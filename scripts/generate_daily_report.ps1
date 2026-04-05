@@ -1,7 +1,8 @@
 param(
-    [string]$VaultName = "Fan&Zhu",
+    [string]$VaultName = "ZephyrSpace",
     [string]$Date = (Get-Date -Format "yyyy-MM-dd"),
-    [switch]$OpenAfterCreate
+    [switch]$OpenAfterCreate,
+    [switch]$OverwriteExisting
 )
 
 $args = @(
@@ -12,6 +13,10 @@ $args = @(
 
 if ($OpenAfterCreate) {
     $args += "--open-after-create"
+}
+
+if ($OverwriteExisting) {
+    $args += "--overwrite-existing"
 }
 
 python @args

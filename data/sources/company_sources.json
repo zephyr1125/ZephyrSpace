@@ -1,0 +1,64 @@
+[
+  {
+    "company": "SpaceX",
+    "note_path": "01-公司/SpaceX.md",
+    "source_name": "Launch Library 2",
+    "source_role": "公共事件源",
+    "source_type": "ll2_launches",
+    "source_url": "https://ll.thespacedevs.com/2.3.0/launches/previous/?search=SpaceX&limit=6",
+    "enabled": true
+  },
+  {
+    "company": "Rocket Lab",
+    "note_path": "01-公司/Rocket Lab.md",
+    "source_name": "Rocket Lab Investor RSS",
+    "source_role": "官方来源",
+    "source_type": "rss",
+    "source_url": "https://investors.rocketlabcorp.com/rss.xml",
+    "enabled": true
+  },
+  {
+    "company": "Amazon Project Kuiper",
+    "note_path": "01-公司/Amazon Project Kuiper.md",
+    "source_name": "About Amazon News RSS",
+    "source_role": "官方来源",
+    "source_type": "rss_keyword",
+    "source_url": "https://www.aboutamazon.com/news/rss",
+    "enabled": true,
+    "keywords": [
+      "kuiper",
+      "leo",
+      "satellite",
+      "broadband"
+    ]
+  },
+  {
+    "company": "Viasat",
+    "note_path": "01-公司/Viasat.md",
+    "source_name": "Viasat Investor RSS",
+    "source_role": "官方来源",
+    "source_type": "rss",
+    "source_url": "https://investors.viasat.com/rss.xml",
+    "enabled": true
+  },
+  {
+    "company": "蓝箭航天",
+    "note_path": "01-公司/蓝箭航天.md",
+    "source_name": "蓝箭航天新闻中心",
+    "source_role": "官方来源",
+    "source_type": "landspace_html",
+    "source_url": "https://www.landspace.com/news.html",
+    "enabled": true
+  },
+  {
+    "company": "银河航天",
+    "note_path": "01-公司/银河航天.md",
+    "source_name": "银河航天",
+    "source_role": "待接入",
+    "source_type": "disabled",
+    "source_url": "",
+    "enabled": false,
+    "reason": "官网稳定可抓取新闻源待确认，先保留占位。"
+  }
+]
+
