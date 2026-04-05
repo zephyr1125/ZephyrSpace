@@ -1,0 +1,26 @@
+[
+  {
+    "source_name": "SpaceNews RSS",
+    "source_role": "垂直媒体",
+    "source_type": "rss",
+    "source_url": "https://spacenews.com/feed/",
+    "enabled": true,
+    "timeout": 20
+  },
+  {
+    "source_name": "PayloadSpace RSS",
+    "source_role": "垂直媒体",
+    "source_type": "rss",
+    "source_url": "https://payloadspace.com/feed/",
+    "enabled": true,
+    "timeout": 20
+  },
+  {
+    "source_name": "Satellite Today RSS",
+    "source_role": "垂直媒体",
+    "source_type": "rss",
+    "source_url": "https://www.satellitetoday.com/feed/",
+    "enabled": true,
+    "timeout": 20
+  }
+]

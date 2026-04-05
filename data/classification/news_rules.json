@@ -1,0 +1,77 @@
+{
+  "companies": [
+    {
+      "name": "SpaceX",
+      "note_path": "01-公司/SpaceX.md",
+      "keywords": ["spacex", "starlink", "starship", "falcon 9", "falcon heavy"]
+    },
+    {
+      "name": "Rocket Lab",
+      "note_path": "01-公司/Rocket Lab.md",
+      "keywords": ["rocket lab", "electron", "neutron", "photon", "haste"]
+    },
+    {
+      "name": "Amazon Project Kuiper",
+      "note_path": "01-公司/Amazon Project Kuiper.md",
+      "keywords": ["project kuiper", "kuiper", "amazon leo"]
+    },
+    {
+      "name": "Viasat",
+      "note_path": "01-公司/Viasat.md",
+      "keywords": ["viasat", "inmarsat"]
+    },
+    {
+      "name": "蓝箭航天",
+      "note_path": "01-公司/蓝箭航天.md",
+      "keywords": ["landspace", "蓝箭", "蓝箭航天", "朱雀"]
+    },
+    {
+      "name": "银河航天",
+      "note_path": "01-公司/银河航天.md",
+      "keywords": ["galaxyspace", "银河航天"]
+    }
+  ],
+  "macro_keywords": [
+    "launch",
+    "satellite",
+    "constellation",
+    "leo",
+    "commercial space",
+    "space force",
+    "nasa",
+    "artemis",
+    "budget",
+    "policy",
+    "government",
+    "defense",
+    "telecom",
+    "broadband",
+    "orbital",
+    "rocket",
+    "发射",
+    "卫星",
+    "星座",
+    "低轨",
+    "航天",
+    "通信",
+    "预算",
+    "政策"
+  ],
+  "topic_mappings": [
+    {
+      "name": "商业发射",
+      "note_path": "02-主题/商业发射.md",
+      "keywords": ["launch", "rocket", "falcon", "electron", "neutron", "朱雀", "发射", "火箭"]
+    },
+    {
+      "name": "低轨卫星互联网",
+      "note_path": "02-主题/低轨卫星互联网.md",
+      "keywords": ["starlink", "kuiper", "leo", "constellation", "broadband", "低轨", "星座", "宽带"]
+    },
+    {
+      "name": "卫星通信",
+      "note_path": "02-主题/卫星通信.md",
+      "keywords": ["satcom", "connectivity", "viasat", "inmarsat", "通信", "卫星通信", "in-flight"]
+    }
+  ]
+}

@@ -11,10 +11,10 @@
   {
     "company": "Rocket Lab",
     "note_path": "01-公司/Rocket Lab.md",
-    "source_name": "Rocket Lab Investor RSS",
+    "source_name": "Rocket Lab Updates",
     "source_role": "官方来源",
-    "source_type": "rss",
-    "source_url": "https://investors.rocketlabcorp.com/rss.xml",
+    "source_type": "rocketlab_updates_html",
+    "source_url": "https://rocketlabcorp.com/updates/",
     "enabled": true
   },
   {
@@ -35,11 +35,26 @@
   {
     "company": "Viasat",
     "note_path": "01-公司/Viasat.md",
-    "source_name": "Viasat Investor RSS",
-    "source_role": "官方来源",
-    "source_type": "rss",
-    "source_url": "https://investors.viasat.com/rss.xml",
-    "enabled": true
+    "source_name": "Google News RSS: Viasat",
+    "source_role": "搜索聚合来源",
+    "source_type": "rss_keyword",
+    "source_url": "https://news.google.com/rss/search?q=Viasat%20satellite%20communications&hl=en-US&gl=US&ceid=US:en",
+    "enabled": true,
+    "keywords": [
+      "viasat"
+    ],
+    "exclude_keywords": [
+      "stock",
+      "stocks",
+      "price",
+      "tradingview",
+      "simplywall.st",
+      "barron's",
+      "investing.com",
+      "moomoo",
+      "futu"
+    ],
+    "timeout": 20
   },
   {
     "company": "蓝箭航天",
@@ -53,12 +68,23 @@
   {
     "company": "银河航天",
     "note_path": "01-公司/银河航天.md",
-    "source_name": "银河航天",
-    "source_role": "待接入",
-    "source_type": "disabled",
-    "source_url": "",
-    "enabled": false,
-    "reason": "官网稳定可抓取新闻源待确认，先保留占位。"
+    "source_name": "Google News RSS: 银河航天",
+    "source_role": "搜索聚合来源",
+    "source_type": "rss_keyword",
+    "source_url": "https://news.google.com/rss/search?q=GalaxySpace%20OR%20%E9%93%B6%E6%B2%B3%E8%88%AA%E5%A4%A9%20satellite&hl=en-US&gl=US&ceid=US:en",
+    "enabled": true,
+    "keywords": [
+      "galaxyspace",
+      "银河航天"
+    ],
+    "exclude_keywords": [
+      "stock",
+      "stocks",
+      "price",
+      "tradingview",
+      "moomoo",
+      "futu"
+    ],
+    "timeout": 20
   }
 ]
-

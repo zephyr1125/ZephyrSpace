@@ -13,8 +13,10 @@ ROOT_DIR = Path(__file__).resolve().parent.parent
 if str(ROOT_DIR / "scripts") not in sys.path:
     sys.path.insert(0, str(ROOT_DIR / "scripts"))
 
-from fetch_company_updates import build_report_content as build_live_report_content  # noqa: E402
-from fetch_company_updates import fetch_all_updates, save_cache  # noqa: E402
+from fetch_industry_news import build_report_content as build_live_report_content  # noqa: E402
+from fetch_industry_news import fetch_all_news, load_json, save_cache  # noqa: E402
+
+RULES_PATH = ROOT_DIR / "data" / "classification" / "news_rules.json"
 
 
 def run_obsidian_command(args: list[str]) -> subprocess.CompletedProcess[str]:
@@ -29,10 +31,10 @@ def run_obsidian_command(args: list[str]) -> subprocess.CompletedProcess[str]:
 
 
 def build_report_content(date: str) -> str:
-    """直接调用抓取模块，避免子进程编码污染。"""
-    results = fetch_all_updates()
-    save_cache(date, results)
-    return build_live_report_content(date, results)
+    items = fetch_all_news()
+    save_cache(date, items)
+    rules = load_json(RULES_PATH)
+    return build_live_report_content(date, items, rules)
 
 
 def main() -> int:
@@ -82,4 +84,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

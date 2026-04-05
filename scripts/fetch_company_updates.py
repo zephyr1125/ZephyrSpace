@@ -51,6 +51,7 @@ REVIEW_SIGNAL_KEYWORDS = [
     "试验",
     "试车",
 ]
+ROCKETLAB_DATE_PATTERN = re.compile(r"^(?P<date>[A-Za-z]+\s+\d{1,2},\s+\d{4})\s+(?P<title>.+?)\s+Read more$", re.S)
 
 
 @dataclass
@@ -97,6 +98,8 @@ def parse_datetime(value: str | None) -> datetime | None:
         lambda text: email.utils.parsedate_to_datetime(text),
         lambda text: datetime.strptime(text, "%Y-%m-%d"),
         lambda text: datetime.strptime(text, "%Y/%m/%d"),
+        lambda text: datetime.strptime(text, "%B %d, %Y"),
+        lambda text: datetime.strptime(text, "%d %m月 %Y"),
     ):
         try:
             parsed = parser(value)
@@ -109,7 +112,6 @@ def parse_datetime(value: str | None) -> datetime | None:
 
 
 def sort_key_for_item(item: UpdateItem) -> tuple[int, str]:
-    """为动态排序，优先按时间倒序，再按标题稳定排序。"""
     parsed = parse_datetime(item.published_at)
     if parsed is None:
         return (0, item.title)
@@ -117,13 +119,14 @@ def sort_key_for_item(item: UpdateItem) -> tuple[int, str]:
 
 
 def fetch_rss_updates(session: requests.Session, config: dict[str, Any]) -> list[UpdateItem]:
-    """抓取 RSS/Atom 数据源。"""
-    response = session.get(config["source_url"], timeout=DEFAULT_TIMEOUT)
+    timeout = config.get("timeout", DEFAULT_TIMEOUT)
+    response = session.get(config["source_url"], timeout=timeout)
     response.raise_for_status()
 
     root = ET.fromstring(response.content)
     items: list[UpdateItem] = []
     keywords = [keyword.lower() for keyword in config.get("keywords", [])]
+    exclude_keywords = [keyword.lower() for keyword in config.get("exclude_keywords", [])]
 
     for node in root.findall(".//item"):
         title = normalize_whitespace(node.findtext("title", default=""))
@@ -134,6 +137,8 @@ def fetch_rss_updates(session: requests.Session, config: dict[str, Any]) -> list
         )
         haystack = f"{title} {summary}".lower()
         if keywords and not any(keyword in haystack for keyword in keywords):
+            continue
+        if exclude_keywords and any(keyword in haystack for keyword in exclude_keywords):
             continue
         if not title or not link:
             continue
@@ -154,8 +159,8 @@ def fetch_rss_updates(session: requests.Session, config: dict[str, Any]) -> list
 
 
 def fetch_landspace_updates(session: requests.Session, config: dict[str, Any]) -> list[UpdateItem]:
-    """抓取蓝箭航天新闻中心。"""
-    response = session.get(config["source_url"], timeout=DEFAULT_TIMEOUT)
+    timeout = config.get("timeout", DEFAULT_TIMEOUT)
+    response = session.get(config["source_url"], timeout=timeout)
     response.raise_for_status()
     response.encoding = response.apparent_encoding or "utf-8"
     html_text = response.text
@@ -200,9 +205,44 @@ def fetch_landspace_updates(session: requests.Session, config: dict[str, Any]) -
     return items
 
 
+def fetch_rocketlab_updates(session: requests.Session, config: dict[str, Any]) -> list[UpdateItem]:
+    timeout = config.get("timeout", DEFAULT_TIMEOUT)
+    response = session.get(config["source_url"], timeout=timeout)
+    response.raise_for_status()
+    html_text = response.text
+
+    items: list[UpdateItem] = []
+    seen: set[str] = set()
+    for match in re.finditer(r'<a[^>]+href="([^"]+)"[^>]*>(.*?)</a>', html_text, re.S):
+        href = match.group(1)
+        body = normalize_whitespace(re.sub(r"<.*?>", " ", match.group(2)))
+        if not href.startswith('/updates/') or 'Read more' not in body:
+            continue
+        parsed = ROCKETLAB_DATE_PATTERN.match(body)
+        if not parsed:
+            continue
+        title = parsed.group('title')
+        published_at = parsed.group('date')
+        absolute_url = urljoin(config["source_url"], href)
+        dedupe_key = f"{title}|{absolute_url}"
+        if dedupe_key in seen:
+            continue
+        seen.add(dedupe_key)
+        items.append(UpdateItem(
+            company=config["company"],
+            note_path=config["note_path"],
+            title=title,
+            url=absolute_url,
+            published_at=published_at,
+            source_name=config["source_name"],
+            source_role=config["source_role"],
+        ))
+    return items
+
+
 def fetch_ll2_updates(session: requests.Session, config: dict[str, Any]) -> list[UpdateItem]:
-    """抓取 Launch Library 2 的发射事件。"""
-    response = session.get(config["source_url"], timeout=DEFAULT_TIMEOUT)
+    timeout = config.get("timeout", DEFAULT_TIMEOUT)
+    response = session.get(config["source_url"], timeout=timeout)
     response.raise_for_status()
     payload = response.json()
 
@@ -236,7 +276,6 @@ def fetch_ll2_updates(session: requests.Session, config: dict[str, Any]) -> list
 
 
 def fetch_updates_for_source(session: requests.Session, config: dict[str, Any]) -> dict[str, Any]:
-    """抓取单个来源，并返回标准化结果。"""
     if not config.get("enabled", True) or config.get("source_type") == "disabled":
         return {
             "company": config["company"],
@@ -253,6 +292,7 @@ def fetch_updates_for_source(session: requests.Session, config: dict[str, Any]) 
         "rss": fetch_rss_updates,
         "rss_keyword": fetch_rss_updates,
         "landspace_html": fetch_landspace_updates,
+        "rocketlab_updates_html": fetch_rocketlab_updates,
         "ll2_launches": fetch_ll2_updates,
     }
 
@@ -296,16 +336,11 @@ def fetch_updates_for_source(session: requests.Session, config: dict[str, Any]) 
 
 
 def fetch_all_updates() -> list[dict[str, Any]]:
-    """抓取所有已配置公司来源。"""
     session = make_session()
-    results = []
-    for config in load_source_configs():
-        results.append(fetch_updates_for_source(session, config))
-    return results
+    return [fetch_updates_for_source(session, config) for config in load_source_configs()]
 
 
 def build_review_signals(results: list[dict[str, Any]]) -> list[UpdateItem]:
-    """从标题中提取值得复查的信号。"""
     items: list[UpdateItem] = []
     for result in results:
         for raw_item in result.get("items", []):
@@ -317,7 +352,6 @@ def build_review_signals(results: list[dict[str, Any]]) -> list[UpdateItem]:
 
 
 def build_report_content(date: str, results: list[dict[str, Any]]) -> str:
-    """根据抓取结果生成日报内容。"""
     all_items = [
         UpdateItem(**raw_item)
         for result in results
@@ -406,7 +440,6 @@ def build_report_content(date: str, results: list[dict[str, Any]]) -> str:
 
 
 def save_cache(date: str, results: list[dict[str, Any]]) -> Path:
-    """把抓取结果写入本地缓存，方便后续调试和比对。"""
     cache_dir = CACHE_DIR / "company_updates"
     cache_dir.mkdir(parents=True, exist_ok=True)
     cache_path = cache_dir / f"{date}.json"
@@ -434,4 +467,5 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+
 
