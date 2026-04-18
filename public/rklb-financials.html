@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rocket Lab 财务增长与盈利路径 — ZephyrSpace</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Newsreader:ital,wght@0,400;0,600;0,700;1,400&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f5f0e6;
+  --bg-card: #fffdf8;
+  --bg-card-hover: #faf6ee;
+  --accent-teal: #0e7490;
+  --accent-blue: #2563a0;
+  --accent-amber: #c2770c;
+  --accent-red: #b91c1c;
+  --accent-green: #0f766e;
+  --accent-purple: #6d28d9;
+  --text: #1c1917;
+  --text-sec: #57534e;
+  --text-dim: #a8a29e;
+  --border: rgba(120, 113, 108, 0.15);
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Noto Sans SC', sans-serif;
+  color: var(--text);
+  background-color: var(--bg);
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem 3rem; }
+
+/* ── Navigation ── */
+.nav-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+  animation: fadeSlideDown 0.6s ease both;
+}
+.nav-pills a {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 0.82rem;
+  color: var(--text-sec);
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+.nav-pills a:hover {
+  background: var(--bg-card-hover);
+  color: var(--accent-teal);
+  border-color: var(--accent-teal);
+  transform: translateY(-1px);
+}
+
+/* ── Header ── */
+.header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  animation: fadeSlideDown 0.7s ease 0.1s both;
+}
+.badge {
+  display: inline-block;
+  padding: 0.3rem 1.1rem;
+  background: var(--accent-teal);
+  color: #fff;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+.header h1 {
+  font-family: 'Newsreader', serif;
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.25;
+  margin-bottom: 0.6rem;
+}
+.header .subtitle {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.88rem;
+  color: var(--accent-amber);
+  letter-spacing: 0.02em;
+}
+
+/* ── Card ── */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.8rem 2rem;
+  margin-bottom: 1.8rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.card:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.07);
+  transform: translateY(-2px);
+}
+.card-title {
+  font-family: 'Newsreader', serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.card-title .icon { font-size: 1.1rem; }
+
+/* ── Key Metrics Grid ── */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.8rem;
+}
+.metric-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.2rem 1rem;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+  transition: all 0.3s ease;
+}
+.metric-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.07);
+}
+.metric-label {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+}
+.metric-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.55rem;
+  font-weight: 600;
+  color: var(--accent-teal);
+  line-height: 1.2;
+}
+.metric-value.amber { color: var(--accent-amber); }
+.metric-value.green { color: var(--accent-green); }
+.metric-value.blue { color: var(--accent-blue); }
+.metric-note {
+  font-size: 0.68rem;
+  color: var(--text-dim);
+  margin-top: 0.3rem;
+}
+
+/* ── Revenue Bar Chart ── */
+.revenue-chart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 0;
+  height: 380px;
+  padding: 0 1rem;
+  margin-top: 1.5rem;
+  position: relative;
+}
+.revenue-chart::before {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 1px;
+  background: var(--border);
+}
+.bar-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  max-width: 120px;
+  position: relative;
+}
+.bar-total {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.35rem;
+}
+.bar-stack {
+  width: 52px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px 6px 0 0;
+  overflow: hidden;
+  position: relative;
+}
+.bar-segment {
+  width: 100%;
+  transition: opacity 0.2s;
+}
+.bar-segment.space { background: var(--accent-teal); }
+.bar-segment.launch { background: var(--accent-amber); }
+.bar-stack:hover .bar-segment { opacity: 0.85; }
+.bar-year {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  color: var(--text-sec);
+  margin-top: 0.6rem;
+  font-weight: 500;
+}
+.chart-legend {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1.2rem;
+  font-size: 0.8rem;
+  color: var(--text-sec);
+}
+.legend-dot {
+  display: inline-block;
+  width: 10px; height: 10px;
+  border-radius: 3px;
+  margin-right: 0.4rem;
+  vertical-align: middle;
+}
+.legend-dot.teal { background: var(--accent-teal); }
+.legend-dot.amber { background: var(--accent-amber); }
+
+/* Bar animation */
+.bar-group { animation: barGrow 0.8s ease both; }
+.bar-group:nth-child(1) { animation-delay: 0.15s; }
+.bar-group:nth-child(2) { animation-delay: 0.25s; }
+.bar-group:nth-child(3) { animation-delay: 0.35s; }
+.bar-group:nth-child(4) { animation-delay: 0.45s; }
+.bar-group:nth-child(5) { animation-delay: 0.55s; }
+.bar-group:nth-child(6) { animation-delay: 0.65s; }
+
+/* ── Quarterly Table ── */
+.q-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
+}
+.q-table th {
+  text-align: center;
+  font-weight: 500;
+  color: var(--text-dim);
+  padding: 0.5rem 0.6rem;
+  border-bottom: 2px solid var(--border);
+  font-size: 0.75rem;
+}
+.q-table td {
+  text-align: center;
+  padding: 0.6rem 0.6rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-sec);
+}
+.q-table tr:last-child td { border-bottom: none; }
+.q-table .year-cell {
+  text-align: left;
+  font-weight: 600;
+  color: var(--text);
+}
+.q-table .highlight { color: var(--accent-teal); font-weight: 600; }
+.q-mini-bar {
+  display: inline-block;
+  height: 6px;
+  background: var(--accent-teal);
+  border-radius: 3px;
+  vertical-align: middle;
+  margin-left: 0.4rem;
+  opacity: 0.5;
+}
+
+/* ── Gross Margin Gauges ── */
+.margin-bars { display: flex; flex-direction: column; gap: 0.9rem; margin-top: 0.5rem; }
+.margin-row {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.margin-year {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-sec);
+  width: 80px;
+  text-align: right;
+  flex-shrink: 0;
+}
+.margin-track {
+  flex: 1;
+  height: 28px;
+  background: rgba(14,116,144,0.07);
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+.margin-fill {
+  height: 100%;
+  border-radius: 6px;
+  background: linear-gradient(90deg, var(--accent-teal), var(--accent-green));
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 0.7rem;
+  transition: width 1s ease;
+}
+.margin-fill.q4-highlight {
+  background: linear-gradient(90deg, var(--accent-green), #059669);
+}
+.margin-pct {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #fff;
+}
+.margin-row { animation: slideRight 0.7s ease both; }
+.margin-row:nth-child(1) { animation-delay: 0.1s; }
+.margin-row:nth-child(2) { animation-delay: 0.2s; }
+.margin-row:nth-child(3) { animation-delay: 0.3s; }
+.margin-row:nth-child(4) { animation-delay: 0.4s; }
+.margin-row:nth-child(5) { animation-delay: 0.5s; }
+
+/* ── Mix Shift ── */
+.mix-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  margin-top: 0.5rem;
+}
+.mix-item { text-align: center; }
+.mix-year {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.8rem;
+}
+.donut-ring {
+  width: 110px; height: 110px;
+  border-radius: 50%;
+  margin: 0 auto 0.8rem;
+  position: relative;
+  display: flex; align-items: center; justify-content: center;
+}
+.donut-ring::after {
+  content: '';
+  width: 56px; height: 56px;
+  background: var(--bg-card);
+  border-radius: 50%;
+  position: absolute;
+}
+.donut-label {
+  position: relative;
+  z-index: 1;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--text-sec);
+  line-height: 1.3;
+  text-align: center;
+}
+.mix-legend {
+  font-size: 0.75rem;
+  color: var(--text-sec);
+  line-height: 1.6;
+}
+
+/* ── Profitability ── */
+.profit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  margin-top: 0.5rem;
+}
+.profit-item {
+  background: rgba(14,116,144,0.04);
+  border-radius: 10px;
+  padding: 1.2rem;
+}
+.profit-item h4 {
+  font-family: 'Newsreader', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.6rem;
+}
+.ebitda-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+  font-size: 0.82rem;
+}
+.ebitda-year {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  color: var(--text-sec);
+  width: 40px;
+}
+.ebitda-bar {
+  height: 18px;
+  background: var(--accent-red);
+  border-radius: 4px;
+  opacity: 0.7;
+}
+.ebitda-val {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  color: var(--accent-red);
+  font-size: 0.8rem;
+}
+.insight-box {
+  background: rgba(194,119,12,0.06);
+  border-left: 3px solid var(--accent-amber);
+  border-radius: 0 8px 8px 0;
+  padding: 1rem 1.2rem;
+  font-size: 0.85rem;
+  color: var(--text-sec);
+  line-height: 1.7;
+  margin-top: 0.8rem;
+}
+
+/* ── Thesis Box ── */
+.thesis-card {
+  background: linear-gradient(135deg, rgba(14,116,144,0.06) 0%, rgba(15,118,110,0.04) 100%);
+  border: 1.5px solid rgba(14,116,144,0.2);
+}
+.thesis-card .card-title { color: var(--accent-teal); }
+.thesis-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.thesis-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  color: var(--text-sec);
+  line-height: 1.6;
+}
+.thesis-list li::before {
+  content: '▸';
+  color: var(--accent-teal);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 0.15em;
+}
+
+/* ── Related Links ── */
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8rem;
+}
+.related-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.8rem 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: 0.82rem;
+  color: var(--text-sec);
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+.related-link:hover {
+  border-color: var(--accent-teal);
+  color: var(--accent-teal);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+/* ── Footer ── */
+.footer {
+  text-align: center;
+  padding-top: 2rem;
+  margin-top: 1rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  line-height: 1.8;
+}
+
+/* ── Animations ── */
+@keyframes fadeSlideDown {
+  from { opacity: 0; transform: translateY(-12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes barGrow {
+  from { opacity: 0; transform: scaleY(0); transform-origin: bottom; }
+  to { opacity: 1; transform: scaleY(1); transform-origin: bottom; }
+}
+@keyframes slideRight {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes cardFadeIn {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.card { animation: cardFadeIn 0.6s ease both; }
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+
+.metrics-grid .metric-card { animation: cardFadeIn 0.5s ease both; }
+.metrics-grid .metric-card:nth-child(1) { animation-delay: 0.1s; }
+.metrics-grid .metric-card:nth-child(2) { animation-delay: 0.18s; }
+.metrics-grid .metric-card:nth-child(3) { animation-delay: 0.26s; }
+.metrics-grid .metric-card:nth-child(4) { animation-delay: 0.34s; }
+.metrics-grid .metric-card:nth-child(5) { animation-delay: 0.42s; }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .header h1 { font-size: 1.8rem; }
+  .metrics-grid { grid-template-columns: repeat(2, 1fr); }
+  .metrics-grid .metric-card:last-child { grid-column: span 2; }
+  .revenue-chart { height: 280px; }
+  .bar-stack { width: 36px; }
+  .bar-total { font-size: 0.7rem; }
+  .mix-grid { grid-template-columns: 1fr; max-width: 260px; margin-left: auto; margin-right: auto; }
+  .profit-grid { grid-template-columns: 1fr; }
+  .related-grid { grid-template-columns: repeat(2, 1fr); }
+  .q-table { font-size: 0.72rem; }
+}
+@media (max-width: 480px) {
+  .container { padding: 1rem; }
+  .metrics-grid { grid-template-columns: 1fr; }
+  .metrics-grid .metric-card:last-child { grid-column: span 1; }
+  .related-grid { grid-template-columns: 1fr; }
+  .nav-pills { gap: 0.35rem; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Navigation -->
+  <nav class="nav-pills">
+    <a href="index.html">← ZephyrSpace 首页</a>
+    <a href="neutron-timeline.html">🚀 Neutron 时间线</a>
+    <a href="rklb-acquisitions.html">🏢 收购路线</a>
+    <a href="electron-launches.html">🛰️ Electron 发射记录</a>
+    <a href="rklb-global-facilities.html">🗺️ 全球设施</a>
+  </nav>
+
+  <!-- Header -->
+  <header class="header">
+    <span class="badge">ROCKET LAB · RKLB</span>
+    <h1>财务增长与盈利路径</h1>
+    <p class="subtitle">$35M → $602M · 5 年 17 倍增长 · Space Systems 驱动转型</p>
+  </header>
+
+  <!-- Key Metrics -->
+  <section class="metrics-grid">
+    <div class="metric-card">
+      <div class="metric-label">2025 总收入</div>
+      <div class="metric-value">$602M</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">2025 毛利率</div>
+      <div class="metric-value green">34.4%</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">Backlog</div>
+      <div class="metric-value amber">$9.95亿</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">收入 CAGR</div>
+      <div class="metric-value blue">~76%</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">Q4 2025 毛利率</div>
+      <div class="metric-value green">38%</div>
+      <div class="metric-note">历史新高</div>
+    </div>
+  </section>
+
+  <!-- Revenue Bar Chart -->
+  <section class="card" style="animation-delay:0.15s">
+    <div class="card-title"><span class="icon">📊</span> 年度收入增长</div>
+    <div class="revenue-chart">
+      <!-- 2020: Total 35, Launch 35, Space 0 -->
+      <div class="bar-group">
+        <div class="bar-total">$35M</div>
+        <div class="bar-stack">
+          <div class="bar-segment launch" style="height:calc(35 / 602 * 340px)"></div>
+        </div>
+        <div class="bar-year">2020</div>
+      </div>
+      <!-- 2021: Total 62, Launch 27, Space 35 -->
+      <div class="bar-group">
+        <div class="bar-total">$62M</div>
+        <div class="bar-stack">
+          <div class="bar-segment space" style="height:calc(35 / 602 * 340px)"></div>
+          <div class="bar-segment launch" style="height:calc(27 / 602 * 340px)"></div>
+        </div>
+        <div class="bar-year">2021</div>
+      </div>
+      <!-- 2022: Total 211, Launch 60.7, Space 150.3 -->
+      <div class="bar-group">
+        <div class="bar-total">$211M</div>
+        <div class="bar-stack">
+          <div class="bar-segment space" style="height:calc(150.3 / 602 * 340px)"></div>
+          <div class="bar-segment launch" style="height:calc(60.7 / 602 * 340px)"></div>
+        </div>
+        <div class="bar-year">2022</div>
+      </div>
+      <!-- 2023: Total 245, Launch 73, Space 172 -->
+      <div class="bar-group">
+        <div class="bar-total">$245M</div>
+        <div class="bar-stack">
+          <div class="bar-segment space" style="height:calc(172 / 602 * 340px)"></div>
+          <div class="bar-segment launch" style="height:calc(73 / 602 * 340px)"></div>
+        </div>
+        <div class="bar-year">2023</div>
+      </div>
+      <!-- 2024: Total 436, Launch 125, Space 311 -->
+      <div class="bar-group">
+        <div class="bar-total">$436M</div>
+        <div class="bar-stack">
+          <div class="bar-segment space" style="height:calc(311 / 602 * 340px)"></div>
+          <div class="bar-segment launch" style="height:calc(125 / 602 * 340px)"></div>
+        </div>
+        <div class="bar-year">2024</div>
+      </div>
+      <!-- 2025: Total 602, Launch 199, Space 403 -->
+      <div class="bar-group">
+        <div class="bar-total" style="font-size:0.95rem;color:var(--accent-teal)">$602M</div>
+        <div class="bar-stack">
+          <div class="bar-segment space" style="height:calc(403 / 602 * 340px)"></div>
+          <div class="bar-segment launch" style="height:calc(199 / 602 * 340px)"></div>
+        </div>
+        <div class="bar-year" style="font-weight:700;color:var(--text)">2025</div>
+      </div>
+    </div>
+    <div class="chart-legend">
+      <span><span class="legend-dot teal"></span>Space Systems</span>
+      <span><span class="legend-dot amber"></span>Launch Services</span>
+    </div>
+  </section>
+
+  <!-- Quarterly Revenue -->
+  <section class="card" style="animation-delay:0.25s">
+    <div class="card-title"><span class="icon">📅</span> 季度收入趋势（$M）</div>
+    <table class="q-table">
+      <thead>
+        <tr>
+          <th style="text-align:left">年度</th>
+          <th>Q1</th>
+          <th>Q2</th>
+          <th>Q3</th>
+          <th>Q4</th>
+          <th>全年</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="year-cell">2022</td>
+          <td>41<span class="q-mini-bar" style="width:22px"></span></td>
+          <td>55<span class="q-mini-bar" style="width:30px"></span></td>
+          <td>63<span class="q-mini-bar" style="width:34px"></span></td>
+          <td>52<span class="q-mini-bar" style="width:28px"></span></td>
+          <td style="font-weight:600">211</td>
+        </tr>
+        <tr>
+          <td class="year-cell">2023</td>
+          <td>55<span class="q-mini-bar" style="width:30px"></span></td>
+          <td>62<span class="q-mini-bar" style="width:33px"></span></td>
+          <td>68<span class="q-mini-bar" style="width:37px"></span></td>
+          <td>60<span class="q-mini-bar" style="width:32px"></span></td>
+          <td style="font-weight:600">245</td>
+        </tr>
+        <tr>
+          <td class="year-cell">2024</td>
+          <td>93<span class="q-mini-bar" style="width:50px"></span></td>
+          <td>106<span class="q-mini-bar" style="width:57px"></span></td>
+          <td>105<span class="q-mini-bar" style="width:56px"></span></td>
+          <td>132<span class="q-mini-bar" style="width:71px"></span></td>
+          <td style="font-weight:600">436</td>
+        </tr>
+        <tr>
+          <td class="year-cell">2025</td>
+          <td class="highlight">123<span class="q-mini-bar" style="width:66px"></span></td>
+          <td class="highlight">144<span class="q-mini-bar" style="width:77px"></span></td>
+          <td class="highlight">155<span class="q-mini-bar" style="width:83px"></span></td>
+          <td class="highlight">180<span class="q-mini-bar" style="width:97px"></span></td>
+          <td style="font-weight:700;color:var(--accent-teal)">602</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Gross Margin -->
+  <section class="card" style="animation-delay:0.35s">
+    <div class="card-title"><span class="icon">📈</span> 毛利率持续改善</div>
+    <div class="margin-bars">
+      <div class="margin-row">
+        <span class="margin-year">2022</span>
+        <div class="margin-track">
+          <div class="margin-fill" style="width:18%">
+            <span class="margin-pct">9.0%</span>
+          </div>
+        </div>
+      </div>
+      <div class="margin-row">
+        <span class="margin-year">2023</span>
+        <div class="margin-track">
+          <div class="margin-fill" style="width:42%">
+            <span class="margin-pct">21.0%</span>
+          </div>
+        </div>
+      </div>
+      <div class="margin-row">
+        <span class="margin-year">2024</span>
+        <div class="margin-track">
+          <div class="margin-fill" style="width:53%">
+            <span class="margin-pct">26.6%</span>
+          </div>
+        </div>
+      </div>
+      <div class="margin-row">
+        <span class="margin-year">2025</span>
+        <div class="margin-track">
+          <div class="margin-fill" style="width:69%">
+            <span class="margin-pct">34.4%</span>
+          </div>
+        </div>
+      </div>
+      <div class="margin-row">
+        <span class="margin-year" style="color:var(--accent-green);font-weight:600">Q4 2025</span>
+        <div class="margin-track">
+          <div class="margin-fill q4-highlight" style="width:76%">
+            <span class="margin-pct">38.0%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="insight-box" style="margin-top:1.2rem">
+      💡 毛利率从 2022 年的 9% 跃升至 Q4 2025 的 38%，反映垂直整合策略正在兑现规模经济效应。
+    </div>
+  </section>
+
+  <!-- Revenue Mix Shift -->
+  <section class="card" style="animation-delay:0.45s">
+    <div class="card-title"><span class="icon">🔄</span> 收入结构变迁</div>
+    <div class="mix-grid">
+      <!-- 2020: 100% Launch -->
+      <div class="mix-item">
+        <div class="mix-year">2020</div>
+        <div class="donut-ring" style="background: conic-gradient(var(--accent-amber) 0% 100%);">
+          <span class="donut-label">$35M</span>
+        </div>
+        <div class="mix-legend">
+          <span class="legend-dot amber"></span>Launch 100%
+        </div>
+      </div>
+      <!-- 2022: 29% Launch, 71% Space -->
+      <div class="mix-item">
+        <div class="mix-year">2022</div>
+        <div class="donut-ring" style="background: conic-gradient(var(--accent-teal) 0% 71%, var(--accent-amber) 71% 100%);">
+          <span class="donut-label">$211M</span>
+        </div>
+        <div class="mix-legend">
+          <span class="legend-dot teal"></span>Space 71%<br>
+          <span class="legend-dot amber"></span>Launch 29%
+        </div>
+      </div>
+      <!-- 2025: 33% Launch, 67% Space -->
+      <div class="mix-item">
+        <div class="mix-year">2025</div>
+        <div class="donut-ring" style="background: conic-gradient(var(--accent-teal) 0% 67%, var(--accent-amber) 67% 100%);">
+          <span class="donut-label">$602M</span>
+        </div>
+        <div class="mix-legend">
+          <span class="legend-dot teal"></span>Space 67%<br>
+          <span class="legend-dot amber"></span>Launch 33%
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Profitability Path -->
+  <section class="card" style="animation-delay:0.55s">
+    <div class="card-title"><span class="icon">🎯</span> 盈利路径分析</div>
+    <div class="profit-grid">
+      <div class="profit-item">
+        <h4>Adjusted EBITDA 趋势</h4>
+        <div class="ebitda-row">
+          <span class="ebitda-year">2022</span>
+          <div class="ebitda-bar" style="width:85%"></div>
+          <span class="ebitda-val">-$132M</span>
+        </div>
+        <div class="ebitda-row">
+          <span class="ebitda-year">2023</span>
+          <div class="ebitda-bar" style="width:83%"></div>
+          <span class="ebitda-val">-$130M</span>
+        </div>
+        <div class="ebitda-row">
+          <span class="ebitda-year">2024</span>
+          <div class="ebitda-bar" style="width:100%"></div>
+          <span class="ebitda-val">-$156M</span>
+        </div>
+        <div class="ebitda-row">
+          <span class="ebitda-year">2025</span>
+          <div class="ebitda-bar" style="width:100%"></div>
+          <span class="ebitda-val">-$156M</span>
+        </div>
+      </div>
+      <div class="profit-item">
+        <h4>关键解读</h4>
+        <p style="font-size:0.85rem;color:var(--text-sec);line-height:1.75;margin-bottom:0.8rem">
+          亏损绝对额稳定在 ~$150M 区间，同期收入却从 $211M 增长至 $602M —— <strong style="color:var(--accent-teal)">经营杠杆正在积累</strong>。
+        </p>
+        <p style="font-size:0.85rem;color:var(--text-sec);line-height:1.75">
+          亏损主因：Neutron 中型火箭研发投入持续消耗资源。这属于<strong style="color:var(--accent-amber)">战略性投入</strong>，而非经营性恶化。一旦 Neutron 完成研发阶段，EBITDA 有望快速改善。
+        </p>
+      </div>
+    </div>
+    <div class="insight-box">
+      📐 亏损率：2022 年净亏损占收入 ~63%，2025 年降至 ~26% —— 随着收入规模扩大，亏损比例持续收窄。
+    </div>
+  </section>
+
+  <!-- Investment Thesis -->
+  <section class="card thesis-card" style="animation-delay:0.65s">
+    <div class="card-title"><span class="icon">💎</span> 投资逻辑要点</div>
+    <ul class="thesis-list">
+      <li>毛利率持续扩张（9% → 38%），垂直整合红利兑现中</li>
+      <li>Space Systems 成为收入主引擎，发射业务仅占 1/3</li>
+      <li>Backlog 接近 $10 亿，收入可见性强</li>
+      <li>亏损主因 Neutron 研发，非经营性恶化</li>
+      <li>关键催化剂：Neutron 首飞、国防大单、EBITDA 转正</li>
+    </ul>
+  </section>
+
+  <!-- Related Research -->
+  <section class="card" style="animation-delay:0.75s">
+    <div class="card-title"><span class="icon">🔗</span> 相关研究</div>
+    <div class="related-grid">
+      <a href="neutron-timeline.html" class="related-link">🚀 Neutron 时间线</a>
+      <a href="rklb-acquisitions.html" class="related-link">🏢 收购路线</a>
+      <a href="electron-launches.html" class="related-link">🛰️ Electron 发射记录</a>
+      <a href="rklb-global-facilities.html" class="related-link">🗺️ 全球设施</a>
+      <a href="index.html" class="related-link">📚 首页</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>数据综合自 Rocket Lab IR · SEC Filings · Macrotrends · StockAnalysis</p>
+    <p>更新于 2026-04-18 · ZephyrSpace 商业航天研究知识库</p>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electron 发射记录全览 — ZephyrSpace</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&family=Noto+Sans+SC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f5f0e6;
+  --bg-card: #fffdf8;
+  --bg-card-hover: #faf6ee;
+  --accent-teal: #0e7490;
+  --accent-blue: #2563a0;
+  --accent-amber: #c2770c;
+  --accent-red: #b91c1c;
+  --accent-green: #0f766e;
+  --accent-purple: #6d28d9;
+  --text: #1c1917;
+  --text-sec: #57534e;
+  --text-dim: #a8a29e;
+  --border: rgba(120, 113, 108, 0.15);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Noto Sans SC', sans-serif;
+  background-color: var(--bg);
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  color: var(--text);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+/* ── Navigation ── */
+.top-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+.top-nav a {
+  font-family: 'Noto Sans SC', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--accent-teal);
+  text-decoration: none;
+  border: 1.5px solid var(--accent-teal);
+  border-radius: 999px;
+  padding: 0.3rem 1rem;
+  transition: background 0.2s, color 0.2s;
+}
+.top-nav a:hover {
+  background: var(--accent-teal);
+  color: #fff;
+}
+
+/* ── Header ── */
+.page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.badge {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--accent-teal);
+  border: 1.5px solid var(--accent-teal);
+  border-radius: 999px;
+  padding: 0.25rem 1rem;
+  margin-bottom: 1rem;
+}
+.page-header h1 {
+  font-family: 'Newsreader', serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.6rem;
+  line-height: 1.2;
+}
+.page-header .subtitle {
+  font-size: 0.95rem;
+  color: var(--text-sec);
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* ── Stats Bar ── */
+.stats-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  margin-bottom: 3.5rem;
+}
+.stat-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.2rem 1rem;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.stat-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+}
+.stat-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.1;
+}
+.stat-label {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  margin-top: 0.3rem;
+}
+.stat-green { color: var(--accent-green); }
+.stat-red { color: var(--accent-red); }
+.stat-teal { color: var(--accent-teal); }
+.stat-amber { color: var(--accent-amber); }
+.stat-blue { color: var(--accent-blue); }
+.stat-purple { color: var(--accent-purple); }
+
+/* ── Section Titles ── */
+.section-title {
+  font-family: 'Newsreader', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--border);
+}
+.section-title .accent {
+  color: var(--accent-teal);
+}
+
+/* ── Bar Chart ── */
+.chart-section {
+  margin-bottom: 3.5rem;
+}
+.bar-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: clamp(6px, 1.5vw, 16px);
+  height: 340px;
+  padding: 1.5rem 0 0;
+  position: relative;
+}
+.bar-chart::before {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: 40px;
+  height: 1px;
+  background: var(--border);
+}
+.bar-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.bar-stack {
+  width: 100%;
+  max-width: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 6px 6px 0 0;
+  overflow: hidden;
+  position: relative;
+  animation: bar-grow 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  transform-origin: bottom;
+  transform: scaleY(0);
+}
+@keyframes bar-grow {
+  to { transform: scaleY(1); }
+}
+.bar-success {
+  background: linear-gradient(180deg, #10b981 0%, #0f766e 100%);
+  transition: filter 0.2s;
+}
+.bar-fail {
+  background: linear-gradient(180deg, #ef4444 0%, #b91c1c 100%);
+  transition: filter 0.2s;
+}
+.bar-col:hover .bar-success,
+.bar-col:hover .bar-fail {
+  filter: brightness(1.12);
+}
+.bar-count {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+.bar-year {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  color: var(--text-sec);
+  margin-top: 10px;
+  padding-top: 6px;
+}
+.chart-legend {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 1.2rem;
+  font-size: 0.8rem;
+  color: var(--text-sec);
+}
+.legend-dot {
+  display: inline-block;
+  width: 10px; height: 10px;
+  border-radius: 3px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+.legend-dot.success { background: var(--accent-green); }
+.legend-dot.fail { background: var(--accent-red); }
+
+/* ── Year Cards ── */
+.year-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.2rem;
+  margin-bottom: 3.5rem;
+}
+.year-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+  border-left: 4px solid var(--border);
+}
+.year-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.07);
+}
+.year-card .year-num {
+  font-family: 'Newsreader', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 0.3rem;
+}
+.year-card .year-meta {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  margin-bottom: 0.8rem;
+}
+.year-card ul {
+  list-style: none;
+  padding: 0;
+}
+.year-card li {
+  font-size: 0.88rem;
+  color: var(--text-sec);
+  padding: 0.25rem 0;
+  padding-left: 1.1rem;
+  position: relative;
+  line-height: 1.5;
+}
+.year-card li::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+}
+
+/* year accent colors */
+.year-card[data-year="2017"] { border-left-color: var(--accent-red); }
+.year-card[data-year="2017"] .year-num { color: var(--accent-red); }
+.year-card[data-year="2017"] li::before { color: var(--accent-red); }
+
+.year-card[data-year="2018"] { border-left-color: var(--accent-amber); }
+.year-card[data-year="2018"] .year-num { color: var(--accent-amber); }
+.year-card[data-year="2018"] li::before { color: var(--accent-amber); }
+
+.year-card[data-year="2019"] { border-left-color: var(--accent-green); }
+.year-card[data-year="2019"] .year-num { color: var(--accent-green); }
+.year-card[data-year="2019"] li::before { color: var(--accent-green); }
+
+.year-card[data-year="2020"] { border-left-color: var(--accent-teal); }
+.year-card[data-year="2020"] .year-num { color: var(--accent-teal); }
+.year-card[data-year="2020"] li::before { color: var(--accent-teal); }
+
+.year-card[data-year="2021"] { border-left-color: var(--accent-blue); }
+.year-card[data-year="2021"] .year-num { color: var(--accent-blue); }
+.year-card[data-year="2021"] li::before { color: var(--accent-blue); }
+
+.year-card[data-year="2022"] { border-left-color: var(--accent-purple); }
+.year-card[data-year="2022"] .year-num { color: var(--accent-purple); }
+.year-card[data-year="2022"] li::before { color: var(--accent-purple); }
+
+.year-card[data-year="2023"] { border-left-color: var(--accent-amber); }
+.year-card[data-year="2023"] .year-num { color: var(--accent-amber); }
+.year-card[data-year="2023"] li::before { color: var(--accent-amber); }
+
+.year-card[data-year="2024"] { border-left-color: var(--accent-green); }
+.year-card[data-year="2024"] .year-num { color: var(--accent-green); }
+.year-card[data-year="2024"] li::before { color: var(--accent-green); }
+
+.year-card[data-year="2025"] { border-left-color: var(--accent-teal); }
+.year-card[data-year="2025"] .year-num { color: var(--accent-teal); }
+.year-card[data-year="2025"] li::before { color: var(--accent-teal); }
+
+/* ── Recovery Section ── */
+.recovery-section {
+  margin-bottom: 3.5rem;
+}
+.recovery-timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+.recovery-timeline::before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 4px;
+  bottom: 4px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--accent-teal), var(--accent-green));
+  border-radius: 2px;
+}
+.recovery-item {
+  position: relative;
+  padding: 0.6rem 0 1.2rem;
+}
+.recovery-item::before {
+  content: '';
+  position: absolute;
+  left: -2rem;
+  top: 0.85rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent-teal);
+  border: 2px solid var(--bg);
+  box-shadow: 0 0 0 2px var(--accent-teal);
+}
+.recovery-item .ri-date {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent-teal);
+}
+.recovery-item .ri-text {
+  font-size: 0.9rem;
+  color: var(--text-sec);
+  margin-top: 0.15rem;
+}
+
+/* ── Related ── */
+.related-section {
+  margin-bottom: 3rem;
+}
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+.related-link {
+  display: block;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.2rem 1.4rem;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+.related-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  border-color: var(--accent-teal);
+}
+.related-link .rl-icon {
+  font-size: 1.3rem;
+  margin-right: 0.4rem;
+}
+.related-link .rl-desc {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  margin-top: 0.25rem;
+  font-weight: 400;
+}
+
+/* ── Footer ── */
+.page-footer {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  line-height: 1.8;
+}
+.page-footer a {
+  color: var(--text-sec);
+  text-decoration: none;
+}
+.page-footer a:hover { text-decoration: underline; }
+
+/* ── Responsive ── */
+@media (max-width: 680px) {
+  .bar-chart { height: 240px; gap: 4px; }
+  .bar-count { font-size: 0.7rem; }
+  .bar-year { font-size: 0.65rem; }
+  .year-cards { grid-template-columns: 1fr; }
+  .stats-bar { grid-template-columns: repeat(3, 1fr); }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Navigation -->
+  <nav class="top-nav">
+    <a href="index.html">← ZephyrSpace 首页</a>
+    <a href="neutron-timeline.html">Neutron 时间线 →</a>
+    <a href="rklb-acquisitions.html">收购路线 →</a>
+    <a href="rklb-financials.html">财务增长 →</a>
+    <a href="rklb-global-facilities.html">全球设施 →</a>
+  </nav>
+
+  <!-- Header -->
+  <header class="page-header">
+    <span class="badge">ROCKET LAB · RKLB</span>
+    <h1>Electron 发射记录全览</h1>
+    <p class="subtitle">2017 — 2025 年间累计 73 次发射，成功 69 次，成功率 94.5%。从新西兰 Māhia 到弗吉尼亚 Wallops，Electron 已跻身全球发射频次第二的运载火箭。</p>
+  </header>
+
+  <!-- Stats Bar -->
+  <div class="stats-bar">
+    <div class="stat-item">
+      <div class="stat-value stat-teal">73</div>
+      <div class="stat-label">总发射次数</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value stat-green">69</div>
+      <div class="stat-label">成功次数</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value stat-red">4</div>
+      <div class="stat-label">失败次数</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value stat-amber">94.5%</div>
+      <div class="stat-label">成功率</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value stat-blue">3</div>
+      <div class="stat-label">发射场数</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value stat-purple">9</div>
+      <div class="stat-label">运营年数</div>
+    </div>
+  </div>
+
+  <!-- Bar Chart -->
+  <section class="chart-section">
+    <h2 class="section-title">逐年发射可视化 <span class="accent">2017 — 2025</span></h2>
+    <div class="bar-chart">
+      <!-- 2017: 1 launch, 0 success, 1 fail -->
+      <div class="bar-col" style="animation-delay:0s">
+        <span class="bar-count">1</span>
+        <div class="bar-stack" style="height:calc((1/16)*280px);animation-delay:0.1s">
+          <div class="bar-fail" style="flex:1"></div>
+        </div>
+        <span class="bar-year">2017</span>
+      </div>
+      <!-- 2018: 3 success -->
+      <div class="bar-col">
+        <span class="bar-count">3</span>
+        <div class="bar-stack" style="height:calc((3/16)*280px);animation-delay:0.2s">
+          <div class="bar-success" style="flex:3"></div>
+        </div>
+        <span class="bar-year">2018</span>
+      </div>
+      <!-- 2019: 6 success -->
+      <div class="bar-col">
+        <span class="bar-count">6</span>
+        <div class="bar-stack" style="height:calc((6/16)*280px);animation-delay:0.3s">
+          <div class="bar-success" style="flex:6"></div>
+        </div>
+        <span class="bar-year">2019</span>
+      </div>
+      <!-- 2020: 6 success, 1 fail -->
+      <div class="bar-col">
+        <span class="bar-count">7</span>
+        <div class="bar-stack" style="height:calc((7/16)*280px);animation-delay:0.4s">
+          <div class="bar-fail" style="flex:1"></div>
+          <div class="bar-success" style="flex:6"></div>
+        </div>
+        <span class="bar-year">2020</span>
+      </div>
+      <!-- 2021: 5 success, 1 fail -->
+      <div class="bar-col">
+        <span class="bar-count">6</span>
+        <div class="bar-stack" style="height:calc((6/16)*280px);animation-delay:0.5s">
+          <div class="bar-fail" style="flex:1"></div>
+          <div class="bar-success" style="flex:5"></div>
+        </div>
+        <span class="bar-year">2021</span>
+      </div>
+      <!-- 2022: 8 success, 1 fail -->
+      <div class="bar-col">
+        <span class="bar-count">9</span>
+        <div class="bar-stack" style="height:calc((9/16)*280px);animation-delay:0.6s">
+          <div class="bar-fail" style="flex:1"></div>
+          <div class="bar-success" style="flex:8"></div>
+        </div>
+        <span class="bar-year">2022</span>
+      </div>
+      <!-- 2023: 9 success, 1 fail -->
+      <div class="bar-col">
+        <span class="bar-count">10</span>
+        <div class="bar-stack" style="height:calc((10/16)*280px);animation-delay:0.7s">
+          <div class="bar-fail" style="flex:1"></div>
+          <div class="bar-success" style="flex:9"></div>
+        </div>
+        <span class="bar-year">2023</span>
+      </div>
+      <!-- 2024: 16 success -->
+      <div class="bar-col">
+        <span class="bar-count">16</span>
+        <div class="bar-stack" style="height:calc((16/16)*280px);animation-delay:0.8s">
+          <div class="bar-success" style="flex:16"></div>
+        </div>
+        <span class="bar-year">2024</span>
+      </div>
+      <!-- 2025: 15 success -->
+      <div class="bar-col">
+        <span class="bar-count">15</span>
+        <div class="bar-stack" style="height:calc((15/16)*280px);animation-delay:0.9s">
+          <div class="bar-success" style="flex:15"></div>
+        </div>
+        <span class="bar-year">2025</span>
+      </div>
+    </div>
+    <div class="chart-legend">
+      <span><span class="legend-dot success"></span>成功</span>
+      <span><span class="legend-dot fail"></span>失败</span>
+    </div>
+  </section>
+
+  <!-- Year-by-Year Detail Cards -->
+  <section>
+    <h2 class="section-title">逐年发射详情</h2>
+    <div class="year-cards">
+
+      <div class="year-card" data-year="2017">
+        <div class="year-num">2017</div>
+        <div class="year-meta">1 次发射 · 成功率 0%</div>
+        <ul>
+          <li>"It's a Test" — 首次试飞失败（遥测故障导致飞行终止）</li>
+          <li>Electron 全球首飞，从新西兰 Māhia 半岛 LC-1 发射</li>
+        </ul>
+      </div>
+
+      <div class="year-card" data-year="2018">
+        <div class="year-num">2018</div>
+        <div class="year-meta">3 次发射 · 成功率 100%</div>
+        <ul>
+          <li>"Still Testing" — 首次成功入轨，Electron 验证完成</li>
+          <li>"It's Business Time" — 首次商业发射任务</li>
+          <li>全年三战三捷，正式开启商业运营</li>
+        </ul>
+      </div>
+
+      <div class="year-card" data-year="2019">
+        <div class="year-num">2019</div>
+        <div class="year-meta">6 次发射 · 成功率 100%</div>
+        <ul>
+          <li>6 连胜，业务验证年</li>
+          <li>执行 DARPA R3D2 实验任务</li>
+          <li>发射节奏稳步提升，奠定高频发射基础</li>
+        </ul>
+      </div>
+
+      <div class="year-card" data-year="2020">
+        <div class="year-num">2020</div>
+        <div class="year-meta">7 次发射 · 成功率 85.7%</div>
+        <ul>
+          <li>首次为美国国家侦察局（NRO）执行任务</li>
+          <li>"Pics or It Didn't Happen" — 发射失败（二级异常）</li>
+          <li>首次尝试一级回收（降落伞减速海面溅落）</li>
+        </ul>
+      </div>
+
+      <div class="year-card" data-year="2021">
+        <div class="year-num">2021</div>
+        <div class="year-meta">6 次发射 · 成功率 83.3%</div>
+        <ul>
+          <li>"Running Out of Toes" — 发射失败</li>
+          <li>为 BlackSky 执行多次专属拼车发射</li>
+          <li>CAPSTONE 月球任务 — Photon 深空平台首次应用</li>
+        </ul>
+      </div>
+
+      <div class="year-card" data-year="2022">
+        <div class="year-num">2022</div>
+        <div class="year-meta">9 次发射 · 成功率 88.9%</div>
+        <ul>
+          <li>"There And Back Again" — 首次直升机空中回收尝试（成功捕获后因负载释放）</li>
+          <li>9 次发射创年度纪录</li>
+          <li>1 次失败，其余任务全部成功</li>
+        </ul>
+      </div>
+
+      <div class="year-card" data-year="2023">
+        <div class="year-num">2023</div>
+        <div class="year-meta">10 次发射 · 成功率 90%</div>
+        <ul>
+          <li>10 次发射再创年度纪录</li>
+          <li>1 次失败（二级电弧故障）</li>
+          <li>承接多个政府与商业客户任务</li>
+        </ul>
+      </div>
+
+      <div class="year-card" data-year="2024">
+        <div class="year-num">2024</div>
+        <div class="year-meta">16 次发射 · 成功率 100% 🎯</div>
+        <ul>
+          <li>16 次发射全部成功，年度纪录大幅刷新</li>
+          <li>发射节奏显著加快，产能与可靠性双重提升</li>
+          <li>全年零失败，创 Electron 最佳年度纪录</li>
+        </ul>
+      </div>
+
+      <div class="year-card" data-year="2025">
+        <div class="year-num">2025</div>
+        <div class="year-meta">15 次发射 · 成功率 100% 🎯</div>
+        <ul>
+          <li>继续保持 100% 成功率</li>
+          <li>Electron 成为全球发射频次第二的火箭（仅次于 Falcon 9）</li>
+          <li>高密度发射验证了 Rocket Lab 的工业化量产能力</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Recovery Milestones -->
+  <section class="recovery-section">
+    <h2 class="section-title">一级回收 <span class="accent">里程碑</span></h2>
+    <div class="recovery-timeline">
+      <div class="recovery-item">
+        <div class="ri-date">2019</div>
+        <div class="ri-text">首次一级降落伞减速溅落试验，验证回收可行性</div>
+      </div>
+      <div class="recovery-item">
+        <div class="ri-date">2020</div>
+        <div class="ri-text">首次海上回收（降落伞 + 海面溅落），成功打捞一级箭体</div>
+      </div>
+      <div class="recovery-item">
+        <div class="ri-date">2022.05</div>
+        <div class="ri-text">"There And Back Again" — 直升机空中捕获一级箭体（捕获成功后因负载异常主动释放）</div>
+      </div>
+      <div class="recovery-item">
+        <div class="ri-date">持续推进</div>
+        <div class="ri-text">持续改进回收技术，目标通过复用一级显著降低每次发射成本</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Research -->
+  <section class="related-section">
+    <h2 class="section-title">相关研究</h2>
+    <div class="related-grid">
+      <a href="neutron-timeline.html" class="related-link">
+        <span class="rl-icon">🚀</span>Neutron 中子号研发时间线
+        <span class="rl-desc">下一代中型运载火箭的关键节点与技术路径</span>
+      </a>
+      <a href="rklb-acquisitions.html" class="related-link">
+        <span class="rl-icon">🏢</span>垂直整合收购路线
+        <span class="rl-desc">Rocket Lab 的并购战略与产业链布局</span>
+      </a>
+      <a href="rklb-financials.html" class="related-link">
+        <span class="rl-icon">💰</span>财务增长与盈利路径
+        <span class="rl-desc">收入结构、毛利率趋势与投资逻辑分析</span>
+      </a>
+      <a href="rklb-global-facilities.html" class="related-link">
+        <span class="rl-icon">🗺️</span>全球设施与能力布局
+        <span class="rl-desc">四国十余处设施的战略分布与能力矩阵</span>
+      </a>
+      <a href="index.html" class="related-link">
+        <span class="rl-icon">📚</span>ZephyrSpace 首页
+        <span class="rl-desc">商业航天研究知识库总览</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="page-footer">
+    <p>数据来源：Rocket Lab IR · Wikipedia · SpaceflightNow</p>
+    <p>更新于 2026-04-18 · <a href="index.html">ZephyrSpace</a> 商业航天研究知识库</p>
+  </footer>
+
+</div>
+
+</body>
+</html>
