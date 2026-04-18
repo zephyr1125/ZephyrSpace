@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rocket Lab 垂直整合收购路线 · ZephyrSpace</title>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,500;0,6..72,700;1,6..72,400&family=Noto+Sans+SC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f5f0e6;
+  --bg-card: #fffdf8;
+  --bg-card-hover: #faf6ee;
+  --accent-teal: #0e7490;
+  --accent-blue: #2563a0;
+  --accent-amber: #c2770c;
+  --accent-red: #b91c1c;
+  --accent-green: #0f766e;
+  --accent-purple: #6d28d9;
+  --accent-indigo: #4f46a8;
+  --text: #1c1917;
+  --text-sec: #57534e;
+  --text-dim: #a8a29e;
+  --border: rgba(120, 113, 108, 0.15);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: var(--bg);
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  color: var(--text);
+  font-family: 'Noto Sans SC', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+.page { max-width: 1100px; margin: 0 auto; padding: 40px 24px 80px; }
+
+/* Nav */
+.nav { margin-bottom: 32px; }
+.nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--accent-teal);
+  text-decoration: none;
+  padding: 6px 14px;
+  border: 1px solid rgba(14, 116, 144, 0.25);
+  border-radius: 100px;
+  transition: all 0.2s;
+}
+.nav a:hover { background: rgba(14, 116, 144, 0.06); border-color: var(--accent-teal); }
+
+/* Header */
+.header { text-align: center; margin-bottom: 56px; position: relative; }
+.header::after {
+  content: ''; position: absolute; bottom: -28px; left: 50%; transform: translateX(-50%);
+  width: 120px; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent-teal), transparent);
+}
+.badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 6px 16px; border: 1px solid var(--accent-teal); border-radius: 100px;
+  font-family: 'JetBrains Mono', monospace; font-size: 11px;
+  color: var(--accent-teal); letter-spacing: 2px; text-transform: uppercase;
+  margin-bottom: 20px; background: rgba(14, 116, 144, 0.04);
+}
+.badge .dot {
+  width: 6px; height: 6px; background: var(--accent-teal); border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse { 0%,100% { opacity: 0.4; } 50% { opacity: 1; } }
+h1 {
+  font-family: 'Newsreader', serif;
+  font-size: clamp(26px, 5vw, 44px); font-weight: 700; line-height: 1.2;
+  color: var(--text); margin-bottom: 12px;
+}
+.subtitle { font-size: 15px; color: var(--text-sec); font-weight: 300; line-height: 1.6; }
+.subtitle strong { color: var(--accent-amber); font-weight: 500; }
+
+/* Pain/Gain */
+.contrast-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+  margin-bottom: 48px;
+}
+.contrast-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px;
+  padding: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+}
+.contrast-card h3 {
+  font-family: 'Newsreader', serif; font-size: 16px; font-weight: 500;
+  margin-bottom: 14px; display: flex; align-items: center; gap: 8px;
+}
+.contrast-card ul { list-style: none; }
+.contrast-card li {
+  font-size: 13px; line-height: 1.8; color: var(--text-sec);
+  padding-left: 18px; position: relative;
+}
+.contrast-card li::before {
+  content: ''; position: absolute; left: 0; top: 9px;
+  width: 6px; height: 6px; border-radius: 50%;
+}
+.pain li::before { background: var(--accent-red); opacity: 0.6; }
+.gain li::before { background: var(--accent-green); opacity: 0.7; }
+
+/* Timeline */
+.timeline { position: relative; margin-bottom: 48px; }
+.timeline::before {
+  content: ''; position: absolute; left: 20px; top: 0; bottom: 0; width: 2px;
+  background: linear-gradient(180deg, var(--accent-blue), var(--accent-teal), var(--accent-green), var(--accent-amber), var(--accent-purple));
+  opacity: 0.35;
+}
+.acq-card {
+  position: relative; margin-left: 52px; margin-bottom: 16px;
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 20px 22px; box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+  transition: all 0.25s;
+}
+.acq-card:hover {
+  border-color: var(--card-accent); transform: translateX(4px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+}
+.acq-card::before {
+  content: ''; position: absolute; left: -39px; top: 24px;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: var(--bg); border: 3px solid var(--card-accent);
+  box-shadow: 0 0 0 3px rgba(0,0,0,0.03);
+}
+.acq-card::after {
+  content: ''; position: absolute; left: -27px; top: 29px;
+  width: 26px; height: 2px; background: var(--card-accent); opacity: 0.25;
+}
+.acq-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 6px; flex-wrap: wrap; }
+.acq-date {
+  font-family: 'JetBrains Mono', monospace; font-size: 11px;
+  color: var(--card-accent); letter-spacing: 1px; flex-shrink: 0;
+}
+.acq-name { font-size: 16px; font-weight: 700; color: var(--text); }
+.acq-type {
+  font-size: 10px; font-family: 'JetBrains Mono', monospace;
+  padding: 2px 8px; border-radius: 4px; letter-spacing: 0.5px;
+  background: rgba(0,0,0,0.03); border: 1px solid var(--border); color: var(--text-dim);
+}
+.acq-body { font-size: 13px; color: var(--text-sec); line-height: 1.7; margin-bottom: 10px; }
+.acq-impact {
+  font-size: 12px; padding: 10px 14px; border-radius: 8px;
+  background: rgba(0,0,0,0.02); border-left: 3px solid var(--card-accent);
+  color: var(--text-sec); line-height: 1.6;
+}
+.acq-impact strong { color: var(--text); font-weight: 500; }
+
+/* Pillars */
+.pillars-section { margin-bottom: 48px; }
+.section-title {
+  font-family: 'Newsreader', serif; font-size: 22px; font-weight: 700;
+  margin-bottom: 20px; color: var(--text);
+}
+.pillars-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;
+}
+.pillar {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 20px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+  transition: all 0.25s; position: relative; overflow: hidden;
+}
+.pillar:hover { border-color: var(--p-color); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.06); }
+.pillar::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: var(--p-color);
+}
+.pillar .icon { font-size: 28px; margin-bottom: 8px; }
+.pillar .p-title {
+  font-family: 'Newsreader', serif; font-size: 15px; font-weight: 700;
+  margin-bottom: 6px; color: var(--text);
+}
+.pillar .p-detail { font-size: 12px; color: var(--text-sec); line-height: 1.6; }
+.pillar .p-companies {
+  margin-top: 10px; font-size: 11px; color: var(--text-dim);
+  font-family: 'JetBrains Mono', monospace; letter-spacing: 0.3px;
+}
+
+/* Strategy insight */
+.insight-box {
+  background: linear-gradient(135deg, rgba(14, 116, 144, 0.06), rgba(79, 70, 168, 0.04));
+  border: 1px solid rgba(14, 116, 144, 0.2); border-radius: 16px;
+  padding: 28px; margin-bottom: 48px; position: relative; overflow: hidden;
+}
+.insight-box::before {
+  content: ''; position: absolute; top: 0; right: 0;
+  width: 200px; height: 200px;
+  background: radial-gradient(circle, rgba(14, 116, 144, 0.05), transparent 70%);
+}
+.insight-box h3 {
+  font-family: 'Newsreader', serif; font-size: 18px; font-weight: 700;
+  margin-bottom: 14px; color: var(--accent-teal);
+}
+.insight-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.insight-item { font-size: 13px; line-height: 1.7; color: var(--text-sec); }
+.insight-item .label { font-weight: 500; color: var(--text); display: block; margin-bottom: 2px; }
+
+/* Stats */
+.stats-row {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px; margin-bottom: 48px;
+}
+.stat {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 16px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+}
+.stat .val {
+  font-family: 'Newsreader', serif; font-size: 26px; font-weight: 700;
+  color: var(--accent-teal); margin-bottom: 4px;
+}
+.stat .lbl { font-size: 11px; color: var(--text-dim); letter-spacing: 1px; }
+
+/* Related */
+.related {
+  margin-bottom: 48px; padding: 20px 24px;
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+}
+.related h3 {
+  font-family: 'Newsreader', serif; font-size: 15px; font-weight: 500;
+  color: var(--text-sec); margin-bottom: 12px;
+}
+.related a {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 14px; color: var(--accent-teal); text-decoration: none;
+  padding: 8px 16px; border: 1px solid rgba(14, 116, 144, 0.2); border-radius: 8px;
+  transition: all 0.2s; margin-right: 8px; margin-bottom: 8px;
+}
+.related a:hover { background: rgba(14, 116, 144, 0.05); border-color: var(--accent-teal); }
+
+/* Footer */
+footer {
+  text-align: center; padding-top: 24px; border-top: 1px solid var(--border);
+}
+footer p { font-size: 11px; color: var(--text-dim); font-family: 'JetBrains Mono', monospace; letter-spacing: 1px; }
+
+@media (max-width: 640px) {
+  .contrast-grid, .insight-grid { grid-template-columns: 1fr; }
+  .pillars-grid { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <nav class="nav">
+    <a href="index.html">← ZephyrSpace 首页</a>
+    <a href="neutron-timeline.html">Neutron 中子号时间线 →</a>
+  </nav>
+
+  <header class="header">
+    <div class="badge"><span class="dot"></span>ROCKET LAB · RKLB</div>
+    <h1>垂直整合收购路线</h1>
+    <p class="subtitle">8 笔收购 · 6 年布局 · 从纯发射公司到<strong>端到端太空基础设施提供商</strong></p>
+  </header>
+
+  <!-- Stats -->
+  <div class="stats-row">
+    <div class="stat"><div class="val">8</div><div class="lbl">收购交易</div></div>
+    <div class="stat"><div class="val">6 年</div><div class="lbl">2020–2026</div></div>
+    <div class="stat"><div class="val">5</div><div class="lbl">业务支柱</div></div>
+    <div class="stat"><div class="val">$18亿+</div><div class="lbl">2025 末 Backlog</div></div>
+    <div class="stat"><div class="val">Prime</div><div class="lbl">国防承包商资格</div></div>
+  </div>
+
+  <!-- Pain vs Gain -->
+  <div class="contrast-grid">
+    <div class="contrast-card pain">
+      <h3><span style="color:var(--accent-red)">●</span> 收购前的痛点</h3>
+      <ul>
+        <li>供应链高度依赖外部，关键部件受制于人</li>
+        <li>毛利率被供应商压缩，规模不经济</li>
+        <li>系统集成能力弱，难以承接国防大单</li>
+        <li>缺乏有效载荷与通信能力，只能做"送货"</li>
+        <li>产能受限，无法应对星座级批量需求</li>
+      </ul>
+    </div>
+    <div class="contrast-card gain">
+      <h3><span style="color:var(--accent-green)">●</span> 收购后的成果</h3>
+      <ul>
+        <li>关键部件自产可控，供应链韧性大幅提升</li>
+        <li>毛利率持续改善，接近 Space Systems 行业水平</li>
+        <li>具备完整卫星解决方案，获得国防 Prime 资格</li>
+        <li>覆盖从载荷到光通信的端到端能力</li>
+        <li>Long Beach 工厂 + 全球布局，支撑规模化交付</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Acquisition Timeline -->
+  <div class="section-title">收购时间线</div>
+  <div class="timeline">
+
+    <div class="acq-card" style="--card-accent: #2563a0">
+      <div class="acq-head">
+        <span class="acq-date">2020.04</span>
+        <span class="acq-name">Sinclair Interplanetary</span>
+        <span class="acq-type">公司收购</span>
+      </div>
+      <div class="acq-body">加拿大航天器部件公司，专注反应轮、星跟踪器、太阳传感器等姿态控制硬件。</div>
+      <div class="acq-impact"><strong>补齐能力：</strong>卫星姿态确定与控制系统（ADCS）自主供应，为 Photon 平台奠定核心硬件基础。这是 Rocket Lab 垂直整合的第一步。</div>
+    </div>
+
+    <div class="acq-card" style="--card-accent: #4f46a8">
+      <div class="acq-head">
+        <span class="acq-date">2021.10</span>
+        <span class="acq-name">Advanced Solutions Inc. (ASI)</span>
+        <span class="acq-type">公司收购</span>
+      </div>
+      <div class="acq-body">科罗拉多州飞行软件与任务仿真公司，服务于 NASA 和国防客户。</div>
+      <div class="acq-impact"><strong>补齐能力：</strong>飞行软件、GNC 算法、数字孪生仿真。让 Rocket Lab 拥有从硬件到软件的完整航天器控制栈。</div>
+    </div>
+
+    <div class="acq-card" style="--card-accent: #4f46a8">
+      <div class="acq-head">
+        <span class="acq-date">2021.12</span>
+        <span class="acq-name">Planetary Systems Corp. (PSC)</span>
+        <span class="acq-type">公司收购</span>
+      </div>
+      <div class="acq-body">马里兰州卫星分离系统领导者，产品广泛用于商业和政府发射任务。</div>
+      <div class="acq-impact"><strong>补齐能力：</strong>卫星分离与分配系统。掌握"最后一公里"释放技术，同时为其他发射服务商供货获取收入。</div>
+    </div>
+
+    <div class="acq-card" style="--card-accent: #0e7490">
+      <div class="acq-head">
+        <span class="acq-date">2022.01</span>
+        <span class="acq-name">SolAero Holdings</span>
+        <span class="acq-type">公司收购</span>
+      </div>
+      <div class="acq-body">全球领先的高效太阳能电池与航天器结构制造商，客户涵盖 NASA、DoD 等。</div>
+      <div class="acq-impact"><strong>补齐能力：</strong>太阳能阵列与精密结构件。这是规模最大的一笔收购，让 Rocket Lab 获得航天器电源系统自主能力和国防级供应链资质。</div>
+    </div>
+
+    <div class="acq-card" style="--card-accent: #0f766e">
+      <div class="acq-head">
+        <span class="acq-date">2023–2024</span>
+        <span class="acq-name">Virgin Orbit 工厂资产</span>
+        <span class="acq-type">资产收购</span>
+      </div>
+      <div class="acq-body">收购 Virgin Orbit 破产资产中的 Long Beach 工厂（14 万平方英尺），含洁净室和制造设备。</div>
+      <div class="acq-impact"><strong>补齐能力：</strong>规模化制造产能。低价获得现成的航天级工厂，为 Neutron 量产和卫星批量交付提供物理空间。</div>
+    </div>
+
+    <div class="acq-card" style="--card-accent: #c2770c">
+      <div class="acq-head">
+        <span class="acq-date">2025.08</span>
+        <span class="acq-name">Geost, LLC</span>
+        <span class="acq-type">公司收购</span>
+      </div>
+      <div class="acq-body">亚利桑那州 EO/IR 传感器载荷公司，为国防和情报客户提供光电/红外成像系统。</div>
+      <div class="acq-impact"><strong>补齐能力：</strong>有效载荷（EO/IR 传感器）。从"只造卫星平台"升级为"造平台 + 载荷"，可承接更完整的国防侦察任务。</div>
+    </div>
+
+    <div class="acq-card" style="--card-accent: #6d28d9">
+      <div class="acq-head">
+        <span class="acq-date">2026.02</span>
+        <span class="acq-name">Optical Support Inc. (OSI)</span>
+        <span class="acq-type">公司收购</span>
+      </div>
+      <div class="acq-body">高精度光学与光机电一体化组件制造商，服务于航天与国防市场。</div>
+      <div class="acq-impact"><strong>补齐能力：</strong>精密光学组件制造。与 Geost 形成"传感器 + 光学"组合，增强端到端载荷交付能力。</div>
+    </div>
+
+    <div class="acq-card" style="--card-accent: #6d28d9">
+      <div class="acq-head">
+        <span class="acq-date">2026.04</span>
+        <span class="acq-name">Mynaric AG</span>
+        <span class="acq-type">公司收购</span>
+      </div>
+      <div class="acq-body">德国激光光通信终端公司，核心产品 CONDOR Mk3 已获得多个星座合同，总部位于慕尼黑。</div>
+      <div class="acq-impact"><strong>补齐能力：</strong>激光光学通信终端。切入星间/星地激光通信赛道，同时获得欧洲研发基地和客户关系，全球化布局关键一步。</div>
+    </div>
+
+  </div>
+
+  <!-- Five Pillars -->
+  <div class="pillars-section">
+    <div class="section-title">端到端太空产业体系 · 五大支柱</div>
+    <div class="pillars-grid">
+      <div class="pillar" style="--p-color: var(--accent-red)">
+        <div class="icon">🚀</div>
+        <div class="p-title">发射</div>
+        <div class="p-detail">小型高频 + 中型可复用<br>覆盖全谱段运力需求</div>
+        <div class="p-companies">Electron · Neutron</div>
+      </div>
+      <div class="pillar" style="--p-color: var(--accent-blue)">
+        <div class="icon">🛰️</div>
+        <div class="p-title">卫星平台</div>
+        <div class="p-detail">完整航天器系统集成<br>姿态 · 软件 · 电源 · 分离</div>
+        <div class="p-companies">Photon · Sinclair · ASI · SolAero · PSC</div>
+      </div>
+      <div class="pillar" style="--p-color: var(--accent-amber)">
+        <div class="icon">🔭</div>
+        <div class="p-title">载荷与光学</div>
+        <div class="p-detail">EO/IR 传感器 + 精密光学<br>国防侦察端到端交付</div>
+        <div class="p-companies">Geost · OSI</div>
+      </div>
+      <div class="pillar" style="--p-color: var(--accent-purple)">
+        <div class="icon">📡</div>
+        <div class="p-title">通信</div>
+        <div class="p-detail">激光光学通信终端<br>星间/星地高速数据链路</div>
+        <div class="p-companies">Mynaric · CONDOR Mk3</div>
+      </div>
+      <div class="pillar" style="--p-color: var(--accent-green)">
+        <div class="icon">🏭</div>
+        <div class="p-title">制造与规模</div>
+        <div class="p-detail">14 万平方英尺工厂<br>支撑星座级批量交付</div>
+        <div class="p-companies">Long Beach · 全球产能</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Strategy Insight -->
+  <div class="insight-box">
+    <h3>🧭 收购战略的底层逻辑</h3>
+    <div class="insight-grid">
+      <div class="insight-item">
+        <span class="label">📈 毛利率驱动</span>
+        自产关键部件取代外采，直接提升 Space Systems 毛利率。每笔收购都在压缩对外部供应商的依赖。
+      </div>
+      <div class="insight-item">
+        <span class="label">🎯 Prime 资格积累</span>
+        完整方案能力是获得国防 Prime 承包商资格的前提。从分包商到 Prime 的跃迁，意味着合同规模和利润率的量级提升。
+      </div>
+      <div class="insight-item">
+        <span class="label">🔗 飞轮效应</span>
+        更多自有部件 → 更完整方案 → 更大合同 → 更多收入 → 更多收购资金。每笔收购都在加速飞轮转动。
+      </div>
+      <div class="insight-item">
+        <span class="label">🌍 全球化布局</span>
+        从新西兰发射 → 美国制造 → 欧洲通信终端。Mynaric 收购标志着 Rocket Lab 开始构建跨大西洋供应链与客户网络。
+      </div>
+    </div>
+  </div>
+
+  <!-- Related -->
+  <div class="related">
+    <h3>相关研究</h3>
+    <a href="neutron-timeline.html">🚀 Neutron 中子号研发时间线</a>
+    <a href="index.html">📚 ZephyrSpace 首页</a>
+  </div>
+
+  <footer>
+    <p>数据综合自 Rocket Lab IR · SEC Filings · NASASpaceFlight · SpaceNews</p>
+    <p style="margin-top: 4px;">更新于 2026-04-18 · ZephyrSpace 商业航天研究知识库</p>
+  </footer>
+
+</div>
+</body>
+</html>
