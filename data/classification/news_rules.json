@@ -29,6 +29,56 @@
       "name": "银河航天",
       "note_path": "01-公司/银河航天.md",
       "keywords": ["galaxyspace", "银河航天"]
+    },
+    {
+      "name": "Firefly Aerospace",
+      "note_path": "01-公司/Firefly Aerospace.md",
+      "keywords": ["firefly", "firefly aerospace", "blue ghost", "alpha rocket"]
+    },
+    {
+      "name": "Boeing",
+      "note_path": "01-公司/Boeing.md",
+      "keywords": ["boeing", "starliner", "sls", "space launch system"]
+    },
+    {
+      "name": "Lockheed Martin",
+      "note_path": "01-公司/Lockheed Martin.md",
+      "keywords": ["lockheed martin", "lockheed", "orion spacecraft", "gps iii"]
+    },
+    {
+      "name": "Northrop Grumman",
+      "note_path": "01-公司/Northrop Grumman.md",
+      "keywords": ["northrop grumman", "northrop", "cygnus", "mev"]
+    },
+    {
+      "name": "RTX Corp",
+      "note_path": "01-公司/RTX Corp.md",
+      "keywords": ["rtx", "raytheon", "pratt whitney", "rl10"]
+    },
+    {
+      "name": "Planet Labs",
+      "note_path": "01-公司/Planet Labs.md",
+      "keywords": ["planet labs", "planetscope", "skysat", "pelican satellite"]
+    },
+    {
+      "name": "Iridium Communications",
+      "note_path": "01-公司/Iridium Communications.md",
+      "keywords": ["iridium", "iridium certus", "iridium next"]
+    },
+    {
+      "name": "Kratos Defense & Security",
+      "note_path": "01-公司/Kratos Defense & Security.md",
+      "keywords": ["kratos", "kratos defense", "openspace"]
+    },
+    {
+      "name": "MDA Space",
+      "note_path": "01-公司/MDA Space.md",
+      "keywords": ["mda space", "mda ltd", "canadarm", "radarsat"]
+    },
+    {
+      "name": "Globalstar",
+      "note_path": "01-公司/Globalstar.md",
+      "keywords": ["globalstar", "gsat", "spot satellite"]
     }
   ],
   "macro_keywords": [
