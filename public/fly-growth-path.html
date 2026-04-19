@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Firefly 成长路径与财务全景 — ZephyrSpace</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Newsreader:ital,wght@0,400;0,600;0,700;1,400&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f5f0e6;
+  --bg-card: #fffdf8;
+  --bg-card-hover: #faf6ee;
+  --accent-teal: #0e7490;
+  --accent-blue: #2563a0;
+  --accent-amber: #c2770c;
+  --accent-red: #b91c1c;
+  --accent-green: #0f766e;
+  --accent-purple: #6d28d9;
+  --text: #1c1917;
+  --text-sec: #57534e;
+  --text-dim: #a8a29e;
+  --border: rgba(120, 113, 108, 0.15);
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Noto Sans SC', sans-serif;
+  color: var(--text);
+  background-color: var(--bg);
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem 3rem; }
+
+/* ── Navigation ── */
+.nav-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+  animation: fadeSlideDown 0.6s ease both;
+}
+.nav-pills a {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 0.82rem;
+  color: var(--text-sec);
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+.nav-pills a:hover {
+  background: var(--bg-card-hover);
+  color: var(--accent-teal);
+  border-color: var(--accent-teal);
+  transform: translateY(-1px);
+}
+
+/* ── Header ── */
+.header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  animation: fadeSlideDown 0.7s ease 0.1s both;
+}
+.badge {
+  display: inline-block;
+  padding: 0.3rem 1.1rem;
+  background: var(--accent-teal);
+  color: #fff;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+.header h1 {
+  font-family: 'Newsreader', serif;
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.25;
+  margin-bottom: 0.6rem;
+}
+.header .subtitle {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.88rem;
+  color: var(--accent-amber);
+  letter-spacing: 0.02em;
+}
+
+/* ── Card ── */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.8rem 2rem;
+  margin-bottom: 1.8rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.card:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.07);
+  transform: translateY(-2px);
+}
+.card-title {
+  font-family: 'Newsreader', serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.card-title .icon { font-size: 1.1rem; }
+
+/* ── Key Metrics Grid ── */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.8rem;
+}
+.metric-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.2rem 1rem;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+  transition: all 0.3s ease;
+}
+.metric-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.07);
+}
+.metric-label {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+}
+.metric-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.55rem;
+  font-weight: 600;
+  color: var(--accent-teal);
+  line-height: 1.2;
+}
+.metric-value.amber { color: var(--accent-amber); }
+.metric-value.green { color: var(--accent-green); }
+.metric-value.blue { color: var(--accent-blue); }
+.metric-value.purple { color: var(--accent-purple); }
+.metric-note {
+  font-size: 0.68rem;
+  color: var(--text-dim);
+  margin-top: 0.3rem;
+}
+
+/* ── Product Family Visual ── */
+.product-visual {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 3rem;
+  padding: 2rem 0 1.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+.product-visual::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  right: 5%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
+}
+.rocket-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.rocket-body {
+  border-radius: 8px 8px 4px 4px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+.rocket-body.alpha {
+  width: 36px;
+  height: 148px;
+  background: linear-gradient(180deg, #e0e7ee 0%, var(--accent-teal) 30%, var(--accent-teal) 100%);
+}
+.rocket-body.eclipse {
+  width: 64px;
+  height: 270px;
+  background: linear-gradient(180deg, #e0e7ee 0%, var(--accent-blue) 25%, var(--accent-blue) 100%);
+}
+.rocket-body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+.rocket-body.alpha::before {
+  border-width: 0 18px 20px 18px;
+  border-color: transparent transparent #e0e7ee transparent;
+  top: -20px;
+}
+.rocket-body.eclipse::before {
+  border-width: 0 32px 28px 32px;
+  border-color: transparent transparent #e0e7ee transparent;
+  top: -28px;
+}
+.rocket-label-name {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  color: var(--text);
+}
+.rocket-label-sub {
+  font-size: 0.78rem;
+  color: var(--text-sec);
+  margin-top: 0.2rem;
+}
+.rocket-label-payload {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+.rocket-label-payload.teal { color: var(--accent-teal); }
+.rocket-label-payload.blue { color: var(--accent-blue); }
+.scale-arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  color: var(--accent-amber);
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  font-size: 1.3rem;
+  gap: 0.3rem;
+}
+.scale-arrow .arrow-line {
+  font-size: 1.8rem;
+  letter-spacing: -4px;
+}
+.scale-arrow .multiplier {
+  font-size: 1.5rem;
+  color: var(--accent-amber);
+}
+.lander-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.lander-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(109,40,217,0.1), rgba(109,40,217,0.2));
+  border: 2px solid rgba(109,40,217,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  margin-bottom: 0.8rem;
+}
+
+/* ── Spec Comparison Table ── */
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+.spec-table th {
+  text-align: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  color: var(--text-dim);
+  padding: 0.6rem 0.8rem;
+  border-bottom: 2px solid var(--border);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.spec-table th:first-child { text-align: left; }
+.spec-table td {
+  padding: 0.55rem 0.8rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-sec);
+  text-align: center;
+}
+.spec-table td:first-child {
+  text-align: left;
+  font-weight: 500;
+  color: var(--text);
+}
+.spec-table tr:last-child td { border-bottom: none; }
+.spec-table .val-teal { color: var(--accent-teal); font-weight: 600; font-family: 'JetBrains Mono', monospace; }
+.spec-table .val-blue { color: var(--accent-blue); font-weight: 600; font-family: 'JetBrains Mono', monospace; }
+.spec-table .val-purple { color: var(--accent-purple); font-weight: 600; font-family: 'JetBrains Mono', monospace; }
+
+/* ── Revenue Bar Chart ── */
+.revenue-chart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 0;
+  height: 320px;
+  padding: 0 1rem;
+  margin-top: 1.5rem;
+  position: relative;
+}
+.revenue-chart::before {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 1px;
+  background: var(--border);
+}
+.bar-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  max-width: 140px;
+  position: relative;
+}
+.bar-total {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.35rem;
+}
+.bar-stack {
+  width: 56px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px 6px 0 0;
+  overflow: hidden;
+  position: relative;
+}
+.bar-stack.estimate {
+  border: 2px dashed var(--accent-amber);
+  background: rgba(194,119,12,0.05);
+  border-bottom: none;
+  border-radius: 6px 6px 0 0;
+}
+.bar-segment {
+  width: 100%;
+  transition: opacity 0.2s;
+}
+.bar-segment.revenue { background: var(--accent-teal); }
+.bar-stack:hover .bar-segment { opacity: 0.85; }
+.bar-year {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  color: var(--text-sec);
+  margin-top: 0.6rem;
+  font-weight: 500;
+}
+.bar-yoy {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  color: var(--accent-green);
+  margin-top: 0.2rem;
+  font-weight: 600;
+}
+
+.bar-group { animation: barGrow 0.8s ease both; }
+.bar-group:nth-child(1) { animation-delay: 0.15s; }
+.bar-group:nth-child(2) { animation-delay: 0.25s; }
+.bar-group:nth-child(3) { animation-delay: 0.35s; }
+.bar-group:nth-child(4) { animation-delay: 0.45s; }
+
+/* ── Partnership Grid ── */
+.partner-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+.partner-item {
+  background: rgba(14,116,144,0.04);
+  border-radius: 10px;
+  padding: 1.2rem;
+}
+.partner-item h4 {
+  font-family: 'Newsreader', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.partner-item p {
+  font-size: 0.85rem;
+  color: var(--text-sec);
+  line-height: 1.6;
+}
+.partner-tag {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  margin-top: 0.4rem;
+}
+.partner-tag.green { background: rgba(15,118,110,0.1); color: var(--accent-green); }
+.partner-tag.blue { background: rgba(37,99,160,0.1); color: var(--accent-blue); }
+.partner-tag.amber { background: rgba(194,119,12,0.1); color: var(--accent-amber); }
+.partner-tag.purple { background: rgba(109,40,217,0.1); color: var(--accent-purple); }
+
+/* ── Comparison Table ── */
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.84rem;
+}
+.compare-table th {
+  text-align: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  padding: 0.6rem 0.8rem;
+  border-bottom: 2px solid var(--border);
+  font-size: 0.78rem;
+}
+.compare-table th:first-child { text-align: left; color: var(--text-dim); }
+.compare-table th.fly { color: var(--accent-teal); }
+.compare-table th.rklb { color: var(--accent-amber); }
+.compare-table td {
+  padding: 0.55rem 0.8rem;
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+  color: var(--text-sec);
+}
+.compare-table td:first-child {
+  text-align: left;
+  font-weight: 500;
+  color: var(--text);
+}
+.compare-table tr:last-child td { border-bottom: none; }
+.compare-table .check { color: var(--accent-green); font-weight: 600; }
+.compare-table .miss { color: var(--text-dim); }
+
+/* ── Thesis Card ── */
+.thesis-card {
+  background: linear-gradient(135deg, rgba(14,116,144,0.06) 0%, rgba(15,118,110,0.04) 100%);
+  border: 1.5px solid rgba(14,116,144,0.2);
+}
+.thesis-card .card-title { color: var(--accent-teal); }
+.thesis-section { margin-bottom: 1.2rem; }
+.thesis-section:last-child { margin-bottom: 0; }
+.thesis-section h4 {
+  font-family: 'Newsreader', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.thesis-section h4.growth { color: var(--accent-green); }
+.thesis-section h4.risk { color: var(--accent-red); }
+.thesis-section h4.diff { color: var(--accent-blue); }
+.thesis-section h4.watch { color: var(--accent-amber); }
+.thesis-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.thesis-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.88rem;
+  color: var(--text-sec);
+  line-height: 1.6;
+}
+.thesis-list li::before {
+  content: '▸';
+  color: var(--accent-teal);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 0.15em;
+}
+.thesis-list.risk li::before { color: var(--accent-red); }
+.thesis-list.diff li::before { color: var(--accent-blue); }
+.thesis-list.watch li::before { color: var(--accent-amber); }
+
+.insight-box {
+  background: rgba(194,119,12,0.06);
+  border-left: 3px solid var(--accent-amber);
+  border-radius: 0 8px 8px 0;
+  padding: 1rem 1.2rem;
+  font-size: 0.85rem;
+  color: var(--text-sec);
+  line-height: 1.7;
+  margin-top: 0.8rem;
+}
+
+/* ── Footer ── */
+.footer {
+  text-align: center;
+  padding-top: 2rem;
+  margin-top: 1rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  line-height: 1.8;
+}
+
+/* ── Animations ── */
+@keyframes fadeSlideDown {
+  from { opacity: 0; transform: translateY(-12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes barGrow {
+  from { opacity: 0; transform: scaleY(0); transform-origin: bottom; }
+  to { opacity: 1; transform: scaleY(1); transform-origin: bottom; }
+}
+@keyframes cardFadeIn {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes rocketRise {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.card { animation: cardFadeIn 0.6s ease both; }
+.card:nth-of-type(1) { animation-delay: 0.1s; }
+.card:nth-of-type(2) { animation-delay: 0.2s; }
+.card:nth-of-type(3) { animation-delay: 0.3s; }
+.card:nth-of-type(4) { animation-delay: 0.4s; }
+.card:nth-of-type(5) { animation-delay: 0.5s; }
+.card:nth-of-type(6) { animation-delay: 0.6s; }
+
+.metrics-grid .metric-card { animation: cardFadeIn 0.5s ease both; }
+.metrics-grid .metric-card:nth-child(1) { animation-delay: 0.1s; }
+.metrics-grid .metric-card:nth-child(2) { animation-delay: 0.18s; }
+.metrics-grid .metric-card:nth-child(3) { animation-delay: 0.26s; }
+.metrics-grid .metric-card:nth-child(4) { animation-delay: 0.34s; }
+.metrics-grid .metric-card:nth-child(5) { animation-delay: 0.42s; }
+
+.rocket-col { animation: rocketRise 0.9s ease both; }
+.rocket-col:nth-child(1) { animation-delay: 0.2s; }
+.rocket-col:nth-child(2) { animation-delay: 0.4s; }
+.lander-col { animation: rocketRise 0.9s ease 0.6s both; }
+.scale-arrow { animation: fadeSlideDown 0.6s ease 0.5s both; }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .header h1 { font-size: 1.8rem; }
+  .metrics-grid { grid-template-columns: repeat(2, 1fr); }
+  .metrics-grid .metric-card:last-child { grid-column: span 2; }
+  .revenue-chart { height: 240px; }
+  .bar-stack { width: 40px; }
+  .bar-total { font-size: 0.75rem; }
+  .partner-grid { grid-template-columns: 1fr; }
+  .product-visual { gap: 1.5rem; flex-wrap: wrap; }
+  .rocket-body.alpha { height: 100px; width: 28px; }
+  .rocket-body.eclipse { height: 180px; width: 48px; }
+  .compare-table, .spec-table { font-size: 0.76rem; }
+}
+@media (max-width: 480px) {
+  .container { padding: 1rem; }
+  .metrics-grid { grid-template-columns: 1fr; }
+  .metrics-grid .metric-card:last-child { grid-column: span 1; }
+  .nav-pills { gap: 0.35rem; }
+  .product-visual { gap: 1rem; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Navigation -->
+  <nav class="nav-pills">
+    <a href="index.html">← 返回首页</a>
+  </nav>
+
+  <!-- Header -->
+  <header class="header">
+    <span class="badge">FLY · FIREFLY AEROSPACE</span>
+    <h1>Firefly 成长路径与财务全景</h1>
+    <p class="subtitle">从小型火箭新秀到多产品线航天公司</p>
+  </header>
+
+  <!-- Key Metrics -->
+  <section class="metrics-grid">
+    <div class="metric-card">
+      <div class="metric-label">2025 收入</div>
+      <div class="metric-value">$159.9M</div>
+      <div class="metric-note">IPO 年</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">YoY 增长</div>
+      <div class="metric-value green">+163%</div>
+      <div class="metric-note">爆发式增长</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">2026E 指引</div>
+      <div class="metric-value amber">$420-450M</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">IPO 后现金</div>
+      <div class="metric-value blue">$793M</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">当前市值</div>
+      <div class="metric-value purple">~$65亿</div>
+      <div class="metric-note">2026.04</div>
+    </div>
+  </section>
+
+  <!-- Product Family: Visual Centerpiece -->
+  <section class="card" style="animation-delay:0.15s">
+    <div class="card-title"><span class="icon">🚀</span> 产品家族：从 Alpha 到 Eclipse 的能力跃升</div>
+
+    <!-- Rocket Visual Comparison -->
+    <div class="product-visual">
+      <div class="rocket-col">
+        <div style="position:relative;">
+          <div class="rocket-body alpha"></div>
+        </div>
+        <div class="rocket-label-name">Alpha</div>
+        <div class="rocket-label-sub">小型运载火箭</div>
+        <div class="rocket-label-payload teal">1,170 kg</div>
+        <div class="rocket-label-sub">29.5m · Ø 1.8m</div>
+      </div>
+
+      <div class="scale-arrow">
+        <div class="multiplier">14×</div>
+        <div class="arrow-line">→→→</div>
+        <div style="font-size:0.72rem;color:var(--accent-amber);">运力跃升</div>
+      </div>
+
+      <div class="rocket-col">
+        <div style="position:relative;">
+          <div class="rocket-body eclipse"></div>
+        </div>
+        <div class="rocket-label-name">Eclipse</div>
+        <div class="rocket-label-sub">中型运载火箭</div>
+        <div class="rocket-label-payload blue">16,300 kg</div>
+        <div class="rocket-label-sub">~54m · Ø 5.4m</div>
+      </div>
+
+      <div style="width:1px;height:200px;background:var(--border);align-self:center;margin:0 0.5rem;"></div>
+
+      <div class="lander-col">
+        <div class="lander-icon">🌙</div>
+        <div class="rocket-label-name">Blue Ghost</div>
+        <div class="rocket-label-sub">月球着陆器</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:0.78rem;color:var(--accent-purple);font-weight:600;margin-top:0.4rem;">NASA CLPS</div>
+        <div class="rocket-label-sub">Mission 1 ✅ 已着陆</div>
+      </div>
+    </div>
+
+    <!-- Spec Comparison Table -->
+    <table class="spec-table">
+      <thead>
+        <tr>
+          <th>参数</th>
+          <th>Alpha</th>
+          <th>Eclipse</th>
+          <th>Blue Ghost</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>类型</td>
+          <td class="val-teal">小型运载火箭</td>
+          <td class="val-blue">中型运载火箭</td>
+          <td class="val-purple">月球着陆器</td>
+        </tr>
+        <tr>
+          <td>LEO 运力</td>
+          <td class="val-teal">~1,170 kg</td>
+          <td class="val-blue">16,300 kg</td>
+          <td style="color:var(--text-dim)">—</td>
+        </tr>
+        <tr>
+          <td>GTO 运力</td>
+          <td style="color:var(--text-dim)">—</td>
+          <td class="val-blue">3,200 kg</td>
+          <td style="color:var(--text-dim)">—</td>
+        </tr>
+        <tr>
+          <td>尺寸</td>
+          <td>29.5m × Ø1.8m</td>
+          <td>~54m × Ø5.4m</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td>一级发动机</td>
+          <td>4× Reaver</td>
+          <td>7× Miranda</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td>二级发动机</td>
+          <td>1× Lightning</td>
+          <td>1× Vira (真空)</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td>燃料</td>
+          <td>RP-1 / LOX</td>
+          <td>RP-1 / LOX</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td>可复用</td>
+          <td style="color:var(--text-dim)">否</td>
+          <td class="val-blue">设计支持 (迭代实现)</td>
+          <td style="color:var(--text-dim)">—</td>
+        </tr>
+        <tr>
+          <td>状态</td>
+          <td class="val-teal">已运营 · 6次发射</td>
+          <td class="val-blue">研发中 · 2026首飞</td>
+          <td class="val-purple">M1✅ · M2 2026底</td>
+        </tr>
+        <tr>
+          <td>合作方</td>
+          <td>—</td>
+          <td>Northrop Grumman</td>
+          <td>NASA CLPS</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Revenue Growth Chart -->
+  <section class="card" style="animation-delay:0.25s">
+    <div class="card-title"><span class="icon">📊</span> 收入增长趋势</div>
+    <div class="revenue-chart">
+      <!-- 2023: $55.2M — baseline, height scale: 450M max → 55.2/450 = 12.3% of 280px ≈ 34px -->
+      <div class="bar-group">
+        <div class="bar-total">$55.2M</div>
+        <div class="bar-stack">
+          <div class="bar-segment revenue" style="height:34px;"></div>
+        </div>
+        <div class="bar-year">2023</div>
+        <div class="bar-yoy" style="color:var(--text-dim);">IPO前</div>
+      </div>
+      <!-- 2024: $60.8M → 60.8/450 = 13.5% ≈ 38px -->
+      <div class="bar-group">
+        <div class="bar-total">$60.8M</div>
+        <div class="bar-stack">
+          <div class="bar-segment revenue" style="height:38px;"></div>
+        </div>
+        <div class="bar-year">2024</div>
+        <div class="bar-yoy">+10%</div>
+      </div>
+      <!-- 2025: $159.9M → 159.9/450 = 35.5% ≈ 100px -->
+      <div class="bar-group">
+        <div class="bar-total">$159.9M</div>
+        <div class="bar-stack">
+          <div class="bar-segment revenue" style="height:100px;"></div>
+        </div>
+        <div class="bar-year">2025</div>
+        <div class="bar-yoy">+163%</div>
+      </div>
+      <!-- 2026E: $435M → 435/450 = 96.7% ≈ 270px -->
+      <div class="bar-group">
+        <div class="bar-total" style="color:var(--accent-amber);">$420-450M</div>
+        <div class="bar-stack estimate">
+          <div class="bar-segment revenue" style="height:270px;opacity:0.5;"></div>
+        </div>
+        <div class="bar-year">2026E</div>
+        <div class="bar-yoy">管理层指引</div>
+      </div>
+    </div>
+
+    <div class="insight-box" style="margin-top:2rem;">
+      💡 2025年收入同比暴增 163%，主要受 Blue Ghost Mission 1 交付和 Alpha 发射服务驱动。2026E 指引 $420-450M 意味着再增长 ~180%，Eclipse 研发进展与新合同签署是关键变量。
+    </div>
+  </section>
+
+  <!-- Financial Snapshot -->
+  <section class="card" style="animation-delay:0.3s">
+    <div class="card-title"><span class="icon">💰</span> 财务快照</div>
+    <table class="spec-table">
+      <thead>
+        <tr>
+          <th>年份</th>
+          <th>收入</th>
+          <th>净亏损</th>
+          <th>备注</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="font-weight:600;font-family:'JetBrains Mono',monospace;">2023</td>
+          <td class="val-teal">$55.2M</td>
+          <td style="color:var(--text-dim)">—</td>
+          <td>IPO 前</td>
+        </tr>
+        <tr>
+          <td style="font-weight:600;font-family:'JetBrains Mono',monospace;">2024</td>
+          <td class="val-teal">$60.8M</td>
+          <td style="color:var(--accent-red);font-family:'JetBrains Mono',monospace;font-weight:600;">-$266M</td>
+          <td>+10% YoY</td>
+        </tr>
+        <tr>
+          <td style="font-weight:600;font-family:'JetBrains Mono',monospace;">2025</td>
+          <td class="val-teal">$159.9M</td>
+          <td style="color:var(--accent-red);font-family:'JetBrains Mono',monospace;font-weight:600;">-$334M</td>
+          <td>+163% YoY · IPO年</td>
+        </tr>
+        <tr>
+          <td style="font-weight:600;font-family:'JetBrains Mono',monospace;">2026E</td>
+          <td class="val-blue">$420-450M</td>
+          <td style="color:var(--text-dim)">—</td>
+          <td>管理层指引</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="display:flex;flex-wrap:wrap;gap:0.8rem;margin-top:1.2rem;">
+      <div style="flex:1;min-width:180px;background:rgba(14,116,144,0.04);border-radius:10px;padding:1rem;">
+        <div style="font-size:0.75rem;color:var(--text-dim);margin-bottom:0.3rem;">IPO 信息</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:0.85rem;color:var(--text-sec);line-height:1.8;">
+          代码: <span style="color:var(--accent-teal);font-weight:600;">FLY</span> · NASDAQ<br>
+          上市: 2025<br>
+          承销: GS / JPM / Jefferies / WF
+        </div>
+      </div>
+      <div style="flex:1;min-width:180px;background:rgba(194,119,12,0.04);border-radius:10px;padding:1rem;">
+        <div style="font-size:0.75rem;color:var(--text-dim);margin-bottom:0.3rem;">估值指标</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:0.85rem;color:var(--text-sec);line-height:1.8;">
+          市值: <span style="color:var(--accent-amber);font-weight:600;">~$60-70亿</span><br>
+          P/E: <span style="color:var(--accent-red);font-weight:600;">约 -18</span> (未盈利)<br>
+          现金: <span style="color:var(--accent-blue);font-weight:600;">$793M</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Strategic Partnerships -->
+  <section class="card" style="animation-delay:0.4s">
+    <div class="card-title"><span class="icon">🤝</span> 战略合作伙伴</div>
+    <div class="partner-grid">
+      <div class="partner-item">
+        <h4>🏭 Northrop Grumman</h4>
+        <p>Eclipse 中型火箭联合研发伙伴，投资 $50M 入股 Firefly。为 Eclipse 提供关键供应链与国防合同通道。</p>
+        <span class="partner-tag green">$50M 投资</span>
+      </div>
+      <div class="partner-item">
+        <h4>🛰️ NASA</h4>
+        <p>CLPS (商业月球载荷服务) 框架承包商。Blue Ghost Mission 1 已成功着陆，Mission 2 计划 2026 年底发射至月球背面。</p>
+        <span class="partner-tag blue">CLPS 合同</span>
+      </div>
+      <div class="partner-item">
+        <h4>🛡️ US Space Force</h4>
+        <p>VICTUS NOX 快速响应发射任务完成。Eclipse 目标 NSSL Lane 1 竞标资格，进入国防发射市场。</p>
+        <span class="partner-tag amber">NSSL Lane 1 目标</span>
+      </div>
+      <div class="partner-item">
+        <h4>🏦 IPO 承销阵容</h4>
+        <p>Goldman Sachs、JPMorgan、Jefferies、Wells Fargo 四大投行联合承销，顶级背书。</p>
+        <span class="partner-tag purple">顶级投行</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Firefly vs Rocket Lab -->
+  <section class="card" style="animation-delay:0.5s">
+    <div class="card-title"><span class="icon">⚖️</span> Firefly vs Rocket Lab 快速对比</div>
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>维度</th>
+          <th class="fly">Firefly (FLY)</th>
+          <th class="rklb">Rocket Lab (RKLB)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>小型火箭</td>
+          <td>Alpha (1.17t)</td>
+          <td>Electron (0.3t)</td>
+        </tr>
+        <tr>
+          <td>中型火箭</td>
+          <td>Eclipse (16.3t)</td>
+          <td>Neutron (13t)</td>
+        </tr>
+        <tr>
+          <td>月球业务</td>
+          <td class="check">Blue Ghost ✅</td>
+          <td class="miss">无</td>
+        </tr>
+        <tr>
+          <td>2025 收入</td>
+          <td>$159.9M</td>
+          <td>~$436M</td>
+        </tr>
+        <tr>
+          <td>发射次数</td>
+          <td>6次 (2成功)</td>
+          <td>60+ (高成功率)</td>
+        </tr>
+        <tr>
+          <td>上市时间</td>
+          <td>2025 IPO</td>
+          <td>2021 SPAC</td>
+        </tr>
+        <tr>
+          <td>核心策略</td>
+          <td style="color:var(--accent-teal);font-weight:500;">多产品线 + 合作伙伴</td>
+          <td style="color:var(--accent-amber);font-weight:500;">垂直整合 + 自研</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="insight-box">
+      💡 两家公司路径截然不同：Rocket Lab 走"自研一切"的垂直整合路线，而 Firefly 选择与 Northrop Grumman 深度绑定。Firefly 的优势在于月球着陆器业务和更大运力的 Eclipse 设计，劣势在于发射可靠性尚未验证。
+    </div>
+  </section>
+
+  <!-- Investment Observation -->
+  <section class="card thesis-card" style="animation-delay:0.6s">
+    <div class="card-title"><span class="icon">🔭</span> 投资观察</div>
+
+    <div class="thesis-section">
+      <h4 class="growth">📈 增长叙事</h4>
+      <ul class="thesis-list">
+        <li>小火箭 → 中火箭 + 月球着陆器，三条产品线同步推进</li>
+        <li>收入从 $55M → $160M → 指引 $420-450M，爆发式增长曲线</li>
+        <li>IPO 募资 $793M 现金储备充足，资金跑道充裕</li>
+        <li>Northrop Grumman 深度绑定，背靠国防巨头的渠道与信用</li>
+      </ul>
+    </div>
+
+    <div class="thesis-section">
+      <h4 class="risk">⚠️ 核心风险</h4>
+      <ul class="thesis-list risk">
+        <li>Alpha 发射可靠性仍未稳定 — 6次发射仅2次完全成功</li>
+        <li>Eclipse 首飞待验证，中型火箭研发存在技术与进度风险</li>
+        <li>持续大额亏损 (2025: -$334M)，盈利路径尚不清晰</li>
+        <li>估值 ~$65亿 vs 收入 $160M，隐含极高增长预期</li>
+      </ul>
+    </div>
+
+    <div class="thesis-section">
+      <h4 class="diff">🔄 与 Rocket Lab 的关键区别</h4>
+      <ul class="thesis-list diff">
+        <li>Firefly 走"合作伙伴模式" — Northrop Grumman 联合研发 Eclipse</li>
+        <li>Rocket Lab 走"垂直整合自研" — 从发动机到航电到卫星全自研</li>
+        <li>Firefly 有月球业务 (Blue Ghost)，Rocket Lab 无此产品线</li>
+        <li>Rocket Lab 发射 track record 远超 Firefly (60+ vs 6次)</li>
+      </ul>
+    </div>
+
+    <div class="thesis-section">
+      <h4 class="watch">👁️ 核心关注点</h4>
+      <ul class="thesis-list watch">
+        <li>Eclipse 首飞是否如期在 2026 年实现</li>
+        <li>2026 收入指引 $420-450M 能否兑现</li>
+        <li>Alpha 后续发射的可靠性改善情况</li>
+        <li>Blue Ghost Mission 2 月球背面任务进展</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    ZephyrSpace · 数据截至 2026 年 4 月
+  </footer>
+
+</div>
+</body>
+</html>
