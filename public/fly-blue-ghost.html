@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blue Ghost 月球任务时间线 · ZephyrSpace</title>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,500;0,6..72,700;1,6..72,400&family=Noto+Sans+SC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f5f0e6;
+  --bg-card: #fffdf8;
+  --bg-card-hover: #faf6ee;
+  --accent-teal: #0e7490;
+  --accent-blue: #2563a0;
+  --accent-amber: #c2770c;
+  --accent-red: #b91c1c;
+  --accent-green: #0f766e;
+  --accent-purple: #6d28d9;
+  --text: #1c1917;
+  --text-sec: #57534e;
+  --text-dim: #a8a29e;
+  --border: rgba(120, 113, 108, 0.15);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: var(--bg);
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  color: var(--text);
+  font-family: 'Noto Sans SC', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+.page { max-width: 1100px; margin: 0 auto; padding: 40px 24px 80px; }
+
+/* Animations */
+@keyframes fadeSlideDown {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse { 0%,100% { opacity: 0.4; } 50% { opacity: 1; } }
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+.anim { opacity: 0; animation: fadeSlideDown 0.6s ease forwards; }
+.anim-d1 { animation-delay: 0.08s; }
+.anim-d2 { animation-delay: 0.16s; }
+.anim-d3 { animation-delay: 0.24s; }
+.anim-d4 { animation-delay: 0.32s; }
+.anim-d5 { animation-delay: 0.40s; }
+.anim-d6 { animation-delay: 0.48s; }
+.anim-d7 { animation-delay: 0.56s; }
+.anim-d8 { animation-delay: 0.64s; }
+
+/* Nav */
+.nav { margin-bottom: 32px; }
+.nav a {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 13px; color: var(--accent-teal); text-decoration: none;
+  padding: 6px 14px; border: 1px solid rgba(14, 116, 144, 0.25);
+  border-radius: 999px; transition: all 0.2s;
+}
+.nav a:hover { background: rgba(14, 116, 144, 0.06); border-color: var(--accent-teal); }
+
+/* Header */
+.header { text-align: center; margin-bottom: 56px; position: relative; }
+.header::after {
+  content: ''; position: absolute; bottom: -28px; left: 50%; transform: translateX(-50%);
+  width: 120px; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent-teal), transparent);
+}
+.badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 6px 16px; border: 1px solid var(--accent-teal); border-radius: 100px;
+  font-family: 'JetBrains Mono', monospace; font-size: 11px;
+  color: var(--accent-teal); letter-spacing: 2px; text-transform: uppercase;
+  margin-bottom: 20px; background: rgba(14, 116, 144, 0.04);
+}
+.badge .dot {
+  width: 6px; height: 6px; background: var(--accent-teal); border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+h1 {
+  font-family: 'Newsreader', serif;
+  font-size: clamp(26px, 5vw, 44px); font-weight: 700; line-height: 1.2;
+  color: var(--text); margin-bottom: 12px;
+}
+.subtitle { font-size: 15px; color: var(--text-sec); font-weight: 300; line-height: 1.6; }
+.subtitle strong { color: var(--accent-amber); font-weight: 500; }
+
+/* Section titles */
+.section-title {
+  font-family: 'Newsreader', serif; font-size: 22px; font-weight: 700;
+  margin-bottom: 20px; color: var(--text);
+}
+
+/* Hero card (Mission 1) */
+.hero-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px;
+  padding: 1.8rem 2rem; box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+  margin-bottom: 24px; transition: all 0.25s; position: relative; overflow: hidden;
+}
+.hero-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.06); transform: translateY(-2px); }
+.hero-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--accent-green), var(--accent-teal), var(--accent-blue));
+}
+.mission-head { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; flex-wrap: wrap; }
+.mission-name {
+  font-family: 'Newsreader', serif; font-size: 24px; font-weight: 700; color: var(--text);
+}
+.status-badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1px;
+  padding: 4px 12px; border-radius: 100px;
+}
+.status-success { background: rgba(15, 118, 110, 0.1); color: var(--accent-green); border: 1px solid rgba(15, 118, 110, 0.25); }
+.status-planned { background: rgba(37, 99, 160, 0.08); color: var(--accent-blue); border: 1px solid rgba(37, 99, 160, 0.2); }
+
+/* Key metrics */
+.metrics {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 12px; margin-bottom: 28px;
+}
+.metric {
+  background: rgba(0,0,0,0.015); border: 1px solid var(--border); border-radius: 10px;
+  padding: 14px; text-align: center;
+}
+.metric .val {
+  font-family: 'JetBrains Mono', monospace; font-size: 20px; font-weight: 600;
+  color: var(--accent-teal); margin-bottom: 4px;
+}
+.metric .lbl { font-size: 11px; color: var(--text-dim); letter-spacing: 0.5px; }
+
+/* Mission timeline (horizontal) */
+.timeline-h { margin-bottom: 28px; }
+.timeline-h .track {
+  position: relative; display: flex; align-items: flex-start; justify-content: space-between;
+  padding: 0 8px; min-height: 100px;
+}
+.timeline-h .track::before {
+  content: ''; position: absolute; top: 22px; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--accent-green), var(--accent-teal), var(--accent-blue), var(--accent-purple), var(--accent-amber), var(--accent-red), var(--text-dim));
+  border-radius: 2px; opacity: 0.3;
+}
+.tl-node {
+  position: relative; display: flex; flex-direction: column; align-items: center;
+  z-index: 1; flex: 1; min-width: 0;
+}
+.tl-dot {
+  width: 14px; height: 14px; border-radius: 50%; border: 3px solid;
+  background: var(--bg-card); margin-bottom: 10px; position: relative;
+  box-shadow: 0 0 0 3px rgba(0,0,0,0.03); flex-shrink: 0;
+}
+.tl-dot.active { background: var(--dot-color); }
+.tl-label {
+  font-size: 11px; font-weight: 500; color: var(--text); text-align: center;
+  line-height: 1.4; max-width: 90px;
+}
+.tl-date {
+  font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--text-dim);
+  margin-top: 3px; text-align: center;
+}
+
+/* Achievements */
+.achieve-list { list-style: none; }
+.achieve-list li {
+  font-size: 13px; line-height: 2; color: var(--text-sec);
+  padding-left: 26px; position: relative;
+}
+.achieve-list li .icon {
+  position: absolute; left: 0; top: 2px; font-size: 14px;
+}
+
+/* Standard card */
+.card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px;
+  padding: 1.8rem 2rem; box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+  margin-bottom: 24px; transition: all 0.25s;
+}
+.card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.06); transform: translateY(-2px); }
+.card-title {
+  font-family: 'Newsreader', serif; font-size: 18px; font-weight: 700;
+  margin-bottom: 16px; color: var(--text);
+}
+
+/* Payloads grid */
+.payloads {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px; margin-bottom: 20px;
+}
+.payload-item {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 13px; color: var(--text-sec); line-height: 1.5;
+  padding: 10px 14px; border-radius: 10px;
+  background: rgba(0,0,0,0.015); border: 1px solid var(--border);
+}
+.payload-item .flag { font-size: 20px; flex-shrink: 0; }
+.payload-item .p-name { font-weight: 500; color: var(--text); display: block; }
+.payload-item .p-desc { font-size: 11px; color: var(--text-dim); }
+
+/* Architecture */
+.arch-box {
+  background: linear-gradient(135deg, rgba(14, 116, 144, 0.04), rgba(37, 99, 160, 0.04));
+  border: 1px solid rgba(14, 116, 144, 0.15); border-radius: 12px;
+  padding: 20px; margin-top: 16px;
+}
+.arch-box h4 {
+  font-family: 'Newsreader', serif; font-size: 15px; font-weight: 700;
+  color: var(--accent-teal); margin-bottom: 10px;
+}
+.arch-box p { font-size: 13px; color: var(--text-sec); line-height: 1.7; }
+
+/* Comparison table */
+.compare {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+  border: 1px solid var(--border); border-radius: 14px; overflow: hidden;
+}
+.compare-col { padding: 24px; }
+.compare-col:first-child { border-right: 1px solid var(--border); }
+.compare-col h3 {
+  font-family: 'Newsreader', serif; font-size: 16px; font-weight: 700;
+  margin-bottom: 16px; display: flex; align-items: center; gap: 8px;
+}
+.compare-row { display: flex; justify-content: space-between; align-items: baseline;
+  padding: 8px 0; border-bottom: 1px solid rgba(120, 113, 108, 0.08);
+  font-size: 13px; color: var(--text-sec);
+}
+.compare-row:last-child { border-bottom: none; }
+.compare-row .label { color: var(--text-dim); font-size: 12px; }
+.compare-row .value { font-weight: 500; color: var(--text); text-align: right; }
+
+/* Insight box */
+.insight-box {
+  background: linear-gradient(135deg, rgba(14, 116, 144, 0.06), rgba(109, 40, 217, 0.04));
+  border: 1px solid rgba(14, 116, 144, 0.2); border-radius: 16px;
+  padding: 28px; margin-bottom: 24px; position: relative; overflow: hidden;
+}
+.insight-box::before {
+  content: ''; position: absolute; top: 0; right: 0;
+  width: 200px; height: 200px;
+  background: radial-gradient(circle, rgba(14, 116, 144, 0.05), transparent 70%);
+}
+.insight-box h3 {
+  font-family: 'Newsreader', serif; font-size: 18px; font-weight: 700;
+  margin-bottom: 16px; color: var(--accent-teal);
+}
+.insight-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.insight-item { font-size: 13px; line-height: 1.7; color: var(--text-sec); position: relative; padding-left: 22px; }
+.insight-item::before {
+  content: ''; position: absolute; left: 0; top: 8px;
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--accent-teal); opacity: 0.5;
+}
+.insight-item .label { font-weight: 500; color: var(--text); display: block; margin-bottom: 2px; }
+
+/* Footer */
+footer {
+  text-align: center; padding-top: 24px; border-top: 1px solid var(--border);
+}
+footer p { font-size: 11px; color: var(--text-dim); font-family: 'JetBrains Mono', monospace; letter-spacing: 1px; }
+
+/* Upgrades list */
+.upgrades { list-style: none; }
+.upgrades li {
+  font-size: 13px; line-height: 2; color: var(--text-sec);
+  padding-left: 22px; position: relative;
+}
+.upgrades li::before {
+  content: '▲'; position: absolute; left: 0; top: 0;
+  color: var(--accent-green); font-size: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .metrics { grid-template-columns: repeat(3, 1fr); }
+  .timeline-h .track { flex-wrap: wrap; gap: 8px; justify-content: center; }
+  .timeline-h .track::before { display: none; }
+  .tl-node { flex: 0 0 auto; width: 80px; }
+  .compare { grid-template-columns: 1fr; }
+  .compare-col:first-child { border-right: none; border-bottom: 1px solid var(--border); }
+  .insight-grid { grid-template-columns: 1fr; }
+  .payloads { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .metrics { grid-template-columns: repeat(2, 1fr); }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Nav -->
+  <nav class="nav anim">
+    <a href="index.html">← 返回首页</a>
+  </nav>
+
+  <!-- Header -->
+  <header class="header anim anim-d1">
+    <div class="badge"><span class="dot"></span>FLY · BLUE GHOST</div>
+    <h1>🌙 Blue Ghost 月球任务时间线</h1>
+    <p class="subtitle">首个完全成功的商业月球软着陆 · 从<strong>近端</strong>到<strong>远端</strong></p>
+  </header>
+
+  <!-- ===== Mission 1 ===== -->
+  <div class="hero-card anim anim-d2">
+    <div class="mission-head">
+      <span class="mission-name">Mission 1 · Blue Ghost</span>
+      <span class="status-badge status-success">✅ 任务成功</span>
+    </div>
+
+    <!-- Key Metrics -->
+    <div class="metrics">
+      <div class="metric">
+        <div class="val">2025-01-15</div>
+        <div class="lbl">发射日期</div>
+      </div>
+      <div class="metric">
+        <div class="val">2025-03-02</div>
+        <div class="lbl">着陆日期</div>
+      </div>
+      <div class="metric">
+        <div class="val">14+</div>
+        <div class="lbl">月面运行天数</div>
+      </div>
+      <div class="metric">
+        <div class="val">10</div>
+        <div class="lbl">NASA 载荷</div>
+      </div>
+      <div class="metric">
+        <div class="val">119 GB+</div>
+        <div class="lbl">科学数据传回</div>
+      </div>
+    </div>
+
+    <!-- Mission Timeline -->
+    <div class="timeline-h">
+      <div style="font-size:12px; color:var(--text-dim); margin-bottom:12px; letter-spacing:1px; font-family:'JetBrains Mono',monospace;">MISSION TIMELINE</div>
+      <div class="track">
+        <div class="tl-node">
+          <div class="tl-dot active" style="border-color: var(--accent-green); --dot-color: var(--accent-green);"></div>
+          <div class="tl-label">🚀 发射</div>
+          <div class="tl-date">01-15</div>
+        </div>
+        <div class="tl-node">
+          <div class="tl-dot active" style="border-color: var(--accent-teal); --dot-color: var(--accent-teal);"></div>
+          <div class="tl-label">地月转移</div>
+          <div class="tl-date">45 天</div>
+        </div>
+        <div class="tl-node">
+          <div class="tl-dot active" style="border-color: var(--accent-blue); --dot-color: var(--accent-blue);"></div>
+          <div class="tl-label">月球轨道</div>
+          <div class="tl-date">入轨</div>
+        </div>
+        <div class="tl-node">
+          <div class="tl-dot active" style="border-color: var(--accent-purple); --dot-color: var(--accent-purple);"></div>
+          <div class="tl-label">🌕 着陆</div>
+          <div class="tl-date">03-02</div>
+        </div>
+        <div class="tl-node">
+          <div class="tl-dot active" style="border-color: var(--accent-amber); --dot-color: var(--accent-amber);"></div>
+          <div class="tl-label">月面运行</div>
+          <div class="tl-date">346h 日照</div>
+        </div>
+        <div class="tl-node">
+          <div class="tl-dot active" style="border-color: var(--accent-red); --dot-color: var(--accent-red);"></div>
+          <div class="tl-label">🌑 月夜</div>
+          <div class="tl-date">5h+</div>
+        </div>
+        <div class="tl-node">
+          <div class="tl-dot" style="border-color: var(--text-dim);"></div>
+          <div class="tl-label">任务结束</div>
+          <div class="tl-date">03-16</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Achievements -->
+    <div style="font-size:12px; color:var(--text-dim); margin-bottom:10px; letter-spacing:1px; font-family:'JetBrains Mono',monospace;">KEY ACHIEVEMENTS</div>
+    <ul class="achieve-list">
+      <li><span class="icon">🏆</span>首个完全成功的商业月球软着陆</li>
+      <li><span class="icon">📡</span>10 个 NASA CLPS 载荷全部成功运行</li>
+      <li><span class="icon">💾</span>传回 119GB+ 科学数据</li>
+      <li><span class="icon">🌅</span>拍摄 HD 月球日落影像</li>
+      <li><span class="icon">🌑</span>从月球表面观测到日全食</li>
+      <li><span class="icon">🔋</span>进入月夜后继续运行超 5 小时</li>
+      <li><span class="icon">📍</span>着陆点：月球危海 (Mare Crisium) Mons Latreille 附近</li>
+      <li><span class="icon">🚀</span>发射载具：SpaceX Falcon 9</li>
+    </ul>
+  </div>
+
+  <!-- ===== Mission 2 ===== -->
+  <div class="card anim anim-d3" style="position:relative; overflow:hidden;">
+    <div style="position:absolute; top:0; left:0; right:0; height:3px; background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));"></div>
+    <div class="mission-head">
+      <span class="mission-name">Mission 2 · Blue Ghost</span>
+      <span class="status-badge status-planned">📋 计划中</span>
+    </div>
+
+    <div class="metrics" style="margin-bottom:24px;">
+      <div class="metric">
+        <div class="val">2026 年底</div>
+        <div class="lbl">预计发射</div>
+      </div>
+      <div class="metric">
+        <div class="val">月球背面</div>
+        <div class="lbl">目标区域</div>
+      </div>
+      <div class="metric">
+        <div class="val">6.7 m</div>
+        <div class="lbl">堆叠构型高度</div>
+      </div>
+      <div class="metric">
+        <div class="val">2 年+</div>
+        <div class="lbl">望远镜设计寿命</div>
+      </div>
+      <div class="metric">
+        <div class="val">5 年</div>
+        <div class="lbl">轨道器设计寿命</div>
+      </div>
+    </div>
+
+    <!-- International Payloads -->
+    <div style="font-size:12px; color:var(--text-dim); margin-bottom:12px; letter-spacing:1px; font-family:'JetBrains Mono',monospace;">INTERNATIONAL PAYLOADS</div>
+    <div class="payloads">
+      <div class="payload-item">
+        <span class="flag">🇺🇸</span>
+        <div>
+          <span class="p-name">LuSEE-Night 射电望远镜</span>
+          <span class="p-desc">主载荷 · 设计运行 2 年</span>
+        </div>
+      </div>
+      <div class="payload-item">
+        <span class="flag">🇦🇪</span>
+        <div>
+          <span class="p-name">Rashid Rover 2</span>
+          <span class="p-desc">阿联酋月球车</span>
+        </div>
+      </div>
+      <div class="payload-item">
+        <span class="flag">🇦🇺</span>
+        <div>
+          <span class="p-name">SPIDER 地震载荷</span>
+          <span class="p-desc">澳大利亚月震探测</span>
+        </div>
+      </div>
+      <div class="payload-item">
+        <span class="flag">🇪🇺</span>
+        <div>
+          <span class="p-name">Lunar Pathfinder</span>
+          <span class="p-desc">ESA 中继卫星</span>
+        </div>
+      </div>
+      <div class="payload-item">
+        <span class="flag">🇨🇦</span>
+        <div>
+          <span class="p-name">LightPort 技术验证</span>
+          <span class="p-desc">加拿大光通信实验</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Architecture -->
+    <div class="arch-box">
+      <h4>🛰️ 双航天器堆叠构型</h4>
+      <p>Mission 2 采用高 22 英尺（6.7 米）的双航天器堆叠设计。上层为 <strong>Elytra 轨道器</strong>，设计在月球轨道运行 5 年，提供长期通信中继与科学观测。下层为 <strong>Blue Ghost 着陆器</strong>，携带 LuSEE-Night 望远镜降落月球背面射电宁静区，运行至少 10 天后关闭，避免干扰望远镜的超低噪声射电观测。</p>
+    </div>
+
+    <!-- Upgrades -->
+    <div style="margin-top:20px;">
+      <div style="font-size:12px; color:var(--text-dim); margin-bottom:10px; letter-spacing:1px; font-family:'JetBrains Mono',monospace;">UPGRADES FROM M1</div>
+      <ul class="upgrades">
+        <li>目标从近端升级到月球背面（远端）</li>
+        <li>单体着陆器 → 双航天器堆叠构型</li>
+        <li>14 天月面运行 → 轨道器 5 年长期驻留</li>
+        <li>纯 NASA 载荷 → 5 国国际合作载荷</li>
+        <li>数据收集任务 → 射电天文科学任务</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== Comparison ===== -->
+  <div class="card anim anim-d4" style="padding:0; overflow:hidden;">
+    <div style="padding:1.8rem 2rem 0;">
+      <div class="card-title">📊 Mission 1 vs Mission 2 对比</div>
+    </div>
+    <div class="compare">
+      <div class="compare-col" style="background: rgba(15, 118, 110, 0.02);">
+        <h3><span style="color:var(--accent-green);">●</span> Mission 1</h3>
+        <div class="compare-row"><span class="label">目标</span><span class="value">月球近端 · 危海</span></div>
+        <div class="compare-row"><span class="label">发射</span><span class="value">2025-01-15</span></div>
+        <div class="compare-row"><span class="label">构型</span><span class="value">单体着陆器</span></div>
+        <div class="compare-row"><span class="label">载荷来源</span><span class="value">NASA</span></div>
+        <div class="compare-row"><span class="label">载荷数</span><span class="value">10</span></div>
+        <div class="compare-row"><span class="label">月面运行</span><span class="value">14+ 天</span></div>
+        <div class="compare-row"><span class="label">数据量</span><span class="value">119 GB+</span></div>
+        <div class="compare-row"><span class="label">任务类型</span><span class="value">技术验证 + 科学</span></div>
+        <div class="compare-row"><span class="label">状态</span><span class="value" style="color:var(--accent-green);">✅ 成功</span></div>
+      </div>
+      <div class="compare-col" style="background: rgba(37, 99, 160, 0.02);">
+        <h3><span style="color:var(--accent-blue);">●</span> Mission 2</h3>
+        <div class="compare-row"><span class="label">目标</span><span class="value">月球远端 · 射电宁静区</span></div>
+        <div class="compare-row"><span class="label">发射</span><span class="value">2026 年底</span></div>
+        <div class="compare-row"><span class="label">构型</span><span class="value">双航天器堆叠</span></div>
+        <div class="compare-row"><span class="label">载荷来源</span><span class="value">🇺🇸🇦🇪🇦🇺🇪🇺🇨🇦</span></div>
+        <div class="compare-row"><span class="label">主载荷</span><span class="value">LuSEE-Night</span></div>
+        <div class="compare-row"><span class="label">轨道器寿命</span><span class="value">5 年</span></div>
+        <div class="compare-row"><span class="label">着陆器运行</span><span class="value">10+ 天</span></div>
+        <div class="compare-row"><span class="label">任务类型</span><span class="value">深空科学 + 中继</span></div>
+        <div class="compare-row"><span class="label">状态</span><span class="value" style="color:var(--accent-blue);">📋 计划中</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Investment Observation ===== -->
+  <div class="insight-box anim anim-d5">
+    <h3>💡 投资观察</h3>
+    <div class="insight-grid">
+      <div class="insight-item">
+        <span class="label">交付能力验证</span>
+        Blue Ghost Mission 1 的完全成功验证了 Firefly Aerospace 在月球货运领域的交付能力，这在 CLPS 承包商中尚属首次。
+      </div>
+      <div class="insight-item">
+        <span class="label">持续收入来源</span>
+        NASA CLPS（商业月球有效载荷服务）框架是 Firefly 的持续收入来源，后续任务合同提供可预见的营收管道。
+      </div>
+      <div class="insight-item">
+        <span class="label">竞争格局</span>
+        Firefly 与 Intuitive Machines (LUNR) 是月球商业化赛道的直接竞争对手。Blue Ghost 的成功使 Firefly 在可靠性记录上暂时领先。
+      </div>
+      <div class="insight-item">
+        <span class="label">国际客户扩展</span>
+        Mission 2 搭载 5 国载荷，意味着客户基础正从单一 NASA 合同扩展到国际市场，降低了收入集中风险。
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="anim anim-d6">
+    <p>ZEPHYRSPACE · 数据截至 2026 年 4 月</p>
+  </footer>
+
+</div>
+</body>
+</html>
