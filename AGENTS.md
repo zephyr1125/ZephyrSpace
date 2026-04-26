@@ -223,17 +223,37 @@ df = pro.index_weight(index_code='930713.CSI')
 all_stocks = df.sort_values('weight', ascending=False)
 ```
 
-**2b. 量化粗筛（三条硬门槛，全部满足才进入候选）**
+**2b. 量化粗筛（四条硬门槛，全部满足才进入候选）**
 
-用 `daily_basic` + `fina_indicator` 批量拉取以下指标，逐一过滤：
+用 `daily_basic`（逐只调用）+ `fina_indicator`（逐只调用，limit=1）拉取指标，每只间隔 0.11s 防限流。50只全量约 20s，可行。
+
+```python
+import time
+
+db_rows, fi_rows = [], []
+for code in all_stocks['con_code']:
+    r = pro.daily_basic(ts_code=code, trade_date='最近交易日',
+        fields='ts_code,pe_ttm,total_mv,pb')
+    if len(r): db_rows.append(r.iloc[0])
+    time.sleep(0.11)
+
+for code in all_stocks['con_code']:
+    r = pro.fina_indicator(ts_code=code,
+        fields='ts_code,roe,or_yoy', limit=1)  # or_yoy = 营收同比增速
+    if len(r): fi_rows.append(r.iloc[0])
+    time.sleep(0.11)
+```
+
+过滤条件（四条，全部满足）：
 
 | 指标 | 门槛 | 说明 |
 |---|---|---|
-| ROE TTM | ≥ 12% | 低于此值说明资本回报不足，不值得深研 |
-| PE TTM | ≤ 行业上限 | 消费/医药 ≤ 40x，科技/成长 ≤ 60x，周期/金融 ≤ 20x |
-| 近 3 年营收趋势 | 非连续下滑 | 允许 1 年波动，但不允许 3 年持续下滑 |
+| 总市值 | ≥ 100亿 | 规模下限，过滤微盘爆雷风险；实测小于100亿的成分股ROE几乎全部<12% |
+| PE TTM | 不为 NaN 且 ≤ 行业上限 | NaN = 亏损，自动排除；上限：消费/医药≤40x，科技/成长≤60x，周期/金融≤20x |
+| ROE TTM | ≥ 12% | 低于此值资本回报不足 |
+| or_yoy（营收同比） | ≥ −15% | 允许短期波动，但严重下滑（如-30%+）直接排除 |
 
-> 粗筛阶段**不写页面**，只输出候选名单（通常 10-25 家）。
+> 粗筛阶段**不写页面**，只输出候选名单（通常 10-20 家）。
 
 **2c. 候选名单上限**
 
