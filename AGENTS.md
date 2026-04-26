@@ -111,6 +111,22 @@
 - 可以降级为只保留英文原文
 - 不允许因为单条新闻翻译失败导致整份日报失败
 
+## Watchlist 管理约定
+
+`data/stock_watchlist.json` 是公司跟踪池，分三档：
+
+- **core（核心池）**：长期底仓，价格合理时主动建仓
+- **growth（成长池）**：高质量成长公司，等价格窗口
+- **radar（雷达池）**：只跟踪，有信号再升档
+
+**在修改该文件之前，必须**：
+
+1. 阅读文件头部的 `AGENT_INSTRUCTION`、`tier_definitions`、`decision_tree`
+2. 只收录已完成完整 PreBuy 分析的公司（`01-公司/` 下有对应页面）
+3. 完整规则见 `data/WATCHLIST_RULES.md`
+
+新增公司时直接按 `required_fields` 中的 13 个字段填写，`priority` 取当前该档最大值 +1。
+
 ## 自动化相关文件
 
 当前关键脚本与配置：

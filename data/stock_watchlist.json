@@ -1,6 +1,75 @@
 {
-  "schema_version": 1,
-  "generated_at": "2026-04-26T14:58:05.3969682+08:00",
+  "schema_version": 2,
+  "AGENT_INSTRUCTION": "修改本文件前，必须先完整阅读 tier_definitions 中对应档位的 entry_criteria 和 decision_tree，判断档位后再写入，不得跳过。完整规则见 data/WATCHLIST_RULES.md。",
+  "rules_doc": "data/WATCHLIST_RULES.md",
+  "tier_definitions": {
+    "core": {
+      "label": "核心池",
+      "description": "买了就放的长期底仓。护城河足够深，价格合理时可主动建仓，无需等待特定催化剂。",
+      "entry_criteria": [
+        "护城河：行业垄断、品牌定价权、或不可复制资产（水电/核电/牌照）",
+        "盈利质量：净现比 > 90%，ROE > 15% 且过去3年持续稳定",
+        "成长要求：不需高增长，但不能出现结构性利润下滑",
+        "估值：PE/PB 处于该公司历史合理/低估区间，不追贵",
+        "红旗：PreBuy 主要红旗 <= 2 条，且无结构性/治理类红旗"
+      ],
+      "operation": "价格落入较好区间时主动建仓；更低区间加仓；追高区坚决不买。",
+      "exit_to_growth": "护城河出现结构性损伤，或连续2年净现比<80%，或ROE持续跌至10%以下",
+      "exit_watchlist": "出现治理红旗（财务造假迹象、大规模利益输送）"
+    },
+    "growth": {
+      "label": "成长池",
+      "description": "高质量成长公司，有清晰的成长驱动力，但当前估值偏贵或有待验证的关键节点。等价格窗口，不追高。",
+      "entry_criteria": [
+        "基本面质量：净现比 > 80%，ROE > 15% 或处于上升趋势",
+        "成长逻辑：有清晰的中长期成长驱动力，且已有历史业绩印证方向正确",
+        "护城河：有可识别的差异化壁垒（技术/品牌/渠道/规模），不需垄断级别",
+        "估值：当前偏贵超出合理区间，等回调；或有关键验证节点待确认",
+        "红旗：PreBuy 主要红旗 <= 3 条，且均为可跟踪可验证类，无根本性治理问题"
+      ],
+      "operation": "等价格进入较好区间再买；有明确业绩验证节点时可在中性区小仓参与；不追高。",
+      "exit_to_core": "估值回落至历史合理区间且护城河进一步夯实，可升至 core",
+      "exit_to_radar": "出现基本面恶化（净利下滑>20%且非一次性 / 毛利率持续下行 / 成长逻辑被证伪）",
+      "exit_watchlist": "基本面持续恶化超过2个季度，原有逻辑不再成立"
+    },
+    "radar": {
+      "label": "雷达池",
+      "description": "有关注价值但存在较多不确定性。只跟踪，不主动买入。出现明确信号后再评估升档。",
+      "entry_criteria": [
+        "逻辑未完全验证：成长故事有说服力但缺乏历史业绩印证，或处于行业周期底部",
+        "红旗较多：PreBuy 主要红旗 >= 3 条，或有1条治理/结构性红旗",
+        "竞争格局不清：护城河存疑，公司胜出概率尚不确定",
+        "主题纯度工具：用于跟踪行业主题景气度，但公司非该主题最优受益者",
+        "困境反转型：当前业绩差，押注未来改善，不确定性高"
+      ],
+      "operation": "只读不买。跟踪季报和行业动态；连续2个季度超预期且核心红旗消除则升至 growth。",
+      "exit_to_growth": "核心红旗消除，成长逻辑获得业绩印证",
+      "exit_watchlist": "跟踪满2年无改善信号，或原有关注理由不再成立"
+    }
+  },
+  "decision_tree": [
+    "1. 是否完成完整 PreBuy 分析？否 -> 不得加入 watchlist",
+    "2. PreBuy 结论是否支持可以布局/可以买？否（纯观察/逻辑未验证）-> radar",
+    "3. 护城河垄断级 + 净现比>90% + ROE稳定>15% + 红旗<=2？是 -> core",
+    "4. 基本面优秀 + 净现比>80% + ROE>15% + 红旗<=3 + 无治理问题？是 -> growth",
+    "5. 以上都不满足 -> radar"
+  ],
+  "required_fields": [
+    "priority: 全局唯一整数，当前档位最大值+1",
+    "name: 公司简称，与 01-公司/ 页面标题一致",
+    "code: XXXXXX.SH 或 XXXXXX.SZ",
+    "note_path: 指向 01-公司/ 下完整 PreBuy 页面",
+    "source_etf: 来源指数代码；非指数来源填 direct",
+    "position_role: 一句话说明在组合中的角色",
+    "prebuy_conclusion: 直接引用 PreBuy 页面的操作结论",
+    "watch_reason: 长期关注理由",
+    "current_price: 加入时当前价格（数字，单位元）",
+    "price_record_time: ISO 8601 格式带时区",
+    "price_bands: 至少3个区间，label/lower/upper/action 不得省略",
+    "risk_flags: 数组，至少2条，引用 PreBuy 主要红旗",
+    "board: 上交所主板/深交所主板/科创板/深交所创业板 之一"
+  ],
+  "generated_at": "2026-04-26T15:08:23.026204+08:00",
   "source_universes": [
     {
       "code": "560390",
@@ -33,14 +102,8 @@
       "note_path": "05-A股指数/980018 卫星通信指数.md"
     }
   ],
-  "selection_rules": [
-    "只收录已经做过完整 PreBuy 的公司",
-    "primary 代表第一优先级跟踪池，secondary 代表第二优先级跟踪池",
-    "价格区间负责触发动作，board 负责区分主板/创业板/科创板",
-    "分层只看公司自身情况，不受 ETF 持仓约束"
-  ],
   "watchlists": {
-    "primary": [
+    "core": [
       {
         "priority": 1,
         "name": "美的集团",
@@ -526,7 +589,7 @@
         "board": "深交所主板"
       }
     ],
-    "secondary": [
+    "growth": [
       {
         "priority": 8,
         "name": "中国核电",
@@ -666,6 +729,448 @@
         "board": "上交所主板"
       },
       {
+        "priority": 14,
+        "name": "亨通光电",
+        "code": "600487.SH",
+        "note_path": "01-公司/亨通光电.md",
+        "source_etf": "560390",
+        "position_role": "铺血管",
+        "prebuy_conclusion": "值得继续研究，但更适合按景气增强仓理解，不适合当纯电网底仓无脑买。",
+        "watch_reason": "线缆与连接通道的代表股，适合观察电网扩散和制造弹性。",
+        "current_price": 69.54,
+        "price_record_time": "2026-04-25 23:02:15 +08:00",
+        "price_bands": [
+          {
+            "label": "追高区",
+            "lower": 75.0,
+            "upper": null,
+            "action": "avoid"
+          },
+          {
+            "label": "中性区",
+            "lower": 65.0,
+            "upper": 75.0,
+            "action": "watch"
+          },
+          {
+            "label": "较好区间",
+            "lower": 58.0,
+            "upper": 65.0,
+            "action": "consider"
+          },
+          {
+            "label": "更低区间",
+            "lower": null,
+            "upper": 58.0,
+            "action": "buy"
+          }
+        ],
+        "risk_flags": [
+          "业务驱动不够纯",
+          "2025Q1 经营现金流回落",
+          "容易被制造景气和通信链情绪抬高"
+        ],
+        "board": "上交所主板"
+      },
+      {
+        "priority": 24,
+        "name": "中际旭创",
+        "code": "300308.SZ",
+        "note_path": "01-公司/中际旭创.md",
+        "source_etf": "930713",
+        "position_role": "AI光模块弹性仓",
+        "prebuy_conclusion": "可以研究性布局，但需等价格回落至合理区间，1.6T放量景气预期已部分Price-in。",
+        "watch_reason": "全球AI光模块龙头（市占率>40%），景气高峰弹性极大，等景气确认信号后加仓。",
+        "current_price": 120.0,
+        "price_record_time": "2026-04-26 14:52:00 +08:00",
+        "price_bands": [
+          {
+            "label": "追高区",
+            "lower": 150.0,
+            "upper": null,
+            "action": "avoid"
+          },
+          {
+            "label": "中性区",
+            "lower": 110.0,
+            "upper": 150.0,
+            "action": "watch"
+          },
+          {
+            "label": "较好区间",
+            "lower": 80.0,
+            "upper": 110.0,
+            "action": "consider"
+          },
+          {
+            "label": "更低区间",
+            "lower": null,
+            "upper": 80.0,
+            "action": "buy"
+          }
+        ],
+        "risk_flags": [
+          "客户集中度极高（北美4客户+英伟达超70%营收），单一客户削减订单即崩",
+          "800G产能2025年可能供过于求，毛利率下行压力",
+          "高端EML光芯片仍部分依赖海外供应，出口管制风险"
+        ],
+        "board": "深交所创业板"
+      },
+      {
+        "priority": 25,
+        "name": "山西汾酒",
+        "code": "600809.SH",
+        "note_path": "01-公司/山西汾酒.md",
+        "source_etf": "399997",
+        "position_role": "白酒成长龙头 / 弹性仓",
+        "prebuy_conclusion": "继续研究，等更好赔率。当前PE约18倍有成长溢价，需等批价修复与业绩加速信号，回调至160元以下再考虑。",
+        "watch_reason": "中证白酒指数增速最快的大权重股，全国化+高端化双轮驱动，等价格回到合理区间。",
+        "current_price": 180.0,
+        "price_record_time": "2026-04-26 14:52:00 +08:00",
+        "price_bands": [
+          {
+            "label": "追高区",
+            "lower": 230.0,
+            "upper": null,
+            "action": "avoid"
+          },
+          {
+            "label": "中性区",
+            "lower": 180.0,
+            "upper": 230.0,
+            "action": "watch"
+          },
+          {
+            "label": "较好区间",
+            "lower": 140.0,
+            "upper": 180.0,
+            "action": "consider"
+          },
+          {
+            "label": "更低区间",
+            "lower": null,
+            "upper": 110.0,
+            "action": "buy"
+          }
+        ],
+        "risk_flags": [
+          "全国化扩张遇阻则成长逻辑核心假设动摇",
+          "高端青花系列批价倒挂说明需求问题",
+          "玻汾大众产品量增价跌拉低整体毛利率"
+        ],
+        "board": "上交所主板"
+      },
+      {
+        "priority": 27,
+        "name": "宁德时代",
+        "code": "300750.SZ",
+        "note_path": "01-公司/宁德时代.md",
+        "source_etf": "932246",
+        "position_role": "储能电池龙头",
+        "prebuy_conclusion": "最强龙头，但更适合等回调，不追高。",
+        "watch_reason": "储能电池指数里最核心的权重锚，适合长期跟踪。",
+        "current_price": 453.98,
+        "price_record_time": "2026-04-26 14:58:05 +08:00",
+        "price_bands": [
+          {
+            "label": "追高区",
+            "lower": 500.0,
+            "upper": null,
+            "action": "avoid"
+          },
+          {
+            "label": "中性区",
+            "lower": 440.0,
+            "upper": 500.0,
+            "action": "watch"
+          },
+          {
+            "label": "较好区间",
+            "lower": 380.0,
+            "upper": 440.0,
+            "action": "consider"
+          },
+          {
+            "label": "更低区间",
+            "lower": null,
+            "upper": 380.0,
+            "action": "buy"
+          }
+        ],
+        "risk_flags": [
+          "估值不便宜",
+          "海外和地缘变量多",
+          "市场预期已经很高"
+        ],
+        "board": "创业板"
+      },
+      {
+        "priority": 28,
+        "name": "阳光电源",
+        "code": "300274.SZ",
+        "note_path": "01-公司/阳光电源.md",
+        "source_etf": "932246",
+        "position_role": "储能系统平台",
+        "prebuy_conclusion": "基本面强，但不适合追。",
+        "watch_reason": "系统平台属性强，是储能链条里最关键的观察点之一。",
+        "current_price": 173.63,
+        "price_record_time": "2026-04-26 14:58:05 +08:00",
+        "price_bands": [
+          {
+            "label": "追高区",
+            "lower": 190.0,
+            "upper": null,
+            "action": "avoid"
+          },
+          {
+            "label": "中性区",
+            "lower": 165.0,
+            "upper": 190.0,
+            "action": "watch"
+          },
+          {
+            "label": "较好区间",
+            "lower": 145.0,
+            "upper": 165.0,
+            "action": "consider"
+          },
+          {
+            "label": "更低区间",
+            "lower": null,
+            "upper": 145.0,
+            "action": "buy"
+          }
+        ],
+        "risk_flags": [
+          "龙头估值不便宜",
+          "海外项目交付节奏会影响预期",
+          "AIDC 电源逻辑需要继续验证"
+        ],
+        "board": "创业板"
+      },
+      {
+        "priority": 42,
+        "name": "澜起科技",
+        "code": "688008.SH",
+        "note_path": "01-公司/澜起科技.md",
+        "source_etf": "930713",
+        "position_role": "AI内存基础设施芯片 / 底仓+弹性兼顾",
+        "prebuy_conclusion": "可以布局，净现比119%、净利率37%、DDR5内存接口芯片寡头，护城河极深；PE 40-45x偏贵，等回调至50元以下再主动加仓。",
+        "watch_reason": "全球DDR5内存接口芯片寡头，AI服务器扩建直接受益，2024年净利+213%且现金流质量极佳，930713成分股中性价比最高的半导体底仓。",
+        "current_price": 57.0,
+        "price_record_time": "2026-04-26 14:52:00 +08:00",
+        "price_bands": [
+          {
+            "label": "追高区",
+            "lower": 75.0,
+            "upper": null,
+            "action": "avoid"
+          },
+          {
+            "label": "中性区",
+            "lower": 60.0,
+            "upper": 75.0,
+            "action": "watch"
+          },
+          {
+            "label": "较好区间",
+            "lower": 45.0,
+            "upper": 60.0,
+            "action": "consider"
+          },
+          {
+            "label": "更低区间",
+            "lower": null,
+            "upper": 45.0,
+            "action": "buy"
+          }
+        ],
+        "risk_flags": [
+          "三星/SK海力士推进自研内存接口芯片，长期市场份额面临压力",
+          "PE 40-45x处于历史偏高位，增长不达预期则回调空间大",
+          "DDR5渗透完成后需CXL/HBM等新品验证才能维持增速"
+        ],
+        "board": "科创板"
+      },
+      {
+        "priority": 43,
+        "name": "金山办公",
+        "code": "688111.SH",
+        "note_path": "01-公司/金山办公.md",
+        "source_etf": "930713",
+        "position_role": "AI办公软件垄断 / 高质量成长底仓",
+        "prebuy_conclusion": "可以布局但等估值合理区间，净现比133%、毛利率85%、WPS国内Office垄断，AI订阅转型顺利；PE 52-54x偏贵，等回调至300元以下加仓。",
+        "watch_reason": "国内Office垄断者（市占率60%+），SaaS+AI订阅转型中，无有息负债，现金流质量极佳，AI应用层中基本面最扎实的标的。",
+        "current_price": 360.0,
+        "price_record_time": "2026-04-26 14:52:00 +08:00",
+        "price_bands": [
+          {
+            "label": "追高区",
+            "lower": 450.0,
+            "upper": null,
+            "action": "avoid"
+          },
+          {
+            "label": "中性区",
+            "lower": 360.0,
+            "upper": 450.0,
+            "action": "watch"
+          },
+          {
+            "label": "较好区间",
+            "lower": 280.0,
+            "upper": 360.0,
+            "action": "consider"
+          },
+          {
+            "label": "更低区间",
+            "lower": null,
+            "upper": 280.0,
+            "action": "buy"
+          }
+        ],
+        "risk_flags": [
+          "PE 52-54x偏高，AI办公竞争加剧（微软Copilot/阿里/腾讯均布局）",
+          "WPS传统软件授权收入同比-8.56%，旧商业模式式微",
+          "云化和AI订阅收入需增长足够快才能弥补传统模式衰退"
+        ],
+        "board": "科创板"
+      },
+      {
+        "priority": 44,
+        "name": "古井贡酒",
+        "code": "000596.SZ",
+        "note_path": "01-公司/古井贡酒.md",
+        "source_etf": "399997",
+        "position_role": "区域白酒成长标杆 / 弹性仓",
+        "prebuy_conclusion": "可以研究等价格，当前约109元TTM PE约25倍偏高，成长逻辑清晰（2024净利+20%，ROE 25%），赔率一般；等回调至90元以下再建仓。",
+        "watch_reason": "安徽白酒绝对龙头，2024年净利+20%是白酒板块最快增速之一，宴席场景绑定深，等价格买成长。",
+        "current_price": 109.5,
+        "price_record_time": "2026-04-26 14:52:00 +08:00",
+        "price_bands": [
+          {
+            "label": "追高区",
+            "lower": 150.0,
+            "upper": null,
+            "action": "avoid"
+          },
+          {
+            "label": "中性区",
+            "lower": 110.0,
+            "upper": 150.0,
+            "action": "watch"
+          },
+          {
+            "label": "较好区间",
+            "lower": 80.0,
+            "upper": 110.0,
+            "action": "consider"
+          },
+          {
+            "label": "更低区间",
+            "lower": null,
+            "upper": 65.0,
+            "action": "buy"
+          }
+        ],
+        "risk_flags": [
+          "省外扩张长期受阻，成长空间和估值天花板受限",
+          "年份原浆高端价格带受茅台/五粮液挤压，提价空间有限",
+          "安徽省内宴席消费季节性强，淡季业绩波动大"
+        ],
+        "board": "深交所主板"
+      },
+      {
+        "priority": 45,
+        "name": "新易盛",
+        "code": "300502.SZ",
+        "note_path": "01-公司/新易盛.md",
+        "source_etf": "930713",
+        "position_role": "AI光模块弹性仓（小市值高弹性）",
+        "prebuy_conclusion": "可以研究性布局，2025E PE约11x赔率较好，与中际旭创同赛道且体量更小弹性更大；但经营现金流-48%是红旗，约90元小仓参与，等1.6T进展确认后加仓。",
+        "watch_reason": "930713指数第二大权重股，2024年净利+312%、ROE 41%，2025E PE约11x，AI数据中心光互联需求持续高增，等价格区间或验证点布局。",
+        "current_price": 90.0,
+        "price_record_time": "2026-04-26 14:52:00 +08:00",
+        "price_bands": [
+          {
+            "label": "追高区",
+            "lower": 120.0,
+            "upper": null,
+            "action": "avoid"
+          },
+          {
+            "label": "中性区",
+            "lower": 90.0,
+            "upper": 120.0,
+            "action": "watch"
+          },
+          {
+            "label": "较好区间",
+            "lower": 65.0,
+            "upper": 90.0,
+            "action": "consider"
+          },
+          {
+            "label": "更低区间",
+            "lower": null,
+            "upper": 65.0,
+            "action": "buy"
+          }
+        ],
+        "risk_flags": [
+          "经营现金流2024年大幅下降48.56%，利润高增但现金流背离（主要红旗）",
+          "海外占比78.7%，关税与制裁风险突出",
+          "800G行业产能2025年可能供过于求，毛利率面临下行压力"
+        ],
+        "board": "深交所创业板"
+      },
+      {
+        "priority": 46,
+        "name": "今世缘",
+        "code": "603369.SH",
+        "note_path": "01-公司/今世缘.md",
+        "source_etf": "399997",
+        "position_role": "江苏次高端白酒 / 全国化成长仓",
+        "prebuy_conclusion": "可以研究等价格，当前约46元PE约16-17倍合理偏高，省外增速+27%全国化逻辑成长中；等回调至40元以下（PE约14倍）再建仓。",
+        "watch_reason": "苏派白酒领导品牌，2024年省外营收增速+27%，全国化路径清晰，是白酒板块中成长逻辑最清晰的区域标的之一。",
+        "current_price": 46.5,
+        "price_record_time": "2026-04-26 14:52:00 +08:00",
+        "price_bands": [
+          {
+            "label": "追高区",
+            "lower": 65.0,
+            "upper": null,
+            "action": "avoid"
+          },
+          {
+            "label": "中性区",
+            "lower": 50.0,
+            "upper": 65.0,
+            "action": "watch"
+          },
+          {
+            "label": "较好区间",
+            "lower": 38.0,
+            "upper": 50.0,
+            "action": "consider"
+          },
+          {
+            "label": "更低区间",
+            "lower": null,
+            "upper": 30.0,
+            "action": "buy"
+          }
+        ],
+        "risk_flags": [
+          "省外扩张成本超预期，ROE可能因此下滑",
+          "江苏本省宴席需求季节性波动大，淡旺季分化明显",
+          "中高端酒水消费整体承压，国缘高端化节奏可能放慢"
+        ],
+        "board": "上交所主板"
+      }
+    ],
+    "radar": [
+      {
         "priority": 11,
         "name": "中国西电",
         "code": "601179.SH",
@@ -794,50 +1299,6 @@
           "煤价中枢变化直接决定盈利",
           "高股息容易误导成稳健底仓",
           "利润已明显下滑"
-        ],
-        "board": "上交所主板"
-      },
-      {
-        "priority": 14,
-        "name": "亨通光电",
-        "code": "600487.SH",
-        "note_path": "01-公司/亨通光电.md",
-        "source_etf": "560390",
-        "position_role": "铺血管",
-        "prebuy_conclusion": "值得继续研究，但更适合按景气增强仓理解，不适合当纯电网底仓无脑买。",
-        "watch_reason": "线缆与连接通道的代表股，适合观察电网扩散和制造弹性。",
-        "current_price": 69.54,
-        "price_record_time": "2026-04-25 23:02:15 +08:00",
-        "price_bands": [
-          {
-            "label": "追高区",
-            "lower": 75.0,
-            "upper": null,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "lower": 65.0,
-            "upper": 75.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "lower": 58.0,
-            "upper": 65.0,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "lower": null,
-            "upper": 58.0,
-            "action": "buy"
-          }
-        ],
-        "risk_flags": [
-          "业务驱动不够纯",
-          "2025Q1 经营现金流回落",
-          "容易被制造景气和通信链情绪抬高"
         ],
         "board": "上交所主板"
       },
@@ -1062,94 +1523,6 @@
         "board": "科创板"
       },
       {
-        "priority": 24,
-        "name": "中际旭创",
-        "code": "300308.SZ",
-        "note_path": "01-公司/中际旭创.md",
-        "source_etf": "930713",
-        "position_role": "AI光模块弹性仓",
-        "prebuy_conclusion": "可以研究性布局，但需等价格回落至合理区间，1.6T放量景气预期已部分Price-in。",
-        "watch_reason": "全球AI光模块龙头（市占率>40%），景气高峰弹性极大，等景气确认信号后加仓。",
-        "current_price": 120.0,
-        "price_record_time": "2026-04-26 14:52:00 +08:00",
-        "price_bands": [
-          {
-            "label": "追高区",
-            "lower": 150.0,
-            "upper": null,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "lower": 110.0,
-            "upper": 150.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "lower": 80.0,
-            "upper": 110.0,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "lower": null,
-            "upper": 80.0,
-            "action": "buy"
-          }
-        ],
-        "risk_flags": [
-          "客户集中度极高（北美4客户+英伟达超70%营收），单一客户削减订单即崩",
-          "800G产能2025年可能供过于求，毛利率下行压力",
-          "高端EML光芯片仍部分依赖海外供应，出口管制风险"
-        ],
-        "board": "深交所创业板"
-      },
-      {
-        "priority": 25,
-        "name": "山西汾酒",
-        "code": "600809.SH",
-        "note_path": "01-公司/山西汾酒.md",
-        "source_etf": "399997",
-        "position_role": "白酒成长龙头 / 弹性仓",
-        "prebuy_conclusion": "继续研究，等更好赔率。当前PE约18倍有成长溢价，需等批价修复与业绩加速信号，回调至160元以下再考虑。",
-        "watch_reason": "中证白酒指数增速最快的大权重股，全国化+高端化双轮驱动，等价格回到合理区间。",
-        "current_price": 180.0,
-        "price_record_time": "2026-04-26 14:52:00 +08:00",
-        "price_bands": [
-          {
-            "label": "追高区",
-            "lower": 230.0,
-            "upper": null,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "lower": 180.0,
-            "upper": 230.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "lower": 140.0,
-            "upper": 180.0,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "lower": null,
-            "upper": 110.0,
-            "action": "buy"
-          }
-        ],
-        "risk_flags": [
-          "全国化扩张遇阻则成长逻辑核心假设动摇",
-          "高端青花系列批价倒挂说明需求问题",
-          "玻汾大众产品量增价跌拉低整体毛利率"
-        ],
-        "board": "上交所主板"
-      },
-      {
         "priority": 26,
         "name": "口子窖",
         "code": "603589.SH",
@@ -1192,94 +1565,6 @@
           "行业调整期渠道商承压，动销未恢复"
         ],
         "board": "上交所主板"
-      },
-      {
-        "priority": 27,
-        "name": "宁德时代",
-        "code": "300750.SZ",
-        "note_path": "01-公司/宁德时代.md",
-        "source_etf": "932246",
-        "position_role": "储能电池龙头",
-        "prebuy_conclusion": "最强龙头，但更适合等回调，不追高。",
-        "watch_reason": "储能电池指数里最核心的权重锚，适合长期跟踪。",
-        "current_price": 453.98,
-        "price_record_time": "2026-04-26 14:58:05 +08:00",
-        "price_bands": [
-          {
-            "label": "追高区",
-            "lower": 500.0,
-            "upper": null,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "lower": 440.0,
-            "upper": 500.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "lower": 380.0,
-            "upper": 440.0,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "lower": null,
-            "upper": 380.0,
-            "action": "buy"
-          }
-        ],
-        "risk_flags": [
-          "估值不便宜",
-          "海外和地缘变量多",
-          "市场预期已经很高"
-        ],
-        "board": "创业板"
-      },
-      {
-        "priority": 28,
-        "name": "阳光电源",
-        "code": "300274.SZ",
-        "note_path": "01-公司/阳光电源.md",
-        "source_etf": "932246",
-        "position_role": "储能系统平台",
-        "prebuy_conclusion": "基本面强，但不适合追。",
-        "watch_reason": "系统平台属性强，是储能链条里最关键的观察点之一。",
-        "current_price": 173.63,
-        "price_record_time": "2026-04-26 14:58:05 +08:00",
-        "price_bands": [
-          {
-            "label": "追高区",
-            "lower": 190.0,
-            "upper": null,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "lower": 165.0,
-            "upper": 190.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "lower": 145.0,
-            "upper": 165.0,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "lower": null,
-            "upper": 145.0,
-            "action": "buy"
-          }
-        ],
-        "risk_flags": [
-          "龙头估值不便宜",
-          "海外项目交付节奏会影响预期",
-          "AIDC 电源逻辑需要继续验证"
-        ],
-        "board": "创业板"
       },
       {
         "priority": 29,
@@ -1334,7 +1619,7 @@
         "position_role": "户储与逆变器",
         "prebuy_conclusion": "逻辑成立，但不建议追。",
         "watch_reason": "户储和逆变器链条的代表，适合看海外需求和产品节奏。",
-        "current_price": 148.80,
+        "current_price": 148.8,
         "price_record_time": "2026-04-26 14:58:05 +08:00",
         "price_bands": [
           {
@@ -1852,226 +2137,6 @@
           "不能按医疗主业简单定价"
         ],
         "board": "创业板"
-      },
-      {
-        "priority": 42,
-        "name": "澜起科技",
-        "code": "688008.SH",
-        "note_path": "01-公司/澜起科技.md",
-        "source_etf": "930713",
-        "position_role": "AI内存基础设施芯片 / 底仓+弹性兼顾",
-        "prebuy_conclusion": "可以布局，净现比119%、净利率37%、DDR5内存接口芯片寡头，护城河极深；PE 40-45x偏贵，等回调至50元以下再主动加仓。",
-        "watch_reason": "全球DDR5内存接口芯片寡头，AI服务器扩建直接受益，2024年净利+213%且现金流质量极佳，930713成分股中性价比最高的半导体底仓。",
-        "current_price": 57.0,
-        "price_record_time": "2026-04-26 14:52:00 +08:00",
-        "price_bands": [
-          {
-            "label": "追高区",
-            "lower": 75.0,
-            "upper": null,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "lower": 60.0,
-            "upper": 75.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "lower": 45.0,
-            "upper": 60.0,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "lower": null,
-            "upper": 45.0,
-            "action": "buy"
-          }
-        ],
-        "risk_flags": [
-          "三星/SK海力士推进自研内存接口芯片，长期市场份额面临压力",
-          "PE 40-45x处于历史偏高位，增长不达预期则回调空间大",
-          "DDR5渗透完成后需CXL/HBM等新品验证才能维持增速"
-        ],
-        "board": "科创板"
-      },
-      {
-        "priority": 43,
-        "name": "金山办公",
-        "code": "688111.SH",
-        "note_path": "01-公司/金山办公.md",
-        "source_etf": "930713",
-        "position_role": "AI办公软件垄断 / 高质量成长底仓",
-        "prebuy_conclusion": "可以布局但等估值合理区间，净现比133%、毛利率85%、WPS国内Office垄断，AI订阅转型顺利；PE 52-54x偏贵，等回调至300元以下加仓。",
-        "watch_reason": "国内Office垄断者（市占率60%+），SaaS+AI订阅转型中，无有息负债，现金流质量极佳，AI应用层中基本面最扎实的标的。",
-        "current_price": 360.0,
-        "price_record_time": "2026-04-26 14:52:00 +08:00",
-        "price_bands": [
-          {
-            "label": "追高区",
-            "lower": 450.0,
-            "upper": null,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "lower": 360.0,
-            "upper": 450.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "lower": 280.0,
-            "upper": 360.0,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "lower": null,
-            "upper": 280.0,
-            "action": "buy"
-          }
-        ],
-        "risk_flags": [
-          "PE 52-54x偏高，AI办公竞争加剧（微软Copilot/阿里/腾讯均布局）",
-          "WPS传统软件授权收入同比-8.56%，旧商业模式式微",
-          "云化和AI订阅收入需增长足够快才能弥补传统模式衰退"
-        ],
-        "board": "科创板"
-      },
-      {
-        "priority": 44,
-        "name": "古井贡酒",
-        "code": "000596.SZ",
-        "note_path": "01-公司/古井贡酒.md",
-        "source_etf": "399997",
-        "position_role": "区域白酒成长标杆 / 弹性仓",
-        "prebuy_conclusion": "可以研究等价格，当前约109元TTM PE约25倍偏高，成长逻辑清晰（2024净利+20%，ROE 25%），赔率一般；等回调至90元以下再建仓。",
-        "watch_reason": "安徽白酒绝对龙头，2024年净利+20%是白酒板块最快增速之一，宴席场景绑定深，等价格买成长。",
-        "current_price": 109.5,
-        "price_record_time": "2026-04-26 14:52:00 +08:00",
-        "price_bands": [
-          {
-            "label": "追高区",
-            "lower": 150.0,
-            "upper": null,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "lower": 110.0,
-            "upper": 150.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "lower": 80.0,
-            "upper": 110.0,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "lower": null,
-            "upper": 65.0,
-            "action": "buy"
-          }
-        ],
-        "risk_flags": [
-          "省外扩张长期受阻，成长空间和估值天花板受限",
-          "年份原浆高端价格带受茅台/五粮液挤压，提价空间有限",
-          "安徽省内宴席消费季节性强，淡季业绩波动大"
-        ],
-        "board": "深交所主板"
-      },
-      {
-        "priority": 45,
-        "name": "新易盛",
-        "code": "300502.SZ",
-        "note_path": "01-公司/新易盛.md",
-        "source_etf": "930713",
-        "position_role": "AI光模块弹性仓（小市值高弹性）",
-        "prebuy_conclusion": "可以研究性布局，2025E PE约11x赔率较好，与中际旭创同赛道且体量更小弹性更大；但经营现金流-48%是红旗，约90元小仓参与，等1.6T进展确认后加仓。",
-        "watch_reason": "930713指数第二大权重股，2024年净利+312%、ROE 41%，2025E PE约11x，AI数据中心光互联需求持续高增，等价格区间或验证点布局。",
-        "current_price": 90.0,
-        "price_record_time": "2026-04-26 14:52:00 +08:00",
-        "price_bands": [
-          {
-            "label": "追高区",
-            "lower": 120.0,
-            "upper": null,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "lower": 90.0,
-            "upper": 120.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "lower": 65.0,
-            "upper": 90.0,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "lower": null,
-            "upper": 65.0,
-            "action": "buy"
-          }
-        ],
-        "risk_flags": [
-          "经营现金流2024年大幅下降48.56%，利润高增但现金流背离（主要红旗）",
-          "海外占比78.7%，关税与制裁风险突出",
-          "800G行业产能2025年可能供过于求，毛利率面临下行压力"
-        ],
-        "board": "深交所创业板"
-      },
-      {
-        "priority": 46,
-        "name": "今世缘",
-        "code": "603369.SH",
-        "note_path": "01-公司/今世缘.md",
-        "source_etf": "399997",
-        "position_role": "江苏次高端白酒 / 全国化成长仓",
-        "prebuy_conclusion": "可以研究等价格，当前约46元PE约16-17倍合理偏高，省外增速+27%全国化逻辑成长中；等回调至40元以下（PE约14倍）再建仓。",
-        "watch_reason": "苏派白酒领导品牌，2024年省外营收增速+27%，全国化路径清晰，是白酒板块中成长逻辑最清晰的区域标的之一。",
-        "current_price": 46.5,
-        "price_record_time": "2026-04-26 14:52:00 +08:00",
-        "price_bands": [
-          {
-            "label": "追高区",
-            "lower": 65.0,
-            "upper": null,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "lower": 50.0,
-            "upper": 65.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "lower": 38.0,
-            "upper": 50.0,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "lower": null,
-            "upper": 30.0,
-            "action": "buy"
-          }
-        ],
-        "risk_flags": [
-          "省外扩张成本超预期，ROE可能因此下滑",
-          "江苏本省宴席需求季节性波动大，淡旺季分化明显",
-          "中高端酒水消费整体承压，国缘高端化节奏可能放慢"
-        ],
-        "board": "上交所主板"
       }
     ]
   }
