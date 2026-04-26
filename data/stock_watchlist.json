@@ -339,6 +339,53 @@
         "price_date": "2026-04-24",
         "board": "深",
         "dv_ttm": 5.8
+      },
+      {
+        "name": "特斯拉",
+        "code": "TSLA.US",
+        "source_etf": "direct",
+        "position_role": "美股AI/Robotaxi/储能核心观察",
+        "prebuy_conclusion": "可以作为核心观察标的，但当前376.30美元仍偏贵，只适合观察或极小仓参与。",
+        "watch_reason": "电动车、储能、FSD、Robotaxi和Optimus长期期权集中，属于美股AI与能源平台核心标的，但必须用价格区间约束追高。",
+        "current_price": 376.3,
+        "price_bands": [
+          400.0,
+          300.0,
+          220.0
+        ],
+        "risk_flags": [
+          "当前估值主要依赖长期AI/Robotaxi/Optimus期权，商业化推迟会导致估值压缩",
+          "汽车主业利润率仍不强，现有利润难以支撑当前市值",
+          "FSD、Robotaxi和自动驾驶监管风险会影响重估节奏"
+        ],
+        "valuation_anchor": "平台期权估值：追高区>400(市场充分定价AI/Robotaxi/Optimus期权，不追) / 中性区300-400(期权逻辑成立但赔率一般，可观察或极小仓) / 较好区间220-300(回到研究性布局区，需同步验证汽车利润率和FSD进展) / 更低区间<220(安全边际改善，但仍需复核Robotaxi和储能兑现)",
+        "price_date": "2026-04-26",
+        "board": "美",
+        "dv_ttm": 0.0
+      },
+      {
+        "name": "苹果",
+        "code": "AAPL",
+        "market": "US",
+        "board": "纳",
+        "source_etf": "direct",
+        "position_role": "美股长线底仓 - 全球最强消费生态+Services高毛利飞轮，Ternus时代AI硬件修复期权",
+        "prebuy_conclusion": "逻辑清晰，等待更合适价格或验证点 - Services飞轮($109B，76%毛利率)+强护城河成立，当前$273处60日高位(CEO换帅消息已定价)，建议等回调至$255以下或spring 2026新Siri验证正面后建仓",
+        "watch_reason": "全球设备生态最深护城河（22亿+活跃设备），Services飞轮结构性增长；2026-09 Ternus接任CEO（硬件工程出身）有望加速AI硬件路线图，撬动下一轮换机超级周期",
+        "current_price": 273.0,
+        "price_date": "2026-04-26",
+        "price_bands": [
+          290.0,
+          255.0,
+          215.0
+        ],
+        "valuation_anchor": "FY2026E EPS≈$9：追高区>$290(>32xFE,CEO利好已定价) / 中性区$255-290(28-32xFE,逻辑对但偏贵) / 较好区间$215-255(24-28xFE,接近5年均值) / 更低区间<$215(<24xFE,强安全边际)",
+        "risk_flags": [
+          "Siri/Apple Intelligence多次延期（原定2025年初，推至2026 spring），AI翻身叙事尚未验证，再度延期则成长催化逻辑破灭",
+          "美中关税年化额外成本$5B+，Morgan Stanley已下调FY2026 EPS；印度供应链切换需3-5年",
+          "DOJ App Store反垄断诉讼（2027庭审），若强制降佣Services利润受损$10-20B"
+        ],
+        "dv_ttm": 0.37
       }
     ],
     "growth": [
