@@ -1,6 +1,6 @@
 {
-  "schema_version": 4,
-  "AGENT_INSTRUCTION": "修改本文件前，必须先完整阅读 tier_definitions 中对应档位的 entry_criteria 和 decision_tree，判断档位后再写入，不得跳过。完整规则见 data/WATCHLIST_RULES.md。\n- price_bands: 固定4档，标签固定为：追高区(avoid) / 中性区(watch) / 较好区间(consider) / 更低区间(strong_buy)；按 min 降序，最后一档 min 必须为 null；禁止增减档数。\n- valuation_anchor: 必填，格式：估值锚类型+四档价位语义，如 '前瞻PE：追高>X(>Nx) / 中性Y-X / 较好Z-Y / 更低<Z'。该字段是price_bands的文字说明，新增公司必须同时填写两者。",
+  "schema_version": 5,
+  "AGENT_INSTRUCTION": "修改本文件前，必须先完整阅读 tier_definitions 中对应档位的 entry_criteria 和 decision_tree，判断档位后再写入，不得跳过。完整规则见 data/WATCHLIST_RULES.md。\n- price_bands: 固定3个数字的数组 [avoid_min, watch_min, consider_min]，按降序排列。隐含第4档（更低区间 / strong_buy）为低于 consider_min 的所有价格。索引语义: [0]=追高区下限(avoid), [1]=中性区下限(watch), [2]=较好区间下限(consider)。\n- valuation_anchor: 必填，格式: 估值锚类型+四档价位语义，如 '前瞻PE: 追高>X / 中性Y-X / 较好Z-Y / 更低<Z'。该字段是price_bands的文字说明，新增公司必须同时填写两者。",
   "rules_doc": "data/WATCHLIST_RULES.md",
   "tier_definitions": {
     "core": {
@@ -65,7 +65,7 @@
     "watch_reason: 长期关注理由",
     "current_price: 加入时当前价格（数字，单位元）",
     "price_record_time: ISO 8601 格式带时区",
-    "price_bands: 固定4档，标签固定为 追高区(avoid)/中性区(watch)/较好区间(consider)/更低区间(strong_buy)，按 min 降序排列，最后一档 min 为 null；禁止多于或少于4档",
+    "price_bands: 固定3个数字的降序数组 [avoid_min, watch_min, consider_min]；对应: 追高区(avoid) / 中性区(watch) / 较好区间(consider) / 更低区间(strong_buy, 隐含)；禁止使用对象格式或增减元素数量",
     "risk_flags: 数组，至少2条，引用 PreBuy 主要红旗",
     "board: 上交所主板/深交所主板/科创板/深交所创业板 之一",
     "valuation_anchor"
@@ -117,26 +117,9 @@
         "current_price": 79.66,
         "price_record_time": "2026-04-25 23:02:15 +08:00",
         "price_bands": [
-          {
-            "label": "追高区",
-            "min": 85.0,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "min": 75.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "min": 68.0,
-            "action": "consider"
-          },
-          {
-            "label": "安全边际更好",
-            "min": null,
-            "action": "buy"
-          }
+          85.0,
+          75.0,
+          68.0
         ],
         "risk_flags": [
           "不是深度低估，买的是好公司合理价",
@@ -158,26 +141,9 @@
         "current_price": 27.31,
         "price_record_time": "2026-04-26 23:02:15 +08:00",
         "price_bands": [
-          {
-            "label": "追高区",
-            "min": 29.0,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "min": 26.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "min": 23.5,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "min": null,
-            "action": "buy"
-          }
+          29.0,
+          26.0,
+          23.5
         ],
         "risk_flags": [
           "来水波动是核心经营变量",
@@ -199,26 +165,9 @@
         "current_price": 38.38,
         "price_record_time": "2026-04-25 23:02:15 +08:00",
         "price_bands": [
-          {
-            "label": "追高区",
-            "min": 42.0,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "min": 36.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "min": 31.0,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "min": null,
-            "action": "buy"
-          }
+          42.0,
+          36.0,
+          31.0
         ],
         "risk_flags": [
           "对油价敏感",
@@ -240,26 +189,9 @@
         "current_price": 14.58,
         "price_record_time": "2026-04-26 23:02:15 +08:00",
         "price_bands": [
-          {
-            "label": "追高区",
-            "min": 16.0,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "min": 14.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "min": 12.5,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "min": null,
-            "action": "buy"
-          }
+          16.0,
+          14.0,
+          12.5
         ],
         "risk_flags": [
           "水电来水波动",
@@ -281,26 +213,9 @@
         "current_price": 37.11,
         "price_record_time": "2026-04-25 23:02:15 +08:00",
         "price_bands": [
-          {
-            "label": "追高区",
-            "min": 40.0,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "min": 35.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "min": 31.0,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "min": null,
-            "action": "buy"
-          }
+          40.0,
+          35.0,
+          31.0
         ],
         "risk_flags": [
           "收入增长偏弱",
@@ -322,26 +237,9 @@
         "current_price": 18.18,
         "price_record_time": "2026-04-25 23:02:15 +08:00",
         "price_bands": [
-          {
-            "label": "追高区",
-            "min": 20.0,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "min": 17.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "min": 15.0,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "min": null,
-            "action": "buy"
-          }
+          20.0,
+          17.0,
+          15.0
         ],
         "risk_flags": [
           "银行板块长期低估值常态",
@@ -363,26 +261,9 @@
         "current_price": 15.64,
         "price_record_time": "2026-04-26 23:02:15 +08:00",
         "price_bands": [
-          {
-            "label": "追高区",
-            "min": 17.0,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "min": 15.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "min": 13.5,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "min": null,
-            "action": "buy"
-          }
+          17.0,
+          15.0,
+          13.5
         ],
         "risk_flags": [
           "单一流域/参股资产依赖",
@@ -404,26 +285,9 @@
         "current_price": 1462.0,
         "price_record_time": "2026-04-26 14:52:00 +08:00",
         "price_bands": [
-          {
-            "label": "追高区",
-            "min": 1700.0,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "min": 1400.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "min": 1200.0,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "min": null,
-            "action": "buy"
-          }
+          1700.0,
+          1400.0,
+          1200.0
         ],
         "risk_flags": [
           "飞天批价若持续下跌至出厂价附近则信号恶化",
@@ -445,26 +309,9 @@
         "current_price": 102.0,
         "price_record_time": "2026-04-26 14:52:00 +08:00",
         "price_bands": [
-          {
-            "label": "追高区",
-            "min": 160.0,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "min": 120.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "min": 90.0,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "min": null,
-            "action": "buy"
-          }
+          160.0,
+          120.0,
+          90.0
         ],
         "risk_flags": [
           "普五批价若跌破出厂价900元则动销恶化",
@@ -486,26 +333,9 @@
         "current_price": 122.0,
         "price_record_time": "2026-04-26 14:52:00 +08:00",
         "price_bands": [
-          {
-            "label": "追高区",
-            "min": 180.0,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "min": 140.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "min": 110.0,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "min": null,
-            "action": "buy"
-          }
+          180.0,
+          140.0,
+          110.0
         ],
         "risk_flags": [
           "国窖批价持续下滑至出厂价以下则高端化战略受损",
@@ -527,26 +357,9 @@
         "current_price": 27.5,
         "price_record_time": "2026-04-26 14:52:00 +08:00",
         "price_bands": [
-          {
-            "label": "追高区",
-            "min": 38.0,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "min": 30.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "min": 22.0,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "min": null,
-            "action": "buy"
-          }
+          38.0,
+          30.0,
+          22.0
         ],
         "risk_flags": [
           "美国实体清单制裁限制海外业务扩张空间",
@@ -570,26 +383,9 @@
         "current_price": 8.88,
         "price_record_time": "2026-04-26 23:02:15 +08:00",
         "price_bands": [
-          {
-            "label": "追高区",
-            "min": 9.5,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "min": 8.3,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "min": 7.3,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "min": null,
-            "action": "buy"
-          }
+          9.5,
+          8.3,
+          7.3
         ],
         "risk_flags": [
           "利润同比下滑",
@@ -611,26 +407,9 @@
         "current_price": 222.13,
         "price_record_time": "2026-04-25 23:02:15 +08:00",
         "price_bands": [
-          {
-            "label": "追高区",
-            "min": 220.0,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "min": 190.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "min": 150.0,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "min": null,
-            "action": "strong_buy"
-          }
+          220.0,
+          190.0,
+          150.0
         ],
         "risk_flags": [
           "估值处在历史高位附近",
@@ -652,26 +431,9 @@
         "current_price": 26.54,
         "price_record_time": "2026-04-25 23:02:15 +08:00",
         "price_bands": [
-          {
-            "label": "追高区",
-            "min": 29.0,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "min": 26.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "min": 24.0,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "min": null,
-            "action": "buy"
-          }
+          29.0,
+          26.0,
+          24.0
         ],
         "risk_flags": [
           "应收账款体量大",
@@ -693,26 +455,9 @@
         "current_price": 69.54,
         "price_record_time": "2026-04-25 23:02:15 +08:00",
         "price_bands": [
-          {
-            "label": "追高区",
-            "min": 75.0,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "min": 65.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "min": 58.0,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "min": null,
-            "action": "buy"
-          }
+          75.0,
+          65.0,
+          58.0
         ],
         "risk_flags": [
           "业务驱动不够纯",
@@ -734,26 +479,9 @@
         "current_price": 120.0,
         "price_record_time": "2026-04-26 14:52:00 +08:00",
         "price_bands": [
-          {
-            "label": "追高区",
-            "min": 150.0,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "min": 110.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "min": 80.0,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "min": null,
-            "action": "buy"
-          }
+          150.0,
+          110.0,
+          80.0
         ],
         "risk_flags": [
           "客户集中度极高（北美4客户+英伟达超70%营收），单一客户削减订单即崩",
@@ -775,26 +503,9 @@
         "current_price": 180.0,
         "price_record_time": "2026-04-26 14:52:00 +08:00",
         "price_bands": [
-          {
-            "label": "追高区",
-            "min": 230.0,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "min": 180.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "min": 140.0,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "min": null,
-            "action": "buy"
-          }
+          230.0,
+          180.0,
+          140.0
         ],
         "risk_flags": [
           "全国化扩张遇阻则成长逻辑核心假设动摇",
@@ -816,26 +527,9 @@
         "current_price": 453.98,
         "price_record_time": "2026-04-26 14:58:05 +08:00",
         "price_bands": [
-          {
-            "label": "追高区",
-            "min": 500.0,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "min": 440.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "min": 380.0,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "min": null,
-            "action": "buy"
-          }
+          500.0,
+          440.0,
+          380.0
         ],
         "risk_flags": [
           "估值不便宜",
@@ -857,26 +551,9 @@
         "current_price": 173.63,
         "price_record_time": "2026-04-26 14:58:05 +08:00",
         "price_bands": [
-          {
-            "label": "追高区",
-            "min": 190.0,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "min": 165.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "min": 145.0,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "min": null,
-            "action": "buy"
-          }
+          190.0,
+          165.0,
+          145.0
         ],
         "risk_flags": [
           "龙头估值不便宜",
@@ -898,26 +575,9 @@
         "current_price": 57.0,
         "price_record_time": "2026-04-26 14:52:00 +08:00",
         "price_bands": [
-          {
-            "label": "追高区",
-            "min": 75.0,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "min": 60.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "min": 45.0,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "min": null,
-            "action": "buy"
-          }
+          75.0,
+          60.0,
+          45.0
         ],
         "risk_flags": [
           "三星/SK海力士推进自研内存接口芯片，长期市场份额面临压力",
@@ -939,26 +599,9 @@
         "current_price": 360.0,
         "price_record_time": "2026-04-26 14:52:00 +08:00",
         "price_bands": [
-          {
-            "label": "追高区",
-            "min": 450.0,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "min": 360.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "min": 280.0,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "min": null,
-            "action": "buy"
-          }
+          450.0,
+          360.0,
+          280.0
         ],
         "risk_flags": [
           "PE 52-54x偏高，AI办公竞争加剧（微软Copilot/阿里/腾讯均布局）",
@@ -980,26 +623,9 @@
         "current_price": 109.5,
         "price_record_time": "2026-04-26 14:52:00 +08:00",
         "price_bands": [
-          {
-            "label": "追高区",
-            "min": 150.0,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "min": 110.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "min": 80.0,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "min": null,
-            "action": "buy"
-          }
+          150.0,
+          110.0,
+          80.0
         ],
         "risk_flags": [
           "省外扩张长期受阻，成长空间和估值天花板受限",
@@ -1021,26 +647,9 @@
         "current_price": 90.0,
         "price_record_time": "2026-04-26 14:52:00 +08:00",
         "price_bands": [
-          {
-            "label": "追高区",
-            "min": 120.0,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "min": 90.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "min": 65.0,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "min": null,
-            "action": "buy"
-          }
+          120.0,
+          90.0,
+          65.0
         ],
         "risk_flags": [
           "经营现金流2024年大幅下降48.56%，利润高增但现金流背离（主要红旗）",
@@ -1062,26 +671,9 @@
         "current_price": 46.5,
         "price_record_time": "2026-04-26 14:52:00 +08:00",
         "price_bands": [
-          {
-            "label": "追高区",
-            "min": 65.0,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "min": 50.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "min": 38.0,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "min": null,
-            "action": "buy"
-          }
+          65.0,
+          50.0,
+          38.0
         ],
         "risk_flags": [
           "省外扩张成本超预期，ROE可能因此下滑",
@@ -1105,26 +697,9 @@
         "current_price": 26.3,
         "price_record_time": "2026-04-25 23:02:15 +08:00",
         "price_bands": [
-          {
-            "label": "追高区",
-            "min": 29.0,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "min": 24.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "min": 20.0,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "min": null,
-            "action": "buy"
-          }
+          29.0,
+          24.0,
+          20.0
         ],
         "risk_flags": [
           "煤价中枢变化直接决定盈利",
@@ -1146,26 +721,9 @@
         "current_price": 38.28,
         "price_record_time": "2026-04-26 14:52:00 +08:00",
         "price_bands": [
-          {
-            "label": "追高区",
-            "min": 55.0,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "min": 42.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "min": 32.0,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "min": null,
-            "action": "buy"
-          }
+          55.0,
+          42.0,
+          32.0
         ],
         "risk_flags": [
           "营收几乎零增长，省内市场天花板临近",
@@ -1187,26 +745,9 @@
         "current_price": 72.81,
         "price_record_time": "2026-04-26 14:58:05 +08:00",
         "price_bands": [
-          {
-            "label": "追高区",
-            "min": 80.0,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "min": 70.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "min": 60.0,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "min": null,
-            "action": "buy"
-          }
+          80.0,
+          70.0,
+          60.0
         ],
         "risk_flags": [
           "估值不算低",
@@ -1228,26 +769,9 @@
         "current_price": 148.8,
         "price_record_time": "2026-04-26 14:58:05 +08:00",
         "price_bands": [
-          {
-            "label": "追高区",
-            "min": 165.0,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "min": 145.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "min": 125.0,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "min": null,
-            "action": "buy"
-          }
+          165.0,
+          145.0,
+          125.0
         ],
         "risk_flags": [
           "估值不低",
@@ -1269,26 +793,9 @@
         "current_price": 110.77,
         "price_record_time": "2026-04-26 14:58:05 +08:00",
         "price_bands": [
-          {
-            "label": "追高区",
-            "min": 120.0,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "min": 105.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "min": 90.0,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "min": null,
-            "action": "buy"
-          }
+          120.0,
+          105.0,
+          90.0
         ],
         "risk_flags": [
           "估值不便宜",
@@ -1310,26 +817,9 @@
         "current_price": 58.62,
         "price_record_time": "2026-04-26 14:58:05 +08:00",
         "price_bands": [
-          {
-            "label": "追高区",
-            "min": 65.0,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "min": 58.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "min": 50.0,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "min": null,
-            "action": "buy"
-          }
+          65.0,
+          58.0,
+          50.0
         ],
         "risk_flags": [
           "订单修复节奏仍要看",
@@ -1351,26 +841,9 @@
         "current_price": 255.86,
         "price_record_time": "2026-04-26 14:58:05 +08:00",
         "price_bands": [
-          {
-            "label": "追高区",
-            "min": 280.0,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "min": 240.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "min": 210.0,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "min": null,
-            "action": "buy"
-          }
+          280.0,
+          240.0,
+          210.0
         ],
         "risk_flags": [
           "估值不便宜",
@@ -1392,26 +865,9 @@
         "current_price": 40.08,
         "price_record_time": "2026-04-26 14:58:05 +08:00",
         "price_bands": [
-          {
-            "label": "追高区",
-            "min": 45.0,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "min": 38.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "min": 32.0,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "min": null,
-            "action": "buy"
-          }
+          45.0,
+          38.0,
+          32.0
         ],
         "risk_flags": [
           "扣非和现金流质量要拆开看",
@@ -1433,26 +889,9 @@
         "current_price": 63.77,
         "price_record_time": "2026-04-26 14:58:05 +08:00",
         "price_bands": [
-          {
-            "label": "追高区",
-            "min": 70.0,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "min": 60.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "min": 52.0,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "min": null,
-            "action": "buy"
-          }
+          70.0,
+          60.0,
+          52.0
         ],
         "risk_flags": [
           "应收和现金流要盯",
@@ -1474,26 +913,9 @@
         "current_price": 49.35,
         "price_record_time": "2026-04-26 14:58:05 +08:00",
         "price_bands": [
-          {
-            "label": "追高区",
-            "min": 55.0,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "min": 48.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "min": 40.0,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "min": null,
-            "action": "buy"
-          }
+          55.0,
+          48.0,
+          40.0
         ],
         "risk_flags": [
           "材料周期波动大",
@@ -1515,26 +937,9 @@
         "current_price": 71.67,
         "price_record_time": "2026-04-26 14:58:05 +08:00",
         "price_bands": [
-          {
-            "label": "追高区",
-            "min": 78.0,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "min": 68.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "min": 55.0,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "min": null,
-            "action": "buy"
-          }
+          78.0,
+          68.0,
+          55.0
         ],
         "risk_flags": [
           "仍是周期股",
@@ -1556,26 +961,9 @@
         "current_price": 105.14,
         "price_record_time": "2026-04-26 14:58:05 +08:00",
         "price_bands": [
-          {
-            "label": "追高区",
-            "min": 115.0,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "min": 100.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "min": 85.0,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "min": null,
-            "action": "buy"
-          }
+          115.0,
+          100.0,
+          85.0
         ],
         "risk_flags": [
           "现金流压力明显",
@@ -1597,26 +985,9 @@
         "current_price": 68.98,
         "price_record_time": "2026-04-26 14:58:05 +08:00",
         "price_bands": [
-          {
-            "label": "追高区",
-            "min": 75.0,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "min": 65.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "min": 52.0,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "min": null,
-            "action": "buy"
-          }
+          75.0,
+          65.0,
+          52.0
         ],
         "risk_flags": [
           "行业竞争激烈",
