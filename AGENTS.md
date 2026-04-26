@@ -270,7 +270,12 @@ top10 = df.sort_values('weight', ascending=False).head(10)
 2. 分两次提交：
    - `feat: 建立[指数名称]指数专题页及前十大成分股PreBuy页面`
    - `feat: 按WATCHLIST_RULES将[N]家公司纳入watchlist` （如有新增）
-3. 向用户输出总结，包含：
+3. **若 watchlist 有任何变更**（新增、档位调整、字段更新），同步拷贝至外部项目：
+   ```powershell
+   Copy-Item "data\stock_watchlist.json" "E:\Work\Python\Finance\api\config\stock_watchlist.json" -Force
+   ```
+   > 此步在 git commit **之后**执行，确保拷贝的是已提交的最终版本。
+4. 向用户输出总结，包含：
 
 ```
 ## [指数名称] PreBuy 分析总结
