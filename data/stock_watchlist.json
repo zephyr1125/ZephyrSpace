@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-04-26T13:01:35+08:00",
+  "generated_at": "2026-04-26T14:52:18+08:00",
   "source_universes": [
     {
       "code": "560390",
@@ -16,6 +16,21 @@
       "code": "931897",
       "name": "绿色电力",
       "note_path": "05-A股指数/绿色电力.md"
+    },
+    {
+      "code": "930713",
+      "name": "中证人工智能",
+      "note_path": "05-A股指数/930713 人工智能指数.md"
+    },
+    {
+      "code": "399997",
+      "name": "中证白酒",
+      "note_path": "05-A股指数/399997 中证白酒指数.md"
+    },
+    {
+      "code": "980018",
+      "name": "国证卫星通信",
+      "note_path": "05-A股指数/980018 卫星通信指数.md"
     }
   ],
   "selection_rules": [
@@ -333,6 +348,182 @@
           "成长弹性有限"
         ],
         "board": "上交所主板"
+      },
+      {
+        "priority": 20,
+        "name": "贵州茅台",
+        "code": "600519.SH",
+        "note_path": "01-公司/贵州茅台.md",
+        "source_etf": "399997",
+        "position_role": "质量价值绝对锚",
+        "prebuy_conclusion": "可以买，当前约1460元处于历史低位PE约20倍，适合分批建立底仓，不追高。",
+        "watch_reason": "中证白酒指数权重第一，护城河最深的消费品，PE历史低位，底仓首选。",
+        "current_price": 1462.0,
+        "price_record_time": "2026-04-26 14:52:00 +08:00",
+        "price_bands": [
+          {
+            "label": "追高区",
+            "lower": 1700.0,
+            "upper": null,
+            "action": "avoid"
+          },
+          {
+            "label": "中性区",
+            "lower": 1400.0,
+            "upper": 1700.0,
+            "action": "watch"
+          },
+          {
+            "label": "较好区间",
+            "lower": 1200.0,
+            "upper": 1400.0,
+            "action": "consider"
+          },
+          {
+            "label": "更低区间",
+            "lower": null,
+            "upper": 1200.0,
+            "action": "buy"
+          }
+        ],
+        "risk_flags": [
+          "飞天批价若持续下跌至出厂价附近则信号恶化",
+          "宏观消费景气度走弱，商务宴请需求收缩",
+          "2026年提价节奏慢于预期则业绩增速回落"
+        ],
+        "board": "上交所主板"
+      },
+      {
+        "priority": 21,
+        "name": "五粮液",
+        "code": "000858.SZ",
+        "note_path": "01-公司/五粮液.md",
+        "source_etf": "399997",
+        "position_role": "高端白酒第二极 / 股息底仓",
+        "prebuy_conclusion": "可以买，当前约102元对应PE约12-13倍为历史极低位，股息率约4.5%提供防御，适合底仓分批建仓。",
+        "watch_reason": "中证白酒指数权重第二，PE历史底部，4.5%股息率支撑，底仓+股息双逻辑。",
+        "current_price": 102.0,
+        "price_record_time": "2026-04-26 14:52:00 +08:00",
+        "price_bands": [
+          {
+            "label": "追高区",
+            "lower": 160.0,
+            "upper": null,
+            "action": "avoid"
+          },
+          {
+            "label": "中性区",
+            "lower": 120.0,
+            "upper": 160.0,
+            "action": "watch"
+          },
+          {
+            "label": "较好区间",
+            "lower": 90.0,
+            "upper": 120.0,
+            "action": "consider"
+          },
+          {
+            "label": "更低区间",
+            "lower": null,
+            "upper": 80.0,
+            "action": "buy"
+          }
+        ],
+        "risk_flags": [
+          "普五批价若跌破出厂价900元则动销恶化",
+          "高端白酒整体需求疲软，比茅台更敏感",
+          "渠道库存压力导致公司主动控货，收入增速承压"
+        ],
+        "board": "深交所主板"
+      },
+      {
+        "priority": 22,
+        "name": "泸州老窖",
+        "code": "000568.SZ",
+        "note_path": "01-公司/泸州老窖.md",
+        "source_etf": "399997",
+        "position_role": "高端白酒第三极 / 股息底仓",
+        "prebuy_conclusion": "可以买，当前约122元对应PE约13-14倍处于历史低位，股息率约4.7%，分红承诺有约束力，适合底仓建仓。",
+        "watch_reason": "中证白酒指数权重第三，ROE 30%，PE历史低位，三年85亿/年分红承诺，底仓逻辑扎实。",
+        "current_price": 122.0,
+        "price_record_time": "2026-04-26 14:52:00 +08:00",
+        "price_bands": [
+          {
+            "label": "追高区",
+            "lower": 180.0,
+            "upper": null,
+            "action": "avoid"
+          },
+          {
+            "label": "中性区",
+            "lower": 140.0,
+            "upper": 180.0,
+            "action": "watch"
+          },
+          {
+            "label": "较好区间",
+            "lower": 110.0,
+            "upper": 140.0,
+            "action": "consider"
+          },
+          {
+            "label": "更低区间",
+            "lower": null,
+            "upper": 90.0,
+            "action": "buy"
+          }
+        ],
+        "risk_flags": [
+          "国窖批价持续下滑至出厂价以下则高端化战略受损",
+          "2024年增速已明显放缓至个位数",
+          "次高端特曲系列库存压力，回款减慢"
+        ],
+        "board": "深交所主板"
+      },
+      {
+        "priority": 23,
+        "name": "海康威视",
+        "code": "002415.SZ",
+        "note_path": "01-公司/海康威视.md",
+        "source_etf": "930713",
+        "position_role": "视觉AI底仓 / 高分红价值锚",
+        "prebuy_conclusion": "可以布局，PE约23x处于历史低位，分红率超53%，适合底仓；需接受短期净利润承压。",
+        "watch_reason": "930713指数内体量最大最稳健的价值标的，AI视觉+AIoT护城河真实，高分红提供安全边际。",
+        "current_price": 27.5,
+        "price_record_time": "2026-04-26 14:52:00 +08:00",
+        "price_bands": [
+          {
+            "label": "追高区",
+            "lower": 38.0,
+            "upper": null,
+            "action": "avoid"
+          },
+          {
+            "label": "中性区",
+            "lower": 30.0,
+            "upper": 38.0,
+            "action": "watch"
+          },
+          {
+            "label": "较好区间",
+            "lower": 22.0,
+            "upper": 30.0,
+            "action": "consider"
+          },
+          {
+            "label": "更低区间",
+            "lower": null,
+            "upper": 22.0,
+            "action": "buy"
+          }
+        ],
+        "risk_flags": [
+          "美国实体清单制裁限制海外业务扩张空间",
+          "净利润连续下滑（-15.1%），国内安防市场传统需求见顶",
+          "创新业务规模仍小且盈利未经验证"
+        ],
+        "board": "深交所主板"
       }
     ],
     "secondary": [
@@ -869,6 +1060,138 @@
           "成长预期容易先行透支"
         ],
         "board": "科创板"
+      },
+      {
+        "priority": 24,
+        "name": "中际旭创",
+        "code": "300308.SZ",
+        "note_path": "01-公司/中际旭创.md",
+        "source_etf": "930713",
+        "position_role": "AI光模块弹性仓",
+        "prebuy_conclusion": "可以研究性布局，但需等价格回落至合理区间，1.6T放量景气预期已部分Price-in。",
+        "watch_reason": "全球AI光模块龙头（市占率>40%），景气高峰弹性极大，等景气确认信号后加仓。",
+        "current_price": 120.0,
+        "price_record_time": "2026-04-26 14:52:00 +08:00",
+        "price_bands": [
+          {
+            "label": "追高区",
+            "lower": 150.0,
+            "upper": null,
+            "action": "avoid"
+          },
+          {
+            "label": "中性区",
+            "lower": 110.0,
+            "upper": 150.0,
+            "action": "watch"
+          },
+          {
+            "label": "较好区间",
+            "lower": 80.0,
+            "upper": 110.0,
+            "action": "consider"
+          },
+          {
+            "label": "更低区间",
+            "lower": null,
+            "upper": 80.0,
+            "action": "buy"
+          }
+        ],
+        "risk_flags": [
+          "客户集中度极高（北美4客户+英伟达超70%营收），单一客户削减订单即崩",
+          "800G产能2025年可能供过于求，毛利率下行压力",
+          "高端EML光芯片仍部分依赖海外供应，出口管制风险"
+        ],
+        "board": "深交所创业板"
+      },
+      {
+        "priority": 25,
+        "name": "山西汾酒",
+        "code": "600809.SH",
+        "note_path": "01-公司/山西汾酒.md",
+        "source_etf": "399997",
+        "position_role": "白酒成长龙头 / 弹性仓",
+        "prebuy_conclusion": "继续研究，等更好赔率。当前PE约18倍有成长溢价，需等批价修复与业绩加速信号，回调至160元以下再考虑。",
+        "watch_reason": "中证白酒指数增速最快的大权重股，全国化+高端化双轮驱动，等价格回到合理区间。",
+        "current_price": 180.0,
+        "price_record_time": "2026-04-26 14:52:00 +08:00",
+        "price_bands": [
+          {
+            "label": "追高区",
+            "lower": 230.0,
+            "upper": null,
+            "action": "avoid"
+          },
+          {
+            "label": "中性区",
+            "lower": 180.0,
+            "upper": 230.0,
+            "action": "watch"
+          },
+          {
+            "label": "较好区间",
+            "lower": 140.0,
+            "upper": 180.0,
+            "action": "consider"
+          },
+          {
+            "label": "更低区间",
+            "lower": null,
+            "upper": 110.0,
+            "action": "buy"
+          }
+        ],
+        "risk_flags": [
+          "全国化扩张遇阻则成长逻辑核心假设动摇",
+          "高端青花系列批价倒挂说明需求问题",
+          "玻汾大众产品量增价跌拉低整体毛利率"
+        ],
+        "board": "上交所主板"
+      },
+      {
+        "priority": 26,
+        "name": "口子窖",
+        "code": "603589.SH",
+        "note_path": "01-公司/口子窖.md",
+        "source_etf": "399997",
+        "position_role": "防御型区域白酒 / 现金流价值",
+        "prebuy_conclusion": "等价格。当前约38元PE约14倍合理，但成长性有限，等PE回到12倍以下（约35元）再小仓位配置。",
+        "watch_reason": "现金流极优（经营现金流同比+60%），资产负债率仅23%，财务最稳健的区域白酒，适合防御底仓。",
+        "current_price": 38.28,
+        "price_record_time": "2026-04-26 14:52:00 +08:00",
+        "price_bands": [
+          {
+            "label": "追高区",
+            "lower": 55.0,
+            "upper": null,
+            "action": "avoid"
+          },
+          {
+            "label": "中性区",
+            "lower": 42.0,
+            "upper": 55.0,
+            "action": "watch"
+          },
+          {
+            "label": "较好区间",
+            "lower": 32.0,
+            "upper": 42.0,
+            "action": "consider"
+          },
+          {
+            "label": "更低区间",
+            "lower": null,
+            "upper": 25.0,
+            "action": "buy"
+          }
+        ],
+        "risk_flags": [
+          "营收几乎零增长，省内市场天花板临近",
+          "省外扩张长期没有突破，成长空间高度受限",
+          "行业调整期渠道商承压，动销未恢复"
+        ],
+        "board": "上交所主板"
       }
     ]
   }
