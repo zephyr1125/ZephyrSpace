@@ -386,6 +386,30 @@
           "DOJ App Store反垄断诉讼（2027庭审），若强制降佣Services利润受损$10-20B"
         ],
         "dv_ttm": 0.37
+      },
+      {
+        "name": "谷歌(Alphabet)",
+        "code": "GOOGL",
+        "market": "US",
+        "board": "纳",
+        "source_etf": "direct",
+        "position_role": "美股长线底仓 - Search近垄断现金流机器×Cloud高速成长(+36%)×Gemini AI全生态，3年+持有窗口在Ad Tech裁决落地后",
+        "prebuy_conclusion": "逻辑清晰，等待更合适价格或验证点 - FCF机器体质成立(OCF $164B)，DOJ Ad Tech裁决悬空是最大单一风险；当前$345处于历史PE高位(90-95分位)，建议等裁决落地+价格回调至$280-300再考虑建仓",
+        "watch_reason": "Search护城河接近垄断(+13.4%持续增长)，Cloud已转正盈利且backlog $240B(+55%)；Gemini月活7.5亿深度锁定Android/Gmail/Docs生态；FCF $73B+持续回购，SBC/净利18.9%温和可控",
+        "current_price": 345.0,
+        "price_date": "2026-04-25",
+        "price_bands": [
+          350.0,
+          290.0,
+          245.0
+        ],
+        "valuation_anchor": "FY2026E EPS $11.70：追高区>$350(>30xFE,历史高分位) / 中性区$290-350(25-30xFE) / 较好区间$245-290(21-25xFE,历史均值附近) / 更低<$245(<21xFE安全边际充足)",
+        "risk_flags": [
+          "DOJ Ad Tech案：AdX强制剥离裁决悬空($30-40B收入规模)，裁决公布前股价承压；行为性救济则为小幅正面",
+          "FY2026 Capex翻倍至$175-185B(FY2025 $91B)：FCF将大幅压缩，短期FCF估值逻辑失效",
+          "DOJ Search行为约束：Apple TAC付款($18-20B/年)逐步消失，6年执行期持续侵蚀高毛利流量"
+        ],
+        "dv_ttm": 0.23
       }
     ],
     "growth": [
@@ -1146,6 +1170,30 @@
         "dv_ttm": 0.17,
         "entry_trigger": null,
         "notes": "Q4 2025单季净利-66%，净利率从19.1%压缩至13.7%，原因未明；2025年定增扩股36%摊薄EPS；PE=62x历史93%分位；等FY2026利润恢复验证后340-420元建仓"
+      },
+      {
+        "name": "亚马逊",
+        "code": "AMZN",
+        "market": "US",
+        "board": "纳",
+        "source_etf": "direct",
+        "position_role": "美股成长池 - AWS全球#1云平台(31%市占)×AI基础设施全栈布局，Prime/广告飞轮提供现金流担保，200B Capex周期后FCF修复期权",
+        "prebuy_conclusion": "逻辑清晰，等待更合适价格或验证点 - AWS Q4增速+24%加速，买入逻辑成立；但当前$264位于60日高位(从低点+33%)，FCF/净利润仅9.9%被Capex压制，建议等2026-04-29财报验证后回调至$240以下再建仓",
+        "watch_reason": "AWS护城河垄断级(200+服务/36区域)，AI工作负载推动云需求新周期；Bedrock+Trainium全栈AI布局最完整；200B Capex峰值后预计FY2027+ FCF修复至$50-80B，届时估值重定价向上",
+        "current_price": 264.0,
+        "price_date": "2026-04-25",
+        "price_bands": [
+          290.0,
+          240.0,
+          190.0
+        ],
+        "valuation_anchor": "FY2026E EPS $7.84：追高区>$290(>37xFE) / 中性区$240-290(30-37xFE，含当前价) / 较好区间$190-240(24-30xFE) / 更低<$190(<24xFE强安全边际)",
+        "risk_flags": [
+          "FCF/净利润仅9.9%(FY2025 $7.7B FCF vs $77.7B净利)：$200B Capex周期若AI ROI不兑现将引发估值重定价",
+          "FTC反垄断主案悬而未决：零售垄断案预计进入联邦法院，极端情形强制拆分",
+          "关税政策拖累电商第三方卖家经济性，广告业务间接受损"
+        ],
+        "dv_ttm": 0
       }
     ],
     "radar": [
