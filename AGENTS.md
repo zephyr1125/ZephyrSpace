@@ -211,38 +211,53 @@
 使用 tushare API（token 见 `.env` 文件）：
 
 ```python
-import tushare as ts, os
+import tushare as ts, os, time
 from dotenv import load_dotenv
 load_dotenv()
 ts.set_token(os.getenv('TUSHARE_TOKEN'))
 pro = ts.pro_api()
 
-# 尝试不同后缀直到成功（CSI/SH/SZ/SW）
-df = pro.index_weight(index_code='930713.CSI')
-# 若无数据则依次降级：index_member → index_component
-all_stocks = df.sort_values('weight', ascending=False)
+# index_weight 返回历史所有期，需过滤最新 trade_date
+# 后缀优先级：深交所指数用 .SZ，中证/国证指数用 .CSI，上交所用 .SH，申万用 .SW
+df = pro.index_weight(index_code='399396.SZ')   # ✅ 已验证：返回 columns=[index_code,con_code,trade_date,weight]
+latest_date = df['trade_date'].max()
+all_stocks = df[df['trade_date'] == latest_date].sort_values('weight', ascending=False)
+# 若 index_weight 无数据，依次降级：index_member → index_component
 ```
+
+> ⚠️ **已验证陷阱**：`index_weight` 返回的是历史所有期数据（可达数千行），必须先过滤 `trade_date == max` 再使用，否则会重复统计。
 
 **2b. 量化粗筛（四条硬门槛，全部满足才进入候选）**
 
-用 `daily_basic`（逐只调用）+ `fina_indicator`（逐只调用，limit=1）拉取指标，每只间隔 0.11s 防限流。50只全量约 20s，可行。
+用 `daily_basic` + `fina_indicator` 逐只调用，每只间隔 0.11s 防限流。
 
 ```python
-import time
-
+# ✅ 已验证：daily_basic 多只逗号分隔批量调用返回空 DataFrame，必须逐只调用
 db_rows, fi_rows = [], []
 for code in all_stocks['con_code']:
-    r = pro.daily_basic(ts_code=code, trade_date='最近交易日',
-        fields='ts_code,pe_ttm,total_mv,pb')
+    r = pro.daily_basic(
+        ts_code=code,
+        trade_date='20260424',          # 最近交易日，格式 YYYYMMDD（非周末）
+        fields='ts_code,pe_ttm,total_mv,pb'
+    )
     if len(r): db_rows.append(r.iloc[0])
     time.sleep(0.11)
 
+# ✅ 已验证：fina_indicator limit=1 返回最新一期（通常为最近季报）
+# or_yoy = 营收同比增速，直接在此接口取得，无需额外调用 income 接口
 for code in all_stocks['con_code']:
-    r = pro.fina_indicator(ts_code=code,
-        fields='ts_code,roe,or_yoy', limit=1)  # or_yoy = 营收同比增速
+    r = pro.fina_indicator(
+        ts_code=code,
+        fields='ts_code,roe,or_yoy',   # roe=净资产收益率TTM, or_yoy=营收同比(%)
+        limit=1
+    )
     if len(r): fi_rows.append(r.iloc[0])
     time.sleep(0.11)
+
+# 实测性能（399396，50只）：daily_basic 7.5s + fina_indicator 12.5s = 约 20s
 ```
+
+> ⚠️ **已验证陷阱**：`total_mv` 单位为**万元**，转亿需除以 10000。
 
 过滤条件（四条，全部满足）：
 
