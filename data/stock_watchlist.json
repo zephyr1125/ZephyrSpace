@@ -1,5 +1,5 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "AGENT_INSTRUCTION": "修改本文件前，必须先完整阅读 tier_definitions 中对应档位的 entry_criteria 和 decision_tree，判断档位后再写入，不得跳过。完整规则见 data/WATCHLIST_RULES.md。",
   "rules_doc": "data/WATCHLIST_RULES.md",
   "tier_definitions": {
@@ -65,11 +65,11 @@
     "watch_reason: 长期关注理由",
     "current_price: 加入时当前价格（数字，单位元）",
     "price_record_time: ISO 8601 格式带时区",
-    "price_bands: 至少3个区间，label/lower/upper/action 不得省略",
+    "price_bands: 至少3个区间，按 min 降序排列（null 排最后）；字段为 label/min/action。min 为进入该区间的最低价格，上边界由上一区间的 min 隐式确定，结构上不可能产生 gap。最后一个区间 min 必须为 null。",
     "risk_flags: 数组，至少2条，引用 PreBuy 主要红旗",
     "board: 上交所主板/深交所主板/科创板/深交所创业板 之一"
   ],
-  "generated_at": "2026-04-26T15:08:23.026204+08:00",
+  "generated_at": "2026-04-26T15:22:57.585249+08:00",
   "source_universes": [
     {
       "code": "560390",
@@ -118,26 +118,22 @@
         "price_bands": [
           {
             "label": "追高区",
-            "lower": 85.0,
-            "upper": null,
+            "min": 85.0,
             "action": "avoid"
           },
           {
             "label": "中性区",
-            "lower": 75.0,
-            "upper": 85.0,
+            "min": 75.0,
             "action": "watch"
           },
           {
             "label": "较好区间",
-            "lower": 68.0,
-            "upper": 75.0,
+            "min": 68.0,
             "action": "consider"
           },
           {
             "label": "安全边际更好",
-            "lower": null,
-            "upper": 68.0,
+            "min": null,
             "action": "buy"
           }
         ],
@@ -162,26 +158,22 @@
         "price_bands": [
           {
             "label": "追高区",
-            "lower": 29.0,
-            "upper": null,
+            "min": 29.0,
             "action": "avoid"
           },
           {
             "label": "中性区",
-            "lower": 26.0,
-            "upper": 29.0,
+            "min": 26.0,
             "action": "watch"
           },
           {
             "label": "较好区间",
-            "lower": 23.5,
-            "upper": 26.0,
+            "min": 23.5,
             "action": "consider"
           },
           {
             "label": "更低区间",
-            "lower": null,
-            "upper": 23.5,
+            "min": null,
             "action": "buy"
           }
         ],
@@ -206,26 +198,22 @@
         "price_bands": [
           {
             "label": "追高区",
-            "lower": 42.0,
-            "upper": null,
+            "min": 42.0,
             "action": "avoid"
           },
           {
             "label": "中性区",
-            "lower": 36.0,
-            "upper": 42.0,
+            "min": 36.0,
             "action": "watch"
           },
           {
             "label": "较好区间",
-            "lower": 31.0,
-            "upper": 36.0,
+            "min": 31.0,
             "action": "consider"
           },
           {
             "label": "更低区间",
-            "lower": null,
-            "upper": 31.0,
+            "min": null,
             "action": "buy"
           }
         ],
@@ -250,26 +238,22 @@
         "price_bands": [
           {
             "label": "追高区",
-            "lower": 16.0,
-            "upper": null,
+            "min": 16.0,
             "action": "avoid"
           },
           {
             "label": "中性区",
-            "lower": 14.0,
-            "upper": 16.0,
+            "min": 14.0,
             "action": "watch"
           },
           {
             "label": "较好区间",
-            "lower": 12.5,
-            "upper": 14.0,
+            "min": 12.5,
             "action": "consider"
           },
           {
             "label": "更低区间",
-            "lower": null,
-            "upper": 12.5,
+            "min": null,
             "action": "buy"
           }
         ],
@@ -294,26 +278,22 @@
         "price_bands": [
           {
             "label": "追高区",
-            "lower": 40.0,
-            "upper": null,
+            "min": 40.0,
             "action": "avoid"
           },
           {
             "label": "中性区",
-            "lower": 35.0,
-            "upper": 40.0,
+            "min": 35.0,
             "action": "watch"
           },
           {
             "label": "较好区间",
-            "lower": 31.0,
-            "upper": 35.0,
+            "min": 31.0,
             "action": "consider"
           },
           {
             "label": "更低区间",
-            "lower": null,
-            "upper": 31.0,
+            "min": null,
             "action": "buy"
           }
         ],
@@ -338,26 +318,22 @@
         "price_bands": [
           {
             "label": "追高区",
-            "lower": 20.0,
-            "upper": null,
+            "min": 20.0,
             "action": "avoid"
           },
           {
             "label": "中性区",
-            "lower": 17.0,
-            "upper": 20.0,
+            "min": 17.0,
             "action": "watch"
           },
           {
             "label": "较好区间",
-            "lower": 15.0,
-            "upper": 17.0,
+            "min": 15.0,
             "action": "consider"
           },
           {
             "label": "更低区间",
-            "lower": null,
-            "upper": 15.0,
+            "min": null,
             "action": "buy"
           }
         ],
@@ -382,26 +358,22 @@
         "price_bands": [
           {
             "label": "追高区",
-            "lower": 17.0,
-            "upper": null,
+            "min": 17.0,
             "action": "avoid"
           },
           {
             "label": "中性区",
-            "lower": 15.0,
-            "upper": 17.0,
+            "min": 15.0,
             "action": "watch"
           },
           {
             "label": "较好区间",
-            "lower": 13.5,
-            "upper": 15.0,
+            "min": 13.5,
             "action": "consider"
           },
           {
             "label": "更低区间",
-            "lower": null,
-            "upper": 13.5,
+            "min": null,
             "action": "buy"
           }
         ],
@@ -426,26 +398,22 @@
         "price_bands": [
           {
             "label": "追高区",
-            "lower": 1700.0,
-            "upper": null,
+            "min": 1700.0,
             "action": "avoid"
           },
           {
             "label": "中性区",
-            "lower": 1400.0,
-            "upper": 1700.0,
+            "min": 1400.0,
             "action": "watch"
           },
           {
             "label": "较好区间",
-            "lower": 1200.0,
-            "upper": 1400.0,
+            "min": 1200.0,
             "action": "consider"
           },
           {
             "label": "更低区间",
-            "lower": null,
-            "upper": 1200.0,
+            "min": null,
             "action": "buy"
           }
         ],
@@ -470,26 +438,22 @@
         "price_bands": [
           {
             "label": "追高区",
-            "lower": 160.0,
-            "upper": null,
+            "min": 160.0,
             "action": "avoid"
           },
           {
             "label": "中性区",
-            "lower": 120.0,
-            "upper": 160.0,
+            "min": 120.0,
             "action": "watch"
           },
           {
             "label": "较好区间",
-            "lower": 90.0,
-            "upper": 120.0,
+            "min": 90.0,
             "action": "consider"
           },
           {
             "label": "更低区间",
-            "lower": null,
-            "upper": 80.0,
+            "min": null,
             "action": "buy"
           }
         ],
@@ -514,26 +478,22 @@
         "price_bands": [
           {
             "label": "追高区",
-            "lower": 180.0,
-            "upper": null,
+            "min": 180.0,
             "action": "avoid"
           },
           {
             "label": "中性区",
-            "lower": 140.0,
-            "upper": 180.0,
+            "min": 140.0,
             "action": "watch"
           },
           {
             "label": "较好区间",
-            "lower": 110.0,
-            "upper": 140.0,
+            "min": 110.0,
             "action": "consider"
           },
           {
             "label": "更低区间",
-            "lower": null,
-            "upper": 90.0,
+            "min": null,
             "action": "buy"
           }
         ],
@@ -558,26 +518,22 @@
         "price_bands": [
           {
             "label": "追高区",
-            "lower": 38.0,
-            "upper": null,
+            "min": 38.0,
             "action": "avoid"
           },
           {
             "label": "中性区",
-            "lower": 30.0,
-            "upper": 38.0,
+            "min": 30.0,
             "action": "watch"
           },
           {
             "label": "较好区间",
-            "lower": 22.0,
-            "upper": 30.0,
+            "min": 22.0,
             "action": "consider"
           },
           {
             "label": "更低区间",
-            "lower": null,
-            "upper": 22.0,
+            "min": null,
             "action": "buy"
           }
         ],
@@ -604,26 +560,22 @@
         "price_bands": [
           {
             "label": "追高区",
-            "lower": 9.5,
-            "upper": null,
+            "min": 9.5,
             "action": "avoid"
           },
           {
             "label": "中性区",
-            "lower": 8.3,
-            "upper": 9.5,
+            "min": 8.3,
             "action": "watch"
           },
           {
             "label": "较好区间",
-            "lower": 7.3,
-            "upper": 8.3,
+            "min": 7.3,
             "action": "consider"
           },
           {
             "label": "更低区间",
-            "lower": null,
-            "upper": 7.3,
+            "min": null,
             "action": "buy"
           }
         ],
@@ -648,32 +600,27 @@
         "price_bands": [
           {
             "label": "追高区",
-            "lower": 220.0,
-            "upper": null,
+            "min": 220.0,
             "action": "avoid"
           },
           {
             "label": "中性区",
-            "lower": 190.0,
-            "upper": 220.0,
+            "min": 190.0,
             "action": "watch"
           },
           {
             "label": "较好区间",
-            "lower": 165.0,
-            "upper": 190.0,
+            "min": 165.0,
             "action": "consider"
           },
           {
             "label": "更舒服区间",
-            "lower": 150.0,
-            "upper": 165.0,
+            "min": 150.0,
             "action": "buy"
           },
           {
             "label": "更低区间",
-            "lower": null,
-            "upper": 150.0,
+            "min": null,
             "action": "strong_buy"
           }
         ],
@@ -698,26 +645,22 @@
         "price_bands": [
           {
             "label": "追高区",
-            "lower": 29.0,
-            "upper": null,
+            "min": 29.0,
             "action": "avoid"
           },
           {
             "label": "中性区",
-            "lower": 26.0,
-            "upper": 29.0,
+            "min": 26.0,
             "action": "watch"
           },
           {
             "label": "较好区间",
-            "lower": 24.0,
-            "upper": 26.0,
+            "min": 24.0,
             "action": "consider"
           },
           {
             "label": "更低区间",
-            "lower": null,
-            "upper": 24.0,
+            "min": null,
             "action": "buy"
           }
         ],
@@ -742,26 +685,22 @@
         "price_bands": [
           {
             "label": "追高区",
-            "lower": 75.0,
-            "upper": null,
+            "min": 75.0,
             "action": "avoid"
           },
           {
             "label": "中性区",
-            "lower": 65.0,
-            "upper": 75.0,
+            "min": 65.0,
             "action": "watch"
           },
           {
             "label": "较好区间",
-            "lower": 58.0,
-            "upper": 65.0,
+            "min": 58.0,
             "action": "consider"
           },
           {
             "label": "更低区间",
-            "lower": null,
-            "upper": 58.0,
+            "min": null,
             "action": "buy"
           }
         ],
@@ -786,26 +725,22 @@
         "price_bands": [
           {
             "label": "追高区",
-            "lower": 150.0,
-            "upper": null,
+            "min": 150.0,
             "action": "avoid"
           },
           {
             "label": "中性区",
-            "lower": 110.0,
-            "upper": 150.0,
+            "min": 110.0,
             "action": "watch"
           },
           {
             "label": "较好区间",
-            "lower": 80.0,
-            "upper": 110.0,
+            "min": 80.0,
             "action": "consider"
           },
           {
             "label": "更低区间",
-            "lower": null,
-            "upper": 80.0,
+            "min": null,
             "action": "buy"
           }
         ],
@@ -830,26 +765,22 @@
         "price_bands": [
           {
             "label": "追高区",
-            "lower": 230.0,
-            "upper": null,
+            "min": 230.0,
             "action": "avoid"
           },
           {
             "label": "中性区",
-            "lower": 180.0,
-            "upper": 230.0,
+            "min": 180.0,
             "action": "watch"
           },
           {
             "label": "较好区间",
-            "lower": 140.0,
-            "upper": 180.0,
+            "min": 140.0,
             "action": "consider"
           },
           {
             "label": "更低区间",
-            "lower": null,
-            "upper": 110.0,
+            "min": null,
             "action": "buy"
           }
         ],
@@ -874,26 +805,22 @@
         "price_bands": [
           {
             "label": "追高区",
-            "lower": 500.0,
-            "upper": null,
+            "min": 500.0,
             "action": "avoid"
           },
           {
             "label": "中性区",
-            "lower": 440.0,
-            "upper": 500.0,
+            "min": 440.0,
             "action": "watch"
           },
           {
             "label": "较好区间",
-            "lower": 380.0,
-            "upper": 440.0,
+            "min": 380.0,
             "action": "consider"
           },
           {
             "label": "更低区间",
-            "lower": null,
-            "upper": 380.0,
+            "min": null,
             "action": "buy"
           }
         ],
@@ -918,26 +845,22 @@
         "price_bands": [
           {
             "label": "追高区",
-            "lower": 190.0,
-            "upper": null,
+            "min": 190.0,
             "action": "avoid"
           },
           {
             "label": "中性区",
-            "lower": 165.0,
-            "upper": 190.0,
+            "min": 165.0,
             "action": "watch"
           },
           {
             "label": "较好区间",
-            "lower": 145.0,
-            "upper": 165.0,
+            "min": 145.0,
             "action": "consider"
           },
           {
             "label": "更低区间",
-            "lower": null,
-            "upper": 145.0,
+            "min": null,
             "action": "buy"
           }
         ],
@@ -962,26 +885,22 @@
         "price_bands": [
           {
             "label": "追高区",
-            "lower": 75.0,
-            "upper": null,
+            "min": 75.0,
             "action": "avoid"
           },
           {
             "label": "中性区",
-            "lower": 60.0,
-            "upper": 75.0,
+            "min": 60.0,
             "action": "watch"
           },
           {
             "label": "较好区间",
-            "lower": 45.0,
-            "upper": 60.0,
+            "min": 45.0,
             "action": "consider"
           },
           {
             "label": "更低区间",
-            "lower": null,
-            "upper": 45.0,
+            "min": null,
             "action": "buy"
           }
         ],
@@ -1006,26 +925,22 @@
         "price_bands": [
           {
             "label": "追高区",
-            "lower": 450.0,
-            "upper": null,
+            "min": 450.0,
             "action": "avoid"
           },
           {
             "label": "中性区",
-            "lower": 360.0,
-            "upper": 450.0,
+            "min": 360.0,
             "action": "watch"
           },
           {
             "label": "较好区间",
-            "lower": 280.0,
-            "upper": 360.0,
+            "min": 280.0,
             "action": "consider"
           },
           {
             "label": "更低区间",
-            "lower": null,
-            "upper": 280.0,
+            "min": null,
             "action": "buy"
           }
         ],
@@ -1050,26 +965,22 @@
         "price_bands": [
           {
             "label": "追高区",
-            "lower": 150.0,
-            "upper": null,
+            "min": 150.0,
             "action": "avoid"
           },
           {
             "label": "中性区",
-            "lower": 110.0,
-            "upper": 150.0,
+            "min": 110.0,
             "action": "watch"
           },
           {
             "label": "较好区间",
-            "lower": 80.0,
-            "upper": 110.0,
+            "min": 80.0,
             "action": "consider"
           },
           {
             "label": "更低区间",
-            "lower": null,
-            "upper": 65.0,
+            "min": null,
             "action": "buy"
           }
         ],
@@ -1094,26 +1005,22 @@
         "price_bands": [
           {
             "label": "追高区",
-            "lower": 120.0,
-            "upper": null,
+            "min": 120.0,
             "action": "avoid"
           },
           {
             "label": "中性区",
-            "lower": 90.0,
-            "upper": 120.0,
+            "min": 90.0,
             "action": "watch"
           },
           {
             "label": "较好区间",
-            "lower": 65.0,
-            "upper": 90.0,
+            "min": 65.0,
             "action": "consider"
           },
           {
             "label": "更低区间",
-            "lower": null,
-            "upper": 65.0,
+            "min": null,
             "action": "buy"
           }
         ],
@@ -1138,26 +1045,22 @@
         "price_bands": [
           {
             "label": "追高区",
-            "lower": 65.0,
-            "upper": null,
+            "min": 65.0,
             "action": "avoid"
           },
           {
             "label": "中性区",
-            "lower": 50.0,
-            "upper": 65.0,
+            "min": 50.0,
             "action": "watch"
           },
           {
             "label": "较好区间",
-            "lower": 38.0,
-            "upper": 50.0,
+            "min": 38.0,
             "action": "consider"
           },
           {
             "label": "更低区间",
-            "lower": null,
-            "upper": 30.0,
+            "min": null,
             "action": "buy"
           }
         ],
@@ -1184,26 +1087,22 @@
         "price_bands": [
           {
             "label": "追高区",
-            "lower": 18.0,
-            "upper": null,
+            "min": 18.0,
             "action": "avoid"
           },
           {
             "label": "中性区",
-            "lower": 15.5,
-            "upper": 18.0,
+            "min": 15.5,
             "action": "watch"
           },
           {
             "label": "较好区间",
-            "lower": 13.5,
-            "upper": 15.5,
+            "min": 13.5,
             "action": "consider"
           },
           {
             "label": "更低区间",
-            "lower": null,
-            "upper": 13.5,
+            "min": null,
             "action": "buy"
           }
         ],
@@ -1228,26 +1127,22 @@
         "price_bands": [
           {
             "label": "追高区",
-            "lower": 29.0,
-            "upper": null,
+            "min": 29.0,
             "action": "avoid"
           },
           {
             "label": "中性区",
-            "lower": 25.0,
-            "upper": 29.0,
+            "min": 25.0,
             "action": "watch"
           },
           {
             "label": "较好区间",
-            "lower": 22.0,
-            "upper": 25.0,
+            "min": 22.0,
             "action": "consider"
           },
           {
             "label": "更低区间",
-            "lower": null,
-            "upper": 22.0,
+            "min": null,
             "action": "buy"
           }
         ],
@@ -1272,26 +1167,22 @@
         "price_bands": [
           {
             "label": "追高区",
-            "lower": 29.0,
-            "upper": null,
+            "min": 29.0,
             "action": "avoid"
           },
           {
             "label": "中性区",
-            "lower": 24.0,
-            "upper": 29.0,
+            "min": 24.0,
             "action": "watch"
           },
           {
             "label": "较好区间",
-            "lower": 20.0,
-            "upper": 24.0,
+            "min": 20.0,
             "action": "consider"
           },
           {
             "label": "更低区间",
-            "lower": null,
-            "upper": 20.0,
+            "min": null,
             "action": "buy"
           }
         ],
@@ -1316,26 +1207,22 @@
         "price_bands": [
           {
             "label": "追高区",
-            "lower": 25.0,
-            "upper": null,
+            "min": 25.0,
             "action": "avoid"
           },
           {
             "label": "中性区",
-            "lower": 22.0,
-            "upper": 25.0,
+            "min": 22.0,
             "action": "watch"
           },
           {
             "label": "较好区间",
-            "lower": 19.0,
-            "upper": 22.0,
+            "min": 19.0,
             "action": "consider"
           },
           {
             "label": "更低区间",
-            "lower": null,
-            "upper": 19.0,
+            "min": null,
             "action": "buy"
           }
         ],
@@ -1360,26 +1247,22 @@
         "price_bands": [
           {
             "label": "追高区",
-            "lower": 29.0,
-            "upper": null,
+            "min": 29.0,
             "action": "avoid"
           },
           {
             "label": "中性区",
-            "lower": 25.0,
-            "upper": 29.0,
+            "min": 25.0,
             "action": "watch"
           },
           {
             "label": "较好区间",
-            "lower": 22.0,
-            "upper": 25.0,
+            "min": 22.0,
             "action": "consider"
           },
           {
             "label": "更低区间",
-            "lower": null,
-            "upper": 22.0,
+            "min": null,
             "action": "buy"
           }
         ],
@@ -1404,26 +1287,22 @@
         "price_bands": [
           {
             "label": "追高区",
-            "lower": 66.0,
-            "upper": null,
+            "min": 66.0,
             "action": "avoid"
           },
           {
             "label": "中性区",
-            "lower": 58.0,
-            "upper": 66.0,
+            "min": 58.0,
             "action": "watch"
           },
           {
             "label": "较好区间",
-            "lower": 52.0,
-            "upper": 58.0,
+            "min": 52.0,
             "action": "consider"
           },
           {
             "label": "更低区间",
-            "lower": null,
-            "upper": 52.0,
+            "min": null,
             "action": "buy"
           }
         ],
@@ -1448,26 +1327,22 @@
         "price_bands": [
           {
             "label": "追高区",
-            "lower": 50.0,
-            "upper": null,
+            "min": 50.0,
             "action": "avoid"
           },
           {
             "label": "中性区",
-            "lower": 43.0,
-            "upper": 50.0,
+            "min": 43.0,
             "action": "watch"
           },
           {
             "label": "较好区间",
-            "lower": 38.0,
-            "upper": 43.0,
+            "min": 38.0,
             "action": "consider"
           },
           {
             "label": "更低区间",
-            "lower": null,
-            "upper": 38.0,
+            "min": null,
             "action": "buy"
           }
         ],
@@ -1492,26 +1367,22 @@
         "price_bands": [
           {
             "label": "追高区",
-            "lower": 105.0,
-            "upper": null,
+            "min": 105.0,
             "action": "avoid"
           },
           {
             "label": "中性区",
-            "lower": 90.0,
-            "upper": 105.0,
+            "min": 90.0,
             "action": "watch"
           },
           {
             "label": "较好区间",
-            "lower": 78.0,
-            "upper": 90.0,
+            "min": 78.0,
             "action": "consider"
           },
           {
             "label": "更低区间",
-            "lower": null,
-            "upper": 78.0,
+            "min": null,
             "action": "buy"
           }
         ],
@@ -1536,26 +1407,22 @@
         "price_bands": [
           {
             "label": "追高区",
-            "lower": 55.0,
-            "upper": null,
+            "min": 55.0,
             "action": "avoid"
           },
           {
             "label": "中性区",
-            "lower": 42.0,
-            "upper": 55.0,
+            "min": 42.0,
             "action": "watch"
           },
           {
             "label": "较好区间",
-            "lower": 32.0,
-            "upper": 42.0,
+            "min": 32.0,
             "action": "consider"
           },
           {
             "label": "更低区间",
-            "lower": null,
-            "upper": 25.0,
+            "min": null,
             "action": "buy"
           }
         ],
@@ -1580,26 +1447,22 @@
         "price_bands": [
           {
             "label": "追高区",
-            "lower": 82.0,
-            "upper": null,
+            "min": 82.0,
             "action": "avoid"
           },
           {
             "label": "中性区",
-            "lower": 70.0,
-            "upper": 82.0,
+            "min": 70.0,
             "action": "watch"
           },
           {
             "label": "较好区间",
-            "lower": 60.0,
-            "upper": 70.0,
+            "min": 60.0,
             "action": "consider"
           },
           {
             "label": "更低区间",
-            "lower": null,
-            "upper": 60.0,
+            "min": null,
             "action": "buy"
           }
         ],
@@ -1624,26 +1487,22 @@
         "price_bands": [
           {
             "label": "追高区",
-            "lower": 165.0,
-            "upper": null,
+            "min": 165.0,
             "action": "avoid"
           },
           {
             "label": "中性区",
-            "lower": 145.0,
-            "upper": 165.0,
+            "min": 145.0,
             "action": "watch"
           },
           {
             "label": "较好区间",
-            "lower": 125.0,
-            "upper": 145.0,
+            "min": 125.0,
             "action": "consider"
           },
           {
             "label": "更低区间",
-            "lower": null,
-            "upper": 125.0,
+            "min": null,
             "action": "buy"
           }
         ],
@@ -1668,26 +1527,22 @@
         "price_bands": [
           {
             "label": "追高区",
-            "lower": 120.0,
-            "upper": null,
+            "min": 120.0,
             "action": "avoid"
           },
           {
             "label": "中性区",
-            "lower": 105.0,
-            "upper": 120.0,
+            "min": 105.0,
             "action": "watch"
           },
           {
             "label": "较好区间",
-            "lower": 90.0,
-            "upper": 105.0,
+            "min": 90.0,
             "action": "consider"
           },
           {
             "label": "更低区间",
-            "lower": null,
-            "upper": 90.0,
+            "min": null,
             "action": "buy"
           }
         ],
@@ -1712,26 +1567,22 @@
         "price_bands": [
           {
             "label": "追高区",
-            "lower": 68.0,
-            "upper": null,
+            "min": 68.0,
             "action": "avoid"
           },
           {
             "label": "中性区",
-            "lower": 58.0,
-            "upper": 68.0,
+            "min": 58.0,
             "action": "watch"
           },
           {
             "label": "较好区间",
-            "lower": 50.0,
-            "upper": 58.0,
+            "min": 50.0,
             "action": "consider"
           },
           {
             "label": "更低区间",
-            "lower": null,
-            "upper": 50.0,
+            "min": null,
             "action": "buy"
           }
         ],
@@ -1756,26 +1607,22 @@
         "price_bands": [
           {
             "label": "追高区",
-            "lower": 275.0,
-            "upper": null,
+            "min": 275.0,
             "action": "avoid"
           },
           {
             "label": "中性区",
-            "lower": 240.0,
-            "upper": 275.0,
+            "min": 240.0,
             "action": "watch"
           },
           {
             "label": "较好区间",
-            "lower": 210.0,
-            "upper": 240.0,
+            "min": 210.0,
             "action": "consider"
           },
           {
             "label": "更低区间",
-            "lower": null,
-            "upper": 210.0,
+            "min": null,
             "action": "buy"
           }
         ],
@@ -1800,26 +1647,22 @@
         "price_bands": [
           {
             "label": "追高区",
-            "lower": 46.0,
-            "upper": null,
+            "min": 46.0,
             "action": "avoid"
           },
           {
             "label": "中性区",
-            "lower": 38.0,
-            "upper": 46.0,
+            "min": 38.0,
             "action": "watch"
           },
           {
             "label": "较好区间",
-            "lower": 32.0,
-            "upper": 38.0,
+            "min": 32.0,
             "action": "consider"
           },
           {
             "label": "更低区间",
-            "lower": null,
-            "upper": 32.0,
+            "min": null,
             "action": "buy"
           }
         ],
@@ -1844,26 +1687,22 @@
         "price_bands": [
           {
             "label": "追高区",
-            "lower": 70.0,
-            "upper": null,
+            "min": 70.0,
             "action": "avoid"
           },
           {
             "label": "中性区",
-            "lower": 60.0,
-            "upper": 70.0,
+            "min": 60.0,
             "action": "watch"
           },
           {
             "label": "较好区间",
-            "lower": 52.0,
-            "upper": 60.0,
+            "min": 52.0,
             "action": "consider"
           },
           {
             "label": "更低区间",
-            "lower": null,
-            "upper": 52.0,
+            "min": null,
             "action": "buy"
           }
         ],
@@ -1888,26 +1727,22 @@
         "price_bands": [
           {
             "label": "追高区",
-            "lower": 58.0,
-            "upper": null,
+            "min": 58.0,
             "action": "avoid"
           },
           {
             "label": "中性区",
-            "lower": 48.0,
-            "upper": 58.0,
+            "min": 48.0,
             "action": "watch"
           },
           {
             "label": "较好区间",
-            "lower": 40.0,
-            "upper": 48.0,
+            "min": 40.0,
             "action": "consider"
           },
           {
             "label": "更低区间",
-            "lower": null,
-            "upper": 40.0,
+            "min": null,
             "action": "buy"
           }
         ],
@@ -1932,26 +1767,22 @@
         "price_bands": [
           {
             "label": "追高区",
-            "lower": 80.0,
-            "upper": null,
+            "min": 80.0,
             "action": "avoid"
           },
           {
             "label": "中性区",
-            "lower": 68.0,
-            "upper": 80.0,
+            "min": 68.0,
             "action": "watch"
           },
           {
             "label": "较好区间",
-            "lower": 60.0,
-            "upper": 68.0,
+            "min": 60.0,
             "action": "consider"
           },
           {
             "label": "更低区间",
-            "lower": null,
-            "upper": 60.0,
+            "min": null,
             "action": "buy"
           }
         ],
@@ -1976,26 +1807,22 @@
         "price_bands": [
           {
             "label": "追高区",
-            "lower": 115.0,
-            "upper": null,
+            "min": 115.0,
             "action": "avoid"
           },
           {
             "label": "中性区",
-            "lower": 100.0,
-            "upper": 115.0,
+            "min": 100.0,
             "action": "watch"
           },
           {
             "label": "较好区间",
-            "lower": 85.0,
-            "upper": 100.0,
+            "min": 85.0,
             "action": "consider"
           },
           {
             "label": "更低区间",
-            "lower": null,
-            "upper": 85.0,
+            "min": null,
             "action": "buy"
           }
         ],
@@ -2020,26 +1847,22 @@
         "price_bands": [
           {
             "label": "追高区",
-            "lower": 78.0,
-            "upper": null,
+            "min": 78.0,
             "action": "avoid"
           },
           {
             "label": "中性区",
-            "lower": 65.0,
-            "upper": 78.0,
+            "min": 65.0,
             "action": "watch"
           },
           {
             "label": "较好区间",
-            "lower": 55.0,
-            "upper": 65.0,
+            "min": 55.0,
             "action": "consider"
           },
           {
             "label": "更低区间",
-            "lower": null,
-            "upper": 55.0,
+            "min": null,
             "action": "buy"
           }
         ],
@@ -2064,26 +1887,22 @@
         "price_bands": [
           {
             "label": "追高区",
-            "lower": 65.0,
-            "upper": null,
+            "min": 65.0,
             "action": "avoid"
           },
           {
             "label": "中性区",
-            "lower": 56.0,
-            "upper": 65.0,
+            "min": 56.0,
             "action": "watch"
           },
           {
             "label": "较好区间",
-            "lower": 48.0,
-            "upper": 56.0,
+            "min": 48.0,
             "action": "consider"
           },
           {
             "label": "更低区间",
-            "lower": null,
-            "upper": 48.0,
+            "min": null,
             "action": "buy"
           }
         ],
@@ -2108,26 +1927,22 @@
         "price_bands": [
           {
             "label": "追高区",
-            "lower": 92.0,
-            "upper": null,
+            "min": 92.0,
             "action": "avoid"
           },
           {
             "label": "中性区",
-            "lower": 78.0,
-            "upper": 92.0,
+            "min": 78.0,
             "action": "watch"
           },
           {
             "label": "较好区间",
-            "lower": 68.0,
-            "upper": 78.0,
+            "min": 68.0,
             "action": "consider"
           },
           {
             "label": "更低区间",
-            "lower": null,
-            "upper": 68.0,
+            "min": null,
             "action": "buy"
           }
         ],

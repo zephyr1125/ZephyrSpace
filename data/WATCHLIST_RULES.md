@@ -126,7 +126,20 @@
 | `watch_reason` | 为什么跟踪这家公司（区别于 prebuy_conclusion，这是长期关注理由） |
 | `current_price` | 加入时的当前价格（数字，单位元） |
 | `price_record_time` | ISO 8601 格式，带时区 |
-| `price_bands` | 至少 3 个区间，label/lower/upper/action 不得省略 |
+| `price_bands` | 至少 3 个区间，**按 `min` 降序排列**（null 排最后）；每个区间只有 `label`/`min`/`action` 三个字段。`min` 为进入该区间的最低价格，上边界由上一区间的 `min` 隐式确定，结构上不可能产生 gap。最后一个区间 `min` 必须为 `null`（覆盖所有更低价格）。 |
+
+**price_bands 写法示例**（正确）：
+
+```json
+"price_bands": [
+  { "label": "追高区",  "min": 85.0,  "action": "avoid"    },
+  { "label": "中性区",  "min": 68.0,  "action": "watch"    },
+  { "label": "较好区间", "min": 55.0,  "action": "consider" },
+  { "label": "更低区间", "min": null,  "action": "buy"      }
+]
+```
+
+解读：price ≥ 85 → avoid；68 ≤ price < 85 → watch；55 ≤ price < 68 → consider；price < 55 → buy。禁止写 `lower`/`upper` 字段，以防 gap。
 | `risk_flags` | 数组，至少 2 条，直接引用 PreBuy 页面的主要红旗 |
 | `board` | 上交所主板 / 深交所主板 / 科创板 / 深交所创业板 之一 |
 
