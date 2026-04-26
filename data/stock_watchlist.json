@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-04-26T14:52:18+08:00",
+  "generated_at": "2026-04-26T14:58:05.3969682+08:00",
   "source_universes": [
     {
       "code": "560390",
@@ -1190,6 +1190,886 @@
           "营收几乎零增长，省内市场天花板临近",
           "省外扩张长期没有突破，成长空间高度受限",
           "行业调整期渠道商承压，动销未恢复"
+        ],
+        "board": "上交所主板"
+      },
+      {
+        "priority": 27,
+        "name": "宁德时代",
+        "code": "300750.SZ",
+        "note_path": "01-公司/宁德时代.md",
+        "source_etf": "932246",
+        "position_role": "储能电池龙头",
+        "prebuy_conclusion": "最强龙头，但更适合等回调，不追高。",
+        "watch_reason": "储能电池指数里最核心的权重锚，适合长期跟踪。",
+        "current_price": 453.98,
+        "price_record_time": "2026-04-26 14:58:05 +08:00",
+        "price_bands": [
+          {
+            "label": "追高区",
+            "lower": 500.0,
+            "upper": null,
+            "action": "avoid"
+          },
+          {
+            "label": "中性区",
+            "lower": 440.0,
+            "upper": 500.0,
+            "action": "watch"
+          },
+          {
+            "label": "较好区间",
+            "lower": 380.0,
+            "upper": 440.0,
+            "action": "consider"
+          },
+          {
+            "label": "更低区间",
+            "lower": null,
+            "upper": 380.0,
+            "action": "buy"
+          }
+        ],
+        "risk_flags": [
+          "估值不便宜",
+          "海外和地缘变量多",
+          "市场预期已经很高"
+        ],
+        "board": "创业板"
+      },
+      {
+        "priority": 28,
+        "name": "阳光电源",
+        "code": "300274.SZ",
+        "note_path": "01-公司/阳光电源.md",
+        "source_etf": "932246",
+        "position_role": "储能系统平台",
+        "prebuy_conclusion": "基本面强，但不适合追。",
+        "watch_reason": "系统平台属性强，是储能链条里最关键的观察点之一。",
+        "current_price": 173.63,
+        "price_record_time": "2026-04-26 14:58:05 +08:00",
+        "price_bands": [
+          {
+            "label": "追高区",
+            "lower": 190.0,
+            "upper": null,
+            "action": "avoid"
+          },
+          {
+            "label": "中性区",
+            "lower": 165.0,
+            "upper": 190.0,
+            "action": "watch"
+          },
+          {
+            "label": "较好区间",
+            "lower": 145.0,
+            "upper": 165.0,
+            "action": "consider"
+          },
+          {
+            "label": "更低区间",
+            "lower": null,
+            "upper": 145.0,
+            "action": "buy"
+          }
+        ],
+        "risk_flags": [
+          "龙头估值不便宜",
+          "海外项目交付节奏会影响预期",
+          "AIDC 电源逻辑需要继续验证"
+        ],
+        "board": "创业板"
+      },
+      {
+        "priority": 29,
+        "name": "亿纬锂能",
+        "code": "300014.SZ",
+        "note_path": "01-公司/亿纬锂能.md",
+        "source_etf": "932246",
+        "position_role": "储能电芯平台",
+        "prebuy_conclusion": "能看，适合等更好的价格。",
+        "watch_reason": "消费、电池和储能并行，适合跟踪储能放量和客户结构变化。",
+        "current_price": 72.81,
+        "price_record_time": "2026-04-26 14:58:05 +08:00",
+        "price_bands": [
+          {
+            "label": "追高区",
+            "lower": 82.0,
+            "upper": null,
+            "action": "avoid"
+          },
+          {
+            "label": "中性区",
+            "lower": 70.0,
+            "upper": 82.0,
+            "action": "watch"
+          },
+          {
+            "label": "较好区间",
+            "lower": 60.0,
+            "upper": 70.0,
+            "action": "consider"
+          },
+          {
+            "label": "更低区间",
+            "lower": null,
+            "upper": 60.0,
+            "action": "buy"
+          }
+        ],
+        "risk_flags": [
+          "估值不算低",
+          "三条业务线节奏不同",
+          "储能放量是否持续仍要验证"
+        ],
+        "board": "创业板"
+      },
+      {
+        "priority": 30,
+        "name": "德业股份",
+        "code": "605117.SH",
+        "note_path": "01-公司/德业股份.md",
+        "source_etf": "932246",
+        "position_role": "户储与逆变器",
+        "prebuy_conclusion": "逻辑成立，但不建议追。",
+        "watch_reason": "户储和逆变器链条的代表，适合看海外需求和产品节奏。",
+        "current_price": 148.80,
+        "price_record_time": "2026-04-26 14:58:05 +08:00",
+        "price_bands": [
+          {
+            "label": "追高区",
+            "lower": 165.0,
+            "upper": null,
+            "action": "avoid"
+          },
+          {
+            "label": "中性区",
+            "lower": 145.0,
+            "upper": 165.0,
+            "action": "watch"
+          },
+          {
+            "label": "较好区间",
+            "lower": 125.0,
+            "upper": 145.0,
+            "action": "consider"
+          },
+          {
+            "label": "更低区间",
+            "lower": null,
+            "upper": 125.0,
+            "action": "buy"
+          }
+        ],
+        "risk_flags": [
+          "估值不低",
+          "海外户储需求波动大",
+          "产品和订单节奏对利润影响明显"
+        ],
+        "board": "上交所主板"
+      },
+      {
+        "priority": 31,
+        "name": "凯莱英",
+        "code": "002821.SZ",
+        "note_path": "01-公司/凯莱英.md",
+        "source_etf": "399989",
+        "position_role": "CDMO 龙头",
+        "prebuy_conclusion": "逻辑清晰，但更适合继续跟踪。",
+        "watch_reason": "医疗外包链条中最典型的平台型公司之一。",
+        "current_price": 110.77,
+        "price_record_time": "2026-04-26 14:58:05 +08:00",
+        "price_bands": [
+          {
+            "label": "追高区",
+            "lower": 120.0,
+            "upper": null,
+            "action": "avoid"
+          },
+          {
+            "label": "中性区",
+            "lower": 105.0,
+            "upper": 120.0,
+            "action": "watch"
+          },
+          {
+            "label": "较好区间",
+            "lower": 90.0,
+            "upper": 105.0,
+            "action": "consider"
+          },
+          {
+            "label": "更低区间",
+            "lower": null,
+            "upper": 90.0,
+            "action": "buy"
+          }
+        ],
+        "risk_flags": [
+          "估值不便宜",
+          "海外医药融资波动会影响订单",
+          "新兴业务仍在爬坡"
+        ],
+        "board": "深交所主板"
+      },
+      {
+        "priority": 32,
+        "name": "泰格医药",
+        "code": "300347.SZ",
+        "note_path": "01-公司/泰格医药.md",
+        "source_etf": "399989",
+        "position_role": "临床试验服务",
+        "prebuy_conclusion": "可以跟踪，不建议现在追。",
+        "watch_reason": "CXO 链条里偏临床试验服务，适合看订单修复。",
+        "current_price": 58.62,
+        "price_record_time": "2026-04-26 14:58:05 +08:00",
+        "price_bands": [
+          {
+            "label": "追高区",
+            "lower": 68.0,
+            "upper": null,
+            "action": "avoid"
+          },
+          {
+            "label": "中性区",
+            "lower": 58.0,
+            "upper": 68.0,
+            "action": "watch"
+          },
+          {
+            "label": "较好区间",
+            "lower": 50.0,
+            "upper": 58.0,
+            "action": "consider"
+          },
+          {
+            "label": "更低区间",
+            "lower": null,
+            "upper": 50.0,
+            "action": "buy"
+          }
+        ],
+        "risk_flags": [
+          "订单修复节奏仍要看",
+          "海外融资环境波动",
+          "估值并不便宜"
+        ],
+        "board": "创业板"
+      },
+      {
+        "priority": 33,
+        "name": "惠泰医疗",
+        "code": "688617.SH",
+        "note_path": "01-公司/惠泰医疗.md",
+        "source_etf": "399989",
+        "position_role": "心血管器械",
+        "prebuy_conclusion": "逻辑清晰，但更适合等回调。",
+        "watch_reason": "器械龙头里质量较高，适合跟踪成长和修复。",
+        "current_price": 255.86,
+        "price_record_time": "2026-04-26 14:58:05 +08:00",
+        "price_bands": [
+          {
+            "label": "追高区",
+            "lower": 275.0,
+            "upper": null,
+            "action": "avoid"
+          },
+          {
+            "label": "中性区",
+            "lower": 240.0,
+            "upper": 275.0,
+            "action": "watch"
+          },
+          {
+            "label": "较好区间",
+            "lower": 210.0,
+            "upper": 240.0,
+            "action": "consider"
+          },
+          {
+            "label": "更低区间",
+            "lower": null,
+            "upper": 210.0,
+            "action": "buy"
+          }
+        ],
+        "risk_flags": [
+          "估值不便宜",
+          "器械赛道竞争和集采扰动仍在",
+          "需要回调提供更好赔率"
+        ],
+        "board": "科创板"
+      },
+      {
+        "priority": 34,
+        "name": "国轩高科",
+        "code": "002074.SZ",
+        "note_path": "01-公司/国轩高科.md",
+        "source_etf": "932246",
+        "position_role": "动力与储能双线",
+        "prebuy_conclusion": "有弹性，但先看主业质量。",
+        "watch_reason": "储能指数里弹性较强，适合跟踪固态和全球化布局。",
+        "current_price": 40.08,
+        "price_record_time": "2026-04-26 14:58:05 +08:00",
+        "price_bands": [
+          {
+            "label": "追高区",
+            "lower": 46.0,
+            "upper": null,
+            "action": "avoid"
+          },
+          {
+            "label": "中性区",
+            "lower": 38.0,
+            "upper": 46.0,
+            "action": "watch"
+          },
+          {
+            "label": "较好区间",
+            "lower": 32.0,
+            "upper": 38.0,
+            "action": "consider"
+          },
+          {
+            "label": "更低区间",
+            "lower": null,
+            "upper": 32.0,
+            "action": "buy"
+          }
+        ],
+        "risk_flags": [
+          "扣非和现金流质量要拆开看",
+          "固态电池兑现仍需时间",
+          "主业质量波动会影响估值"
+        ],
+        "board": "创业板"
+      },
+      {
+        "priority": 35,
+        "name": "科华数据",
+        "code": "002335.SZ",
+        "note_path": "01-公司/科华数据.md",
+        "source_etf": "932246",
+        "position_role": "系统侧和电力电子",
+        "prebuy_conclusion": "可以跟踪，不建议重仓。",
+        "watch_reason": "不是纯电池股，但在储能链条里有系统侧价值。",
+        "current_price": 63.77,
+        "price_record_time": "2026-04-26 14:58:05 +08:00",
+        "price_bands": [
+          {
+            "label": "追高区",
+            "lower": 70.0,
+            "upper": null,
+            "action": "avoid"
+          },
+          {
+            "label": "中性区",
+            "lower": 60.0,
+            "upper": 70.0,
+            "action": "watch"
+          },
+          {
+            "label": "较好区间",
+            "lower": 52.0,
+            "upper": 60.0,
+            "action": "consider"
+          },
+          {
+            "label": "更低区间",
+            "lower": null,
+            "upper": 52.0,
+            "action": "buy"
+          }
+        ],
+        "risk_flags": [
+          "应收和现金流要盯",
+          "系统侧竞争激烈",
+          "利润兑现节奏不稳定"
+        ],
+        "board": "深交所主板"
+      },
+      {
+        "priority": 36,
+        "name": "天赐材料",
+        "code": "002709.SZ",
+        "note_path": "01-公司/天赐材料.md",
+        "source_etf": "932246",
+        "position_role": "电解液材料",
+        "prebuy_conclusion": "回暖是真，买点还要等。",
+        "watch_reason": "材料环节的周期修复标的，适合观察行业景气。",
+        "current_price": 49.35,
+        "price_record_time": "2026-04-26 14:58:05 +08:00",
+        "price_bands": [
+          {
+            "label": "追高区",
+            "lower": 58.0,
+            "upper": null,
+            "action": "avoid"
+          },
+          {
+            "label": "中性区",
+            "lower": 48.0,
+            "upper": 58.0,
+            "action": "watch"
+          },
+          {
+            "label": "较好区间",
+            "lower": 40.0,
+            "upper": 48.0,
+            "action": "consider"
+          },
+          {
+            "label": "更低区间",
+            "lower": null,
+            "upper": 40.0,
+            "action": "buy"
+          }
+        ],
+        "risk_flags": [
+          "材料周期波动大",
+          "价格竞争会压缩利润",
+          "回暖不等于趋势反转"
+        ],
+        "board": "创业板"
+      },
+      {
+        "priority": 37,
+        "name": "恩捷股份",
+        "code": "002812.SZ",
+        "note_path": "01-公司/恩捷股份.md",
+        "source_etf": "932246",
+        "position_role": "隔膜材料",
+        "prebuy_conclusion": "扭亏是真的，但它还是周期股。",
+        "watch_reason": "隔膜环节的修复样本，适合看产能利用率和价格。",
+        "current_price": 71.67,
+        "price_record_time": "2026-04-26 14:58:05 +08:00",
+        "price_bands": [
+          {
+            "label": "追高区",
+            "lower": 80.0,
+            "upper": null,
+            "action": "avoid"
+          },
+          {
+            "label": "中性区",
+            "lower": 68.0,
+            "upper": 80.0,
+            "action": "watch"
+          },
+          {
+            "label": "较好区间",
+            "lower": 60.0,
+            "upper": 68.0,
+            "action": "consider"
+          },
+          {
+            "label": "更低区间",
+            "lower": null,
+            "upper": 60.0,
+            "action": "buy"
+          }
+        ],
+        "risk_flags": [
+          "仍是周期股",
+          "竞争加剧会压利润",
+          "扭亏不代表趋势已经稳住"
+        ],
+        "board": "深交所主板"
+      },
+      {
+        "priority": 38,
+        "name": "固德威",
+        "code": "688390.SH",
+        "note_path": "01-公司/固德威.md",
+        "source_etf": "932246",
+        "position_role": "逆变器与户储设备",
+        "prebuy_conclusion": "有修复，但更适合等确认。",
+        "watch_reason": "储能链条中偏海外户储和逆变器，修复弹性值得跟踪。",
+        "current_price": 105.14,
+        "price_record_time": "2026-04-26 14:58:05 +08:00",
+        "price_bands": [
+          {
+            "label": "追高区",
+            "lower": 115.0,
+            "upper": null,
+            "action": "avoid"
+          },
+          {
+            "label": "中性区",
+            "lower": 100.0,
+            "upper": 115.0,
+            "action": "watch"
+          },
+          {
+            "label": "较好区间",
+            "lower": 85.0,
+            "upper": 100.0,
+            "action": "consider"
+          },
+          {
+            "label": "更低区间",
+            "lower": null,
+            "upper": 85.0,
+            "action": "buy"
+          }
+        ],
+        "risk_flags": [
+          "现金流压力明显",
+          "修复还没完全确认",
+          "海外户储需求节奏仍是关键变量"
+        ],
+        "board": "科创板"
+      },
+      {
+        "priority": 39,
+        "name": "鹏辉能源",
+        "code": "300438.SZ",
+        "note_path": "01-公司/鹏辉能源.md",
+        "source_etf": "932246",
+        "position_role": "高弹性储能电池",
+        "prebuy_conclusion": "可以跟踪修复，但先别追。",
+        "watch_reason": "波动性强，适合看储能景气和订单弹性。",
+        "current_price": 68.98,
+        "price_record_time": "2026-04-26 14:58:05 +08:00",
+        "price_bands": [
+          {
+            "label": "追高区",
+            "lower": 78.0,
+            "upper": null,
+            "action": "avoid"
+          },
+          {
+            "label": "中性区",
+            "lower": 65.0,
+            "upper": 78.0,
+            "action": "watch"
+          },
+          {
+            "label": "较好区间",
+            "lower": 55.0,
+            "upper": 65.0,
+            "action": "consider"
+          },
+          {
+            "label": "更低区间",
+            "lower": null,
+            "upper": 55.0,
+            "action": "buy"
+          }
+        ],
+        "risk_flags": [
+          "行业竞争激烈",
+          "盈利波动大",
+          "扩产会放大风险"
+        ],
+        "board": "创业板"
+      },
+      {
+        "priority": 40,
+        "name": "英科医疗",
+        "code": "300677.SZ",
+        "note_path": "01-公司/英科医疗.md",
+        "source_etf": "399989",
+        "position_role": "医疗耗材修复",
+        "prebuy_conclusion": "可以跟踪周期修复，不建议追。",
+        "watch_reason": "更像周期修复股，适合观察供需和利润弹性。",
+        "current_price": 56.88,
+        "price_record_time": "2026-04-26 14:58:05 +08:00",
+        "price_bands": [
+          {
+            "label": "追高区",
+            "lower": 65.0,
+            "upper": null,
+            "action": "avoid"
+          },
+          {
+            "label": "中性区",
+            "lower": 56.0,
+            "upper": 65.0,
+            "action": "watch"
+          },
+          {
+            "label": "较好区间",
+            "lower": 48.0,
+            "upper": 56.0,
+            "action": "consider"
+          },
+          {
+            "label": "更低区间",
+            "lower": null,
+            "upper": 48.0,
+            "action": "buy"
+          }
+        ],
+        "risk_flags": [
+          "主业仍偏周期",
+          "价格波动影响利润",
+          "修复不等于高质量成长"
+        ],
+        "board": "创业板"
+      },
+      {
+        "priority": 41,
+        "name": "九安医疗",
+        "code": "002432.SZ",
+        "note_path": "01-公司/九安医疗.md",
+        "source_etf": "399989",
+        "position_role": "家用医疗与资产收益",
+        "prebuy_conclusion": "可以跟踪，但不适合按医疗主业直接买。",
+        "watch_reason": "主业和利润来源不一致，适合盯主业修复和资产收益变化。",
+        "current_price": 82.86,
+        "price_record_time": "2026-04-26 14:58:05 +08:00",
+        "price_bands": [
+          {
+            "label": "追高区",
+            "lower": 92.0,
+            "upper": null,
+            "action": "avoid"
+          },
+          {
+            "label": "中性区",
+            "lower": 78.0,
+            "upper": 92.0,
+            "action": "watch"
+          },
+          {
+            "label": "较好区间",
+            "lower": 68.0,
+            "upper": 78.0,
+            "action": "consider"
+          },
+          {
+            "label": "更低区间",
+            "lower": null,
+            "upper": 68.0,
+            "action": "buy"
+          }
+        ],
+        "risk_flags": [
+          "主业收入仍在下滑",
+          "利润更多来自投资收益",
+          "不能按医疗主业简单定价"
+        ],
+        "board": "创业板"
+      },
+      {
+        "priority": 42,
+        "name": "澜起科技",
+        "code": "688008.SH",
+        "note_path": "01-公司/澜起科技.md",
+        "source_etf": "930713",
+        "position_role": "AI内存基础设施芯片 / 底仓+弹性兼顾",
+        "prebuy_conclusion": "可以布局，净现比119%、净利率37%、DDR5内存接口芯片寡头，护城河极深；PE 40-45x偏贵，等回调至50元以下再主动加仓。",
+        "watch_reason": "全球DDR5内存接口芯片寡头，AI服务器扩建直接受益，2024年净利+213%且现金流质量极佳，930713成分股中性价比最高的半导体底仓。",
+        "current_price": 57.0,
+        "price_record_time": "2026-04-26 14:52:00 +08:00",
+        "price_bands": [
+          {
+            "label": "追高区",
+            "lower": 75.0,
+            "upper": null,
+            "action": "avoid"
+          },
+          {
+            "label": "中性区",
+            "lower": 60.0,
+            "upper": 75.0,
+            "action": "watch"
+          },
+          {
+            "label": "较好区间",
+            "lower": 45.0,
+            "upper": 60.0,
+            "action": "consider"
+          },
+          {
+            "label": "更低区间",
+            "lower": null,
+            "upper": 45.0,
+            "action": "buy"
+          }
+        ],
+        "risk_flags": [
+          "三星/SK海力士推进自研内存接口芯片，长期市场份额面临压力",
+          "PE 40-45x处于历史偏高位，增长不达预期则回调空间大",
+          "DDR5渗透完成后需CXL/HBM等新品验证才能维持增速"
+        ],
+        "board": "科创板"
+      },
+      {
+        "priority": 43,
+        "name": "金山办公",
+        "code": "688111.SH",
+        "note_path": "01-公司/金山办公.md",
+        "source_etf": "930713",
+        "position_role": "AI办公软件垄断 / 高质量成长底仓",
+        "prebuy_conclusion": "可以布局但等估值合理区间，净现比133%、毛利率85%、WPS国内Office垄断，AI订阅转型顺利；PE 52-54x偏贵，等回调至300元以下加仓。",
+        "watch_reason": "国内Office垄断者（市占率60%+），SaaS+AI订阅转型中，无有息负债，现金流质量极佳，AI应用层中基本面最扎实的标的。",
+        "current_price": 360.0,
+        "price_record_time": "2026-04-26 14:52:00 +08:00",
+        "price_bands": [
+          {
+            "label": "追高区",
+            "lower": 450.0,
+            "upper": null,
+            "action": "avoid"
+          },
+          {
+            "label": "中性区",
+            "lower": 360.0,
+            "upper": 450.0,
+            "action": "watch"
+          },
+          {
+            "label": "较好区间",
+            "lower": 280.0,
+            "upper": 360.0,
+            "action": "consider"
+          },
+          {
+            "label": "更低区间",
+            "lower": null,
+            "upper": 280.0,
+            "action": "buy"
+          }
+        ],
+        "risk_flags": [
+          "PE 52-54x偏高，AI办公竞争加剧（微软Copilot/阿里/腾讯均布局）",
+          "WPS传统软件授权收入同比-8.56%，旧商业模式式微",
+          "云化和AI订阅收入需增长足够快才能弥补传统模式衰退"
+        ],
+        "board": "科创板"
+      },
+      {
+        "priority": 44,
+        "name": "古井贡酒",
+        "code": "000596.SZ",
+        "note_path": "01-公司/古井贡酒.md",
+        "source_etf": "399997",
+        "position_role": "区域白酒成长标杆 / 弹性仓",
+        "prebuy_conclusion": "可以研究等价格，当前约109元TTM PE约25倍偏高，成长逻辑清晰（2024净利+20%，ROE 25%），赔率一般；等回调至90元以下再建仓。",
+        "watch_reason": "安徽白酒绝对龙头，2024年净利+20%是白酒板块最快增速之一，宴席场景绑定深，等价格买成长。",
+        "current_price": 109.5,
+        "price_record_time": "2026-04-26 14:52:00 +08:00",
+        "price_bands": [
+          {
+            "label": "追高区",
+            "lower": 150.0,
+            "upper": null,
+            "action": "avoid"
+          },
+          {
+            "label": "中性区",
+            "lower": 110.0,
+            "upper": 150.0,
+            "action": "watch"
+          },
+          {
+            "label": "较好区间",
+            "lower": 80.0,
+            "upper": 110.0,
+            "action": "consider"
+          },
+          {
+            "label": "更低区间",
+            "lower": null,
+            "upper": 65.0,
+            "action": "buy"
+          }
+        ],
+        "risk_flags": [
+          "省外扩张长期受阻，成长空间和估值天花板受限",
+          "年份原浆高端价格带受茅台/五粮液挤压，提价空间有限",
+          "安徽省内宴席消费季节性强，淡季业绩波动大"
+        ],
+        "board": "深交所主板"
+      },
+      {
+        "priority": 45,
+        "name": "新易盛",
+        "code": "300502.SZ",
+        "note_path": "01-公司/新易盛.md",
+        "source_etf": "930713",
+        "position_role": "AI光模块弹性仓（小市值高弹性）",
+        "prebuy_conclusion": "可以研究性布局，2025E PE约11x赔率较好，与中际旭创同赛道且体量更小弹性更大；但经营现金流-48%是红旗，约90元小仓参与，等1.6T进展确认后加仓。",
+        "watch_reason": "930713指数第二大权重股，2024年净利+312%、ROE 41%，2025E PE约11x，AI数据中心光互联需求持续高增，等价格区间或验证点布局。",
+        "current_price": 90.0,
+        "price_record_time": "2026-04-26 14:52:00 +08:00",
+        "price_bands": [
+          {
+            "label": "追高区",
+            "lower": 120.0,
+            "upper": null,
+            "action": "avoid"
+          },
+          {
+            "label": "中性区",
+            "lower": 90.0,
+            "upper": 120.0,
+            "action": "watch"
+          },
+          {
+            "label": "较好区间",
+            "lower": 65.0,
+            "upper": 90.0,
+            "action": "consider"
+          },
+          {
+            "label": "更低区间",
+            "lower": null,
+            "upper": 65.0,
+            "action": "buy"
+          }
+        ],
+        "risk_flags": [
+          "经营现金流2024年大幅下降48.56%，利润高增但现金流背离（主要红旗）",
+          "海外占比78.7%，关税与制裁风险突出",
+          "800G行业产能2025年可能供过于求，毛利率面临下行压力"
+        ],
+        "board": "深交所创业板"
+      },
+      {
+        "priority": 46,
+        "name": "今世缘",
+        "code": "603369.SH",
+        "note_path": "01-公司/今世缘.md",
+        "source_etf": "399997",
+        "position_role": "江苏次高端白酒 / 全国化成长仓",
+        "prebuy_conclusion": "可以研究等价格，当前约46元PE约16-17倍合理偏高，省外增速+27%全国化逻辑成长中；等回调至40元以下（PE约14倍）再建仓。",
+        "watch_reason": "苏派白酒领导品牌，2024年省外营收增速+27%，全国化路径清晰，是白酒板块中成长逻辑最清晰的区域标的之一。",
+        "current_price": 46.5,
+        "price_record_time": "2026-04-26 14:52:00 +08:00",
+        "price_bands": [
+          {
+            "label": "追高区",
+            "lower": 65.0,
+            "upper": null,
+            "action": "avoid"
+          },
+          {
+            "label": "中性区",
+            "lower": 50.0,
+            "upper": 65.0,
+            "action": "watch"
+          },
+          {
+            "label": "较好区间",
+            "lower": 38.0,
+            "upper": 50.0,
+            "action": "consider"
+          },
+          {
+            "label": "更低区间",
+            "lower": null,
+            "upper": 30.0,
+            "action": "buy"
+          }
+        ],
+        "risk_flags": [
+          "省外扩张成本超预期，ROE可能因此下滑",
+          "江苏本省宴席需求季节性波动大，淡旺季分化明显",
+          "中高端酒水消费整体承压，国缘高端化节奏可能放慢"
         ],
         "board": "上交所主板"
       }
