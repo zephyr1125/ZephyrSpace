@@ -1,5 +1,5 @@
 {
-  "schema_version": 10,
+  "schema_version": 11,
   "AGENT_INSTRUCTION": "修改本文件前，必须先完整阅读 tier_definitions 中对应档位的 entry_criteria 和 decision_tree，判断档位后再写入，不得跳过。完整规则见 data/WATCHLIST_RULES.md。\n字段说明：\n- note_path: 已移除，固定规则为 01-公司/{name}.md\n- board: 单字 沪/深/创/科/北，对应 上交所主板/深交所主板/深交所创业板/科创板/北交所\n- price_bands: 固定3个数字数组 [avoid_min, watch_min, consider_min] 降序，索引语义: [0]=追高区(avoid), [1]=中性区(watch), [2]=较好区间(consider), 隐含第4档=更低区间(strong_buy)。\n- valuation_anchor: 必填，四档价位语义说明，必须与 price_bands 同时填写。\n- priority: 已移除。\n- radar 专属必填字段 entry_trigger：一句话写明具体可量化的入场触发器（含数字），例如：股价跌至X元(DY>=Y%)、某季报净利同比转正、某项目投产落地。不得使用模糊表述如「等基本面改善」。没有具体触发器的公司不得加入 watchlist，记录在指数专题页即可。\n- dv_ttm: 股息率（DV TTM，单位%，数字类型），来自 tushare daily_basic 最新一条，需定期更新。",
   "rules_doc": "data/WATCHLIST_RULES.md",
   "tier_definitions": {
@@ -1567,68 +1567,6 @@
         "dv_ttm": 0.3,
         "ts_code": "688213.SH",
         "tier": "radar"
-      },
-      {
-        "name": "盛美上海",
-        "code": "688082.SH",
-        "source_etf": "931912",
-        "board": "科",
-        "tier": "radar",
-        "sector": "半导体清洗设备",
-        "position_role": "半导体清洗设备弹性仓，SAPS/TEBO差异化工艺国产替代受益",
-        "prebuy_conclusion": "逻辑清晰，等待更合适价格或验证点。当前PE 54x处于历史中高位（约62%分位），Q4 2025净利润骤降-67% yoy原因待验证，不追高。",
-        "watch_reason": "国产半导体清洗设备龙头，SAPS单晶圆清洗+TEBO背面抛光差异化技术壁垒，国产替代逻辑清晰；ACMR持股74.5%导致治理/出口管制结构性风险，需等Q4利润疑点消除及价格回落至合适区间后再升档。",
-        "current_price": 157.98,
-        "price_date": "2026-04-24",
-        "price_bands": [
-          170.0,
-          135.0,
-          110.0
-        ],
-        "risk_flags": [
-          "Q4 2025净利润约1.30亿（vs Q4 2024约3.95亿，-67% yoy），净利率仅约8%，原因未明，年报未详解",
-          "ACM Research（ACMR，美股）持股74.5%，美国出口管制风险具结构性，中小股东保护薄弱",
-          "2025年前三季度经营现金流为负（-0.59亿），2021-2023年OCF持续为负，现金流质量存疑",
-          "存货46.3亿（2025Q3），周转天数约248天，减值风险较高",
-          "2025年定增约47亿（+9.9%稀释），FY2025 ROE被压至13.21%"
-        ],
-        "valuation_anchor": "成长PE锚（FY2025 EPS 3.10元）：追高区≥170（PE≥55x，国产替代逻辑充分定价，赔率极差）/ 中性区135-170（PE43-55x，当前157元在此区间，可关注不追）/ 较好区间110-135（PE35-43x，接近历史估值底部，赔率改善）/ 更低区间<110（PE<35x，安全边际充足，可积极布局）",
-        "entry_trigger": "股价回落至140元以下（PE FY2025≤45x），且Q1 2026季报净利率恢复至18%以上、经营现金流转正，确认Q4 2025低利润率为一次性因素后可升档growth",
-        "pe_range": [
-          54.3,
-          38.0,
-          70.0
-        ],
-        "roe_ttm": 13.2,
-        "revenue_growth": 20.8,
-        "market_cap_bn": 75.86,
-        "dv_ttm": 0.38,
-        "notes": "来源：931912中证半导体产业指数。FY2025营收67.86亿（+20.8%），归母净利13.96亿（EPS 3.10元）。核心关注点：Q4 2025净利异常是否一次性（股权激励？费用归集？），需Q1 2026季报验证。升档条件：净利率恢复18%+、OCF转正、股价≤140元（PE≤45x）。",
-        "ts_code": "688082.SH"
-      },
-      {
-        "ts_code": "688332.SH",
-        "name": "中科蓝讯",
-        "sector": "蓝牙芯片/半导体",
-        "board": "科",
-        "tier": "radar",
-        "thesis": "蓝牙TWS芯片国产Fabless龙头，表观PE=10.7x为价值陷阱（11.5亿非经常性损益），等扣非净利转正+价格70-85元再升档",
-        "price_bands": [
-          125.0,
-          95.0,
-          70.0
-        ],
-        "pe_range": [
-          10.7,
-          8.0,
-          60.0
-        ],
-        "roe_ttm": 30.5,
-        "revenue_growth": 1.2,
-        "market_cap_bn": 151.7,
-        "dv_ttm": 0.79,
-        "entry_trigger": "扣非净利润增速转正（TTM扣非净利>2.8亿）且OCF/净利>50%，确认非经常性收益不再掩盖主业；同时股价回落至95元以下（扣非PE<45x）",
-        "notes": "PE=10.7x是教科书级价值陷阱：约11.5亿非经常性损益使净利从3亿暴增至14亿；OCF仅0.64亿背离率96%；扣非PE≈57x；TWS芯片市场饱和增速仅+1.2%"
       }
     ]
   }
