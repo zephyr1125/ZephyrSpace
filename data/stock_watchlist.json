@@ -179,7 +179,7 @@
         "code": "600886.SH",
         "source_etf": "931897",
         "position_role": "水电资产 + 区域能源平台",
-        "prebuy_conclusion": "逻辑清晰，当前价格基本合理，可按计划分批研究性买入。",
+        "prebuy_conclusion": "逻辑清晰，当前约13.37元处于较好区间，赔率改善，可研究性布局/分批建仓。",
         "watch_reason": "水电资产和大基地开发并重，适合观察清洁能源底仓。",
         "current_price": 13.37,
         "price_bands": [
@@ -248,7 +248,7 @@
         "code": "600674.SH",
         "source_etf": "931897",
         "position_role": "水电参股与现金流资产",
-        "prebuy_conclusion": "逻辑清晰，当前价格基本合理，可按计划分批研究性买入。",
+        "prebuy_conclusion": "逻辑清晰，当前约14.93元处于较好区间，赔率改善，可研究性布局/分批建仓。",
         "watch_reason": "参股收益和水电现金流都比较稳，适合价值型观察。",
         "current_price": 14.93,
         "price_bands": [
@@ -271,7 +271,7 @@
         "code": "600519.SH",
         "source_etf": "399997",
         "position_role": "质量价值绝对锚",
-        "prebuy_conclusion": "可以买，当前约1460元处于历史低位PE约20倍，适合分批建立底仓，不追高。",
+        "prebuy_conclusion": "可以买，当前约1458元处于历史中低位估值，适合分批建立底仓，不追高。",
         "watch_reason": "中证白酒指数权重第一，护城河最深的消费品，PE历史低位，底仓首选。",
         "current_price": 1458.49,
         "price_bands": [
@@ -294,8 +294,8 @@
         "code": "000858.SZ",
         "source_etf": "399997",
         "position_role": "高端白酒第二极 / 股息底仓",
-        "prebuy_conclusion": "可以买，当前约102元对应PE约12-13倍为历史极低位，股息率约4.5%提供防御，适合底仓分批建仓。",
-        "watch_reason": "中证白酒指数权重第二，PE历史底部，4.5%股息率支撑，底仓+股息双逻辑。",
+        "prebuy_conclusion": "可以买，当前约101元对应PE约14倍处于历史较低位，股息率约5.7%，适合底仓型投资者当前区间分批建仓。",
+        "watch_reason": "中证白酒指数权重第二，PE历史底部，5.7%股息率支撑，底仓+股息双逻辑。",
         "current_price": 101.27,
         "price_bands": [
           160.0,
@@ -317,7 +317,7 @@
         "code": "000568.SZ",
         "source_etf": "399997",
         "position_role": "高端白酒第三极 / 股息底仓",
-        "prebuy_conclusion": "可以买，当前约122元对应PE约13-14倍处于历史低位，股息率约4.7%，分红承诺有约束力，适合底仓建仓。",
+        "prebuy_conclusion": "可以买，当前约103元对应PE约12倍处于历史极低位，股息率约5.8%，当前处于更低区间，安全边际充足，适合积极分批建仓。",
         "watch_reason": "中证白酒指数权重第三，ROE 30%，PE历史低位，三年85亿/年分红承诺，底仓逻辑扎实。",
         "current_price": 102.63,
         "price_bands": [
@@ -331,29 +331,6 @@
           "次高端特曲系列库存压力，回款减慢"
         ],
         "valuation_anchor": "历史PE+股息率：追高区>180(PE>20x，高端化预期充分定价) / 中性区140-180(PE15-20x，可持有等国窖批价修复) / 较好区间110-140(PE12-15x，股息率约4.7%，底仓可建仓) / 更低区间<110(PE<12x，安全边际充足)",
-        "price_date": "2026-04-24",
-        "board": "深"
-      },
-      {
-        "priority": 23,
-        "name": "海康威视",
-        "code": "002415.SZ",
-        "source_etf": "930713",
-        "position_role": "视觉AI底仓 / 高分红价值锚",
-        "prebuy_conclusion": "可以布局，PE约23x处于历史低位，分红率超53%，适合底仓；需接受短期净利润承压。",
-        "watch_reason": "930713指数内体量最大最稳健的价值标的，AI视觉+AIoT护城河真实，高分红提供安全边际。",
-        "current_price": 33.6,
-        "price_bands": [
-          38.0,
-          30.0,
-          22.0
-        ],
-        "risk_flags": [
-          "美国实体清单制裁限制海外业务扩张空间",
-          "净利润连续下滑（-15.1%），国内安防市场传统需求见顶",
-          "创新业务规模仍小且盈利未经验证"
-        ],
-        "valuation_anchor": "历史PE+AI转型验证：追高区>38(PE>30x，转型未充分验证时偏贵) / 中性区30-38(PE23-30x，逻辑对但赔率一般) / 较好区间22-30(PE17-23x，高分红支撑，可底仓布局) / 更低区间<22(PE<17x，股息率>5%，安全边际充足)",
         "price_date": "2026-04-24",
         "board": "深"
       }
@@ -452,12 +429,35 @@
         "board": "沪"
       },
       {
+        "priority": 23,
+        "name": "海康威视",
+        "code": "002415.SZ",
+        "source_etf": "930713",
+        "position_role": "视觉AI底仓 / 高分红价值锚",
+        "prebuy_conclusion": "持有现有仓位观察；未持仓者等回落至30元以下再布局，当前33.6元中性区赔率一般，不是最优建仓时机。",
+        "watch_reason": "930713指数内体量最大最稳健的价值标的，AI视觉+AIoT护城河真实，高分红提供安全边际。",
+        "current_price": 33.6,
+        "price_bands": [
+          38.0,
+          30.0,
+          22.0
+        ],
+        "risk_flags": [
+          "美国实体清单制裁限制海外业务扩张空间",
+          "净利润连续下滑（-15.1%），国内安防市场传统需求见顶",
+          "创新业务规模仍小且盈利未经验证"
+        ],
+        "valuation_anchor": "历史PE+AI转型验证：追高区>38(PE>30x，转型未充分验证时偏贵) / 中性区30-38(PE23-30x，逻辑对但赔率一般) / 较好区间22-30(PE17-23x，高分红支撑，可底仓布局) / 更低区间<22(PE<17x，股息率>5%，安全边际充足)",
+        "price_date": "2026-04-24",
+        "board": "深"
+      },
+      {
         "priority": 24,
         "name": "中际旭创",
         "code": "300308.SZ",
         "source_etf": "930713",
         "position_role": "AI光模块弹性仓",
-        "prebuy_conclusion": "可以研究性布局，但需等价格回落至合理区间，1.6T放量景气预期已部分Price-in。",
+        "prebuy_conclusion": "当前886元极端追高区（合理区间<150元），赔率极差，不建议买入；等待大幅回落至150元以下重新审视，公司基本面仍强。",
         "watch_reason": "全球AI光模块龙头（市占率>40%），景气高峰弹性极大，等景气确认信号后加仓。",
         "current_price": 886.99,
         "price_bands": [
@@ -480,7 +480,7 @@
         "code": "600809.SH",
         "source_etf": "399997",
         "position_role": "白酒成长龙头 / 弹性仓",
-        "prebuy_conclusion": "继续研究，等更好赔率。当前PE约18倍有成长溢价，需等批价修复与业绩加速信号，回调至160元以下再考虑。",
+        "prebuy_conclusion": "估值已回落至较好区间，当前约142元TTM PE约14倍，赔率改善；成长逻辑未破坏，可开始研究性布局，跟踪省外动销和批价。",
         "watch_reason": "中证白酒指数增速最快的大权重股，全国化+高端化双轮驱动，等价格回到合理区间。",
         "current_price": 141.95,
         "price_bands": [
@@ -503,7 +503,7 @@
         "code": "300750.SZ",
         "source_etf": "932246",
         "position_role": "储能电池龙头",
-        "prebuy_conclusion": "最强龙头，但更适合等回调，不追高。",
+        "prebuy_conclusion": "公司最强，但现在不便宜，适合等回调或验证点；不追价，等380元以下再分批布局。",
         "watch_reason": "储能电池指数里最核心的权重锚，适合长期跟踪。",
         "current_price": 444.9,
         "price_bands": [
@@ -526,7 +526,7 @@
         "code": "300274.SZ",
         "source_etf": "932246",
         "position_role": "储能系统平台",
-        "prebuy_conclusion": "基本面强，但不适合追。",
+        "prebuy_conclusion": "基本面很强，当前133.79元已跌至更低区间，安全边际明显改善，适合分批建仓；持续跟踪储能系统收入和海外交付节奏。",
         "watch_reason": "系统平台属性强，是储能链条里最关键的观察点之一。",
         "current_price": 133.79,
         "price_bands": [
@@ -549,7 +549,7 @@
         "code": "688008.SH",
         "source_etf": "930713",
         "position_role": "AI内存基础设施芯片 / 底仓+弹性兼顾",
-        "prebuy_conclusion": "可以布局，净现比119%、净利率37%、DDR5内存接口芯片寡头，护城河极深；PE 40-45x偏贵，等回调至50元以下再主动加仓。",
+        "prebuy_conclusion": "当前163.5元极端追高区（合理区间<75元），PE约89x赔率极差，不建议买入；等待回落至75元以下重新审视，护城河极深（DDR5寡头）。",
         "watch_reason": "全球DDR5内存接口芯片寡头，AI服务器扩建直接受益，2024年净利+213%且现金流质量极佳，930713成分股中性价比最高的半导体底仓。",
         "current_price": 163.5,
         "price_bands": [
@@ -572,7 +572,7 @@
         "code": "688111.SH",
         "source_etf": "930713",
         "position_role": "AI办公软件垄断 / 高质量成长底仓",
-        "prebuy_conclusion": "可以布局但等估值合理区间，净现比133%、毛利率85%、WPS国内Office垄断，AI订阅转型顺利；PE 52-54x偏贵，等回调至300元以下加仓。",
+        "prebuy_conclusion": "估值已大幅回落，当前249元已进入更低区间，PE约32x；国内Office垄断+现金流极佳，适合主动加仓，持续验证AI付费转化。",
         "watch_reason": "国内Office垄断者（市占率60%+），SaaS+AI订阅转型中，无有息负债，现金流质量极佳，AI应用层中基本面最扎实的标的。",
         "current_price": 249.12,
         "price_bands": [
@@ -595,7 +595,7 @@
         "code": "000596.SZ",
         "source_etf": "399997",
         "position_role": "区域白酒成长标杆 / 弹性仓",
-        "prebuy_conclusion": "可以研究等价格，当前约109元TTM PE约25倍偏高，成长逻辑清晰（2024净利+20%，ROE 25%），赔率一般；等回调至90元以下再建仓。",
+        "prebuy_conclusion": "估值已大幅回落，当前约109.5元TTM PE约12倍，处于较好区间；成长逻辑清晰，可开始建仓，跟踪省内宴席动销和年份原浆出货。",
         "watch_reason": "安徽白酒绝对龙头，2024年净利+20%是白酒板块最快增速之一，宴席场景绑定深，等价格买成长。",
         "current_price": 109.5,
         "price_bands": [
@@ -618,7 +618,7 @@
         "code": "300502.SZ",
         "source_etf": "930713",
         "position_role": "AI光模块弹性仓（小市值高弹性）",
-        "prebuy_conclusion": "可以研究性布局，2025E PE约11x赔率较好，与中际旭创同赛道且体量更小弹性更大；但经营现金流-48%是红旗，约90元小仓参与，等1.6T进展确认后加仓。",
+        "prebuy_conclusion": "当前537元极端追高区（合理区间<120元），赔率极差，不建议买入；等待大幅回落至120元以下重新审视，关注经营现金流改善。",
         "watch_reason": "930713指数第二大权重股，2024年净利+312%、ROE 41%，2025E PE约11x，AI数据中心光互联需求持续高增，等价格区间或验证点布局。",
         "current_price": 537.27,
         "price_bands": [
@@ -641,7 +641,7 @@
         "code": "603369.SH",
         "source_etf": "399997",
         "position_role": "江苏次高端白酒 / 全国化成长仓",
-        "prebuy_conclusion": "可以研究等价格，当前约46元PE约16-17倍合理偏高，省外增速+27%全国化逻辑成长中；等回调至40元以下（PE约14倍）再建仓。",
+        "prebuy_conclusion": "价格已大幅下跌至更低区间（26.65元，PE约11.6倍），安全边际充足；省外扩张逻辑成立，可开始建仓，密切跟踪省外收入数据。",
         "watch_reason": "苏派白酒领导品牌，2024年省外营收增速+27%，全国化路径清晰，是白酒板块中成长逻辑最清晰的区域标的之一。",
         "current_price": 26.65,
         "price_bands": [
@@ -689,7 +689,7 @@
         "code": "603589.SH",
         "source_etf": "399997",
         "position_role": "防御型区域白酒 / 现金流价值",
-        "prebuy_conclusion": "等价格。当前约38元PE约14倍合理，但成长性有限，等PE回到12倍以下（约35元）再小仓位配置。",
+        "prebuy_conclusion": "当前24.77元跌至更低区间，静态PE约9倍安全边际充足；但TTM动态PE约38倍说明2025年盈利可能大幅下滑，须先核实业绩再决定，保守型小仓位配置。",
         "watch_reason": "现金流极优（经营现金流同比+60%），资产负债率仅23%，财务最稳健的区域白酒，适合防御底仓。",
         "current_price": 24.77,
         "price_bands": [
@@ -712,7 +712,7 @@
         "code": "300014.SZ",
         "source_etf": "932246",
         "position_role": "储能电芯平台",
-        "prebuy_conclusion": "能看，适合等更好的价格。",
+        "prebuy_conclusion": "逻辑清晰，但净利增长不同步现金流，行业费用压力仍在；更适合继续跟踪，等净利率重启信号再建仓。",
         "watch_reason": "消费、电池和储能并行，适合跟踪储能放量和客户结构变化。",
         "current_price": 72.81,
         "price_bands": [
@@ -735,7 +735,7 @@
         "code": "605117.SH",
         "source_etf": "932246",
         "position_role": "户储与逆变器",
-        "prebuy_conclusion": "逻辑成立，但不建议追。",
+        "prebuy_conclusion": "逻辑成立，但股价已反映修复预期，不便宜；等更舒服切入点，中性区观察不追。",
         "watch_reason": "户储和逆变器链条的代表，适合看海外需求和产品节奏。",
         "current_price": 146.82,
         "price_bands": [
@@ -758,7 +758,7 @@
         "code": "002821.SZ",
         "source_etf": "399989",
         "position_role": "CDMO 龙头",
-        "prebuy_conclusion": "逻辑清晰，但更适合继续跟踪。",
+        "prebuy_conclusion": "逻辑清晰，2025年报收入和利润全面改善；但已反映修复预期，中性区不追，等更好价格或回调确认后介入。",
         "watch_reason": "医疗外包链条中最典型的平台型公司之一。",
         "current_price": 117.08,
         "price_bands": [
@@ -781,7 +781,7 @@
         "code": "300347.SZ",
         "source_etf": "399989",
         "position_role": "临床试验服务",
-        "prebuy_conclusion": "可以跟踪，不建议现在追。",
+        "prebuy_conclusion": "扣非利润质量存疑，价格已进入较好区间；可考虑小仓位研究性布局，等待主业修复信号确认。",
         "watch_reason": "CXO 链条里偏临床试验服务，适合看订单修复。",
         "current_price": 56.02,
         "price_bands": [
@@ -804,7 +804,7 @@
         "code": "688617.SH",
         "source_etf": "399989",
         "position_role": "心血管器械",
-        "prebuy_conclusion": "逻辑清晰，但更适合等回调。",
+        "prebuy_conclusion": "逻辑成立，主业双位数增长，但当前248元中性区价格不便宜；等回调至较好区间（210-240元）再布局。",
         "watch_reason": "器械龙头里质量较高，适合跟踪成长和修复。",
         "current_price": 248.0,
         "price_bands": [
@@ -827,7 +827,7 @@
         "code": "002074.SZ",
         "source_etf": "932246",
         "position_role": "动力与储能双线",
-        "prebuy_conclusion": "有弹性，但先看主业质量。",
+        "prebuy_conclusion": "三季报净利暴增含非经常项，扣非和现金流未同步主业；继续研究，等主业质量改善确认后再考虑。",
         "watch_reason": "储能指数里弹性较强，适合跟踪固态和全球化布局。",
         "current_price": 39.88,
         "price_bands": [
@@ -850,7 +850,7 @@
         "code": "002335.SZ",
         "source_etf": "932246",
         "position_role": "系统侧和电力电子",
-        "prebuy_conclusion": "可以跟踪，不建议重仓。",
+        "prebuy_conclusion": "能看，但应收账款和现金流是关键风险；等应收改善和算力订单确认后再布局，不适合无脑买。",
         "watch_reason": "不是纯电池股，但在储能链条里有系统侧价值。",
         "current_price": 64.64,
         "price_bands": [
@@ -873,7 +873,7 @@
         "code": "002709.SZ",
         "source_etf": "932246",
         "position_role": "电解液材料",
-        "prebuy_conclusion": "回暖是真，买点还要等。",
+        "prebuy_conclusion": "基本面在修复，回暖是真；但周期属性强，等材料价格趋势更明确后再布局，不急买。",
         "watch_reason": "材料环节的周期修复标的，适合观察行业景气。",
         "current_price": 53.04,
         "price_bands": [
@@ -896,7 +896,7 @@
         "code": "002812.SZ",
         "source_etf": "932246",
         "position_role": "隔膜材料",
-        "prebuy_conclusion": "扭亏是真的，但它还是周期股。",
+        "prebuy_conclusion": "已从大亏走到扭亏，修复是真；但仍是周期股，先看趋势确立，等隔膜价格稳定后再考虑。",
         "watch_reason": "隔膜环节的修复样本，适合看产能利用率和价格。",
         "current_price": 77.18,
         "price_bands": [
@@ -919,7 +919,7 @@
         "code": "688390.SH",
         "source_etf": "932246",
         "position_role": "逆变器与户储设备",
-        "prebuy_conclusion": "有修复，但更适合等确认。",
+        "prebuy_conclusion": "业绩已修复扭亏，但扣非利润仍薄，现金流压力明显；已进入较好区间，可考虑小仓位研究性布局，等现金流稳定后加仓。",
         "watch_reason": "储能链条中偏海外户储和逆变器，修复弹性值得跟踪。",
         "current_price": 89.54,
         "price_bands": [
@@ -942,7 +942,7 @@
         "code": "300438.SZ",
         "source_etf": "932246",
         "position_role": "高弹性储能电池",
-        "prebuy_conclusion": "可以跟踪修复，但先别追。",
+        "prebuy_conclusion": "有修复，但仍偏高波动；中性区观察，先确认全年业绩趋势转正，再考虑小仓位介入。",
         "watch_reason": "波动性强，适合看储能景气和订单弹性。",
         "current_price": 69.3,
         "price_bands": [
