@@ -1406,6 +1406,78 @@
           "N2爬坡引发毛利率稀释2-3pp"
         ],
         "dv_ttm": 3.08
+      },
+      {
+        "name": "Adobe",
+        "code": "ADBE",
+        "market": "US",
+        "board": "纳",
+        "source_etf": "direct",
+        "position_role": "创意软件事实垄断，Firefly AI货币化落地，FCF Yield ~10%",
+        "prebuy_conclusion": "逻辑清晰，当前价格合理，可按计划买入",
+        "watch_reason": "ARR $260亿+11%，Forward PE 10.4x处十年最低分位，CEO接班是短期不确定性",
+        "current_price": 245.0,
+        "price_date": "2026-04-26",
+        "price_bands": [
+          280,
+          245,
+          200
+        ],
+        "valuation_anchor": "FY2026E Non-GAAP EPS $23.49，Forward PE ~10.4x",
+        "risk_flags": [
+          "CEO接班人未定（最大风险）",
+          "Canva/Figma AI蚕食低端市场",
+          "Q2 FY2026指引偏弱"
+        ],
+        "dv_ttm": 0.0
+      },
+      {
+        "name": "Salesforce",
+        "code": "CRM",
+        "market": "US",
+        "board": "纽",
+        "source_etf": "direct",
+        "position_role": "企业CRM全球第一，Agentforce AI Agent平台货币化启动",
+        "prebuy_conclusion": "逻辑清晰，当前价格合理，可按计划买入",
+        "watch_reason": "Agentforce ARR $800M +169%，13x Forward PE历史最低分位，$50B回购支撑",
+        "current_price": 175.0,
+        "price_date": "2026-04-26",
+        "price_bands": [
+          215,
+          175,
+          158
+        ],
+        "valuation_anchor": "FY2027E Non-GAAP EPS $13.20，Forward PE ~13.3x",
+        "risk_flags": [
+          "Agentforce客单价偏低均值$27K",
+          "微软Copilot侵蚀中期威胁",
+          "$50B商誉减值风险"
+        ],
+        "dv_ttm": 0.0
+      },
+      {
+        "name": "Uber",
+        "code": "UBER",
+        "market": "US",
+        "board": "纽",
+        "source_etf": "direct",
+        "position_role": "全球最大叫车+外卖双平台，AV分发中立平台策略",
+        "prebuy_conclusion": "逻辑清晰，等待更合适价格或验证点",
+        "watch_reason": "FCF $9.8B +42%，EV/EBITDA ~14.6x，当前$74处绿灯区上端，等$68-72更优",
+        "current_price": 74.6,
+        "price_date": "2026-04-26",
+        "price_bands": [
+          90,
+          78,
+          62
+        ],
+        "valuation_anchor": "FY2026E Adj.EBITDA $11.04B，EV/EBITDA ~14.6x",
+        "risk_flags": [
+          "欧英司机雇员分类诉讼蔓延",
+          "Tesla Robotaxi绕开Uber独立扩张",
+          "Q1增速降至13.8%需验证"
+        ],
+        "dv_ttm": 0.0
       }
     ],
     "radar": [
