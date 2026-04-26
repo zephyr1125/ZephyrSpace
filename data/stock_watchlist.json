@@ -1,6 +1,6 @@
 {
   "schema_version": 4,
-  "AGENT_INSTRUCTION": "修改本文件前，必须先完整阅读 tier_definitions 中对应档位的 entry_criteria 和 decision_tree，判断档位后再写入，不得跳过。完整规则见 data/WATCHLIST_RULES.md。\n- valuation_anchor: 必填，格式：估值锚类型+四档价位语义，如 '前瞻PE：追高>X(>Nx) / 中性Y-X / 较好Z-Y / 更低<Z'。该字段是price_bands的文字说明，新增公司必须同时填写两者。",
+  "AGENT_INSTRUCTION": "修改本文件前，必须先完整阅读 tier_definitions 中对应档位的 entry_criteria 和 decision_tree，判断档位后再写入，不得跳过。完整规则见 data/WATCHLIST_RULES.md。\n- price_bands: 固定4档，标签固定为：追高区(avoid) / 中性区(watch) / 较好区间(consider) / 更低区间(strong_buy)；按 min 降序，最后一档 min 必须为 null；禁止增减档数。\n- valuation_anchor: 必填，格式：估值锚类型+四档价位语义，如 '前瞻PE：追高>X(>Nx) / 中性Y-X / 较好Z-Y / 更低<Z'。该字段是price_bands的文字说明，新增公司必须同时填写两者。",
   "rules_doc": "data/WATCHLIST_RULES.md",
   "tier_definitions": {
     "core": {
@@ -65,7 +65,7 @@
     "watch_reason: 长期关注理由",
     "current_price: 加入时当前价格（数字，单位元）",
     "price_record_time: ISO 8601 格式带时区",
-    "price_bands: 至少3个区间，按 min 降序排列（null 排最后）；字段为 label/min/action。min 为进入该区间的最低价格，上边界由上一区间的 min 隐式确定，结构上不可能产生 gap。最后一个区间 min 必须为 null。",
+    "price_bands: 固定4档，标签固定为 追高区(avoid)/中性区(watch)/较好区间(consider)/更低区间(strong_buy)，按 min 降序排列，最后一档 min 为 null；禁止多于或少于4档",
     "risk_flags: 数组，至少2条，引用 PreBuy 主要红旗",
     "board: 上交所主板/深交所主板/科创板/深交所创业板 之一",
     "valuation_anchor"
@@ -623,13 +623,8 @@
           },
           {
             "label": "较好区间",
-            "min": 165.0,
-            "action": "consider"
-          },
-          {
-            "label": "更舒服区间",
             "min": 150.0,
-            "action": "buy"
+            "action": "consider"
           },
           {
             "label": "更低区间",

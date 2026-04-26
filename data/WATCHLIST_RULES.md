@@ -126,20 +126,29 @@
 | `watch_reason` | 为什么跟踪这家公司（区别于 prebuy_conclusion，这是长期关注理由） |
 | `current_price` | 加入时的当前价格（数字，单位元） |
 | `price_record_time` | ISO 8601 格式，带时区 |
-| `price_bands` | 至少 3 个区间，**按 `min` 降序排列**（null 排最后）；每个区间只有 `label`/`min`/`action` 三个字段。`min` 为进入该区间的最低价格，上边界由上一区间的 `min` 隐式确定，结构上不可能产生 gap。最后一个区间 `min` 必须为 `null`（覆盖所有更低价格）。 |
+| `price_bands` | **固定 4 档**，标签和 action 固定如下表，按 `min` 降序排列，最后一档 `min` 必须为 `null`（覆盖所有更低价格）。每个区间只有 `label`/`min`/`action` 三个字段，禁止增减档数、禁止写 `lower`/`upper` 字段。 |
+
+**price_bands 固定四档结构**：
+
+| 档位 | label | action | 含义 |
+|---|---|---|---|
+| 第 1 档（最高） | `追高区` | `avoid` | 明显高于合理区间上沿，赔率差，不买 |
+| 第 2 档 | `中性区` | `watch` | 逻辑对但价格不便宜，观察持有 |
+| 第 3 档 | `较好区间` | `consider` | 赔率开始顺手，可研究性布局 |
+| 第 4 档（最低） | `更低区间` | `strong_buy` | 安全边际更好，可更积极加仓；min 固定为 null |
 
 **price_bands 写法示例**（正确）：
 
 ```json
 "price_bands": [
-  { "label": "追高区",  "min": 85.0,  "action": "avoid"    },
-  { "label": "中性区",  "min": 68.0,  "action": "watch"    },
-  { "label": "较好区间", "min": 55.0,  "action": "consider" },
-  { "label": "更低区间", "min": null,  "action": "buy"      }
+  { "label": "追高区",   "min": 85.0, "action": "avoid"     },
+  { "label": "中性区",   "min": 68.0, "action": "watch"     },
+  { "label": "较好区间", "min": 55.0, "action": "consider"  },
+  { "label": "更低区间", "min": null, "action": "strong_buy" }
 ]
 ```
 
-解读：price ≥ 85 → avoid；68 ≤ price < 85 → watch；55 ≤ price < 68 → consider；price < 55 → buy。禁止写 `lower`/`upper` 字段，以防 gap。
+解读：price ≥ 85 → avoid；68 ≤ price < 85 → watch；55 ≤ price < 68 → consider；price < 55 → strong_buy。`min` 单字段隐式确定区间上边界，结构上不可能产生 gap。
 
 **valuation_anchor 写法规范**：
 
@@ -180,3 +189,4 @@
 |---|---|
 | 2026-04-26 | 初版，从 primary/secondary 两档重构为 core/growth/radar 三档 |
 | 2026-04-26 | 新增 valuation_anchor 必填字段；radar 删除电网主题工具/利润来源复杂类 9 家；修复批次1+2共12家公司的 price_bands 至估值锚口径；schema_version 升至 4 |
+| 2026-04-26 | price_bands 由"至少3档"改为**固定4档**，标签和 action 固定（追高区/中性区/较好区间/更低区间）；思源电气5档合并为4档；更新 AGENT_INSTRUCTION 和 required_fields 说明 |
