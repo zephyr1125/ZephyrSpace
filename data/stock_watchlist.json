@@ -438,7 +438,7 @@
       },
       {
         "name": "伯克希尔哈撒韦B",
-        "code": "BRK.B.US",
+        "code": "BRK-B.US",
         "market": "US",
         "board": "纽",
         "source_etf": "direct",
