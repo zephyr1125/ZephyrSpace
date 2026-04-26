@@ -360,12 +360,13 @@
         ],
         "valuation_anchor": "平台期权估值：追高区>400(市场充分定价AI/Robotaxi/Optimus期权，不追) / 中性区300-400(期权逻辑成立但赔率一般，可观察或极小仓) / 较好区间220-300(回到研究性布局区，需同步验证汽车利润率和FSD进展) / 更低区间<220(安全边际改善，但仍需复核Robotaxi和储能兑现)",
         "price_date": "2026-04-26",
-        "board": "美",
-        "dv_ttm": 0.0
+        "board": "纳",
+        "dv_ttm": 0.0,
+        "market": "US"
       },
       {
         "name": "苹果",
-        "code": "AAPL",
+        "code": "AAPL.US",
         "market": "US",
         "board": "纳",
         "source_etf": "direct",
@@ -389,7 +390,7 @@
       },
       {
         "name": "谷歌(Alphabet)",
-        "code": "GOOGL",
+        "code": "GOOGL.US",
         "market": "US",
         "board": "纳",
         "source_etf": "direct",
@@ -410,6 +411,102 @@
           "DOJ Search行为约束：Apple TAC付款($18-20B/年)逐步消失，6年执行期持续侵蚀高毛利流量"
         ],
         "dv_ttm": 0.23
+      },
+      {
+        "name": "英伟达",
+        "code": "NVDA",
+        "market": "US",
+        "board": "纳",
+        "source_etf": "direct",
+        "position_role": "AI算力基础设施核心卖铲资产，CUDA生态护城河极深",
+        "prebuy_conclusion": "逻辑清晰，当前价格合理，可按计划买入",
+        "watch_reason": "全球AI算力第一卖铲商，FY27E Forward PE ~24x处历史低分位，PEG≈0.63",
+        "current_price": 207.0,
+        "price_date": "2026-04-26",
+        "price_bands": [
+          250,
+          208,
+          167
+        ],
+        "valuation_anchor": "FY2027E Non-GAAP EPS $8.34，Forward PE ~25x",
+        "risk_flags": [
+          "H20出口管制损失~$10.5B",
+          "云厂商Capex降温戴维斯双杀风险",
+          "台积电供应链集中"
+        ],
+        "dv_ttm": 0.0
+      },
+      {
+        "name": "伯克希尔哈撒韦B",
+        "code": "BRK.B",
+        "market": "US",
+        "board": "纽",
+        "source_etf": "direct",
+        "position_role": "多元化控股+保险浮存金复利机器，长期底仓",
+        "prebuy_conclusion": "逻辑清晰，当前价格合理，可按计划买入",
+        "watch_reason": "$382B现金弹药+$176B浮存金，P/Book 1.42x处10年中位数，Greg Abel接班落地",
+        "current_price": 469.0,
+        "price_date": "2026-04-26",
+        "price_bands": [
+          540,
+          490,
+          455
+        ],
+        "valuation_anchor": "P/Book 1.42x（10年均值），Operating EPS FY2025 $20.32",
+        "risk_flags": [
+          "Abel接班执行力待验证",
+          "BHE山火诉讼潜在数十亿负债",
+          "BNSF铁路持续承压"
+        ],
+        "dv_ttm": 0.0
+      },
+      {
+        "name": "可口可乐",
+        "code": "KO",
+        "market": "US",
+        "board": "纽",
+        "source_etf": "direct",
+        "position_role": "防御型高股息底仓，Dividend King 64年连增",
+        "prebuy_conclusion": "逻辑清晰，等待更合适价格或验证点",
+        "watch_reason": "品牌护城河不可复制，FCF覆盖分红127%，巴菲特持股背书，目标增仓区$65-67",
+        "current_price": 70.0,
+        "price_date": "2026-04-26",
+        "price_bands": [
+          74,
+          67,
+          62
+        ],
+        "valuation_anchor": "FY2025E EPS $2.98，Forward PE 23.5x @ $70",
+        "risk_flags": [
+          "IRS税务纠纷潜在$16B负债",
+          "利率逆风（股息率2.80% vs 国债4.55%）",
+          "有机增长降速至5-6%"
+        ],
+        "dv_ttm": 1.965
+      },
+      {
+        "name": "微软",
+        "code": "MSFT",
+        "market": "US",
+        "board": "纳",
+        "source_etf": "direct",
+        "position_role": "企业软件+云计算双飞轮，AI货币化最确定的平台",
+        "prebuy_conclusion": "逻辑清晰，当前价格合理，可按计划买入",
+        "watch_reason": "Azure Q3增速35%加速，OCF净现比137%，当前$425处🟢区间，Copilot渗透仅3.3%",
+        "current_price": 425.0,
+        "price_date": "2026-04-26",
+        "price_bands": [
+          640,
+          510,
+          420
+        ],
+        "valuation_anchor": "FY2027E Non-GAAP EPS $19.14，当前22.2x FY2027E",
+        "risk_flags": [
+          "AI Capex $64.6B收益不确定",
+          "FTC对Microsoft-OpenAI反垄断调查",
+          "Copilot货币化进展缓慢"
+        ],
+        "dv_ttm": 3.32
       }
     ],
     "growth": [
@@ -1052,128 +1149,123 @@
         "ts_code": "688123.SH"
       },
       {
-        "ts_code": "603501.SH",
         "name": "豪威集团",
-        "sector": "图像传感器/半导体",
+        "code": "603501.SH",
+        "source_etf": "931912",
+        "position_role": "图像传感器/AI视觉感知成长仓",
+        "prebuy_conclusion": "逻辑清晰，全球车载CIS市占率32.9%第一，PE约29x与净利增长匹配，可在较好区间70-95元分批研究性布局。",
+        "watch_reason": "韦尔股份旗下OmniVision/豪威业务具备车载CIS、手机CIS和AI视觉感知多重暴露，是半导体产业链里更贴近终端感知的成长标的。",
+        "current_price": 98.88,
+        "price_date": "2026-04-24",
         "board": "沪",
-        "tier": "growth",
-        "thesis": "全球车载CIS市占率32.9%第一，手机CIS全球第三，AI视觉感知基础芯片，PE≈29x与净利+21.7%匹配",
         "price_bands": [
           120.0,
           95.0,
           70.0
         ],
-        "pe_range": [
-          29.7,
-          15.0,
-          55.0
+        "risk_flags": [
+          "消费电子和汽车电子需求存在周期波动",
+          "CIS行业竞争激烈，手机CIS业务价格压力仍需跟踪",
+          "并购整合和海外业务占比较高，汇率与地缘风险会影响估值"
         ],
-        "roe_ttm": 15.4,
-        "revenue_growth": 12.1,
-        "market_cap_bn": 1199.6,
-        "dv_ttm": 0.65,
-        "entry_trigger": null,
-        "notes": "韦尔股份（603501）持有OmniVision/豪威集团业务；车载CIS全球第一护城河深；汽车+AI视觉双轮驱动；PE29x估值合理可小仓建仓"
+        "valuation_anchor": "成长PE+车载CIS景气：追高区>120(PE约36x以上，成长溢价偏满) / 中性区95-120(PE约29-36x，逻辑对但赔率一般) / 较好区间70-95(PE约21-29x，汽车+AI视觉逻辑有赔率) / 更低区间<70(PE<21x，若增长未恶化则安全边际明显)",
+        "dv_ttm": 0.65
       },
       {
-        "ts_code": "688019.SH",
         "name": "安集科技",
-        "sector": "半导体材料/CMP",
+        "code": "688019.SH",
+        "source_etf": "931912",
+        "position_role": "半导体材料/CMP国产替代成长仓",
+        "prebuy_conclusion": "逻辑清晰，国内CMP抛光液龙头，ROE约25%，但需等PE回落至45x以下再建仓。",
+        "watch_reason": "CMP抛光液和清洗剂国产替代纯度较高，受益于晶圆厂扩产和国产材料替代，是半导体材料环节的核心观察标的。",
+        "current_price": 246.12,
+        "price_date": "2026-04-24",
         "board": "科",
-        "tier": "growth",
-        "thesis": "国内CMP抛光液龙头，国产替代+晶圆扩产双驱动，ROE 25%，等PE<45x再建仓",
         "price_bands": [
           246.0,
           202.0,
           157.0
         ],
-        "pe_range": [
-          55.0,
-          22.0,
-          80.0
+        "risk_flags": [
+          "存货增速高于营收增速，需关注去库和减值风险",
+          "半导体材料验证周期长，客户放量节奏不完全可控",
+          "当前价格接近追高线，短期赔率一般"
         ],
-        "roe_ttm": 25.1,
-        "revenue_growth": 36.5,
-        "market_cap_bn": 430.7,
-        "dv_ttm": 0.13,
-        "entry_trigger": null,
-        "notes": "CMP抛光液/清洗剂国产替代唯一纯粹标的；存货+70%超营收增速需关注去库风险；等PE回落至45x以下（157-202元）建仓"
+        "valuation_anchor": "成长PE+国产替代：追高区>246(PE约55x以上，材料龙头溢价偏高) / 中性区202-246(PE约45-55x，等待验证) / 较好区间157-202(PE约35-45x，进入可布局区) / 更低区间<157(PE<35x，安全边际改善)",
+        "dv_ttm": 0.13
       },
       {
-        "ts_code": "688099.SH",
         "name": "晶晨股份",
-        "sector": "消费电子SoC/半导体",
+        "code": "688099.SH",
+        "source_etf": "931912",
+        "position_role": "消费电子SoC成长观察",
+        "prebuy_conclusion": "国内智能TV/机顶盒SoC龙头，但需等存货消化和现金流回正，价格回落至62-72元区间再考虑介入。",
+        "watch_reason": "智能TV、机顶盒和边缘AI SoC具备国产替代和终端智能化逻辑，但当前现金流和库存质量需要验证。",
+        "current_price": 77.28,
+        "price_date": "2026-04-24",
         "board": "科",
-        "tier": "growth",
-        "thesis": "国内智能TV/机顶盒SoC龙头，等存货消化+现金流回正，价格回落至62-72元区间介入",
         "price_bands": [
           87.0,
           72.0,
           62.0
         ],
-        "pe_range": [
-          44.0,
-          18.0,
-          75.0
+        "risk_flags": [
+          "存货大幅增长，库存消化风险需要持续验证",
+          "经营现金流弱于净利润，利润质量仍需观察",
+          "消费电子SoC景气波动大，终端需求恢复不确定"
         ],
-        "roe_ttm": 12.7,
-        "revenue_growth": 14.6,
-        "market_cap_bn": 383.7,
-        "dv_ttm": 0.0,
-        "entry_trigger": null,
-        "notes": "2025年存货暴增+79%至25.3亿，OCF-2.3亿 vs 净利8.73亿严重背离；Q4季度利润持续下行；ROE在粗筛下沿（12.7%）；等Q1 2026验证存货消化"
+        "valuation_anchor": "成长PE+库存验证：追高区>87(PE约44x以上，库存未验证前不追) / 中性区72-87(PE约36-44x，观察现金流) / 较好区间62-72(PE约31-36x，若库存改善可研究性布局) / 更低区间<62(PE<31x，安全边际更好)",
+        "dv_ttm": 0.0
       },
       {
-        "ts_code": "688002.SH",
         "name": "睿创微纳",
-        "sector": "红外探测器/半导体",
+        "code": "688002.SH",
+        "source_etf": "931912",
+        "position_role": "红外探测器/军民融合成长仓",
+        "prebuy_conclusion": "国内高端非制冷红外探测器代表，2025净利高增且现金流优质，但当前估值偏贵，等PE回落至历史中位数45x附近。",
+        "watch_reason": "军民双轮驱动，红外探测器和热成像需求具备长期空间，且2025年经营现金流远超净利润，财务质量较好。",
+        "current_price": 137.4,
+        "price_date": "2026-04-24",
         "board": "科",
-        "tier": "growth",
-        "thesis": "国内唯一规模量产高端非制冷红外探测器芯片，2025净利+98%，OCF远超净利，等PE回落至历史中位数45x附近",
         "price_bands": [
           130.0,
           110.0,
           95.0
         ],
-        "pe_range": [
-          55.0,
-          19.6,
-          75.5
+        "risk_flags": [
+          "当前价格已高于追高线，短期涨幅较大",
+          "军品和行业订单节奏会造成业绩波动",
+          "历史上曾出现净利下滑，不能线性外推2025高增"
         ],
-        "roe_ttm": 18.7,
-        "revenue_growth": 46.1,
-        "market_cap_bn": 618.3,
-        "dv_ttm": 0.12,
-        "entry_trigger": null,
-        "notes": "军民双轮驱动；OCF=18.56亿远超净利11.25亿（财务健康）；近30日急涨28%处于顶部；PE历史72%分位偏贵；2022年曾净利-32%（军品节奏波动）"
+        "valuation_anchor": "成长PE+军民订单验证：追高区>130(PE约55x以上，处于历史偏高分位) / 中性区110-130(PE约45-55x，等待订单验证) / 较好区间95-110(PE约39-45x，赔率改善) / 更低区间<95(PE<39x，安全边际更好)",
+        "dv_ttm": 0.12
       },
       {
-        "ts_code": "002371.SZ",
         "name": "北方华创",
-        "sector": "半导体设备",
+        "code": "002371.SZ",
+        "source_etf": "931912",
+        "position_role": "半导体设备国产替代核心成长仓",
+        "prebuy_conclusion": "A股半导体设备市值龙头，国产替代逻辑强，但需等2026年利润恢复验证且PE低于55x再建仓。",
+        "watch_reason": "刻蚀、PVD、CVD等设备平台能力完整，是半导体设备国产替代核心公司；估值和利润波动需要严格约束买点。",
+        "current_price": 546.13,
+        "price_date": "2026-04-24",
         "board": "深",
-        "tier": "growth",
-        "thesis": "A股半导体设备市值龙头，刻蚀/PVD/CVD全产品线，国产替代核心，等2026年利润恢复+PE<55x再建仓",
         "price_bands": [
           485.0,
           420.0,
           340.0
         ],
-        "pe_range": [
-          62.0,
-          25.0,
-          100.0
+        "risk_flags": [
+          "当前价格高于追高线，估值处于偏高区间",
+          "2025年Q4单季利润明显下滑，净利率压缩原因需验证",
+          "定增扩股摊薄EPS，股东回报和成长兑现需要继续跟踪"
         ],
-        "roe_ttm": 16.1,
-        "revenue_growth": 30.9,
-        "market_cap_bn": 3426.3,
-        "dv_ttm": 0.17,
-        "entry_trigger": null,
-        "notes": "Q4 2025单季净利-66%，净利率从19.1%压缩至13.7%，原因未明；2025年定增扩股36%摊薄EPS；PE=62x历史93%分位；等FY2026利润恢复验证后340-420元建仓"
+        "valuation_anchor": "半导体设备PE+利润恢复：追高区>485(PE>62x，历史高分位，不追) / 中性区420-485(PE约55-62x，等待2026利润恢复) / 较好区间340-420(PE约45-55x，国产替代核心可研究性布局) / 更低区间<340(PE<45x，安全边际改善)",
+        "dv_ttm": 0.17
       },
       {
         "name": "亚马逊",
-        "code": "AMZN",
+        "code": "AMZN.US",
         "market": "US",
         "board": "纳",
         "source_etf": "direct",
@@ -1194,6 +1286,126 @@
           "关税政策拖累电商第三方卖家经济性，广告业务间接受损"
         ],
         "dv_ttm": 0
+      },
+      {
+        "name": "AMD",
+        "code": "AMD",
+        "market": "US",
+        "board": "纳",
+        "source_etf": "direct",
+        "position_role": "AI加速器+服务器CPU双线成长，NVDA生态补充",
+        "prebuy_conclusion": "逻辑清晰，等待更合适价格或验证点",
+        "watch_reason": "EPYC服务器份额破40%，MI300规模化，FCF +179%，等回调$268-300建仓",
+        "current_price": 350.0,
+        "price_date": "2026-04-26",
+        "price_bands": [
+          335,
+          268,
+          201
+        ],
+        "valuation_anchor": "FY2026E Non-GAAP EPS $6.70，Forward PE 52x（偏贵）",
+        "risk_flags": [
+          "出口管制已损失$1.8B",
+          "ROCm生态差距短期难追CUDA",
+          "当前估值容错率低"
+        ],
+        "dv_ttm": 0.0
+      },
+      {
+        "name": "美光科技",
+        "code": "MU",
+        "market": "US",
+        "board": "纳",
+        "source_etf": "direct",
+        "position_role": "HBM内存寡占+CHIPS Act政策护城河，AI算力基础设施配套",
+        "prebuy_conclusion": "逻辑清晰，当前价格合理，可按计划买入",
+        "watch_reason": "HBM3E供应NVIDIA Blackwell全年售罄，PB ~2.1x历史中低位，6x Forward PE极低",
+        "current_price": 97.0,
+        "price_date": "2026-04-26",
+        "price_bands": [
+          140,
+          110,
+          80
+        ],
+        "valuation_anchor": "FY2026E Non-GAAP EPS ~$16，公允价值中枢$160（10x EPS）",
+        "risk_flags": [
+          "出口管制已损失中国数据中心12-15%营收",
+          "DRAM周期提前反转风险",
+          "CapEx极高FCF极薄"
+        ],
+        "dv_ttm": 0.46
+      },
+      {
+        "name": "Rocket Lab",
+        "code": "RKLB",
+        "market": "US",
+        "board": "纳",
+        "source_etf": "direct",
+        "position_role": "商业航天端到端平台，Neutron火箭期权",
+        "prebuy_conclusion": "适合继续研究，不适合立刻买",
+        "watch_reason": "$1.85B backlog收入可见性强，毛利率快速改善至34%，等$60以下或Neutron进展明确再建仓",
+        "current_price": 79.68,
+        "price_date": "2026-04-26",
+        "price_bands": [
+          85,
+          60,
+          35
+        ],
+        "valuation_anchor": "FY2026E Revenue $854M，EV/Revenue ~50x（偏贵）",
+        "risk_flags": [
+          "Neutron已两次延迟Q4 2026仍有风险",
+          "EV/Revenue ~50x容错空间小",
+          "EBITDA转正要等FY2027-2028"
+        ],
+        "dv_ttm": 0.0
+      },
+      {
+        "name": "新思科技",
+        "code": "SNPS",
+        "market": "US",
+        "board": "纳",
+        "source_etf": "direct",
+        "position_role": "EDA双寡头，AI芯片设计工具垄断，Ansys收购后全流程覆盖",
+        "prebuy_conclusion": "可以试错，但只能小仓位",
+        "watch_reason": "Ansys收购已完成构建EDA+仿真全流程垄断，Forward PE 34.7x处历史低分位，等FY2026 Q2验证整合",
+        "current_price": 500.0,
+        "price_date": "2026-04-26",
+        "price_bands": [
+          600,
+          490,
+          400
+        ],
+        "valuation_anchor": "FY2026E Non-GAAP EPS $14.42，Forward PE ~34.7x",
+        "risk_flags": [
+          "Ansys并表净债务~$11.8B高杠杆",
+          "整合执行风险FY2026是第一并表年",
+          "中国IP业务出口管制承压"
+        ],
+        "dv_ttm": 0.0
+      },
+      {
+        "name": "台积电",
+        "code": "TSM",
+        "market": "US",
+        "board": "纽",
+        "source_etf": "direct",
+        "position_role": "全球唯一3nm/2nm量产代工厂，AI算力产业链核心制造基础设施",
+        "prebuy_conclusion": "逻辑清晰，等待更合适价格或验证点",
+        "watch_reason": "N2独占2-3年无竞争，HPC占营收61%，等回调至$340-360再建仓",
+        "current_price": 402.46,
+        "price_date": "2026-04-26",
+        "price_bands": [
+          400,
+          340,
+          290
+        ],
+        "valuation_anchor": "FY2026E EPS $15.50，Forward PE ~26x @ $402",
+        "risk_flags": [
+          "台海地缘政治系统性风险（不可对冲）",
+          "美国贸易政策出口管制升级",
+          "N2爬坡引发毛利率稀释2-3pp"
+        ],
+        "dv_ttm": 3.08
       }
     ],
     "radar": [
