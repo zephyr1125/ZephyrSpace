@@ -140,8 +140,25 @@
 ```
 
 解读：price ≥ 85 → avoid；68 ≤ price < 85 → watch；55 ≤ price < 68 → consider；price < 55 → buy。禁止写 `lower`/`upper` 字段，以防 gap。
+
+**valuation_anchor 写法规范**：
+
+`valuation_anchor` 是 `price_bands` 的文字说明，**必须与 price_bands 同时填写**，记录"这四档价位是按什么逻辑定出来的"，供后续 AI 或人工核查时直接对着锚更新数字。
+
+格式模板：
+```
+"valuation_anchor": "估值锚类型：追高区>X(说明) / 中性区Y-X(说明) / 较好区间Z-Y(说明) / 更低区间<Z(说明)"
+```
+
+不同公司类型的估值锚选择：
+- **成长股**：前瞻 PE / PEG / EV/EBITDA + 增长验证节点
+- **周期股**：利润中枢 × 历史 PE 区间 + 景气位置
+- **价值/底仓股**：历史 PE 区间 / PB / 股息率 + 安全边际
+- **困境反转股**：修复进度（扣非 / 现金流）× P/S 或 PB
+
 | `risk_flags` | 数组，至少 2 条，直接引用 PreBuy 页面的主要红旗 |
 | `board` | 上交所主板 / 深交所主板 / 科创板 / 深交所创业板 之一 |
+| `valuation_anchor` | 必填，记录四档价位的估值逻辑，格式见上 |
 
 ---
 
@@ -151,7 +168,7 @@
 
 - **core（核心池）**：11 家，均为原 primary 池，各档最高确信度底仓
 - **growth（成长池）**：13 家，原 secondary 中基本面最优、成长逻辑清晰的公司
-- **radar（雷达池）**：22 家，原 secondary 中需要更多验证或有明显红旗的公司
+- **radar（雷达池）**：13 家，需要更多验证或有明显红旗的公司（2026-04-26 删除了电网主题工具类和利润来源复杂类共 9 家后剩余）
 
 完整列表见 `data/stock_watchlist.json`。
 
@@ -162,3 +179,4 @@
 | 日期 | 变更说明 |
 |---|---|
 | 2026-04-26 | 初版，从 primary/secondary 两档重构为 core/growth/radar 三档 |
+| 2026-04-26 | 新增 valuation_anchor 必填字段；radar 删除电网主题工具/利润来源复杂类 9 家；修复批次1+2共12家公司的 price_bands 至估值锚口径；schema_version 升至 4 |

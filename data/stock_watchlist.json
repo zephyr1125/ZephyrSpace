@@ -1,6 +1,6 @@
 {
-  "schema_version": 3,
-  "AGENT_INSTRUCTION": "修改本文件前，必须先完整阅读 tier_definitions 中对应档位的 entry_criteria 和 decision_tree，判断档位后再写入，不得跳过。完整规则见 data/WATCHLIST_RULES.md。",
+  "schema_version": 4,
+  "AGENT_INSTRUCTION": "修改本文件前，必须先完整阅读 tier_definitions 中对应档位的 entry_criteria 和 decision_tree，判断档位后再写入，不得跳过。完整规则见 data/WATCHLIST_RULES.md。\n- valuation_anchor: 必填，格式：估值锚类型+四档价位语义，如 '前瞻PE：追高>X(>Nx) / 中性Y-X / 较好Z-Y / 更低<Z'。该字段是price_bands的文字说明，新增公司必须同时填写两者。",
   "rules_doc": "data/WATCHLIST_RULES.md",
   "tier_definitions": {
     "core": {
@@ -67,7 +67,8 @@
     "price_record_time: ISO 8601 格式带时区",
     "price_bands: 至少3个区间，按 min 降序排列（null 排最后）；字段为 label/min/action。min 为进入该区间的最低价格，上边界由上一区间的 min 隐式确定，结构上不可能产生 gap。最后一个区间 min 必须为 null。",
     "risk_flags: 数组，至少2条，引用 PreBuy 主要红旗",
-    "board: 上交所主板/深交所主板/科创板/深交所创业板 之一"
+    "board: 上交所主板/深交所主板/科创板/深交所创业板 之一",
+    "valuation_anchor"
   ],
   "generated_at": "2026-04-26T15:22:57.585249+08:00",
   "source_universes": [
@@ -1074,86 +1075,6 @@
     ],
     "radar": [
       {
-        "priority": 11,
-        "name": "中国西电",
-        "code": "601179.SH",
-        "note_path": "01-公司/中国西电.md",
-        "source_etf": "560390",
-        "position_role": "建骨架 / 特高压纯度",
-        "prebuy_conclusion": "逻辑顺，但当前更像主题纯度工具，适合继续研究或等回调，不适合直接追高。",
-        "watch_reason": "特高压纯度最高，适合观察主网骨架主题。",
-        "current_price": 17.21,
-        "price_record_time": "2026-04-25 23:02:15 +08:00",
-        "price_bands": [
-          {
-            "label": "追高区",
-            "min": 18.0,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "min": 15.5,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "min": 13.5,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "min": null,
-            "action": "buy"
-          }
-        ],
-        "risk_flags": [
-          "估值已经明显抬高",
-          "2025Q1 现金流为负",
-          "主题热度退去后纯度溢价可能收缩"
-        ],
-        "board": "上交所主板"
-      },
-      {
-        "priority": 12,
-        "name": "特变电工",
-        "code": "600089.SH",
-        "note_path": "01-公司/特变电工.md",
-        "source_etf": "560390",
-        "position_role": "主网建设广谱受益",
-        "prebuy_conclusion": "可以继续研究，但当前更适合按“主网建设 + 综合周期”理解，不适合当纯电网龙头无脑买。",
-        "watch_reason": "主网建设周期的广谱受益者，但业务纯度不够。",
-        "current_price": 26.96,
-        "price_record_time": "2026-04-25 23:02:15 +08:00",
-        "price_bands": [
-          {
-            "label": "追高区",
-            "min": 29.0,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "min": 25.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "min": 22.0,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "min": null,
-            "action": "buy"
-          }
-        ],
-        "risk_flags": [
-          "业务不够纯",
-          "2024 利润大幅下滑",
-          "综合平台波动会干扰主线判断"
-        ],
-        "board": "上交所主板"
-      },
-      {
         "priority": 13,
         "name": "陕西煤业",
         "code": "601225.SH",
@@ -1191,207 +1112,8 @@
           "高股息容易误导成稳健底仓",
           "利润已明显下滑"
         ],
-        "board": "上交所主板"
-      },
-      {
-        "priority": 15,
-        "name": "平高电气",
-        "code": "600312.SH",
-        "note_path": "01-公司/平高电气.md",
-        "source_etf": "560390",
-        "position_role": "高压开关 / 主网骨架延伸",
-        "prebuy_conclusion": "逻辑顺，但当前更适合继续研究或等回调，不适合直接追高。",
-        "watch_reason": "主网骨架和高压开关环节的重要标的，适合观察特高压和主网建设节奏。",
-        "current_price": 22.96,
-        "price_record_time": "2026-04-26 23:02:15 +08:00",
-        "price_bands": [
-          {
-            "label": "追高区",
-            "min": 25.0,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "min": 22.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "min": 19.0,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "min": null,
-            "action": "buy"
-          }
-        ],
-        "risk_flags": [
-          "受主网投资节奏影响明显",
-          "现金流阶段性波动",
-          "主题交易退潮后估值容易回落"
-        ],
-        "board": "上交所主板"
-      },
-      {
-        "priority": 16,
-        "name": "许继电气",
-        "code": "000400.SZ",
-        "note_path": "01-公司/许继电气.md",
-        "source_etf": "560390",
-        "position_role": "二次设备 / 配网自动化",
-        "prebuy_conclusion": "逻辑清晰，适合继续研究；如果现在下手，更像接受盈利波动后的验证买点。",
-        "watch_reason": "配网自动化和系统侧延伸的核心公司之一，适合跟踪新型电力系统建设。",
-        "current_price": 26.24,
-        "price_record_time": "2026-04-26 23:02:15 +08:00",
-        "price_bands": [
-          {
-            "label": "追高区",
-            "min": 29.0,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "min": 25.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "min": 22.0,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "min": null,
-            "action": "buy"
-          }
-        ],
-        "risk_flags": [
-          "利润增速波动较大",
-          "部分季度现金流承压",
-          "更依赖电网自动化景气持续性"
-        ],
-        "board": "深交所主板"
-      },
-      {
-        "priority": 17,
-        "name": "东方电缆",
-        "code": "603606.SH",
-        "note_path": "01-公司/东方电缆.md",
-        "source_etf": "560390",
-        "position_role": "海缆 / 连接通道",
-        "prebuy_conclusion": "值得继续研究，但更适合按海缆与深远海风电弹性仓看待，不适合追高。",
-        "watch_reason": "海缆和电力连接通道的代表，适合观察深远海风电与电网通道扩张。",
-        "current_price": 59.39,
-        "price_record_time": "2026-04-26 23:02:15 +08:00",
-        "price_bands": [
-          {
-            "label": "追高区",
-            "min": 66.0,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "min": 58.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "min": 52.0,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "min": null,
-            "action": "buy"
-          }
-        ],
-        "risk_flags": [
-          "业务驱动不够纯",
-          "现金流会受项目节奏影响",
-          "容易被海风和制造景气预期拉高"
-        ],
-        "board": "上交所主板"
-      },
-      {
-        "priority": 18,
-        "name": "四方股份",
-        "code": "601126.SH",
-        "note_path": "01-公司/四方股份.md",
-        "source_etf": "560390",
-        "position_role": "二次设备 / 调度保护",
-        "prebuy_conclusion": "质量不错，但当前位置偏高，更适合继续研究或等回调，不适合直接追。",
-        "watch_reason": "调度、保护和控制环节的重要公司，能吃到控网和配网自动化逻辑。",
-        "current_price": 46.5,
-        "price_record_time": "2026-04-26 23:02:15 +08:00",
-        "price_bands": [
-          {
-            "label": "追高区",
-            "min": 50.0,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "min": 43.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "min": 38.0,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "min": null,
-            "action": "buy"
-          }
-        ],
-        "risk_flags": [
-          "估值不算便宜",
-          "订单节奏会影响业绩弹性",
-          "控网逻辑强但仍受行业景气驱动"
-        ],
-        "board": "上交所主板"
-      },
-      {
-        "priority": 19,
-        "name": "金盘科技",
-        "code": "688676.SH",
-        "note_path": "01-公司/金盘科技.md",
-        "source_etf": "560390",
-        "position_role": "高弹性设备平台",
-        "prebuy_conclusion": "高弹性成长仓，值得继续研究，但当前估值和预期都不低，不适合追高。",
-        "watch_reason": "高端配电与设备平台属性强，适合观察成长弹性和设备升级逻辑。",
-        "current_price": 95.84,
-        "price_record_time": "2026-04-26 23:02:15 +08:00",
-        "price_bands": [
-          {
-            "label": "追高区",
-            "min": 105.0,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "min": 90.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "min": 78.0,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "min": null,
-            "action": "buy"
-          }
-        ],
-        "risk_flags": [
-          "估值偏高",
-          "现金流阶段性偏弱",
-          "成长预期容易先行透支"
-        ],
-        "board": "科创板"
+        "board": "上交所主板",
+        "valuation_anchor": "周期PE+股息率：追高区>29(PE>17x，煤价高点充分定价) / 中性区24-29(PE14-17x，持有观察) / 较好区间20-24(PE12-14x，股息率约6%，周期低位布局) / 更低区间<20(PE<12x，若利润中枢稳定则安全边际明显)"
       },
       {
         "priority": 26,
@@ -1447,7 +1169,7 @@
         "price_bands": [
           {
             "label": "追高区",
-            "min": 82.0,
+            "min": 80.0,
             "action": "avoid"
           },
           {
@@ -1471,7 +1193,8 @@
           "三条业务线节奏不同",
           "储能放量是否持续仍要验证"
         ],
-        "board": "创业板"
+        "board": "创业板",
+        "valuation_anchor": "EV/EBITDA+前瞻PE：追高区>80(PE>29x，净利增速放缓下赔率差) / 中性区70-80(PE25-29x，现金流强但等净利增速恢复) / 较好区间60-70(PE21-25x，等净利率重启) / 更低区间<60(PE<21x，平台折价明显，安全边际充足)"
       },
       {
         "priority": 30,
@@ -1511,7 +1234,8 @@
           "海外户储需求波动大",
           "产品和订单节奏对利润影响明显"
         ],
-        "board": "上交所主板"
+        "board": "上交所主板",
+        "valuation_anchor": "前瞻PE×海外景气：追高区>165(PE>26x，户储景气预期充分) / 中性区145-165(PE23-26x，景气延续但赔率一般) / 较好区间125-145(PE20-23x，等海外景气明确再布局) / 更低区间<125(PE<20x，去库充分后安全边际明显)"
       },
       {
         "priority": 31,
@@ -1551,7 +1275,8 @@
           "海外医药融资波动会影响订单",
           "新兴业务仍在爬坡"
         ],
-        "board": "深交所主板"
+        "board": "深交所主板",
+        "valuation_anchor": "前瞻PE×在手订单：追高区>120(PE>32x，订单增长充分定价) / 中性区105-120(PE28-32x，逻辑对但不便宜) / 较好区间90-105(PE24-28x，等订单持续兑现) / 更低区间<90(PE<24x，在手订单若维持则安全边际充足)"
       },
       {
         "priority": 32,
@@ -1567,7 +1292,7 @@
         "price_bands": [
           {
             "label": "追高区",
-            "min": 68.0,
+            "min": 65.0,
             "action": "avoid"
           },
           {
@@ -1591,7 +1316,8 @@
           "海外融资环境波动",
           "估值并不便宜"
         ],
-        "board": "创业板"
+        "board": "创业板",
+        "valuation_anchor": "扣非PE+新签订单：追高区>65(扣非PE极高，归母利润质量不纯) / 中性区58-65(等扣非改善，观察订单价格回升) / 较好区间50-58(扣非修复有迹象时赔率改善) / 更低区间<50(扣非PE回落+订单加速确认，安全边际充足)"
       },
       {
         "priority": 33,
@@ -1607,7 +1333,7 @@
         "price_bands": [
           {
             "label": "追高区",
-            "min": 275.0,
+            "min": 280.0,
             "action": "avoid"
           },
           {
@@ -1631,7 +1357,8 @@
           "器械赛道竞争和集采扰动仍在",
           "需要回调提供更好赔率"
         ],
-        "board": "科创板"
+        "board": "科创板",
+        "valuation_anchor": "2026E前瞻PE：追高区>280(~85x，国产替代+产品放量充分定价) / 中性区240-280(70-85x，好公司但不便宜) / 较好区间210-240(60-70x，等估值随业绩消化) / 更低区间<210(<60x，回调后安全边际充足)"
       },
       {
         "priority": 34,
@@ -1647,7 +1374,7 @@
         "price_bands": [
           {
             "label": "追高区",
-            "min": 46.0,
+            "min": 45.0,
             "action": "avoid"
           },
           {
@@ -1671,7 +1398,8 @@
           "固态电池兑现仍需时间",
           "主业质量波动会影响估值"
         ],
-        "board": "创业板"
+        "board": "创业板",
+        "valuation_anchor": "前瞻PE+扣非改善：追高区>45(非经常性利润高，主业扣非偏低) / 中性区38-45(等扣非修复+固态电池/海外验证) / 较好区间32-38(主业利润质量改善后赔率合适) / 更低区间<32(主业未充分兑现前安全边际更好)"
       },
       {
         "priority": 35,
@@ -1711,7 +1439,8 @@
           "系统侧竞争激烈",
           "利润兑现节奏不稳定"
         ],
-        "board": "深交所主板"
+        "board": "深交所主板",
+        "valuation_anchor": "前瞻PE：追高区>70(算力电源高预期已定价) / 中性区60-70(观察应收账款改善) / 较好区间52-60(等算力订单确认，赔率改善) / 更低区间<52(回调充分+现金流改善后安全边际明显)"
       },
       {
         "priority": 36,
@@ -1727,7 +1456,7 @@
         "price_bands": [
           {
             "label": "追高区",
-            "min": 58.0,
+            "min": 55.0,
             "action": "avoid"
           },
           {
@@ -1751,7 +1480,8 @@
           "价格竞争会压缩利润",
           "回暖不等于趋势反转"
         ],
-        "board": "创业板"
+        "board": "创业板",
+        "valuation_anchor": "周期利润中枢×PE：追高区>55(景气高点、材料修复已充分定价) / 中性区48-55(回暖已被看到，观察材料价格) / 较好区间40-48(向利润中枢合理估值靠拢，赔率改善) / 更低区间<40(周期低位PB支撑，安全边际明显)"
       },
       {
         "priority": 37,
@@ -1767,7 +1497,7 @@
         "price_bands": [
           {
             "label": "追高区",
-            "min": 80.0,
+            "min": 78.0,
             "action": "avoid"
           },
           {
@@ -1777,7 +1507,7 @@
           },
           {
             "label": "较好区间",
-            "min": 60.0,
+            "min": 55.0,
             "action": "consider"
           },
           {
@@ -1791,7 +1521,8 @@
           "竞争加剧会压利润",
           "扭亏不代表趋势已经稳住"
         ],
-        "board": "深交所主板"
+        "board": "深交所主板",
+        "valuation_anchor": "隔膜价格修复×PB：追高区>78(扭亏仅1.4亿，当前市值过高) / 中性区68-78(等隔膜价格回升趋势持续) / 较好区间55-68(价格改善持续性确认，赔率改善) / 更低区间<55(周期PB支撑+利润修复，安全边际明显)"
       },
       {
         "priority": 38,
@@ -1831,7 +1562,8 @@
           "修复还没完全确认",
           "海外户储需求节奏仍是关键变量"
         ],
-        "board": "科创板"
+        "board": "科创板",
+        "valuation_anchor": "修复进度×P/S：追高区>115(扣非利润极薄，现金流未转正，估值偏贵) / 中性区100-115(等现金流持续转正) / 较好区间85-100(利润+现金流同步改善时赔率合适) / 更低区间<85(充分回调+盈利稳定后安全边际明显)"
       },
       {
         "priority": 39,
@@ -1847,7 +1579,7 @@
         "price_bands": [
           {
             "label": "追高区",
-            "min": 78.0,
+            "min": 75.0,
             "action": "avoid"
           },
           {
@@ -1857,7 +1589,7 @@
           },
           {
             "label": "较好区间",
-            "min": 55.0,
+            "min": 52.0,
             "action": "consider"
           },
           {
@@ -1871,87 +1603,8 @@
           "盈利波动大",
           "扩产会放大风险"
         ],
-        "board": "创业板"
-      },
-      {
-        "priority": 40,
-        "name": "英科医疗",
-        "code": "300677.SZ",
-        "note_path": "01-公司/英科医疗.md",
-        "source_etf": "399989",
-        "position_role": "医疗耗材修复",
-        "prebuy_conclusion": "可以跟踪周期修复，不建议追。",
-        "watch_reason": "更像周期修复股，适合观察供需和利润弹性。",
-        "current_price": 56.88,
-        "price_record_time": "2026-04-26 14:58:05 +08:00",
-        "price_bands": [
-          {
-            "label": "追高区",
-            "min": 65.0,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "min": 56.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "min": 48.0,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "min": null,
-            "action": "buy"
-          }
-        ],
-        "risk_flags": [
-          "主业仍偏周期",
-          "价格波动影响利润",
-          "修复不等于高质量成长"
-        ],
-        "board": "创业板"
-      },
-      {
-        "priority": 41,
-        "name": "九安医疗",
-        "code": "002432.SZ",
-        "note_path": "01-公司/九安医疗.md",
-        "source_etf": "399989",
-        "position_role": "家用医疗与资产收益",
-        "prebuy_conclusion": "可以跟踪，但不适合按医疗主业直接买。",
-        "watch_reason": "主业和利润来源不一致，适合盯主业修复和资产收益变化。",
-        "current_price": 82.86,
-        "price_record_time": "2026-04-26 14:58:05 +08:00",
-        "price_bands": [
-          {
-            "label": "追高区",
-            "min": 92.0,
-            "action": "avoid"
-          },
-          {
-            "label": "中性区",
-            "min": 78.0,
-            "action": "watch"
-          },
-          {
-            "label": "较好区间",
-            "min": 68.0,
-            "action": "consider"
-          },
-          {
-            "label": "更低区间",
-            "min": null,
-            "action": "buy"
-          }
-        ],
-        "risk_flags": [
-          "主业收入仍在下滑",
-          "利润更多来自投资收益",
-          "不能按医疗主业简单定价"
-        ],
-        "board": "创业板"
+        "board": "创业板",
+        "valuation_anchor": "周期修复×现金流：追高区>75(净利极薄但估值高，现金流不稳) / 中性区65-75(等业绩预告完全兑现) / 较好区间52-65(利润趋势确立后赔率改善) / 更低区间<52(充分回调+现金流改善后明确买点)"
       }
     ]
   }
