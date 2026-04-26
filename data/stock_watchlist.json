@@ -414,7 +414,7 @@
       },
       {
         "name": "英伟达",
-        "code": "NVDA",
+        "code": "NVDA.US",
         "market": "US",
         "board": "纳",
         "source_etf": "direct",
@@ -438,7 +438,7 @@
       },
       {
         "name": "伯克希尔哈撒韦B",
-        "code": "BRK.B",
+        "code": "BRK.B.US",
         "market": "US",
         "board": "纽",
         "source_etf": "direct",
@@ -462,7 +462,7 @@
       },
       {
         "name": "可口可乐",
-        "code": "KO",
+        "code": "KO.US",
         "market": "US",
         "board": "纽",
         "source_etf": "direct",
@@ -486,7 +486,7 @@
       },
       {
         "name": "微软",
-        "code": "MSFT",
+        "code": "MSFT.US",
         "market": "US",
         "board": "纳",
         "source_etf": "direct",
@@ -1289,7 +1289,7 @@
       },
       {
         "name": "AMD",
-        "code": "AMD",
+        "code": "AMD.US",
         "market": "US",
         "board": "纳",
         "source_etf": "direct",
@@ -1313,7 +1313,7 @@
       },
       {
         "name": "美光科技",
-        "code": "MU",
+        "code": "MU.US",
         "market": "US",
         "board": "纳",
         "source_etf": "direct",
@@ -1337,7 +1337,7 @@
       },
       {
         "name": "Rocket Lab",
-        "code": "RKLB",
+        "code": "RKLB.US",
         "market": "US",
         "board": "纳",
         "source_etf": "direct",
@@ -1361,7 +1361,7 @@
       },
       {
         "name": "新思科技",
-        "code": "SNPS",
+        "code": "SNPS.US",
         "market": "US",
         "board": "纳",
         "source_etf": "direct",
@@ -1385,7 +1385,7 @@
       },
       {
         "name": "台积电",
-        "code": "TSM",
+        "code": "TSM.US",
         "market": "US",
         "board": "纽",
         "source_etf": "direct",
@@ -1409,7 +1409,7 @@
       },
       {
         "name": "Adobe",
-        "code": "ADBE",
+        "code": "ADBE.US",
         "market": "US",
         "board": "纳",
         "source_etf": "direct",
@@ -1433,7 +1433,7 @@
       },
       {
         "name": "Salesforce",
-        "code": "CRM",
+        "code": "CRM.US",
         "market": "US",
         "board": "纽",
         "source_etf": "direct",
@@ -1457,7 +1457,7 @@
       },
       {
         "name": "Uber",
-        "code": "UBER",
+        "code": "UBER.US",
         "market": "US",
         "board": "纽",
         "source_etf": "direct",
