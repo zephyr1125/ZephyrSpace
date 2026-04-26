@@ -161,7 +161,7 @@
 - **困境反转股**：修复进度（扣非 / 现金流）× P/S 或 PB
 
 | `risk_flags` | 数组，至少 2 条，直接引用 PreBuy 页面的主要红旗 |
-| `board` | 上交所主板 / 深交所主板 / 科创板 / 深交所创业板 之一 |
+| `board` | 单字：`沪`=上交所主板 / `深`=深交所主板 / `创`=深交所创业板 / `科`=科创板 / `北`=北交所 |
 | `valuation_anchor` | 必填，记录四档价位的估值逻辑，格式见上 |
 
 ---
@@ -186,3 +186,5 @@
 | 2026-04-26 | 新增 valuation_anchor 必填字段；radar 删除电网主题工具/利润来源复杂类 9 家；修复批次1+2共12家公司的 price_bands 至估值锚口径；schema_version 升至 4 |
 | 2026-04-26 | price_bands 由"至少3档"改为**固定4档**，标签和 action 固定（追高区/中性区/较好区间/更低区间）；思源电气5档合并为4档；更新 AGENT_INSTRUCTION 和 required_fields 说明 |
 | 2026-04-26 | price_bands 改为**纯数字数组** `[avoid_min, watch_min, consider_min]`，label/action 移至规则定义，schema_version 升至 5 |
+| 2026-04-26 | 移除冗余字段 note_path（可由name推导）；price_record_time 改为 price_date（日期-only）；schema_version 升至 6 |
+| 2026-04-26 | board 改为单字 沪/深/创/科/北；修正原有7条数据的不一致标注；schema_version 升至 7 |
