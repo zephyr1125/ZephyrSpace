@@ -1,6 +1,6 @@
 {
-  "schema_version": 8,
-  "AGENT_INSTRUCTION": "修改本文件前，必须先完整阅读 tier_definitions 中对应档位的 entry_criteria 和 decision_tree，判断档位后再写入，不得跳过。完整规则见 data/WATCHLIST_RULES.md。\n字段说明：\n- note_path: 已移除，固定规则为 01-公司/{name}.md\n- board: 单字 沪/深/创/科/北，对应 上交所主板/深交所主板/深交所创业板/科创板/北交所\n- price_bands: 固定3个数字数组 [avoid_min, watch_min, consider_min] 降序，索引语义: [0]=追高区(avoid), [1]=中性区(watch), [2]=较好区间(consider), 隐含第4档=更低区间(strong_buy)。\n- valuation_anchor: 必填，四档价位语义说明，必须与 price_bands 同时填写。\n- radar 专属必填字段 entry_trigger：一句话写明具体可量化的入场触发器（含数字），例如：股价跌至X元(DY>=Y%)、某季报净利同比转正、某项目投产落地。不得使用模糊表述如「等基本面改善」。没有具体触发器的公司不得加入 watchlist，记录在指数专题页即可。",
+  "schema_version": 9,
+  "AGENT_INSTRUCTION": "修改本文件前，必须先完整阅读 tier_definitions 中对应档位的 entry_criteria 和 decision_tree，判断档位后再写入，不得跳过。完整规则见 data/WATCHLIST_RULES.md。\n字段说明：\n- note_path: 已移除，固定规则为 01-公司/{name}.md\n- board: 单字 沪/深/创/科/北，对应 上交所主板/深交所主板/深交所创业板/科创板/北交所\n- price_bands: 固定3个数字数组 [avoid_min, watch_min, consider_min] 降序，索引语义: [0]=追高区(avoid), [1]=中性区(watch), [2]=较好区间(consider), 隐含第4档=更低区间(strong_buy)。\n- valuation_anchor: 必填，四档价位语义说明，必须与 price_bands 同时填写。\n- priority: 已移除。\n- radar 专属必填字段 entry_trigger：一句话写明具体可量化的入场触发器（含数字），例如：股价跌至X元(DY>=Y%)、某季报净利同比转正、某项目投产落地。不得使用模糊表述如「等基本面改善」。没有具体触发器的公司不得加入 watchlist，记录在指数专题页即可。",
   "rules_doc": "data/WATCHLIST_RULES.md",
   "tier_definitions": {
     "core": {
@@ -55,7 +55,6 @@
     "5. 以上都不满足 -> radar"
   ],
   "required_fields": [
-    "priority: 全局唯一整数，当前档位最大值+1",
     "name: 公司简称，与 01-公司/ 页面标题一致",
     "code: XXXXXX.SH 或 XXXXXX.SZ",
     "source_etf: 来源指数代码；非指数来源填 direct",
@@ -70,7 +69,7 @@
     "valuation_anchor",
     "entry_trigger（radar专属必填）：一句话具体可量化的入场触发器，含数字条件"
   ],
-  "generated_at": "2026-04-26T18:01:31.253220+08:00",
+  "generated_at": "2026-04-26T18:04:09.862392+08:00",
   "source_universes": [
     {
       "code": "560390",
@@ -106,7 +105,6 @@
   "watchlists": {
     "core": [
       {
-        "priority": 1,
         "name": "美的集团",
         "code": "000333.SZ",
         "source_etf": "980081",
@@ -129,7 +127,6 @@
         "board": "深"
       },
       {
-        "priority": 2,
         "name": "长江电力",
         "code": "600900.SH",
         "source_etf": "931897",
@@ -152,7 +149,6 @@
         "board": "沪"
       },
       {
-        "priority": 3,
         "name": "中国海油",
         "code": "600938.SH",
         "source_etf": "980081",
@@ -175,7 +171,6 @@
         "board": "沪"
       },
       {
-        "priority": 4,
         "name": "国投电力",
         "code": "600886.SH",
         "source_etf": "931897",
@@ -198,7 +193,6 @@
         "board": "沪"
       },
       {
-        "priority": 5,
         "name": "格力电器",
         "code": "000651.SZ",
         "source_etf": "980081",
@@ -221,7 +215,6 @@
         "board": "深"
       },
       {
-        "priority": 6,
         "name": "兴业银行",
         "code": "601166.SH",
         "source_etf": "980081",
@@ -244,7 +237,6 @@
         "board": "沪"
       },
       {
-        "priority": 7,
         "name": "川投能源",
         "code": "600674.SH",
         "source_etf": "931897",
@@ -267,7 +259,6 @@
         "board": "沪"
       },
       {
-        "priority": 20,
         "name": "贵州茅台",
         "code": "600519.SH",
         "source_etf": "399997",
@@ -290,7 +281,6 @@
         "board": "沪"
       },
       {
-        "priority": 21,
         "name": "五粮液",
         "code": "000858.SZ",
         "source_etf": "399997",
@@ -313,7 +303,6 @@
         "board": "深"
       },
       {
-        "priority": 22,
         "name": "泸州老窖",
         "code": "000568.SZ",
         "source_etf": "399997",
@@ -338,7 +327,6 @@
     ],
     "growth": [
       {
-        "priority": 8,
         "name": "中国核电",
         "code": "601985.SH",
         "source_etf": "931897",
@@ -361,7 +349,6 @@
         "board": "沪"
       },
       {
-        "priority": 9,
         "name": "思源电气",
         "code": "002028.SZ",
         "source_etf": "560390",
@@ -384,7 +371,6 @@
         "board": "深"
       },
       {
-        "priority": 10,
         "name": "国电南瑞",
         "code": "600406.SH",
         "source_etf": "560390",
@@ -407,7 +393,6 @@
         "board": "沪"
       },
       {
-        "priority": 14,
         "name": "亨通光电",
         "code": "600487.SH",
         "source_etf": "560390",
@@ -430,7 +415,6 @@
         "board": "沪"
       },
       {
-        "priority": 23,
         "name": "海康威视",
         "code": "002415.SZ",
         "source_etf": "930713",
@@ -453,7 +437,6 @@
         "board": "深"
       },
       {
-        "priority": 24,
         "name": "中际旭创",
         "code": "300308.SZ",
         "source_etf": "930713",
@@ -476,7 +459,6 @@
         "board": "创"
       },
       {
-        "priority": 25,
         "name": "山西汾酒",
         "code": "600809.SH",
         "source_etf": "399997",
@@ -499,7 +481,6 @@
         "board": "沪"
       },
       {
-        "priority": 27,
         "name": "宁德时代",
         "code": "300750.SZ",
         "source_etf": "932246",
@@ -522,7 +503,6 @@
         "board": "创"
       },
       {
-        "priority": 28,
         "name": "阳光电源",
         "code": "300274.SZ",
         "source_etf": "932246",
@@ -545,7 +525,6 @@
         "board": "创"
       },
       {
-        "priority": 42,
         "name": "澜起科技",
         "code": "688008.SH",
         "source_etf": "930713",
@@ -568,7 +547,6 @@
         "board": "科"
       },
       {
-        "priority": 43,
         "name": "金山办公",
         "code": "688111.SH",
         "source_etf": "930713",
@@ -591,7 +569,6 @@
         "board": "科"
       },
       {
-        "priority": 44,
         "name": "古井贡酒",
         "code": "000596.SZ",
         "source_etf": "399997",
@@ -614,7 +591,6 @@
         "board": "深"
       },
       {
-        "priority": 45,
         "name": "新易盛",
         "code": "300502.SZ",
         "source_etf": "930713",
@@ -637,7 +613,6 @@
         "board": "创"
       },
       {
-        "priority": 46,
         "name": "今世缘",
         "code": "603369.SH",
         "source_etf": "399997",
@@ -660,7 +635,6 @@
         "board": "沪"
       },
       {
-        "priority": 47,
         "name": "伊利股份",
         "code": "600887.SH",
         "source_etf": "399396",
@@ -683,7 +657,6 @@
         "valuation_anchor": "正常化PE+股息率：追高区>30(PE>20x，减值出清前不宜追) / 中性区27-30(PE18-20x，可持有) / 较好区间22-27(正常化PE约15-18x，股息率>6%，底仓合适) / 更低区间<22(PE<15x，安全边际充足)"
       },
       {
-        "priority": 48,
         "name": "海天味业",
         "code": "603288.SH",
         "source_etf": "399396",
@@ -706,7 +679,6 @@
         "valuation_anchor": "历史PE区间：追高区>45(PE>38x，消费溢价过高) / 中性区35-45(PE30-38x，逻辑对但赔率偏紧) / 较好区间28-35(PE23-30x，调味品龙头合理买点) / 更低区间<28(PE<23x，安全边际明显)"
       },
       {
-        "priority": 49,
         "name": "东鹏饮料",
         "code": "605499.SH",
         "source_etf": "399396",
@@ -729,7 +701,6 @@
         "valuation_anchor": "前瞻PE+增速验证：追高区>220(PE>28x，成长溢价过足) / 中性区175-220(PE22-28x，等季度增速持续验证) / 较好区间140-175(PE18-22x，赔率改善可建仓) / 更低区间<140(PE<18x，成长折价，安全边际明显)"
       },
       {
-        "priority": 52,
         "name": "赣能股份",
         "code": "000899.SZ",
         "source_etf": "931897",
@@ -752,7 +723,6 @@
         "valuation_anchor": "历史PE区间：追高区>14.5(PE>15x，ROE溢价透支) / 中性区12.0-14.5(PE12-15x，当前位置，逻辑对赔率一般) / 较好区间10.5-12.0(PE10-12x，赔率顺手可布局) / 更低区间<10.5(PE<10x，安全边际充足)"
       },
       {
-        "priority": 53,
         "name": "广州发展",
         "code": "600098.SH",
         "source_etf": "931897",
@@ -773,11 +743,32 @@
           "营收增速有限，高息逻辑依赖分红政策稳定性"
         ],
         "valuation_anchor": "股息率倒推：追高区>12.34(DY<3%，明显高估) / 中性区9.26-12.34(DY3-4%，观察) / 较好区间7.41-9.26(DY4-5%，可布局) / 更低区间<7.41(DY>5%，积极建仓)"
+      },
+      {
+        "name": "新奥股份",
+        "code": "600803.SH",
+        "source_etf": "direct",
+        "position_role": "高股息天然气平台型卫星仓",
+        "prebuy_conclusion": "可以纳入卫星仓候选观察，但当前21.20元只适合观察或极小仓试探，较舒服的买点在19-20元。",
+        "watch_reason": "现金流和分红质量较强，具备LNG长协、舟山接收站和城燃终端网络，适合作为高股息天然气平台并附带LNG供应链波动受益期权跟踪。",
+        "current_price": 21.2,
+        "price_date": "2026-04-24",
+        "board": "沪",
+        "price_bands": [
+          23.5,
+          21.0,
+          19.0
+        ],
+        "risk_flags": [
+          "城燃端顺价约束，LNG成本上涨不一定能完全传导到终端",
+          "国际LNG长协、现货采购、汇率和套保会带来利润波动",
+          "资产负债率约53.21%，短债和长期债务规模不低"
+        ],
+        "valuation_anchor": "股息率+PE：追高区>23.5(PE>15.5x且股息率吸引力下降，不追) / 中性区21-23.5(PE13.8-15.5x，质量和分红逻辑成立但赔率一般) / 较好区间19-21(PE12.5-13.8x，股息率接近或超过6%，可研究性小仓) / 更低区间<19(PE<12.5x，高股息和现金流安全边际更好)"
       }
     ],
     "radar": [
       {
-        "priority": 13,
         "name": "陕西煤业",
         "code": "601225.SH",
         "source_etf": "980081",
@@ -801,7 +792,6 @@
         "entry_trigger": "股价跌至22元以下（PE<8x，DY>5%），或季报净利同比连续2季转正"
       },
       {
-        "priority": 29,
         "name": "亿纬锂能",
         "code": "300014.SZ",
         "source_etf": "932246",
@@ -825,7 +815,6 @@
         "entry_trigger": "股价跌至55元以下（PE<15x），或储能业务季度营收占比超40%"
       },
       {
-        "priority": 30,
         "name": "德业股份",
         "code": "605117.SH",
         "source_etf": "932246",
@@ -849,7 +838,6 @@
         "entry_trigger": "股价跌至100元以下（PE<15x），或海外逆变器出货量季度同比超30%"
       },
       {
-        "priority": 31,
         "name": "凯莱英",
         "code": "002821.SZ",
         "source_etf": "399989",
@@ -873,7 +861,6 @@
         "entry_trigger": "股价跌至90元以下（PE<18x），或CDMO大订单获取明确公告"
       },
       {
-        "priority": 32,
         "name": "泰格医药",
         "code": "300347.SZ",
         "source_etf": "399989",
@@ -897,7 +884,6 @@
         "entry_trigger": "股价跌至45元以下（PE<20x），或CXO行业订单回暖季报验证"
       },
       {
-        "priority": 33,
         "name": "惠泰医疗",
         "code": "688617.SH",
         "source_etf": "399989",
@@ -921,7 +907,6 @@
         "entry_trigger": "股价跌至180元以下（PE<30x），或电生理耗材集采靴子落地后估值修复"
       },
       {
-        "priority": 34,
         "name": "国轩高科",
         "code": "002074.SZ",
         "source_etf": "932246",
@@ -945,7 +930,6 @@
         "entry_trigger": "股价跌至30元以下（PB<1x），或大众合作车型销量季报超预期"
       },
       {
-        "priority": 35,
         "name": "科华数据",
         "code": "002335.SZ",
         "source_etf": "932246",
@@ -969,7 +953,6 @@
         "entry_trigger": "股价跌至50元以下（PE<15x），或AI算力订单定点公告落地"
       },
       {
-        "priority": 40,
         "name": "洋河股份",
         "code": "002304.SZ",
         "source_etf": "399996",
@@ -993,7 +976,6 @@
         "entry_trigger": "股价跌至40元以下（PE<10x，DY>5%），或渠道库存压力明确改善"
       },
       {
-        "priority": 50,
         "name": "双汇发展",
         "code": "000895.SZ",
         "source_etf": "399396",
@@ -1017,7 +999,6 @@
         "entry_trigger": "股价跌至24元以下（PE<8x，DY>6%），或猪肉价格回落至成本线下方"
       },
       {
-        "priority": 51,
         "name": "安琪酵母",
         "code": "600298.SH",
         "source_etf": "399396",
@@ -1041,7 +1022,6 @@
         "entry_trigger": "股价跌至32元以下（PE<18x），或海外市场营收占比超30%季报验证"
       },
       {
-        "priority": 54,
         "name": "国电电力",
         "code": "600795.SH",
         "source_etf": "931897",
@@ -1065,7 +1045,6 @@
         "entry_trigger": "股价跌至4.10元以下（PE<10x，DY>5%），或季报净利同比由负转正"
       },
       {
-        "priority": 55,
         "name": "甘肃能源",
         "code": "000791.SZ",
         "source_etf": "931897",
@@ -1089,7 +1068,6 @@
         "entry_trigger": "股价跌至6.80元以下（PE<10x），或重组后连续4季度ROE维持在12%以上"
       },
       {
-        "priority": 56,
         "name": "建投能源",
         "code": "000600.SZ",
         "source_etf": "931897",
@@ -1113,7 +1091,6 @@
         "entry_trigger": "股价跌至7.50元以下（PE<8x），或煤价下行至650元/吨以下季报验证"
       },
       {
-        "priority": 58,
         "name": "华电国际",
         "code": "600027.SH",
         "source_etf": "931897",
@@ -1137,7 +1114,6 @@
         "entry_trigger": "股价跌至4.22元以下（DY>5%），或季报净利同比连续2季正增长"
       },
       {
-        "priority": 59,
         "name": "申能股份",
         "code": "600642.SH",
         "source_etf": "931897",
