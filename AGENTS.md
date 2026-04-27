@@ -261,6 +261,12 @@ r = pro.daily_basic(ts_code=code, trade_date='20260424',
 
 ### 第 2 步：获取全成分股并量化粗筛
 
+> 🔴 **粗筛必须由主 Agent 亲自执行，不得委托给 background agent。**
+> 粗筛是整个流程的信息质量关键节点——一旦漏筛，后续所有 PreBuy 都无法弥补。
+> Background agent 无法感知数据缺失、Q1 陷阱、API 返回异常等常见漏筛风险；
+> 主 Agent 在粗筛过程中可实时判断和修正，确保候选名单完整。
+> **PreBuy 分析（第 3-5 步）可以并行委托给 background agent，但粗筛（第 2 步）不可以。**
+
 **2a. 拉取全成分股**
 
 使用 tushare API（token 见 `.env` 文件）：
