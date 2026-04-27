@@ -1,5 +1,5 @@
 {
-  "schema_version": 16,
+  "schema_version": 17,
   "AGENT_INSTRUCTION": "修改本文件前，必须先完整阅读 tier_definitions 中对应档位的 entry_criteria 和 decision_tree，判断档位后再写入，不得跳过。完整规则见 data/WATCHLIST_RULES.md。\n字段说明：\n- note_path: 已移除，固定规则为 01-公司/{name}.md\n- board: 单字 沪/深/创/科/北，对应 上交所主板/深交所主板/深交所创业板/科创板/北交所\n- price_bands: 固定3个数字数组 [avoid_min, watch_min, consider_min] 降序，索引语义: [0]=追高区(avoid), [1]=中性区(watch), [2]=较好区间(consider), 隐含第4档=更低区间(strong_buy)。\n- valuation_anchor: 必填，四档价位语义说明，必须与 price_bands 同时填写。\n- priority: 已移除。\n- radar 专属必填字段 entry_trigger：一句话写明具体可量化的入场触发器（含数字），例如：股价跌至X元(DY>=Y%)、某季报净利同比转正、某项目投产落地。不得使用模糊表述如「等基本面改善」。没有具体触发器的公司不得加入 watchlist，记录在指数专题页即可。\n- dv_ttm: 股息率（DV TTM，单位%，数字类型），来自 tushare daily_basic 最新一条，需定期更新。\n- next_earnings_date: 下一期财报预约/实际披露日期（YYYY-MM-DD）。来源：tushare pro.disclosure_date() 或交易所预约日历。财报发布后须立即更新为下一期日期，确保该字段始终指向未来。无法查到预约日则用法定截止日估算（一季报04-30/半年报08-31/三季报10-31/年报次年04-30）并在值后标注「估算」字样。\n- next_earnings_type: 下一期财报类型，枚举值：一季报/半年报/三季报/年报。",
   "rules_doc": "data/WATCHLIST_RULES.md",
   "tier_definitions": {
@@ -158,9 +158,10 @@
         "valuation_anchor": "股息率+PE：追高区>29(股息率<3%，长期复利资产定价偏高) / 中性区26-29(股息率约3-3.5%，底仓可持有) / 较好区间23.5-26(股息率约3.5-4%，赔率改善可建仓) / 更低区间<23.5(股息率>4%，安全边际明显)",
         "price_date": "2026-04-24",
         "board": "沪",
-        "dv_ttm": 3.52,
+        "dv_ttm": 3.54,
         "next_earnings_date": "2026-04-30",
-        "next_earnings_type": "一季报"
+        "next_earnings_type": "一季报",
+        "last_close": 26.66
       },
       {
         "name": "中国海油",
@@ -192,7 +193,7 @@
         "code": "600886.SH",
         "source_etf": "931897",
         "position_role": "水电资产 + 区域能源平台",
-        "prebuy_conclusion": "逻辑清晰，当前约13.37元处于较好区间，赔率改善，可研究性布局/分批建仓。",
+        "prebuy_conclusion": "逻辑清晰，13.40元处于较好区间，赔率改善，可分批建仓",
         "watch_reason": "水电资产和大基地开发并重，适合观察清洁能源底仓。",
         "current_price": 13.37,
         "price_bands": [
@@ -210,7 +211,8 @@
         "board": "沪",
         "dv_ttm": 3.41,
         "next_earnings_date": "2026-04-30",
-        "next_earnings_type": "一季报"
+        "next_earnings_type": "一季报",
+        "last_close": 13.4
       },
       {
         "name": "贵州茅台",
@@ -891,9 +893,10 @@
           "营收增速有限，高息逻辑依赖分红政策稳定性"
         ],
         "valuation_anchor": "股息率倒推：追高区>12.34(DY<3%，明显高估) / 中性区9.26-12.34(DY3-4%，观察) / 较好区间7.41-9.26(DY4-5%，可布局) / 更低区间<7.41(DY>5%，积极建仓)",
-        "dv_ttm": 5.23,
+        "dv_ttm": 5.18,
         "next_earnings_date": "2026-04-30",
-        "next_earnings_type": "一季报"
+        "next_earnings_type": "一季报",
+        "last_close": 7.14
       },
       {
         "name": "新奥股份",
@@ -1635,6 +1638,29 @@
         "dv_ttm": 2.1,
         "next_earnings_date": "2026-04-30",
         "next_earnings_type": "一季报"
+      },
+      {
+        "code": "600023.SH",
+        "name": "浙能电力",
+        "board": "沪",
+        "sector": "公用事业/电力",
+        "last_close": 5.78,
+        "price_bands": [
+          11.33,
+          8.5,
+          6.8
+        ],
+        "valuation_anchor": "以股息率为锚：避开>11.33元(DY<3%)，关注8.50-11.33元(DY3-4%)，较好6.80-8.50元(DY4-5%)，理想<6.80元(DY>5%)",
+        "dv_ttm": 5.88,
+        "prebuy_conclusion": "浙江省垄断性区域电力平台，股息率5.88%（全批次最高）已在理想价位，近60日偏高位（5.78 vs高5.87），可小批量建仓",
+        "next_earnings_date": "2026-04-28",
+        "next_earnings_type": "半年报",
+        "tags": [
+          "绿色电力",
+          "公用事业",
+          "高息",
+          "火电+新能源"
+        ]
       }
     ],
     "radar": [
@@ -1894,9 +1920,10 @@
         ],
         "valuation_anchor": "PE区间：追高区>5.10(PE>12.7x，利润下行中定价偏贵) / 中性区4.60-5.10(PE11.5-12.7x，当前位置) / 较好区间4.10-4.60(PE10-11.5x，股息率接近4.5%) / 更低区间<4.10(PE<10x，股息率>5%，周期底部布局)",
         "entry_trigger": "股价跌至4.10元以下（PE<10x，DY>5%），或季报净利同比由负转正",
-        "dv_ttm": 4.26,
+        "dv_ttm": 4.29,
         "next_earnings_date": "2026-04-29",
-        "next_earnings_type": "一季报"
+        "next_earnings_type": "一季报",
+        "last_close": 4.89
       },
       {
         "name": "甘肃能源",
@@ -1972,16 +1999,17 @@
         ],
         "valuation_anchor": "股息率倒推：追高区>7.03(DY<2.5%) / 中性区5.27-7.03(DY2.5-3.5%) / 较好区间4.22-5.27(DY3.5-4.5%) / 更低区间<4.22(DY>5%，积极建仓)",
         "entry_trigger": "股价跌至4.22元以下（DY>5%），或季报净利同比连续2季正增长",
-        "dv_ttm": 4.32,
+        "dv_ttm": 4.29,
         "next_earnings_date": "2026-04-29",
-        "next_earnings_type": "一季报"
+        "next_earnings_type": "一季报",
+        "last_close": 4.91
       },
       {
         "name": "申能股份",
         "code": "600642.SH",
         "source_etf": "931897",
         "position_role": "上海市属综合能源平台，财务质量最优的等待标的",
-        "prebuy_conclusion": "四家公用事业参数候选中财务最干净（负债率54%，毛利23%），当前9.33距理想价8.99仅差3.5%，等回调再布局。",
+        "prebuy_conclusion": "Q1净利-22%压力，OCF稳健，8.95元已在理想价（DY5.03%），小仓位试探，等H1验证",
         "watch_reason": "931897绿电公用事业参数筛选，财务结构最健康，DY4.82%，是四家中最优质的等待标的，价格回落至理想价后评估升档。",
         "current_price": 9.33,
         "price_date": "2026-04-25",
@@ -1998,9 +2026,10 @@
         ],
         "valuation_anchor": "股息率倒推：追高区>14.99(DY<2%) / 中性区11.24-14.99(DY2-3%) / 较好区间8.99-11.24(DY3-4%) / 更低区间<8.99(DY≥4%+，积极建仓)",
         "entry_trigger": "股价跌至8.99元以下（DY>=4.8%），或天然气价格下行带动毛利改善季报验证",
-        "dv_ttm": 4.82,
-        "next_earnings_date": "2026-04-27",
-        "next_earnings_type": "一季报"
+        "dv_ttm": 5.03,
+        "next_earnings_date": "2026-08-31（估算）",
+        "next_earnings_type": "半年报",
+        "last_close": 8.95
       },
       {
         "name": "重庆啤酒",
@@ -2677,6 +2706,102 @@
         "entry_trigger": "价格回落至26-33元（PE<=27x）且Q1-Q2连续ROE维持>=12.5%验证改善非一次性",
         "next_earnings_date": "2026-04-30",
         "next_earnings_type": "一季报"
+      },
+      {
+        "code": "600863.SH",
+        "name": "内蒙华电",
+        "board": "沪",
+        "sector": "公用事业/电力",
+        "last_close": 4.56,
+        "price_bands": [
+          6.1,
+          4.6,
+          3.7
+        ],
+        "valuation_anchor": "以股息率为锚：避开>6.10元(DY<3%)，关注4.60-6.10元(DY3-4%)，较好3.70-4.60元(DY4-5%)，理想<3.70元(DY>5%)",
+        "dv_ttm": 4.02,
+        "prebuy_conclusion": "华能集团控股内蒙古煤电平台，ROE14.82%是绿电指数中最高，当前PE14.6x偏高，等回调至DY>4.5%再介入",
+        "entry_trigger": "股价跌至4.0元以下（DY>4.5%），或季报净利同比由负转正",
+        "next_earnings_date": "2026-08-31（估算）",
+        "next_earnings_type": "半年报",
+        "tags": [
+          "绿色电力",
+          "火电",
+          "内蒙古",
+          "煤电转型"
+        ]
+      },
+      {
+        "code": "600011.SH",
+        "name": "华能国际",
+        "board": "沪",
+        "sector": "公用事业/电力",
+        "last_close": 6.95,
+        "price_bands": [
+          9.0,
+          6.75,
+          5.4
+        ],
+        "valuation_anchor": "以股息率为锚：避开>9.00元(DY<3%)，关注6.75-9.00元(DY3-4%)，较好5.40-6.75元(DY4-5%)，理想<5.40元(DY>5%)",
+        "dv_ttm": 3.88,
+        "prebuy_conclusion": "全批次PE最低(7.57x)，OCF4.66x极强，DY⚠️3.88%略低于门槛，当前处于60日低位区间，等DY达4%（约6.75元以下）再建仓",
+        "entry_trigger": "股价跌至6.75元以下（DY>4%），或煤价同比持续下降且季报净利同比转正",
+        "next_earnings_date": "2026-04-29",
+        "next_earnings_type": "一季报",
+        "tags": [
+          "绿色电力",
+          "火电",
+          "新能源转型",
+          "大盘央企"
+        ]
+      },
+      {
+        "code": "600483.SH",
+        "name": "福能股份",
+        "board": "沪",
+        "sector": "公用事业/电力",
+        "last_close": 9.89,
+        "price_bands": [
+          12.77,
+          9.58,
+          7.66
+        ],
+        "valuation_anchor": "以股息率为锚：避开>12.77元(DY<3%)，关注9.58-12.77元(DY3-4%)，较好7.66-9.58元(DY4-5%)，理想<7.66元(DY>5%)",
+        "dv_ttm": 3.87,
+        "prebuy_conclusion": "福建省国资委控股水电+火电平台，ROE11.2%+OCF1.73x稳健，DY⚠️3.87%略低于门槛，60日偏低位（9.89 vs高11.30），等DY达4%",
+        "entry_trigger": "股价跌至9.58元以下（DY>4%），或水电来水改善推动季报利润同比改善",
+        "next_earnings_date": "2026-08-31（估算）",
+        "next_earnings_type": "半年报",
+        "tags": [
+          "绿色电力",
+          "水电",
+          "火电",
+          "福建省国企"
+        ]
+      },
+      {
+        "code": "000690.SZ",
+        "name": "宝新能源",
+        "board": "深",
+        "sector": "公用事业/新能源",
+        "last_close": 5.46,
+        "price_bands": [
+          6.67,
+          5.0,
+          4.0
+        ],
+        "valuation_anchor": "以股息率为锚：避开>6.67元(DY<3%)，关注5.00-6.67元(DY3-4%)，较好4.00-5.00元(DY4-5%)，理想<4.00元(DY>5%)",
+        "dv_ttm": 3.66,
+        "prebuy_conclusion": "批次中唯一营收正增长(+9.2%)的小市值新能源运营商，DY⚠️3.66%，市值仅119亿，等DY达4%（约5元以下）且营收增长持续验证后再建仓",
+        "entry_trigger": "股价跌至5.00元以下（DY>4%），且连续2季度营收同比正增长",
+        "next_earnings_date": "2026-04-28",
+        "next_earnings_type": "一季报",
+        "tags": [
+          "绿色电力",
+          "风电",
+          "光伏",
+          "小市值"
+        ]
       }
     ]
   },
