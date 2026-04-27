@@ -282,13 +282,21 @@ for code in all_stocks['con_code']:
 
 # ✅ 已验证：fina_indicator limit=1 返回最新一期（通常为最近季报）
 # or_yoy = 营收同比增速，直接在此接口取得，无需额外调用 income 接口
+#
+# ⚠️ Q1 ROE 低估陷阱：在 Q1（3-4月）跑粗筛时，limit=1 返回的是 Q1 季报（end_date=XXXX0331）。
+# Q1 净利润只有全年的一小部分，但净资产是全年数，导致 ROE 被系统性低估（可能只有年化的 1/3）。
+# 典型案例：思源电气 Q1 ROE=3.5%，全年约 20%；亨通光电 Q1 ROE=3.4%，全年 8.9%。
+# 修正方法：优先取 end_date 以 1231 结尾的最近年报数据，而非最近一期季报。
 for code in all_stocks['con_code']:
     r = pro.fina_indicator(
         ts_code=code,
-        fields='ts_code,roe,or_yoy',   # roe=净资产收益率TTM, or_yoy=营收同比(%)
-        limit=1
+        fields='ts_code,end_date,roe,or_yoy',   # roe=净资产收益率, or_yoy=营收同比(%)
+        limit=5                                  # 多取几期，优先用最近年报
     )
-    if len(r): fi_rows.append(r.iloc[0])
+    if len(r):
+        annual = r[r['end_date'].str.endswith('1231')]  # 优先取全年数据
+        row = annual.iloc[0] if len(annual) else r.iloc[0]
+        fi_rows.append(row)
     time.sleep(0.11)
 
 # 实测性能（399396，50只）：daily_basic 7.5s + fina_indicator 12.5s = 约 20s
