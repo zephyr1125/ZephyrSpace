@@ -2481,6 +2481,27 @@
         "dv_ttm": 0.09,
         "next_earnings_date": "2026-04-28",
         "next_earnings_type": "年报"
+      },
+      {
+        "code": "688256.SH",
+        "name": "寒武纪",
+        "tier": "radar",
+        "industry": "成长科技",
+        "sub_sector": "AI芯片/国产算力",
+        "roe_latest": 23.9,
+        "roe_year": 2025,
+        "pe_ttm": 277.0,
+        "market_cap_bn": 570.3,
+        "entry_trigger": "股价≤400元且2025全年扣非净利润确认转正",
+        "price_bands": [
+          692,
+          400,
+          300
+        ],
+        "prebuy_conclusion": "国产AI芯片核心标的，ROE=23.9%质量优秀，PE=277x极贵。等股价回调至400元以下+2025扣非转正双重确认后，可小仓参与。",
+        "added_date": "2026-04-27",
+        "last_reviewed": "2026-04-27",
+        "source_index": "931912"
       }
     ]
   },
