@@ -1,5 +1,5 @@
 {
-  "schema_version": 14,
+  "schema_version": 15,
   "AGENT_INSTRUCTION": "修改本文件前，必须先完整阅读 tier_definitions 中对应档位的 entry_criteria 和 decision_tree，判断档位后再写入，不得跳过。完整规则见 data/WATCHLIST_RULES.md。\n字段说明：\n- note_path: 已移除，固定规则为 01-公司/{name}.md\n- board: 单字 沪/深/创/科/北，对应 上交所主板/深交所主板/深交所创业板/科创板/北交所\n- price_bands: 固定3个数字数组 [avoid_min, watch_min, consider_min] 降序，索引语义: [0]=追高区(avoid), [1]=中性区(watch), [2]=较好区间(consider), 隐含第4档=更低区间(strong_buy)。\n- valuation_anchor: 必填，四档价位语义说明，必须与 price_bands 同时填写。\n- priority: 已移除。\n- radar 专属必填字段 entry_trigger：一句话写明具体可量化的入场触发器（含数字），例如：股价跌至X元(DY>=Y%)、某季报净利同比转正、某项目投产落地。不得使用模糊表述如「等基本面改善」。没有具体触发器的公司不得加入 watchlist，记录在指数专题页即可。\n- dv_ttm: 股息率（DV TTM，单位%，数字类型），来自 tushare daily_basic 最新一条，需定期更新。\n- next_earnings_date: 下一期财报预约/实际披露日期（YYYY-MM-DD）。来源：tushare pro.disclosure_date() 或交易所预约日历。财报发布后须立即更新为下一期日期，确保该字段始终指向未来。无法查到预约日则用法定截止日估算（一季报04-30/半年报08-31/三季报10-31/年报次年04-30）并在值后标注「估算」字样。\n- next_earnings_type: 下一期财报类型，枚举值：一季报/半年报/三季报/年报。",
   "rules_doc": "data/WATCHLIST_RULES.md",
   "tier_definitions": {
@@ -72,7 +72,7 @@
     "next_earnings_date: 下一期财报预约/实际披露日期，YYYY-MM-DD格式；来源 tushare disclosure_date；财报发布后立即更新为下一期，确保始终指向未来",
     "next_earnings_type: 下一期财报类型，枚举值：一季报/半年报/三季报/年报"
   ],
-  "generated_at": "2026-04-24",
+  "generated_at": "2026-04-29",
   "source_universes": [
     {
       "code": "560390",
@@ -1560,6 +1560,31 @@
         "dv_ttm": 1.0,
         "next_earnings_date": "2026-04-30（估算）",
         "next_earnings_type": "一季报"
+      },
+      {
+        "name": "宏发股份",
+        "code": "600885.SH",
+        "source_etf": "560390",
+        "position_role": "全球继电器龙头，NEV+储能成长弹性仓，等回调窗口",
+        "prebuy_conclusion": "继电器全球龙头，NEV+储能驱动，净现比110%，但毛利承压且关税风险大，PE25.3x中性偏高，等回调至20-25元布局。",
+        "watch_reason": "继电器赛道全球规模第一，NEV高压接触器和储能继电器为中长期成长主线；现金流质量优秀，等价格回调至合理区间",
+        "current_price": 28.7,
+        "price_date": "2026-04-24",
+        "board": "沪",
+        "price_bands": [
+          33.0,
+          25.0,
+          20.0
+        ],
+        "risk_flags": [
+          "毛利率持续下滑（2024年36.2%→2025年34.3%），净利仅增7.76%远低于营收22%增速",
+          "海外收入50%+，美国关税升级直接冲击出口利润率",
+          "PE 25.27x处合理区间上沿，安全边际不足，需等回调"
+        ],
+        "valuation_anchor": "EPS约1.14元，工业电气+成长继电器PE区间18-29x：追高区>33元(PE>29x，赔率差不买) / 中性区25-33元(PE22-29x，可持有观察) / 较好区间20-25元(PE18-22x，赔率改善可布局) / 更低区间<20元(PE<18x，安全边际明显)",
+        "dv_ttm": 1.209,
+        "next_earnings_date": "2026-08-31",
+        "next_earnings_type": "半年报"
       }
     ],
     "radar": [
