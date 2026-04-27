@@ -5,6 +5,7 @@
 # 这些文件主要记录当前打开的标签页、侧边栏状态、最近访问文件等，
 # 对知识库本身没有长期价值，而且多人或多设备下会频繁产生噪音。
 .obsidian/workspace.json
+.obsidian/graph.json
 
 # =========================
 # Obsidian 缓存与可再生文件
@@ -26,6 +27,19 @@ exports/
 data/raw/
 data/cache/
 *.log
+
+# 粗筛缓存与临时数据文件
+data/cache_*.json
+data/_screen_*.csv
+
+# 脚本目录下的临时数据与临时脚本
+scripts/tmp_*.py
+scripts/*_data.json
+
+# 环境变量（含 API Token 等敏感信息）
+.env
+.env.*
+!.env.example
 
 # =========================
 # Python 运行噪音
