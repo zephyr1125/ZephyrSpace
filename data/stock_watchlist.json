@@ -3141,6 +3141,33 @@
         "dv_ttm": 1.38,
         "next_earnings_date": "2026-04-30",
         "next_earnings_type": "一季报"
+      },
+      {
+        "name": "天齐锂业",
+        "code": "002466.SZ",
+        "source_etf": "direct",
+        "position_role": "全球锂资源双核心资产（Greenbushes+SQM），困境反转弹性仓",
+        "prebuy_conclusion": "2026Q1年化PE约17x，处于中性区，radar追踪，等半年报确认盈利可持续+OCF回归后再考虑布局。",
+        "watch_reason": "Greenbushes锂辉石矿+SQM23.77%股权是全球稀缺资产，2026Q1净利18.76亿同比+1700%，困境反转拐点已现，等确认信号。",
+        "current_price": 73.65,
+        "price_bands": [
+          88.0,
+          65.0,
+          52.0
+        ],
+        "risk_flags": [
+          "锂价强周期：锂价回落将导致利润迅速恶化（2024年亏损79亿为证）",
+          "SQM智利政策风险：锂资源国有化政策可能侵蚀核心联营资产价值",
+          "2026Q1 OCF仅14%（待半年报验证是否结构性问题）",
+          "长期借款106亿，历史激进并购遗留债务，财务费用压力"
+        ],
+        "valuation_anchor": "基于2026Q1年化净利约75亿（=Q1×4）：追高区>88(PE>25x) / 中性区65-88(PE18-25x，当前73元处于此区间) / 较好区间52-65(PE14-18x) / 更低区间<52(PE<14x，安全边际明显)",
+        "price_date": "2026-04-27",
+        "board": "深",
+        "entry_trigger": "股价跌至55元以下（年化PE约13x），或2026半年报净利润累计>35亿且OCF/净利>60%双重确认",
+        "dv_ttm": null,
+        "next_earnings_date": "2026-08-31（估算）",
+        "next_earnings_type": "半年报"
       }
     ]
   },
