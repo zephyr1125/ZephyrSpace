@@ -1211,14 +1211,14 @@
         "board": "纳",
         "source_etf": "direct",
         "position_role": "商业航天端到端平台，Neutron火箭期权",
-        "prebuy_conclusion": "适合继续研究，不适合立刻买",
+        "prebuy_conclusion": "优质成长平台，当前估值偏高（EV/FY26E Rev ~50x），.68处于中性区；Neutron首飞验证前不追高，等待。",
         "watch_reason": "$1.85B backlog收入可见性强，毛利率快速改善至34%，等$60以下或Neutron进展明确再建仓",
         "current_price": 79.68,
-        "price_date": "2026-04-26",
+        "price_date": "2026-04-24",
         "price_bands": [
-          85,
-          60,
-          35
+          85.0,
+          62.0,
+          38.0
         ],
         "valuation_anchor": "FY2026E Revenue $854M，EV/Revenue ~50x（偏贵）",
         "risk_flags": [
@@ -1227,8 +1227,8 @@
           "EBITDA转正要等FY2027-2028"
         ],
         "dv_ttm": 0.0,
-        "next_earnings_date": "2026-08-31（估算）",
-        "next_earnings_type": "半年报"
+        "next_earnings_date": "2026-05-08",
+        "next_earnings_type": "季报"
       },
       {
         "name": "新思科技",
@@ -1484,6 +1484,33 @@
         "dv_ttm": 0.49,
         "next_earnings_date": "2026-08-31（估算）",
         "next_earnings_type": "半年报"
+      },
+      {
+        "name": "AST SpaceMobile",
+        "code": "ASTS.US",
+        "position_role": "直连手机卫星/LEO星座 — 颠覆运营商业务",
+        "prebuy_conclusion": "技术验证完成（50+MNO合作+FCC授权），H2 2026商业启动是关键考验；当前.40处于中性区偏低端，-5%轻仓。P/S 316x TTM完全依赖未来兑现，.2B可转债稀释风险须重视。",
+        "watch_reason": "全球唯一已部署直连手机卫星网络的上市公司；AT&T/Verizon/Vodafone等50+运营商战略合作；.2B积压订单；竞争对手Lynk/SpaceX Direct-to-Cell均未商业化。",
+        "current_price": 76.4,
+        "price_date": "2026-04-24",
+        "board": "美",
+        "price_bands": [
+          95.0,
+          70.0,
+          45.0
+        ],
+        "risk_flags": [
+          "执行风险：卫星制造/发射延误可能推迟商业启动",
+          ".2B可转债2028年到期，潜在大规模股权稀释",
+          "盈利时间线遥远（共识预测2028年才转正）",
+          "Beta=2.8，极高波动性，单月-30%以上可能",
+          "频谱干扰风险尚未完全解决（地面站和航空频段冲突）"
+        ],
+        "valuation_anchor": "P/S 316x TTM / 前瞻P/S 15-20x（FY27E） / 追高区> / 中性区-95（当前） / 较好区间-70 / 理想区间<",
+        "entry_trigger": "Q1 2026财报（2026-05-08）商业用户数量确认；或价格回落至",
+        "dv_ttm": null,
+        "next_earnings_date": "2026-05-08",
+        "next_earnings_type": "季报"
       }
     ],
     "radar": [
@@ -2069,6 +2096,60 @@
         "entry_trigger": "2026年H1营收同比转正且扣非净利同比>0%，或潘刚减持结束后连续2季度利润质量改善",
         "next_earnings_date": "2026-04-30",
         "next_earnings_type": "一季报"
+      },
+      {
+        "name": "Planet Labs",
+        "code": "PL.US",
+        "position_role": "地球观测数据/遥感分析 — 政府+商业双线",
+        "prebuy_conclusion": "基本面真实改善（FCF首次转正+），56%毛利率优秀，+积压订单；但股价从+（10x），当前37x P/S已充分透支，等待-28区间入场。",
+        "watch_reason": "全球最大商业地球观测星座（~200颗），每日全球覆盖；56%毛利率全行业领先；政府/情报/农业多元客户；FY26 FCF首次转正，商业模式进入验证期。",
+        "current_price": 35.44,
+        "price_date": "2026-04-24",
+        "board": "美",
+        "price_bands": [
+          45.0,
+          28.0,
+          18.0
+        ],
+        "risk_flags": [
+          "政府客户集中度50%+，预算削减风险",
+          "BlackSky快速追赶，竞争格局恶化",
+          "GAAP仍亏损，依赖融资维持运营",
+          "13.6%空头比例，做空压力较大",
+          "估值已透支（37x P/S），任何预期落空引发大幅回调"
+        ],
+        "valuation_anchor": "P/S 37x TTM / 前瞻P/S 26x FY27E / 追高区> / 中性区-45（当前） / 较好区间-28 / 理想区间<",
+        "entry_trigger": "2026年6月FY27 Q1财报确认营收增速维持40%+，或价格回落至",
+        "dv_ttm": null,
+        "next_earnings_date": "2026-06-15",
+        "next_earnings_type": "季报"
+      },
+      {
+        "name": "Firefly Aerospace",
+        "code": "FLY.US",
+        "position_role": "小型+中型发射/月球商业化 — 蓝色鬼魂效应",
+        "prebuy_conclusion": "Blue Ghost Mission 1成功是真实信用背书，163% YoY增速+2026E -450M指引亮眼；但Alpha可靠性33%+Eclipse未首飞，当前.13处于中性区，等。",
+        "watch_reason": "全球首个完全成功的商业月球软着陆（Blue Ghost），NASA CLPS合同竞争优势；Eclipse+Northrop Grumman合作降低中型火箭研发风险；IPO后现金。",
+        "current_price": 35.13,
+        "price_date": "2026-04-24",
+        "board": "美",
+        "price_bands": [
+          45.0,
+          28.0,
+          20.0
+        ],
+        "risk_flags": [
+          "Alpha火箭可靠性仅33%（6次仅2成功），商业客户信心受损",
+          "Eclipse首飞目标2026年，时间线存在延误风险",
+          "多产品线同时推进（Alpha+Eclipse+Blue Ghost）可能分散工程资源",
+          "与Northrop Grumman合作Eclipse意味着利润分成",
+          "市场估值35x当前营收（.6B/），执行压力大"
+        ],
+        "valuation_anchor": "P/S ~35x 2025A / 前瞻P/S ~13x 2026E（若）/ 追高区>（IPO价以上）/ 中性区-45（当前）/ 较好区间-28 / 理想区间<",
+        "entry_trigger": "Eclipse首飞时间线公告（2026H1）或Alpha复飞成功（可靠性验证），价格回落至",
+        "dv_ttm": null,
+        "next_earnings_date": "2026-05-15",
+        "next_earnings_type": "季报"
       }
     ]
   },
