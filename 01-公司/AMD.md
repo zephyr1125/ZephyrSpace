@@ -9,6 +9,8 @@ aliases: [AMD, Advanced Micro Devices]
 market: US
 board: 纳斯达克
 最后更新日期: 2026-04-26
+下一财报日: 2026-08-31
+下一财报类型: 半年报
 ---
 
 # AMD（Advanced Micro Devices）
