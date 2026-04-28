@@ -1,6 +1,6 @@
 {
   "schema_version": 17,
-  "AGENT_INSTRUCTION": "修改本文件前，必须先完整阅读 tier_definitions 中对应档位的 entry_criteria 和 decision_tree，判断档位后再写入，不得跳过。完整规则见 data/WATCHLIST_RULES.md。\n字段说明：\n- note_path: 已移除，固定规则为 01-公司/{name}.md\n- board: 单字 沪/深/创/科/北，对应 上交所主板/深交所主板/深交所创业板/科创板/北交所\n- price_bands: 固定3个数字数组 [avoid_min, watch_min, consider_min] 降序，索引语义: [0]=追高区(avoid), [1]=中性区(watch), [2]=较好区间(consider), 隐含第4档=更低区间(strong_buy)。\n- valuation_anchor: 必填，四档价位语义说明，必须与 price_bands 同时填写。\n- priority: 已移除。\n- radar 专属必填字段 entry_trigger：一句话写明具体可量化的入场触发器（含数字），例如：股价跌至X元(DY>=Y%)、某季报净利同比转正、某项目投产落地。不得使用模糊表述如「等基本面改善」。没有具体触发器的公司不得加入 watchlist，记录在指数专题页即可。\n- dv_ttm: 股息率（DV TTM，单位%，数字类型），来自 tushare daily_basic 最新一条，需定期更新。\n- next_earnings_date: 下一期财报预约/实际披露日期（YYYY-MM-DD）。来源：tushare pro.disclosure_date() 或交易所预约日历。财报发布后须立即更新为下一期日期，确保该字段始终指向未来。无法查到预约日则用法定截止日估算（一季报04-30/半年报08-31/三季报10-31/年报次年04-30）并在值后标注「估算」字样。\n- next_earnings_type: 下一期财报类型，枚举值：一季报/半年报/三季报/年报。",
+  "AGENT_INSTRUCTION": "修改本文件前，必须先完整阅读 tier_definitions 中对应档位的 entry_criteria 和 decision_tree，判断档位后再写入，不得跳过。完整规则见 data/WATCHLIST_RULES.md。\n字段说明：\n- note_path: 已移除，固定规则为 01-公司/{name}.md\n- board: 单字 沪/深/创/科/北，对应 上交所主板/深交所主板/深交所创业板/科创板/北交所\n- price_bands: 固定3个数字数组 [avoid_min, watch_min, consider_min] 降序，索引语义: [0]=追高区(avoid), [1]=中性区(watch), [2]=较好区间(consider), 隐含第4档=更低区间(strong_buy)。\n- valuation_anchor: 必填，四档价位语义说明，必须与 price_bands 同时填写。\n- priority: 已移除。\n- radar 专属必填字段 entry_trigger：一句话写明具体可量化的入场触发器（含数字），例如：股价跌至X元(DY>=Y%)、某季报净利同比转正、某项目投产落地。不得使用模糊表述如「等基本面改善」。没有具体触发器的公司不得加入 watchlist，记录在指数专题页即可。\n- dv_ttm: 股息率（DV TTM，单位%，数字类型），来自 tushare daily_basic 最新一条，需定期更新。\n- next_earnings_date: 下一期财报预约/实际披露日期（YYYY-MM-DD）。来源：tushare pro.disclosure_date() 或交易所预约日历。财报发布后须立即更新为下一期日期，确保该字段始终指向未来。无法查到预约日则用法定截止日估算（一季报04-30/半年报08-31/三季报10-31/年报次年04-30）并在值后标注「估算」字样。\n- next_earnings_type: 下一期财报类型，枚举值：一季报/半年报/三季报/年报。\n- cycle_is_cyclical: 布尔值，是否为周期股（符合模块14判定标准）。\n- cycle_position: 周期位置，枚举值见 cycle_position_schema。cycle_is_cyclical=true 时必填，否则省略。每次 PreBuy 更新时同步刷新。",
   "rules_doc": "data/WATCHLIST_RULES.md",
   "tier_definitions": {
     "core": {
@@ -70,7 +70,9 @@
     "entry_trigger（radar专属必填）：一句话具体可量化的入场触发器，含数字条件",
     "dv_ttm: 股息率（DV TTM，单位%，数字），来自 tushare daily_basic 最新一条，None 代表暂无股息",
     "next_earnings_date: 下一期财报预约/实际披露日期，YYYY-MM-DD格式；来源 tushare disclosure_date；财报发布后立即更新为下一期，确保始终指向未来",
-    "next_earnings_type: 下一期财报类型，枚举值：一季报/半年报/三季报/年报"
+    "next_earnings_type: 下一期财报类型，枚举值：一季报/半年报/三季报/年报",
+    "cycle_is_cyclical: 布尔值，是否为周期股（true/false）；true 时 cycle_position 必填",
+    "cycle_position（cycle_is_cyclical=true时必填）: 取值见 cycle_position_schema，枚举值：底部/复苏早期/复苏中期/景气高峰/收缩期/出清期"
   ],
   "generated_at": "2026-04-27",
   "source_universes": [
@@ -1797,7 +1799,9 @@
           "Q1 2026营收仅+3.75%，量增缓慢，主要靠价格推动",
           "PB=4.79x对化工周期股偏高，下行时双杀风险"
         ],
-        "notes": "PB=4.79x处于5年92%分位，景气高峰特征明显；PS+7升档被周期降档抵消；配额护城河延长景气但不消除双杀风险；维持growth小仓观察，不追高"
+        "notes": "PB=4.79x处于5年92%分位，景气高峰特征明显；PS+7升档被周期降档抵消；配额护城河延长景气但不消除双杀风险；维持growth小仓观察，不追高",
+        "cycle_is_cyclical": true,
+        "cycle_position": "景气高峰"
       },
       {
         "name": "羚锐制药",
@@ -3590,5 +3594,22 @@
       }
     ]
   },
-  "last_updated": "2026-04-28"
+  "last_updated": "2026-04-28",
+  "cycle_position_schema": {
+    "_comment": "周期位置字段，仅对周期股必填；非周期股省略或填 null。取值必须是以下6个枚举值之一。",
+    "values": {
+      "底部": "PB历史分位 <20%，ROE处于近年低点或亏损，产品价格仍下行或企稳；最佳买入窗口，用PB定价",
+      "复苏早期": "PB历史分位 20-40%，ROE刚开始回升，产品价格企稳向上；可建仓，关注景气验证节点",
+      "复苏中期": "PB历史分位 40-65%，ROE持续改善，产品价格上行趋势明确；可持仓，关注顶部信号",
+      "景气高峰": "PB历史分位 >70%，ROE处于近年高点，产品价格同比高位（环比趋平或仍涨）；不追高，PE低是陷阱，准备减仓逻辑",
+      "收缩期": "PB从高位回落，ROE开始恶化，产品价格同比转负；持续减仓，不建仓",
+      "出清期": "PB历史分位极低，ROE亏损或极低，弱势企业退出；研究关注，等待产品价格企稳+ROE触底两个条件同时出现再行动"
+    },
+    "填写规则": [
+      "cycle_is_cyclical=true 时 cycle_position 必填",
+      "cycle_is_cyclical=false 或 null 时省略 cycle_position",
+      "每次 PreBuy 更新时同步更新 cycle_position",
+      "判断依据：PB历史分位(最重要) + ROE趋势 + 行业产品价格趋势，见 SKILL.md 模块14"
+    ]
+  }
 }
