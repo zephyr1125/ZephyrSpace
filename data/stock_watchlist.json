@@ -317,8 +317,8 @@
           "DOJ App Store反垄断诉讼（2027庭审），若强制降佣Services利润受损$10-20B"
         ],
         "dv_ttm": 0.37,
-        "next_earnings_date": "2026-08-31（估算）",
-        "next_earnings_type": "半年报"
+        "next_earnings_date": "2026-04-30",
+        "next_earnings_type": "季报"
       },
       {
         "name": "谷歌(Alphabet)",
@@ -343,8 +343,8 @@
           "DOJ Search行为约束：Apple TAC付款($18-20B/年)逐步消失，6年执行期持续侵蚀高毛利流量"
         ],
         "dv_ttm": 0.23,
-        "next_earnings_date": "2026-08-31（估算）",
-        "next_earnings_type": "半年报"
+        "next_earnings_date": "2026-04-29",
+        "next_earnings_type": "季报"
       },
       {
         "name": "英伟达",
@@ -369,8 +369,8 @@
           "台积电供应链集中"
         ],
         "dv_ttm": 0.0,
-        "next_earnings_date": "2026-08-31（估算）",
-        "next_earnings_type": "半年报"
+        "next_earnings_date": "2026-05-27",
+        "next_earnings_type": "季报"
       },
       {
         "name": "伯克希尔哈撒韦B",
@@ -395,8 +395,8 @@
           "BNSF铁路持续承压"
         ],
         "dv_ttm": 0.0,
-        "next_earnings_date": "2026-08-31（估算）",
-        "next_earnings_type": "半年报"
+        "next_earnings_date": "2026-05-01（估算）",
+        "next_earnings_type": "季报"
       },
       {
         "name": "可口可乐",
@@ -421,8 +421,8 @@
           "有机增长降速至5-6%"
         ],
         "dv_ttm": 1.965,
-        "next_earnings_date": "2026-08-31（估算）",
-        "next_earnings_type": "半年报"
+        "next_earnings_date": "2026-07-31（估算）",
+        "next_earnings_type": "季报"
       },
       {
         "name": "微软",
@@ -447,8 +447,8 @@
           "Copilot货币化进展缓慢"
         ],
         "dv_ttm": 3.32,
-        "next_earnings_date": "2026-08-31（估算）",
-        "next_earnings_type": "半年报"
+        "next_earnings_date": "2026-04-29",
+        "next_earnings_type": "季报"
       }
     ],
     "growth": [
@@ -649,8 +649,8 @@
         "price_date": "2026-04-27",
         "board": "创",
         "dv_ttm": 1.82,
-        "next_earnings_date": "2026-04-30",
-        "next_earnings_type": "一季报"
+        "next_earnings_date": "2026-08-31（估算）",
+        "next_earnings_type": "半年报"
       },
       {
         "name": "阳光电源",
@@ -1133,8 +1133,8 @@
           "关税政策拖累电商第三方卖家经济性，广告业务间接受损"
         ],
         "dv_ttm": 0,
-        "next_earnings_date": "2026-08-31（估算）",
-        "next_earnings_type": "半年报"
+        "next_earnings_date": "2026-04-29",
+        "next_earnings_type": "季报"
       },
       {
         "name": "AMD",
@@ -1159,8 +1159,8 @@
           "当前估值容错率低"
         ],
         "dv_ttm": 0.0,
-        "next_earnings_date": "2026-08-31（估算）",
-        "next_earnings_type": "半年报"
+        "next_earnings_date": "2026-05-05",
+        "next_earnings_type": "季报"
       },
       {
         "name": "美光科技",
@@ -1185,8 +1185,8 @@
           "CapEx极高FCF极薄"
         ],
         "dv_ttm": 0.46,
-        "next_earnings_date": "2026-08-31（估算）",
-        "next_earnings_type": "半年报"
+        "next_earnings_date": "2026-06-24（估算）",
+        "next_earnings_type": "季报"
       },
       {
         "name": "Rocket Lab",
@@ -1237,8 +1237,8 @@
           "中国IP业务出口管制承压"
         ],
         "dv_ttm": 0.0,
-        "next_earnings_date": "2026-08-31（估算）",
-        "next_earnings_type": "半年报"
+        "next_earnings_date": "2026-05-27",
+        "next_earnings_type": "季报"
       },
       {
         "name": "台积电",
@@ -1263,8 +1263,8 @@
           "N2爬坡引发毛利率稀释2-3pp"
         ],
         "dv_ttm": 3.08,
-        "next_earnings_date": "2026-08-31（估算）",
-        "next_earnings_type": "半年报"
+        "next_earnings_date": "2026-07-16（估算）",
+        "next_earnings_type": "季报"
       },
       {
         "name": "Adobe",
@@ -1289,8 +1289,8 @@
           "Q2 FY2026指引偏弱"
         ],
         "dv_ttm": 0.0,
-        "next_earnings_date": "2026-08-31（估算）",
-        "next_earnings_type": "半年报"
+        "next_earnings_date": "2026-06-11",
+        "next_earnings_type": "季报"
       },
       {
         "name": "Salesforce",
@@ -1315,8 +1315,8 @@
           "$50B商誉减值风险"
         ],
         "dv_ttm": 0.0,
-        "next_earnings_date": "2026-08-31（估算）",
-        "next_earnings_type": "半年报"
+        "next_earnings_date": "2026-05-27",
+        "next_earnings_type": "季报"
       },
       {
         "name": "Uber",
@@ -1341,8 +1341,8 @@
           "Q1增速降至13.8%需验证"
         ],
         "dv_ttm": 0.0,
-        "next_earnings_date": "2026-08-31（估算）",
-        "next_earnings_type": "半年报"
+        "next_earnings_date": "2026-05-06",
+        "next_earnings_type": "季报"
       },
       {
         "name": "格力电器",
@@ -1442,8 +1442,8 @@
         "board": "纳",
         "dv_ttm": 0.0,
         "market": "US",
-        "next_earnings_date": "2026-08-31（估算）",
-        "next_earnings_type": "半年报"
+        "next_earnings_date": "2026-07-22（估算）",
+        "next_earnings_type": "季报"
       },
       {
         "name": "惠泰医疗",
@@ -1518,7 +1518,7 @@
         ],
         "valuation_anchor": "EPS=0.68元，电力二次设备PE 15-25x；追高区>17元(>25x赔率差) / 中性区14-17元(20-25x) / 较好区间10-14元(15-20x赔率顺手) / 更低区间<10元(<15x安全边际好)",
         "dv_ttm": 0.6,
-        "next_earnings_date": "2026-04-30（估算）",
+        "next_earnings_date": "2026-04-29",
         "next_earnings_type": "一季报"
       },
       {
@@ -1543,7 +1543,7 @@
         ],
         "valuation_anchor": "EPS=0.552元，高压绝缘设备PE 20-35x；追高区>19元(>35x赔率差) / 中性区14-19元(25-35x) / 较好区间11-14元(20-25x赔率顺手) / 更低区间<11元(<20x安全边际好)",
         "dv_ttm": 1.0,
-        "next_earnings_date": "2026-04-30（估算）",
+        "next_earnings_date": "2026-04-30",
         "next_earnings_type": "一季报"
       },
       {
@@ -1568,8 +1568,8 @@
         ],
         "valuation_anchor": "EPS约1.14元，工业电气+成长继电器PE区间18-29x：追高区>33元(PE>29x，赔率差不买) / 中性区25-33元(PE22-29x，可持有观察) / 较好区间20-25元(PE18-22x，赔率改善可布局) / 更低区间<20元(PE<18x，安全边际明显)",
         "dv_ttm": 1.209,
-        "next_earnings_date": "2026-08-31",
-        "next_earnings_type": "半年报"
+        "next_earnings_date": "2026-04-30",
+        "next_earnings_type": "一季报"
       },
       {
         "name": "华明装备",
@@ -2450,7 +2450,7 @@
         "valuation_anchor": "EPS=1.51元，智能电表PE 15-25x；追高区>38元(>25x赔率差) / 中性区30-38元(20-25x净利未转正前观察) / 较好区间22-30元(15-20x净利转正后布局) / 更低区间<22元(<15x安全边际好)",
         "entry_trigger": "2026年一季报或半年报净利同比转正（净利同比>0%），且净现比稳定回升至80%以上",
         "dv_ttm": 2.36,
-        "next_earnings_date": "2026-04-30（估算）",
+        "next_earnings_date": "2026-04-30",
         "next_earnings_type": "一季报"
       },
       {
@@ -2476,8 +2476,8 @@
         "valuation_anchor": "EPS=1.50元，变压器PE 15-25x；追高区>37元(>25x当前正处此区赔率差) / 中性区30-37元(20-25x OCF转正后可持有) / 较好区间22-30元(15-20x OCF稳定后布局) / 更低区间<22元(<15x安全边际好)",
         "entry_trigger": "OCF连续两季度转正（两个季度净现比均>60%），且ROE稳定提升至12%以上",
         "dv_ttm": 1.41,
-        "next_earnings_date": "2026-04-30（估算）",
-        "next_earnings_type": "年报"
+        "next_earnings_date": "2026-04-29",
+        "next_earnings_type": "一季报"
       },
       {
         "name": "神马电力",
@@ -2528,8 +2528,8 @@
         "valuation_anchor": "PE软件定价：EPS≈0.745元，软件/数字化公司合理PE区间35-55x；追高区>52元(>70x当前56.4元处此区) / 中性区40-52元(54-70x，ROE达标后可小仓观察) / 较好区间28-40元(38-54x，ROE>15%且价格回落后布局) / 更低区间<28元(<38x，安全边际明显)",
         "entry_trigger": "ROE连续两年稳定超过15%（当前13.47%，需2026年报验证≥15%），且股价回落至40元以下（PE≈54x）",
         "dv_ttm": 0.47,
-        "next_earnings_date": "2026-08-31（估算）",
-        "next_earnings_type": "半年报"
+        "next_earnings_date": "2026-04-30",
+        "next_earnings_type": "一季报"
       },
       {
         "name": "保变电气",
@@ -2552,7 +2552,9 @@
           "PE=121x，净利润绝对值极小（1.97亿 vs 市值277亿），大幅透支成长预期"
         ],
         "entry_trigger": "股价回落至11元以下（对应2026E净利润3亿、前瞻PE≤60x）或2026年中报单季净利润超过1亿元（验证增长持续性）",
-        "dv_ttm": null
+        "dv_ttm": null,
+        "next_earnings_date": "2026-08-31（估算）",
+        "next_earnings_type": "半年报"
       },
       {
         "name": "金盘科技",
@@ -2678,7 +2680,9 @@
         "prebuy_conclusion": "国产AI芯片核心标的，ROE=23.9%质量优秀，PE=277x极贵。等股价回调至400元以下+2025扣非转正双重确认后，可小仓参与。",
         "added_date": "2026-04-27",
         "last_reviewed": "2026-04-27",
-        "source_index": "931912"
+        "source_index": "931912",
+        "next_earnings_date": "2026-04-30",
+        "next_earnings_type": "一季报"
       },
       {
         "name": "尚太科技",
@@ -2752,8 +2756,8 @@
           "小市值流动性风险，估值波动大"
         ],
         "entry_trigger": "价格回落至20-26元（PE<=33x）且净现比回升至>1.0",
-        "next_earnings_date": "2026-04-30",
-        "next_earnings_type": "一季报"
+        "next_earnings_date": "2026-08-31（估算）",
+        "next_earnings_type": "半年报"
       },
       {
         "name": "震裕科技",
@@ -2853,8 +2857,8 @@
           "隔膜行业产能过剩毛利率承压"
         ],
         "entry_trigger": "价格回落至26-33元（PE<=27x）且Q1-Q2连续ROE维持>=12.5%验证改善非一次性",
-        "next_earnings_date": "2026-04-30",
-        "next_earnings_type": "一季报"
+        "next_earnings_date": "2026-08-31（估算）",
+        "next_earnings_type": "半年报"
       },
       {
         "code": "600863.SH",
@@ -2975,8 +2979,8 @@
         "board": "深",
         "entry_trigger": "股价跌至32元以下（对应2025年PE约16x），或公司公告2026年度分红且股息率≥3%",
         "dv_ttm": null,
-        "next_earnings_date": "2026-08-31（估算）",
-        "next_earnings_type": "半年报"
+        "next_earnings_date": "2026-04-30",
+        "next_earnings_type": "一季报"
       },
       {
         "name": "雷赛智能",
@@ -3079,8 +3083,8 @@
           "OCF/净利偏低（约35%），应收账款周转偏慢，利润含金量有待提升"
         ],
         "dv_ttm": 2.81,
-        "next_earnings_date": "2026-04-30",
-        "next_earnings_type": "一季报"
+        "next_earnings_date": "2026-08-31（估算）",
+        "next_earnings_type": "半年报"
       },
       {
         "name": "石头科技",
@@ -3105,8 +3109,8 @@
           "净利润-31%与收入+56.5%的严重背离；毛利率从55%压缩至42%，价格战激烈"
         ],
         "dv_ttm": 0.66,
-        "next_earnings_date": "2026-04-30",
-        "next_earnings_type": "一季报"
+        "next_earnings_date": "2026-08-31（估算）",
+        "next_earnings_type": "半年报"
       },
       {
         "name": "快克智能",
@@ -3131,8 +3135,8 @@
           "市值116亿/净利1.38亿（FY2025）比例失调，稍有负面变化即面临估值崩塌风险"
         ],
         "dv_ttm": 1.38,
-        "next_earnings_date": "2026-04-30",
-        "next_earnings_type": "一季报"
+        "next_earnings_date": "2026-08-31（估算）",
+        "next_earnings_type": "半年报"
       },
       {
         "name": "天齐锂业",
@@ -3261,8 +3265,8 @@
         "price_date": "2026-04-27",
         "board": "深",
         "dv_ttm": 1.17,
-        "next_earnings_date": "2026-08-31",
-        "next_earnings_type": "半年报",
+        "next_earnings_date": "2026-04-30",
+        "next_earnings_type": "一季报",
         "entry_trigger": "2026半年报营收YoY仍>15%（确认集采份额扩张持续），且股价处于33~45元较好区间"
       },
       {
@@ -3339,8 +3343,8 @@
         "price_date": "2026-04-27",
         "board": "科",
         "dv_ttm": 1.68,
-        "next_earnings_date": "2026-08-31",
-        "next_earnings_type": "半年报",
+        "next_earnings_date": "2026-04-30",
+        "next_earnings_type": "一季报",
         "entry_trigger": "主动脉支架集采进展明朗（落地或豁免）且ROE连续2期年报改善至15%以上，且股价处于75~90元较好区间"
       },
       {
@@ -3417,7 +3421,7 @@
         "price_date": "2026-04-24",
         "board": "科",
         "dv_ttm": 0.0,
-        "next_earnings_date": "2026-04-30估算",
+        "next_earnings_date": "2026-04-30",
         "next_earnings_type": "一季报",
         "entry_trigger": "股价回落至400元以下（PE约80x），且连续2个季度净利润同比增速超200%以确认盈利持续性"
       },
@@ -3521,8 +3525,8 @@
         "price_date": "2026-04-24",
         "board": "深",
         "dv_ttm": 1.11,
-        "next_earnings_date": "2026-10-31估算",
-        "next_earnings_type": "三季报",
+        "next_earnings_date": "2026-08-31（估算）",
+        "next_earnings_type": "半年报",
         "entry_trigger": "2026Q2季报（约2026年8月）净利润同比转正，确认Q1下滑系一次性；且股价在95~115元区间"
       },
       {
@@ -3547,8 +3551,8 @@
         "price_date": "2026-04-24",
         "board": "科",
         "dv_ttm": 0.79,
-        "next_earnings_date": "2026-08-31估算",
-        "next_earnings_type": "半年报",
+        "next_earnings_date": "2026-04-30",
+        "next_earnings_type": "一季报",
         "entry_trigger": "H1 2026半年报（约2026年8月）确认营收同比≥20%，且股价在155~175元区间未大幅反弹"
       },
       {
