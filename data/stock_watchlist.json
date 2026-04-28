@@ -3458,6 +3458,58 @@
         "next_earnings_date": "2026-08-31估算",
         "next_earnings_type": "半年报",
         "entry_trigger": "H1 2026净利润同比>=30%（半年报约2026年8月确认），且股价在145~160元区间"
+      },
+      {
+        "name": "北特科技",
+        "code": "603009.SH",
+        "board": "沪",
+        "source_etf": "direct",
+        "position_role": "高端制造弹性仓（人形机器人滚柱丝杠概念）",
+        "prebuy_conclusion": "机器人丝杠逻辑成立但尚处投入期，当前PE 131x极度透支，radar tier等待回调至31元以下后评估。",
+        "watch_reason": "行星滚柱丝杠国产替代空间大，北特是A股纯正机器人丝杠标的，18.5亿资本投入预计2026年底一期投产，等待业绩验证窗口。",
+        "current_price": 45.42,
+        "price_date": "2026-04-28",
+        "price_bands": [
+          33,
+          31,
+          22
+        ],
+        "valuation_anchor": "基于2026E EPS 0.42元（+20%增长），机器人赛道溢价基准PE 65x；PS=5政策加成，bands[1] +15%至31元",
+        "dv_ttm": 0.18,
+        "next_earnings_date": "2026-08-31",
+        "next_earnings_type": "半年报",
+        "risk_flags": [
+          "当前PE 131x，概念溢价极高，回撤风险50-70%",
+          "丝杠业务尚无规模化收入，叙事先于业绩",
+          "ROE仅7%，传统汽车业务盈利能力偏弱",
+          "18.5亿资本开支可能引发再融资摊薄"
+        ]
+      },
+      {
+        "name": "荣昌生物",
+        "code": "688331.SH",
+        "board": "科",
+        "source_etf": "direct",
+        "position_role": "创新药弹性仓（自免+肿瘤双商业化，BD出海价值兑现）",
+        "prebuy_conclusion": "泰它西普放量+出海BD逻辑清晰，但2025净利依赖一次性授权，Q1 2026仍亏损，当前134.6元处中性区高端，等回调至120元以下建仓。",
+        "watch_reason": "国内首个双靶自免药泰它西普商业化领先+适应症持续扩张，ADC出海BD能力已被AbbVie验证，是创新药赛道高弹性标的。",
+        "current_price": 134.6,
+        "price_date": "2026-04-28",
+        "price_bands": [
+          138,
+          127,
+          92
+        ],
+        "valuation_anchor": "基于2025年实际营收32.51亿、股本5.65亿股，P/S基准20x；PS=4政策加成，bands[1] +10%至127元",
+        "dv_ttm": 0.0,
+        "next_earnings_date": "2026-08-28",
+        "next_earnings_type": "半年报",
+        "risk_flags": [
+          "2025净利7.1亿含9.44亿一次性授权，扣非仅0.68亿",
+          "Q1 2026归母净利-2.54亿，核心业务仍亏损",
+          "PE TTM 107x，估值高度依赖管线和授权兑现",
+          "RC48面临同类ADC竞品竞争，市场份额有侵蚀风险"
+        ]
       }
     ]
   },
