@@ -1997,6 +1997,35 @@
         "cycle_is_cyclical": false,
         "cycle_position": null,
         "entry_trigger": "等H1半年报确认负债率不再恶化后可加仓至满仓"
+      },
+      {
+        "name": "生益科技",
+        "code": "600183.SH",
+        "ts_code": "600183.SH",
+        "source_etf": null,
+        "board": "沪",
+        "position_role": "国内覆铜板CCL龙头，AI服务器高速高频CCL受益方；毛利率加速改善（22%→26.5%→28.1%），ROE从12%跳升至21%，当前估值偏贵等回调",
+        "prebuy_conclusion": "PE=52.9x历史88%分位+PB=10.55x历史95.5%分位，估值偏贵；但2025净利+91.7%、Q1 2026净利+105%、毛利率持续改善，基本面极强；质押0%，国资背景稳定；当前72.63元处于中性区，等回调至50-65元（FY2026E PE 26-34x）较好区间再首批建仓1-1.5万元",
+        "watch_reason": "AI服务器供应链CCL龙头，毛利率和ROE加速改善，等估值回调",
+        "current_price": 72.63,
+        "price_date": "2026-04-28",
+        "price_bands": [
+          80.0,
+          65.0,
+          50.0
+        ],
+        "valuation_anchor": "FY2026E EPS约1.90元为基准：≥80=追高，65-80=中性（当前），50-65=较好，<50=安全边际充足",
+        "risk_flags": [
+          "PE历史88%分位+PB历史95.5%分位，双估值极高，当前安全边际不足",
+          "CCL有周期属性，AI服务器需求若放缓，景气拐点前估值可能大幅压缩",
+          "AI高速CCL占总收入比例不透明，叙事溢价难精确量化"
+        ],
+        "dv_ttm": 1.38,
+        "next_earnings_date": "2026-08-31",
+        "next_earnings_type": "半年报",
+        "cycle_is_cyclical": true,
+        "cycle_position": "景气上行",
+        "entry_trigger": "价格回调至65元以下，FY2026E PE进入26-34x较好区间后建仓"
       }
     ],
     "radar": [
