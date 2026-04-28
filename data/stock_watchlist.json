@@ -700,8 +700,8 @@
         "price_date": "2026-04-24",
         "board": "科",
         "dv_ttm": 0.36,
-        "next_earnings_date": "2026-04-28",
-        "next_earnings_type": "一季报"
+        "next_earnings_date": "2026-08-31",
+        "next_earnings_type": "半年报"
       },
       {
         "name": "金山办公",
@@ -825,8 +825,8 @@
         ],
         "valuation_anchor": "历史PE区间：追高区>45(PE>38x，消费溢价过高) / 中性区35-45(PE30-38x，逻辑对但赔率偏紧) / 较好区间28-35(PE23-30x，调味品龙头合理买点) / 更低区间<28(PE<23x，安全边际明显)",
         "dv_ttm": 3.55,
-        "next_earnings_date": "2026-04-28",
-        "next_earnings_type": "一季报"
+        "next_earnings_date": "2026-08-31",
+        "next_earnings_type": "半年报"
       },
       {
         "name": "东鹏饮料",
@@ -875,8 +875,8 @@
         ],
         "valuation_anchor": "历史PE区间：追高区>14.5(PE>15x，ROE溢价透支) / 中性区12.0-14.5(PE12-15x，当前位置，逻辑对赔率一般) / 较好区间10.5-12.0(PE10-12x，赔率顺手可布局) / 更低区间<10.5(PE<10x，安全边际充足)",
         "dv_ttm": 2.55,
-        "next_earnings_date": "2026-04-28",
-        "next_earnings_type": "一季报"
+        "next_earnings_date": "2026-08-31",
+        "next_earnings_type": "半年报"
       },
       {
         "name": "广州发展",
@@ -951,8 +951,8 @@
         ],
         "valuation_anchor": "历史PE分位：追高区>72(PE>22x，历史75%分位以上，高估) / 中性区63-72(PE19-22x，合理价，可持有) / 较好区间55-63(PE17-19x，历史低位，可建仓) / 更低区间<55(PE<17x，安全边际充足)",
         "dv_ttm": 3.57,
-        "next_earnings_date": "2026-04-28",
-        "next_earnings_type": "一季报"
+        "next_earnings_date": "2026-08-31",
+        "next_earnings_type": "半年报"
       },
       {
         "name": "海大集团",
@@ -976,8 +976,8 @@
         ],
         "valuation_anchor": "历史PE分位：追高区>56(PE>18x，超历史75%分位，不追) / 中性区50-56(PE16-18x，当前估值合理，可持有) / 较好区间43-50(PE14-16x，当前位置，赔率好) / 更低区间<43(PE<14x，安全边际充足)",
         "dv_ttm": 2.79,
-        "next_earnings_date": "2026-04-28",
-        "next_earnings_type": "一季报"
+        "next_earnings_date": "2026-08-31",
+        "next_earnings_type": "半年报"
       },
       {
         "name": "柏楚电子",
@@ -1107,8 +1107,8 @@
         ],
         "valuation_anchor": "成长PE+军民订单验证：追高区>130(PE约55x以上，处于历史偏高分位) / 中性区110-130(PE约45-55x，等待订单验证) / 较好区间95-110(PE约39-45x，赔率改善) / 更低区间<95(PE<39x，安全边际更好)",
         "dv_ttm": 0.12,
-        "next_earnings_date": "2026-04-28",
-        "next_earnings_type": "一季报"
+        "next_earnings_date": "2026-08-31",
+        "next_earnings_type": "半年报"
       },
       {
         "name": "北方华创",
@@ -1690,8 +1690,8 @@
           "毛利率连续5季度下行（34.6%→29.3%），新能源电驱整车厂压价及内化风险"
         ],
         "dv_ttm": 0.63,
-        "next_earnings_date": "2026-04-28",
-        "next_earnings_type": "一季报"
+        "next_earnings_date": "2026-08-31",
+        "next_earnings_type": "半年报"
       },
       {
         "name": "拓普集团",
@@ -1845,8 +1845,8 @@
         "board": "深",
         "entry_trigger": "股价跌至90元以下（PE<18x），或CDMO大订单获取明确公告",
         "dv_ttm": 0.94,
-        "next_earnings_date": "2026-04-28",
-        "next_earnings_type": "一季报"
+        "next_earnings_date": "2026-08-31",
+        "next_earnings_type": "半年报"
       },
       {
         "name": "泰格医药",
@@ -1923,8 +1923,8 @@
         "board": "深",
         "entry_trigger": "股价跌至50元以下（PE<15x），或AI算力订单定点公告落地",
         "dv_ttm": 0.15,
-        "next_earnings_date": "2026-04-27",
-        "next_earnings_type": "一季报"
+        "next_earnings_date": "2026-08-31",
+        "next_earnings_type": "半年报"
       },
       {
         "name": "洋河股份",
@@ -1949,8 +1949,8 @@
         "valuation_anchor": "困境反转×PB：追高区>80(业绩未反转前明显偏贵) / 中性区60-80(观察等渠道出清完成信号) / 较好区间45-60(PB约1.4-1.9x，有确认信号可小仓试探) / 更低区间<45(PB<1.4x，困境底部安全边际较好)",
         "entry_trigger": "股价跌至40元以下（PE<10x，DY>5%），或渠道库存压力明确改善",
         "dv_ttm": 4.65,
-        "next_earnings_date": "2026-04-28",
-        "next_earnings_type": "一季报"
+        "next_earnings_date": "2026-08-31",
+        "next_earnings_type": "半年报"
       },
       {
         "name": "双汇发展",
@@ -2001,8 +2001,8 @@
         "valuation_anchor": "历史PE+ROE修复验证：追高区>50(PE>28x，ROE下行期估值过高) / 中性区38-50(PE22-28x，等毛利改善信号) / 较好区间30-38(PE17-22x，若ROE企稳则赔率合适) / 更低区间<30(PE<17x，困境反转若成立则安全边际充足)",
         "entry_trigger": "股价跌至32元以下（PE<18x），或海外市场营收占比超30%季报验证",
         "dv_ttm": 1.39,
-        "next_earnings_date": "2026-04-28",
-        "next_earnings_type": "一季报"
+        "next_earnings_date": "2026-08-31",
+        "next_earnings_type": "半年报"
       },
       {
         "name": "国电电力",
@@ -2242,8 +2242,8 @@
         ],
         "dv_ttm": 0.247,
         "entry_trigger": "连续2季度营收同比>20%且净利润无大额库存减值（扣非增速>15%），同时股价回落至80元以下（PE<35x）",
-        "next_earnings_date": "2026-04-28",
-        "next_earnings_type": "一季报"
+        "next_earnings_date": "2026-08-31",
+        "next_earnings_type": "半年报"
       },
       {
         "name": "伊利股份",
@@ -2555,8 +2555,8 @@
         "valuation_anchor": "前瞻PE（2026E净利约4.0-4.5亿，EPS约0.92-1.03元/股）：追高区≥110元（PE>107x，当前位置）/ 中性区75-110元（PE73-107x，逻辑对但贵）/ 较好区间55-75元（PE53-73x，赔率开始顺手）/ 更低区间<55元（PE<53x，安全边际充分）",
         "entry_trigger": "股价跌至75元以下（对应2026E PE约75x），且2025年报归母净利润同比增速不低于15%，两项同时满足后升档growth评估建仓",
         "dv_ttm": 0.09,
-        "next_earnings_date": "2026-04-28",
-        "next_earnings_type": "年报"
+        "next_earnings_date": "2026-08-31",
+        "next_earnings_type": "半年报"
       },
       {
         "code": "688256.SH",
@@ -2601,8 +2601,8 @@
           "负极材料行业价格战持续，毛利率承压"
         ],
         "entry_trigger": "价格回落至62-75元（PE<=20x）且Q1财报ROE维持>13%验证盈利质量",
-        "next_earnings_date": "2026-04-28",
-        "next_earnings_type": "一季报"
+        "next_earnings_date": "2026-08-31",
+        "next_earnings_type": "半年报"
       },
       {
         "name": "科达利",
@@ -2626,8 +2626,8 @@
           "结构件行业绑定大客户，议价能力受限"
         ],
         "entry_trigger": "价格回落至155-190元（PE<=29x）且净利增速维持>20%",
-        "next_earnings_date": "2026-04-28",
-        "next_earnings_type": "一季报"
+        "next_earnings_date": "2026-08-31",
+        "next_earnings_type": "半年报"
       },
       {
         "name": "正泰电源",
@@ -2702,8 +2702,8 @@
           "AIDC电源赛道叙事成分较强，收入占比需验证"
         ],
         "entry_trigger": "价格回落至32-42元（PE<=38x）且AIDC电源收入占比确认提升至>20%",
-        "next_earnings_date": "2026-04-27",
-        "next_earnings_type": "一季报"
+        "next_earnings_date": "2026-08-31",
+        "next_earnings_type": "半年报"
       },
       {
         "name": "先导智能",
@@ -2842,8 +2842,8 @@
         "dv_ttm": 3.66,
         "prebuy_conclusion": "批次中唯一营收正增长(+9.2%)的小市值新能源运营商，DY⚠️3.66%，市值仅119亿，等DY达4%（约5元以下）且营收增长持续验证后再建仓",
         "entry_trigger": "股价跌至5.00元以下（DY>4%），且连续2季度营收同比正增长",
-        "next_earnings_date": "2026-04-28",
-        "next_earnings_type": "一季报",
+        "next_earnings_date": "2026-08-31",
+        "next_earnings_type": "半年报",
         "tags": [
           "绿色电力",
           "风电",
@@ -3062,5 +3062,5 @@
       }
     ]
   },
-  "last_updated": "2026-04-27"
+  "last_updated": "2026-04-28"
 }
