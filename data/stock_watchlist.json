@@ -408,23 +408,24 @@
         "board": "纽",
         "source_etf": "direct",
         "position_role": "防御型高股息底仓，Dividend King 64年连增",
-        "prebuy_conclusion": "逻辑清晰，等待更合适价格或验证点",
-        "watch_reason": "品牌护城河不可复制，FCF覆盖分红127%，巴菲特持股背书，目标增仓区$65-67",
-        "current_price": 70.0,
-        "price_date": "2026-04-26",
+        "prebuy_conclusion": "Q1 2026大幅超预期（有机+10%，EPS $0.86 vs 预期$0.81），量价齐升，指引上调至+8-9%；63年Dividend King，品牌护城河垄断级别，PE 23.2x处历史均值以下，逻辑清晰，当前价格合理，可按计划买入；财报日若跳空>3%至$78以上等回调",
+        "watch_reason": "品牌护城河不可复制，Q1 2026有机增速10%创近年新高，量价齐升，FCF机器（剔除一次性后FCF约$11.4B），63年连续增股息，新CEO首季超预期",
+        "current_price": 75.4,
+        "price_date": "2026-04-28",
         "price_bands": [
-          74,
-          67,
+          91,
+          78,
           62
         ],
-        "valuation_anchor": "FY2025E EPS $2.98，Forward PE 23.5x @ $70",
+        "valuation_anchor": "FY2026E EPS ~$3.25（Q1超预期后上调），PE 28x=$91追高/24x=$78中性/19x=$62较好/19x以下强力支撑；当前$75.40在较好区间上沿",
         "risk_flags": [
-          "IRS税务纠纷潜在$16B负债",
-          "利率逆风（股息率2.80% vs 国债4.55%）",
-          "有机增长降速至5-6%"
+          "IRS税务纠纷潜在$16B负债（一票否决候选，需持续关注）",
+          "铝关税风险：美国铝关税直接推高罐装成本，若无法转嫁则压缩毛利",
+          "2025 GAAP FCF仅$5.3B（fairlife一次性支出扭曲），需2026回归确认",
+          "新兴市场汇率敞口：KO约60%收入来自海外，美元强势侵蚀reported利润"
         ],
-        "dv_ttm": 1.965,
-        "next_earnings_date": "2026-07-31（估算）",
+        "dv_ttm": 2.72,
+        "next_earnings_date": "2026-07-28（估算）",
         "next_earnings_type": "季报"
       },
       {
