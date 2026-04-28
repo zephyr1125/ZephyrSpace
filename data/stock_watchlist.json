@@ -278,8 +278,8 @@
         "watch_reason": "中证白酒指数权重第三，ROE 30%，PE历史低位，三年85亿/年分红承诺，底仓逻辑扎实。",
         "current_price": 100.2,
         "price_bands": [
+          155,
           127,
-          100,
           85
         ],
         "risk_flags": [
