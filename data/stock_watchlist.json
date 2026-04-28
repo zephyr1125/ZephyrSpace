@@ -3991,6 +3991,31 @@
         "cycle_is_cyclical": true,
         "cycle_position": "复苏中期",
         "entry_trigger": "PB回落至3.0x以下（约12.5元），同时钴价持续站稳6万元/吨且OCF/净利连续2季>80%；两条件满足后可小仓位布局"
+      },
+      {
+        "name": "东山精密",
+        "code": "002384.SZ",
+        "source_etf": "direct",
+        "board": "深",
+        "position_role": "AI服务器高端PCB弹性仓，Q1 2026净利+143%基本面质变",
+        "prebuy_conclusion": "当前不宜追入，等回调至130元以下再考虑布局，纳入radar跟踪",
+        "watch_reason": "Q1 2026净利+143%（11.1亿）、净利率从3.5%跃升至8.6%，AI服务器PCB需求驱动基本面质变，政策顺风⭐⭐⭐；但TTM PE=165x、前向PE=76x无安全边际，商誉47.7亿占净资产21%",
+        "current_price": 183.90,
+        "price_date": "2026-04-28",
+        "price_bands": [190, 130, 85],
+        "valuation_anchor": "前向PE（年化Q1）：追高>190(PE>76x) / 中性130-190(PE约40-76x) / 较好85-130(PE约20-40x) / 更低<85(PE<20x，安全边际明显)",
+        "risk_flags": [
+          "估值透支：TTM PE=165x、前向PE=76x，无安全边际",
+          "商誉47.7亿占净资产21%，减值风险显著",
+          "Q1业绩可持续性待Q2验证，净利率8.6%是否持续",
+          "负债率63.7%偏高，流动比率1.09偏低"
+        ],
+        "entry_trigger": "Q2 2026净利润率维持8%+且股价回落至130元以下（对应前向PE约40x）",
+        "dv_ttm": 0.0353,
+        "next_earnings_date": "2026-08-31（估算）",
+        "next_earnings_type": "半年报",
+        "cycle_is_cyclical": true,
+        "cycle_position": "景气高峰"
       }
     ]
   },
