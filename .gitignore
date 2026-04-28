@@ -31,6 +31,9 @@ data/cache/
 # 粗筛缓存与临时数据文件
 data/cache_*.json
 data/_screen_*.csv
+data/screen_*.json
+data/prebuy_*.json
+data/temp_*.json
 
 # 脚本目录下的临时数据与临时脚本
 scripts/tmp_*.py
