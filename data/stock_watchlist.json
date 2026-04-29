@@ -2987,23 +2987,26 @@
         "board": "创",
         "position_role": "锂电设备全球龙头，净现比3.17极强，等PE合理后建仓",
         "watch_reason": "全球锂电设备龙头，净现比3.17极强，2025净利暴增446%需核实基数效应后再入场",
-        "prebuy_conclusion": "设备龙头逻辑成立净现比超强，但PE61x含高预期，等55元以下+Q1验证",
-        "current_price": 57.43,
-        "price_date": "2026-04-27",
+        "prebuy_conclusion": "2026Q1验证增长（营收+19.1%、净利+11%），OCF净现比308%极强；PE TTM 59倍仍偏高（前瞻~53倍），等回调至46-52元（前瞻PE≤50倍）+半年报毛利率确认后再升档",
+        "current_price": 55.36,
+        "price_date": "2026-04-28",
         "dv_ttm": 0.1,
         "price_bands": [
           65.0,
-          55.0,
-          42.0
+          52.0,
+          46.0
         ],
-        "valuation_anchor": "前瞻PE锚（2026E EPS约1.65元）：追高区>65(PE>39x) / 中性区55-65(PE 33-39x) / 较好区间42-55(PE 25-33x) / 更低区间<42(PE<25x)",
+        "valuation_anchor": "前瞻PE锚（2026E净利约17.4亿，EPS~1.04元）：追高区>65(PE>63x) / 中性区52-65(PE 50-63x) / 较好区间46-52(PE 44-50x) / 安全边际区<46(PE<44x)",
         "risk_flags": [
-          "2025净利+446%增速含低基数效应，持续性待验证",
-          "锂电设备订单高度依赖下游capex周期"
+          "毛利率小幅下行（2026Q1 33.6%，同比降0.9ppt），净利率压缩需关注",
+          "锂电设备订单高度依赖下游capex周期，平台期后存在增速放缓风险"
         ],
-        "entry_trigger": "价格回落至42-55元（PE<=33x）且Q1净利同比正增长验证增速持续性",
-        "next_earnings_date": "2026-04-29",
-        "next_earnings_type": "一季报"
+        "entry_trigger": "价格回落至46-52元（前瞻PE≤50倍）且半年报净利增速确认≥10%，届时可考虑升档growth层",
+        "next_earnings_date": "2026-08-28",
+        "next_earnings_type": "半年报",
+        "cycle_is_cyclical": true,
+        "cycle_position": "扩张后期/平台期",
+        "last_updated": "2026-04-29"
       },
       {
         "name": "璞泰来",
