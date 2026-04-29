@@ -4482,6 +4482,62 @@
       "next_earnings_type": "一季报",
       "cycle_is_cyclical": true,
       "cycle_position": "复苏早期"
+    },
+    {
+      "name": "华安证券",
+      "code": "600909.SH",
+      "source_etf": "399975",
+      "position_role": "证券行业周期工具仓，跟踪区域性小券商PB低位修复机会",
+      "prebuy_conclusion": "radar tier跟踪，不主动建仓；PB=1.06处于5年18%分位，但2026Q1营收-21.6%，行情收缩期未见底；等跌破5.25元（PB≤1.0）且季报ROE年化重回9%以上后再评估升档。",
+      "watch_reason": "区域性券商PB接近历史低位，国资背景分红稳定（payout ratio约38%可持续），粗筛ROE=9.11%（⚠️边界，金融类门槛10%）；实际DV TTM=2.35%（未达金融类4%门槛），未满足主动建仓条件。",
+      "current_price": 5.54,
+      "price_date": "2026-04-29",
+      "board": "沪",
+      "dv_ttm": 2.35,
+      "price_bands": [
+        6.83,
+        5.25,
+        4.46
+      ],
+      "risk_flags": [
+        "ROE强周期性：2024年6.83%→2025年9.11%→2026Q1下滑，高度依赖A股市场行情",
+        "实际DV TTM=2.35%，未达金融类4%股息门槛（粗筛时4.04%为数据误差）",
+        "区域性竞争劣势，行业集中化下市场份额向头部集中，护城河薄弱",
+        "2026Q1营收同比-21.6%，行情收缩期持续性不确定"
+      ],
+      "valuation_anchor": "以PB为主锚（BPS=5.25元，2026Q1）：追高区>6.83（PB>1.3x，5年历史高位）/ 中性区5.25-6.83（PB 1.0-1.3x，当前5.54元在此区间）/ 较好区间4.46-5.25（PB 0.85-1.0x，接近净资产）/ 更低区间<4.46（PB<0.85x，历史极低，安全边际充足）",
+      "entry_trigger": "股价跌至5.25元以下（PB≤1.0×BPS）且半年报/三季报ROE年化重回9%以上，两条件同时达成后评估升档至growth",
+      "next_earnings_date": "2026-08-31估算",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": true,
+      "cycle_position": "收缩期"
+    },
+    {
+      "name": "中金公司",
+      "code": "601995.SH",
+      "source_etf": "399975.SZ",
+      "position_role": "机构投行周期弹性仓，中国最国际化券商，低PB历史分位（2.6%）叠加ROE复苏，非底仓型",
+      "prebuy_conclusion": "逻辑清晰，等待2026-04-30一季报验证后可在31-38元区间逐步建仓；PB 5年分位2.6%，赔率明显向好",
+      "watch_reason": "ROE从5.52%（2024）→9.39%（2025）强劲复苏；PB 1.66x处于5年历史极低（2.6%分位）；投行业务随IPO政策改善有弹性；PS=+1政策顺风；cycle_position=复苏中期",
+      "current_price": 34.43,
+      "price_date": "2026-04-29",
+      "board": "沪",
+      "dv_ttm": 0.52,
+      "price_bands": [
+        42.0,
+        38.0,
+        31.0
+      ],
+      "valuation_anchor": "PB主锚（BPS=20.71元）：追高区>42（PB>2.0x）；中性区38-42（PB 1.8-2.0x）；较好区间31-38（PB 1.5-1.8x含PS+1调整后）；强买区<31（PB<1.5x历史极低安全边际）",
+      "risk_flags": [
+        "高薪文化压制ROE：长期ROE难超12%，估值天花板低",
+        "IPO监管周期风险：2023-24年收紧曾使投行收入骤跌，政策反转速度不可预期",
+        "高市场敏感性：自营/交易收入随A股行情剧烈波动"
+      ],
+      "next_earnings_date": "2026-04-30",
+      "next_earnings_type": "一季报",
+      "cycle_is_cyclical": true,
+      "cycle_position": "复苏中期"
     }
   ]
 }
