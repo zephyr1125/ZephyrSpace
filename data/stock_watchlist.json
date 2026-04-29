@@ -2027,6 +2027,29 @@
         "next_earnings_type": "半年报",
         "cycle_is_cyclical": true,
         "cycle_position": "底部/复苏早期"
+      },
+      {
+        "name": "同花顺",
+        "code": "300033.SZ",
+        "source_etf": "direct",
+        "board": "创",
+        "position_role": "金融数据/AI量化工具平台，ROE36.7%极优质成长，等价格回调窗口",
+        "prebuy_conclusion": "逻辑清晰，等待更合适价格或验证点。ROE36.7%/净现比118%/2026Q1净利+113%，质地极优；但PB=5年99.8%分位极贵，当前231元在追高区，需等回落至160元以下再建仓。PS=+6。",
+        "watch_reason": "金融AI数据平台龙头，ROE36.7%+净现比118%是A股罕见高质量，2026Q1净利翻倍超预期，政策高顺风PS+6，等价格合理窗口",
+        "current_price": 231.2,
+        "price_date": "2026-04-29",
+        "price_bands": [200, 160, 120],
+        "valuation_anchor": "2025净利32.05亿，PE约52x；追高区>200(PB极端分位) / 中性区160-200 / 较好区间120-160(PS+6绿灯区) / 更低区间<120",
+        "risk_flags": [
+          "PB=5年99.8%分位极度高估，当前231元赔率极差，历史PB曾大幅回落",
+          "金融市场景气强相关，熊市期间用户活跃度和付费率快速下降",
+          "AI叙事溢价难量化，竞争对手同质化功能持续压缩差异化壁垒"
+        ],
+        "dv_ttm": 0.87,
+        "next_earnings_date": "2026-08-31",
+        "next_earnings_type": "半年报",
+        "policy_score": 6,
+        "last_updated": "2026-04-29"
       }
     ],
     "radar": [
@@ -4189,6 +4212,54 @@
         "next_earnings_type": "一季报",
         "cycle_is_cyclical": true,
         "cycle_position": "复苏早期"
+      },
+      {
+        "name": "海光信息",
+        "code": "688041.SH",
+        "source_etf": "direct",
+        "board": "科",
+        "position_role": "国产CPU/DCU算力芯片，PS=+9政策极强顺风，AMD授权🔴结构性风险待明朗",
+        "prebuy_conclusion": "核心疑点未解，不建议买入。AMD授权法律安全性🔴未明朗，PE=246x/PB=5年98.8%分位极贵，但PS=+9政策极强顺风。等AMD授权风险明朗+PE降至合理区间后重新评估。",
+        "watch_reason": "国产CPU/DCU最纯粹标的，2026Q1净利+35.8%业绩强劲，政策PS+9，但AMD授权结构性风险是一票否决候选，需跟踪事件进展",
+        "current_price": 289.0,
+        "price_date": "2026-04-29",
+        "price_bands": [250, 150, 100],
+        "valuation_anchor": "2025净利25.45亿，PE=246x极端泡沫；较好区间<100元(PE~100x，国产算力赛道溢价内) / 理想区间<70元",
+        "risk_flags": [
+          "🔴 AMD授权法律安全性：架构授权来源于AMD，若出口管制扩大覆盖授权协议，公司核心架构能力存在根本性风险",
+          "PE=246x/PB=5年98.8%分位，估值极端，安全边际几乎为零",
+          "国产算力验证期：DCU在国内大模型训练中实际采用规模仍待Q2-Q3季报验证"
+        ],
+        "entry_trigger": "AMD授权法律安全性得到官方确认（公告/监管澄清）且PE降至150x以下（约130元），或股价回落至100元以下（PE≈100x）",
+        "dv_ttm": 0.0,
+        "next_earnings_date": "2026-08-31",
+        "next_earnings_type": "半年报",
+        "policy_score": 9,
+        "last_updated": "2026-04-29"
+      },
+      {
+        "name": "深信服",
+        "code": "300454.SZ",
+        "source_etf": "direct",
+        "board": "深",
+        "position_role": "网络安全/自主可控IT基础设施，Q1净利+180%验证复苏，OCF待改善后升growth",
+        "prebuy_conclusion": "可以试错，但只能小仓位。2026Q1净利+180.7%复苏超预期，PB=17.4%历史低位，当前74.43元在PS调整绿灯区（65-86元）；但OCF/净利=53%低于growth门槛，维持radar等H2验证后升档。",
+        "watch_reason": "网络安全+AI网关自主可控赛道，2026Q1净利爆发+180.7%复苏确认，PB历史低位17.4%赔率优秀，PS=+4政策顺风",
+        "current_price": 74.43,
+        "price_date": "2026-04-29",
+        "price_bands": [95, 75, 65],
+        "valuation_anchor": "2025净利14.37亿，PE=38.3x；PS=+4，绿灯区上界+15%至86元；追高区>95 / 中性区75-95 / 较好区间65-75（当前在此） / 更低区间<65",
+        "risk_flags": [
+          "OCF/净利=53.4%（FY2025），低于growth门槛80%，利润质量仍需改善",
+          "安全软件SaaS云化转型中，客户迁移节奏和ARPU提升速度不确定",
+          "ROE=11%处于成长科技门槛边界，需连续2个季度验证改善"
+        ],
+        "entry_trigger": "H2 2026半年报OCF/净利≥70%，且ROE维持在12%以上，升档至growth",
+        "dv_ttm": 0.0,
+        "next_earnings_date": "2026-08-31",
+        "next_earnings_type": "半年报",
+        "policy_score": 4,
+        "last_updated": "2026-04-29"
       }
     ]
   },
