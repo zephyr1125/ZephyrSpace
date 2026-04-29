@@ -2147,7 +2147,11 @@
         "watch_reason": "互联网零售投资者平台龙头，天天基金+经纪+两融三轮驱动，ROE 14%且持续提升，PB历史低位，A股复苏中最大弹性受益方",
         "current_price": 20.26,
         "price_date": "2026-04-29",
-        "price_bands": [26.0, 22.0, 18.0],
+        "price_bands": [
+          26.0,
+          22.0,
+          18.0
+        ],
         "valuation_anchor": "PB历史分位+前瞻PE：追高区>26元(PB>4.4x,接近中位数) / 中性区22-26元 / 绿灯区18-22元(PB历史P20附近，PS+2调整后上界+10%) / 强绿<18元(PB<3.0x)",
         "risk_flags": [
           "A股市场活跃度周期性：牛熊切换时营收弹性双向放大，历史PB区间2.3x~9.8x",
@@ -4379,10 +4383,38 @@
         "next_earnings_type": "半年报",
         "policy_score": 4,
         "last_updated": "2026-04-29"
+      },
+      {
+        "name": "长江证券",
+        "code": "000783.SZ",
+        "source_etf": "399975",
+        "position_role": "证券行业周期仓，受益A股市场景气但无强护城河的区域性中等券商",
+        "prebuy_conclusion": "逻辑清晰，等待更合适价格或验证点。",
+        "watch_reason": "中等规模区域券商，2025年ROE回升至10%，需观察持续性；PB<0.9x或ROE连续2年>10%时可升档。",
+        "current_price": 7.26,
+        "price_date": "2026-04-29",
+        "board": "深",
+        "price_bands": [
+          8.8,
+          7.8,
+          6.5
+        ],
+        "risk_flags": [
+          "盈利高度周期性，景气反转时EPS可能腰斩",
+          "区域性券商无竞争护城河，市占率面临头部券商压制",
+          "实控人背景待补充核实"
+        ],
+        "valuation_anchor": "PB定价（BPS 6.49元）：追高区>8.8(PB>1.35x) / 中性区7.8-8.8(PB 1.2-1.35x) / 较好区间6.5-7.8(PB 1.0-1.2x，PS+1调整后上界8.58元) / 更低区间<6.5(PB<1.0x，接近历史低位)",
+        "entry_trigger": "PB跌至0.90x以下（约5.84元）触发建仓，或ROE连续2年>10%后在PB<1.1x时择机买入",
+        "dv_ttm": 2.07,
+        "next_earnings_date": "2026-04-30",
+        "next_earnings_type": "一季报",
+        "cycle_is_cyclical": true,
+        "cycle_position": "复苏中期"
       }
     ]
   },
-  "last_updated": "2026-04-28",
+  "last_updated": "2026-04-29",
   "cycle_position_schema": {
     "_comment": "周期位置字段，仅对周期股必填；非周期股省略或填 null。取值必须是以下6个枚举值之一。",
     "values": {
