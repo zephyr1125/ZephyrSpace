@@ -1,4 +1,4 @@
-[
+﻿[
   {
     "name": "陕西煤业",
     "code": "601225.SH",
@@ -82,9 +82,9 @@
     "code": "300347.SZ",
     "source_etf": "399989",
     "position_role": "临床试验服务",
-    "prebuy_conclusion": "扣非利润质量存疑，价格已进入较好区间；可考虑小仓位研究性布局，等待主业修复信号确认。",
+    "prebuy_conclusion": "Q1 2026营收+15%修复延续，净利-70%主因Q1 2025高基数（非经常性损益），非主业退步；PE 62.9x估值极贵，等扣非利润季度同比转正再建仓。",
     "watch_reason": "CXO 链条里偏临床试验服务，适合看订单修复。",
-    "current_price": 56.02,
+    "current_price": 56.38,
     "price_bands": [
       65.0,
       58.0,
@@ -96,21 +96,21 @@
       "估值并不便宜"
     ],
     "valuation_anchor": "扣非PE+新签订单：追高区>65(扣非PE极高，归母利润质量不纯) / 中性区58-65(等扣非改善，观察订单价格回升) / 较好区间50-58(扣非修复有迹象时赔率改善) / 更低区间<50(扣非PE回落+订单加速确认，安全边际充足)",
-    "price_date": "2026-04-24",
+    "price_date": "2026-04-29",
     "board": "创",
     "entry_trigger": "股价跌至45元以下（PE<20x），或CXO行业订单回暖季报验证",
     "dv_ttm": 0.53,
-    "next_earnings_date": "2026-04-29",
-    "next_earnings_type": "一季报"
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报"
   },
   {
     "name": "国轩高科",
     "code": "002074.SZ",
     "source_etf": "932246",
     "position_role": "动力与储能双线",
-    "prebuy_conclusion": "三季报净利暴增含非经常项，扣非和现金流未同步主业；继续研究，等主业质量改善确认后再考虑。",
+    "prebuy_conclusion": "Q1 2026净利几乎归零（0.21亿，-79%），证实2025年高利润靠非经常性损益；营收+29%量增仍强，但forward PE极高，等Q2利润质量改善信号确认后再考虑。",
     "watch_reason": "储能指数里弹性较强，适合跟踪固态和全球化布局。",
-    "current_price": 39.88,
+    "current_price": 37.75,
     "price_bands": [
       45.0,
       38.0,
@@ -122,12 +122,12 @@
       "主业质量波动会影响估值"
     ],
     "valuation_anchor": "前瞻PE+扣非改善：追高区>45(非经常性利润高，主业扣非偏低) / 中性区38-45(等扣非修复+固态电池/海外验证) / 较好区间32-38(主业利润质量改善后赔率合适) / 更低区间<32(主业未充分兑现前安全边际更好)",
-    "price_date": "2026-04-24",
+    "price_date": "2026-04-29",
     "board": "深",
     "entry_trigger": "股价跌至30元以下（PB<1x），或大众合作车型销量季报超预期",
     "dv_ttm": 0.25,
-    "next_earnings_date": "2026-04-29",
-    "next_earnings_type": "一季报"
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报"
   },
   {
     "name": "科华数据",
@@ -242,10 +242,10 @@
     "code": "600795.SH",
     "source_etf": "931897",
     "position_role": "大型火电+水电混合平台，利润弹性跟踪标的",
-    "prebuy_conclusion": "处于中性区，利润下行周期中不宜加仓；等利润企稳信号（季报净利同比转正）再考虑布局，较好区间4.10-4.60元。",
+    "prebuy_conclusion": "Q1 2026净利-22.79%，下滑延续，企稳信号未出现；OCF健康（季度0.496/share），PE 12.84x+DV 4.32%估值合理，等季报净利同比转正再升仓。",
     "watch_reason": "931897绿电指数大权重股，DY4.26%尚可，但2025年利润同比-27.2%是核心预警，等周期底部确认后评估升档。",
-    "current_price": 4.93,
-    "price_date": "2026-04-25",
+    "current_price": 4.86,
+    "price_date": "2026-04-29",
     "board": "沪",
     "price_bands": [
       5.1,
@@ -260,8 +260,8 @@
     "valuation_anchor": "PE区间：追高区>5.10(PE>12.7x，利润下行中定价偏贵) / 中性区4.60-5.10(PE11.5-12.7x，当前位置) / 较好区间4.10-4.60(PE10-11.5x，股息率接近4.5%) / 更低区间<4.10(PE<10x，股息率>5%，周期底部布局)",
     "entry_trigger": "股价跌至4.10元以下（PE<10x，DY>5%），或季报净利同比由负转正",
     "dv_ttm": 4.29,
-    "next_earnings_date": "2026-04-29",
-    "next_earnings_type": "一季报",
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报",
     "last_close": 4.89
   },
   {
@@ -324,10 +324,10 @@
     "code": "600027.SH",
     "source_etf": "931897",
     "position_role": "央企火电+水电混合平台，现金流最强的等待标的",
-    "prebuy_conclusion": "处于中性区（4.22-5.27元），现金流最充裕（272亿），距理想价4.22仅差3%，等待入场；不追高。",
+    "prebuy_conclusion": "Q1 2026净利-9.93%，下滑延续但幅度收窄；OCF极强（季度0.486/share，全年4.5倍净利），PE 9.83x+DV 4.20%低廉，等H1 2026净利同比转正或股价跌至4.22元以下（DY>5%）再升档。",
     "watch_reason": "931897绿电公用事业参数筛选，现金流272亿为四家中最强，PE9.33x最低，等理想价4.22元（DY≥5%）再布局。",
-    "current_price": 4.88,
-    "price_date": "2026-04-25",
+    "current_price": 5.02,
+    "price_date": "2026-04-29",
     "board": "沪",
     "price_bands": [
       7.03,
@@ -342,8 +342,8 @@
     "valuation_anchor": "股息率倒推：追高区>7.03(DY<2.5%) / 中性区5.27-7.03(DY2.5-3.5%) / 较好区间4.22-5.27(DY3.5-4.5%) / 更低区间<4.22(DY>5%，积极建仓)",
     "entry_trigger": "股价跌至4.22元以下（DY>5%），或季报净利同比连续2季正增长",
     "dv_ttm": 4.29,
-    "next_earnings_date": "2026-04-29",
-    "next_earnings_type": "一季报",
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报",
     "last_close": 4.91
   },
   {
@@ -586,32 +586,6 @@
     "entry_trigger": "2026年一季报或半年报净利同比转正（净利同比>0%），且净现比稳定回升至80%以上",
     "dv_ttm": 2.36,
     "next_earnings_date": "2026-04-30",
-    "next_earnings_type": "一季报"
-  },
-  {
-    "name": "明阳电气",
-    "code": "301291.SZ",
-    "source_etf": "560390",
-    "position_role": "绿电场站配套变压器成长股，OCF修复后的升档候选",
-    "prebuy_conclusion": "Radar tier。营收+27%高成长，但OCF=-91.2%严重负值，当前55.99元估值含大量成长溢价，等OCF转正。",
-    "watch_reason": "干式变压器+绿电场站配套，受益新能源装机加速，成长逻辑清晰，等OCF修复后是高质量成长标的。",
-    "current_price": 55.99,
-    "price_date": "2026-04-24",
-    "board": "创",
-    "price_bands": [
-      37.0,
-      30.0,
-      22.0
-    ],
-    "risk_flags": [
-      "OCF=-4.27亿，净现比=-91.2%，经营现金流与利润严重背离",
-      "ROE=9.76%边界警告，盈利效率偏低",
-      "净利同比+7.31% vs 营收+27.14%，利润率在下降"
-    ],
-    "valuation_anchor": "EPS=1.50元，变压器PE 15-25x；追高区>37元(>25x当前正处此区赔率差) / 中性区30-37元(20-25x OCF转正后可持有) / 较好区间22-30元(15-20x OCF稳定后布局) / 更低区间<22元(<15x安全边际好)",
-    "entry_trigger": "OCF连续两季度转正（两个季度净现比均>60%），且ROE稳定提升至12%以上",
-    "dv_ttm": 1.41,
-    "next_earnings_date": "2026-04-29",
     "next_earnings_type": "一季报"
   },
   {
