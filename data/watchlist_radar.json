@@ -209,7 +209,7 @@
     "next_earnings_date": "2026-08-31",
     "next_earnings_type": "半年报",
     "cycle_is_cyclical": true,
-    "cycle_position": "有利阶段：2026Q1毛利率19.70%创近年新高，猪价处于相对低位，成本压力下降；但低猪价可能触发养殖端减产，约9-12个月后猪价回升，需跟踪2026Q2-Q3猪价走势"
+    "cycle_position": "复苏早期"
   },
   {
     "name": "安琪酵母",
@@ -974,7 +974,7 @@
     "next_earnings_date": "2026-08-28",
     "next_earnings_type": "半年报",
     "cycle_is_cyclical": true,
-    "cycle_position": "扩张后期/平台期",
+    "cycle_position": "景气高峰",
     "last_updated": "2026-04-29"
   },
   {
@@ -1052,7 +1052,7 @@
     "forward_dv": 5.79,
     "last_updated": "2026-04-29",
     "cycle_is_cyclical": true,
-    "cycle_position": "周期高点之后下行初段（煤价改善已兑现，电价市场化持续承压，2026Q1净利-9.83%）"
+    "cycle_position": "收缩期"
   },
   {
     "code": "600483.SH",

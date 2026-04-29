@@ -200,7 +200,7 @@
     "next_earnings_date": "2026-08-31（估算）",
     "next_earnings_type": "半年报",
     "cycle_is_cyclical": true,
-    "cycle_position": "承压期——去库存尚未出清，2026Q1双降确认，等2026Q3批价企稳+合同负债回升信号"
+    "cycle_position": "收缩期"
   },
   {
     "name": "宁德时代",
@@ -1561,7 +1561,7 @@
     "next_earnings_date": "2026-08-31",
     "next_earnings_type": "半年报",
     "cycle_is_cyclical": true,
-    "cycle_position": "景气上行",
+    "cycle_position": "景气高峰",
     "entry_trigger": "价格回调至65元以下，FY2026E PE进入26-34x较好区间后建仓"
   },
   {
@@ -1642,7 +1642,7 @@
     "next_earnings_date": "2026-08-31",
     "next_earnings_type": "半年报",
     "cycle_is_cyclical": true,
-    "cycle_position": "扩张期中段（2024年9月924行情启动至今），阶段性外部冲击（关税）压制，PB仍处历史极低分位",
+    "cycle_position": "复苏早期",
     "notes": "国投证券（原安信证券）全牌照中型券商，国投泰康信托（信托）参股国投瑞银（公募）；2025年报ROE 6.08%，EPS 0.50元；2026Q1营收39.38亿+31.81%，净利7.66亿+12.63%；关注H1分业务拆解和国资整合动态"
   },
   {
