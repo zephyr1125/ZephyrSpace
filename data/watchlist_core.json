@@ -378,7 +378,7 @@
     "board": "纳",
     "source_etf": "direct",
     "position_role": "全球最大社交广告平台垄断级护城河，OCF印钞机，AI广告精准化飞轮持续强化",
-    "prebuy_conclusion": "逻辑清晰，当前价格合理，可按计划买入",
+    "prebuy_conclusion": "逻辑清晰，当前价格合理，可按计划买入 ⚠️ 分析基于FY2025年报，Q1 2026（2026-04-29 AMC）尚未纳入",
     "watch_reason": "32亿+DAU双边网络效应护城河，FY2025经营利润率41.4%/OCF $115.8B，PEG 0.76（FY2026E PE 22.1x/增速29%），历史低分位，分析师目标$838(+24.7%)",
     "current_price": 672.50,
     "price_date": "2026-04-29",
@@ -394,8 +394,9 @@
       "⚠️ SBC/净利润 33.7%，Non-GAAP EPS较真实利润高估约24%，需打折看待"
     ],
     "dv_ttm": null,
-    "next_earnings_date": "2026-07-30（估算）",
+    "next_earnings_date": "2026-04-29",
     "next_earnings_type": "季报",
+    "pending_earnings_note": "Q1 2026（2026-04-29 AMC 今日盘后）结果尚未纳入分析，财报发布后需更新公司页及本条目，并将next_earnings_date更新为Q2 2026日期",
     "cycle_is_cyclical": false
   },
   {
@@ -405,7 +406,7 @@
     "board": "纽",
     "source_etf": "direct",
     "position_role": "全球第二大支付网络过路费机器，不承担信用风险，双边网络效应准垄断护城河",
-    "prebuy_conclusion": "逻辑清晰，当前价格合理，可按计划买入",
+    "prebuy_conclusion": "逻辑清晰，当前价格合理，可按计划买入 ⚠️ 分析基于FY2025年报，Q1 2026（2026-04-30 BMO）尚未纳入",
     "watch_reason": "FCF/净利润114.6%，FY2025 FCF Margin 52.3%，PEG 1.19（前瞻PE 26.1x/增速22%），历史PE均值35x当前低分位，分析师目标$649(+23.1%)",
     "current_price": 527.37,
     "price_date": "2026-04-29",
@@ -421,8 +422,9 @@
       "⚠️ 实时支付（FedNow/UPI等）和加密货币支付对传统卡网络的长期替代威胁"
     ],
     "dv_ttm": 0.68,
-    "next_earnings_date": "2026-07-29（估算）",
+    "next_earnings_date": "2026-04-30",
     "next_earnings_type": "季报",
+    "pending_earnings_note": "Q1 2026（2026-04-30 BMO 明日盘前）结果尚未纳入分析，财报发布后需更新公司页及本条目，并将next_earnings_date更新为Q2 2026日期",
     "cycle_is_cyclical": false
   }
 ]
