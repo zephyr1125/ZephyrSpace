@@ -2026,6 +2026,29 @@
         "cycle_is_cyclical": true,
         "cycle_position": "景气上行",
         "entry_trigger": "价格回调至65元以下，FY2026E PE进入26-34x较好区间后建仓"
+      },
+      {
+        "name": "招商银行",
+        "code": "600036.SH",
+        "source_etf": "direct",
+        "board": "沪",
+        "position_role": "利率周期底部底仓型银行配置，低于账面价值买入行业龙头",
+        "prebuy_conclusion": "逻辑清晰，当前价格合理，可按计划买入。PB=0.91x（5年18.8%低分位），Q1 2026收入+3.8%拐点初现，利率/信用周期底部/复苏早期，远期股息率约5.1%，周期升档+政策顺风PS+3综合达growth。",
+        "watch_reason": "零售银行护城河最深（AUM 13.2T），Q1 2026收入拐点确认（近8季最强），PB=0.91x破账面价值，远期股息率5.1%，政策顺风PS+3，利率周期底部。",
+        "current_price": 39.6,
+        "price_date": "2026-04-29",
+        "price_bands": [50, 45, 38],
+        "valuation_anchor": "以PB分位定价：追高区>50(PB>1.11x，周期修复已充分定价) / 中性区45-50(PB 1.0-1.11x，可持有) / 较好区间38-45(PB 0.85-1.0x，低于账面价值，赔率良好) / 更低区间<38(PB<0.85x，安全边际充足)",
+        "risk_flags": [
+          "PBOC继续降息→NIM进一步压缩→ROE回升路径延长，Q1 2026 NIM待年报官方确认",
+          "Q1 2026收入拐点可持续性未验证，Q2 2026为关键验证节点",
+          "宏观信用收缩若超预期，NPL可能抬升（当前估算0.95%，处于历史低位）"
+        ],
+        "dv_ttm": 7.61,
+        "next_earnings_date": "2026-08-31",
+        "next_earnings_type": "半年报",
+        "cycle_is_cyclical": true,
+        "cycle_position": "底部/复苏早期"
       }
     ],
     "radar": [
