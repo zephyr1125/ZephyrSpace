@@ -370,5 +370,59 @@
     "next_earnings_date": "2026-07-15（估算）",
     "next_earnings_type": "季报",
     "cycle_is_cyclical": false
+  },
+  {
+    "name": "Meta",
+    "code": "META.US",
+    "market": "US",
+    "board": "纳",
+    "source_etf": "direct",
+    "position_role": "全球最大社交广告平台垄断级护城河，OCF印钞机，AI广告精准化飞轮持续强化",
+    "prebuy_conclusion": "逻辑清晰，当前价格合理，可按计划买入",
+    "watch_reason": "32亿+DAU双边网络效应护城河，FY2025经营利润率41.4%/OCF $115.8B，PEG 0.76（FY2026E PE 22.1x/增速29%），历史低分位，分析师目标$838(+24.7%)",
+    "current_price": 672.50,
+    "price_date": "2026-04-29",
+    "price_bands": [
+      700,
+      580,
+      440
+    ],
+    "valuation_anchor": "FY2026E Non-GAAP EPS $30.39：追高区>$700(>23x) / 中性区$580-700(19-23x，含当前$672) / 较好区间$440-580(14-19x) / 更低区间<$440(<14x)",
+    "risk_flags": [
+      "🔴 FTC反垄断诉讼：强制拆分Instagram/WhatsApp风险，可能颠覆核心商业模式",
+      "🟡 FY2025 CapEx $69.7B急速膨胀，FCF由$54B降至$46B，CapEx失控将持续压制FCF",
+      "⚠️ SBC/净利润 33.7%，Non-GAAP EPS较真实利润高估约24%，需打折看待"
+    ],
+    "dv_ttm": null,
+    "next_earnings_date": "2026-07-30（估算）",
+    "next_earnings_type": "季报",
+    "cycle_is_cyclical": false
+  },
+  {
+    "name": "万事达卡",
+    "code": "MA.US",
+    "market": "US",
+    "board": "纽",
+    "source_etf": "direct",
+    "position_role": "全球第二大支付网络过路费机器，不承担信用风险，双边网络效应准垄断护城河",
+    "prebuy_conclusion": "逻辑清晰，当前价格合理，可按计划买入",
+    "watch_reason": "FCF/净利润114.6%，FY2025 FCF Margin 52.3%，PEG 1.19（前瞻PE 26.1x/增速22%），历史PE均值35x当前低分位，分析师目标$649(+23.1%)",
+    "current_price": 527.37,
+    "price_date": "2026-04-29",
+    "price_bands": [
+      706,
+      606,
+      484
+    ],
+    "valuation_anchor": "FY2026E Non-GAAP EPS $20.19：追高区>$706(>35x，历史均值上沿) / 中性区$606-706(30-35x) / 较好区间$484-606(24-30x，含当前$527) / 更低区间<$484(<24x)",
+    "risk_flags": [
+      "🟡 反垄断监管风险：欧美对Visa/MA双寡头支付网络的持续调查，可能影响手续费定价",
+      "🟡 经济衰退将直接压低跨境支付交易量，收入和利润弹性较大",
+      "⚠️ 实时支付（FedNow/UPI等）和加密货币支付对传统卡网络的长期替代威胁"
+    ],
+    "dv_ttm": 0.68,
+    "next_earnings_date": "2026-07-29（估算）",
+    "next_earnings_type": "季报",
+    "cycle_is_cyclical": false
   }
 ]

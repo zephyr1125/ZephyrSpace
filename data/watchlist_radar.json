@@ -2374,5 +2374,34 @@
     "next_earnings_date": "2026-08-31（估算）",
     "next_earnings_type": "半年报",
     "entry_trigger": "商誉减值测试无重大减值（半年报披露），且净利率提升至2%以上，价格回落至26元以下"
+  },
+  {
+    "name": "联合健康",
+    "code": "UNH.US",
+    "market": "US",
+    "board": "纽",
+    "source_etf": "direct",
+    "position_role": "美国最大健康险+健康管理平台，利润断崖期困境反转跟踪标的",
+    "prebuy_conclusion": "可以试错，但只能小仓位（≤5%）",
+    "watch_reason": "FY2025 MLR升至89.2%导致利润两年跌44%，但FCF/净利润133%现金流未崩；创始人Hemsley回归主导修复；FY2026E EPS $18.03恢复预期+36%，等待MLR拐点确认",
+    "current_price": 368.43,
+    "price_date": "2026-04-29",
+    "price_bands": [
+      420,
+      350,
+      310
+    ],
+    "valuation_anchor": "FY2026E EPS $18.03：追高区>$420(>23x，修复预期透支) / 中性区$350-420(19-23x，含当前$368) / 较好区间$310-350(17-19x，MLR拐点后可建仓) / 更低区间<$310(<17x，触发器满足时积极买入)",
+    "risk_flags": [
+      "🔴 Medicare Advantage MLR从83.2%升至89.2%（2年+6pp），结构性恶化趋势未见明确反转",
+      "🔴 DOJ对Medicare billing practices调查，罚款金额和时间线高度不确定",
+      "🟡 FY2025有效税率12.9%（历史20-24%），FY2026正常化将额外拖累~$1.5B净利",
+      "🟡 CEO Andrew Witty 2025年6月辞职，创始人Hemsley回归但困局严峻"
+    ],
+    "entry_trigger": "连续2个季度MLR <86%（确认赔付率拐点）；或 股价跌至$310以下（FY+1E PE <17.2x，安全边际充足）",
+    "dv_ttm": 2.32,
+    "next_earnings_date": "2026-07-17（估算）",
+    "next_earnings_type": "季报",
+    "cycle_is_cyclical": false
   }
 ]
