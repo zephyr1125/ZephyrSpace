@@ -1269,9 +1269,9 @@
     "code": "300442.SZ",
     "source_etf": "930713",
     "position_role": "IDC龙头，AI算力基础设施核心",
-    "prebuy_conclusion": "当前92.95元处于中性偏好区间，PE=29x，Q1加速+53.6%；IDC逻辑持续验证，回调至85元以下可加仓。",
+    "prebuy_conclusion": "当前90.44元处于较好区间，PE=28.41x，Q1加速+53.6%；IDC逻辑持续验证，回调至85元以下可加仓，70元以下大仓介入。",
     "watch_reason": "重资产IDC龙头，Q1加速，ROE=42.8%，PE相较光模块同类更合理，AI算力扩建直接受益。",
-    "current_price": 92.95,
+    "current_price": 90.44,
     "price_bands": [
       100.0,
       85.0,
@@ -1282,11 +1282,11 @@
       "单一大客户依赖风险，若头部云厂商缩减资本开支直接影响出租率",
       "股权质押和大股东减持历史，需关注治理风险"
     ],
-    "valuation_anchor": "PE区间：追高区>100(PE>34x) / 中性区85-100(PE 29-34x，当前位置) / 较好区间70-85(PE 24-29x) / 更低区间<70(PE<24x)",
-    "price_date": "2026-04-24",
+    "valuation_anchor": "PE区间：追高区>100(PE>34x) / 中性区85-100(PE 29-34x) / 较好区间70-85(PE 24-29x，当前90.44元接近) / 更低区间<70(PE<24x)",
+    "price_date": "2026-04-29",
     "board": "创",
     "dv_ttm": 0.57,
-    "next_earnings_date": "2026-08-31估算",
+    "next_earnings_date": "2026-08-31（估算）",
     "next_earnings_type": "半年报"
   },
   {
