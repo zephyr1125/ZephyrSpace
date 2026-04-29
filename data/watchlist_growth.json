@@ -6,7 +6,11 @@
     "prebuy_conclusion": "2026Q1净利+202%、毛利率25%，验证新周期上升；当前前向PE约35x处黄灯区偏高，等候回调至165元以下建仓",
     "watch_reason": "A股稀缺的半导体工厂洁净室EPC纯正标的，台资技术体系+头部客户关系护城河，ROE 43%且FCF强劲，政策顺风PS+4，逢低布局价值大",
     "current_price": 192.38,
-    "price_bands": [210, 165, 120],
+    "price_bands": [
+      210,
+      165,
+      120
+    ],
     "risk_flags": [
       "工程类周期性强，依赖下游半导体/光伏资本开支",
       "PB历史分位99.2%，当前估值偏高",
@@ -1668,5 +1672,135 @@
     "notes": "2026Q1业绩：营收18.13亿+16.5%，净利3.45亿+31.4%，毛利率39.16%。PS+5（核电⭐⭐+能源安全⭐⭐+整治内卷⭐），绿灯区上界+15%。",
     "cycle_is_cyclical": true,
     "cycle_position": "复苏中期"
+  },
+  {
+    "name": "四方股份",
+    "code": "601126.SH",
+    "tier": "growth",
+    "board": "沪",
+    "prebuy_conclusion": "继电保护+调度自动化平台龙头，基本面优质（净现比147.8%），政策+6强顺风；但PE 54.3x处历史P99.9、PB 9.19x处P99.8，近60日股价已涨+50%，当前严重高估，等回调至35-40元绿灯区再建仓。",
+    "watch_reason": "电网神经系统供应商，继电保护市占率高，受益新型电力系统建设政策+6，现金流质量极佳；等价格合理后是高质量成长仓选手。",
+    "current_price": 53.99,
+    "price_bands": [
+      45,
+      40,
+      35
+    ],
+    "price_date": "2026-04-29",
+    "valuation_anchor": "PE法：追高区>45元(PE>41x) / 中性区40-45元(PE 36-41x) / 较好区间35-40元(PE 32-36x) / 更优区间<35元(PE<32x)；政策+6上移10%",
+    "risk_flags": [
+      "当前PE/PB均在历史P99分位，严重高估",
+      "近60日已涨+50%，短期透支风险高",
+      "电网投资周期性，项目集中度较高",
+      "收入确认季节性强，H1通常较弱"
+    ],
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报",
+    "dv_ttm": 0.8,
+    "notes": "2026Q1营收+18.05%/净利+12.08%；净现比147.8%，现金流5/5；等PE回落至35x以下（约35-40元）再建仓"
+  },
+  {
+    "code": "300059.SZ",
+    "name": "东方财富",
+    "board": "创",
+    "tier": "growth",
+    "position_role": "互联网财经平台龙头（天天基金+东方财富证券），A股成交量弹性最强标的",
+    "watch_reason": "唯一ROE>=14%的证券类公司，互联网平台护城河不可复制，2026Q1营收+44%验证弹性，PS+2政策顺风",
+    "prebuy_conclusion": "互联网平台属性+ROE 14%+Q1强劲，公司质量最优；等A股日均成交量持续>=1.2万亿验证后可加仓",
+    "cycle_is_cyclical": true,
+    "cycle_position": "复苏中期",
+    "price_bands": [
+      28,
+      22,
+      16
+    ],
+    "price_date": "2026-04-29",
+    "current_price": 20.26,
+    "valuation_anchor": "PB为主兼顾PS（互联网平台）：绿灯区18-22元/中性区22-26元/追高区>26元",
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报",
+    "risk_flags": [
+      "A股成交量萎缩直接打击经纪+两融收入",
+      "基金销售市占率受支付宝/微信竞争挤压",
+      "PB历史绝对值高，需用自身历史分位"
+    ]
+  },
+  {
+    "code": "601066.SH",
+    "name": "中信建投",
+    "board": "沪",
+    "tier": "growth",
+    "position_role": "A股IPO承销市场份额前三的头部投资银行，中信系央企背景",
+    "watch_reason": "ROE修复至10.51%+PB历史1-3%极低分位+PS+4，投行声誉溢价已被打完，处于历史性低估区",
+    "prebuy_conclusion": "PB处于5年1-3%极低位，ROE修复至10.51%，等价格窗口验证",
+    "cycle_is_cyclical": true,
+    "cycle_position": "底部/复苏早期",
+    "price_bands": [
+      32,
+      25,
+      18
+    ],
+    "price_date": "2026-04-29",
+    "current_price": 22.1,
+    "valuation_anchor": "PB为主定价：绿灯区PB 2.0-2.5x/中性区2.5-3.0x/追高区>3.0x",
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报",
+    "risk_flags": [
+      "IPO监管政策再度收紧将直接冲击投行收入",
+      "与中信证券存在同系竞争",
+      "高薪文化压制ROE天花板"
+    ]
+  },
+  {
+    "code": "600030.SH",
+    "name": "中信证券",
+    "board": "沪",
+    "tier": "growth",
+    "position_role": "A股规模最大综合券商，经纪/投行/资管/自营全线覆盖，行业护城河最宽",
+    "watch_reason": "行业规模龙头+2026Q1净利+54.6%+PS+4双重顺风，ROE接近10%并持续改善",
+    "prebuy_conclusion": "龙头规模护城河+Q1业绩验证+政策明确顺风，当前PB 47%分位中性，等回落至1.2-1.3x加仓",
+    "cycle_is_cyclical": true,
+    "cycle_position": "复苏中期",
+    "price_bands": [
+      33,
+      27,
+      21
+    ],
+    "price_date": "2026-04-29",
+    "current_price": 27.3,
+    "valuation_anchor": "PB定价：追高区>33元/中性区27-33元/较好区间21-27元/安全边际<21元",
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报",
+    "risk_flags": [
+      "A股行情逆转冲击自营+经纪+投行三线",
+      "ROE仍在9.81%边界需H1确认破10%",
+      "中美贸易摩擦影响跨境业务"
+    ]
+  },
+  {
+    "code": "600999.SH",
+    "name": "招商证券",
+    "board": "沪",
+    "tier": "growth",
+    "position_role": "招商局集团旗下综合券商，背靠招商银行协同，机构+零售双轮驱动",
+    "watch_reason": "2026Q1营收+48%最强增速，ROE持续改善接近10%，PB历史5.9%极低分位，PS+3政策顺风",
+    "prebuy_conclusion": "Q1强劲增长验证复苏逻辑，PB处历史极低区，H1确认ROE>=10%后可升core tier",
+    "cycle_is_cyclical": true,
+    "cycle_position": "复苏早期",
+    "price_bands": [
+      26,
+      19,
+      14
+    ],
+    "price_date": "2026-04-29",
+    "current_price": 15.64,
+    "valuation_anchor": "PB定价（BPS 14.30元）：安全边际<14.3元/较好区间14.3-18.6元/中性区18.6-25.7元/追高>25.7元",
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报",
+    "risk_flags": [
+      "营收+48%需验证是否可持续",
+      "ROE 9.52%仍在门槛边界",
+      "招商系内部协同若弱化影响护城河"
+    ]
   }
 ]

@@ -2214,5 +2214,85 @@
     "next_earnings_type": "半年报",
     "policy_score": 4,
     "last_updated": "2026-04-29"
+  },
+  {
+    "name": "三一重工",
+    "code": "600031.SH",
+    "tier": "radar",
+    "board": "沪",
+    "prebuy_conclusion": "全球工程机械龙头（挖掘机/混凝土泵车），典型周期股；2026Q1净利仅+0.46%，利润增速骤降是核心疑点；PB 2.13x处历史33%分位，等半年报验证利润修复或PB回落至1.9x以下（约18.7元）再入场。",
+    "watch_reason": "工程机械全球龙头，海外收入占比持续提升（对冲国内地产弱周期），现金流质量满分；PB处中低位，等价格窗口是高质量周期仓选手。",
+    "current_price": 20.5,
+    "price_bands": [
+      29,
+      23,
+      19
+    ],
+    "price_date": "2026-04-29",
+    "valuation_anchor": "PB法（工程机械周期股）：追高区>29.6元(PB>3.1x) / 中性区22.7-29.6元(PB 2.4-3.1x) / 较好区间18.7-22.7元(PB 1.9-2.4x) / 更优区间<18.7元(PB<1.9x)",
+    "risk_flags": [
+      "Q1净利+0.46%，利润增速骤降，扣非净利验证待出",
+      "国内地产弱复苏持续拖累工程机械需求",
+      "海外关税风险（中美贸易摩擦）",
+      "工程机械周期顶部PE陷阱风险"
+    ],
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报",
+    "cycle_is_cyclical": true,
+    "cycle_position": "复苏中期",
+    "dv_ttm": 2.1,
+    "notes": "2026Q1营收+14.0%/净利仅+0.46%，利润增速骤降需关注；海外收入占比~45%是核心看点；升档条件：半年报净利同比>15%或PB<1.9x"
+  },
+  {
+    "code": "002736.SZ",
+    "name": "国信证券",
+    "board": "深",
+    "tier": "radar",
+    "position_role": "深圳国资背景中型综合券商，零售经纪+机构业务均衡",
+    "watch_reason": "2025年报ROE已升至10.69%突破10%门槛，PB 5年26.3%低分位，等Q1报验证ROE持续性",
+    "prebuy_conclusion": "ROE已破门槛+PB低位，等Q1确认ROE持续改善后可升growth tier",
+    "cycle_is_cyclical": true,
+    "cycle_position": "复苏早期",
+    "price_bands": [
+      16,
+      12,
+      9
+    ],
+    "price_date": "2026-04-29",
+    "current_price": 11.12,
+    "valuation_anchor": "PB定价：较好区间10-12.6元/中性区12.6-16元/追高>16元",
+    "next_earnings_date": "2026-04-30",
+    "next_earnings_type": "一季报",
+    "risk_flags": [
+      "Q1数据若恶化需重新评估",
+      "中型券商规模劣势",
+      "深圳本地业务集中"
+    ]
+  },
+  {
+    "code": "601995.SH",
+    "name": "中金公司",
+    "board": "沪",
+    "tier": "radar",
+    "position_role": "中国最具国际化特色的投资银行，专注机构客户/IPO承销/跨境业务",
+    "watch_reason": "PB历史2.6%极低分位+国际投行差异化护城河+ROE改善趋势，等Q1确认复苏节奏",
+    "prebuy_conclusion": "差异化定位最强+PB极低位，等Q1确认ROE改善后可升growth tier",
+    "cycle_is_cyclical": true,
+    "cycle_position": "复苏中期",
+    "price_bands": [
+      48,
+      38,
+      28
+    ],
+    "price_date": "2026-04-29",
+    "current_price": 34.43,
+    "valuation_anchor": "PB定价：绿灯区31-38元/中性区38-48元/追高>48元",
+    "next_earnings_date": "2026-04-30",
+    "next_earnings_type": "一季报",
+    "risk_flags": [
+      "IPO监管再收紧直接冲击投行收入",
+      "高薪文化压制ROE",
+      "跨境业务受中美关系影响"
+    ]
   }
 ]
