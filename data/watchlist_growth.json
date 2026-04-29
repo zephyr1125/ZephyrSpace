@@ -703,24 +703,27 @@
     "board": "纳",
     "source_etf": "direct",
     "position_role": "HBM内存寡占+CHIPS Act政策护城河，AI算力基础设施配套",
-    "prebuy_conclusion": "逻辑清晰，当前价格合理，可按计划买入",
-    "watch_reason": "HBM3E供应NVIDIA Blackwell全年售罄，PB ~2.1x历史中低位，6x Forward PE极低",
-    "current_price": 97.0,
-    "price_date": "2026-04-26",
+    "prebuy_conclusion": "可以试错，但只能小仓位 - HBM AI内存结构性需求成立；当前$521已超分析师均值目标$483，YoY+500%；FY2026E前瞻PE 8.85x极低但半导体周期下行风险高，等回调至$420-450再考虑建仓",
+    "watch_reason": "HBM3E/4供应NVIDIA Blackwell/B300算力飞轮，全球三大DRAM制造商之一（三星/海力士/美光）；TTM净利$241亿爆发，FY2026E EPS $58.96前瞻PE仅8.85x；OCF/净利127%体质健康，CHIPS Act补贴降低长期资本成本",
+    "current_price": 521.54,
+    "price_date": "2026-04-29",
     "price_bands": [
-      140,
-      110,
-      80
+      550,
+      450,
+      350
     ],
-    "valuation_anchor": "FY2026E Non-GAAP EPS ~$16，公允价值中枢$160（10x EPS）",
+    "valuation_anchor": "FY2026E EPS $58.96（FY截至2026-08）：追高区>$550(>9.3xFE,超历史均值+动量驱动) / 中性区$450-550(7.6-9.3xFE,含当前价) / 较好区间$350-450(5.9-7.6xFE) / 更低区间<$350(<5.9xFE,周期恐慌时出现)",
     "risk_flags": [
-      "出口管制已损失中国数据中心12-15%营收",
-      "DRAM周期提前反转风险",
-      "CapEx极高FCF极薄"
+      "极度周期性：历史三年涨两年崩，FY2023亏损$58亿；AI资本支出降温可在2季度内引发HBM需求骤降",
+      "股价已超分析师均值目标$483（当前$521），估值完全依赖FY2026E盈利高度兑现",
+      "CapEx密集（TTM $204亿），FCF/净利仅43%，高强度产能扩张若需求减速将迅速耗尽现金",
+      "中国出口管制持续扩大敞口（当前约10%营收），若制裁升级将直接冲击营收"
     ],
-    "dv_ttm": 0.46,
+    "dv_ttm": 0.09,
     "next_earnings_date": "2026-06-24（估算）",
-    "next_earnings_type": "季报"
+    "next_earnings_type": "季报",
+    "cycle_is_cyclical": true,
+    "cycle_position": "景气高峰"
   },
   {
     "name": "Rocket Lab",
@@ -1804,5 +1807,32 @@
       "ROE 9.52%仍在门槛边界",
       "招商系内部协同若弱化影响护城河"
     ]
+  },
+  {
+    "name": "通用动力",
+    "code": "GD.US",
+    "market": "US",
+    "board": "纽",
+    "source_etf": "direct",
+    "position_role": "美国多元国防核心持仓，国防预算上行周期受益+Gulfstream商务机成长双引擎",
+    "prebuy_conclusion": "逻辑清晰，等待更合适价格或验证点 - Q1 2026大超预期已在股价反映（今日+10.6%），FCF TTM $62亿优质；当前$347处于中性区偏上，建议等回调至$290-320再建仓",
+    "watch_reason": "美国国防预算上行周期+NATO盟友军费增长，多年合同积压可见性极高；Q1 2026营收/利润/积压全部两位数增长+全年EPS指引上调；TTM FCF $62亿/净利143%，净债务持续压降，稳定中低双位数复合增长",
+    "current_price": 346.81,
+    "price_date": "2026-04-29",
+    "price_bands": [
+      385,
+      320,
+      270
+    ],
+    "valuation_anchor": "FY2026E EPS $16.81：追高区>$385(>22.9xFE) / 中性区$320-385(19-22.9xFE，含当前价) / 较好区间$270-320(16-19xFE) / 更低区间<$270(<16xFE,历史低估区)",
+    "risk_flags": [
+      "商誉$210亿占总资产36%，历史并购积累，若核心业务下滑存在减值风险",
+      "政治周期风险：政府换届或预算僵局可推迟/取消大额合同",
+      "今日财报大涨10%后估值收窄，前瞻PE 20.6x当前无明显安全边际"
+    ],
+    "dv_ttm": 2.05,
+    "next_earnings_date": "2026-07-23（估算）",
+    "next_earnings_type": "季报",
+    "cycle_is_cyclical": false
   }
 ]

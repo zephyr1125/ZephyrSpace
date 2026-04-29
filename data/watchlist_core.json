@@ -343,5 +343,32 @@
     "dv_ttm": 3.32,
     "next_earnings_date": "2026-04-29",
     "next_earnings_type": "季报"
+  },
+  {
+    "name": "摩根大通",
+    "code": "JPM.US",
+    "market": "US",
+    "board": "纽",
+    "source_etf": "direct",
+    "position_role": "全球最强银行长线底仓，ROTCE 18.7%+持续回购分红复利机器，金融板块压估值时的错杀机会",
+    "prebuy_conclusion": "逻辑清晰，等待更合适价格或验证点 - ROTCE 18.7%/FY2025净利$55.7B体质成立，金融板块YTD-4%带来相对低估；当前$310处于中性区，建议等回调至$280-295再建仓",
+    "watch_reason": "全球最高盈利银行（ROTCE 18.7%），FY2025回购$316亿+分红$166亿返还$482亿（净利87%）；前瞻PE 14.2x处历史合理低位；规模护城河深（$4万亿总资产），Jamie Dimon领导运营效率持续领先同业",
+    "current_price": 310.31,
+    "price_date": "2026-04-29",
+    "price_bands": [
+      350,
+      310,
+      265
+    ],
+    "valuation_anchor": "FY2026E EPS $21.88：追高区>$350(>16xFE,历史高分位) / 中性区$310-350(14-16xFE,含当前价) / 较好区间$265-310(12-14xFE) / 更低区间<$265(<12xFE,历史罕见低估)",
+    "risk_flags": [
+      "降息周期将压缩NIM净息差，NII（占收入约55%）面临压力；降息2次以上将直接影响FY2027 EPS",
+      "信贷周期风险：FY2025准备金$142亿，宏观下行时坏账可快速扩大，ROE/ROTCE将显著下滑",
+      "巴塞尔III终版监管资本要求，若CET1提高可能压缩回购空间和股东回报"
+    ],
+    "dv_ttm": 1.68,
+    "next_earnings_date": "2026-07-15（估算）",
+    "next_earnings_type": "季报",
+    "cycle_is_cyclical": false
   }
 ]
