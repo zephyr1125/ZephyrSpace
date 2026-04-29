@@ -2,6 +2,7 @@
   {
     "name": "亚翔集成",
     "code": "603929.SH",
+    "tier": "growth",
     "position_role": "半导体洁净室工程龙头",
     "prebuy_conclusion": "2026Q1净利+202%、毛利率25%，验证新周期上升；当前前向PE约35x处黄灯区偏高，等候回调至165元以下建仓",
     "watch_reason": "A股稀缺的半导体工厂洁净室EPC纯正标的，台资技术体系+头部客户关系护城河，ROE 43%且FCF强劲，政策顺风PS+4，逢低布局价值大",
@@ -178,6 +179,7 @@
   {
     "name": "山西汾酒",
     "code": "600809.SH",
+    "tier": "growth",
     "source_etf": "399997",
     "position_role": "白酒成长龙头 / 弹性仓",
     "prebuy_conclusion": "2026Q1营收-9.7%/净利-19.0%双降确认承压，成长逻辑进入修复等待期；但PE历史分位0.5%极低，PS=+4政策利好消费升级，当前143元处于绿灯区（118-150元），建议小仓位持有，等2026H1合同负债回升+批价稳定信号再评估加仓。",
@@ -1590,6 +1592,9 @@
     "next_earnings_type": "半年报",
     "cycle_is_cyclical": true,
     "cycle_position": "复苏早期"
+  },
+  {
+    "name": "同花顺",
     "code": "300033.SZ",
     "source_etf": "direct",
     "board": "创",
