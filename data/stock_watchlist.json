@@ -3062,24 +3062,28 @@
         "name": "华能国际",
         "board": "沪",
         "sector": "公用事业/电力",
-        "last_close": 6.95,
+        "last_close": 6.91,
         "price_bands": [
-          9.0,
-          6.75,
-          5.4
+          8.0,
+          6.67,
+          5.71
         ],
-        "valuation_anchor": "以股息率为锚：避开>9.00元(DY<3%)，关注6.75-9.00元(DY3-4%)，较好5.40-6.75元(DY4-5%)，理想<5.40元(DY>5%)",
-        "dv_ttm": 3.88,
-        "prebuy_conclusion": "全批次PE最低(7.57x)，OCF4.66x极强，DY⚠️3.88%略低于门槛，当前处于60日低位区间，等DY达4%（约6.75元以下）再建仓",
-        "entry_trigger": "股价跌至6.75元以下（DY>4%），或煤价同比持续下降且季报净利同比转正",
-        "next_earnings_date": "2026-04-29",
-        "next_earnings_type": "一季报",
+        "valuation_anchor": "以2025年报前向股息率(0.40元/股)为锚：避开>8.00元(ForwardDY<5%)，中性区6.67-8.00元(DY5-6%)，较好5.71-6.67元(DY6-7%)，理想<5.71元(DY>7%)",
+        "dv_ttm": 3.87,
+        "prebuy_conclusion": "Forward DY 5.79%(2025年报0.40元/股)已超5%门槛，PB 1.55x近5年最低，但2026Q1净利-9.83%下滑初段，等H1降幅收窄(<10%)或价格跌至6.67元以下(DY>6%)再建底仓",
+        "entry_trigger": "H1净利同比降幅收窄至<10%，或股价跌至6.67元以下（ForwardDY>6%）",
+        "next_earnings_date": "2026-08-31（估算）",
+        "next_earnings_type": "半年报",
         "tags": [
           "绿色电力",
           "火电",
           "新能源转型",
           "大盘央企"
-        ]
+        ],
+        "forward_dv": 5.79,
+        "last_updated": "2026-04-29",
+        "cycle_is_cyclical": true,
+        "cycle_position": "周期高点之后下行初段（煤价改善已兑现，电价市场化持续承压，2026Q1净利-9.83%）"
       },
       {
         "code": "600483.SH",
