@@ -3122,7 +3122,7 @@
         "position_role": "盐湖提锂+钾肥双主业，察尔汗盐湖资源型周期底仓",
         "prebuy_conclusion": "高质量资源型公司，当前估值中性偏贵（PE约20x），等价格回落至较好区间再布局，radar追踪。",
         "watch_reason": "察尔汗盐湖全球稀缺、不可复制；盐湖提锂成本行业最低；ROE 20%+（2025），OCF/净利141%，财务质量一线；等锂钾价格底部+价格窗口。",
-        "current_price": 37.42,
+        "current_price": 37.02,
         "price_bands": [
           42.0,
           35.0,
@@ -3134,12 +3134,14 @@
           "国企决策效率偏低，产能扩张和分红决策可能滞后预期"
         ],
         "valuation_anchor": "基于2025年净利84.8亿（市值1980亿）：追高区>42(PE>25x) / 中性区35-42(PE 21-25x，当前处于此区间) / 较好区间28-35(PE 16-21x，可研究性布局) / 更低区间<28(PE<16x，安全边际明显)",
-        "price_date": "2026-04-24",
+        "price_date": "2026-04-28",
         "board": "深",
         "entry_trigger": "股价跌至32元以下（对应2025年PE约16x），或公司公告2026年度分红且股息率≥3%",
         "dv_ttm": null,
-        "next_earnings_date": "2026-04-30",
-        "next_earnings_type": "一季报"
+        "next_earnings_date": "2026-08-31",
+        "next_earnings_type": "半年报",
+        "cycle_is_cyclical": true,
+        "cycle_position": "出清期"
       },
       {
         "name": "雷赛智能",
@@ -3304,7 +3306,7 @@
         "position_role": "全球锂资源双核心资产（Greenbushes+SQM），困境反转弹性仓",
         "prebuy_conclusion": "2026Q1年化PE约17x，处于中性区，radar追踪，等半年报确认盈利可持续+OCF回归后再考虑布局。",
         "watch_reason": "Greenbushes锂辉石矿+SQM23.77%股权是全球稀缺资产，2026Q1净利18.76亿同比+1700%，困境反转拐点已现，等确认信号。",
-        "current_price": 73.65,
+        "current_price": 72.53,
         "price_bands": [
           88.0,
           65.0,
@@ -3317,12 +3319,14 @@
           "长期借款106亿，历史激进并购遗留债务，财务费用压力"
         ],
         "valuation_anchor": "基于2026Q1年化净利约75亿（=Q1×4）：追高区>88(PE>25x) / 中性区65-88(PE18-25x，当前73元处于此区间) / 较好区间52-65(PE14-18x) / 更低区间<52(PE<14x，安全边际明显)",
-        "price_date": "2026-04-27",
+        "price_date": "2026-04-28",
         "board": "深",
         "entry_trigger": "股价跌至55元以下（年化PE约13x），或2026半年报净利润累计>35亿且OCF/净利>60%双重确认",
         "dv_ttm": null,
-        "next_earnings_date": "2026-08-31（估算）",
-        "next_earnings_type": "半年报"
+        "next_earnings_date": "2026-08-31",
+        "next_earnings_type": "半年报",
+        "cycle_is_cyclical": true,
+        "cycle_position": "出清期"
       },
       {
         "name": "汇川技术",
@@ -4082,6 +4086,32 @@
         "policy_score": 4,
         "entry_trigger": "H1 2026半年报：存货<20亿 AND 经营现金流>0 AND 净利率回升至>11%",
         "last_updated": "2026-04-29"
+      },
+      {
+        "name": "赣锋锂业",
+        "code": "002460.SZ",
+        "source_etf": "direct",
+        "position_role": "全球锂化合物龙头，全产业链布局（资源+化合物+电池），锂价周期弹性仓",
+        "prebuy_conclusion": "全球锂化合物龙头，产业链最全，但ROE仅3.8%，PB 5年95%高分位，市场已提前定价复苏。当前等待锂价确认性反弹+ROE回归5%+。",
+        "watch_reason": "全产业链锂公司（锂矿+化合物+电池），比天齐多元化。PB 95%高分位=市场已定价复苏。2025年营收+22.1%量的恢复已开始；等锂价持续反弹确认后升档。",
+        "current_price": 82.10,
+        "price_bands": [90, 73, 52],
+        "risk_flags": [
+          "PB 5年95%高分位：市场已大幅提前定价复苏，无安全边际",
+          "锂价强周期：2024年亏损20.7亿，利润高度依赖碳酸锂/氢氧化锂价格",
+          "电池业务持续亏损，拖累整体ROE修复进度",
+          "海外资产风险：阿根廷政治/汇率风险，爱尔兰项目进度不确定"
+        ],
+        "valuation_anchor": "基于2026E净利35-50亿预期：追高区>90(PE>49x/36x) / 中性区73-90(PE34-49x/29-36x，当前82元) / 较好区间52-73(PE25-34x/21-29x) / 更低区间<52(PE<25x，安全边际充足)",
+        "price_date": "2026-04-28",
+        "board": "深",
+        "entry_trigger": "①股价跌至65元以下（预期PE约33x基于50亿利润）② 2026半年报净利累计>20亿且OCF/净利>60% → 触发升档评估",
+        "dv_ttm": 0.18,
+        "next_earnings_date": "2026-08-31",
+        "next_earnings_type": "半年报",
+        "cycle_is_cyclical": true,
+        "cycle_position": "出清期",
+        "notes": "全产业链锂公司（锂矿+化合物+电池），比天齐多元化。PB 95%高分位=市场已定价复苏。触发升档：锂价>10万/吨持续3月+半年报净利>20亿+OCF/净利>60%"
       }
     ]
   },
