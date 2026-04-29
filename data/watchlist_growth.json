@@ -1589,10 +1589,7 @@
     "next_earnings_date": "2026-08-31",
     "next_earnings_type": "半年报",
     "cycle_is_cyclical": true,
-    "cycle_position": "底部/复苏早期"
-  },
-  {
-    "name": "同花顺",
+    "cycle_position": "复苏早期"
     "code": "300033.SZ",
     "source_etf": "direct",
     "board": "创",
