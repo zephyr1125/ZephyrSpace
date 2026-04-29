@@ -4431,5 +4431,29 @@
       "每次 PreBuy 更新时同步更新 cycle_position",
       "判断依据：PB历史分位(最重要) + ROE趋势 + 行业产品价格趋势，见 SKILL.md 模块14"
     ]
-  }
+  },
+  "growth": [
+    {
+      "name": "国信证券",
+      "code": "002736.SZ",
+      "source_etf": "399975.SZ",
+      "position_role": "证券行业周期价值仓，受益A股市场活跃度复苏加国资改革，PB低分位建仓标的",
+      "prebuy_conclusion": "逻辑清晰，当前PB处于5年历史26分位（1.1646），复苏早期可布局；较好入场区间10.00-12.60元",
+      "watch_reason": "ROE持续复苏至2025年10.69%，PB处于历史低分位，国资背景稳定，政策顺风PS=+2，cycle_position=复苏早期",
+      "current_price": 11.12,
+      "price_date": "2026-04-29",
+      "board": "深",
+      "dv_ttm": 3.85,
+      "price_bands": [
+        14.0,
+        12.6,
+        10.0
+      ],
+      "valuation_anchor": "以PB为主锚：追高区>14.00（PB>1.47）；中性区12.60-14.00（PB 1.32-1.47）；较好区间10.00-12.60（PB 1.05-1.32含PS加权）；强买区<10.00（PB<1.05历史极低）",
+      "next_earnings_date": "2026-04-30",
+      "next_earnings_type": "一季报",
+      "cycle_is_cyclical": true,
+      "cycle_position": "复苏早期"
+    }
+  ]
 }
