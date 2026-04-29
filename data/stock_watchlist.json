@@ -74,7 +74,7 @@
     "cycle_is_cyclical: 布尔值，是否为周期股（true/false）；true 时 cycle_position 必填",
     "cycle_position（cycle_is_cyclical=true时必填）: 取值见 cycle_position_schema，枚举值：底部/复苏早期/复苏中期/景气高峰/收缩期/出清期"
   ],
-  "generated_at": "2026-04-27",
+  "generated_at": "2026-04-29",
   "source_universes": [
     {
       "code": "560390",
@@ -4134,6 +4134,61 @@
         "cycle_is_cyclical": true,
         "cycle_position": "出清期",
         "notes": "全产业链锂公司（锂矿+化合物+电池），比天齐多元化。PB 95%高分位=市场已定价复苏。触发升档：锂价>10万/吨持续3月+半年报净利>20亿+OCF/净利>60%"
+      },
+      {
+        "name": "绿的谐波",
+        "code": "688017.SH",
+        "source_etf": "H30590",
+        "board": "科",
+        "position_role": "谐波减速器A股唯一纯正标的，具身智能关节传动核心零部件",
+        "prebuy_conclusion": "叙事强顺风（PS=+4）但估值极贵（PB 5年71.6%分位），ROE=3.57%远不足标准，等价格回落至150-180元（PB 7.5-9x）或毛利率回升至40%+",
+        "watch_reason": "谐波减速器护城河高，A股唯一纯正标的，具身智能量产后需求弹性最大",
+        "current_price": 207.65,
+        "price_date": "2026-04-28",
+        "price_bands": [
+          240,
+          200,
+          150
+        ],
+        "valuation_anchor": "PB分位定价：240元以上(PB>12x追高区) / 200-240元(PB 10-12x中性区,当前位置) / 150-200元(PB 7.5-10x较好区间) / 150元以下(PB<7.5x最优区)",
+        "risk_flags": [
+          "叙事泡沫严重：PE=275x，年净利1.24亿vs市值376亿，隐含未来净利需增至13.6亿（当前10x+）",
+          "ROE极低（3.57%）：净资产35亿因IPO募集稀释，ROE修复需要营收翻倍且毛利率回升，周期较长",
+          "毛利率下滑：从历史50%+降至36.9%，竞争加剧，回升斜率不确定"
+        ],
+        "entry_trigger": "股价回落至180元以下（PB≤9.0x）且半年报毛利率≥40%，确认ROE修复路径成立",
+        "dv_ttm": null,
+        "next_earnings_date": "2026-08-31",
+        "next_earnings_type": "半年报",
+        "notes": "估算截止日，tushare未返回预约日期"
+      },
+      {
+        "name": "埃斯顿",
+        "code": "002747.SZ",
+        "source_etf": "H30590",
+        "board": "深",
+        "position_role": "国内工业机器人本体出货量第一，运动控制+机器人整机国产替代核心标的",
+        "prebuy_conclusion": "FY2024大亏后扭亏，PB=6.14x（5年24.2%分位）相对历史偏低，但商誉/净资产=51%高悬，2026-04-30一季报是核心验证节点，等Q1数据后再决策",
+        "watch_reason": "国内机器人本体国产替代逻辑最纯正，具身智能整机集成能力，PB历史偏低位",
+        "current_price": 20.38,
+        "price_date": "2026-04-28",
+        "price_bands": [
+          25,
+          20,
+          16
+        ],
+        "valuation_anchor": "PB分位定价（复苏早期）：25元以上(PB>7.5x追高区) / 20-25元(PB 6-7.5x中性区,当前位置) / 16-20元(PB 4.8-6x较好区间) / 16元以下(PB<4.8x最优区，接近历史最低3.68x)",
+        "risk_flags": [
+          "商誉高风险：商誉10.3亿/净资产20.2亿=51%，FY2024-2025合计减值4.56亿，FY2026是否继续减值不确定",
+          "盈利极弱：FY2025净利仅0.45亿，ROE=2.40%，安全垫极薄",
+          "FY2024大亏-8.1亿：商誉减值+经营下滑双重打击，经营修复真实性待Q1验证"
+        ],
+        "entry_trigger": "2026-04-30一季报净利为正（同比改善）且商誉无新增减值，股价在20元以下可小仓试探（≤5%）",
+        "dv_ttm": null,
+        "next_earnings_date": "2026-04-30",
+        "next_earnings_type": "一季报",
+        "cycle_is_cyclical": true,
+        "cycle_position": "复苏早期"
       }
     ]
   },
