@@ -2081,6 +2081,34 @@
         "next_earnings_type": "一季报",
         "cycle_is_cyclical": true,
         "cycle_position": "复苏中期"
+      },
+      {
+        "name": "招商证券",
+        "code": "600999.SH",
+        "source_etf": "399975",
+        "board": "沪",
+        "position_role": "招商局系头部综合券商，PB历史底部+ROE改善+招行协同，周期金融成长仓",
+        "prebuy_conclusion": "PB=1.12（5.9%历史分位极低），ROE从8.24%→9.21%改善趋势明确，2026Q1营收+47.96%超预期、OCF转正，招商银行协同提供结构性护城河；当前15.64元处于较好区间（PB1.0-1.3x），建议分批建仓，等H1 2026确认ROE≥10%后酌情升档。",
+        "watch_reason": "证券行业批次PB历史分位最低（5.9%），招行协同为竞争差异化来源，2026Q1增速加速（+47.96%），周期复苏早期赔率不对称",
+        "current_price": 15.64,
+        "price_date": "2026-04-28",
+        "price_bands": [
+          25.7,
+          18.6,
+          14.3
+        ],
+        "valuation_anchor": "以BPS为锚（14.30元/股，2026Q1末）：追高区>25.7(PB>1.8x，周期高估区) / 中性区18.6-25.7(PB 1.3-1.8x，逻辑对但赔率一般) / 较好区间14.3-18.6(PB 1.0-1.3x，当前15.64元在此✅) / 更低区间<14.3(PB<1.0x，历史底部安全边际充足)",
+        "risk_flags": [
+          "收入结构偏周期（自营+经纪约60-70%），A股熊市时ROE可能跌回7%以下",
+          "2025年OCF为负（-313.7亿），业务扩张导致，需持续跟踪2026全年OCF"
+        ],
+        "dv_ttm": 3.17,
+        "next_earnings_date": "2026-08-31（估算）",
+        "next_earnings_type": "半年报",
+        "cycle_is_cyclical": true,
+        "cycle_position": "复苏早期",
+        "policy_score": 3,
+        "last_updated": "2026-04-28"
       }
     ],
     "radar": [
