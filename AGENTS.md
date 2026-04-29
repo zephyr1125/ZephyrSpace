@@ -127,10 +127,15 @@ watchlist 数据已拆分为 4 个文件，放在 `data/` 目录：
 - 读取 `AGENT_INSTRUCTION`、`tier_definitions`、`decision_tree` 时，读 `watchlist_meta.json`
 - 每次修改后，运行 `.\scripts\sync_watchlist.ps1` 同步到外部项目
 
-> 🚫 **子 Agent（background/general-purpose）严禁写入任何 watchlist 文件。**
-> 多个子 Agent 并发写同一文件会导致内容互相覆盖、数据丢失。
-> **所有 watchlist 写入必须由主 Agent 统一执行**：等全部 PreBuy 汇总完成、档位决策确定后，由主 Agent 一次性写入。
-> 即使技能（skill）文档中有"写入 watchlist"的指令，子 Agent 执行时也必须跳过该步骤，改为在输出结论中注明"建议档位：xxx"，由主 Agent 汇总后操作。
+> 🚫 **任何 Agent（包括主 Agent 和子 Agent）在用户确认前，均不得写入任何 watchlist 文件。**
+>
+> **正确流程**：
+> 1. 子 Agent 完成 PreBuy 后，在输出结论中注明「建议档位：xxx」，**不写文件**
+> 2. 主 Agent 汇总所有 PreBuy 结果后，向用户展示建议档位，**询问用户确认哪些公司写入**
+> 3. 收到用户确认后，主 Agent 一次性写入，然后运行 `sync_watchlist.ps1`
+>
+> 即使技能（skill）文档中有"写入 watchlist"的指令，也必须跳过，等待用户确认。
+> 多个 Agent 并发写同一文件会导致内容互相覆盖、数据丢失，这是此规则的根本原因。
 
 **在修改任何 watchlist 文件之前，必须**：
 
