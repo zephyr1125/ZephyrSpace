@@ -2136,6 +2136,31 @@
         "next_earnings_type": "一季报",
         "cycle_is_cyclical": true,
         "cycle_position": "复苏中期"
+      },
+      {
+        "name": "东方财富",
+        "code": "300059.SZ",
+        "source_etf": "399975",
+        "board": "创",
+        "position_role": "互联网金融平台弹性仓 / 证券活跃度Beta最强标的",
+        "prebuy_conclusion": "逻辑清晰，PB处于历史22.6%分位（历史低位），当前20.26元处绿灯区，建议growth档位分批布局；以A股日均成交额恢复和2026H1净利增速≥30%为验证条件",
+        "watch_reason": "互联网零售投资者平台龙头，天天基金+经纪+两融三轮驱动，ROE 14%且持续提升，PB历史低位，A股复苏中最大弹性受益方",
+        "current_price": 20.26,
+        "price_date": "2026-04-29",
+        "price_bands": [26.0, 22.0, 18.0],
+        "valuation_anchor": "PB历史分位+前瞻PE：追高区>26元(PB>4.4x,接近中位数) / 中性区22-26元 / 绿灯区18-22元(PB历史P20附近，PS+2调整后上界+10%) / 强绿<18元(PB<3.0x)",
+        "risk_flags": [
+          "A股市场活跃度周期性：牛熊切换时营收弹性双向放大，历史PB区间2.3x~9.8x",
+          "天天基金市占率受支付宝/微信竞争压力，基金费率改革已压缩尾随佣金",
+          "两融利息收入受监管调整和市场杠杆水平影响"
+        ],
+        "dv_ttm": 0.29,
+        "next_earnings_date": "2026-08-31（估算）",
+        "next_earnings_type": "半年报",
+        "cycle_is_cyclical": true,
+        "cycle_position": "复苏中期",
+        "policy_score": 2,
+        "last_updated": "2026-04-29"
       }
     ],
     "radar": [
