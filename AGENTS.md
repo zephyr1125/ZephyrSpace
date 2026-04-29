@@ -113,19 +113,27 @@
 
 ## Watchlist 管理约定
 
-`data/stock_watchlist.json` 是公司跟踪池，分三档：
+watchlist 数据已拆分为 4 个文件，放在 `data/` 目录：
 
-- **core（核心池）**：长期底仓，价格合理时主动建仓
-- **growth（成长池）**：高质量成长公司，等价格窗口
-- **radar（雷达池）**：只跟踪，有信号再升档
+| 文件 | 内容 | 大小参考 |
+|---|---|---|
+| `watchlist_meta.json` | schema、tier_definitions、AGENT_INSTRUCTION 等元数据 | ~10KB |
+| `watchlist_core.json` | core tier 数组（核心池，约 13 家） | ~15KB |
+| `watchlist_growth.json` | growth tier 数组（成长池，约 61 家） | ~72KB |
+| `watchlist_radar.json` | radar tier 数组（雷达池，约 83 家） | ~114KB |
 
-**在修改该文件之前，必须**：
+**读写规则（重要）**：
+- 新增/更新公司时，**只改对应 tier 的文件**，不碰其他三个
+- 读取 `AGENT_INSTRUCTION`、`tier_definitions`、`decision_tree` 时，读 `watchlist_meta.json`
+- 每次修改后，运行 `.\scripts\sync_watchlist.ps1` 同步到外部项目
 
-1. 阅读文件头部的 `AGENT_INSTRUCTION`、`tier_definitions`、`decision_tree`
+**在修改任何 watchlist 文件之前，必须**：
+
+1. 阅读 `watchlist_meta.json` 中的 `AGENT_INSTRUCTION`、`tier_definitions`、`decision_tree`
 2. 只收录已完成完整 PreBuy 分析的公司（`01-公司/` 下有对应页面）
 3. 完整规则见 `data/WATCHLIST_RULES.md`
 
-新增公司时直接按 `required_fields` 中的必填字段填写。
+新增公司时直接按 `required_fields` 中的必填字段填写（`required_fields` 在 `watchlist_meta.json` 中）。
 
 **"不入"出口**：满足以下任意 2 条的公司直接排除，**不写入 watchlist**，在公司页和指数专题页注明"❌ 不入"：
 1. OCF/净利 < 20%（或非经常性损益 > 60% 净利）——利润质量严重失真
@@ -396,11 +404,11 @@ for code in all_stocks['con_code']:
 2. 分两次提交：
    - `feat: 建立[指数名称]指数专题页及候选成分股PreBuy页面`
    - `feat: 按WATCHLIST_RULES将[N]家公司纳入watchlist` （如有新增）
-3. **若 watchlist 有任何变更**（新增、档位调整、字段更新），同步拷贝至外部项目：
+3. **若 watchlist 有任何变更**（新增、档位调整、字段更新），同步至外部项目：
    ```powershell
-   Copy-Item "data\stock_watchlist.json" "E:\Work\Python\Finance\api\config\stock_watchlist.json" -Force
+   .\scripts\sync_watchlist.ps1
    ```
-   > 此步在 git commit **之后**执行，确保拷贝的是已提交的最终版本。
+   > 此步在 git commit **之后**执行，确保同步的是已提交的最终版本。
 4. 向用户输出总结，包含：
 
 ```

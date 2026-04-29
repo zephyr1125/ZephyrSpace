@@ -1,0 +1,1591 @@
+[
+  {
+    "name": "中国核电",
+    "code": "601985.SH",
+    "source_etf": "931897",
+    "position_role": "核电核心资产",
+    "prebuy_conclusion": "逻辑清晰，等待更合适价格或验证点。",
+    "watch_reason": "核电核心资产，适合跟踪清洁电力底仓，但当前仍需等更好赔率。",
+    "current_price": 9.07,
+    "price_bands": [
+      9.5,
+      8.3,
+      7.3
+    ],
+    "risk_flags": [
+      "利润同比下滑",
+      "核电项目周期长",
+      "资本开支重"
+    ],
+    "valuation_anchor": "PE+股息率：追高区>9.5(股息率<3.5%，核电稳态资产定价偏高) / 中性区8.3-9.5(可持有，等新机组装机验证) / 较好区间7.3-8.3(股息率约4%+，赔率改善) / 更低区间<7.3(股息率>4.5%，安全边际明显)",
+    "price_date": "2026-04-24",
+    "board": "沪",
+    "dv_ttm": 1.98,
+    "next_earnings_date": "2026-04-30",
+    "next_earnings_type": "一季报"
+  },
+  {
+    "name": "思源电气",
+    "code": "002028.SZ",
+    "source_etf": "560390",
+    "position_role": "建骨架 + 吃升级",
+    "prebuy_conclusion": "好公司，但当前更适合继续研究，不适合立刻买。",
+    "watch_reason": "高端设备平台和存量升级逻辑最强，弹性也更高。",
+    "current_price": 222.13,
+    "price_bands": [
+      220.0,
+      190.0,
+      150.0
+    ],
+    "risk_flags": [
+      "估值处在历史高位附近",
+      "2025Q1/H1 经营现金流转弱",
+      "AI 电力和升级叙事容易把预期推得过高"
+    ],
+    "valuation_anchor": "前瞻PE+现金流验证：追高区>220(估值历史高位，叙事偏热，不建议追) / 中性区190-220(增长优，但赔率偏紧，等回调) / 较好区间150-190(开始进入可研究区，等现金流改善) / 更低区间<150(充分回调后安全边际明显)",
+    "price_date": "2026-04-24",
+    "board": "深",
+    "dv_ttm": 0.22,
+    "next_earnings_date": "2026-08-31（估算）",
+    "next_earnings_type": "半年报"
+  },
+  {
+    "name": "国电南瑞",
+    "code": "600406.SH",
+    "source_etf": "560390",
+    "position_role": "做大脑",
+    "prebuy_conclusion": "逻辑清晰，等待更合适价格或验证点。",
+    "watch_reason": "新型电力系统和算电协同里最核心的控制层龙头之一。",
+    "current_price": 26.54,
+    "price_bands": [
+      29.0,
+      26.0,
+      24.0
+    ],
+    "risk_flags": [
+      "应收账款体量大",
+      "高度绑定电网投资节奏",
+      "不是最纯的高弹性工具"
+    ],
+    "valuation_anchor": "前瞻PE+电网投资节奏：追高区>29(PE偏高，电网投资预期充分定价) / 中性区26-29(逻辑顺，赔率一般，等验证) / 较好区间24-26(现金流持续改善时赔率合适) / 更低区间<24(安全边际更好，系统性回撤后买点)",
+    "price_date": "2026-04-24",
+    "board": "沪",
+    "dv_ttm": 2.18,
+    "next_earnings_date": "2026-04-30",
+    "next_earnings_type": "一季报"
+  },
+  {
+    "name": "亨通光电",
+    "code": "600487.SH",
+    "source_etf": "560390",
+    "position_role": "铺血管",
+    "prebuy_conclusion": "值得继续研究，但更适合按景气增强仓理解，不适合当纯电网底仓无脑买。",
+    "watch_reason": "线缆与连接通道的代表股，适合观察电网扩散和制造弹性。",
+    "current_price": 69.54,
+    "price_bands": [
+      75.0,
+      65.0,
+      58.0
+    ],
+    "risk_flags": [
+      "业务驱动不够纯",
+      "2025Q1 经营现金流回落",
+      "容易被制造景气和通信链情绪抬高"
+    ],
+    "valuation_anchor": "前瞻PE×复合景气度：追高区>75(电网+海缆+通信多线叙事偏热) / 中性区65-75(复合驱动，赔率一般，等线缆景气确认) / 较好区间58-65(驱动明确时赔率改善) / 更低区间<58(情绪回落后布局点)",
+    "price_date": "2026-04-24",
+    "board": "沪",
+    "dv_ttm": 0.33,
+    "next_earnings_date": "2026-08-31（估算）",
+    "next_earnings_type": "半年报"
+  },
+  {
+    "name": "海康威视",
+    "code": "002415.SZ",
+    "source_etf": "930713",
+    "position_role": "视觉AI底仓 / 高分红价值锚",
+    "prebuy_conclusion": "2025年全年及Q1 2026双双大幅复苏（净利+18.5%/+36.4%，OCF+91%），逻辑验证，合理区可轻仓建仓",
+    "watch_reason": "930713指数内体量最大最稳健的价值标的，AI视觉+AIoT护城河真实，高分红提供安全边际。",
+    "current_price": 33.97,
+    "price_bands": [
+      38,
+      32,
+      26
+    ],
+    "risk_flags": [
+      "美国实体清单制裁限制海外业务扩张空间",
+      "净利润连续下滑（-15.1%），国内安防市场传统需求见顶",
+      "创新业务规模仍小且盈利未经验证"
+    ],
+    "valuation_anchor": "历史PE+AI转型验证：追高区>38(PE>30x，转型未充分验证时偏贵) / 中性区30-38(PE23-30x，逻辑对但赔率一般) / 较好区间22-30(PE17-23x，高分红支撑，可底仓布局) / 更低区间<22(PE<17x，股息率>5%，安全边际充足)",
+    "price_date": "2026-04-27",
+    "board": "深",
+    "dv_ttm": 3.28,
+    "next_earnings_date": "2026-08-31（估算）",
+    "next_earnings_type": "半年报"
+  },
+  {
+    "name": "中际旭创",
+    "code": "300308.SZ",
+    "source_etf": "930713",
+    "position_role": "AI光模块弹性仓",
+    "prebuy_conclusion": "当前886元极端追高区（合理区间<150元），赔率极差，不建议买入；等待大幅回落至150元以下重新审视，公司基本面仍强。",
+    "watch_reason": "全球AI光模块龙头（市占率>40%），景气高峰弹性极大，等景气确认信号后加仓。",
+    "current_price": 886.99,
+    "price_bands": [
+      150.0,
+      110.0,
+      80.0
+    ],
+    "risk_flags": [
+      "客户集中度极高（北美4客户+英伟达超70%营收），单一客户削减订单即崩",
+      "800G产能2025年可能供过于求，毛利率下行压力",
+      "高端EML光芯片仍部分依赖海外供应，出口管制风险"
+    ],
+    "valuation_anchor": "2025E前瞻PE×算力景气：追高区>150(2025E PE>20x，景气充分定价) / 中性区110-150(PE约14-20x，逻辑对但赔率一般) / 较好区间80-110(PE约10-14x，安全边际尚可) / 更低区间<80(PE<10x，景气若持续则明显折价)",
+    "price_date": "2026-04-24",
+    "board": "创",
+    "dv_ttm": 0.1,
+    "next_earnings_date": "2026-08-31（估算）",
+    "next_earnings_type": "半年报"
+  },
+  {
+    "name": "山西汾酒",
+    "code": "600809.SH",
+    "source_etf": "399997",
+    "position_role": "白酒成长龙头 / 弹性仓",
+    "prebuy_conclusion": "估值已回落至较好区间，当前约142元TTM PE约14倍，赔率改善；成长逻辑未破坏，可开始研究性布局，跟踪省外动销和批价。",
+    "watch_reason": "中证白酒指数增速最快的大权重股，全国化+高端化双轮驱动，等价格回到合理区间。",
+    "current_price": 141.95,
+    "price_bands": [
+      230.0,
+      180.0,
+      140.0
+    ],
+    "risk_flags": [
+      "全国化扩张遇阻则成长逻辑核心假设动摇",
+      "高端青花系列批价倒挂说明需求问题",
+      "玻汾大众产品量增价跌拉低整体毛利率"
+    ],
+    "valuation_anchor": "前瞻PE+全国化验证：追高区>230(PE>23x，全国化成长溢价过高) / 中性区180-230(PE18-23x，等省外增速持续验证) / 较好区间140-180(PE14-18x，接近底仓布局区间) / 更低区间<140(PE<14x，接近茅五泸估值水平，安全边际充足)",
+    "price_date": "2026-04-24",
+    "board": "沪",
+    "dv_ttm": 2.54,
+    "next_earnings_date": "2026-04-30",
+    "next_earnings_type": "一季报"
+  },
+  {
+    "name": "宁德时代",
+    "code": "300750.SZ",
+    "source_etf": "932246",
+    "position_role": "储能电池龙头",
+    "prebuy_conclusion": "公司最强，但现在不便宜，适合等回调或验证点；不追价，等380元以下再分批布局。",
+    "watch_reason": "储能电池指数里最核心的权重锚，适合长期跟踪。",
+    "current_price": 434.88,
+    "price_bands": [
+      500.0,
+      440.0,
+      380.0
+    ],
+    "risk_flags": [
+      "估值不便宜",
+      "海外和地缘变量多",
+      "市场预期已经很高"
+    ],
+    "valuation_anchor": "前瞻PE+储能出货验证：追高区>500(储能高增+全球扩张充分定价) / 中性区440-500(最强龙头但赔率一般，等业绩持续超预期) / 较好区间380-440(PE下移后赔率改善，等储能季度出货确认) / 更低区间<380(安全边际更好，极端情绪下买点)",
+    "price_date": "2026-04-27",
+    "board": "创",
+    "dv_ttm": 1.82,
+    "next_earnings_date": "2026-08-31（估算）",
+    "next_earnings_type": "半年报"
+  },
+  {
+    "name": "阳光电源",
+    "code": "300274.SZ",
+    "source_etf": "932246",
+    "position_role": "储能系统平台",
+    "prebuy_conclusion": "Q1 2026净利-40%（高基数+汇兑损失），毛利率33.26%尚可，环比Q4 2025 +45%有底部迹象，等H1半年报验证企稳后再加仓，当前小仓持有观察",
+    "watch_reason": "系统平台属性强，是储能链条里最关键的观察点之一。",
+    "current_price": 131.39,
+    "price_bands": [
+      175.0,
+      155.0,
+      130.0
+    ],
+    "risk_flags": [
+      "龙头估值不便宜",
+      "海外项目交付节奏会影响预期",
+      "AIDC 电源逻辑需要继续验证"
+    ],
+    "valuation_anchor": "以TTM PE为锚（FY2025基准134.61亿）：避开>175元(PE>26x)，关注155-175元，较好130-155元，理想<130元；若FY2026净利降至100亿，前向PE相应上移约34%",
+    "price_date": "2026-04-27",
+    "board": "创",
+    "dv_ttm": 1.53,
+    "next_earnings_date": "2026-08-31（估算）",
+    "next_earnings_type": "半年报",
+    "last_close": 131.39
+  },
+  {
+    "name": "澜起科技",
+    "code": "688008.SH",
+    "source_etf": "930713",
+    "position_role": "AI内存基础设施芯片 / 底仓+弹性兼顾",
+    "prebuy_conclusion": "当前163.5元极端追高区（合理区间<75元），PE约89x赔率极差，不建议买入；等待回落至75元以下重新审视，护城河极深（DDR5寡头）。",
+    "watch_reason": "全球DDR5内存接口芯片寡头，AI服务器扩建直接受益，2024年净利+213%且现金流质量极佳，930713成分股中性价比最高的半导体底仓。",
+    "current_price": 163.5,
+    "price_bands": [
+      75.0,
+      60.0,
+      45.0
+    ],
+    "risk_flags": [
+      "三星/SK海力士推进自研内存接口芯片，长期市场份额面临压力",
+      "PE 40-45x处于历史偏高位，增长不达预期则回调空间大",
+      "DDR5渗透完成后需CXL/HBM等新品验证才能维持增速"
+    ],
+    "valuation_anchor": "前瞻PE+DDR5渗透率：追高区>75(PE>55x，DDR5高增长充分定价) / 中性区60-75(PE45-55x，逻辑对但赔率一般) / 较好区间45-60(PE30-40x，护城河扎实，可建仓) / 更低区间<45(PE<30x，成长+质量折价，安全边际充足)",
+    "price_date": "2026-04-24",
+    "board": "科",
+    "dv_ttm": 0.36,
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报"
+  },
+  {
+    "name": "金山办公",
+    "code": "688111.SH",
+    "source_etf": "930713",
+    "position_role": "AI办公软件垄断 / 高质量成长底仓",
+    "prebuy_conclusion": "估值已大幅回落，当前249元已进入更低区间，PE约32x；国内Office垄断+现金流极佳，适合主动加仓，持续验证AI付费转化。",
+    "watch_reason": "国内Office垄断者（市占率60%+），SaaS+AI订阅转型中，无有息负债，现金流质量极佳，AI应用层中基本面最扎实的标的。",
+    "current_price": 249.12,
+    "price_bands": [
+      450.0,
+      360.0,
+      280.0
+    ],
+    "risk_flags": [
+      "PE 52-54x偏高，AI办公竞争加剧（微软Copilot/阿里/腾讯均布局）",
+      "WPS传统软件授权收入同比-8.56%，旧商业模式式微",
+      "云化和AI订阅收入需增长足够快才能弥补传统模式衰退"
+    ],
+    "valuation_anchor": "前瞻PE+WPS AI兑现度：追高区>450(PE>65x，AI办公高预期充分定价) / 中性区360-450(PE52-65x，好公司但赔率不佳) / 较好区间280-360(PE40-52x，云订阅增长验证中，赔率改善) / 更低区间<280(PE<40x，护城河折价，安全边际充足)",
+    "price_date": "2026-04-24",
+    "board": "科",
+    "dv_ttm": 0.36,
+    "next_earnings_date": "2026-08-31（估算）",
+    "next_earnings_type": "半年报"
+  },
+  {
+    "name": "古井贡酒",
+    "code": "000596.SZ",
+    "source_etf": "399997",
+    "position_role": "区域白酒成长标杆 / 弹性仓",
+    "prebuy_conclusion": "基本面压力重，谨慎观察。Q1 2026净利-31.0%，⚠️毛利率77.85%下滑2.1pp已触达品牌弱化警戒线。PE TTM 11.91x处5年1.3%分位，赔率中等偏弱。PS+4，绿灯上界116元，当前106.6元在区间内但风险较高。等H1 2026毛利率≥78%确认后再建仓，止损67元。",
+    "watch_reason": "安徽白酒绝对龙头，2024年净利+20%是白酒板块最快增速之一，宴席场景绑定深，等价格买成长。",
+    "current_price": 106.6,
+    "price_bands": [
+      120,
+      116,
+      67
+    ],
+    "risk_flags": [
+      "Q1 2026净利-31.0%，降幅大于行业均值，基本面压力超预期",
+      "⚠️毛利率77.85%下滑2.1pp，已触达品牌弱化警戒线(-2pp阈值)",
+      "⚠️2025年报扣非/净利数据缺失，需核查年报原文",
+      "省外扩张进度不及预期，安徽本省依赖度过高"
+    ],
+    "valuation_anchor": "EPS 6.72元(2025年报实际)；PS+4，绿灯上界+15%至116元",
+    "price_date": "2026-04-28",
+    "board": "深",
+    "dv_ttm": 5.48,
+    "next_earnings_date": "2026-08-29",
+    "next_earnings_type": "半年报",
+    "cycle_is_cyclical": true,
+    "cycle_position": "底部",
+    "policy_score": 4,
+    "last_updated": "2026-04-29"
+  },
+  {
+    "name": "新易盛",
+    "code": "300502.SZ",
+    "source_etf": "930713",
+    "position_role": "AI光模块弹性仓（小市值高弹性）",
+    "prebuy_conclusion": "当前537元极端追高区（合理区间<120元），赔率极差，不建议买入；等待大幅回落至120元以下重新审视，关注经营现金流改善。",
+    "watch_reason": "930713指数第二大权重股，2024年净利+312%、ROE 41%，2025E PE约11x，AI数据中心光互联需求持续高增，等价格区间或验证点布局。",
+    "current_price": 537.27,
+    "price_bands": [
+      120.0,
+      90.0,
+      65.0
+    ],
+    "risk_flags": [
+      "经营现金流2024年大幅下降48.56%，利润高增但现金流背离（主要红旗）",
+      "海外占比78.7%，关税与制裁风险突出",
+      "800G行业产能2025年可能供过于求，毛利率面临下行压力"
+    ],
+    "valuation_anchor": "2025E前瞻PE×算力景气：追高区>120(2025E PE>20x，1.6T放量预期充分定价) / 中性区90-120(PE约11-15x，逻辑对，可小仓参与) / 较好区间65-90(PE约8-11x，充分安全边际) / 更低区间<65(PE<8x，景气若持续则明显折价)",
+    "price_date": "2026-04-24",
+    "board": "创",
+    "dv_ttm": 0.06,
+    "next_earnings_date": "2026-08-31（估算）",
+    "next_earnings_type": "半年报"
+  },
+  {
+    "name": "海天味业",
+    "code": "603288.SH",
+    "source_etf": "399396",
+    "position_role": "调味品龙头 / 等价格窗口",
+    "prebuy_conclusion": "中性区，暂不追；等回落至35元以下（PE<30x）较好区间再布局，双标门后份额流失尚未完全止血。",
+    "watch_reason": "调味品绝对龙头（酱油市占率25%+），净现比>90%，等估值回到合理区间。",
+    "current_price": 39.92,
+    "price_date": "2026-04-24",
+    "board": "沪",
+    "price_bands": [
+      45.0,
+      35.0,
+      28.0
+    ],
+    "risk_flags": [
+      "双标门后高端消费者信任受损，结构性份额流失",
+      "历史溢价消退中，PE从100x降至33x仍未到底",
+      "增速放缓至10%下，PEG约3x性价比不足"
+    ],
+    "valuation_anchor": "历史PE区间：追高区>45(PE>38x，消费溢价过高) / 中性区35-45(PE30-38x，逻辑对但赔率偏紧) / 较好区间28-35(PE23-30x，调味品龙头合理买点) / 更低区间<28(PE<23x，安全边际明显)",
+    "dv_ttm": 3.55,
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报"
+  },
+  {
+    "name": "东鹏饮料",
+    "code": "605499.SH",
+    "source_etf": "399396",
+    "position_role": "能量饮料成长仓",
+    "prebuy_conclusion": "中性区，等较好区间140-175元（PE约18-22x）再布局；成长逻辑清晰但当前赔率一般，每季度验证增速。",
+    "watch_reason": "国内能量饮料第二品牌，市场份额持续扩张，2025年净利44.2亿同比+21%，成长驱动力强。",
+    "current_price": 199.96,
+    "price_date": "2026-04-24",
+    "board": "沪",
+    "price_bands": [
+      220.0,
+      175.0,
+      140.0
+    ],
+    "risk_flags": [
+      "高度依赖能量饮料单品，增速一旦拐点估值快速收缩",
+      "资产负债率64.7%，渠道杠杆偏高",
+      "红牛持续竞争及新品牌挤压，份额扩张边际递减"
+    ],
+    "valuation_anchor": "前瞻PE+增速验证：追高区>220(PE>28x，成长溢价过足) / 中性区175-220(PE22-28x，等季度增速持续验证) / 较好区间140-175(PE18-22x，赔率改善可建仓) / 更低区间<140(PE<18x，成长折价，安全边际明显)",
+    "dv_ttm": 1.25,
+    "next_earnings_date": "2026-04-30",
+    "next_earnings_type": "一季报"
+  },
+  {
+    "name": "赣能股份",
+    "code": "000899.SZ",
+    "source_etf": "931897",
+    "position_role": "省级水电清洁能源平台，ROE最高的绿电成长标的",
+    "prebuy_conclusion": "ROE质量最优，当前处于中性区合理估值，可以建立研究性底仓；较好区间10.5-12元积极加仓。",
+    "watch_reason": "931897绿电粗筛ROE最高（16.5%），净现比2.16x，江西省清洁能源整合平台，等较好区间布局。",
+    "current_price": 12.93,
+    "price_date": "2026-04-25",
+    "board": "深",
+    "price_bands": [
+      14.5,
+      12.0,
+      10.5
+    ],
+    "risk_flags": [
+      "重组历史不足两年，长期运营稳定性待验证",
+      "股息率仅2.55%，分红吸引力弱于其他电力底仓",
+      "ROE 16.5%可持续性存疑，依赖资产注入后高效运营"
+    ],
+    "valuation_anchor": "历史PE区间：追高区>14.5(PE>15x，ROE溢价透支) / 中性区12.0-14.5(PE12-15x，当前位置，逻辑对赔率一般) / 较好区间10.5-12.0(PE10-12x，赔率顺手可布局) / 更低区间<10.5(PE<10x，安全边际充足)",
+    "dv_ttm": 2.55,
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报"
+  },
+  {
+    "name": "广州发展",
+    "code": "600098.SH",
+    "source_etf": "931897",
+    "position_role": "省级燃气+电力综合能源平台，高息价值底仓候选",
+    "prebuy_conclusion": "破净+股息率5.23%+净利润+33.9%三重叠加，当前价7.08已低于理想价7.41，进入更低区间，积极建仓逻辑最清晰。",
+    "watch_reason": "931897绿电公用事业参数筛选，PB<1破净+DY超5%+利润大增，是四家高息标的中性价比最高的，当前价已破理想价。",
+    "current_price": 7.08,
+    "price_date": "2026-04-25",
+    "board": "沪",
+    "price_bands": [
+      12.34,
+      9.26,
+      7.41
+    ],
+    "risk_flags": [
+      "燃气与发电业务混合，估值锚不纯粹",
+      "ROE 8.66%属于公用事业下限，高息依赖稳定利润支撑",
+      "营收增速有限，高息逻辑依赖分红政策稳定性"
+    ],
+    "valuation_anchor": "股息率倒推：追高区>12.34(DY<3%，明显高估) / 中性区9.26-12.34(DY3-4%，观察) / 较好区间7.41-9.26(DY4-5%，可布局) / 更低区间<7.41(DY>5%，积极建仓)",
+    "dv_ttm": 5.18,
+    "next_earnings_date": "2026-04-30",
+    "next_earnings_type": "一季报",
+    "last_close": 7.14
+  },
+  {
+    "name": "新奥股份",
+    "code": "600803.SH",
+    "source_etf": "direct",
+    "position_role": "高股息天然气平台型卫星仓",
+    "prebuy_conclusion": "可以纳入卫星仓候选观察，但当前21.20元只适合观察或极小仓试探，较舒服的买点在19-20元。",
+    "watch_reason": "现金流和分红质量较强，具备LNG长协、舟山接收站和城燃终端网络，适合作为高股息天然气平台并附带LNG供应链波动受益期权跟踪。",
+    "current_price": 21.2,
+    "price_date": "2026-04-24",
+    "board": "沪",
+    "price_bands": [
+      23.5,
+      21.0,
+      19.0
+    ],
+    "risk_flags": [
+      "城燃端顺价约束，LNG成本上涨不一定能完全传导到终端",
+      "国际LNG长协、现货采购、汇率和套保会带来利润波动",
+      "资产负债率约53.21%，短债和长期债务规模不低"
+    ],
+    "valuation_anchor": "股息率+PE：追高区>23.5(PE>15.5x且股息率吸引力下降，不追) / 中性区21-23.5(PE13.8-15.5x，质量和分红逻辑成立但赔率一般) / 较好区间19-21(PE12.5-13.8x，股息率接近或超过6%，可研究性小仓) / 更低区间<19(PE<12.5x，高股息和现金流安全边际更好)",
+    "dv_ttm": 5.7,
+    "next_earnings_date": "2026-04-30",
+    "next_earnings_type": "一季报"
+  },
+  {
+    "name": "青岛啤酒",
+    "code": "600600.SH",
+    "source_etf": "000932",
+    "position_role": "中国第二大啤酒品牌 / 高端化价值底仓",
+    "prebuy_conclusion": "逻辑清晰，当前价格合理，可按计划买入。PE=18.3x处于5年4.2%历史分位，高端化毛利率连续三年扩张（41.8%），净现金状态，现金流优质。",
+    "watch_reason": "啤酒双寡头之一，估值极度低估（5年4.2%分位），高端化兑现中，股息率3.57%提供安全垫；消费龙头中性价比最优候选之一。",
+    "current_price": 61.68,
+    "price_date": "2026-04-24",
+    "board": "沪",
+    "price_bands": [
+      72.0,
+      63.0,
+      55.0
+    ],
+    "risk_flags": [
+      "华润雪花市占率领先，啤酒行业总量见顶，高端化竞争激烈",
+      "2023年工厂事件虽已平息，品牌美誉度修复需时间验证",
+      "白酒消费趋势替代效应，消费降级影响啤酒高端化节奏"
+    ],
+    "valuation_anchor": "历史PE分位：追高区>72(PE>22x，历史75%分位以上，高估) / 中性区63-72(PE19-22x，合理价，可持有) / 较好区间55-63(PE17-19x，历史低位，可建仓) / 更低区间<55(PE<17x，安全边际充足)",
+    "dv_ttm": 3.57,
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报"
+  },
+  {
+    "name": "柏楚电子",
+    "code": "688188.SH",
+    "board": "科",
+    "tier": "growth",
+    "sector": "激光切割控制系统",
+    "thesis": "激光CNC控制系统国内龙头，市占率>50%，轻资产高毛利（毛利率77%+），客户粘性高，国产替代外资仍有空间",
+    "current_price": 138.35,
+    "price_date": "2026-04-26",
+    "dv_ttm": 0.36,
+    "pe_ttm": 35.9,
+    "roe": 19.3,
+    "price_bands": [
+      155.0,
+      135.0,
+      115.0
+    ],
+    "risk_flags": [
+      "激光切割行业景气与下游制造业投资周期高度相关，景气下行时ROE可能大幅回落",
+      "客户集中度风险：大族激光等少数大客户占较高比例",
+      "当前价格处于中性区（PE35x+），需等回调至30-35x区间入场"
+    ],
+    "valuation_anchor": {
+      "avoid": "155元以上，PE>40x，已充分定价增长预期",
+      "watch": "135-155元，PE35-40x，可关注但不急",
+      "consider": "115-135元，PE30-35x，较好入场区间",
+      "strong_buy": "100-115元以下，PE26-30x，安全边际充足"
+    },
+    "next_earnings_date": "2026-04-30",
+    "next_earnings_type": "一季报"
+  },
+  {
+    "name": "豪威集团",
+    "code": "603501.SH",
+    "source_etf": "931912",
+    "position_role": "图像传感器/AI视觉感知成长仓",
+    "prebuy_conclusion": "逻辑清晰，全球车载CIS市占率32.9%第一，PE约29x与净利增长匹配，可在较好区间70-95元分批研究性布局。",
+    "watch_reason": "韦尔股份旗下OmniVision/豪威业务具备车载CIS、手机CIS和AI视觉感知多重暴露，是半导体产业链里更贴近终端感知的成长标的。",
+    "current_price": 98.88,
+    "price_date": "2026-04-24",
+    "board": "沪",
+    "price_bands": [
+      120.0,
+      95.0,
+      70.0
+    ],
+    "risk_flags": [
+      "消费电子和汽车电子需求存在周期波动",
+      "CIS行业竞争激烈，手机CIS业务价格压力仍需跟踪",
+      "并购整合和海外业务占比较高，汇率与地缘风险会影响估值"
+    ],
+    "valuation_anchor": "成长PE+车载CIS景气：追高区>120(PE约36x以上，成长溢价偏满) / 中性区95-120(PE约29-36x，逻辑对但赔率一般) / 较好区间70-95(PE约21-29x，汽车+AI视觉逻辑有赔率) / 更低区间<70(PE<21x，若增长未恶化则安全边际明显)",
+    "dv_ttm": 0.65,
+    "next_earnings_date": "2026-04-30",
+    "next_earnings_type": "一季报"
+  },
+  {
+    "name": "安集科技",
+    "code": "688019.SH",
+    "source_etf": "931912",
+    "position_role": "半导体材料/CMP国产替代成长仓",
+    "prebuy_conclusion": "Q1 2026 OCF/净利63.1%（vs 2025全年51.7%），存货修复信号明确；PS=+5政策调整绿灯上界至232元，当前257.9元超出绿灯区，等候回落至232元以下建仓。",
+    "watch_reason": "CMP抛光液和清洗剂国产替代纯度较高，受益于晶圆厂扩产和国产材料替代，是半导体材料环节的核心观察标的。",
+    "current_price": 257.9,
+    "price_date": "2026-04-28",
+    "board": "科",
+    "price_bands": [
+      280.0,
+      232.0,
+      157.0
+    ],
+    "risk_flags": [
+      "存货增速高于营收增速，需关注去库和减值风险",
+      "半导体材料验证周期长，客户放量节奏不完全可控",
+      "当前价格超出政策调整绿灯上界（232元），等候回落"
+    ],
+    "valuation_anchor": "成长PE+PS=+5政策调整：追高区>280(PE约59x以上) / 中性区232-280(PE约49-59x，黄灯等候) / 较好区间157-232(PE约33-49x，政策调整绿灯区，可建仓) / 更低区间<157(PE<33x，安全边际充足)",
+    "dv_ttm": 0.13,
+    "next_earnings_date": "2026-08-20",
+    "next_earnings_type": "半年报",
+    "cycle_is_cyclical": true,
+    "cycle_position": "复苏中期"
+  },
+  {
+    "name": "睿创微纳",
+    "code": "688002.SH",
+    "source_etf": "931912",
+    "position_role": "红外探测器/军民融合成长仓",
+    "prebuy_conclusion": "国内高端非制冷红外探测器代表，2025净利高增且现金流优质，但当前估值偏贵，等PE回落至历史中位数45x附近。",
+    "watch_reason": "军民双轮驱动，红外探测器和热成像需求具备长期空间，且2025年经营现金流远超净利润，财务质量较好。",
+    "current_price": 137.4,
+    "price_date": "2026-04-24",
+    "board": "科",
+    "price_bands": [
+      130.0,
+      110.0,
+      95.0
+    ],
+    "risk_flags": [
+      "当前价格已高于追高线，短期涨幅较大",
+      "军品和行业订单节奏会造成业绩波动",
+      "历史上曾出现净利下滑，不能线性外推2025高增"
+    ],
+    "valuation_anchor": "成长PE+军民订单验证：追高区>130(PE约55x以上，处于历史偏高分位) / 中性区110-130(PE约45-55x，等待订单验证) / 较好区间95-110(PE约39-45x，赔率改善) / 更低区间<95(PE<39x，安全边际更好)",
+    "dv_ttm": 0.12,
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报"
+  },
+  {
+    "name": "北方华创",
+    "code": "002371.SZ",
+    "source_etf": "931912",
+    "position_role": "半导体设备国产替代核心成长仓",
+    "prebuy_conclusion": "A股半导体设备市值龙头，国产替代逻辑强，但需等2026年利润恢复验证且PE低于55x再建仓。",
+    "watch_reason": "刻蚀、PVD、CVD等设备平台能力完整，是半导体设备国产替代核心公司；估值和利润波动需要严格约束买点。",
+    "current_price": 546.13,
+    "price_date": "2026-04-24",
+    "board": "深",
+    "price_bands": [
+      485.0,
+      420.0,
+      340.0
+    ],
+    "risk_flags": [
+      "当前价格高于追高线，估值处于偏高区间",
+      "2025年Q4单季利润明显下滑，净利率压缩原因需验证",
+      "定增扩股摊薄EPS，股东回报和成长兑现需要继续跟踪"
+    ],
+    "valuation_anchor": "半导体设备PE+利润恢复：追高区>485(PE>62x，历史高分位，不追) / 中性区420-485(PE约55-62x，等待2026利润恢复) / 较好区间340-420(PE约45-55x，国产替代核心可研究性布局) / 更低区间<340(PE<45x，安全边际改善)",
+    "dv_ttm": 0.17,
+    "next_earnings_date": "2026-04-30",
+    "next_earnings_type": "一季报"
+  },
+  {
+    "name": "亚马逊",
+    "code": "AMZN.US",
+    "market": "US",
+    "board": "纳",
+    "source_etf": "direct",
+    "position_role": "美股成长池 - AWS全球#1云平台(31%市占)×AI基础设施全栈布局，Prime/广告飞轮提供现金流担保，200B Capex周期后FCF修复期权",
+    "prebuy_conclusion": "逻辑清晰，等待更合适价格或验证点 - AWS Q4增速+24%加速，买入逻辑成立；但当前$264位于60日高位(从低点+33%)，FCF/净利润仅9.9%被Capex压制，建议等2026-04-29财报验证后回调至$240以下再建仓",
+    "watch_reason": "AWS护城河垄断级(200+服务/36区域)，AI工作负载推动云需求新周期；Bedrock+Trainium全栈AI布局最完整；200B Capex峰值后预计FY2027+ FCF修复至$50-80B，届时估值重定价向上",
+    "current_price": 264.0,
+    "price_date": "2026-04-25",
+    "price_bands": [
+      290.0,
+      240.0,
+      190.0
+    ],
+    "valuation_anchor": "FY2026E EPS $7.84：追高区>$290(>37xFE) / 中性区$240-290(30-37xFE，含当前价) / 较好区间$190-240(24-30xFE) / 更低<$190(<24xFE强安全边际)",
+    "risk_flags": [
+      "FCF/净利润仅9.9%(FY2025 $7.7B FCF vs $77.7B净利)：$200B Capex周期若AI ROI不兑现将引发估值重定价",
+      "FTC反垄断主案悬而未决：零售垄断案预计进入联邦法院，极端情形强制拆分",
+      "关税政策拖累电商第三方卖家经济性，广告业务间接受损"
+    ],
+    "dv_ttm": 0,
+    "next_earnings_date": "2026-04-29",
+    "next_earnings_type": "季报"
+  },
+  {
+    "name": "AMD",
+    "code": "AMD.US",
+    "market": "US",
+    "board": "纳",
+    "source_etf": "direct",
+    "position_role": "AI加速器+服务器CPU双线成长，NVDA生态补充",
+    "prebuy_conclusion": "逻辑清晰，等待更合适价格或验证点",
+    "watch_reason": "EPYC服务器份额破40%，MI300规模化，FCF +179%，等回调$268-300建仓",
+    "current_price": 350.0,
+    "price_date": "2026-04-26",
+    "price_bands": [
+      335,
+      268,
+      201
+    ],
+    "valuation_anchor": "FY2026E Non-GAAP EPS $6.70，Forward PE 52x（偏贵）",
+    "risk_flags": [
+      "出口管制已损失$1.8B",
+      "ROCm生态差距短期难追CUDA",
+      "当前估值容错率低"
+    ],
+    "dv_ttm": 0.0,
+    "next_earnings_date": "2026-05-05",
+    "next_earnings_type": "季报"
+  },
+  {
+    "name": "美光科技",
+    "code": "MU.US",
+    "market": "US",
+    "board": "纳",
+    "source_etf": "direct",
+    "position_role": "HBM内存寡占+CHIPS Act政策护城河，AI算力基础设施配套",
+    "prebuy_conclusion": "逻辑清晰，当前价格合理，可按计划买入",
+    "watch_reason": "HBM3E供应NVIDIA Blackwell全年售罄，PB ~2.1x历史中低位，6x Forward PE极低",
+    "current_price": 97.0,
+    "price_date": "2026-04-26",
+    "price_bands": [
+      140,
+      110,
+      80
+    ],
+    "valuation_anchor": "FY2026E Non-GAAP EPS ~$16，公允价值中枢$160（10x EPS）",
+    "risk_flags": [
+      "出口管制已损失中国数据中心12-15%营收",
+      "DRAM周期提前反转风险",
+      "CapEx极高FCF极薄"
+    ],
+    "dv_ttm": 0.46,
+    "next_earnings_date": "2026-06-24（估算）",
+    "next_earnings_type": "季报"
+  },
+  {
+    "name": "Rocket Lab",
+    "code": "RKLB.US",
+    "market": "US",
+    "board": "纳",
+    "source_etf": "direct",
+    "position_role": "商业航天端到端平台，Neutron火箭期权",
+    "prebuy_conclusion": "优质成长平台，当前估值偏高（EV/FY26E Rev ~50x），.68处于中性区；Neutron首飞验证前不追高，等待。",
+    "watch_reason": "$1.85B backlog收入可见性强，毛利率快速改善至34%，等$60以下或Neutron进展明确再建仓",
+    "current_price": 79.68,
+    "price_date": "2026-04-24",
+    "price_bands": [
+      85.0,
+      62.0,
+      38.0
+    ],
+    "valuation_anchor": "FY2026E Revenue $854M，EV/Revenue ~50x（偏贵）",
+    "risk_flags": [
+      "Neutron已两次延迟Q4 2026仍有风险",
+      "EV/Revenue ~50x容错空间小",
+      "EBITDA转正要等FY2027-2028"
+    ],
+    "dv_ttm": 0.0,
+    "next_earnings_date": "2026-05-08",
+    "next_earnings_type": "季报"
+  },
+  {
+    "name": "新思科技",
+    "code": "SNPS.US",
+    "market": "US",
+    "board": "纳",
+    "source_etf": "direct",
+    "position_role": "EDA双寡头，AI芯片设计工具垄断，Ansys收购后全流程覆盖",
+    "prebuy_conclusion": "可以试错，但只能小仓位",
+    "watch_reason": "Ansys收购已完成构建EDA+仿真全流程垄断，Forward PE 34.7x处历史低分位，等FY2026 Q2验证整合",
+    "current_price": 500.0,
+    "price_date": "2026-04-26",
+    "price_bands": [
+      600,
+      490,
+      400
+    ],
+    "valuation_anchor": "FY2026E Non-GAAP EPS $14.42，Forward PE ~34.7x",
+    "risk_flags": [
+      "Ansys并表净债务~$11.8B高杠杆",
+      "整合执行风险FY2026是第一并表年",
+      "中国IP业务出口管制承压"
+    ],
+    "dv_ttm": 0.0,
+    "next_earnings_date": "2026-05-27",
+    "next_earnings_type": "季报"
+  },
+  {
+    "name": "台积电",
+    "code": "TSM.US",
+    "market": "US",
+    "board": "纽",
+    "source_etf": "direct",
+    "position_role": "全球唯一3nm/2nm量产代工厂，AI算力产业链核心制造基础设施",
+    "prebuy_conclusion": "逻辑清晰，等待更合适价格或验证点",
+    "watch_reason": "N2独占2-3年无竞争，HPC占营收61%，等回调至$340-360再建仓",
+    "current_price": 402.46,
+    "price_date": "2026-04-26",
+    "price_bands": [
+      400,
+      340,
+      290
+    ],
+    "valuation_anchor": "FY2026E EPS $15.50，Forward PE ~26x @ $402",
+    "risk_flags": [
+      "台海地缘政治系统性风险（不可对冲）",
+      "美国贸易政策出口管制升级",
+      "N2爬坡引发毛利率稀释2-3pp"
+    ],
+    "dv_ttm": 3.08,
+    "next_earnings_date": "2026-07-16（估算）",
+    "next_earnings_type": "季报"
+  },
+  {
+    "name": "Adobe",
+    "code": "ADBE.US",
+    "market": "US",
+    "board": "纳",
+    "source_etf": "direct",
+    "position_role": "创意软件事实垄断，Firefly AI货币化落地，FCF Yield ~10%",
+    "prebuy_conclusion": "逻辑清晰，当前价格合理，可按计划买入",
+    "watch_reason": "ARR $260亿+11%，Forward PE 10.4x处十年最低分位，CEO接班是短期不确定性",
+    "current_price": 245.0,
+    "price_date": "2026-04-26",
+    "price_bands": [
+      280,
+      245,
+      200
+    ],
+    "valuation_anchor": "FY2026E Non-GAAP EPS $23.49，Forward PE ~10.4x",
+    "risk_flags": [
+      "CEO接班人未定（最大风险）",
+      "Canva/Figma AI蚕食低端市场",
+      "Q2 FY2026指引偏弱"
+    ],
+    "dv_ttm": 0.0,
+    "next_earnings_date": "2026-06-11",
+    "next_earnings_type": "季报"
+  },
+  {
+    "name": "Salesforce",
+    "code": "CRM.US",
+    "market": "US",
+    "board": "纽",
+    "source_etf": "direct",
+    "position_role": "企业CRM全球第一，Agentforce AI Agent平台货币化启动",
+    "prebuy_conclusion": "逻辑清晰，当前价格合理，可按计划买入",
+    "watch_reason": "Agentforce ARR $800M +169%，13x Forward PE历史最低分位，$50B回购支撑",
+    "current_price": 175.0,
+    "price_date": "2026-04-26",
+    "price_bands": [
+      215,
+      175,
+      158
+    ],
+    "valuation_anchor": "FY2027E Non-GAAP EPS $13.20，Forward PE ~13.3x",
+    "risk_flags": [
+      "Agentforce客单价偏低均值$27K",
+      "微软Copilot侵蚀中期威胁",
+      "$50B商誉减值风险"
+    ],
+    "dv_ttm": 0.0,
+    "next_earnings_date": "2026-05-27",
+    "next_earnings_type": "季报"
+  },
+  {
+    "name": "Uber",
+    "code": "UBER.US",
+    "market": "US",
+    "board": "纽",
+    "source_etf": "direct",
+    "position_role": "全球最大叫车+外卖双平台，AV分发中立平台策略",
+    "prebuy_conclusion": "逻辑清晰，等待更合适价格或验证点",
+    "watch_reason": "FCF $9.8B +42%，EV/EBITDA ~14.6x，当前$74处绿灯区上端，等$68-72更优",
+    "current_price": 74.6,
+    "price_date": "2026-04-26",
+    "price_bands": [
+      90,
+      78,
+      62
+    ],
+    "valuation_anchor": "FY2026E Adj.EBITDA $11.04B，EV/EBITDA ~14.6x",
+    "risk_flags": [
+      "欧英司机雇员分类诉讼蔓延",
+      "Tesla Robotaxi绕开Uber独立扩张",
+      "Q1增速降至13.8%需验证"
+    ],
+    "dv_ttm": 0.0,
+    "next_earnings_date": "2026-05-06",
+    "next_earnings_type": "季报"
+  },
+  {
+    "name": "格力电器",
+    "code": "000651.SZ",
+    "source_etf": "980081",
+    "position_role": "消费价值锚",
+    "prebuy_conclusion": "结论升档(PS+4)。PE TTM 6.80x处5年4.4%历史极低分位，DY 7.78%极高防御，Q1 2026基本面企稳(净利+3.01%)。38.44元处绿灯区间低端，建议积极分批布局；上方阻力46元(基准绿灯上界)、53元(PS调整上界)。",
+    "watch_reason": "低增长、强现金回报、低估值折价的典型样本。",
+    "current_price": 38.44,
+    "price_bands": [
+      53,
+      46,
+      34
+    ],
+    "risk_flags": [
+      "空调市场增速放缓，国内渗透率接近天花板",
+      "海外收入占比约13%，汇率及贸易摩擦风险",
+      "多元化业务(格力钛/工业品)盈利能力弱于主业"
+    ],
+    "valuation_anchor": "PE 8x x 2026E EPS 5.82元 + DY 7%双锚；PS=+4，结论升档，绿灯上界+15%至53元",
+    "price_date": "2026-04-28",
+    "board": "深",
+    "dv_ttm": 7.78,
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报",
+    "pe_ttm": 6.8,
+    "pb": 1.55,
+    "cycle_is_cyclical": true,
+    "cycle_position": "复苏早期",
+    "policy_score": 4,
+    "last_updated": "2026-04-29"
+  },
+  {
+    "name": "兴业银行",
+    "code": "601166.SH",
+    "source_etf": "980081",
+    "position_role": "金融价值锚",
+    "prebuy_conclusion": "可以作为价值底仓研究性买入，但必须把它当银行股，而不是成长股。",
+    "watch_reason": "低估值、分红和资产质量稳定，适合价值底仓观察。",
+    "current_price": 18.18,
+    "price_bands": [
+      20.0,
+      17.0,
+      15.0
+    ],
+    "risk_flags": [
+      "银行板块长期低估值常态",
+      "盈利增速偏低",
+      "资本补充与息差压力仍在"
+    ],
+    "valuation_anchor": "PB+股息率：追高区>20(PE>5.5x，股息率<4%，银行溢价难维系) / 中性区17-20(PE4.7-5.5x，可持有拿股息) / 较好区间15-17(PE4.1-4.7x，股息率约5%+，价值底仓更舒服) / 更低区间<15(PE<4.1x，股息率>6%，安全边际充足)",
+    "price_date": "2026-04-24",
+    "board": "沪",
+    "dv_ttm": 8.94,
+    "next_earnings_date": "2026-04-30",
+    "next_earnings_type": "一季报"
+  },
+  {
+    "name": "川投能源",
+    "code": "600674.SH",
+    "source_etf": "931897",
+    "position_role": "水电参股与现金流资产",
+    "prebuy_conclusion": "逻辑清晰，当前约14.93元处于较好区间，赔率改善，可研究性布局/分批建仓。",
+    "watch_reason": "参股收益和水电现金流都比较稳，适合价值型观察。",
+    "current_price": 14.93,
+    "price_bands": [
+      17.0,
+      15.0,
+      13.5
+    ],
+    "risk_flags": [
+      "单一流域/参股资产依赖",
+      "来水和分红节奏会波动",
+      "成长弹性有限"
+    ],
+    "valuation_anchor": "股息率+参股资产价值：追高区>17(参股收益折算偏贵，股息率<3.5%) / 中性区15-17(底仓可持有，等来水验证) / 较好区间13.5-15(股息率约5%+，赔率改善) / 更低区间<13.5(参股资产折价明显，安全边际充足)",
+    "price_date": "2026-04-24",
+    "board": "沪",
+    "dv_ttm": 2.68,
+    "next_earnings_date": "2026-08-31（估算）",
+    "next_earnings_type": "半年报"
+  },
+  {
+    "name": "特斯拉",
+    "code": "TSLA.US",
+    "source_etf": "direct",
+    "position_role": "美股AI/Robotaxi/储能核心观察",
+    "prebuy_conclusion": "可以作为核心观察标的，但当前376.30美元仍偏贵，只适合观察或极小仓参与。",
+    "watch_reason": "电动车、储能、FSD、Robotaxi和Optimus长期期权集中，属于美股AI与能源平台核心标的，但必须用价格区间约束追高。",
+    "current_price": 376.3,
+    "price_bands": [
+      400.0,
+      300.0,
+      220.0
+    ],
+    "risk_flags": [
+      "当前估值主要依赖长期AI/Robotaxi/Optimus期权，商业化推迟会导致估值压缩",
+      "汽车主业利润率仍不强，现有利润难以支撑当前市值",
+      "FSD、Robotaxi和自动驾驶监管风险会影响重估节奏"
+    ],
+    "valuation_anchor": "平台期权估值：追高区>400(市场充分定价AI/Robotaxi/Optimus期权，不追) / 中性区300-400(期权逻辑成立但赔率一般，可观察或极小仓) / 较好区间220-300(回到研究性布局区，需同步验证汽车利润率和FSD进展) / 更低区间<220(安全边际改善，但仍需复核Robotaxi和储能兑现)",
+    "price_date": "2026-04-26",
+    "board": "纳",
+    "dv_ttm": 0.0,
+    "market": "US",
+    "next_earnings_date": "2026-07-22（估算）",
+    "next_earnings_type": "季报"
+  },
+  {
+    "name": "惠泰医疗",
+    "code": "688617.SH",
+    "source_etf": "399989",
+    "position_role": "心血管器械",
+    "prebuy_conclusion": "逻辑成立，2026Q1验证成长持续（营收+24.8%，净利+25.3%），心血管器械国产替代赛道清晰；ROE 29.3%，毛利率72.9%，财务质量优秀；按price_bands较好区间（210-240元）布局，不追高；电生理耗材集采政策是核心尾部风险，需持续跟踪进展。",
+    "watch_reason": "器械龙头里质量较高，适合跟踪成长和修复。",
+    "current_price": 248.73,
+    "price_bands": [
+      280.0,
+      240.0,
+      210.0
+    ],
+    "risk_flags": [
+      "器械赛道竞争加剧，电生理耗材集采政策落地前定价存在不确定性",
+      "心血管器械竞争格局未稳定，强生/雅培等外资持续推进国产化替代，压制估值上限"
+    ],
+    "valuation_anchor": "2026E前瞻PE：追高区>280(~85x，国产替代+产品放量充分定价) / 中性区240-280(70-85x，好公司但不便宜) / 较好区间210-240(60-70x，等估值随业绩消化) / 更低区间<210(<60x，回调后安全边际充足)",
+    "price_date": "2026-04-27",
+    "last_updated": "2026-04-28",
+    "board": "科",
+    "dv_ttm": 0.49,
+    "next_earnings_date": "2026-08-31（估算）",
+    "next_earnings_type": "半年报"
+  },
+  {
+    "name": "AST SpaceMobile",
+    "code": "ASTS.US",
+    "position_role": "直连手机卫星/LEO星座 — 颠覆运营商业务",
+    "prebuy_conclusion": "技术验证完成（50+MNO合作+FCC授权），H2 2026商业启动是关键考验；当前.40处于中性区偏低端，-5%轻仓。P/S 316x TTM完全依赖未来兑现，.2B可转债稀释风险须重视。",
+    "watch_reason": "全球唯一已部署直连手机卫星网络的上市公司；AT&T/Verizon/Vodafone等50+运营商战略合作；.2B积压订单；竞争对手Lynk/SpaceX Direct-to-Cell均未商业化。",
+    "current_price": 76.4,
+    "price_date": "2026-04-24",
+    "board": "美",
+    "price_bands": [
+      95.0,
+      70.0,
+      45.0
+    ],
+    "risk_flags": [
+      "执行风险：卫星制造/发射延误可能推迟商业启动",
+      ".2B可转债2028年到期，潜在大规模股权稀释",
+      "盈利时间线遥远（共识预测2028年才转正）",
+      "Beta=2.8，极高波动性，单月-30%以上可能",
+      "频谱干扰风险尚未完全解决（地面站和航空频段冲突）"
+    ],
+    "valuation_anchor": "P/S 316x TTM / 前瞻P/S 15-20x（FY27E） / 追高区> / 中性区-95（当前） / 较好区间-70 / 理想区间<",
+    "entry_trigger": "Q1 2026财报（2026-05-08）商业用户数量确认；或价格回落至",
+    "dv_ttm": null,
+    "next_earnings_date": "2026-05-08",
+    "next_earnings_type": "季报"
+  },
+  {
+    "name": "东方电子",
+    "code": "000682.SZ",
+    "source_etf": "560390",
+    "position_role": "电力二次设备成长，二次设备景气扩散验证",
+    "prebuy_conclusion": "Q1 2026净利+95%，PE历史3.1%分位（19.49x），PS=+5政策强顺风（新型电网），前瞻PE约14.7x处于安全边际区，可按计划建仓。",
+    "watch_reason": "电力二次设备第二梯队优质标的，ROE和净现比均达Growth门槛，受益电网数字化升级。",
+    "current_price": 13.26,
+    "price_date": "2026-04-28",
+    "board": "深",
+    "price_bands": [
+      27.0,
+      22.0,
+      15.0
+    ],
+    "risk_flags": [
+      "Q1净利+95%含季节性因素，H1合并数据需持续验证",
+      "国电南瑞主导市场，东方电子属第二梯队，议价能力偏弱",
+      "PB历史82.2%分位偏高，若ROE回落有压缩风险"
+    ],
+    "valuation_anchor": "2026E EPS约0.90元+PS=+5政策调整：追高区>27元(>30x) / 中性区22-27元(24-30x) / 较好区间15-22元(17-24x，政策调整绿灯区) / 安全边际区<15元(<17x，当前13.26元处于此区间)",
+    "dv_ttm": 0.62,
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报",
+    "cycle_is_cyclical": true,
+    "cycle_position": "复苏中期"
+  },
+  {
+    "name": "长高电新",
+    "code": "002452.SZ",
+    "source_etf": "560390",
+    "position_role": "特高压绝缘设备漏网之鱼，高毛利高壁垒小市值",
+    "prebuy_conclusion": "漏网之鱼（市值68亿），高毛利38.82%+净现比104.7%，基本面质量优秀，当前11.02元处于较好区间下沿，可研究性关注。",
+    "watch_reason": "高压/超高压绝缘子避雷器技术壁垒高，特高压建设加速直接受益，估值合理偏低。",
+    "current_price": 11.02,
+    "price_date": "2026-04-24",
+    "board": "深",
+    "price_bands": [
+      19.0,
+      14.0,
+      11.0
+    ],
+    "risk_flags": [
+      "营收同比-5.41%边界警告，需确认是项目验收节奏还是需求放缓",
+      "应收账款/营收54.7%超警戒线，回款节奏需跟踪",
+      "市值68亿偏小，流动性和机构关注度有限"
+    ],
+    "valuation_anchor": "EPS=0.552元，高压绝缘设备PE 20-35x；追高区>19元(>35x赔率差) / 中性区14-19元(25-35x) / 较好区间11-14元(20-25x赔率顺手) / 更低区间<11元(<20x安全边际好)",
+    "dv_ttm": 1.0,
+    "next_earnings_date": "2026-04-30",
+    "next_earnings_type": "一季报"
+  },
+  {
+    "name": "宏发股份",
+    "code": "600885.SH",
+    "source_etf": "560390",
+    "position_role": "全球继电器龙头，NEV+储能成长弹性仓，等回调窗口",
+    "prebuy_conclusion": "继电器全球龙头，NEV+储能驱动，净现比110%，但毛利承压且关税风险大，PE25.3x中性偏高，等回调至20-25元布局。",
+    "watch_reason": "继电器赛道全球规模第一，NEV高压接触器和储能继电器为中长期成长主线；现金流质量优秀，等价格回调至合理区间",
+    "current_price": 28.7,
+    "price_date": "2026-04-24",
+    "board": "沪",
+    "price_bands": [
+      33.0,
+      25.0,
+      20.0
+    ],
+    "risk_flags": [
+      "毛利率持续下滑（2024年36.2%→2025年34.3%），净利仅增7.76%远低于营收22%增速",
+      "海外收入50%+，美国关税升级直接冲击出口利润率",
+      "PE 25.27x处合理区间上沿，安全边际不足，需等回调"
+    ],
+    "valuation_anchor": "EPS约1.14元，工业电气+成长继电器PE区间18-29x：追高区>33元(PE>29x，赔率差不买) / 中性区25-33元(PE22-29x，可持有观察) / 较好区间20-25元(PE18-22x，赔率改善可布局) / 更低区间<20元(PE<18x，安全边际明显)",
+    "dv_ttm": 1.209,
+    "next_earnings_date": "2026-04-30",
+    "next_earnings_type": "一季报"
+  },
+  {
+    "name": "华明装备",
+    "code": "002270.SZ",
+    "source_etf": "931994",
+    "position_role": "高压GIS精密设备成长仓，ROE 22.5%+毛利54%，等22-27元价格窗口",
+    "prebuy_conclusion": "高质量成熟型成长仓，逻辑清晰，当前27.59元处于中性区；等22-27元区间可研究性布局，不追高。",
+    "watch_reason": "GIS设备毛利率54%+净利率30%+ROE 22.5%，电网设备股中盈利质量顶级；存量替换+特高压新建需求持续，待2026H1营收增速验证回升。",
+    "current_price": 27.59,
+    "price_date": "2026-04-25",
+    "board": "深",
+    "price_bands": [
+      36.0,
+      27.0,
+      22.0
+    ],
+    "risk_flags": [
+      "营收增速从+18.4%（2024）降至+4.5%（2025），成长性待验证",
+      "PE 34.8x+PB 7.87x，增速放缓背景下估值承压，下行空间较大",
+      "客户集中国网/南网，采购节奏波动影响业绩"
+    ],
+    "valuation_anchor": "前瞻PE（ROE 22.5%高质量成长）：追高区>36(PE≥45x，明显高估) / 中性区27-36(PE 34-45x，逻辑对但赔率一般，当前区间) / 较好区间22-27(PE 28-34x，赔率改善可布局) / 更低区间<22(PE<28x，股息率≈3%，性价比高)",
+    "dv_ttm": 2.24,
+    "next_earnings_date": "2026-08-31（估算）",
+    "next_earnings_type": "半年报"
+  },
+  {
+    "name": "德业股份",
+    "code": "605117.SH",
+    "source_etf": "932246",
+    "position_role": "户储与逆变器",
+    "prebuy_conclusion": "逻辑成立，当前140.7元在中性区偏低，可小仓跟踪，等125元以下建仓",
+    "watch_reason": "户储和逆变器链条的代表，适合看海外需求和产品节奏。",
+    "current_price": 140.7,
+    "price_bands": [
+      165.0,
+      145.0,
+      120.0
+    ],
+    "risk_flags": [
+      "估值不低",
+      "海外户储需求波动大",
+      "产品和订单节奏对利润影响明显"
+    ],
+    "valuation_anchor": "前瞻PE锚：追高区>165(PE>48x) / 中性区145-165(PE 42-48x) / 较好区间120-145(PE 35-42x) / 更低区间<120(PE<35x)，EPS约3.48元，户储+光储双主线",
+    "price_date": "2026-04-27",
+    "board": "沪",
+    "dv_ttm": 2.1,
+    "next_earnings_date": "2026-04-30",
+    "next_earnings_type": "一季报"
+  },
+  {
+    "code": "600023.SH",
+    "name": "浙能电力",
+    "board": "沪",
+    "sector": "公用事业/电力",
+    "last_close": 5.78,
+    "price_bands": [
+      11.33,
+      8.5,
+      6.8
+    ],
+    "valuation_anchor": "以股息率为锚：避开>11.33元(DY<3%)，关注8.50-11.33元(DY3-4%)，较好6.80-8.50元(DY4-5%)，理想<6.80元(DY>5%)",
+    "dv_ttm": 5.88,
+    "prebuy_conclusion": "浙江省垄断性区域电力平台，股息率5.88%（全批次最高）已在理想价位，近60日偏高位（5.78 vs高5.87），可小批量建仓",
+    "next_earnings_date": "2026-08-31（估算）",
+    "next_earnings_type": "半年报",
+    "tags": [
+      "绿色电力",
+      "公用事业",
+      "高息",
+      "火电+新能源"
+    ]
+  },
+  {
+    "name": "拓普集团",
+    "code": "601689.SH",
+    "ts_code": "601689.SH",
+    "source_etf": "931571",
+    "board": "沪",
+    "position_role": "汽车零部件+人形机器人执行器，机器人叙事最强标的之一",
+    "prebuy_conclusion": "逻辑清晰，等待更合适价格或验证点。45-56元绿灯区（PE≤32x）或机器人执行器收入占比首次超5%后再重仓",
+    "watch_reason": "特斯拉Optimus执行器+汽车热管理/空悬双轮驱动，机器人执行器国产化先锋",
+    "current_price": 56.76,
+    "price_date": "2026-04-24",
+    "price_bands": [
+      65.0,
+      56.0,
+      45.0
+    ],
+    "valuation_anchor": "基于2026E EPS约1.75元，65元以上=PE>37x追高，56-65=PE32-37x中性，45-56=PE26-32x较好，45以下=PE<26x安全边际充足",
+    "risk_flags": [
+      "FY2025净利润同比-7.3%，毛利率持续收窄（20.8%→19.4%），增收不增利",
+      "机器人执行器实际收入占比未在年报单独披露，叙事溢价风险高"
+    ],
+    "dv_ttm": 0.91,
+    "next_earnings_date": "2026-04-30",
+    "next_earnings_type": "一季报"
+  },
+  {
+    "name": "科沃斯",
+    "code": "603486.SH",
+    "ts_code": "603486.SH",
+    "source_etf": "931571",
+    "board": "沪",
+    "position_role": "全球最大家用服务机器人品牌，出海增长核心验证标的",
+    "prebuy_conclusion": "逻辑清晰，等待更合适价格或验证点。关税冲击明朗前等PE回落至18x（~55元）以下再重仓",
+    "watch_reason": "ROE跃升至21.7%+OCF/净利1.93x，FY2025利润质量大幅改善，海外扩张驱动真实增长",
+    "current_price": 61.64,
+    "price_date": "2026-04-24",
+    "price_bands": [
+      70.0,
+      60.0,
+      50.0
+    ],
+    "valuation_anchor": "基于FY2025 EPS约2.78元，70以上=PE>25x叙事溢价区，60-70=PE22-25x中性，50-60=PE18-22x较好，50以下=PE<18x安全边际充足",
+    "risk_flags": [
+      "美国关税冲击海外营收（美国收入占海外45.9%中较大比重），2026年H1影响待观察",
+      "Q1 2026净利同比-14.7%，关税扰动与季节性因素叠加，短期不确定性高"
+    ],
+    "dv_ttm": 0.73,
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报"
+  },
+  {
+    "name": "双环传动",
+    "code": "002472.SZ",
+    "ts_code": "002472.SZ",
+    "source_etf": "931571",
+    "board": "深",
+    "position_role": "RV减速器国内龙头，机器人核心零部件国产替代直接受益",
+    "prebuy_conclusion": "逻辑清晰，等待更合适价格或验证点。回落至30-32元（PE~20x）加仓，当前可小仓轻仓",
+    "watch_reason": "国内RV减速器市占率第一（14%），OCF/净利=1.89x现金质量极优，ROE稳步从12.2%→13.4%上升",
+    "current_price": 36.63,
+    "price_date": "2026-04-24",
+    "price_bands": [
+      44.0,
+      36.0,
+      30.0
+    ],
+    "valuation_anchor": "基于FY2025净利12.62亿，44以上=PE>28x追高，36-44=PE23-28x中性，30-36=PE19-23x较好，30以下=PE<19x安全边际充足",
+    "risk_flags": [
+      "Q1 2026营收+1.49%接近停滞，订单能否在H2人形机器人放量时加速存疑",
+      "纳博特斯克日系龙头市占率约60%，短期难以撼动，双环受制于国产化速度上限"
+    ],
+    "dv_ttm": 1.1,
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报"
+  },
+  {
+    "name": "润泽科技",
+    "code": "300442.SZ",
+    "source_etf": "930713",
+    "position_role": "IDC龙头，AI算力基础设施核心",
+    "prebuy_conclusion": "当前92.95元处于中性偏好区间，PE=29x，Q1加速+53.6%；IDC逻辑持续验证，回调至85元以下可加仓。",
+    "watch_reason": "重资产IDC龙头，Q1加速，ROE=42.8%，PE相较光模块同类更合理，AI算力扩建直接受益。",
+    "current_price": 92.95,
+    "price_bands": [
+      100.0,
+      85.0,
+      70.0
+    ],
+    "risk_flags": [
+      "重资产模式高资本开支，需持续跟踪ROIC是否能维持高位",
+      "单一大客户依赖风险，若头部云厂商缩减资本开支直接影响出租率",
+      "股权质押和大股东减持历史，需关注治理风险"
+    ],
+    "valuation_anchor": "PE区间：追高区>100(PE>34x) / 中性区85-100(PE 29-34x，当前位置) / 较好区间70-85(PE 24-29x) / 更低区间<70(PE<24x)",
+    "price_date": "2026-04-24",
+    "board": "创",
+    "dv_ttm": 0.57,
+    "next_earnings_date": "2026-08-31估算",
+    "next_earnings_type": "半年报"
+  },
+  {
+    "name": "瑞芯微",
+    "code": "603893.SH",
+    "source_etf": "930713",
+    "position_role": "AIoT/边缘AI芯片龙头",
+    "prebuy_conclusion": "当前178.65元处于中性区下沿，PE=65x，ROE=26.2%；若回调至160元附近赔率明显改善，适合逐步建仓。",
+    "watch_reason": "AIoT边缘AI芯片龙头，开发者生态护城河深，Q1净利+57.1%加速，中下价区赔率可接受。",
+    "current_price": 178.65,
+    "price_bands": [
+      220.0,
+      180.0,
+      150.0
+    ],
+    "risk_flags": [
+      "出口管制风险：AIoT芯片含高性能算力，存在潜在管制升级可能",
+      "消费电子有周期性，下行周期库存风险放大净利波动",
+      "PE=65x定价已充分反映成长预期，增速一旦放缓估值快速收缩"
+    ],
+    "valuation_anchor": "PE区间：追高区>220(PE>80x) / 中性区180-220(PE 65-80x，当前位置) / 较好区间150-180(PE 55-65x) / 更低区间<150(PE<55x)",
+    "price_date": "2026-04-24",
+    "board": "沪",
+    "dv_ttm": 0.53,
+    "next_earnings_date": "2026-08-31估算",
+    "next_earnings_type": "半年报"
+  },
+  {
+    "name": "巨化股份",
+    "code": "600160.SH",
+    "board": "沪",
+    "source_etf": "direct",
+    "position_role": "氟化工配额龙头，制冷剂景气周期成长仓",
+    "prebuy_conclusion": "逻辑清晰，等待更合适价格或验证点",
+    "watch_reason": "三代制冷剂配额全国第一(R32≈46%)，PVDF含氟新材料长期成长，Q1 2026净利+45.93%",
+    "current_price": 36.22,
+    "price_date": "2026-04-28",
+    "price_bands": [
+      50,
+      43,
+      36
+    ],
+    "valuation_anchor": "PE历史均值32x：追高区>54(PE>39x) / 中性区52-54(含政策加成后绿灯上界) / 较好区间36-52(PE26-37x) / 更低区间<36(PE<26x)",
+    "dv_ttm": 1.13,
+    "next_earnings_date": "2026-08-31（估算）",
+    "next_earnings_type": "半年报",
+    "risk_flags": [
+      "典型周期股：2023年ROE仅5.98%，制冷剂价格下行时盈利骤降",
+      "Q1 2026营收仅+3.75%，量增缓慢，主要靠价格推动",
+      "PB=4.79x对化工周期股偏高，下行时双杀风险"
+    ],
+    "notes": "PB=4.79x处于5年92%分位，景气高峰特征明显；PS+7升档被周期降档抵消；配额护城河延长景气但不消除双杀风险；维持growth小仓观察，不追高",
+    "cycle_is_cyclical": true,
+    "cycle_position": "景气高峰"
+  },
+  {
+    "name": "羚锐制药",
+    "code": "600285.SH",
+    "board": "沪",
+    "source_etf": "direct",
+    "position_role": "中药贴膏龙头，质量价值底仓，高分红安全垫",
+    "prebuy_conclusion": "22.57元处于较好区间，PE 16.2x低于历史均值18.5x，DV约4%，逻辑成立可研究性布局",
+    "watch_reason": "贴膏剂细分龙头，通络祛痛膏专利至2032年，ROE稳定23-24%，老龄化持续受益",
+    "current_price": 22.57,
+    "price_date": "2026-04-28",
+    "price_bands": [
+      31,
+      30,
+      21
+    ],
+    "valuation_anchor": "PE历史均值18.5x：追高区>31(PE>22x) / 中性区30-31(含政策加成后绿灯上界) / 较好区间21-30(PE15-21x) / 更低区间<21(PE<15x，历史低位)",
+    "dv_ttm": 3.99,
+    "next_earnings_date": "2026-08-31（估算）",
+    "next_earnings_type": "半年报",
+    "risk_flags": [
+      "2025年报净现比62.43%偏低（2024年为108%），原因待验证",
+      "集采政策若扩大至外用中成药贴膏领域，核心产品毛利将承压",
+      "市值较小（128亿），机构参与度低，流动性一般"
+    ]
+  },
+  {
+    "name": "中国铝业",
+    "code": "601600.SH",
+    "ts_code": "601600.SH",
+    "source_etf": "930708",
+    "board": "沪",
+    "position_role": "铝行业央企龙头，电解铝+氧化铝全产业链，PS+3政策顺风；复苏中期成长仓",
+    "prebuy_conclusion": "基本面扎实，ROE=17.6%，OCF/净利=132%，国央企PS+3。PB历史分位89.7%偏高，赔率偏差。等9-11元较好区间建仓，当前11.66元中性区低端可小仓参与（周期仓≤5%）。",
+    "watch_reason": "国内最大铝业央企，铝-氧化铝一体化覆盖完整，受益铝价复苏+新能源铝需求增长；ROE 17%+OCF现金流质量优秀",
+    "current_price": 11.66,
+    "price_date": "2026-04-28",
+    "price_bands": [
+      15.0,
+      11.0,
+      9.0
+    ],
+    "valuation_anchor": "PB分位+PE复合定价；2025净利126.74亿，合理PE 11-16x，PB历史中位约2.0-2.5x",
+    "risk_flags": [
+      "PB历史89.7%分位偏高，若铝价回调则估值压缩风险大",
+      "国央企资本配置效率偏低，ROE在历史高位后面临均值回归风险"
+    ],
+    "dv_ttm": 2.21,
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报",
+    "cycle_is_cyclical": true,
+    "cycle_position": "复苏中期",
+    "entry_trigger": null
+  },
+  {
+    "name": "天山铝业",
+    "code": "002532.SZ",
+    "ts_code": "002532.SZ",
+    "source_etf": "930708",
+    "board": "深",
+    "position_role": "新疆低成本电解铝龙头，度电0.19元护城河；复苏中期成长仓，但PB高位需等回调",
+    "prebuy_conclusion": "新疆低电价护城河（度电0.19元），ROE 17%，OCF/净利167%。Q1 2026净利+108%验证成长逻辑。PB分位92.3%高位，不追高。13-16元较好区间是主力建仓机会。2026年H1净利>40亿为持仓验证节点。",
+    "watch_reason": "新疆低电价形成结构性成本优势，ROE持续17%+，Q1 2026业绩大幅超预期，铝成本护城河在行业中罕见",
+    "current_price": 16.79,
+    "price_date": "2026-04-28",
+    "price_bands": [
+      21.0,
+      16.0,
+      13.0
+    ],
+    "valuation_anchor": "动态PE为主（2026预期净利90亿=PE约8.6x）+PB分位辅助；成本护城河支撑PB中枢上移",
+    "risk_flags": [
+      "PB历史92.3%分位景气高峰，铝价若回调则股价双杀风险",
+      "新疆地缘政治/政策风险（电价政策、投资限制）；产能集中于单一省份",
+      "市场已充分定价成长逻辑，安全边际不足"
+    ],
+    "dv_ttm": 2.96,
+    "next_earnings_date": "2026-08-29",
+    "next_earnings_type": "半年报",
+    "cycle_is_cyclical": true,
+    "cycle_position": "景气高峰",
+    "entry_trigger": null
+  },
+  {
+    "name": "神火股份",
+    "code": "000933.SZ",
+    "ts_code": "000933.SZ",
+    "source_etf": "930708",
+    "board": "深",
+    "position_role": "煤炭+电解铝双轮驱动，Q1 2026净利+223%；复苏中期，等25-31元布局",
+    "prebuy_conclusion": "铝业复苏中期，Q1 2026超预期是强信号；等价格回落至25-31元（PB 2.0-2.45x）时可研究性布局弹性仓；当前32.23元处于中性区（PB 64.6%分位），煤炭政策逆风构成中期压力",
+    "watch_reason": "煤铝双轮驱动，Q1 2026净利+223%超预期，OCF/净利191%现金流优秀；铝业龙头中PB分位较低，赔率相对合理",
+    "current_price": 32.23,
+    "price_date": "2026-04-28",
+    "price_bands": [
+      38.0,
+      31.0,
+      25.0
+    ],
+    "valuation_anchor": "PB分位定价（周期性材料+能源双周期）：PB历史64.6%分位，中性区31-38元，较好区25-31元",
+    "risk_flags": [
+      "煤炭业务面临政策压缩压力，煤炭价格持续下行风险",
+      "电解铝产能扩张叠加铝价回调，双业务同步下行风险"
+    ],
+    "dv_ttm": 3.21,
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报",
+    "cycle_is_cyclical": true,
+    "cycle_position": "复苏中期",
+    "entry_trigger": null
+  },
+  {
+    "name": "华峰铝业",
+    "code": "601702.SH",
+    "ts_code": "601702.SH",
+    "source_etf": "930708",
+    "board": "沪",
+    "position_role": "铝箔龙头，新能源电池铝箔受益标的；PB历史8.5%极低分位+ROE 20%，赔率最优",
+    "prebuy_conclusion": "PB=2.77处于5年8.5%历史分位（极低位），ROE=20%为本批最高，当前18.50元已处于较好区间（PB 2.6-3.4x）低端；新能源铝箔需求成长逻辑成立；OCF 2025年已改善至133%；核心风险是毛利率持续承压，等待半年报毛利率回升至15%以上作为加仓确认信号",
+    "watch_reason": "铝箔行业龙头，新能源锂电池铝箔高速增长；ROE 20%在铝加工行业极优，PB历史分位8.5%极低，赔率优异",
+    "current_price": 18.5,
+    "price_date": "2026-04-28",
+    "price_bands": [
+      30.0,
+      22.0,
+      17.0
+    ],
+    "valuation_anchor": "PB分位定价（铝加工成长股）：历史分位8.5%极低，22-30元=中性，17-22元=较好，17元以下=强买",
+    "risk_flags": [
+      "毛利率持续承压（2024=16.3%，2025Q3=12.3%），铝箔竞争加剧定价权弱",
+      "铝价上行时原材料成本转嫁能力存疑"
+    ],
+    "dv_ttm": 2.15,
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报",
+    "cycle_is_cyclical": true,
+    "cycle_position": "复苏早期",
+    "entry_trigger": null
+  },
+  {
+    "name": "紫金矿业",
+    "code": "601899.SH",
+    "ts_code": "601899.SH",
+    "source_etf": "930708",
+    "board": "沪",
+    "position_role": "全球铜金矿业龙头，铜+金双驱，海外矿山扩张；ROE 31.8%+Q1净利+97.5%，复苏中期成长仓",
+    "prebuy_conclusion": "逻辑清晰等待价格——铜金双驱全球布局，ROE31.8%/OCF/净利91.9%基本面优质，但PB=4.44x处于5年73%历史分位，等PB≤4.0x（约30元）再研究性布局",
+    "watch_reason": "A股唯一同时拥有世界级铜矿（科卢维齐、巨龙）和大型金矿（波格拉）的上市公司，铜的能源转型结构增量需求+黄金货币避险双逻辑，是A股跟踪全球铜金周期最纯粹的标的",
+    "current_price": 32.95,
+    "price_date": "2026-04-28",
+    "price_bands": [
+      36.0,
+      30.0,
+      26.0
+    ],
+    "valuation_anchor": "PB分位+PE复合定价；当前PE 14.2x处历史20.4%低位，PB 4.44x处历史73.3%分位；36元以上=PB>4.8x追高，30-36=中性，26-30=较好（PB 3.5-4.0x），<26=安全边际",
+    "risk_flags": [
+      "海外矿山占产量60%+，刚果金/巴布亚新几内亚地缘政治风险不可完全对冲",
+      "铜金价处于历史高位，若商品价格回调净利润可能收缩30-50%",
+      "持续海外并购积累商誉及整合管理风险"
+    ],
+    "dv_ttm": 1.51,
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报",
+    "cycle_is_cyclical": true,
+    "cycle_position": "复苏中期"
+  },
+  {
+    "name": "密尔克卫",
+    "code": "603713.SH",
+    "ts_code": "603713.SH",
+    "source_etf": null,
+    "board": "沪",
+    "position_role": "危化品物流唯一A股标的，全国资质最全；双估值历史极低位（PE 6.3%分位/PB 10.3%分位），ROE三年持续改善，增长稳定",
+    "prebuy_conclusion": "PE=14.2x历史6.3%分位、PB=1.88x历史10.3%分位双低位；ROE三年持续改善至13.87%；Q1 2026营收+12%、净利+7.1%增长延续；当前56.30元处于政策加权后较好区间（47-66元，PS=+1政治局物流网顺风，上界+10%）；核心风险是负债率快速攀升至74.47%，建议首批1.5-2万元，等半年报确认负债率改善后加仓",
+    "watch_reason": "危化品物流唯一A股标的，全国资质壁垒极深，双估值历史极低，增长稳定",
+    "current_price": 56.3,
+    "price_date": "2026-04-28",
+    "price_bands": [
+      70.0,
+      66.0,
+      47.0
+    ],
+    "valuation_anchor": "PE分位定价：当前14.2x处于历史6.3%极低分位；政策加权（PS=+1）后价格区间：≥70追高，66-70中性，47-66较好（当前），<47安全边际充足",
+    "risk_flags": [
+      "负债率快速攀升（2023:60.75%→2024:65.81%→2025:74.47%），流动性压力需持续监控",
+      "市值仅89亿，小盘流动性风险",
+      "OCF/净利历史波动较大（2024=51%，2025=84%），现金流质量有待稳定"
+    ],
+    "dv_ttm": 1.26,
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报",
+    "cycle_is_cyclical": false,
+    "cycle_position": null,
+    "entry_trigger": "等H1半年报确认负债率不再恶化后可加仓至满仓"
+  },
+  {
+    "name": "生益科技",
+    "code": "600183.SH",
+    "ts_code": "600183.SH",
+    "source_etf": null,
+    "board": "沪",
+    "position_role": "国内覆铜板CCL龙头，AI服务器高速高频CCL受益方；毛利率加速改善（22%→26.5%→28.1%），ROE从12%跳升至21%，当前估值偏贵等回调",
+    "prebuy_conclusion": "PS=+12（AI/算力政治局+十五五双⭐⭐⭐），结论升档：中性区低端（65-75元）可建初始仓位；PE=52.9x历史88%分位+PB=10.55x历史95.5%分位，纯基本面视角估值偏贵；但2025净利+91.7%、Q1 2026净利+105%、毛利率持续改善，基本面极强；质押0%，国资背景稳定；政策加权绿灯区50-74.75元（原50-65元上界+15%），当前72.63元已进入绿灯区，建议首批1-1.5万元建仓",
+    "watch_reason": "AI服务器供应链CCL龙头，毛利率和ROE加速改善，等估值回调",
+    "current_price": 72.63,
+    "price_date": "2026-04-28",
+    "price_bands": [
+      87.0,
+      74.75,
+      50.0
+    ],
+    "valuation_anchor": "FY2026E EPS约1.90元为基准；政策加权（PS=+12）绿灯区上界+15%：≥87=追高，74.75-87=中性，50-74.75=较好（当前72.63在此），<50=安全边际充足",
+    "risk_flags": [
+      "PE历史88%分位+PB历史95.5%分位，双估值极高，当前安全边际不足",
+      "CCL有周期属性，AI服务器需求若放缓，景气拐点前估值可能大幅压缩",
+      "AI高速CCL占总收入比例不透明，叙事溢价难精确量化"
+    ],
+    "dv_ttm": 1.38,
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报",
+    "cycle_is_cyclical": true,
+    "cycle_position": "景气上行",
+    "entry_trigger": "价格回调至65元以下，FY2026E PE进入26-34x较好区间后建仓"
+  },
+  {
+    "name": "招商银行",
+    "code": "600036.SH",
+    "source_etf": "direct",
+    "board": "沪",
+    "position_role": "利率周期底部底仓型银行配置，低于账面价值买入行业龙头",
+    "prebuy_conclusion": "逻辑清晰，当前价格合理，可按计划买入。PB=0.91x（5年18.8%低分位），Q1 2026收入+3.8%拐点初现，利率/信用周期底部/复苏早期，远期股息率约5.1%，周期升档+政策顺风PS+3综合达growth。",
+    "watch_reason": "零售银行护城河最深（AUM 13.2T），Q1 2026收入拐点确认（近8季最强），PB=0.91x破账面价值，远期股息率5.1%，政策顺风PS+3，利率周期底部。",
+    "current_price": 39.6,
+    "price_date": "2026-04-29",
+    "price_bands": [
+      50,
+      45,
+      38
+    ],
+    "valuation_anchor": "以PB分位定价：追高区>50(PB>1.11x，周期修复已充分定价) / 中性区45-50(PB 1.0-1.11x，可持有) / 较好区间38-45(PB 0.85-1.0x，低于账面价值，赔率良好) / 更低区间<38(PB<0.85x，安全边际充足)",
+    "risk_flags": [
+      "PBOC继续降息→NIM进一步压缩→ROE回升路径延长，Q1 2026 NIM待年报官方确认",
+      "Q1 2026收入拐点可持续性未验证，Q2 2026为关键验证节点",
+      "宏观信用收缩若超预期，NPL可能抬升（当前估算0.95%，处于历史低位）"
+    ],
+    "dv_ttm": 7.61,
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报",
+    "cycle_is_cyclical": true,
+    "cycle_position": "底部/复苏早期"
+  },
+  {
+    "name": "同花顺",
+    "code": "300033.SZ",
+    "source_etf": "direct",
+    "board": "创",
+    "position_role": "金融数据/AI量化工具平台，ROE36.7%极优质成长，等价格回调窗口",
+    "prebuy_conclusion": "逻辑清晰，等待更合适价格或验证点。ROE36.7%/净现比118%/2026Q1净利+113%，质地极优；但PB=5年99.8%分位极贵，当前231元在追高区，需等回落至160元以下再建仓。PS=+6。",
+    "watch_reason": "金融AI数据平台龙头，ROE36.7%+净现比118%是A股罕见高质量，2026Q1净利翻倍超预期，政策高顺风PS+6，等价格合理窗口",
+    "current_price": 231.2,
+    "price_date": "2026-04-29",
+    "price_bands": [
+      200,
+      160,
+      120
+    ],
+    "valuation_anchor": "2025净利32.05亿，PE约52x；追高区>200(PB极端分位) / 中性区160-200 / 较好区间120-160(PS+6绿灯区) / 更低区间<120",
+    "risk_flags": [
+      "PB=5年99.8%分位极度高估，当前231元赔率极差，历史PB曾大幅回落",
+      "金融市场景气强相关，熊市期间用户活跃度和付费率快速下降",
+      "AI叙事溢价难量化，竞争对手同质化功能持续压缩差异化壁垒"
+    ],
+    "dv_ttm": 0.87,
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报",
+    "policy_score": 6,
+    "last_updated": "2026-04-29"
+  }
+]

@@ -1,8 +1,8 @@
 # Watchlist 分层规则
 
-> **重要：任何 AI 在修改 `data/stock_watchlist.json` 之前，必须先完整阅读本文件。**
+> **重要：任何 AI 在修改 watchlist 文件之前，必须先完整阅读本文件。**
 
-本文件是 `data/stock_watchlist.json` 的配套规则说明，定义了三档 watchlist 的分层标准、进入/退出条件和操作约定。
+本文件是 watchlist 分拆文件（`watchlist_meta.json` / `watchlist_core.json` / `watchlist_growth.json` / `watchlist_radar.json`）的配套规则说明，定义了三档 watchlist 的分层标准、进入/退出条件和操作约定。
 
 ---
 

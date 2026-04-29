@@ -1,0 +1,138 @@
+{
+  "schema_version": 17,
+  "AGENT_INSTRUCTION": "修改本文件前，必须先完整阅读 tier_definitions 中对应档位的 entry_criteria 和 decision_tree，判断档位后再写入，不得跳过。完整规则见 data/WATCHLIST_RULES.md。\n字段说明：\n- note_path: 已移除，固定规则为 01-公司/{name}.md\n- board: 单字 沪/深/创/科/北，对应 上交所主板/深交所主板/深交所创业板/科创板/北交所\n- price_bands: 固定3个数字数组 [avoid_min, watch_min, consider_min] 降序，索引语义: [0]=追高区(avoid), [1]=中性区(watch), [2]=较好区间(consider), 隐含第4档=更低区间(strong_buy)。\n- valuation_anchor: 必填，四档价位语义说明，必须与 price_bands 同时填写。\n- priority: 已移除。\n- radar 专属必填字段 entry_trigger：一句话写明具体可量化的入场触发器（含数字），例如：股价跌至X元(DY>=Y%)、某季报净利同比转正、某项目投产落地。不得使用模糊表述如「等基本面改善」。没有具体触发器的公司不得加入 watchlist，记录在指数专题页即可。\n- dv_ttm: 股息率（DV TTM，单位%，数字类型），来自 tushare daily_basic 最新一条，需定期更新。\n- next_earnings_date: 下一期财报预约/实际披露日期（YYYY-MM-DD）。来源：tushare pro.disclosure_date() 或交易所预约日历。财报发布后须立即更新为下一期日期，确保该字段始终指向未来。无法查到预约日则用法定截止日估算（一季报04-30/半年报08-31/三季报10-31/年报次年04-30）并在值后标注「估算」字样。\n- next_earnings_type: 下一期财报类型，枚举值：一季报/半年报/三季报/年报。\n- cycle_is_cyclical: 布尔值，是否为周期股（符合模块14判定标准）。\n- cycle_position: 周期位置，枚举值见 cycle_position_schema。cycle_is_cyclical=true 时必填，否则省略。每次 PreBuy 更新时同步刷新。",
+  "rules_doc": "data/WATCHLIST_RULES.md",
+  "tier_definitions": {
+    "core": {
+      "label": "核心池",
+      "description": "买了就放的长期底仓。护城河足够深，价格合理时可主动建仓，无需等待特定催化剂。注意：档位由基本面质量决定，与当前股价无关；价格高低体现在 price_bands，不影响是否归入此档。",
+      "entry_criteria": [
+        "护城河：行业垄断、品牌定价权、或不可复制资产（水电/核电/牌照）",
+        "盈利质量：净现比 > 90%，ROE > 15% 且过去3年持续稳定",
+        "成长要求：不需高增长，但不能出现结构性利润下滑",
+        "红旗：PreBuy 主要红旗 <= 2 条，且无结构性/治理类红旗"
+      ],
+      "operation": "价格落入较好区间时主动建仓；更低区间加仓；追高区坚决不买。",
+      "exit_to_growth": "护城河出现结构性损伤，或连续2年净现比<80%，或ROE持续跌至10%以下",
+      "exit_watchlist": "出现治理红旗（财务造假迹象、大规模利益输送）"
+    },
+    "growth": {
+      "label": "成长池",
+      "description": "高质量成长公司，护城河尚未达到垄断级别，或有关键成长节点仍待业绩验证。等价格窗口，不追高。注意：档位由基本面质量决定，与当前股价无关；core 与 growth 的区别在于护城河深度和成长验证程度，而非谁现在更贵。",
+      "entry_criteria": [
+        "基本面质量：净现比 > 80%，ROE > 15% 或处于上升趋势",
+        "成长逻辑：有清晰的中长期成长驱动力，且已有历史业绩印证方向正确",
+        "护城河：有可识别的差异化壁垒（技术/品牌/渠道/规模），不需垄断级别",
+        "红旗：PreBuy 主要红旗 <= 3 条，且均为可跟踪可验证类，无根本性治理问题"
+      ],
+      "operation": "等价格进入较好区间再买；有明确业绩验证节点时可在中性区小仓参与；不追高。",
+      "exit_to_core": "护城河进一步夯实至垄断级别，可升至 core",
+      "exit_to_radar": "出现基本面恶化（净利下滑>20%且非一次性 / 毛利率持续下行 / 成长逻辑被证伪）",
+      "exit_watchlist": "基本面持续恶化超过2个季度，原有逻辑不再成立"
+    },
+    "radar": {
+      "label": "雷达池",
+      "description": "有关注价值但存在较多不确定性。只跟踪，不主动买入。出现明确信号后再评估升档。",
+      "entry_criteria": [
+        "逻辑未完全验证：成长故事有说服力但缺乏历史业绩印证，或处于行业周期底部",
+        "红旗较多：PreBuy 主要红旗 >= 3 条，或有1条治理/结构性红旗",
+        "竞争格局不清：护城河存疑，公司胜出概率尚不确定",
+        "主题纯度工具：用于跟踪行业主题景气度，但公司非该主题最优受益者",
+        "困境反转型：当前业绩差，押注未来改善，不确定性高"
+      ],
+      "operation": "只读不买。跟踪季报和行业动态；连续2个季度超预期且核心红旗消除则升至 growth。",
+      "exit_to_growth": "核心红旗消除，成长逻辑获得业绩印证",
+      "exit_watchlist": "跟踪满2年无改善信号，或原有关注理由不再成立"
+    }
+  },
+  "decision_tree": [
+    "1. 是否完成完整 PreBuy 分析？否 -> 不得加入 watchlist",
+    "2. 是否触发「不入」出口？（满足任意2条：① OCF/净利<20%且非经常性损益>60%净利 ② 无明确有时限修复路径 ③ 结构性治理/合规风险） -> ❌ 不入 watchlist",
+    "3. PreBuy 结论是否支持可以布局/可以买（基本面逻辑成立）？否（纯观察/逻辑未验证）-> 有具体入场触发器 -> radar；无触发器 -> 仅记录指数专题页",
+    "4. 护城河垄断级 + 净现比>90% + ROE稳定>15% + 红旗<=2？是 -> core（不论当前价格）",
+    "5. 基本面优秀 + 净现比>80% + ROE>15% + 红旗<=3 + 无治理问题？是 -> growth（不论当前价格）",
+    "6. 以上都不满足 -> 有具体可量化触发器 -> radar；无触发器 -> 不进 watchlist",
+    "注意：档位分类基于公司基本面质量，当前股价不影响应进入哪个档位。价格只影响 price_bands 中的操作区间。"
+  ],
+  "required_fields": [
+    "name: 公司简称，与 01-公司/ 页面标题一致",
+    "code: XXXXXX.SH 或 XXXXXX.SZ",
+    "source_etf: 来源指数代码；非指数来源填 direct",
+    "position_role: 一句话说明在组合中的角色",
+    "prebuy_conclusion: 直接引用 PreBuy 页面的操作结论",
+    "watch_reason: 长期关注理由",
+    "current_price: 加入时当前价格（数字，单位元）",
+    "price_date: 加入时的价格日期，YYYY-MM-DD格式",
+    "board: 单字 沪/深/创/科/北（上交所主板/深交所主板/深交所创业板/科创板/北交所）",
+    "price_bands: 固定3个数字的降序数组 [avoid_min, watch_min, consider_min]；对应: 追高区(avoid) / 中性区(watch) / 较好区间(consider) / 更低区间(strong_buy, 隐含)；禁止使用对象格式或增减元素数量",
+    "risk_flags: 数组，至少2条，引用 PreBuy 主要红旗",
+    "valuation_anchor",
+    "entry_trigger（radar专属必填）：一句话具体可量化的入场触发器，含数字条件",
+    "dv_ttm: 股息率（DV TTM，单位%，数字），来自 tushare daily_basic 最新一条，None 代表暂无股息",
+    "next_earnings_date: 下一期财报预约/实际披露日期，YYYY-MM-DD格式；来源 tushare disclosure_date；财报发布后立即更新为下一期，确保始终指向未来",
+    "next_earnings_type: 下一期财报类型，枚举值：一季报/半年报/三季报/年报",
+    "cycle_is_cyclical: 布尔值，是否为周期股（true/false）；true 时 cycle_position 必填",
+    "cycle_position（cycle_is_cyclical=true时必填）: 取值见 cycle_position_schema，枚举值：底部/复苏早期/复苏中期/景气高峰/收缩期/出清期"
+  ],
+  "generated_at": "2026-04-29",
+  "source_universes": [
+    {
+      "code": "560390",
+      "name": "A股电网设备",
+      "note_path": "05-A股指数/电网设备.md"
+    },
+    {
+      "code": "980081",
+      "name": "价值100",
+      "note_path": "05-A股指数/价值100.md"
+    },
+    {
+      "code": "931897",
+      "name": "绿色电力",
+      "note_path": "05-A股指数/绿色电力.md"
+    },
+    {
+      "code": "930713",
+      "name": "中证人工智能",
+      "note_path": "05-A股指数/930713 人工智能指数.md"
+    },
+    {
+      "code": "399997",
+      "name": "中证白酒",
+      "note_path": "05-A股指数/399997 中证白酒指数.md"
+    },
+    {
+      "code": "980018",
+      "name": "国证卫星通信",
+      "note_path": "05-A股指数/980018 卫星通信指数.md"
+    },
+    {
+      "code": "931912",
+      "name": "中证半导体产业",
+      "note_path": "05-A股指数/931912 中证半导体产业指数.md"
+    },
+    {
+      "code": "931571",
+      "name": "中证机器人",
+      "note_path": "05-A股指数/931571 中证机器人指数.md"
+    }
+  ],
+  "last_updated": "2026-04-29",
+  "cycle_position_schema": {
+    "_comment": "周期位置字段，仅对周期股必填；非周期股省略或填 null。取值必须是以下6个枚举值之一。",
+    "values": {
+      "底部": "PB历史分位 <20%，ROE处于近年低点或亏损，产品价格仍下行或企稳；最佳买入窗口，用PB定价",
+      "复苏早期": "PB历史分位 20-40%，ROE刚开始回升，产品价格企稳向上；可建仓，关注景气验证节点",
+      "复苏中期": "PB历史分位 40-65%，ROE持续改善，产品价格上行趋势明确；可持仓，关注顶部信号",
+      "景气高峰": "PB历史分位 >70%，ROE处于近年高点，产品价格同比高位（环比趋平或仍涨）；不追高，PE低是陷阱，准备减仓逻辑",
+      "收缩期": "PB从高位回落，ROE开始恶化，产品价格同比转负；持续减仓，不建仓",
+      "出清期": "PB历史分位极低，ROE亏损或极低，弱势企业退出；研究关注，等待产品价格企稳+ROE触底两个条件同时出现再行动"
+    },
+    "填写规则": [
+      "cycle_is_cyclical=true 时 cycle_position 必填",
+      "cycle_is_cyclical=false 或 null 时省略 cycle_position",
+      "每次 PreBuy 更新时同步更新 cycle_position",
+      "判断依据：PB历史分位(最重要) + ROE趋势 + 行业产品价格趋势，见 SKILL.md 模块14"
+    ]
+  }
+}
