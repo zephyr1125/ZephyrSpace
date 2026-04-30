@@ -324,24 +324,24 @@
     "market": "US",
     "board": "纳",
     "source_etf": "direct",
-    "position_role": "企业软件+云计算双飞轮，AI货币化最确定的平台",
-    "prebuy_conclusion": "逻辑清晰，当前价格合理，可按计划买入",
-    "watch_reason": "Azure Q3增速35%加速，OCF净现比137%，当前$425处🟢区间，Copilot渗透仅3.3%",
-    "current_price": 425.0,
-    "price_date": "2026-04-26",
+    "position_role": "企业软件现金牛 + Azure/AI平台底仓，核心跟踪点转向Capex回收与Copilot兑现",
+    "prebuy_conclusion": "高质量 Core，估值中性偏合理，继续看执行兑现。",
+    "watch_reason": "Azure 40%增速、AI业务年化收入超过$37B、commercial RPO升至$627B，同时Productivity分部仍提供近60%营业利润率的现金流底座。",
+    "current_price": 424.46,
+    "price_date": "2026-04-30",
     "price_bands": [
-      640,
-      510,
-      420
+      520,
+      450,
+      390
     ],
-    "valuation_anchor": "FY2027E Non-GAAP EPS $19.14，当前22.2x FY2027E",
+    "valuation_anchor": "以二手一致预期FY2026E EPS $16.92、FY2027E EPS $19.38为锚：追高区>$520(>30.7x FY2026E，市场继续无视Capex压力) / 中性区$450-520(26.6-30.7x，逻辑强但估值透支) / 较好区间$390-450(23.1-26.6x，质量与估值匹配) / 更低区间<$390(<23.1x，安全边际更充分)",
     "risk_flags": [
-      "AI Capex $64.6B收益不确定",
-      "FTC对Microsoft-OpenAI反垄断调查",
-      "Copilot货币化进展缓慢"
+      "AI Capex与数据中心租赁义务继续抬升，FY2026前九个月Capex近似口径已达$80.15B、未起租数据中心义务升至$196.6B",
+      "OpenAI关系仍重要但独家性已下降，新协议下Microsoft不再拥有对新增算力需求的优先拒绝权",
+      "Copilot商业化透明度仍不够，截至2026-04-30公司未持续披露足够细的付费席位、ARR或利润贡献指标"
     ],
-    "dv_ttm": 3.32,
-    "next_earnings_date": "2026-04-29",
+    "dv_ttm": 0.82,
+    "next_earnings_date": "2026-07-28（估算）",
     "next_earnings_type": "季报"
   },
   {
@@ -377,26 +377,25 @@
     "market": "US",
     "board": "纳",
     "source_etf": "direct",
-    "position_role": "全球最大社交广告平台垄断级护城河，OCF印钞机，AI广告精准化飞轮持续强化",
-    "prebuy_conclusion": "逻辑清晰，当前价格合理，可按计划买入 ⚠️ 分析基于FY2025年报，Q1 2026（2026-04-29 AMC）尚未纳入",
-    "watch_reason": "32亿+DAU双边网络效应护城河，FY2025经营利润率41.4%/OCF $115.8B，PEG 0.76（FY2026E PE 22.1x/增速29%），历史低分位，分析师目标$838(+24.7%)",
-    "current_price": 672.50,
-    "price_date": "2026-04-29",
+    "position_role": "垄断级社交广告平台 + AI广告现金流机器，核心跟踪点转向高CapEx回报与FTC进展",
+    "prebuy_conclusion": "主业更强，但资本开支风险显著抬升；当前更适合分批跟踪，不适合把 Q1 beat 直接等同于便宜。",
+    "watch_reason": "Q1 2026 已验证广告量价双升（展示量+19%、单广告价格+12%），Family DAP达35.6亿，PEG约0.75；但2026全年CapEx指引上修至$125-145B。",
+    "current_price": 669.12,
+    "price_date": "2026-04-30",
     "price_bands": [
-      850,
-      700,
-      580
+      820,
+      670,
+      550
     ],
-    "valuation_anchor": "FY2026E Non-GAAP EPS $30.39：追高区>$850(>28x，历史高分位) / 中性区$700-850(23-28x) / 较好区间$580-700(19-23x，含当前$672，PEG<1) / 更低区间<$580(<19x，FTC恐慌或市场错杀时加仓)",
+    "valuation_anchor": "以二手一致预期FY2026E EPS $30.39为锚：追高区>$820(>27x，需要市场继续忽略CapEx压力) / 中性区$670-820(22-27x，逻辑强但不宜追高) / 较好区间$550-670(18-22x，估值与增长基本匹配) / 更低区间<$550(<18x，通常需监管恐慌或系统性错杀)",
     "risk_flags": [
-      "🔴 FTC反垄断诉讼：强制拆分Instagram/WhatsApp风险，可能颠覆核心商业模式",
-      "🟡 FY2025 CapEx $69.7B急速膨胀，FCF由$54B降至$46B，CapEx失控将持续压制FCF",
-      "⚠️ SBC/净利润 33.7%，Non-GAAP EPS较真实利润高估约24%，需打折看待"
+      "FTC反垄断诉讼若支持拆分Instagram或WhatsApp，将直接重估长期估值中枢",
+      "2026全年CapEx指引已上修至$125-145B，若AI基础设施回报兑现慢，FCF将继续受压",
+      "双重股权结构下Mark Zuckerberg截至2026-04-01仍控制60.8%总投票权，普通股东影响力有限"
     ],
     "dv_ttm": null,
-    "next_earnings_date": "2026-04-29",
+    "next_earnings_date": "2026-07-29（估算）",
     "next_earnings_type": "季报",
-    "pending_earnings_note": "Q1 2026（2026-04-29 AMC 今日盘后）结果尚未纳入分析，财报发布后需更新公司页及本条目，并将next_earnings_date更新为Q2 2026日期",
     "cycle_is_cyclical": false
   },
   {
@@ -405,26 +404,26 @@
     "market": "US",
     "board": "纽",
     "source_etf": "direct",
-    "position_role": "全球第二大支付网络过路费机器，不承担信用风险，双边网络效应准垄断护城河",
-    "prebuy_conclusion": "逻辑清晰，当前价格合理，可按计划买入 ⚠️ 分析基于FY2025年报，Q1 2026（2026-04-30 BMO）尚未纳入",
-    "watch_reason": "FCF/净利润114.6%，FY2025 FCF Margin 52.3%，PEG 1.19（前瞻PE 26.1x/增速22%），历史PE均值35x当前低分位，分析师目标$649(+23.1%)",
-    "current_price": 527.37,
+    "position_role": "全球支付网络核心底仓，双边网络效应深、利润质量强，当前等待Q1验证后再决定是否加码",
+    "prebuy_conclusion": "逻辑清晰，等待更合适价格或验证点。",
+    "watch_reason": "FY2025 FCF/净利润达114.6%，跨境交易量本地货币口径+15%、增值服务收入+23%；等Q1 2026正式验证跨境与利润率后再上调结论。",
+    "current_price": 525.23,
     "price_date": "2026-04-29",
     "price_bands": [
       706,
       606,
       484
     ],
-    "valuation_anchor": "FY2026E Non-GAAP EPS $20.19：追高区>$706(>35x，历史均值上沿) / 中性区$606-706(30-35x) / 较好区间$484-606(24-30x，含当前$527) / 更低区间<$484(<24x)",
+    "valuation_anchor": "以二手一致预期FY2026E EPS $20.19为锚：追高区>$706(>35x，长期平台股估值上沿) / 中性区$606-706(30-35x，逻辑没问题但安全边际一般) / 较好区间$484-606(24-30x，估值已回到相对舒服位置) / 更低区间<$484(<24x，赔率明显改善)",
     "risk_flags": [
-      "🟡 反垄断监管风险：欧美对Visa/MA双寡头支付网络的持续调查，可能影响手续费定价",
-      "🟡 经济衰退将直接压低跨境支付交易量，收入和利润弹性较大",
-      "⚠️ 实时支付（FedNow/UPI等）和加密货币支付对传统卡网络的长期替代威胁"
+      "监管与诉讼风险持续存在，interchange、surcharging和litigation settlements仍是10-K核心风险项",
+      "跨境交易是重要增长引擎，旅行、贸易与汇率波动会直接影响盈利弹性",
+      "实时支付与账户到账网络会侵蚀部分低附加值交易，长期压制定价权"
     ],
-    "dv_ttm": 0.68,
+    "dv_ttm": 0.66,
     "next_earnings_date": "2026-04-30",
     "next_earnings_type": "季报",
-    "pending_earnings_note": "Q1 2026（2026-04-30 BMO 明日盘前）结果尚未纳入分析，财报发布后需更新公司页及本条目，并将next_earnings_date更新为Q2 2026日期",
+    "pending_earnings_note": "截至2026-04-30更新时，Q1 2026正式8-K/10-Q尚未纳入分析；若当日财报确认跨境交易、支付量和利润率维持健康，应及时把next_earnings_date更新为Q2 2026日期并同步上调结论",
     "cycle_is_cyclical": false
   }
 ]
