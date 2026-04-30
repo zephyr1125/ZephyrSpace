@@ -2515,5 +2515,33 @@
     "next_earnings_type": "半年报",
     "cycle_is_cyclical": true,
     "cycle_position": "收缩期"
+  },
+  {
+    "name": "横店东磁",
+    "code": "002056.SZ",
+    "source_etf": "930598",
+    "tier": "radar",
+    "board": "深",
+    "position_role": "全球铁氧体磁材龙头+光伏组件双轮驱动，磁材成长总量标的",
+    "prebuy_conclusion": "Q1 2026净利实际-15.76%（非报告的+30%），加速增长信号不成立，降至radar tier；2025全年ROE=17.9%/OCF=176%基本面扎实，等Q2净利恢复正增长后重新评估growth资格",
+    "watch_reason": "A股磁性材料规模最大标的，铁氧体磁材规模壁垒强，政策PS=+7，弱周期+价值成长混合；Q1利润下滑+毛利率压缩需Q2验证",
+    "current_price": 19.16,
+    "price_bands": [
+      22.8,
+      20.5,
+      17.1
+    ],
+    "valuation_anchor": "PE定价：追高区>22.8元(PE>20x) / 中性区20.5-22.8元 / 较好区间17.1-20.5元(PE15-18x) / 更低区间<17.1元(PE<15x)",
+    "risk_flags": [
+      "Q1 2026净利同比-15.76%，加速增长逻辑不成立，需Q2验证",
+      "毛利率持续下滑（19.78%→17.82%），磁材涨价覆盖能力待验证",
+      "自由现金流为负（资本开支~35亿），重资产扩张期"
+    ],
+    "price_date": "2026-04-29",
+    "dv_ttm": 4.28,
+    "next_earnings_date": "2026-08-31（估算）",
+    "next_earnings_type": "半年报",
+    "cycle_is_cyclical": true,
+    "cycle_position": "复苏早期"
   }
 ]
