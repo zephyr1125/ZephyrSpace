@@ -219,24 +219,24 @@
     "market": "US",
     "board": "纳",
     "source_etf": "direct",
-    "position_role": "美股长线底仓 - Search近垄断现金流机器×Cloud高速成长(+36%)×Gemini AI全生态，3年+持有窗口在Ad Tech裁决落地后",
-    "prebuy_conclusion": "逻辑清晰，等待更合适价格或验证点 - FCF机器体质成立(OCF $164B)，DOJ Ad Tech裁决悬空是最大单一风险；当前$345处于历史PE高位(90-95分位)，建议等裁决落地+价格回调至$280-300再考虑建仓",
-    "watch_reason": "Search护城河接近垄断(+13.4%持续增长)，Cloud已转正盈利且backlog $240B(+55%)；Gemini月活7.5亿深度锁定Android/Gmail/Docs生态；FCF $73B+持续回购，SBC/净利18.9%温和可控",
-    "current_price": 345.0,
-    "price_date": "2026-04-25",
+    "position_role": "美股长线核心底仓 - Search/广告现金牛 + Google Cloud/AI平台第二增长极，核心观察点转向Ad Tech救济与高CapEx兑现效率",
+    "prebuy_conclusion": "逻辑清晰，等待更合适价格或验证点 - Q1 2026已正式验证Cloud与Search双强增长，但当前更接近中性区上沿，需继续观察Ad Tech救济与高CapEx对FCF的压制。",
+    "watch_reason": "Q1 2026营收$109.9B同比+22%，Google Cloud单季首次站上$20.0B且同比+63%；Google Services仍稳，说明AI没有打坏核心广告机，但估值已反映部分强财报乐观预期。",
+    "current_price": 349.94,
+    "price_date": "2026-04-29",
     "price_bands": [
-      350.0,
-      290.0,
-      245.0
+      360.0,
+      320.0,
+      285.0
     ],
-    "valuation_anchor": "FY2026E EPS $11.70：追高区>$350(>30xFE,历史高分位) / 中性区$290-350(25-30xFE) / 较好区间$245-290(21-25xFE,历史均值附近) / 更低<$245(<21xFE安全边际充足)",
+    "valuation_anchor": "以二手一致预期FY2026E EPS约$11.81为锚：追高区>$360(>30.5x，强财报后溢价明显) / 中性区$320-360(27.1-30.5x，质量高但需继续观察Ad Tech救济与高CapEx) / 较好区间$285-320(24.1-27.1x，质量与赔率更平衡) / 更低区间<$285(<24.1x，若基本面未坏则安全边际更充足)",
     "risk_flags": [
-      "DOJ Ad Tech案：AdX强制剥离裁决悬空($30-40B收入规模)，裁决公布前股价承压；行为性救济则为小幅正面",
-      "FY2026 Capex翻倍至$175-185B(FY2025 $91B)：FCF将大幅压缩，短期FCF估值逻辑失效",
-      "DOJ Search行为约束：Apple TAC付款($18-20B/年)逐步消失，6年执行期持续侵蚀高毛利流量"
+      "Ad Tech案责任认定已坐实，但最终救济仍未落地；若进入剥离或强制处置级别，相关高毛利广告技术资产估值中枢会被重定价",
+      "AI基建资本开支显著抬升，Q1 2026二手口径自由现金流仅约$10.1B，投资逻辑不能只看EPS而需同步看FCF兑现",
+      "Search案已进入长期行为救济期，默认分发、数据开放与流量获取经济性会慢变量侵蚀护城河"
     ],
     "dv_ttm": 0.23,
-    "next_earnings_date": "2026-04-29",
+    "next_earnings_date": "2026-07-29（估算）",
     "next_earnings_type": "季报"
   },
   {
