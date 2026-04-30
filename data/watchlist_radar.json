@@ -2403,5 +2403,117 @@
     "next_earnings_date": "2026-07-17（估算）",
     "next_earnings_type": "季报",
     "cycle_is_cyclical": false
+  },
+  {
+    "name": "银河磁体",
+    "code": "300127.SZ",
+    "source_etf": "930598",
+    "tier": "radar",
+    "board": "创",
+    "position_role": "稀土粘结磁体小巨人，高净利率+零杠杆财务顶尖",
+    "prebuy_conclusion": "Q1 2026营收+34%、净利+36%加速，财务质量顶尖（零杠杆零商誉20%净利率），但PE=52.7x偏贵，等PE<35x（约22元以下）建仓",
+    "watch_reason": "A股粘结磁体稀缺标的，净利率20%在磁材中最高，政策PS=+5，等估值回落是唯一约束",
+    "entry_trigger": "股价回落至22元以下（PE≤35x），且连续两季度净利增速≥20%",
+    "current_price": 31.3,
+    "price_bands": [
+      35,
+      25,
+      18
+    ],
+    "valuation_anchor": "PE定价：追高区>35元(PE>60x) / 中性区25-35元(PE43-60x，当前区间) / 较好区间18-25元(PE31-43x，研究性布局) / 更低区间<18元(PE<31x，大仓介入)",
+    "risk_flags": [
+      "PE=52.7x估值偏贵，当前不适合建仓",
+      "市值偏小（~100亿），流动性有限",
+      "OCF/净利=56%偏低，需持续跟踪现金流改善"
+    ],
+    "price_date": "2026-04-29",
+    "dv_ttm": 1.12,
+    "next_earnings_date": "2026-08-31（估算）",
+    "next_earnings_type": "半年报",
+    "cycle_is_cyclical": true,
+    "cycle_position": "复苏早期"
+  },
+  {
+    "name": "铂科新材",
+    "code": "300811.SZ",
+    "source_etf": "930598",
+    "tier": "radar",
+    "board": "创",
+    "position_role": "软磁粉心差异化技术标的，磁粉行业高毛利龙头",
+    "prebuy_conclusion": "毛利42%+零杠杆+零商誉质地优秀，但PE=60.5x处追高区（当前90.41元），Q1净利仅+3%利润率压缩，等PE回落至50x以下（约72元以下）建仓",
+    "watch_reason": "软磁粉心差异化产品，受益AI电源和新能源磁材扩张，基本面质量高，只等价格",
+    "entry_trigger": "股价回落至72元以下（PE<50x），且季度净利增速恢复至15%以上",
+    "current_price": 90.41,
+    "price_bands": [
+      72,
+      58,
+      50
+    ],
+    "valuation_anchor": "PE定价：追高区>72元(PE>50x，当前区间不建议介入) / 黄灯区58-72元(PE40-50x，研究性布局) / 绿灯区50-58元(PE35-40x，较好入场) / 更低区间<50元(PE<35x，大仓介入)",
+    "risk_flags": [
+      "PE=60.5x处于追高区，当前价90.41元赔率差",
+      "Q1 2026净利增速仅+3%（远低于营收+14%），毛利率压缩",
+      "软磁粉心新增产能投放，行业竞争加剧风险"
+    ],
+    "price_date": "2026-04-29",
+    "dv_ttm": 0.22,
+    "next_earnings_date": "2026-08-31（估算）",
+    "next_earnings_type": "半年报"
+  },
+  {
+    "name": "大洋电机",
+    "code": "002249.SZ",
+    "source_etf": "930598",
+    "tier": "radar",
+    "board": "深",
+    "position_role": "汽车电机+工业电机双线，高现金流价值标的",
+    "prebuy_conclusion": "净利连续三年增长，OCF=184%优秀，但ROE=11%未达12%门槛，Q1营收-3.9%转负，等ROE改善+营收回正后升档",
+    "watch_reason": "汽车+工业电机双赛道，现金流质量在同类中顶尖，高股息（DY=2.5%），基本面向好方向明确，等量化触发器",
+    "entry_trigger": "ROE连续两季度站稳12%以上，且Q2营收增速同比转正（>0%）",
+    "current_price": 9.11,
+    "price_bands": [
+      11,
+      8,
+      6
+    ],
+    "valuation_anchor": "PE定价：追高区>11元(PE>25x) / 中性区8-11元(PE18-25x，当前区间) / 较好区间6-8元(PE14-18x，研究性布局) / 更低区间<6元(PE<14x，安全边际充足)",
+    "risk_flags": [
+      "ROE=11%未达合格门槛（12%），盈利能力偏弱",
+      "Q1 2026营收同比-3.9%，营收增长停滞",
+      "PE=20.7x处历史中位数以上，赔率一般"
+    ],
+    "price_date": "2026-04-29",
+    "dv_ttm": 2.49,
+    "next_earnings_date": "2026-08-31（估算）",
+    "next_earnings_type": "半年报"
+  },
+  {
+    "name": "卧龙电驱",
+    "code": "600580.SH",
+    "source_etf": "930598",
+    "tier": "radar",
+    "board": "沪",
+    "position_role": "工业电机+电动化平台，全球化布局中的困境反转标的",
+    "prebuy_conclusion": "营收连续两年下滑（2025:-4.9%），PE=52x处5年77%高分位，商誉/净资产31%，当前不适合介入，等2026H1营收转正且PE<39x再评估",
+    "watch_reason": "工业电机+EV驱动双布局，全球化渠道是差异化壁垒，若营收企稳则有明确升档逻辑",
+    "entry_trigger": "2026H1营收同比转正（半年报营收>2025H1），且PE回落至39x以下（约28元）",
+    "current_price": 37.47,
+    "price_bands": [
+      38,
+      28,
+      20
+    ],
+    "valuation_anchor": "PE定价：追高区>38元(PE>53x，当前区间不建议) / 中性区28-38元(PE39-53x，等营收转正信号) / 较好区间20-28元(PE28-39x，历史中位数，可布局) / 更低区间<20元(PE<28x，安全边际好)",
+    "risk_flags": [
+      "营收连续两年下滑（2024:-3.4%，2025:-4.9%），成长逻辑尚未验证",
+      "PE=52x处于5年历史77%高分位，估值偏贵",
+      "商誉/净资产=31%，并购标的业绩承诺压力"
+    ],
+    "price_date": "2026-04-29",
+    "dv_ttm": 0.33,
+    "next_earnings_date": "2026-08-31（估算）",
+    "next_earnings_type": "半年报",
+    "cycle_is_cyclical": true,
+    "cycle_position": "收缩期"
   }
 ]

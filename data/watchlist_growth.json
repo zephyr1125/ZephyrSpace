@@ -1834,5 +1834,89 @@
     "next_earnings_date": "2026-07-23（估算）",
     "next_earnings_type": "季报",
     "cycle_is_cyclical": false
+  },
+  {
+    "name": "横店东磁",
+    "code": "002056.SZ",
+    "source_etf": "930598",
+    "tier": "growth",
+    "board": "深",
+    "position_role": "全球铁氧体磁材龙头+光伏组件双轮驱动，磁材成长总量标的",
+    "prebuy_conclusion": "Q1 2026营收+23%、净利+30%加速，PE=17.5x历史低位，OCF=176%优秀，当前19.16元处于绿灯区上部，可研究性小仓布局，等Q2业绩确认后加仓",
+    "watch_reason": "A股磁性材料规模最大标的，铁氧体磁材规模壁垒强，政策PS=+5，弱周期+价值成长混合属性，适合作稀土产业链底仓配置",
+    "current_price": 19.16,
+    "price_bands": [
+      22.8,
+      20.5,
+      17.1
+    ],
+    "valuation_anchor": "PE定价：追高区>22.8元(PE>20x) / 中性区20.5-22.8元(PE18-20x，小仓试探) / 较好区间17.1-20.5元(PE15-18x，研究性布局) / 更低区间<17.1元(PE<15x，重点加仓)",
+    "risk_flags": [
+      "毛利率持续下滑（19.78%→17.82%），磁材涨价覆盖能力待验证",
+      "自由现金流为负（资本开支~35亿），重资产扩张期",
+      "光伏业务竞争激烈，组件价格下行压力持续"
+    ],
+    "price_date": "2026-04-29",
+    "dv_ttm": 4.28,
+    "next_earnings_date": "2026-08-31（估算）",
+    "next_earnings_type": "半年报",
+    "cycle_is_cyclical": true,
+    "cycle_position": "复苏中期"
+  },
+  {
+    "name": "厦门钨业",
+    "code": "600549.SH",
+    "source_etf": "930598",
+    "tier": "growth",
+    "board": "沪",
+    "position_role": "钨资源稀缺性×新能源材料成长性双锚（钨冶炼+NdFeB磁材+LFP正极）",
+    "prebuy_conclusion": "Q1 2026营收+87%、净利+189%爆发验证双主线共振，扣非干净，OCF=129%，当前59.47元处中性区，回调至52元以下绿灯区布局",
+    "watch_reason": "A股稀有金属+新能源材料双逻辑稀缺标的，钨供给稀缺+LFP磁材放量，PS=+5，基本面质量高，是稀土产业链高权重核心持仓",
+    "current_price": 59.47,
+    "price_bands": [
+      70,
+      52,
+      40
+    ],
+    "valuation_anchor": "前向PE：追高区>70元(前瞻PE>40x) / 中性区52-70元(PE30-40x，当前区间) / 较好区间40-52元(PE23-30x，分批建仓) / 更低区间<40元(PE<23x，安全边际充足)",
+    "risk_flags": [
+      "钨精矿价格受全球矿业供给影响，商品价格波动风险",
+      "LFP正极材料赛道竞争激烈，厦钨新能源市占率压力",
+      "PE=31.2x中性偏高，当前不适合追高"
+    ],
+    "price_date": "2026-04-29",
+    "dv_ttm": 1.02,
+    "next_earnings_date": "2026-08-31（估算）",
+    "next_earnings_type": "半年报",
+    "cycle_is_cyclical": true,
+    "cycle_position": "复苏中期"
+  },
+  {
+    "name": "金力永磁",
+    "code": "300748.SZ",
+    "source_etf": "930598",
+    "tier": "growth",
+    "board": "创",
+    "position_role": "高性能钕铁硼永磁龙头，EV+机器人+风电三赛道核心材料",
+    "prebuy_conclusion": "三赛道需求结构向好，2025年净利+142%触底恢复，Q1+16%延续，ROE=9.68%偏低是约束，PE=62x历史中位数，研究性小仓观察，等稀土价格企稳+ROE回升12%以上再加仓",
+    "watch_reason": "人形机器人量产爆发的核心磁材标的，EV+风电需求稳增，稀土自主可控直接受益，PS=+5，是稀土产业链最高弹性标的",
+    "current_price": 33.49,
+    "price_bands": [
+      40,
+      30,
+      22
+    ],
+    "valuation_anchor": "PE定价（稀土价格向上弹性大）：追高区>40元(PE>76x) / 中性区30-40元(PE57-76x，小仓观察) / 较好区间22-30元(PE42-57x，分批布局) / 更低区间<22元(PE<42x，历史低位，大仓介入)",
+    "risk_flags": [
+      "ROE=9.68%尚未回升至合格水平（门槛12%），稀土原料成本压制利润",
+      "PE=62x历史中位数，下游量产不及预期则估值承压",
+      "稀土价格政策性波动风险（供给侧管控+下游新兴需求节奏不确定）"
+    ],
+    "price_date": "2026-04-29",
+    "dv_ttm": 0.89,
+    "next_earnings_date": "2026-08-31（估算）",
+    "next_earnings_type": "半年报",
+    "cycle_is_cyclical": true,
+    "cycle_position": "复苏早期"
   }
 ]
