@@ -2543,5 +2543,33 @@
     "next_earnings_type": "半年报",
     "cycle_is_cyclical": true,
     "cycle_position": "复苏早期"
+  },
+  {
+    "name": "广州发展",
+    "code": "600098.SH",
+    "source_etf": "direct",
+    "tier": "radar",
+    "board": "沪",
+    "position_role": "广州市国资综合能源平台，高股息防御底仓，等非经常性损益来源澄清后评估升档",
+    "prebuy_conclusion": "当前PB 0.9334处于5年76.6%分位，安全边际不足；2025年非经常性损益占净利54.5%导致扣非PE约24x；等价格回落至PB<0.85x（约6.54元）且2026半年报确认扣非利润回归正常后考虑建仓",
+    "watch_reason": "广州市国资委能源平台+长江电力战略持股14%（整合期权）+DY TTM 5.1%高股息；政策顺风PS=+3（能源安全+国企改革）；核心疑点澄清后可升至growth评估",
+    "current_price": 7.24,
+    "price_date": "2026-04-29",
+    "price_bands": [
+      7.7,
+      6.54,
+      5.78
+    ],
+    "valuation_anchor": "PB分位定价：追高区>7.70元(PB>1.00x) / 中性区6.54-7.70元(PB 0.85-1.00x) / 较好区间5.78-6.54元(PB 0.75-0.85x) / 更低区间<5.78元(PB<0.75x)",
+    "entry_trigger": "价格<=6.54元（PB<0.85x，5年20%分位以下）且2026半年报扣非净利润>=7.5亿（年化>=15亿）",
+    "risk_flags": [
+      "2025年非经常性损益约12.63亿占净利54.5%（H1单期76.7%），来源未完整披露，扣非PE实为约24x",
+      "自由现金流持续为负（2025年-31.44亿），重资本扩张压制分红增长空间"
+    ],
+    "dv_ttm": 5.111,
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报",
+    "cycle_is_cyclical": true,
+    "cycle_position": "复苏中期"
   }
 ]
