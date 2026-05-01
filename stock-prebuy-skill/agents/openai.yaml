@@ -1,0 +1,7 @@
+interface:
+  display_name: "买股前审视个股"
+  short_description: "在买入任何个股前系统核查业务、财报、估值、治理与潜在雷点"
+  default_prompt: "请用 stock-prebuy-review 技能，按买入理由、商业模式、财报质量、现金流、资本结构、治理、监管风险、估值与反证条件，系统审视这只股票，并用简体中文输出。"
+
+policy:
+  allow_implicit_invocation: true
