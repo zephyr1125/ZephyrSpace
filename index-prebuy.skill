@@ -1,0 +1,336 @@
+# 指数整体 PreBuy —— 行业/主题指数 ETF 买入分析
+
+## 用途
+
+评估某个**行业指数或主题指数**作为整体是否值得买入 ETF。
+目标：判断当前赔率，给出买入价格区间和建仓节奏建议。
+
+**不做什么**：不拆解筛选个股，不逐只公司分析（那是成分股 PreBuy 的职责）。
+
+---
+
+## 触发指令
+
+当用户说以下任意一种表述时，**不需要二次确认**，直接按本 SOP 执行：
+
+- `对[指数名/代码]做指数PreBuy`
+- `帮我评估[指数]值不值得买ETF`
+- `[指数名]适合现在建仓吗`
+- `[指数名]指数整体怎么样`
+
+**与成分股 PreBuy 的区别**（禁止混淆）：
+
+| 触发表述 | 执行的流程 |
+|---|---|
+| `用 prebuy 分析[指数]` | 成分股PreBuy——全成分粗筛 + 逐只深度分析 + watchlist决策 |
+| `对[指数]做指数PreBuy` | **本技能**——指数整体估值 + 赛道质量 + 买入价格区间 |
+
+---
+
+## 适用范围
+
+✅ 适用：行业指数、主题指数（中证、国证、上交所、深交所发布的行业/主题类指数）
+❌ 不适用：宽基指数（沪深300、中证500、创业板指等）、个股分析
+
+---
+
+## 5 步分析 SOP
+
+### 第 1 步：确认指数基本信息
+
+从用户输入或已有指数页（`05-A股指数/`）中获取：
+- 指数代码（格式：`XXXXXX.CSI` / `.SZ` / `.SH`）
+- 指数名称
+- 相关 ETF（若有）
+- 样本数量、发布机构
+
+**判断编制类型**（影响后续是否做成分股轻量核查）：
+- **市值加权**（纯被动）：按成分股总市值权重排列，如中证电网设备、全指证券公司
+- **策略型**（等权/因子/行业特定规则）：需额外检查前10大成分股质量
+
+判断方法：查阅指数编制方案或指数名称中含"等权"、"质量"、"价值"、"动量"等词即为策略型。
+
+---
+
+### 第 2 步：获取当前 PE / 股息率
+
+**来源：中证官网（akshare 封装）**
+
+```python
+import akshare as ak
+
+df = ak.stock_zh_index_value_csindex(symbol="931994")  # 替换为目标指数代码
+# 返回最近20个交易日，取最新一行
+current_pe  = float(df.iloc[0]['市盈率1（总股本）P/E1'])
+current_dy  = float(df.iloc[0]['股息率1（总股本）D/P1'])
+index_name  = df.iloc[0]['指数中文简称Index Chinese Name']
+as_of_date  = str(df.iloc[0]['日期Date'])
+```
+
+**注意事项**：
+- 部分指数代码在中证官网格式为 `H30590` 等字母开头格式，需查官网确认
+- 若 `stock_zh_index_value_csindex` 返回 404，说明该指数未收录于中证官网，改用以下备用方式：
+  - web_fetch 东方财富指数页面 `https://quote.eastmoney.com/zs{code}.html`
+  - 人工填入（从同花顺或指数官网页面读取）
+
+---
+
+### 第 3 步：计算历史 PE 分位（价格反推法）
+
+**原理**：`历史PE_t ≈ 当前PE × (历史收盘_t / 当前收盘)`
+
+假设短中期 EPS 变化较平滑，此近似对判断估值水位方向足够可靠。对盈利周期性极强的赛道（如半导体、猪周期），需在结论中注明"分位数为价格近似，盈利变化未体现"。
+
+```python
+import tushare as ts
+import pandas as pd
+from datetime import datetime, timedelta
+import os, time
+from dotenv import load_dotenv
+
+load_dotenv()
+ts.set_token(os.getenv('TUSHARE_TOKEN'))
+pro = ts.pro_api()
+
+ts_code   = '931994.CSI'   # tushare 格式，主题指数后缀通常为 .CSI
+today_str = datetime.now().strftime('%Y%m%d')
+start_3y  = (datetime.now() - timedelta(days=3*365)).strftime('%Y%m%d')
+start_5y  = (datetime.now() - timedelta(days=5*365)).strftime('%Y%m%d')
+
+df_price = pro.index_daily(ts_code=ts_code, start_date=start_5y, end_date=today_str)
+if df_price.empty:
+    print(f'⚠️ tushare 无 {ts_code} 价格数据，尝试 .SZ / .SH 后缀')
+    # 降级尝试
+    for suffix in ['.SZ', '.SH']:
+        alt = ts_code.replace('.CSI', suffix)
+        df_price = pro.index_daily(ts_code=alt, start_date=start_5y, end_date=today_str)
+        if not df_price.empty:
+            break
+
+df_price = df_price.sort_values('trade_date').reset_index(drop=True)
+current_price = df_price.iloc[-1]['close']
+
+# 近似历史 PE
+df_price['implied_pe'] = current_pe * (df_price['close'] / current_price)
+
+# 计算分位
+pe_3y = df_price[df_price['trade_date'] >= start_3y]['implied_pe']
+pe_5y = df_price['implied_pe']
+
+pct_3y = (current_pe - pe_3y.min()) / (pe_3y.max() - pe_3y.min()) * 100
+pct_5y = (current_pe - pe_5y.min()) / (pe_5y.max() - pe_5y.min()) * 100
+
+pe_3y_min, pe_3y_max = pe_3y.min(), pe_3y.max()
+pe_5y_min, pe_5y_max = pe_5y.min(), pe_5y.max()
+
+print(f'当前PE: {current_pe:.1f}')
+print(f'3年PE范围: {pe_3y_min:.1f} ~ {pe_3y_max:.1f}，当前分位: {pct_3y:.1f}%')
+print(f'5年PE范围: {pe_5y_min:.1f} ~ {pe_5y_max:.1f}，当前分位: {pct_5y:.1f}%')
+```
+
+**分位参考基准**（与沪深300对比）：
+```python
+# 拉沪深300当前 PE 作为市场基准
+df_hs300 = ak.stock_zh_index_value_csindex(symbol="000300")
+hs300_pe = float(df_hs300.iloc[0]['市盈率1（总股本）P/E1'])
+pe_premium = (current_pe / hs300_pe - 1) * 100
+print(f'沪深300当前PE: {hs300_pe:.1f}，目标指数溢价: +{pe_premium:.1f}%')
+```
+
+---
+
+### 第 4 步：成分股加权质量评估
+
+**计算指数加权平均 ROE（代表整体盈利质量）**：
+
+```python
+# 获取最新成分股权重
+df_w = pro.index_weight(index_code=ts_code)
+latest = df_w['trade_date'].max()
+df_w = df_w[df_w['trade_date'] == latest].copy()
+
+# 对权重前 20 只计算 ROE（覆盖通常超过 70% 权重，足够代表整体）
+total_weight, weighted_roe_sum = 0, 0
+failed = []
+
+for _, row in df_w.nlargest(20, 'weight').iterrows():
+    code   = row['con_code']
+    weight = float(row['weight'])
+    try:
+        r = pro.fina_indicator(ts_code=code, fields='ts_code,end_date,roe', limit=5)
+        annual = r[r['end_date'].str.endswith('1231')]
+        roe = float(annual.iloc[0]['roe']) if len(annual) else None
+        if roe and roe > 0:
+            weighted_roe_sum += roe * weight
+            total_weight     += weight
+    except:
+        failed.append(code)
+    time.sleep(0.11)
+
+weighted_roe = weighted_roe_sum / total_weight if total_weight else None
+cr5  = df_w.nlargest(5,  'weight')['weight'].sum()
+cr10 = df_w.nlargest(10, 'weight')['weight'].sum()
+
+print(f'加权平均ROE（前20只）: {weighted_roe:.1f}%')
+print(f'集中度 CR5={cr5:.1f}%，CR10={cr10:.1f}%')
+```
+
+**策略型指数额外步骤**（非纯市值加权时执行）：
+
+检查前 10 大成分股 ROE 和营收同比，遇以下情况在结论中标注 ⚠️，不展开分析：
+- ROE < 5%（低质量成分）
+- 营收同比 < -20%（景气下行）
+- 超过 3 只触发 → 在结论中说明"成分股质量参差，指数编制规则存在低质量成分混入风险"
+
+---
+
+### 第 5 步：赛道周期判断
+
+基于公开信息综合判断（无需额外 API，用知识 + web_fetch 验证）：
+
+**判断维度**：
+1. 产业周期阶段：底部 / 复苏早期 / 复苏中期 / 景气高峰 / 收缩期 / 出清期
+2. 政策面：有明确政策催化 / 中性 / 政策逆风
+3. 景气信号：订单增速、产能利用率、龙头业绩指引方向
+
+**输出格式**（一段话）：
+> [赛道名]当前处于[周期阶段]。[政策面描述，1句]。[景气信号，1句]。[对估值的含义，1句]。
+
+---
+
+### 第 6 步：价格区间与建仓策略
+
+**三档价位**（基于 PE 3年历史分位）：
+
+| 分位区间 | 信号 | 对应ETF净值/点位 | 建仓策略 |
+|---|---|---|---|
+| PE 分位 < 30% | ✅ 低估区 | 对应价格 = 当前价 × (pe_3y_30th/current_pe) | 积极建仓（可一次性 50%） |
+| PE 分位 30-60% | 🟡 合理区 | 当前价附近 | 分 3 批次建仓（每批 20-25%） |
+| PE 分位 > 60% | 🔴 高估区 | — | 观望，等回落到合理区 |
+| PE 分位 > 80% | 🚫 泡沫区 | — | 不建仓 |
+
+```python
+# 计算三档目标价
+pe_30th = pe_3y.quantile(0.30)   # 低估线：PE处于3年30%分位
+pe_50th = pe_3y.quantile(0.50)   # 合理中位
+
+# 对应指数点位
+target_low    = current_price * (pe_30th / current_pe)   # 积极买入价
+target_median = current_price * (pe_50th / current_pe)   # 合理区中位
+
+print(f'积极买入线（PE 30%分位）：指数点位 {target_low:.0f}，当前偏离 {(target_low/current_price-1)*100:.1f}%')
+print(f'合理中位（PE 50%分位）：指数点位 {target_median:.0f}')
+```
+
+---
+
+## 输出规范
+
+分析完成后，输出写入指数页（`05-A股指数/[代码] [名称].md`）的以下区块。
+
+若该指数页不存在，先按 `[[00-首页/指数页模板（A股指数）]]` 创建基础页面，再填入 PreBuy 区块。
+
+**必须输出的 6 个区块**（按顺序）：
+
+```markdown
+## 指数整体PreBuy结论
+
+> **[可买 / 分批布局 / 等待回调 / 不适合当前介入]**
+> [一句话理由：基于PE分位+赛道周期]
+
+记录时间：YYYY-MM-DD
+
+---
+
+## 估值历史分位
+
+| 指标 | 数值 |
+|---|---|
+| 当前 PE TTM | XX.X |
+| 当前股息率 | X.XX% |
+| 3年PE范围 | XX ~ XX |
+| **3年PE分位** | **XX%** |
+| 5年PE分位 | XX%（如有数据）|
+| 沪深300当前PE | XX.X（参考基准）|
+| 相对沪深300溢价 | +XX%（历史正常区间：[区间描述]）|
+
+> ⚠️ 分位数为价格近似值（假设EPS变化平稳）。[如有特殊情况，在此注明]
+
+---
+
+## 成分股整体质量
+
+| 指标 | 数值 | 评价 |
+|---|---|---|
+| 加权平均 ROE（前20只）| XX% | [高/中/低] |
+| CR5（前5大权重合计）| XX% | [集中/分散] |
+| CR10（前10大权重合计）| XX% | — |
+| 样本总数 | N 只 | — |
+
+[策略型指数：前10大成分股质量一览，有红旗标注 ⚠️]
+
+---
+
+## 赛道周期判断
+
+**当前阶段**：[底部 / 复苏早期 / 复苏中期 / 景气高峰 / 收缩期 / 出清期]
+
+[赛道周期描述，2-3句话]
+
+**政策面**：[利好 / 中性 / 逆风] — [具体描述]
+
+**景气信号**：[描述订单/业绩/产能方向]
+
+---
+
+## 买入价格区间
+
+> 以下点位基于指数点位，对应 ETF 净值需按实际折算。
+
+| 档位 | 目标 PE | 对应指数点位 | 当前偏离 | 建议仓位 |
+|---|---|---|---|---|
+| ✅ 积极买入（低估区）| XX.X（3年30%分位）| XXXX | -XX% | 首次50%仓位 |
+| 🟡 分批补仓（合理区）| XX.X（3年50%分位）| XXXX | -XX% | 每批20% |
+| 🔴 当前位置（参考）| XX.X | XXXX（当前）| 0% | — |
+
+---
+
+## 主要风险
+
+1. [风险1：不超过一句话]
+2. [风险2]
+3. [风险3]
+```
+
+---
+
+## 常见陷阱与注意事项
+
+### 数据陷阱
+
+1. **tushare 指数代码后缀**：主题指数通常用 `.CSI`，深交所指数用 `.SZ`，上交所用 `.SH`。若 `.CSI` 无数据，逐一尝试其他后缀。
+
+2. **akshare 中证代码格式**：中证官网部分指数使用字母前缀（如 `H30590`），与 tushare 的纯数字代码不同。若 `stock_zh_index_value_csindex` 返回 404，到 `https://www.csindex.com.cn` 查询正确代码格式。
+
+3. **PE 近似分位的局限性**：盈利周期性极强的行业（如半导体、面板、猪周期），历史价格低点往往对应业绩低谷而非估值低谷，分位数会低估真实 PE 水位。此类指数需在结论中额外说明。
+
+4. **成立时间短的新指数**：若指数成立不足 3 年，历史分位参考意义有限，需明确注明"历史数据不足 3 年，分位参考意义有限"。
+
+### 分析边界
+
+- **不给出具体买入金额或仓位百分比的绝对数值**，只给出相对节奏（首仓/补仓/等待）
+- **不对赛道做超过 6 个月的景气预判**，只描述当前所处阶段
+- **不做横向指数比较推荐**（"A指数比B指数更值得买"），只评估单个指数的绝对水位
+
+---
+
+## 数据来源速查
+
+| 数据 | 来源 | 接口/方法 |
+|---|---|---|
+| 当前 PE TTM / 股息率 | 中证官网（通过 akshare）| `ak.stock_zh_index_value_csindex(symbol)` |
+| 指数价格历史（最长~5年）| tushare | `pro.index_daily(ts_code, start_date, end_date)` |
+| 历史 PE 分位（近似）| 两者计算 | 当前PE × (历史价/当前价) |
+| 成分股权重 | tushare | `pro.index_weight(index_code)` |
+| 成分股 ROE | tushare | `pro.fina_indicator(ts_code, fields, limit=5)` |
+| 沪深300 PE（参考基准）| 中证官网（通过 akshare）| `ak.stock_zh_index_value_csindex("000300")` |
