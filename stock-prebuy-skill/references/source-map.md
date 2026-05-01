@@ -82,3 +82,51 @@
 2. 再互动问答
 3. 再监管与司法
 4. 最后用官网和媒体补充
+
+---
+
+## 理杏仁 Lixinger API
+
+> **优先级：理杏仁 > tushare**（数据质量更高、字段更完整、含历史分位）
+
+- **API总目录**：https://www.lixinger.com/api/open-api/url-doc
+- **Token配置**：`.env` 文件中的 `LIXINGER_TOKEN` 字段
+- **股票代码格式**：纯数字，不带后缀（`600036`，非 `600036.SH`）
+
+### 常用个股接口
+
+| 接口 | 用途 | URL |
+|---|---|---|
+| 非金融基本面 | PE/PB历史分位（成长/周期股）| `POST /api/cn/company/fundamental/non_financial` |
+| 银行基本面 | PB历史分位（银行股）| `POST /api/cn/company/fundamental/bank` |
+| 证券基本面 | PE历史分位（证券股）| `POST /api/cn/company/fundamental/security` |
+| 监管措施 | 处罚/工作函/整改通知 | `POST /api/cn/company/measures` |
+| 问询函 | 问询函/关注函/监管函（含PDF链接）| `POST /api/cn/company/inquiry` |
+| 大股东增减持 | 控股股东/5%以上股东变动 | `POST /api/cn/company/major-shareholders-shares-change` |
+| 高管增减持 | 董监高增减持 | `POST /api/cn/company/senior-executive-shares-change` |
+| 股权质押 | 质押明细、比例（含未解除过滤）| `POST /api/cn/company/pledge` |
+| 分红历史 | 每股股息、分红比例 | `POST /api/cn/company/dividend` |
+| 限售解禁热度 | 近期解禁压力初筛信号 | `POST /api/cn/company/hot/elr` |
+| K线数据 | 当前价、历史价格 | `POST /api/cn/company/candlestick` |
+
+### 关键字段速查（基本面接口 metricsList）
+
+| 字段 | 含义 |
+|---|---|
+| `pe_ttm` | 当前PE（滚动）|
+| `pe_ttm.y3.cvpos` | PE 3年历史分位（0~1，如0.15=15%分位）|
+| `pe_ttm.y3.q2v` / `q5v` / `q8v` | P20 / P50 / P80 对应的PE值 |
+| `pb` | 当前PB |
+| `pb.y3.cvpos` | PB 3年历史分位 |
+| `pb.y3.q2v` / `q5v` / `q8v` | P20 / P50 / P80 对应的PB值 |
+| `dyr` | 当前股息率（TTM）|
+
+### Price Bands 计算方法（按公司类型）
+
+| 公司类型 | 分位锚 | 公式 |
+|---|---|---|
+| 非金融成长/周期 | PE分位 | `bands = [q8v × ratio, q5v × ratio, q2v × ratio]`，`ratio = 当前价/当前PE` |
+| 银行/保险 | PB分位 | `bands = [q8v × BPS, q5v × BPS, q2v × BPS]`，`BPS = 当前价/当前PB` |
+| 公用事业 | 股息率分位 | 保留股息率反算，理杏仁 `dyr.y3.cvpos` 作验证 |
+| PE<0亏损 | PB分位 | `price_bands = null`，改用PB分位描述 |
+
