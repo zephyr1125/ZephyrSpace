@@ -13,7 +13,7 @@
 $src = "$PSScriptRoot\..\data"
 $dst = "E:\Work\Python\Finance\api\config"
 
-$files = @("watchlist_meta.json", "watchlist_core.json", "watchlist_growth.json", "watchlist_radar.json")
+$files = @("watchlist_meta.json", "watchlist_core.json", "watchlist_growth.json", "watchlist_radar.json", "watchlist_index.json")
 
 foreach ($f in $files) {
     $srcFile = Join-Path $src $f

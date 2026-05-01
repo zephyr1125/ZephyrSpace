@@ -365,6 +365,11 @@ print(f'合理中位（PE 50%分位）：指数点位 {target_median:.0f}')
 - 若该指数（`index_code`）已存在，则**整条更新**（视为重新分析）
 - `index_code` 是唯一键，写入前检查列表内不重复
 - **主Agent负责写入，禁止子Agent直接修改此文件**
+- **写入后必须运行同步脚本**，将文件同步到 Finance 项目：
+  ```powershell
+  .\scripts\sync_watchlist.ps1
+  ```
+  （`watchlist_index.json` 已纳入该脚本的同步列表）
 
 **写入模板**：
 
