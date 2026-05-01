@@ -113,22 +113,22 @@
     "board": "纳",
     "source_etf": "direct",
     "position_role": "美股长线底仓 - 全球最强消费生态+Services高毛利飞轮，Ternus时代AI硬件修复期权",
-    "prebuy_conclusion": "逻辑清晰，等待更合适价格或验证点 - Services飞轮($109B，76%毛利率)+强护城河成立，当前$273处60日高位(CEO换帅消息已定价)，建议等回调至$255以下或spring 2026新Siri验证正面后建仓",
+    "prebuy_conclusion": "FQ2 2026(日历Q1)收入+16.6%/净利+19.4%/EPS $2.01+21.8%/FCF+28%，全面超预期，加速趋势清晰；Services飞轮持续，毛利率49.3%历史新高；forward PE约31x，中性区底部，AI验证前小仓参与，回调至$265以下较优。",
     "watch_reason": "全球设备生态最深护城河（22亿+活跃设备），Services飞轮结构性增长；2026-09 Ternus接任CEO（硬件工程出身）有望加速AI硬件路线图，撬动下一轮换机超级周期",
-    "current_price": 273.0,
-    "price_date": "2026-04-26",
+    "current_price": 276.54,
+    "price_date": "2026-04-30",
     "price_bands": [
-      290.0,
-      255.0,
-      215.0
+      300,
+      265,
+      243
     ],
-    "valuation_anchor": "FY2026E EPS≈$9：追高区>$290(>32xFE,CEO利好已定价) / 中性区$255-290(28-32xFE,逻辑对但偏贵) / 较好区间$215-255(24-28xFE,接近5年均值) / 更低区间<$215(<24xFE,强安全边际)",
+    "valuation_anchor": "FY2026E EPS $8.80（StockAnalysis forward PE），PE 34x=$300追高/30x=$265中性/27.6x=$243较好/27x以下安全边际强；当前$276处中性区底部",
     "risk_flags": [
       "Siri/Apple Intelligence多次延期（原定2025年初，推至2026 spring），AI翻身叙事尚未验证，再度延期则成长催化逻辑破灭",
       "美中关税年化额外成本$5B+，Morgan Stanley已下调FY2026 EPS；印度供应链切换需3-5年",
       "DOJ App Store反垄断诉讼（2027庭审），若强制降佣Services利润受损$10-20B"
     ],
-    "dv_ttm": 0.37,
+    "dv_ttm": 1.04,
     "next_earnings_date": "2026-07-28（估算）",
     "next_earnings_type": "季报"
   },
