@@ -855,7 +855,7 @@ d = resp.json()["data"][0]
 5. 公司官网产品资料
 
 **数据 API 优先顺序（估值/财务/监管）：**
-> 理杏仁（Lixinger）优先，tushare 其次；理杏仁无数据时再用 tushare 或 web_fetch 东方财富补充。
+> 理杏仁（Lixinger）为唯一主力数据源；理杏仁无数据时用东方财富 web_fetch 补充；不再使用 tushare。
 
 | 数据类型 | 优先数据源 | 接口 |
 |---|---|---|
@@ -866,8 +866,10 @@ d = resp.json()["data"][0]
 | 股权质押 | 理杏仁 | `/company/pledge` |
 | 分红历史 | 理杏仁 | `/company/dividend` |
 | 限售解禁（初筛） | 理杏仁热度 | `/company/hot/elr` |
-| 财报营收/净利润 | tushare→东方财富双验 | `fina_indicator` + QDATE验证 |
-| 当前价格 | 理杏仁 | `/company/candlestick` |
+| 财报营收/净利润/ROE | 理杏仁 | `/company/fs/non_financial`（银行→`/fs/bank`，证券→`/fs/security`）|
+| 当前价格 / 近60日走势 | 理杏仁 | `/company/candlestick` |
+| 前十大股东 | 理杏仁 | `/company/majority-shareholders` |
+| 财报QDATE验证（备用）| 东方财富 web_fetch | `datacenter-web.eastmoney.com/api/...` |
 
 > ⚠️ **理杏仁 API 关键陷阱（已实测验证）**
 >
@@ -910,17 +912,17 @@ print(f"当前价={current_price}, 近60日高={high_60}, 近60日低={low_60}")
 
 官方资料入口和用途见 [references/source-map.md](references/source-map.md)。
 
-> ⚠️ **财报季 tushare 延迟警告（必读）**
+> ⚠️ **财报数据获取（理杏仁 fs/* 接口）**
 >
-> tushare 在财报信息方面获取经常不及时，数据可能滞后 1-3 天。
-> **当运行 PreBuy 的日期位于财报密集发布期间（一季报：4月，半年报：8月，三季报：10月，年报：3-4月），必须同时通过 Web 进行双重确认：**
+> 财报数据优先用理杏仁 `/company/fs/non_financial`（非金融）或 `/company/fs/bank`（银行），返回标准化财务数据。
+> 理杏仁同样可能存在数据延迟，**当运行 PreBuy 的日期位于财报密集发布期间（一季报：4月，半年报：8月，三季报：10月，年报：3-4月），必须用东方财富 web_fetch 进行QDATE二次确认：**
 >
 > 1. **确认财报是否已发布**：用东方财富 API 查最新报告期
 >    ```
 >    URL: https://datacenter-web.eastmoney.com/api/data/v1/get?reportName=RPT_LICO_FN_CPD&columns=ALL&filter=(SECURITY_CODE%3D%22{6位代码}%22)&pageNumber=1&pageSize=3
 >    确认字段：ISNEW="1"（最新一期）、QDATE（如"2026Q1"）、REPORTDATE（如"2026-03-31"）
 >    ```
-> 2. **用 Web 数据取代 tushare 的财报字段**：优先使用东方财富返回的以下字段：
+> 2. **若理杏仁数据期别落后于预期**，改用东方财富返回的以下字段作为财报来源：
 >    - `TOTAL_OPERATE_INCOME`（营业总收入）
 >    - `PARENT_NETPROFIT`（归母净利润）
 >    - `YSTZ`（营收同比 %）
@@ -929,11 +931,11 @@ print(f"当前价={current_price}, 近60日高={high_60}, 近60日低={low_60}")
 >    - `XSMLL`（毛利率）
 >    - `JYXJL`（经营现金流净额）
 >
-> 若东方财富与 tushare 数据不一致，**以东方财富为准**，并在分析结论中注明数据来源。
+> 若两者数据不一致，**以东方财富为准**，并在结论中注明数据来源。
 
 > 🔴 **财报QDATE强制验证（每次取财报数据后必做，不可跳过）**
 >
-> **问题根源**：东方财富/tushare API 会静默返回上一期数据，不报错、不提示。若不验证期别，分析者会把 2025Q1 数据误标为"Q1 2026"，或把 2024Q3 数据误标为最新三季报，导致结论完全错误。这在批量 PreBuy 中尤其危险。
+> **问题根源**：理杏仁/东方财富 API 都可能静默返回上一期数据，不报错、不提示。若不验证期别，分析者会把 2025Q1 数据误标为"Q1 2026"，或把 2024Q3 数据误标为最新三季报，导致结论完全错误。这在批量 PreBuy 中尤其危险。
 >
 > **第一步：根据当天日期推算「应有的最新报告期」**
 >
@@ -993,42 +995,35 @@ print(f"当前价={current_price}, 近60日高={high_60}, 近60日低={low_60}")
 
 **操作流程**：
 
-1. 用 tushare `disclosure_date` 查预约披露日期：
+1. **直接用法定截止日估算**（理杏仁无 disclosure_date 接口，tushare 不再使用）：
 
 ```python
-import tushare as ts, os, time
-from dotenv import load_dotenv
-from datetime import datetime
+from datetime import date
 
-load_dotenv()
-ts.set_token(os.getenv('TUSHARE_TOKEN'))
-pro = ts.pro_api()
+def get_next_earnings_estimate(today=None):
+    """
+    根据A股法定披露截止日规则，估算下一期财报日期和类型。
+    返回 (date_str: str "YYYY-MM-DD", report_type: str)
+    """
+    if today is None:
+        today = date.today()
+    y, m = today.year, today.month
+    if m < 4:
+        return f"{y}-04-30", "一季报"      # 等待本年Q1
+    elif m < 8:
+        return f"{y}-08-31", "半年报"      # 等待本年H1
+    elif m < 10:
+        return f"{y}-10-31", "三季报"      # 等待本年Q3
+    else:
+        return f"{y+1}-04-30", "年报"      # 等待次年年报/一季报
+        # 注：10-12月若年报已披露则下一期为次年一季报，用04-30通用
 
-today = datetime.today().strftime('%Y%m%d')
-end_types = {'1': '一季报', '2': '半年报', '3': '三季报', '4': '年报'}
-
-def get_next_earnings(ts_code):
-    candidates = []
-    for et, et_name in end_types.items():
-        df = pro.disclosure_date(ts_code=ts_code, end_type=et)
-        time.sleep(0.12)
-        if df is None or len(df) == 0:
-            continue
-        future = df[df['pre_date'] >= today]
-        # 优先选尚未实际披露的（actual_date 为空）
-        not_out = future[future['actual_date'].isna() | (future['actual_date'] == '')]
-        rows = not_out if len(not_out) > 0 else future
-        if len(rows) > 0:
-            row = rows.sort_values('pre_date').iloc[0]
-            candidates.append({'pre_date': row['pre_date'], 'type': et_name})
-    if not candidates:
-        return None, None
-    candidates.sort(key=lambda x: x['pre_date'])
-    return candidates[0]['pre_date'], candidates[0]['type']
-
-date_str, report_type = get_next_earnings('600887.SH')
-# date_str = '20260820', report_type = '半年报'
+next_date, next_type = get_next_earnings_estimate()
+# e.g., ("2026-08-31", "半年报")
 ```
+
+> 📌 若需精确到实际预约披露日（而非法定截止日），可用东方财富财经日历 web_fetch 补充：
+> `https://datacenter-web.eastmoney.com/api/data/v1/get?reportName=RPT_PUBLIC_OP_NEWREPORT&filter=(SECURITY_CODE%3D%22{6位代码}%22)&pageNumber=1&pageSize=5`
 
 2. 将结果（格式转为 YYYY-MM-DD）写入两个地方：
 
@@ -1048,7 +1043,7 @@ date_str, report_type = get_next_earnings('600887.SH')
    "cycle_position": "景气高峰"       // 枚举值见 cycle_position_schema；每次 PreBuy 更新时同步刷新
    ```
 
-3. 若 tushare 未返回预约数据，用法定截止日估算并标注「估算」：
+3. 若估算日期与公司实际预约日有出入，用法定截止日标注「估算」：
    - 一季报：`YYYY-04-30`
    - 半年报：`YYYY-08-31`
    - 三季报：`YYYY-10-31`
