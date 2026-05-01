@@ -72,9 +72,40 @@ as_of_date  = str(df.iloc[0]['日期'])
 
 **注意事项**：
 - 部分指数代码在中证官网格式为 `H30590` 等字母开头格式，需查官网确认
-- 若 `stock_zh_index_value_csindex` 返回 404，说明该指数未收录于中证官网，改用以下备用方式：
-  - web_fetch 东方财富指数页面 `https://quote.eastmoney.com/zs{code}.html`
-  - 人工填入（从同花顺或指数官网页面读取）
+- 若 `stock_zh_index_value_csindex` 返回 404，判断原因：
+  - **国证指数**（399xxx，深交所发布）：中证官网不收录，必须用下方"成分股加权PE"降级方案
+  - **其他情况**：可尝试 web_fetch 东方财富 `https://quote.eastmoney.com/zs{code}.html`
+
+**国证指数（399xxx）专用降级方案——成分股加权PE**：
+
+> 适用：akshare 返回404的深交所国证指数（如399396国证食品、399997中证白酒等）
+
+```python
+import tushare as ts, pandas as pd, time
+
+# 用成分股日行情数据计算加权PE/股息率
+df_w = pro.index_weight(index_code='399396.SZ')
+latest = df_w['trade_date'].max()
+top30 = df_w[df_w['trade_date'] == latest].nlargest(30, 'weight')  # 覆盖通常>85%权重
+
+total_pe_w, total_dy_w, total_w = 0, 0, 0
+for _, row in top30.iterrows():
+    code = row['con_code']
+    w = float(row['weight'])
+    r = pro.daily_basic(ts_code=code, trade_date='20260430',   # 最近交易日
+                        fields='ts_code,pe_ttm,dv_ttm')
+    if not r.empty and not pd.isna(r.iloc[0]['pe_ttm']) and r.iloc[0]['pe_ttm'] > 0:
+        total_pe_w += float(r.iloc[0]['pe_ttm']) * w
+        total_dy_w += float(r.iloc[0].get('dv_ttm', 0) or 0) * w
+        total_w += w
+    time.sleep(0.12)
+
+current_pe = total_pe_w / total_w   # 成分股权重加权PE
+current_dy = total_dy_w / total_w   # 成分股权重加权股息率
+print(f'加权PE={current_pe:.2f}，加权DY={current_dy:.2f}%，权重覆盖={total_w:.1f}%')
+```
+
+**注意**：成分股加权PE与指数官方PE存在轻微差异，原因：①亏损股被排除（官方通常计入）；②PE异常值（如某只股票PE>100x因业绩临时大降）会上拉加权结果——须在结论中标注。
 
 ---
 
@@ -205,6 +236,14 @@ print(f'集中度 CR5={cr5:.1f}%，CR10={cr10:.1f}%')
 1. 产业周期阶段：底部 / 复苏早期 / 复苏中期 / 景气高峰 / 收缩期 / 出清期
 2. 政策面：有明确政策催化 / 中性 / 政策逆风
 3. 景气信号：订单增速、产能利用率、龙头业绩指引方向
+
+**多赛道混合指数的处理规则**（如消费指数含白酒+养殖+乳制品）：
+
+若指数包含多个不同周期阶段的赛道，`cycle_position` 填**权重最大子赛道**的阶段，并在"赛道周期判断"区块中额外说明内部分化：
+
+> 示例：000932中证消费（白酒约30%处于收缩期末段，养殖约15%处于猪价底部）→ cycle_position 填 `收缩期`（白酒为主导），但在正文中注明"内部分化：白酒出清末段/养殖处猪价低谷"
+
+识别多赛道混合指数的方法：指数简介中列举多个不同行业（如"食品饮料、畜牧养殖、调味品"），或前5大成分涵盖两种以上赛道。
 
 **输出格式**（一段话）：
 > [赛道名]当前处于[周期阶段]。[政策面描述，1句]。[景气信号，1句]。[对估值的含义，1句]。
