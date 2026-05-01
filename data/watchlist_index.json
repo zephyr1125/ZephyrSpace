@@ -157,6 +157,270 @@
       "price_date": "2026-04-30",
       "note_path": "05-A股指数/399396 中证食品饮料指数.md",
       "last_updated": "2026-05-01"
+    },
+    {
+      "index_code": "931152.CSI",
+      "lx_code": "931152",
+      "name": "中证创新药产业指数",
+      "related_etfs": [
+        "515120.SH 创新药ETF（汇添富）",
+        "159992.SZ 创新药ETF（广发）"
+      ],
+      "category": "消费医药",
+      "cycle_position": "复苏早期",
+      "prebuy_conclusion": "观望为主 — 当前PE(49.0x)处3年69.5%分位，接近偏贵区，创新药政策改善但商业化兑现尚需时间；等待回调至1700以下再介入",
+      "current_pe": 49.02,
+      "current_dy": 0.01,
+      "pe_3y_percentile": 69.5,
+      "pe_5y_percentile": 75.3,
+      "current_index_price": 1900.87,
+      "price_bands": [
+        1954,
+        1711,
+        1529
+      ],
+      "valuation_anchor": "3年PE分位换算（2026-04-30 1901点/49.02x基准）：P80→50.39x / P50→44.11x / P20→39.44x；来源：理杏仁MCW",
+      "risk_flags": [
+        "多数创新药企收入规模仍小，盈利兑现周期长",
+        "纳入医保后大幅降价侵蚀利润",
+        "3年分位69.5%已接近偏贵区，当前不是性价比最高入场点"
+      ],
+      "price_date": "2026-04-30",
+      "note_path": "05-A股指数/931152 中证创新药产业指数.md",
+      "last_updated": "2026-05-01"
+    },
+    {
+      "index_code": "399965.SZ",
+      "lx_code": "399965",
+      "name": "中证800地产指数",
+      "related_etfs": [
+        "512200.SH 地产ETF（华夏）"
+      ],
+      "category": "通用混合",
+      "cycle_position": "出清期",
+      "prebuy_conclusion": "回避 — 当前PE为负（-4.2x，行业整体亏损），3年PE分位98.5%，传统价格-PE分位体系在地产行业完全失效；地产出清期尚未结束，不建议配置",
+      "current_pe": -4.18,
+      "current_dy": 0.01,
+      "pe_3y_percentile": 98.5,
+      "pe_5y_percentile": 99.1,
+      "current_index_price": 2451.91,
+      "price_bands": null,
+      "valuation_anchor": "⚠️ PE数据异常，分位换算无效",
+      "risk_flags": [
+        "行业整体仍在亏损，传统估值方法失效",
+        "土地财政模式结构性瓦解，人口拐点长期拖累需求",
+        "已爆雷房企处置时间长，金融系统风险尾部未完全消除"
+      ],
+      "price_date": "2026-04-30",
+      "note_path": "05-A股指数/399965 中证800地产指数.md",
+      "last_updated": "2026-05-01"
+    },
+    {
+      "index_code": "930633.CSI",
+      "lx_code": "930633",
+      "name": "中证旅游主题指数",
+      "related_etfs": [
+        "159旅游ETF（暂无主流大型）"
+      ],
+      "category": "消费医药",
+      "cycle_position": "复苏中期",
+      "prebuy_conclusion": "观望为主 — 当前PE(113.6x)虽处3年历史最低分位，但高PE系COVID后盈利复苏不完全，价格分位换算完全失效（历史有大量亏损年份）；等待盈利稳定后重新评估",
+      "current_pe": 113.56,
+      "current_dy": 0.01,
+      "pe_3y_percentile": 0,
+      "pe_5y_percentile": 0,
+      "current_index_price": 2713.94,
+      "price_bands": null,
+      "valuation_anchor": "3年PE分位换算（2026-04-30 2714点/113.56x基准）：P80→-22.50x / P50→-2597.17x / P20→1922.43x；来源：理杏仁MCW",
+      "risk_flags": [
+        "历史亏损（COVID）导致PE分位体系完全失效，价格带不可靠",
+        "旅游消费客单价提升慢，利润率修复周期长",
+        "宏观消费若再度疲软对可选消费景区冲击大"
+      ],
+      "price_date": "2026-04-30",
+      "note_path": "05-A股指数/930633 中证旅游主题指数.md",
+      "last_updated": "2026-05-01"
+    },
+    {
+      "index_code": "931151.CSI",
+      "lx_code": "931151",
+      "name": "中证光伏产业指数",
+      "related_etfs": [
+        "515790.SH 光伏ETF（华夏）",
+        "159857.SZ 光伏ETF（汇添富）"
+      ],
+      "category": "成长科技",
+      "cycle_position": "出清期",
+      "prebuy_conclusion": "回避 — 当前PE(1687x)因行业全面亏损导致极度失真，3年PE分位换算完全失效；光伏组件价格持续下跌至历史低位，龙头龙头亏损，估值方法需切换至PB；当前PB位置待确认",
+      "current_pe": 1687.5,
+      "current_dy": 0.01,
+      "pe_3y_percentile": 78.8,
+      "pe_5y_percentile": 87.3,
+      "current_index_price": 3161.09,
+      "price_bands": null,
+      "valuation_anchor": "⚠️ PE数据异常，分位换算无效",
+      "risk_flags": [
+        "行业全面亏损，PE失真（1687x），传统PE分位体系失效，需用PB评估",
+        "海外贸易壁垒（欧美反补贴税）持续压制出口预期",
+        "出清期持续时间难以预测，现金流压力大的二线厂商面临退市风险"
+      ],
+      "price_date": "2026-04-30",
+      "note_path": "05-A股指数/931151 中证光伏产业指数.md",
+      "last_updated": "2026-05-01"
+    },
+    {
+      "index_code": "399808.SZ",
+      "lx_code": "399808",
+      "name": "中证新能源指数",
+      "related_etfs": [
+        "516160.SH 新能源ETF（工银）",
+        "159763.SZ 新能源ETF（易方达）"
+      ],
+      "category": "成长科技",
+      "cycle_position": "出清期",
+      "prebuy_conclusion": "观望 — 当前PE(45.2x)处3年79.0%分位，属偏贵区；新能源整体（锂电+整车+风光）均处于产能过剩出清期，估值虽有弹性但基本面压力尚未结束",
+      "current_pe": 45.21,
+      "current_dy": 0.01,
+      "pe_3y_percentile": 79.0,
+      "pe_5y_percentile": 71.3,
+      "current_index_price": 3228.56,
+      "price_bands": [
+        3262,
+        2184,
+        1032
+      ],
+      "valuation_anchor": "3年PE分位换算（2026-04-30 3229点/45.21x基准）：P80→45.68x / P50→30.59x / P20→14.44x；来源：理杏仁MCW",
+      "risk_flags": [
+        "产能过剩出清时间长，3年79%分位当前估值不便宜",
+        "锂电材料价格下跌链式传导至中游，盈利修复时间难以预测",
+        "欧盟对华新能源汽车加征关税影响出口预期"
+      ],
+      "price_date": "2026-04-30",
+      "note_path": "05-A股指数/399808 中证新能源指数.md",
+      "last_updated": "2026-05-01"
+    },
+    {
+      "index_code": "000813.SH",
+      "lx_code": "000813",
+      "name": "中证细分化工产业主题指数",
+      "related_etfs": [
+        "516020.SH 化工ETF（易方达）"
+      ],
+      "category": "周期材料",
+      "cycle_position": "出清期",
+      "prebuy_conclusion": "观望 — 当前PE(26.6x)处3年78.3%分位，属偏贵区；化工行业持续产能过剩，PTA/MDI/化纤等主要品类价格仍在低位，盈利修复慢",
+      "current_pe": 26.55,
+      "current_dy": 0.01,
+      "pe_3y_percentile": 78.3,
+      "pe_5y_percentile": 86.3,
+      "current_index_price": 4412.28,
+      "price_bands": [
+        4496,
+        3789,
+        3278
+      ],
+      "valuation_anchor": "3年PE分位换算（2026-04-30 4412点/26.55x基准）：P80→27.05x / P50→22.80x / P20→19.73x；来源：理杏仁MCW",
+      "risk_flags": [
+        "行业产能过剩持续，3年分位78%已偏贵",
+        "原油价格波动影响化工品成本（双向风险）",
+        "高耗能产业面临双碳政策长期约束，新增产能受限"
+      ],
+      "price_date": "2026-04-30",
+      "note_path": "05-A股指数/000813 中证细分化工产业主题指数.md",
+      "last_updated": "2026-05-01"
+    },
+    {
+      "index_code": "930713.CSI",
+      "lx_code": "930713",
+      "name": "中证人工智能主题指数",
+      "related_etfs": [
+        "515980.SH AI算力ETF（汇添富）",
+        "159819.SZ 人工智能ETF（易方达）"
+      ],
+      "category": "成长科技",
+      "cycle_position": "景气高峰",
+      "prebuy_conclusion": "分批布局 — 当前PE(59.2x)处3年38.8%分位，属偏低区间，但科技主题历史PE波动极大，5年分位60%更保守；AI产业浪潮仍在景气高峰，估值有一定支撑，可小仓位布局",
+      "current_pe": 59.21,
+      "current_dy": 0.01,
+      "pe_3y_percentile": 38.8,
+      "pe_5y_percentile": 60.0,
+      "current_index_price": 6160.15,
+      "price_bands": [
+        7218,
+        6357,
+        5537
+      ],
+      "valuation_anchor": "3年PE分位换算（2026-04-30 6160点/59.21x基准）：P80→69.38x / P50→61.11x / P20→53.22x；来源：理杏仁MCW",
+      "risk_flags": [
+        "历史PE曾从20x飙升至200x+再暴跌，5年60%分位更审慎",
+        "算力景气能否延续取决于大模型商业化进度",
+        "A股AI主题与美股Nvidia等高度联动，外部风险传导快"
+      ],
+      "price_date": "2026-04-30",
+      "note_path": "05-A股指数/930713 中证人工智能主题指数.md",
+      "last_updated": "2026-05-01"
+    },
+    {
+      "index_code": "000822.SH",
+      "lx_code": "000822",
+      "name": "中证有色金属指数",
+      "related_etfs": [
+        "159876.SZ 有色ETF（嘉实）",
+        "512400.SH 有色ETF（国泰）"
+      ],
+      "category": "周期材料",
+      "cycle_position": "景气高峰",
+      "prebuy_conclusion": "观望/减仓 — 当前PE(15.3x)处3年100%分位（历史最高），当前价11160已高于PE分位换算P80点位9289；铜价+黄金双双创历史新高，景气高峰特征明显，加仓风险大",
+      "current_pe": 15.27,
+      "current_dy": 0.04,
+      "pe_3y_percentile": 100,
+      "pe_5y_percentile": 97.5,
+      "current_index_price": 11160.13,
+      "price_bands": [
+        9289,
+        7455,
+        6622
+      ],
+      "valuation_anchor": "3年PE分位换算（2026-04-30 11160点/15.27x基准）：P80→12.71x / P50→10.20x / P20→9.06x；来源：理杏仁MCW",
+      "risk_flags": [
+        "PE历史100%分位，景气高峰后周期性回落风险极大",
+        "铜价与全球PMI高度相关，若衰退预期升温有色暴跌",
+        "锂子赛道（天齐、赣锋）仍在出清期，与铜金走势背离"
+      ],
+      "price_date": "2026-04-30",
+      "note_path": "05-A股指数/000822 中证有色金属指数.md",
+      "last_updated": "2026-05-01"
+    },
+    {
+      "index_code": "930851.CSI",
+      "lx_code": "930851",
+      "name": "中证云计算与大数据主题指数",
+      "related_etfs": [
+        "516110.SH 云计算ETF（华夏）",
+        "159890.SZ 云计算ETF（富国）"
+      ],
+      "category": "成长科技",
+      "cycle_position": "复苏早期",
+      "prebuy_conclusion": "分批布局 — 当前PE(78.5x)处3年26.5%分位，属偏低区间；云计算受AI基础设施投资带动进入新一轮上行周期，估值处于合理偏低位置",
+      "current_pe": 78.46,
+      "current_dy": 0.0,
+      "pe_3y_percentile": 26.5,
+      "pe_5y_percentile": 53.1,
+      "current_index_price": 6888.96,
+      "price_bands": [
+        8805,
+        7678,
+        6619
+      ],
+      "valuation_anchor": "3年PE分位换算（2026-04-30 6889点/78.46x基准）：P80→100.28x / P50→87.45x / P20→75.38x；来源：理杏仁MCW",
+      "risk_flags": [
+        "历史PE范围宽，3年P20=68x说明估值下限已较高",
+        "国内SaaS渗透率提升慢，To B销售周期长，盈利转正时间不确定",
+        "中美科技竞争影响部分底层技术获取（EDA工具、先进制程等）"
+      ],
+      "price_date": "2026-04-30",
+      "note_path": "05-A股指数/930851 中证云计算与大数据主题指数.md",
+      "last_updated": "2026-05-01"
     }
   ]
 }
