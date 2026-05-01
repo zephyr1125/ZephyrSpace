@@ -1055,35 +1055,58 @@ next_date, next_type = get_next_earnings_estimate()
 
 ### 第 3.6 步：计算 price_bands 并写入 watchlist（A股必做）
 
-**目的**：每次完成 PreBuy 分析后，将基于历史分位计算的 price_bands 写入 watchlist JSON，替代旧的手工拍估或与当前价强绑定的数值。
+**目的**：每次完成 PreBuy 分析后，将基于历史分位计算（并含政策/周期调整）的 price_bands 写入 watchlist JSON，替代旧的手工拍估或与当前价强绑定的数值。
 
-**计算方法**：调用上方模块11中的 `calc_price_bands()` 函数。
+**计算方法**：调用上方模块11中的 `calc_price_bands()` 函数，再叠加模块13（政策PS）和模块14（周期）的调整。
+
+**price_bands 写入规则**：
+- `price_bands[0]`（追高线）= 基础 P80 对应价格，**若 PS ≥ +1，叠加 PS 加成**（+10% 对应 ×1.10，+15% 对应 ×1.15），写入最终调整后数值
+- `price_bands[1]`（中性底）= 基础 P50 对应价格，不做 PS 调整
+- `price_bands[2]`（最优区起点）= 基础 P20 对应价格，不做调整
+
+> ⚠️ **price_bands 存最终值，不存原始 P80**。若 PS=+3 使追高线从 46.47 变为 47.4，watchlist 应写 47.4，便于外部系统直接判断区间，无需二次计算。
 
 **写入格式**：
 
 ```json
 {
-  "price_bands": [31.06, 24.16, 21.00],
-  "price_bands_basis": "pe_ttm.y3",
+  "price_bands": [47.4, 43.12, 40.05],
+  "price_bands_basis": "pb.y3+ps3",
   "price_bands_date": "2026-04-30"
 }
 ```
+
+`price_bands_basis` 后缀说明：`pb.y3` = 纯PB分位；`pb.y3+ps3` = PB分位+PS+3加成；`pe_ttm.y3+ps2` = PE分位+PS+2加成；以此类推。
 
 字段说明：
 
 | 字段 | 含义 |
 |---|---|
-| `price_bands[0]` | 红线（P80历史估值对应价格），当前价超过此值 → 🔴 |
+| `price_bands[0]` | 追高线（最终调整后），当前价超过此值 → 🔴 |
 | `price_bands[1]` | 中性底（P50历史估值），当前价在[1]~[0] → 🟡 |
 | `price_bands[2]` | 最优区起点（P20历史估值），当前价 < [2] → 🟢🟢 |
-| `price_bands_basis` | 分位来源：`pe_ttm.y3`（PE）/ `pb.y3`（PB，用于银行/保险/亏损股）|
+| `price_bands_basis` | 分位来源+PS加成标注 |
 | `price_bands_date` | 计算时使用的估值数据日期，格式 YYYY-MM-DD |
 
 **注意事项**：
 - 数字数组，不填文字描述字符串
-- 银行/保险：`price_bands_basis = "pb.y3"`，公式为 `q值 × BPS`
+- 银行/保险：`price_bands_basis` 以 `pb.y3` 为前缀，公式为 `q值 × BPS`
 - PE < 0（亏损）：`price_bands = null`，在 notes 注明「当期亏损，price_bands暂不适用」
 - 每次做 PreBuy 更新时同步刷新这三个字段，不允许保留旧值
+
+---
+
+### 价格区间表：页面内必须放最终调整值，位置在最后
+
+**公司页「价格与时机判断」章节的最终价格区间表，必须遵守：**
+
+1. **内容为最终值**：表格数值须已叠加所有调整（PS政策加成、周期位置调整），不展示调整前的原始P80/P50/P20值（原始分位数据可在表格前以参考形式列出，但最终表格必须是调整后的最终区间）
+
+2. **位置在章节最后**：表格放在「近60日走势概述」「当前口径」「政策加成调整说明」之后，作为整节的最终结论
+
+3. **表格标题**必须注明「最终价格区间（含[调整原因]）」，如：「最终价格区间（含PS+3政策顺风加成）」
+
+4. **与 watchlist 保持一致**：`price_bands[0]` 对应表格红/黄分界，`price_bands[1]` 对应黄/绿分界，`price_bands[2]` 对应绿/双绿分界
 
 ### 第 4 步：把公司压缩成一句话
 

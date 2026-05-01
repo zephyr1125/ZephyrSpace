@@ -856,11 +856,11 @@
     "current_price": 38.27,
     "price_date": "2026-04-30",
     "price_bands": [
-      46.47,
+      47.4,
       43.12,
       40.05
     ],
-    "valuation_anchor": "以PB 3年分位定价（理杏仁Lixinger）：追高区>46.47(PB>P80=1.035x) / 中性区43.12-46.47(PB P50-P80) / 较好区间40.05-43.12(PB P20-P50) / 🟢🟢最优区<40.05(PB<P20=0.892x，3年8%分位)",
+    "valuation_anchor": "以PB 3年分位定价（理杏仁）含PS+3政策顺风加成：追高区>47.4(PS调整后上界,原P80=46.47+10%) / 中性区43.12-47.4 / 较好区间40.05-43.12(PB P20-P50) / 🟢🟢最优区<40.05(PB<P20=0.892x，3年8%分位)",
     "risk_flags": [
       "PBOC继续降息→NIM进一步压缩→ROE回升路径延长，Q1 2026 NIM待年报官方确认",
       "Q1 2026收入拐点可持续性未验证，Q2 2026为关键验证节点",
@@ -871,7 +871,7 @@
     "next_earnings_type": "半年报",
     "cycle_is_cyclical": true,
     "cycle_position": "复苏早期",
-    "price_bands_basis": "pb.y3",
+    "price_bands_basis": "pb.y3+ps3",
     "price_bands_date": "2026-04-30"
   },
   {
