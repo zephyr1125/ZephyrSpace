@@ -150,6 +150,65 @@ watchlist 数据已拆分为 4 个文件，放在 `data/` 目录：
 2. 无明确有时限的修复路径（修复时间 > 3 年或无法预期）
 3. 结构性治理/合规风险（如外资持股 > 50% 叠加出口管制、非标审计）
 
+### 季报更新 SOP（对已在 watchlist 的公司）
+
+**触发条件**：`next_earnings_type` = `一季报` / `半年报` / `三季报` / `季报`，且对应财报已发布。
+
+**A股季报发布节点参考**：
+- 一季报：4月30日前
+- 半年报：8月31日前
+- 三季报：10月31日前
+- 年报：4月30日前（次年）
+
+**执行步骤**：
+
+1. **批量识别待更新公司**：筛选 `next_earnings_type` 不为半年报/年报的公司，检查财报是否已发布
+2. **拉取财报数据**：优先 tushare `fina_indicator`，**若最新 end_date 不符（仍为上一期），必须用 web_fetch 外部验证**（见下方数据规范）
+3. **更新公司页**：在 `## 已核实的关键事实` 或 `## 季度财报跟踪` 区块添加新一期数据，更新 `## PreBuy 结论` 加 `[Qx YYYY已验证]` 标注
+4. **更新 watchlist JSON（必须同时更新以下三个字段，缺一不可）**：
+   ```json
+   "next_earnings_type": "半年报",
+   "next_earnings_date": "2026-08-31",
+   "next_earnings_time": "2026-08"
+   ```
+   > ⚠️ **已踩坑**：只更新 `next_earnings_type` 和 `next_earnings_time`，漏掉 `next_earnings_date`，会导致 Watchlist 视图仍显示旧的财报日期。三个字段必须在同一个脚本里一并更新。
+5. 更新 `prebuy_conclusion` 纳入最新季报简评
+6. **运行 `sync_watchlist.ps1`** 同步
+
+**A股季报 → 下一期日期参考**：
+| 当前类型 | 改为 | `next_earnings_date` |
+|---|---|---|
+| 一季报 (3月) | 半年报 | `YYYY-08-31` |
+| 半年报 (6月) | 三季报 | `YYYY-10-31` |
+| 三季报 (9月) | 年报 | `YYYY+1-04-30` |
+| 年报 (12月) | 一季报 | `YYYY+1-04-30` |
+
+**子 Agent 季报更新分工**：
+- 子 Agent 职责：更新公司页，输出建议的 watchlist 字段更新（key-value 格式）
+- 主 Agent 职责：汇总子 Agent 结果，写入 watchlist JSON（子 Agent 不得直接写文件）
+
+---
+
+### tushare 财报数据规范
+
+> ⚠️ **tushare 财报数据存在延迟**（通常滞后1-3天，有时更长），不能假设 `fina_indicator` 返回的就是最新季报。
+
+**验证规则**：
+1. 拉取 `fina_indicator` 后，检查返回的最新 `end_date` 是否符合预期
+   - 例：4月30日后查询，若 `end_date` 最新仍为 `20251231`（年报），而非 `20260331`（Q1），说明 tushare 未更新
+2. **不符合预期时，必须用 `web_fetch` 外部验证**：
+   - A股：东方财富 `https://emweb.securities.eastmoney.com/PC_HSF10/FinanceAnalysis/index?code={code}`
+   - A股财务摘要：`https://quote.eastmoney.com/concept/{code}.html`
+   - 美股/港股：`https://stockanalysis.com/stocks/{ticker}/financials/?p=quarterly`
+3. 若 tushare 与外部数据不一致，以**外部数据为准**，并在脚本注释中记录不一致情况
+
+**tushare Q1 ROE 低估陷阱**（已在粗筛 SOP 中记录，此处补充季报更新场景）：
+
+在季报更新时，若拉取 `roe` 字段用于 prebuy_conclusion 描述，需注意：
+- Q1 ROE 因净资产是全年数，通常只有全年 ROE 的 1/4（约年化的 25%）
+- 描述时应使用**年化 ROE**（Q1 ROE × 4）或写明"Q1单季 ROE=X%，年化约X%"
+- 或直接用最近年报 ROE 作为参考值，季报 ROE 只做趋势判断
+
 ## 自动化相关文件
 
 当前关键脚本与配置：
