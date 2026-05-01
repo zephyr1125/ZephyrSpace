@@ -252,26 +252,54 @@ print(f'集中度 CR5={cr5:.1f}%，CR10={cr10:.1f}%')
 
 ### 第 6 步：价格区间与建仓策略
 
-**三档价位**（基于 PE 3年历史分位）：
+**三档价位**（基于 3 年历史收盘价百分位，与当前价格无关）：
 
-| 分位区间 | 信号 | 对应ETF净值/点位 | 建仓策略 |
+> ⚠️ **重要原则**：price_bands 三个值必须全部来自历史分位，**不能把当前价格塞入其中任一档**。
+> 历史分位本身已隐含了行业惯常估值水位（银行 PE 低→区间自然低，科技 PE 高→区间自然高），无需手动按行业调整。
+
+| 档位 | 定义 | 信号含义 | 建仓策略 |
 |---|---|---|---|
-| PE 分位 < 30% | ✅ 低估区 | 对应价格 = 当前价 × (pe_3y_30th/current_pe) | 积极建仓（可一次性 50%） |
-| PE 分位 30-60% | 🟡 合理区 | 当前价附近 | 分 3 批次建仓（每批 20-25%） |
-| PE 分位 > 60% | 🔴 高估区 | — | 观望，等回落到合理区 |
-| PE 分位 > 80% | 🚫 泡沫区 | — | 不建仓 |
+| bands[0] = P80 | 3年历史收盘价 80% 分位 | 偏贵区上沿，不追高 | 观望或减仓 |
+| bands[1] = P50 | 3年历史收盘价 50% 分位 | 历史中位，合理区 | 分 3 批建仓（每批 20%） |
+| bands[2] = P20 | 3年历史收盘价 20% 分位 | 历史偏低区，积极买入 | 积极建仓（可一次性 50%） |
+
+当前价格（`current_index_price`）与三档对比，决定当前所处位置：
+- 当前价 > bands[0]：高于历史 P80，偏贵
+- bands[1] < 当前价 ≤ bands[0]：合理偏高区
+- bands[2] < 当前价 ≤ bands[1]：合理偏低区（较好买点）
+- 当前价 ≤ bands[2]：低于历史 P20，历史低位，积极买入
 
 ```python
-# 计算三档目标价
-pe_30th = pe_3y.quantile(0.30)   # 低估线：PE处于3年30%分位
-pe_50th = pe_3y.quantile(0.50)   # 合理中位
+import numpy as np
+from datetime import datetime, timedelta
 
-# 对应指数点位
-target_low    = current_price * (pe_30th / current_pe)   # 积极买入价
-target_median = current_price * (pe_50th / current_pe)   # 合理区中位
+# 拉取 3 年日收盘价（tushare，代码与 current_index_price 同一数据源）
+today = datetime.today()
+start_3y = (today - timedelta(days=365*3)).strftime('%Y%m%d')
+df_p = pro.index_daily(ts_code=ts_code, start_date=start_3y, end_date=today.strftime('%Y%m%d'), fields='trade_date,close')
+prices = df_p['close'].dropna().values
 
-print(f'积极买入线（PE 30%分位）：指数点位 {target_low:.0f}，当前偏离 {(target_low/current_price-1)*100:.1f}%')
-print(f'合理中位（PE 50%分位）：指数点位 {target_median:.0f}')
+# 三档锚点（纯历史分位，与当前价无关）
+p80 = int(round(np.percentile(prices, 80)))   # bands[0]：偏贵区上沿
+p50 = int(round(np.percentile(prices, 50)))   # bands[1]：历史中位
+p20 = int(round(np.percentile(prices, 20)))   # bands[2]：历史偏低区
+
+price_bands = [p80, p50, p20]
+valuation_anchor = (
+    f'3年历史价格分位锚点（{start_3y[:4]}-{today.year}）：'
+    f'P80={p80}（偏贵区上沿），P50={p50}（历史中位），P20={p20}（积极买入区）'
+)
+
+print(f'price_bands: {price_bands}')
+print(f'当前价 {current_price:.1f} 处于：', end='')
+if current_price > p80:
+    print('P80 以上（偏贵，不追高）')
+elif current_price > p50:
+    print(f'P50~P80（{(current_price-p50)/(p80-p50)*100:.0f}% 进入偏贵区）')
+elif current_price > p20:
+    print(f'P20~P50（合理偏低区，较好买点）')
+else:
+    print('P20 以下（历史低位，积极买入）')
 ```
 
 ---
@@ -386,8 +414,8 @@ print(f'合理中位（PE 50%分位）：指数点位 {target_median:.0f}')
   "pe_3y_percentile": 65.0,
   "pe_5y_percentile": 58.0,
   "current_index_price": 1250,
-  "price_bands": [1350, 1180, 980],
-  "valuation_anchor": "3年30%分位PE对应点位980（积极买入线），3年50%分位对应1180（中性区底），当前1250处合理区上沿",
+  "price_bands": [1680, 1380, 1050],
+  "valuation_anchor": "3年历史价格分位锚点（2023-2026）：P80=1680（偏贵区上沿，不追高），P50=1380（历史中位，合理区），P20=1050（历史偏低区，积极买入）。三档均为纯历史分位，与当前价格无关。",
   "risk_flags": [
     "稀土价格周期性波动，上游盈利弹性极大",
     "下游需求高度依赖新能源车/风电装机节奏",
@@ -414,6 +442,10 @@ print(f'合理中位（PE 50%分位）：指数点位 {target_median:.0f}')
 4. **PE 近似分位的局限性（强周期赛道）**：半导体、稀土、猪周期、面板等强周期行业，PE高分位往往对应盈利低谷（股价还没跌/预期已回升），PE低分位往往对应景气顶部。**不能用PE低=便宜、PE高=贵的线性逻辑**。对此类指数，价格区间应以周期阶段判断为主，PE分位仅为辅助参考，并在结论中注明。
 
 5. **成立时间短的新指数**：若指数成立不足 3 年，历史分位参考意义有限，需明确注明"历史数据不足 3 年，分位参考意义有限"。
+
+6. **price_bands 禁止嵌入当前价格**：price_bands 三个值必须全部来自历史价格百分位（P20/P50/P80），任何一档都不能等于或近似等于写入时的 `current_index_price`。若写入后发现 bands 中某值 ≈ 当前价，说明违反了此规则，需用 `scripts/recalc_index_price_bands.py` 重新计算。
+
+7. **H30590 价格序列口径问题**：中证机器人指数在 akshare 和 tushare 返回的点位不在同一基准（akshare 约 700 级别，tushare H30590.CSI 约 1900 级别）。price_bands 用 tushare 口径计算，`current_index_price` 也必须从 tushare 取值，两者必须保持同一数据源。
 
 6. **PowerShell 执行 Python 脚本**：PowerShell 不支持 heredoc（`<< 'EOF'` 语法），多行 Python 代码**必须先写入 `.py` 文件再执行**，不能用内联方式。正确做法：`python "C:\path\to\script.py"`。
 
