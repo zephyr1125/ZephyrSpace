@@ -375,10 +375,9 @@ print(f'合理中位（PE 50%分位）：指数点位 {target_median:.0f}')
 
 7. **tushare 财报数据延迟**：`fina_indicator` 返回的最新 `end_date` 有时不是最新一期（滞后1-3天）。**验证方法**：若最新 `end_date` 不符合预期（如4月后查询仍返回去年年报），必须通过 `web_fetch` 从东方财富或 stockanalysis.com 外部验证后再使用，不可轻信。
 
-8. **watchlist 三字段必须同步更新**：更新 watchlist 中的财报状态时，**必须同时更新以下三个字段**，缺一会导致 Watchlist 视图显示错误日期：
+8. **watchlist 两字段必须同步更新**：更新 watchlist 中的财报状态时，**必须同时更新以下两个字段**，只更新其中一个会导致 Watchlist 视图显示错误日期：
    - `next_earnings_type`（如：一季报 → 半年报）
    - `next_earnings_date`（如：`2026-04-30` → `2026-08-31`）
-   - `next_earnings_time`（如：`2026-04` → `2026-08`）
 
 ### 分析边界
 

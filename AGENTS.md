@@ -165,13 +165,12 @@ watchlist 数据已拆分为 4 个文件，放在 `data/` 目录：
 1. **批量识别待更新公司**：筛选 `next_earnings_type` 不为半年报/年报的公司，检查财报是否已发布
 2. **拉取财报数据**：优先 tushare `fina_indicator`，**若最新 end_date 不符（仍为上一期），必须用 web_fetch 外部验证**（见下方数据规范）
 3. **更新公司页**：在 `## 已核实的关键事实` 或 `## 季度财报跟踪` 区块添加新一期数据，更新 `## PreBuy 结论` 加 `[Qx YYYY已验证]` 标注
-4. **更新 watchlist JSON（必须同时更新以下三个字段，缺一不可）**：
+4. **更新 watchlist JSON（必须同时更新以下两个字段，缺一不可）**：
    ```json
    "next_earnings_type": "半年报",
-   "next_earnings_date": "2026-08-31",
-   "next_earnings_time": "2026-08"
+   "next_earnings_date": "2026-08-31"
    ```
-   > ⚠️ **已踩坑**：只更新 `next_earnings_type` 和 `next_earnings_time`，漏掉 `next_earnings_date`，会导致 Watchlist 视图仍显示旧的财报日期。三个字段必须在同一个脚本里一并更新。
+   > ⚠️ **已踩坑**：只更新了 `next_earnings_type`，漏掉 `next_earnings_date`，会导致 Watchlist 视图仍显示旧的财报日期。两个字段必须在同一个脚本里一并更新。
 5. 更新 `prebuy_conclusion` 纳入最新季报简评
 6. **运行 `sync_watchlist.ps1`** 同步
 
