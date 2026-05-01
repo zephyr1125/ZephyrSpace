@@ -1,16 +1,11 @@
 {
   "schema_version": 1,
-  "AGENT_INSTRUCTION": "指数整体PreBuy完成后，必须将分析结果写入本文件。\n规则：\n- 所有完成指数整体PreBuy分析的行业/主题指数均纳入，无需判断是否值得纳入\n- 不分档位，扁平列表\n- 每次PreBuy分析结束后，主Agent负责写入，禁止子Agent直接写入\n- 如该指数已存在，则更新所有字段（视为重新分析）\n- index_code 为唯一键，确保列表内不重复\n字段说明：\n- index_code: 指数代码带后缀，如 930598.CSI\n- name: 指数中文全名\n- related_etfs: 相关ETF列表（字符串数组，每项格式：'代码.SZ/SH 名称'）\n- category: 类别，枚举值：成长科技/消费医药/公用事业能源/周期材料/金融/通用混合\n- cycle_position: 赛道当前周期位置，枚举值（精确单一值）：底部/复苏早期/复苏中期/景气高峰/收缩期/出清期\n- prebuy_conclusion: 结论文字，格式：'[可买/分批布局/等待回调/不适合当前介入] — [一句话理由]'\n- current_pe: 当前PE TTM（数字）\n- current_dy: 当前股息率（数字，单位%）\n- pe_3y_percentile: 3年PE近似分位（数字，0-100）\n- pe_5y_percentile: 5年PE近似分位（数字，0-100；若历史不足5年则null）\n- current_index_price: 当前指数点位（数字）\n- price_bands: 三档指数点位 [追高区起点, 中性区起点, 较好区起点]，降序，数字数组\n- valuation_anchor: 估值锚说明（文字，描述三档点位对应的PE/意义）\n- risk_flags: 主要风险（字符串数组，3条以内）\n- price_date: 价格记录日期（YYYY-MM-DD）\n- note_path: 对应指数页路径，格式：'05-A股指数/[代码] [名称].md'\n- last_updated: 最后更新日期（YYYY-MM-DD）",
+  "AGENT_INSTRUCTION": "指数整体PreBuy完成后，必须将分析结果写入本文件。\n规则：\n- 所有完成指数整体PreBuy分析的行业/主题指数均纳入，无需判断是否值得纳入\n- 不分档位，扁平列表\n- 每次PreBuy分析结束后，主Agent负责写入，禁止子Agent直接写入\n- 如该指数已存在，则更新所有字段（视为重新分析）\n- index_code 为唯一键，确保列表内不重复\n字段说明：\n- index_code: 指数代码带后缀，如 930598.CSI\n- name: 指数中文全名\n- related_etfs: 相关ETF列表（字符串数组，每项格式：代码.SZ/SH 名称）\n- category: 类别，枚举值：成长科技/消费医药/公用事业能源/周期材料/金融/通用混合\n- cycle_position: 赛道当前周期位置，枚举值（精确单一值）：底部/复苏早期/复苏中期/景气高峰/收缩期/出清期\n- prebuy_conclusion: 结论文字，格式：[可买/分批布局/等待回调/不适合当前介入] — [一句话理由]\n- current_pe: 当前PE TTM（数字）\n- current_dy: 当前股息率（数字，单位%）\n- pe_3y_percentile: 3年PE近似分位（数字，0-100）\n- pe_5y_percentile: 5年PE近似分位（数字，0-100；若历史不足5年则null）\n- current_index_price: 当前指数点位（数字）\n- price_bands: 三档指数点位 [追高区起点, 中性区起点, 较好区起点]，降序，数字数组\n- valuation_anchor: 估值锚说明（文字）\n- risk_flags: 主要风险（字符串数组，3条以内）\n- price_date: 价格记录日期（YYYY-MM-DD）\n- note_path: 对应指数页路径\n- last_updated: 最后更新日期（YYYY-MM-DD）",
   "indices": [
     {
       "index_code": "930598.CSI",
       "name": "中证稀土产业指数",
-      "related_etfs": [
-        "159715.SZ 稀土ETF易方达",
-        "159713.SZ 稀土ETF富国",
-        "516150.SH 稀土ETF嘉实",
-        "516780.SH 稀土ETF华泰柏瑞"
-      ],
+      "related_etfs": ["159715.SZ 稀土ETF易方达", "159713.SZ 稀土ETF富国", "516150.SH 稀土ETF嘉实", "516780.SH 稀土ETF华泰柏瑞"],
       "category": "通用混合",
       "cycle_position": "复苏早期",
       "prebuy_conclusion": "分批布局 — 出口管制政策催化已落地，但PE处3年83.4%高分位，政策预期已被充分定价；等回调至2700点以下（PE约43x）再分批建仓，勿追高",
@@ -20,14 +15,60 @@
       "pe_5y_percentile": 83.4,
       "current_index_price": 3141.52,
       "price_bands": [3380, 2700, 2100],
-      "valuation_anchor": "3年PE历史：17.8~56.8；追高区≥3380（PE>54x，3年90%分位以上）/ 观察区2700-3380（PE43-54x，政策已定价阶段）/ 较好区间2100-2700（PE约33-43x，业绩兑现后的合理区）/ 更低区间<2100（PE<33x，稀土价格大幅反弹兑现时的安全边际充足区）。⚠️强周期赛道，PE低≠底部，结合稀土价格走势判断",
+      "valuation_anchor": "3年PE历史：17.8~56.8；追高区>=3380（PE>54x）/ 观察区2700-3380（PE43-54x）/ 较好区间2100-2700（PE约33-43x）/ 安全区<2100（PE<33x）。强周期赛道，PE低不等于底部",
       "risk_flags": [
-        "稀土价格强周期波动，上游ROE对价格极度敏感（价格-10%则北方稀土ROE可跌至0附近）",
-        "国际替代供应链加速：出口管制刺激澳洲/非洲稀土矿提速，2-3年后对定价权有侵蚀风险",
-        "第二大权重金风科技（7.5%）为风电整机商，稀土价格上涨对其反而是成本压力"
+        "稀土价格强周期波动，北方稀土ROE对价格极度敏感",
+        "国际替代供应链加速：出口管制刺激澳洲/非洲稀土矿提速",
+        "金风科技（7.5%权重）为风电整机商，稀土涨价对其为成本压力"
       ],
       "price_date": "2026-04-30",
       "note_path": "05-A股指数/930598 中证稀土产业指数.md",
+      "last_updated": "2026-05-01"
+    },
+    {
+      "index_code": "000932.SH",
+      "name": "中证消费指数",
+      "related_etfs": ["159985.SZ 消费ETF华夏", "515650.SH 消费50ETF南方"],
+      "category": "消费医药",
+      "cycle_position": "收缩期",
+      "prebuy_conclusion": "可买（分批建仓）— 当前PE=18.5x处3年16.4%分位已在低估区，含约15%猪周期养殖股（牧原/温氏），非纯消费品牌敞口，了解成分后积极建仓",
+      "current_pe": 18.46,
+      "current_dy": 3.65,
+      "pe_3y_percentile": 16.4,
+      "pe_5y_percentile": 8.1,
+      "current_index_price": 14358.23,
+      "price_bands": [15742, 14358, 13500],
+      "valuation_anchor": "3年PE历史：16.9~26.5；积极买入线15742（PE20.2x，30%分位）/ 合理中位16367（PE21.0x，50%分位）/ 当前14358（PE18.5x，16.4%分位，已在低估区）",
+      "risk_flags": [
+        "养殖板块（牧原+温氏约15.5%权重）处于猪价下行周期，ROE为负拖累整体盈利质量",
+        "白酒渠道库存：次高端白酒去化未完成，动销恢复节奏不确定",
+        "消费复苏不及预期：内需弹性依赖就业和收入预期改善"
+      ],
+      "price_date": "2026-04-30",
+      "note_path": "05-A股指数/000932 中证消费指数.md",
+      "last_updated": "2026-05-01"
+    },
+    {
+      "index_code": "399396.SZ",
+      "name": "国证食品指数",
+      "related_etfs": ["159843.SZ 国证食品ETF华夏", "516910.SH 国证食品ETF易方达"],
+      "category": "消费医药",
+      "cycle_position": "收缩期",
+      "prebuy_conclusion": "可买（积极建仓）— 当前加权PE约22.6x处3年9.7%分位极低位，DY=4.3%兜底，主题纯度高（前5大均为消费品牌龙头），白酒出清末段赔率充足",
+      "current_pe": 22.61,
+      "current_dy": 4.30,
+      "pe_3y_percentile": 9.7,
+      "pe_5y_percentile": 4.8,
+      "current_index_price": 16477.42,
+      "price_bands": [19452, 18427, 16477],
+      "valuation_anchor": "3年PE历史：21.2~35.6（加权估算）；积极买入线18427（PE25.3x，30%分位）/ 合理中位19452（PE26.7x，50%分位）/ 当前16477（PE22.6x，9.7%分位，极低估区）。注：PE为成分股加权估算，洋河(PE=73x,2.5%权重)上拉约1.8x",
+      "risk_flags": [
+        "白酒高度集中（约50%权重），茅台/五粮液批价若二次下探则指数承压",
+        "次高端白酒（洋河PE=73x）业绩下滑，若蔓延至汾酒等则拖累整体盈利修复",
+        "内需弱复苏叠加贸易摩擦，白酒去库存时间线可能延长至2026年底"
+      ],
+      "price_date": "2026-04-30",
+      "note_path": "05-A股指数/399396 国证食品指数.md",
       "last_updated": "2026-05-01"
     }
   ]
