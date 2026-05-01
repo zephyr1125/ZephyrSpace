@@ -1890,5 +1890,61 @@
     "next_earnings_type": "半年报",
     "cycle_is_cyclical": true,
     "cycle_position": "复苏早期"
+  },
+  {
+    "name": "国投电力",
+    "code": "600886.SH",
+    "source_etf": "931897",
+    "position_role": "水电资产 + 区域能源平台",
+    "prebuy_conclusion": "从Core降档至Growth。Q1 2026营收-4.6%、净利+1.9%，增长弱于长江电力，不具备Core占位资格。",
+    "watch_reason": "水电资产和大基地开发并重，适合观察清洁能源底仓。",
+    "current_price": 13.37,
+    "price_bands": [
+      16.0,
+      14.0,
+      12.5
+    ],
+    "risk_flags": [
+      "水电来水波动",
+      "大基地项目周期长",
+      "好资产常常不便宜"
+    ],
+    "valuation_anchor": "股息率+PE：追高区>16(股息率低，水电+大基地资产定价偏高) / 中性区14-16(底仓可持有，等大基地验证) / 较好区间12.5-14(股息率约4%，赔率改善) / 更低区间<12.5(股息率>4.5%，安全边际明显)",
+    "price_date": "2026-04-24",
+    "board": "沪",
+    "dv_ttm": 3.41,
+    "next_earnings_date": "2026-04-30",
+    "next_earnings_type": "一季报",
+    "last_close": 13.4
+  },
+  {
+    "name": "泸州老窖",
+    "code": "000568.SZ",
+    "source_etf": "399997",
+    "position_role": "高端白酒第三极 / 股息底仓",
+    "prebuy_conclusion": "从Core降档至Growth。Q1 2026净利-19.3%、营收-14.2%，景气底部持续，不符合Core持仓要求。ROE 29%底层质量尚可，长期仍值得跟踪。",
+    "watch_reason": "中证白酒指数权重第三，ROE 30%，PE历史低位，三年85亿/年分红承诺，底仓逻辑扎实。",
+    "current_price": 100.2,
+    "price_bands": [
+      135,
+      120,
+      75
+    ],
+    "risk_flags": [
+      "2025年报净利-19.6%，Q1 2026延续-19.3%，景气底部持续",
+      "⚠️2025年报扣非/净利26.99%异常，需核查年报原文确认利润质量",
+      "国窖批价约920-940元仍低于出厂价950元，渠道去库未完成",
+      "白酒消费税后移政策讨论持续，落地将压制利润空间"
+    ],
+    "valuation_anchor": "EPS 7.38元(2025年报实际)；PE 12x=88元底/PE 16x=118元中/PE 18x=133元顶；PS+5绿灯上界+15%至~120元",
+    "price_date": "2026-04-28",
+    "board": "深",
+    "dv_ttm": 5.94,
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报",
+    "policy_score": 5,
+    "last_updated": "2026-04-29",
+    "cycle_is_cyclical": true,
+    "cycle_position": "底部"
   }
 ]
