@@ -421,6 +421,339 @@
       "price_date": "2026-04-30",
       "note_path": "05-A股指数/930851 中证云计算与大数据主题指数.md",
       "last_updated": "2026-05-01"
+    },
+    {
+      "index_code": "000949.SH",
+      "lx_code": "000949",
+      "name": "中证农业主题指数",
+      "related_etfs": [
+        "000998.SH 农业ETF华安"
+      ],
+      "category": "消费医药",
+      "cycle_position": "景气高峰",
+      "prebuy_conclusion": "等待回调 — 3年分位81.9%，PE=39x偏贵，当前不是好入场时机，跌至3y P50以下再考虑",
+      "current_pe": 39.12,
+      "current_dy": 1.75,
+      "pe_3y_percentile": 81.9,
+      "pe_5y_percentile": 66.2,
+      "current_index_price": 5873.67,
+      "price_bands": [
+        5703,
+        3608,
+        2870
+      ],
+      "valuation_anchor": "中证农业主题指数PE-TTM 3年P20/P50/P80分位换算点位",
+      "risk_flags": [
+        "猪周期/种植周期波动大",
+        "农产品价格受天气政策影响",
+        "分位81.9%偏贵等回调"
+      ],
+      "price_date": "2026-04-30",
+      "note_path": "05-A股指数/000949 中证农业主题指数.md",
+      "last_updated": "2026-05-01"
+    },
+    {
+      "index_code": "399998.SZ",
+      "lx_code": "399998",
+      "name": "中证煤炭指数",
+      "related_etfs": [
+        "515220.SH 煤炭ETF"
+      ],
+      "category": "周期材料",
+      "cycle_position": "景气高峰",
+      "prebuy_conclusion": "不适合当前介入 — 3年分位99.9%，处于历史极贵位置，煤炭强周期，等出清后再看",
+      "current_pe": 22.91,
+      "current_dy": 2.92,
+      "pe_3y_percentile": 99.9,
+      "pe_5y_percentile": 99.9,
+      "current_index_price": 2533.36,
+      "price_bands": [
+        1582,
+        1363,
+        964
+      ],
+      "valuation_anchor": "中证煤炭指数PE-TTM 3年P20/P50/P80分位换算点位",
+      "risk_flags": [
+        "分位99.9%，历史极值，任何回调空间巨大",
+        "煤价与宏观/冬季需求强相关，周期性极强",
+        "长期能源转型压力"
+      ],
+      "price_date": "2026-04-30",
+      "note_path": "05-A股指数/399998 中证煤炭指数.md",
+      "last_updated": "2026-05-01"
+    },
+    {
+      "index_code": "000977.SH",
+      "lx_code": "000977",
+      "name": "中证全指通信指数",
+      "related_etfs": [
+        "515880.SH 通信ETF"
+      ],
+      "category": "成长科技",
+      "cycle_position": "景气高峰",
+      "prebuy_conclusion": "等待回调 — 3年分位79.4%，PE=35x偏高，AI+卫星互联网驱动但价格已反映较多预期",
+      "current_pe": 35.55,
+      "current_dy": 1.58,
+      "pe_3y_percentile": 79.4,
+      "pe_5y_percentile": 66.6,
+      "current_index_price": 2279.35,
+      "price_bands": [
+        2292,
+        1583,
+        1041
+      ],
+      "valuation_anchor": "中证全指通信指数PE-TTM 3年P20/P50/P80分位换算点位",
+      "risk_flags": [
+        "分位79.4%偏贵",
+        "5G投资周期高峰已过",
+        "中美科技摩擦风险"
+      ],
+      "price_date": "2026-04-30",
+      "note_path": "05-A股指数/000977 中证全指通信指数.md",
+      "last_updated": "2026-05-01"
+    },
+    {
+      "index_code": "931897.CSI",
+      "lx_code": "931897",
+      "name": "中证绿色电力指数",
+      "related_etfs": [
+        "563980.SH 绿色电力ETF"
+      ],
+      "category": "公用事业能源",
+      "cycle_position": "收缩期",
+      "prebuy_conclusion": "等待回调 — 3年分位73%，绿电装机供过于求导致电价承压，PE=19x但盈利能力受消纳限制",
+      "current_pe": 19.01,
+      "current_dy": 2.65,
+      "pe_3y_percentile": 73.0,
+      "pe_5y_percentile": 53.0,
+      "current_index_price": 1194.73,
+      "price_bands": [
+        1262,
+        1121,
+        1067
+      ],
+      "valuation_anchor": "中证绿色电力指数PE-TTM 3年P20/P50/P80分位换算点位",
+      "risk_flags": [
+        "分位73%偏贵",
+        "绿电消纳和电价政策不确定",
+        "装机过剩压低利用小时数"
+      ],
+      "price_date": "2026-04-30",
+      "note_path": "05-A股指数/931897 中证绿色电力指数.md",
+      "last_updated": "2026-05-01"
+    },
+    {
+      "index_code": "931643.CSI",
+      "lx_code": "931643",
+      "name": "中证港股通互联网指数",
+      "related_etfs": [
+        "513050.SH 港股互联网ETF",
+        "159605.SZ 港股互联网ETF"
+      ],
+      "category": "成长科技",
+      "cycle_position": "景气高峰",
+      "prebuy_conclusion": "不适合当前介入 — 3年分位94.8%，PE=58x处于历史极高位，互联网政策环境改善已price-in",
+      "current_pe": 57.96,
+      "current_dy": 0.69,
+      "pe_3y_percentile": 94.8,
+      "pe_5y_percentile": 83.1,
+      "current_index_price": 2356.76,
+      "price_bands": [
+        2159,
+        1400,
+        1099
+      ],
+      "valuation_anchor": "中证港股通互联网指数PE-TTM 3年P20/P50/P80分位换算点位",
+      "risk_flags": [
+        "3年分位94.8%极贵",
+        "港股受美联储/地缘政治双重影响",
+        "估值已充分反映AI预期"
+      ],
+      "price_date": "2026-04-30",
+      "note_path": "05-A股指数/931643 中证港股通互联网指数.md",
+      "last_updated": "2026-05-01"
+    },
+    {
+      "index_code": "000808.SH",
+      "lx_code": "000808",
+      "name": "中证家用电器指数",
+      "related_etfs": [
+        "159996.SZ 家电ETF",
+        "516110.SH 家电ETF华宝"
+      ],
+      "category": "消费医药",
+      "cycle_position": "景气高峰",
+      "prebuy_conclusion": "等待回调 — 3年分位77.4%，PE=35x偏贵，龙头格局稳定但价格已反映复苏预期",
+      "current_pe": 34.93,
+      "current_dy": 1.51,
+      "pe_3y_percentile": 77.4,
+      "pe_5y_percentile": 73.9,
+      "current_index_price": 8199.17,
+      "price_bands": [
+        8262,
+        7267,
+        6503
+      ],
+      "valuation_anchor": "中证家用电器指数PE-TTM 3年P20/P50/P80分位换算点位",
+      "risk_flags": [
+        "分位77.4%偏贵",
+        "地产下行拖累家电后周期需求",
+        "出口面临关税压力"
+      ],
+      "price_date": "2026-04-30",
+      "note_path": "05-A股指数/000808 中证家用电器指数.md",
+      "last_updated": "2026-05-01"
+    },
+    {
+      "index_code": "399986.SZ",
+      "lx_code": "399986",
+      "name": "中证银行指数",
+      "related_etfs": [
+        "512800.SH 银行ETF",
+        "159887.SZ 银行ETF华宝"
+      ],
+      "category": "金融",
+      "cycle_position": "复苏中期",
+      "prebuy_conclusion": "等待回调 — 3年分位79.9%，银行PE=6.9x绝对值低但历史分位偏高，高股息策略已充分定价",
+      "current_pe": 6.94,
+      "current_dy": 4.25,
+      "pe_3y_percentile": 79.9,
+      "pe_5y_percentile": 87.9,
+      "current_index_price": 7268.76,
+      "price_bands": [
+        7275,
+        6202,
+        5119
+      ],
+      "valuation_anchor": "中证银行指数PE-TTM 3年P20/P50/P80分位换算点位（银行PE绝对值本身偏低属正常）",
+      "risk_flags": [
+        "3年分位79.9%，但银行PE本来就低，分位高因行情",
+        "净息差持续压缩",
+        "地方债/房贷风险"
+      ],
+      "price_date": "2026-04-30",
+      "note_path": "05-A股指数/399986 中证银行指数.md",
+      "last_updated": "2026-05-01"
+    },
+    {
+      "index_code": "930708.CSI",
+      "lx_code": "930708",
+      "name": "中证稀土产业指数",
+      "related_etfs": [
+        "516000.SH 稀土ETF华夏"
+      ],
+      "category": "周期材料",
+      "cycle_position": "收缩期",
+      "prebuy_conclusion": "等待回调 — 3年分位75%，稀土价格持续低迷，新能源需求未能消化产能扩张，等价格拐点信号",
+      "current_pe": 22.02,
+      "current_dy": 1.33,
+      "pe_3y_percentile": 75.0,
+      "pe_5y_percentile": 65.7,
+      "current_index_price": 3419.76,
+      "price_bands": [
+        3570,
+        2926,
+        2482
+      ],
+      "valuation_anchor": "中证稀土产业指数PE-TTM 3年P20/P50/P80分位换算点位",
+      "risk_flags": [
+        "分位75%偏贵",
+        "稀土价格处于下行通道",
+        "供应管控松动可能进一步压价"
+      ],
+      "price_date": "2026-04-30",
+      "note_path": "05-A股指数/930708 中证稀土产业指数.md",
+      "last_updated": "2026-05-01"
+    },
+    {
+      "index_code": "399971.SZ",
+      "lx_code": "399971",
+      "name": "中证传媒指数",
+      "related_etfs": [
+        "512980.SH 传媒ETF"
+      ],
+      "category": "成长科技",
+      "cycle_position": "景气高峰",
+      "prebuy_conclusion": "等待回调 — 3年分位75.6%，PE=43x偏高，AI+游戏+影视政策改善已反映，等更优性价比",
+      "current_pe": 42.82,
+      "current_dy": 1.72,
+      "pe_3y_percentile": 75.6,
+      "pe_5y_percentile": 83.6,
+      "current_index_price": 1456.46,
+      "price_bands": [
+        1519,
+        1254,
+        974
+      ],
+      "valuation_anchor": "中证传媒指数PE-TTM 3年P20/P50/P80分位换算点位",
+      "risk_flags": [
+        "分位75.6%偏贵",
+        "AI内容冲击传统媒体商业模式",
+        "版权监管不确定性"
+      ],
+      "price_date": "2026-04-30",
+      "note_path": "05-A股指数/399971 中证传媒指数.md",
+      "last_updated": "2026-05-01"
+    },
+    {
+      "index_code": "930955.CSI",
+      "lx_code": "930955",
+      "name": "中证储能主题指数",
+      "related_etfs": [
+        "562790.SH 储能ETF"
+      ],
+      "category": "公用事业能源",
+      "cycle_position": "复苏早期",
+      "prebuy_conclusion": "等待回调 — 3年分位84.4%，PE极低或含亏损成分，储能全产业链价格战尚未出清，等确认盈利修复",
+      "current_pe": 9.11,
+      "current_dy": 4.4,
+      "pe_3y_percentile": 84.4,
+      "pe_5y_percentile": 90.7,
+      "current_index_price": 11962.71,
+      "price_bands": [
+        11768,
+        9473,
+        8131
+      ],
+      "valuation_anchor": "中证储能主题指数PE-TTM 3年P20/P50/P80分位换算点位（需关注PE极低的结构性原因）",
+      "risk_flags": [
+        "3年分位84.4%偏贵",
+        "PE=9.1x极低疑为周期底部亏损",
+        "储能价格战激烈"
+      ],
+      "price_date": "2026-04-30",
+      "note_path": "05-A股指数/930955 中证储能主题指数.md",
+      "last_updated": "2026-05-01"
+    },
+    {
+      "index_code": "000979.SH",
+      "lx_code": "000979",
+      "name": "中证全指石油天然气指数",
+      "related_etfs": [
+        "561260.SH 油气ETF华宝"
+      ],
+      "category": "公用事业能源",
+      "cycle_position": "景气高峰",
+      "prebuy_conclusion": "不适合当前介入 — 3年分位93%，油气股已充分受益高油价和国际化战略，当前不具备进攻性价比",
+      "current_pe": 19.53,
+      "current_dy": 2.44,
+      "pe_3y_percentile": 93.0,
+      "pe_5y_percentile": 95.8,
+      "current_index_price": 7820.1,
+      "price_bands": [
+        6111,
+        5313,
+        4788
+      ],
+      "valuation_anchor": "中证全指石油天然气指数PE-TTM 3年P20/P50/P80分位换算点位",
+      "risk_flags": [
+        "分位93%极贵",
+        "国际油价高位风险",
+        "能源转型长期压制"
+      ],
+      "price_date": "2026-04-30",
+      "note_path": "05-A股指数/000979 中证全指石油天然气指数.md",
+      "last_updated": "2026-05-01"
     }
   ]
 }
