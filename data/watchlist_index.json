@@ -13,11 +13,11 @@
       "current_dy": 0.01,
       "pe_3y_percentile": 71.7,
       "pe_5y_percentile": 75.0,
-      "current_index_price": 817.55,
+      "current_index_price": 11739.19,
       "price_bands": [
-        887,
-        514,
-        259
+        9801,
+        7459,
+        6555
       ],
       "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=70.6→点位887（偏贵区），P50对应PE=41.0→点位514（历史中位），P20对应PE=20.6→点位259（积极买入区）。数据来源 lixinger cn/industry/fundamental/sw_2021 (630000，近似映射自 931932)。",
       "risk_flags": [
@@ -25,7 +25,7 @@
         "板块高估值对景气放缓非常敏感",
         "指数把多个强周期子行业揉在一起，波动会被放大"
       ],
-      "price_date": "2026-04-29",
+      "price_date": "20260430",
       "note_path": "05-A股指数/931932 中证全指电力设备指数.md",
       "last_updated": "2026-05-01",
       "wind_code": "801730.SI"
@@ -41,11 +41,11 @@
       "current_dy": 0.01,
       "pe_3y_percentile": 100,
       "pe_5y_percentile": 100,
-      "current_index_price": 10025.73,
+      "current_index_price": 2368.82,
       "price_bands": [
-        8240,
-        6551,
-        5802
+        1951,
+        1541,
+        1388
       ],
       "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=44.5→点位8240（偏贵区），P50对应PE=35.4→点位6551（历史中位），P20对应PE=31.3→点位5802（积极买入区）。数据来源 lixinger cn/industry/fundamental/sw_2021 (640000，近似映射自 H30166)。",
       "risk_flags": [
@@ -53,7 +53,7 @@
         "当前估值处高位，修复不及预期时回撤空间大",
         "宏观投资和出口订单波动会同时影响多个子板块"
       ],
-      "price_date": "2026-04-29",
+      "price_date": "20260430",
       "note_path": "05-A股指数/H30166 中证全指机械制造指数.md",
       "last_updated": "2026-05-01",
       "wind_code": "801890.SI"
@@ -69,11 +69,11 @@
       "current_dy": 0.02,
       "pe_3y_percentile": 100,
       "pe_5y_percentile": 100,
-      "current_index_price": 822.27,
+      "current_index_price": 2237.41,
       "price_bands": [
-        619,
-        537,
-        480
+        2208,
+        2028,
+        1857
       ],
       "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=11.9→点位619（偏贵区），P50对应PE=10.3→点位537（历史中位），P20对应PE=9.3→点位480（积极买入区）。数据来源 lixinger cn/industry/fundamental/sw_2021 (620000，近似映射自 931931)。",
       "risk_flags": [
@@ -81,7 +81,7 @@
         "若稳增长力度不及预期，估值修复空间会受限",
         "建筑央企弹性有限，更适合低波动配置而非高弹性博弈"
       ],
-      "price_date": "2026-04-29",
+      "price_date": "20260430",
       "note_path": "05-A股指数/931931 中证全指建筑装饰指数.md",
       "last_updated": "2026-05-01",
       "wind_code": "801720.SI"
@@ -97,11 +97,11 @@
       "current_dy": 0.01,
       "pe_3y_percentile": 89.2,
       "pe_5y_percentile": 93.2,
-      "current_index_price": 883.33,
+      "current_index_price": 2195.25,
       "price_bands": [
-        791,
-        575,
-        517
+        1934,
+        1764,
+        1571
       ],
       "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=38.4→点位791（偏贵区），P50对应PE=28.0→点位575（历史中位），P20对应PE=25.1→点位517（积极买入区）。数据来源 lixinger cn/industry/fundamental/sw_2021 (760000，近似映射自 931933)。",
       "risk_flags": [
@@ -109,7 +109,7 @@
         "行业整体ROE偏低，难以支撑高估值",
         "环保政策兑现节奏若放缓，估值回撤会很直接"
       ],
-      "price_date": "2026-04-29",
+      "price_date": "20260430",
       "note_path": "05-A股指数/931933 中证全指环保指数.md",
       "last_updated": "2026-05-01",
       "wind_code": "801970.SI"
@@ -125,11 +125,11 @@
       "current_dy": 0.01,
       "pe_3y_percentile": 98.5,
       "pe_5y_percentile": 99.1,
-      "current_index_price": 904.93,
+      "current_index_price": 4989.33,
       "price_bands": [
-        744,
-        625,
-        519
+        4154,
+        3558,
+        3262
       ],
       "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=35.4→点位744（偏贵区），P50对应PE=29.7→点位625（历史中位），P20对应PE=24.7→点位519（积极买入区）。数据来源 lixinger cn/industry/fundamental/sw_2021 (220000，近似映射自 932111)。",
       "risk_flags": [
@@ -137,7 +137,7 @@
         "子行业景气错位明显，指数容易把强弱混在一起买",
         "原材料价格回落时，估值和盈利可能双杀"
       ],
-      "price_date": "2026-04-29",
+      "price_date": "20260430",
       "note_path": "05-A股指数/932111 中证全指化工行业指数.md",
       "last_updated": "2026-05-01",
       "wind_code": "801030.SI"
@@ -153,11 +153,11 @@
       "current_dy": 0.0,
       "pe_3y_percentile": 65.6,
       "pe_5y_percentile": 79.4,
-      "current_index_price": 910.84,
+      "current_index_price": 2031.61,
       "price_bands": [
-        1141,
-        755,
-        551
+        1699,
+        1498,
+        1298
       ],
       "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=134.5→点位1141（偏贵区），P50对应PE=89.0→点位755（历史中位），P20对应PE=64.9→点位551（积极买入区）。数据来源 lixinger cn/industry/fundamental/sw_2021 (650000，近似映射自 932116)。",
       "risk_flags": [
@@ -165,7 +165,7 @@
         "军工订单节奏和业绩确认往往滞后于市场预期",
         "高集中度让少数军工龙头的波动直接放大指数表现"
       ],
-      "price_date": "2026-04-29",
+      "price_date": "20260430",
       "note_path": "05-A股指数/932116 中证全指航空航天与国防行业指数.md",
       "last_updated": "2026-05-01",
       "wind_code": "801740.SI"
@@ -181,11 +181,11 @@
       "current_dy": 0.01,
       "pe_3y_percentile": 96.1,
       "pe_5y_percentile": 97.7,
-      "current_index_price": 574.18,
+      "current_index_price": 6306.45,
       "price_bands": [
-        530,
-        419,
-        353
+        7199,
+        6611,
+        6204
       ],
       "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=47.0→点位530（偏贵区），P50对应PE=37.2→点位419（历史中位），P20对应PE=31.2→点位353（积极买入区）。数据来源 lixinger cn/industry/fundamental/sw_2021 (370500，近似映射自 931940)。",
       "risk_flags": [
@@ -193,7 +193,7 @@
         "医疗服务修复速度若低于预期，会拖累整体弹性",
         "迈瑞和联影等大权重股波动会显著影响指数表现"
       ],
-      "price_date": "2026-04-29",
+      "price_date": "20260430",
       "note_path": "05-A股指数/931940 中证全指医疗指数.md",
       "last_updated": "2026-05-01",
       "wind_code": "801153.SI"
@@ -209,11 +209,11 @@
       "current_dy": 0.01,
       "pe_3y_percentile": 74.3,
       "pe_5y_percentile": 78.3,
-      "current_index_price": 9357.65,
+      "current_index_price": 8094.68,
       "price_bands": [
-        9765,
-        8009,
-        7283
+        8762,
+        8085,
+        7321
       ],
       "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=50.3→点位9765（偏贵区），P50对应PE=41.2→点位8009（历史中位），P20对应PE=37.5→点位7283（积极买入区）。数据来源 lixinger cn/industry/fundamental/sw_2021 (370000，近似映射自 H30179)。",
       "risk_flags": [
@@ -221,7 +221,7 @@
         "医药内部子行业修复节奏不一致，指数容易强弱对冲",
         "若集采和控费再超预期，估值修复会反复"
       ],
-      "price_date": "2026-04-29",
+      "price_date": "20260430",
       "note_path": "05-A股指数/H30179 中证全指医药指数.md",
       "last_updated": "2026-05-01",
       "wind_code": "801150.SI"
@@ -237,11 +237,11 @@
       "current_dy": 0.04,
       "pe_3y_percentile": 43.4,
       "pe_5y_percentile": 26.0,
-      "current_index_price": 11160.94,
+      "current_index_price": 15609.46,
       "price_bands": [
-        13812,
-        11288,
-        10673
+        21109,
+        17995,
+        16698
       ],
       "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=27.2→点位13812（偏贵区），P50对应PE=22.3→点位11288（历史中位），P20对应PE=21.0→点位10673（积极买入区）。数据来源 lixinger cn/industry/fundamental/sw_2021 (340000，近似映射自 H30177)。",
       "risk_flags": [
@@ -249,7 +249,7 @@
         "指数高度依赖茅台、五粮液等龙头，集中度较高",
         "居民消费信心恢复弱于预期，会延后行业景气回升"
       ],
-      "price_date": "2026-04-29",
+      "price_date": "20260430",
       "note_path": "05-A股指数/H30177 中证全指食品、饮料与烟草指数.md",
       "last_updated": "2026-05-01",
       "wind_code": "801120.SI"
@@ -265,11 +265,11 @@
       "current_dy": 1.49,
       "pe_3y_percentile": 49.7,
       "pe_5y_percentile": 30.9,
-      "current_index_price": 2364.3,
+      "current_index_price": 2114.93,
       "price_bands": [
-        2577,
-        2408,
-        1997
+        2384,
+        2158,
+        1855
       ],
       "valuation_anchor": "当期PE为负（行业整体亏损），price_bands基于3年历史价格分位P80/P50/P20，PE分位不适用",
       "risk_flags": [
@@ -277,7 +277,7 @@
         "整体ROE偏低，容易出现估值不低质量也一般的尴尬",
         "零售消费复苏若再次放缓，指数缺少足够强的龙头兜底"
       ],
-      "price_date": "2026-04-29",
+      "price_date": "20260430",
       "note_path": "05-A股指数/H30175 中证全指零售业指数.md",
       "last_updated": "2026-05-01",
       "wind_code": "801200.SI"
@@ -293,11 +293,11 @@
       "current_dy": 0.01,
       "pe_3y_percentile": 99.9,
       "pe_5y_percentile": 76.7,
-      "current_index_price": 8577.21,
+      "current_index_price": 17730.33,
       "price_bands": [
-        6869,
-        6421,
-        5648
+        20378,
+        17322,
+        15653
       ],
       "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=31.6→点位6869（偏贵区），P50对应PE=29.5→点位6421（历史中位），P20对应PE=26.0→点位5648（积极买入区）。数据来源 lixinger cn/industry/fundamental/sw_2021 (280500，近似映射自 H30164)。",
       "risk_flags": [
@@ -305,7 +305,7 @@
         "指数同时包含整车和零部件，强弱周期并不同步",
         "当前估值已不低，一旦销量或出口预期降温，回撤会比较直接"
       ],
-      "price_date": "2026-04-29",
+      "price_date": "20260430",
       "note_path": "05-A股指数/H30164 中证全指乘用车及零部件指数.md",
       "last_updated": "2026-05-01",
       "wind_code": "801095.SI"
@@ -321,11 +321,11 @@
       "current_dy": 0.03,
       "pe_3y_percentile": 3.6,
       "pe_5y_percentile": 2.2,
-      "current_index_price": 1351.2,
+      "current_index_price": 1305.07,
       "price_bands": [
-        2576,
-        2000,
-        1584
+        1295,
+        1108,
+        940
       ],
       "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=13.5→点位2576（偏贵区），P50对应PE=10.5→点位2000（历史中位），P20对应PE=8.3→点位1584（积极买入区）。数据来源 lixinger cn/industry/fundamental/sw_2021 (490200，近似映射自 H30186)。",
       "risk_flags": [
@@ -333,7 +333,7 @@
         "长端利率和权益市场波动会同时影响估值与利润预期",
         "行业修复节奏通常慢于券商，容易出现估值高位横盘"
       ],
-      "price_date": "2026-04-29",
+      "price_date": "20260430",
       "note_path": "05-A股指数/H30186 中证全指保险指数.md",
       "last_updated": "2026-05-01",
       "wind_code": "801194.SI"
@@ -349,11 +349,11 @@
       "current_dy": 0.03,
       "pe_3y_percentile": 2.1,
       "pe_5y_percentile": 1.2,
-      "current_index_price": 750.33,
+      "current_index_price": 1826.57,
       "price_bands": [
-        1232,
-        1108,
-        903
+        1938,
+        1646,
+        1441
       ],
       "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=17.3→点位1232（偏贵区），P50对应PE=15.6→点位1108（历史中位），P20对应PE=12.7→点位903（积极买入区）。数据来源 lixinger cn/industry/fundamental/sw_2021 (490000，近似映射自 H30211)。",
       "risk_flags": [
@@ -361,7 +361,7 @@
         "市场成交额和风险偏好若回落，景气修复会放缓",
         "头部权重股估值变化会显著影响指数走势"
       ],
-      "price_date": "2026-04-29",
+      "price_date": "20260430",
       "note_path": "05-A股指数/H30211 中证全指资本市场指数.md",
       "last_updated": "2026-05-01",
       "wind_code": "801790.SI"
@@ -377,11 +377,11 @@
       "current_dy": 0.0,
       "pe_3y_percentile": 93.5,
       "pe_5y_percentile": 96.1,
-      "current_index_price": 10491.14,
+      "current_index_price": 8108.69,
       "price_bands": [
-        9260,
-        7958,
-        7208
+        5818,
+        3965,
+        3471
       ],
       "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=76.9→点位9260（偏贵区），P50对应PE=66.1→点位7958（历史中位），P20对应PE=59.9→点位7208（积极买入区）。数据来源 lixinger cn/industry/fundamental/sw_2021 (270000，近似映射自 H30183)。",
       "risk_flags": [
@@ -389,7 +389,7 @@
         "行业内部子赛道多，强景气并不代表全板块同步兑现",
         "海外需求和贸易限制仍可能带来硬件链波动"
       ],
-      "price_date": "2026-04-29",
+      "price_date": "20260430",
       "note_path": "05-A股指数/H30183 中证全指电子指数.md",
       "last_updated": "2026-05-01",
       "wind_code": "801080.SI"
