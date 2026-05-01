@@ -1,0 +1,5 @@
+{
+  "schema_version": 1,
+  "AGENT_INSTRUCTION": "指数整体PreBuy完成后，必须将分析结果写入本文件。\n规则：\n- 所有完成指数整体PreBuy分析的行业/主题指数均纳入，无需判断是否值得纳入\n- 不分档位，扁平列表\n- 每次PreBuy分析结束后，主Agent负责写入，禁止子Agent直接写入\n- 如该指数已存在，则更新所有字段（视为重新分析）\n- index_code 为唯一键，确保列表内不重复\n字段说明：\n- index_code: 指数代码带后缀，如 930598.CSI\n- name: 指数中文全名\n- related_etfs: 相关ETF列表（字符串数组，每项格式：'代码.SZ/SH 名称'）\n- category: 类别，枚举值：成长科技/消费医药/公用事业能源/周期材料/金融/通用混合\n- cycle_position: 赛道当前周期位置，枚举值（精确单一值）：底部/复苏早期/复苏中期/景气高峰/收缩期/出清期\n- prebuy_conclusion: 结论文字，格式：'[可买/分批布局/等待回调/不适合当前介入] — [一句话理由]'\n- current_pe: 当前PE TTM（数字）\n- current_dy: 当前股息率（数字，单位%）\n- pe_3y_percentile: 3年PE近似分位（数字，0-100）\n- pe_5y_percentile: 5年PE近似分位（数字，0-100；若历史不足5年则null）\n- current_index_price: 当前指数点位（数字）\n- price_bands: 三档指数点位 [追高区起点, 中性区起点, 较好区起点]，降序，数字数组\n- valuation_anchor: 估值锚说明（文字，描述三档点位对应的PE/意义）\n- risk_flags: 主要风险（字符串数组，3条以内）\n- price_date: 价格记录日期（YYYY-MM-DD）\n- note_path: 对应指数页路径，格式：'05-A股指数/[代码] [名称].md'\n- last_updated: 最后更新日期（YYYY-MM-DD）",
+  "indices": []
+}

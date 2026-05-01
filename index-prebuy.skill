@@ -304,6 +304,46 @@ print(f'合理中位（PE 50%分位）：指数点位 {target_median:.0f}')
 
 ---
 
+### 第 6 步：写入 watchlist_index.json
+
+分析完成后，将结果写入 `data/watchlist_index.json` 的 `indices` 数组。
+
+**规则**：
+- 所有完成指数整体 PreBuy 的指数**无条件纳入**，不判断是否值得
+- 若该指数（`index_code`）已存在，则**整条更新**（视为重新分析）
+- `index_code` 是唯一键，写入前检查列表内不重复
+- **主Agent负责写入，禁止子Agent直接修改此文件**
+
+**写入模板**：
+
+```json
+{
+  "index_code": "930598.CSI",
+  "name": "中证稀土产业指数",
+  "related_etfs": ["159715.SZ 稀土ETF易方达", "159713.SZ 稀土ETF富国"],
+  "category": "通用混合",
+  "cycle_position": "复苏早期",
+  "prebuy_conclusion": "等待回调 — 当前PE处3年65%分位，偏高，等回落至合理区间",
+  "current_pe": 42.5,
+  "current_dy": 0.8,
+  "pe_3y_percentile": 65.0,
+  "pe_5y_percentile": 58.0,
+  "current_index_price": 1250,
+  "price_bands": [1350, 1180, 980],
+  "valuation_anchor": "3年30%分位PE对应点位980（积极买入线），3年50%分位对应1180（中性区底），当前1250处合理区上沿",
+  "risk_flags": [
+    "稀土价格周期性波动，上游盈利弹性极大",
+    "下游需求高度依赖新能源车/风电装机节奏",
+    "出口管制政策变化可能引发国际替代加速"
+  ],
+  "price_date": "2026-05-01",
+  "note_path": "05-A股指数/930598 中证稀土产业指数.md",
+  "last_updated": "2026-05-01"
+}
+```
+
+---
+
 ## 常见陷阱与注意事项
 
 ### 数据陷阱
