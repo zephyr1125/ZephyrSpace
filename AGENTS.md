@@ -609,7 +609,7 @@ for code in all_stocks['con_code']:
 3. **计算历史分位**：`pro.index_daily` 拉5年价格 → 近似 PE 历史分位（3年/5年）
 4. **成分股质量**：`index_weight` + `fina_indicator` → 加权平均 ROE + 集中度 CR5/CR10；若策略型指数，额外检查前10大成分的 ROE 和营收同比
 5. **赛道周期判断**：综合判断产业周期阶段、政策面、景气信号
-6. **写入 watchlist_index.json**：所有完成分析的指数无条件写入（主Agent执行）
+6. **写入并同步 watchlist_index.json**：所有完成分析的指数无条件写入（主Agent执行），随后运行 `.\scripts\sync_watchlist.ps1` 同步到 `E:\Work\Python\Finance\api\config\watchlist_index.json`
 
 ### 输出写入位置
 
@@ -629,6 +629,7 @@ for code in all_stocks['con_code']:
 - 若已存在则整条更新（重新分析即更新）
 - `index_code` 为唯一键，写入前确认不重复
 - **主Agent负责写入，禁止子Agent直接写入**
+- **写入后必须运行** `.\scripts\sync_watchlist.ps1`，同步到 `E:\Work\Python\Finance\api\config\watchlist_index.json`
 - 写入格式见 `index-prebuy.skill` 第 6 步模板
 
 ### 数据来源速查

@@ -49,7 +49,7 @@ python .\scripts\generate_daily_report.py --vault-name ZephyrSpace --date 2026-0
 
 ### 指数整体 PreBuy（触发词：对[指数]做指数PreBuy / [指数]适合建仓吗）
 
-完整 SOP 在 `index-prebuy.skill`，分析对象是指数本身（不拆解个股），输出到指数页 + `data/watchlist_index.json`。
+完整 SOP 在 `index-prebuy.skill`，分析对象是指数本身（不拆解个股），输出到指数页 + `data/watchlist_index.json`，并在写入后运行 `.\scripts\sync_watchlist.ps1` 同步到 `E:\Work\Python\Finance\api\config\watchlist_index.json`。
 
 ## Watchlist 管理
 

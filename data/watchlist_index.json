@@ -1,11 +1,375 @@
 {
   "schema_version": 1,
-  "AGENT_INSTRUCTION": "指数整体PreBuy完成后，必须将分析结果写入本文件。\n规则：\n- 所有完成指数整体PreBuy分析的行业/主题指数均纳入，无需判断是否值得纳入\n- 不分档位，扁平列表\n- 每次PreBuy分析结束后，主Agent负责写入，禁止子Agent直接写入\n- 如该指数已存在，则更新所有字段（视为重新分析）\n- index_code 为唯一键，确保列表内不重复\n字段说明：\n- index_code: 指数代码带后缀，如 930598.CSI\n- name: 指数中文全名\n- related_etfs: 相关ETF列表（字符串数组，每项格式：代码.SZ/SH 名称）\n- category: 类别，枚举值：成长科技/消费医药/公用事业能源/周期材料/金融/通用混合\n- cycle_position: 赛道当前周期位置，枚举值（精确单一值）：底部/复苏早期/复苏中期/景气高峰/收缩期/出清期\n- prebuy_conclusion: 结论文字，格式：[可买/分批布局/等待回调/不适合当前介入] — [一句话理由]\n- current_pe: 当前PE TTM（数字）\n- current_dy: 当前股息率（数字，单位%）\n- pe_3y_percentile: 3年PE近似分位（数字，0-100）\n- pe_5y_percentile: 5年PE近似分位（数字，0-100；若历史不足5年则null）\n- current_index_price: 当前指数点位（数字）\n- price_bands: 三档指数点位 [追高区起点, 中性区起点, 较好区起点]，降序，数字数组\n- valuation_anchor: 估值锚说明（文字）\n- risk_flags: 主要风险（字符串数组，3条以内）\n- price_date: 价格记录日期（YYYY-MM-DD）\n- note_path: 对应指数页路径\n- last_updated: 最后更新日期（YYYY-MM-DD）",
+  "AGENT_INSTRUCTION": "指数整体PreBuy完成后，必须将分析结果写入本文件。\n规则：\n- 所有完成指数整体PreBuy分析的行业/主题指数均纳入，无需判断是否值得纳入\n- 不分档位，扁平列表\n- 每次PreBuy分析结束后，主Agent负责写入，禁止子Agent直接写入\n- 如该指数已存在，则更新所有字段（视为重新分析）\n- index_code 为唯一键，确保列表内不重复\n- 写入本文件后，必须运行 .\\scripts\\sync_watchlist.ps1，将结果同步到 E:\\Work\\Python\\Finance\\api\\config\\watchlist_index.json\n字段说明：\n- index_code: 指数代码带后缀，如 930598.CSI\n- name: 指数中文全名\n- related_etfs: 相关ETF列表（字符串数组，每项格式：代码.SZ/SH 名称）\n- category: 类别，枚举值：成长科技/消费医药/公用事业能源/周期材料/金融/通用混合\n- cycle_position: 赛道当前周期位置，枚举值（精确单一值）：底部/复苏早期/复苏中期/景气高峰/收缩期/出清期\n- prebuy_conclusion: 结论文字，格式：[可买/分批布局/等待回调/不适合当前介入] — [一句话理由]\n- current_pe: 当前PE TTM（数字）\n- current_dy: 当前股息率（数字，单位%）\n- pe_3y_percentile: 3年PE近似分位（数字，0-100）\n- pe_5y_percentile: 5年PE近似分位（数字，0-100；若历史不足5年则null）\n- current_index_price: 当前指数点位（数字）\n- price_bands: 三档指数点位 [追高区起点, 中性区起点, 较好区起点]，降序，数字数组\n- valuation_anchor: 估值锚说明（文字）\n- risk_flags: 主要风险（字符串数组，3条以内）\n- price_date: 价格记录日期（YYYY-MM-DD）\n- note_path: 对应指数页路径\n- last_updated: 最后更新日期（YYYY-MM-DD）",
   "indices": [
+    {
+      "index_code": "932077.CSI",
+      "name": "中证全指能源行业指数",
+      "related_etfs": [],
+      "category": "公用事业能源",
+      "cycle_position": "复苏中期",
+      "prebuy_conclusion": "等待回调 — 高股息有支撑，但煤炭与油气盈利已从低位修复到中后段，当前PE处近3年81.8%分位，赔率不够舒适。",
+      "current_pe": 14.6,
+      "current_dy": 3.95,
+      "pe_3y_percentile": 81.8,
+      "pe_5y_percentile": 86.5,
+      "current_index_price": 2963.64,
+      "price_bands": [
+        2964,
+        2346,
+        2199
+      ],
+      "valuation_anchor": "采用中证官网932077官方PE口径。3年PE近似范围9.9x ~ 15.6x，当前3年分位81.8%，5年分位86.5%。",
+      "risk_flags": [
+        "商品价格回落会直接压缩盈利和估值",
+        "前五大权重接近一半，指数过度依赖神华、中石油、中海油等龙头",
+        "高股息防御属性已被市场部分提前定价"
+      ],
+      "price_date": "2026-04-30",
+      "note_path": "05-A股指数/932077 中证全指能源行业指数.md",
+      "last_updated": "2026-05-01"
+    },
+    {
+      "index_code": "932078.CSI",
+      "name": "中证全指原材料行业指数",
+      "related_etfs": [],
+      "category": "周期材料",
+      "cycle_position": "复苏中期",
+      "prebuy_conclusion": "等待回调 — 有色、化工和资源材料景气在修复，但当前PE已到近3年82.9%分位，明显不是舒服的行业篮子买点。",
+      "current_pe": 34.94,
+      "current_dy": 1.2,
+      "pe_3y_percentile": 82.9,
+      "pe_5y_percentile": 82.9,
+      "current_index_price": 5448.83,
+      "price_bands": [
+        5449,
+        3366,
+        3176
+      ],
+      "valuation_anchor": "采用中证官网932078官方PE口径。3年PE近似范围16.2x ~ 38.8x，当前3年分位82.9%，5年分位82.9%。",
+      "risk_flags": [
+        "周期品盈利波动大，PE高低会失真",
+        "内部子赛道分化显著，指数容易把强弱行业混在一起买",
+        "资源价格一旦回撤，估值和盈利可能双杀"
+      ],
+      "price_date": "2026-04-30",
+      "note_path": "05-A股指数/932078 中证全指原材料行业指数.md",
+      "last_updated": "2026-05-01"
+    },
+    {
+      "index_code": "932079.CSI",
+      "name": "中证全指工业行业指数",
+      "related_etfs": [],
+      "category": "通用混合",
+      "cycle_position": "复苏中期",
+      "prebuy_conclusion": "等待回调 — 工业制造景气在修复，但估值已经到近3年95%分位，当前位置更像景气交易后半程，而不是低位配置点。",
+      "current_pe": 27.52,
+      "current_dy": 1.35,
+      "pe_3y_percentile": 95.0,
+      "pe_5y_percentile": 88.3,
+      "current_index_price": 4781.77,
+      "price_bands": [
+        4782,
+        3601,
+        3259
+      ],
+      "valuation_anchor": "采用中证官网932079官方PE口径。3年PE近似范围15.0x ~ 28.2x，当前3年分位95.0%，5年分位88.3%。",
+      "risk_flags": [
+        "指数成分复杂，周期错位明显",
+        "当前估值处高位，景气不及预期容易先杀估值",
+        "宁德时代单一权重较高，会放大新能源链波动"
+      ],
+      "price_date": "2026-04-30",
+      "note_path": "05-A股指数/932079 中证全指工业行业指数.md",
+      "last_updated": "2026-05-01"
+    },
+    {
+      "index_code": "932080.CSI",
+      "name": "中证全指可选消费行业指数",
+      "related_etfs": [],
+      "category": "消费医药",
+      "cycle_position": "复苏中期",
+      "prebuy_conclusion": "等待回调 — 家电和汽车链条较强，但可选消费整体估值已到3年76%分位，当前位置更适合等回调，不适合把复苏预期继续追满。",
+      "current_pe": 23.1,
+      "current_dy": 2.19,
+      "pe_3y_percentile": 76.4,
+      "pe_5y_percentile": 74.0,
+      "current_index_price": 5479.46,
+      "price_bands": [
+        5479,
+        5119,
+        4554
+      ],
+      "valuation_anchor": "采用中证官网932080官方PE口径。3年PE近似范围15.6x ~ 25.4x，当前3年分位76.4%，5年分位74.0%。",
+      "risk_flags": [
+        "汽车和家电权重高，指数对少数龙头依赖较强",
+        "居民消费修复不及预期会压制估值",
+        "部分高景气环节已经提前透支预期"
+      ],
+      "price_date": "2026-04-30",
+      "note_path": "05-A股指数/932080 中证全指可选消费行业指数.md",
+      "last_updated": "2026-05-01"
+    },
+    {
+      "index_code": "932081.CSI",
+      "name": "中证全指主要消费行业指数",
+      "related_etfs": [],
+      "category": "消费医药",
+      "cycle_position": "收缩期",
+      "prebuy_conclusion": "可买（分批建仓） — 当前已落在低估区，ROE和股息率都不错，虽然白酒仍处收缩期，但赔率已经明显优于大多数成长行业。",
+      "current_pe": 20.03,
+      "current_dy": 3.18,
+      "pe_3y_percentile": 24.1,
+      "pe_5y_percentile": 12.2,
+      "current_index_price": 12600.44,
+      "price_bands": [
+        14158,
+        13418,
+        12600
+      ],
+      "valuation_anchor": "采用中证官网932081官方PE口径。3年PE近似范围17.4x ~ 28.2x，当前3年分位24.1%，5年分位12.2%。",
+      "risk_flags": [
+        "白酒动销恢复慢于预期会拖累整体重估",
+        "牧原、温氏等养殖股会带来猪周期波动",
+        "高集中度使茅台、五粮液表现对指数影响很大"
+      ],
+      "price_date": "2026-04-30",
+      "note_path": "05-A股指数/932081 中证全指主要消费行业指数.md",
+      "last_updated": "2026-05-01"
+    },
+    {
+      "index_code": "932082.CSI",
+      "name": "中证全指医药卫生行业指数",
+      "related_etfs": [],
+      "category": "消费医药",
+      "cycle_position": "复苏早期",
+      "prebuy_conclusion": "分批布局 — 估值不算极低，但相比近5年仍偏低位，行业处在复苏早期，适合长钱慢慢建仓而不是一把梭。",
+      "current_pe": 28.05,
+      "current_dy": 1.48,
+      "pe_3y_percentile": 53.7,
+      "pe_5y_percentile": 23.0,
+      "current_index_price": 9368.2,
+      "price_bands": [
+        9575,
+        9368,
+        8791
+      ],
+      "valuation_anchor": "采用中证官网932082官方PE口径。3年PE近似范围21.5x ~ 33.7x，当前3年分位53.7%，5年分位23.0%。",
+      "risk_flags": [
+        "政策控费和集采会压制部分子赛道利润率",
+        "药明、恒瑞等头部资产波动会显著影响指数",
+        "复苏节奏不均匀，容易出现结构性跑输"
+      ],
+      "price_date": "2026-04-30",
+      "note_path": "05-A股指数/932082 中证全指医药卫生行业指数.md",
+      "last_updated": "2026-05-01"
+    },
+    {
+      "index_code": "932083.CSI",
+      "name": "中证全指金融行业指数",
+      "related_etfs": [],
+      "category": "金融",
+      "cycle_position": "复苏中期",
+      "prebuy_conclusion": "分批布局 — 绝对PE不高、股息率也不错，虽然分位不算便宜，但作为宽金融篮子仍能接受，适合分批而不是追涨。",
+      "current_pe": 8.48,
+      "current_dy": 3.49,
+      "pe_3y_percentile": 64.9,
+      "pe_5y_percentile": 68.2,
+      "current_index_price": 8408.83,
+      "price_bands": [
+        8409,
+        8329,
+        6821
+      ],
+      "valuation_anchor": "采用中证官网932083官方PE口径。3年PE近似范围6.3x ~ 9.7x，当前3年分位64.9%，5年分位68.2%。",
+      "risk_flags": [
+        "券商与银行逻辑不同，指数容易两头都不极致",
+        "若市场成交降温，券商部分会拖累整体表现",
+        "银行息差和资产质量仍是长期约束"
+      ],
+      "price_date": "2026-04-30",
+      "note_path": "05-A股指数/932083 中证全指金融行业指数.md",
+      "last_updated": "2026-05-01"
+    },
+    {
+      "index_code": "931775.CSI",
+      "name": "中证全指房地产指数",
+      "related_etfs": [],
+      "category": "通用混合",
+      "cycle_position": "出清期",
+      "prebuy_conclusion": "不适合当前介入 — 看起来分位不高，但行业仍在出清期，加权ROE只有2.8%，估值参考意义很弱，ETF化配置价值不高。",
+      "current_pe": 26.41,
+      "current_dy": 0.96,
+      "pe_3y_percentile": 35.2,
+      "pe_5y_percentile": 20.8,
+      "current_index_price": 2864.2,
+      "price_bands": [
+        3040,
+        2864,
+        2765
+      ],
+      "valuation_anchor": "采用中证官网931775官方PE口径。3年PE近似范围20.5x ~ 37.3x，当前3年分位35.2%，5年分位20.8%。",
+      "risk_flags": [
+        "估值对地产板块参考意义弱，容易出现价值陷阱",
+        "ROE过低说明行业仍未摆脱基本面约束",
+        "高政策敏感度带来大波动，不适合作为被动行业底仓"
+      ],
+      "price_date": "2026-04-30",
+      "note_path": "05-A股指数/931775 中证全指房地产指数.md",
+      "last_updated": "2026-05-01"
+    },
+    {
+      "index_code": "932084.CSI",
+      "name": "中证全指信息技术行业指数",
+      "related_etfs": [],
+      "category": "成长科技",
+      "cycle_position": "复苏中期",
+      "prebuy_conclusion": "等待回调 — AI、半导体、服务器和电子链条情绪很热，但官方PE已经站到近3年和5年绝对上沿，当前位置不适合追高。",
+      "current_pe": 72.81,
+      "current_dy": 0.52,
+      "pe_3y_percentile": 100.0,
+      "pe_5y_percentile": 100.0,
+      "current_index_price": 9569.06,
+      "price_bands": [
+        9569,
+        5995,
+        5176
+      ],
+      "valuation_anchor": "采用中证官网932084官方PE口径。3年PE近似范围28.0x ~ 72.8x，当前3年分位100.0%，5年分位100.0%。",
+      "risk_flags": [
+        "估值已在近年上沿，景气稍弱就会先压缩估值",
+        "内部子赛道差异大，指数会稀释最强主线的纯度",
+        "海外限制和全球电子周期波动仍是长期变量"
+      ],
+      "price_date": "2026-04-30",
+      "note_path": "05-A股指数/932084 中证全指信息技术行业指数.md",
+      "last_updated": "2026-05-01"
+    },
+    {
+      "index_code": "932085.CSI",
+      "name": "中证全指通信服务行业指数",
+      "related_etfs": [],
+      "category": "通用混合",
+      "cycle_position": "复苏早期",
+      "prebuy_conclusion": "等待回调 — 光模块和算力通信景气很强，但估值也已经透支到3年91%分位，指数层面更适合等大波动后的回撤。",
+      "current_pe": 51.15,
+      "current_dy": 1.0,
+      "pe_3y_percentile": 91.3,
+      "pe_5y_percentile": 91.7,
+      "current_index_price": 12178.57,
+      "price_bands": [
+        12179,
+        6670,
+        5825
+      ],
+      "valuation_anchor": "采用中证官网932085官方PE口径。3年PE近似范围18.6x ~ 54.2x，当前3年分位91.3%，5年分位91.7%。",
+      "risk_flags": [
+        "前两大权重过高，指数实质上重仓光模块",
+        "一旦AI资本开支预期放缓，估值回撤会很剧烈",
+        "运营商与高弹性科技股混编会稀释单一逻辑"
+      ],
+      "price_date": "2026-04-30",
+      "note_path": "05-A股指数/932085 中证全指通信服务行业指数.md",
+      "last_updated": "2026-05-01"
+    },
+    {
+      "index_code": "932086.CSI",
+      "name": "中证全指公用事业行业指数",
+      "related_etfs": [],
+      "category": "公用事业能源",
+      "cycle_position": "复苏中期",
+      "prebuy_conclusion": "等待回调 — 公用事业本身偏防御，但当前分位并不便宜，红利属性已经被买掉不少，适合等回调再看。",
+      "current_pe": 19.37,
+      "current_dy": 2.38,
+      "pe_3y_percentile": 76.7,
+      "pe_5y_percentile": 80.8,
+      "current_index_price": 2832.84,
+      "price_bands": [
+        2833,
+        2551,
+        2432
+      ],
+      "valuation_anchor": "采用中证官网932086官方PE口径。3年PE近似范围14.8x ~ 20.8x，当前3年分位76.7%，5年分位80.8%。",
+      "risk_flags": [
+        "高股息防御逻辑拥挤后，回撤时弹性有限但估值也会压缩",
+        "子行业估值体系不同，指数平均化后纯度下降",
+        "利率与监管政策变化会影响公用事业重估节奏"
+      ],
+      "price_date": "2026-04-30",
+      "note_path": "05-A股指数/932086 中证全指公用事业行业指数.md",
+      "last_updated": "2026-05-01"
+    },
+    {
+      "index_code": "H30184.CSI",
+      "name": "中证全指半导体产品与设备指数",
+      "related_etfs": [
+        "512480.SH 半导体ETF国联安",
+        "159995.SZ 芯片ETF华夏",
+        "159516.SZ 半导体设备ETF国泰"
+      ],
+      "category": "成长科技",
+      "cycle_position": "复苏中期",
+      "prebuy_conclusion": "等待回调 — 赛道景气正在恢复，但当前官方PE 115.69x已处3年/5年100%分位，估值大幅跑在基本面前面，当前位置不适合追高。",
+      "current_pe": 115.69,
+      "current_dy": 0.15,
+      "pe_3y_percentile": 100.0,
+      "pe_5y_percentile": 100.0,
+      "current_index_price": 11451.16,
+      "price_bands": [
+        11451,
+        6386,
+        5075
+      ],
+      "valuation_anchor": "采用中证官网H30184官方PE口径。3年PE近似范围36.4~115.7x，当前已在上沿；5075点对应3年30%分位，6386点对应3年60%分位，现价11451点属于高位追价区。",
+      "risk_flags": [
+        "当前估值已到近3年上沿，景气稍弱就可能先压缩估值",
+        "半导体各子赛道修复不均匀，指数会把高质量与高估值公司一起打包买入",
+        "先进制程与设备环节仍受外部限制和全球需求波动影响"
+      ],
+      "price_date": "2026-04-30",
+      "note_path": "05-A股指数/931912 中证半导体产业指数.md",
+      "last_updated": "2026-05-01"
+    },
+    {
+      "index_code": "H30590.CSI",
+      "name": "中证机器人指数",
+      "related_etfs": [
+        "159526.SZ 机器人ETF嘉实",
+        "562500.SH 机器人ETF华夏",
+        "159770.SZ 机器人ETF天弘"
+      ],
+      "category": "成长科技",
+      "cycle_position": "复苏早期",
+      "prebuy_conclusion": "等待回调 — 赛道处于复苏早期，但按2026年4月30日成分股加权代理PE约85.4x，处3年/5年98.5%分位，当前整体赔率不足，至少等回落至580点附近再看。",
+      "current_pe": 85.36,
+      "current_dy": 0.6,
+      "pe_3y_percentile": 98.5,
+      "pe_5y_percentile": 98.5,
+      "current_index_price": 707.6,
+      "price_bands": [
+        708,
+        580,
+        557
+      ],
+      "valuation_anchor": "中证官网H30590在2026-03-31 factsheet中滚动PE为空，故采用2026-04-30全66只成分股中正PE且PE<300x样本的加权代理值，权重覆盖80.0%；3年PE近似范围61.0~85.7x，当前接近上沿。",
+      "risk_flags": [
+        "高权重股盈利质量偏弱，加权ROE仅约9.0%，指数盈利底盘不扎实",
+        "估值高度前置，当前代理PE较沪深300溢价约452%，一旦订单兑现慢于预期易出现估值压缩",
+        "主题暴露并不纯，工业自动化和AI软件权重较高，不等于纯人形机器人Beta"
+      ],
+      "price_date": "2026-04-30",
+      "note_path": "05-A股指数/931571 中证机器人指数.md",
+      "last_updated": "2026-05-01"
+    },
     {
       "index_code": "930598.CSI",
       "name": "中证稀土产业指数",
-      "related_etfs": ["159715.SZ 稀土ETF易方达", "159713.SZ 稀土ETF富国", "516150.SH 稀土ETF嘉实", "516780.SH 稀土ETF华泰柏瑞"],
+      "related_etfs": [
+        "159715.SZ 稀土ETF易方达",
+        "159713.SZ 稀土ETF富国",
+        "516150.SH 稀土ETF嘉实",
+        "516780.SH 稀土ETF华泰柏瑞"
+      ],
       "category": "通用混合",
       "cycle_position": "复苏早期",
       "prebuy_conclusion": "分批布局 — 出口管制政策催化已落地，但PE处3年83.4%高分位，政策预期已被充分定价；等回调至2700点以下（PE约43x）再分批建仓，勿追高",
@@ -14,7 +378,11 @@
       "pe_3y_percentile": 83.4,
       "pe_5y_percentile": 83.4,
       "current_index_price": 3141.52,
-      "price_bands": [3380, 2700, 2100],
+      "price_bands": [
+        3380,
+        2700,
+        2100
+      ],
       "valuation_anchor": "3年PE历史：17.8~56.8；追高区>=3380（PE>54x）/ 观察区2700-3380（PE43-54x）/ 较好区间2100-2700（PE约33-43x）/ 安全区<2100（PE<33x）。强周期赛道，PE低不等于底部",
       "risk_flags": [
         "稀土价格强周期波动，北方稀土ROE对价格极度敏感",
@@ -28,7 +396,10 @@
     {
       "index_code": "000932.SH",
       "name": "中证消费指数",
-      "related_etfs": ["159985.SZ 消费ETF华夏", "515650.SH 消费50ETF南方"],
+      "related_etfs": [
+        "159985.SZ 消费ETF华夏",
+        "515650.SH 消费50ETF南方"
+      ],
       "category": "消费医药",
       "cycle_position": "收缩期",
       "prebuy_conclusion": "可买（分批建仓）— 当前PE=18.5x处3年16.4%分位已在低估区，含约15%猪周期养殖股（牧原/温氏），非纯消费品牌敞口，了解成分后积极建仓",
@@ -37,7 +408,11 @@
       "pe_3y_percentile": 16.4,
       "pe_5y_percentile": 8.1,
       "current_index_price": 14358.23,
-      "price_bands": [15742, 14358, 13500],
+      "price_bands": [
+        15742,
+        14358,
+        13500
+      ],
       "valuation_anchor": "3年PE历史：16.9~26.5；积极买入线15742（PE20.2x，30%分位）/ 合理中位16367（PE21.0x，50%分位）/ 当前14358（PE18.5x，16.4%分位，已在低估区）",
       "risk_flags": [
         "养殖板块（牧原+温氏约15.5%权重）处于猪价下行周期，ROE为负拖累整体盈利质量",
@@ -51,16 +426,23 @@
     {
       "index_code": "399396.SZ",
       "name": "国证食品指数",
-      "related_etfs": ["159843.SZ 国证食品ETF华夏", "516910.SH 国证食品ETF易方达"],
+      "related_etfs": [
+        "159843.SZ 国证食品ETF华夏",
+        "516910.SH 国证食品ETF易方达"
+      ],
       "category": "消费医药",
       "cycle_position": "收缩期",
       "prebuy_conclusion": "可买（积极建仓）— 当前加权PE约22.6x处3年9.7%分位极低位，DY=4.3%兜底，主题纯度高（前5大均为消费品牌龙头），白酒出清末段赔率充足",
       "current_pe": 22.61,
-      "current_dy": 4.30,
+      "current_dy": 4.3,
       "pe_3y_percentile": 9.7,
       "pe_5y_percentile": 4.8,
       "current_index_price": 16477.42,
-      "price_bands": [19452, 18427, 16477],
+      "price_bands": [
+        19452,
+        18427,
+        16477
+      ],
       "valuation_anchor": "3年PE历史：21.2~35.6（加权估算）；积极买入线18427（PE25.3x，30%分位）/ 合理中位19452（PE26.7x，50%分位）/ 当前16477（PE22.6x，9.7%分位，极低估区）。注：PE为成分股加权估算，洋河(PE=73x,2.5%权重)上拉约1.8x",
       "risk_flags": [
         "白酒高度集中（约50%权重），茅台/五粮液批价若二次下探则指数承压",
@@ -68,7 +450,39 @@
         "内需弱复苏叠加贸易摩擦，白酒去库存时间线可能延长至2026年底"
       ],
       "price_date": "2026-04-30",
-      "note_path": "05-A股指数/399396 国证食品指数.md",
+      "note_path": "05-A股指数/399989 中证医疗指数.md",
+      "last_updated": "2026-05-01"
+    },
+    {
+      "index_code": "399989.SZ",
+      "name": "中证医疗指数",
+      "related_etfs": [
+        "512170 医疗ETF华宝",
+        "159847 医疗ETF易方达",
+        "159828 医疗ETF国泰",
+        "560260 医疗ETF广发"
+      ],
+      "category": "消费医药",
+      "cycle_position": "复苏早期",
+      "prebuy_conclusion": "分批布局 — 当前PE=29.97处3年31%分位（低估区下沿），相对沪深300溢价94%偏高但赔率合理，赛道处复苏早期，长钱可40%首仓入场",
+      "current_pe": 29.97,
+      "current_dy": 1.43,
+      "pe_3y_percentile": 31.0,
+      "pe_5y_percentile": 9.1,
+      "current_index_price": 6687.22,
+      "price_bands": [
+        7500,
+        7006,
+        6687
+      ],
+      "valuation_anchor": "3年PE历史：24.1~43.0；积极买入线6687（PE24.1x，30%分位）/ 合理中位7006（PE约35x，50%分位）/ 当前6687（PE29.97x，31%分位，已在低估区下沿）。注：5年分位偏低因指数早期估值系统性较高",
+      "risk_flags": [
+        "药明康德《生物安全法》草案悬而未决，CXO板块占指数约12%权重",
+        "器械集采持续扩大，价格降幅超50%压制相关成分股收入端",
+        "医疗反腐长尾影响，医院采购决策周期拉长"
+      ],
+      "price_date": "2026-04-30",
+      "note_path": "05-A股指数/399989 中证医疗指数.md",
       "last_updated": "2026-05-01"
     }
   ]
