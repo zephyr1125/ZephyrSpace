@@ -27,7 +27,8 @@
       ],
       "price_date": "2026-04-29",
       "note_path": "05-A股指数/931932 中证全指电力设备指数.md",
-      "last_updated": "2026-05-01"
+      "last_updated": "2026-05-01",
+      "wind_code": "801730.SI"
     },
     {
       "index_code": "640000.SW",
@@ -54,7 +55,8 @@
       ],
       "price_date": "2026-04-29",
       "note_path": "05-A股指数/H30166 中证全指机械制造指数.md",
-      "last_updated": "2026-05-01"
+      "last_updated": "2026-05-01",
+      "wind_code": "801890.SI"
     },
     {
       "index_code": "620000.SW",
@@ -81,7 +83,8 @@
       ],
       "price_date": "2026-04-29",
       "note_path": "05-A股指数/931931 中证全指建筑装饰指数.md",
-      "last_updated": "2026-05-01"
+      "last_updated": "2026-05-01",
+      "wind_code": "801720.SI"
     },
     {
       "index_code": "760000.SW",
@@ -108,7 +111,8 @@
       ],
       "price_date": "2026-04-29",
       "note_path": "05-A股指数/931933 中证全指环保指数.md",
-      "last_updated": "2026-05-01"
+      "last_updated": "2026-05-01",
+      "wind_code": "801970.SI"
     },
     {
       "index_code": "220000.SW",
@@ -135,7 +139,8 @@
       ],
       "price_date": "2026-04-29",
       "note_path": "05-A股指数/932111 中证全指化工行业指数.md",
-      "last_updated": "2026-05-01"
+      "last_updated": "2026-05-01",
+      "wind_code": "801030.SI"
     },
     {
       "index_code": "650000.SW",
@@ -162,7 +167,8 @@
       ],
       "price_date": "2026-04-29",
       "note_path": "05-A股指数/932116 中证全指航空航天与国防行业指数.md",
-      "last_updated": "2026-05-01"
+      "last_updated": "2026-05-01",
+      "wind_code": "801740.SI"
     },
     {
       "index_code": "370500.SW",
@@ -189,7 +195,8 @@
       ],
       "price_date": "2026-04-29",
       "note_path": "05-A股指数/931940 中证全指医疗指数.md",
-      "last_updated": "2026-05-01"
+      "last_updated": "2026-05-01",
+      "wind_code": "801153.SI"
     },
     {
       "index_code": "370000.SW",
@@ -216,7 +223,8 @@
       ],
       "price_date": "2026-04-29",
       "note_path": "05-A股指数/H30179 中证全指医药指数.md",
-      "last_updated": "2026-05-01"
+      "last_updated": "2026-05-01",
+      "wind_code": "801150.SI"
     },
     {
       "index_code": "340000.SW",
@@ -243,7 +251,8 @@
       ],
       "price_date": "2026-04-29",
       "note_path": "05-A股指数/H30177 中证全指食品、饮料与烟草指数.md",
-      "last_updated": "2026-05-01"
+      "last_updated": "2026-05-01",
+      "wind_code": "801120.SI"
     },
     {
       "index_code": "450000.SW",
@@ -270,7 +279,8 @@
       ],
       "price_date": "2026-04-29",
       "note_path": "05-A股指数/H30175 中证全指零售业指数.md",
-      "last_updated": "2026-05-01"
+      "last_updated": "2026-05-01",
+      "wind_code": "801200.SI"
     },
     {
       "index_code": "280500.SW",
@@ -297,7 +307,8 @@
       ],
       "price_date": "2026-04-29",
       "note_path": "05-A股指数/H30164 中证全指乘用车及零部件指数.md",
-      "last_updated": "2026-05-01"
+      "last_updated": "2026-05-01",
+      "wind_code": "801095.SI"
     },
     {
       "index_code": "490200.SW",
@@ -324,7 +335,8 @@
       ],
       "price_date": "2026-04-29",
       "note_path": "05-A股指数/H30186 中证全指保险指数.md",
-      "last_updated": "2026-05-01"
+      "last_updated": "2026-05-01",
+      "wind_code": "801194.SI"
     },
     {
       "index_code": "490000.SW",
@@ -351,7 +363,8 @@
       ],
       "price_date": "2026-04-29",
       "note_path": "05-A股指数/H30211 中证全指资本市场指数.md",
-      "last_updated": "2026-05-01"
+      "last_updated": "2026-05-01",
+      "wind_code": "801790.SI"
     },
     {
       "index_code": "270000.SW",
@@ -378,7 +391,8 @@
       ],
       "price_date": "2026-04-29",
       "note_path": "05-A股指数/H30183 中证全指电子指数.md",
-      "last_updated": "2026-05-01"
+      "last_updated": "2026-05-01",
+      "wind_code": "801080.SI"
     }
   ]
 }
