@@ -11,15 +11,15 @@
       "prebuy_conclusion": "等待回调 — 板块景气并不差，但当前估值几乎贴着近3年上沿走，市场已把修复预期交易得很满，适合等回撤而不是追高。",
       "current_pe": 65.14,
       "current_dy": 0.01,
-      "pe_3y_percentile": 71.7,
+      "pe_3y_percentile": 74.3,
       "pe_5y_percentile": 75.0,
       "current_index_price": 11739.19,
       "price_bands": [
-        9801,
-        7459,
-        6555
+        12392,
+        7199,
+        3617
       ],
-      "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=70.6→点位887（偏贵区），P50对应PE=41.0→点位514（历史中位），P20对应PE=20.6→点位259（积极买入区）。数据来源 lixinger cn/industry/fundamental/sw_2021 (630000，近似映射自 931932)。",
+      "valuation_anchor": "3年PE分位锚点（20260430）：P80对应PE=70.6x→点位12392 / P50对应PE=41.0x→点位7199 / P20对应PE=20.6x→点位3617；数据来源lixinger sw_2021（MCW）",
       "risk_flags": [
         "光伏和锂电价格战会持续侵蚀盈利质量",
         "板块高估值对景气放缓非常敏感",
@@ -39,15 +39,15 @@
       "prebuy_conclusion": "等待回调 — 工业制造景气在修复，但当前估值已经贴近近3年和5年上沿，宽而杂的行业篮子没有提供足够舒服的赔率。",
       "current_pe": 54.15,
       "current_dy": 0.01,
-      "pe_3y_percentile": 100,
+      "pe_3y_percentile": 99.6,
       "pe_5y_percentile": 100,
       "current_index_price": 2368.82,
       "price_bands": [
-        1951,
-        1541,
-        1388
+        1967,
+        1564,
+        1385
       ],
-      "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=44.5→点位8240（偏贵区），P50对应PE=35.4→点位6551（历史中位），P20对应PE=31.3→点位5802（积极买入区）。数据来源 lixinger cn/industry/fundamental/sw_2021 (640000，近似映射自 H30166)。",
+      "valuation_anchor": "3年PE分位锚点（20260430）：P80对应PE=44.5x→点位1967 / P50对应PE=35.4x→点位1564 / P20对应PE=31.3x→点位1385；数据来源lixinger sw_2021（MCW）",
       "risk_flags": [
         "行业口径过宽，强弱周期互相抵消",
         "当前估值处高位，修复不及预期时回撤空间大",
@@ -67,15 +67,15 @@
       "prebuy_conclusion": "分批布局 — 绝对估值不高，股息率也还能看，若要配稳增长修复可以分批，但它并不是很高弹性的行业机会。",
       "current_pe": 15.85,
       "current_dy": 0.02,
-      "pe_3y_percentile": 100,
+      "pe_3y_percentile": 100.0,
       "pe_5y_percentile": 100,
       "current_index_price": 2237.41,
       "price_bands": [
-        2208,
-        2028,
-        1857
+        1612,
+        1396,
+        1249
       ],
-      "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=11.9→点位619（偏贵区），P50对应PE=10.3→点位537（历史中位），P20对应PE=9.3→点位480（积极买入区）。数据来源 lixinger cn/industry/fundamental/sw_2021 (620000，近似映射自 931931)。",
+      "valuation_anchor": "3年PE分位锚点（20260430）：P80对应PE=11.9x→点位1612 / P50对应PE=10.3x→点位1396 / P20对应PE=9.3x→点位1249；数据来源lixinger sw_2021（MCW）",
       "risk_flags": [
         "行业回款和现金流质量弱于账面利润",
         "若稳增长力度不及预期，估值修复空间会受限",
@@ -95,15 +95,15 @@
       "prebuy_conclusion": "等待回调 — 环保赛道方向没问题，但当前估值已站到近3年绝对高位附近，而行业整体ROE并不高，容错偏低。",
       "current_pe": 42.92,
       "current_dy": 0.01,
-      "pe_3y_percentile": 89.2,
+      "pe_3y_percentile": 88.7,
       "pe_5y_percentile": 93.2,
       "current_index_price": 2195.25,
       "price_bands": [
-        1934,
-        1764,
-        1571
+        1987,
+        1444,
+        1298
       ],
-      "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=38.4→点位791（偏贵区），P50对应PE=28.0→点位575（历史中位），P20对应PE=25.1→点位517（积极买入区）。数据来源 lixinger cn/industry/fundamental/sw_2021 (760000，近似映射自 931933)。",
+      "valuation_anchor": "3年PE分位锚点（20260430）：P80对应PE=38.5x→点位1987 / P50对应PE=27.9x→点位1444 / P20对应PE=25.1x→点位1298；数据来源lixinger sw_2021（MCW）",
       "risk_flags": [
         "项目回款和现金流质量往往弱于利润表表现",
         "行业整体ROE偏低，难以支撑高估值",
@@ -123,15 +123,15 @@
       "prebuy_conclusion": "等待回调 — 化工行业有修复，但当前估值已经接近近3年绝对上沿。对周期行业来说，这通常不是好的左侧赔率点。",
       "current_pe": 43.05,
       "current_dy": 0.01,
-      "pe_3y_percentile": 98.5,
+      "pe_3y_percentile": 97.8,
       "pe_5y_percentile": 99.1,
       "current_index_price": 4989.33,
       "price_bands": [
-        4154,
-        3558,
-        3262
+        4171,
+        3495,
+        2907
       ],
-      "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=35.4→点位744（偏贵区），P50对应PE=29.7→点位625（历史中位），P20对应PE=24.7→点位519（积极买入区）。数据来源 lixinger cn/industry/fundamental/sw_2021 (220000，近似映射自 932111)。",
+      "valuation_anchor": "3年PE分位锚点（20260430）：P80对应PE=35.5x→点位4171 / P50对应PE=29.7x→点位3495 / P20对应PE=24.7x→点位2907；数据来源lixinger sw_2021（MCW）",
       "risk_flags": [
         "周期品盈利波动会让PE参考价值失真",
         "子行业景气错位明显，指数容易把强弱混在一起买",
@@ -151,15 +151,15 @@
       "prebuy_conclusion": "等待回调 — 军工和航天方向有长期逻辑，但当前估值已接近近3年和5年高位，而账面ROE只有中低个位数，预期很满、容错很薄。",
       "current_pe": 107.36,
       "current_dy": 0.0,
-      "pe_3y_percentile": 65.6,
+      "pe_3y_percentile": 53.5,
       "pe_5y_percentile": 79.4,
       "current_index_price": 2031.61,
       "price_bands": [
-        1699,
-        1498,
-        1298
+        2830,
+        1872,
+        1365
       ],
-      "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=134.5→点位1141（偏贵区），P50对应PE=89.0→点位755（历史中位），P20对应PE=64.9→点位551（积极买入区）。数据来源 lixinger cn/industry/fundamental/sw_2021 (650000，近似映射自 932116)。",
+      "valuation_anchor": "3年PE分位锚点（20260430）：P80对应PE=134.5x→点位2830 / P50对应PE=89.0x→点位1872 / P20对应PE=64.9x→点位1365；数据来源lixinger sw_2021（MCW）",
       "risk_flags": [
         "估值极高而利润兑现偏慢，最容易发生估值压缩",
         "军工订单节奏和业绩确认往往滞后于市场预期",
@@ -179,15 +179,15 @@
       "prebuy_conclusion": "分批布局 — 当前估值已经回到近3年和5年的相对低位，板块质量不差，虽非极端便宜，但已进入可慢慢收集的位置。",
       "current_pe": 50.87,
       "current_dy": 0.01,
-      "pe_3y_percentile": 96.1,
+      "pe_3y_percentile": 90.1,
       "pe_5y_percentile": 97.7,
       "current_index_price": 6306.45,
       "price_bands": [
-        7199,
-        6611,
-        6204
+        5965,
+        4719,
+        3967
       ],
-      "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=47.0→点位530（偏贵区），P50对应PE=37.2→点位419（历史中位），P20对应PE=31.2→点位353（积极买入区）。数据来源 lixinger cn/industry/fundamental/sw_2021 (370500，近似映射自 931940)。",
+      "valuation_anchor": "3年PE分位锚点（20260430）：P80对应PE=47.0x→点位5965 / P50对应PE=37.2x→点位4719 / P20对应PE=31.2x→点位3967；数据来源lixinger sw_2021（MCW）",
       "risk_flags": [
         "集采和控费仍会持续压制部分器械和耗材估值",
         "医疗服务修复速度若低于预期，会拖累整体弹性",
@@ -207,15 +207,15 @@
       "prebuy_conclusion": "分批布局 — 医药大方向已从最差阶段出来，但当前估值并不算很低，只能算回到可接受区间，适合长钱慢慢建仓。",
       "current_pe": 48.16,
       "current_dy": 0.01,
-      "pe_3y_percentile": 74.3,
+      "pe_3y_percentile": 73.7,
       "pe_5y_percentile": 78.3,
       "current_index_price": 8094.68,
       "price_bands": [
-        8762,
-        8085,
-        7321
+        8472,
+        6952,
+        6319
       ],
-      "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=50.3→点位9765（偏贵区），P50对应PE=41.2→点位8009（历史中位），P20对应PE=37.5→点位7283（积极买入区）。数据来源 lixinger cn/industry/fundamental/sw_2021 (370000，近似映射自 H30179)。",
+      "valuation_anchor": "3年PE分位锚点（20260430）：P80对应PE=50.2x→点位8472 / P50对应PE=41.2x→点位6952 / P20对应PE=37.5x→点位6319；数据来源lixinger sw_2021（MCW）",
       "risk_flags": [
         "药明康德等大权重股仍受海外政策和订单扰动",
         "医药内部子行业修复节奏不一致，指数容易强弱对冲",
@@ -235,15 +235,15 @@
       "prebuy_conclusion": "可买（分批建仓） — 当前估值已落到近3年和5年的明显低位，龙头质量依然在线，虽收入修复偏慢，但赔率已明显站在买方这边。",
       "current_pe": 22.0,
       "current_dy": 0.04,
-      "pe_3y_percentile": 43.4,
+      "pe_3y_percentile": 35.4,
       "pe_5y_percentile": 26.0,
       "current_index_price": 15609.46,
       "price_bands": [
-        21109,
-        17995,
-        16698
+        19596,
+        16012,
+        15142
       ],
-      "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=27.2→点位13812（偏贵区），P50对应PE=22.3→点位11288（历史中位），P20对应PE=21.0→点位10673（积极买入区）。数据来源 lixinger cn/industry/fundamental/sw_2021 (340000，近似映射自 H30177)。",
+      "valuation_anchor": "3年PE分位锚点（20260430）：P80对应PE=27.2x→点位19596 / P50对应PE=22.2x→点位16012 / P20对应PE=21.0x→点位15142；数据来源lixinger sw_2021（MCW）",
       "risk_flags": [
         "白酒需求修复若继续放缓，估值修复会拉长",
         "指数高度依赖茅台、五粮液等龙头，集中度较高",
@@ -263,7 +263,7 @@
       "prebuy_conclusion": "不适合当前介入 — 当前估值不算离谱，但行业整体ROE偏弱、成分股纯度一般，这个指数不是优质消费资产的好代理。",
       "current_pe": 31.08,
       "current_dy": 1.49,
-      "pe_3y_percentile": 49.7,
+      "pe_3y_percentile": 97.4,
       "pe_5y_percentile": 30.9,
       "current_index_price": 2114.93,
       "price_bands": [
@@ -271,7 +271,7 @@
         2158,
         1855
       ],
-      "valuation_anchor": "当期PE为负（行业整体亏损），price_bands基于3年历史价格分位P80/P50/P20，PE分位不适用",
+      "valuation_anchor": "3年价格分位锚点（PE为负，无法使用PE法）：P80=2384 / P50=2158 / P20=1855（sw_daily收盘价，20260430）",
       "risk_flags": [
         "指数成分杂，缺乏统一而高质量的盈利逻辑",
         "整体ROE偏低，容易出现估值不低质量也一般的尴尬",
@@ -291,15 +291,15 @@
       "prebuy_conclusion": "等待回调 — 汽车链仍有景气支撑，但当前估值已经回到近3年和5年偏高位置，当前位置更像景气交易中段，而非舒服配置点。",
       "current_pe": 39.43,
       "current_dy": 0.01,
-      "pe_3y_percentile": 99.9,
+      "pe_3y_percentile": 99.4,
       "pe_5y_percentile": 76.7,
       "current_index_price": 17730.33,
       "price_bands": [
-        20378,
-        17322,
-        15653
+        14457,
+        13519,
+        11884
       ],
-      "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=31.6→点位6869（偏贵区），P50对应PE=29.5→点位6421（历史中位），P20对应PE=26.0→点位5648（积极买入区）。数据来源 lixinger cn/industry/fundamental/sw_2021 (280500，近似映射自 H30164)。",
+      "valuation_anchor": "3年PE分位锚点（20260430）：P80对应PE=31.6x→点位14457 / P50对应PE=29.5x→点位13519 / P20对应PE=26.0x→点位11884；数据来源lixinger sw_2021（MCW）",
       "risk_flags": [
         "行业价格战会持续压缩整车和零部件利润率",
         "指数同时包含整车和零部件，强弱周期并不同步",
@@ -319,15 +319,15 @@
       "prebuy_conclusion": "等待回调 — 龙头险企质量不错，但当前估值已经处在近3年和5年的偏高位置，适合等更低波动窗口再做配置。",
       "current_pe": 7.06,
       "current_dy": 0.03,
-      "pe_3y_percentile": 3.6,
+      "pe_3y_percentile": 7.9,
       "pe_5y_percentile": 2.2,
       "current_index_price": 1305.07,
       "price_bands": [
-        1295,
-        1108,
-        940
+        2416,
+        1860,
+        1485
       ],
-      "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=13.5→点位2576（偏贵区），P50对应PE=10.5→点位2000（历史中位），P20对应PE=8.3→点位1584（积极买入区）。数据来源 lixinger cn/industry/fundamental/sw_2021 (490200，近似映射自 H30186)。",
+      "valuation_anchor": "3年PE分位锚点（20260430）：P80对应PE=13.5x→点位2416 / P50对应PE=10.4x→点位1860 / P20对应PE=8.3x→点位1485；数据来源lixinger sw_2021（MCW）",
       "risk_flags": [
         "中国平安单一权重超过七成，指数极度集中",
         "长端利率和权益市场波动会同时影响估值与利润预期",
@@ -347,15 +347,15 @@
       "prebuy_conclusion": "分批布局 — 当前估值大致在历史中位附近，跟随资本市场活跃度修复，可以分批参与，但还不是强赔率抄底点。",
       "current_pe": 10.54,
       "current_dy": 0.03,
-      "pe_3y_percentile": 2.1,
+      "pe_3y_percentile": 3.0,
       "pe_5y_percentile": 1.2,
       "current_index_price": 1826.57,
       "price_bands": [
-        1938,
-        1646,
-        1441
+        2969,
+        2672,
+        2176
       ],
-      "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=17.3→点位1232（偏贵区），P50对应PE=15.6→点位1108（历史中位），P20对应PE=12.7→点位903（积极买入区）。数据来源 lixinger cn/industry/fundamental/sw_2021 (490000，近似映射自 H30211)。",
+      "valuation_anchor": "3年PE分位锚点（20260430）：P80对应PE=17.3x→点位2969 / P50对应PE=15.6x→点位2672 / P20对应PE=12.7x→点位2176；数据来源lixinger sw_2021（MCW）",
       "risk_flags": [
         "本质仍由券商和金融平台主导，波动不低",
         "市场成交额和风险偏好若回落，景气修复会放缓",
@@ -375,15 +375,15 @@
       "prebuy_conclusion": "等待回调 — 电子链景气修复很强，但当前官方PE几乎贴着近3年和5年上沿走，乐观预期已经被交易得很满。",
       "current_pe": 87.14,
       "current_dy": 0.0,
-      "pe_3y_percentile": 93.5,
+      "pe_3y_percentile": 93.0,
       "pe_5y_percentile": 96.1,
       "current_index_price": 8108.69,
       "price_bands": [
-        5818,
-        3965,
-        3471
+        7178,
+        6163,
+        5580
       ],
-      "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=76.9→点位9260（偏贵区），P50对应PE=66.1→点位7958（历史中位），P20对应PE=59.9→点位7208（积极买入区）。数据来源 lixinger cn/industry/fundamental/sw_2021 (270000，近似映射自 H30183)。",
+      "valuation_anchor": "3年PE分位锚点（20260430）：P80对应PE=77.0x→点位7178 / P50对应PE=66.1x→点位6163 / P20对应PE=59.9x→点位5580；数据来源lixinger sw_2021（MCW）",
       "risk_flags": [
         "当前估值极高，景气稍有放缓就会先压估值",
         "行业内部子赛道多，强景气并不代表全板块同步兑现",
