@@ -290,10 +290,12 @@ def get_valuation_percentile(stock_code, endpoint, use_pb=False):
         metrics = ["pe_ttm", "pe_ttm.y3.cvpos", "pe_ttm.y3.q2v", "pe_ttm.y3.q5v", "pe_ttm.y3.q8v",
                    "pb", "pb.y3.cvpos"]  # 同时拉 PB 备用（PE<0 时切换）
 
+    today = __import__('datetime').date.today().isoformat()  # 动态日期，不硬编码
     resp = requests.post(endpoint, json={
-        "stockCode": stock_code,   # 纯数字代码，不带后缀
-        "startDate": "2026-04-30",
-        "endDate":   "2026-04-30",
+        # ⚠️ fundamental 接口必须用 stockCodes（数组），用 stockCode（字符串）返回 code=0 空数据
+        "stockCodes": [stock_code],   # 纯数字代码数组，如 ["600036"]，不带后缀
+        "startDate": today,
+        "endDate":   today,
         "metricsList": metrics,
         "token": LX_TOKEN
     })
@@ -392,10 +394,12 @@ def calc_price_bands(stock_code, current_price, company_type="non_financial"):
         ["pe_ttm", "pe_ttm.y3.q2v", "pe_ttm.y3.q5v", "pe_ttm.y3.q8v",
          "pb", "pb.y3.q2v", "pb.y3.q5v", "pb.y3.q8v"]  # 备用：PE<0时切PB
     )
+    today = __import__('datetime').date.today().isoformat()  # 动态日期
     resp = requests.post(endpoint_map[company_type], json={
-        "stockCode": stock_code,
-        "startDate": "2026-04-30",
-        "endDate":   "2026-04-30",
+        # ⚠️ fundamental 接口必须用 stockCodes（数组），用 stockCode（字符串）返回 code=0 空数据
+        "stockCodes": [stock_code],   # 纯数字代码数组，如 ["600036"]
+        "startDate": today,
+        "endDate":   today,
         "metricsList": metrics,
         "token": LX_TOKEN
     })
@@ -753,10 +757,12 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # 优先用理杏仁基本面接口（非金融）获取PB历史分位
+# ⚠️ fundamental 接口必须用 stockCodes（数组），用 stockCode（字符串）返回 code=0 空数据
+today = __import__('datetime').date.today().isoformat()
 resp = requests.post("https://open.lixinger.com/api/cn/company/fundamental/non_financial", json={
-    "stockCode": "000002",          # 纯数字代码
-    "startDate": "2026-04-30",
-    "endDate": "2026-04-30",
+    "stockCodes": ["000002"],        # 纯数字代码数组，不带后缀
+    "startDate": today,
+    "endDate": today,
     "metricsList": ["pb", "pb.y3.cvpos", "pb.y3.q2v", "pb.y3.q5v", "pb.y3.q8v"],
     "token": os.getenv("LIXINGER_TOKEN")
 })
@@ -862,6 +868,45 @@ d = resp.json()["data"][0]
 | 限售解禁（初筛） | 理杏仁热度 | `/company/hot/elr` |
 | 财报营收/净利润 | tushare→东方财富双验 | `fina_indicator` + QDATE验证 |
 | 当前价格 | 理杏仁 | `/company/candlestick` |
+
+> ⚠️ **理杏仁 API 关键陷阱（已实测验证）**
+>
+> | 接口类型 | 参数名 | ✅ 正确 | ❌ 错误 |
+> |---|---|---|---|
+> | `fundamental/bank`、`fundamental/non_financial` 等基本面接口 | 股票代码字段 | `"stockCodes": ["600036"]`（**数组**） | `"stockCode": "600036"`（字符串，返回 code=0 空数据）|
+> | `dividend`、`pledge`、`measures`、`inquiry`、增减持、`hot/elr` 等非基本面接口 | 股票代码字段 | `"stockCode": "600036"`（**字符串**） | `"stockCodes": ["600036"]` |
+>
+> **一句话记法**：`fundamental/*` 系列用数组，其他接口用字符串。
+
+**candlestick 接口示例（当前价格 + 近60日走势）：**
+
+```python
+import requests, os
+from dotenv import load_dotenv
+from datetime import date, timedelta
+load_dotenv()
+
+today = date.today().isoformat()
+sixty_days_ago = (date.today() - timedelta(days=90)).isoformat()  # 多取几天确保60交易日
+
+resp = requests.post("https://open.lixinger.com/api/cn/company/candlestick", json={
+    "stockCode": "600036",          # 纯数字代码，字符串（非数组）
+    "startDate": sixty_days_ago,
+    "endDate":   today,
+    "token": os.getenv("LIXINGER_TOKEN")
+})
+data = resp.json().get("data", [])
+
+# ⚠️ candlestick 数据返回无序，必须先排序
+data = sorted(data, key=lambda x: x["date"])
+
+# ⚠️ 字段名是完整英文（非缩写）：close / open / high / low / volume
+latest = data[-1]
+current_price = latest["close"]
+high_60 = max(d["high"] for d in data)
+low_60  = min(d["low"]  for d in data)
+print(f"当前价={current_price}, 近60日高={high_60}, 近60日低={low_60}")
+```
 
 官方资料入口和用途见 [references/source-map.md](references/source-map.md)。
 
