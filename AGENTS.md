@@ -208,6 +208,42 @@ watchlist 数据已拆分为 4 个文件，放在 `data/` 目录：
 - 描述时应使用**年化 ROE**（Q1 ROE × 4）或写明"Q1单季 ROE=X%，年化约X%"
 - 或直接用最近年报 ROE 作为参考值，季报 ROE 只做趋势判断
 
+## 网络搜索：Tavily 集成
+
+**Tavily 可用**，API Key 存于 `.env` 的 `TAVILY_KEY` 字段。工具模块：`scripts/tavily_search.py`。
+
+### 何时用 Tavily vs web_fetch
+
+| 场景 | 工具 | 原因 |
+|---|---|---|
+| 红旗排查（处罚/违规/诉讼/负面事件）| **Tavily** | URL 不确定，需跨来源搜索 |
+| 近期重大事件（公告/并购/管理层变动）| **Tavily** | 需要聚合多个新闻来源 |
+| 公司基础信息补全（行业地位/竞争格局）| **Tavily** | 自由文本查询更高效 |
+| 财务数据验证（东方财富/stockanalysis）| **web_fetch** | URL 已知，结构化数据 |
+| tushare 财报延迟验证 | **web_fetch** | 拼固定 URL 速度更快 |
+
+### 调用方式
+
+```python
+from scripts.tavily_search import prebuy_web_research, search_red_flags
+
+# 一次获取红旗 + 近期事件 + 公司信息
+result = prebuy_web_research("东方财富", "300059.SZ")
+print(result["red_flags"])
+print(result["recent_news"])
+
+# 仅搜索红旗
+flags = search_red_flags("东方财富", "300059.SZ")
+```
+
+### PreBuy 流程中的嵌入点
+
+在 **第 4 步（对候选公司运行 PreBuy 分析）** 中：
+- 调用 `prebuy_web_research(公司名, ticker)` 获取网络调研内容
+- 将 `red_flags` 结果填入页面的 `## 主要红旗` 区块
+- 将 `recent_news` 结果填入 `## 已核实的关键事实` 区块（注明"网络调研"来源）
+- 若结果为空或无实质内容，在页面注明"网络调研未发现重大红旗"
+
 ## 自动化相关文件
 
 当前关键脚本与配置：
