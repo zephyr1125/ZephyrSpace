@@ -52,123 +52,75 @@
 
 ---
 
-### 第 2 步：获取当前 PE / 股息率
+### 第 2 步：获取当前 PE / 股息率 及历史分位
 
-**来源：中证官网（akshare 封装）**
+**主要来源：理杏仁 `/index/fundamental`**
 
-> ⚠️ **akshare 列名已于2026年变更**，旧列名（含英文后缀的长列名）会报 `KeyError`，请使用以下已验证的新列名。
+> ✅ 理杏仁直接返回 MCW（市值加权）PE 当前值 + 历史分位（q2v/q5v/q8v），是**唯一数据源**，无需 akshare。
+> 适用范围：399xxx.SZ（深交所）、000xxx.SH（上交所）、931xxx.CSI / 930xxx.CSI（中证）均可。
 
 ```python
-import akshare as ak
+import requests, os
+from dotenv import load_dotenv
+load_dotenv()
+token = os.getenv('LIXINGER_TOKEN')
 
-df = ak.stock_zh_index_value_csindex(symbol="931994")  # 替换为目标指数代码
-# 已验证列名（2026-05 版本）：'日期', '指数代码', '指数中文全称', '指数中文简称',
-#   '指数英文全称', '指数英文简称', '市盈率1', '市盈率2', '股息率1', '股息率2'
-current_pe  = float(df.iloc[0]['市盈率1'])      # 总股本加权PE
-current_dy  = float(df.iloc[0]['股息率1'])      # 总股本加权股息率
-index_name  = df.iloc[0]['指数中文简称']
-as_of_date  = str(df.iloc[0]['日期'])
+# lixinger 调用时只用纯数字代码（去掉 .SZ / .SH / .CSI 后缀）
+lx_code = '399989'   # 例：399989.SZ → '399989'
+
+r = requests.post('https://open.lixinger.com/api/cn/index/fundamental', json={
+    'token': token,
+    'date': '2026-04-30',    # 最近交易日（格式 YYYY-MM-DD）
+    'stockCodes': [lx_code],
+    'metricsList': [
+        'pe_ttm.mcw',
+        'pe_ttm.y3.mcw.q2v', 'pe_ttm.y3.mcw.q5v', 'pe_ttm.y3.mcw.q8v', 'pe_ttm.y3.mcw.cvpos',
+        'pe_ttm.y5.mcw.q2v', 'pe_ttm.y5.mcw.q5v', 'pe_ttm.y5.mcw.q8v', 'pe_ttm.y5.mcw.cvpos',
+        'dyr.mcw'
+    ]
+})
+d = r.json()['data'][0]
+
+current_pe = d['pe_ttm.mcw']          # 当前 MCW PE
+current_dy = d.get('dyr.mcw', 0)      # 当前 MCW 股息率（可能为 None）
+q2v_3y = d['pe_ttm.y3.mcw.q2v']      # 3年 P20 PE
+q5v_3y = d['pe_ttm.y3.mcw.q5v']      # 3年 P50 PE
+q8v_3y = d['pe_ttm.y3.mcw.q8v']      # 3年 P80 PE
+cv_3y  = d['pe_ttm.y3.mcw.cvpos']    # 3年 PE 百分位（0~1）
+q2v_5y = d.get('pe_ttm.y5.mcw.q2v')
+q5v_5y = d.get('pe_ttm.y5.mcw.q5v')
+q8v_5y = d.get('pe_ttm.y5.mcw.q8v')
+cv_5y  = d.get('pe_ttm.y5.mcw.cvpos')
+
+print(f'当前PE (MCW): {current_pe:.2f}')
+print(f'3年PE分位: {cv_3y*100:.1f}%  P20={q2v_3y:.1f} P50={q5v_3y:.1f} P80={q8v_3y:.1f}')
+if cv_5y:
+    print(f'5年PE分位: {cv_5y*100:.1f}%  P20={q2v_5y:.1f} P50={q5v_5y:.1f} P80={q8v_5y:.1f}')
 ```
 
 **注意事项**：
-- 部分指数代码在中证官网格式为 `H30590` 等字母开头格式，需查官网确认
-- 若 `stock_zh_index_value_csindex` 返回 404，判断原因：
-  - **国证指数**（399xxx，深交所发布）：中证官网不收录，必须用下方"成分股加权PE"降级方案
-  - **其他情况**：可尝试 web_fetch 东方财富 `https://quote.eastmoney.com/zs{code}.html`
-
-**国证指数（399xxx）专用降级方案——成分股加权PE**：
-
-> 适用：akshare 返回404的深交所国证指数（如399396国证食品、399997中证白酒等）
-
-```python
-import tushare as ts, pandas as pd, time
-
-# 用成分股日行情数据计算加权PE/股息率
-df_w = pro.index_weight(index_code='399396.SZ')
-latest = df_w['trade_date'].max()
-top30 = df_w[df_w['trade_date'] == latest].nlargest(30, 'weight')  # 覆盖通常>85%权重
-
-total_pe_w, total_dy_w, total_w = 0, 0, 0
-for _, row in top30.iterrows():
-    code = row['con_code']
-    w = float(row['weight'])
-    r = pro.daily_basic(ts_code=code, trade_date='20260430',   # 最近交易日
-                        fields='ts_code,pe_ttm,dv_ttm')
-    if not r.empty and not pd.isna(r.iloc[0]['pe_ttm']) and r.iloc[0]['pe_ttm'] > 0:
-        total_pe_w += float(r.iloc[0]['pe_ttm']) * w
-        total_dy_w += float(r.iloc[0].get('dv_ttm', 0) or 0) * w
-        total_w += w
-    time.sleep(0.12)
-
-current_pe = total_pe_w / total_w   # 成分股权重加权PE
-current_dy = total_dy_w / total_w   # 成分股权重加权股息率
-print(f'加权PE={current_pe:.2f}，加权DY={current_dy:.2f}%，权重覆盖={total_w:.1f}%')
-```
-
-**注意**：成分股加权PE与指数官方PE存在轻微差异，原因：①亏损股被排除（官方通常计入）；②PE异常值（如某只股票PE>100x因业绩临时大降）会上拉加权结果——须在结论中标注。
+- 理杏仁 MCW PE 使用**市值加权法**（负PE股票排除在外），与东方财富等网站显示的算术均值 PE 可能有差异，在结论中注明"PE 来源：理杏仁市值加权（MCW）"
+- 若 `data` 返回空列表，检查 `lx_code` 是否为纯数字（不含后缀），或尝试加 `"source": "csindex"` 参数
+- 对盈利周期性极强的赛道（半导体、猪周期），在结论中注明"PE 分位为近似，强周期行业景气底部 PE 可能虚高"
 
 ---
 
-### 第 3 步：计算历史 PE 分位（价格反推法）
+### 第 3 步：历史 PE 分位（直接来自理杏仁，第 2 步已获取）
 
-**原理**：`历史PE_t ≈ 当前PE × (历史收盘_t / 当前收盘)`
-
-假设短中期 EPS 变化较平滑，此近似对判断估值水位方向足够可靠。对盈利周期性极强的赛道（如半导体、猪周期），需在结论中注明"分位数为价格近似，盈利变化未体现"。
-
-```python
-import tushare as ts
-import pandas as pd
-from datetime import datetime, timedelta
-import os, time
-from dotenv import load_dotenv
-
-load_dotenv()
-ts.set_token(os.getenv('TUSHARE_TOKEN'))
-pro = ts.pro_api()
-
-ts_code   = '931994.CSI'   # tushare 格式，主题指数后缀通常为 .CSI
-today_str = datetime.now().strftime('%Y%m%d')
-start_3y  = (datetime.now() - timedelta(days=3*365)).strftime('%Y%m%d')
-start_5y  = (datetime.now() - timedelta(days=5*365)).strftime('%Y%m%d')
-
-df_price = pro.index_daily(ts_code=ts_code, start_date=start_5y, end_date=today_str)
-if df_price.empty:
-    print(f'⚠️ tushare 无 {ts_code} 价格数据，尝试 .SZ / .SH 后缀')
-    # 降级尝试
-    for suffix in ['.SZ', '.SH']:
-        alt = ts_code.replace('.CSI', suffix)
-        df_price = pro.index_daily(ts_code=alt, start_date=start_5y, end_date=today_str)
-        if not df_price.empty:
-            break
-
-df_price = df_price.sort_values('trade_date').reset_index(drop=True)
-current_price = df_price.iloc[-1]['close']
-
-# 近似历史 PE
-df_price['implied_pe'] = current_pe * (df_price['close'] / current_price)
-
-# 计算分位
-pe_3y = df_price[df_price['trade_date'] >= start_3y]['implied_pe']
-pe_5y = df_price['implied_pe']
-
-pct_3y = (current_pe - pe_3y.min()) / (pe_3y.max() - pe_3y.min()) * 100
-pct_5y = (current_pe - pe_5y.min()) / (pe_5y.max() - pe_5y.min()) * 100
-
-pe_3y_min, pe_3y_max = pe_3y.min(), pe_3y.max()
-pe_5y_min, pe_5y_max = pe_5y.min(), pe_5y.max()
-
-print(f'当前PE: {current_pe:.1f}')
-print(f'3年PE范围: {pe_3y_min:.1f} ~ {pe_3y_max:.1f}，当前分位: {pct_3y:.1f}%')
-print(f'5年PE范围: {pe_5y_min:.1f} ~ {pe_5y_max:.1f}，当前分位: {pct_5y:.1f}%')
-```
+> ✅ 第 2 步调用理杏仁时已同时拿到 `q2v/q5v/q8v` 和 `cvpos`，**无需额外计算**。
+> 直接使用 `cv_3y`（3年PE百分位）和 `q2v_3y/q5v_3y/q8v_3y`（P20/P50/P80 PE值）即可。
 
 **分位参考基准**（与沪深300对比）：
 ```python
-# 拉沪深300当前 PE 作为市场基准
-df_hs300 = ak.stock_zh_index_value_csindex(symbol="000300")
-hs300_pe = float(df_hs300.iloc[0]['市盈率1'])   # 已验证新列名
+import requests
+r = requests.post('https://open.lixinger.com/api/cn/index/fundamental', json={
+    'token': token, 'date': '2026-04-30',
+    'stockCodes': ['000300'],
+    'metricsList': ['pe_ttm.mcw']
+})
+hs300_pe = r.json()['data'][0]['pe_ttm.mcw']
 pe_premium = (current_pe / hs300_pe - 1) * 100
-print(f'沪深300当前PE: {hs300_pe:.1f}，目标指数溢价: +{pe_premium:.1f}%')
+print(f'沪深300当前PE (MCW): {hs300_pe:.1f}，目标指数溢价: +{pe_premium:.1f}%')
 ```
 
 ---
@@ -252,55 +204,67 @@ print(f'集中度 CR5={cr5:.1f}%，CR10={cr10:.1f}%')
 
 ### 第 6 步：价格区间与建仓策略
 
-**三档价位**（基于 3 年历史收盘价百分位，与当前价格无关）：
+**价格数据来源：理杏仁 `/index/candlestick`**
 
-> ⚠️ **重要原则**：price_bands 三个值必须全部来自历史分位，**不能把当前价格塞入其中任一档**。
-> 历史分位本身已隐含了行业惯常估值水位（银行 PE 低→区间自然低，科技 PE 高→区间自然高），无需手动按行业调整。
-
-| 档位 | 定义 | 信号含义 | 建仓策略 |
-|---|---|---|---|
-| bands[0] = P80 | 3年历史收盘价 80% 分位 | 偏贵区上沿，不追高 | 观望或减仓 |
-| bands[1] = P50 | 3年历史收盘价 50% 分位 | 历史中位，合理区 | 分 3 批建仓（每批 20%） |
-| bands[2] = P20 | 3年历史收盘价 20% 分位 | 历史偏低区，积极买入 | 积极建仓（可一次性 50%） |
-
-当前价格（`current_index_price`）与三档对比，决定当前所处位置：
-- 当前价 > bands[0]：高于历史 P80，偏贵
-- bands[1] < 当前价 ≤ bands[0]：合理偏高区
-- bands[2] < 当前价 ≤ bands[1]：合理偏低区（较好买点）
-- 当前价 ≤ bands[2]：低于历史 P20，历史低位，积极买入
+> ✅ 与 PE 同源，彻底消除价格-PE 尺度不一致问题。
+> ⚠️ 注意：参数是 `stockCode`（单数），响应字段是 `close`/`open` 全名，数据**降序**（最新在前）。
 
 ```python
-import numpy as np
-from datetime import datetime, timedelta
+import requests, numpy as np, os
+from dotenv import load_dotenv
+load_dotenv()
+token = os.getenv('LIXINGER_TOKEN')
 
-# 拉取 3 年日收盘价（tushare，代码与 current_index_price 同一数据源）
-today = datetime.today()
-start_3y = (today - timedelta(days=365*3)).strftime('%Y%m%d')
-df_p = pro.index_daily(ts_code=ts_code, start_date=start_3y, end_date=today.strftime('%Y%m%d'), fields='trade_date,close')
-prices = df_p['close'].dropna().values
+lx_code = '399989'  # 纯数字，不带后缀
 
-# 三档锚点（纯历史分位，与当前价无关）
-p80 = int(round(np.percentile(prices, 80)))   # bands[0]：偏贵区上沿
-p50 = int(round(np.percentile(prices, 50)))   # bands[1]：历史中位
-p20 = int(round(np.percentile(prices, 20)))   # bands[2]：历史偏低区
+# 当前价（最新1条）
+r = requests.post('https://open.lixinger.com/api/cn/index/candlestick', json={
+    'token': token, 'stockCode': lx_code, 'type': 'normal',
+    'startDate': '2026-04-28', 'endDate': '2026-04-30'
+})
+current_price = float(r.json()['data'][0]['close'])  # data[0] 是最新
+price_date = r.json()['data'][0]['date'][:10]
 
-price_bands = [p80, p50, p20]
+# 3年历史价格（用于参考，PE分位换算不依赖此值）
+r3 = requests.post('https://open.lixinger.com/api/cn/index/candlestick', json={
+    'token': token, 'stockCode': lx_code, 'type': 'normal',
+    'startDate': '2023-05-01', 'endDate': '2026-04-30'
+})
+closes_3y = [float(x['close']) for x in r3.json()['data']]  # 降序，但percentile顺序无关
+
+# PE 分位 → 价格换算（q2v/q5v/q8v 来自第2步）
+ratio = current_price / current_pe
+q8 = q8v_3y
+if q8 > q5v_3y * 4:
+    q8 = q5v_3y * 2  # 极端值截断
+
+price_bands = [round(q8 * ratio), round(q5v_3y * ratio), round(q2v_3y * ratio)]
 valuation_anchor = (
-    f'3年历史价格分位锚点（{start_3y[:4]}-{today.year}）：'
-    f'P80={p80}（偏贵区上沿），P50={p50}（历史中位），P20={p20}（积极买入区）'
+    f"3年PE分位换算（{price_date} {current_price:.0f}点/{current_pe:.1f}x基准）："
+    f"P80对应PE={q8v_3y:.1f}x→点位{price_bands[0]} / "
+    f"P50对应PE={q5v_3y:.1f}x→点位{price_bands[1]} / "
+    f"P20对应PE={q2v_3y:.1f}x→点位{price_bands[2]}；"
+    f"数据来源：理杏仁MCW分位（fundamental）+ candlestick价格，单一数据源"
 )
-
+print(f'当前价 {current_price:.0f}，PE {current_pe:.1f}x（3年{cv_3y*100:.0f}%分位）')
 print(f'price_bands: {price_bands}')
-print(f'当前价 {current_price:.1f} 处于：', end='')
-if current_price > p80:
-    print('P80 以上（偏贵，不追高）')
-elif current_price > p50:
-    print(f'P50~P80（{(current_price-p50)/(p80-p50)*100:.0f}% 进入偏贵区）')
-elif current_price > p20:
-    print(f'P20~P50（合理偏低区，较好买点）')
-else:
-    print('P20 以下（历史低位，积极买入）')
 ```
+
+**负PE或PE极端（>500x）时的回退方案**：
+```python
+# 直接用3年历史价格百分位
+price_bands = [round(float(np.percentile(closes_3y,80))), round(float(np.percentile(closes_3y,50))), round(float(np.percentile(closes_3y,20)))]
+valuation_anchor = f"3年价格分位（PE为负/极端，无法用PE法）：P80={price_bands[0]} / P50={price_bands[1]} / P20={price_bands[2]}"
+```
+
+**当前价位判断**：
+
+| 条件 | 说明 | 建仓策略 |
+|---|---|---|
+| 当前价 > bands[0]（P80点位）| 当前PE > 3年P80 PE，历史高估区 | 观望，不追高 |
+| bands[1] < 当前价 ≤ bands[0] | 合理偏高区 | 少量试仓（20%） |
+| bands[2] < 当前价 ≤ bands[1] | 合理偏低区，较好买点 | 分批建仓（3×20%） |
+| 当前价 ≤ bands[2]（P20点位）| 历史低估区，当前PE < 3年P20 PE | 积极建仓（50%+） |
 
 ---
 
@@ -467,9 +431,13 @@ else:
 
 | 数据 | 来源 | 接口/方法 |
 |---|---|---|
-| 当前 PE TTM / 股息率 | 中证官网（通过 akshare）| `ak.stock_zh_index_value_csindex(symbol)` |
-| 指数价格历史（最长~5年）| tushare | `pro.index_daily(ts_code, start_date, end_date)` |
-| 历史 PE 分位（近似）| 两者计算 | 当前PE × (历史价/当前价) |
-| 成分股权重 | tushare | `pro.index_weight(index_code)` |
+| 当前 PE TTM / 股息率 / PE历史分位 | **理杏仁**（主要来源）| `POST /api/cn/index/fundamental`，`stockCodes: [lx_code]`，`metricsList: [pe_ttm.mcw, pe_ttm.y3.mcw.q2v/q5v/q8v/cvpos, dyr.mcw]` |
+| 指数当前价格 / 历史价格 | **理杏仁** | `POST /api/cn/index/candlestick`，`stockCode: lx_code`（单数），`type: "normal"`，响应字段 `close`，数据降序（最新在前） |
+| 成分股权重 | tushare | `pro.index_weight(index_code='399989.SZ')` |
 | 成分股 ROE | tushare | `pro.fina_indicator(ts_code, fields, limit=5)` |
-| 沪深300 PE（参考基准）| 中证官网（通过 akshare）| `ak.stock_zh_index_value_csindex("000300")` |
+| 沪深300 PE（参考基准）| **理杏仁** | `POST /api/cn/index/fundamental`，`stockCodes: ['000300']`，`metricsList: ['pe_ttm.mcw']` |
+
+**lixinger 调用规范**：
+- `stockCodes`（复数）：`fundamental` 接口用，接受数组
+- `stockCode`（单数）：`candlestick` 接口用，只接受单个代码字符串
+- 代码格式：纯数字，不带 `.SZ` / `.SH` / `.CSI` 后缀
