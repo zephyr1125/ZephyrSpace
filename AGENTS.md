@@ -260,6 +260,24 @@ flags = search_red_flags("东方财富", "300059.SZ")
 - 优先兼容现有日报结构
 - 新增逻辑时优先通过配置驱动，而不是把规则硬编码到多个位置
 
+## Skill 文件同步约定
+
+Skill 源文件存放在 vault 内，修改后必须同步到 agents 目录才能生效：
+
+| Skill | 源文件 | 同步目标 |
+|---|---|---|
+| stock-prebuy-review | `stock-prebuy-skill/SKILL.md` | `C:\Users\zephy\.agents\skills\stock-prebuy-review\SKILL.md` |
+| stock-prebuy（指数）| `index-prebuy.skill` | 无需同步（直接读取 vault 内文件） |
+
+**每次修改 SKILL.md 后，必须执行同步命令：**
+
+```powershell
+Copy-Item "E:\ObsidianVaults\ZephyrSpace\stock-prebuy-skill\SKILL.md" `
+    "C:\Users\zephy\.agents\skills\stock-prebuy-review\SKILL.md" -Force
+```
+
+> Agent 在修改 `stock-prebuy-skill/SKILL.md` 后，必须自动执行上述同步，无需等待用户提醒。
+
 ## Obsidian CLI 使用约定
 
 如需操作笔记，优先使用 `Obsidian CLI` 做以下事情：
