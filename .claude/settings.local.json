@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -)",
+      "Bash(python scripts/prebuy_399989.py)",
+      "Bash(python scripts/check_399989_akshare.py)"
+    ]
+  }
+}
