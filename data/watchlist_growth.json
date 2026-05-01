@@ -56,7 +56,7 @@
     "code": "600406.SH",
     "source_etf": "560390",
     "position_role": "做大脑",
-    "prebuy_conclusion": "逻辑清晰，等待更合适价格或验证点。",
+    "prebuy_conclusion": "系统控制层龙头，十五五+算电协同受益。PE约26.7x，ROE 16.25%。Q1营收+7.5%/净利+6.0%，平稳增长，季节性符合预期，全年逻辑维持。等26元以下或半年报验证。",
     "watch_reason": "新型电力系统和算电协同里最核心的控制层龙头之一。",
     "current_price": 26.54,
     "price_bands": [
@@ -74,7 +74,8 @@
     "board": "沪",
     "dv_ttm": 2.18,
     "next_earnings_date": "2026-04-30",
-    "next_earnings_type": "一季报"
+    "next_earnings_type": "半年报",
+    "next_earnings_time": "2026-08"
   },
   {
     "name": "海康威视",
@@ -206,7 +207,7 @@
     "code": "605499.SH",
     "source_etf": "399396",
     "position_role": "能量饮料成长仓",
-    "prebuy_conclusion": "中性区，等较好区间140-175元（PE约18-22x）再布局；成长逻辑清晰但当前赔率一般，每季度验证增速。",
+    "prebuy_conclusion": "能量饮料第二品牌，ROE 51.6%超级现金牛。Q1营收+21.5%/净利+28.3%，增速稳健，盈利质量向上，强成长逻辑优质验证。较好入场区间140-175元（PE约18-22x）。",
     "watch_reason": "国内能量饮料第二品牌，市场份额持续扩张，2025年净利44.2亿同比+21%，成长驱动力强。",
     "current_price": 199.96,
     "price_date": "2026-04-24",
@@ -224,7 +225,8 @@
     "valuation_anchor": "前瞻PE+增速验证：追高区>220(PE>28x，成长溢价过足) / 中性区175-220(PE22-28x，等季度增速持续验证) / 较好区间140-175(PE18-22x，赔率改善可建仓) / 更低区间<140(PE<18x，成长折价，安全边际明显)",
     "dv_ttm": 1.25,
     "next_earnings_date": "2026-04-30",
-    "next_earnings_type": "一季报"
+    "next_earnings_type": "半年报",
+    "next_earnings_time": "2026-08"
   },
   {
     "name": "柏楚电子",
@@ -255,7 +257,9 @@
       "strong_buy": "100-115元以下，PE26-30x，安全边际充足"
     },
     "next_earnings_date": "2026-04-30",
-    "next_earnings_type": "一季报"
+    "next_earnings_type": "半年报",
+    "next_earnings_time": "2026-08",
+    "prebuy_conclusion": "Q1营收+10.5%/净利+23.9%，增速放缓但盈利质量提升，激光控制系统龙头逻辑维持，等PE<35x或H1验证增速回升建仓。"
   },
   {
     "name": "安集科技",
@@ -314,7 +318,7 @@
     "code": "002371.SZ",
     "source_etf": "931912",
     "position_role": "半导体设备国产替代核心成长仓",
-    "prebuy_conclusion": "A股半导体设备市值龙头，国产替代逻辑强，但需等2026年利润恢复验证且PE低于55x再建仓。",
+    "prebuy_conclusion": "Q1营收+25.8%/净利+3.4%（利润率修复中），OCF大幅改善，国产替代逻辑维持，等净利增速持续恢复至≥15%后建仓。",
     "watch_reason": "刻蚀、PVD、CVD等设备平台能力完整，是半导体设备国产替代核心公司；估值和利润波动需要严格约束买点。",
     "current_price": 546.13,
     "price_date": "2026-04-24",
@@ -332,7 +336,8 @@
     "valuation_anchor": "半导体设备PE+利润恢复：追高区>485(PE>62x，历史高分位，不追) / 中性区420-485(PE约55-62x，等待2026利润恢复) / 较好区间340-420(PE约45-55x，国产替代核心可研究性布局) / 更低区间<340(PE<45x，安全边际改善)",
     "dv_ttm": 0.17,
     "next_earnings_date": "2026-04-30",
-    "next_earnings_type": "一季报"
+    "next_earnings_type": "半年报",
+    "next_earnings_time": "2026-08"
   },
   {
     "name": "亚马逊",
@@ -393,7 +398,7 @@
     "board": "纳",
     "source_etf": "direct",
     "position_role": "EDA双寡头，AI芯片设计工具垄断，Ansys收购后全流程覆盖",
-    "prebuy_conclusion": "可以试错，但只能小仓位",
+    "prebuy_conclusion": "Q1 FY2026：营收$2,409M(+65.5% YoY，含Ansys全季并表)，GAAP净利$65M(大幅下降因并购摊销~$156M)，需关注Non-GAAP EPS(引导FY2026全年$14.42)而非GAAP；FY2026是Ansys第一完整并表年，整合进展是核心观察点。等Q2 FY2026(2026-05-27)确认整合协同后再加仓。",
     "watch_reason": "Ansys收购已完成构建EDA+仿真全流程垄断，Forward PE 34.7x处历史低分位，等FY2026 Q2验证整合",
     "current_price": 500.0,
     "price_date": "2026-04-26",
@@ -419,7 +424,7 @@
     "board": "纽",
     "source_etf": "direct",
     "position_role": "全球唯一3nm/2nm量产代工厂，AI算力产业链核心制造基础设施",
-    "prebuy_conclusion": "逻辑清晰，等待更合适价格或验证点",
+    "prebuy_conclusion": "Q1 2026已验证：营收NT$839.25B(+35.3% YoY)，毛利率66.2%(超引导63-65%)，AI HPC占比61%；N3/N5合计占晶圆营收超60%，定价权已转移至台积电。逻辑强力验证，等NT$850以下/~$150再建仓。",
     "watch_reason": "N2独占2-3年无竞争，HPC占营收61%，等回调至$340-360再建仓",
     "current_price": 402.46,
     "price_date": "2026-04-26",
@@ -445,7 +450,7 @@
     "board": "纳",
     "source_etf": "direct",
     "position_role": "创意软件事实垄断，Firefly AI货币化落地，FCF Yield ~10%",
-    "prebuy_conclusion": "逻辑清晰，当前价格合理，可按计划买入",
+    "prebuy_conclusion": "Q1 FY2026已验证：营收$6,398M(+12% YoY)，ARR $260.6亿(+10.9%)，经营现金流稳健，AI功能持续推出Firefly扩大护城河。增速平稳但非AI焦虑受害者，Forward PE ~10x处历史最低分位，逻辑维持。",
     "watch_reason": "ARR $260亿+11%，Forward PE 10.4x处十年最低分位，CEO接班是短期不确定性",
     "current_price": 245.0,
     "price_date": "2026-04-26",
@@ -625,7 +630,7 @@
     "code": "605117.SH",
     "source_etf": "932246",
     "position_role": "户储与逆变器",
-    "prebuy_conclusion": "逻辑成立，当前140.7元在中性区偏低，可小仓跟踪，等125元以下建仓",
+    "prebuy_conclusion": "Q1营收+73.8%/净利+68.4%，储能出海爆发大超预期，OCF/净利133%，逻辑强力验证，可积极跟踪，等回调加仓。",
     "watch_reason": "户储和逆变器链条的代表，适合看海外需求和产品节奏。",
     "current_price": 140.7,
     "price_bands": [
@@ -643,7 +648,8 @@
     "board": "沪",
     "dv_ttm": 2.1,
     "next_earnings_date": "2026-04-30",
-    "next_earnings_type": "一季报"
+    "next_earnings_type": "半年报",
+    "next_earnings_time": "2026-08"
   },
   {
     "name": "拓普集团",
@@ -652,7 +658,7 @@
     "source_etf": "931571",
     "board": "沪",
     "position_role": "汽车零部件+人形机器人执行器，机器人叙事最强标的之一",
-    "prebuy_conclusion": "逻辑清晰，等待更合适价格或验证点。45-56元绿灯区（PE≤32x）或机器人执行器收入占比首次超5%后再重仓",
+    "prebuy_conclusion": "Q1营收+14.9%/净利-2.4%（降幅持续收窄：-11.97%→-7.4%→-2.4%），修复路径验证中，等净利转正且机器人收入占比>5%后建仓。",
     "watch_reason": "特斯拉Optimus执行器+汽车热管理/空悬双轮驱动，机器人执行器国产化先锋",
     "current_price": 56.76,
     "price_date": "2026-04-24",
@@ -668,7 +674,8 @@
     ],
     "dv_ttm": 0.91,
     "next_earnings_date": "2026-04-30",
-    "next_earnings_type": "一季报"
+    "next_earnings_type": "半年报",
+    "next_earnings_time": "2026-08"
   },
   {
     "name": "润泽科技",
