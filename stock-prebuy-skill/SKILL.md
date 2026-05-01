@@ -262,6 +262,57 @@ inquiries = resp2.json().get("data", [])
 - 高估值是在买确定性，还是在买叙事泡沫
 - 远期 PE（基于下一财年预期）是否合理
 
+数据来源：**理杏仁基本面接口**，按公司类型选择：
+
+```python
+import requests, os
+from dotenv import load_dotenv
+load_dotenv()
+LX_TOKEN = os.getenv("LIXINGER_TOKEN")
+
+# ① 判断公司类型，选择对应接口
+# 银行 → /fundamental/bank（用 pb 分位）
+# 证券/保险 → /fundamental/security 或 /insurance（用 pe_ttm 分位）
+# 其他 → /fundamental/non_financial（用 pe_ttm 分位；PE<0亏损改用 pb 分位）
+
+COMPANY_TYPE_ENDPOINT = {
+    "bank":          "https://open.lixinger.com/api/cn/company/fundamental/bank",
+    "security":      "https://open.lixinger.com/api/cn/company/fundamental/security",
+    "insurance":     "https://open.lixinger.com/api/cn/company/fundamental/insurance",
+    "non_financial": "https://open.lixinger.com/api/cn/company/fundamental/non_financial",
+}
+
+def get_valuation_percentile(stock_code, endpoint, use_pb=False):
+    """返回当前估值和3年历史分位，用于 price_bands 计算。"""
+    if use_pb:
+        metrics = ["pb", "pb.y3.cvpos", "pb.y3.q2v", "pb.y3.q5v", "pb.y3.q8v"]
+    else:
+        metrics = ["pe_ttm", "pe_ttm.y3.cvpos", "pe_ttm.y3.q2v", "pe_ttm.y3.q5v", "pe_ttm.y3.q8v",
+                   "pb", "pb.y3.cvpos"]  # 同时拉 PB 备用（PE<0 时切换）
+
+    resp = requests.post(endpoint, json={
+        "stockCode": stock_code,   # 纯数字代码，不带后缀
+        "startDate": "2026-04-30",
+        "endDate":   "2026-04-30",
+        "metricsList": metrics,
+        "token": LX_TOKEN
+    })
+    data = resp.json().get("data", [])
+    return data[0] if data else {}
+
+# 示例：招商银行（银行，用 PB 分位）
+d = get_valuation_percentile("600036", COMPANY_TYPE_ENDPOINT["bank"], use_pb=True)
+# d["pb"] = 当前PB；d["pb.y3.cvpos"] = 3年PB分位（0~1）
+# d["pb.y3.q2v"]=P20, d["pb.y3.q5v"]=P50, d["pb.y3.q8v"]=P80
+
+# 示例：东方财富（非金融，用 PE 分位）
+d = get_valuation_percentile("300059", COMPANY_TYPE_ENDPOINT["non_financial"])
+# d["pe_ttm"] = 当前PE；d["pe_ttm.y3.cvpos"] = 3年PE分位（0~1）
+```
+
+> 分位解读：< 20% → 历史低位（便宜） / 20-50% → 中低 / 50-80% → 中高 / > 80% → 历史高位（贵）
+> 若 `pe_ttm` ≤ 0 或 NaN（亏损），切换为 PB 分位，在分析中注明「当期亏损，改用PB分位」
+
 红旗：
 - 只拿横向 PE 比，不看业务纯度和增长质量
 - 把「便宜」当成买入理由本身
@@ -310,6 +361,69 @@ inquiries = resp2.json().get("data", [])
 | X-Y 元 | xxP-yyP | 🟡 中性区，可关注但需等确认 |
 | Y-Z 元 | yyP-zzP | 🟢 较好入场区间 |
 | Z 元以下 | <zzP | 🟢🟢 安全边际充足 |
+
+**理杏仁 price_bands 标准计算方法：**
+
+price_bands 必须基于历史估值分位，不得直接对当前价格做±N%估算。格式：`[红线, 中性底, 最优区起点]`（数字，非文字）。
+
+```python
+import requests, os
+from dotenv import load_dotenv
+load_dotenv()
+LX_TOKEN = os.getenv("LIXINGER_TOKEN")
+
+def calc_price_bands(stock_code, current_price, company_type="non_financial"):
+    """
+    用理杏仁 PE/PB 3年历史分位计算 price_bands。
+    返回 [红线(P80价格), 中性底(P50价格), 最优区(P20价格)]
+    
+    company_type: "non_financial" / "bank" / "security" / "insurance"
+    银行/保险用 PB 分位 × BPS；其他用 PE 分位 × ratio
+    """
+    endpoint_map = {
+        "non_financial": "https://open.lixinger.com/api/cn/company/fundamental/non_financial",
+        "bank":          "https://open.lixinger.com/api/cn/company/fundamental/bank",
+        "security":      "https://open.lixinger.com/api/cn/company/fundamental/security",
+        "insurance":     "https://open.lixinger.com/api/cn/company/fundamental/insurance",
+    }
+    use_pb = company_type in ("bank", "insurance")
+    metrics = (
+        ["pb", "pb.y3.q2v", "pb.y3.q5v", "pb.y3.q8v"] if use_pb else
+        ["pe_ttm", "pe_ttm.y3.q2v", "pe_ttm.y3.q5v", "pe_ttm.y3.q8v",
+         "pb", "pb.y3.q2v", "pb.y3.q5v", "pb.y3.q8v"]  # 备用：PE<0时切PB
+    )
+    resp = requests.post(endpoint_map[company_type], json={
+        "stockCode": stock_code,
+        "startDate": "2026-04-30",
+        "endDate":   "2026-04-30",
+        "metricsList": metrics,
+        "token": LX_TOKEN
+    })
+    d = resp.json().get("data", [{}])[0]
+
+    if use_pb:
+        pb = d.get("pb")
+        if not pb: return None
+        bps = current_price / pb          # 每股净资产
+        q2v, q5v, q8v = d["pb.y3.q2v"], d["pb.y3.q5v"], d["pb.y3.q8v"]
+        return [round(q8v * bps, 2), round(q5v * bps, 2), round(q2v * bps, 2)]
+    else:
+        pe = d.get("pe_ttm")
+        if not pe or pe <= 0:            # 亏损：切换 PB
+            pb = d.get("pb")
+            if not pb: return None
+            bps = current_price / pb
+            q2v, q5v, q8v = d["pb.y3.q2v"], d["pb.y3.q5v"], d["pb.y3.q8v"]
+            return [round(q8v * bps, 2), round(q5v * bps, 2), round(q2v * bps, 2)]
+        ratio = current_price / pe        # 每1倍PE对应的价格（≈ EPS）
+        q2v, q5v, q8v = d["pe_ttm.y3.q2v"], d["pe_ttm.y3.q5v"], d["pe_ttm.y3.q8v"]
+        return [round(q8v * ratio, 2), round(q5v * ratio, 2), round(q2v * ratio, 2)]
+
+# 使用示例：
+# bands = calc_price_bands("300059", 20.26, "non_financial")
+# → [31.06, 24.16, 21.00]  # [红线, 中性底, 最优区起点]
+# 灯号判断：当前价 > bands[0] → 🔴；bands[1]~bands[0] → 🟡；bands[2]~bands[1] → 🟢；< bands[2] → 🟢🟢
+```
 
 红旗：
 - 短期（3-4 周内）涨幅超过 30% 后仍想追入
@@ -734,6 +848,21 @@ d = resp.json()["data"][0]
 4. 监管处罚、问询函、司法与工商信用
 5. 公司官网产品资料
 
+**数据 API 优先顺序（估值/财务/监管）：**
+> 理杏仁（Lixinger）优先，tushare 其次；理杏仁无数据时再用 tushare 或 web_fetch 东方财富补充。
+
+| 数据类型 | 优先数据源 | 接口 |
+|---|---|---|
+| PE/PB历史分位 | 理杏仁 | `/fundamental/non_financial`（银行→`/bank`，证券→`/security`）|
+| price_bands 计算 | 理杏仁 | 同上，用 `q2v/q5v/q8v` × ratio/BPS |
+| 监管措施/问询函 | 理杏仁 | `/company/measures`、`/company/inquiry` |
+| 大股东/高管增减持 | 理杏仁 | `/company/major-shareholders-shares-change`、`/senior-executive-shares-change` |
+| 股权质押 | 理杏仁 | `/company/pledge` |
+| 分红历史 | 理杏仁 | `/company/dividend` |
+| 限售解禁（初筛） | 理杏仁热度 | `/company/hot/elr` |
+| 财报营收/净利润 | tushare→东方财富双验 | `fina_indicator` + QDATE验证 |
+| 当前价格 | 理杏仁 | `/company/candlestick` |
+
 官方资料入口和用途见 [references/source-map.md](references/source-map.md)。
 
 > ⚠️ **财报季 tushare 延迟警告（必读）**
@@ -883,6 +1012,38 @@ date_str, report_type = get_next_earnings('600887.SH')
 4. **每次财报发布后须更新**此字段为下下期日期，确保始终指向未来。
 
 > ⚠️ 财报发布前 2 周是高风险窗口：不在此窗口新建仓（信息不对称风险高），已持仓者评估是否需要减仓或加止损。
+
+### 第 3.6 步：计算 price_bands 并写入 watchlist（A股必做）
+
+**目的**：每次完成 PreBuy 分析后，将基于历史分位计算的 price_bands 写入 watchlist JSON，替代旧的手工拍估或与当前价强绑定的数值。
+
+**计算方法**：调用上方模块11中的 `calc_price_bands()` 函数。
+
+**写入格式**：
+
+```json
+{
+  "price_bands": [31.06, 24.16, 21.00],
+  "price_bands_basis": "pe_ttm.y3",
+  "price_bands_date": "2026-04-30"
+}
+```
+
+字段说明：
+
+| 字段 | 含义 |
+|---|---|
+| `price_bands[0]` | 红线（P80历史估值对应价格），当前价超过此值 → 🔴 |
+| `price_bands[1]` | 中性底（P50历史估值），当前价在[1]~[0] → 🟡 |
+| `price_bands[2]` | 最优区起点（P20历史估值），当前价 < [2] → 🟢🟢 |
+| `price_bands_basis` | 分位来源：`pe_ttm.y3`（PE）/ `pb.y3`（PB，用于银行/保险/亏损股）|
+| `price_bands_date` | 计算时使用的估值数据日期，格式 YYYY-MM-DD |
+
+**注意事项**：
+- 数字数组，不填文字描述字符串
+- 银行/保险：`price_bands_basis = "pb.y3"`，公式为 `q值 × BPS`
+- PE < 0（亏损）：`price_bands = null`，在 notes 注明「当期亏损，price_bands暂不适用」
+- 每次做 PreBuy 更新时同步刷新这三个字段，不允许保留旧值
 
 ### 第 4 步：把公司压缩成一句话
 
