@@ -9,23 +9,23 @@
       "category": "成长科技",
       "cycle_position": "复苏中期",
       "prebuy_conclusion": "等待回调 — 板块景气并不差，但当前估值几乎贴着近3年上沿走，市场已把修复预期交易得很满，适合等回撤而不是追高。",
-      "current_pe": 37.88,
-      "current_dy": 0.95,
-      "pe_3y_percentile": 99.7,
-      "pe_5y_percentile": 81.9,
+      "current_pe": 65.14,
+      "current_dy": 0.01,
+      "pe_3y_percentile": 71.7,
+      "pe_5y_percentile": 75.0,
       "current_index_price": 817.55,
       "price_bands": [
-        586,
-        511,
-        469
+        887,
+        514,
+        259
       ],
-      "valuation_anchor": "3年历史价格分位锚点（2023-2026）：P80=586（偏贵区上沿，不追高），P50=511（历史中位，合理区），P20=469（历史偏低区，积极买入）。数据来源 tushare 931932.CSI，共 593 个交易日。",
+      "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=70.6→点位887（偏贵区），P50对应PE=41.0→点位514（历史中位），P20对应PE=20.6→点位259（积极买入区）。数据来源 lixinger cn/industry/fundamental/sw_2021 (630000，近似映射自 931932)。",
       "risk_flags": [
         "光伏和锂电价格战会持续侵蚀盈利质量",
         "板块高估值对景气放缓非常敏感",
         "指数把多个强周期子行业揉在一起，波动会被放大"
       ],
-      "price_date": "2026-04-30",
+      "price_date": "2026-04-29",
       "note_path": "05-A股指数/931932 中证全指电力设备指数.md",
       "last_updated": "2026-05-01"
     },
@@ -36,23 +36,23 @@
       "category": "通用混合",
       "cycle_position": "复苏中期",
       "prebuy_conclusion": "等待回调 — 工业制造景气在修复，但当前估值已经贴近近3年和5年上沿，宽而杂的行业篮子没有提供足够舒服的赔率。",
-      "current_pe": 35.53,
-      "current_dy": 1.23,
-      "pe_3y_percentile": 97.8,
-      "pe_5y_percentile": 98.7,
+      "current_pe": 54.15,
+      "current_dy": 0.01,
+      "pe_3y_percentile": 100,
+      "pe_5y_percentile": 100,
       "current_index_price": 10025.73,
       "price_bands": [
-        8654,
-        6798,
-        6150
+        8240,
+        6551,
+        5802
       ],
-      "valuation_anchor": "3年历史价格分位锚点（2023-2026）：P80=8654（偏贵区上沿，不追高），P50=6798（历史中位，合理区），P20=6150（历史偏低区，积极买入）。数据来源 tushare H30166.CSI，共 724 个交易日。",
+      "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=44.5→点位8240（偏贵区），P50对应PE=35.4→点位6551（历史中位），P20对应PE=31.3→点位5802（积极买入区）。数据来源 lixinger cn/industry/fundamental/sw_2021 (640000，近似映射自 H30166)。",
       "risk_flags": [
         "行业口径过宽，强弱周期互相抵消",
         "当前估值处高位，修复不及预期时回撤空间大",
         "宏观投资和出口订单波动会同时影响多个子板块"
       ],
-      "price_date": "2026-04-30",
+      "price_date": "2026-04-29",
       "note_path": "05-A股指数/H30166 中证全指机械制造指数.md",
       "last_updated": "2026-05-01"
     },
@@ -63,23 +63,23 @@
       "category": "通用混合",
       "cycle_position": "复苏早期",
       "prebuy_conclusion": "分批布局 — 绝对估值不高，股息率也还能看，若要配稳增长修复可以分批，但它并不是很高弹性的行业机会。",
-      "current_pe": 9.5,
-      "current_dy": 2.77,
-      "pe_3y_percentile": 81.3,
-      "pe_5y_percentile": 55.9,
+      "current_pe": 15.85,
+      "current_dy": 0.02,
+      "pe_3y_percentile": 100,
+      "pe_5y_percentile": 100,
       "current_index_price": 822.27,
       "price_bands": [
-        811,
-        750,
-        720
+        619,
+        537,
+        480
       ],
-      "valuation_anchor": "3年历史价格分位锚点（2023-2026）：P80=811（偏贵区上沿，不追高），P50=750（历史中位，合理区），P20=720（历史偏低区，积极买入）。数据来源 tushare 931931.CSI，共 593 个交易日。",
+      "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=11.9→点位619（偏贵区），P50对应PE=10.3→点位537（历史中位），P20对应PE=9.3→点位480（积极买入区）。数据来源 lixinger cn/industry/fundamental/sw_2021 (620000，近似映射自 931931)。",
       "risk_flags": [
         "行业回款和现金流质量弱于账面利润",
         "若稳增长力度不及预期，估值修复空间会受限",
         "建筑央企弹性有限，更适合低波动配置而非高弹性博弈"
       ],
-      "price_date": "2026-04-30",
+      "price_date": "2026-04-29",
       "note_path": "05-A股指数/931931 中证全指建筑装饰指数.md",
       "last_updated": "2026-05-01"
     },
@@ -90,23 +90,23 @@
       "category": "公用事业能源",
       "cycle_position": "复苏早期",
       "prebuy_conclusion": "等待回调 — 环保赛道方向没问题，但当前估值已站到近3年绝对高位附近，而行业整体ROE并不高，容错偏低。",
-      "current_pe": 26.8,
-      "current_dy": 1.16,
-      "pe_3y_percentile": 99.7,
-      "pe_5y_percentile": 91.9,
+      "current_pe": 42.92,
+      "current_dy": 0.01,
+      "pe_3y_percentile": 89.2,
+      "pe_5y_percentile": 93.2,
       "current_index_price": 883.33,
       "price_bands": [
-        746,
-        698,
-        600
+        791,
+        575,
+        517
       ],
-      "valuation_anchor": "3年历史价格分位锚点（2023-2026）：P80=746（偏贵区上沿，不追高），P50=698（历史中位，合理区），P20=600（历史偏低区，积极买入）。数据来源 tushare 931933.CSI，共 593 个交易日。",
+      "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=38.4→点位791（偏贵区），P50对应PE=28.0→点位575（历史中位），P20对应PE=25.1→点位517（积极买入区）。数据来源 lixinger cn/industry/fundamental/sw_2021 (760000，近似映射自 931933)。",
       "risk_flags": [
         "项目回款和现金流质量往往弱于利润表表现",
         "行业整体ROE偏低，难以支撑高估值",
         "环保政策兑现节奏若放缓，估值回撤会很直接"
       ],
-      "price_date": "2026-04-30",
+      "price_date": "2026-04-29",
       "note_path": "05-A股指数/931933 中证全指环保指数.md",
       "last_updated": "2026-05-01"
     },
@@ -117,23 +117,23 @@
       "category": "周期材料",
       "cycle_position": "复苏中期",
       "prebuy_conclusion": "等待回调 — 化工行业有修复，但当前估值已经接近近3年绝对上沿。对周期行业来说，这通常不是好的左侧赔率点。",
-      "current_pe": 30.09,
-      "current_dy": 1.36,
-      "pe_3y_percentile": 99.7,
-      "pe_5y_percentile": 93.8,
+      "current_pe": 43.05,
+      "current_dy": 0.01,
+      "pe_3y_percentile": 98.5,
+      "pe_5y_percentile": 99.1,
       "current_index_price": 904.93,
       "price_bands": [
-        662,
-        603,
-        574
+        744,
+        625,
+        519
       ],
-      "valuation_anchor": "3年历史价格分位锚点（2023-2026）：P80=662（偏贵区上沿，不追高），P50=603（历史中位，合理区），P20=574（历史偏低区，积极买入）。数据来源 tushare 932111.CSI，共 593 个交易日。",
+      "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=35.4→点位744（偏贵区），P50对应PE=29.7→点位625（历史中位），P20对应PE=24.7→点位519（积极买入区）。数据来源 lixinger cn/industry/fundamental/sw_2021 (220000，近似映射自 932111)。",
       "risk_flags": [
         "周期品盈利波动会让PE参考价值失真",
         "子行业景气错位明显，指数容易把强弱混在一起买",
         "原材料价格回落时，估值和盈利可能双杀"
       ],
-      "price_date": "2026-04-30",
+      "price_date": "2026-04-29",
       "note_path": "05-A股指数/932111 中证全指化工行业指数.md",
       "last_updated": "2026-05-01"
     },
@@ -144,23 +144,23 @@
       "category": "成长科技",
       "cycle_position": "复苏早期",
       "prebuy_conclusion": "等待回调 — 军工和航天方向有长期逻辑，但当前估值已接近近3年和5年高位，而账面ROE只有中低个位数，预期很满、容错很薄。",
-      "current_pe": 69.62,
-      "current_dy": 0.52,
-      "pe_3y_percentile": 99.5,
-      "pe_5y_percentile": 99.2,
+      "current_pe": 107.36,
+      "current_dy": 0.0,
+      "pe_3y_percentile": 65.6,
+      "pe_5y_percentile": 79.4,
       "current_index_price": 910.84,
       "price_bands": [
-        728,
-        681,
-        585
+        1141,
+        755,
+        551
       ],
-      "valuation_anchor": "3年历史价格分位锚点（2023-2026）：P80=728（偏贵区上沿，不追高），P50=681（历史中位，合理区），P20=585（历史偏低区，积极买入）。数据来源 tushare 932116.CSI，共 593 个交易日。",
+      "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=134.5→点位1141（偏贵区），P50对应PE=89.0→点位755（历史中位），P20对应PE=64.9→点位551（积极买入区）。数据来源 lixinger cn/industry/fundamental/sw_2021 (650000，近似映射自 932116)。",
       "risk_flags": [
         "估值极高而利润兑现偏慢，最容易发生估值压缩",
         "军工订单节奏和业绩确认往往滞后于市场预期",
         "高集中度让少数军工龙头的波动直接放大指数表现"
       ],
-      "price_date": "2026-04-30",
+      "price_date": "2026-04-29",
       "note_path": "05-A股指数/932116 中证全指航空航天与国防行业指数.md",
       "last_updated": "2026-05-01"
     },
@@ -171,23 +171,23 @@
       "category": "消费医药",
       "cycle_position": "复苏早期",
       "prebuy_conclusion": "分批布局 — 当前估值已经回到近3年和5年的相对低位，板块质量不差，虽非极端便宜，但已进入可慢慢收集的位置。",
-      "current_pe": 25.97,
-      "current_dy": 1.68,
-      "pe_3y_percentile": 20.2,
-      "pe_5y_percentile": 13.1,
+      "current_pe": 50.87,
+      "current_dy": 0.01,
+      "pe_3y_percentile": 96.1,
+      "pe_5y_percentile": 97.7,
       "current_index_price": 574.18,
       "price_bands": [
-        697,
-        624,
-        574
+        530,
+        419,
+        353
       ],
-      "valuation_anchor": "3年历史价格分位锚点（2023-2026）：P80=697（偏贵区上沿，不追高），P50=624（历史中位，合理区），P20=574（历史偏低区，积极买入）。数据来源 tushare 931940.CSI，共 593 个交易日。",
+      "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=47.0→点位530（偏贵区），P50对应PE=37.2→点位419（历史中位），P20对应PE=31.2→点位353（积极买入区）。数据来源 lixinger cn/industry/fundamental/sw_2021 (370500，近似映射自 931940)。",
       "risk_flags": [
         "集采和控费仍会持续压制部分器械和耗材估值",
         "医疗服务修复速度若低于预期，会拖累整体弹性",
         "迈瑞和联影等大权重股波动会显著影响指数表现"
       ],
-      "price_date": "2026-04-30",
+      "price_date": "2026-04-29",
       "note_path": "05-A股指数/931940 中证全指医疗指数.md",
       "last_updated": "2026-05-01"
     },
@@ -198,23 +198,23 @@
       "category": "消费医药",
       "cycle_position": "复苏早期",
       "prebuy_conclusion": "分批布局 — 医药大方向已从最差阶段出来，但当前估值并不算很低，只能算回到可接受区间，适合长钱慢慢建仓。",
-      "current_pe": 29.51,
-      "current_dy": 1.36,
-      "pe_3y_percentile": 66.6,
-      "pe_5y_percentile": 41.7,
+      "current_pe": 48.16,
+      "current_dy": 0.01,
+      "pe_3y_percentile": 74.3,
+      "pe_5y_percentile": 78.3,
       "current_index_price": 9357.65,
       "price_bands": [
-        9640,
-        8874,
-        8030
+        9765,
+        8009,
+        7283
       ],
-      "valuation_anchor": "3年历史价格分位锚点（2023-2026）：P80=9640（偏贵区上沿，不追高），P50=8874（历史中位，合理区），P20=8030（历史偏低区，积极买入）。数据来源 tushare H30179.CSI，共 724 个交易日。",
+      "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=50.3→点位9765（偏贵区），P50对应PE=41.2→点位8009（历史中位），P20对应PE=37.5→点位7283（积极买入区）。数据来源 lixinger cn/industry/fundamental/sw_2021 (370000，近似映射自 H30179)。",
       "risk_flags": [
         "药明康德等大权重股仍受海外政策和订单扰动",
         "医药内部子行业修复节奏不一致，指数容易强弱对冲",
         "若集采和控费再超预期，估值修复会反复"
       ],
-      "price_date": "2026-04-30",
+      "price_date": "2026-04-29",
       "note_path": "05-A股指数/H30179 中证全指医药指数.md",
       "last_updated": "2026-05-01"
     },
@@ -225,23 +225,23 @@
       "category": "消费医药",
       "cycle_position": "收缩期",
       "prebuy_conclusion": "可买（分批建仓） — 当前估值已落到近3年和5年的明显低位，龙头质量依然在线，虽收入修复偏慢，但赔率已明显站在买方这边。",
-      "current_pe": 19.89,
-      "current_dy": 3.55,
-      "pe_3y_percentile": 7.5,
-      "pe_5y_percentile": 4.5,
+      "current_pe": 22.0,
+      "current_dy": 0.04,
+      "pe_3y_percentile": 43.4,
+      "pe_5y_percentile": 26.0,
       "current_index_price": 11160.94,
       "price_bands": [
-        14324,
-        12773,
-        11975
+        13812,
+        11288,
+        10673
       ],
-      "valuation_anchor": "3年历史价格分位锚点（2023-2026）：P80=14324（偏贵区上沿，不追高），P50=12773（历史中位，合理区），P20=11975（历史偏低区，积极买入）。数据来源 tushare H30177.CSI，共 724 个交易日。",
+      "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=27.2→点位13812（偏贵区），P50对应PE=22.3→点位11288（历史中位），P20对应PE=21.0→点位10673（积极买入区）。数据来源 lixinger cn/industry/fundamental/sw_2021 (340000，近似映射自 H30177)。",
       "risk_flags": [
         "白酒需求修复若继续放缓，估值修复会拉长",
         "指数高度依赖茅台、五粮液等龙头，集中度较高",
         "居民消费信心恢复弱于预期，会延后行业景气回升"
       ],
-      "price_date": "2026-04-30",
+      "price_date": "2026-04-29",
       "note_path": "05-A股指数/H30177 中证全指食品、饮料与烟草指数.md",
       "last_updated": "2026-05-01"
     },
@@ -256,19 +256,19 @@
       "current_dy": 1.49,
       "pe_3y_percentile": 49.7,
       "pe_5y_percentile": 30.9,
-      "current_index_price": 2369.43,
+      "current_index_price": 2364.3,
       "price_bands": [
-        2520,
-        2373,
-        1960
+        2577,
+        2408,
+        1997
       ],
-      "valuation_anchor": "3年历史价格分位锚点（2023-2026）：P80=2520（偏贵区上沿，不追高），P50=2373（历史中位，合理区），P20=1960（历史偏低区，积极买入）。数据来源 tushare H30175.CSI，共 724 个交易日。",
+      "valuation_anchor": "当期PE为负（行业整体亏损），price_bands基于3年历史价格分位P80/P50/P20，PE分位不适用",
       "risk_flags": [
         "指数成分杂，缺乏统一而高质量的盈利逻辑",
         "整体ROE偏低，容易出现估值不低质量也一般的尴尬",
         "零售消费复苏若再次放缓，指数缺少足够强的龙头兜底"
       ],
-      "price_date": "2026-04-30",
+      "price_date": "2026-04-29",
       "note_path": "05-A股指数/H30175 中证全指零售业指数.md",
       "last_updated": "2026-05-01"
     },
@@ -279,23 +279,23 @@
       "category": "消费医药",
       "cycle_position": "复苏中期",
       "prebuy_conclusion": "等待回调 — 汽车链仍有景气支撑，但当前估值已经回到近3年和5年偏高位置，当前位置更像景气交易中段，而非舒服配置点。",
-      "current_pe": 26.26,
-      "current_dy": 1.42,
-      "pe_3y_percentile": 79.7,
-      "pe_5y_percentile": 87.8,
+      "current_pe": 39.43,
+      "current_dy": 0.01,
+      "pe_3y_percentile": 99.9,
+      "pe_5y_percentile": 76.7,
       "current_index_price": 8577.21,
       "price_bands": [
-        8580,
-        7087,
-        6284
+        6869,
+        6421,
+        5648
       ],
-      "valuation_anchor": "3年历史价格分位锚点（2023-2026）：P80=8580（偏贵区上沿，不追高），P50=7087（历史中位，合理区），P20=6284（历史偏低区，积极买入）。数据来源 tushare H30164.CSI，共 724 个交易日。",
+      "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=31.6→点位6869（偏贵区），P50对应PE=29.5→点位6421（历史中位），P20对应PE=26.0→点位5648（积极买入区）。数据来源 lixinger cn/industry/fundamental/sw_2021 (280500，近似映射自 H30164)。",
       "risk_flags": [
         "行业价格战会持续压缩整车和零部件利润率",
         "指数同时包含整车和零部件，强弱周期并不同步",
         "当前估值已不低，一旦销量或出口预期降温，回撤会比较直接"
       ],
-      "price_date": "2026-04-30",
+      "price_date": "2026-04-29",
       "note_path": "05-A股指数/H30164 中证全指乘用车及零部件指数.md",
       "last_updated": "2026-05-01"
     },
@@ -306,23 +306,23 @@
       "category": "金融",
       "cycle_position": "复苏早期",
       "prebuy_conclusion": "分批布局 — 绝对PE仍低、股息率有防守性，虽然近3年和5年分位都不算特别便宜，但银行本就是适合慢慢收集的低波动金融底仓。",
-      "current_pe": 7.06,
-      "current_dy": 4.12,
-      "pe_3y_percentile": 71.1,
-      "pe_5y_percentile": 81.8,
+      "current_pe": 6.99,
+      "current_dy": 0.04,
+      "pe_3y_percentile": 81.1,
+      "pe_5y_percentile": 88.7,
       "current_index_price": 7268.76,
       "price_bands": [
-        7524,
-        6712,
-        5679
+        7270,
+        6196,
+        5115
       ],
-      "valuation_anchor": "3年历史价格分位锚点（2023-2026）：P80=7524（偏贵区上沿，不追高），P50=6712（历史中位，合理区），P20=5679（历史偏低区，积极买入）。数据来源 tushare 399986.CSI，共 726 个交易日。",
+      "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=6.9→点位7270（偏贵区），P50对应PE=5.9→点位6196（历史中位），P20对应PE=4.9→点位5115（积极买入区）。数据来源 lixinger cn/index/fundamental (399986)。",
       "risk_flags": [
         "净息差若继续下行会长期压制银行估值中枢",
         "弱信用需求下，行业修复速度可能持续偏慢",
         "指数高度依赖招行、兴业和国有大行等头部银行表现"
       ],
-      "price_date": "2026-04-30",
+      "price_date": "2026-04-29",
       "note_path": "05-A股指数/399986 中证银行指数.md",
       "last_updated": "2026-05-01"
     },
@@ -337,23 +337,23 @@
       "category": "金融",
       "cycle_position": "复苏中期",
       "prebuy_conclusion": "分批布局 — 券商板块不算低估，但也未到泡沫区；若看资本市场活跃度修复，可以分批参与，不适合追涨式满仓。",
-      "current_pe": 22.03,
-      "current_dy": 1.75,
-      "pe_3y_percentile": 54.8,
-      "pe_5y_percentile": 56.4,
+      "current_pe": 15.3,
+      "current_dy": 0.02,
+      "pe_3y_percentile": 3.0,
+      "pe_5y_percentile": 3.3,
       "current_index_price": 757.08,
       "price_bands": [
-        846,
-        740,
-        635
+        1157,
+        1054,
+        937
       ],
-      "valuation_anchor": "3年历史价格分位锚点（2023-2026）：P80=846（偏贵区上沿，不追高），P50=740（历史中位，合理区），P20=635（历史偏低区，积极买入）。数据来源 tushare 399975.CSI，共 726 个交易日。",
+      "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=23.4→点位1157（偏贵区），P50对应PE=21.4→点位1054（历史中位），P20对应PE=19.0→点位937（积极买入区）。数据来源 lixinger cn/index/fundamental (399975)。",
       "risk_flags": [
         "证券行业对成交额和风险偏好极度敏感",
         "东方财富和头部券商权重较高，会放大指数波动",
         "若并购重组和资本市场改革预期降温，估值修复容易中断"
       ],
-      "price_date": "2026-04-30",
+      "price_date": "2026-04-29",
       "note_path": "05-A股指数/399975 中证全指证券公司指数.md",
       "last_updated": "2026-05-01"
     },
@@ -364,23 +364,23 @@
       "category": "金融",
       "cycle_position": "复苏中期",
       "prebuy_conclusion": "等待回调 — 龙头险企质量不错，但当前估值已经处在近3年和5年的偏高位置，适合等更低波动窗口再做配置。",
-      "current_pe": 8.62,
-      "current_dy": 3.01,
-      "pe_3y_percentile": 81.6,
-      "pe_5y_percentile": 85.6,
+      "current_pe": 7.06,
+      "current_dy": 0.03,
+      "pe_3y_percentile": 3.6,
+      "pe_5y_percentile": 2.2,
       "current_index_price": 1351.2,
       "price_bands": [
-        1346,
-        1167,
-        964
+        2576,
+        2000,
+        1584
       ],
-      "valuation_anchor": "3年历史价格分位锚点（2023-2026）：P80=1346（偏贵区上沿，不追高），P50=1167（历史中位，合理区），P20=964（历史偏低区，积极买入）。数据来源 tushare H30186.CSI，共 724 个交易日。",
+      "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=13.5→点位2576（偏贵区），P50对应PE=10.5→点位2000（历史中位），P20对应PE=8.3→点位1584（积极买入区）。数据来源 lixinger cn/industry/fundamental/sw_2021 (490200，近似映射自 H30186)。",
       "risk_flags": [
         "中国平安单一权重超过七成，指数极度集中",
         "长端利率和权益市场波动会同时影响估值与利润预期",
         "行业修复节奏通常慢于券商，容易出现估值高位横盘"
       ],
-      "price_date": "2026-04-30",
+      "price_date": "2026-04-29",
       "note_path": "05-A股指数/H30186 中证全指保险指数.md",
       "last_updated": "2026-05-01"
     },
@@ -391,23 +391,23 @@
       "category": "金融",
       "cycle_position": "复苏中期",
       "prebuy_conclusion": "分批布局 — 当前估值大致在历史中位附近，跟随资本市场活跃度修复，可以分批参与，但还不是强赔率抄底点。",
-      "current_pe": 21.98,
-      "current_dy": 1.77,
-      "pe_3y_percentile": 56.5,
-      "pe_5y_percentile": 58.1,
+      "current_pe": 10.54,
+      "current_dy": 0.03,
+      "pe_3y_percentile": 2.1,
+      "pe_5y_percentile": 1.2,
       "current_index_price": 750.33,
       "price_bands": [
-        835,
-        729,
-        628
+        1232,
+        1108,
+        903
       ],
-      "valuation_anchor": "3年历史价格分位锚点（2023-2026）：P80=835（偏贵区上沿，不追高），P50=729（历史中位，合理区），P20=628（历史偏低区，积极买入）。数据来源 tushare H30211.CSI，共 724 个交易日。",
+      "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=17.3→点位1232（偏贵区），P50对应PE=15.6→点位1108（历史中位），P20对应PE=12.7→点位903（积极买入区）。数据来源 lixinger cn/industry/fundamental/sw_2021 (490000，近似映射自 H30211)。",
       "risk_flags": [
         "本质仍由券商和金融平台主导，波动不低",
         "市场成交额和风险偏好若回落，景气修复会放缓",
         "头部权重股估值变化会显著影响指数走势"
       ],
-      "price_date": "2026-04-30",
+      "price_date": "2026-04-29",
       "note_path": "05-A股指数/H30211 中证全指资本市场指数.md",
       "last_updated": "2026-05-01"
     },
@@ -418,23 +418,23 @@
       "category": "成长科技",
       "cycle_position": "复苏早期",
       "prebuy_conclusion": "等待回调 — 计算机板块景气在修复，但账面ROE偏弱，77.91x 的高估值容错不高，更适合等更舒服的价格带。",
-      "current_pe": 77.91,
-      "current_dy": 0.49,
-      "pe_3y_percentile": 55.1,
-      "pe_5y_percentile": 50.9,
+      "current_pe": 752.01,
+      "current_dy": 0.0,
+      "pe_3y_percentile": 66.6,
+      "pe_5y_percentile": 80.0,
       "current_index_price": 7196.44,
       "price_bands": [
-        7910,
-        7088,
-        5614
+        7099,
+        3549,
+        1584
       ],
-      "valuation_anchor": "3年历史价格分位锚点（2023-2026）：P80=7910（偏贵区上沿，不追高），P50=7088（历史中位，合理区），P20=5614（历史偏低区，积极买入）。数据来源 tushare H30182.CSI，共 726 个交易日。",
+      "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=744.9（截断自12328.6）→点位7099（偏贵区），P50对应PE=372.4→点位3549（历史中位），P20对应PE=166.2→点位1584（积极买入区）。注：计算机行业历史PE极端值已截断（q8原值=12328.6），改用q5×2。数据来源：lixinger cn/index/fundamental (H30182)。",
       "risk_flags": [
         "高估值叠加低ROE，利润兑现不及预期时回撤会很快",
         "主题资金主导明显，板块波动大于多数传统行业",
         "软件和应用层景气恢复不齐，指数内部强弱分化大"
       ],
-      "price_date": "2026-04-30",
+      "price_date": "2026-04-29",
       "note_path": "05-A股指数/H30182 中证全指计算机指数.md",
       "last_updated": "2026-05-01"
     },
@@ -445,23 +445,23 @@
       "category": "成长科技",
       "cycle_position": "复苏中期",
       "prebuy_conclusion": "等待回调 — 电子链景气修复很强，但当前官方PE几乎贴着近3年和5年上沿走，乐观预期已经被交易得很满。",
-      "current_pe": 58.05,
-      "current_dy": 0.81,
-      "pe_3y_percentile": 99.4,
-      "pe_5y_percentile": 99.7,
+      "current_pe": 87.14,
+      "current_dy": 0.0,
+      "pe_3y_percentile": 93.5,
+      "pe_5y_percentile": 96.1,
       "current_index_price": 10491.14,
       "price_bands": [
-        8151,
-        5528,
-        4926
+        9260,
+        7958,
+        7208
       ],
-      "valuation_anchor": "3年历史价格分位锚点（2023-2026）：P80=8151（偏贵区上沿，不追高），P50=5528（历史中位，合理区），P20=4926（历史偏低区，积极买入）。数据来源 tushare H30183.CSI，共 724 个交易日。",
+      "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=76.9→点位9260（偏贵区），P50对应PE=66.1→点位7958（历史中位），P20对应PE=59.9→点位7208（积极买入区）。数据来源 lixinger cn/industry/fundamental/sw_2021 (270000，近似映射自 H30183)。",
       "risk_flags": [
         "当前估值极高，景气稍有放缓就会先压估值",
         "行业内部子赛道多，强景气并不代表全板块同步兑现",
         "海外需求和贸易限制仍可能带来硬件链波动"
       ],
-      "price_date": "2026-04-30",
+      "price_date": "2026-04-29",
       "note_path": "05-A股指数/H30183 中证全指电子指数.md",
       "last_updated": "2026-05-01"
     },
@@ -472,23 +472,23 @@
       "category": "公用事业能源",
       "cycle_position": "复苏中期",
       "prebuy_conclusion": "等待回调 — 高股息有支撑，但煤炭与油气盈利已从低位修复到中后段，当前PE处近3年81.8%分位，赔率不够舒适。",
-      "current_pe": 14.6,
-      "current_dy": 3.95,
-      "pe_3y_percentile": 81.8,
-      "pe_5y_percentile": 86.5,
+      "current_pe": 16.98,
+      "current_dy": 0.03,
+      "pe_3y_percentile": 95.4,
+      "pe_5y_percentile": 97.1,
       "current_index_price": 2963.64,
       "price_bands": [
-        2525,
-        2294,
-        2165
+        2291,
+        2019,
+        1853
       ],
-      "valuation_anchor": "3年历史价格分位锚点（2023-2026）：P80=2525（偏贵区上沿，不追高），P50=2294（历史中位，合理区），P20=2165（历史偏低区，积极买入）。数据来源 tushare 932077.CSI，共 726 个交易日。",
+      "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=13.1→点位2291（偏贵区），P50对应PE=11.6→点位2019（历史中位），P20对应PE=10.6→点位1853（积极买入区）。数据来源 lixinger cn/industry/fundamental/sw_2021 (750000，近似映射自 932077)。",
       "risk_flags": [
         "商品价格回落会直接压缩盈利和估值",
         "前五大权重接近一半，指数过度依赖神华、中石油、中海油等龙头",
         "高股息防御属性已被市场部分提前定价"
       ],
-      "price_date": "2026-04-30",
+      "price_date": "2026-04-29",
       "note_path": "05-A股指数/932077 中证全指能源行业指数.md",
       "last_updated": "2026-05-01"
     },
@@ -499,23 +499,23 @@
       "category": "周期材料",
       "cycle_position": "复苏中期",
       "prebuy_conclusion": "等待回调 — 有色、化工和资源材料景气在修复，但当前PE已到近3年82.9%分位，明显不是舒服的行业篮子买点。",
-      "current_pe": 34.94,
-      "current_dy": 1.2,
-      "pe_3y_percentile": 82.9,
-      "pe_5y_percentile": 82.9,
+      "current_pe": 24.83,
+      "current_dy": 0.01,
+      "pe_3y_percentile": 78.3,
+      "pe_5y_percentile": 68.0,
       "current_index_price": 5448.83,
       "price_bands": [
-        4163,
-        3298,
-        3075
+        5531,
+        4533,
+        3653
       ],
-      "valuation_anchor": "3年历史价格分位锚点（2023-2026）：P80=4163（偏贵区上沿，不追高），P50=3298（历史中位，合理区），P20=3075（历史偏低区，积极买入）。数据来源 tushare 932078.CSI，共 726 个交易日。",
+      "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=25.2→点位5531（偏贵区），P50对应PE=20.7→点位4533（历史中位），P20对应PE=16.7→点位3653（积极买入区）。数据来源 lixinger cn/industry/fundamental/sw_2021 (240000，近似映射自 932078)。",
       "risk_flags": [
         "周期品盈利波动大，PE高低会失真",
         "内部子赛道分化显著，指数容易把强弱行业混在一起买",
         "资源价格一旦回撤，估值和盈利可能双杀"
       ],
-      "price_date": "2026-04-30",
+      "price_date": "2026-04-29",
       "note_path": "05-A股指数/932078 中证全指原材料行业指数.md",
       "last_updated": "2026-05-01"
     },
@@ -526,23 +526,23 @@
       "category": "通用混合",
       "cycle_position": "复苏中期",
       "prebuy_conclusion": "等待回调 — 工业制造景气在修复，但估值已经到近3年95%分位，当前位置更像景气交易后半程，而不是低位配置点。",
-      "current_pe": 27.52,
-      "current_dy": 1.35,
-      "pe_3y_percentile": 95.0,
-      "pe_5y_percentile": 88.3,
+      "current_pe": 54.15,
+      "current_dy": 0.01,
+      "pe_3y_percentile": 100,
+      "pe_5y_percentile": 100,
       "current_index_price": 4781.77,
       "price_bands": [
-        4145,
-        3493,
-        3134
+        3930,
+        3125,
+        2767
       ],
-      "valuation_anchor": "3年历史价格分位锚点（2023-2026）：P80=4145（偏贵区上沿，不追高），P50=3493（历史中位，合理区），P20=3134（历史偏低区，积极买入）。数据来源 tushare 932079.CSI，共 726 个交易日。",
+      "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=44.5→点位3930（偏贵区），P50对应PE=35.4→点位3125（历史中位），P20对应PE=31.3→点位2767（积极买入区）。数据来源 lixinger cn/industry/fundamental/sw_2021 (640000，近似映射自 932079)。",
       "risk_flags": [
         "指数成分复杂，周期错位明显",
         "当前估值处高位，景气不及预期容易先杀估值",
         "宁德时代单一权重较高，会放大新能源链波动"
       ],
-      "price_date": "2026-04-30",
+      "price_date": "2026-04-29",
       "note_path": "05-A股指数/932079 中证全指工业行业指数.md",
       "last_updated": "2026-05-01"
     },
@@ -553,23 +553,23 @@
       "category": "消费医药",
       "cycle_position": "复苏中期",
       "prebuy_conclusion": "等待回调 — 家电和汽车链条较强，但可选消费整体估值已到3年76%分位，当前位置更适合等回调，不适合把复苏预期继续追满。",
-      "current_pe": 23.1,
-      "current_dy": 2.19,
-      "pe_3y_percentile": 76.4,
-      "pe_5y_percentile": 74.0,
+      "current_pe": 34.22,
+      "current_dy": 0.01,
+      "pe_3y_percentile": 79.6,
+      "pe_5y_percentile": 50.5,
       "current_index_price": 5479.46,
       "price_bands": [
-        5480,
-        4879,
-        4446
+        5490,
+        5037,
+        4494
       ],
-      "valuation_anchor": "3年历史价格分位锚点（2023-2026）：P80=5480（偏贵区上沿，不追高），P50=4879（历史中位，合理区），P20=4446（历史偏低区，积极买入）。数据来源 tushare 932080.CSI，共 726 个交易日。",
+      "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=34.3→点位5490（偏贵区），P50对应PE=31.5→点位5037（历史中位），P20对应PE=28.1→点位4494（积极买入区）。数据来源 lixinger cn/industry/fundamental/sw_2021 (280000，近似映射自 932080)。",
       "risk_flags": [
         "汽车和家电权重高，指数对少数龙头依赖较强",
         "居民消费修复不及预期会压制估值",
         "部分高景气环节已经提前透支预期"
       ],
-      "price_date": "2026-04-30",
+      "price_date": "2026-04-29",
       "note_path": "05-A股指数/932080 中证全指可选消费行业指数.md",
       "last_updated": "2026-05-01"
     },
@@ -580,23 +580,23 @@
       "category": "消费医药",
       "cycle_position": "收缩期",
       "prebuy_conclusion": "可买（分批建仓） — 当前已落在低估区，ROE和股息率都不错，虽然白酒仍处收缩期，但赔率已经明显优于大多数成长行业。",
-      "current_pe": 20.03,
-      "current_dy": 3.18,
-      "pe_3y_percentile": 24.1,
-      "pe_5y_percentile": 12.2,
+      "current_pe": 22.0,
+      "current_dy": 0.04,
+      "pe_3y_percentile": 43.4,
+      "pe_5y_percentile": 26.0,
       "current_index_price": 12600.44,
       "price_bands": [
-        15328,
-        13894,
-        13187
+        15593,
+        12744,
+        12050
       ],
-      "valuation_anchor": "3年历史价格分位锚点（2023-2026）：P80=15328（偏贵区上沿，不追高），P50=13894（历史中位，合理区），P20=13187（历史偏低区，积极买入）。数据来源 tushare 932081.CSI，共 726 个交易日。",
+      "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=27.2→点位15593（偏贵区），P50对应PE=22.3→点位12744（历史中位），P20对应PE=21.0→点位12050（积极买入区）。数据来源 lixinger cn/industry/fundamental/sw_2021 (340000，近似映射自 932081)。",
       "risk_flags": [
         "白酒动销恢复慢于预期会拖累整体重估",
         "牧原、温氏等养殖股会带来猪周期波动",
         "高集中度使茅台、五粮液表现对指数影响很大"
       ],
-      "price_date": "2026-04-30",
+      "price_date": "2026-04-29",
       "note_path": "05-A股指数/932081 中证全指主要消费行业指数.md",
       "last_updated": "2026-05-01"
     },
@@ -607,23 +607,23 @@
       "category": "消费医药",
       "cycle_position": "复苏早期",
       "prebuy_conclusion": "分批布局 — 估值不算极低，但相比近5年仍偏低位，行业处在复苏早期，适合长钱慢慢建仓而不是一把梭。",
-      "current_pe": 28.05,
-      "current_dy": 1.48,
-      "pe_3y_percentile": 53.7,
-      "pe_5y_percentile": 23.0,
+      "current_pe": 48.16,
+      "current_dy": 0.01,
+      "pe_3y_percentile": 74.3,
+      "pe_5y_percentile": 78.3,
       "current_index_price": 9368.2,
       "price_bands": [
-        10110,
-        9320,
-        8585
+        9776,
+        8018,
+        7291
       ],
-      "valuation_anchor": "3年历史价格分位锚点（2023-2026）：P80=10110（偏贵区上沿，不追高），P50=9320（历史中位，合理区），P20=8585（历史偏低区，积极买入）。数据来源 tushare 932082.CSI，共 726 个交易日。",
+      "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=50.3→点位9776（偏贵区），P50对应PE=41.2→点位8018（历史中位），P20对应PE=37.5→点位7291（积极买入区）。数据来源 lixinger cn/industry/fundamental/sw_2021 (370000，近似映射自 932082)。",
       "risk_flags": [
         "政策控费和集采会压制部分子赛道利润率",
         "药明、恒瑞等头部资产波动会显著影响指数",
         "复苏节奏不均匀，容易出现结构性跑输"
       ],
-      "price_date": "2026-04-30",
+      "price_date": "2026-04-29",
       "note_path": "05-A股指数/932082 中证全指医药卫生行业指数.md",
       "last_updated": "2026-05-01"
     },
@@ -634,23 +634,23 @@
       "category": "金融",
       "cycle_position": "复苏中期",
       "prebuy_conclusion": "分批布局 — 绝对PE不高、股息率也不错，虽然分位不算便宜，但作为宽金融篮子仍能接受，适合分批而不是追涨。",
-      "current_pe": 8.48,
-      "current_dy": 3.49,
-      "pe_3y_percentile": 64.9,
-      "pe_5y_percentile": 68.2,
+      "current_pe": 10.54,
+      "current_dy": 0.03,
+      "pe_3y_percentile": 2.1,
+      "pe_5y_percentile": 1.2,
       "current_index_price": 8408.83,
       "price_bands": [
-        8798,
-        8133,
-        6710
+        13804,
+        12422,
+        10123
       ],
-      "valuation_anchor": "3年历史价格分位锚点（2023-2026）：P80=8798（偏贵区上沿，不追高），P50=8133（历史中位，合理区），P20=6710（历史偏低区，积极买入）。数据来源 tushare 932083.CSI，共 726 个交易日。",
+      "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=17.3→点位13804（偏贵区），P50对应PE=15.6→点位12422（历史中位），P20对应PE=12.7→点位10123（积极买入区）。数据来源 lixinger cn/industry/fundamental/sw_2021 (490000，近似映射自 932083)。",
       "risk_flags": [
         "券商与银行逻辑不同，指数容易两头都不极致",
         "若市场成交降温，券商部分会拖累整体表现",
         "银行息差和资产质量仍是长期约束"
       ],
-      "price_date": "2026-04-30",
+      "price_date": "2026-04-29",
       "note_path": "05-A股指数/932083 中证全指金融行业指数.md",
       "last_updated": "2026-05-01"
     },
@@ -665,19 +665,19 @@
       "current_dy": 0.96,
       "pe_3y_percentile": 35.2,
       "pe_5y_percentile": 20.8,
-      "current_index_price": 2864.2,
+      "current_index_price": 2821.6,
       "price_bands": [
-        3261,
-        2928,
-        2708
+        3465,
+        2990,
+        2717
       ],
-      "valuation_anchor": "3年历史价格分位锚点（2023-2026）：P80=3261（偏贵区上沿，不追高），P50=2928（历史中位，合理区），P20=2708（历史偏低区，积极买入）。数据来源 tushare 931775.CSI，共 726 个交易日。",
+      "valuation_anchor": "当期PE为负（房地产行业整体亏损），price_bands基于3年历史价格分位P80/P50/P20，PE分位不适用",
       "risk_flags": [
         "估值对地产板块参考意义弱，容易出现价值陷阱",
         "ROE过低说明行业仍未摆脱基本面约束",
         "高政策敏感度带来大波动，不适合作为被动行业底仓"
       ],
-      "price_date": "2026-04-30",
+      "price_date": "2026-04-29",
       "note_path": "05-A股指数/931775 中证全指房地产指数.md",
       "last_updated": "2026-05-01"
     },
@@ -688,23 +688,23 @@
       "category": "成长科技",
       "cycle_position": "复苏中期",
       "prebuy_conclusion": "等待回调 — AI、半导体、服务器和电子链条情绪很热，但官方PE已经站到近3年和5年绝对上沿，当前位置不适合追高。",
-      "current_pe": 72.81,
-      "current_dy": 0.52,
-      "pe_3y_percentile": 100.0,
-      "pe_5y_percentile": 100.0,
+      "current_pe": 151.12,
+      "current_dy": 0.01,
+      "pe_3y_percentile": 49.4,
+      "pe_5y_percentile": 69.7,
       "current_index_price": 9569.06,
       "price_bands": [
-        7807,
-        5770,
-        4644
+        13856,
+        9700,
+        6868
       ],
-      "valuation_anchor": "3年历史价格分位锚点（2023-2026）：P80=7807（偏贵区上沿，不追高），P50=5770（历史中位，合理区），P20=4644（历史偏低区，积极买入）。数据来源 tushare 932084.CSI，共 726 个交易日。",
+      "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=218.8→点位13856（偏贵区），P50对应PE=153.2→点位9700（历史中位），P20对应PE=108.5→点位6868（积极买入区）。数据来源 lixinger cn/industry/fundamental/sw_2021 (710000，近似映射自 932084)。",
       "risk_flags": [
         "估值已在近年上沿，景气稍弱就会先压缩估值",
         "内部子赛道差异大，指数会稀释最强主线的纯度",
         "海外限制和全球电子周期波动仍是长期变量"
       ],
-      "price_date": "2026-04-30",
+      "price_date": "2026-04-29",
       "note_path": "05-A股指数/932084 中证全指信息技术行业指数.md",
       "last_updated": "2026-05-01"
     },
@@ -715,23 +715,23 @@
       "category": "通用混合",
       "cycle_position": "复苏早期",
       "prebuy_conclusion": "等待回调 — 光模块和算力通信景气很强，但估值也已经透支到3年91%分位，指数层面更适合等大波动后的回撤。",
-      "current_pe": 51.15,
-      "current_dy": 1.0,
-      "pe_3y_percentile": 91.3,
-      "pe_5y_percentile": 91.7,
+      "current_pe": 31.76,
+      "current_dy": 0.02,
+      "pe_3y_percentile": 99.3,
+      "pe_5y_percentile": 85.9,
       "current_index_price": 12178.57,
       "price_bands": [
-        9267,
-        6419,
-        5471
+        10017,
+        8552,
+        7992
       ],
-      "valuation_anchor": "3年历史价格分位锚点（2023-2026）：P80=9267（偏贵区上沿，不追高），P50=6419（历史中位，合理区），P20=5471（历史偏低区，积极买入）。数据来源 tushare 932085.CSI，共 726 个交易日。",
+      "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=26.1→点位10017（偏贵区），P50对应PE=22.3→点位8552（历史中位），P20对应PE=20.8→点位7992（积极买入区）。数据来源 lixinger cn/industry/fundamental/sw_2021 (730000，近似映射自 932085)。",
       "risk_flags": [
         "前两大权重过高，指数实质上重仓光模块",
         "一旦AI资本开支预期放缓，估值回撤会很剧烈",
         "运营商与高弹性科技股混编会稀释单一逻辑"
       ],
-      "price_date": "2026-04-30",
+      "price_date": "2026-04-29",
       "note_path": "05-A股指数/932085 中证全指通信服务行业指数.md",
       "last_updated": "2026-05-01"
     },
@@ -742,23 +742,23 @@
       "category": "公用事业能源",
       "cycle_position": "复苏中期",
       "prebuy_conclusion": "等待回调 — 公用事业本身偏防御，但当前分位并不便宜，红利属性已经被买掉不少，适合等回调再看。",
-      "current_pe": 19.37,
-      "current_dy": 2.38,
-      "pe_3y_percentile": 76.7,
-      "pe_5y_percentile": 80.8,
+      "current_pe": 20.86,
+      "current_dy": 0.02,
+      "pe_3y_percentile": 78.9,
+      "pe_5y_percentile": 54.8,
       "current_index_price": 2832.84,
       "price_bands": [
-        2639,
-        2514,
-        2379
+        2847,
+        2615,
+        2481
       ],
-      "valuation_anchor": "3年历史价格分位锚点（2023-2026）：P80=2639（偏贵区上沿，不追高），P50=2514（历史中位，合理区），P20=2379（历史偏低区，积极买入）。数据来源 tushare 932086.CSI，共 726 个交易日。",
+      "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=21.0→点位2847（偏贵区），P50对应PE=19.2→点位2615（历史中位），P20对应PE=18.3→点位2481（积极买入区）。数据来源 lixinger cn/industry/fundamental/sw_2021 (410000，近似映射自 932086)。",
       "risk_flags": [
         "高股息防御逻辑拥挤后，回撤时弹性有限但估值也会压缩",
         "子行业估值体系不同，指数平均化后纯度下降",
         "利率与监管政策变化会影响公用事业重估节奏"
       ],
-      "price_date": "2026-04-30",
+      "price_date": "2026-04-29",
       "note_path": "05-A股指数/932086 中证全指公用事业行业指数.md",
       "last_updated": "2026-05-01"
     },
@@ -773,23 +773,23 @@
       "category": "成长科技",
       "cycle_position": "复苏中期",
       "prebuy_conclusion": "等待回调 — 赛道景气正在恢复，但当前官方PE 115.69x已处3年/5年100%分位，估值大幅跑在基本面前面，当前位置不适合追高。",
-      "current_pe": 115.69,
-      "current_dy": 0.15,
-      "pe_3y_percentile": 100.0,
-      "pe_5y_percentile": 100.0,
+      "current_pe": 118.26,
+      "current_dy": 0.0,
+      "pe_3y_percentile": 78.2,
+      "pe_5y_percentile": 86.8,
       "current_index_price": 11451.16,
       "price_bands": [
-        8645,
-        6079,
-        4567
+        10974,
+        9493,
+        7356
       ],
-      "valuation_anchor": "3年历史价格分位锚点（2023-2026）：P80=8645（偏贵区上沿，不追高），P50=6079（历史中位，合理区），P20=4567（历史偏低区，积极买入）。数据来源 tushare H30184.CSI，共 726 个交易日。",
+      "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=118.8→点位10974（偏贵区），P50对应PE=102.8→点位9493（历史中位），P20对应PE=79.7→点位7356（积极买入区）。数据来源 lixinger cn/index/fundamental (H30184)。",
       "risk_flags": [
         "当前估值已到近3年上沿，景气稍弱就可能先压缩估值",
         "半导体各子赛道修复不均匀，指数会把高质量与高估值公司一起打包买入",
         "先进制程与设备环节仍受外部限制和全球需求波动影响"
       ],
-      "price_date": "2026-04-30",
+      "price_date": "2026-04-29",
       "note_path": "05-A股指数/931912 中证半导体产业指数.md",
       "last_updated": "2026-05-01"
     },
@@ -804,23 +804,23 @@
       "category": "成长科技",
       "cycle_position": "复苏早期",
       "prebuy_conclusion": "等待回调 — 赛道处于复苏早期，但按2026年4月30日成分股加权代理PE约85.4x，处3年/5年98.5%分位，当前整体赔率不足，至少等回落至580点附近再看。",
-      "current_pe": 85.36,
-      "current_dy": 0.6,
-      "pe_3y_percentile": 98.5,
-      "pe_5y_percentile": 98.5,
+      "current_pe": 67.48,
+      "current_dy": 0.01,
+      "pe_3y_percentile": 75.7,
+      "pe_5y_percentile": 85.4,
       "current_index_price": 1936.83,
       "price_bands": [
-        1814,
-        1526,
-        1326
+        1983,
+        1389,
+        1137
       ],
-      "valuation_anchor": "3年历史价格分位锚点（2023-2026）：P80=1814（偏贵区上沿，不追高），P50=1526（历史中位，合理区），P20=1326（历史偏低区，积极买入）。数据来源 tushare H30590.CSI，共 726 个交易日。",
+      "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=69.8→点位1983（偏贵区），P50对应PE=48.9→点位1389（历史中位），P20对应PE=40.0→点位1137（积极买入区）。数据来源 lixinger cn/index/fundamental (H30590)。",
       "risk_flags": [
         "高权重股盈利质量偏弱，加权ROE仅约9.0%，指数盈利底盘不扎实",
         "估值高度前置，当前代理PE较沪深300溢价约452%，一旦订单兑现慢于预期易出现估值压缩",
         "主题暴露并不纯，工业自动化和AI软件权重较高，不等于纯人形机器人Beta"
       ],
-      "price_date": "2026-04-30",
+      "price_date": "2026-04-29",
       "note_path": "05-A股指数/931571 中证机器人指数.md",
       "last_updated": "2026-05-01"
     },
@@ -836,23 +836,23 @@
       "category": "通用混合",
       "cycle_position": "复苏早期",
       "prebuy_conclusion": "分批布局 — 出口管制政策催化已落地，但PE处3年83.4%高分位，政策预期已被充分定价；等回调至2700点以下（PE约43x）再分批建仓，勿追高",
-      "current_pe": 50.32,
-      "current_dy": 0.72,
-      "pe_3y_percentile": 83.4,
-      "pe_5y_percentile": 83.4,
+      "current_pe": 41.05,
+      "current_dy": 0.01,
+      "pe_3y_percentile": 83.1,
+      "pe_5y_percentile": 85.2,
       "current_index_price": 3141.52,
       "price_bands": [
-        2620,
-        1674,
-        1423
+        3034,
+        2467,
+        2179
       ],
-      "valuation_anchor": "3年历史价格分位锚点（2023-2026）：P80=2620（偏贵区上沿，不追高），P50=1674（历史中位，合理区），P20=1423（历史偏低区，积极买入）。数据来源 tushare 930598.CSI，共 726 个交易日。",
+      "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=40.1→点位3034（偏贵区），P50对应PE=32.6→点位2467（历史中位），P20对应PE=28.8→点位2179（积极买入区）。数据来源 lixinger cn/index/fundamental (930598)。",
       "risk_flags": [
         "稀土价格强周期波动，北方稀土ROE对价格极度敏感",
         "国际替代供应链加速：出口管制刺激澳洲/非洲稀土矿提速",
         "金风科技（7.5%权重）为风电整机商，稀土涨价对其为成本压力"
       ],
-      "price_date": "2026-04-30",
+      "price_date": "2026-04-29",
       "note_path": "05-A股指数/930598 中证稀土产业指数.md",
       "last_updated": "2026-05-01"
     },
@@ -866,23 +866,23 @@
       "category": "消费医药",
       "cycle_position": "收缩期",
       "prebuy_conclusion": "可买（分批建仓）— 当前PE=18.5x处3年16.4%分位已在低估区，含约15%猪周期养殖股（牧原/温氏），非纯消费品牌敞口，了解成分后积极建仓",
-      "current_pe": 18.46,
-      "current_dy": 3.65,
-      "pe_3y_percentile": 16.4,
-      "pe_5y_percentile": 8.1,
+      "current_pe": 22.18,
+      "current_dy": 0.04,
+      "pe_3y_percentile": 51.1,
+      "pe_5y_percentile": 30.6,
       "current_index_price": 14358.23,
       "price_bands": [
-        18139,
-        16367,
-        15444
+        17776,
+        14254,
+        12583
       ],
-      "valuation_anchor": "3年历史价格分位锚点（2023-2026）：P80=18139（偏贵区上沿，不追高），P50=16367（历史中位，合理区），P20=15444（历史偏低区，积极买入）。数据来源 tushare 000932.SH，共 726 个交易日。",
+      "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=27.5→点位17776（偏贵区），P50对应PE=22.0→点位14254（历史中位），P20对应PE=19.4→点位12583（积极买入区）。数据来源 lixinger cn/index/fundamental (000932)。",
       "risk_flags": [
         "养殖板块（牧原+温氏约15.5%权重）处于猪价下行周期，ROE为负拖累整体盈利质量",
         "白酒渠道库存：次高端白酒去化未完成，动销恢复节奏不确定",
         "消费复苏不及预期：内需弹性依赖就业和收入预期改善"
       ],
-      "price_date": "2026-04-30",
+      "price_date": "2026-04-29",
       "note_path": "05-A股指数/000932 中证消费指数.md",
       "last_updated": "2026-05-01"
     },
@@ -896,23 +896,23 @@
       "category": "消费医药",
       "cycle_position": "收缩期",
       "prebuy_conclusion": "可买（积极建仓）— 当前加权PE约22.6x处3年9.7%分位极低位，DY=4.3%兜底，主题纯度高（前5大均为消费品牌龙头），白酒出清末段赔率充足",
-      "current_pe": 22.61,
-      "current_dy": 4.3,
-      "pe_3y_percentile": 9.7,
-      "pe_5y_percentile": 4.8,
+      "current_pe": 21.44,
+      "current_dy": 0.04,
+      "pe_3y_percentile": 42.0,
+      "pe_5y_percentile": 25.1,
       "current_index_price": 16477.42,
       "price_bands": [
-        22135,
-        19452,
-        17977
+        20357,
+        16773,
+        15853
       ],
-      "valuation_anchor": "3年历史价格分位锚点（2023-2026）：P80=22135（偏贵区上沿，不追高），P50=19452（历史中位，合理区），P20=17977（历史偏低区，积极买入）。数据来源 tushare 399396.SZ，共 726 个交易日。",
+      "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=26.4→点位20357（偏贵区），P50对应PE=21.8→点位16773（历史中位），P20对应PE=20.6→点位15853（积极买入区）。数据来源 lixinger cn/index/fundamental (399396)。",
       "risk_flags": [
         "白酒高度集中（约50%权重），茅台/五粮液批价若二次下探则指数承压",
         "次高端白酒（洋河PE=73x）业绩下滑，若蔓延至汾酒等则拖累整体盈利修复",
         "内需弱复苏叠加贸易摩擦，白酒去库存时间线可能延长至2026年底"
       ],
-      "price_date": "2026-04-30",
+      "price_date": "2026-04-29",
       "note_path": "05-A股指数/399989 中证医疗指数.md",
       "last_updated": "2026-05-01"
     },
@@ -928,23 +928,23 @@
       "category": "消费医药",
       "cycle_position": "复苏早期",
       "prebuy_conclusion": "分批布局 — 当前PE=29.97处3年31%分位（低估区下沿），相对沪深300溢价94%偏高但赔率合理，赛道处复苏早期，长钱可40%首仓入场",
-      "current_pe": 29.97,
-      "current_dy": 1.43,
-      "pe_3y_percentile": 31.0,
-      "pe_5y_percentile": 9.1,
+      "current_pe": 29.94,
+      "current_dy": 0.01,
+      "pe_3y_percentile": 35.8,
+      "pe_5y_percentile": 38.0,
       "current_index_price": 6687.22,
       "price_bands": [
-        8006,
-        7006,
-        6483
+        7464,
+        6951,
+        6540
       ],
-      "valuation_anchor": "3年历史价格分位锚点（2023-2026）：P80=8006（偏贵区上沿，不追高），P50=7006（历史中位，合理区），P20=6483（历史偏低区，积极买入）。数据来源 tushare 399989.SZ，共 726 个交易日。",
+      "valuation_anchor": "3年历史PE分位锚点（2026-04-29）：P80对应PE=33.1→点位7464（偏贵区），P50对应PE=30.9→点位6951（历史中位），P20对应PE=29.0→点位6540（积极买入区）。数据来源 lixinger cn/index/fundamental (399989)。",
       "risk_flags": [
         "药明康德《生物安全法》草案悬而未决，CXO板块占指数约12%权重",
         "器械集采持续扩大，价格降幅超50%压制相关成分股收入端",
         "医疗反腐长尾影响，医院采购决策周期拉长"
       ],
-      "price_date": "2026-04-30",
+      "price_date": "2026-04-29",
       "note_path": "05-A股指数/399989 中证医疗指数.md",
       "last_updated": "2026-05-01"
     }
