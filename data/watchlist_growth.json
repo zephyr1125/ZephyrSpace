@@ -73,7 +73,7 @@
     "price_date": "2026-04-24",
     "board": "沪",
     "dv_ttm": 2.18,
-    "next_earnings_date": "2026-04-30",
+    "next_earnings_date": "2026-08-31",
     "next_earnings_type": "半年报",
     "next_earnings_time": "2026-08"
   },
@@ -224,7 +224,7 @@
     ],
     "valuation_anchor": "前瞻PE+增速验证：追高区>220(PE>28x，成长溢价过足) / 中性区175-220(PE22-28x，等季度增速持续验证) / 较好区间140-175(PE18-22x，赔率改善可建仓) / 更低区间<140(PE<18x，成长折价，安全边际明显)",
     "dv_ttm": 1.25,
-    "next_earnings_date": "2026-04-30",
+    "next_earnings_date": "2026-08-31",
     "next_earnings_type": "半年报",
     "next_earnings_time": "2026-08"
   },
@@ -256,7 +256,7 @@
       "consider": "115-135元，PE30-35x，较好入场区间",
       "strong_buy": "100-115元以下，PE26-30x，安全边际充足"
     },
-    "next_earnings_date": "2026-04-30",
+    "next_earnings_date": "2026-08-31",
     "next_earnings_type": "半年报",
     "next_earnings_time": "2026-08",
     "prebuy_conclusion": "Q1营收+10.5%/净利+23.9%，增速放缓但盈利质量提升，激光控制系统龙头逻辑维持，等PE<35x或H1验证增速回升建仓。"
@@ -335,7 +335,7 @@
     ],
     "valuation_anchor": "半导体设备PE+利润恢复：追高区>485(PE>62x，历史高分位，不追) / 中性区420-485(PE约55-62x，等待2026利润恢复) / 较好区间340-420(PE约45-55x，国产替代核心可研究性布局) / 更低区间<340(PE<45x，安全边际改善)",
     "dv_ttm": 0.17,
-    "next_earnings_date": "2026-04-30",
+    "next_earnings_date": "2026-08-31",
     "next_earnings_type": "半年报",
     "next_earnings_time": "2026-08"
   },
@@ -647,7 +647,7 @@
     "price_date": "2026-04-27",
     "board": "沪",
     "dv_ttm": 2.1,
-    "next_earnings_date": "2026-04-30",
+    "next_earnings_date": "2026-08-31",
     "next_earnings_type": "半年报",
     "next_earnings_time": "2026-08"
   },
@@ -673,7 +673,7 @@
       "机器人执行器实际收入占比未在年报单独披露，叙事溢价风险高"
     ],
     "dv_ttm": 0.91,
-    "next_earnings_date": "2026-04-30",
+    "next_earnings_date": "2026-08-31",
     "next_earnings_type": "半年报",
     "next_earnings_time": "2026-08"
   },
