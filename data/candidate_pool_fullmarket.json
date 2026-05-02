@@ -1,0 +1,2360 @@
+{
+  "meta": {
+    "generated": "2026-05-02",
+    "source": "同花顺筛选器",
+    "filters": {
+      "pe_range": "1-50",
+      "market_cap_min_亿": 50,
+      "roe_min_approx": "3（单季，≈年化12%）",
+      "revenue_yoy_min": "-10%",
+      "debt_ratio_max": "70%",
+      "exchange": "沪深A股",
+      "exclude_st": true
+    },
+    "total": 234,
+    "in_watchlist": 39,
+    "new_candidates": 195
+  },
+  "stocks": [
+    {
+      "code": "002215.SZ",
+      "name": "诺 普 信",
+      "industry": "种植业与林业",
+      "price": 10.92,
+      "pe": 3.6,
+      "pb": 2.25,
+      "mc_亿": 110.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "600332.SH",
+      "name": "白云山",
+      "industry": "中药",
+      "price": 22.65,
+      "pe": 5.2,
+      "pb": 0.93,
+      "mc_亿": 368.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "600961.SH",
+      "name": "株冶集团",
+      "industry": "工业金属",
+      "price": 26.49,
+      "pe": 6.2,
+      "pb": 5.62,
+      "mc_亿": 284.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "002701.SZ",
+      "name": "奥瑞金",
+      "industry": "包装印刷",
+      "price": 5.5,
+      "pe": 6.8,
+      "pb": 1.37,
+      "mc_亿": 141.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "601038.SH",
+      "name": "一拖股份",
+      "industry": "专用设备",
+      "price": 13.84,
+      "pe": 6.9,
+      "pb": 1.89,
+      "mc_亿": 156.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "600578.SH",
+      "name": "京能电力",
+      "industry": "电力",
+      "price": 4.88,
+      "pe": 7.4,
+      "pb": 1.3,
+      "mc_亿": 327.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "002832.SZ",
+      "name": "比音勒芬",
+      "industry": "服装家纺",
+      "price": 20.24,
+      "pe": 7.5,
+      "pb": 2.02,
+      "mc_亿": 116.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "601233.SH",
+      "name": "桐昆股份",
+      "industry": "化学纤维",
+      "price": 24.21,
+      "pe": 7.6,
+      "pb": 1.43,
+      "mc_亿": 576.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "000807.SZ",
+      "name": "云铝股份",
+      "industry": "工业金属",
+      "price": 31.8,
+      "pe": 7.7,
+      "pb": 3.09,
+      "mc_亿": 1103.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "000612.SZ",
+      "name": "焦作万方",
+      "industry": "工业金属",
+      "price": 13.29,
+      "pe": 7.8,
+      "pb": 2.06,
+      "mc_亿": 158.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "000567.SZ",
+      "name": "海德股份",
+      "industry": "多元金融",
+      "price": 6.67,
+      "pe": 7.8,
+      "pb": 2.16,
+      "mc_亿": 130.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "601677.SH",
+      "name": "明泰铝业",
+      "industry": "工业金属",
+      "price": 17.75,
+      "pe": 7.9,
+      "pb": 1.11,
+      "mc_亿": 221.0,
+      "in_watchlist": true
+    },
+    {
+      "code": "300723.SZ",
+      "name": "一品红",
+      "industry": "化学制药",
+      "price": 41.45,
+      "pe": 7.9,
+      "pb": 9.67,
+      "mc_亿": 187.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "000933.SZ",
+      "name": "神火股份",
+      "industry": "工业金属",
+      "price": 32.13,
+      "pe": 7.9,
+      "pb": 2.69,
+      "mc_亿": 723.0,
+      "in_watchlist": true
+    },
+    {
+      "code": "600887.SH",
+      "name": "伊利股份",
+      "industry": "饮料制造",
+      "price": 27.46,
+      "pe": 8.1,
+      "pb": 2.91,
+      "mc_亿": 1737.0,
+      "in_watchlist": true
+    },
+    {
+      "code": "600398.SH",
+      "name": "海澜之家",
+      "industry": "服装家纺",
+      "price": 6.61,
+      "pe": 8.4,
+      "pb": 1.65,
+      "mc_亿": 317.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "002745.SZ",
+      "name": "木林森",
+      "industry": "光学光电子",
+      "price": 9.49,
+      "pe": 8.4,
+      "pb": 1.19,
+      "mc_亿": 141.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "002668.SZ",
+      "name": "TCL智家",
+      "industry": "白色家电",
+      "price": 9.55,
+      "pe": 8.4,
+      "pb": 2.69,
+      "mc_亿": 104.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "600861.SH",
+      "name": "北京人力",
+      "industry": "其他社会服务",
+      "price": 15.9,
+      "pe": 8.6,
+      "pb": 1.19,
+      "mc_亿": 90.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "688221.SH",
+      "name": "前沿生物-U",
+      "industry": "化学制药",
+      "price": 20.93,
+      "pe": 8.6,
+      "pb": 7.07,
+      "mc_亿": 78.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "002532.SZ",
+      "name": "天山铝业",
+      "industry": "工业金属",
+      "price": 16.64,
+      "pe": 8.7,
+      "pb": 2.46,
+      "mc_亿": 770.0,
+      "in_watchlist": true
+    },
+    {
+      "code": "603049.SH",
+      "name": "中策橡胶",
+      "industry": "汽车零部件",
+      "price": 48.94,
+      "pe": 8.8,
+      "pb": 1.67,
+      "mc_亿": 428.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "300773.SZ",
+      "name": "拉卡拉",
+      "industry": "多元金融",
+      "price": 26.94,
+      "pe": 8.8,
+      "pb": 4.3,
+      "mc_亿": 209.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "002345.SZ",
+      "name": "潮宏基",
+      "industry": "服装家纺",
+      "price": 10.57,
+      "pe": 8.9,
+      "pb": 2.33,
+      "mc_亿": 94.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "601600.SH",
+      "name": "中国铝业",
+      "industry": "工业金属",
+      "price": 11.65,
+      "pe": 9.0,
+      "pb": 2.48,
+      "mc_亿": 1999.0,
+      "in_watchlist": true
+    },
+    {
+      "code": "002128.SZ",
+      "name": "电投能源",
+      "industry": "煤炭开采加工",
+      "price": 32.36,
+      "pe": 9.1,
+      "pb": 1.83,
+      "mc_亿": 725.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "603198.SH",
+      "name": "迎驾贡酒",
+      "industry": "白酒",
+      "price": 38.0,
+      "pe": 9.1,
+      "pb": 2.65,
+      "mc_亿": 304.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "000848.SZ",
+      "name": "承德露露",
+      "industry": "饮料制造",
+      "price": 8.9,
+      "pe": 9.1,
+      "pb": 2.45,
+      "mc_亿": 91.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "603588.SH",
+      "name": "高能环境",
+      "industry": "环境治理",
+      "price": 14.58,
+      "pe": 9.2,
+      "pb": 2.17,
+      "mc_亿": 222.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "002588.SZ",
+      "name": "史丹利",
+      "industry": "农化制品",
+      "price": 10.94,
+      "pe": 9.2,
+      "pb": 1.59,
+      "mc_亿": 126.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "000651.SZ",
+      "name": "格力电器",
+      "industry": "白色家电",
+      "price": 40.05,
+      "pe": 9.2,
+      "pb": 1.48,
+      "mc_亿": 2243.0,
+      "in_watchlist": true
+    },
+    {
+      "code": "605599.SH",
+      "name": "菜百股份",
+      "industry": "服装家纺",
+      "price": 19.19,
+      "pe": 9.4,
+      "pb": 2.95,
+      "mc_亿": 149.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "600595.SH",
+      "name": "中孚实业",
+      "industry": "工业金属",
+      "price": 7.73,
+      "pe": 9.4,
+      "pb": 1.73,
+      "mc_亿": 310.0,
+      "in_watchlist": true
+    },
+    {
+      "code": "000902.SZ",
+      "name": "新洋丰",
+      "industry": "农化制品",
+      "price": 15.24,
+      "pe": 9.6,
+      "pb": 1.55,
+      "mc_亿": 191.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "002772.SZ",
+      "name": "众兴菌业",
+      "industry": "种植业与林业",
+      "price": 17.24,
+      "pe": 9.9,
+      "pb": 1.78,
+      "mc_亿": 65.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "000999.SZ",
+      "name": "华润三九",
+      "industry": "中药",
+      "price": 25.91,
+      "pe": 10.0,
+      "pb": 1.85,
+      "mc_亿": 431.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "600711.SH",
+      "name": "盛屯矿业",
+      "industry": "工业金属",
+      "price": 13.76,
+      "pe": 10.4,
+      "pb": 2.43,
+      "mc_亿": 425.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "601058.SH",
+      "name": "赛轮轮胎",
+      "industry": "汽车零部件",
+      "price": 13.92,
+      "pe": 10.8,
+      "pb": 2.04,
+      "mc_亿": 458.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "688266.SH",
+      "name": "泽璟制药-U",
+      "industry": "化学制药",
+      "price": 104.0,
+      "pe": 10.9,
+      "pb": 16.07,
+      "mc_亿": 275.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "601899.SH",
+      "name": "紫金矿业",
+      "industry": "贵金属",
+      "price": 33.3,
+      "pe": 11.0,
+      "pb": 4.49,
+      "mc_亿": 8855.0,
+      "in_watchlist": true
+    },
+    {
+      "code": "300146.SZ",
+      "name": "汤臣倍健",
+      "industry": "食品加工制造",
+      "price": 10.5,
+      "pe": 11.1,
+      "pb": 1.54,
+      "mc_亿": 178.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "000737.SZ",
+      "name": "北方铜业",
+      "industry": "工业金属",
+      "price": 14.34,
+      "pe": 11.1,
+      "pb": 3.67,
+      "mc_亿": 273.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "601168.SH",
+      "name": "西部矿业",
+      "industry": "工业金属",
+      "price": 29.59,
+      "pe": 11.1,
+      "pb": 3.53,
+      "mc_亿": 705.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "002448.SZ",
+      "name": "中原内配",
+      "industry": "汽车零部件",
+      "price": 15.11,
+      "pe": 11.2,
+      "pb": 2.26,
+      "mc_亿": 89.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "600323.SH",
+      "name": "瀚蓝环境",
+      "industry": "环境治理",
+      "price": 32.01,
+      "pe": 11.3,
+      "pb": 1.72,
+      "mc_亿": 261.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "002266.SZ",
+      "name": "浙富控股",
+      "industry": "环境治理",
+      "price": 5.28,
+      "pe": 11.4,
+      "pb": 2.18,
+      "mc_亿": 276.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "000538.SZ",
+      "name": "云南白药",
+      "industry": "中药",
+      "price": 53.05,
+      "pe": 11.6,
+      "pb": 2.25,
+      "mc_亿": 947.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "000858.SZ",
+      "name": "五 粮 液",
+      "industry": "白酒",
+      "price": 97.08,
+      "pe": 11.7,
+      "pb": 2.94,
+      "mc_亿": 3768.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "601083.SH",
+      "name": "锦江航运",
+      "industry": "港口航运",
+      "price": 12.11,
+      "pe": 11.7,
+      "pb": 1.62,
+      "mc_亿": 157.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "002216.SZ",
+      "name": "三全食品",
+      "industry": "食品加工制造",
+      "price": 14.38,
+      "pe": 11.7,
+      "pb": 2.59,
+      "mc_亿": 126.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "601021.SH",
+      "name": "春秋航空",
+      "industry": "机场航运",
+      "price": 47.18,
+      "pe": 11.7,
+      "pb": 2.48,
+      "mc_亿": 462.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "600433.SH",
+      "name": "冠豪高新",
+      "industry": "造纸",
+      "price": 4.84,
+      "pe": 11.8,
+      "pb": 1.92,
+      "mc_亿": 85.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "002648.SZ",
+      "name": "卫星化学",
+      "industry": "化学制品",
+      "price": 29.6,
+      "pe": 11.8,
+      "pb": 2.81,
+      "mc_亿": 997.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "002752.SZ",
+      "name": "昇兴股份",
+      "industry": "包装印刷",
+      "price": 7.4,
+      "pe": 11.9,
+      "pb": 1.96,
+      "mc_亿": 72.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "002379.SZ",
+      "name": "宏桥控股",
+      "industry": "工业金属",
+      "price": 24.9,
+      "pe": 12.0,
+      "pb": 6.21,
+      "mc_亿": 3245.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "603816.SH",
+      "name": "顾家家居",
+      "industry": "家居用品",
+      "price": 29.04,
+      "pe": 12.0,
+      "pb": 2.15,
+      "mc_亿": 239.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "601975.SH",
+      "name": "招商南油",
+      "industry": "港口航运",
+      "price": 4.48,
+      "pe": 12.1,
+      "pb": 1.75,
+      "mc_亿": 210.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "600938.SH",
+      "name": "中国海油",
+      "industry": "油气开采及服务",
+      "price": 39.99,
+      "pe": 12.1,
+      "pb": 2.27,
+      "mc_亿": 19007.0,
+      "in_watchlist": true
+    },
+    {
+      "code": "000333.SZ",
+      "name": "美的集团",
+      "industry": "白色家电",
+      "price": 81.1,
+      "pe": 12.2,
+      "pb": 2.65,
+      "mc_亿": 6169.0,
+      "in_watchlist": true
+    },
+    {
+      "code": "603713.SH",
+      "name": "密尔克卫",
+      "industry": "物流",
+      "price": 56.87,
+      "pe": 12.2,
+      "pb": 1.83,
+      "mc_亿": 90.0,
+      "in_watchlist": true
+    },
+    {
+      "code": "600662.SH",
+      "name": "外服控股",
+      "industry": "其他社会服务",
+      "price": 5.07,
+      "pe": 12.2,
+      "pb": 2.13,
+      "mc_亿": 116.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "002517.SZ",
+      "name": "恺英网络",
+      "industry": "游戏",
+      "price": 17.98,
+      "pe": 12.3,
+      "pb": 3.71,
+      "mc_亿": 384.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "301219.SZ",
+      "name": "腾远钴业",
+      "industry": "能源金属",
+      "price": 88.7,
+      "pe": 12.3,
+      "pb": 2.65,
+      "mc_亿": 261.0,
+      "in_watchlist": true
+    },
+    {
+      "code": "002170.SZ",
+      "name": "芭田股份",
+      "industry": "农化制品",
+      "price": 13.9,
+      "pe": 12.3,
+      "pb": 3.33,
+      "mc_亿": 135.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "601061.SH",
+      "name": "中信金属",
+      "industry": "贸易",
+      "price": 13.86,
+      "pe": 12.3,
+      "pb": 2.8,
+      "mc_亿": 679.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "000989.SZ",
+      "name": "九芝堂",
+      "industry": "中药",
+      "price": 9.65,
+      "pe": 12.5,
+      "pb": 2.14,
+      "mc_亿": 83.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "603799.SH",
+      "name": "华友钴业",
+      "industry": "能源金属",
+      "price": 66.59,
+      "pe": 12.6,
+      "pb": 2.5,
+      "mc_亿": 1263.0,
+      "in_watchlist": true
+    },
+    {
+      "code": "600598.SH",
+      "name": "北大荒",
+      "industry": "种植业与林业",
+      "price": 16.75,
+      "pe": 12.8,
+      "pb": 3.47,
+      "mc_亿": 298.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "603993.SH",
+      "name": "洛阳钼业",
+      "industry": "工业金属",
+      "price": 18.62,
+      "pe": 12.8,
+      "pb": 4.48,
+      "mc_亿": 3984.0,
+      "in_watchlist": true
+    },
+    {
+      "code": "601872.SH",
+      "name": "招商轮船",
+      "industry": "港口航运",
+      "price": 17.6,
+      "pe": 12.9,
+      "pb": 3.15,
+      "mc_亿": 1421.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "600285.SH",
+      "name": "羚锐制药",
+      "industry": "中药",
+      "price": 22.36,
+      "pe": 12.9,
+      "pb": 3.48,
+      "mc_亿": 127.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "000975.SZ",
+      "name": "山金国际",
+      "industry": "贵金属",
+      "price": 26.05,
+      "pe": 13.0,
+      "pb": 4.45,
+      "mc_亿": 723.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "300815.SZ",
+      "name": "玉禾田",
+      "industry": "环境治理",
+      "price": 21.39,
+      "pe": 13.0,
+      "pb": 1.81,
+      "mc_亿": 85.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "600993.SH",
+      "name": "马应龙",
+      "industry": "中药",
+      "price": 26.03,
+      "pe": 13.2,
+      "pb": 2.44,
+      "mc_亿": 112.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "600489.SH",
+      "name": "中金黄金",
+      "industry": "贵金属",
+      "price": 25.96,
+      "pe": 13.2,
+      "pb": 3.84,
+      "mc_亿": 1258.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "000680.SZ",
+      "name": "山推股份",
+      "industry": "工程机械",
+      "price": 11.91,
+      "pe": 13.3,
+      "pb": 2.76,
+      "mc_亿": 179.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "600233.SH",
+      "name": "圆通速递",
+      "industry": "物流",
+      "price": 21.5,
+      "pe": 13.3,
+      "pb": 2.03,
+      "mc_亿": 736.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "300181.SZ",
+      "name": "佐力药业",
+      "industry": "中药",
+      "price": 15.21,
+      "pe": 13.4,
+      "pb": 3.12,
+      "mc_亿": 107.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "000758.SZ",
+      "name": "中色股份",
+      "industry": "工业金属",
+      "price": 7.01,
+      "pe": 13.4,
+      "pb": 2.24,
+      "mc_亿": 140.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "600026.SH",
+      "name": "中远海能",
+      "industry": "港口航运",
+      "price": 21.59,
+      "pe": 13.6,
+      "pb": 2.45,
+      "mc_亿": 1180.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "002468.SZ",
+      "name": "申通快递",
+      "industry": "物流",
+      "price": 16.35,
+      "pe": 13.6,
+      "pb": 2.2,
+      "mc_亿": 250.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "003006.SZ",
+      "name": "百亚股份",
+      "industry": "美容护理",
+      "price": 18.51,
+      "pe": 13.8,
+      "pb": 5.05,
+      "mc_亿": 80.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "600362.SH",
+      "name": "江西铜业",
+      "industry": "工业金属",
+      "price": 45.46,
+      "pe": 14.0,
+      "pb": 1.87,
+      "mc_亿": 1574.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "603444.SH",
+      "name": "吉比特",
+      "industry": "游戏",
+      "price": 406.61,
+      "pe": 14.2,
+      "pb": 4.88,
+      "mc_亿": 293.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "000425.SZ",
+      "name": "徐工机械",
+      "industry": "工程机械",
+      "price": 9.95,
+      "pe": 14.2,
+      "pb": 1.87,
+      "mc_亿": 1169.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "002558.SZ",
+      "name": "巨人网络",
+      "industry": "游戏",
+      "price": 32.82,
+      "pe": 14.4,
+      "pb": 3.82,
+      "mc_亿": 624.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "002602.SZ",
+      "name": "世纪华通",
+      "industry": "游戏",
+      "price": 16.01,
+      "pe": 14.6,
+      "pb": 3.65,
+      "mc_亿": 1180.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "000429.SZ",
+      "name": "粤高速Ａ",
+      "industry": "公路铁路运输",
+      "price": 12.58,
+      "pe": 14.6,
+      "pb": 2.28,
+      "mc_亿": 263.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "000963.SZ",
+      "name": "华东医药",
+      "industry": "化学制药",
+      "price": 33.35,
+      "pe": 14.6,
+      "pb": 2.27,
+      "mc_亿": 585.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "002001.SZ",
+      "name": "新 和 成",
+      "industry": "化学制药",
+      "price": 34.8,
+      "pe": 14.6,
+      "pb": 3.04,
+      "mc_亿": 1070.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "603156.SH",
+      "name": "养元饮品",
+      "industry": "饮料制造",
+      "price": 37.55,
+      "pe": 14.7,
+      "pb": 4.77,
+      "mc_亿": 473.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "002083.SZ",
+      "name": "孚日股份",
+      "industry": "纺织制造",
+      "price": 11.3,
+      "pe": 14.8,
+      "pb": 2.19,
+      "mc_亿": 107.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "002833.SZ",
+      "name": "弘亚数控",
+      "industry": "专用设备",
+      "price": 20.41,
+      "pe": 14.9,
+      "pb": 2.9,
+      "mc_亿": 87.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "603612.SH",
+      "name": "索通发展",
+      "industry": "非金属材料",
+      "price": 24.91,
+      "pe": 15.0,
+      "pb": 2.1,
+      "mc_亿": 124.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "600989.SH",
+      "name": "宝丰能源",
+      "industry": "化学原料",
+      "price": 30.7,
+      "pe": 15.4,
+      "pb": 4.32,
+      "mc_亿": 2251.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "600872.SH",
+      "name": "中炬高新",
+      "industry": "食品加工制造",
+      "price": 20.78,
+      "pe": 15.4,
+      "pb": 2.72,
+      "mc_亿": 162.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "000630.SZ",
+      "name": "铜陵有色",
+      "industry": "工业金属",
+      "price": 6.15,
+      "pe": 15.4,
+      "pb": 2.2,
+      "mc_亿": 825.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "603338.SH",
+      "name": "浙江鼎力",
+      "industry": "工程机械",
+      "price": 55.12,
+      "pe": 15.4,
+      "pb": 2.36,
+      "mc_亿": 279.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "002768.SZ",
+      "name": "国恩股份",
+      "industry": "塑料制品",
+      "price": 52.8,
+      "pe": 15.5,
+      "pb": 2.31,
+      "mc_亿": 159.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "603508.SH",
+      "name": "思维列控",
+      "industry": "计算机设备",
+      "price": 26.16,
+      "pe": 15.5,
+      "pb": 2.39,
+      "mc_亿": 100.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "600499.SH",
+      "name": "科达制造",
+      "industry": "家居用品",
+      "price": 19.25,
+      "pe": 15.7,
+      "pb": 2.81,
+      "mc_亿": 369.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "000551.SZ",
+      "name": "创元科技",
+      "industry": "环保设备",
+      "price": 16.28,
+      "pe": 15.9,
+      "pb": 2.59,
+      "mc_亿": 79.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "002293.SZ",
+      "name": "罗莱生活",
+      "industry": "服装家纺",
+      "price": 11.26,
+      "pe": 15.9,
+      "pb": 2.16,
+      "mc_亿": 94.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "600519.SH",
+      "name": "贵州茅台",
+      "industry": "白酒",
+      "price": 1384.79,
+      "pe": 15.9,
+      "pb": 6.4,
+      "mc_亿": 17341.0,
+      "in_watchlist": true
+    },
+    {
+      "code": "603013.SH",
+      "name": "亚普股份",
+      "industry": "汽车零部件",
+      "price": 20.41,
+      "pe": 16.0,
+      "pb": 2.24,
+      "mc_亿": 104.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "603979.SH",
+      "name": "金诚信",
+      "industry": "工业金属",
+      "price": 62.3,
+      "pe": 16.1,
+      "pb": 3.39,
+      "mc_亿": 389.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "603345.SH",
+      "name": "安井食品",
+      "industry": "食品加工制造",
+      "price": 109.39,
+      "pe": 16.2,
+      "pb": 2.27,
+      "mc_亿": 365.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "688578.SH",
+      "name": "艾力斯",
+      "industry": "化学制药",
+      "price": 92.6,
+      "pe": 16.4,
+      "pb": 5.38,
+      "mc_亿": 417.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "603162.SH",
+      "name": "海通发展",
+      "industry": "港口航运",
+      "price": 14.87,
+      "pe": 16.4,
+      "pb": 2.97,
+      "mc_亿": 138.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "000960.SZ",
+      "name": "锡业股份",
+      "industry": "小金属",
+      "price": 35.25,
+      "pe": 16.7,
+      "pb": 2.8,
+      "mc_亿": 580.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "603899.SH",
+      "name": "晨光股份",
+      "industry": "家居用品",
+      "price": 24.54,
+      "pe": 16.8,
+      "pb": 2.35,
+      "mc_亿": 226.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "002275.SZ",
+      "name": "桂林三金",
+      "industry": "中药",
+      "price": 14.31,
+      "pe": 16.9,
+      "pb": 2.53,
+      "mc_亿": 84.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "600389.SH",
+      "name": "江山股份",
+      "industry": "农化制品",
+      "price": 28.9,
+      "pe": 17.0,
+      "pb": 2.98,
+      "mc_亿": 124.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "000878.SZ",
+      "name": "云南铜业",
+      "industry": "工业金属",
+      "price": 19.1,
+      "pe": 17.1,
+      "pb": 2.51,
+      "mc_亿": 463.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "000792.SZ",
+      "name": "盐湖股份",
+      "industry": "农化制品",
+      "price": 39.29,
+      "pe": 17.2,
+      "pb": 4.65,
+      "mc_亿": 2079.0,
+      "in_watchlist": true
+    },
+    {
+      "code": "002884.SZ",
+      "name": "凌霄泵业",
+      "industry": "通用设备",
+      "price": 18.82,
+      "pe": 17.2,
+      "pb": 2.68,
+      "mc_亿": 67.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "300529.SZ",
+      "name": "健帆生物",
+      "industry": "医疗器械",
+      "price": 19.04,
+      "pe": 17.2,
+      "pb": 4.25,
+      "mc_亿": 152.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "002284.SZ",
+      "name": "亚太股份",
+      "industry": "汽车零部件",
+      "price": 13.29,
+      "pe": 17.3,
+      "pb": 2.8,
+      "mc_亿": 98.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "002847.SZ",
+      "name": "盐津铺子",
+      "industry": "食品加工制造",
+      "price": 58.72,
+      "pe": 17.4,
+      "pb": 7.38,
+      "mc_亿": 160.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "002603.SZ",
+      "name": "以岭药业",
+      "industry": "中药",
+      "price": 17.04,
+      "pe": 17.4,
+      "pb": 2.5,
+      "mc_亿": 285.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "300972.SZ",
+      "name": "万辰集团",
+      "industry": "零售",
+      "price": 226.81,
+      "pe": 17.5,
+      "pb": 21.52,
+      "mc_亿": 441.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "601958.SH",
+      "name": "金钼股份",
+      "industry": "小金属",
+      "price": 19.58,
+      "pe": 17.5,
+      "pb": 3.19,
+      "mc_亿": 632.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "603259.SH",
+      "name": "药明康德",
+      "industry": "医疗服务",
+      "price": 109.55,
+      "pe": 17.6,
+      "pb": 3.88,
+      "mc_亿": 3269.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "300628.SZ",
+      "name": "亿联网络",
+      "industry": "通信设备",
+      "price": 36.53,
+      "pe": 17.6,
+      "pb": 4.64,
+      "mc_亿": 463.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "000997.SZ",
+      "name": "新 大 陆",
+      "industry": "计算机设备",
+      "price": 19.89,
+      "pe": 17.9,
+      "pb": 2.67,
+      "mc_亿": 202.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "002262.SZ",
+      "name": "恩华药业",
+      "industry": "化学制药",
+      "price": 22.42,
+      "pe": 17.9,
+      "pb": 2.72,
+      "mc_亿": 228.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "600486.SH",
+      "name": "扬农化工",
+      "industry": "农化制品",
+      "price": 72.34,
+      "pe": 18.0,
+      "pb": 2.47,
+      "mc_亿": 293.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "603317.SH",
+      "name": "天味食品",
+      "industry": "食品加工制造",
+      "price": 17.13,
+      "pe": 18.2,
+      "pb": 3.83,
+      "mc_亿": 182.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "002956.SZ",
+      "name": "西麦食品",
+      "industry": "食品加工制造",
+      "price": 33.15,
+      "pe": 18.3,
+      "pb": 4.31,
+      "mc_亿": 74.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "600988.SH",
+      "name": "赤峰黄金",
+      "industry": "贵金属",
+      "price": 38.0,
+      "pe": 18.3,
+      "pb": 5.05,
+      "mc_亿": 722.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "600415.SH",
+      "name": "小商品城",
+      "industry": "零售",
+      "price": 13.25,
+      "pe": 18.3,
+      "pb": 3.04,
+      "mc_亿": 727.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "603337.SH",
+      "name": "杰克科技",
+      "industry": "专用设备",
+      "price": 39.54,
+      "pe": 18.4,
+      "pb": 3.51,
+      "mc_亿": 188.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "600329.SH",
+      "name": "达仁堂",
+      "industry": "中药",
+      "price": 40.6,
+      "pe": 18.4,
+      "pb": 4.16,
+      "mc_亿": 313.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "000682.SZ",
+      "name": "东方电子",
+      "industry": "电网设备",
+      "price": 13.05,
+      "pe": 18.6,
+      "pb": 2.84,
+      "mc_亿": 175.0,
+      "in_watchlist": true
+    },
+    {
+      "code": "002545.SZ",
+      "name": "东方铁塔",
+      "industry": "农化制品",
+      "price": 23.99,
+      "pe": 18.6,
+      "pb": 2.92,
+      "mc_亿": 298.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "603399.SH",
+      "name": "永杉锂业",
+      "industry": "能源金属",
+      "price": 19.39,
+      "pe": 18.7,
+      "pb": 6.13,
+      "mc_亿": 99.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "600309.SH",
+      "name": "万华化学",
+      "industry": "化学制品",
+      "price": 89.54,
+      "pe": 18.9,
+      "pb": 2.52,
+      "mc_亿": 2803.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "603298.SH",
+      "name": "杭叉集团",
+      "industry": "工程机械",
+      "price": 27.17,
+      "pe": 18.9,
+      "pb": 2.96,
+      "mc_亿": 356.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "002014.SZ",
+      "name": "永新股份",
+      "industry": "包装印刷",
+      "price": 11.19,
+      "pe": 18.9,
+      "pb": 2.67,
+      "mc_亿": 69.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "001332.SZ",
+      "name": "锡装股份",
+      "industry": "专用设备",
+      "price": 62.8,
+      "pe": 19.0,
+      "pb": 2.61,
+      "mc_亿": 69.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "300769.SZ",
+      "name": "德方纳米",
+      "industry": "电池",
+      "price": 71.95,
+      "pe": 19.0,
+      "pb": 3.86,
+      "mc_亿": 202.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "601702.SH",
+      "name": "华峰铝业",
+      "industry": "工业金属",
+      "price": 18.52,
+      "pe": 19.0,
+      "pb": 2.77,
+      "mc_亿": 185.0,
+      "in_watchlist": true
+    },
+    {
+      "code": "002155.SZ",
+      "name": "湖南黄金",
+      "industry": "贵金属",
+      "price": 29.07,
+      "pe": 19.1,
+      "pb": 5.21,
+      "mc_亿": 454.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "600298.SH",
+      "name": "安琪酵母",
+      "industry": "食品加工制造",
+      "price": 37.6,
+      "pe": 19.1,
+      "pb": 2.62,
+      "mc_亿": 326.0,
+      "in_watchlist": true
+    },
+    {
+      "code": "603195.SH",
+      "name": "公牛集团",
+      "industry": "家居用品",
+      "price": 44.85,
+      "pe": 19.2,
+      "pb": 4.55,
+      "mc_亿": 811.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "603194.SH",
+      "name": "中力股份",
+      "industry": "工程机械",
+      "price": 34.87,
+      "pe": 19.2,
+      "pb": 2.53,
+      "mc_亿": 140.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "603025.SH",
+      "name": "大豪科技",
+      "industry": "自动化设备",
+      "price": 16.36,
+      "pe": 19.2,
+      "pb": 6.16,
+      "mc_亿": 183.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "000423.SZ",
+      "name": "东阿阿胶",
+      "industry": "中药",
+      "price": 55.0,
+      "pe": 19.5,
+      "pb": 3.28,
+      "mc_亿": 354.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "603379.SH",
+      "name": "三美股份",
+      "industry": "化学制品",
+      "price": 65.27,
+      "pe": 19.7,
+      "pb": 4.62,
+      "mc_亿": 398.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "605305.SH",
+      "name": "中际联合",
+      "industry": "工程机械",
+      "price": 47.8,
+      "pe": 19.7,
+      "pb": 3.32,
+      "mc_亿": 102.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "002056.SZ",
+      "name": "横店东磁",
+      "industry": "光伏设备",
+      "price": 18.94,
+      "pe": 20.0,
+      "pb": 2.8,
+      "mc_亿": 308.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "688128.SH",
+      "name": "中国电研",
+      "industry": "专用设备",
+      "price": 26.51,
+      "pe": 20.0,
+      "pb": 2.97,
+      "mc_亿": 107.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "688016.SH",
+      "name": "心脉医疗",
+      "industry": "医疗器械",
+      "price": 102.32,
+      "pe": 20.4,
+      "pb": 2.99,
+      "mc_亿": 126.0,
+      "in_watchlist": true
+    },
+    {
+      "code": "300206.SZ",
+      "name": "理邦仪器",
+      "industry": "医疗器械",
+      "price": 14.91,
+      "pe": 20.6,
+      "pb": 3.76,
+      "mc_亿": 86.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "600549.SH",
+      "name": "厦门钨业",
+      "industry": "小金属",
+      "price": 57.78,
+      "pe": 20.7,
+      "pb": 5.01,
+      "mc_亿": 917.0,
+      "in_watchlist": true
+    },
+    {
+      "code": "300573.SZ",
+      "name": "兴齐眼药",
+      "industry": "化学制药",
+      "price": 69.45,
+      "pe": 20.7,
+      "pb": 7.83,
+      "mc_亿": 171.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "002043.SZ",
+      "name": "兔 宝 宝",
+      "industry": "建筑材料",
+      "price": 14.83,
+      "pe": 20.8,
+      "pb": 3.57,
+      "mc_亿": 123.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "300415.SZ",
+      "name": "伊之密",
+      "industry": "专用设备",
+      "price": 24.22,
+      "pe": 21.0,
+      "pb": 3.34,
+      "mc_亿": 113.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "600160.SH",
+      "name": "巨化股份",
+      "industry": "化学制品",
+      "price": 36.63,
+      "pe": 21.1,
+      "pb": 4.58,
+      "mc_亿": 989.0,
+      "in_watchlist": true
+    },
+    {
+      "code": "600875.SH",
+      "name": "东方电气",
+      "industry": "其他电源设备",
+      "price": 39.01,
+      "pe": 21.3,
+      "pb": 2.88,
+      "mc_亿": 1349.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "300015.SZ",
+      "name": "爱尔眼科",
+      "industry": "医疗服务",
+      "price": 10.78,
+      "pe": 21.3,
+      "pb": 4.36,
+      "mc_亿": 1005.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "688155.SH",
+      "name": "先惠技术",
+      "industry": "电池",
+      "price": 103.57,
+      "pe": 21.3,
+      "pb": 5.33,
+      "mc_亿": 131.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "603271.SH",
+      "name": "永杰新材",
+      "industry": "工业金属",
+      "price": 52.0,
+      "pe": 21.4,
+      "pb": 3.36,
+      "mc_亿": 102.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "603091.SH",
+      "name": "众鑫股份",
+      "industry": "家居用品",
+      "price": 81.06,
+      "pe": 22.1,
+      "pb": 3.63,
+      "mc_亿": 83.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "000408.SZ",
+      "name": "藏格矿业",
+      "industry": "农化制品",
+      "price": 89.26,
+      "pe": 22.3,
+      "pb": 7.94,
+      "mc_亿": 1402.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "600660.SH",
+      "name": "福耀玻璃",
+      "industry": "汽车零部件",
+      "price": 58.87,
+      "pe": 22.4,
+      "pb": 3.93,
+      "mc_亿": 1536.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "605499.SH",
+      "name": "东鹏饮料",
+      "industry": "饮料制造",
+      "price": 203.84,
+      "pe": 22.9,
+      "pb": 5.62,
+      "mc_亿": 1151.0,
+      "in_watchlist": true
+    },
+    {
+      "code": "002568.SZ",
+      "name": "百润股份",
+      "industry": "饮料制造",
+      "price": 19.06,
+      "pe": 22.9,
+      "pb": 3.94,
+      "mc_亿": 199.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "002946.SZ",
+      "name": "新乳业",
+      "industry": "饮料制造",
+      "price": 19.91,
+      "pe": 23.0,
+      "pb": 4.48,
+      "mc_亿": 171.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "301665.SZ",
+      "name": "泰禾股份",
+      "industry": "农化制品",
+      "price": 27.45,
+      "pe": 23.0,
+      "pb": 3.31,
+      "mc_亿": 124.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "603288.SH",
+      "name": "海天味业",
+      "industry": "食品加工制造",
+      "price": 38.64,
+      "pe": 23.1,
+      "pb": 5.38,
+      "mc_亿": 2261.0,
+      "in_watchlist": true
+    },
+    {
+      "code": "600236.SH",
+      "name": "桂冠电力",
+      "industry": "电力",
+      "price": 10.09,
+      "pe": 23.1,
+      "pb": 4.16,
+      "mc_亿": 795.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "002311.SZ",
+      "name": "海大集团",
+      "industry": "农产品加工",
+      "price": 49.98,
+      "pe": 23.2,
+      "pb": 3.27,
+      "mc_亿": 822.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "603132.SH",
+      "name": "金徽股份",
+      "industry": "工业金属",
+      "price": 19.47,
+      "pe": 23.2,
+      "pb": 5.58,
+      "mc_亿": 190.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "605319.SH",
+      "name": "无锡振华",
+      "industry": "汽车零部件",
+      "price": 26.82,
+      "pe": 23.3,
+      "pb": 3.28,
+      "mc_亿": 94.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "603486.SH",
+      "name": "科沃斯",
+      "industry": "小家电",
+      "price": 65.16,
+      "pe": 23.3,
+      "pb": 4.07,
+      "mc_亿": 377.0,
+      "in_watchlist": true
+    },
+    {
+      "code": "000893.SZ",
+      "name": "亚钾国际",
+      "industry": "农化制品",
+      "price": 54.05,
+      "pe": 23.4,
+      "pb": 3.59,
+      "mc_亿": 499.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "301292.SZ",
+      "name": "海科新源",
+      "industry": "电池",
+      "price": 84.83,
+      "pe": 23.5,
+      "pb": 6.61,
+      "mc_亿": 189.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "300821.SZ",
+      "name": "东岳硅材",
+      "industry": "化学制品",
+      "price": 15.18,
+      "pe": 23.5,
+      "pb": 3.55,
+      "mc_亿": 182.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "601882.SH",
+      "name": "XD海天精",
+      "industry": "通用设备",
+      "price": 20.08,
+      "pe": 23.5,
+      "pb": 3.43,
+      "mc_亿": 105.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "605016.SH",
+      "name": "百龙创园",
+      "industry": "化学制品",
+      "price": 27.19,
+      "pe": 23.7,
+      "pb": 5.49,
+      "mc_亿": 114.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "688036.SH",
+      "name": "传音控股",
+      "industry": "消费电子",
+      "price": 57.75,
+      "pe": 23.7,
+      "pb": 3.13,
+      "mc_亿": 665.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "300490.SZ",
+      "name": "华自科技",
+      "industry": "其他电源设备",
+      "price": 19.9,
+      "pe": 23.9,
+      "pb": 3.56,
+      "mc_亿": 79.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "605099.SH",
+      "name": "共创草坪",
+      "industry": "家居用品",
+      "price": 48.42,
+      "pe": 24.3,
+      "pb": 5.84,
+      "mc_亿": 195.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "300750.SZ",
+      "name": "宁德时代",
+      "industry": "电池",
+      "price": 436.0,
+      "pe": 24.3,
+      "pb": 5.15,
+      "mc_亿": 20172.0,
+      "in_watchlist": true
+    },
+    {
+      "code": "300910.SZ",
+      "name": "瑞丰新材",
+      "industry": "化学制品",
+      "price": 46.54,
+      "pe": 24.6,
+      "pb": 3.48,
+      "mc_亿": 138.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "301239.SZ",
+      "name": "普瑞眼科",
+      "industry": "医疗服务",
+      "price": 46.83,
+      "pe": 24.8,
+      "pb": 3.32,
+      "mc_亿": 70.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "600563.SH",
+      "name": "法拉电子",
+      "industry": "元件",
+      "price": 118.02,
+      "pe": 24.8,
+      "pb": 4.22,
+      "mc_亿": 266.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "600885.SH",
+      "name": "宏发股份",
+      "industry": "电网设备",
+      "price": 31.14,
+      "pe": 24.9,
+      "pb": 3.68,
+      "mc_亿": 482.0,
+      "in_watchlist": true
+    },
+    {
+      "code": "603129.SH",
+      "name": "春风动力",
+      "industry": "汽车服务及其他",
+      "price": 274.73,
+      "pe": 24.9,
+      "pb": 5.27,
+      "mc_亿": 422.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "301607.SZ",
+      "name": "富特科技",
+      "industry": "汽车零部件",
+      "price": 50.53,
+      "pe": 25.5,
+      "pb": 5.98,
+      "mc_亿": 79.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "301275.SZ",
+      "name": "汉朔科技",
+      "industry": "其他电子",
+      "price": 45.03,
+      "pe": 26.3,
+      "pb": 4.58,
+      "mc_亿": 190.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "300373.SZ",
+      "name": "扬杰科技",
+      "industry": "半导体",
+      "price": 75.88,
+      "pe": 26.8,
+      "pb": 4.16,
+      "mc_亿": 412.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "300014.SZ",
+      "name": "亿纬锂能",
+      "industry": "电池",
+      "price": 72.59,
+      "pe": 27.0,
+      "pb": 3.45,
+      "mc_亿": 1562.0,
+      "in_watchlist": true
+    },
+    {
+      "code": "600176.SH",
+      "name": "中国巨石",
+      "industry": "建筑材料",
+      "price": 34.5,
+      "pe": 27.2,
+      "pb": 4.28,
+      "mc_亿": 1381.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "688029.SH",
+      "name": "南微医学",
+      "industry": "医疗器械",
+      "price": 85.02,
+      "pe": 27.3,
+      "pb": 3.76,
+      "mc_亿": 160.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "603659.SH",
+      "name": "璞泰来",
+      "industry": "电池",
+      "price": 36.27,
+      "pe": 27.5,
+      "pb": 3.69,
+      "mc_亿": 775.0,
+      "in_watchlist": true
+    },
+    {
+      "code": "300357.SZ",
+      "name": "我武生物",
+      "industry": "生物制品",
+      "price": 25.4,
+      "pe": 27.9,
+      "pb": 4.86,
+      "mc_亿": 133.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "300697.SZ",
+      "name": "电工合金",
+      "industry": "工业金属",
+      "price": 16.13,
+      "pe": 28.0,
+      "pb": 5.32,
+      "mc_亿": 70.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "002850.SZ",
+      "name": "科达利",
+      "industry": "电池",
+      "price": 190.45,
+      "pe": 28.5,
+      "pb": 3.84,
+      "mc_亿": 525.0,
+      "in_watchlist": true
+    },
+    {
+      "code": "603606.SH",
+      "name": "东方电缆",
+      "industry": "电网设备",
+      "price": 62.13,
+      "pe": 28.8,
+      "pb": 5.02,
+      "mc_亿": 427.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "605117.SH",
+      "name": "德业股份",
+      "industry": "光伏设备",
+      "price": 150.63,
+      "pe": 28.8,
+      "pb": 11.85,
+      "mc_亿": 1370.0,
+      "in_watchlist": true
+    },
+    {
+      "code": "688208.SH",
+      "name": "道通科技",
+      "industry": "计算机设备",
+      "price": 33.87,
+      "pe": 29.1,
+      "pb": 5.89,
+      "mc_亿": 227.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "301613.SZ",
+      "name": "新铝时代",
+      "industry": "汽车零部件",
+      "price": 46.93,
+      "pe": 29.2,
+      "pb": 3.99,
+      "mc_亿": 68.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "601138.SH",
+      "name": "工业富联",
+      "industry": "消费电子",
+      "price": 62.88,
+      "pe": 29.4,
+      "pb": 7.08,
+      "mc_亿": 12478.0,
+      "in_watchlist": true
+    },
+    {
+      "code": "002240.SZ",
+      "name": "盛新锂能",
+      "industry": "能源金属",
+      "price": 60.09,
+      "pe": 29.6,
+      "pb": 5.12,
+      "mc_亿": 550.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "688697.SH",
+      "name": "纽威数控",
+      "industry": "通用设备",
+      "price": 17.4,
+      "pe": 29.9,
+      "pb": 4.16,
+      "mc_亿": 80.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "002901.SZ",
+      "name": "大博医疗",
+      "industry": "医疗器械",
+      "price": 43.4,
+      "pe": 30.6,
+      "pb": 4.82,
+      "mc_亿": 180.0,
+      "in_watchlist": true
+    },
+    {
+      "code": "301603.SZ",
+      "name": "乔锋智能",
+      "industry": "通用设备",
+      "price": 108.85,
+      "pe": 31.0,
+      "pb": 5.25,
+      "mc_亿": 131.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "002315.SZ",
+      "name": "焦点科技",
+      "industry": "互联网电商",
+      "price": 30.44,
+      "pe": 32.0,
+      "pb": 4.36,
+      "mc_亿": 126.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "688188.SH",
+      "name": "柏楚电子",
+      "industry": "自动化设备",
+      "price": 141.78,
+      "pe": 32.3,
+      "pb": 6.41,
+      "mc_亿": 409.0,
+      "in_watchlist": true
+    },
+    {
+      "code": "002690.SZ",
+      "name": "美亚光电",
+      "industry": "专用设备",
+      "price": 17.52,
+      "pe": 33.3,
+      "pb": 5.11,
+      "mc_亿": 155.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "002475.SZ",
+      "name": "立讯精密",
+      "industry": "消费电子",
+      "price": 67.0,
+      "pe": 33.4,
+      "pb": 5.53,
+      "mc_亿": 4882.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "002270.SZ",
+      "name": "华明装备",
+      "industry": "电网设备",
+      "price": 24.49,
+      "pe": 33.7,
+      "pb": 7.03,
+      "mc_亿": 219.0,
+      "in_watchlist": true
+    },
+    {
+      "code": "002595.SZ",
+      "name": "豪迈科技",
+      "industry": "专用设备",
+      "price": 87.45,
+      "pe": 33.9,
+      "pb": 5.58,
+      "mc_亿": 700.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "603092.SH",
+      "name": "德力佳",
+      "industry": "风电设备",
+      "price": 73.0,
+      "pe": 34.4,
+      "pb": 5.09,
+      "mc_亿": 292.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "002947.SZ",
+      "name": "恒铭达",
+      "industry": "消费电子",
+      "price": 81.27,
+      "pe": 34.4,
+      "pb": 6.44,
+      "mc_亿": 208.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "301031.SZ",
+      "name": "中熔电气",
+      "industry": "其他电子",
+      "price": 160.4,
+      "pe": 34.8,
+      "pb": 9.64,
+      "mc_亿": 159.0,
+      "in_watchlist": true
+    },
+    {
+      "code": "603699.SH",
+      "name": "纽威股份",
+      "industry": "通用设备",
+      "price": 62.74,
+      "pe": 35.2,
+      "pb": 9.73,
+      "mc_亿": 486.0,
+      "in_watchlist": true
+    },
+    {
+      "code": "300893.SZ",
+      "name": "松原安全",
+      "industry": "汽车零部件",
+      "price": 22.58,
+      "pe": 35.5,
+      "pb": 5.05,
+      "mc_亿": 107.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "300866.SZ",
+      "name": "安克创新",
+      "industry": "消费电子",
+      "price": 125.44,
+      "pe": 35.6,
+      "pb": 6.02,
+      "mc_亿": 673.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "688278.SH",
+      "name": "特宝生物",
+      "industry": "生物制品",
+      "price": 58.25,
+      "pe": 36.1,
+      "pb": 6.55,
+      "mc_亿": 238.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "688617.SH",
+      "name": "惠泰医疗",
+      "industry": "医疗器械",
+      "price": 237.87,
+      "pe": 36.6,
+      "pb": 11.3,
+      "mc_亿": 335.0,
+      "in_watchlist": true
+    },
+    {
+      "code": "688213.SH",
+      "name": "思特威-W",
+      "industry": "半导体",
+      "price": 87.91,
+      "pe": 37.4,
+      "pb": 6.48,
+      "mc_亿": 354.0,
+      "in_watchlist": true
+    },
+    {
+      "code": "300302.SZ",
+      "name": "同有科技",
+      "industry": "计算机设备",
+      "price": 27.72,
+      "pe": 38.1,
+      "pb": 12.06,
+      "mc_亿": 133.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "603293.SH",
+      "name": "埃泰克",
+      "industry": "汽车零部件",
+      "price": 49.73,
+      "pe": 38.4,
+      "pb": 3.06,
+      "mc_亿": 89.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "001376.SZ",
+      "name": "百通能源",
+      "industry": "电力",
+      "price": 15.17,
+      "pe": 41.0,
+      "pb": 5.47,
+      "mc_亿": 70.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "603040.SH",
+      "name": "新坐标",
+      "industry": "汽车零部件",
+      "price": 79.62,
+      "pe": 41.1,
+      "pb": 6.99,
+      "mc_亿": 109.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "688416.SH",
+      "name": "恒烁股份",
+      "industry": "半导体",
+      "price": 97.23,
+      "pe": 41.5,
+      "pb": 6.07,
+      "mc_亿": 81.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "301345.SZ",
+      "name": "涛涛车业",
+      "industry": "汽车服务及其他",
+      "price": 270.01,
+      "pe": 41.8,
+      "pb": 7.79,
+      "mc_亿": 294.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "300693.SZ",
+      "name": "盛弘股份",
+      "industry": "其他电源设备",
+      "price": 46.47,
+      "pe": 42.7,
+      "pb": 6.45,
+      "mc_亿": 145.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "600114.SH",
+      "name": "东睦股份",
+      "industry": "通用设备",
+      "price": 34.08,
+      "pe": 42.7,
+      "pb": 6.04,
+      "mc_亿": 215.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "001221.SZ",
+      "name": "悍高集团",
+      "industry": "家居用品",
+      "price": 57.02,
+      "pe": 44.4,
+      "pb": 7.75,
+      "mc_亿": 228.0,
+      "in_watchlist": false
+    },
+    {
+      "code": "300487.SZ",
+      "name": "蓝晓科技",
+      "industry": "塑料制品",
+      "price": 63.75,
+      "pe": 44.6,
+      "pb": 7.29,
+      "mc_亿": 325.0,
+      "in_watchlist": false
+    }
+  ]
+}
