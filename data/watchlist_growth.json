@@ -1131,7 +1131,11 @@
     "watch_reason": "FCF机器（$6.12B/32.5% margin）+ 护城河极强（QuickBooks生态锁定+TurboTax历史数据壁垒）+ Non-GAAP Forward PE 16.4x接近10年历史低位（从$813跌至$393/-52%），分析师20人Strong Buy均值目标$594-692（当前+50-75%），PEG 0.9x赔率极优",
     "current_price": 393.0,
     "price_date": "2026-05-02",
-    "price_bands": [600, 480, 393],
+    "price_bands": [
+      600,
+      480,
+      393
+    ],
     "valuation_anchor": "Non-GAAP FY2026E EPS ~$24：追高区>$600(>25x NNGAAP FE) / 中性区$480-600(20-25x) / 较好区间$393-480(16-20x，当前价) / 更低区间<$393(<16x，历史极低估值)",
     "risk_flags": [
       "TurboTax AI颠覆风险：OpenAI/Google免费AI税务助手+IRS Direct File扩张，2026税季是首次真实验证（Q3 FY2026 May 20-21）",
@@ -1142,6 +1146,119 @@
     "next_earnings_date": "2026-05-20",
     "next_earnings_type": "季报",
     "pending_earnings_note": "Q3 FY2026（2026-05-20 AMC）含2026全年报税季结果，是AI冲击TurboTax的首次真实验证，财报发布后需更新公司页及本条目，并将next_earnings_date更新为下一期日期",
+    "cycle_is_cyclical": false
+  },
+  {
+    "name": "RTX公司",
+    "code": "RTX.US",
+    "market": "US",
+    "board": "纽",
+    "tier": "growth",
+    "source_etf": "ITA",
+    "position_role": "航空发动机（Pratt & Whitney GTF）+ 导弹防御（Raytheon PAC-3/AIM）+ 航电系统（Collins Aerospace）三引擎，Beta 0.43 低波动防御标的",
+    "prebuy_conclusion": "逻辑清晰，等待更合适价格或验证点。GTF粉末金属检修接近尾声（Q1 2026 EPS +32% 已验证），Raytheon导弹积压 + 提供多年可见收入，Fwd PE 25.3x 合理但非低估；建议  以下（Fwd PE ~24x）主力建仓，当前  可小仓试探",
+    "watch_reason": "GTF检修尾声催化：P&W利润率修复路径清晰，FY2026E EPS同比增38.7%；PAC-3/AIM导弹积压+受益全球重整军备；Beta 0.43 极低波动适合做组合压舱石；Fwd PE 25.3x在航空国防板块属合理估值，52周低位附近",
+    "current_price": 174.0,
+    "price_date": "2026-05-01",
+    "price_bands": [
+      186,
+      165,
+      138
+    ],
+    "valuation_anchor": "FY2026E EPS .88（non-GAAP共识）：追高区>(>27xFE) / 中性区-(24-27xFE，含当前) / 较好区-(20-24xFE) / 更低区<(<20xFE，历史低估区)",
+    "risk_flags": [
+      "GTF检修进展不及预期：若追加更多发动机需返厂，P&W利润率修复推迟",
+      "Raytheon产能瓶颈：PAC-3/AIM-120订单激增但制造产能扩张需2-3年，交付滞后风险",
+      "商业航空需求周期性：GTF发动机下游为航司，若经济衰退导致航空需求骤降则连带受损"
+    ],
+    "dv_ttm": 1.56,
+    "next_earnings_date": "2026-07-28",
+    "next_earnings_type": "季报",
+    "cycle_is_cyclical": false
+  },
+  {
+    "name": "TransDigm",
+    "code": "TDG.US",
+    "market": "US",
+    "board": "纽",
+    "tier": "growth",
+    "source_etf": "ITA",
+    "position_role": "航空专有件垄断收费站——40,000+ SKU sole-source零件，依靠FAA认证壁垒和唯一供应商地位每年涨价5-10%，EBITDA Margin 50%+",
+    "prebuy_conclusion": "逻辑清晰，当前价格合理，可按计划小仓买入，待Q2财报（2026-05-05）验证后决定加仓规模。当前,154接近52周低位（高点,624），Fwd PE 28.4x显著低于历史均值~40x，分析师目标价+35%，定价权护城河是航空工业品中最强之一。⚠️ 分析基于FY2025年报，Q2 FY2026（2026-05-05）尚未纳入",
+    "watch_reason": "近52周低位(,154 vs 高,624)，Fwd PE 28.4x低于历史均值~40x，分析师共识+35%上行空间；sole-source定价权护城河无可复制（30年涨价实证）；商业航空复苏推动售后件需求；高杠杆（6.5x D/EBITDA）是设计而非缺陷，COVID压测已通过",
+    "current_price": 1154.45,
+    "price_date": "2026-05-01",
+    "price_bands": [
+      1580,
+      1280,
+      1050
+    ],
+    "valuation_anchor": "FY2026E EPS .41（non-GAAP，25家分析师）：追高区>,580(>40xFE) / 中性区,280-,580(32-40xFE) / 较好区,050-,280(27-32xFE，含当前,154) / 更低区<,050(<27xFE，历史低估区)",
+    "risk_flags": [
+      "DoD定价调查：美国国防部及国会多次批评TDG对军用合同零件收取过高价格，监管收紧可能压缩政府合同利润率",
+      "高杠杆6.5x D/EBITDA：利率持续高位将增加再融资成本，若收入下滑杠杆风险放大",
+      "商业航空周期性：65%收入来自商业航空售后市场，若航空需求骤降（类COVID事件）将直接冲击收入"
+    ],
+    "dv_ttm": 0.0,
+    "next_earnings_date": "2026-05-05",
+    "next_earnings_type": "季报",
+    "pending_earnings_note": "Q2 FY2026（2026-05-05）距今3天即将发布，当前分析基于Q1 FY2026数据，财报发布后需更新公司页及本条目，并将next_earnings_date更新为下一期",
+    "cycle_is_cyclical": false
+  },
+  {
+    "name": "洛克希德马丁",
+    "code": "LMT.US",
+    "market": "US",
+    "board": "纽",
+    "tier": "growth",
+    "source_etf": "ITA",
+    "position_role": "F-35全球唯一供应商（17国盟友，4500架+订单）+ PAC-3/HIMARS导弹 + 侦察卫星，国防支出确定性最高的价值型标的",
+    "prebuy_conclusion": "逻辑清晰，当前价格处于较好区间底部，可分批建仓。Fwd PE 16.9x接近历史底部，TR-3延误已充分定价，FY2026E EPS预期同比反弹+40%（TR-3飞机交付解锁），2.69%股息+积极回购提供下行保护；",
+    "watch_reason": "Fwd PE 16.9x 10年历史低位，距52周高-26%；F-35积压；TR-3软件延误是短期催化而非永久损失（17国无替代选择）；2.69%股息+每年缩股~2-3%构建安全边际；Q1 2026已开始修复",
+    "current_price": 512.77,
+    "price_date": "2026-05-01",
+    "price_bands": [
+      575,
+      515,
+      460
+    ],
+    "valuation_anchor": "FY2026E EPS .22（non-GAAP，28家分析师）：追高区>(>19xFE) / 中性区-(17-19xFE) / 较好区-(15-17xFE，含当前) / 更低区<(<15xFE，历史极低估值)",
+    "risk_flags": [
+      "F-35 TR-3 Block 4软件持续延误：约80-100架飞机验收推迟，若2026年仍无法交付则营收继续承压，EPS反弹预期落空",
+      "DOGE/国防预算削减：若五角大楼预算受压，F-35采购数量可能下调，长期积压规模缩减",
+      "EPS下行趋势：连续2年GAAP EPS同比下滑（FY2024 -3.7%，FY2025 -6.0%），需等待FY2026修复信号确认"
+    ],
+    "dv_ttm": 2.69,
+    "next_earnings_date": "2026-07-21",
+    "next_earnings_type": "季报",
+    "cycle_is_cyclical": false
+  },
+  {
+    "name": "诺斯罗普格鲁曼",
+    "code": "NOC.US",
+    "market": "US",
+    "board": "纽",
+    "tier": "growth",
+    "source_etf": "ITA",
+    "position_role": "B-21 Raider隐形轰炸机唯一承包商 + Sentinel ICBM ，核威慑战略基础设施供应商，20年以上合同能见度",
+    "prebuy_conclusion": "逻辑清晰，等待更合适价格或验证点。PE 17.8x接近历史低位但Fwd PE 20.1x略高于均值18.9x，当前/较好区间边界；建议（Fwd PE ≤18x）主力建仓，Sentinel重基准正式落地后风险出清是关键触发点",
+    "watch_reason": "B-21+Sentinel构建唯一承包商护城河，20年收入能见度，两项目均不可取消；PE 17.8x历史低位区间；分析师Buy目标(+23%)；Beta 0.05接近零波动防御属性；1.59%股息+积极回购（每年缩股3-4%）",
+    "current_price": 568.14,
+    "price_date": "2026-05-01",
+    "price_bands": [
+      650,
+      594,
+      510
+    ],
+    "valuation_anchor": "FY2026E EPS .26（non-GAAP，27家分析师）：追高区>(>23xFE) / 中性区-(21-23xFE) / 较好区-(18-21xFE，含当前) / 更低区<(<18xFE，历史低估区)",
+    "risk_flags": [
+      "Sentinel(GBSD)成本超支：合同总价从+，触发Nunn-McCurdy条款，利润率压缩预计持续至2027年，FY2026E EPS同比-2.8%",
+      "B-21交付节奏风险：隐身飞机制造工艺复杂，生产率爬坡慢于预期将延迟收入确认",
+      "战略武器预算政治风险：虽国家核威慑优先级极高，但政策变化或和谈情景下ICBM现代化计划可能调整"
+    ],
+    "dv_ttm": 1.59,
+    "next_earnings_date": "2026-07-28",
+    "next_earnings_type": "季报",
     "cycle_is_cyclical": false
   }
 ]
