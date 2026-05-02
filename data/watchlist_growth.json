@@ -1119,5 +1119,29 @@
     "next_earnings_type": "季报",
     "pending_earnings_note": "Q1 2026（2026-05-05 BMO）结果尚未纳入分析，财报发布后需更新公司页及本条目，并将next_earnings_date更新为下一期日期",
     "cycle_is_cyclical": false
+  },
+  {
+    "name": "Intuit",
+    "code": "INTU.US",
+    "market": "US",
+    "board": "纳",
+    "tier": "growth",
+    "position_role": "美国中小企业+个人财税SaaS垄断平台，QuickBooks(~80%SMB市场)+TurboTax(~40%在线报税)双核FCF机器",
+    "prebuy_conclusion": "逻辑清晰，当前价格合理，建议等待Q3 FY2026财报（2026-05-20 AMC）验证2026税季结果后再决定是否建仓或加仓。Non-GAAP Forward PE 16.4x（历史低位），PEG≈0.9x，FCF Margin 32%+，赔率极具吸引力；核心风险是AI颠覆TurboTax是否在2026税季实质发生。⚠️ 分析基于FY2025年报及Q2 FY2026，Q3 FY2026（2026-05-20 AMC）尚未纳入",
+    "watch_reason": "FCF机器（$6.12B/32.5% margin）+ 护城河极强（QuickBooks生态锁定+TurboTax历史数据壁垒）+ Non-GAAP Forward PE 16.4x接近10年历史低位（从$813跌至$393/-52%），分析师20人Strong Buy均值目标$594-692（当前+50-75%），PEG 0.9x赔率极优",
+    "current_price": 393.0,
+    "price_date": "2026-05-02",
+    "price_bands": [600, 480, 393],
+    "valuation_anchor": "Non-GAAP FY2026E EPS ~$24：追高区>$600(>25x NNGAAP FE) / 中性区$480-600(20-25x) / 较好区间$393-480(16-20x，当前价) / 更低区间<$393(<16x，历史极低估值)",
+    "risk_flags": [
+      "TurboTax AI颠覆风险：OpenAI/Google免费AI税务助手+IRS Direct File扩张，2026税季是首次真实验证（Q3 FY2026 May 20-21）",
+      "商誉$14B（Credit Karma+Mailchimp），Credit Karma增速持续低于收购预期，减值风险",
+      "SBC/净利润51%（FY2025），GAAP与Non-GAAP EPS差距约45%，需关注稀释程度"
+    ],
+    "dv_ttm": 1.15,
+    "next_earnings_date": "2026-05-20",
+    "next_earnings_type": "季报",
+    "pending_earnings_note": "Q3 FY2026（2026-05-20 AMC）含2026全年报税季结果，是AI冲击TurboTax的首次真实验证，财报发布后需更新公司页及本条目，并将next_earnings_date更新为下一期日期",
+    "cycle_is_cyclical": false
   }
 ]
