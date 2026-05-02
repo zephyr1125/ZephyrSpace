@@ -1063,5 +1063,32 @@
     "next_earnings_type": "半年报",
     "cycle_is_cyclical": true,
     "cycle_position": "复苏中期"
+  },
+  {
+    "name": "美的集团",
+    "code": "000333.SZ",
+    "tier": "growth",
+    "position_role": "家电+工业机器人平台型龙头",
+    "prebuy_conclusion": "PE TTM 13.95x处3年74.9%分位（历史偏贵），Q1 2026营收增速骤降至+2.5%（上年同期+20.6%），需验证是否为基数效应；股息率5.31%，ROE 19.7%，PS+3（高端制造+AI）；等价格至绿灯区73~77元建仓。",
+    "watch_reason": "白色家电+工业机器人+楼宇科技全产业链龙头，ROE 19.7%、股息率5.31%，出海布局成熟；当前估值偏贵，等回调。",
+    "current_price": 81.1,
+    "price_bands": [
+      90.38,
+      76.99,
+      73.26
+    ],
+    "risk_flags": [
+      "Q1 2026营收增速骤降至+2.5%，真实增速趋势待半年报验证",
+      "库卡商誉272亿元，并购整合+景气下行存减值风险",
+      "美国关税冲击海外业务（北美占比约15%）"
+    ],
+    "valuation_anchor": "追高线90.38元(PE历史80%分位+PS3加成) / 中性底76.99元(PE历史50%分位) / 最优区73.26元以下(PE历史20%分位)",
+    "price_date": "2026-04-30",
+    "board": "深",
+    "dv_ttm": 5.31,
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报",
+    "cycle_is_cyclical": false,
+    "cycle_position": null
   }
 ]

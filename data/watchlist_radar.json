@@ -1624,5 +1624,31 @@
     "cycle_is_cyclical": true,
     "cycle_position": "底部",
     "tier": "radar"
+  },
+  {
+    "name": "中国海油",
+    "code": "600938.SH",
+    "source_etf": null,
+    "position_role": "国内最大海上石油天然气生产商",
+    "prebuy_conclusion": "Q1 2026营收+8.6%/净利+7.1%，复苏确认；但PE TTM 15.25x处3年96.6%分位、PB 2.27x处94.2%分位，估值已充分定价复苏预期；当前价39.99元高于PS调整后追高线38.8元，不适合新仓追入。触发升档条件：价格≤38.8元且Q2确认复苏→growth。",
+    "watch_reason": "OCF/净利171%（现金质量极佳），负债率26.7%，能源安全政策顺风PS+3；质地优秀但当前估值偏贵，等价格回调后升档。",
+    "current_price": 39.99,
+    "price_bands": [
+      38.8,
+      33.0,
+      29.4
+    ],
+    "risk_flags": [
+      "PE/PB均在3年94%+历史高分位，估值透支",
+      "股息率从10%+压缩至2.88%，安全垫薄",
+      "强周期股：油价下行将同时压缩利润和估值（双杀风险）"
+    ],
+    "valuation_anchor": "追高线38.8元(PB历史80%分位×BPS+PS3加成) / 中性底33.0元(PB历史50%分位×BPS) / 最优区29.4元以下(PB历史20%分位×BPS)",
+    "price_date": "2026-04-30",
+    "board": "沪",
+    "entry_trigger": "股价回落至38.8元以下，或Q2 2026业绩确认复苏后升档growth",
+    "dv_ttm": 2.88,
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报"
   }
 ]
