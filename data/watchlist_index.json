@@ -846,6 +846,34 @@
       "price_date": "2026-04-30",
       "note_path": "05-A股指数/980027 国证新能源电池指数.md",
       "last_updated": "2026-05-06"
+    },
+    {
+      "index_code": "931994.CSI",
+      "name": "中证电网设备主题指数",
+      "related_etf": "560390（易方达电网设备ETF）",
+      "category": "成长科技",
+      "sector": "电网设备",
+      "pe_current": 37.57,
+      "pe_y3_percentile": 92.1,
+      "pe_y5_percentile": 93.4,
+      "pe_y3_p20": 19.22,
+      "pe_y3_p50": 23.4,
+      "pe_y3_p80": 27.41,
+      "price_date": "2026-04-30",
+      "price": 3308,
+      "price_bands": [
+        2414,
+        2061,
+        1692
+      ],
+      "div_yield_mcw": 1.0,
+      "cr5_roe": 13.2,
+      "cr5": 45.2,
+      "cr10": 58.3,
+      "cycle_position": "景气高峰",
+      "prebuy_conclusion": "估值极度偏贵，3年分位92.1%，5年分位93.4%，当前3308点已在P80(2414)之上。CR5加权ROE约13.2%，成分股质量不支持37x PE。建议等待回调至P50以下(≤2061)再评估，短期不买入。",
+      "analysis_date": "2026-04-30",
+      "index_page": "05-A股指数/931994 中证电网设备主题指数.md"
     }
   ]
 }
