@@ -1650,5 +1650,64 @@
     "dv_ttm": 2.88,
     "next_earnings_date": "2026-08-31",
     "next_earnings_type": "半年报"
+  },
+  {
+    "name": "江森自控",
+    "code": "JCI.US",
+    "market": "US",
+    "board": "纽",
+    "tier": "radar",
+    "source_etf": "direct",
+    "position_role": "美股雷达池 - 楼宇自动化+数据中心冷却转型标的，等Q2 FY2026财报验证",
+    "prebuy_conclusion": "逻辑清晰，等待更合适价格或验证点 - 战略重心聚焦楼宇自动化+数据中心，订单创纪录；但GAAP/Non-GAAP差60%+、转型成本仍高；等\\ FY2026财报（5月6日）验证。⚠️ 分析基于Q1 FY2026，Q2 FY2026（2026-05-06）尚未纳入",
+    "watch_reason": "AI数据中心冷却/楼宇自控双赛道，转型逻辑清晰；Q1 FY2026调整后EPS+40%、订单创纪录是强信号；财年截至9/30，需多期财报积累GAAP口径改善证据",
+    "current_price": 145.08,
+    "price_date": "2026-05-01",
+    "price_bands": [
+      155,
+      130,
+      110
+    ],
+    "valuation_anchor": "FY2026E EPS ~\\.80（Non-GAAP）：追高区>\\(>32x) / 中性区\\-155(27-32x，含当前) / 较好区间\\-130(22-27x，转型验证后可建仓) / 更低区间<\\(<22x，安全边际充足)",
+    "risk_flags": [
+      "GAAP EPS \\.97 vs 调整后~\\.80，差距60%+，大量剥离/重组费用影响真实盈利",
+      "转型过程中营收规模收缩（剥离非核心业务），增长验证期较长",
+      "Q2 FY2026（2026-05-06）财报待发，转型执行存在不确定性"
+    ],
+    "entry_trigger": "股价跌至\\（Forward PE <27x）且Q2 FY2026 Non-GAAP EPS同比增速维持≥35%；或连续2个季度GAAP净利润转正且无重大一次性项目",
+    "dv_ttm": 1.72,
+    "next_earnings_date": "2026-05-06",
+    "next_earnings_type": "季报",
+    "pending_earnings_note": "Q2 FY2026（2026-05-06）结果尚未纳入分析，财报发布后需更新公司页及本条目，并将next_earnings_date更新为下一期日期",
+    "cycle_is_cyclical": false
+  },
+  {
+    "name": "Quanta Services",
+    "code": "PWR.US",
+    "market": "US",
+    "board": "纽",
+    "tier": "radar",
+    "source_etf": "direct",
+    "position_role": "美股雷达池 - 电力/通信/管道基础设施EPC承包商，执行力卓越但估值极高待回调",
+    "prebuy_conclusion": "逻辑清晰，等待更合适价格 - Q1 2026 EPS+51%、营收+26%验证执行力卓越；但PE 101x极端昂贵，分析师目标价\\%；等\\-590才考虑入场",
+    "watch_reason": "AI数据中心+绿能并网基础设施建设涵盖全链的EPC平台；政府基础设施投资顺风；Q1 2026业绩验证增速真实，但当前估值已透支2年以上增长",
+    "current_price": 742.21,
+    "price_date": "2026-05-01",
+    "price_bands": [
+      700,
+      590,
+      490
+    ],
+    "valuation_anchor": "FY2026E EPS ~\\.50（基于Q1趋势）：追高区>\\(>73x FY2026E) / 中性区\\-700(62-73x，小仓观察) / 较好区间\\-590(51-62x，接近分析师目标价) / 更低区间<\\(<51x，安全边际充足)",
+    "risk_flags": [
+      "TTM PE 101x极端估值，分析师共识目标价\\%",
+      "运营利润率仅5.66%（工程承包商天花板），对原材料/劳动力成本高度敏感",
+      "FY2025并购支出\\.2B，整合风险与商誉累积"
+    ],
+    "entry_trigger": "股价回调至\\（Forward PE ~62x回归较合理区间），且2026年订单积压同比维持≥20%增速",
+    "dv_ttm": 0.22,
+    "next_earnings_date": "2026-07-31（估算）",
+    "next_earnings_type": "季报",
+    "cycle_is_cyclical": false
   }
 ]

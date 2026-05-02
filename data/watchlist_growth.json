@@ -1090,5 +1090,34 @@
     "next_earnings_type": "半年报",
     "cycle_is_cyclical": false,
     "cycle_position": null
+  },
+  {
+    "name": "伊顿",
+    "code": "ETN.US",
+    "market": "US",
+    "board": "纽",
+    "tier": "growth",
+    "source_etf": "direct",
+    "position_role": "美股成长池 - 电力基础设施+数据中心电力管理核心受益标的，高质量FCF机器",
+    "prebuy_conclusion": "逻辑清晰，等待更合适价格 - FY2025 FCF/净利润86.9%、运营利润率19%，Electrical Americas高速增长，数据中心+AI电力基础设施长期顺风；当前\\（PE 40x），等\\。⚠️ 分析基于FY2025年报，Q1 2026（2026-05-05 BMO）尚未纳入",
+    "watch_reason": "电力管理设备+数据中心基础设施双驱动，Electrical Americas 38%营收贡献最高毛利段；股息连续增长13年+，FCF质量86.9%；AI数据中心电力化是10年以上长逻辑",
+    "current_price": 425.55,
+    "price_date": "2026-05-01",
+    "price_bands": [
+      430,
+      390,
+      340
+    ],
+    "valuation_anchor": "FY2026E EPS \\.07：追高区>\\(>32.9x，已充分溢价) / 中性区\\-430(29.8-32.9x，持有观察) / 较好区间\\-390(26.0-29.8x，适合建仓) / 更低区间<\\(<26.0x，加仓机会)",
+    "risk_flags": [
+      "Q1 2026财报尚未发布（2026-05-05 BMO），存在财报前不确定性",
+      "分析师目标价\\，一致预期不支持当前估值",
+      "关税政策对欧洲/亚洲供应链采购成本的影响尚未量化"
+    ],
+    "dv_ttm": 1.25,
+    "next_earnings_date": "2026-05-05",
+    "next_earnings_type": "季报",
+    "pending_earnings_note": "Q1 2026（2026-05-05 BMO）结果尚未纳入分析，财报发布后需更新公司页及本条目，并将next_earnings_date更新为下一期日期",
+    "cycle_is_cyclical": false
   }
 ]
