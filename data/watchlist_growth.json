@@ -254,39 +254,6 @@
     "next_earnings_type": "半年报"
   },
   {
-    "name": "柏楚电子",
-    "code": "688188.SH",
-    "board": "科",
-    "tier": "growth",
-    "sector": "激光切割控制系统",
-    "thesis": "激光CNC控制系统国内龙头，市占率>50%，轻资产高毛利（毛利率77%+），客户粘性高，国产替代外资仍有空间",
-    "current_price": 138.35,
-    "price_date": "2026-04-26",
-    "dv_ttm": 0.36,
-    "pe_ttm": 35.9,
-    "roe": 19.3,
-    "price_bands": [
-      155.0,
-      135.0,
-      115.0
-    ],
-    "risk_flags": [
-      "激光切割行业景气与下游制造业投资周期高度相关，景气下行时ROE可能大幅回落",
-      "客户集中度风险：大族激光等少数大客户占较高比例",
-      "当前价格处于中性区（PE35x+），需等回调至30-35x区间入场"
-    ],
-    "valuation_anchor": {
-      "avoid": "155元以上，PE>40x，已充分定价增长预期",
-      "watch": "135-155元，PE35-40x，可关注但不急",
-      "consider": "115-135元，PE30-35x，较好入场区间",
-      "strong_buy": "100-115元以下，PE26-30x，安全边际充足"
-    },
-    "next_earnings_date": "2026-08-31",
-    "next_earnings_type": "半年报",
-    "next_earnings_time": "2026-08",
-    "prebuy_conclusion": "Q1营收+10.5%/净利+23.9%，增速放缓但盈利质量提升，激光控制系统龙头逻辑维持，等PE<35x或H1验证增速回升建仓。"
-  },
-  {
     "name": "安集科技",
     "code": "688019.SH",
     "source_etf": "931912",
@@ -673,32 +640,6 @@
     "price_date": "2026-04-27",
     "board": "沪",
     "dv_ttm": 2.1,
-    "next_earnings_date": "2026-08-31",
-    "next_earnings_type": "半年报",
-    "next_earnings_time": "2026-08"
-  },
-  {
-    "name": "拓普集团",
-    "code": "601689.SH",
-    "ts_code": "601689.SH",
-    "source_etf": "931571",
-    "board": "沪",
-    "position_role": "汽车零部件+人形机器人执行器，机器人叙事最强标的之一",
-    "prebuy_conclusion": "Q1营收+14.9%/净利-2.4%（降幅持续收窄：-11.97%→-7.4%→-2.4%），修复路径验证中，等净利转正且机器人收入占比>5%后建仓。",
-    "watch_reason": "特斯拉Optimus执行器+汽车热管理/空悬双轮驱动，机器人执行器国产化先锋",
-    "current_price": 56.76,
-    "price_date": "2026-04-24",
-    "price_bands": [
-      65.0,
-      56.0,
-      45.0
-    ],
-    "valuation_anchor": "基于2026E EPS约1.75元，65元以上=PE>37x追高，56-65=PE32-37x中性，45-56=PE26-32x较好，45以下=PE<26x安全边际充足",
-    "risk_flags": [
-      "FY2025净利润同比-7.3%，毛利率持续收窄（20.8%→19.4%），增收不增利",
-      "机器人执行器实际收入占比未在年报单独披露，叙事溢价风险高"
-    ],
-    "dv_ttm": 0.91,
     "next_earnings_date": "2026-08-31",
     "next_earnings_type": "半年报",
     "next_earnings_time": "2026-08"
@@ -1452,5 +1393,191 @@
     "next_earnings_date": "2026-08-31",
     "next_earnings_type": "半年报",
     "cycle_is_cyclical": false
+  },
+  {
+    "name": "柏楚电子",
+    "code": "688188.SH",
+    "source_etf": "H30590",
+    "board": "科",
+    "position_role": "激光切割CNC控制系统绝对龙头，轻资产高壁垒，H30590成分股最优质标的",
+    "prebuy_conclusion": "PE 34.9x处于3年历史分位0%（历史最低区），激光控制系统龙头逻辑完整，OCF/净利99%，财务质量极佳，当前价141元处于积极买入区间，长持逻辑优先。",
+    "watch_reason": "激光CNC控制系统国内龙头（市占率>50%），轻资产高毛利（毛利率77%+），净利率51%，客户粘性高",
+    "current_price": 141.78,
+    "price_date": "2026-04-30",
+    "price_bands": [
+      228,
+      180,
+      162
+    ],
+    "valuation_anchor": "EPS_TTM≈4.07元；P80=227.9元(PE56x)追高，P50=179.5元(PE44x)中性，P20=161.8元(PE39.8x)较好买入，当前141元(<P20)在积极买入区",
+    "risk_flags": [
+      "2024年创始人团队集体减持约12%股份（高位套现），当前价格仍低于减持均价",
+      "Q1 2026营收增速从26.5%降至10.5%，增速趋势验证中，需H1 2026确认不继续放缓"
+    ],
+    "dv_ttm": 1.56,
+    "cycle_is_cyclical": false,
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报",
+    "next_earnings_time": "2026-08"
+  },
+  {
+    "name": "拓普集团",
+    "code": "601689.SH",
+    "source_etf": "H30590",
+    "board": "沪",
+    "position_role": "汽车零部件+人形机器人执行器，特斯拉Optimus核心供应商",
+    "prebuy_conclusion": "PE 37.8x处于3年62.5%分位（中性偏贵），FY2025净利-7.4%（Q1 2026净利转为正增长），机器人执行器30亿订单确认；等净利转正趋势确认且价格回落至P50（56元）再分批介入。",
+    "watch_reason": "特斯拉Optimus旋转关节核心供应商，机器人执行器30亿订单确认，汽车热管理/空悬双赛道",
+    "current_price": 60.14,
+    "price_date": "2026-04-30",
+    "price_bands": [
+      67,
+      56,
+      46
+    ],
+    "valuation_anchor": "EPS_TTM≈1.59元；P80=67.1元(PE42.2x)追高，P50=55.5元(PE34.9x)中性建仓，P20=45.9元(PE28.9x)较好买入",
+    "risk_flags": [
+      "FY2025净利润首次下滑-7.4%，ROE降至12.73%边界，净利修复路径仍需验证",
+      "2025年8-9月创始人家族成员集中高位减持（含关联公司持股归零，套现规模大）",
+      "特斯拉为双线核心客户（汽车+机器人），客户集中度风险突出"
+    ],
+    "dv_ttm": 0.82,
+    "cycle_is_cyclical": false,
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报",
+    "next_earnings_time": "2026-08"
+  },
+  {
+    "name": "汇川技术",
+    "code": "300124.SZ",
+    "source_etf": "H30590",
+    "board": "创",
+    "position_role": "中国工业自动化龙头，通用伺服市占率32%，机器人控制器期权标的",
+    "prebuy_conclusion": "PE 39.18x处于3年76%分位，当前偏贵；Q1净利-23.4%，等回调至P50（64元）附近再分批介入。ROE 13.8%，护城河稳固，长期持有逻辑不变。",
+    "watch_reason": "国产工业自动化No.1，伺服/变频/PLC三大核心，人形机器人核心零部件布局兑现中",
+    "current_price": 68.6,
+    "price_date": "2026-04-30",
+    "price_bands": [
+      70,
+      64,
+      58
+    ],
+    "valuation_anchor": "EPS_TTM≈1.75元；P80=69.7元(PE39.8x)追高，P50=63.6元(PE36.3x)中性建仓，P20=58.5元(PE33.4x)较好，52以下PE<30x强力支撑",
+    "risk_flags": [
+      "Q1 2026净利同比-23.4%，OCF/净利仅8.8%，增速下行非一次性，盈利能力待验证",
+      "毛利率连续5季度下行（34.6%→29.1%），新能源整车厂压价及内化压力持续"
+    ],
+    "dv_ttm": 0.59,
+    "cycle_is_cyclical": false,
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报",
+    "next_earnings_time": "2026-08"
+  },
+  {
+    "name": "雷赛智能",
+    "code": "002979.SZ",
+    "source_etf": "H30590",
+    "board": "深",
+    "position_role": "运动控制国产替代+人形机器人关节伺服，叙事与基本面共振标的",
+    "prebuy_conclusion": "Q1 2026营收+34.5%提速显著；PE 57.2x在3年59.86%分位（略超P50），当前处分批建仓区间内，可少量起仓，目标价41元（P50）。",
+    "watch_reason": "国产运动控制细分龙头，人形机器人关节伺服布局早，ROE 13.86%健康，营收提速确认",
+    "current_price": 43.88,
+    "price_date": "2026-04-30",
+    "price_bands": [
+      51,
+      41,
+      27
+    ],
+    "valuation_anchor": "EPS_TTM≈0.77元；P80=50.7元(PE65.8x)追高，P50=41.2元(PE53.5x)中性，P20=27.3元(PE35.5x)较好买入",
+    "risk_flags": [
+      "PE 57.2x处于3年60%分位，赔率一般，高位追入风险大",
+      "应收账款占营收40.7%（账期148天偏长），坏账风险需跟踪"
+    ],
+    "dv_ttm": 0.71,
+    "cycle_is_cyclical": false,
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报",
+    "next_earnings_time": "2026-08"
+  },
+  {
+    "name": "科沃斯",
+    "code": "603486.SH",
+    "source_etf": "H30590",
+    "board": "沪",
+    "position_role": "扫地机器人+服务机器人消费端龙头，低估值高赔率",
+    "prebuy_conclusion": "PE 22.3x处于3年22%分位，紧贴历史P20低位；FY2025净利+118%、OCF/净利178%，赔率极佳。当前价65元接近P20（64元），可分批建仓。",
+    "watch_reason": "国内扫地机龙头（科沃斯+添可双品牌），出海布局，FY25盈利大幅修复，估值历史偏低区",
+    "current_price": 65.16,
+    "price_date": "2026-04-30",
+    "price_bands": [
+      135,
+      90,
+      64
+    ],
+    "valuation_anchor": "EPS_TTM≈2.92元；P80≈135元(PE46x)追高，P50≈90元(PE31x)中性，P20≈64元(PE22x)较好买入，60以下更优",
+    "risk_flags": [
+      "FY2026 Q1净利-14.7%，毛利率压缩趋势需持续跟踪",
+      "美国关税145%对海外收入冲击尚待验证",
+      "行业竞争加剧（追觅等新玩家快速扩张）"
+    ],
+    "dv_ttm": 0.69,
+    "cycle_is_cyclical": false,
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报",
+    "next_earnings_time": "2026-08"
+  },
+  {
+    "name": "双环传动",
+    "code": "002472.SZ",
+    "source_etf": "H30590",
+    "board": "深",
+    "position_role": "NEV传动齿轴龙头+人形机器人谐波减速器，基本面+叙事双驱",
+    "prebuy_conclusion": "PE 26.3x处于3年33.7%分位，处于分批建仓区间（P20-P50之间），FY2025净利+23%，OCF/净利190%，谐波减速器子公司提供期权价值，当前可分批起仓。",
+    "watch_reason": "汽车传动齿轴市占率70%+，人形机器人谐波减速器子公司环动科技量产中，基本面扎实",
+    "current_price": 39.27,
+    "price_date": "2026-04-30",
+    "price_bands": [
+      48,
+      42,
+      37
+    ],
+    "valuation_anchor": "EPS_TTM=1.494元；P80=48.4元(PE32.4x)追高，P50=41.6元(PE27.8x)中性，P20=36.8元(PE24.6x)较好买入",
+    "risk_flags": [
+      "2025年初实控人及高管在37-42元区间集中减持968万股（套现约3.74亿）",
+      "谐波减速器子公司环动科技营收<5亿，人形机器人量产兑现时间不确定",
+      "短期借款31.22亿，净有息负债为正，融资需求持续"
+    ],
+    "dv_ttm": 1.03,
+    "cycle_is_cyclical": false,
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报",
+    "next_earnings_time": "2026-08"
+  },
+  {
+    "name": "南网科技",
+    "code": "688248.SH",
+    "source_etf": "H30590",
+    "board": "科",
+    "position_role": "南方电网旗下电力技术+工业机器人，国资护城河标的",
+    "prebuy_conclusion": "PE 75x处于3年74.8%分位，估值偏贵；FY2025营收+22.3%、ROE 13.5%，国资背景稳定，但Q1营收/净利均-13%，等回调至43元（P50）附近再介入。",
+    "watch_reason": "南网系唯一A股标的，电力信息化+工业机器人双轮，国资护城河清晰，ROE稳定在13%+",
+    "current_price": 54.91,
+    "price_date": "2026-04-30",
+    "price_bands": [
+      57,
+      43,
+      34
+    ],
+    "valuation_anchor": "EPS_TTM≈0.73元；P80=57.1元(PE78x)追高，P50=42.8元(PE58x)中性建仓，P20=34.3元(PE47x)较好买入",
+    "risk_flags": [
+      "Q1 2026营收/净利同比均-13%，全年增长路径存疑",
+      "机器人概念纯度低，主题资金退出时估值面临收缩风险",
+      "大股东广东电网+南网产投合计59.55%首发原始股已解禁，潜在减持压力"
+    ],
+    "dv_ttm": 0.48,
+    "cycle_is_cyclical": false,
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报",
+    "next_earnings_time": "2026-08"
   }
 ]

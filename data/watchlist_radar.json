@@ -615,58 +615,6 @@
     "cycle_position": "复苏中期"
   },
   {
-    "name": "雷赛智能",
-    "code": "002979.SZ",
-    "ts_code": "002979.SZ",
-    "source_etf": "931571",
-    "board": "深",
-    "position_role": "运动控制+人形机器人布局先行者，叙事标的",
-    "prebuy_conclusion": "纯雷达观察。PE=55x对ROE=13.86%严重高估，等PE回落至35x以下（约25-27元）再建仓",
-    "watch_reason": "国产运动控制细分龙头，人形机器人关节伺服布局较早，叙事支撑强",
-    "current_price": 42.27,
-    "price_date": "2026-04-24",
-    "price_bands": [
-      50.0,
-      40.0,
-      27.0
-    ],
-    "valuation_anchor": "基于EPS约0.77元，50以上=PE>65x纯叙事泡沫，40-50=PE52-65x高估，27-40=PE35-52x中性偏高，27以下=PE<35x开始合理",
-    "entry_trigger": "PE回落至35x以下（股价约25-27元），或ROE突破15%且连续两个季度维持",
-    "risk_flags": [
-      "PE=55x对ROE=13.86%严重错配，隐含叙事溢价过高，赔率极差",
-      "营收18.74亿/净利2.25亿，规模较小，机器人订单放量尚无季报量化佐证"
-    ],
-    "dv_ttm": 0.73,
-    "next_earnings_date": "2026-08-31",
-    "next_earnings_type": "半年报"
-  },
-  {
-    "name": "汇川技术",
-    "code": "300124.SZ",
-    "ts_code": "300124.SZ",
-    "source_etf": "931571",
-    "board": "创",
-    "position_role": "中国工业自动化龙头，机器人控制器期权标的",
-    "prebuy_conclusion": "已降档radar。Q1 2026净利-23.4%（OCF/净利仅8.8%），继2025Q3单季利润增速仅+4%后再度恶化，增速下行非一次性；等净利润同比转正且OCF/净利回升>60%后重新评估。",
-    "watch_reason": "国产工业自动化No.1，通用变频/伺服/PLC三大核心，机器人控制器从期权逐步兑现",
-    "current_price": 64.75,
-    "price_date": "2026-04-24",
-    "price_bands": [
-      72.0,
-      62.0,
-      52.0
-    ],
-    "valuation_anchor": "基于2025E净利约54亿，72元以上=PE>36x追高，62-72=PE31-36x中性，52-62=PE26-31x较好，52以下=PE<26x强力支撑",
-    "risk_flags": [
-      "2025Q3单季净利增速仅+4%，与营收增速+21%的剪刀差扩大，原因待年报确认",
-      "毛利率连续5季度下行（34.6%→29.3%），新能源电驱整车厂压价及内化风险"
-    ],
-    "dv_ttm": 0.63,
-    "next_earnings_date": "2026-08-31",
-    "next_earnings_type": "半年报",
-    "entry_trigger": "股价跌至50元以下（2026E PE≤25x）且连续两季度净利润同比正增长，且OCF/净利>60%；两项须同时满足"
-  },
-  {
     "name": "大博医疗",
     "code": "002901.SZ",
     "source_etf": "399989",
@@ -1790,5 +1738,145 @@
     "dv_ttm": 1.5,
     "next_earnings_date": "2026-08-31",
     "next_earnings_type": "半年报"
+  },
+  {
+    "name": "大华股份",
+    "code": "002236.SZ",
+    "source_etf": "H30590",
+    "board": "深",
+    "position_role": "AI安防+机器视觉转型中期，低估值高股息，等待ROE修复",
+    "prebuy_conclusion": "PE 15.49x处于3年36.8%分位，估值偏低；OCF质量优秀（100%），股息率3.0%；但美国实体清单限制海外扩张，ROE 10.46%未突破12%，纳入radar tier等待ROE改善。",
+    "watch_reason": "安防行业第二，AI安防+机器视觉转型，低估值+高股息，等待ROE突破12%后升档",
+    "current_price": 18.49,
+    "price_date": "2026-04-30",
+    "price_bands": [
+      24,
+      20,
+      14
+    ],
+    "valuation_anchor": "EPS_TTM≈1.18元；P80≈23.9元(PE20.2x)追高，P50≈19.9元(PE16.9x)中性，P20≈14元(PE12x，低ROE折价后底部)较好买入",
+    "entry_trigger": "ROE连续两季度年化≥12%，且AI安防/机器视觉业务收入占比超30%；或股价跌至14元以下（PE~12x）大盘恐慌时可试仓",
+    "risk_flags": [
+      "美国商务部实体清单（2019年），海外扩张受限，品牌声誉持续受损",
+      "ROE 10.46%，长期低于12%成长档门槛，盈利修复路径不确定",
+      "应收账款154.74亿（账期172天），若大客户回款出现问题将直接冲击利润"
+    ],
+    "dv_ttm": 0.99,
+    "cycle_is_cyclical": false,
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报",
+    "next_earnings_time": "2026-08"
+  },
+  {
+    "name": "石头科技",
+    "code": "688169.SH",
+    "source_etf": "H30590",
+    "board": "科",
+    "position_role": "消费机器人SLAM技术领先，PB历史极低，等待毛利率企稳",
+    "prebuy_conclusion": "PE 21.1x处于3年31%分位、PB处于历史0.28%极低分位，已隐含大量悲观预期；但FY25毛利率从50%坍塌至42%、ROE从16%降至10%，量涨利缩信号明确，纳入radar等待毛利率企稳。",
+    "watch_reason": "扫地机器人SLAM算法领先，海外占比55%+，具身智能算法积累厚；低估值提供安全垫，等基本面改善升档",
+    "current_price": 117.86,
+    "price_date": "2026-04-29",
+    "price_bands": [
+      150,
+      125,
+      107
+    ],
+    "valuation_anchor": "EPS_TTM≈5.57元；P80=150.1元(PE26.9x)追高，P50=124.6元(PE22.4x)中性，P20=107.2元(PE19.2x)较好买入",
+    "entry_trigger": "FY26H1（2026-08-31）毛利率回升至≥45%，且库存增速≤营收增速；或股价跌至≤107元（PE≤19x，P20）且毛利率确认企稳",
+    "risk_flags": [
+      "FY25毛利率从50%坍塌至42%（-8pp），ROE从16%降至10%，量涨利缩趋势明确",
+      "库存从14.9亿激增至26.6亿（+78% YoY），Q1 2026进一步升至32.2亿，渠道健康度存疑",
+      "美国关税持续加码，海外收入占55%+，毛利率压力来源之一"
+    ],
+    "dv_ttm": 0.66,
+    "cycle_is_cyclical": false,
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报",
+    "next_earnings_time": "2026-08"
+  },
+  {
+    "name": "伟创电气",
+    "code": "688698.SH",
+    "source_etf": "H30590",
+    "board": "科",
+    "position_role": "细分工控伺服/变频，人形机器人关节驱动布局中，等待估值回落",
+    "prebuy_conclusion": "PE 57.4x超过3年P80（82.9%分位），高估；Q1净利-14.7%，ROE 11.83%边界，自由现金流为负；纳入radar等待价格回落至P50（47-65元）区间且盈利改善。",
+    "watch_reason": "伺服驱动+变频器专精特新，人形机器人关节驱动布局中，细分市场有积累；等估值合理再介入",
+    "current_price": 68.24,
+    "price_date": "2026-04-30",
+    "price_bands": [
+      65,
+      48,
+      36
+    ],
+    "valuation_anchor": "EPS_TTM=1.189元；P80=65.43元(PE55x)当前超过追高线，P50=47.74元(PE40.2x)中性，P20=35.87元(PE30.2x)较好买入",
+    "entry_trigger": "股价回落至47-65元区间（3年P50附近），且2026H1 ROE年化≥12%、OCF/净利≥50%，净利率止跌回升",
+    "risk_flags": [
+      "PE 57.4x超过3年P80（82.9%分位），当前价格高估，超过P80警戒线",
+      "2026Q1净利同比-14.74%，ROE年化仅~8%，盈利能力边际恶化",
+      "2025年自由现金流-3.90亿，OCF/净利30.77%偏低，资本支出压制现金"
+    ],
+    "dv_ttm": 0.61,
+    "cycle_is_cyclical": false,
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报",
+    "next_earnings_time": "2026-08"
+  },
+  {
+    "name": "信捷电气",
+    "code": "603416.SH",
+    "source_etf": "H30590",
+    "board": "沪",
+    "position_role": "国产小型PLC细分龙头，等待ROE突破12%及治理改善",
+    "prebuy_conclusion": "ROE=10.15%（FY2025）连续低于12%门槛，高管减持+控股股东质押9.62%+13亿委托理财异常，纳入radar等待ROE改善及治理信号改善；营收持续加速（Q1 2026+19.6%）是正面信号。",
+    "watch_reason": "国内小型PLC细分龙头，智改数转和进口替代双驱，营收持续加速，等ROE修复升档",
+    "current_price": 54.36,
+    "price_date": "2026-04-30",
+    "price_bands": [
+      62,
+      48,
+      36
+    ],
+    "valuation_anchor": "EPS_TTM=1.67元；P80=62.4元(PE37.4x)追高，P50=48.1元(PE28.8x)中性，P20=36.4元(PE21.8x)较好买入",
+    "entry_trigger": "2026H1 ROE年化回升至≥12%，且高管减持计划结束，控股股东质押率降至5%以下；或股价回落至≤38元（PE≤23x，历史25%分位）",
+    "risk_flags": [
+      "ROE 10.15%（FY24=10.31%→FY25=10.15%）持续低于12%门槛且无改善趋势",
+      "控股股东持续质押9.62%总股本（2026-04新增），高管过志强2-3月减持50万股",
+      "拟用13亿闲置资金（占净资产48%）做委托理财/证券投资，主业投入意愿存疑"
+    ],
+    "dv_ttm": 2.68,
+    "cycle_is_cyclical": false,
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报",
+    "next_earnings_time": "2026-08"
+  },
+  {
+    "name": "快克智能",
+    "code": "603203.SH",
+    "source_etf": "H30590",
+    "board": "沪",
+    "position_role": "焊接设备细分龙头，PE历史极高，等待估值大幅回落",
+    "prebuy_conclusion": "PE=79.75x处于3年历史99.86%分位（极度高估，历史P80仅20.2元/PE20.2x）；Q1营收+33%复苏初现，但2025年净利-34.8%异常，当前价格严重虚高，纳入radar等待回落至P80以下（20元）。",
+    "watch_reason": "锡焊设备细分龙头（波峰焊/AOI），Q1 2026营收+33%复苏信号，基本面修复后估值将大幅压缩",
+    "current_price": 46.88,
+    "price_date": "2026-04-30",
+    "price_bands": [
+      20,
+      17,
+      16
+    ],
+    "valuation_anchor": "EPS_TTM≈0.588元；P80=20.21元(PE34.4x)为正常估值上限，P50=17.18元(PE29x)中性，P20=15.52元(PE26x)较好买入；当前46.88元远超P80，等待价格腰斩",
+    "entry_trigger": "股价回落至P80以下（≤20元），且2026H1净利增速≥20%验证复苏，并确认2025年净利下滑原因（EBIT上升但净利异常下滑的原因得到解释）",
+    "risk_flags": [
+      "PE=79.75x处于3年历史99.86%分位，极度高估，历史正常P80仅20.2元",
+      "2025年净利同比-34.8%异常下滑（EBIT与净利背离，原因不明），利润质量存疑",
+      "高管刘志宏、窦小明在29-40元区间持续减持，内部人对高位无信心"
+    ],
+    "dv_ttm": 1.36,
+    "cycle_is_cyclical": false,
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报",
+    "next_earnings_time": "2026-08"
   }
 ]
