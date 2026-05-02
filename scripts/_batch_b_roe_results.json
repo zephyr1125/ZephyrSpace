@@ -1,0 +1,452 @@
+{
+  "330000": {
+    "name": "家用电器",
+    "total_comp": 94,
+    "weighted_roe": 17.4,
+    "weighted_rev_yoy": 6.0,
+    "cr5": 68.7,
+    "cr10": 77.6,
+    "top10": [
+      {
+        "code": "000333.SZ",
+        "name": "美的集团",
+        "weight": 35.03,
+        "roe": 20.0,
+        "or_yoy": 12.1,
+        "end_date": "20251231"
+      },
+      {
+        "code": "000651.SZ",
+        "name": "格力电器",
+        "weight": 14.7,
+        "roe": 20.5,
+        "or_yoy": -9.9,
+        "end_date": "20251231"
+      },
+      {
+        "code": "002050.SZ",
+        "name": "三花智控",
+        "weight": 8.9,
+        "roe": 15.9,
+        "or_yoy": 11.0,
+        "end_date": "20251231"
+      },
+      {
+        "code": "600690.SH",
+        "name": "海尔智家",
+        "weight": 7.23,
+        "roe": 17.0,
+        "or_yoy": 5.7,
+        "end_date": "20251231"
+      },
+      {
+        "code": "600839.SH",
+        "name": "四川长虹",
+        "weight": 2.87,
+        "roe": 6.6,
+        "or_yoy": 4.9,
+        "end_date": "20251231"
+      },
+      {
+        "code": "688169.SH",
+        "name": "石头科技",
+        "weight": 2.2,
+        "roe": 10.1,
+        "or_yoy": 56.5,
+        "end_date": "20251231"
+      },
+      {
+        "code": "300342.SZ",
+        "name": "天银机电",
+        "weight": 1.99,
+        "roe": 0.8,
+        "or_yoy": -21.6,
+        "end_date": "20251231"
+      },
+      {
+        "code": "002429.SZ",
+        "name": "兆驰股份",
+        "weight": 1.92,
+        "roe": 8.0,
+        "or_yoy": -12.4,
+        "end_date": "20251231"
+      },
+      {
+        "code": "600060.SH",
+        "name": "海信视像",
+        "weight": 1.61,
+        "roe": 12.0,
+        "or_yoy": -1.5,
+        "end_date": "20251231"
+      },
+      {
+        "code": "603486.SH",
+        "name": "科沃斯",
+        "weight": 1.14,
+        "roe": 21.7,
+        "or_yoy": 15.1,
+        "end_date": "20251231"
+      }
+    ]
+  },
+  "350000": {
+    "name": "纺织服饰",
+    "total_comp": 106,
+    "weighted_roe": 9.7,
+    "weighted_rev_yoy": 5.3,
+    "cr5": 16.5,
+    "cr10": 27.4,
+    "top10": [
+      {
+        "code": "600177.SH",
+        "name": "雅戈尔",
+        "weight": 4.1,
+        "roe": 5.9,
+        "or_yoy": -18.4,
+        "end_date": "20251231"
+      },
+      {
+        "code": "300005.SZ",
+        "name": "探路者",
+        "weight": 3.86,
+        "roe": 4.0,
+        "or_yoy": -13.2,
+        "end_date": "20251231"
+      },
+      {
+        "code": "600398.SH",
+        "name": "海澜之家",
+        "weight": 3.44,
+        "roe": 12.3,
+        "or_yoy": 3.2,
+        "end_date": "20251231"
+      },
+      {
+        "code": "600916.SH",
+        "name": "中国黄金",
+        "weight": 2.59,
+        "roe": 3.8,
+        "or_yoy": 15.5,
+        "end_date": "20251231"
+      },
+      {
+        "code": "002003.SZ",
+        "name": "伟星股份",
+        "weight": 2.48,
+        "roe": 14.5,
+        "or_yoy": 2.7,
+        "end_date": "20251231"
+      },
+      {
+        "code": "002083.SZ",
+        "name": "孚日股份",
+        "weight": 2.36,
+        "roe": 9.4,
+        "or_yoy": -2.6,
+        "end_date": "20251231"
+      },
+      {
+        "code": "002832.SZ",
+        "name": "比音勒芬",
+        "weight": 2.29,
+        "roe": 10.5,
+        "or_yoy": 7.7,
+        "end_date": "20251231"
+      },
+      {
+        "code": "601718.SH",
+        "name": "际华集团",
+        "weight": 2.24,
+        "roe": -2.4,
+        "or_yoy": -29.9,
+        "end_date": "20251231"
+      },
+      {
+        "code": "002345.SZ",
+        "name": "潮宏基",
+        "weight": 2.05,
+        "roe": 13.6,
+        "or_yoy": 43.0,
+        "end_date": "20251231"
+      },
+      {
+        "code": "300979.SZ",
+        "name": "华利集团",
+        "weight": 2.0,
+        "roe": 19.0,
+        "or_yoy": 4.1,
+        "end_date": "20251231"
+      }
+    ]
+  },
+  "360000": {
+    "name": "轻工制造",
+    "total_comp": 158,
+    "weighted_roe": 11.2,
+    "weighted_rev_yoy": 11.4,
+    "cr5": 17.0,
+    "cr10": 25.8,
+    "top10": [
+      {
+        "code": "002078.SZ",
+        "name": "太阳纸业",
+        "weight": 4.92,
+        "roe": 11.0,
+        "or_yoy": -3.8,
+        "end_date": "20251231"
+      },
+      {
+        "code": "002565.SZ",
+        "name": "顺灏股份",
+        "weight": 3.39,
+        "roe": 3.2,
+        "or_yoy": -21.8,
+        "end_date": "20251231"
+      },
+      {
+        "code": "603195.SH",
+        "name": "公牛集团",
+        "weight": 3.03,
+        "roe": 24.9,
+        "or_yoy": -4.8,
+        "end_date": "20251231"
+      },
+      {
+        "code": "002831.SZ",
+        "name": "裕同科技",
+        "weight": 3.0,
+        "roe": 13.5,
+        "or_yoy": 0.5,
+        "end_date": "20251231"
+      },
+      {
+        "code": "603816.SH",
+        "name": "顾家家居",
+        "weight": 2.65,
+        "roe": 17.5,
+        "or_yoy": 8.5,
+        "end_date": "20251231"
+      },
+      {
+        "code": "002969.SZ",
+        "name": "嘉美包装",
+        "weight": 1.99,
+        "roe": 3.5,
+        "or_yoy": -12.0,
+        "end_date": "20251231"
+      },
+      {
+        "code": "603899.SH",
+        "name": "晨光股份",
+        "weight": 1.8,
+        "roe": 14.4,
+        "or_yoy": 3.4,
+        "end_date": "20251231"
+      },
+      {
+        "code": "002229.SZ",
+        "name": "鸿博股份",
+        "weight": 1.72,
+        "roe": -12.4,
+        "or_yoy": 98.6,
+        "end_date": "20251231"
+      },
+      {
+        "code": "600210.SH",
+        "name": "紫江企业",
+        "weight": 1.69,
+        "roe": 16.2,
+        "or_yoy": -9.7,
+        "end_date": "20251231"
+      },
+      {
+        "code": "603833.SH",
+        "name": "欧派家居",
+        "weight": 1.62,
+        "roe": 10.6,
+        "or_yoy": -8.9,
+        "end_date": "20251231"
+      }
+    ]
+  },
+  "770000": {
+    "name": "美容护理",
+    "total_comp": 29,
+    "weighted_roe": 10.8,
+    "weighted_rev_yoy": -1.3,
+    "cr5": 44.2,
+    "cr10": 65.2,
+    "top10": [
+      {
+        "code": "300896.SZ",
+        "name": "爱美客",
+        "weight": 14.63,
+        "roe": 16.8,
+        "or_yoy": -18.9,
+        "end_date": "20251231"
+      },
+      {
+        "code": "603605.SH",
+        "name": "珀莱雅",
+        "weight": 11.85,
+        "roe": 26.0,
+        "or_yoy": -1.7,
+        "end_date": "20251231"
+      },
+      {
+        "code": "688363.SH",
+        "name": "华熙生物",
+        "weight": 7.62,
+        "roe": 4.2,
+        "or_yoy": -21.8,
+        "end_date": "20251231"
+      },
+      {
+        "code": "300888.SZ",
+        "name": "稳健医疗",
+        "weight": 5.07,
+        "roe": 6.8,
+        "or_yoy": 22.0,
+        "end_date": "20251231"
+      },
+      {
+        "code": "002511.SZ",
+        "name": "中顺洁柔",
+        "weight": 5.06,
+        "roe": 5.9,
+        "or_yoy": 7.7,
+        "end_date": "20251231"
+      },
+      {
+        "code": "600315.SH",
+        "name": "上海家化",
+        "weight": 5.03,
+        "roe": 3.9,
+        "or_yoy": 11.2,
+        "end_date": "20251231"
+      },
+      {
+        "code": "300957.SZ",
+        "name": "贝泰妮",
+        "weight": 5.02,
+        "roe": 8.3,
+        "or_yoy": -6.6,
+        "end_date": "20251231"
+      },
+      {
+        "code": "300132.SZ",
+        "name": "青松股份",
+        "weight": 3.86,
+        "roe": 11.1,
+        "or_yoy": 14.4,
+        "end_date": "20251231"
+      },
+      {
+        "code": "300740.SZ",
+        "name": "水羊股份",
+        "weight": 3.8,
+        "roe": 6.9,
+        "or_yoy": 17.5,
+        "end_date": "20251231"
+      },
+      {
+        "code": "300658.SZ",
+        "name": "延江股份",
+        "weight": 3.24,
+        "roe": 3.1,
+        "or_yoy": 17.4,
+        "end_date": "20251231"
+      }
+    ]
+  },
+  "460000": {
+    "name": "社会服务",
+    "total_comp": 81,
+    "weighted_roe": 8.2,
+    "weighted_rev_yoy": 3.4,
+    "cr5": 23.8,
+    "cr10": 37.3,
+    "top10": [
+      {
+        "code": "300012.SZ",
+        "name": "华测检测",
+        "weight": 7.84,
+        "roe": 13.9,
+        "or_yoy": 8.8,
+        "end_date": "20251231"
+      },
+      {
+        "code": "002607.SZ",
+        "name": "中公教育",
+        "weight": 4.45,
+        "roe": 6.6,
+        "or_yoy": -14.8,
+        "end_date": "20251231"
+      },
+      {
+        "code": "300144.SZ",
+        "name": "宋城演艺",
+        "weight": 4.32,
+        "roe": 9.9,
+        "or_yoy": -6.6,
+        "end_date": "20251231"
+      },
+      {
+        "code": "600754.SH",
+        "name": "锦江酒店",
+        "weight": 3.6,
+        "roe": 5.9,
+        "or_yoy": -1.8,
+        "end_date": "20251231"
+      },
+      {
+        "code": "600258.SH",
+        "name": "首旅酒店",
+        "weight": 3.56,
+        "roe": 6.8,
+        "or_yoy": -1.9,
+        "end_date": "20251231"
+      },
+      {
+        "code": "300010.SZ",
+        "name": "豆神教育",
+        "weight": 3.08,
+        "roe": 4.1,
+        "or_yoy": 33.0,
+        "end_date": "20251231"
+      },
+      {
+        "code": "600158.SH",
+        "name": "中体产业",
+        "weight": 3.01,
+        "roe": -8.5,
+        "or_yoy": -14.8,
+        "end_date": "20251231"
+      },
+      {
+        "code": "300938.SZ",
+        "name": "信测标准",
+        "weight": 3.0,
+        "roe": 12.9,
+        "or_yoy": 10.9,
+        "end_date": "20251231"
+      },
+      {
+        "code": "300416.SZ",
+        "name": "苏试试验",
+        "weight": 2.2,
+        "roe": 9.5,
+        "or_yoy": 11.0,
+        "end_date": "20251231"
+      },
+      {
+        "code": "002967.SZ",
+        "name": "广电计量",
+        "weight": 2.2,
+        "roe": 12.2,
+        "or_yoy": 12.4,
+        "end_date": "20251231"
+      }
+    ]
+  }
+}

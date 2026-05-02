@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+Step 1: 加载成分股数据（2026-03-31）...
+  成分股数: 80
+Step 2: 批量获取估值数据（2026-04-30）...
+  获取到: 80 只
+Step 3: 东方财富获取年报ROE（2025年报）...
+  获取ROE: 80 只
+Step 3b: 理杏仁获取年度营收（y.ps.toi.t）...
+  2025营收: 80 只, 2024营收: 80 只
+
+==============================================================================================================
+#   代码         权重      市值亿      PE      PB     ROE     营收同比      PE3yr%   结论
+==============================================================================================================
+  File "E:\ObsidianVaults\ZephyrSpace\scripts\_931994_rescreen2.py", line 197, in <module>
+    print(f"{i:3} {code:10} {weight:6.2f}% {mc_s:8} {pe_s:7} {pb_s:6} {roe_s:7} {yoy_s:9} {pe3_s:8} {status} {reason_s}")
+UnicodeEncodeError: 'gbk' codec can't encode character '\u274c' in position 74: illegal multibyte sequence
