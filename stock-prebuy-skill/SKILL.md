@@ -862,6 +862,7 @@ def calc_price_bands(stock_code, current_price, company_type="non_financial"):
 
 **数据 API 优先顺序（估值/财务/监管）：**
 > 理杏仁（Lixinger）为唯一主力数据源；理杏仁无数据时用东方财富 web_fetch 补充；不再使用 tushare。
+> **调用理杏仁 API 时，优先使用 `lixinger-query` skill 中的 `query()` 函数和端点目录（`references/endpoints.md`），不要手工拼 requests.post。若对某端点的 metricsList 合法字段不确定，调用 `fetch_doc(path)` 查询后再调用，避免字段名猜测导致 ValidationError。**
 
 | 数据类型 | 优先数据源 | 接口 |
 |---|---|---|
