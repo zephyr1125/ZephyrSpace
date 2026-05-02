@@ -62,6 +62,16 @@ description: >-
 
 如果同名公司存在 A/H 双重上市，先确认交易标的。
 
+**公司页处理规则（检查 `01-公司/` 是否已有对应页面）：**
+
+| 用户描述 | 处理方式 |
+|---|---|
+| 「重新 PreBuy」/ 「从头 PreBuy」/ 「重做」 | **先删除**现有公司页，再按模板从头创建 |
+| 「更新」/ 「刷新」/ 「季报更新」 | **保留**现有页面，在原有章节基础上覆盖更新数据 |
+| 首次分析（页面不存在） | 按模板新建 |
+
+> 删除时使用 `Remove-Item` 或 Obsidian CLI `delete` 命令，确认后再重建，避免新旧数据混用导致结论前后矛盾。
+
 ### 第 1 步：固定查 14 个模块
 
 #### 模块 1：公司到底赚什么钱
@@ -877,8 +887,28 @@ def calc_price_bands(stock_code, current_price, company_type="non_financial"):
 > | `dividend`、`pledge`、`measures`、`inquiry`、增减持、`hot/elr` 等非基本面接口 | 股票代码字段 | `"stockCode": "600036"`（**字符串**） | `"stockCodes": ["600036"]` |
 > | `candlestick` K线接口 | 复权类型 | `"type": "lxr_fc_rights"` 必须传 | 不传 type → 返回 `ValidationError` |
 > | `fs/bank`、`fundamental/bank` | ROE字段 | 不支持（会导致整个请求报错） | 不可在 `metricsList` 或字段列表中包含 `roe`、`roe.wa` 等字段；**银行ROE必须从东方财富 `WEIGHTAVG_ROE` 字段获取** |
+> | **所有 `fundamental/*` 接口** | `startDate` / `endDate` | **必须用最近交易日**（如 `2026-04-30`） | 传当天日期若为周末/节假日 → 返回空数据/None，不报错 |
 >
-> **一句话记法**：`fundamental/*` 系列用数组，其他接口用字符串；candlestick 必须加 type；银行ROE不在理杏仁。
+> **一句话记法**：`fundamental/*` 系列用数组，其他接口用字符串；candlestick 必须加 type；银行ROE不在理杏仁；日期必须是最近交易日。
+>
+> **最近交易日辅助函数**（在周末/节假日运行时必用）：
+>
+> ```python
+> from datetime import date, timedelta
+>
+> def last_trading_day(today=None):
+>     """返回最近一个 A 股交易日（简化版：跳过周六日，不处理法定节假日）。
+>     若需处理五一/国庆/春节等长假，建议 web_fetch 查询理杏仁最新一条 candlestick 的日期。"""
+>     if today is None:
+>         today = date.today()
+>     d = today
+>     while d.weekday() >= 5:   # 5=Saturday, 6=Sunday
+>         d -= timedelta(days=1)
+>     return d.isoformat()
+>
+> # 使用示例：
+> trade_date = last_trading_day()   # e.g., "2026-04-30"（若今天是周六/日则自动回退）
+> ```
 
 **candlestick 接口示例（当前价格 + 近60日走势）：**
 
