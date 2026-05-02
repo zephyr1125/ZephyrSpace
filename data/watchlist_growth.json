@@ -229,6 +229,31 @@
     "next_earnings_time": "2026-08"
   },
   {
+    "name": "伯特利",
+    "code": "603596.SH",
+    "source_etf": "931783",
+    "position_role": "智能驾驶执行层 / 线控制动成长仓",
+    "prebuy_conclusion": "继续研究，可列入主选观察池。",
+    "watch_reason": "站在智能驾驶执行层，单车底盘电子化和线控制动渗透率提升能持续抬升价值量，兑现度比纯概念股更高。",
+    "current_price": 45.88,
+    "price_bands": [
+      52.0,
+      42.0,
+      35.0
+    ],
+    "risk_flags": [
+      "2026Q1利润增速停滞，若后续两个季度都不恢复，估值上修空间有限",
+      "汽车行业价格战向供应链传导，执行层零部件也可能被压价",
+      "海外客户与扩产兑现节奏若低于预期，成长逻辑会降速"
+    ],
+    "valuation_anchor": "成长PE+执行层兑现：追高区>52元(市场默认高增长再加速，不追) / 中性区42-52元(逻辑对但不便宜，继续跟踪) / 较好区间35-42元(可以研究性布局) / 更低区间<35元(安全边际明显提升)",
+    "price_date": "2026-04-30",
+    "board": "沪",
+    "dv_ttm": 0.76,
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报"
+  },
+  {
     "name": "柏楚电子",
     "code": "688188.SH",
     "board": "科",
@@ -1345,6 +1370,32 @@
     "next_earnings_date": "2026-05-07",
     "next_earnings_type": "季报",
     "pending_earnings_note": "Q1 2026（2026-05-07 AMC盘后）结果尚未纳入分析，财报发布后需更新公司页及本条目",
+    "cycle_is_cyclical": false
+  },
+  {
+    "name": "华明装备",
+    "code": "002270.SZ",
+    "tier": "growth",
+    "position_role": "电网设备精密仓：高压GIS/OLTC设备，高毛利（54%）高ROE（22.5%），吃特高压新建+存量变电站升级周期",
+    "prebuy_conclusion": "高质量成熟型成长仓，ROE 22.5%+毛利 54%+OCF/净利 85%，基本面优秀；当前 27.59 元处于中性区上沿（PE 34.8x），等 22-27 元区间可研究性布局，不追高。",
+    "watch_reason": "GIS技术壁垒强，主电网客户粘性高，1990-2000年代变电站进入20-30年GIS替换周期；盈利质量在A股电气设备中属顶级，等营收增速验证回升后加仓",
+    "current_price": 27.59,
+    "price_bands": [
+      36,
+      27,
+      22
+    ],
+    "risk_flags": [
+      "营收增速从+18.4%(2024)大幅放缓至+4.5%(2025)，成长持续性待验证",
+      "客户集中度高（主要依赖国网/南网采购节奏），季度业绩波动难预测"
+    ],
+    "valuation_anchor": "PE 34.8x（2026-04-25），较好区间对应PE 28-34x，追高区>45x",
+    "price_date": "2026-04-25",
+    "board": "深",
+    "source_etf": "931994",
+    "dv_ttm": 2.24,
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报",
     "cycle_is_cyclical": false
   }
 ]
