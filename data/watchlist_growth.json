@@ -851,12 +851,12 @@
     "source_etf": "direct",
     "board": "沪",
     "position_role": "利率周期底部底仓型银行配置，低于账面价值买入行业龙头",
-    "prebuy_conclusion": "逻辑清晰，当前38.27元处于🟢🟢最优区（PB=0.852x，3年8%分位，P20以下）。Q1 2026收入+3.8%拐点初现，利率/信用周期底部/复苏早期，远期股息率5.3%，周期升档+政策顺风PS+3，积极建仓区。[理杏仁PB分位 2026-04-30]",
+    "prebuy_conclusion": "逻辑清晰，当前价格处于历史低位，可按计划建仓底仓。PB=0.85x（3年8%分位），NIM接近底部，2026Q1营收首次转正+3.8%，股息率5.27%。反证：NIM<1.85%或NPL快速上升。",
     "watch_reason": "零售银行护城河最深（AUM 13.2T），Q1 2026收入拐点确认（近8季最强），PB=0.91x破账面价值，远期股息率5.1%，政策顺风PS+3，利率周期底部。",
     "current_price": 38.27,
     "price_date": "2026-04-30",
     "price_bands": [
-      47.4,
+      51.1,
       43.12,
       40.05
     ],
@@ -870,7 +870,7 @@
     "next_earnings_date": "2026-08-31",
     "next_earnings_type": "半年报",
     "cycle_is_cyclical": true,
-    "cycle_position": "复苏早期",
+    "cycle_position": "底部/复苏早期",
     "price_bands_basis": "pb.y3+ps3",
     "price_bands_date": "2026-04-30"
   },
