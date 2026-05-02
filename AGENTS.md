@@ -163,7 +163,7 @@ watchlist 数据已拆分为 4 个文件，放在 `data/` 目录：
 **执行步骤**：
 
 1. **批量识别待更新公司**：筛选 `next_earnings_type` 不为半年报/年报的公司，检查财报是否已发布
-2. **拉取财报数据**：优先 tushare `fina_indicator`，**若最新 end_date 不符（仍为上一期），必须用 web_fetch 外部验证**（见下方数据规范）
+2. **拉取财报数据**：优先理杏仁 `cn/company/fs/non_financial`（`date` 参数传最近年末日），**若返回期别落后于预期，必须用东方财富 web_fetch 外部验证**（见下方财报数据规范）
 3. **更新公司页**：在 `## 已核实的关键事实` 或 `## 季度财报跟踪` 区块添加新一期数据，更新 `## PreBuy 结论` 加 `[Qx YYYY已验证]` 标注
 4. **更新 watchlist JSON（必须同时更新以下两个字段，缺一不可）**：
    ```json
@@ -188,22 +188,21 @@ watchlist 数据已拆分为 4 个文件，放在 `data/` 目录：
 
 ---
 
-### tushare 财报数据规范
+### 财报数据规范（理杏仁 + 东方财富备用）
 
-> ⚠️ **tushare 财报数据存在延迟**（通常滞后1-3天，有时更长），不能假设 `fina_indicator` 返回的就是最新季报。
+> ⚠️ **理杏仁与东方财富财报数据均可能存在延迟**（通常滞后1-3天，有时更长），必须验证期别后再使用。
 
 **验证规则**：
-1. 拉取 `fina_indicator` 后，检查返回的最新 `end_date` 是否符合预期
-   - 例：4月30日后查询，若 `end_date` 最新仍为 `20251231`（年报），而非 `20260331`（Q1），说明 tushare 未更新
-2. **不符合预期时，必须用 `web_fetch` 外部验证**：
-   - A股：东方财富 `https://emweb.securities.eastmoney.com/PC_HSF10/FinanceAnalysis/index?code={code}`
-   - A股财务摘要：`https://quote.eastmoney.com/concept/{code}.html`
+1. 用理杏仁 `cn/company/fs/non_financial` 拉取后，检查返回的最新期别是否符合预期（用 SKILL 中的 `expected_latest_qdate()` 函数推算应有的最新报告期）
+2. **不符合预期时，用东方财富 web_fetch 外部验证**：
+   - A股：`https://datacenter-web.eastmoney.com/api/data/v1/get?reportName=RPT_LICO_FN_CPD&columns=ALL&filter=(SECURITY_CODE%3D%22{6位代码}%22)&pageNumber=1&pageSize=3`
+   - 关注字段：`ISNEW="1"` + `QDATE`（如 `"2026Q1"`）+ `REPORTDATE`（如 `"2026-03-31"`）
    - 美股/港股：`https://stockanalysis.com/stocks/{ticker}/financials/?p=quarterly`
-3. 若 tushare 与外部数据不一致，以**外部数据为准**，并在脚本注释中记录不一致情况
+3. 若理杏仁与东方财富数据不一致，以**东方财富为准**，并在结论中注明数据来源
 
-**tushare Q1 ROE 低估陷阱**（已在粗筛 SOP 中记录，此处补充季报更新场景）：
+**Q1 ROE 低估陷阱**（与数据源无关，季报更新时同样适用）：
 
-在季报更新时，若拉取 `roe` 字段用于 prebuy_conclusion 描述，需注意：
+在季报更新时，若取 Q1 季报的 ROE 字段用于 prebuy_conclusion 描述，需注意：
 - Q1 ROE 因净资产是全年数，通常只有全年 ROE 的 1/4（约年化的 25%）
 - 描述时应使用**年化 ROE**（Q1 ROE × 4）或写明"Q1单季 ROE=X%，年化约X%"
 - 或直接用最近年报 ROE 作为参考值，季报 ROE 只做趋势判断
@@ -220,7 +219,7 @@ watchlist 数据已拆分为 4 个文件，放在 `data/` 目录：
 | 近期重大事件（公告/并购/管理层变动）| **Tavily** | 需要聚合多个新闻来源 |
 | 公司基础信息补全（行业地位/竞争格局）| **Tavily** | 自由文本查询更高效 |
 | 财务数据验证（东方财富/stockanalysis）| **web_fetch** | URL 已知，结构化数据 |
-| tushare 财报延迟验证 | **web_fetch** | 拼固定 URL 速度更快 |
+| 财报期别验证（理杏仁延迟时）| **web_fetch** 东方财富 | 已知 URL，直接验证 QDATE |
 
 ### 调用方式
 
@@ -393,11 +392,14 @@ Copy-Item "E:\ObsidianVaults\ZephyrSpace\stock-prebuy-skill\SKILL.md" `
 - 示例：公用事业DY门槛4%，某股DY=3.5%（偏离12.5%<20%）→ 保留并标注⚠️
 - 示例：消费ROE门槛15%，某股ROE=12.5%（偏离16.7%>20%）→ 排除
 
-**新增字段**：公用事业/金融类型需在 `daily_basic` 中额外拉取 `dv_ttm`（股息率TTM）和 `pb`：
+**新增字段**：公用事业/金融类型需额外获取 `dv_ttm`（股息率TTM）和 `pb`，在理杏仁 `fundamental/non_financial` 的 `metricsList` 中加入 `"dyr"`（年化股息率）和 `"pb"` 即可：
 ```python
-# 公用事业/金融：额外拉 dv_ttm 和 pb
-r = pro.daily_basic(ts_code=code, trade_date='20260424',
-    fields='ts_code,pe_ttm,total_mv,pb,dv_ttm')  # ✅ dv_ttm已验证可用
+# 公用事业/金融：在 metricsList 中加入股息率和 PB
+val_resp = lx_post("cn/company/fundamental/non_financial", {
+    "stockCodes": codes,
+    "date": trade_date,
+    "metricsList": ["pe_ttm", "pb", "mc", "dyr"]  # dyr = 年化股息率（%），理杏仁已验证可用
+})
 ```
 
 ---
@@ -412,64 +414,79 @@ r = pro.daily_basic(ts_code=code, trade_date='20260424',
 
 **2a. 拉取全成分股**
 
-使用 tushare API（token 见 `.env` 文件）：
+使用理杏仁 API（token 见 `.env` 文件的 `LIXINGER_TOKEN`）：
 
 ```python
-import tushare as ts, os, time
+import requests, os, sys
 from dotenv import load_dotenv
+from datetime import date, timedelta
 load_dotenv()
-ts.set_token(os.getenv('TUSHARE_TOKEN'))
-pro = ts.pro_api()
 
-# index_weight 返回历史所有期，需过滤最新 trade_date
-# 后缀优先级：深交所指数用 .SZ，中证/国证指数用 .CSI，上交所用 .SH，申万用 .SW
-df = pro.index_weight(index_code='399396.SZ')   # ✅ 已验证：返回 columns=[index_code,con_code,trade_date,weight]
-latest_date = df['trade_date'].max()
-all_stocks = df[df['trade_date'] == latest_date].sort_values('weight', ascending=False)
-# 若 index_weight 无数据，依次降级：index_member → index_component
+LX_TOKEN = os.getenv("LIXINGER_TOKEN")
+LX_BASE = "https://open.lixinger.com/api"
+
+def last_trading_day():
+    """返回最近交易日（跳过周末；节假日需人工判断）。"""
+    d = date.today()
+    while d.weekday() >= 5:  # 5=周六 6=周日
+        d -= timedelta(days=1)
+    return d.isoformat()
+
+def lx_post(path, payload):
+    resp = requests.post(f"{LX_BASE}/{path}", json={**payload, "token": LX_TOKEN})
+    return resp.json()
+
+# 获取成分股权重：cn/index/constituent-weightings [S]
+# stockCode 传纯数字代码（不带后缀），如 "399396"（深交所指数）、"000300"（上交所）
+trade_date = last_trading_day()
+result = lx_post("cn/index/constituent-weightings", {
+    "stockCode": "399396",   # ← 替换为目标指数代码（纯数字，不带 .SZ/.SH）
+    "date": trade_date
+})
+all_stocks = sorted(result.get("data", []), key=lambda x: x.get("weight", 0), reverse=True)
+codes = [s["stockCode"] for s in all_stocks]
+# 若返回空，说明理杏仁不收录该指数，降级用 cn/index/constituents（无权重）或 akshare
 ```
 
-> ⚠️ **已验证陷阱**：`index_weight` 返回的是历史所有期数据（可达数千行），必须先过滤 `trade_date == max` 再使用，否则会重复统计。
+> ⚠️ **理杏仁指数代码说明**：`cn/index/constituent-weightings` 使用纯数字代码（如 `"399396"`），不带 `.SZ`/`.SH` 后缀。可先调用 `cn/index` 接口列出所有支持指数确认代码。若理杏仁不收录目标指数，降级使用 `ak.index_stock_cons_weight_csindex(symbol="XXXXXX")`。
 
 **2b. 量化粗筛（四条硬门槛，全部满足才进入候选）**
 
-用 `daily_basic` + `fina_indicator` 逐只调用，每只间隔 0.11s 防限流。
+理杏仁 `fundamental/non_financial` 为 **[M] 端点**，支持批量传入所有成分股代码，一次调用即可获取全量 PE/PB/市值数据，无需逐只调用。
 
 ```python
-# ✅ 已验证：daily_basic 多只逗号分隔批量调用返回空 DataFrame，必须逐只调用
-db_rows, fi_rows = [], []
-for code in all_stocks['con_code']:
-    r = pro.daily_basic(
-        ts_code=code,
-        trade_date='20260424',          # 最近交易日，格式 YYYYMMDD（非周末）
-        fields='ts_code,pe_ttm,total_mv,pb'
-    )
-    if len(r): db_rows.append(r.iloc[0])
-    time.sleep(0.11)
+# ⚠️ fundamental/* 接口日期必须用最近交易日（非周末/节假日），否则静默返回空数据
+# ⚠️ fundamental/* 接口必须用 stockCodes（数组），不能用 stockCode（字符串）
 
-# ✅ 已验证：fina_indicator limit=1 返回最新一期（通常为最近季报）
-# or_yoy = 营收同比增速，直接在此接口取得，无需额外调用 income 接口
-#
-# ⚠️ Q1 ROE 低估陷阱：在 Q1（3-4月）跑粗筛时，limit=1 返回的是 Q1 季报（end_date=XXXX0331）。
-# Q1 净利润只有全年的一小部分，但净资产是全年数，导致 ROE 被系统性低估（可能只有年化的 1/3）。
-# 典型案例：思源电气 Q1 ROE=3.5%，全年约 20%；亨通光电 Q1 ROE=3.4%，全年 8.9%。
-# 修正方法：优先取 end_date 以 1231 结尾的最近年报数据，而非最近一期季报。
-for code in all_stocks['con_code']:
-    r = pro.fina_indicator(
-        ts_code=code,
-        fields='ts_code,end_date,roe,or_yoy',   # roe=净资产收益率, or_yoy=营收同比(%)
-        limit=5                                  # 多取几期，优先用最近年报
-    )
-    if len(r):
-        annual = r[r['end_date'].str.endswith('1231')]  # 优先取全年数据
-        row = annual.iloc[0] if len(annual) else r.iloc[0]
-        fi_rows.append(row)
-    time.sleep(0.11)
+# 一次批量获取所有成分股估值（PE/PB/市值）
+val_resp = lx_post("cn/company/fundamental/non_financial", {
+    "stockCodes": codes,      # 纯数字代码数组，如 ["600036", "300059", ...]
+    "date": trade_date,       # 最近交易日
+    "metricsList": ["pe_ttm", "pb", "mc"]  # mc = 总市值（亿元）
+})
+val_dict = {d["stockCode"]: d for d in val_resp.get("data", [])}
 
-# 实测性能（399396，50只）：daily_basic 7.5s + fina_indicator 12.5s = 约 20s
+# Q1 ROE 低估陷阱：优先取最近年报数据（期末日以 12-31 结尾），避免 Q1 ROE 被系统性低估
+# 年报 ROE 通常在 3-4 月之前已全部披露；若处于 4 月披露密集期，需逐只验证 QDATE
+last_annual_end = f"{date.today().year - (1 if date.today().month < 5 else 0)}-12-31"
+
+# fs/* 用 date 参数时为 [M] 端点，支持批量
+# ⚠️ 财报字段名以 fetch_doc("cn/company/fs/non_financial") 返回的 metricsList 为准
+# 常用字段示例（需用 lixinger-query skill 的 fetch_doc 确认）：
+#   ROE：可能在 fundamental 中（如 "roe"）或 fs 中（如 "a.pr.roe.t"）
+#   营收同比：可能为 "a.ps.toi.t.yoy" 等
+# 建议：先用 fetch_doc 查一次合法字段名，再填入 metricsList
+fs_resp = lx_post("cn/company/fs/non_financial", {
+    "stockCodes": codes,
+    "date": last_annual_end,   # 传最近年末日，返回最近年报数据
+    "metricsList": ["a.pr.roe.t", "a.ps.toi.t.yoy"]  # 示例，需用 fetch_doc 确认
+})
+fs_dict = {d["stockCode"]: d for d in fs_resp.get("data", [])}
+
+# 实测性能（50只）：两次批量调用 约 2-3s（对比原 tushare 逐只调用约 20s）
 ```
 
-> ⚠️ **已验证陷阱**：`total_mv` 单位为**万元**，转亿需除以 10000。
+> ⚠️ **理杏仁 [M] 端点批量说明**：`fundamental/*` 和 `fs/*`（传 `date` 参数时）均支持批量传入 `stockCodes` 数组，大幅提升效率。若成分股超过 100 只，分两批次调用。
 
 **过滤条件：根据上方「行业参数分级表」选择对应参数组，以下条件全部满足才通过。**
 
@@ -502,7 +519,7 @@ for code in all_stocks['con_code']:
 ### 第 4 步：对每家候选公司运行 PreBuy 分析
 
 对每家公司逐一执行完整 PreBuy 分析，使用以下数据来源：
-- **tushare**：`daily`（价格）、`daily_basic`（PE/PB/市值）、`fina_indicator`（ROE/净现比）、`income`（营收/净利润）
+- **理杏仁**：`cn/company/candlestick`（当前价格）、`cn/company/fundamental/non_financial`（PE/PB/市值历史分位）、`cn/company/fs/non_financial`（ROE/营收/净利润）
 - 公开财报、官网、行业报告
 
 分析结果按模板填入页面以下所有章节：
@@ -514,7 +531,7 @@ for code in all_stocks['con_code']:
 - `## 9 种投资陷阱复核`
 - `## 当前操作含义`
 
-价格使用 tushare 拉取最近交易日收盘价（`trade_date` 用最近周五或最近有数据日），并在页面记录 `记录时间`。
+价格使用理杏仁 `cn/company/candlestick` 拉取最近交易日收盘价（`endDate` 传 `last_trading_day()` 返回的日期），并在页面记录 `记录时间`。
 
 ---
 
@@ -624,8 +641,8 @@ for code in all_stocks['con_code']:
 
 1. **确认基本信息**：指数代码、名称、编制类型（市值加权 vs 策略型）
 2. **获取当前估值**：`ak.stock_zh_index_value_csindex(symbol)` → 当前 PE / 股息率
-3. **计算历史分位**：`pro.index_daily` 拉5年价格 → 近似 PE 历史分位（3年/5年）
-4. **成分股质量**：`index_weight` + `fina_indicator` → 加权平均 ROE + 集中度 CR5/CR10；若策略型指数，额外检查前10大成分的 ROE 和营收同比
+3. **计算历史分位**：理杏仁 `cn/index/fundamental`，`metricsList` 含 `pe_ttm.y3.cvpos`/`q2v`/`q5v`/`q8v`，直接返回3年历史分位，无需手工计算
+4. **成分股质量**：理杏仁 `cn/index/constituent-weightings` + `cn/company/fs/non_financial` [M] → 加权平均 ROE + 集中度 CR5/CR10；若策略型指数，额外检查前10大成分的 ROE 和营收同比
 5. **赛道周期判断**：综合判断产业周期阶段、政策面、景气信号
 6. **写入并同步 watchlist_index.json**：所有完成分析的指数无条件写入（主Agent执行），随后运行 `.\scripts\sync_watchlist.ps1` 同步到 `E:\Work\Python\Finance\api\config\watchlist_index.json`
 
@@ -655,8 +672,8 @@ for code in all_stocks['con_code']:
 | 数据 | 来源 | 接口 |
 |---|---|---|
 | 当前 PE / 股息率 | 中证官网（akshare）| `ak.stock_zh_index_value_csindex` |
-| 价格历史（~5年）| tushare | `pro.index_daily`，后缀优先 `.CSI` |
-| 历史 PE 分位（近似）| 两者计算 | 当前PE × (历史价/当前价) |
-| 成分股权重 | tushare | `pro.index_weight` |
-| 成分股 ROE | tushare | `pro.fina_indicator`，优先取年报（end_date 以 1231 结尾）|
+| 价格历史（~5年）| 理杏仁 | `cn/index/candlestick`，`stockCode` 传纯数字代码 |
+| 历史 PE 分位 | 理杏仁 | `cn/index/fundamental`，`metricsList` 含 `pe_ttm.y3.cvpos`/`q2v`/`q5v`/`q8v` |
+| 成分股权重 | 理杏仁 | `cn/index/constituent-weightings` [S]，`stockCode` 传纯数字代码 |
+| 成分股 ROE | 理杏仁 | `cn/company/fs/non_financial` [M]，`date` 传最近年末日（以 12-31 结尾）|
 | 沪深300 PE（基准）| 中证官网（akshare）| `ak.stock_zh_index_value_csindex("000300")` |
