@@ -869,7 +869,9 @@ d = resp.json()["data"][0]
 | 股权质押 | 理杏仁 | `/company/pledge` |
 | 分红历史 | 理杏仁 | `/company/dividend` |
 | 限售解禁（初筛） | 理杏仁热度 | `/company/hot/elr` |
-| 财报营收/净利润/ROE | 理杏仁 | `/company/fs/non_financial`（银行→`/fs/bank`，证券→`/fs/security`）|
+| 财报营收/净利润（非金融）| 理杏仁 | `/company/fs/non_financial`（证券→`/fs/security`，保险→`/fs/insurance`）|
+| 财报营收/净利润（银行）| 理杏仁 | `/company/fs/bank`（**注：fs/bank 无 ROE 字段**，见下方陷阱）|
+| 银行 ROE（加权）| 东方财富 | `RPT_LICO_FN_CPD` 接口，字段 `WEIGHTAVG_ROE`（理杏仁 fs/bank 不支持）|
 | 当前价格 / 近60日走势 | 理杏仁 | `/company/candlestick` |
 | 前十大股东 | 理杏仁 | `/company/majority-shareholders` |
 | 财报QDATE验证（备用）| 东方财富 web_fetch | `datacenter-web.eastmoney.com/api/...` |
@@ -880,8 +882,10 @@ d = resp.json()["data"][0]
 > |---|---|---|---|
 > | `fundamental/bank`、`fundamental/non_financial` 等基本面接口 | 股票代码字段 | `"stockCodes": ["600036"]`（**数组**） | `"stockCode": "600036"`（字符串，返回 code=0 空数据）|
 > | `dividend`、`pledge`、`measures`、`inquiry`、增减持、`hot/elr` 等非基本面接口 | 股票代码字段 | `"stockCode": "600036"`（**字符串**） | `"stockCodes": ["600036"]` |
+> | `candlestick` K线接口 | 复权类型 | `"type": "lxr_fc_rights"` 必须传 | 不传 type → 返回 `ValidationError` |
+> | `fs/bank`、`fundamental/bank` | ROE字段 | 不支持（会导致整个请求报错） | 不可在 `metricsList` 或字段列表中包含 `roe`、`roe.wa` 等字段；**银行ROE必须从东方财富 `WEIGHTAVG_ROE` 字段获取** |
 >
-> **一句话记法**：`fundamental/*` 系列用数组，其他接口用字符串。
+> **一句话记法**：`fundamental/*` 系列用数组，其他接口用字符串；candlestick 必须加 type；银行ROE不在理杏仁。
 
 **candlestick 接口示例（当前价格 + 近60日走势）：**
 
@@ -898,6 +902,7 @@ resp = requests.post("https://open.lixinger.com/api/cn/company/candlestick", jso
     "stockCode": "600036",          # 纯数字代码，字符串（非数组）
     "startDate": sixty_days_ago,
     "endDate":   today,
+    "type": "lxr_fc_rights",        # ⚠️ 必须指定复权类型，否则返回 ValidationError
     "token": os.getenv("LIXINGER_TOKEN")
 })
 data = resp.json().get("data", [])
