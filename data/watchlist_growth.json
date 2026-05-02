@@ -1260,5 +1260,91 @@
     "next_earnings_date": "2026-07-28",
     "next_earnings_type": "季报",
     "cycle_is_cyclical": false
+  },
+  {
+    "name": "ServiceNow(NOW)",
+    "code": "NOW.US",
+    "market": "US",
+    "board": "纽",
+    "tier": "growth",
+    "source_etf": "direct",
+    "position_role": "AI Wave 2企业工作流执行层，ITSM市占率~44%全球第一，Now Assist AI变现最快验证标的",
+    "prebuy_conclusion": "逻辑清晰，当前$91处于较好入场区间（Non-GAAP FE PE 21.6x），PEG 1.06x处历史低估值；FCF Margin 34%稳健；SBC=112% GAAP净利润及Armis并购商誉暴增是主要观察风险。分析已纳入Q1 2026财报（2026-04-22 AMC）",
+    "watch_reason": "ITSM全球垄断地位+AI变现验证+FCF机器(34% Margin)，Now Assist ACV $600M向$1B成长路径清晰",
+    "current_price": 91.0,
+    "price_date": "2026-05-01",
+    "price_bands": [
+      140,
+      105,
+      80
+    ],
+    "valuation_anchor": "FY2026E Non-GAAP EPS $4.21；追高区>$140(>33x) / 中性区$105-140(25-33x) / 较好区间$80-105(19-25x) / 强势买入<$80(<19x)",
+    "risk_flags": [
+      "SBC = 112% GAAP净利润，Non-GAAP美化程度极高",
+      "Armis并购致商誉从$1.3B跳至$4.5B，整合与减值风险上升",
+      "Now Assist $600M ACV仅占总收入4.5%，AI货币化仍需规模验证"
+    ],
+    "dv_ttm": 0,
+    "next_earnings_date": "2026-07-22",
+    "next_earnings_type": "季报",
+    "cycle_is_cyclical": false
+  },
+  {
+    "name": "Snowflake(SNOW)",
+    "code": "SNOW.US",
+    "market": "US",
+    "board": "纽",
+    "tier": "growth",
+    "source_etf": "direct",
+    "position_role": "AI Wave 2数据治理层，企业AI部署数据准备必经之路，ETF盲区标的",
+    "prebuy_conclusion": "逻辑清晰，等待更合适价格。当前$141处于较好区间($127-160)，EV/FY2027E Rev 7.8x接近历史低端；SBC占收入34%是最大稀释风险，Databricks IPO时间线是估值压制因素。分析基于FY2026年报，Q1 FY2027（2026-05-27 AMC）结果尚未纳入",
+    "watch_reason": "云中立数据云唯一领导者，NRR 126%，AI占新客签约50%，FCF Margin 23.9%持续改善，企业AI数据基础设施核心卡位",
+    "current_price": 141.0,
+    "price_date": "2026-05-01",
+    "price_bands": [
+      215,
+      160,
+      127
+    ],
+    "valuation_anchor": "EV/FY2027E Revenue（FY2027E=$6.02B）；追高区>$215(>12x) / 中性区$160-215(9-12x) / 较好区间$127-160(7-9x) / 强势买入<$110(<6x)",
+    "risk_flags": [
+      "SBC占收入34%（FY2026），GAAP持续亏损，Non-GAAP大幅美化",
+      "Databricks（未上市）竞争威胁真实，IPO时间线是估值压制风险",
+      "$2.3B零息可转债2028年到期，需监控届时现金充裕度"
+    ],
+    "dv_ttm": 0,
+    "next_earnings_date": "2026-05-27",
+    "next_earnings_type": "季报",
+    "pending_earnings_note": "Q1 FY2027（2026-05-27 AMC盘后）结果尚未纳入分析，财报发布后需更新公司页及本条目",
+    "cycle_is_cyclical": false
+  },
+  {
+    "name": "Cloudflare(NET)",
+    "code": "NET.US",
+    "market": "US",
+    "board": "纽",
+    "tier": "growth",
+    "source_etf": "direct",
+    "position_role": "AI Wave 2边缘安全+AI推理双主线，唯一同时横跨CIBR和WCLD两条赛道",
+    "prebuy_conclusion": "逻辑清晰，等待更合适价格或验证点。当前$217.50接近中性区上沿($222)，EV/NTM Rev 27x已充分定价；财报2026-05-07是近期关键风险，建议先观察结果再决策；扣SBC后FCF为负是关键红旗。Q1 2026（2026-05-07 AMC）结果尚未纳入",
+    "watch_reason": "全球唯一边缘CDN+Zero Trust安全+AI推理统一平台，Workers AI请求+4000%，企业大客户增长+23%；近期财报风险（2026-05-07）",
+    "current_price": 217.5,
+    "price_date": "2026-05-01",
+    "price_bands": [
+      265,
+      222,
+      178
+    ],
+    "valuation_anchor": "EV/NTM Revenue（FY2026E收入$2.83B）；追高区>$265(>32x) / 中性区$222-265(27-32x) / 较好区间$178-222(22-27x) / 强势买入<$152(<17x)",
+    "risk_flags": [
+      "扣除SBC $451M后真实FCF为-$163M，GAAP层面仍亏损",
+      "Workers AI +4000%请求量但收入贡献未独立披露，AI货币化时间线不确定",
+      "EV/NTM Rev 27x估值充分，5/7财报若不达预期可能大幅回调（Beta 1.88）"
+    ],
+    "dv_ttm": 0,
+    "next_earnings_date": "2026-05-07",
+    "next_earnings_type": "季报",
+    "pending_earnings_note": "Q1 2026（2026-05-07 AMC盘后）结果尚未纳入分析，财报发布后需更新公司页及本条目",
+    "cycle_is_cyclical": false
   }
 ]
