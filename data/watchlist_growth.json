@@ -178,6 +178,32 @@
     "next_earnings_type": "半年报"
   },
   {
+    "name": "工业富联",
+    "code": "601138.SH",
+    "source_etf": "931495",
+    "position_role": "AI算力硬件与高端制造平台成长仓",
+    "prebuy_conclusion": "逻辑清晰，等待更合适价格或验证点；2025年收入和利润高增，但经营现金流与利润规模不匹配，当前估值接近3年高位区，不追高。",
+    "watch_reason": "工业富联卡在AI资本开支和制造平台化的交汇点，是931495里少数既有工业属性、又能直接受益AI基础设施扩张的大权重公司。",
+    "current_price": 62.88,
+    "price_date": "2026-04-30",
+    "board": "沪",
+    "price_bands": [
+      66.61,
+      42.74,
+      33.86
+    ],
+    "risk_flags": [
+      "2025年经营现金流净额仅约52.38亿元，明显低于利润规模，利润含金量一般",
+      "毛利率不到7%，制造平台型业务天生利润率不高",
+      "当前PE约30.7x，3年分位约79%，市场已计入较多乐观预期"
+    ],
+    "valuation_anchor": "3年PE分位换算：追高区>66.61元(P80，估值偏高不追) / 中性区42.74-66.61元(P50-P80，逻辑对但赔率一般) / 较好区间33.86-42.74元(P20-P50，可研究性布局) / 更低区间<33.86元(安全边际更好)",
+    "dv_ttm": 1.54,
+    "next_earnings_date": "2026-08-31（估算）",
+    "next_earnings_type": "半年报",
+    "cycle_is_cyclical": false
+  },
+  {
     "name": "东鹏饮料",
     "code": "605499.SH",
     "source_etf": "399396",
@@ -1550,6 +1576,145 @@
       "大股东广东电网+南网产投合计59.55%首发原始股已解禁，潜在减持压力"
     ],
     "dv_ttm": 0.48,
+    "cycle_is_cyclical": false,
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报",
+    "next_earnings_time": "2026-08"
+  }
+,
+  {
+    "name": "艾力斯(688578)",
+    "code": "688578.SH",
+    "source_etf": "930719",
+    "board": "科",
+    "position_role": "国产第三代EGFR-TKI龙头，伏美替尼商业化加速，PE处3年极低位",
+    "prebuy_conclusion": "PE 17.26x处于3年历史0.55%分位（接近历史最低），FY2025营收+45.8%、ROE 35.4%持续提升，OCF/净利106%，质量极佳。当前价¥92.60处于标准买入区低端，赔率良好。",
+    "watch_reason": "伏美替尼（奥赋迪）年销售额突破50亿，ADJ+KRAS等管线提供成长期权，估值历史极低位",
+    "current_price": 92.60,
+    "price_date": "2026-04-30",
+    "price_bands": [194, 107, 87],
+    "valuation_anchor": "EPS_TTM=¥4.86；>¥194(>40x)追高，¥107-136(22-28x)合理持有，¥87-107(18-22x)标准买入，<¥87(15-18x)积极买入",
+    "risk_flags": [
+      "收入95%以上集中于伏美替尼单产品，管线多样化尚需时间",
+      "EGFR-TKI竞争激烈，奥希替尼（阿斯利康）仍为全球主流",
+      "仲裁事项（与江苏复星）尚未落地，潜在赔偿风险"
+    ],
+    "dv_ttm": 0,
+    "cycle_is_cyclical": false,
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报",
+    "next_earnings_time": "2026-08"
+  },
+  {
+    "name": "艾德生物(300685)",
+    "code": "300685.SZ",
+    "source_etf": "930719",
+    "board": "创",
+    "position_role": "国内伴随诊断（CDx）龙头，SuperARMS液体活检，FDA/CE/NMPA三重认证",
+    "prebuy_conclusion": "PE 22.15x处于3年历史0%分位（历史极低位），FY2025营收+8%、ROE 18.5%、毛利率82.6%，负债率仅12.4%，公司正实施回购。当前价¥20.21处于合理买入区低端，安全边际较高。",
+    "watch_reason": "伴随诊断细分龙头，靶向药审批加速推动CDx需求增长，FDA认证打开海外空间，估值处于历史极低位",
+    "current_price": 20.21,
+    "price_date": "2026-04-30",
+    "price_bands": [29, 24, 19],
+    "valuation_anchor": "EPS_TTM=¥0.91；>¥29(>32x)追高区，¥24-28(26-31x)合理估值，¥19-24(21-26x)合理买入，<¥19(<21x)强力买入",
+    "risk_flags": [
+      "市值约78亿偏小，机构持仓流动性有限",
+      "Q1 2026营收小幅负增长（-4.3%），需验证是否季节性",
+      "伴随诊断增速高度依赖靶向药新适应症审批节奏"
+    ],
+    "dv_ttm": 0.5,
+    "cycle_is_cyclical": false,
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报",
+    "next_earnings_time": "2026-08"
+  },
+  {
+    "name": "药明康德(603259)",
+    "code": "603259.SH",
+    "source_etf": "930719",
+    "board": "沪",
+    "position_role": "全球最大CRDMO之一，TIDES寡核苷酸/多肽超预期，低位高赔率",
+    "prebuy_conclusion": "PE 16.24x处于3年历史25%分位，FY2025营收+15.8%、扣非净利+32.6%、ROE 28.6%，OCF/NP=90%。2026Q1持续经营收入+39.4%、Non-IFRS净利+71.7%，业绩超预期兑现。Biosecure Act已立法但过渡期至2027年，¥96以下积极配置。",
+    "watch_reason": "TIDES业务全球稀缺资产，Biosecure Act风险已部分定价，估值处于历史低位，2026业绩超预期",
+    "current_price": 109.55,
+    "price_date": "2026-04-30",
+    "price_bands": [120, 96, 77],
+    "valuation_anchor": "2026E Non-IFRS EPS≈¥6.0；≥¥120(≥20x)不操作，¥96-120(16-20x)观察区（当前），¥77-96(13-16x)标准买入，≤¥77(≤13x)积极买入",
+    "risk_flags": [
+      "Biosecure Act已成法律（2025-12-18签署），美国营收占比72%，结构性压力持续",
+      "WuXi ATU一次性收益使TTM PE失真，扣非PE约23.7x偏贵",
+      "过渡期细则未完全明确，部分美国客户订单转移压力"
+    ],
+    "dv_ttm": 4.5,
+    "cycle_is_cyclical": false,
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报",
+    "next_earnings_time": "2026-08"
+  },
+  {
+    "name": "迈瑞医疗(300760)",
+    "code": "300760.SZ",
+    "source_etf": "930719",
+    "board": "创",
+    "position_role": "中国最大医疗器械公司，监护/超声/IVD三足鼎立，PE处5年低位",
+    "prebuy_conclusion": "PE 26.05x处于5年历史20%分位，PB 5.09x处5年极低位。FY2025营收-9.4%为医疗反腐+集采短期冲击，OCF/净利125%现金流健康。若FY2026营收恢复，动态PE约20x，安全边际充足。当前可建仓，等Q1 2026营收转正作为加仓确认。",
+    "watch_reason": "国内医疗器械龙头，品牌护城河+国际化布局完整，集采反腐短期冲击，估值处5年低位等反弹",
+    "current_price": 168.40,
+    "price_date": "2026-04-30",
+    "price_bands": [235, 188, 155],
+    "valuation_anchor": "FY2025 EPS=¥6.71；>¥235(>35x)偏贵，¥188-235(28-35x)合理偏高，¥155-181(23-27x)合理偏低（当前¥168在此），¥134-148(20-22x)高性价比",
+    "risk_flags": [
+      "FY2025营收-9.4%、净利-30.3%，集采扩围+反腐冲击能否在2026年完全出清待验证",
+      "国际化占比约25%，出口管制监控（目前未列清单，需持续跟踪）",
+      "大单品超声/监护市场增长已放缓，新增长引擎IVD尚未完全接棒"
+    ],
+    "dv_ttm": 1.5,
+    "cycle_is_cyclical": false,
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报",
+    "next_earnings_time": "2026-08"
+  },
+  {
+    "name": "荣昌生物(688331)",
+    "code": "688331.SH",
+    "source_etf": "930719",
+    "board": "科",
+    "position_role": "国内ADC+自身免疫双平台创新药，泰它西普全球首创双靶机制，AbbVie背书",
+    "prebuy_conclusion": "FY2025营收+89.4%、Q1 2026实现净利+3.28亿（真实盈利），ROE 24.9%。PE 56.5x对首次盈利阶段创新药合理。AbbVie认可($62亿)验证技术价值。当前¥129处中性区中下段，可小仓建仓（≤5%），等OCF改善或适应症获批加仓。",
+    "watch_reason": "泰它西普全球独有BLyS/APRIL双靶，RC48 ADC国际化，AbbVie合作背书，Q1盈利验证商业化阶段",
+    "current_price": 129.31,
+    "price_date": "2026-04-30",
+    "price_bands": [158, 114, 76],
+    "valuation_anchor": "2026E PS基准；>¥158(PS>25x)追高，¥114-158(PS 18-25x)中性区（当前¥129），¥76-114(PS 12-18x)较好区，<¥76(PS<12x)理想区",
+    "risk_flags": [
+      "Q1 2026 OCF仅0.11亿 vs NP 3.28亿（3.4%），约2-3亿/季来自AbbVie首付款递延摊销，非纯产品现金盈利",
+      "泰它西普新适应症（IgA肾病/干燥综合征）获批时间不确定",
+      "A+H双上市，港股持续折价；RC148美国BLA递交时间未定"
+    ],
+    "dv_ttm": 0,
+    "cycle_is_cyclical": false,
+    "next_earnings_date": "2026-08-31",
+    "next_earnings_type": "半年报",
+    "next_earnings_time": "2026-08"
+  },
+  {
+    "name": "三生国健(688336)",
+    "code": "688336.SH",
+    "source_etf": "930719",
+    "board": "科",
+    "position_role": "国内双抗出海里程碑，SSGJ-707获辉瑞$62亿合作，等除权后价格窗口",
+    "prebuy_conclusion": "⚠️PE TTM 15.2x为假象：FY2025净利约30.6亿来自辉瑞首付款一次性收入，真实前瞻PE 45-65x（基于2026E核心净利7-10亿）。2026Q1核心业务+38.6%健康增长，净现金约30亿。当前¥73.19处中性区，等除权后（约¥50）较好区再介入或Q2业绩验证。",
+    "watch_reason": "SSGJ-707辉瑞$62亿合作验证国产双抗出海价值，2026年III期数据是核心催化剂，等价格窗口",
+    "current_price": 73.19,
+    "price_date": "2026-04-30",
+    "price_bands": [90, 65, 50],
+    "valuation_anchor": "2026E EPS≈1.14-1.62元（未除权），预计2026H1除权（10转4.5股）；>¥90追高，¥65-90中性（当前¥73），¥50-65较好区，<¥50安全边际好；除权后价格约乘0.69",
+    "risk_flags": [
+      "FY2025业绩含约30.6亿辉瑞首付款一次性收入，TTM PE严重失真，真实前瞻PE 45-65x",
+      "10转4.5股本增加已获AGM批准，除权时机和市场消化不确定",
+      "SSGJ-707核心靶点依赖辉瑞IIb/III期临床成功率（尚在推进中）"
+    ],
+    "dv_ttm": 0,
     "cycle_is_cyclical": false,
     "next_earnings_date": "2026-08-31",
     "next_earnings_type": "半年报",
