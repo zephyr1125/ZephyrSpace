@@ -1021,6 +1021,73 @@ print(f"当前价={current_price}, 近60日高={high_60}, 近60日低={low_60}")
 >
 > **注意**：财报密集期内各公司陆续发布，截止日前仍有10-30%公司未发布。批量分析时**必须逐条验证**，不可假设所有公司已发布当期报告。
 
+> 🔴 **Q1 ROE 低估陷阱（批量粗筛必读）**
+>
+> **问题根源**：批量粗筛时若使用 tushare `fina_indicator` 且 `limit=1`，返回的往往是最新一期季报（如 Q1 2026，`end_date=20260331`）。Q1 季报的 ROE 字段是当期累计净利/期末净资产，约等于全年 ROE 的 1/4，会系统性低估真实盈利能力，造成大量优质公司被误判为 FAIL。
+>
+> **实测案例（931994 指数 2026-05-01 复查）**：
+>
+> | 公司 | tushare Q1 ROE | 东方财富 2025年报 ROE | 误判结果 |
+> |---|---|---|---|
+> | 思源电气(002028) | 3.5% | **18.1%** | FAIL → ✅ PASS（差5.2倍！权重9.44%！） |
+> | 东方电缆(603606) | 4.4% | **15.3%** | FAIL → ✅ PASS（差3.5倍） |
+> | 三星电气(601567) | 10.8% | **19.6%** | BORDER → ✅ PASS |
+>
+> **修复规则（粗筛时强制执行）**：
+> 1. ROE 必须取**最近年报**（`end_date` 以 `1231` 结尾），不得取 Q1/Q3 季报
+> 2. 最近年末日估算：`f"{date.today().year - (1 if date.today().month < 5 else 0)}-12-31"`
+> 3. 描述时若用 Q1 ROE，必须注明"Q1单季，年化约 Q1×4"或改用年报 ROE
+> 4. 若年报数据未更新（4月前新年报尚未披露），用东方财富 `RPT_LICO_FN_CPD` 中 `QDATE.endswith("Q4")` 识别年报并取 `WEIGHTAVG_ROE`
+>
+> **东方财富批量获取年报 ROE 代码片段**：
+>
+> ```python
+> import requests
+>
+> def get_annual_roe(stock_code_6digit):
+>     """从东方财富获取最近年报ROE（通过QDATE.endswith('Q4')识别）"""
+>     url = (
+>         "https://datacenter-web.eastmoney.com/api/data/v1/get"
+>         f"?reportName=RPT_LICO_FN_CPD&columns=ALL"
+>         f"&filter=(SECURITY_CODE%3D%22{stock_code_6digit}%22)"
+>         f"&pageNumber=1&pageSize=5&sortColumns=REPORTDATE&sortTypes=-1"
+>     )
+>     resp = requests.get(url, headers={"Accept-Encoding": "gzip"})
+>     rows = resp.json().get("result", {}).get("data", [])
+>     for row in rows:
+>         if row.get("QDATE", "").endswith("Q4"):  # 年报识别
+>             return float(row.get("WEIGHTAVG_ROE") or 0)
+>     return None
+> ```
+
+> ⚠️ **理杏仁指数成分股接口额外陷阱（批量指数分析时必读）**
+>
+> | 接口 | 正确参数 | 错误写法 | 后果 |
+> |---|---|---|---|
+> | `cn/index/constituent-weightings` | `"startDate": "2026-03-31"` | `"date": "2026-03-31"` | date参数静默返回空数据 |
+> | `cn/index/constituent-weightings` | 成分股完整名单**仅季末更新**（3/31、6/30、9/30、12/31） | 使用非季末日期 | 仅返回 top-10，漏掉其余成分股 |
+> | `cn/company/fs/non_financial` | 年度营收字段 `y.ps.toi.t` | `a.ps.toi.t` | 找不到字段，返回空 |
+> | `cn/company/fs/non_financial` | 营收YOY需手工算：`(rev2025-rev2024)/rev2024` | `y.ps.toi.t.yoy` | 触发MongoDB路径冲突，整批报错 |
+> | `cn/company/fundamental/non_financial` | 市值字段 `mc` 单位是**元**，需 `/1e8` 转亿 | 直接使用 mc 值 | 所有公司市值被高估1亿倍 |
+> | `cn/company/profile` | 公司名在 `companyName` 字段 | `cnName`（永远为空） | 获取不到公司中文名 |
+>
+> **ROE 在理杏仁的位置说明**：ROE 既不在 `fundamental/non_financial`，也不在 `fs/non_financial` 的常规字段中。**批量粗筛时，ROE 统一从东方财富 `WEIGHTAVG_ROE` 字段获取年报数据**，不要在理杏仁接口中寻找。
+
+> ⚠️ **PowerShell 调用 Python 脚本编码陷阱**
+>
+> 在 Windows PowerShell 中运行含 emoji 字符的 Python 脚本时，会触发 GBK 编码错误：
+> `UnicodeEncodeError: 'gbk' codec can't encode character '\u274c'`
+>
+> **解决方案**：脚本中所有输出改用纯 ASCII 替代符号：
+> - `❌` → `FAIL`
+> - `✅` → `PASS`
+> - `⚠️` → `BORDER` 或 `WARN`
+>
+> 或在脚本顶部强制设置编码（不如直接去掉emoji稳）：
+> ```python
+> import sys; sys.stdout.reconfigure(encoding='utf-8')
+> ```
+
 ### 第 3.5 步：确认下一期财报日期（A股必做，结果写入公司页和 watchlist）
 
 **目的**：随时知道这家公司下一次「成绩单」在什么时候发布，以便在财报窗口期前评估仓位风险，也方便跟踪买入逻辑是否得到验证。
