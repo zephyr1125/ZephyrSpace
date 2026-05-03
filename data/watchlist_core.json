@@ -152,24 +152,25 @@
       "name": "东鹏饮料",
       "code": "605499.SH",
       "board": "沪",
-      "current_price": 75.0,
-      "price_date": "2026-04-30",
+      "current_price": 203.84,
+      "price_date": "2026-05-03",
       "next_earnings_type": "半年报",
       "next_earnings_date": "2026-08-31",
       "cycle_is_cyclical": false,
       "price_bands": [
-        120,
-        75,
-        40
+        240,
+        200,
+        175
       ],
       "source_etf": "direct",
-      "watch_reason": "品牌饮料龙头+毛利44.5%+连续5年分红",
-      "valuation_anchor": "PE 22x (合理)",
-      "prebuy_conclusion": "饮料龙头，ROE32%，毛利44.5%，品牌护城河深",
-      "position_role": "品牌消费龙头标的",
+      "watch_reason": "品牌饮料龙头+毛利44.5%+连续5年分红+Q1增速超预期",
+      "valuation_anchor": "PE 26.1x (基于增速25-30%的合理估值)",
+      "prebuy_conclusion": "饮料龙头，ROE51.6%，毛利44.5%，品牌护城河深。Q1增速+28.31%超预期，当前PE26.1x对应增速25-30%为合理定价。推荐在175-200元区间追加布局。",
+      "position_role": "品牌消费高成长标的",
+      "dv_ttm": 2.5,
       "risk_flags": [
-        "消费需求波动",
-        "竞争加剧"
+        "单品依赖风险（东鹏特饮占比高）",
+        "增速若降至15%以下需重评"
       ]
     },
     {
