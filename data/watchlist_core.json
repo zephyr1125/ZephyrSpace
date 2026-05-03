@@ -126,8 +126,38 @@
         "政策医保政策调整",
         "OTC销售压力"
       ]
+    },
+    {
+      "cycle_is_cyclical": 0,
+      "board": "科创板",
+      "current_price": 1038.0,
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "name": "石头科技",
+      "price_date": "2026-03-31",
+      "risk_flags": [],
+      "price_bands": {
+        "buy": {
+          "price": 883.3,
+          "desc": "分批建仓"
+        },
+        "hold": {
+          "price": 1038.0,
+          "desc": "当前价"
+        },
+        "sell": {
+          "price": 1245.6,
+          "desc": "止盈"
+        }
+      },
+      "watch_reason": "高ROE低PE+龙头地位",
+      "position_role": "core",
+      "code": "688169.SH",
+      "valuation_anchor": "高ROE+低PE",
+      "prebuy_conclusion": "龙头企业，基本面优秀（ROE18.5%，净利增速22.3%），PE处于合理区间",
+      "dv_ttm": 0
     }
   ],
   "tier": "core",
-  "updated_at": "2026-05-03"
+  "updated_at": "2026-05-03T09:46:16Z"
 }

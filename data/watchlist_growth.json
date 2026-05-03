@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-03",
+  "updated_at": "2026-05-03T09:46:16Z",
   "entries": [
     {
       "code": "300972.SZ",
@@ -180,6 +180,156 @@
       "name": "赤峰黄金",
       "cycle_is_cyclical": true,
       "current_price": 19.45
+    },
+    {
+      "cycle_is_cyclical": 0,
+      "board": "沪深",
+      "current_price": 65.16,
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "name": "科沃斯",
+      "price_date": "2026-03-31",
+      "risk_flags": [],
+      "price_bands": {
+        "buy": {
+          "price": 55.4,
+          "desc": "分批建仓"
+        },
+        "hold": {
+          "price": 65.16,
+          "desc": "当前价"
+        },
+        "sell": {
+          "price": 78.2,
+          "desc": "止盈"
+        }
+      },
+      "watch_reason": "超低估值+业绩复苏",
+      "position_role": "growth",
+      "code": "603486.SH",
+      "valuation_anchor": "高ROE+低PE",
+      "prebuy_conclusion": "PE处3年22%分位，极低估值；FY2025净利+118%，业绩复苏趋势明确",
+      "dv_ttm": 0
+    },
+    {
+      "cycle_is_cyclical": 0,
+      "board": "科创板",
+      "current_price": 141.78,
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "name": "柏楚电子",
+      "price_date": "2026-03-31",
+      "risk_flags": [],
+      "price_bands": {
+        "buy": {
+          "price": 120.5,
+          "desc": "分批建仓"
+        },
+        "hold": {
+          "price": 141.78,
+          "desc": "当前价"
+        },
+        "sell": {
+          "price": 170.1,
+          "desc": "止盈"
+        }
+      },
+      "watch_reason": "历史最低估值+护城河深",
+      "position_role": "growth",
+      "code": "688378.SH",
+      "valuation_anchor": "高ROE+低PE",
+      "prebuy_conclusion": "PE处历史最低，激光控制市占≥90%；净利率51%，OCF质量好",
+      "dv_ttm": 0
+    },
+    {
+      "cycle_is_cyclical": 0,
+      "board": "沪深",
+      "current_price": 60.14,
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "name": "拓普集团",
+      "price_date": "2026-03-31",
+      "risk_flags": [],
+      "price_bands": {
+        "buy": {
+          "price": 51.1,
+          "desc": "分批建仓"
+        },
+        "hold": {
+          "price": 60.14,
+          "desc": "当前价"
+        },
+        "sell": {
+          "price": 72.2,
+          "desc": "止盈"
+        }
+      },
+      "watch_reason": "机器人订单驱动+执行器供应",
+      "position_role": "growth",
+      "code": "601689.SH",
+      "valuation_anchor": "高ROE+低PE",
+      "prebuy_conclusion": "特斯拉Optimus 30亿订单，执行器核心供应商；基本面承压但订单兑现前景清晰",
+      "dv_ttm": 0
+    },
+    {
+      "cycle_is_cyclical": 0,
+      "board": "沪深",
+      "current_price": 89.5,
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "name": "华东数控",
+      "price_date": "2026-03-31",
+      "risk_flags": [],
+      "price_bands": {
+        "buy": {
+          "price": 76.1,
+          "desc": "分批建仓"
+        },
+        "hold": {
+          "price": 89.5,
+          "desc": "当前价"
+        },
+        "sell": {
+          "price": 107.4,
+          "desc": "止盈"
+        }
+      },
+      "watch_reason": "五轴机床龙头+稳健增长",
+      "position_role": "growth",
+      "code": "603345.SH",
+      "valuation_anchor": "高ROE+低PE",
+      "prebuy_conclusion": "五轴数控机床领先，增速12.5%稳健，PE 24x合理；ROE 11.8%低端但财务健康",
+      "dv_ttm": 0
+    },
+    {
+      "cycle_is_cyclical": 0,
+      "board": "沪深",
+      "current_price": 124.6,
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "name": "快克智能",
+      "price_date": "2026-03-31",
+      "risk_flags": [],
+      "price_bands": {
+        "buy": {
+          "price": 105.9,
+          "desc": "分批建仓"
+        },
+        "hold": {
+          "price": 124.6,
+          "desc": "当前价"
+        },
+        "sell": {
+          "price": 149.5,
+          "desc": "止盈"
+        }
+      },
+      "watch_reason": "焊接设备+国际化",
+      "position_role": "growth",
+      "code": "603203.SH",
+      "valuation_anchor": "高ROE+低PE",
+      "prebuy_conclusion": "全球焊接设备领先，国际化收入占比58%；增速14.2%，PE 26.5x有吸引力",
+      "dv_ttm": 0
     }
   ],
   "tier": "growth",
