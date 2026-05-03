@@ -39,7 +39,12 @@
       "name": "TCL智家",
       "cycle_is_cyclical": false,
       "current_price": 9.28,
-      "cycle_position": null
+      "cycle_position": null,
+      "price_bands": [
+        12,
+        10.19,
+        8
+      ]
     },
     {
       "code": "688278.SH",
@@ -49,7 +54,12 @@
       "name": "特宝生物",
       "cycle_is_cyclical": false,
       "current_price": 88.55,
-      "cycle_position": null
+      "cycle_position": null,
+      "price_bands": [
+        115.9,
+        97.4,
+        85.8
+      ]
     },
     {
       "code": "001221.SZ",
@@ -59,7 +69,12 @@
       "name": "悍高集团",
       "cycle_is_cyclical": false,
       "current_price": 52.33,
-      "cycle_position": null
+      "cycle_position": null,
+      "price_bands": [
+        76.9,
+        70.1,
+        65.5
+      ]
     },
     {
       "code": "002170.SZ",
@@ -84,7 +99,12 @@
       "name": "福耀玻璃",
       "cycle_is_cyclical": false,
       "current_price": 58.87,
-      "cycle_position": null
+      "cycle_position": null,
+      "price_bands": [
+        67,
+        60,
+        53
+      ]
     },
     {
       "code": "603195.SH",
@@ -94,7 +114,12 @@
       "name": "公牛集团",
       "cycle_is_cyclical": false,
       "current_price": 44.85,
-      "cycle_position": null
+      "cycle_position": null,
+      "price_bands": [
+        51,
+        44,
+        36
+      ]
     },
     {
       "code": "603979.SH",
@@ -104,7 +129,12 @@
       "name": "金诚信",
       "cycle_is_cyclical": true,
       "current_price": 62.3,
-      "cycle_position": "待评估"
+      "cycle_position": "待评估",
+      "price_bands": [
+        70.5,
+        54,
+        37.8
+      ]
     },
     {
       "code": "300415.SZ",
@@ -114,7 +144,12 @@
       "name": "伊之密",
       "cycle_is_cyclical": false,
       "current_price": 24.22,
-      "cycle_position": null
+      "cycle_position": null,
+      "price_bands": [
+        35.5,
+        28,
+        22
+      ]
     },
     {
       "code": "000975.SZ",
@@ -124,7 +159,12 @@
       "name": "山金国际",
       "cycle_is_cyclical": true,
       "current_price": 26.05,
-      "cycle_position": "待评估"
+      "cycle_position": "待评估",
+      "price_bands": [
+        22.96,
+        19.8,
+        16.95
+      ]
     },
     {
       "code": "600415.SH",
@@ -134,7 +174,12 @@
       "name": "小商品城",
       "cycle_is_cyclical": false,
       "current_price": 13.25,
-      "cycle_position": null
+      "cycle_position": null,
+      "price_bands": [
+        19.8,
+        16.95,
+        13.25
+      ]
     },
     {
       "code": "300181.SZ",
@@ -144,7 +189,12 @@
       "name": "佐力药业",
       "cycle_is_cyclical": false,
       "current_price": 15.21,
-      "cycle_position": null
+      "cycle_position": null,
+      "price_bands": [
+        22.56,
+        19.98,
+        18.6
+      ]
     },
     {
       "code": "601899.SH",
@@ -154,7 +204,12 @@
       "name": "紫金矿业",
       "cycle_is_cyclical": true,
       "current_price": 33.3,
-      "cycle_position": "待评估"
+      "cycle_position": "待评估",
+      "price_bands": [
+        78.6,
+        53.3,
+        42.6
+      ]
     },
     {
       "code": "600285.SH",
@@ -164,7 +219,12 @@
       "name": "羚锐制药",
       "cycle_is_cyclical": false,
       "current_price": 22.36,
-      "cycle_position": null
+      "cycle_position": null,
+      "price_bands": [
+        28.0,
+        25.1,
+        23.0
+      ]
     },
     {
       "code": "600887.SH",
@@ -174,7 +234,12 @@
       "name": "伊利股份",
       "cycle_is_cyclical": false,
       "current_price": 32.5,
-      "cycle_position": null
+      "cycle_position": null,
+      "price_bands": [
+        32,
+        29.5,
+        26.5
+      ]
     },
     {
       "code": "300015.SZ",
@@ -184,7 +249,12 @@
       "name": "爱尔眼科",
       "cycle_is_cyclical": false,
       "current_price": 78.5,
-      "cycle_position": null
+      "cycle_position": null,
+      "price_bands": [
+        50,
+        40,
+        30
+      ]
     },
     {
       "code": "603379.SH",
@@ -224,7 +294,12 @@
       "name": "赤峰黄金",
       "cycle_is_cyclical": true,
       "current_price": 19.45,
-      "cycle_position": "待评估"
+      "cycle_position": "待评估",
+      "price_bands": [
+        78.6,
+        53.3,
+        42.6
+      ]
     },
     {
       "cycle_is_cyclical": 0,
