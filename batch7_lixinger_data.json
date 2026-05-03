@@ -1,0 +1,97 @@
+{
+  "000975": {
+    "name": "山金国际",
+    "market_cap": 72333615003.25,
+    "pe_ttm": 19.7005,
+    "pb": 4.8524,
+    "dyr": 0.0184,
+    "dividend_count": 7,
+    "recent_dividends": [
+      {
+        "date": null,
+        "amount": null
+      },
+      {
+        "date": null,
+        "amount": null
+      },
+      {
+        "date": null,
+        "amount": null
+      },
+      {
+        "date": null,
+        "amount": null
+      },
+      {
+        "date": null,
+        "amount": null
+      }
+    ]
+  },
+  "688281": {
+    "name": "思特威-W",
+    "market_cap": 20404640730.5,
+    "pe_ttm": 63.0482,
+    "pb": 4.2693,
+    "dyr": 0.0047,
+    "dividend_count": 9,
+    "recent_dividends": [
+      {
+        "date": null,
+        "amount": null
+      },
+      {
+        "date": null,
+        "amount": null
+      },
+      {
+        "date": null,
+        "amount": null
+      },
+      {
+        "date": null,
+        "amount": null
+      },
+      {
+        "date": null,
+        "amount": null
+      }
+    ]
+  },
+  "600415": {
+    "name": "小商品城",
+    "market_cap": 72657159744.5,
+    "pe_ttm": 16.5481,
+    "pb": 3.0441,
+    "dyr": 0.0377,
+    "dividend_count": 7,
+    "recent_dividends": [
+      {
+        "date": null,
+        "amount": null
+      },
+      {
+        "date": null,
+        "amount": null
+      },
+      {
+        "date": null,
+        "amount": null
+      },
+      {
+        "date": null,
+        "amount": null
+      },
+      {
+        "date": null,
+        "amount": null
+      }
+    ]
+  },
+  "600181": {
+    "name": "佐力药业",
+    "dividend_count": 0,
+    "recent_dividends": []
+  }
+}

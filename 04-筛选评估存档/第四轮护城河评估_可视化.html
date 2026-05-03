@@ -1,0 +1,524 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第四轮护城河强度评估</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .header p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .summary {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .summary-card {
+            background: #f8f9fa;
+            border-left: 4px solid;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .summary-card.keep {
+            border-color: #28a745;
+            background: #f0fdf4;
+        }
+        
+        .summary-card.review {
+            border-color: #ffc107;
+            background: #fffbf0;
+        }
+        
+        .summary-card.drop {
+            border-color: #dc3545;
+            background: #fdf4f4;
+        }
+        
+        .summary-card h3 {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+        
+        .summary-card .number {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        
+        .summary-card.keep .number { color: #28a745; }
+        .summary-card.review .number { color: #ffc107; }
+        .summary-card.drop .number { color: #dc3545; }
+        
+        .summary-card p {
+            font-size: 12px;
+            color: #999;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .comparison-table th {
+            background: #2c3e50;
+            color: white;
+            padding: 16px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .comparison-table td {
+            padding: 16px;
+            border-bottom: 1px solid #eee;
+            font-size: 14px;
+        }
+        
+        .comparison-table tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .company-name {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .metric {
+            text-align: center;
+            font-weight: 500;
+        }
+        
+        .metric.good { color: #28a745; }
+        .metric.warning { color: #ffc107; }
+        .metric.bad { color: #dc3545; }
+        
+        .moat-rating {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .moat-strong { background: #d4edda; color: #155724; }
+        .moat-medium { background: #fff3cd; color: #856404; }
+        .moat-weak { background: #f8d7da; color: #721c24; }
+        
+        .decision {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            text-align: center;
+        }
+        
+        .decision.keep {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .decision.review {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .decision.drop {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .detail-section {
+            margin-bottom: 40px;
+        }
+        
+        .detail-section h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+        
+        .detail-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .detail-card h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        
+        .detail-row .label {
+            color: #666;
+            font-weight: 500;
+        }
+        
+        .detail-row .value {
+            color: #2c3e50;
+            font-weight: 600;
+        }
+        
+        .highlight {
+            background: #fff3cd;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+        
+        .footer {
+            background: #f8f9fa;
+            padding: 20px 40px;
+            text-align: center;
+            color: #999;
+            font-size: 12px;
+            border-top: 1px solid #ddd;
+        }
+        
+        .decision-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .decision-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid;
+        }
+        
+        .decision-item.keep {
+            border-color: #28a745;
+            background: #f0fdf4;
+        }
+        
+        .decision-item.review {
+            border-color: #ffc107;
+            background: #fffbf0;
+        }
+        
+        .decision-item.drop {
+            border-color: #dc3545;
+            background: #fdf4f4;
+        }
+        
+        .decision-item h4 {
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: #2c3e50;
+        }
+        
+        .decision-item p {
+            font-size: 12px;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 768px) {
+            .summary {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .decision-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .comparison-table {
+                font-size: 12px;
+            }
+            
+            .comparison-table td, .comparison-table th {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 第四轮护城河强度评估</h1>
+            <p>2026-05-03 | 4家公司评估完成</p>
+        </div>
+        
+        <div class="content">
+            <!-- 汇总卡片 -->
+            <div class="summary">
+                <div class="summary-card keep">
+                    <h3>✅ 保留</h3>
+                    <div class="number">1</div>
+                    <p>悍高集团</p>
+                </div>
+                <div class="summary-card review">
+                    <h3>🟡 待评估</h3>
+                    <div class="number">1</div>
+                    <p>拉卡拉</p>
+                </div>
+                <div class="summary-card drop">
+                    <h3>❌ 淘汰</h3>
+                    <div class="number">2</div>
+                    <p>中熔/惠泰</p>
+                </div>
+                <div class="summary-card">
+                    <h3>📊 总体质量</h3>
+                    <div class="number">2.5/4</div>
+                    <p>一般水平</p>
+                </div>
+            </div>
+            
+            <!-- 对比表格 -->
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>公司名称</th>
+                        <th>代码</th>
+                        <th>市值(亿)</th>
+                        <th>毛利率</th>
+                        <th>护城河强度</th>
+                        <th>第四轮决策</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="company-name">1️⃣ 悍高集团</td>
+                        <td>001221.SZ</td>
+                        <td class="metric good">130 ✓</td>
+                        <td class="metric good">26.5% ✓</td>
+                        <td><span class="moat-rating moat-strong">⭐⭐⭐强</span></td>
+                        <td><span class="decision keep">✅ 保留</span></td>
+                    </tr>
+                    <tr>
+                        <td class="company-name">2️⃣ 拉卡拉</td>
+                        <td>300773.SZ</td>
+                        <td class="metric good">190 ✓</td>
+                        <td class="metric warning">37.2% ↘</td>
+                        <td><span class="moat-rating moat-medium">⭐⭐中</span></td>
+                        <td><span class="decision review">🟡 待评估</span></td>
+                    </tr>
+                    <tr>
+                        <td class="company-name">3️⃣ 中熔电气</td>
+                        <td>301031.SH</td>
+                        <td class="metric bad">37 ❌</td>
+                        <td class="metric bad">22.8% ↘</td>
+                        <td><span class="moat-rating moat-weak">⭐弱</span></td>
+                        <td><span class="decision drop">❌ 淘汰</span></td>
+                    </tr>
+                    <tr>
+                        <td class="company-name">4️⃣ 惠泰医疗</td>
+                        <td>605990.SH</td>
+                        <td class="metric bad">45 ❌</td>
+                        <td class="metric good">55.5% ✓</td>
+                        <td><span class="moat-rating moat-weak">⭐⭐弱中</span></td>
+                        <td><span class="decision drop">❌ 淘汰</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <!-- 决策详情 -->
+            <div class="detail-section">
+                <h2>📋 决策详情</h2>
+                
+                <div class="decision-list">
+                    <div class="decision-item keep">
+                        <h4>✅ 保留(1家)</h4>
+                        <p>• 悍高集团<br/>• 国际汽配龙头<br/>• 市值/毛利/竞争力全维度优秀<br/>• 分红稳定<br/>• 风险低</p>
+                    </div>
+                    
+                    <div class="decision-item review">
+                        <h4>🟡 待评估(1家)</h4>
+                        <p>• 拉卡拉<br/>• 支付行业龙头<br/>• 毛利率下行趋势明显<br/>• 股东减持/IPO受阻<br/>• 观察Q2/Q3季报</p>
+                    </div>
+                    
+                    <div class="decision-item drop">
+                        <h4>❌ 淘汰(2家)</h4>
+                        <p>• 中熔电气(37亿)<br/>• 惠泰医疗(45亿)<br/>• 市值均低于50亿门槛<br/>• 竞争优势不足<br/>• 经营历史短</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 详细分析 -->
+            <div class="detail-section">
+                <h2>🏆 TOP 1: 悍高集团 - 强烈推荐</h2>
+                
+                <div class="detail-card">
+                    <h3>核心优势</h3>
+                    <div class="detail-row">
+                        <span class="label">市值</span>
+                        <span class="value">130亿元 ✅</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">毛利率</span>
+                        <span class="value">26.5% ✅</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">品牌</span>
+                        <span class="value">⭐⭐⭐ 国际龙头</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">技术</span>
+                        <span class="value">⭐⭐⭐ 电动驱动领先</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">网络</span>
+                        <span class="value">⭐⭐⭐ 全球体系</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">分红</span>
+                        <span class="value">✅ 连续3年增长</span>
+                    </div>
+                </div>
+                
+                <div class="detail-card">
+                    <h3>投资建议</h3>
+                    <div class="detail-row">
+                        <span class="label">操作</span>
+                        <span class="value">纳入核心池 + 定投</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">持仓</span>
+                        <span class="value">长期持有</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">风险</span>
+                        <span class="value">🟡 低(可控)</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="detail-section">
+                <h2>⚠️ TOP 2: 拉卡拉 - 需要观察</h2>
+                
+                <div class="detail-card">
+                    <h3>现状分析</h3>
+                    <div class="detail-row">
+                        <span class="label">市值</span>
+                        <span class="value">180-200亿元 ✅</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">毛利率趋势</span>
+                        <span class="value">42.5% → 37.2% <span class="highlight">下滑5.3%</span></span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">负面事件</span>
+                        <span class="value">股东减持 + IPO受阻</span>
+                    </div>
+                </div>
+                
+                <div class="detail-card">
+                    <h3>关键指标(触发淘汰条件)</h3>
+                    <div class="detail-row">
+                        <span class="label">毛利率</span>
+                        <span class="value">继续下滑至35% → 淘汰</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">订单量</span>
+                        <span class="value">明显下滑 → 淘汰</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">股东减持</span>
+                        <span class="value">继续大幅减持 → 淘汰</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">观察周期</span>
+                        <span class="value">Q2/Q3季报发布</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="detail-section">
+                <h2>💡 核心发现</h2>
+                
+                <div class="detail-card">
+                    <h3>1. 市值50亿是不可妥协的门槛</h3>
+                    <p>中熔电气(37亿)、惠泰医疗(45亿)双双不达标，流动性风险大</p>
+                </div>
+                
+                <div class="detail-card">
+                    <h3>2. 毛利率趋势比绝对值更重要</h3>
+                    <p>拉卡拉3年下滑5.3%，是比绝对值37%更值得关注的危险信号</p>
+                </div>
+                
+                <div class="detail-card">
+                    <h3>3. 竞争优势需多维验证</h3>
+                    <p>仅成本优势无法构成护城河，品牌+技术+网络的多维优势才是真护城河</p>
+                </div>
+                
+                <div class="detail-card">
+                    <h3>4. 负面事件是隐性风险信号</h3>
+                    <p>拉卡拉的股东减持和IPO受阻，比财务数据更能反映市场对前景的真实判断</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>报告生成: 2026-05-03 | 有效期至Q2/Q3季报发布 | 数据来源: 理杏仁API + Tavily搜索 + 定性分析</p>
+        </div>
+    </div>
+</body>
+</html>

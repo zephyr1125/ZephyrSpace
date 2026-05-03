@@ -179,23 +179,27 @@
       "board": "科",
       "current_price": 185.0,
       "price_date": "2026-04-30",
-      "next_earnings_type": "半年报",
-      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "中报",
+      "next_earnings_date": "2026-08-30",
       "cycle_is_cyclical": false,
       "price_bands": [
-        280,
+        250,
         185,
-        100
+        120
       ],
       "source_etf": "direct",
-      "watch_reason": "创新药物+毛利96%+ROE45%+稳定分红",
-      "valuation_anchor": "PE 28x (高增长合理)",
-      "prebuy_conclusion": "创新药物龙头，ROE45%，毛利96%，技术护城河强",
-      "position_role": "医药创新龙头标的",
+      "watch_reason": "创新药CDMO龙头+毛利96.8%+ROE35.4%+净利+53%YoY+客户粘性强",
+      "valuation_anchor": "PE 32.8x (基于2026年EPS年化5.64元，对应高增速40%+合理)",
+      "prebuy_conclusion": "创新药CDMO领军企业，2025年ROE35.4%、毛利96.83%、净利+53%YoY。2026Q1营收+44.2%、净利+54.94%，创新药产业链景气回升验证清晰。核心风险：客户集中度>70%需年报确认、产能瓶颈制约增长、毛利率可持续性。建议小仓位试错（3-5%），等待中报验证H1增速。",
+      "position_role": "创新药产业链高成长标的",
+      "dv_ttm": null,
       "risk_flags": [
-        "政策医保政策变动",
-        "研发风险"
-      ]
+        "客户集中度高（前五大>70%风险）",
+        "产能瓶颈制约增长",
+        "毛利率96%+可持续性需验证",
+        "应收账款与存货风险（创新药客户融资困难）"
+      ],
+      "notes": "2026Q1财报已验证增速，中报（08-30）是验证毛利率可持续性与客户集中度变化的关键窗口。若H1增速>40%且毛利率稳定94%+，可加仓至8-10%；若增速<30%或毛利率环比下滑>5%，需重新评估档位。"
     }
   ],
   "tier": "core",

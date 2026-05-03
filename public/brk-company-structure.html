@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>伯克希尔旗下公司结构图谱 — ZephyrSpace</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Newsreader:ital,wght@0,400;0,600;0,700;1,400&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f5f0e6;
+  --bg-card: #fffdf8;
+  --bg-card-hover: #faf6ee;
+  --accent-teal: #0e7490;
+  --accent-blue: #2563a0;
+  --accent-amber: #c2770c;
+  --accent-red: #b91c1c;
+  --accent-green: #0f766e;
+  --text: #1c1917;
+  --text-sec: #57534e;
+  --text-dim: #a8a29e;
+  --border: rgba(120, 113, 108, 0.15);
+  --shadow: 0 10px 30px rgba(28, 25, 23, 0.08);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: 'Noto Sans SC', sans-serif;
+  color: var(--text);
+  background-color: var(--bg);
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; }
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+.nav-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.nav-pills a {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 0.82rem;
+  color: var(--text-sec);
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.nav-pills a:hover {
+  background: var(--bg-card-hover);
+  color: var(--accent-teal);
+  border-color: var(--accent-teal);
+  transform: translateY(-1px);
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.35rem 1rem;
+  background: var(--accent-teal);
+  color: #fff;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  margin: 0 0 0.7rem;
+  font-family: 'Newsreader', serif;
+  font-size: clamp(2.3rem, 5vw, 4rem);
+  line-height: 1.08;
+  font-weight: 700;
+}
+
+.hero p {
+  max-width: 860px;
+  margin: 0 auto;
+  color: var(--text-sec);
+  font-size: 1rem;
+}
+
+.hero .mono {
+  display: inline-block;
+  margin-top: 0.8rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
+  color: var(--accent-amber);
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.section {
+  padding: 1.6rem 1.8rem;
+  margin-bottom: 1.4rem;
+}
+
+.section h2 {
+  margin: 0 0 1rem;
+  font-family: 'Newsreader', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.section .lead {
+  color: var(--text-sec);
+  margin-bottom: 1rem;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.metric {
+  padding: 1.1rem 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(14,116,144,0.05), rgba(255,253,248,0.98));
+}
+
+.metric-label {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  margin-bottom: 0.35rem;
+}
+
+.metric-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.55rem;
+  font-weight: 600;
+  color: var(--accent-teal);
+  line-height: 1.15;
+}
+
+.metric-note {
+  margin-top: 0.3rem;
+  font-size: 0.75rem;
+  color: var(--text-sec);
+}
+
+.org-shell {
+  position: relative;
+  padding-top: 0.8rem;
+}
+
+.parent-card {
+  max-width: 620px;
+  margin: 0 auto 1.4rem;
+  padding: 1.4rem 1.5rem;
+  text-align: center;
+  border: 1px solid rgba(14,116,144,0.22);
+  background:
+    radial-gradient(circle at top right, rgba(14,116,144,0.11), transparent 35%),
+    linear-gradient(180deg, rgba(255,255,255,0.98), rgba(245,240,230,0.6));
+}
+
+.parent-card h3 {
+  margin: 0 0 0.35rem;
+  font-family: 'Newsreader', serif;
+  font-size: 1.7rem;
+}
+
+.parent-card p {
+  margin: 0;
+  color: var(--text-sec);
+  font-size: 0.95rem;
+}
+
+.spine {
+  width: 2px;
+  height: 38px;
+  margin: 0 auto;
+  background: linear-gradient(180deg, rgba(14,116,144,0.55), rgba(14,116,144,0.12));
+}
+
+.branch-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  position: relative;
+}
+
+.branch-grid::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 17%;
+  right: 17%;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(14,116,144,0.12), rgba(14,116,144,0.55), rgba(14,116,144,0.12));
+}
+
+.branch-card {
+  position: relative;
+  padding: 1.3rem 1.3rem 1.2rem;
+  overflow: hidden;
+}
+
+.branch-card::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  width: 2px;
+  height: 20px;
+  transform: translateX(-50%);
+  background: rgba(14,116,144,0.35);
+}
+
+.branch-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.branch-top h3 {
+  margin: 0;
+  font-family: 'Newsreader', serif;
+  font-size: 1.35rem;
+}
+
+.branch-sub {
+  color: var(--text-sec);
+  font-size: 0.88rem;
+}
+
+.branch-ratio {
+  text-align: right;
+  min-width: 92px;
+}
+
+.branch-ratio .big {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.18rem;
+  font-weight: 600;
+  color: var(--accent-blue);
+}
+
+.branch-ratio .small {
+  display: block;
+  font-size: 0.74rem;
+  color: var(--text-dim);
+}
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0.85rem 0 0.95rem;
+}
+
+.chip {
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.7);
+  color: var(--text-sec);
+}
+
+.branch-notes {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--text-sec);
+  font-size: 0.9rem;
+}
+
+.branch-notes li + li {
+  margin-top: 0.35rem;
+}
+
+.finance-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.85rem;
+}
+
+.equity-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.equity-card {
+  padding: 1.15rem 1.1rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(194,119,12,0.06), rgba(255,253,248,1));
+}
+
+.equity-card h3 {
+  margin: 0 0 0.2rem;
+  font-size: 1rem;
+}
+
+.equity-card .sub {
+  margin: 0 0 0.8rem;
+  font-size: 0.8rem;
+  color: var(--text-dim);
+}
+
+.equity-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.55rem;
+  margin-top: 0.75rem;
+}
+
+.equity-stat {
+  padding: 0.7rem 0.75rem;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.74);
+  border: 1px solid var(--border);
+}
+
+.equity-stat .k {
+  display: block;
+  font-size: 0.68rem;
+  color: var(--text-dim);
+}
+
+.equity-stat .v {
+  display: block;
+  margin-top: 0.16rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--accent-amber);
+}
+
+.finance-box {
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(37,99,160,0.04), rgba(255,253,248,1));
+}
+
+.finance-box h3 {
+  margin: 0 0 0.35rem;
+  font-size: 0.88rem;
+}
+
+.finance-box .v {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--accent-green);
+}
+
+.finance-box p {
+  margin: 0.35rem 0 0;
+  font-size: 0.74rem;
+  color: var(--text-dim);
+}
+
+.footnote {
+  margin-top: 0.9rem;
+  font-size: 0.76rem;
+  color: var(--text-dim);
+}
+
+.source-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.source-table th,
+.source-table td {
+  padding: 0.85rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  text-align: left;
+}
+
+.source-table th {
+  color: var(--text-sec);
+  font-weight: 600;
+}
+
+.source-table a {
+  color: var(--accent-blue);
+  text-decoration: none;
+}
+
+.source-table a:hover {
+  text-decoration: underline;
+}
+
+.source-pill {
+  display: inline-block;
+  margin-right: 0.4rem;
+  margin-bottom: 0.25rem;
+  padding: 0.18rem 0.48rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.67rem;
+  color: var(--text-sec);
+  background: rgba(255,255,255,0.75);
+}
+
+.footer {
+  margin-top: 2rem;
+  color: var(--text-dim);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+@media (max-width: 960px) {
+  .summary-grid,
+  .finance-grid,
+  .equity-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .branch-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .branch-grid::before {
+    display: none;
+  }
+
+  .branch-card::before {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 1.35rem 1rem 3rem;
+  }
+
+  .section {
+    padding: 1.2rem 1rem;
+  }
+
+  .summary-grid,
+  .finance-grid,
+  .equity-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .branch-top {
+    flex-direction: column;
+  }
+
+  .branch-ratio {
+    text-align: left;
+  }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="nav-pills">
+    <a href="index.html">← 返回首页</a>
+    <a href="#org-map">结构图</a>
+    <a href="#equities">股票持仓层</a>
+    <a href="#finance">经营口径</a>
+    <a href="#sources">数据来源</a>
+  </div>
+
+  <header class="hero">
+    <div class="badge">BRK / STRUCTURE</div>
+    <h1>伯克希尔旗下公司结构<br>一图流</h1>
+    <p>这页不是“持仓清单”，而是<strong>伯克希尔真正控制并并表的经营公司骨架</strong>。结构锚点来自 2025 年报 A-1《Operating Companies》与 Note 26《Business segment data》，再用 GEICO 与 BNSF 官方页面交叉验证关键所有权关系。</p>
+    <div class="mono">口径时间：FY2025 / 文件发布日期：2026-02-28</div>
+  </header>
+
+  <section class="section card">
+    <h2>先看结论</h2>
+    <div class="summary-grid">
+      <div class="metric">
+        <div class="metric-label">总员工数</div>
+        <div class="metric-value">387,815</div>
+        <div class="metric-note">年报 Appendix A-1</div>
+      </div>
+      <div class="metric">
+        <div class="metric-label">核心经营支柱</div>
+        <div class="metric-value">4 大类</div>
+        <div class="metric-note">保险 / 铁路与能源 / 制造 / 服务零售</div>
+      </div>
+      <div class="metric">
+        <div class="metric-label">经营业务收入</div>
+        <div class="metric-value">$368.4B</div>
+        <div class="metric-note">2025 operating businesses total</div>
+      </div>
+      <div class="metric">
+        <div class="metric-label">经营业务税前利润</div>
+        <div class="metric-value">$51.7B</div>
+        <div class="metric-note">2025 Note 26</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section card" id="org-map">
+    <h2>公司结构图谱</h2>
+    <p class="lead">下面是<strong>按经营逻辑</strong>而不是按股票持仓来画的伯克希尔骨架。为避免伪精确，这里展示的是“核心板块 + 旗舰子公司”，不是法律实体的完整穷举。</p>
+
+    <div class="org-shell">
+      <div class="parent-card card">
+        <h3>Berkshire Hathaway Inc.</h3>
+        <p>总部极小，但控制大量独立经营公司。总部员工仅 <strong>28 人</strong>，绝大多数经营活动都在子公司层面完成。</p>
+      </div>
+      <div class="spine"></div>
+
+      <div class="branch-grid">
+        <article class="branch-card card">
+          <div class="branch-top">
+            <div>
+              <h3>保险</h3>
+              <div class="branch-sub">伯克希尔的资本发动机</div>
+            </div>
+            <div class="branch-ratio">
+              <span class="big">42,633</span>
+              <span class="small">约 11.0% 员工</span>
+            </div>
+          </div>
+          <div class="chip-row">
+            <span class="chip">GEICO</span>
+            <span class="chip">General Re</span>
+            <span class="chip">BH Reinsurance</span>
+            <span class="chip">MedPro</span>
+            <span class="chip">USLI</span>
+            <span class="chip">TransRe</span>
+          </div>
+          <ul class="branch-notes">
+            <li>GEICO 是最醒目的消费保险品牌，GEICO 官网明确写明其集团由 Berkshire Hathaway 全资拥有。</li>
+            <li>年报 A-1 列出的保险经营公司覆盖车险、再保险、医疗责任险、专业责任险与超额责任险。</li>
+            <li>Note 26 披露的保险口径更接近“保费赚取 + 投资收益”，是伯克希尔与普通工业公司最不一样的地方。</li>
+          </ul>
+        </article>
+
+        <article class="branch-card card">
+          <div class="branch-top">
+            <div>
+              <h3>铁路、公共事业与能源</h3>
+              <div class="branch-sub">重资产、稳现金流、长久期护城河</div>
+            </div>
+            <div class="branch-ratio">
+              <span class="big">58,791</span>
+              <span class="small">约 15.2% 员工</span>
+            </div>
+          </div>
+          <div class="chip-row">
+            <span class="chip">BNSF</span>
+            <span class="chip">PacifiCorp</span>
+            <span class="chip">MidAmerican Energy</span>
+            <span class="chip">NV Energy</span>
+            <span class="chip">Northern Powergrid</span>
+            <span class="chip">BHE Renewables</span>
+          </div>
+          <ul class="branch-notes">
+            <li>BNSF 官网写明：2010 年 2 月 12 日起，BNSF 成为 Berkshire Hathaway 子公司。</li>
+            <li>年报 A-1 把 BHE 旗下的 PacifiCorp、MidAmerican、NV Energy、Northern Powergrid、管道与输电资产单独列出。</li>
+            <li>这一组业务的共同点不是高增长，而是高替代难度、监管框架内的长期现金流。</li>
+          </ul>
+        </article>
+
+        <article class="branch-card card">
+          <div class="branch-top">
+            <div>
+              <h3>制造</h3>
+              <div class="branch-sub">员工最多，也是最分散的一层</div>
+            </div>
+            <div class="branch-ratio">
+              <span class="big">175,607</span>
+              <span class="small">约 45.3% 员工</span>
+            </div>
+          </div>
+          <div class="chip-row">
+            <span class="chip">Precision Castparts</span>
+            <span class="chip">Clayton Homes</span>
+            <span class="chip">Marmon</span>
+            <span class="chip">Lubrizol</span>
+            <span class="chip">Shaw</span>
+            <span class="chip">Duracell</span>
+            <span class="chip">Fruit of the Loom</span>
+          </div>
+          <ul class="branch-notes">
+            <li>制造是伯克希尔最大的用工池，涵盖航空零部件、建材、住宅、工业润滑与消费品牌。</li>
+            <li>Marmon 本身又是控股平台，年报脚注说明其下辖 100+ 制造与服务企业、分成 11 个业务组。</li>
+            <li>这层结构最像“去中心化工业控股组合”，不是单一赛道押注。</li>
+          </ul>
+        </article>
+
+        <article class="branch-card card">
+          <div class="branch-top">
+            <div>
+              <h3>服务与零售</h3>
+              <div class="branch-sub">从分销到出行服务，再到消费终端</div>
+            </div>
+            <div class="branch-ratio">
+              <span class="big">110,756</span>
+              <span class="small">约 28.6% 员工</span>
+            </div>
+          </div>
+          <div class="chip-row">
+            <span class="chip">McLane</span>
+            <span class="chip">Pilot</span>
+            <span class="chip">NetJets</span>
+            <span class="chip">FlightSafety</span>
+            <span class="chip">Dairy Queen</span>
+            <span class="chip">Berkshire Automotive</span>
+            <span class="chip">See's Candies</span>
+          </div>
+          <ul class="branch-notes">
+            <li>年报 Appendix A-1 把 McLane、Pilot、NetJets、FlightSafety、NFM、See's 等都放在这一层。</li>
+            <li>Note 26 中，McLane 与 Pilot 被单独拆成两个收入板块，说明它们体量足够大，不能只当零售子品牌看。</li>
+            <li>这一层是伯克希尔最贴近“日常经济活动”的部分，覆盖物流、卡车驿站、航空服务、家具、珠宝、糖果与餐饮。</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section card" id="equities">
+    <h2>别漏掉这层：上市股票持仓</h2>
+    <p class="lead">如果只看并表子公司，会低估伯克希尔真正的资本结构。它一边拥有 GEICO、BNSF、BHE、Pilot 这些经营资产，另一边也长期持有大量上市公司股权。<strong>这部分不是旗下运营子公司</strong>，而是伯克希尔的公开股票投资层。</p>
+
+    <div class="equity-grid">
+      <article class="equity-card">
+        <h3>苹果 Apple</h3>
+        <p class="sub">2025 年报股东信列示的大额持仓之一</p>
+        <div class="equity-stats">
+          <div class="equity-stat">
+            <span class="k">持股占苹果</span>
+            <span class="v">1.6%</span>
+          </div>
+          <div class="equity-stat">
+            <span class="k">年末市值</span>
+            <span class="v">$62.0B</span>
+          </div>
+          <div class="equity-stat">
+            <span class="k">2025 股息</span>
+            <span class="v">$280M</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="equity-card">
+        <h3>可口可乐 Coca-Cola</h3>
+        <p class="sub">最经典的长期消费股持仓之一</p>
+        <div class="equity-stats">
+          <div class="equity-stat">
+            <span class="k">持股占可口可乐</span>
+            <span class="v">9.3%</span>
+          </div>
+          <div class="equity-stat">
+            <span class="k">年末市值</span>
+            <span class="v">$28.0B</span>
+          </div>
+          <div class="equity-stat">
+            <span class="k">2025 股息</span>
+            <span class="v">$816M</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="equity-card">
+        <h3>美国运通 American Express</h3>
+        <p class="sub">持股比例已经接近战略股东级别</p>
+        <div class="equity-stats">
+          <div class="equity-stat">
+            <span class="k">持股占美国运通</span>
+            <span class="v">22.1%</span>
+          </div>
+          <div class="equity-stat">
+            <span class="k">年末市值</span>
+            <span class="v">$56.1B</span>
+          </div>
+          <div class="equity-stat">
+            <span class="k">2025 股息</span>
+            <span class="v">$479M</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="equity-card">
+        <h3>股票投资层的完整感</h3>
+        <p class="sub">官方年报 Note 4/5 明确告诉你，不能只盯苹果和可口可乐</p>
+        <ul class="branch-notes">
+          <li>2025 年末五大普通股持仓包括：<strong>American Express、Apple、Bank of America、Coca-Cola、Chevron</strong>。</li>
+          <li>股东信单列展示的还有 <strong>Moody's</strong>：持股占比 `13.9%`，年末市值 `12.6B` 美元。</li>
+          <li><strong>Occidental</strong> 与 <strong>Kraft Heinz</strong> 更特殊：前者普通股按权益法核算、另有优先股和认股权证；后者也是权益法核心投资。</li>
+          <li>2025 年末披露：Occidental 持股 `26.9%`，Kraft Heinz 持股 `27.5%`。</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="footnote">
+      口径说明：这里故意把“并表经营子公司”和“上市股权投资”拆开，因为两者在会计处理、控制权和估值理解上完全不是一回事。  
+      数据锚点来自 2025 年报股东信与 Note 4/5；其中苹果、美国运通、可口可乐、穆迪给出了持股比例、市值和股息，Bank of America 与 Chevron 则在 Note 4 中被确认属于五大普通股持仓。
+    </div>
+  </section>
+
+  <section class="section card" id="finance">
+    <h2>2025 经营口径快照</h2>
+    <p class="lead">这部分不是估值表，而是为了帮助理解“哪几层是真正的大块头”。其中保险收入口径与工业公司不同，主要看保费与投资收益；服务零售部分按 Note 26 的披露，把 McLane 与 Pilot 作为单独大块保留。</p>
+
+    <div class="finance-grid">
+      <div class="finance-box">
+        <h3>保险</h3>
+        <div class="v">$95.0B</div>
+        <p>保费赚取 + 投资收益</p>
+      </div>
+      <div class="finance-box">
+        <h3>BNSF</h3>
+        <div class="v">$23.5B</div>
+        <p>税前利润 $7.2B</p>
+      </div>
+      <div class="finance-box">
+        <h3>BHE</h3>
+        <div class="v">$26.3B</div>
+        <p>税前利润 $2.3B</p>
+      </div>
+      <div class="finance-box">
+        <h3>制造</h3>
+        <div class="v">$78.5B</div>
+        <p>税前利润 $12.6B</p>
+      </div>
+      <div class="finance-box">
+        <h3>服务零售</h3>
+        <div class="v">$135.8B</div>
+        <p>Service/Retail + McLane + Pilot 合并展示</p>
+      </div>
+    </div>
+
+    <div class="footnote">
+      注：`$135.8B` = Service &amp; Retailing `42.6B` + McLane `51.0B` + Pilot `42.2B`。  
+      注：保险收入定义与工业收入不同，因此这组数字用于理解结构，不建议直接横向粗暴相加比较“效率”。
+    </div>
+  </section>
+
+  <section class="section card" id="sources">
+    <h2>多方印证的数据来源</h2>
+    <p class="lead">我把来源拆成三层：<strong>官方年报主锚</strong>、<strong>SEC 镜像复核</strong>、<strong>子公司官网验证关键所有权关系</strong>。这样可以避免只引用二手“伯克希尔持有哪些公司”的整理文章。</p>
+
+    <table class="source-table">
+      <thead>
+        <tr>
+          <th>用途</th>
+          <th>主来源</th>
+          <th>交叉验证</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>集团经营范围总定义</td>
+          <td>
+            <span class="source-pill">官方年报</span>
+            <a href="https://www.berkshirehathaway.com/2025ar/2025ar.pdf" target="_blank" rel="noopener noreferrer">Berkshire Hathaway 2025 Annual Report</a><br>
+            `Nature of operations` 明确写明：保险与再保险、铁路运输、公用事业与能源、制造、服务和零售。
+          </td>
+          <td>
+            <span class="source-pill">SEC</span>
+            <a href="https://www.sec.gov/Archives/edgar/data/0000060086/000006008626000025/a2025annualreport.pdf" target="_blank" rel="noopener noreferrer">SEC EDGAR 镜像版 2025 Annual Report</a>
+          </td>
+        </tr>
+        <tr>
+          <td>经营公司名单与员工数</td>
+          <td>
+            <span class="source-pill">官方年报 A-1</span>
+            年报 Appendix A-1《Operating Companies》：列出 GEICO、BNSF、BHE 旗下单位、Clayton、Marmon、McLane、Pilot、NetJets 等，并给出员工数。
+          </td>
+          <td>
+            <span class="source-pill">结构复核</span>
+            本页只选取骨架级公司，不把法律实体穷举冒充“全名单”。
+          </td>
+        </tr>
+        <tr>
+          <td>板块收入与税前利润</td>
+          <td>
+            <span class="source-pill">官方年报 Note 26</span>
+            年报 Note 26《Business segment data》：BNSF、BHE、制造、服务零售、McLane、Pilot 的 2025 收入与税前利润。
+          </td>
+          <td>
+            <span class="source-pill">SEC</span>
+            同期 SEC EDGAR 版本可交叉核对相同数字。
+          </td>
+        </tr>
+        <tr>
+          <td>上市股票持仓层</td>
+          <td>
+            <span class="source-pill">官方年报股东信</span>
+            <a href="https://www.berkshirehathaway.com/2025ar/2025ar.pdf" target="_blank" rel="noopener noreferrer">Berkshire Hathaway 2025 Annual Report</a><br>
+            股东信单列展示 Apple、American Express、Coca-Cola、Moody's 的持股比例、市值与 2025 股息。
+          </td>
+          <td>
+            <span class="source-pill">Note 4/5</span>
+            同一份年报的 Note 4 明确五大普通股持仓包括 Bank of America 和 Chevron；Note 5 披露 Occidental 与 Kraft Heinz 的权益法持股比例。
+          </td>
+        </tr>
+        <tr>
+          <td>GEICO 与伯克希尔关系</td>
+          <td>
+            <span class="source-pill">子公司官网</span>
+            <a href="https://www.geico.com/about/corporate/corporate-ownership/" target="_blank" rel="noopener noreferrer">GEICO Corporate Ownership</a><br>
+            官网直接写明：GEICO group is wholly owned by Berkshire Hathaway Inc.
+          </td>
+          <td>
+            <span class="source-pill">官方年报</span>
+            年报 A-1 将 GEICO 列为保险板块最大经营公司。
+          </td>
+        </tr>
+        <tr>
+          <td>BNSF 与伯克希尔关系</td>
+          <td>
+            <span class="source-pill">子公司官网</span>
+            <a href="https://www.bnsf.com/about-bnsf/financial-information/" target="_blank" rel="noopener noreferrer">BNSF Financial Information</a><br>
+            官网写明：2010 年 2 月 12 日，BNSF became subsidiaries of Berkshire Hathaway Inc.
+          </td>
+          <td>
+            <span class="source-pill">官方年报</span>
+            年报 A-1 与 Note 26 同时把 BNSF 作为单独大板块披露。
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <div class="footer">
+    ZephyrSpace · 这是一张“结构图”，不是完整法律实体清单；若后续需要，我可以再补一版“伯克希尔旗下旗舰公司全名单索引页”。
+  </div>
+</div>
+</body>
+</html>
