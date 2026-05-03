@@ -412,28 +412,6 @@
       "cycle_position": null
     },
     {
-      "dv_ttm": 0,
-      "watch_reason": "PE分位2.3%极低估+ROE19.6%稳健+现金流优质",
-      "price_date": "2026-05-03",
-      "next_earnings_date": "2026-08-31",
-      "code": "002966.SZ",
-      "name": "中策橡胶",
-      "position_role": "汽车轮胎龙头",
-      "prebuy_conclusion": "基本面稳健，当前估值处于历史低位，现金流优质，适合分批布局",
-      "price_bands": [
-        11.5,
-        9.5,
-        8.0
-      ],
-      "next_earnings_type": "半年报",
-      "cycle_is_cyclical": false,
-      "current_price": 0,
-      "risk_flags": [],
-      "valuation_anchor": "高ROE+低PE",
-      "board": "深",
-      "cycle_position": null
-    },
-    {
       "name": "福特科技",
       "code": "605558.SH",
       "board": "沪",
