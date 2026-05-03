@@ -1,296 +1,133 @@
-[
-  {
-    "name": "长江电力",
-    "code": "600900.SH",
-    "source_etf": "931897",
-    "position_role": "水电现金流锚",
-    "prebuy_conclusion": "Q1 2026净利+30.5%，来水改善逻辑兑现；PE TTM 18.53x处3年历史0%分位（极度低估），股息率3.66%，政策顺风PS+3（清洁能源+水网建设），当前价远低于中性底36.43元，积极建仓。",
-    "watch_reason": "绿色电力里最稳的现金流底仓，适合长期持续跟踪。",
-    "current_price": 27.32,
-    "price_bands": [
-      41.22,
-      36.43,
-      32.82
-    ],
-    "risk_flags": [
-      "来水波动是核心经营变量",
-      "估值不便宜，不能当低估值捡漏",
-      "成长弹性有限，更适合底仓思路"
-    ],
-    "valuation_anchor": "股息率+PE：追高区>29(股息率<3%，长期复利资产定价偏高) / 中性区26-29(股息率约3-3.5%，底仓可持有) / 较好区间23.5-26(股息率约3.5-4%，赔率改善可建仓) / 更低区间<23.5(股息率>4%，安全边际明显)",
-    "price_date": "2026-04-30",
-    "board": "沪",
-    "dv_ttm": 3.54,
-    "next_earnings_date": "2026-08-31",
-    "next_earnings_type": "半年报",
-    "last_close": 26.66,
-    "price_bands_basis": "pe_ttm.y3+ps3",
-    "price_bands_date": "2026-05-02"
-  },
-  {
-    "name": "贵州茅台",
-    "code": "600519.SH",
-    "source_etf": "399997",
-    "position_role": "质量价值绝对锚",
-    "prebuy_conclusion": "Q1 2026营收+6.3%（从FY2025 -1.2%恢复正增长），PE 20.97x/3年28.3%分位，PB 3年0%分位，股息率3.75%，估值低位；景气底部已确认反转，适合底仓分批布局。⚠️ 董秘/财务总监蒋焰2026-03-14被留置调查，需跟踪治理风险。",
-    "watch_reason": "中证白酒指数权重第一，护城河最深的消费品，PE历史低位，底仓首选。",
-    "current_price": 1458.49,
-    "price_bands": [
-      2185,
-      1674,
-      1466
-    ],
-    "risk_flags": [
-      "飞天批价若持续下跌至出厂价附近则信号恶化",
-      "宏观消费景气度走弱，商务宴请需求收缩",
-      "2026年提价节奏慢于预期则业绩增速回落"
-    ],
-    "valuation_anchor": "历史PE+批价信号：追高区>1700(PE>25x，成长性充分定价) / 中性区1400-1700(PE20-25x，好公司合理价) / 较好区间1200-1400(PE17-20x，历史底部区，可分批建仓) / 更低区间<1200(PE<17x，安全边际充足，关注批价回升信号)",
-    "price_date": "2026-04-24",
-    "board": "沪",
-    "dv_ttm": 3.54,
-    "next_earnings_date": "2026-08-31",
-    "next_earnings_type": "半年报",
-    "price_bands_basis": "pe_ttm.y3+ps2",
-    "price_bands_date": "2026-05-02",
-    "notes": "⚠️ 2026-03-14 董秘兼财务总监蒋焰被留置调查（反腐），接替人选未明，需持续跟踪治理风险。国有大股东2025-12小幅减持0.16%。"
-  },
-  {
-    "name": "苹果",
-    "code": "AAPL.US",
-    "market": "US",
-    "board": "纳",
-    "source_etf": "direct",
-    "position_role": "美股长线底仓 - 全球最强消费生态+Services高毛利飞轮，Ternus时代AI硬件修复期权",
-    "prebuy_conclusion": "FQ2 2026(日历Q1)收入+16.6%/净利+19.4%/EPS $2.01+21.8%/FCF+28%，全面超预期，加速趋势清晰；Services飞轮持续，毛利率49.3%历史新高；forward PE约31x，中性区底部，AI验证前小仓参与，回调至$265以下较优。",
-    "watch_reason": "全球设备生态最深护城河（22亿+活跃设备），Services飞轮结构性增长；2026-09 Ternus接任CEO（硬件工程出身）有望加速AI硬件路线图，撬动下一轮换机超级周期",
-    "current_price": 276.54,
-    "price_date": "2026-04-30",
-    "price_bands": [
-      300,
-      265,
-      243
-    ],
-    "valuation_anchor": "FY2026E EPS $8.80（StockAnalysis forward PE），PE 34x=$300追高/30x=$265中性/27.6x=$243较好/27x以下安全边际强；当前$276处中性区底部",
-    "risk_flags": [
-      "Siri/Apple Intelligence多次延期（原定2025年初，推至2026 spring），AI翻身叙事尚未验证，再度延期则成长催化逻辑破灭",
-      "美中关税年化额外成本$5B+，Morgan Stanley已下调FY2026 EPS；印度供应链切换需3-5年",
-      "DOJ App Store反垄断诉讼（2027庭审），若强制降佣Services利润受损$10-20B"
-    ],
-    "dv_ttm": 1.04,
-    "next_earnings_date": "2026-07-28（估算）",
-    "next_earnings_type": "季报"
-  },
-  {
-    "name": "谷歌(Alphabet)",
-    "code": "GOOGL.US",
-    "market": "US",
-    "board": "纳",
-    "source_etf": "direct",
-    "position_role": "美股长线核心底仓 - Search/广告现金牛 + Google Cloud/AI平台第二增长极，核心观察点转向Ad Tech救济与高CapEx兑现效率",
-    "prebuy_conclusion": "逻辑清晰，等待更合适价格或验证点 - Q1 2026已正式验证Cloud与Search双强增长，但当前更接近中性区上沿，需继续观察Ad Tech救济与高CapEx对FCF的压制。",
-    "watch_reason": "Q1 2026营收$109.9B同比+22%，Google Cloud单季首次站上$20.0B且同比+63%；Google Services仍稳，说明AI没有打坏核心广告机，但估值已反映部分强财报乐观预期。",
-    "current_price": 349.94,
-    "price_date": "2026-04-29",
-    "price_bands": [
-      360.0,
-      320.0,
-      285.0
-    ],
-    "valuation_anchor": "以二手一致预期FY2026E EPS约$11.81为锚：追高区>$360(>30.5x，强财报后溢价明显) / 中性区$320-360(27.1-30.5x，质量高但需继续观察Ad Tech救济与高CapEx) / 较好区间$285-320(24.1-27.1x，质量与赔率更平衡) / 更低区间<$285(<24.1x，若基本面未坏则安全边际更充足)",
-    "risk_flags": [
-      "Ad Tech案责任认定已坐实，但最终救济仍未落地；若进入剥离或强制处置级别，相关高毛利广告技术资产估值中枢会被重定价",
-      "AI基建资本开支显著抬升，Q1 2026二手口径自由现金流仅约$10.1B，投资逻辑不能只看EPS而需同步看FCF兑现",
-      "Search案已进入长期行为救济期，默认分发、数据开放与流量获取经济性会慢变量侵蚀护城河"
-    ],
-    "dv_ttm": 0.23,
-    "next_earnings_date": "2026-07-29（估算）",
-    "next_earnings_type": "季报"
-  },
-  {
-    "name": "英伟达",
-    "code": "NVDA.US",
-    "market": "US",
-    "board": "纳",
-    "source_etf": "direct",
-    "position_role": "AI算力基础设施核心卖铲资产，CUDA生态护城河极深",
-    "prebuy_conclusion": "逻辑清晰，当前价格合理，可按计划买入",
-    "watch_reason": "全球AI算力第一卖铲商，FY27E Forward PE ~24x处历史低分位，PEG≈0.63",
-    "current_price": 207.0,
-    "price_date": "2026-04-26",
-    "price_bands": [
-      250,
-      208,
-      167
-    ],
-    "valuation_anchor": "FY2027E Non-GAAP EPS $8.34，Forward PE ~25x",
-    "risk_flags": [
-      "H20出口管制损失~$10.5B",
-      "云厂商Capex降温戴维斯双杀风险",
-      "台积电供应链集中"
-    ],
-    "dv_ttm": 0.0,
-    "next_earnings_date": "2026-05-27",
-    "next_earnings_type": "季报"
-  },
-  {
-    "name": "伯克希尔哈撒韦B",
-    "code": "BRK-B.US",
-    "market": "US",
-    "board": "纽",
-    "source_etf": "direct",
-    "position_role": "多元化控股+保险浮存金复利机器，长期底仓",
-    "prebuy_conclusion": "逻辑清晰，当前价格合理，可按计划买入",
-    "watch_reason": "$382B现金弹药+$176B浮存金，P/Book 1.42x处10年中位数，Greg Abel接班落地",
-    "current_price": 469.0,
-    "price_date": "2026-04-26",
-    "price_bands": [
-      540,
-      490,
-      455
-    ],
-    "valuation_anchor": "P/Book 1.42x（10年均值），Operating EPS FY2025 $20.32",
-    "risk_flags": [
-      "Abel接班执行力待验证",
-      "BHE山火诉讼潜在数十亿负债",
-      "BNSF铁路持续承压"
-    ],
-    "dv_ttm": 0.0,
-    "next_earnings_date": "2026-05-01（估算）",
-    "next_earnings_type": "季报"
-  },
-  {
-    "name": "可口可乐",
-    "code": "KO.US",
-    "market": "US",
-    "board": "纽",
-    "source_etf": "direct",
-    "position_role": "防御型高股息底仓，Dividend King 64年连增",
-    "prebuy_conclusion": "Q1 2026大幅超预期（有机+10%，EPS $0.86 vs 预期$0.81），量价齐升，指引上调至+8-9%；连续66年Dividend King，品牌护城河垄断级别，forward PE约23.8x，当前$78.76处中性偏好区间，可按计划买入。",
-    "watch_reason": "品牌护城河不可复制，Q1 2026有机增速10%创近年新高，量价齐升，FCF机器（剔除一次性后FCF约$11.4B），63年连续增股息，新CEO首季超预期",
-    "current_price": 78.76,
-    "price_date": "2026-04-30",
-    "price_bands": [
-      88,
-      78,
-      70
-    ],
-    "valuation_anchor": "FY2026E EPS $3.30（Q1超预期后上调），PE 26.7x=$88追高/23.6x=$78中性/21.2x=$70较好区间；当前$78.76在中性偏好区间",
-    "risk_flags": [
-      "IRS税务纠纷潜在$16B负债（一票否决候选，需持续关注）",
-      "铝关税风险：美国铝关税直接推高罐装成本，若无法转嫁则压缩毛利",
-      "2025 GAAP FCF仅$5.3B（fairlife一次性支出扭曲），需2026回归确认",
-      "新兴市场汇率敞口：KO约60%收入来自海外，美元强势侵蚀reported利润"
-    ],
-    "dv_ttm": 2.06,
-    "next_earnings_date": "2026-07-28（估算）",
-    "next_earnings_type": "季报"
-  },
-  {
-    "name": "微软",
-    "code": "MSFT.US",
-    "market": "US",
-    "board": "纳",
-    "source_etf": "direct",
-    "position_role": "企业软件现金牛 + Azure/AI平台底仓，核心跟踪点转向Capex回收与Copilot兑现",
-    "prebuy_conclusion": "高质量 Core，估值中性偏合理，继续看执行兑现。",
-    "watch_reason": "Azure 40%增速、AI业务年化收入超过$37B、commercial RPO升至$627B，同时Productivity分部仍提供近60%营业利润率的现金流底座。",
-    "current_price": 424.46,
-    "price_date": "2026-04-30",
-    "price_bands": [
-      520,
-      450,
-      390
-    ],
-    "valuation_anchor": "以二手一致预期FY2026E EPS $16.92、FY2027E EPS $19.38为锚：追高区>$520(>30.7x FY2026E，市场继续无视Capex压力) / 中性区$450-520(26.6-30.7x，逻辑强但估值透支) / 较好区间$390-450(23.1-26.6x，质量与估值匹配) / 更低区间<$390(<23.1x，安全边际更充分)",
-    "risk_flags": [
-      "AI Capex与数据中心租赁义务继续抬升，FY2026前九个月Capex近似口径已达$80.15B、未起租数据中心义务升至$196.6B",
-      "OpenAI关系仍重要但独家性已下降，新协议下Microsoft不再拥有对新增算力需求的优先拒绝权",
-      "Copilot商业化透明度仍不够，截至2026-04-30公司未持续披露足够细的付费席位、ARR或利润贡献指标"
-    ],
-    "dv_ttm": 0.82,
-    "next_earnings_date": "2026-07-28（估算）",
-    "next_earnings_type": "季报"
-  },
-  {
-    "name": "摩根大通",
-    "code": "JPM.US",
-    "market": "US",
-    "board": "纽",
-    "source_etf": "direct",
-    "position_role": "全球最强银行长线底仓，ROTCE 18.7%+持续回购分红复利机器，金融板块压估值时的错杀机会",
-    "prebuy_conclusion": "逻辑清晰，等待更合适价格或验证点 - Q1 2026大幅超预期（净利$16.49B +15.2%，EPS $5.94）验证NII韧性，信贷质量改善；当前$313处于中性区，建议等回调至$265-310较好区间再建仓",
-    "watch_reason": "全球最高盈利银行（ROTCE 18.7%），FY2025回购$316亿+分红$166亿返还$482亿（净利87%）；Q1 2026净利$16.49B超预期，前瞻PE 14.2x处历史合理低位；规模护城河深（$4万亿总资产），Jamie Dimon领导运营效率持续领先同业",
-    "current_price": 313.02,
-    "price_date": "2026-04-22",
-    "price_bands": [
-      350,
-      310,
-      265
-    ],
-    "valuation_anchor": "FY2026E EPS $21.88：追高区>$350(>16xFE,历史高分位) / 中性区$310-350(14-16xFE,含当前价) / 较好区间$265-310(12-14xFE) / 更低区间<$265(<12xFE,历史罕见低估)",
-    "risk_flags": [
-      "降息周期将压缩NIM净息差，NII（占收入约55%）面临压力；降息2次以上将直接影响FY2027 EPS",
-      "信贷周期风险：FY2025准备金$142亿，宏观下行时坏账可快速扩大，ROE/ROTCE将显著下滑",
-      "巴塞尔III终版监管资本要求，若CET1提高可能压缩回购空间和股东回报"
-    ],
-    "dv_ttm": 1.92,
-    "next_earnings_date": "2026-07-14",
-    "next_earnings_type": "季报",
-    "cycle_is_cyclical": false
-  },
-  {
-    "name": "Meta",
-    "code": "META.US",
-    "market": "US",
-    "board": "纳",
-    "source_etf": "direct",
-    "position_role": "垄断级社交广告平台 + AI广告现金流机器，核心跟踪点转向高CapEx回报与FTC进展",
-    "prebuy_conclusion": "主业更强，但资本开支风险显著抬升；当前更适合分批跟踪，不适合把 Q1 beat 直接等同于便宜。",
-    "watch_reason": "Q1 2026 已验证广告量价双升（展示量+19%、单广告价格+12%），Family DAP达35.6亿，PEG约0.75；但2026全年CapEx指引上修至$125-145B。",
-    "current_price": 669.12,
-    "price_date": "2026-04-30",
-    "price_bands": [
-      820,
-      670,
-      550
-    ],
-    "valuation_anchor": "以二手一致预期FY2026E EPS $30.39为锚：追高区>$820(>27x，需要市场继续忽略CapEx压力) / 中性区$670-820(22-27x，逻辑强但不宜追高) / 较好区间$550-670(18-22x，估值与增长基本匹配) / 更低区间<$550(<18x，通常需监管恐慌或系统性错杀)",
-    "risk_flags": [
-      "FTC反垄断诉讼若支持拆分Instagram或WhatsApp，将直接重估长期估值中枢",
-      "2026全年CapEx指引已上修至$125-145B，若AI基础设施回报兑现慢，FCF将继续受压",
-      "双重股权结构下Mark Zuckerberg截至2026-04-01仍控制60.8%总投票权，普通股东影响力有限"
-    ],
-    "dv_ttm": null,
-    "next_earnings_date": "2026-07-29（估算）",
-    "next_earnings_type": "季报",
-    "cycle_is_cyclical": false
-  },
-  {
-    "name": "万事达卡",
-    "code": "MA.US",
-    "market": "US",
-    "board": "纽",
-    "source_etf": "direct",
-    "position_role": "全球支付网络核心底仓，双边网络效应深、利润质量强，当前等待Q1验证后再决定是否加码",
-    "prebuy_conclusion": "Q1 2026收入+15.8%/净利+18.4%/EPS+21.2%，增速提速，FCF+28.1%，逻辑全面兑现。forward PE约25x，较好区间，Core档位维持。",
-    "watch_reason": "FY2025 FCF/净利润达114.6%，跨境交易量本地货币口径+15%、增值服务收入+23%；等Q1 2026正式验证跨境与利润率后再上调结论。",
-    "current_price": 502.92,
-    "price_date": "2026-04-30",
-    "price_bands": [
-      706,
-      606,
-      484
-    ],
-    "valuation_anchor": "以二手一致预期FY2026E EPS $20.19为锚：追高区>$706(>35x，长期平台股估值上沿) / 中性区$606-706(30-35x，逻辑没问题但安全边际一般) / 较好区间$484-606(24-30x，估值已回到相对舒服位置) / 更低区间<$484(<24x，赔率明显改善)",
-    "risk_flags": [
-      "监管与诉讼风险持续存在，interchange、surcharging和litigation settlements仍是10-K核心风险项",
-      "跨境交易是重要增长引擎，旅行、贸易与汇率波动会直接影响盈利弹性",
-      "实时支付与账户到账网络会侵蚀部分低附加值交易，长期压制定价权"
-    ],
-    "dv_ttm": 0.66,
-    "next_earnings_date": "2026-07-28（估算）",
-    "next_earnings_type": "季报",
-    "cycle_is_cyclical": false
-  }
-]
+{
+  "version": 1,
+  "entries": [
+    {
+      "current_price": 69.45,
+      "price_date": "2026-04-30",
+      "next_earnings_type": "半年报",
+      "dv_ttm": null,
+      "next_earnings_date": "2026-08-31",
+      "cycle_is_cyclical": false,
+      "price_bands": [
+        90,
+        65,
+        40
+      ],
+      "source_etf": "direct",
+      "name": "兴齐眼药",
+      "watch_reason": "ROE39%+PE低估值+阿托品放量",
+      "valuation_anchor": "PE 22.6x (历史最低分位0%)",
+      "prebuy_conclusion": "眼科制药高质量成长，ROE39%，PE历史最低",
+      "code": "300573.SZ",
+      "position_role": "高ROE低PE核心档标的",
+      "board": "深",
+      "risk_flags": [
+        "阿托品集中度风险",
+        "医保覆盖变动"
+      ]
+    },
+    {
+      "current_price": 108.5,
+      "price_date": "2026-04-30",
+      "next_earnings_type": "半年报",
+      "dv_ttm": null,
+      "next_earnings_date": "2026-08-31",
+      "cycle_is_cyclical": false,
+      "price_bands": [
+        180,
+        120,
+        60
+      ],
+      "source_etf": "direct",
+      "name": "大豪科技",
+      "watch_reason": "ROE27.8%+PE极低+市占率80%+",
+      "valuation_anchor": "PE 30.2x (历史极低分位0.4%)",
+      "prebuy_conclusion": "绣花机电控全球第一，ROE27.8%，PE分位0.4%",
+      "code": "603025.SH",
+      "position_role": "高ROE低PE核心档标的",
+      "board": "沪",
+      "risk_flags": [
+        "关税压力",
+        "下游纺织出口"
+      ]
+    },
+    {
+      "valuation_anchor": "PE 10.6x (历史最低)",
+      "cycle_position": "复苏中期",
+      "price_bands": [
+        16,
+        12,
+        7
+      ],
+      "dv_ttm": 5.2,
+      "board": "沪",
+      "name": "锦江航运",
+      "source_etf": "direct",
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "price_date": "2026-04-30",
+      "current_price": 12.11,
+      "risk_flags": [
+        "航运周期",
+        "长江运力过剩"
+      ],
+      "code": "601083.SH",
+      "watch_reason": "PE历史低位1.7%+ROE稳升+航运复苏",
+      "prebuy_conclusion": "内河运输龙头，ROE16.6%，PE历史极低，现金流优秀",
+      "cycle_is_cyclical": true,
+      "position_role": "高ROE低PE核心档标的"
+    },
+    {
+      "current_price": 10.92,
+      "price_date": "2026-04-30",
+      "next_earnings_type": "半年报",
+      "dv_ttm": 2.1,
+      "next_earnings_date": "2026-08-31",
+      "cycle_is_cyclical": false,
+      "price_bands": [
+        15,
+        11,
+        8
+      ],
+      "source_etf": "direct",
+      "name": "诺普信",
+      "watch_reason": "ROE稳定+PE低位+农药需求稳定",
+      "valuation_anchor": "PE 14.1x (合理)",
+      "prebuy_conclusion": "农药龙头，ROE16.3%，PE合理，行业景气",
+      "code": "002215.SZ",
+      "position_role": "高ROE低PE核心档标的",
+      "board": "深",
+      "risk_flags": [
+        "农药行业竞争",
+        "原材料波动"
+      ]
+    },
+    {
+      "current_price": 25.91,
+      "price_date": "2026-04-30",
+      "next_earnings_type": "半年报",
+      "dv_ttm": 2.5,
+      "next_earnings_date": "2026-08-31",
+      "cycle_is_cyclical": false,
+      "price_bands": [
+        35,
+        26,
+        18
+      ],
+      "source_etf": "direct",
+      "name": "华润三九",
+      "watch_reason": "ROE稳健+PE低+医药消费升级+毛利最高",
+      "valuation_anchor": "PE 13.4x (低位)",
+      "prebuy_conclusion": "中医药龙头，ROE16.3%，PE低，毛利54%最高",
+      "code": "000999.SZ",
+      "position_role": "高ROE低PE核心档标的",
+      "board": "深",
+      "risk_flags": [
+        "政策医保政策调整",
+        "OTC销售压力"
+      ]
+    }
+  ],
+  "tier": "core",
+  "updated_at": "2026-05-03"
+}
