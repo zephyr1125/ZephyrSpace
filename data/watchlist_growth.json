@@ -9,7 +9,12 @@
       "name": "万辰集团",
       "cycle_is_cyclical": false,
       "current_price": 226.81,
-      "cycle_position": null
+      "cycle_position": null,
+      "price_bands": [
+        350,
+        220,
+        140
+      ]
     },
     {
       "code": "002847.SZ",
@@ -19,7 +24,12 @@
       "name": "盐津铺子",
       "cycle_is_cyclical": false,
       "current_price": 58.72,
-      "cycle_position": null
+      "cycle_position": null,
+      "price_bands": [
+        96,
+        76,
+        65
+      ]
     },
     {
       "code": "002668.SZ",
@@ -59,7 +69,12 @@
       "name": "芭田股份",
       "cycle_is_cyclical": true,
       "current_price": 13.9,
-      "cycle_position": "待评估"
+      "cycle_position": "待评估",
+      "price_bands": [
+        22,
+        15,
+        11
+      ]
     },
     {
       "code": "600660.SH",
@@ -179,7 +194,12 @@
       "name": "三美股份",
       "cycle_is_cyclical": true,
       "current_price": 32.88,
-      "cycle_position": "待评估"
+      "cycle_position": "待评估",
+      "price_bands": [
+        150,
+        65,
+        35
+      ]
     },
     {
       "code": "605599.SH",
@@ -189,7 +209,12 @@
       "name": "菜百股份",
       "cycle_is_cyclical": false,
       "current_price": 28.5,
-      "cycle_position": null
+      "cycle_position": null,
+      "price_bands": [
+        24,
+        19.19,
+        15
+      ]
     },
     {
       "code": "600988.SH",
