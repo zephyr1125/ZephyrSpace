@@ -163,7 +163,7 @@
     },
     {
       "code": "300015.SZ",
-      "board": null,
+      "board": "深",
       "position_role": "眼科医疗龙头",
       "watch_reason": "龙头确定+PE32x+Q1业绩验证",
       "name": "爱尔眼科",
@@ -211,9 +211,9 @@
       "price_date": "2026-03-31",
       "risk_flags": [],
       "price_bands": [
-        55.4,
+        78.2,
         65.16,
-        78.2
+        55.4
       ],
       "watch_reason": "超低估值+业绩复苏",
       "position_role": "growth",
@@ -225,7 +225,7 @@
     },
     {
       "cycle_is_cyclical": 0,
-      "board": null,
+      "board": "科",
       "current_price": 141.78,
       "next_earnings_date": "2026-08-31",
       "next_earnings_type": "半年报",
@@ -233,9 +233,9 @@
       "price_date": "2026-03-31",
       "risk_flags": [],
       "price_bands": [
-        120.5,
+        170.1,
         141.78,
-        170.1
+        120.5
       ],
       "watch_reason": "历史最低估值+护城河深",
       "position_role": "growth",
@@ -255,9 +255,9 @@
       "price_date": "2026-03-31",
       "risk_flags": [],
       "price_bands": [
-        51.1,
+        72.2,
         60.14,
-        72.2
+        51.1
       ],
       "watch_reason": "机器人订单驱动+执行器供应",
       "position_role": "growth",
@@ -277,9 +277,9 @@
       "price_date": "2026-03-31",
       "risk_flags": [],
       "price_bands": [
-        76.1,
+        107.4,
         89.5,
-        107.4
+        76.1
       ],
       "watch_reason": "五轴机床龙头+稳健增长",
       "position_role": "growth",
@@ -299,9 +299,9 @@
       "price_date": "2026-03-31",
       "risk_flags": [],
       "price_bands": [
-        105.9,
+        149.5,
         124.6,
-        149.5
+        105.9
       ],
       "watch_reason": "焊接设备+国际化",
       "position_role": "growth",
@@ -321,9 +321,9 @@
       "position_role": "汽车轮胎龙头",
       "prebuy_conclusion": "基本面稳健，当前估值处于历史低位，现金流优质，适合分批布局",
       "price_bands": [
-        8.0,
+        11.5,
         9.5,
-        11.5
+        8.0
       ],
       "next_earnings_type": "半年报",
       "cycle_is_cyclical": false,
