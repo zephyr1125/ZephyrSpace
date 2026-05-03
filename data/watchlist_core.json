@@ -129,35 +129,74 @@
     },
     {
       "cycle_is_cyclical": 0,
-      "board": "科创板",
+      "board": null,
       "current_price": 1038.0,
       "next_earnings_date": "2026-08-31",
       "next_earnings_type": "半年报",
       "name": "石头科技",
       "price_date": "2026-03-31",
       "risk_flags": [],
-      "price_bands": {
-        "buy": {
-          "price": 883.3,
-          "desc": "分批建仓"
-        },
-        "hold": {
-          "price": 1038.0,
-          "desc": "当前价"
-        },
-        "sell": {
-          "price": 1245.6,
-          "desc": "止盈"
-        }
-      },
+      "price_bands": [
+        883.3,
+        1038.0,
+        1245.6
+      ],
       "watch_reason": "高ROE低PE+龙头地位",
       "position_role": "core",
       "code": "688169.SH",
       "valuation_anchor": "高ROE+低PE",
       "prebuy_conclusion": "龙头企业，基本面优秀（ROE18.5%，净利增速22.3%），PE处于合理区间",
       "dv_ttm": 0
+    },
+    {
+      "name": "东鹏饮料",
+      "code": "605499.SH",
+      "board": "沪",
+      "current_price": 75.0,
+      "price_date": "2026-04-30",
+      "next_earnings_type": "半年报",
+      "next_earnings_date": "2026-08-31",
+      "cycle_is_cyclical": false,
+      "price_bands": [
+        120,
+        75,
+        40
+      ],
+      "source_etf": "direct",
+      "watch_reason": "品牌饮料龙头+毛利44.5%+连续5年分红",
+      "valuation_anchor": "PE 22x (合理)",
+      "prebuy_conclusion": "饮料龙头，ROE32%，毛利44.5%，品牌护城河深",
+      "position_role": "品牌消费龙头标的",
+      "risk_flags": [
+        "消费需求波动",
+        "竞争加剧"
+      ]
+    },
+    {
+      "name": "艾力斯",
+      "code": "688578.SH",
+      "board": "科",
+      "current_price": 185.0,
+      "price_date": "2026-04-30",
+      "next_earnings_type": "半年报",
+      "next_earnings_date": "2026-08-31",
+      "cycle_is_cyclical": false,
+      "price_bands": [
+        280,
+        185,
+        100
+      ],
+      "source_etf": "direct",
+      "watch_reason": "创新药物+毛利96%+ROE45%+稳定分红",
+      "valuation_anchor": "PE 28x (高增长合理)",
+      "prebuy_conclusion": "创新药物龙头，ROE45%，毛利96%，技术护城河强",
+      "position_role": "医药创新龙头标的",
+      "risk_flags": [
+        "政策医保政策变动",
+        "研发风险"
+      ]
     }
   ],
   "tier": "core",
-  "updated_at": "2026-05-03T09:46:16Z"
+  "updated_at": "2026-05-03T03:05:17.997916Z"
 }

@@ -54,6 +54,18 @@ VALID_EARNINGS_TYPES = {
     '年报'
 }
 
+# board 有效值
+VALID_BOARDS = {
+    '深',
+    '沪',
+    '科',
+    '北',
+    '港',
+    '美',
+    '纽',
+    '纳'
+}
+
 
 def validate_entry(entry, entry_idx=0, tier='unknown'):
     """验证单条 watchlist 条目"""
@@ -84,16 +96,29 @@ def validate_entry(entry, entry_idx=0, tier='unknown'):
         if entry['next_earnings_type'] not in VALID_EARNINGS_TYPES:
             errors.append(f"  [枚举错误] next_earnings_type = '{entry['next_earnings_type']}'")
     
-    # 4. price_bands 排序检查
+    # 4. price_bands 格式和排序检查
     if 'price_bands' in entry:
         pb = entry['price_bands']
-        if isinstance(pb, list):
+        if pb is None:
+            warnings.append(f"  [待补充] price_bands = null （需要补充价格区间）")
+        elif isinstance(pb, dict):
+            # 对象格式错误
+            errors.append(f"  [格式错误] price_bands 是对象格式 {{...}}，应转换为数组格式 [买, 持, 卖]")
+        elif isinstance(pb, list):
             if len(pb) != 3:
                 errors.append(f"  [格式错误] price_bands 应为3个元素，但有 {len(pb)} 个")
             elif not (pb[0] > pb[1] > pb[2]):
                 errors.append(f"  [排序错误] price_bands {pb} 不是降序 (应为 [买入高, 持有中, 卖出低])")
         else:
-            errors.append(f"  [类型错误] price_bands 应为数组，但是 {type(pb)}")
+            errors.append(f"  [类型错误] price_bands 应为数组或null，但是 {type(pb).__name__}")
+    
+    # 4b. board 格式检查
+    if 'board' in entry:
+        board = entry['board']
+        if board is None:
+            errors.append(f"  [格式错误] board = null （必须指定上市板块）")
+        elif board not in VALID_BOARDS:
+            errors.append(f"  [格式错误] board = '{board}' （无效值，应为 {VALID_BOARDS}）")
     
     # 5. code 格式检查
     if 'code' in entry:

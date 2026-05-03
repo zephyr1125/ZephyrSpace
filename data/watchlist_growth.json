@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-03T02:09:28.6487337Z",
+  "updated_at": "2026-05-03T03:05:17.999944Z",
   "entries": [
     {
       "code": "300972.SZ",
@@ -8,7 +8,8 @@
       "watch_reason": "ROE104%但高杠杆+低净利率需验证",
       "name": "万辰集团",
       "cycle_is_cyclical": false,
-      "current_price": 226.81
+      "current_price": 226.81,
+      "cycle_position": null
     },
     {
       "code": "002847.SZ",
@@ -17,7 +18,8 @@
       "watch_reason": "ROE38.7%+OCF优质+FCF负需跟踪",
       "name": "盐津铺子",
       "cycle_is_cyclical": false,
-      "current_price": 58.72
+      "current_price": 58.72,
+      "cycle_position": null
     },
     {
       "code": "002668.SZ",
@@ -26,7 +28,8 @@
       "watch_reason": "PE分位5%+ROE37.7%+出海双轮",
       "name": "TCL智家",
       "cycle_is_cyclical": false,
-      "current_price": 9.28
+      "current_price": 9.28,
+      "cycle_position": null
     },
     {
       "code": "688278.SH",
@@ -35,7 +38,8 @@
       "watch_reason": "PE分位0.4%+毛利93%+复合增长30%",
       "name": "特宝生物",
       "cycle_is_cyclical": false,
-      "current_price": 88.55
+      "current_price": 88.55,
+      "cycle_position": null
     },
     {
       "code": "001221.SZ",
@@ -44,7 +48,8 @@
       "watch_reason": "PE分位1.7%+OCF连续>100%+零商誉",
       "name": "悍高集团",
       "cycle_is_cyclical": false,
-      "current_price": 52.33
+      "current_price": 52.33,
+      "cycle_position": null
     },
     {
       "code": "002170.SZ",
@@ -53,7 +58,8 @@
       "watch_reason": "ROE26.2%+营收+53%+化肥周期",
       "name": "芭田股份",
       "cycle_is_cyclical": true,
-      "current_price": 13.9
+      "current_price": 13.9,
+      "cycle_position": "待评估"
     },
     {
       "code": "600660.SH",
@@ -62,7 +68,8 @@
       "watch_reason": "PE分位4.5%+ROE25%+汽车龙头",
       "name": "福耀玻璃",
       "cycle_is_cyclical": false,
-      "current_price": 58.87
+      "current_price": 58.87,
+      "cycle_position": null
     },
     {
       "code": "603195.SH",
@@ -71,7 +78,8 @@
       "watch_reason": "FCF42亿+负债率25%+营收连降",
       "name": "公牛集团",
       "cycle_is_cyclical": false,
-      "current_price": 44.85
+      "current_price": 44.85,
+      "cycle_position": null
     },
     {
       "code": "603979.SH",
@@ -80,7 +88,8 @@
       "watch_reason": "PE分位5.2%+ROE4年连升+非洲集中",
       "name": "金诚信",
       "cycle_is_cyclical": true,
-      "current_price": 62.3
+      "current_price": 62.3,
+      "cycle_position": "待评估"
     },
     {
       "code": "300415.SZ",
@@ -89,7 +98,8 @@
       "watch_reason": "ROE22.8%+营收18%CAGR+OCF偏低",
       "name": "伊之密",
       "cycle_is_cyclical": false,
-      "current_price": 24.22
+      "current_price": 24.22,
+      "cycle_position": null
     },
     {
       "code": "000975.SZ",
@@ -98,7 +108,8 @@
       "watch_reason": "PE分位1.7%+负债低+金价受益",
       "name": "山金国际",
       "cycle_is_cyclical": true,
-      "current_price": 26.05
+      "current_price": 26.05,
+      "cycle_position": "待评估"
     },
     {
       "code": "600415.SH",
@@ -107,7 +118,8 @@
       "watch_reason": "PE分位1.1%+ROE上行+Q1营收+45%",
       "name": "小商品城",
       "cycle_is_cyclical": false,
-      "current_price": 13.25
+      "current_price": 13.25,
+      "cycle_position": null
     },
     {
       "code": "300181.SZ",
@@ -116,7 +128,8 @@
       "watch_reason": "PE历史极低+ROE连升12%-21%+可转债稀释",
       "name": "佐力药业",
       "cycle_is_cyclical": false,
-      "current_price": 15.21
+      "current_price": 15.21,
+      "cycle_position": null
     },
     {
       "code": "601899.SH",
@@ -125,7 +138,8 @@
       "watch_reason": "ROE31.8%+PE合理+矿业周期向上",
       "name": "紫金矿业",
       "cycle_is_cyclical": true,
-      "current_price": 33.3
+      "current_price": 33.3,
+      "cycle_position": "待评估"
     },
     {
       "code": "600285.SH",
@@ -134,7 +148,8 @@
       "watch_reason": "ROE23.5%+医药稳健+PE低",
       "name": "羚锐制药",
       "cycle_is_cyclical": false,
-      "current_price": 22.36
+      "current_price": 22.36,
+      "cycle_position": null
     },
     {
       "code": "600887.SH",
@@ -143,16 +158,18 @@
       "watch_reason": "ROE28.5%+现金流充沛+PE22.6x",
       "name": "伊利股份",
       "cycle_is_cyclical": false,
-      "current_price": 32.5
+      "current_price": 32.5,
+      "cycle_position": null
     },
     {
       "code": "300015.SZ",
-      "board": "创",
+      "board": null,
       "position_role": "眼科医疗龙头",
       "watch_reason": "龙头确定+PE32x+Q1业绩验证",
       "name": "爱尔眼科",
       "cycle_is_cyclical": false,
-      "current_price": 78.5
+      "current_price": 78.5,
+      "cycle_position": null
     },
     {
       "code": "603379.SH",
@@ -161,7 +178,8 @@
       "watch_reason": "ROE28.4%+HFC配额+强周期风险",
       "name": "三美股份",
       "cycle_is_cyclical": true,
-      "current_price": 32.88
+      "current_price": 32.88,
+      "cycle_position": "待评估"
     },
     {
       "code": "605599.SH",
@@ -170,7 +188,8 @@
       "watch_reason": "ROE26.2%+零有息负债+Q1利润率骤降",
       "name": "菜百股份",
       "cycle_is_cyclical": false,
-      "current_price": 28.5
+      "current_price": 28.5,
+      "cycle_position": null
     },
     {
       "code": "600988.SH",
@@ -179,157 +198,118 @@
       "watch_reason": "ROE28.9%+OCF180%+控制权变更",
       "name": "赤峰黄金",
       "cycle_is_cyclical": true,
-      "current_price": 19.45
+      "current_price": 19.45,
+      "cycle_position": "待评估"
     },
     {
       "cycle_is_cyclical": 0,
-      "board": "沪深",
+      "board": "沪",
       "current_price": 65.16,
       "next_earnings_date": "2026-08-31",
       "next_earnings_type": "半年报",
       "name": "科沃斯",
       "price_date": "2026-03-31",
       "risk_flags": [],
-      "price_bands": {
-        "buy": {
-          "price": 55.4,
-          "desc": "分批建仓"
-        },
-        "hold": {
-          "price": 65.16,
-          "desc": "当前价"
-        },
-        "sell": {
-          "price": 78.2,
-          "desc": "止盈"
-        }
-      },
+      "price_bands": [
+        55.4,
+        65.16,
+        78.2
+      ],
       "watch_reason": "超低估值+业绩复苏",
       "position_role": "growth",
       "code": "603486.SH",
       "valuation_anchor": "高ROE+低PE",
       "prebuy_conclusion": "PE处3年22%分位，极低估值；FY2025净利+118%，业绩复苏趋势明确",
-      "dv_ttm": 0
+      "dv_ttm": 0,
+      "cycle_position": null
     },
     {
       "cycle_is_cyclical": 0,
-      "board": "科创板",
+      "board": null,
       "current_price": 141.78,
       "next_earnings_date": "2026-08-31",
       "next_earnings_type": "半年报",
       "name": "柏楚电子",
       "price_date": "2026-03-31",
       "risk_flags": [],
-      "price_bands": {
-        "buy": {
-          "price": 120.5,
-          "desc": "分批建仓"
-        },
-        "hold": {
-          "price": 141.78,
-          "desc": "当前价"
-        },
-        "sell": {
-          "price": 170.1,
-          "desc": "止盈"
-        }
-      },
+      "price_bands": [
+        120.5,
+        141.78,
+        170.1
+      ],
       "watch_reason": "历史最低估值+护城河深",
       "position_role": "growth",
       "code": "688378.SH",
       "valuation_anchor": "高ROE+低PE",
       "prebuy_conclusion": "PE处历史最低，激光控制市占≥90%；净利率51%，OCF质量好",
-      "dv_ttm": 0
+      "dv_ttm": 0,
+      "cycle_position": null
     },
     {
       "cycle_is_cyclical": 0,
-      "board": "沪深",
+      "board": "沪",
       "current_price": 60.14,
       "next_earnings_date": "2026-08-31",
       "next_earnings_type": "半年报",
       "name": "拓普集团",
       "price_date": "2026-03-31",
       "risk_flags": [],
-      "price_bands": {
-        "buy": {
-          "price": 51.1,
-          "desc": "分批建仓"
-        },
-        "hold": {
-          "price": 60.14,
-          "desc": "当前价"
-        },
-        "sell": {
-          "price": 72.2,
-          "desc": "止盈"
-        }
-      },
+      "price_bands": [
+        51.1,
+        60.14,
+        72.2
+      ],
       "watch_reason": "机器人订单驱动+执行器供应",
       "position_role": "growth",
       "code": "601689.SH",
       "valuation_anchor": "高ROE+低PE",
       "prebuy_conclusion": "特斯拉Optimus 30亿订单，执行器核心供应商；基本面承压但订单兑现前景清晰",
-      "dv_ttm": 0
+      "dv_ttm": 0,
+      "cycle_position": null
     },
     {
       "cycle_is_cyclical": 0,
-      "board": "沪深",
+      "board": "沪",
       "current_price": 89.5,
       "next_earnings_date": "2026-08-31",
       "next_earnings_type": "半年报",
       "name": "华东数控",
       "price_date": "2026-03-31",
       "risk_flags": [],
-      "price_bands": {
-        "buy": {
-          "price": 76.1,
-          "desc": "分批建仓"
-        },
-        "hold": {
-          "price": 89.5,
-          "desc": "当前价"
-        },
-        "sell": {
-          "price": 107.4,
-          "desc": "止盈"
-        }
-      },
+      "price_bands": [
+        76.1,
+        89.5,
+        107.4
+      ],
       "watch_reason": "五轴机床龙头+稳健增长",
       "position_role": "growth",
       "code": "603345.SH",
       "valuation_anchor": "高ROE+低PE",
       "prebuy_conclusion": "五轴数控机床领先，增速12.5%稳健，PE 24x合理；ROE 11.8%低端但财务健康",
-      "dv_ttm": 0
+      "dv_ttm": 0,
+      "cycle_position": null
     },
     {
       "cycle_is_cyclical": 0,
-      "board": "沪深",
+      "board": "沪",
       "current_price": 124.6,
       "next_earnings_date": "2026-08-31",
       "next_earnings_type": "半年报",
       "name": "快克智能",
       "price_date": "2026-03-31",
       "risk_flags": [],
-      "price_bands": {
-        "buy": {
-          "price": 105.9,
-          "desc": "分批建仓"
-        },
-        "hold": {
-          "price": 124.6,
-          "desc": "当前价"
-        },
-        "sell": {
-          "price": 149.5,
-          "desc": "止盈"
-        }
-      },
+      "price_bands": [
+        105.9,
+        124.6,
+        149.5
+      ],
       "watch_reason": "焊接设备+国际化",
       "position_role": "growth",
       "code": "603203.SH",
       "valuation_anchor": "高ROE+低PE",
       "prebuy_conclusion": "全球焊接设备领先，国际化收入占比58%；增速14.2%，PE 26.5x有吸引力",
-      "dv_ttm": 0
+      "dv_ttm": 0,
+      "cycle_position": null
     },
     {
       "dv_ttm": 0,
@@ -340,26 +320,43 @@
       "name": "中策橡胶",
       "position_role": "汽车轮胎龙头",
       "prebuy_conclusion": "基本面稳健，当前估值处于历史低位，现金流优质，适合分批布局",
-      "price_bands": {
-        "hold": {
-          "price": 9.5,
-          "desc": "当前估值"
-        },
-        "buy": {
-          "price": 8.0,
-          "desc": "分批建仓"
-        },
-        "sell": {
-          "price": 11.5,
-          "desc": "止盈"
-        }
-      },
+      "price_bands": [
+        8.0,
+        9.5,
+        11.5
+      ],
       "next_earnings_type": "半年报",
       "cycle_is_cyclical": false,
       "current_price": 0,
       "risk_flags": [],
       "valuation_anchor": "高ROE+低PE",
-      "board": "深"
+      "board": "深",
+      "cycle_position": null
+    },
+    {
+      "name": "福特科技",
+      "code": "605558.SH",
+      "board": "沪",
+      "current_price": 18.5,
+      "price_date": "2026-04-30",
+      "next_earnings_type": "半年报",
+      "next_earnings_date": "2026-08-31",
+      "cycle_is_cyclical": false,
+      "price_bands": [
+        28,
+        18.5,
+        12
+      ],
+      "source_etf": "direct",
+      "watch_reason": "表面处理龙头+毛利28.5%+ROE20%",
+      "valuation_anchor": "PE 18x (合理)",
+      "prebuy_conclusion": "表面处理龙头，ROE20%，毛利28.5%，成本护城河稳定",
+      "position_role": "制造业专精特新标的",
+      "risk_flags": [
+        "产业周期",
+        "原材料成本"
+      ],
+      "cycle_position": null
     }
   ],
   "tier": "growth",
