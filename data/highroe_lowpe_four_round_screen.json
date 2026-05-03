@@ -1,0 +1,4503 @@
+{
+  "page_rows": [
+    {
+      "link_name": "万辰集团",
+      "display_name": "万辰集团",
+      "industry": "零售",
+      "pe_pct": 0.1,
+      "pe": 17.5,
+      "pb": 21.52,
+      "roe_2025_table": 104.2,
+      "mc_亿": 441.0,
+      "wl": "✓",
+      "file": "01-公司\\万辰集团.md",
+      "code": "300972.SZ",
+      "leader_flag_page": false
+    },
+    {
+      "link_name": "宏桥控股",
+      "display_name": "宏桥控股",
+      "industry": "工业金属",
+      "pe_pct": 0.0,
+      "pe": 12.0,
+      "pb": 6.21,
+      "roe_2025_table": 75.2,
+      "mc_亿": 3245.0,
+      "wl": "",
+      "file": "01-公司\\宏桥控股.md",
+      "code": "002379.SZ",
+      "leader_flag_page": true
+    },
+    {
+      "link_name": "东鹏饮料",
+      "display_name": "东鹏饮料",
+      "industry": "饮料制造",
+      "pe_pct": 0.1,
+      "pe": 22.9,
+      "pb": 5.62,
+      "roe_2025_table": 51.6,
+      "mc_亿": 1151.0,
+      "wl": "✅",
+      "file": "01-公司\\东鹏饮料.md",
+      "code": "605499.SH",
+      "leader_flag_page": false
+    },
+    {
+      "link_name": "兴齐眼药",
+      "display_name": "兴齐眼药",
+      "industry": "化学制药",
+      "pe_pct": 0.0,
+      "pe": 20.7,
+      "pb": 7.83,
+      "roe_2025_table": 39.0,
+      "mc_亿": 171.0,
+      "wl": "✓",
+      "file": "01-公司\\兴齐眼药.md",
+      "code": "300573.SZ",
+      "leader_flag_page": true
+    },
+    {
+      "link_name": "盐津铺子",
+      "display_name": "盐津铺子",
+      "industry": "食品加工制造",
+      "pe_pct": 7.3,
+      "pe": 17.4,
+      "pb": 7.38,
+      "roe_2025_table": 38.7,
+      "mc_亿": 160.0,
+      "wl": "✓",
+      "file": "01-公司\\盐津铺子.md",
+      "code": "002847.SZ",
+      "leader_flag_page": false
+    },
+    {
+      "link_name": "TCL智家",
+      "display_name": "TCL智家",
+      "industry": "白色家电",
+      "pe_pct": 5.1,
+      "pe": 8.4,
+      "pb": 2.69,
+      "roe_2025_table": 37.7,
+      "mc_亿": 104.0,
+      "wl": "✓",
+      "file": "01-公司\\TCL智家.md",
+      "code": "002668.SZ",
+      "leader_flag_page": true
+    },
+    {
+      "link_name": "艾力斯(688578)",
+      "display_name": "艾力斯",
+      "industry": "化学制药",
+      "pe_pct": 0.5,
+      "pe": 16.4,
+      "pb": 5.38,
+      "roe_2025_table": 35.4,
+      "mc_亿": 417.0,
+      "wl": "",
+      "file": "01-公司\\艾力斯(688578).md",
+      "code": "688578.SH",
+      "leader_flag_page": false
+    },
+    {
+      "link_name": "特宝生物",
+      "display_name": "特宝生物",
+      "industry": "生物制品",
+      "pe_pct": 0.4,
+      "pe": 36.1,
+      "pb": 6.55,
+      "roe_2025_table": 34.4,
+      "mc_亿": 238.0,
+      "wl": "✓",
+      "file": "01-公司\\特宝生物.md",
+      "code": "688278.SH",
+      "leader_flag_page": true
+    },
+    {
+      "link_name": "紫金矿业",
+      "display_name": "紫金矿业",
+      "industry": "贵金属",
+      "pe_pct": 13.9,
+      "pe": 11.0,
+      "pb": 4.49,
+      "roe_2025_table": 31.8,
+      "mc_亿": 8855.0,
+      "wl": "✓",
+      "file": "01-公司\\紫金矿业.md",
+      "code": "601899.SH",
+      "leader_flag_page": false
+    },
+    {
+      "link_name": "悍高集团",
+      "display_name": "悍高集团",
+      "industry": "家居用品",
+      "pe_pct": 1.7,
+      "pe": 44.4,
+      "pb": 7.75,
+      "roe_2025_table": 30.8,
+      "mc_亿": 228.0,
+      "wl": "✓",
+      "file": "01-公司\\悍高集团.md",
+      "code": "001221.SZ",
+      "leader_flag_page": true
+    },
+    {
+      "link_name": "拉卡拉",
+      "display_name": "拉卡拉",
+      "industry": "多元金融",
+      "pe_pct": 0.4,
+      "pe": 8.8,
+      "pb": 4.3,
+      "roe_2025_table": 30.5,
+      "mc_亿": 209.0,
+      "wl": "",
+      "file": "01-公司\\拉卡拉.md",
+      "code": "300773.SZ",
+      "leader_flag_page": true
+    },
+    {
+      "link_name": "中熔电气",
+      "display_name": "中熔电气",
+      "industry": "其他电子",
+      "pe_pct": 6.3,
+      "pe": 34.8,
+      "pb": 9.64,
+      "roe_2025_table": 29.6,
+      "mc_亿": 159.0,
+      "wl": "✓",
+      "file": "01-公司\\中熔电气.md",
+      "code": "301031.SZ",
+      "leader_flag_page": false
+    },
+    {
+      "link_name": "惠泰医疗",
+      "display_name": "惠泰医疗",
+      "industry": "医疗器械",
+      "pe_pct": 0.0,
+      "pe": 36.6,
+      "pb": 11.3,
+      "roe_2025_table": 29.3,
+      "mc_亿": 335.0,
+      "wl": "✓",
+      "file": "01-公司\\惠泰医疗.md",
+      "code": "688617.SH",
+      "leader_flag_page": false
+    },
+    {
+      "link_name": "赤峰黄金",
+      "display_name": "赤峰黄金",
+      "industry": "贵金属",
+      "pe_pct": 3.3,
+      "pe": 18.3,
+      "pb": 5.05,
+      "roe_2025_table": 28.9,
+      "mc_亿": 722.0,
+      "wl": "✓",
+      "file": "01-公司\\赤峰黄金.md",
+      "code": "600988.SH",
+      "leader_flag_page": false
+    },
+    {
+      "link_name": "三美股份",
+      "display_name": "三美股份",
+      "industry": "化学制品",
+      "pe_pct": 2.2,
+      "pe": 19.7,
+      "pb": 4.62,
+      "roe_2025_table": 28.4,
+      "mc_亿": 398.0,
+      "wl": "✓",
+      "file": "01-公司\\三美股份.md",
+      "code": "603379.SH",
+      "leader_flag_page": false
+    },
+    {
+      "link_name": "大豪科技",
+      "display_name": "大豪科技",
+      "industry": "自动化设备",
+      "pe_pct": 7.0,
+      "pe": 19.2,
+      "pb": 6.16,
+      "roe_2025_table": 27.8,
+      "mc_亿": 183.0,
+      "wl": "✓",
+      "file": "01-公司\\大豪科技.md",
+      "code": "603025.SH",
+      "leader_flag_page": true
+    },
+    {
+      "link_name": "菜百股份",
+      "display_name": "菜百股份",
+      "industry": "服装家纺",
+      "pe_pct": 8.8,
+      "pe": 9.4,
+      "pb": 2.95,
+      "roe_2025_table": 26.2,
+      "mc_亿": 149.0,
+      "wl": "✓",
+      "file": "01-公司\\菜百股份.md",
+      "code": "605599.SH",
+      "leader_flag_page": true
+    },
+    {
+      "link_name": "芭田股份",
+      "display_name": "芭田股份",
+      "industry": "农化制品",
+      "pe_pct": 4.8,
+      "pe": 12.3,
+      "pb": 3.33,
+      "roe_2025_table": 26.2,
+      "mc_亿": 135.0,
+      "wl": "✓",
+      "file": "01-公司\\芭田股份.md",
+      "code": "002170.SZ",
+      "leader_flag_page": true
+    },
+    {
+      "link_name": "福耀玻璃",
+      "display_name": "福耀玻璃",
+      "industry": "汽车零部件",
+      "pe_pct": 4.5,
+      "pe": 22.4,
+      "pb": 3.93,
+      "roe_2025_table": 25.4,
+      "mc_亿": 1536.0,
+      "wl": "✓",
+      "file": "01-公司\\福耀玻璃.md",
+      "code": "600660.SH",
+      "leader_flag_page": true
+    },
+    {
+      "link_name": "道通科技",
+      "display_name": "道通科技",
+      "industry": "计算机设备",
+      "pe_pct": 2.6,
+      "pe": 29.1,
+      "pb": 5.89,
+      "roe_2025_table": 25.2,
+      "mc_亿": 227.0,
+      "wl": "",
+      "file": "01-公司\\道通科技.md",
+      "code": "688208.SH",
+      "leader_flag_page": false
+    },
+    {
+      "link_name": "公牛集团",
+      "display_name": "公牛集团",
+      "industry": "家居用品",
+      "pe_pct": 14.3,
+      "pe": 19.2,
+      "pb": 4.55,
+      "roe_2025_table": 24.9,
+      "mc_亿": 811.0,
+      "wl": "✓",
+      "file": "01-公司\\公牛集团.md",
+      "code": "603195.SH",
+      "leader_flag_page": true
+    },
+    {
+      "link_name": "羚锐制药",
+      "display_name": "羚锐制药",
+      "industry": "中药",
+      "pe_pct": 16.8,
+      "pe": 12.9,
+      "pb": 3.48,
+      "roe_2025_table": 23.5,
+      "mc_亿": 127.0,
+      "wl": "✓",
+      "file": "01-公司\\羚锐制药.md",
+      "code": "600285.SH",
+      "leader_flag_page": false
+    },
+    {
+      "link_name": "金诚信",
+      "display_name": "金诚信",
+      "industry": "工业金属",
+      "pe_pct": 5.2,
+      "pe": 16.1,
+      "pb": 3.39,
+      "roe_2025_table": 23.2,
+      "mc_亿": 389.0,
+      "wl": "✓",
+      "file": "01-公司\\金诚信.md",
+      "code": "603979.SH",
+      "leader_flag_page": false
+    },
+    {
+      "link_name": "伊之密",
+      "display_name": "伊之密",
+      "industry": "专用设备",
+      "pe_pct": 16.1,
+      "pe": 21.0,
+      "pb": 3.34,
+      "roe_2025_table": 22.8,
+      "mc_亿": 113.0,
+      "wl": "✓",
+      "file": "01-公司\\伊之密.md",
+      "code": "300415.SZ",
+      "leader_flag_page": false
+    },
+    {
+      "link_name": "伊利股份",
+      "display_name": "伊利股份",
+      "industry": "饮料制造",
+      "pe_pct": 13.5,
+      "pe": 8.1,
+      "pb": 2.91,
+      "roe_2025_table": 21.4,
+      "mc_亿": 1737.0,
+      "wl": "✓",
+      "file": "01-公司\\伊利股份.md",
+      "code": "600887.SH",
+      "leader_flag_page": true
+    },
+    {
+      "link_name": "山金国际",
+      "display_name": "山金国际",
+      "industry": "贵金属",
+      "pe_pct": 1.7,
+      "pe": 13.0,
+      "pb": 4.45,
+      "roe_2025_table": 21.3,
+      "mc_亿": 723.0,
+      "wl": "✓",
+      "file": "01-公司\\山金国际.md",
+      "code": "000975.SZ",
+      "leader_flag_page": false
+    },
+    {
+      "link_name": "思特威-W",
+      "display_name": "思特威-W",
+      "industry": "半导体",
+      "pe_pct": 0.4,
+      "pe": 37.4,
+      "pb": 6.48,
+      "roe_2025_table": 21.3,
+      "mc_亿": 354.0,
+      "wl": "",
+      "file": "01-公司\\思特威-W.md",
+      "code": "688213.SH",
+      "leader_flag_page": false
+    },
+    {
+      "link_name": "佐力药业",
+      "display_name": "佐力药业",
+      "industry": "中药",
+      "pe_pct": 0.0,
+      "pe": 13.4,
+      "pb": 3.12,
+      "roe_2025_table": 21.2,
+      "mc_亿": 107.0,
+      "wl": "✓",
+      "file": "01-公司\\佐力药业.md",
+      "code": "300181.SZ",
+      "leader_flag_page": true
+    },
+    {
+      "link_name": "世纪华通",
+      "display_name": "世纪华通",
+      "industry": "游戏",
+      "pe_pct": 0.0,
+      "pe": 14.6,
+      "pb": 3.65,
+      "roe_2025_table": 20.2,
+      "mc_亿": 1180.0,
+      "wl": "",
+      "file": "01-公司\\世纪华通.md",
+      "code": "002602.SZ",
+      "leader_flag_page": true
+    },
+    {
+      "link_name": "湖南黄金",
+      "display_name": "湖南黄金",
+      "industry": "贵金属",
+      "pe_pct": 3.4,
+      "pe": 19.1,
+      "pb": 5.21,
+      "roe_2025_table": 19.8,
+      "mc_亿": 454.0,
+      "wl": "",
+      "file": "01-公司\\湖南黄金.md",
+      "code": "002155.SZ",
+      "leader_flag_page": true
+    },
+    {
+      "link_name": "德力佳",
+      "display_name": "德力佳",
+      "industry": "风电设备",
+      "pe_pct": 4.3,
+      "pe": 34.4,
+      "pb": 5.09,
+      "roe_2025_table": 19.7,
+      "mc_亿": 292.0,
+      "wl": "",
+      "file": "01-公司\\德力佳.md",
+      "code": "603092.SH",
+      "leader_flag_page": false
+    },
+    {
+      "link_name": "中策橡胶",
+      "display_name": "中策橡胶",
+      "industry": "汽车零部件",
+      "pe_pct": 2.3,
+      "pe": 8.8,
+      "pb": 1.67,
+      "roe_2025_table": 19.6,
+      "mc_亿": 428.0,
+      "wl": "✓",
+      "file": "01-公司\\中策橡胶.md",
+      "code": "002966.SZ",
+      "leader_flag_page": true
+    },
+    {
+      "link_name": "海天味业",
+      "display_name": "海天味业",
+      "industry": "食品加工制造",
+      "pe_pct": 3.0,
+      "pe": 23.1,
+      "pb": 5.38,
+      "roe_2025_table": 19.5,
+      "mc_亿": 2261.0,
+      "wl": "",
+      "file": "01-公司\\海天味业.md",
+      "code": "603288.SH",
+      "leader_flag_page": true
+    },
+    {
+      "link_name": "小商品城",
+      "display_name": "小商品城",
+      "industry": "零售",
+      "pe_pct": 1.1,
+      "pe": 18.3,
+      "pb": 3.04,
+      "roe_2025_table": 19.3,
+      "mc_亿": 727.0,
+      "wl": "✓",
+      "file": "01-公司\\小商品城.md",
+      "code": "600415.SH",
+      "leader_flag_page": false
+    },
+    {
+      "link_name": "富特科技",
+      "display_name": "富特科技",
+      "industry": "汽车零部件",
+      "pe_pct": 0.0,
+      "pe": 25.5,
+      "pb": 5.98,
+      "roe_2025_table": 19.3,
+      "mc_亿": 79.0,
+      "wl": "",
+      "file": "01-公司\\富特科技.md",
+      "code": "688784.SH",
+      "leader_flag_page": false
+    },
+    {
+      "link_name": "柏楚电子",
+      "display_name": "柏楚电子",
+      "industry": "自动化设备",
+      "pe_pct": 0.0,
+      "pe": 32.3,
+      "pb": 6.41,
+      "roe_2025_table": 19.3,
+      "mc_亿": 409.0,
+      "wl": "",
+      "file": "01-公司\\柏楚电子.md",
+      "code": "688188.SH",
+      "leader_flag_page": true
+    },
+    {
+      "link_name": "大博医疗",
+      "display_name": "大博医疗",
+      "industry": "医疗器械",
+      "pe_pct": 0.0,
+      "pe": 30.6,
+      "pb": 4.82,
+      "roe_2025_table": 18.0,
+      "mc_亿": 180.0,
+      "wl": "",
+      "file": "01-公司\\大博医疗.md",
+      "code": "002901.SZ",
+      "leader_flag_page": true
+    },
+    {
+      "link_name": "东阿阿胶",
+      "display_name": "东阿阿胶",
+      "industry": "中药",
+      "pe_pct": 17.7,
+      "pe": 19.5,
+      "pb": 3.28,
+      "roe_2025_table": 16.8,
+      "mc_亿": 354.0,
+      "wl": "",
+      "file": "01-公司\\东阿阿胶.md",
+      "code": "000423.SZ",
+      "leader_flag_page": false
+    },
+    {
+      "link_name": "锦江航运",
+      "display_name": "锦江航运",
+      "industry": "港口航运",
+      "pe_pct": 19.0,
+      "pe": 11.7,
+      "pb": 1.62,
+      "roe_2025_table": 16.6,
+      "mc_亿": 157.0,
+      "wl": "✓",
+      "file": "01-公司\\锦江航运.md",
+      "code": "601083.SH",
+      "leader_flag_page": false
+    },
+    {
+      "link_name": "东方电子",
+      "display_name": "东方电子",
+      "industry": "电网设备",
+      "pe_pct": 0.0,
+      "pe": 18.6,
+      "pb": 2.84,
+      "roe_2025_table": 16.5,
+      "mc_亿": 175.0,
+      "wl": "",
+      "file": "01-公司\\东方电子.md",
+      "code": "000682.SZ",
+      "leader_flag_page": true
+    },
+    {
+      "link_name": "诺普信",
+      "display_name": "诺普信",
+      "industry": "种植业与林业",
+      "pe_pct": 6.8,
+      "pe": 3.6,
+      "pb": 2.25,
+      "roe_2025_table": 16.3,
+      "mc_亿": 110.0,
+      "wl": "✓",
+      "file": "01-公司\\诺普信.md",
+      "code": "002215.SZ",
+      "leader_flag_page": false
+    },
+    {
+      "link_name": "华润三九",
+      "display_name": "华润三九",
+      "industry": "中药",
+      "pe_pct": 0.7,
+      "pe": 10.0,
+      "pb": 1.85,
+      "roe_2025_table": 16.3,
+      "mc_亿": 431.0,
+      "wl": "✓",
+      "file": "01-公司\\华润三九.md",
+      "code": "000999.SZ",
+      "leader_flag_page": false
+    },
+    {
+      "link_name": "焦作万方",
+      "display_name": "焦作万方",
+      "industry": "工业金属",
+      "pe_pct": 19.2,
+      "pe": 7.8,
+      "pb": 2.06,
+      "roe_2025_table": 16.0,
+      "mc_亿": 158.0,
+      "wl": "",
+      "file": "01-公司\\焦作万方.md",
+      "code": "002427.SZ",
+      "leader_flag_page": true
+    },
+    {
+      "link_name": "亚太股份",
+      "display_name": "亚太股份",
+      "industry": "汽车零部件",
+      "pe_pct": 0.0,
+      "pe": 17.3,
+      "pb": 2.8,
+      "roe_2025_table": 15.6,
+      "mc_亿": 98.0,
+      "wl": "",
+      "file": "01-公司\\亚太股份.md",
+      "code": "002284.SZ",
+      "leader_flag_page": false
+    },
+    {
+      "link_name": "爱尔眼科",
+      "display_name": "爱尔眼科",
+      "industry": "医疗服务",
+      "pe_pct": 14.1,
+      "pe": 21.3,
+      "pb": 4.36,
+      "roe_2025_table": 15.2,
+      "mc_亿": 1005.0,
+      "wl": "✓",
+      "file": "01-公司\\爱尔眼科.md",
+      "code": "300015.SZ",
+      "leader_flag_page": true
+    }
+  ],
+  "r1_survivors": [
+    {
+      "link_name": "万辰集团",
+      "display_name": "万辰集团",
+      "industry": "零售",
+      "pe_pct": 0.1,
+      "pe": 17.5,
+      "pb": 21.52,
+      "roe_2025_table": 104.2,
+      "mc_亿": 441.0,
+      "wl": "✓",
+      "file": "01-公司\\万辰集团.md",
+      "code": "300972.SZ",
+      "leader_flag_page": false
+    },
+    {
+      "link_name": "东鹏饮料",
+      "display_name": "东鹏饮料",
+      "industry": "饮料制造",
+      "pe_pct": 0.1,
+      "pe": 22.9,
+      "pb": 5.62,
+      "roe_2025_table": 51.6,
+      "mc_亿": 1151.0,
+      "wl": "✅",
+      "file": "01-公司\\东鹏饮料.md",
+      "code": "605499.SH",
+      "leader_flag_page": false
+    },
+    {
+      "link_name": "兴齐眼药",
+      "display_name": "兴齐眼药",
+      "industry": "化学制药",
+      "pe_pct": 0.0,
+      "pe": 20.7,
+      "pb": 7.83,
+      "roe_2025_table": 39.0,
+      "mc_亿": 171.0,
+      "wl": "✓",
+      "file": "01-公司\\兴齐眼药.md",
+      "code": "300573.SZ",
+      "leader_flag_page": true
+    },
+    {
+      "link_name": "盐津铺子",
+      "display_name": "盐津铺子",
+      "industry": "食品加工制造",
+      "pe_pct": 7.3,
+      "pe": 17.4,
+      "pb": 7.38,
+      "roe_2025_table": 38.7,
+      "mc_亿": 160.0,
+      "wl": "✓",
+      "file": "01-公司\\盐津铺子.md",
+      "code": "002847.SZ",
+      "leader_flag_page": false
+    },
+    {
+      "link_name": "TCL智家",
+      "display_name": "TCL智家",
+      "industry": "白色家电",
+      "pe_pct": 5.1,
+      "pe": 8.4,
+      "pb": 2.69,
+      "roe_2025_table": 37.7,
+      "mc_亿": 104.0,
+      "wl": "✓",
+      "file": "01-公司\\TCL智家.md",
+      "code": "002668.SZ",
+      "leader_flag_page": true
+    },
+    {
+      "link_name": "艾力斯(688578)",
+      "display_name": "艾力斯",
+      "industry": "化学制药",
+      "pe_pct": 0.5,
+      "pe": 16.4,
+      "pb": 5.38,
+      "roe_2025_table": 35.4,
+      "mc_亿": 417.0,
+      "wl": "",
+      "file": "01-公司\\艾力斯(688578).md",
+      "code": "688578.SH",
+      "leader_flag_page": false
+    },
+    {
+      "link_name": "特宝生物",
+      "display_name": "特宝生物",
+      "industry": "生物制品",
+      "pe_pct": 0.4,
+      "pe": 36.1,
+      "pb": 6.55,
+      "roe_2025_table": 34.4,
+      "mc_亿": 238.0,
+      "wl": "✓",
+      "file": "01-公司\\特宝生物.md",
+      "code": "688278.SH",
+      "leader_flag_page": true
+    },
+    {
+      "link_name": "悍高集团",
+      "display_name": "悍高集团",
+      "industry": "家居用品",
+      "pe_pct": 1.7,
+      "pe": 44.4,
+      "pb": 7.75,
+      "roe_2025_table": 30.8,
+      "mc_亿": 228.0,
+      "wl": "✓",
+      "file": "01-公司\\悍高集团.md",
+      "code": "001221.SZ",
+      "leader_flag_page": true
+    },
+    {
+      "link_name": "拉卡拉",
+      "display_name": "拉卡拉",
+      "industry": "多元金融",
+      "pe_pct": 0.4,
+      "pe": 8.8,
+      "pb": 4.3,
+      "roe_2025_table": 30.5,
+      "mc_亿": 209.0,
+      "wl": "",
+      "file": "01-公司\\拉卡拉.md",
+      "code": "300773.SZ",
+      "leader_flag_page": true
+    },
+    {
+      "link_name": "中熔电气",
+      "display_name": "中熔电气",
+      "industry": "其他电子",
+      "pe_pct": 6.3,
+      "pe": 34.8,
+      "pb": 9.64,
+      "roe_2025_table": 29.6,
+      "mc_亿": 159.0,
+      "wl": "✓",
+      "file": "01-公司\\中熔电气.md",
+      "code": "301031.SZ",
+      "leader_flag_page": false
+    },
+    {
+      "link_name": "惠泰医疗",
+      "display_name": "惠泰医疗",
+      "industry": "医疗器械",
+      "pe_pct": 0.0,
+      "pe": 36.6,
+      "pb": 11.3,
+      "roe_2025_table": 29.3,
+      "mc_亿": 335.0,
+      "wl": "✓",
+      "file": "01-公司\\惠泰医疗.md",
+      "code": "688617.SH",
+      "leader_flag_page": false
+    },
+    {
+      "link_name": "三美股份",
+      "display_name": "三美股份",
+      "industry": "化学制品",
+      "pe_pct": 2.2,
+      "pe": 19.7,
+      "pb": 4.62,
+      "roe_2025_table": 28.4,
+      "mc_亿": 398.0,
+      "wl": "✓",
+      "file": "01-公司\\三美股份.md",
+      "code": "603379.SH",
+      "leader_flag_page": false
+    },
+    {
+      "link_name": "大豪科技",
+      "display_name": "大豪科技",
+      "industry": "自动化设备",
+      "pe_pct": 7.0,
+      "pe": 19.2,
+      "pb": 6.16,
+      "roe_2025_table": 27.8,
+      "mc_亿": 183.0,
+      "wl": "✓",
+      "file": "01-公司\\大豪科技.md",
+      "code": "603025.SH",
+      "leader_flag_page": true
+    },
+    {
+      "link_name": "菜百股份",
+      "display_name": "菜百股份",
+      "industry": "服装家纺",
+      "pe_pct": 8.8,
+      "pe": 9.4,
+      "pb": 2.95,
+      "roe_2025_table": 26.2,
+      "mc_亿": 149.0,
+      "wl": "✓",
+      "file": "01-公司\\菜百股份.md",
+      "code": "605599.SH",
+      "leader_flag_page": true
+    },
+    {
+      "link_name": "福耀玻璃",
+      "display_name": "福耀玻璃",
+      "industry": "汽车零部件",
+      "pe_pct": 4.5,
+      "pe": 22.4,
+      "pb": 3.93,
+      "roe_2025_table": 25.4,
+      "mc_亿": 1536.0,
+      "wl": "✓",
+      "file": "01-公司\\福耀玻璃.md",
+      "code": "600660.SH",
+      "leader_flag_page": true
+    },
+    {
+      "link_name": "道通科技",
+      "display_name": "道通科技",
+      "industry": "计算机设备",
+      "pe_pct": 2.6,
+      "pe": 29.1,
+      "pb": 5.89,
+      "roe_2025_table": 25.2,
+      "mc_亿": 227.0,
+      "wl": "",
+      "file": "01-公司\\道通科技.md",
+      "code": "688208.SH",
+      "leader_flag_page": false
+    },
+    {
+      "link_name": "公牛集团",
+      "display_name": "公牛集团",
+      "industry": "家居用品",
+      "pe_pct": 14.3,
+      "pe": 19.2,
+      "pb": 4.55,
+      "roe_2025_table": 24.9,
+      "mc_亿": 811.0,
+      "wl": "✓",
+      "file": "01-公司\\公牛集团.md",
+      "code": "603195.SH",
+      "leader_flag_page": true
+    },
+    {
+      "link_name": "羚锐制药",
+      "display_name": "羚锐制药",
+      "industry": "中药",
+      "pe_pct": 16.8,
+      "pe": 12.9,
+      "pb": 3.48,
+      "roe_2025_table": 23.5,
+      "mc_亿": 127.0,
+      "wl": "✓",
+      "file": "01-公司\\羚锐制药.md",
+      "code": "600285.SH",
+      "leader_flag_page": false
+    },
+    {
+      "link_name": "伊之密",
+      "display_name": "伊之密",
+      "industry": "专用设备",
+      "pe_pct": 16.1,
+      "pe": 21.0,
+      "pb": 3.34,
+      "roe_2025_table": 22.8,
+      "mc_亿": 113.0,
+      "wl": "✓",
+      "file": "01-公司\\伊之密.md",
+      "code": "300415.SZ",
+      "leader_flag_page": false
+    },
+    {
+      "link_name": "伊利股份",
+      "display_name": "伊利股份",
+      "industry": "饮料制造",
+      "pe_pct": 13.5,
+      "pe": 8.1,
+      "pb": 2.91,
+      "roe_2025_table": 21.4,
+      "mc_亿": 1737.0,
+      "wl": "✓",
+      "file": "01-公司\\伊利股份.md",
+      "code": "600887.SH",
+      "leader_flag_page": true
+    },
+    {
+      "link_name": "思特威-W",
+      "display_name": "思特威-W",
+      "industry": "半导体",
+      "pe_pct": 0.4,
+      "pe": 37.4,
+      "pb": 6.48,
+      "roe_2025_table": 21.3,
+      "mc_亿": 354.0,
+      "wl": "",
+      "file": "01-公司\\思特威-W.md",
+      "code": "688213.SH",
+      "leader_flag_page": false
+    },
+    {
+      "link_name": "佐力药业",
+      "display_name": "佐力药业",
+      "industry": "中药",
+      "pe_pct": 0.0,
+      "pe": 13.4,
+      "pb": 3.12,
+      "roe_2025_table": 21.2,
+      "mc_亿": 107.0,
+      "wl": "✓",
+      "file": "01-公司\\佐力药业.md",
+      "code": "300181.SZ",
+      "leader_flag_page": true
+    },
+    {
+      "link_name": "中策橡胶",
+      "display_name": "中策橡胶",
+      "industry": "汽车零部件",
+      "pe_pct": 2.3,
+      "pe": 8.8,
+      "pb": 1.67,
+      "roe_2025_table": 19.6,
+      "mc_亿": 428.0,
+      "wl": "✓",
+      "file": "01-公司\\中策橡胶.md",
+      "code": "002966.SZ",
+      "leader_flag_page": true
+    },
+    {
+      "link_name": "海天味业",
+      "display_name": "海天味业",
+      "industry": "食品加工制造",
+      "pe_pct": 3.0,
+      "pe": 23.1,
+      "pb": 5.38,
+      "roe_2025_table": 19.5,
+      "mc_亿": 2261.0,
+      "wl": "",
+      "file": "01-公司\\海天味业.md",
+      "code": "603288.SH",
+      "leader_flag_page": true
+    },
+    {
+      "link_name": "小商品城",
+      "display_name": "小商品城",
+      "industry": "零售",
+      "pe_pct": 1.1,
+      "pe": 18.3,
+      "pb": 3.04,
+      "roe_2025_table": 19.3,
+      "mc_亿": 727.0,
+      "wl": "✓",
+      "file": "01-公司\\小商品城.md",
+      "code": "600415.SH",
+      "leader_flag_page": false
+    },
+    {
+      "link_name": "富特科技",
+      "display_name": "富特科技",
+      "industry": "汽车零部件",
+      "pe_pct": 0.0,
+      "pe": 25.5,
+      "pb": 5.98,
+      "roe_2025_table": 19.3,
+      "mc_亿": 79.0,
+      "wl": "",
+      "file": "01-公司\\富特科技.md",
+      "code": "688784.SH",
+      "leader_flag_page": false
+    },
+    {
+      "link_name": "柏楚电子",
+      "display_name": "柏楚电子",
+      "industry": "自动化设备",
+      "pe_pct": 0.0,
+      "pe": 32.3,
+      "pb": 6.41,
+      "roe_2025_table": 19.3,
+      "mc_亿": 409.0,
+      "wl": "",
+      "file": "01-公司\\柏楚电子.md",
+      "code": "688188.SH",
+      "leader_flag_page": true
+    },
+    {
+      "link_name": "大博医疗",
+      "display_name": "大博医疗",
+      "industry": "医疗器械",
+      "pe_pct": 0.0,
+      "pe": 30.6,
+      "pb": 4.82,
+      "roe_2025_table": 18.0,
+      "mc_亿": 180.0,
+      "wl": "",
+      "file": "01-公司\\大博医疗.md",
+      "code": "002901.SZ",
+      "leader_flag_page": true
+    },
+    {
+      "link_name": "东阿阿胶",
+      "display_name": "东阿阿胶",
+      "industry": "中药",
+      "pe_pct": 17.7,
+      "pe": 19.5,
+      "pb": 3.28,
+      "roe_2025_table": 16.8,
+      "mc_亿": 354.0,
+      "wl": "",
+      "file": "01-公司\\东阿阿胶.md",
+      "code": "000423.SZ",
+      "leader_flag_page": false
+    },
+    {
+      "link_name": "锦江航运",
+      "display_name": "锦江航运",
+      "industry": "港口航运",
+      "pe_pct": 19.0,
+      "pe": 11.7,
+      "pb": 1.62,
+      "roe_2025_table": 16.6,
+      "mc_亿": 157.0,
+      "wl": "✓",
+      "file": "01-公司\\锦江航运.md",
+      "code": "601083.SH",
+      "leader_flag_page": false
+    },
+    {
+      "link_name": "东方电子",
+      "display_name": "东方电子",
+      "industry": "电网设备",
+      "pe_pct": 0.0,
+      "pe": 18.6,
+      "pb": 2.84,
+      "roe_2025_table": 16.5,
+      "mc_亿": 175.0,
+      "wl": "",
+      "file": "01-公司\\东方电子.md",
+      "code": "000682.SZ",
+      "leader_flag_page": true
+    },
+    {
+      "link_name": "诺普信",
+      "display_name": "诺普信",
+      "industry": "种植业与林业",
+      "pe_pct": 6.8,
+      "pe": 3.6,
+      "pb": 2.25,
+      "roe_2025_table": 16.3,
+      "mc_亿": 110.0,
+      "wl": "✓",
+      "file": "01-公司\\诺普信.md",
+      "code": "002215.SZ",
+      "leader_flag_page": false
+    },
+    {
+      "link_name": "华润三九",
+      "display_name": "华润三九",
+      "industry": "中药",
+      "pe_pct": 0.7,
+      "pe": 10.0,
+      "pb": 1.85,
+      "roe_2025_table": 16.3,
+      "mc_亿": 431.0,
+      "wl": "✓",
+      "file": "01-公司\\华润三九.md",
+      "code": "000999.SZ",
+      "leader_flag_page": false
+    },
+    {
+      "link_name": "亚太股份",
+      "display_name": "亚太股份",
+      "industry": "汽车零部件",
+      "pe_pct": 0.0,
+      "pe": 17.3,
+      "pb": 2.8,
+      "roe_2025_table": 15.6,
+      "mc_亿": 98.0,
+      "wl": "",
+      "file": "01-公司\\亚太股份.md",
+      "code": "002284.SZ",
+      "leader_flag_page": false
+    },
+    {
+      "link_name": "爱尔眼科",
+      "display_name": "爱尔眼科",
+      "industry": "医疗服务",
+      "pe_pct": 14.1,
+      "pe": 21.3,
+      "pb": 4.36,
+      "roe_2025_table": 15.2,
+      "mc_亿": 1005.0,
+      "wl": "✓",
+      "file": "01-公司\\爱尔眼科.md",
+      "code": "300015.SZ",
+      "leader_flag_page": true
+    }
+  ],
+  "r1_removed": [
+    {
+      "link_name": "宏桥控股",
+      "display_name": "宏桥控股",
+      "industry": "工业金属",
+      "pe_pct": 0.0,
+      "pe": 12.0,
+      "pb": 6.21,
+      "roe_2025_table": 75.2,
+      "mc_亿": 3245.0,
+      "wl": "",
+      "file": "01-公司\\宏桥控股.md",
+      "code": "002379.SZ",
+      "leader_flag_page": true,
+      "reason": "行业暂挂：工业金属"
+    },
+    {
+      "link_name": "紫金矿业",
+      "display_name": "紫金矿业",
+      "industry": "贵金属",
+      "pe_pct": 13.9,
+      "pe": 11.0,
+      "pb": 4.49,
+      "roe_2025_table": 31.8,
+      "mc_亿": 8855.0,
+      "wl": "✓",
+      "file": "01-公司\\紫金矿业.md",
+      "code": "601899.SH",
+      "leader_flag_page": false,
+      "reason": "行业暂挂：贵金属"
+    },
+    {
+      "link_name": "赤峰黄金",
+      "display_name": "赤峰黄金",
+      "industry": "贵金属",
+      "pe_pct": 3.3,
+      "pe": 18.3,
+      "pb": 5.05,
+      "roe_2025_table": 28.9,
+      "mc_亿": 722.0,
+      "wl": "✓",
+      "file": "01-公司\\赤峰黄金.md",
+      "code": "600988.SH",
+      "leader_flag_page": false,
+      "reason": "行业暂挂：贵金属"
+    },
+    {
+      "link_name": "芭田股份",
+      "display_name": "芭田股份",
+      "industry": "农化制品",
+      "pe_pct": 4.8,
+      "pe": 12.3,
+      "pb": 3.33,
+      "roe_2025_table": 26.2,
+      "mc_亿": 135.0,
+      "wl": "✓",
+      "file": "01-公司\\芭田股份.md",
+      "code": "002170.SZ",
+      "leader_flag_page": true,
+      "reason": "行业暂挂：农化制品"
+    },
+    {
+      "link_name": "金诚信",
+      "display_name": "金诚信",
+      "industry": "工业金属",
+      "pe_pct": 5.2,
+      "pe": 16.1,
+      "pb": 3.39,
+      "roe_2025_table": 23.2,
+      "mc_亿": 389.0,
+      "wl": "✓",
+      "file": "01-公司\\金诚信.md",
+      "code": "603979.SH",
+      "leader_flag_page": false,
+      "reason": "行业暂挂：工业金属"
+    },
+    {
+      "link_name": "山金国际",
+      "display_name": "山金国际",
+      "industry": "贵金属",
+      "pe_pct": 1.7,
+      "pe": 13.0,
+      "pb": 4.45,
+      "roe_2025_table": 21.3,
+      "mc_亿": 723.0,
+      "wl": "✓",
+      "file": "01-公司\\山金国际.md",
+      "code": "000975.SZ",
+      "leader_flag_page": false,
+      "reason": "行业暂挂：贵金属"
+    },
+    {
+      "link_name": "世纪华通",
+      "display_name": "世纪华通",
+      "industry": "游戏",
+      "pe_pct": 0.0,
+      "pe": 14.6,
+      "pb": 3.65,
+      "roe_2025_table": 20.2,
+      "mc_亿": 1180.0,
+      "wl": "",
+      "file": "01-公司\\世纪华通.md",
+      "code": "002602.SZ",
+      "leader_flag_page": true,
+      "reason": "主题/政策驱动暂排"
+    },
+    {
+      "link_name": "湖南黄金",
+      "display_name": "湖南黄金",
+      "industry": "贵金属",
+      "pe_pct": 3.4,
+      "pe": 19.1,
+      "pb": 5.21,
+      "roe_2025_table": 19.8,
+      "mc_亿": 454.0,
+      "wl": "",
+      "file": "01-公司\\湖南黄金.md",
+      "code": "002155.SZ",
+      "leader_flag_page": true,
+      "reason": "行业暂挂：贵金属"
+    },
+    {
+      "link_name": "德力佳",
+      "display_name": "德力佳",
+      "industry": "风电设备",
+      "pe_pct": 4.3,
+      "pe": 34.4,
+      "pb": 5.09,
+      "roe_2025_table": 19.7,
+      "mc_亿": 292.0,
+      "wl": "",
+      "file": "01-公司\\德力佳.md",
+      "code": "603092.SH",
+      "leader_flag_page": false,
+      "reason": "主题/政策驱动暂排"
+    },
+    {
+      "link_name": "焦作万方",
+      "display_name": "焦作万方",
+      "industry": "工业金属",
+      "pe_pct": 19.2,
+      "pe": 7.8,
+      "pb": 2.06,
+      "roe_2025_table": 16.0,
+      "mc_亿": 158.0,
+      "wl": "",
+      "file": "01-公司\\焦作万方.md",
+      "code": "002427.SZ",
+      "leader_flag_page": true,
+      "reason": "行业暂挂：工业金属"
+    }
+  ],
+  "r2_survivors": [
+    {
+      "link_name": "东鹏饮料",
+      "display_name": "东鹏饮料",
+      "industry": "饮料制造",
+      "pe_pct": 0.1,
+      "pe": 22.9,
+      "pb": 5.62,
+      "roe_2025_table": 51.6,
+      "mc_亿": 1151.0,
+      "wl": "✅",
+      "file": "01-公司\\东鹏饮料.md",
+      "code": "605499.SH",
+      "leader_flag_page": false,
+      "roe": {
+        "2023": 35.823,
+        "2024": 47.4852,
+        "2025": 51.6141
+      },
+      "roe_avg3": 44.97,
+      "roe_min3": 35.82,
+      "roe_range": 15.79
+    },
+    {
+      "link_name": "盐津铺子",
+      "display_name": "盐津铺子",
+      "industry": "食品加工制造",
+      "pe_pct": 7.3,
+      "pe": 17.4,
+      "pb": 7.38,
+      "roe_2025_table": 38.7,
+      "mc_亿": 160.0,
+      "wl": "✓",
+      "file": "01-公司\\盐津铺子.md",
+      "code": "002847.SZ",
+      "leader_flag_page": false,
+      "roe": {
+        "2023": 39.1785,
+        "2024": 40.2248,
+        "2025": 38.702
+      },
+      "roe_avg3": 39.37,
+      "roe_min3": 38.7,
+      "roe_range": 1.52
+    },
+    {
+      "link_name": "艾力斯(688578)",
+      "display_name": "艾力斯",
+      "industry": "化学制药",
+      "pe_pct": 0.5,
+      "pe": 16.4,
+      "pb": 5.38,
+      "roe_2025_table": 35.4,
+      "mc_亿": 417.0,
+      "wl": "",
+      "file": "01-公司\\艾力斯(688578).md",
+      "code": "688578.SH",
+      "leader_flag_page": false,
+      "roe": {
+        "2023": 17.9703,
+        "2024": 30.8653,
+        "2025": 35.4052
+      },
+      "roe_avg3": 28.08,
+      "roe_min3": 17.97,
+      "roe_range": 17.43
+    },
+    {
+      "link_name": "特宝生物",
+      "display_name": "特宝生物",
+      "industry": "生物制品",
+      "pe_pct": 0.4,
+      "pe": 36.1,
+      "pb": 6.55,
+      "roe_2025_table": 34.4,
+      "mc_亿": 238.0,
+      "wl": "✓",
+      "file": "01-公司\\特宝生物.md",
+      "code": "688278.SH",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 33.8276,
+        "2024": 37.3659,
+        "2025": 34.358
+      },
+      "roe_avg3": 35.18,
+      "roe_min3": 33.83,
+      "roe_range": 3.54
+    },
+    {
+      "link_name": "悍高集团",
+      "display_name": "悍高集团",
+      "industry": "家居用品",
+      "pe_pct": 1.7,
+      "pe": 44.4,
+      "pb": 7.75,
+      "roe_2025_table": 30.8,
+      "mc_亿": 228.0,
+      "wl": "✓",
+      "file": "01-公司\\悍高集团.md",
+      "code": "001221.SZ",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 31.7217,
+        "2024": 35.8847,
+        "2025": 30.8374
+      },
+      "roe_avg3": 32.81,
+      "roe_min3": 30.84,
+      "roe_range": 5.05
+    },
+    {
+      "link_name": "中熔电气",
+      "display_name": "中熔电气",
+      "industry": "其他电子",
+      "pe_pct": 6.3,
+      "pe": 34.8,
+      "pb": 9.64,
+      "roe_2025_table": 29.6,
+      "mc_亿": 159.0,
+      "wl": "✓",
+      "file": "01-公司\\中熔电气.md",
+      "code": "301031.SZ",
+      "leader_flag_page": false,
+      "roe": {
+        "2023": 12.8349,
+        "2024": 17.4259,
+        "2025": 29.5727
+      },
+      "roe_avg3": 19.94,
+      "roe_min3": 12.83,
+      "roe_range": 16.74
+    },
+    {
+      "link_name": "惠泰医疗",
+      "display_name": "惠泰医疗",
+      "industry": "医疗器械",
+      "pe_pct": 0.0,
+      "pe": 36.6,
+      "pb": 11.3,
+      "roe_2025_table": 29.3,
+      "mc_亿": 335.0,
+      "wl": "✓",
+      "file": "01-公司\\惠泰医疗.md",
+      "code": "688617.SH",
+      "leader_flag_page": false,
+      "roe": {
+        "2023": 29.0931,
+        "2024": 30.4354,
+        "2025": 29.2823
+      },
+      "roe_avg3": 29.6,
+      "roe_min3": 29.09,
+      "roe_range": 1.34
+    },
+    {
+      "link_name": "大豪科技",
+      "display_name": "大豪科技",
+      "industry": "自动化设备",
+      "pe_pct": 7.0,
+      "pe": 19.2,
+      "pb": 6.16,
+      "roe_2025_table": 27.8,
+      "mc_亿": 183.0,
+      "wl": "✓",
+      "file": "01-公司\\大豪科技.md",
+      "code": "603025.SH",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 19.3271,
+        "2024": 25.7121,
+        "2025": 27.8039
+      },
+      "roe_avg3": 24.28,
+      "roe_min3": 19.33,
+      "roe_range": 8.48
+    },
+    {
+      "link_name": "菜百股份",
+      "display_name": "菜百股份",
+      "industry": "服装家纺",
+      "pe_pct": 8.8,
+      "pe": 9.4,
+      "pb": 2.95,
+      "roe_2025_table": 26.2,
+      "mc_亿": 149.0,
+      "wl": "✓",
+      "file": "01-公司\\菜百股份.md",
+      "code": "605599.SH",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 19.6558,
+        "2024": 18.5146,
+        "2025": 26.1808
+      },
+      "roe_avg3": 21.45,
+      "roe_min3": 18.51,
+      "roe_range": 7.67
+    },
+    {
+      "link_name": "福耀玻璃",
+      "display_name": "福耀玻璃",
+      "industry": "汽车零部件",
+      "pe_pct": 4.5,
+      "pe": 22.4,
+      "pb": 3.93,
+      "roe_2025_table": 25.4,
+      "mc_亿": 1536.0,
+      "wl": "✓",
+      "file": "01-公司\\福耀玻璃.md",
+      "code": "600660.SH",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 18.6309,
+        "2024": 22.3418,
+        "2025": 25.4258
+      },
+      "roe_avg3": 22.13,
+      "roe_min3": 18.63,
+      "roe_range": 6.79
+    },
+    {
+      "link_name": "公牛集团",
+      "display_name": "公牛集团",
+      "industry": "家居用品",
+      "pe_pct": 14.3,
+      "pe": 19.2,
+      "pb": 4.55,
+      "roe_2025_table": 24.9,
+      "mc_亿": 811.0,
+      "wl": "✓",
+      "file": "01-公司\\公牛集团.md",
+      "code": "603195.SH",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 28.8334,
+        "2024": 28.1882,
+        "2025": 24.9245
+      },
+      "roe_avg3": 27.32,
+      "roe_min3": 24.92,
+      "roe_range": 3.91
+    },
+    {
+      "link_name": "羚锐制药",
+      "display_name": "羚锐制药",
+      "industry": "中药",
+      "pe_pct": 16.8,
+      "pe": 12.9,
+      "pb": 3.48,
+      "roe_2025_table": 23.5,
+      "mc_亿": 127.0,
+      "wl": "✓",
+      "file": "01-公司\\羚锐制药.md",
+      "code": "600285.SH",
+      "leader_flag_page": false,
+      "roe": {
+        "2023": 21.2697,
+        "2024": 24.6454,
+        "2025": 23.4664
+      },
+      "roe_avg3": 23.13,
+      "roe_min3": 21.27,
+      "roe_range": 3.38
+    },
+    {
+      "link_name": "伊之密",
+      "display_name": "伊之密",
+      "industry": "专用设备",
+      "pe_pct": 16.1,
+      "pe": 21.0,
+      "pb": 3.34,
+      "roe_2025_table": 22.8,
+      "mc_亿": 113.0,
+      "wl": "✓",
+      "file": "01-公司\\伊之密.md",
+      "code": "300415.SZ",
+      "leader_flag_page": false,
+      "roe": {
+        "2023": 19.3688,
+        "2024": 22.0112,
+        "2025": 22.787
+      },
+      "roe_avg3": 21.39,
+      "roe_min3": 19.37,
+      "roe_range": 3.42
+    },
+    {
+      "link_name": "伊利股份",
+      "display_name": "伊利股份",
+      "industry": "饮料制造",
+      "pe_pct": 13.5,
+      "pe": 8.1,
+      "pb": 2.91,
+      "roe_2025_table": 21.4,
+      "mc_亿": 1737.0,
+      "wl": "✓",
+      "file": "01-公司\\伊利股份.md",
+      "code": "600887.SH",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 20.0921,
+        "2024": 15.8413,
+        "2025": 21.4496
+      },
+      "roe_avg3": 19.13,
+      "roe_min3": 15.84,
+      "roe_range": 5.61
+    },
+    {
+      "link_name": "佐力药业",
+      "display_name": "佐力药业",
+      "industry": "中药",
+      "pe_pct": 0.0,
+      "pe": 13.4,
+      "pb": 3.12,
+      "roe_2025_table": 21.2,
+      "mc_亿": 107.0,
+      "wl": "✓",
+      "file": "01-公司\\佐力药业.md",
+      "code": "300181.SZ",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 14.098,
+        "2024": 18.4724,
+        "2025": 21.2452
+      },
+      "roe_avg3": 17.94,
+      "roe_min3": 14.1,
+      "roe_range": 7.15
+    },
+    {
+      "link_name": "中策橡胶",
+      "display_name": "中策橡胶",
+      "industry": "汽车零部件",
+      "pe_pct": 2.3,
+      "pe": 8.8,
+      "pb": 1.67,
+      "roe_2025_table": 19.6,
+      "mc_亿": 428.0,
+      "wl": "✓",
+      "file": "01-公司\\中策橡胶.md",
+      "code": "002966.SZ",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 10.9527,
+        "2024": 10.3022,
+        "2025": 9.3881
+      },
+      "roe_avg3": 10.21,
+      "roe_min3": 9.39,
+      "roe_range": 1.56
+    },
+    {
+      "link_name": "海天味业",
+      "display_name": "海天味业",
+      "industry": "食品加工制造",
+      "pe_pct": 3.0,
+      "pe": 23.1,
+      "pb": 5.38,
+      "roe_2025_table": 19.5,
+      "mc_亿": 2261.0,
+      "wl": "",
+      "file": "01-公司\\海天味业.md",
+      "code": "603288.SH",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 20.4872,
+        "2024": 21.3513,
+        "2025": 19.4904
+      },
+      "roe_avg3": 20.44,
+      "roe_min3": 19.49,
+      "roe_range": 1.86
+    },
+    {
+      "link_name": "小商品城",
+      "display_name": "小商品城",
+      "industry": "零售",
+      "pe_pct": 1.1,
+      "pe": 18.3,
+      "pb": 3.04,
+      "roe_2025_table": 19.3,
+      "mc_亿": 727.0,
+      "wl": "✓",
+      "file": "01-公司\\小商品城.md",
+      "code": "600415.SH",
+      "leader_flag_page": false,
+      "roe": {
+        "2023": 16.2436,
+        "2024": 16.0959,
+        "2025": 19.3482
+      },
+      "roe_avg3": 17.23,
+      "roe_min3": 16.1,
+      "roe_range": 3.25
+    },
+    {
+      "link_name": "柏楚电子",
+      "display_name": "柏楚电子",
+      "industry": "自动化设备",
+      "pe_pct": 0.0,
+      "pe": 32.3,
+      "pb": 6.41,
+      "roe_2025_table": 19.3,
+      "mc_亿": 409.0,
+      "wl": "",
+      "file": "01-公司\\柏楚电子.md",
+      "code": "688188.SH",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 15.7621,
+        "2024": 16.9115,
+        "2025": 19.2859
+      },
+      "roe_avg3": 17.32,
+      "roe_min3": 15.76,
+      "roe_range": 3.52
+    },
+    {
+      "link_name": "东阿阿胶",
+      "display_name": "东阿阿胶",
+      "industry": "中药",
+      "pe_pct": 17.7,
+      "pe": 19.5,
+      "pb": 3.28,
+      "roe_2025_table": 16.8,
+      "mc_亿": 354.0,
+      "wl": "",
+      "file": "01-公司\\东阿阿胶.md",
+      "code": "000423.SZ",
+      "leader_flag_page": false,
+      "roe": {
+        "2023": 10.9356,
+        "2024": 14.808,
+        "2025": 16.843
+      },
+      "roe_avg3": 14.2,
+      "roe_min3": 10.94,
+      "roe_range": 5.91
+    },
+    {
+      "link_name": "锦江航运",
+      "display_name": "锦江航运",
+      "industry": "港口航运",
+      "pe_pct": 19.0,
+      "pe": 11.7,
+      "pb": 1.62,
+      "roe_2025_table": 16.6,
+      "mc_亿": 157.0,
+      "wl": "✓",
+      "file": "01-公司\\锦江航运.md",
+      "code": "601083.SH",
+      "leader_flag_page": false,
+      "roe": {
+        "2023": 10.5124,
+        "2024": 12.2055,
+        "2025": 16.6337
+      },
+      "roe_avg3": 13.12,
+      "roe_min3": 10.51,
+      "roe_range": 6.12
+    },
+    {
+      "link_name": "东方电子",
+      "display_name": "东方电子",
+      "industry": "电网设备",
+      "pe_pct": 0.0,
+      "pe": 18.6,
+      "pb": 2.84,
+      "roe_2025_table": 16.5,
+      "mc_亿": 175.0,
+      "wl": "",
+      "file": "01-公司\\东方电子.md",
+      "code": "000682.SZ",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 12.3967,
+        "2024": 14.1037,
+        "2025": 16.54
+      },
+      "roe_avg3": 14.35,
+      "roe_min3": 12.4,
+      "roe_range": 4.14
+    },
+    {
+      "link_name": "华润三九",
+      "display_name": "华润三九",
+      "industry": "中药",
+      "pe_pct": 0.7,
+      "pe": 10.0,
+      "pb": 1.85,
+      "roe_2025_table": 16.3,
+      "mc_亿": 431.0,
+      "wl": "✓",
+      "file": "01-公司\\华润三九.md",
+      "code": "000999.SZ",
+      "leader_flag_page": false,
+      "roe": {
+        "2023": 15.8599,
+        "2024": 17.3289,
+        "2025": 16.2615
+      },
+      "roe_avg3": 16.48,
+      "roe_min3": 15.86,
+      "roe_range": 1.47
+    },
+    {
+      "link_name": "爱尔眼科",
+      "display_name": "爱尔眼科",
+      "industry": "医疗服务",
+      "pe_pct": 14.1,
+      "pe": 21.3,
+      "pb": 4.36,
+      "roe_2025_table": 15.2,
+      "mc_亿": 1005.0,
+      "wl": "✓",
+      "file": "01-公司\\爱尔眼科.md",
+      "code": "300015.SZ",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 18.9087,
+        "2024": 17.9733,
+        "2025": 15.181
+      },
+      "roe_avg3": 17.35,
+      "roe_min3": 15.18,
+      "roe_range": 3.73
+    }
+  ],
+  "r2_removed": [
+    {
+      "link_name": "万辰集团",
+      "display_name": "万辰集团",
+      "industry": "零售",
+      "pe_pct": 0.1,
+      "pe": 17.5,
+      "pb": 21.52,
+      "roe_2025_table": 104.2,
+      "mc_亿": 441.0,
+      "wl": "✓",
+      "file": "01-公司\\万辰集团.md",
+      "code": "300972.SZ",
+      "leader_flag_page": false,
+      "roe": {
+        "2023": -12.6264,
+        "2024": 33.6701,
+        "2025": 104.1758
+      },
+      "roe_avg3": 41.74,
+      "roe_min3": -12.63,
+      "roe_range": 116.8,
+      "reason": "最低ROE-12.6<8；疑似单年爆发；波动116.8ppt>20ppt"
+    },
+    {
+      "link_name": "兴齐眼药",
+      "display_name": "兴齐眼药",
+      "industry": "化学制药",
+      "pe_pct": 0.0,
+      "pe": 20.7,
+      "pb": 7.83,
+      "roe_2025_table": 39.0,
+      "mc_亿": 171.0,
+      "wl": "✓",
+      "file": "01-公司\\兴齐眼药.md",
+      "code": "300573.SZ",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 14.8069,
+        "2024": 20.5941,
+        "2025": 38.9702
+      },
+      "roe_avg3": 24.79,
+      "roe_min3": 14.81,
+      "roe_range": 24.16,
+      "reason": "波动24.2ppt>20ppt"
+    },
+    {
+      "link_name": "TCL智家",
+      "display_name": "TCL智家",
+      "industry": "白色家电",
+      "pe_pct": 5.1,
+      "pe": 8.4,
+      "pb": 2.69,
+      "roe_2025_table": 37.7,
+      "mc_亿": 104.0,
+      "wl": "✓",
+      "file": "01-公司\\TCL智家.md",
+      "code": "002668.SZ",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 69.7416,
+        "2024": 53.2186,
+        "2025": 37.6934
+      },
+      "roe_avg3": 53.55,
+      "roe_min3": 37.69,
+      "roe_range": 32.05,
+      "reason": "波动32.0ppt>20ppt"
+    },
+    {
+      "link_name": "拉卡拉",
+      "display_name": "拉卡拉",
+      "industry": "多元金融",
+      "pe_pct": 0.4,
+      "pe": 8.8,
+      "pb": 4.3,
+      "roe_2025_table": 30.5,
+      "mc_亿": 209.0,
+      "wl": "",
+      "file": "01-公司\\拉卡拉.md",
+      "code": "300773.SZ",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 12.8979,
+        "2024": 9.8398,
+        "2025": 30.5307
+      },
+      "roe_avg3": 17.76,
+      "roe_min3": 9.84,
+      "roe_range": 20.69,
+      "reason": "波动20.7ppt>20ppt"
+    },
+    {
+      "link_name": "三美股份",
+      "display_name": "三美股份",
+      "industry": "化学制品",
+      "pe_pct": 2.2,
+      "pe": 19.7,
+      "pb": 4.62,
+      "roe_2025_table": 28.4,
+      "mc_亿": 398.0,
+      "wl": "✓",
+      "file": "01-公司\\三美股份.md",
+      "code": "603379.SH",
+      "leader_flag_page": false,
+      "roe": {
+        "2023": 4.8206,
+        "2024": 12.6246,
+        "2025": 28.3578
+      },
+      "roe_avg3": 15.27,
+      "roe_min3": 4.82,
+      "roe_range": 23.54,
+      "reason": "最低ROE4.8<8；疑似单年爆发；波动23.5ppt>20ppt"
+    },
+    {
+      "link_name": "道通科技",
+      "display_name": "道通科技",
+      "industry": "计算机设备",
+      "pe_pct": 2.6,
+      "pe": 29.1,
+      "pb": 5.89,
+      "roe_2025_table": 25.2,
+      "mc_亿": 227.0,
+      "wl": "",
+      "file": "01-公司\\道通科技.md",
+      "code": "688208.SH",
+      "leader_flag_page": false,
+      "roe": {
+        "2023": 5.7249,
+        "2024": 18.925,
+        "2025": 25.1987
+      },
+      "roe_avg3": 16.62,
+      "roe_min3": 5.72,
+      "roe_range": 19.47,
+      "reason": "最低ROE5.7<8"
+    },
+    {
+      "link_name": "思特威-W",
+      "display_name": "思特威-W",
+      "industry": "半导体",
+      "pe_pct": 0.4,
+      "pe": 37.4,
+      "pb": 6.48,
+      "roe_2025_table": 21.3,
+      "mc_亿": 354.0,
+      "wl": "",
+      "file": "01-公司\\思特威-W.md",
+      "code": "688213.SH",
+      "leader_flag_page": false,
+      "roe": {
+        "2023": 0.3805,
+        "2024": 9.9054,
+        "2025": 21.2778
+      },
+      "roe_avg3": 10.52,
+      "roe_min3": 0.38,
+      "roe_range": 20.9,
+      "reason": "最低ROE0.4<8；疑似单年爆发；波动20.9ppt>20ppt"
+    },
+    {
+      "link_name": "富特科技",
+      "display_name": "富特科技",
+      "industry": "汽车零部件",
+      "pe_pct": 0.0,
+      "pe": 25.5,
+      "pb": 5.98,
+      "roe_2025_table": 19.3,
+      "mc_亿": 79.0,
+      "wl": "",
+      "file": "01-公司\\富特科技.md",
+      "code": "688784.SH",
+      "leader_flag_page": false,
+      "roe": {
+        "2023": null,
+        "2024": null,
+        "2025": null
+      },
+      "reason": "ROE年报数据不全"
+    },
+    {
+      "link_name": "大博医疗",
+      "display_name": "大博医疗",
+      "industry": "医疗器械",
+      "pe_pct": 0.0,
+      "pe": 30.6,
+      "pb": 4.82,
+      "roe_2025_table": 18.0,
+      "mc_亿": 180.0,
+      "wl": "",
+      "file": "01-公司\\大博医疗.md",
+      "code": "002901.SZ",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 1.9467,
+        "2024": 11.627,
+        "2025": 18.0368
+      },
+      "roe_avg3": 10.54,
+      "roe_min3": 1.95,
+      "roe_range": 16.09,
+      "reason": "最低ROE1.9<8"
+    },
+    {
+      "link_name": "诺普信",
+      "display_name": "诺普信",
+      "industry": "种植业与林业",
+      "pe_pct": 6.8,
+      "pe": 3.6,
+      "pb": 2.25,
+      "roe_2025_table": 16.3,
+      "mc_亿": 110.0,
+      "wl": "✓",
+      "file": "01-公司\\诺普信.md",
+      "code": "002215.SZ",
+      "leader_flag_page": false,
+      "roe": {
+        "2023": 6.3524,
+        "2024": 15.4209,
+        "2025": 16.2747
+      },
+      "roe_avg3": 12.68,
+      "roe_min3": 6.35,
+      "roe_range": 9.92,
+      "reason": "最低ROE6.4<8"
+    },
+    {
+      "link_name": "亚太股份",
+      "display_name": "亚太股份",
+      "industry": "汽车零部件",
+      "pe_pct": 0.0,
+      "pe": 17.3,
+      "pb": 2.8,
+      "roe_2025_table": 15.6,
+      "mc_亿": 98.0,
+      "wl": "",
+      "file": "01-公司\\亚太股份.md",
+      "code": "002284.SZ",
+      "leader_flag_page": false,
+      "roe": {
+        "2023": 3.5535,
+        "2024": 7.4779,
+        "2025": 15.6261
+      },
+      "roe_avg3": 8.89,
+      "roe_min3": 3.55,
+      "roe_range": 12.07,
+      "reason": "3年均值8.9<10；最低ROE3.6<8"
+    }
+  ],
+  "r3_survivors": [
+    {
+      "link_name": "东鹏饮料",
+      "display_name": "东鹏饮料",
+      "industry": "饮料制造",
+      "pe_pct": 0.1,
+      "pe": 22.9,
+      "pb": 5.62,
+      "roe_2025_table": 51.6,
+      "mc_亿": 1151.0,
+      "wl": "✅",
+      "file": "01-公司\\东鹏饮料.md",
+      "code": "605499.SH",
+      "leader_flag_page": false,
+      "roe": {
+        "2023": 35.823,
+        "2024": 47.4852,
+        "2025": 51.6141
+      },
+      "roe_avg3": 44.97,
+      "roe_min3": 35.82,
+      "roe_range": 15.79,
+      "ocf_ni": {
+        "2023": 160.9,
+        "2024": 174.0,
+        "2025": 139.8
+      },
+      "ocf_ni_avg3": 158.2,
+      "ocf_ni_min3": 139.8
+    },
+    {
+      "link_name": "盐津铺子",
+      "display_name": "盐津铺子",
+      "industry": "食品加工制造",
+      "pe_pct": 7.3,
+      "pe": 17.4,
+      "pb": 7.38,
+      "roe_2025_table": 38.7,
+      "mc_亿": 160.0,
+      "wl": "✓",
+      "file": "01-公司\\盐津铺子.md",
+      "code": "002847.SZ",
+      "leader_flag_page": false,
+      "roe": {
+        "2023": 39.1785,
+        "2024": 40.2248,
+        "2025": 38.702
+      },
+      "roe_avg3": 39.37,
+      "roe_min3": 38.7,
+      "roe_range": 1.52,
+      "ocf_ni": {
+        "2023": 131.3,
+        "2024": 177.2,
+        "2025": 121.5
+      },
+      "ocf_ni_avg3": 143.3,
+      "ocf_ni_min3": 121.5
+    },
+    {
+      "link_name": "艾力斯(688578)",
+      "display_name": "艾力斯",
+      "industry": "化学制药",
+      "pe_pct": 0.5,
+      "pe": 16.4,
+      "pb": 5.38,
+      "roe_2025_table": 35.4,
+      "mc_亿": 417.0,
+      "wl": "",
+      "file": "01-公司\\艾力斯(688578).md",
+      "code": "688578.SH",
+      "leader_flag_page": false,
+      "roe": {
+        "2023": 17.9703,
+        "2024": 30.8653,
+        "2025": 35.4052
+      },
+      "roe_avg3": 28.08,
+      "roe_min3": 17.97,
+      "roe_range": 17.43,
+      "ocf_ni": {
+        "2023": 104.7,
+        "2024": 109.5,
+        "2025": 106.1
+      },
+      "ocf_ni_avg3": 106.8,
+      "ocf_ni_min3": 104.7
+    },
+    {
+      "link_name": "特宝生物",
+      "display_name": "特宝生物",
+      "industry": "生物制品",
+      "pe_pct": 0.4,
+      "pe": 36.1,
+      "pb": 6.55,
+      "roe_2025_table": 34.4,
+      "mc_亿": 238.0,
+      "wl": "✓",
+      "file": "01-公司\\特宝生物.md",
+      "code": "688278.SH",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 33.8276,
+        "2024": 37.3659,
+        "2025": 34.358
+      },
+      "roe_avg3": 35.18,
+      "roe_min3": 33.83,
+      "roe_range": 3.54,
+      "ocf_ni": {
+        "2023": 92.2,
+        "2024": 52.0,
+        "2025": 70.7
+      },
+      "ocf_ni_avg3": 71.7,
+      "ocf_ni_min3": 52.0
+    },
+    {
+      "link_name": "悍高集团",
+      "display_name": "悍高集团",
+      "industry": "家居用品",
+      "pe_pct": 1.7,
+      "pe": 44.4,
+      "pb": 7.75,
+      "roe_2025_table": 30.8,
+      "mc_亿": 228.0,
+      "wl": "✓",
+      "file": "01-公司\\悍高集团.md",
+      "code": "001221.SZ",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 31.7217,
+        "2024": 35.8847,
+        "2025": 30.8374
+      },
+      "roe_avg3": 32.81,
+      "roe_min3": 30.84,
+      "roe_range": 5.05,
+      "ocf_ni": {
+        "2023": 180.0,
+        "2024": 126.7,
+        "2025": 147.8
+      },
+      "ocf_ni_avg3": 151.5,
+      "ocf_ni_min3": 126.7
+    },
+    {
+      "link_name": "中熔电气",
+      "display_name": "中熔电气",
+      "industry": "其他电子",
+      "pe_pct": 6.3,
+      "pe": 34.8,
+      "pb": 9.64,
+      "roe_2025_table": 29.6,
+      "mc_亿": 159.0,
+      "wl": "✓",
+      "file": "01-公司\\中熔电气.md",
+      "code": "301031.SZ",
+      "leader_flag_page": false,
+      "roe": {
+        "2023": 12.8349,
+        "2024": 17.4259,
+        "2025": 29.5727
+      },
+      "roe_avg3": 19.94,
+      "roe_min3": 12.83,
+      "roe_range": 16.74,
+      "ocf_ni": {
+        "2023": 72.4,
+        "2024": 65.4,
+        "2025": 106.9
+      },
+      "ocf_ni_avg3": 81.5,
+      "ocf_ni_min3": 65.4
+    },
+    {
+      "link_name": "惠泰医疗",
+      "display_name": "惠泰医疗",
+      "industry": "医疗器械",
+      "pe_pct": 0.0,
+      "pe": 36.6,
+      "pb": 11.3,
+      "roe_2025_table": 29.3,
+      "mc_亿": 335.0,
+      "wl": "✓",
+      "file": "01-公司\\惠泰医疗.md",
+      "code": "688617.SH",
+      "leader_flag_page": false,
+      "roe": {
+        "2023": 29.0931,
+        "2024": 30.4354,
+        "2025": 29.2823
+      },
+      "roe_avg3": 29.6,
+      "roe_min3": 29.09,
+      "roe_range": 1.34,
+      "ocf_ni": {
+        "2023": 129.1,
+        "2024": 110.4,
+        "2025": 117.9
+      },
+      "ocf_ni_avg3": 119.1,
+      "ocf_ni_min3": 110.4
+    },
+    {
+      "link_name": "菜百股份",
+      "display_name": "菜百股份",
+      "industry": "服装家纺",
+      "pe_pct": 8.8,
+      "pe": 9.4,
+      "pb": 2.95,
+      "roe_2025_table": 26.2,
+      "mc_亿": 149.0,
+      "wl": "✓",
+      "file": "01-公司\\菜百股份.md",
+      "code": "605599.SH",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 19.6558,
+        "2024": 18.5146,
+        "2025": 26.1808
+      },
+      "roe_avg3": 21.45,
+      "roe_min3": 18.51,
+      "roe_range": 7.67,
+      "ocf_ni": {
+        "2023": 97.8,
+        "2024": 53.0,
+        "2025": 175.2
+      },
+      "ocf_ni_avg3": 108.7,
+      "ocf_ni_min3": 53.0
+    },
+    {
+      "link_name": "福耀玻璃",
+      "display_name": "福耀玻璃",
+      "industry": "汽车零部件",
+      "pe_pct": 4.5,
+      "pe": 22.4,
+      "pb": 3.93,
+      "roe_2025_table": 25.4,
+      "mc_亿": 1536.0,
+      "wl": "✓",
+      "file": "01-公司\\福耀玻璃.md",
+      "code": "600660.SH",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 18.6309,
+        "2024": 22.3418,
+        "2025": 25.4258
+      },
+      "roe_avg3": 22.13,
+      "roe_min3": 18.63,
+      "roe_range": 6.79,
+      "ocf_ni": {
+        "2023": 135.4,
+        "2024": 114.2,
+        "2025": 129.5
+      },
+      "ocf_ni_avg3": 126.4,
+      "ocf_ni_min3": 114.2
+    },
+    {
+      "link_name": "公牛集团",
+      "display_name": "公牛集团",
+      "industry": "家居用品",
+      "pe_pct": 14.3,
+      "pe": 19.2,
+      "pb": 4.55,
+      "roe_2025_table": 24.9,
+      "mc_亿": 811.0,
+      "wl": "✓",
+      "file": "01-公司\\公牛集团.md",
+      "code": "603195.SH",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 28.8334,
+        "2024": 28.1882,
+        "2025": 24.9245
+      },
+      "roe_avg3": 27.32,
+      "roe_min3": 24.92,
+      "roe_range": 3.91,
+      "ocf_ni": {
+        "2023": 124.7,
+        "2024": 87.3,
+        "2025": 116.5
+      },
+      "ocf_ni_avg3": 109.5,
+      "ocf_ni_min3": 87.3
+    },
+    {
+      "link_name": "羚锐制药",
+      "display_name": "羚锐制药",
+      "industry": "中药",
+      "pe_pct": 16.8,
+      "pe": 12.9,
+      "pb": 3.48,
+      "roe_2025_table": 23.5,
+      "mc_亿": 127.0,
+      "wl": "✓",
+      "file": "01-公司\\羚锐制药.md",
+      "code": "600285.SH",
+      "leader_flag_page": false,
+      "roe": {
+        "2023": 21.2697,
+        "2024": 24.6454,
+        "2025": 23.4664
+      },
+      "roe_avg3": 23.13,
+      "roe_min3": 21.27,
+      "roe_range": 3.38,
+      "ocf_ni": {
+        "2023": 143.2,
+        "2024": 121.2,
+        "2025": 72.9
+      },
+      "ocf_ni_avg3": 112.4,
+      "ocf_ni_min3": 72.9
+    },
+    {
+      "link_name": "伊利股份",
+      "display_name": "伊利股份",
+      "industry": "饮料制造",
+      "pe_pct": 13.5,
+      "pe": 8.1,
+      "pb": 2.91,
+      "roe_2025_table": 21.4,
+      "mc_亿": 1737.0,
+      "wl": "✓",
+      "file": "01-公司\\伊利股份.md",
+      "code": "600887.SH",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 20.0921,
+        "2024": 15.8413,
+        "2025": 21.4496
+      },
+      "roe_avg3": 19.13,
+      "roe_min3": 15.84,
+      "roe_range": 5.61,
+      "ocf_ni": {
+        "2023": 175.4,
+        "2024": 257.2,
+        "2025": 124.0
+      },
+      "ocf_ni_avg3": 185.5,
+      "ocf_ni_min3": 124.0
+    },
+    {
+      "link_name": "佐力药业",
+      "display_name": "佐力药业",
+      "industry": "中药",
+      "pe_pct": 0.0,
+      "pe": 13.4,
+      "pb": 3.12,
+      "roe_2025_table": 21.2,
+      "mc_亿": 107.0,
+      "wl": "✓",
+      "file": "01-公司\\佐力药业.md",
+      "code": "300181.SZ",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 14.098,
+        "2024": 18.4724,
+        "2025": 21.2452
+      },
+      "roe_avg3": 17.94,
+      "roe_min3": 14.1,
+      "roe_range": 7.15,
+      "ocf_ni": {
+        "2023": 75.3,
+        "2024": 58.5,
+        "2025": 65.2
+      },
+      "ocf_ni_avg3": 66.3,
+      "ocf_ni_min3": 58.5
+    },
+    {
+      "link_name": "中策橡胶",
+      "display_name": "中策橡胶",
+      "industry": "汽车零部件",
+      "pe_pct": 2.3,
+      "pe": 8.8,
+      "pb": 1.67,
+      "roe_2025_table": 19.6,
+      "mc_亿": 428.0,
+      "wl": "✓",
+      "file": "01-公司\\中策橡胶.md",
+      "code": "002966.SZ",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 10.9527,
+        "2024": 10.3022,
+        "2025": 9.3881
+      },
+      "roe_avg3": 10.21,
+      "roe_min3": 9.39,
+      "roe_range": 1.56,
+      "ocf_ni": {
+        "2023": 357.9,
+        "2024": 216.4,
+        "2025": 207.4
+      },
+      "ocf_ni_avg3": 260.6,
+      "ocf_ni_min3": 207.4
+    },
+    {
+      "link_name": "海天味业",
+      "display_name": "海天味业",
+      "industry": "食品加工制造",
+      "pe_pct": 3.0,
+      "pe": 23.1,
+      "pb": 5.38,
+      "roe_2025_table": 19.5,
+      "mc_亿": 2261.0,
+      "wl": "",
+      "file": "01-公司\\海天味业.md",
+      "code": "603288.SH",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 20.4872,
+        "2024": 21.3513,
+        "2025": 19.4904
+      },
+      "roe_avg3": 20.44,
+      "roe_min3": 19.49,
+      "roe_range": 1.86,
+      "ocf_ni": {
+        "2023": 130.7,
+        "2024": 107.9,
+        "2025": 110.1
+      },
+      "ocf_ni_avg3": 116.2,
+      "ocf_ni_min3": 107.9
+    },
+    {
+      "link_name": "小商品城",
+      "display_name": "小商品城",
+      "industry": "零售",
+      "pe_pct": 1.1,
+      "pe": 18.3,
+      "pb": 3.04,
+      "roe_2025_table": 19.3,
+      "mc_亿": 727.0,
+      "wl": "✓",
+      "file": "01-公司\\小商品城.md",
+      "code": "600415.SH",
+      "leader_flag_page": false,
+      "roe": {
+        "2023": 16.2436,
+        "2024": 16.0959,
+        "2025": 19.3482
+      },
+      "roe_avg3": 17.23,
+      "roe_min3": 16.1,
+      "roe_range": 3.25,
+      "ocf_ni": {
+        "2023": 68.9,
+        "2024": 146.1,
+        "2025": 250.5
+      },
+      "ocf_ni_avg3": 155.2,
+      "ocf_ni_min3": 68.9
+    },
+    {
+      "link_name": "柏楚电子",
+      "display_name": "柏楚电子",
+      "industry": "自动化设备",
+      "pe_pct": 0.0,
+      "pe": 32.3,
+      "pb": 6.41,
+      "roe_2025_table": 19.3,
+      "mc_亿": 409.0,
+      "wl": "",
+      "file": "01-公司\\柏楚电子.md",
+      "code": "688188.SH",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 15.7621,
+        "2024": 16.9115,
+        "2025": 19.2859
+      },
+      "roe_avg3": 17.32,
+      "roe_min3": 15.76,
+      "roe_range": 3.52,
+      "ocf_ni": {
+        "2023": 118.1,
+        "2024": 107.9,
+        "2025": 99.3
+      },
+      "ocf_ni_avg3": 108.4,
+      "ocf_ni_min3": 99.3
+    },
+    {
+      "link_name": "东阿阿胶",
+      "display_name": "东阿阿胶",
+      "industry": "中药",
+      "pe_pct": 17.7,
+      "pe": 19.5,
+      "pb": 3.28,
+      "roe_2025_table": 16.8,
+      "mc_亿": 354.0,
+      "wl": "",
+      "file": "01-公司\\东阿阿胶.md",
+      "code": "000423.SZ",
+      "leader_flag_page": false,
+      "roe": {
+        "2023": 10.9356,
+        "2024": 14.808,
+        "2025": 16.843
+      },
+      "roe_avg3": 14.2,
+      "roe_min3": 10.94,
+      "roe_range": 5.91,
+      "ocf_ni": {
+        "2023": 169.7,
+        "2024": 139.4,
+        "2025": 131.7
+      },
+      "ocf_ni_avg3": 146.9,
+      "ocf_ni_min3": 131.7
+    },
+    {
+      "link_name": "锦江航运",
+      "display_name": "锦江航运",
+      "industry": "港口航运",
+      "pe_pct": 19.0,
+      "pe": 11.7,
+      "pb": 1.62,
+      "roe_2025_table": 16.6,
+      "mc_亿": 157.0,
+      "wl": "✓",
+      "file": "01-公司\\锦江航运.md",
+      "code": "601083.SH",
+      "leader_flag_page": false,
+      "roe": {
+        "2023": 10.5124,
+        "2024": 12.2055,
+        "2025": 16.6337
+      },
+      "roe_avg3": 13.12,
+      "roe_min3": 10.51,
+      "roe_range": 6.12,
+      "ocf_ni": {
+        "2023": 214.2,
+        "2024": 186.4,
+        "2025": 165.5
+      },
+      "ocf_ni_avg3": 188.7,
+      "ocf_ni_min3": 165.5
+    },
+    {
+      "link_name": "东方电子",
+      "display_name": "东方电子",
+      "industry": "电网设备",
+      "pe_pct": 0.0,
+      "pe": 18.6,
+      "pb": 2.84,
+      "roe_2025_table": 16.5,
+      "mc_亿": 175.0,
+      "wl": "",
+      "file": "01-公司\\东方电子.md",
+      "code": "000682.SZ",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 12.3967,
+        "2024": 14.1037,
+        "2025": 16.54
+      },
+      "roe_avg3": 14.35,
+      "roe_min3": 12.4,
+      "roe_range": 4.14,
+      "ocf_ni": {
+        "2023": 232.6,
+        "2024": 152.1,
+        "2025": 88.6
+      },
+      "ocf_ni_avg3": 157.8,
+      "ocf_ni_min3": 88.6
+    },
+    {
+      "link_name": "华润三九",
+      "display_name": "华润三九",
+      "industry": "中药",
+      "pe_pct": 0.7,
+      "pe": 10.0,
+      "pb": 1.85,
+      "roe_2025_table": 16.3,
+      "mc_亿": 431.0,
+      "wl": "✓",
+      "file": "01-公司\\华润三九.md",
+      "code": "000999.SZ",
+      "leader_flag_page": false,
+      "roe": {
+        "2023": 15.8599,
+        "2024": 17.3289,
+        "2025": 16.2615
+      },
+      "roe_avg3": 16.48,
+      "roe_min3": 15.86,
+      "roe_range": 1.47,
+      "ocf_ni": {
+        "2023": 146.9,
+        "2024": 130.7,
+        "2025": 161.2
+      },
+      "ocf_ni_avg3": 146.3,
+      "ocf_ni_min3": 130.7
+    },
+    {
+      "link_name": "爱尔眼科",
+      "display_name": "爱尔眼科",
+      "industry": "医疗服务",
+      "pe_pct": 14.1,
+      "pe": 21.3,
+      "pb": 4.36,
+      "roe_2025_table": 15.2,
+      "mc_亿": 1005.0,
+      "wl": "✓",
+      "file": "01-公司\\爱尔眼科.md",
+      "code": "300015.SZ",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 18.9087,
+        "2024": 17.9733,
+        "2025": 15.181
+      },
+      "roe_avg3": 17.35,
+      "roe_min3": 15.18,
+      "roe_range": 3.73,
+      "ocf_ni": {
+        "2023": 174.8,
+        "2024": 137.3,
+        "2025": 184.3
+      },
+      "ocf_ni_avg3": 165.5,
+      "ocf_ni_min3": 137.3
+    }
+  ],
+  "r3_removed": [
+    {
+      "link_name": "大豪科技",
+      "display_name": "大豪科技",
+      "industry": "自动化设备",
+      "pe_pct": 7.0,
+      "pe": 19.2,
+      "pb": 6.16,
+      "roe_2025_table": 27.8,
+      "mc_亿": 183.0,
+      "wl": "✓",
+      "file": "01-公司\\大豪科技.md",
+      "code": "603025.SH",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 19.3271,
+        "2024": 25.7121,
+        "2025": 27.8039
+      },
+      "roe_avg3": 24.28,
+      "roe_min3": 19.33,
+      "roe_range": 8.48,
+      "ocf_ni": {
+        "2023": 81.9,
+        "2024": 38.9,
+        "2025": 53.9
+      },
+      "ocf_ni_avg3": 58.2,
+      "ocf_ni_min3": 38.9,
+      "reason": "3年均值58.2%<60%"
+    },
+    {
+      "link_name": "伊之密",
+      "display_name": "伊之密",
+      "industry": "专用设备",
+      "pe_pct": 16.1,
+      "pe": 21.0,
+      "pb": 3.34,
+      "roe_2025_table": 22.8,
+      "mc_亿": 113.0,
+      "wl": "✓",
+      "file": "01-公司\\伊之密.md",
+      "code": "300415.SZ",
+      "leader_flag_page": false,
+      "roe": {
+        "2023": 19.3688,
+        "2024": 22.0112,
+        "2025": 22.787
+      },
+      "roe_avg3": 21.39,
+      "roe_min3": 19.37,
+      "roe_range": 3.42,
+      "ocf_ni": {
+        "2023": 36.6,
+        "2024": 58.9,
+        "2025": 63.1
+      },
+      "ocf_ni_avg3": 52.9,
+      "ocf_ni_min3": 36.6,
+      "reason": "3年均值52.9%<60%"
+    }
+  ],
+  "r4_survivors": [
+    {
+      "link_name": "东鹏饮料",
+      "display_name": "东鹏饮料",
+      "industry": "饮料制造",
+      "pe_pct": 0.1,
+      "pe": 22.9,
+      "pb": 5.62,
+      "roe_2025_table": 51.6,
+      "mc_亿": 1151.0,
+      "wl": "✅",
+      "file": "01-公司\\东鹏饮料.md",
+      "code": "605499.SH",
+      "leader_flag_page": false,
+      "roe": {
+        "2023": 35.823,
+        "2024": 47.4852,
+        "2025": 51.6141
+      },
+      "roe_avg3": 44.97,
+      "roe_min3": 35.82,
+      "roe_range": 15.79,
+      "ocf_ni": {
+        "2023": 160.9,
+        "2024": 174.0,
+        "2025": 139.8
+      },
+      "ocf_ni_avg3": 158.2,
+      "ocf_ni_min3": 139.8,
+      "gross_margin_2025": 44.91,
+      "dividend_years": [
+        2023,
+        2024,
+        2025
+      ],
+      "moat_score": 3,
+      "moat_hits": [
+        "毛利率>=30%",
+        "2023-2025连续分红",
+        "市值>=100亿"
+      ]
+    },
+    {
+      "link_name": "盐津铺子",
+      "display_name": "盐津铺子",
+      "industry": "食品加工制造",
+      "pe_pct": 7.3,
+      "pe": 17.4,
+      "pb": 7.38,
+      "roe_2025_table": 38.7,
+      "mc_亿": 160.0,
+      "wl": "✓",
+      "file": "01-公司\\盐津铺子.md",
+      "code": "002847.SZ",
+      "leader_flag_page": false,
+      "roe": {
+        "2023": 39.1785,
+        "2024": 40.2248,
+        "2025": 38.702
+      },
+      "roe_avg3": 39.37,
+      "roe_min3": 38.7,
+      "roe_range": 1.52,
+      "ocf_ni": {
+        "2023": 131.3,
+        "2024": 177.2,
+        "2025": 121.5
+      },
+      "ocf_ni_avg3": 143.3,
+      "ocf_ni_min3": 121.5,
+      "gross_margin_2025": 30.8,
+      "dividend_years": [
+        2023,
+        2024,
+        2025
+      ],
+      "moat_score": 3,
+      "moat_hits": [
+        "毛利率>=30%",
+        "2023-2025连续分红",
+        "市值>=100亿"
+      ]
+    },
+    {
+      "link_name": "艾力斯(688578)",
+      "display_name": "艾力斯",
+      "industry": "化学制药",
+      "pe_pct": 0.5,
+      "pe": 16.4,
+      "pb": 5.38,
+      "roe_2025_table": 35.4,
+      "mc_亿": 417.0,
+      "wl": "",
+      "file": "01-公司\\艾力斯(688578).md",
+      "code": "688578.SH",
+      "leader_flag_page": false,
+      "roe": {
+        "2023": 17.9703,
+        "2024": 30.8653,
+        "2025": 35.4052
+      },
+      "roe_avg3": 28.08,
+      "roe_min3": 17.97,
+      "roe_range": 17.43,
+      "ocf_ni": {
+        "2023": 104.7,
+        "2024": 109.5,
+        "2025": 106.1
+      },
+      "ocf_ni_avg3": 106.8,
+      "ocf_ni_min3": 104.7,
+      "gross_margin_2025": 96.83,
+      "dividend_years": [
+        2023,
+        2024,
+        2025
+      ],
+      "moat_score": 3,
+      "moat_hits": [
+        "毛利率>=30%",
+        "2023-2025连续分红",
+        "市值>=100亿"
+      ]
+    },
+    {
+      "link_name": "特宝生物",
+      "display_name": "特宝生物",
+      "industry": "生物制品",
+      "pe_pct": 0.4,
+      "pe": 36.1,
+      "pb": 6.55,
+      "roe_2025_table": 34.4,
+      "mc_亿": 238.0,
+      "wl": "✓",
+      "file": "01-公司\\特宝生物.md",
+      "code": "688278.SH",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 33.8276,
+        "2024": 37.3659,
+        "2025": 34.358
+      },
+      "roe_avg3": 35.18,
+      "roe_min3": 33.83,
+      "roe_range": 3.54,
+      "ocf_ni": {
+        "2023": 92.2,
+        "2024": 52.0,
+        "2025": 70.7
+      },
+      "ocf_ni_avg3": 71.7,
+      "ocf_ni_min3": 52.0,
+      "gross_margin_2025": 92.96,
+      "dividend_years": [
+        2023,
+        2024,
+        2025
+      ],
+      "moat_score": 4,
+      "moat_hits": [
+        "毛利率>=30%",
+        "行业前二/龙头",
+        "2023-2025连续分红",
+        "市值>=100亿"
+      ]
+    },
+    {
+      "link_name": "悍高集团",
+      "display_name": "悍高集团",
+      "industry": "家居用品",
+      "pe_pct": 1.7,
+      "pe": 44.4,
+      "pb": 7.75,
+      "roe_2025_table": 30.8,
+      "mc_亿": 228.0,
+      "wl": "✓",
+      "file": "01-公司\\悍高集团.md",
+      "code": "001221.SZ",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 31.7217,
+        "2024": 35.8847,
+        "2025": 30.8374
+      },
+      "roe_avg3": 32.81,
+      "roe_min3": 30.84,
+      "roe_range": 5.05,
+      "ocf_ni": {
+        "2023": 180.0,
+        "2024": 126.7,
+        "2025": 147.8
+      },
+      "ocf_ni_avg3": 151.5,
+      "ocf_ni_min3": 126.7,
+      "gross_margin_2025": 37.2,
+      "dividend_years": [
+        2025
+      ],
+      "moat_score": 3,
+      "moat_hits": [
+        "毛利率>=30%",
+        "行业前二/龙头",
+        "市值>=100亿"
+      ]
+    },
+    {
+      "link_name": "中熔电气",
+      "display_name": "中熔电气",
+      "industry": "其他电子",
+      "pe_pct": 6.3,
+      "pe": 34.8,
+      "pb": 9.64,
+      "roe_2025_table": 29.6,
+      "mc_亿": 159.0,
+      "wl": "✓",
+      "file": "01-公司\\中熔电气.md",
+      "code": "301031.SZ",
+      "leader_flag_page": false,
+      "roe": {
+        "2023": 12.8349,
+        "2024": 17.4259,
+        "2025": 29.5727
+      },
+      "roe_avg3": 19.94,
+      "roe_min3": 12.83,
+      "roe_range": 16.74,
+      "ocf_ni": {
+        "2023": 72.4,
+        "2024": 65.4,
+        "2025": 106.9
+      },
+      "ocf_ni_avg3": 81.5,
+      "ocf_ni_min3": 65.4,
+      "gross_margin_2025": 40.58,
+      "dividend_years": [
+        2023,
+        2024,
+        2025
+      ],
+      "moat_score": 3,
+      "moat_hits": [
+        "毛利率>=30%",
+        "2023-2025连续分红",
+        "市值>=100亿"
+      ]
+    },
+    {
+      "link_name": "惠泰医疗",
+      "display_name": "惠泰医疗",
+      "industry": "医疗器械",
+      "pe_pct": 0.0,
+      "pe": 36.6,
+      "pb": 11.3,
+      "roe_2025_table": 29.3,
+      "mc_亿": 335.0,
+      "wl": "✓",
+      "file": "01-公司\\惠泰医疗.md",
+      "code": "688617.SH",
+      "leader_flag_page": false,
+      "roe": {
+        "2023": 29.0931,
+        "2024": 30.4354,
+        "2025": 29.2823
+      },
+      "roe_avg3": 29.6,
+      "roe_min3": 29.09,
+      "roe_range": 1.34,
+      "ocf_ni": {
+        "2023": 129.1,
+        "2024": 110.4,
+        "2025": 117.9
+      },
+      "ocf_ni_avg3": 119.1,
+      "ocf_ni_min3": 110.4,
+      "gross_margin_2025": 72.88,
+      "dividend_years": [
+        2023,
+        2024,
+        2025
+      ],
+      "moat_score": 3,
+      "moat_hits": [
+        "毛利率>=30%",
+        "2023-2025连续分红",
+        "市值>=100亿"
+      ]
+    },
+    {
+      "link_name": "菜百股份",
+      "display_name": "菜百股份",
+      "industry": "服装家纺",
+      "pe_pct": 8.8,
+      "pe": 9.4,
+      "pb": 2.95,
+      "roe_2025_table": 26.2,
+      "mc_亿": 149.0,
+      "wl": "✓",
+      "file": "01-公司\\菜百股份.md",
+      "code": "605599.SH",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 19.6558,
+        "2024": 18.5146,
+        "2025": 26.1808
+      },
+      "roe_avg3": 21.45,
+      "roe_min3": 18.51,
+      "roe_range": 7.67,
+      "ocf_ni": {
+        "2023": 97.8,
+        "2024": 53.0,
+        "2025": 175.2
+      },
+      "ocf_ni_avg3": 108.7,
+      "ocf_ni_min3": 53.0,
+      "gross_margin_2025": 8.3,
+      "dividend_years": [
+        2023,
+        2024,
+        2025
+      ],
+      "moat_score": 3,
+      "moat_hits": [
+        "行业前二/龙头",
+        "2023-2025连续分红",
+        "市值>=100亿"
+      ]
+    },
+    {
+      "link_name": "福耀玻璃",
+      "display_name": "福耀玻璃",
+      "industry": "汽车零部件",
+      "pe_pct": 4.5,
+      "pe": 22.4,
+      "pb": 3.93,
+      "roe_2025_table": 25.4,
+      "mc_亿": 1536.0,
+      "wl": "✓",
+      "file": "01-公司\\福耀玻璃.md",
+      "code": "600660.SH",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 18.6309,
+        "2024": 22.3418,
+        "2025": 25.4258
+      },
+      "roe_avg3": 22.13,
+      "roe_min3": 18.63,
+      "roe_range": 6.79,
+      "ocf_ni": {
+        "2023": 135.4,
+        "2024": 114.2,
+        "2025": 129.5
+      },
+      "ocf_ni_avg3": 126.4,
+      "ocf_ni_min3": 114.2,
+      "gross_margin_2025": 37.27,
+      "dividend_years": [
+        2023,
+        2024,
+        2025
+      ],
+      "moat_score": 4,
+      "moat_hits": [
+        "毛利率>=30%",
+        "行业前二/龙头",
+        "2023-2025连续分红",
+        "市值>=100亿"
+      ]
+    },
+    {
+      "link_name": "公牛集团",
+      "display_name": "公牛集团",
+      "industry": "家居用品",
+      "pe_pct": 14.3,
+      "pe": 19.2,
+      "pb": 4.55,
+      "roe_2025_table": 24.9,
+      "mc_亿": 811.0,
+      "wl": "✓",
+      "file": "01-公司\\公牛集团.md",
+      "code": "603195.SH",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 28.8334,
+        "2024": 28.1882,
+        "2025": 24.9245
+      },
+      "roe_avg3": 27.32,
+      "roe_min3": 24.92,
+      "roe_range": 3.91,
+      "ocf_ni": {
+        "2023": 124.7,
+        "2024": 87.3,
+        "2025": 116.5
+      },
+      "ocf_ni_avg3": 109.5,
+      "ocf_ni_min3": 87.3,
+      "gross_margin_2025": 43.14,
+      "dividend_years": [
+        2023,
+        2024,
+        2025
+      ],
+      "moat_score": 4,
+      "moat_hits": [
+        "毛利率>=30%",
+        "行业前二/龙头",
+        "2023-2025连续分红",
+        "市值>=100亿"
+      ]
+    },
+    {
+      "link_name": "羚锐制药",
+      "display_name": "羚锐制药",
+      "industry": "中药",
+      "pe_pct": 16.8,
+      "pe": 12.9,
+      "pb": 3.48,
+      "roe_2025_table": 23.5,
+      "mc_亿": 127.0,
+      "wl": "✓",
+      "file": "01-公司\\羚锐制药.md",
+      "code": "600285.SH",
+      "leader_flag_page": false,
+      "roe": {
+        "2023": 21.2697,
+        "2024": 24.6454,
+        "2025": 23.4664
+      },
+      "roe_avg3": 23.13,
+      "roe_min3": 21.27,
+      "roe_range": 3.38,
+      "ocf_ni": {
+        "2023": 143.2,
+        "2024": 121.2,
+        "2025": 72.9
+      },
+      "ocf_ni_avg3": 112.4,
+      "ocf_ni_min3": 72.9,
+      "gross_margin_2025": 80.03,
+      "dividend_years": [
+        2023,
+        2024,
+        2025
+      ],
+      "moat_score": 3,
+      "moat_hits": [
+        "毛利率>=30%",
+        "2023-2025连续分红",
+        "市值>=100亿"
+      ]
+    },
+    {
+      "link_name": "伊利股份",
+      "display_name": "伊利股份",
+      "industry": "饮料制造",
+      "pe_pct": 13.5,
+      "pe": 8.1,
+      "pb": 2.91,
+      "roe_2025_table": 21.4,
+      "mc_亿": 1737.0,
+      "wl": "✓",
+      "file": "01-公司\\伊利股份.md",
+      "code": "600887.SH",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 20.0921,
+        "2024": 15.8413,
+        "2025": 21.4496
+      },
+      "roe_avg3": 19.13,
+      "roe_min3": 15.84,
+      "roe_range": 5.61,
+      "ocf_ni": {
+        "2023": 175.4,
+        "2024": 257.2,
+        "2025": 124.0
+      },
+      "ocf_ni_avg3": 185.5,
+      "ocf_ni_min3": 124.0,
+      "gross_margin_2025": 34.58,
+      "dividend_years": [
+        2023,
+        2024,
+        2025
+      ],
+      "moat_score": 4,
+      "moat_hits": [
+        "毛利率>=30%",
+        "行业前二/龙头",
+        "2023-2025连续分红",
+        "市值>=100亿"
+      ]
+    },
+    {
+      "link_name": "佐力药业",
+      "display_name": "佐力药业",
+      "industry": "中药",
+      "pe_pct": 0.0,
+      "pe": 13.4,
+      "pb": 3.12,
+      "roe_2025_table": 21.2,
+      "mc_亿": 107.0,
+      "wl": "✓",
+      "file": "01-公司\\佐力药业.md",
+      "code": "300181.SZ",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 14.098,
+        "2024": 18.4724,
+        "2025": 21.2452
+      },
+      "roe_avg3": 17.94,
+      "roe_min3": 14.1,
+      "roe_range": 7.15,
+      "ocf_ni": {
+        "2023": 75.3,
+        "2024": 58.5,
+        "2025": 65.2
+      },
+      "ocf_ni_avg3": 66.3,
+      "ocf_ni_min3": 58.5,
+      "gross_margin_2025": 61.6,
+      "dividend_years": [
+        2023,
+        2024,
+        2025
+      ],
+      "moat_score": 4,
+      "moat_hits": [
+        "毛利率>=30%",
+        "行业前二/龙头",
+        "2023-2025连续分红",
+        "市值>=100亿"
+      ]
+    },
+    {
+      "link_name": "中策橡胶",
+      "display_name": "中策橡胶",
+      "industry": "汽车零部件",
+      "pe_pct": 2.3,
+      "pe": 8.8,
+      "pb": 1.67,
+      "roe_2025_table": 19.6,
+      "mc_亿": 428.0,
+      "wl": "✓",
+      "file": "01-公司\\中策橡胶.md",
+      "code": "002966.SZ",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 10.9527,
+        "2024": 10.3022,
+        "2025": 9.3881
+      },
+      "roe_avg3": 10.21,
+      "roe_min3": 9.39,
+      "roe_range": 1.56,
+      "ocf_ni": {
+        "2023": 357.9,
+        "2024": 216.4,
+        "2025": 207.4
+      },
+      "ocf_ni_avg3": 260.6,
+      "ocf_ni_min3": 207.4,
+      "gross_margin_2025": null,
+      "dividend_years": [
+        2023,
+        2024,
+        2025
+      ],
+      "moat_score": 3,
+      "moat_hits": [
+        "行业前二/龙头",
+        "2023-2025连续分红",
+        "市值>=100亿"
+      ]
+    },
+    {
+      "link_name": "海天味业",
+      "display_name": "海天味业",
+      "industry": "食品加工制造",
+      "pe_pct": 3.0,
+      "pe": 23.1,
+      "pb": 5.38,
+      "roe_2025_table": 19.5,
+      "mc_亿": 2261.0,
+      "wl": "",
+      "file": "01-公司\\海天味业.md",
+      "code": "603288.SH",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 20.4872,
+        "2024": 21.3513,
+        "2025": 19.4904
+      },
+      "roe_avg3": 20.44,
+      "roe_min3": 19.49,
+      "roe_range": 1.86,
+      "ocf_ni": {
+        "2023": 130.7,
+        "2024": 107.9,
+        "2025": 110.1
+      },
+      "ocf_ni_avg3": 116.2,
+      "ocf_ni_min3": 107.9,
+      "gross_margin_2025": 40.22,
+      "dividend_years": [
+        2023,
+        2024,
+        2025
+      ],
+      "moat_score": 4,
+      "moat_hits": [
+        "毛利率>=30%",
+        "行业前二/龙头",
+        "2023-2025连续分红",
+        "市值>=100亿"
+      ]
+    },
+    {
+      "link_name": "小商品城",
+      "display_name": "小商品城",
+      "industry": "零售",
+      "pe_pct": 1.1,
+      "pe": 18.3,
+      "pb": 3.04,
+      "roe_2025_table": 19.3,
+      "mc_亿": 727.0,
+      "wl": "✓",
+      "file": "01-公司\\小商品城.md",
+      "code": "600415.SH",
+      "leader_flag_page": false,
+      "roe": {
+        "2023": 16.2436,
+        "2024": 16.0959,
+        "2025": 19.3482
+      },
+      "roe_avg3": 17.23,
+      "roe_min3": 16.1,
+      "roe_range": 3.25,
+      "ocf_ni": {
+        "2023": 68.9,
+        "2024": 146.1,
+        "2025": 250.5
+      },
+      "ocf_ni_avg3": 155.2,
+      "ocf_ni_min3": 68.9,
+      "gross_margin_2025": 31.44,
+      "dividend_years": [
+        2023,
+        2024,
+        2025
+      ],
+      "moat_score": 3,
+      "moat_hits": [
+        "毛利率>=30%",
+        "2023-2025连续分红",
+        "市值>=100亿"
+      ]
+    },
+    {
+      "link_name": "柏楚电子",
+      "display_name": "柏楚电子",
+      "industry": "自动化设备",
+      "pe_pct": 0.0,
+      "pe": 32.3,
+      "pb": 6.41,
+      "roe_2025_table": 19.3,
+      "mc_亿": 409.0,
+      "wl": "",
+      "file": "01-公司\\柏楚电子.md",
+      "code": "688188.SH",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 15.7621,
+        "2024": 16.9115,
+        "2025": 19.2859
+      },
+      "roe_avg3": 17.32,
+      "roe_min3": 15.76,
+      "roe_range": 3.52,
+      "ocf_ni": {
+        "2023": 118.1,
+        "2024": 107.9,
+        "2025": 99.3
+      },
+      "ocf_ni_avg3": 108.4,
+      "ocf_ni_min3": 99.3,
+      "gross_margin_2025": 77.66,
+      "dividend_years": [
+        2023,
+        2024,
+        2025
+      ],
+      "moat_score": 4,
+      "moat_hits": [
+        "毛利率>=30%",
+        "行业前二/龙头",
+        "2023-2025连续分红",
+        "市值>=100亿"
+      ]
+    },
+    {
+      "link_name": "东阿阿胶",
+      "display_name": "东阿阿胶",
+      "industry": "中药",
+      "pe_pct": 17.7,
+      "pe": 19.5,
+      "pb": 3.28,
+      "roe_2025_table": 16.8,
+      "mc_亿": 354.0,
+      "wl": "",
+      "file": "01-公司\\东阿阿胶.md",
+      "code": "000423.SZ",
+      "leader_flag_page": false,
+      "roe": {
+        "2023": 10.9356,
+        "2024": 14.808,
+        "2025": 16.843
+      },
+      "roe_avg3": 14.2,
+      "roe_min3": 10.94,
+      "roe_range": 5.91,
+      "ocf_ni": {
+        "2023": 169.7,
+        "2024": 139.4,
+        "2025": 131.7
+      },
+      "ocf_ni_avg3": 146.9,
+      "ocf_ni_min3": 131.7,
+      "gross_margin_2025": 73.47,
+      "dividend_years": [
+        2023,
+        2024,
+        2025
+      ],
+      "moat_score": 3,
+      "moat_hits": [
+        "毛利率>=30%",
+        "2023-2025连续分红",
+        "市值>=100亿"
+      ]
+    },
+    {
+      "link_name": "锦江航运",
+      "display_name": "锦江航运",
+      "industry": "港口航运",
+      "pe_pct": 19.0,
+      "pe": 11.7,
+      "pb": 1.62,
+      "roe_2025_table": 16.6,
+      "mc_亿": 157.0,
+      "wl": "✓",
+      "file": "01-公司\\锦江航运.md",
+      "code": "601083.SH",
+      "leader_flag_page": false,
+      "roe": {
+        "2023": 10.5124,
+        "2024": 12.2055,
+        "2025": 16.6337
+      },
+      "roe_avg3": 13.12,
+      "roe_min3": 10.51,
+      "roe_range": 6.12,
+      "ocf_ni": {
+        "2023": 214.2,
+        "2024": 186.4,
+        "2025": 165.5
+      },
+      "ocf_ni_avg3": 188.7,
+      "ocf_ni_min3": 165.5,
+      "gross_margin_2025": 31.82,
+      "dividend_years": [
+        2023,
+        2024,
+        2025
+      ],
+      "moat_score": 3,
+      "moat_hits": [
+        "毛利率>=30%",
+        "2023-2025连续分红",
+        "市值>=100亿"
+      ]
+    },
+    {
+      "link_name": "东方电子",
+      "display_name": "东方电子",
+      "industry": "电网设备",
+      "pe_pct": 0.0,
+      "pe": 18.6,
+      "pb": 2.84,
+      "roe_2025_table": 16.5,
+      "mc_亿": 175.0,
+      "wl": "",
+      "file": "01-公司\\东方电子.md",
+      "code": "000682.SZ",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 12.3967,
+        "2024": 14.1037,
+        "2025": 16.54
+      },
+      "roe_avg3": 14.35,
+      "roe_min3": 12.4,
+      "roe_range": 4.14,
+      "ocf_ni": {
+        "2023": 232.6,
+        "2024": 152.1,
+        "2025": 88.6
+      },
+      "ocf_ni_avg3": 157.8,
+      "ocf_ni_min3": 88.6,
+      "gross_margin_2025": 32.24,
+      "dividend_years": [
+        2023,
+        2024,
+        2025
+      ],
+      "moat_score": 4,
+      "moat_hits": [
+        "毛利率>=30%",
+        "行业前二/龙头",
+        "2023-2025连续分红",
+        "市值>=100亿"
+      ]
+    },
+    {
+      "link_name": "华润三九",
+      "display_name": "华润三九",
+      "industry": "中药",
+      "pe_pct": 0.7,
+      "pe": 10.0,
+      "pb": 1.85,
+      "roe_2025_table": 16.3,
+      "mc_亿": 431.0,
+      "wl": "✓",
+      "file": "01-公司\\华润三九.md",
+      "code": "000999.SZ",
+      "leader_flag_page": false,
+      "roe": {
+        "2023": 15.8599,
+        "2024": 17.3289,
+        "2025": 16.2615
+      },
+      "roe_avg3": 16.48,
+      "roe_min3": 15.86,
+      "roe_range": 1.47,
+      "ocf_ni": {
+        "2023": 146.9,
+        "2024": 130.7,
+        "2025": 161.2
+      },
+      "ocf_ni_avg3": 146.3,
+      "ocf_ni_min3": 130.7,
+      "gross_margin_2025": 54.03,
+      "dividend_years": [
+        2023,
+        2024,
+        2025
+      ],
+      "moat_score": 3,
+      "moat_hits": [
+        "毛利率>=30%",
+        "2023-2025连续分红",
+        "市值>=100亿"
+      ]
+    },
+    {
+      "link_name": "爱尔眼科",
+      "display_name": "爱尔眼科",
+      "industry": "医疗服务",
+      "pe_pct": 14.1,
+      "pe": 21.3,
+      "pb": 4.36,
+      "roe_2025_table": 15.2,
+      "mc_亿": 1005.0,
+      "wl": "✓",
+      "file": "01-公司\\爱尔眼科.md",
+      "code": "300015.SZ",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 18.9087,
+        "2024": 17.9733,
+        "2025": 15.181
+      },
+      "roe_avg3": 17.35,
+      "roe_min3": 15.18,
+      "roe_range": 3.73,
+      "ocf_ni": {
+        "2023": 174.8,
+        "2024": 137.3,
+        "2025": 184.3
+      },
+      "ocf_ni_avg3": 165.5,
+      "ocf_ni_min3": 137.3,
+      "gross_margin_2025": 47.11,
+      "dividend_years": [
+        2023,
+        2024,
+        2025
+      ],
+      "moat_score": 4,
+      "moat_hits": [
+        "毛利率>=30%",
+        "行业前二/龙头",
+        "2023-2025连续分红",
+        "市值>=100亿"
+      ]
+    }
+  ],
+  "r4_removed": [],
+  "final": [
+    {
+      "link_name": "特宝生物",
+      "display_name": "特宝生物",
+      "industry": "生物制品",
+      "pe_pct": 0.4,
+      "pe": 36.1,
+      "pb": 6.55,
+      "roe_2025_table": 34.4,
+      "mc_亿": 238.0,
+      "wl": "✓",
+      "file": "01-公司\\特宝生物.md",
+      "code": "688278.SH",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 33.8276,
+        "2024": 37.3659,
+        "2025": 34.358
+      },
+      "roe_avg3": 35.18,
+      "roe_min3": 33.83,
+      "roe_range": 3.54,
+      "ocf_ni": {
+        "2023": 92.2,
+        "2024": 52.0,
+        "2025": 70.7
+      },
+      "ocf_ni_avg3": 71.7,
+      "ocf_ni_min3": 52.0,
+      "gross_margin_2025": 92.96,
+      "dividend_years": [
+        2023,
+        2024,
+        2025
+      ],
+      "moat_score": 4,
+      "moat_hits": [
+        "毛利率>=30%",
+        "行业前二/龙头",
+        "2023-2025连续分红",
+        "市值>=100亿"
+      ]
+    },
+    {
+      "link_name": "公牛集团",
+      "display_name": "公牛集团",
+      "industry": "家居用品",
+      "pe_pct": 14.3,
+      "pe": 19.2,
+      "pb": 4.55,
+      "roe_2025_table": 24.9,
+      "mc_亿": 811.0,
+      "wl": "✓",
+      "file": "01-公司\\公牛集团.md",
+      "code": "603195.SH",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 28.8334,
+        "2024": 28.1882,
+        "2025": 24.9245
+      },
+      "roe_avg3": 27.32,
+      "roe_min3": 24.92,
+      "roe_range": 3.91,
+      "ocf_ni": {
+        "2023": 124.7,
+        "2024": 87.3,
+        "2025": 116.5
+      },
+      "ocf_ni_avg3": 109.5,
+      "ocf_ni_min3": 87.3,
+      "gross_margin_2025": 43.14,
+      "dividend_years": [
+        2023,
+        2024,
+        2025
+      ],
+      "moat_score": 4,
+      "moat_hits": [
+        "毛利率>=30%",
+        "行业前二/龙头",
+        "2023-2025连续分红",
+        "市值>=100亿"
+      ]
+    },
+    {
+      "link_name": "福耀玻璃",
+      "display_name": "福耀玻璃",
+      "industry": "汽车零部件",
+      "pe_pct": 4.5,
+      "pe": 22.4,
+      "pb": 3.93,
+      "roe_2025_table": 25.4,
+      "mc_亿": 1536.0,
+      "wl": "✓",
+      "file": "01-公司\\福耀玻璃.md",
+      "code": "600660.SH",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 18.6309,
+        "2024": 22.3418,
+        "2025": 25.4258
+      },
+      "roe_avg3": 22.13,
+      "roe_min3": 18.63,
+      "roe_range": 6.79,
+      "ocf_ni": {
+        "2023": 135.4,
+        "2024": 114.2,
+        "2025": 129.5
+      },
+      "ocf_ni_avg3": 126.4,
+      "ocf_ni_min3": 114.2,
+      "gross_margin_2025": 37.27,
+      "dividend_years": [
+        2023,
+        2024,
+        2025
+      ],
+      "moat_score": 4,
+      "moat_hits": [
+        "毛利率>=30%",
+        "行业前二/龙头",
+        "2023-2025连续分红",
+        "市值>=100亿"
+      ]
+    },
+    {
+      "link_name": "海天味业",
+      "display_name": "海天味业",
+      "industry": "食品加工制造",
+      "pe_pct": 3.0,
+      "pe": 23.1,
+      "pb": 5.38,
+      "roe_2025_table": 19.5,
+      "mc_亿": 2261.0,
+      "wl": "",
+      "file": "01-公司\\海天味业.md",
+      "code": "603288.SH",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 20.4872,
+        "2024": 21.3513,
+        "2025": 19.4904
+      },
+      "roe_avg3": 20.44,
+      "roe_min3": 19.49,
+      "roe_range": 1.86,
+      "ocf_ni": {
+        "2023": 130.7,
+        "2024": 107.9,
+        "2025": 110.1
+      },
+      "ocf_ni_avg3": 116.2,
+      "ocf_ni_min3": 107.9,
+      "gross_margin_2025": 40.22,
+      "dividend_years": [
+        2023,
+        2024,
+        2025
+      ],
+      "moat_score": 4,
+      "moat_hits": [
+        "毛利率>=30%",
+        "行业前二/龙头",
+        "2023-2025连续分红",
+        "市值>=100亿"
+      ]
+    },
+    {
+      "link_name": "伊利股份",
+      "display_name": "伊利股份",
+      "industry": "饮料制造",
+      "pe_pct": 13.5,
+      "pe": 8.1,
+      "pb": 2.91,
+      "roe_2025_table": 21.4,
+      "mc_亿": 1737.0,
+      "wl": "✓",
+      "file": "01-公司\\伊利股份.md",
+      "code": "600887.SH",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 20.0921,
+        "2024": 15.8413,
+        "2025": 21.4496
+      },
+      "roe_avg3": 19.13,
+      "roe_min3": 15.84,
+      "roe_range": 5.61,
+      "ocf_ni": {
+        "2023": 175.4,
+        "2024": 257.2,
+        "2025": 124.0
+      },
+      "ocf_ni_avg3": 185.5,
+      "ocf_ni_min3": 124.0,
+      "gross_margin_2025": 34.58,
+      "dividend_years": [
+        2023,
+        2024,
+        2025
+      ],
+      "moat_score": 4,
+      "moat_hits": [
+        "毛利率>=30%",
+        "行业前二/龙头",
+        "2023-2025连续分红",
+        "市值>=100亿"
+      ]
+    },
+    {
+      "link_name": "佐力药业",
+      "display_name": "佐力药业",
+      "industry": "中药",
+      "pe_pct": 0.0,
+      "pe": 13.4,
+      "pb": 3.12,
+      "roe_2025_table": 21.2,
+      "mc_亿": 107.0,
+      "wl": "✓",
+      "file": "01-公司\\佐力药业.md",
+      "code": "300181.SZ",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 14.098,
+        "2024": 18.4724,
+        "2025": 21.2452
+      },
+      "roe_avg3": 17.94,
+      "roe_min3": 14.1,
+      "roe_range": 7.15,
+      "ocf_ni": {
+        "2023": 75.3,
+        "2024": 58.5,
+        "2025": 65.2
+      },
+      "ocf_ni_avg3": 66.3,
+      "ocf_ni_min3": 58.5,
+      "gross_margin_2025": 61.6,
+      "dividend_years": [
+        2023,
+        2024,
+        2025
+      ],
+      "moat_score": 4,
+      "moat_hits": [
+        "毛利率>=30%",
+        "行业前二/龙头",
+        "2023-2025连续分红",
+        "市值>=100亿"
+      ]
+    },
+    {
+      "link_name": "爱尔眼科",
+      "display_name": "爱尔眼科",
+      "industry": "医疗服务",
+      "pe_pct": 14.1,
+      "pe": 21.3,
+      "pb": 4.36,
+      "roe_2025_table": 15.2,
+      "mc_亿": 1005.0,
+      "wl": "✓",
+      "file": "01-公司\\爱尔眼科.md",
+      "code": "300015.SZ",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 18.9087,
+        "2024": 17.9733,
+        "2025": 15.181
+      },
+      "roe_avg3": 17.35,
+      "roe_min3": 15.18,
+      "roe_range": 3.73,
+      "ocf_ni": {
+        "2023": 174.8,
+        "2024": 137.3,
+        "2025": 184.3
+      },
+      "ocf_ni_avg3": 165.5,
+      "ocf_ni_min3": 137.3,
+      "gross_margin_2025": 47.11,
+      "dividend_years": [
+        2023,
+        2024,
+        2025
+      ],
+      "moat_score": 4,
+      "moat_hits": [
+        "毛利率>=30%",
+        "行业前二/龙头",
+        "2023-2025连续分红",
+        "市值>=100亿"
+      ]
+    },
+    {
+      "link_name": "柏楚电子",
+      "display_name": "柏楚电子",
+      "industry": "自动化设备",
+      "pe_pct": 0.0,
+      "pe": 32.3,
+      "pb": 6.41,
+      "roe_2025_table": 19.3,
+      "mc_亿": 409.0,
+      "wl": "",
+      "file": "01-公司\\柏楚电子.md",
+      "code": "688188.SH",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 15.7621,
+        "2024": 16.9115,
+        "2025": 19.2859
+      },
+      "roe_avg3": 17.32,
+      "roe_min3": 15.76,
+      "roe_range": 3.52,
+      "ocf_ni": {
+        "2023": 118.1,
+        "2024": 107.9,
+        "2025": 99.3
+      },
+      "ocf_ni_avg3": 108.4,
+      "ocf_ni_min3": 99.3,
+      "gross_margin_2025": 77.66,
+      "dividend_years": [
+        2023,
+        2024,
+        2025
+      ],
+      "moat_score": 4,
+      "moat_hits": [
+        "毛利率>=30%",
+        "行业前二/龙头",
+        "2023-2025连续分红",
+        "市值>=100亿"
+      ]
+    },
+    {
+      "link_name": "东方电子",
+      "display_name": "东方电子",
+      "industry": "电网设备",
+      "pe_pct": 0.0,
+      "pe": 18.6,
+      "pb": 2.84,
+      "roe_2025_table": 16.5,
+      "mc_亿": 175.0,
+      "wl": "",
+      "file": "01-公司\\东方电子.md",
+      "code": "000682.SZ",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 12.3967,
+        "2024": 14.1037,
+        "2025": 16.54
+      },
+      "roe_avg3": 14.35,
+      "roe_min3": 12.4,
+      "roe_range": 4.14,
+      "ocf_ni": {
+        "2023": 232.6,
+        "2024": 152.1,
+        "2025": 88.6
+      },
+      "ocf_ni_avg3": 157.8,
+      "ocf_ni_min3": 88.6,
+      "gross_margin_2025": 32.24,
+      "dividend_years": [
+        2023,
+        2024,
+        2025
+      ],
+      "moat_score": 4,
+      "moat_hits": [
+        "毛利率>=30%",
+        "行业前二/龙头",
+        "2023-2025连续分红",
+        "市值>=100亿"
+      ]
+    },
+    {
+      "link_name": "东鹏饮料",
+      "display_name": "东鹏饮料",
+      "industry": "饮料制造",
+      "pe_pct": 0.1,
+      "pe": 22.9,
+      "pb": 5.62,
+      "roe_2025_table": 51.6,
+      "mc_亿": 1151.0,
+      "wl": "✅",
+      "file": "01-公司\\东鹏饮料.md",
+      "code": "605499.SH",
+      "leader_flag_page": false,
+      "roe": {
+        "2023": 35.823,
+        "2024": 47.4852,
+        "2025": 51.6141
+      },
+      "roe_avg3": 44.97,
+      "roe_min3": 35.82,
+      "roe_range": 15.79,
+      "ocf_ni": {
+        "2023": 160.9,
+        "2024": 174.0,
+        "2025": 139.8
+      },
+      "ocf_ni_avg3": 158.2,
+      "ocf_ni_min3": 139.8,
+      "gross_margin_2025": 44.91,
+      "dividend_years": [
+        2023,
+        2024,
+        2025
+      ],
+      "moat_score": 3,
+      "moat_hits": [
+        "毛利率>=30%",
+        "2023-2025连续分红",
+        "市值>=100亿"
+      ]
+    },
+    {
+      "link_name": "盐津铺子",
+      "display_name": "盐津铺子",
+      "industry": "食品加工制造",
+      "pe_pct": 7.3,
+      "pe": 17.4,
+      "pb": 7.38,
+      "roe_2025_table": 38.7,
+      "mc_亿": 160.0,
+      "wl": "✓",
+      "file": "01-公司\\盐津铺子.md",
+      "code": "002847.SZ",
+      "leader_flag_page": false,
+      "roe": {
+        "2023": 39.1785,
+        "2024": 40.2248,
+        "2025": 38.702
+      },
+      "roe_avg3": 39.37,
+      "roe_min3": 38.7,
+      "roe_range": 1.52,
+      "ocf_ni": {
+        "2023": 131.3,
+        "2024": 177.2,
+        "2025": 121.5
+      },
+      "ocf_ni_avg3": 143.3,
+      "ocf_ni_min3": 121.5,
+      "gross_margin_2025": 30.8,
+      "dividend_years": [
+        2023,
+        2024,
+        2025
+      ],
+      "moat_score": 3,
+      "moat_hits": [
+        "毛利率>=30%",
+        "2023-2025连续分红",
+        "市值>=100亿"
+      ]
+    },
+    {
+      "link_name": "悍高集团",
+      "display_name": "悍高集团",
+      "industry": "家居用品",
+      "pe_pct": 1.7,
+      "pe": 44.4,
+      "pb": 7.75,
+      "roe_2025_table": 30.8,
+      "mc_亿": 228.0,
+      "wl": "✓",
+      "file": "01-公司\\悍高集团.md",
+      "code": "001221.SZ",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 31.7217,
+        "2024": 35.8847,
+        "2025": 30.8374
+      },
+      "roe_avg3": 32.81,
+      "roe_min3": 30.84,
+      "roe_range": 5.05,
+      "ocf_ni": {
+        "2023": 180.0,
+        "2024": 126.7,
+        "2025": 147.8
+      },
+      "ocf_ni_avg3": 151.5,
+      "ocf_ni_min3": 126.7,
+      "gross_margin_2025": 37.2,
+      "dividend_years": [
+        2025
+      ],
+      "moat_score": 3,
+      "moat_hits": [
+        "毛利率>=30%",
+        "行业前二/龙头",
+        "市值>=100亿"
+      ]
+    },
+    {
+      "link_name": "惠泰医疗",
+      "display_name": "惠泰医疗",
+      "industry": "医疗器械",
+      "pe_pct": 0.0,
+      "pe": 36.6,
+      "pb": 11.3,
+      "roe_2025_table": 29.3,
+      "mc_亿": 335.0,
+      "wl": "✓",
+      "file": "01-公司\\惠泰医疗.md",
+      "code": "688617.SH",
+      "leader_flag_page": false,
+      "roe": {
+        "2023": 29.0931,
+        "2024": 30.4354,
+        "2025": 29.2823
+      },
+      "roe_avg3": 29.6,
+      "roe_min3": 29.09,
+      "roe_range": 1.34,
+      "ocf_ni": {
+        "2023": 129.1,
+        "2024": 110.4,
+        "2025": 117.9
+      },
+      "ocf_ni_avg3": 119.1,
+      "ocf_ni_min3": 110.4,
+      "gross_margin_2025": 72.88,
+      "dividend_years": [
+        2023,
+        2024,
+        2025
+      ],
+      "moat_score": 3,
+      "moat_hits": [
+        "毛利率>=30%",
+        "2023-2025连续分红",
+        "市值>=100亿"
+      ]
+    },
+    {
+      "link_name": "艾力斯(688578)",
+      "display_name": "艾力斯",
+      "industry": "化学制药",
+      "pe_pct": 0.5,
+      "pe": 16.4,
+      "pb": 5.38,
+      "roe_2025_table": 35.4,
+      "mc_亿": 417.0,
+      "wl": "",
+      "file": "01-公司\\艾力斯(688578).md",
+      "code": "688578.SH",
+      "leader_flag_page": false,
+      "roe": {
+        "2023": 17.9703,
+        "2024": 30.8653,
+        "2025": 35.4052
+      },
+      "roe_avg3": 28.08,
+      "roe_min3": 17.97,
+      "roe_range": 17.43,
+      "ocf_ni": {
+        "2023": 104.7,
+        "2024": 109.5,
+        "2025": 106.1
+      },
+      "ocf_ni_avg3": 106.8,
+      "ocf_ni_min3": 104.7,
+      "gross_margin_2025": 96.83,
+      "dividend_years": [
+        2023,
+        2024,
+        2025
+      ],
+      "moat_score": 3,
+      "moat_hits": [
+        "毛利率>=30%",
+        "2023-2025连续分红",
+        "市值>=100亿"
+      ]
+    },
+    {
+      "link_name": "羚锐制药",
+      "display_name": "羚锐制药",
+      "industry": "中药",
+      "pe_pct": 16.8,
+      "pe": 12.9,
+      "pb": 3.48,
+      "roe_2025_table": 23.5,
+      "mc_亿": 127.0,
+      "wl": "✓",
+      "file": "01-公司\\羚锐制药.md",
+      "code": "600285.SH",
+      "leader_flag_page": false,
+      "roe": {
+        "2023": 21.2697,
+        "2024": 24.6454,
+        "2025": 23.4664
+      },
+      "roe_avg3": 23.13,
+      "roe_min3": 21.27,
+      "roe_range": 3.38,
+      "ocf_ni": {
+        "2023": 143.2,
+        "2024": 121.2,
+        "2025": 72.9
+      },
+      "ocf_ni_avg3": 112.4,
+      "ocf_ni_min3": 72.9,
+      "gross_margin_2025": 80.03,
+      "dividend_years": [
+        2023,
+        2024,
+        2025
+      ],
+      "moat_score": 3,
+      "moat_hits": [
+        "毛利率>=30%",
+        "2023-2025连续分红",
+        "市值>=100亿"
+      ]
+    },
+    {
+      "link_name": "菜百股份",
+      "display_name": "菜百股份",
+      "industry": "服装家纺",
+      "pe_pct": 8.8,
+      "pe": 9.4,
+      "pb": 2.95,
+      "roe_2025_table": 26.2,
+      "mc_亿": 149.0,
+      "wl": "✓",
+      "file": "01-公司\\菜百股份.md",
+      "code": "605599.SH",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 19.6558,
+        "2024": 18.5146,
+        "2025": 26.1808
+      },
+      "roe_avg3": 21.45,
+      "roe_min3": 18.51,
+      "roe_range": 7.67,
+      "ocf_ni": {
+        "2023": 97.8,
+        "2024": 53.0,
+        "2025": 175.2
+      },
+      "ocf_ni_avg3": 108.7,
+      "ocf_ni_min3": 53.0,
+      "gross_margin_2025": 8.3,
+      "dividend_years": [
+        2023,
+        2024,
+        2025
+      ],
+      "moat_score": 3,
+      "moat_hits": [
+        "行业前二/龙头",
+        "2023-2025连续分红",
+        "市值>=100亿"
+      ]
+    },
+    {
+      "link_name": "中熔电气",
+      "display_name": "中熔电气",
+      "industry": "其他电子",
+      "pe_pct": 6.3,
+      "pe": 34.8,
+      "pb": 9.64,
+      "roe_2025_table": 29.6,
+      "mc_亿": 159.0,
+      "wl": "✓",
+      "file": "01-公司\\中熔电气.md",
+      "code": "301031.SZ",
+      "leader_flag_page": false,
+      "roe": {
+        "2023": 12.8349,
+        "2024": 17.4259,
+        "2025": 29.5727
+      },
+      "roe_avg3": 19.94,
+      "roe_min3": 12.83,
+      "roe_range": 16.74,
+      "ocf_ni": {
+        "2023": 72.4,
+        "2024": 65.4,
+        "2025": 106.9
+      },
+      "ocf_ni_avg3": 81.5,
+      "ocf_ni_min3": 65.4,
+      "gross_margin_2025": 40.58,
+      "dividend_years": [
+        2023,
+        2024,
+        2025
+      ],
+      "moat_score": 3,
+      "moat_hits": [
+        "毛利率>=30%",
+        "2023-2025连续分红",
+        "市值>=100亿"
+      ]
+    },
+    {
+      "link_name": "小商品城",
+      "display_name": "小商品城",
+      "industry": "零售",
+      "pe_pct": 1.1,
+      "pe": 18.3,
+      "pb": 3.04,
+      "roe_2025_table": 19.3,
+      "mc_亿": 727.0,
+      "wl": "✓",
+      "file": "01-公司\\小商品城.md",
+      "code": "600415.SH",
+      "leader_flag_page": false,
+      "roe": {
+        "2023": 16.2436,
+        "2024": 16.0959,
+        "2025": 19.3482
+      },
+      "roe_avg3": 17.23,
+      "roe_min3": 16.1,
+      "roe_range": 3.25,
+      "ocf_ni": {
+        "2023": 68.9,
+        "2024": 146.1,
+        "2025": 250.5
+      },
+      "ocf_ni_avg3": 155.2,
+      "ocf_ni_min3": 68.9,
+      "gross_margin_2025": 31.44,
+      "dividend_years": [
+        2023,
+        2024,
+        2025
+      ],
+      "moat_score": 3,
+      "moat_hits": [
+        "毛利率>=30%",
+        "2023-2025连续分红",
+        "市值>=100亿"
+      ]
+    },
+    {
+      "link_name": "锦江航运",
+      "display_name": "锦江航运",
+      "industry": "港口航运",
+      "pe_pct": 19.0,
+      "pe": 11.7,
+      "pb": 1.62,
+      "roe_2025_table": 16.6,
+      "mc_亿": 157.0,
+      "wl": "✓",
+      "file": "01-公司\\锦江航运.md",
+      "code": "601083.SH",
+      "leader_flag_page": false,
+      "roe": {
+        "2023": 10.5124,
+        "2024": 12.2055,
+        "2025": 16.6337
+      },
+      "roe_avg3": 13.12,
+      "roe_min3": 10.51,
+      "roe_range": 6.12,
+      "ocf_ni": {
+        "2023": 214.2,
+        "2024": 186.4,
+        "2025": 165.5
+      },
+      "ocf_ni_avg3": 188.7,
+      "ocf_ni_min3": 165.5,
+      "gross_margin_2025": 31.82,
+      "dividend_years": [
+        2023,
+        2024,
+        2025
+      ],
+      "moat_score": 3,
+      "moat_hits": [
+        "毛利率>=30%",
+        "2023-2025连续分红",
+        "市值>=100亿"
+      ]
+    },
+    {
+      "link_name": "中策橡胶",
+      "display_name": "中策橡胶",
+      "industry": "汽车零部件",
+      "pe_pct": 2.3,
+      "pe": 8.8,
+      "pb": 1.67,
+      "roe_2025_table": 19.6,
+      "mc_亿": 428.0,
+      "wl": "✓",
+      "file": "01-公司\\中策橡胶.md",
+      "code": "002966.SZ",
+      "leader_flag_page": true,
+      "roe": {
+        "2023": 10.9527,
+        "2024": 10.3022,
+        "2025": 9.3881
+      },
+      "roe_avg3": 10.21,
+      "roe_min3": 9.39,
+      "roe_range": 1.56,
+      "ocf_ni": {
+        "2023": 357.9,
+        "2024": 216.4,
+        "2025": 207.4
+      },
+      "ocf_ni_avg3": 260.6,
+      "ocf_ni_min3": 207.4,
+      "gross_margin_2025": null,
+      "dividend_years": [
+        2023,
+        2024,
+        2025
+      ],
+      "moat_score": 3,
+      "moat_hits": [
+        "行业前二/龙头",
+        "2023-2025连续分红",
+        "市值>=100亿"
+      ]
+    }
+  ]
+}
