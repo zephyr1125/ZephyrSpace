@@ -165,7 +165,15 @@ watchlist 数据已拆分为 4 个文件，放在 `data/` 目录：
 1. **批量识别待更新公司**：筛选 `next_earnings_type` 不为半年报/年报的公司，检查财报是否已发布
 2. **拉取财报数据**：优先理杏仁 `cn/company/fs/non_financial`（`date` 参数传最近年末日），**若返回期别落后于预期，必须用东方财富 web_fetch 外部验证**（见下方财报数据规范）
 3. **更新公司页**：在 `## 已核实的关键事实` 或 `## 季度财报跟踪` 区块添加新一期数据，更新 `## PreBuy 结论` 加 `[Qx YYYY已验证]` 标注
-4. **更新 watchlist JSON（必须同时更新以下两个字段，缺一不可）**：
+4. **治理事件检查（必选步骤）**：每次季报更新时，必须同步用 Tavily 搜索近期治理事件，不可仅依赖理杏仁：
+   ```python
+   from scripts.tavily_search import _get_client, _fmt
+   client = _get_client()
+   result = client.search(f"{公司名} {ticker} 减持 大宗 增持 {当前年月}", max_results=5, search_depth="advanced")
+   ```
+   > ⚠️ **已踩坑**：理杏仁 `cn/company/senior-executive-shares-change` 接口存在数据盲区，对部分公司返回空数据而实际存在减持记录（实例：大豪科技 2026年3月集中减持被漏检）。**"接口返回空"≠"无减持"**，必须通过 Tavily 或东方财富公告二次确认。
+   > 搜索结果若发现：① 大股东/高管减持公告、② 集体减持计划、③ 权益变动触及1%提示公告 → 须更新公司页"主要红旗"和"A股特有风险检查"表，并评估对 PreBuy 结论的影响。
+5. **更新 watchlist JSON（必须同时更新以下两个字段，缺一不可）**：
    ```json
    "next_earnings_type": "半年报",
    "next_earnings_date": "2026-08-31"
@@ -183,7 +191,7 @@ watchlist 数据已拆分为 4 个文件，放在 `data/` 目录：
 | 年报 (12月) | 一季报 | `YYYY+1-04-30` |
 
 **子 Agent 季报更新分工**：
-- 子 Agent 职责：更新公司页，输出建议的 watchlist 字段更新（key-value 格式）
+- 子 Agent 职责：更新公司页（含财报数据 + 治理事件检查），输出建议的 watchlist 字段更新（key-value 格式）
 - 主 Agent 职责：汇总子 Agent 结果，写入 watchlist JSON（子 Agent 不得直接写文件）
 
 ---
