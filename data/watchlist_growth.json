@@ -1,6 +1,31 @@
 {
-  "updated_at": "2026-05-03T03:05:17.999944Z",
+  "updated_at": "2026-05-06T10:50:37.000000Z",
   "entries": [
+    {
+      "code": "601398.SH",
+      "board": "沪",
+      "name": "工商银行",
+      "source_etf": "direct",
+      "position_role": "高股息国有大行底仓，利率/信用周期复苏早期",
+      "prebuy_conclusion": "逻辑清晰，政策顺风，当前价格中性区（PB 3年58%分位），适合底仓型投资者在7.0以下分批建仓，不追高",
+      "watch_reason": "全球最大银行+国家信用背书+4%+稳定股息+NIM 2026Q1出现2021年来首次季度回升，估值PB<1.0提供安全垫",
+      "current_price": 7.45,
+      "price_date": "2026-04-30",
+      "dv_ttm": 4.16,
+      "price_bands": [8.62, 6.96, 5.95],
+      "price_bands_basis": "pb.y3+ps2",
+      "price_bands_date": "2026-04-30",
+      "valuation_anchor": "PB历史3年分位定价+PS+2国央企政策加成。[0]=8.62(P80×1.10,追高区) / [1]=6.96(P50,中性底) / [2]=5.95(P20,较好区间) / <5.95为强买入区(股息率>5.2%,类汇金2024入场点)",
+      "risk_flags": [
+        "信用减值损失2026Q1同比+21.55%，显著高于营收增速，若持续则压制利润增速",
+        "加权ROE温和持续下行（9.88%→9.45%→8.83%年化），长期PB中枢存在下移压力",
+        "NIM绝对值1.29%仍偏低，若LPR继续下调则难以大幅改善"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": true,
+      "cycle_position": "复苏早期"
+    },
     {
       "code": "300972.SZ",
       "board": "深",
