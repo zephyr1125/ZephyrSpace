@@ -12,7 +12,11 @@
       "current_price": 7.45,
       "price_date": "2026-04-30",
       "dv_ttm": 4.16,
-      "price_bands": [8.62, 6.96, 5.95],
+      "price_bands": [
+        8.62,
+        6.96,
+        5.95
+      ],
       "price_bands_basis": "pb.y3+ps2",
       "price_bands_date": "2026-04-30",
       "valuation_anchor": "PB历史3年分位定价+PS+2国央企政策加成。[0]=8.62(P80×1.10,追高区) / [1]=6.96(P50,中性底) / [2]=5.95(P20,较好区间) / <5.95为强买入区(股息率>5.2%,类汇金2024入场点)",
@@ -249,21 +253,6 @@
         28.0,
         25.1,
         23.0
-      ]
-    },
-    {
-      "code": "600887.SH",
-      "board": "沪",
-      "position_role": "乳业龙头",
-      "watch_reason": "ROE28.5%+现金流充沛+PE22.6x",
-      "name": "伊利股份",
-      "cycle_is_cyclical": false,
-      "current_price": 32.5,
-      "cycle_position": null,
-      "price_bands": [
-        32,
-        29.5,
-        26.5
       ]
     },
     {
