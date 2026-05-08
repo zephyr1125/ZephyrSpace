@@ -997,6 +997,37 @@
       "price_date": "2026-04-30",
       "note_path": "05-A股指数/930719 中证精准医疗主题指数.md",
       "last_updated": "2026-05-02"
+    },
+    {
+      "index_code": "H30007.CSI",
+      "lx_code": "H30007",
+      "name": "中证芯片产业指数",
+      "related_etfs": [
+        "516350.SH 易方达中证芯片产业ETF"
+      ],
+      "category": "成长科技",
+      "cycle_position": "复苏中期",
+      "prebuy_conclusion": "分批布局（等回调后积极介入）— 当前PE=115.45x处历史P80(80.1x)以上高位，ETF(516350)后复权价1.538为5年/3年全时高；PS=+5（十五五⭐⭐⭐半导体+政治局AI算力⭐⭐⭐）触发升一档，结论升为分批布局。建议ETF回调至1.20（PE约90x）以下方可开仓",
+      "current_pe": 115.45,
+      "current_dy": 0.12,
+      "pe_3y_percentile": null,
+      "pe_5y_percentile": null,
+      "current_index_price": null,
+      "price_bands": [
+        1.74,
+        1.2,
+        0.93
+      ],
+      "valuation_anchor": "PE法（芯片成长股）：以ETF 516350后复权净值为单位（lixinger无H30007实时指数数据）；1.74=PE约130x(追高区) / 1.20=PE约90x(中性底,含PS+5政策加成后升至分批布局) / 0.93=PE约70x(安全边际区)；历史PE区间(2018-2024)：P20=31.3x/P50=50.6x/P80=80.1x（akshare历史数据，当前115x已超P80）；akshare当前PE仅有20天历史，长期分位参考有限",
+      "risk_flags": [
+        "美国出口管制持续升级（EUV/先进HBM），中芯国际/北方华创等核心成分直接受制",
+        "ETF后复权价处5年/3年历史100%分位，PE=115x超历史P80(80.1x)，回调空间大",
+        "Top10等权ROE约13.2%偏低（含中芯国际3.4%/芯原微电子-18.6%亏损），高PE需高增速支撑",
+        "lixinger对H30007覆盖不完整，指数数据依赖akshare和东方财富外部来源"
+      ],
+      "price_date": "2026-05-08",
+      "note_path": "05-A股指数/H30007 中证芯片产业指数.md",
+      "last_updated": "2026-05-08"
     }
   ]
 }
