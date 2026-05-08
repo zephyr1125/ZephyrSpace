@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-08T06:33:06.937343Z",
+  "updated_at": "2026-05-08",
   "entries": [
     {
       "code": "601398.SH",
@@ -223,21 +223,6 @@
         22.56,
         19.98,
         18.6
-      ]
-    },
-    {
-      "code": "601899.SH",
-      "board": "沪",
-      "position_role": "矿业龙头",
-      "watch_reason": "ROE31.8%+PE合理+矿业周期向上",
-      "name": "紫金矿业",
-      "cycle_is_cyclical": true,
-      "current_price": 33.3,
-      "cycle_position": "待评估",
-      "price_bands": [
-        78.6,
-        53.3,
-        42.6
       ]
     },
     {
@@ -590,6 +575,35 @@
       "next_earnings_type": "半年报",
       "cycle_is_cyclical": true,
       "cycle_position": "底部"
+    },
+    {
+      "code": "601899.SH",
+      "board": "MAIN",
+      "name": "紫金矿业",
+      "source_etf": "direct",
+      "position_role": "铜金矿全球龙头，资源安全战略核心标的，零息CB支撑扩张",
+      "prebuy_conclusion": "逻辑清晰，当前价处绿灯区（PE 3年25.9%低分位），景气高峰+产量扩张双逻辑，建议初始仓位5-8%在34-38区间分批建仓，半年报验证后再加至10-12%",
+      "watch_reason": "全球铜金矿龙头，La Arena铜矿二期（\\）扩产，2025净利518亿+61.5%，2026Q1净利201亿+97.5%，管理层2025-12大规模H股增持，PE历史低分位",
+      "current_price": 34.8,
+      "price_date": "2026-05-08",
+      "price_bands": [
+        43.0,
+        38.45,
+        34.08
+      ],
+      "price_bands_basis": "pe_ttm.y3+ps3-cycle_peak_15pct",
+      "price_bands_date": "2026-05-08",
+      "valuation_anchor": "PE历史3年分位定价+PS+3政策加成-景气高峰15%折扣。[0]=43.0(追高区) / [1]=38.45(P50,中性底) / [2]=34.08(P20,绿灯区入场)",
+      "risk_flags": [
+        "景气高峰：PB 3年82%分位，铜金价格处历史高位，周期回落时双杀风险",
+        "可转债\\（2031年，深度OTM），转股概率低",
+        "2023年上交所纪律处分（子公司超范围采矿石，历史事件）",
+        "大宗商品周期风险：铜金价格受全球宏观影响，价格下行将直接压缩利润"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": true,
+      "cycle_position": "景气高峰"
     }
   ],
   "tier": "growth",
