@@ -275,12 +275,17 @@ Skill 源文件存放在 vault 内，修改后必须同步到 agents 目录才�
 |---|---|---|
 | stock-prebuy-review | `stock-prebuy-skill/SKILL.md` | `C:\Users\zephy\.agents\skills\stock-prebuy-review\SKILL.md` |
 | stock-prebuy（指数）| `index-prebuy.skill` | 无需同步（直接读取 vault 内文件） |
+| hk-prebuy | `hk-prebuy-skill/SKILL.md` | `C:\Users\zephy\.agents\skills\hk-prebuy\SKILL.md` |
 
 **每次修改 SKILL.md 后，必须执行同步命令：**
 
 ```powershell
 Copy-Item "E:\ObsidianVaults\ZephyrSpace\stock-prebuy-skill\SKILL.md" `
     "C:\Users\zephy\.agents\skills\stock-prebuy-review\SKILL.md" -Force
+
+# hk-prebuy 技能同步（修改 hk-prebuy-skill/SKILL.md 后执行）
+Copy-Item "E:\ObsidianVaults\ZephyrSpace\hk-prebuy-skill\SKILL.md" `
+    "C:\Users\zephy\.agents\skills\hk-prebuy\SKILL.md" -Force
 ```
 
 > Agent 在修改 `stock-prebuy-skill/SKILL.md` 后，必须自动执行上述同步，无需等待用户提醒。
