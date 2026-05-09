@@ -87,10 +87,13 @@ WEIGHTS = {
         9: 0.05, 10: 0.06, 11: 0.04, 12: 0.06,
     },
     "CN_GROWTH": {
-        # 前瞻PE不可靠归零 → 补给PEG(+8%)、成分股变动(+4%)、ERP(+3%)
-        1: 0.20, 2: 0.00, 3: 0.18, 4: 0.08,
-        5: 0.13, 6: 0.10, 7: 0.08, 8: 0.08,
-        9: 0.05, 10: 0.06, 11: 0.03, 12: 0.01,
+        # 前瞻PE跳过(D2=0%)；D3 PEG仍可用但数据质量较低→降至12%
+        # D5 ERP对早期盈利爬坡指数意义有限→降至7%
+        # 释放的权重补给：D1(+2%) D6(+2%) D10(+2%) D11(+2%) D12(+4%)
+        # 理念：减少TTM盈利锚的影响，加强政策/技术/成分质量的权重
+        1: 0.22, 2: 0.00, 3: 0.12, 4: 0.08,
+        5: 0.07, 6: 0.12, 7: 0.08, 8: 0.08,
+        9: 0.05, 10: 0.08, 11: 0.05, 12: 0.05,
     },
 }
 ```
@@ -372,17 +375,28 @@ def score_dim2_forward_pe(fwd_pe, benchmarks):
     else:                            score = 75 + min(20, (fwd_pe - p80) / p80 * 40)
     return round(score), f"前瞻PE {fwd_pe:.1f}x（历史P20={p20}/P50={p50}/P80={p80}）"
 
-def score_dim3_peg(fwd_pe, growth_pct):
-    """PEG = 前瞻PE ÷ 预期净利润增速%"""
+def score_dim3_peg(fwd_pe, growth_pct, index_type="US_TECH"):
+    """PEG = 前瞻PE ÷ 预期净利润增速%
+
+    ⚠️ CN_GROWTH 使用规则（重要，避免方法论自相矛盾）：
+    - D2（前瞻PE）虽然因独立可靠性低而跳过，但 D3 的 PEG 仍然需要 Forward PE 作为分子。
+    - 正确做法：用分析师一致预期 Forward PE（Wind/Bloomberg）÷ 一致预期增速。
+      例如：科创50 Forward PE ≈ 80x，增速预期 ≈ 65-70%，PEG ≈ 1.2（合理偏贵）。
+    - 若 Forward PE 无法获取，备选：TTM PE ÷ TTM 实际盈利增速 YoY（全用实际数据，不混搭）。
+    - 🚫 禁止：TTM PE ÷ 前瞻增速（两者时态不一致，系统性高估"贵"的程度）。
+    - 若以上均无可靠数据，返回 None 跳过本维度，不强行打分。
+
+    CN_VALUE 指数同样应优先用 Forward PE / 实际盈利增速，不用 TTM PE 混搭前瞻增速。
+    """
     if not fwd_pe or not growth_pct or growth_pct <= 0:
         return None, "PEG无法计算（增速为负或数据缺失）"
     peg = fwd_pe / growth_pct
     if peg < 0.8:      score = 15
     elif peg < 1.0:    score = 30
-    elif peg < 1.2:    score = 50
-    elif peg < 1.5:    score = 65
-    elif peg < 2.0:    score = 80
-    else:              score = 95
+    elif peg < 1.2:    score = 45
+    elif peg < 1.5:    score = 60
+    elif peg < 2.0:    score = 75
+    else:              score = 90
     return score, f"PEG = {fwd_pe:.1f} ÷ {growth_pct:.0f}% = {peg:.2f}"
 
 def score_dim4_roe(roe_pct):
@@ -396,17 +410,27 @@ def score_dim4_roe(roe_pct):
     else:              score = 80
     return score, f"加权ROE {roe_pct:.1f}%"
 
-def score_dim5_erp(pe, risk_free_rate_pct, dy_pct=0):
-    """股债利差ERP = max(盈利收益率, 股息率) - 无风险利率"""
+def score_dim5_erp(pe, risk_free_rate_pct, dy_pct=0, index_type="CN_VALUE"):
+    """股债利差ERP = max(盈利收益率, 股息率) - 无风险利率
+
+    ⚠️ CN_GROWTH 适用性说明：
+    对早期盈利爬坡型指数（如科创50，PE=156x，大量成分股微利或刚扭亏），
+    TTM 盈利收益率（1/PE=0.64%）严重低估投资者的真实预期回报，因为
+    投资者定价的是未来3-5年利润大幅改善后的回报，而非当期盈利收益率。
+    本维度对 CN_GROWTH 仍保留（权重已降至7%），仅作边界条件参考：
+    ERP为正 → 说明估值还没到纯泡沫阶段；ERP深度为负 → 需额外谨慎。
+    不应以此做"买贵了"的核心判断。
+
+    对 CN_VALUE（沪深300/A500/上证50）和 US_BROAD，ERP具有较强参考意义。
+    """
     earnings_yield = (1 / pe * 100) if pe and pe > 0 else 0
-    # 取盈利收益率和股息率的较大值作为"回报率"代理
     equity_yield = max(earnings_yield, dy_pct)
     erp = equity_yield - risk_free_rate_pct
     if erp > 4:    score = 15
     elif erp > 2:  score = 30
     elif erp > 0:  score = 50
     elif erp > -2: score = 70
-    else:          score = 88
+    else:          score = 85
     return score, f"ERP = 盈利收益率{equity_yield:.1f}% - 国债{risk_free_rate_pct:.1f}% = {erp:+.1f}%"
 
 def score_dim6_policy(policy_text, is_us=True):
@@ -626,6 +650,28 @@ obsidian create vault=ZephyrSpace `
 ---
 
 ## 常见陷阱与注意事项
+
+### 方法论陷阱（CN_GROWTH 专用）
+
+8. **D3 PEG 与 D2 前瞻PE 的一致性**：
+   CN_GROWTH 跳过 D2 的理由是"A股分析师预测独立可信度低"，但 D3 PEG 的分子仍然需要 Forward PE。
+   正确处理：用分析师一致预期的 **Forward PE ÷ 一致预期增速**（两者同时来自分析师，但作为比值使用，相对稳定性高于单独的 Forward PE）。
+   常见错误：用 **TTM PE（历史）÷ 前瞻增速（未来）** — 时态混搭，对盈利爬坡期指数系统性高估"贵"。
+   例：科创50 TTM PE=156x ÷ 增速27% = PEG 5.8（极高），但 Forward PE≈80x ÷ 增速65% = PEG 1.2（合理偏贵）。差距接近5倍。
+
+9. **D5 ERP 不适合作为 CN_GROWTH 核心指标**：
+   TTM 盈利收益率对 PE>100x 的早期成长指数无实际意义（1/100=1%，比国债收益率还低）。
+   正确定位：ERP 对 CN_GROWTH 仅作"防泡沫底线"参考，而非"贵或便宜"的主要判据。
+   权重已调低至 7%（原 13%），打分时注明"参考价值有限"即可，不必过度解读负值。
+
+10. **CN_GROWTH 正确打分流程**：
+    ```
+    Step 1: 获取 Forward PE（Wind/Bloomberg 分析师一致预期，或参考市场报道）
+    Step 2: 获取 Forward 盈利增速（同一来源，确保时态一致）
+    Step 3: PEG = Forward PE ÷ Forward 增速
+    Step 4: 若以上均无可靠来源 → D3 返回 None，跳过（不强行打分）
+    禁止：TTM PE ÷ Forward 增速（混搭时态）
+    ```
 
 ### 数据陷阱
 
