@@ -50,7 +50,8 @@
 | 标普、标普500、SPX、SPY | SPX | 标普500 | US_BROAD | — | 513500 |
 | 沪深300、HS300、000300 | 000300 | 沪深300 | CN_VALUE | 000300 | 510300 |
 | A500、中证A500、000510 | 000510 | 中证A500 | CN_VALUE | 000510 ⚠️ | 159800 |
-| 科创、科创综指 | 000688 | 科创综合指数 | CN_GROWTH | 000688 ⚠️ | 588000 |
+| 科创、科创50、000688 | 000688 | 科创50 | CN_GROWTH | 000688 | 588150（南方）/588000 |
+| 科创100、000698 | 000698 | 科创100 | CN_GROWTH | 000698 | 588200 |
 | 创业板、创业板指、399006 | 399006 | 创业板指 | CN_GROWTH | 399006 | 159915 |
 | 上证50、000016 | 000016 | 上证50 | CN_VALUE | 000016 | 510050 |
 
@@ -126,11 +127,13 @@ def lx_post(path, payload):
     r = requests.post(f"{BASE}/{path}",
                       json={**payload, "token": TOKEN},
                       headers={"Accept-Encoding": "gzip"})  # ⚠️ 必须设置
-    raw = gzip.decompress(r.content) if "gzip" in r.headers.get("Content-Encoding","") else r.content
+    # requests 会自动处理 gzip 解压；直接用 r.json() 最稳健
+    # 如需手动处理：try gzip.decompress(r.content) except BadGzipFile: use r.content
+    raw = r.content  # r.json() 在调用方直接 json.loads(raw) 兼容
     return json.loads(raw)
 
 trade_date = last_trading_day()
-annual_date = f"{date.today().year - (1 if date.today().month < 5 else 0)}-12-31"
+annual_date = f"{date.today().year - 1}-12-31"  # 取上一个已完成财年（如2026年5月→2025-12-31）
 
 # --- PE分位 + 股息率 ---
 fund = lx_post("cn/index/fundamental", {
@@ -626,7 +629,7 @@ obsidian create vault=ZephyrSpace `
 
 ### 数据陷阱
 
-1. **理杏仁必须设置 gzip header**：所有请求头需含 `"Accept-Encoding": "gzip"`，否则返回 HTTP 429。
+1. **理杏仁 gzip 处理**：必须设置 `headers={"Accept-Encoding": "gzip"}` 否则返回 HTTP 429；但响应是否真的 gzip 压缩由服务端决定。**最稳健做法是直接用 `r.json()`**，requests 会自动处理解压，不要手动调 `gzip.decompress()`。
 
 2. **理杏仁代码不带后缀**：`000300`（不是 `000300.SH`），`399006`（不是 `399006.SZ`）。
 
@@ -637,7 +640,18 @@ obsidian create vault=ZephyrSpace `
 
 4. **理杏仁 fundamental 日期必须是交易日**：周末传入会静默返回空，用 `last_trading_day()` 函数。
 
-5. **ROE年报日期**：`annual_date = f"{year-1 if month<5 else year}-12-31"` 取最近年末日；4月前用上一年年报。
+5. **ROE年报日期**：`annual_date = f"{date.today().year - 1}-12-31"` 始终取上一个完整财年（如2026年任何月份都取 2025-12-31），因为当年年报要等到次年4月才完整披露。
+
+6. **科创板(688xxx)成分股 ROE**：理杏仁 `cn/company/fs/non_financial` 对科创板股票返回空数据（已实测）。改用 **tushare `fina_indicator`** 获取年报ROE，权重数据用 **akshare `index_stock_cons_weight_csindex("000688")`**。示例：
+   ```python
+   import tushare as ts, akshare as ak
+   df = ak.index_stock_cons_weight_csindex(symbol="000688").sort_values("权重",ascending=False).head(20)
+   for _, row in df.iterrows():
+       fi = pro.fina_indicator(ts_code=f"{str(row['成分券代码']).zfill(6)}.SH", fields="roe,end_date", limit=1)
+       roe = fi.iloc[0]["roe"] if len(fi) > 0 else None
+   ```
+
+7. **科创50 constituent-weightings 在理杏仁返回空**：理杏仁 `cn/index/constituent-weightings` 不支持科创50（000688），`data` 为空列表。必须用 akshare 替代。
 
 6. **美股PE百分位**：内置基准（`US_PE_BENCHMARKS`）基于 2015-2025 历史，**每年1月应手动更新一次**。每次更新时，从 macrotrends 查看最新 10 年 P20/P50/P80 数据后修改 skill 文件中的值。
 
