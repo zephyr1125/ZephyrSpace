@@ -1,0 +1,664 @@
+# 指数贵不贵周评 Skill
+
+## 用途
+
+每周对主要指数进行 **12维度量化估值打分**，输出 **0–100 分**（越高越贵），
+转换为操作信号，作为加仓/减仓/观望的策略参考。
+
+**与 `index-prebuy.skill` 的区别：**
+
+| | index-valuation-weekly（本技能）| index-prebuy |
+|---|---|---|
+| 定位 | 周期性扫描（每周跑）| 一次性深度分析 |
+| 覆盖 | 主要宽基指数（含美股）| 行业/主题指数 |
+| 输出 | 打分卡 + 操作信号 | 买入价格区间 + watchlist决策 |
+| 写入 | 99-个人观察/周评记录/ | 05-A股指数/ + watchlist_index.json |
+
+---
+
+## 触发词
+
+用户说以下任意表述时，**直接执行，不需要二次确认**：
+
+- `[指数名/代码] 贵不贵`
+- `周评 [指数名]`
+- `[指数名] 现在值得加仓吗`
+- `[指数名] 该加仓还是减仓`
+- `帮我分析 [指数名] 贵不贵`
+
+---
+
+## 操作信号对照表
+
+| 总分 | 信号 | 操作参考 |
+|---|---|---|
+| 0–30 | 💚 很便宜 | 积极建仓 / 大幅增仓 |
+| 30–45 | 🟢 偏便宜 | 分批建仓 / 适度增仓 |
+| 45–60 | 🟡 合理中性 | 持仓观望，不追高不减仓 |
+| 60–75 | 🟠 偏贵 | 不追高，可减仓至标准仓位 |
+| 75–100 | 🔴 很贵 | 减仓，等待回调机会 |
+
+---
+
+## 第 0 步：识别指数类型
+
+### 指数配置表
+
+| 用户常用表述 | 标准代码 | 指数名 | 类型 | 理杏仁代码 | 国内跟踪ETF |
+|---|---|---|---|---|---|
+| 纳指、纳指100、NDX、QQQ | NDX | 纳斯达克100 | US_TECH | — | 513100 |
+| 标普、标普500、SPX、SPY | SPX | 标普500 | US_BROAD | — | 513500 |
+| 沪深300、HS300、000300 | 000300 | 沪深300 | CN_VALUE | 000300 | 510300 |
+| A500、中证A500、000510 | 000510 | 中证A500 | CN_VALUE | 000510 ⚠️ | 159800 |
+| 科创、科创综指 | 000688 | 科创综合指数 | CN_GROWTH | 000688 ⚠️ | 588000 |
+| 创业板、创业板指、399006 | 399006 | 创业板指 | CN_GROWTH | 399006 | 159915 |
+| 上证50、000016 | 000016 | 上证50 | CN_VALUE | 000016 | 510050 |
+
+⚠️ 首次使用时，先调用理杏仁验证代码是否有效（若 data 为空，查中证官网确认代码）。
+
+### 权重矩阵（Python，写入脚本时使用）
+
+```python
+WEIGHTS = {
+    "US_TECH": {
+        1: 0.20,   # 动态PE历史分位
+        2: 0.15,   # 前瞻PE（Forward PE）
+        3: 0.10,   # PEG
+        4: 0.08,   # ROE质量
+        5: 0.10,   # 股债利差（ERP）
+        6: 0.10,   # 央行政策
+        7: 0.08,   # VIX/波动
+        8: 0.06,   # 资金流入
+        9: 0.05,   # ETF溢价
+        10: 0.05,  # 技术面（均线乖离）
+        11: 0.02,  # 地缘/宏观风险
+        12: 0.01,  # 成分股变动
+    },
+    "US_BROAD": {
+        1: 0.20, 2: 0.12, 3: 0.08, 4: 0.08,
+        5: 0.12, 6: 0.10, 7: 0.08, 8: 0.06,
+        9: 0.05, 10: 0.06, 11: 0.03, 12: 0.02,
+    },
+    "CN_VALUE": {
+        # 前瞻PE不可靠，权重归零 → 补给ERP(+8%)和资金流入(+4%)、成分股变动(+3%)
+        1: 0.20, 2: 0.00, 3: 0.05, 4: 0.08,
+        5: 0.18, 6: 0.10, 7: 0.08, 8: 0.10,
+        9: 0.05, 10: 0.06, 11: 0.04, 12: 0.06,
+    },
+    "CN_GROWTH": {
+        # 前瞻PE不可靠归零 → 补给PEG(+8%)、成分股变动(+4%)、ERP(+3%)
+        1: 0.20, 2: 0.00, 3: 0.18, 4: 0.08,
+        5: 0.13, 6: 0.10, 7: 0.08, 8: 0.08,
+        9: 0.05, 10: 0.06, 11: 0.03, 12: 0.01,
+    },
+}
+```
+
+---
+
+## 第 1 步：量化数据采集
+
+> 以下批次1-3 **可并行执行**（分别在不同 PowerShell 会话或并行 agent 中运行）。
+
+### 批次1-A：A股指数 — PE分位 + 股息率（理杏仁）
+
+仅当指数类型为 `CN_VALUE` 或 `CN_GROWTH` 时执行。
+
+将以下代码写入 `scripts/tmp_valuation_cn.py` 并执行：
+
+```python
+import requests, gzip, json, os, sys
+from datetime import date, timedelta
+from dotenv import load_dotenv
+load_dotenv()
+
+TOKEN = os.getenv("LIXINGER_TOKEN")
+BASE  = "https://open.lixinger.com/api"
+INDEX_CODE = sys.argv[1]  # 命令行传入，如 "000300"
+
+def last_trading_day():
+    d = date.today()
+    while d.weekday() >= 5:
+        d -= timedelta(days=1)
+    return d.isoformat()
+
+def lx_post(path, payload):
+    r = requests.post(f"{BASE}/{path}",
+                      json={**payload, "token": TOKEN},
+                      headers={"Accept-Encoding": "gzip"})  # ⚠️ 必须设置
+    raw = gzip.decompress(r.content) if "gzip" in r.headers.get("Content-Encoding","") else r.content
+    return json.loads(raw)
+
+trade_date = last_trading_day()
+annual_date = f"{date.today().year - (1 if date.today().month < 5 else 0)}-12-31"
+
+# --- PE分位 + 股息率 ---
+fund = lx_post("cn/index/fundamental", {
+    "stockCodes": [INDEX_CODE], "date": trade_date,
+    "metricsList": [
+        "pe_ttm.mcw",
+        "pe_ttm.y3.mcw.cvpos","pe_ttm.y3.mcw.q2v","pe_ttm.y3.mcw.q5v","pe_ttm.y3.mcw.q8v",
+        "pe_ttm.y5.mcw.cvpos","pe_ttm.y5.mcw.q2v","pe_ttm.y5.mcw.q5v","pe_ttm.y5.mcw.q8v",
+        "dyr.mcw"
+    ]
+})
+d = fund["data"][0]
+current_pe   = d["pe_ttm.mcw"]
+cv_3y        = d["pe_ttm.y3.mcw.cvpos"]
+q2v, q5v, q8v = d["pe_ttm.y3.mcw.q2v"], d["pe_ttm.y3.mcw.q5v"], d["pe_ttm.y3.mcw.q8v"]
+cv_5y        = d.get("pe_ttm.y5.mcw.cvpos")
+current_dy   = d.get("dyr.mcw") or 0.0
+
+# --- 技术面：当前价 + 250日均线 ---
+from datetime import datetime
+start_date = (date.today() - timedelta(days=380)).isoformat()
+candle = lx_post("cn/index/candlestick", {
+    "stockCode": INDEX_CODE, "type": "normal",
+    "startDate": start_date, "endDate": trade_date
+})
+closes = [float(x["close"]) for x in candle["data"]]  # 降序，最新在前
+current_price = closes[0]
+ma250 = sum(closes[:250]) / min(250, len(closes))
+deviation_pct = (current_price / ma250 - 1) * 100
+
+# --- ROE：前20大成分股加权平均（年报）---
+weights_resp = lx_post("cn/index/constituent-weightings", {
+    "stockCode": INDEX_CODE, "date": trade_date
+})
+stocks = sorted(weights_resp.get("data",[]), key=lambda x: x.get("weight",0), reverse=True)
+top20 = stocks[:20]
+codes20 = [s["stockCode"] for s in top20]
+w_map  = {s["stockCode"]: s["weight"] for s in top20}
+
+roe_resp = lx_post("cn/company/fs/non_financial", {
+    "stockCodes": codes20, "date": annual_date,
+    "metricsList": ["y.ps.np.t", "y.bs.eq.t"]
+})
+roe_dict = {}
+for item in roe_resp.get("data", []):
+    np_v = item.get("y.ps.np.t")
+    eq_v = item.get("y.bs.eq.t")
+    if np_v and eq_v and eq_v > 0:
+        roe_dict[item["stockCode"]] = (np_v / eq_v) * 100
+
+tw, wroe = 0, 0
+for code, w in w_map.items():
+    if code in roe_dict:
+        wroe += roe_dict[code] * w; tw += w
+weighted_roe = wroe / tw if tw > 0 else None
+
+# --- 输出（供后续脚本读取）---
+result = {
+    "current_pe": current_pe, "cv_3y": cv_3y, "cv_5y": cv_5y,
+    "q2v": q2v, "q5v": q5v, "q8v": q8v,
+    "current_dy": current_dy, "current_price": current_price,
+    "ma250": ma250, "deviation_pct": deviation_pct,
+    "weighted_roe": weighted_roe,
+}
+print(json.dumps(result, ensure_ascii=False))
+```
+
+运行方式：
+```powershell
+python scripts\tmp_valuation_cn.py 000300 > scripts\tmp_cn_result.json
+```
+
+---
+
+### 批次1-B：美股指数 — PE + 技术面（macrotrends web_fetch）
+
+仅当类型为 `US_TECH` 或 `US_BROAD` 时执行。
+
+**NDX（纳斯达克100）PE数据：**
+```python
+# 使用 web_fetch 抓取 macrotrends
+# NDX PE（以QQQ为代理）
+url_ndx_pe = "https://www.macrotrends.net/stocks/charts/QQQ/invesco-qqq-trust/pe-ratio"
+url_ndx_fwd = "https://www.macrotrends.net/stocks/charts/QQQ/invesco-qqq-trust/forward-pe-ratio"
+
+# SPX PE
+url_spx_pe  = "https://www.macrotrends.net/2577/sp-500-pe-ratio-price-to-earnings-chart"
+url_spx_fwd = "https://www.macrotrends.net/stocks/charts/SPY/spdr-s-p-500-etf-trust/forward-pe-ratio"
+```
+
+从页面中提取：当前PE值、历史数据表格（用于计算10年百分位）。
+若 web_fetch 解析失败，使用下方**内置历史基准**：
+
+```python
+# ⚠️ 内置历史基准（每年1月手动更新一次）
+# 基于 2015-2025 十年历史数据
+US_PE_BENCHMARKS = {
+    "NDX": {
+        "current_pe": None,  # 每次运行时从macrotrends获取
+        "fwd_pe": None,      # 从macrotrends获取
+        "p20_ttm": 22.0,     # 10年 P20 PE（便宜区）
+        "p50_ttm": 28.0,     # 10年 P50 PE（中位）
+        "p80_ttm": 38.0,     # 10年 P80 PE（偏贵区）
+        "p20_fwd": 18.0,     # Forward PE P20
+        "p50_fwd": 23.0,     # Forward PE P50
+        "p80_fwd": 30.0,     # Forward PE P80
+        "typical_roe": 28.0, # 历史典型ROE（偏保守用，精确值从stockanalysis获取）
+        # 上次更新：2026-01
+    },
+    "SPX": {
+        "current_pe": None,
+        "fwd_pe": None,
+        "p20_ttm": 16.0,
+        "p50_ttm": 21.0,
+        "p80_ttm": 27.0,
+        "p20_fwd": 14.0,
+        "p50_fwd": 18.0,
+        "p80_fwd": 23.0,
+        "typical_roe": 18.0,
+        # 上次更新：2026-01
+    },
+}
+```
+
+**ROE获取（US，stockanalysis.com）：**
+```
+NDX/QQQ ROE：https://stockanalysis.com/etf/qqq/financials/?p=quarterly
+SPX/SPY ROE：https://stockanalysis.com/etf/spy/financials/?p=quarterly
+```
+
+---
+
+### 批次2：国债收益率 + VIX
+
+```python
+# 中国10年期国债收益率
+url_cn_bond = "https://yield.chinabond.com.cn/cbweb-czb-web/czb/queryGjqxInfo?workTime=&locale=cn"
+# 备用：https://www.chinamoney.com.cn/chinese/bkccpr/  (web_fetch)
+
+# 美国10年期国债
+url_us_bond = "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/TextView?type=daily_treasury_yield_curve&field_tdr_date_value_month={YYYYMM}"
+
+# VIX（美股用）
+url_vix = "https://www.cboe.com/tradable_products/vix/"
+# 备用直接抓数字：https://finance.yahoo.com/quote/%5EVIX/
+```
+
+若上述链接解析困难，使用 Tavily 搜索：
+```python
+from scripts.tavily_search import _get_client
+client = _get_client()
+# 中国国债
+result = client.search("中国10年期国债收益率 今日", max_results=3, search_depth="basic")
+# VIX
+result = client.search("VIX恐慌指数 today current level", max_results=3, search_depth="basic")
+```
+
+---
+
+## 第 2 步：Tavily 定性数据采集（4个并行搜索）
+
+将以下4个搜索**同时触发**：
+
+```python
+from scripts.tavily_search import _get_client, _fmt
+from datetime import date
+client = _get_client()
+today = date.today().strftime("%Y年%m月")
+
+# 搜索1：央行政策
+r_policy = client.search(
+    f"{'美联储' if index_type.startswith('US') else '中国人民银行PBOC'} 利率决议 降息预期 {today}",
+    max_results=5, search_depth="advanced"
+)
+
+# 搜索2：资金流入
+r_flow = client.search(
+    f"{index_name} ETF净流入 {'北向资金' if index_type.startswith('CN') else ''} {today}",
+    max_results=5, search_depth="advanced"
+)
+
+# 搜索3：地缘/宏观风险
+query_geo = (
+    f"美联储 关税 经济衰退风险 {today}" if index_type.startswith('US')
+    else f"中美关系 经济政策 A股风险 {today}"
+)
+r_geo = client.search(query_geo, max_results=4, search_depth="basic")
+
+# 搜索4：成分股变动
+r_rebal = client.search(
+    f"{index_name} 成分股调整 纳入 剔除 {today}",
+    max_results=4, search_depth="basic"
+)
+```
+
+---
+
+## 第 3 步：各维度评分
+
+将以下评分代码写入 `scripts/tmp_score_calc.py`：
+
+```python
+# ====================================================
+# 输入：第1步和第2步采集的数据变量
+# 输出：scores字典（key=维度序号, value=0-100分）
+# ====================================================
+
+def score_dim1_pe_percentile(cv_3y, cv_5y=None):
+    """动态PE历史分位 → 直接转换为0-100分"""
+    score = cv_3y * 100
+    note = f"3年PE百分位 {cv_3y*100:.1f}%"
+    if cv_5y:
+        score = (cv_3y * 0.6 + cv_5y * 0.4) * 100  # 3年+5年加权
+        note += f"，5年分位 {cv_5y*100:.1f}%（加权均值）"
+    return round(score), note
+
+def score_dim1_pe_us(current_pe, benchmarks):
+    """美股PE百分位（基于内置历史基准）"""
+    p20, p50, p80 = benchmarks["p20_ttm"], benchmarks["p50_ttm"], benchmarks["p80_ttm"]
+    if current_pe <= p20:
+        score = 10 + (current_pe / p20) * 20
+    elif current_pe <= p50:
+        score = 30 + ((current_pe - p20) / (p50 - p20)) * 25
+    elif current_pe <= p80:
+        score = 55 + ((current_pe - p50) / (p80 - p50)) * 20
+    else:
+        score = 75 + min(25, ((current_pe - p80) / p80) * 50)
+    return round(score), f"当前PE {current_pe:.1f}x，历史P20={p20}/P50={p50}/P80={p80}"
+
+def score_dim2_forward_pe(fwd_pe, benchmarks):
+    """前瞻PE（仅US，CN类跳过返回None）"""
+    p20, p50, p80 = benchmarks["p20_fwd"], benchmarks["p50_fwd"], benchmarks["p80_fwd"]
+    if fwd_pe <= p20:                score = 20
+    elif fwd_pe <= p50:              score = 30 + (fwd_pe - p20) / (p50 - p20) * 20
+    elif fwd_pe <= p80:              score = 50 + (fwd_pe - p50) / (p80 - p50) * 25
+    else:                            score = 75 + min(20, (fwd_pe - p80) / p80 * 40)
+    return round(score), f"前瞻PE {fwd_pe:.1f}x（历史P20={p20}/P50={p50}/P80={p80}）"
+
+def score_dim3_peg(fwd_pe, growth_pct):
+    """PEG = 前瞻PE ÷ 预期净利润增速%"""
+    if not fwd_pe or not growth_pct or growth_pct <= 0:
+        return None, "PEG无法计算（增速为负或数据缺失）"
+    peg = fwd_pe / growth_pct
+    if peg < 0.8:      score = 15
+    elif peg < 1.0:    score = 30
+    elif peg < 1.2:    score = 50
+    elif peg < 1.5:    score = 65
+    elif peg < 2.0:    score = 80
+    else:              score = 95
+    return score, f"PEG = {fwd_pe:.1f} ÷ {growth_pct:.0f}% = {peg:.2f}"
+
+def score_dim4_roe(roe_pct):
+    """ROE质量（高ROE支撑估值，得分反向）"""
+    if not roe_pct:
+        return 50, "ROE数据缺失，默认中性50分"
+    if roe_pct > 25:   score = 20
+    elif roe_pct > 20: score = 35
+    elif roe_pct > 15: score = 50
+    elif roe_pct > 10: score = 65
+    else:              score = 80
+    return score, f"加权ROE {roe_pct:.1f}%"
+
+def score_dim5_erp(pe, risk_free_rate_pct, dy_pct=0):
+    """股债利差ERP = max(盈利收益率, 股息率) - 无风险利率"""
+    earnings_yield = (1 / pe * 100) if pe and pe > 0 else 0
+    # 取盈利收益率和股息率的较大值作为"回报率"代理
+    equity_yield = max(earnings_yield, dy_pct)
+    erp = equity_yield - risk_free_rate_pct
+    if erp > 4:    score = 15
+    elif erp > 2:  score = 30
+    elif erp > 0:  score = 50
+    elif erp > -2: score = 70
+    else:          score = 88
+    return score, f"ERP = 盈利收益率{equity_yield:.1f}% - 国债{risk_free_rate_pct:.1f}% = {erp:+.1f}%"
+
+def score_dim6_policy(policy_text, is_us=True):
+    """央行政策（Tavily文本 → 固定规则打分）"""
+    text = policy_text.lower()
+    # 判断关键词（优先级从低贵到高贵）
+    if any(k in text for k in ["降息25", "降息50", "降息0.25", "降息0.5", "cut rate", "rate cut"]):
+        return 20, "当前降息周期中"
+    if any(k in text for k in ["降息预期", "预期降息", "75%概率", "有望降息", "expected to cut"]):
+        return 40, "有明确降息预期（市场定价>50%）"
+    if any(k in text for k in ["暂停降息", "维持不变", "pause", "hold", "按兵不动"]):
+        if any(k in text for k in ["年内", "全年", "year", "later"]):
+            return 60, "暂停降息，预期模糊或推迟至年底"
+        return 55, "暂停降息，关注后续指引"
+    if any(k in text for k in ["加息", "hike", "raise rate", "tighten"]):
+        return 85, "加息周期或加息风险"
+    return 60, "政策信号不明确，默认中性偏贵"
+
+def score_dim7_vix(vix_value=None, cn_sentiment=None):
+    """VIX（美股）/ 市场情绪（A股）"""
+    if vix_value is not None:
+        if vix_value < 15:   score = 75
+        elif vix_value < 20: score = 55
+        elif vix_value < 25: score = 40
+        elif vix_value < 30: score = 30
+        else:                score = 15
+        return score, f"VIX = {vix_value:.1f}"
+    # A股：依赖Tavily描述，用关键词判断
+    if cn_sentiment:
+        text = cn_sentiment.lower()
+        if any(k in text for k in ["缩量", "地量", "成交萎缩", "冷清"]):      return 25, "A股成交量萎缩，市场观望情绪重"
+        if any(k in text for k in ["正常", "温和", "平稳"]):                  return 50, "A股市场情绪正常"
+        if any(k in text for k in ["放量", "活跃", "成交创新高", "热度"]):     return 65, "A股成交活跃"
+        if any(k in text for k in ["疯狂", "暴量", "散户涌入", "全面涨停"]):   return 82, "A股情绪过热，警惕"
+    return 50, "波动数据不足，默认中性50分"
+
+def score_dim8_flow(flow_text):
+    """资金流入"""
+    text = flow_text.lower()
+    if any(k in text for k in ["大幅净流入", "创历史新高", "大规模流入", "record inflow"]):
+        return 75, "大幅净流入，情绪偏热"
+    if any(k in text for k in ["净流入", "持续流入", "inflow", "加仓"]):
+        return 55, "温和净流入"
+    if any(k in text for k in ["净流出", "持续流出", "outflow", "减仓", "赎回"]):
+        return 30, "资金净流出"
+    if any(k in text for k in ["大幅流出", "恐慌性赎回", "panic", "massive outflow"]):
+        return 15, "大幅净流出，市场恐慌"
+    return 48, "资金流向中性"
+
+def score_dim9_etf_premium(premium_pct):
+    """ETF溢价率（正=溢价，负=折价）"""
+    if premium_pct < -1:    score = 15
+    elif premium_pct < 0:   score = 30
+    elif premium_pct < 3:   score = 45
+    elif premium_pct < 6:   score = 60
+    elif premium_pct < 10:  score = 75
+    else:                   score = 90
+    return score, f"ETF溢价率 {premium_pct:+.2f}%"
+
+def score_dim10_technical(deviation_pct):
+    """技术面：价格相对250日均线乖离率"""
+    if deviation_pct < -20:       score = 10
+    elif deviation_pct < -10:     score = 25
+    elif deviation_pct < 0:       score = 45
+    elif deviation_pct < 10:      score = 55
+    elif deviation_pct < 20:      score = 70
+    else:                         score = 85
+    return score, f"价格较250日均线乖离 {deviation_pct:+.1f}%"
+
+def score_dim11_geopolitical(geo_text):
+    """地缘/宏观风险"""
+    text = geo_text.lower()
+    if any(k in text for k in ["停火", "缓和", "达成协议", "降低关税", "ceasefire", "de-escalat"]):
+        return 25, "地缘/宏观风险缓和"
+    if any(k in text for k in ["升级", "冲突扩大", "制裁加码", "衰退预期", "escalat", "recession"]):
+        return 75, "地缘/宏观风险升级"
+    return 50, "宏观风险中性"
+
+def score_dim12_rebalance(rebal_text):
+    """成分股变动"""
+    text = rebal_text.lower()
+    if any(k in text for k in ["纳入", "ai", "半导体", "科技龙头", "高增速", "added"]):
+        if any(k in text for k in ["剔除", "传统", "低增速", "removed"]):
+            return 25, "调入优质成长成分，调出低质成分，指数质量提升"
+    if any(k in text for k in ["无重大调整", "no major change", "维持"]):
+        return 50, "近期无重大成分调整"
+    if any(k in text for k in ["纳入传统", "成长性下降", "科技占比降低"]):
+        return 75, "成长性成分被稀释"
+    return 50, "成分股变动信息不明确，默认中性"
+
+# ====================================================
+# 汇总函数
+# ====================================================
+
+def calculate_total(scores_dict, weights_dict, index_type):
+    w = weights_dict[index_type]
+    total = 0.0
+    detail = {}
+    for dim, score in scores_dict.items():
+        if score is None:
+            continue  # 跳过无法计算的维度（如CN类的前瞻PE）
+        weight = w[dim]
+        weighted = score * weight
+        total += weighted
+        detail[dim] = {"score": score, "weight": weight, "weighted": round(weighted, 2)}
+    return round(total, 1), detail
+
+def signal_from_score(total):
+    if total < 30:   return "💚 很便宜", "积极建仓 / 大幅增仓"
+    if total < 45:   return "🟢 偏便宜", "分批建仓 / 适度增仓"
+    if total < 60:   return "🟡 合理中性", "持仓观望，不追高不减仓"
+    if total < 75:   return "🟠 偏贵", "不追高，可减仓至标准仓位"
+    return "🔴 很贵", "减仓，等待回调机会"
+```
+
+---
+
+## 第 4 步：汇总输出
+
+完成评分后，**在对话中先输出打分卡**，格式如下：
+
+```
+## [指数名] 贵不贵 — YYYY-MM-DD
+
+| # | 维度 | 当前数据 | 得分 | 权重 | 加权得分 |
+|---|---|---|---|---|---|
+| 1 | 动态PE历史分位 | [PE]x（[百分位]%分位）| [S1] | [W1]% | [W1×S1/100] |
+| 2 | 前瞻PE | [fwd_pe]x（历史[%分位]%）| [S2] | [W2]% | … |
+| 3 | PEG | [peg] | … |
+| 4 | ROE质量 | [roe]% | … |
+| 5 | 股债利差(ERP) | [erp]% | … |
+| 6 | 央行政策 | [政策描述] | … |
+| 7 | VIX/波动 | [VIX值 or 描述] | … |
+| 8 | 资金流入 | [描述] | … |
+| 9 | ETF溢价 | [溢价率]% | … |
+| 10 | 技术面 | 乖离[%] | … |
+| 11 | 地缘/宏观 | [描述] | … |
+| 12 | 成分股变动 | [描述] | … |
+| **合计** | | | | 100% | **[总分]** |
+
+**总分：[总分] / 100**
+**信号：[emoji+信号]**
+**操作参考：[操作建议]**
+```
+
+---
+
+## 第 5 步：写入 Vault
+
+使用 Obsidian CLI 写入 `99-个人观察/周评记录/`：
+
+```powershell
+# 文件名格式：YYYY-MM-DD [指数名].md
+obsidian create vault=ZephyrSpace `
+  path="99-个人观察/周评记录/YYYY-MM-DD [指数名].md" `
+  content="[完整Markdown内容]"
+```
+
+**写入的 Markdown 模板：**
+
+```markdown
+---
+指数: [指数名]
+类型: [US_TECH|US_BROAD|CN_VALUE|CN_GROWTH]
+评估日期: YYYY-MM-DD
+总分: XX.X
+信号: [文字信号，如"偏贵"]
+---
+
+## [指数名] 贵不贵 — YYYY-MM-DD
+
+[打分卡表格]
+
+## 各维度简评
+
+**1. 动态PE历史分位（[S1]分）**
+[2-3句话：数值、历史位置、含义]
+
+**2. 前瞻PE（[S2]分）**
+[2-3句话，CN类注明"前瞻PE权重为零，A股分析师预测可信度低"]
+
+**3. PEG（[S3]分）**
+[数据来源+计算过程]
+
+**4. ROE质量（[S4]分）**
+[加权ROE数值+与历史均值/标杆对比]
+
+**5. 股债利差ERP（[S5]分）**
+[盈利收益率-国债收益率=ERP，含义]
+
+**6. 央行政策（[S6]分）**
+[搜索摘要+打分依据]
+
+**7. VIX/波动（[S7]分）**
+[VIX数值或A股情绪描述]
+
+**8. 资金流入（[S8]分）**
+[ETF净流入/北向资金方向]
+
+**9. ETF溢价（[S9]分）**
+[溢价率+来源]
+
+**10. 技术面（[S10]分）**
+[当前价/年线/乖离率]
+
+**11. 地缘/宏观风险（[S11]分）**
+[风险描述]
+
+**12. 成分股变动（[S12]分）**
+[最近调样情况]
+
+---
+*数据来源：理杏仁（A股PE/ROE/技术面）/ macrotrends（美股PE）/ Tavily（定性）/ CBOE（VIX）*
+*评估时间：[完整时间戳]*
+```
+
+---
+
+## 常见陷阱与注意事项
+
+### 数据陷阱
+
+1. **理杏仁必须设置 gzip header**：所有请求头需含 `"Accept-Encoding": "gzip"`，否则返回 HTTP 429。
+
+2. **理杏仁代码不带后缀**：`000300`（不是 `000300.SH`），`399006`（不是 `399006.SZ`）。
+
+3. **理杏仁 [S] 端点 vs [M] 端点**：
+   - `cn/index/candlestick` 是 [S]，参数用 `stockCode`（单数字符串）
+   - `cn/index/fundamental` 是 [M]，参数用 `stockCodes`（数组）
+   - `cn/company/fs/non_financial` 带 `date` 参数时是 [M]（批量）
+
+4. **理杏仁 fundamental 日期必须是交易日**：周末传入会静默返回空，用 `last_trading_day()` 函数。
+
+5. **ROE年报日期**：`annual_date = f"{year-1 if month<5 else year}-12-31"` 取最近年末日；4月前用上一年年报。
+
+6. **美股PE百分位**：内置基准（`US_PE_BENCHMARKS`）基于 2015-2025 历史，**每年1月应手动更新一次**。每次更新时，从 macrotrends 查看最新 10 年 P20/P50/P80 数据后修改 skill 文件中的值。
+
+7. **ETF溢价仅对"跨境"ETF意义显著**：沪深300 ETF（510300）通常折溢价接近 0%，这个维度对它意义有限，得分基本固定在45左右。对"国内跟踪美股"的 ETF（如513100纳指ETF）溢价可达3-10%，此维度有效。
+
+8. **A股 前瞻PE 权重为0**：CN类指数维度2权重归零，**不要手动估算一个Forward PE塞进去**，直接跳过计算即可。
+
+9. **PEG 增速数据来源说明**：
+   - 美股：从 macrotrends / FactSet 摘要获取分析师一致预期（5年年化EPS增速）
+   - A股：Tavily 搜索 "[指数名] 成分股盈利增速预期 2026"，取综合判断
+   - 若增速为负，PEG无意义，此维度返回 None，权重转移给 PE 分位（维度1）
+
+10. **PowerShell 多行 Python 代码**：不支持 heredoc，必须先写入 `.py` 文件再执行。
+
+### 评分结果异常处理
+
+- 若某维度数据获取失败（API超时/解析失败），该维度得分置 `None`，其权重**等比例分配给其他有效维度**（不直接忽略，否则总分偏低）。
+- 若超过 4 个维度失败，在输出中明确提示"数据不完整，本次评分仅供参考"。
+
+### 输出一致性
+
+- 所有分数取整数（`round()`）
+- 总分保留 1 位小数
+- 每次评分后都写入 vault（即使总分变化很小），便于积累历史趋势
