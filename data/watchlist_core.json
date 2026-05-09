@@ -200,8 +200,35 @@
         "应收账款与存货风险（创新药客户融资困难）"
       ],
       "notes": "2026Q1财报已验证增速，中报（08-30）是验证毛利率可持续性与客户集中度变化的关键窗口。若H1增速>40%且毛利率稳定94%+，可加仓至8-10%；若增速<30%或毛利率环比下滑>5%，需重新评估档位。"
+    },
+    {
+      "name": "腾讯控股",
+      "code": "00700.HK",
+      "board": "港",
+      "source_etf": "direct",
+      "position_role": "中国互联网综合垄断平台，微信社交+游戏广告+金融科技，长期核心底仓",
+      "prebuy_conclusion": "护城河最强（微信11.5亿MAU），OCF/NI=135%，ROE~21%。当前HK$471.4处于中性区，可分批建仓",
+      "watch_reason": "微信生态不可复制；游戏全球份额第一；广告AI驱动效率提升；OCF持续优质；持续回购支撑股价",
+      "current_price": 471.4,
+      "price_date": "2026-05-08",
+      "dv_ttm": 1.1,
+      "price_bands": [
+        583,
+        477,
+        371
+      ],
+      "price_bands_basis": "pe_ttm.y3_range",
+      "price_bands_date": "2026-05-08",
+      "valuation_anchor": "PE历史分位~50%，中性区，当前471.4在中性底477附近",
+      "risk_flags": [
+        "监管政策风险（游戏版号/金融科技合规）",
+        "VIE结构存在理论解散风险，地缘博弈加剧时估值折价"
+      ],
+      "next_earnings_date": "2026-08-13",
+      "next_earnings_type": "中期业绩",
+      "cycle_is_cyclical": false
     }
   ],
   "tier": "core",
-  "updated_at": "2026-05-03T03:05:17.997916Z"
+  "updated_at": "2026-05-09"
 }

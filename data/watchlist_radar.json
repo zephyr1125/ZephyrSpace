@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-08T06:33:06.937343Z",
+  "updated_at": "2026-05-09",
   "entries": [
     {
       "name": "陕西煤业",
@@ -2049,6 +2049,232 @@
       "next_earnings_type": "半年报",
       "cycle_is_cyclical": true,
       "cycle_position": "景气高峰"
+    },
+    {
+      "name": "中通快递",
+      "code": "02057.HK",
+      "board": "港",
+      "source_etf": "direct",
+      "position_role": "中国民营快递第一，规模效益驱动降本，等合规改善后建仓",
+      "prebuy_conclusion": "ROE 14.2%低于15%阈值+WVR结构+合规危机+毛利骤降，多重风险叠加。等合规确认+毛利改善后建仓",
+      "watch_reason": "快递行业规模第一，成本优势明显；若监管问题解决+毛利修复，是极具吸引力的标的",
+      "current_price": 195.0,
+      "price_date": "2026-05-08",
+      "dv_ttm": 2.7,
+      "price_bands": [
+        209,
+        172,
+        135
+      ],
+      "price_bands_basis": "pe_ttm.y3_range",
+      "price_bands_date": "2026-05-08",
+      "valuation_anchor": "PE中低位，但基本面修复前不适合建仓",
+      "entry_trigger": "毛利率>=28%连续两期+经营利润转正+SEC/DOJ合规确认（或PE<=12x同时满足②③）",
+      "risk_flags": [
+        "SEC/DOJ合规调查悬而未决，若处罚落地可能影响在美上市资格",
+        "WVR结构削弱中小股东权益；毛利率骤降至历史低位"
+      ],
+      "next_earnings_date": "2026-08-20",
+      "next_earnings_type": "中期业绩",
+      "cycle_is_cyclical": false
+    },
+    {
+      "name": "老铺黄金",
+      "code": "06181.HK",
+      "board": "港",
+      "source_etf": "direct",
+      "position_role": "中国高端古法黄金珠宝品牌，小众奢侈品赛道",
+      "prebuy_conclusion": "ROE 64%但OCF持续为负（-6.85B HKD），利润含金量存重大疑点。等2026中期OCF由负转正+大股东锁定期后无大规模减持后建仓",
+      "watch_reason": "古法黄金高端定位差异化强；品牌溢价高；若OCF修复，估值重构空间大",
+      "current_price": 592.5,
+      "price_date": "2026-05-08",
+      "dv_ttm": null,
+      "price_bands": [
+        771,
+        593,
+        445
+      ],
+      "price_bands_basis": "pe_ttm.y3_range",
+      "price_bands_date": "2026-05-08",
+      "valuation_anchor": "当前593处于中性底593，OCF转正前不建议入场",
+      "entry_trigger": "2026中期业绩OCF由负转正（>0）+大股东锁定期满后3个月内无大额减持公告",
+      "risk_flags": [
+        "OCF持续为负，利润质量严重存疑，黄金珠宝存货占用大量现金",
+        "黄金价格高位，行业整体估值承压；上市不足两年，信息透明度有限"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "中期业绩",
+      "cycle_is_cyclical": false
+    },
+    {
+      "name": "南山铝业国际",
+      "code": "02610.HK",
+      "board": "港",
+      "source_etf": "direct",
+      "position_role": "铝合金制造，周期股，等铝价企稳后建仓",
+      "prebuy_conclusion": "铝价周期下行+IPO后跌44%+客户集中度>50%，风险较大。等铝价企稳+PB跌破1.0x后建仓",
+      "watch_reason": "航空/汽车铝合金高端产品升级趋势；若价格回升+客户多元化，利润弹性大",
+      "current_price": 38.5,
+      "price_date": "2026-05-08",
+      "dv_ttm": 2.75,
+      "price_bands": [
+        62,
+        42,
+        25
+      ],
+      "price_bands_basis": "pb.y3_range",
+      "price_bands_date": "2026-05-08",
+      "valuation_anchor": "PB定价（周期股），当前PB约1.2x，等跌破1.0x（约HK$25）再建仓",
+      "entry_trigger": "铝价FOB企稳>=380美元/吨+PB跌破1.0x（约HK$25）",
+      "risk_flags": [
+        "铝价周期性下行，单一商品价格主导利润",
+        "IPO后锁定期结束，大股东减持压力"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "中期业绩",
+      "cycle_is_cyclical": true,
+      "cycle_position": "收缩期"
+    },
+    {
+      "name": "紫金黄金国际",
+      "code": "02259.HK",
+      "board": "港",
+      "source_etf": "direct",
+      "position_role": "黄金矿业，周期股，黄金价格高位阶段观察",
+      "prebuy_conclusion": "黄金高位+PE 26.87x+OCF数据缺失（新上市），多重不确定性。等金价回落至$2500-2800/oz且Forward PE<15x后建仓",
+      "watch_reason": "黄金避险属性在地缘风险下长期有支撑；若金价回落至合理区间，矿业股有超额弹性",
+      "current_price": 172.5,
+      "price_date": "2026-05-08",
+      "dv_ttm": 0.87,
+      "price_bands": [
+        230,
+        170,
+        130
+      ],
+      "price_bands_basis": "pe_ttm.y3_range",
+      "price_bands_date": "2026-05-08",
+      "valuation_anchor": "PE 26.87x，黄金高位对应高估值，等金价回落至Forward PE<15x（约HK$130）",
+      "entry_trigger": "金价回落至$2500-2800/oz区间+Forward PE<15x（约HK$130）",
+      "risk_flags": [
+        "黄金价格高位（$3300+/oz），均值回归可能带来利润大幅下滑",
+        "新上市公司历史数据不足，OCF数据缺失，信息透明度低"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "中期业绩",
+      "cycle_is_cyclical": true,
+      "cycle_position": "景气高峰"
+    },
+    {
+      "name": "乐舒适",
+      "code": "02698.HK",
+      "board": "港",
+      "source_etf": "direct",
+      "position_role": "高端卫浴产品，IPO新股观察期",
+      "prebuy_conclusion": "解禁压力+未纳入港股通+新上市仅6个月，多重短期压力。等解禁后3-4周无大额抛压后评估",
+      "watch_reason": "高端卫浴需求稳定，若解禁平稳度过则可分析基本面再决策",
+      "current_price": 28.1,
+      "price_date": "2026-05-08",
+      "dv_ttm": null,
+      "price_bands": [
+        39,
+        32,
+        26
+      ],
+      "price_bands_basis": "pe_ttm.y3_range",
+      "price_bands_date": "2026-05-08",
+      "valuation_anchor": "上市不足1年，历史分位数据不足，以绝对PE估算为主",
+      "entry_trigger": "解禁后3-4周成交量回落至日均以下，无大额抛压信号，且纳入港股通",
+      "risk_flags": [
+        "解禁压力：大量IPO前股份即将解禁，成本远低于当前价",
+        "未纳入港股通，南向资金无法买入，流动性受限"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "中期业绩",
+      "cycle_is_cyclical": false
+    },
+    {
+      "name": "飞速创新",
+      "code": "03355.HK",
+      "board": "港",
+      "source_etf": "direct",
+      "position_role": "高性能Wi-Fi/网络设备，华为商标诉讼风险观察",
+      "prebuy_conclusion": "华为商标侵权诉讼未决+A股三次上市失败+流动性偏低，多重风险。等诉讼结果明朗后再评估",
+      "watch_reason": "若商标诉讼胜诉或和解，品牌风险解除后基本面可重新评估",
+      "current_price": 44.24,
+      "price_date": "2026-05-08",
+      "dv_ttm": 1.21,
+      "price_bands": [
+        57,
+        43,
+        33
+      ],
+      "price_bands_basis": "pe_ttm.y3_range",
+      "price_bands_date": "2026-05-08",
+      "valuation_anchor": "诉讼风险未解除前估值折价合理",
+      "entry_trigger": "华为商标侵权诉讼一审结果明朗（胜诉或达成协议）且A股上市计划有实质进展",
+      "risk_flags": [
+        "华为商标侵权诉讼：若败诉需更名+赔偿，对品牌和财务双重冲击",
+        "A股三次上市失败显示信披/合规问题，流动性偏低（港股）"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "中期业绩",
+      "cycle_is_cyclical": false
+    },
+    {
+      "name": "珩湾科技",
+      "code": "01523.HK",
+      "board": "港",
+      "source_etf": "direct",
+      "position_role": "全球SD-WAN细分龙头，Peplink品牌超轻资产compounder",
+      "prebuy_conclusion": "ROE 79%+净利率35%+OCF/NI=115%+零债务，质量极优，但当前HK$8.62超3年P80(HK$6.16)，估值偏贵。等回调至HK$7.5以下布局",
+      "watch_reason": "Peplink在海事/矿山/活动转播细分场景定价权极强；Starlink整合打开新市场；几乎零债务的轻资产复利机器",
+      "current_price": 8.62,
+      "price_date": "2026-05-08",
+      "dv_ttm": 4.0,
+      "price_bands": [
+        9.5,
+        7.5,
+        5.5
+      ],
+      "price_bands_basis": "forward_eps_x_pe_range",
+      "price_bands_date": "2026-05-08",
+      "valuation_anchor": "Forward EPS HK$0.43，当前8.62对应PE~20x，超过中性底17x",
+      "entry_trigger": "股价回落至HK$7.5以下（Forward PE<=17x）+下一期半年报确认收入增速恢复至>=15%",
+      "risk_flags": [
+        "FY2025收入增速降至11.4%（vs FY2024的23.9%），需确认增速放缓非系统性",
+        "当前股价接近历史全时高位HK$8.66，追高风险高"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "中期业绩",
+      "cycle_is_cyclical": false
+    },
+    {
+      "name": "周六福",
+      "code": "06168.HK",
+      "board": "港",
+      "source_etf": "direct",
+      "position_role": "大众黄金珠宝加盟商，OCF修复观察标的，高DY候选",
+      "prebuy_conclusion": "OCF危机（FY2025 OCF/NI仅4.8%，vs FY2024的55%），利润含金量存重大疑点。列入RADAR等2026中期OCF修复至40%+后再行动",
+      "watch_reason": "PE ~11x+DY 5.4%，大众黄金消费刚需，若OCF修复则估值显著低估，高赔率标的",
+      "current_price": 19.34,
+      "price_date": "2026-05-08",
+      "dv_ttm": 5.4,
+      "price_bands": [
+        25.0,
+        19.0,
+        14.5
+      ],
+      "price_bands_basis": "ttm_eps_x_pe_range",
+      "price_bands_date": "2026-05-08",
+      "valuation_anchor": "TTM EPS HK$1.75，当前19.34对应PE~11x（中性底），OCF修复前不建议建仓",
+      "entry_trigger": "2026中期业绩OCF/NI>=40%+半年收入增速回升至+10%以上",
+      "risk_flags": [
+        "FY2025 OCF/NI仅4.8%（FY2024为55%），现金流急剧恶化，利润质量存疑",
+        "IPO后股价从HK$53.74跌至19.34（-64%），套牢盘压力大，反弹高度受限"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "中期业绩",
+      "cycle_is_cyclical": false
     }
   ],
   "tier": "radar",

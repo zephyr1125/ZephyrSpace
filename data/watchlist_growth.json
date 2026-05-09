@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-08",
+  "updated_at": "2026-05-09",
   "entries": [
     {
       "code": "601398.SH",
@@ -629,6 +629,276 @@
       ],
       "next_earnings_type": "半年报",
       "next_earnings_date": "2026-08-31"
+    },
+    {
+      "name": "泡泡玛特",
+      "code": "09992.HK",
+      "board": "港",
+      "source_etf": "direct",
+      "position_role": "潮玩IP平台，Pop Mart全球化消费品牌，高ROE成长股",
+      "prebuy_conclusion": "ROE 77%+全球扩张强劲，IP集中（Labubu）是核心风险，OCF/NI=85%略低于90%阈值。当前HK$168偏贵，等回调至HK$147以下分批建仓",
+      "watch_reason": "IP工厂运营能力极强，海外东南亚/北美/欧洲渗透加速；盲盒模式制造稀缺感；增长动能持续验证",
+      "current_price": 168.1,
+      "price_date": "2026-05-08",
+      "dv_ttm": 1.4,
+      "price_bands": [
+        263,
+        189,
+        147
+      ],
+      "price_bands_basis": "pe_ttm.y3_range",
+      "price_bands_date": "2026-05-08",
+      "valuation_anchor": "PE ~40x，历史中高位，当前168.1高于中性底189需更大回调",
+      "risk_flags": [
+        "IP集中风险：Labubu单IP销售占比过高，爆款退潮时收入弹性大",
+        "OCF/NI=85%略低于90%质量门槛，需跟踪"
+      ],
+      "next_earnings_date": "2026-08-20",
+      "next_earnings_type": "中期业绩",
+      "cycle_is_cyclical": false
+    },
+    {
+      "name": "安踏体育",
+      "code": "02020.HK",
+      "board": "港",
+      "source_etf": "direct",
+      "position_role": "中国运动服装龙头，多品牌矩阵（安踏+FILA+始祖鸟），消费升级受益",
+      "prebuy_conclusion": "ROE 22.5%+OCF/NI=154%，PE处于历史底部，赔率最佳。当前HK$78.25处于绿灯区下沿，可分批建仓",
+      "watch_reason": "品牌矩阵覆盖大众到高端；始祖鸟高增速+FILA品牌力强；管理层持续公开市场回购",
+      "current_price": 78.25,
+      "price_date": "2026-05-08",
+      "dv_ttm": 3.1,
+      "price_bands": [
+        116,
+        84,
+        63
+      ],
+      "price_bands_basis": "pe_ttm.y3_range",
+      "price_bands_date": "2026-05-08",
+      "valuation_anchor": "PE ~17x，3年P20附近，历史底部估值",
+      "risk_flags": [
+        "行业竞争加剧（耐克/阿迪恢复+李宁），份额争夺激烈",
+        "FILA增速放缓风险，高端定位维护难度上升"
+      ],
+      "next_earnings_date": "2026-08-25",
+      "next_earnings_type": "中期业绩",
+      "cycle_is_cyclical": false
+    },
+    {
+      "name": "华润万象生活",
+      "code": "01209.HK",
+      "board": "港",
+      "source_etf": "direct",
+      "position_role": "高质量商业物业运营商，购物中心+住宅物管双引擎",
+      "prebuy_conclusion": "ROE 25%+OCF/NI=103%，商业管理强壁垒，但收入增速仅4%偏慢。当前HK$50处于中性区，等回调至HK$36-40绿灯区建仓更佳",
+      "watch_reason": "高端购物中心运营能力领先；REITs化预期提供估值支撑；物业管理费率可持续提升",
+      "current_price": 50.2,
+      "price_date": "2026-05-08",
+      "dv_ttm": 2.3,
+      "price_bands": [
+        64,
+        50,
+        36
+      ],
+      "price_bands_basis": "pe_ttm.y3_range",
+      "price_bands_date": "2026-05-08",
+      "valuation_anchor": "PE ~28x，当前50处于中性底50附近",
+      "risk_flags": [
+        "收入增速仅4%，增长动能不足，估值溢价承压",
+        "母公司华润置地拿地放缓可能影响新项目来源"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "中期业绩",
+      "cycle_is_cyclical": false
+    },
+    {
+      "name": "蜜雪集团",
+      "code": "02097.HK",
+      "board": "港",
+      "source_etf": "direct",
+      "position_role": "全球规模第一现制饮品连锁，极致性价比模式，下沉市场主导者",
+      "prebuy_conclusion": "ROE 30%+全球门店超45000家+供应链护城河深，H股全流通后短期供应压力是主要风险。当前HK$287.6处于中性区，等回调至HK$198以下分批建仓",
+      "watch_reason": "极致性价比模式在经济下行期更具韧性；东南亚扩张快速；供应链垂直整合降低加盟商成本",
+      "current_price": 287.6,
+      "price_date": "2026-05-08",
+      "dv_ttm": null,
+      "price_bands": [
+        396,
+        288,
+        198
+      ],
+      "price_bands_basis": "pe_ttm.y3_range",
+      "price_bands_date": "2026-05-08",
+      "valuation_anchor": "当前288处于中性底288，估值合理区间上沿",
+      "risk_flags": [
+        "H股全流通期供应压力：大量内资持有人可能通过港股套现",
+        "食品安全/门店质量管控难度随门店数量增加而上升"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "中期业绩",
+      "cycle_is_cyclical": false
+    },
+    {
+      "name": "普拉达",
+      "code": "01913.HK",
+      "board": "港",
+      "source_etf": "direct",
+      "position_role": "欧洲顶级奢侈品集团，Prada+Miu Miu双品牌，港股严重低估的奢品股",
+      "prebuy_conclusion": "ROE 19%+OCF/NI=194%+PE 12.5x严重低估（vs同类30-40x）。当前HK$38.46处于黄绿分界，即刻布局较合适",
+      "watch_reason": "Miu Miu成为全球增速最快奢侈品牌；PE显著低于LVMH/开云等欧洲同行；现金流质量极优",
+      "current_price": 38.46,
+      "price_date": "2026-05-08",
+      "dv_ttm": 3.91,
+      "price_bands": [
+        67.5,
+        46,
+        30.7
+      ],
+      "price_bands_basis": "pe_ttm.y3_range",
+      "price_bands_date": "2026-05-08",
+      "valuation_anchor": "PE 12.5x，显著低于欧洲同行30-40x，处于历史低估区",
+      "risk_flags": [
+        "奢侈品消费周期风险：中国高净值人群境外消费回流不稳定",
+        "汇率风险：欧元/港元波动影响折算业绩"
+      ],
+      "next_earnings_date": "2026-07-31",
+      "next_earnings_type": "中期业绩",
+      "cycle_is_cyclical": false
+    },
+    {
+      "name": "毛戈平",
+      "code": "01318.HK",
+      "board": "港",
+      "source_etf": "direct",
+      "position_role": "中国高端彩妆品牌，MGPIN自有IP，创始人强个人品牌效应",
+      "prebuy_conclusion": "ROE 29.5%+OCF~100%，高端国货彩妆稀缺标的，但PE 25.5x当前偏贵。等回调至HK$70以下（PE~22x）分批建仓",
+      "watch_reason": "高端美妆国产替代先行者，创始人IP背书强；百货专柜渠道护城河；毛利率持续改善",
+      "current_price": 72.3,
+      "price_date": "2026-05-08",
+      "dv_ttm": 1.58,
+      "price_bands": [
+        85,
+        70,
+        51
+      ],
+      "price_bands_basis": "pe_ttm.y3_range",
+      "price_bands_date": "2026-05-08",
+      "valuation_anchor": "PE 25.5x，处于中性区，等中性底70以下入场",
+      "risk_flags": [
+        "创始人高度依赖风险：创始人品牌与公司高度绑定",
+        "百货渠道萎缩，线上化转型进度是核心变量"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "中期业绩",
+      "cycle_is_cyclical": false
+    },
+    {
+      "name": "巨子生物",
+      "code": "02367.HK",
+      "board": "港",
+      "source_etf": "direct",
+      "position_role": "胶原蛋白功效护肤龙头，可复美+可丽金双品牌，医美级护肤新赛道",
+      "prebuy_conclusion": "PE 14.95x合理+三类医械新催化剂，2025净利-7%是阶段性调整，当前HK$31处于黄灯区。等回调至HK$25绿灯区建仓",
+      "watch_reason": "重组胶原蛋白技术壁垒高，专利保护期长；三类医械资质打开医院渠道；功效护肤赛道高速增长",
+      "current_price": 31.1,
+      "price_date": "2026-05-08",
+      "dv_ttm": 1.97,
+      "price_bands": [
+        45,
+        35,
+        25
+      ],
+      "price_bands_basis": "pe_ttm.y3_range",
+      "price_bands_date": "2026-05-08",
+      "valuation_anchor": "PE 14.95x，处于历史中低位，绿灯区起点25对应PE~12x",
+      "risk_flags": [
+        "功效护肤品牌竞争加剧，后入者持续压价",
+        "三类医械临床数据若不达预期，催化剂落空"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "中期业绩",
+      "cycle_is_cyclical": false
+    },
+    {
+      "name": "赤子城科技",
+      "code": "09911.HK",
+      "board": "港",
+      "source_etf": "direct",
+      "position_role": "出海社交平台，MICO/YoYo多元文化社交，中东/东南亚新兴市场龙头",
+      "prebuy_conclusion": "ROE 45%+PE 11.9x，出海社交稀缺标的，当前HK$9.78明显低估，分批布局",
+      "watch_reason": "中东/北非/东南亚社交市场渗透率低，先发优势强；直播打赏ARPU持续提升；轻资产高ROE",
+      "current_price": 9.78,
+      "price_date": "2026-05-08",
+      "dv_ttm": null,
+      "price_bands": [
+        17,
+        12,
+        9
+      ],
+      "price_bands_basis": "pe_ttm.y3_range",
+      "price_bands_date": "2026-05-08",
+      "valuation_anchor": "PE 11.9x，历史低位，当前9.78接近最优区9以下",
+      "risk_flags": [
+        "中东政策监管风险，社交内容合规要求严格",
+        "市值偏小（~40亿HKD），流动性风险较高"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "中期业绩",
+      "cycle_is_cyclical": false
+    },
+    {
+      "name": "康臣药业",
+      "code": "01681.HK",
+      "board": "港",
+      "source_etf": "direct",
+      "position_role": "中成药特色品种+化学药双引擎，高股息防御成长，本批次最优标的",
+      "prebuy_conclusion": "PE 11.5x强买区+4.7%股息+OCF/NI=112%，基本面清晰，当前HK$15.5处于绿灯区，可立刻布局",
+      "watch_reason": "尿毒清颗粒等特色品种市场份额稳固；中药配方颗粒放量；管理层持续增持；高股息提供安全边际",
+      "current_price": 15.5,
+      "price_date": "2026-05-08",
+      "dv_ttm": 4.7,
+      "price_bands": [
+        27,
+        21,
+        16
+      ],
+      "price_bands_basis": "pe_ttm.y3_range",
+      "price_bands_date": "2026-05-08",
+      "valuation_anchor": "PE 11.5x，历史底部，绿灯区16以下对应PE~12x",
+      "risk_flags": [
+        "集采风险：中成药纳入集采后毛利率大幅下降的尾部风险",
+        "港股流动性偏低，中小市值折价"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "中期业绩",
+      "cycle_is_cyclical": false
+    },
+    {
+      "name": "滨江服务",
+      "code": "03316.HK",
+      "board": "港",
+      "source_etf": "direct",
+      "position_role": "港股高质量物业管理，高股息+净现金防御底仓",
+      "prebuy_conclusion": "PE 10.4x+DY 7%+OCF/NI=139%+零有息负债+净现金HK$39亿，安全边际极高。当前HK$25.78超3年P80，等回调至HK$22以下（DY>=8%）建仓",
+      "watch_reason": "ROE 37%靠纯经营杠杆；剔净现金后PE~5x；已签约面积128%储备锁定未来收入；续签率100%+费率年均+14%",
+      "current_price": 25.78,
+      "price_date": "2026-05-08",
+      "dv_ttm": 7.0,
+      "price_bands": [
+        30.0,
+        22.5,
+        20.0
+      ],
+      "price_bands_basis": "dv_ttm_anchor+3yr_price_range",
+      "price_bands_date": "2026-05-08",
+      "valuation_anchor": "年化股息HK$1.80，DY锚定：30(DY<6%追高)/22.5(DY=8%中性)/20(DY=9%较好)",
+      "risk_flags": [
+        "60-70%收入来自母公司滨江集团，若母公司缩减开发则接管增长放缓",
+        "63.6%在管面积集中于杭州，区域集中风险"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "中期业绩",
+      "cycle_is_cyclical": false
     }
   ],
   "tier": "growth",
