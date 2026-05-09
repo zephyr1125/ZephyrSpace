@@ -1,0 +1,6 @@
+{
+  "statusLine": {
+    "type": "command",
+    "command": "input=$(cat); CYAN=$(printf '\\033[96m'); YEL=$(printf '\\033[33m'); PINK=$(printf '\\033[95m'); R=$(printf '\\033[0m'); model=$(echo \"$input\" | jq -r '.model.display_name // empty' | sed 's/^Claude //'); ctx_pct=$(echo \"$input\" | jq -r '.context_window.used_percentage // empty'); five_pct=$(echo \"$input\" | jq -r 'if .rate_limits.five_hour then (100 - .rate_limits.five_hour.used_percentage) else empty end'); week_pct=$(echo \"$input\" | jq -r 'if .rate_limits.seven_day then (100 - .rate_limits.seven_day.used_percentage) else empty end'); out=\"${CYAN}${model}${R}\"; [ -n \"$ctx_pct\" ] && out=\"$out  ${YEL}ctx: $(printf '%.0f' \"$ctx_pct\")%${R}\"; [ -n \"$five_pct\" ] && out=\"$out  ${PINK}5h: $(printf '%.0f' \"$five_pct\")%${R}\"; [ -n \"$week_pct\" ] && out=\"$out  ${PINK}7d: $(printf '%.0f' \"$week_pct\")%${R}\"; echo \"$out\""
+  }
+}
