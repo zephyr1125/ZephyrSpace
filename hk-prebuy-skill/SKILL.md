@@ -347,12 +347,12 @@ def calc_hk_price_bands(current_price, latest_eps, q20_pe, q50_pe, q80_pe):
 #### 模块 10：催化剂与验证时间线
 
 必查：
-- 下次财报披露时间（港股只有中期和年度，无季报）
+- 下次财报披露时间（**先判断是否季报公司，再查日期——见下方说明**）
 - 关键订单、新产能、监管审批节点
 - 诉讼/处罚进展
 - 大股东/机构增减持窗口
 
-> ⚠️ **港股财报节奏**（与 A 股不同，只有半年报和年报）：
+> ⚠️ **港股财报节奏**（大多数只有半年报和年报，但存在重要例外）：
 >
 > | 报告类型 | 财年结束后截止日 | 典型时间 |
 > |---|---|---|
@@ -360,6 +360,13 @@ def calc_hk_price_bands(current_price, latest_eps, q20_pe, q50_pe, q80_pe):
 > | 中期业绩（Interim Results）| 半年度结束后 3 个月内 | 8月（12月财年）|
 >
 > 注意：部分港股公司财年不在 12 月结束（银行常为 3/31，太古为 6/30），须查年报确认。
+>
+> **⚠️ 季报例外（重要）**：以下类型的港股公司会额外发布季度业绩，下次财报类型应填 `季度业绩（Q1/Q2/Q3）`，不能默认用「中期业绩」：
+> 1. **自愿季报公司**：腾讯控股（00700.HK）自 2004 年起每季度发布业绩，是港股中极少数自愿季报的大型科技公司
+> 2. **美股双重上市公司**：在纽交所/纳斯达克同时上市的港股（如中通快递 02057.HK/ZTO），跟随美国市场惯例发布季度财报
+>
+> **识别方法**：在 HKEXnews 公告历史中搜索公司过去 12 个月的「业绩公告」，若出现 4 次以上则为季报公司。
+> 或者在 stockanalysis.com 该公司页面查看历史财报频率。
 
 要回答：
 - 未来 2 个月最关键的验证指标是什么
@@ -645,14 +652,48 @@ result = prebuy_web_research(公司名, f"{hk_code}.HK")
 
 ### 第 3.5 步：确认下一期财报日期（港股版）
 
-港股仅有中期和年度两次业绩，无季报。
+> ⚠️ **踩坑记录（2026-05）**：腾讯控股和中通快递的 `next_earnings_type` 曾被错误填为「中期业绩」，实际均为季报公司，应为「季度业绩（Q1）」。
+> **原因**：Skill 曾硬编码「港股无季报」，导致所有公司统一套用半年/年报逻辑，完全漏掉季报例外。
+> **教训**：对任何双重上市公司或知名大型科技公司，必须先验证财报频率，不可默认套用常规逻辑。
+
+**第一步：先判断是否季报公司（必做，不可跳过）**
+
+已知季报公司列表（持续维护，遇到新的随时补充）：
+
+| 公司 | 代码 | 季报原因 |
+|---|---|---|
+| 腾讯控股 | 00700.HK | 自愿季报，自2004年起每季披露 |
+| 中通快递 | 02057.HK | 在NYSE(ZTO)双重上市，遵循美国季报惯例 |
+| 阿里巴巴（港股） | 09988.HK | 在NYSE(BABA)双重上市 |
+| 京东集团（港股） | 09618.HK | 在NASDAQ(JD)双重上市 |
+| 百度集团（港股） | 09888.HK | 在NASDAQ(BIDU)双重上市 |
+| 网易（港股） | 09999.HK | 在NASDAQ(NTES)双重上市 |
+
+**若公司不在以上列表**，通过以下方式快速判断：
+
+```python
+# 方法1：检查 stockanalysis.com 历史财报频率
+# web_fetch https://stockanalysis.com/quote/hkex/{4位代码}/financials/?p=quarterly
+# 如果有季度财务数据，即为季报公司
+
+# 方法2：搜索 HKEXnews 近12个月公告标题含 "季度"/"quarterly"
+# https://www.hkexnews.hk/listedco/listconews/search/search_active_main_c.aspx
+```
+
+**第二步：根据频率调用对应函数**
 
 ```python
 from datetime import date
 
-def get_hk_next_earnings(fiscal_year_end_month=12, today=None):
+# ===== 季报公司（美股双重上市 or 腾讯等自愿季报）=====
+KNOWN_QUARTERLY_REPORTERS = {
+    "00700", "02057", "09988", "09618", "09888", "09999"
+}
+
+def get_hk_next_earnings(hk_code_4digit, fiscal_year_end_month=12, today=None):
     """
     估算港股下一期业绩发布时间。
+    hk_code_4digit: 4位数字代码（不带.HK），如 "0700"
     fiscal_year_end_month: 财年结束月份（大多数为12月）
     返回 (date_str, report_type)
     """
@@ -660,6 +701,19 @@ def get_hk_next_earnings(fiscal_year_end_month=12, today=None):
         today = date.today()
     y, m = today.year, today.month
 
+    # 季报公司：按季度估算下一期
+    if hk_code_4digit.lstrip("0") in {c.lstrip("0") for c in KNOWN_QUARTERLY_REPORTERS}:
+        # Q1 约5月，Q2（中期）约8月，Q3 约11月，Q4（年报）约3月
+        if m < 5:
+            return f"{y}-05-15", "季度业绩（Q1）"   # 具体日期查公司公告确认
+        elif m < 8:
+            return f"{y}-08-15", "季度业绩（Q2/中期）"
+        elif m < 11:
+            return f"{y}-11-15", "季度业绩（Q3）"
+        else:
+            return f"{y+1}-03-31", "年度业绩"
+
+    # 普通半年报/年报公司
     if fiscal_year_end_month == 12:
         # 年报：3月31日前；中期：8月31日前
         if m < 4:
@@ -672,13 +726,23 @@ def get_hk_next_earnings(fiscal_year_end_month=12, today=None):
         # 非12月财年：需查公司年报确认，此处仅做粗略估算
         return "待确认（非12月财年）", "请查年报确认财年结束月份"
 
-next_date, next_type = get_hk_next_earnings()
+# 使用示例
+next_date, next_type = get_hk_next_earnings("0700")  # 腾讯 → 季报
+next_date, next_type = get_hk_next_earnings("1299")  # 友邦 → 半年报
 ```
+
+> ⚠️ **季报公司的具体日期必须核实**：`KNOWN_QUARTERLY_REPORTERS` 只提供类型判断，具体日期（如腾讯2026年Q1是5月13日）必须通过 Tavily 搜索或 HKEXnews 公告确认，函数返回值只是参考区间，不可直接写入 watchlist。
 
 将结果写入公司页 frontmatter：
 ```yaml
 下一财报日: 2026-08-31
 下一财报类型: 中期业绩
+```
+
+# 季报公司示例：
+```yaml
+下一财报日: 2026-05-13
+下一财报类型: 季度业绩（Q1）
 ```
 
 ### 第 3.6 步：计算 price_bands 并写入 watchlist
@@ -877,10 +941,10 @@ HKFRS 下投资物业公允价值变动计入损益，A 股会计不允许。地
 
 ```json
 {
-  "ticker": "0700.HK",
-  "hk_code": "0700",
+  "ticker": "1299.HK",
+  "hk_code": "1299",
   "market": "HK",
-  "company_type": "H股 / 红筹 / 港资 / 中概科技",
+  "company_type": "港资",
   "vie_structure": false,
   "wvr_structure": false,
   "us_sanction_risk": false,
@@ -891,6 +955,17 @@ HKFRS 下投资物业公允价值变动计入损益，A 股会计不允许。地
   "next_earnings_type": "中期业绩"
 }
 ```
+
+> ⚠️ **季报公司示例**（不要用「中期业绩」，用 `"季度业绩（Q1）"`）：
+> ```json
+> {
+>   "ticker": "0700.HK",
+>   "next_earnings_date": "2026-05-13",
+>   "next_earnings_type": "季度业绩（Q1）"
+> }
+> ```
+>
+> **季报公司 `next_earnings_type` 枚举值**：`季度业绩（Q1）` / `季度业绩（Q2/中期）` / `季度业绩（Q3）` / `年度业绩`
 
 `dual_listing` 取值：`"A+H"` / `"HK only"` / `"HK+US ADR"`
 
