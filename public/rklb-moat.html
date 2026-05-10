@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rocket Lab 三层护城河分析 · ZephyrSpace</title>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,500;0,6..72,700;1,6..72,400&family=Noto+Sans+SC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f5f0e6;
+  --bg-card: #fffdf8;
+  --text: #1c1917;
+  --text-sec: #57534e;
+  --text-dim: #a8a29e;
+  --border: rgba(120, 113, 108, 0.15);
+  --accent-teal: #0e7490;
+  --accent-blue: #2563a0;
+  --accent-amber: #c2770c;
+  --accent-green: #0f766e;
+  --accent-red: #b91c1c;
+  --accent-purple: #6d28d9;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: var(--bg);
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  color: var(--text);
+  font-family: 'Noto Sans SC', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+.page { max-width: 1100px; margin: 0 auto; padding: 40px 24px 80px; }
+
+/* Nav */
+.nav { margin-bottom: 32px; }
+.nav a {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 13px; color: var(--accent-teal); text-decoration: none;
+  padding: 6px 14px; border: 1px solid rgba(14, 116, 144, 0.25); border-radius: 100px;
+  transition: all 0.2s;
+}
+.nav a:hover { background: rgba(14, 116, 144, 0.06); border-color: var(--accent-teal); }
+
+/* Header */
+.header { text-align: center; margin-bottom: 56px; position: relative; }
+.header::after {
+  content: ''; position: absolute; bottom: -28px; left: 50%; transform: translateX(-50%);
+  width: 120px; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent-teal), transparent);
+}
+.badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 6px 16px; border: 1px solid var(--accent-teal); border-radius: 100px;
+  font-family: 'JetBrains Mono', monospace; font-size: 11px;
+  color: var(--accent-teal); letter-spacing: 2px; text-transform: uppercase;
+  margin-bottom: 20px; background: rgba(14, 116, 144, 0.04);
+}
+.badge .dot { width: 6px; height: 6px; background: var(--accent-teal); border-radius: 50%; animation: pulse 2s ease-in-out infinite; }
+@keyframes pulse { 0%,100% { opacity: 0.4; } 50% { opacity: 1; } }
+h1 { font-family: 'Newsreader', serif; font-size: clamp(24px, 4.5vw, 42px); font-weight: 700; line-height: 1.2; margin-bottom: 12px; }
+.subtitle { font-size: 15px; color: var(--text-sec); font-weight: 300; line-height: 1.7; }
+.subtitle strong { color: var(--accent-amber); font-weight: 500; }
+
+/* Section title */
+.section-title {
+  font-family: 'Newsreader', serif; font-size: 22px; font-weight: 700;
+  margin-bottom: 20px; color: var(--text); display: flex; align-items: center; gap: 12px;
+}
+.section-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+/* Moat overview bar */
+.moat-overview {
+  display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 48px;
+}
+.moat-layer {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px;
+  padding: 28px 24px; position: relative; overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.03); transition: all 0.25s;
+}
+.moat-layer:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.07); }
+.moat-layer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--layer-color); }
+.moat-icon { font-size: 32px; margin-bottom: 12px; }
+.moat-num { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-dim); letter-spacing: 2px; margin-bottom: 4px; text-transform: uppercase; }
+.moat-name { font-family: 'Newsreader', serif; font-size: 19px; font-weight: 700; margin-bottom: 8px; }
+.moat-subtitle { font-size: 12px; color: var(--text-sec); line-height: 1.6; font-weight: 300; }
+.moat-score {
+  margin-top: 16px; padding: 10px 14px; border-radius: 8px;
+  background: rgba(0,0,0,0.02); border-left: 3px solid var(--layer-color);
+  font-size: 12px; color: var(--text-sec); line-height: 1.5;
+}
+.moat-score strong { color: var(--text); font-weight: 600; }
+
+/* Detailed moat cards */
+.moat-detail { margin-bottom: 48px; }
+.detail-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px;
+  overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.03); margin-bottom: 20px;
+}
+.detail-head {
+  padding: 20px 24px 16px; border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; gap: 14px;
+  background: linear-gradient(135deg, rgba(0,0,0,0.015), transparent);
+}
+.detail-icon { font-size: 24px; }
+.detail-head-text {}
+.detail-head-title { font-family: 'Newsreader', serif; font-size: 18px; font-weight: 700; }
+.detail-head-sub { font-size: 12px; color: var(--text-sec); margin-top: 2px; }
+.detail-body { padding: 20px 24px; }
+.detail-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
+.detail-item {
+  padding: 14px 16px; border-radius: 10px;
+  border: 1px solid var(--border); background: rgba(0,0,0,0.01);
+}
+.detail-item .di-label { font-size: 11px; color: var(--text-dim); font-family: 'JetBrains Mono', monospace; letter-spacing: 0.5px; margin-bottom: 6px; text-transform: uppercase; }
+.detail-item .di-val { font-family: 'Newsreader', serif; font-size: 18px; font-weight: 700; margin-bottom: 4px; }
+.detail-item .di-desc { font-size: 12px; color: var(--text-sec); line-height: 1.6; }
+.bullets { list-style: none; }
+.bullets li {
+  font-size: 13px; color: var(--text-sec); line-height: 1.8;
+  padding-left: 20px; position: relative;
+}
+.bullets li::before {
+  content: ''; position: absolute; left: 0; top: 9px;
+  width: 7px; height: 7px; border-radius: 50%; background: var(--bullet-color, #a8a29e);
+}
+
+/* Government contracts table */
+.contract-table { margin-bottom: 48px; }
+table {
+  width: 100%; border-collapse: collapse;
+  background: var(--bg-card); border-radius: 14px; overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.03); font-size: 13px;
+}
+thead th {
+  padding: 14px 18px; text-align: left;
+  background: rgba(0,0,0,0.025); border-bottom: 1px solid var(--border);
+  font-family: 'JetBrains Mono', monospace; font-size: 10px;
+  letter-spacing: 1px; text-transform: uppercase; color: var(--text-dim);
+  font-weight: 400;
+}
+tbody td {
+  padding: 14px 18px; border-bottom: 1px solid var(--border);
+  vertical-align: top; line-height: 1.6;
+}
+tbody tr:last-child td { border-bottom: none; }
+tbody tr:hover td { background: rgba(14, 116, 144, 0.025); }
+.contract-program { font-weight: 600; color: var(--text); }
+.contract-value { font-family: 'Newsreader', serif; font-size: 17px; font-weight: 700; }
+.contract-status {
+  display: inline-block; padding: 2px 8px; border-radius: 4px;
+  font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.5px;
+}
+.status-active { background: rgba(15, 118, 110, 0.1); color: var(--accent-green); border: 1px solid rgba(15, 118, 110, 0.2); }
+.status-pipeline { background: rgba(37, 99, 160, 0.08); color: var(--accent-blue); border: 1px solid rgba(37, 99, 160, 0.18); }
+.status-won { background: rgba(14, 116, 144, 0.08); color: var(--accent-teal); border: 1px solid rgba(14, 116, 144, 0.2); }
+
+/* Comparison section */
+.comparison { margin-bottom: 48px; }
+.compare-grid { display: grid; grid-template-columns: 1fr auto 1fr; gap: 0; align-items: stretch; }
+.compare-col {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px;
+  padding: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+}
+.compare-col.left { border-right: none; border-radius: 14px 0 0 14px; }
+.compare-col.right { border-left: none; border-radius: 0 14px 14px 0; }
+.compare-center {
+  display: flex; align-items: center; justify-content: center;
+  padding: 0 16px; flex-direction: column; gap: 8px;
+  border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+  background: var(--bg-card);
+}
+.compare-vs { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--text-dim); letter-spacing: 2px; }
+.compare-vs-circle {
+  width: 36px; height: 36px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--bg); border: 1px solid var(--border); font-size: 13px; font-weight: 700;
+}
+.compare-co-name {
+  font-family: 'Newsreader', serif; font-size: 18px; font-weight: 700; margin-bottom: 4px;
+}
+.compare-co-sub { font-size: 11px; color: var(--text-dim); font-family: 'JetBrains Mono', monospace; margin-bottom: 16px; }
+.compare-rows {}
+.compare-row { padding: 8px 0; border-bottom: 1px solid var(--border); }
+.compare-row:last-child { border-bottom: none; }
+.compare-row .label { font-size: 10px; color: var(--text-dim); font-family: 'JetBrains Mono', monospace; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 3px; }
+.compare-row .val { font-size: 13px; color: var(--text-sec); line-height: 1.5; }
+.compare-row .val strong { color: var(--text); }
+
+/* Insight box */
+.insight-box {
+  background: linear-gradient(135deg, rgba(14, 116, 144, 0.07), rgba(37, 99, 160, 0.04));
+  border: 1px solid rgba(14, 116, 144, 0.22); border-radius: 16px;
+  padding: 28px 28px; margin-bottom: 48px; position: relative; overflow: hidden;
+}
+.insight-box::before {
+  content: ''; position: absolute; top: -40px; right: -40px;
+  width: 200px; height: 200px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(14, 116, 144, 0.06), transparent 70%);
+}
+.insight-title { font-family: 'Newsreader', serif; font-size: 19px; font-weight: 700; margin-bottom: 14px; color: var(--accent-teal); }
+.insight-body { font-size: 14px; color: var(--text-sec); line-height: 1.8; }
+.insight-body strong { color: var(--text); font-weight: 500; }
+
+/* Risk section */
+.risk-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin-bottom: 48px; }
+.risk-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 18px 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+}
+.risk-card .risk-label { font-size: 10px; color: var(--text-dim); font-family: 'JetBrains Mono', monospace; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 6px; }
+.risk-card .risk-title { font-family: 'Newsreader', serif; font-size: 15px; font-weight: 700; margin-bottom: 6px; }
+.risk-card .risk-desc { font-size: 12px; color: var(--text-sec); line-height: 1.65; }
+.risk-card.high { border-left: 3px solid var(--accent-red); }
+.risk-card.med { border-left: 3px solid var(--accent-amber); }
+.risk-card.low { border-left: 3px solid var(--accent-green); }
+
+footer {
+  margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border);
+  text-align: center; font-size: 12px; color: var(--text-dim); line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .moat-overview { grid-template-columns: 1fr; }
+  .compare-grid { grid-template-columns: 1fr; }
+  .compare-col.left, .compare-col.right { border-radius: 14px; }
+  .compare-center { display: none; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Nav -->
+  <div class="nav"><a href="index.html">← 返回首页</a></div>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="badge"><span class="dot"></span> RKLB · MOAT ANALYSIS</div>
+    <h1>Rocket Lab<br>三层护城河分析</h1>
+    <p class="subtitle">
+      小公司挑战大厂的底层逻辑：<strong>技术自研 × 国家安全绑定 × 战略错位</strong><br>
+      三道壁垒相互强化，构建独特的竞争护城河
+    </p>
+  </div>
+
+  <!-- Moat Overview -->
+  <div class="moat-overview">
+    <div class="moat-layer" style="--layer-color: var(--accent-teal)">
+      <div class="moat-icon">⚙️</div>
+      <div class="moat-num">Layer 01</div>
+      <div class="moat-name">技术 · 物理壁垒</div>
+      <div class="moat-subtitle">垂直整合自研，从发动机到卫星平台全栈掌控，外部供应商难以复制的制造体系</div>
+      <div class="moat-score">
+        <strong>核心优势：</strong>14天发射周期 · Rutherford全自研发动机 · Photon卫星总线
+      </div>
+    </div>
+    <div class="moat-layer" style="--layer-color: var(--accent-blue)">
+      <div class="moat-icon">🛡️</div>
+      <div class="moat-num">Layer 02</div>
+      <div class="moat-name">国家安全 · 准入壁垒</div>
+      <div class="moat-subtitle">ITAR合规、美国本土制造、政府长期合同锁定，竞争对手无法轻易进入</div>
+      <div class="moat-score">
+        <strong>核心优势：</strong>SDA $13亿+ · NSSL第3层 · HASTE $1.9亿
+      </div>
+    </div>
+    <div class="moat-layer" style="--layer-color: var(--accent-amber)">
+      <div class="moat-icon">🎯</div>
+      <div class="moat-num">Layer 03</div>
+      <div class="moat-name">战略定位 · 错位竞争</div>
+      <div class="moat-subtitle">Electron瞄准SpaceX不覆盖的专用轨道窗口，与SpaceX互补而非正面竞争</div>
+      <div class="moat-score">
+        <strong>核心优势：</strong>小卫星专属发射 · 不与SpaceX抢市场 · 共享太空经济增长
+      </div>
+    </div>
+  </div>
+
+  <!-- Layer 1 Detail -->
+  <div class="moat-detail">
+    <div class="section-title">Layer 01 — 技术与物理壁垒</div>
+
+    <div class="detail-card">
+      <div class="detail-head">
+        <div class="detail-icon">⚙️</div>
+        <div class="detail-head-text">
+          <div class="detail-head-title">垂直整合：从零件到轨道，全链自研</div>
+          <div class="detail-head-sub">不依赖单一供应商，自研成本结构形成竞争壁垒</div>
+        </div>
+      </div>
+      <div class="detail-body">
+        <div class="detail-grid" style="margin-bottom: 20px;">
+          <div class="detail-item">
+            <div class="di-label">发射周期</div>
+            <div class="di-val" style="color: var(--accent-teal)">14天</div>
+            <div class="di-desc">从客户合同到入轨，行业最短周期之一，依赖全栈内部生产能力</div>
+          </div>
+          <div class="detail-item">
+            <div class="di-label">Rutherford 发动机</div>
+            <div class="di-val" style="color: var(--accent-teal)">全自研</div>
+            <div class="di-desc">全球首款批量使用3D打印的轨道级发动机，Electron每枚9台</div>
+          </div>
+          <div class="detail-item">
+            <div class="di-label">Photon 卫星平台</div>
+            <div class="di-val" style="color: var(--accent-teal)">通用总线</div>
+            <div class="di-desc">覆盖LEO/MEO/GEO多轨道，已承载多个政府任务，内化原为采购项</div>
+          </div>
+          <div class="detail-item">
+            <div class="di-label">Curie 推进系统</div>
+            <div class="di-val" style="color: var(--accent-teal)">自研</div>
+            <div class="di-desc">可多次点火的绿色推进剂发动机，用于Photon轨道转移与延伸任务</div>
+          </div>
+        </div>
+        <ul class="bullets" style="--bullet-color: var(--accent-teal)">
+          <li>通过系列收购整合反应轮（Sinclair Interplanetary）、太阳能电池板（SolAero）、数据通信终端（Mynaric）等全链关键组件，形成封闭供应体系</li>
+          <li>Electron 火箭主体结构采用碳纤维复合材料，自主制造，非外购</li>
+          <li>Neutron 中型火箭使用AFRL认证的可重复使用架构，复用第一级降低边际成本</li>
+          <li>新西兰 Mahia 私有发射台 + 美国弗吉尼亚 Wallops 发射台，两地互为备份</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="insight-box">
+      <div class="insight-title">💡 为什么垂直整合是护城河而非负担？</div>
+      <div class="insight-body">
+        大多数小火箭公司选择外采零部件以降低资本开支，但 Rocket Lab 反其道而行。<strong>全栈自研的代价是更高前期投入，换来的是定价主导权和排他性供应链。</strong>当政府客户对供应链可见度有要求（ITAR合规、美国制造认证），外购零件的竞争对手面临结构性障碍，而 Rocket Lab 天然满足。
+      </div>
+    </div>
+  </div>
+
+  <!-- Layer 2 Detail -->
+  <div class="moat-detail">
+    <div class="section-title">Layer 02 — 国家安全与准入壁垒</div>
+
+    <div class="detail-card">
+      <div class="detail-head">
+        <div class="detail-icon">🛡️</div>
+        <div class="detail-head-text">
+          <div class="detail-head-title">政府"粘性"：ITAR + 长期合同 + 机密准入</div>
+          <div class="detail-head-sub">一旦深度绑定，替换成本极高；新进入者须经数年审核</div>
+        </div>
+      </div>
+      <div class="detail-body">
+        <div class="detail-grid" style="margin-bottom: 20px;">
+          <div class="detail-item">
+            <div class="di-label">ITAR 合规状态</div>
+            <div class="di-val" style="color: var(--accent-blue)">完全合规</div>
+            <div class="di-desc">美国制造+美国籍员工为核心，满足国防出口管制全部要求</div>
+          </div>
+          <div class="detail-item">
+            <div class="di-label">Backlog（合同储备）</div>
+            <div class="di-val" style="color: var(--accent-blue)">$18.5亿</div>
+            <div class="di-desc">同比增长73%，约3年收入可见性；政府合同占比超过60%</div>
+          </div>
+          <div class="detail-item">
+            <div class="di-label">NSSL 第3层认证</div>
+            <div class="di-val" style="color: var(--accent-blue)">已获批</div>
+            <div class="di-desc">美国国家安全太空发射计划，5年框架合同，$5.6亿份额</div>
+          </div>
+          <div class="detail-item">
+            <div class="di-label">SDA 合同总额</div>
+            <div class="di-val" style="color: var(--accent-blue)">$13亿+</div>
+            <div class="di-desc">第2批次~$5.15亿 + 第3批次$8.16亿，为美军星链式卫星网络制造组件</div>
+          </div>
+        </div>
+        <ul class="bullets" style="--bullet-color: var(--accent-blue)">
+          <li>政府任务积累机密发射经验，形成难以量化的信任资本——新进入者没有捷径</li>
+          <li>HASTE 高超音速导弹试验项目：2026年3月获$1.9亿合同，属高度敏感任务</li>
+          <li>"黄金穹顶"（Golden Dome）国家导弹防御计划：$1750亿预算，RKLB 有望获得太空传感器层份额</li>
+          <li>太空军分类任务：Electron SN40+已承接多次机密政府飞行，细节不对外披露</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Government Contracts Table -->
+    <div class="contract-table">
+      <table>
+        <thead>
+          <tr>
+            <th>项目 / 合同</th>
+            <th>金额</th>
+            <th>时间</th>
+            <th>类别</th>
+            <th>状态</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="contract-program">SDA Tranche 3（卫星数据架构第3批次）</div>
+              <div style="font-size: 12px; color: var(--text-dim); margin-top: 2px;">为美国太空发展局制造星座卫星组件</div>
+            </td>
+            <td><div class="contract-value" style="color: var(--accent-blue)">$8.16亿</div></td>
+            <td style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-dim);">2024</td>
+            <td style="font-size: 12px; color: var(--text-sec);">国家安全 · 太空</td>
+            <td><span class="contract-status status-active">执行中</span></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="contract-program">NSSL 第3层（国家安全太空发射）</div>
+              <div style="font-size: 12px; color: var(--text-dim); margin-top: 2px;">Neutron 火箭进入美军发射名单</div>
+            </td>
+            <td><div class="contract-value" style="color: var(--accent-blue)">$5.6亿</div></td>
+            <td style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-dim);">2023</td>
+            <td style="font-size: 12px; color: var(--text-sec);">国家安全 · 发射</td>
+            <td><span class="contract-status status-won">已认证</span></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="contract-program">SDA Tranche 2（卫星数据架构第2批次）</div>
+              <div style="font-size: 12px; color: var(--text-dim); margin-top: 2px;">追踪层星座卫星组件制造</div>
+            </td>
+            <td><div class="contract-value" style="color: var(--accent-blue)">~$5.15亿</div></td>
+            <td style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-dim);">2023</td>
+            <td style="font-size: 12px; color: var(--text-sec);">国家安全 · 太空</td>
+            <td><span class="contract-status status-active">执行中</span></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="contract-program">HASTE（高超音速导弹试验）</div>
+              <div style="font-size: 12px; color: var(--text-dim); margin-top: 2px;">Electron 改型，用于高超声速武器研发测试</div>
+            </td>
+            <td><div class="contract-value" style="color: var(--accent-teal)">$1.9亿</div></td>
+            <td style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-dim);">2026.03</td>
+            <td style="font-size: 12px; color: var(--text-sec);">国防 · 导弹防御</td>
+            <td><span class="contract-status status-active">执行中</span></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="contract-program">黄金穹顶（Golden Dome）</div>
+              <div style="font-size: 12px; color: var(--text-dim); margin-top: 2px;">国家导弹防御计划，太空传感器层机遇</div>
+            </td>
+            <td><div class="contract-value" style="color: var(--accent-amber)">$1750亿（计划总额）</div></td>
+            <td style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-dim);">2025–</td>
+            <td style="font-size: 12px; color: var(--text-sec);">国防 · 导弹防御</td>
+            <td><span class="contract-status status-pipeline">待参与</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Layer 3 Detail -->
+  <div class="moat-detail">
+    <div class="section-title">Layer 03 — 战略定位与错位竞争</div>
+
+    <!-- SpaceX vs RKLB Comparison -->
+    <div class="comparison" style="margin-bottom: 20px;">
+      <div class="compare-grid">
+        <div class="compare-col left">
+          <div class="compare-co-name">SpaceX</div>
+          <div class="compare-co-sub">FALCON 9 · STARLINK</div>
+          <div class="compare-rows">
+            <div class="compare-row">
+              <div class="label">目标市场</div>
+              <div class="val"><strong>大型卫星星座</strong>、大质量载荷、有人飞行</div>
+            </div>
+            <div class="compare-row">
+              <div class="label">发射单价</div>
+              <div class="val">Falcon 9 <strong>~$7,000万</strong>（rideshare更低）</div>
+            </div>
+            <div class="compare-row">
+              <div class="label">调度灵活性</div>
+              <div class="val">共乘（rideshare）模式，<strong>窗口固定</strong>，客户难以指定轨道</div>
+            </div>
+            <div class="compare-row">
+              <div class="label">核心战略</div>
+              <div class="val"><strong>开放生态</strong>：以低价占领发射市场</div>
+            </div>
+            <div class="compare-row">
+              <div class="label">Starlink 收益</div>
+              <div class="val"><strong>内部交叉补贴</strong>，发射成本内化</div>
+            </div>
+          </div>
+        </div>
+        <div class="compare-center">
+          <div class="compare-vs">vs</div>
+          <div class="compare-vs-circle">↔</div>
+          <div style="font-size: 10px; color: var(--accent-green); font-family: 'JetBrains Mono', monospace; text-align: center; margin-top: 4px;">互补<br>非竞争</div>
+        </div>
+        <div class="compare-col right">
+          <div class="compare-co-name">Rocket Lab</div>
+          <div class="compare-co-sub">ELECTRON · NEUTRON</div>
+          <div class="compare-rows">
+            <div class="compare-row">
+              <div class="label">目标市场</div>
+              <div class="val"><strong>专用小型卫星</strong>发射、定制轨道、时效敏感任务</div>
+            </div>
+            <div class="compare-row">
+              <div class="label">发射单价</div>
+              <div class="val">Electron <strong>~$800万</strong>，专属载荷不与他人共乘</div>
+            </div>
+            <div class="compare-row">
+              <div class="label">调度灵活性</div>
+              <div class="val"><strong>客户专属窗口</strong>，可指定轨道高度、倾角、时间</div>
+            </div>
+            <div class="compare-row">
+              <div class="label">核心战略</div>
+              <div class="val"><strong>封闭生态</strong>：端到端服务，从发射到在轨运营</div>
+            </div>
+            <div class="compare-row">
+              <div class="label">空间系统收益</div>
+              <div class="val"><strong>67%营收来源</strong>，与发射业务协同飞轮</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="insight-box">
+      <div class="insight-title">🎯 错位竞争：Rocket Lab 从不与 SpaceX 正面交锋</div>
+      <div class="insight-body">
+        SpaceX 的最优解是大批量共乘，而 Rocket Lab 的客户恰恰不愿意共乘——他们需要<strong>专属窗口、精确轨道、快速响应</strong>。政府情报卫星不能和商业卫星拼车；科研机构不能等 6 个月凑满一船货；国防客户需要保密任务记录。<br><br>
+        <strong>Neutron 的定位同样如此：</strong>填补 Electron（300kg）与 Falcon 9（22.8吨）之间 8 吨级中型载荷的市场空白，而不是正面挑战 SpaceX 的成熟市场。
+      </div>
+    </div>
+
+    <div class="detail-card">
+      <div class="detail-head">
+        <div class="detail-icon">🚀</div>
+        <div class="detail-head-text">
+          <div class="detail-head-title">Neutron：中型市场的差异化入局</div>
+          <div class="detail-head-sub">8吨LEO运力 · 可重复使用 · 面向星座部署与政府任务</div>
+        </div>
+      </div>
+      <div class="detail-body">
+        <div class="detail-grid" style="margin-bottom: 16px;">
+          <div class="detail-item">
+            <div class="di-label">目标载荷</div>
+            <div class="di-val" style="color: var(--accent-amber)">8吨</div>
+            <div class="di-desc">LEO运力，填补 Electron（300kg）与 Falcon 9（22.8吨）之间的空白</div>
+          </div>
+          <div class="detail-item">
+            <div class="di-label">首飞目标</div>
+            <div class="di-val" style="color: var(--accent-amber)">2026 Q4</div>
+            <div class="di-desc">2026年1月液压测试失败后调整时间线；研发稳步推进</div>
+          </div>
+          <div class="detail-item">
+            <div class="di-label">成本目标</div>
+            <div class="di-val" style="color: var(--accent-amber)">竞争性</div>
+            <div class="di-desc">一级回收复用，通过快速周转摊薄固定成本；具体单价未公布</div>
+          </div>
+          <div class="detail-item">
+            <div class="di-label">发射基地</div>
+            <div class="di-val" style="color: var(--accent-amber)">Wallops</div>
+            <div class="di-desc">弗吉尼亚 NASA Wallops 岛，临近 DC，政府任务首选地</div>
+          </div>
+        </div>
+        <ul class="bullets" style="--bullet-color: var(--accent-amber)">
+          <li>NSSL 第3层认证已包含 Neutron，意味着一旦首飞成功即可承接政府大载荷任务</li>
+          <li>Neutron 瞄准 Amazon Kuiper、OneWeb 等星座部署，每次可一箭多星</li>
+          <li>可重复使用架构：第一级陆上回收，不需要漂浮平台，降低技术复杂度</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Risk Section -->
+  <div class="section-title">需警惕的护城河风险</div>
+  <div class="risk-grid">
+    <div class="risk-card high">
+      <div class="risk-label">高风险</div>
+      <div class="risk-title">Neutron 研发延期</div>
+      <div class="risk-desc">2026年1月液压测试失败，已推迟首飞。若 Neutron 持续延期，将影响 NSSL 收入实现和投资者信心。</div>
+    </div>
+    <div class="risk-card high">
+      <div class="risk-label">高风险</div>
+      <div class="risk-title">稀释融资压力</div>
+      <div class="risk-desc">2025年通过 ATM 增发融资 $11.46亿，股本摊薄明显。若 Neutron 研发周期拉长，可能需要再次融资。</div>
+    </div>
+    <div class="risk-card med">
+      <div class="risk-label">中风险</div>
+      <div class="risk-title">政府预算波动</div>
+      <div class="risk-desc">合同储备集中于国防项目，DOGE 裁减开支或国会预算削减，可能影响 SDA/NSSL 合同执行进度。</div>
+    </div>
+    <div class="risk-card med">
+      <div class="risk-label">中风险</div>
+      <div class="risk-title">SpaceX 下沉竞争</div>
+      <div class="risk-desc">若 SpaceX 大幅降低专属发射定价（类似 Transporter rideshare），RKLB 的专属窗口溢价优势将受压。</div>
+    </div>
+    <div class="risk-card low">
+      <div class="risk-label">低风险</div>
+      <div class="risk-title">收购整合挑战</div>
+      <div class="risk-desc">Mynaric（$1.55亿）等多起收购存在整合难度，但 RKLB 过往收购（Sinclair/SolAero）整合顺利，管理经验成熟。</div>
+    </div>
+    <div class="risk-card low">
+      <div class="risk-label">低风险</div>
+      <div class="risk-title">Electron 竞争加剧</div>
+      <div class="risk-desc">RocketX、Relativity、ABL 等竞争者在小型发射市场活跃，但 Electron 79次累计发射 / 94.9%成功率已确立可靠性口碑。</div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Rocket Lab (RKLB) · 护城河分析</p>
+    <p style="margin-top: 4px;">数据截至 2026年5月 · 本页仅供研究参考，不构成投资建议</p>
+    <p style="margin-top: 4px;"><a href="index.html" style="color: var(--accent-teal); text-decoration: none; font-size: 11px;">← ZephyrSpace 研究首页</a></p>
+  </footer>
+
+</div>
+</body>
+</html>

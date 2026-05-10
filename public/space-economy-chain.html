@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>太空经济产业链全景 · ZephyrSpace</title>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,500;0,6..72,700;1,6..72,400&family=Noto+Sans+SC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f5f0e6;
+  --bg-card: #fffdf8;
+  --text: #1c1917;
+  --text-sec: #57534e;
+  --text-dim: #a8a29e;
+  --border: rgba(120,113,108,0.15);
+  --accent-teal: #0e7490;
+  --accent-blue: #2563a0;
+  --accent-amber: #c2770c;
+  --accent-green: #0f766e;
+  --accent-red: #b91c1c;
+  --accent-purple: #6d28d9;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Sans SC', sans-serif;
+  min-height: 100vh;
+}
+/* noise texture */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Nav */
+.top-nav {
+  margin-bottom: 2rem;
+}
+.top-nav a {
+  display: inline-block;
+  padding: 0.45rem 1.1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  text-decoration: none;
+  color: var(--text-sec);
+  font-size: 0.82rem;
+  transition: all 0.2s;
+}
+.top-nav a:hover { border-color: var(--accent-teal); color: var(--accent-teal); }
+
+/* Header */
+.page-header {
+  margin-bottom: 3rem;
+}
+.badge {
+  display: inline-block;
+  background: var(--accent-teal);
+  color: #fff;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+.page-header h1 {
+  font-family: 'Newsreader', serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.7rem;
+  color: var(--text);
+}
+.page-header .subtitle {
+  font-size: 1rem;
+  color: var(--text-sec);
+  line-height: 1.7;
+  max-width: 680px;
+}
+
+/* Section title */
+.section-title {
+  font-family: 'Newsreader', serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 1.4rem;
+}
+.section-title .accent { color: var(--accent-teal); }
+
+/* Card */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.8rem;
+  margin-bottom: 1.6rem;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.07);
+}
+.card-title {
+  font-family: 'Newsreader', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.icon { font-size: 1.1rem; }
+
+/* ── Market Size Growth ── */
+.market-growth {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+.mkt-item {
+  background: rgba(14,116,144,0.04);
+  border-radius: 12px;
+  padding: 1.4rem 1.2rem;
+  text-align: center;
+  border: 1px solid rgba(14,116,144,0.1);
+  position: relative;
+}
+.mkt-item.highlight {
+  background: linear-gradient(135deg,rgba(14,116,144,0.1),rgba(15,118,110,0.06));
+  border-color: rgba(14,116,144,0.25);
+}
+.mkt-year {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+.mkt-val {
+  font-family: 'Newsreader', serif;
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: var(--accent-teal);
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+.mkt-val.target { color: var(--accent-green); }
+.mkt-growth {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--accent-amber);
+  font-weight: 600;
+}
+.mkt-source {
+  font-size: 0.73rem;
+  color: var(--text-dim);
+  margin-top: 0.5rem;
+}
+.arrow-connector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: var(--accent-teal);
+  opacity: 0.5;
+}
+
+/* ── Investment Stats ── */
+.invest-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.invest-item {
+  text-align: center;
+  padding: 1.2rem 0.8rem;
+  background: rgba(37,99,160,0.04);
+  border-radius: 10px;
+  border: 1px solid rgba(37,99,160,0.1);
+}
+.invest-val {
+  font-family: 'Newsreader', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--accent-blue);
+  margin-bottom: 0.3rem;
+}
+.invest-lbl {
+  font-size: 0.78rem;
+  color: var(--text-sec);
+  line-height: 1.4;
+}
+
+/* ── Industry Chain ── */
+.chain-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.chain-layer {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  align-items: stretch;
+  margin-bottom: 0.6rem;
+}
+.layer-label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px 0 0 12px;
+  padding: 1.2rem 0.8rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.85rem;
+  line-height: 1.3;
+  color: #fff;
+}
+.layer-label.upstream { background: var(--accent-blue); }
+.layer-label.midstream { background: var(--accent-teal); }
+.layer-label.downstream { background: var(--accent-green); }
+.layer-en {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  font-weight: 400;
+  opacity: 0.8;
+  margin-top: 0.3rem;
+}
+.layer-content {
+  border: 1px solid var(--border);
+  border-left: none;
+  border-radius: 0 12px 12px 0;
+  padding: 1.2rem 1.4rem;
+  background: var(--bg-card);
+}
+.layer-desc {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  margin-bottom: 0.9rem;
+  line-height: 1.5;
+}
+.segment-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.seg-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.77rem;
+  font-weight: 500;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text-sec);
+}
+.seg-tag.teal { background: rgba(14,116,144,0.08); border-color: rgba(14,116,144,0.2); color: var(--accent-teal); }
+.seg-tag.blue { background: rgba(37,99,160,0.08); border-color: rgba(37,99,160,0.2); color: var(--accent-blue); }
+.seg-tag.green { background: rgba(15,118,110,0.08); border-color: rgba(15,118,110,0.2); color: var(--accent-green); }
+.seg-tag.amber { background: rgba(194,119,12,0.08); border-color: rgba(194,119,12,0.2); color: var(--accent-amber); }
+.seg-tag.rklb {
+  background: rgba(14,116,144,0.12);
+  border-color: rgba(14,116,144,0.35);
+  color: var(--accent-teal);
+  font-weight: 600;
+}
+.rklb-badge {
+  display: inline-block;
+  background: var(--accent-teal);
+  color: #fff;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+  vertical-align: middle;
+}
+
+/* ── Growth Drivers ── */
+.drivers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+.driver-card {
+  border-radius: 12px;
+  padding: 1.5rem 1.3rem;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.driver-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.07);
+}
+.driver-icon {
+  font-size: 2rem;
+  margin-bottom: 0.7rem;
+}
+.driver-title {
+  font-family: 'Newsreader', serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+.driver-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.driver-num.teal { color: var(--accent-teal); }
+.driver-num.amber { color: var(--accent-amber); }
+.driver-num.purple { color: var(--accent-purple); }
+.driver-desc {
+  font-size: 0.82rem;
+  color: var(--text-sec);
+  line-height: 1.65;
+}
+.driver-details {
+  margin-top: 0.8rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--border);
+}
+.driver-detail-item {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  padding: 0.2rem 0;
+  padding-left: 0.9rem;
+  position: relative;
+}
+.driver-detail-item::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+  color: var(--text-dim);
+}
+
+/* ── RKLB Position ── */
+.rklb-pos {
+  background: linear-gradient(135deg,rgba(14,116,144,0.07),rgba(15,118,110,0.04));
+  border: 1.5px solid rgba(14,116,144,0.2);
+  border-radius: 14px;
+  padding: 1.8rem;
+  margin-bottom: 1.6rem;
+}
+.rklb-pos-title {
+  font-family: 'Newsreader', serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--accent-teal);
+  margin-bottom: 1.2rem;
+}
+.pos-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.83rem;
+}
+.pos-table th {
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-dim);
+  padding: 0.5rem 0.8rem;
+  border-bottom: 2px solid var(--border);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+}
+.pos-table td {
+  padding: 0.7rem 0.8rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-sec);
+  vertical-align: top;
+  line-height: 1.5;
+}
+.pos-table tr:last-child td { border-bottom: none; }
+.layer-chip {
+  display: inline-block;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: #fff;
+}
+.layer-chip.up { background: var(--accent-blue); }
+.layer-chip.mid { background: var(--accent-teal); }
+.layer-chip.down { background: var(--accent-green); }
+.pct-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent-teal);
+}
+
+/* ── Orbit Layers ── */
+.orbit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.orbit-card {
+  border-radius: 10px;
+  padding: 1.2rem;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+}
+.orbit-name {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent-teal);
+  margin-bottom: 0.3rem;
+}
+.orbit-alt {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  margin-bottom: 0.7rem;
+}
+.orbit-use {
+  font-size: 0.82rem;
+  color: var(--text-sec);
+  line-height: 1.55;
+}
+.orbit-examples {
+  margin-top: 0.6rem;
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  font-style: italic;
+}
+
+/* Footer */
+.page-footer {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  line-height: 1.8;
+}
+.page-footer a { color: var(--text-sec); text-decoration: none; }
+.page-footer a:hover { text-decoration: underline; }
+
+/* Animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.card, .rklb-pos { animation: fadeUp 0.5s ease both; }
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+
+@media (max-width: 768px) {
+  .market-growth { grid-template-columns: 1fr; }
+  .arrow-connector { transform: rotate(90deg); }
+  .invest-grid { grid-template-columns: repeat(2, 1fr); }
+  .drivers-grid { grid-template-columns: 1fr; }
+  .orbit-grid { grid-template-columns: 1fr; }
+  .chain-layer { grid-template-columns: 90px 1fr; }
+  .page-header h1 { font-size: 1.8rem; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Nav -->
+  <nav class="top-nav">
+    <a href="index.html">← ZephyrSpace 首页</a>
+  </nav>
+
+  <!-- Header -->
+  <header class="page-header">
+    <span class="badge">产业研究 · SPACE ECONOMY</span>
+    <h1>太空经济产业链全景</h1>
+    <p class="subtitle">从发射到应用 — 全球太空经济 2025 年规模 $6264 亿，三大驱动力推动 2034 年迈向 $1 万亿里程碑，Rocket Lab 在上中下游均有战略布局。</p>
+  </header>
+
+  <!-- Market Size Growth -->
+  <section class="card">
+    <div class="card-title"><span class="icon">🌍</span> 全球太空经济规模增长</div>
+    <div class="market-growth">
+      <div class="mkt-item">
+        <div class="mkt-year">2015</div>
+        <div class="mkt-val">$3350亿</div>
+        <div class="mkt-growth">基准年</div>
+        <div class="mkt-source">Novaspace</div>
+      </div>
+      <div class="mkt-item highlight">
+        <div class="mkt-year">2025 · 现在</div>
+        <div class="mkt-val">$6264亿</div>
+        <div class="mkt-growth">十年 +87%，约 CAGR 6.5%</div>
+        <div class="mkt-source">Novaspace 2025 年度报告</div>
+      </div>
+      <div class="mkt-item">
+        <div class="mkt-year">2034 · 目标</div>
+        <div class="mkt-val target">$1万亿</div>
+        <div class="mkt-growth">九年 +60%，约 CAGR 5.3%</div>
+        <div class="mkt-source">Novaspace 预测</div>
+      </div>
+    </div>
+    <div style="background:rgba(194,119,12,0.06);border-left:3px solid var(--accent-amber);border-radius:0 8px 8px 0;padding:0.9rem 1.1rem;font-size:0.83rem;color:var(--text-sec);line-height:1.65">
+      💡 <strong>关键背景</strong>：$1 万亿是 Morgan Stanley、Novaspace、NASA 等多机构引用的共识里程碑。触发因素包括：国防卫星网络的全面建设、低成本发射使商业应用普及化，以及新型卫星直连服务带来的增量用户。
+    </div>
+  </section>
+
+  <!-- Investment Activity -->
+  <section class="card">
+    <div class="card-title"><span class="icon">💰</span> 2025 年产业投资活跃度</div>
+    <div class="invest-grid">
+      <div class="invest-item">
+        <div class="invest-val">$90亿</div>
+        <div class="invest-lbl">2025年私募融资总额<br><span style="color:var(--text-dim);font-size:0.72rem">2021年后历史最高</span></div>
+      </div>
+      <div class="invest-item">
+        <div class="invest-val">54</div>
+        <div class="invest-lbl">已完成并购交易数<br><span style="color:var(--text-dim);font-size:0.72rem">+16 笔待完成</span></div>
+      </div>
+      <div class="invest-item">
+        <div class="invest-val">~$175B</div>
+        <div class="invest-lbl">Golden Dome 预算<br><span style="color:var(--text-dim);font-size:0.72rem">美国国家导弹防御</span></div>
+      </div>
+      <div class="invest-item">
+        <div class="invest-val">10M+</div>
+        <div class="invest-lbl">Starlink 全球用户<br><span style="color:var(--text-dim);font-size:0.72rem">2026 年初突破</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industry Chain -->
+  <section class="card">
+    <div class="card-title"><span class="icon">🔗</span> 三层产业链结构</div>
+    <div class="chain-wrapper">
+
+      <!-- Upstream -->
+      <div class="chain-layer">
+        <div class="layer-label upstream">
+          上游<br>基础层
+          <div class="layer-en">UPSTREAM</div>
+        </div>
+        <div class="layer-content">
+          <div class="layer-desc">航天器制造与发射能力建设，太空基础设施的提供方，投资周期长、壁垒高</div>
+          <div class="segment-tags">
+            <span class="seg-tag rklb">🚀 运载火箭 <span class="rklb-badge">RKLB</span></span>
+            <span class="seg-tag blue">卫星整星制造</span>
+            <span class="seg-tag blue">推进系统</span>
+            <span class="seg-tag rklb">🛰️ 卫星组件/平台 <span class="rklb-badge">RKLB</span></span>
+            <span class="seg-tag blue">地面测控站</span>
+            <span class="seg-tag blue">R&D / 技术研发</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Midstream -->
+      <div class="chain-layer">
+        <div class="layer-label midstream">
+          中游<br>运营层
+          <div class="layer-en">MIDSTREAM</div>
+        </div>
+        <div class="layer-content">
+          <div class="layer-desc">卫星星座的部署与运营，将基础设施转化为数据/通信服务，规模经济效应强</div>
+          <div class="segment-tags">
+            <span class="seg-tag teal">宽带互联网星座</span>
+            <span class="seg-tag teal">对地观测星座</span>
+            <span class="seg-tag teal">导弹预警卫星网</span>
+            <span class="seg-tag teal">通信中继卫星</span>
+            <span class="seg-tag amber">频谱资源运营</span>
+            <span class="seg-tag amber">卫星保险</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Downstream -->
+      <div class="chain-layer">
+        <div class="layer-label downstream">
+          下游<br>应用层
+          <div class="layer-en">DOWNSTREAM</div>
+        </div>
+        <div class="layer-content">
+          <div class="layer-desc">最终用户服务与数据产品，直接产生收入，市场规模占太空经济 75%+</div>
+          <div class="segment-tags">
+            <span class="seg-tag green">卫星宽带服务</span>
+            <span class="seg-tag green">遥感数据分析</span>
+            <span class="seg-tag green">精准导航（GNSS）</span>
+            <span class="seg-tag green">国防情报</span>
+            <span class="seg-tag amber">太空旅游</span>
+            <span class="seg-tag green">气象服务</span>
+            <span class="seg-tag amber">农业/物流监控</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Orbit Types -->
+  <section class="card">
+    <div class="card-title"><span class="icon">🌐</span> 轨道层级与商业价值</div>
+    <div class="orbit-grid">
+      <div class="orbit-card">
+        <div class="orbit-name">LEO</div>
+        <div class="orbit-alt">低地球轨道 · 200–2000 km</div>
+        <div class="orbit-use">最活跃商业区间。低时延、低发射成本，适合互联网星座（Starlink、Kuiper）、对地观测、SDA 军事感知网络</div>
+        <div class="orbit-examples">代表：Starlink 10,000+ 颗 · Kuiper 300+ 颗 · SDA Tranche</div>
+      </div>
+      <div class="orbit-card">
+        <div class="orbit-name">MEO</div>
+        <div class="orbit-alt">中地球轨道 · 2000–35786 km</div>
+        <div class="orbit-use">GNSS 导航的黄金轨道（GPS、北斗、伽利略均在此）；部分宽带星座（O3b mPower）选择此轨道以扩大覆盖</div>
+        <div class="orbit-examples">代表：GPS 卫星 · O3b mPower</div>
+      </div>
+      <div class="orbit-card">
+        <div class="orbit-name">GEO</div>
+        <div class="orbit-alt">地球同步轨道 · 35,786 km</div>
+        <div class="orbit-use">广播/气象/传统通信主场地。卫星相对地球固定，覆盖范围广；时延高（约 600ms），不适合实时应用</div>
+        <div class="orbit-examples">代表：传统通信卫星 · 气象卫星</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Three Growth Drivers -->
+  <section class="card">
+    <div class="card-title"><span class="icon">🚀</span> 三大增长驱动力</div>
+    <div class="drivers-grid">
+
+      <div class="driver-card">
+        <div class="driver-icon">🛡️</div>
+        <div class="driver-title">国家安全与国防</div>
+        <div class="driver-num teal">$175B</div>
+        <div class="driver-desc">Golden Dome 导弹防御计划将成为史上最大太空国防采购，推动传感器卫星、拦截器、指挥控制系统的大规模建设</div>
+        <div class="driver-details">
+          <div class="driver-detail-item">SDA 追踪层 Tranche 3：$816M</div>
+          <div class="driver-detail-item">NSSL Phase 3 IDIQ：$5.6B（RKLB 资格）</div>
+          <div class="driver-detail-item">HASTE 超音速测试：$190M（RKLB）</div>
+          <div class="driver-detail-item">乌克兰冲突驱动欧洲盟国增加国防航天投资</div>
+        </div>
+      </div>
+
+      <div class="driver-card">
+        <div class="driver-icon">📡</div>
+        <div class="driver-title">卫星互联网普及</div>
+        <div class="driver-num amber">$100亿</div>
+        <div class="driver-desc">Starlink 2025 年营收约 $100 亿，1000 万用户跨过商业验证门槛。低成本宽带接入正在重构边远地区和航空/海事连接市场</div>
+        <div class="driver-details">
+          <div class="driver-detail-item">Starlink：10,500+ 颗在轨，~165 国覆盖</div>
+          <div class="driver-detail-item">Amazon Kuiper：300+ 颗已发射，FCC 要求 2026 年达 1618 颗</div>
+          <div class="driver-detail-item">OneWeb/Eutelsat：648 颗 LEO 星座</div>
+          <div class="driver-detail-item">直连手机（D2D）：Globalstar+Apple iPhone 已商用</div>
+        </div>
+      </div>
+
+      <div class="driver-card">
+        <div class="driver-icon">💡</div>
+        <div class="driver-title">新商业模式兴起</div>
+        <div class="driver-num purple">$90亿</div>
+        <div class="driver-desc">2025 年私募投资 $90 亿达 2021 年后历史峰值，54 笔 M&A 整合显示产业成熟。新玩家从单一发射商向综合平台商演化</div>
+        <div class="driver-details">
+          <div class="driver-detail-item">SpaceX IPO 2026.06，$1.75T 估值，激发资本热情</div>
+          <div class="driver-detail-item">垂直整合并购浪潮：RKLB 8 笔、RL-10 系列整合</div>
+          <div class="driver-detail-item">太空资源开采（月球水冰、小行星）概念成熟</div>
+          <div class="driver-detail-item">轨道服务（维修/补给/退役）新赛道萌芽</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- RKLB Position in Chain -->
+  <div class="rklb-pos">
+    <div class="rklb-pos-title">Rocket Lab 在产业链中的位置</div>
+    <table class="pos-table">
+      <thead>
+        <tr>
+          <th>层级</th>
+          <th>RKLB 业务线</th>
+          <th>FY2025 收入</th>
+          <th>驱动因素</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="layer-chip up">上游</span></td>
+          <td>Electron 发射服务（HASTE、商业小卫星）</td>
+          <td><span class="pct-badge">$199M · 33%</span></td>
+          <td>国防 HASTE 合同、商业星座部署</td>
+        </tr>
+        <tr>
+          <td><span class="layer-chip up">上游</span></td>
+          <td>Space Systems — 卫星组件/平台（Photon、SolAero 太阳能板、姿控、分离系统）</td>
+          <td><span class="pct-badge">$403M · 67%</span></td>
+          <td>SDA Tranche 合同、商业星座供应</td>
+        </tr>
+        <tr>
+          <td><span class="layer-chip mid">中游</span></td>
+          <td>Neutron（研发阶段）— 目标中型星座部署</td>
+          <td>$0（首飞目标 2026 Q4）</td>
+          <td>Kuiper/SDA 大型星座批量发射</td>
+        </tr>
+        <tr>
+          <td><span class="layer-chip up">上游</span></td>
+          <td>Mynaric 激光光通信终端（2026.04 收购）</td>
+          <td>并表中</td>
+          <td>SDA 星间激光链路、欧洲防务客户</td>
+        </tr>
+      </tbody>
+    </table>
+    <div style="margin-top:1.1rem;font-size:0.83rem;color:var(--text-sec);line-height:1.65">
+      🎯 <strong>战略逻辑</strong>：RKLB 的核心是"太空上游垂直整合平台"——通过 8 笔并购控制卫星全链条关键部件，使其在三大驱动力（国防/星座/新模式）的任何一条成真时，都能分到超比例的收益。当前 $1.85B Backlog（+73% YoY）正是这一战略的收入验证。
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="page-footer">
+    <p>数据来源：Novaspace 2025 年度报告 · Rocket Lab IR · SpaceNews · Euroconsult</p>
+    <p>更新于 2026-05-21 · <a href="index.html">ZephyrSpace</a> 商业航天研究知识库</p>
+  </footer>
+
+</div>
+</body>
+</html>
