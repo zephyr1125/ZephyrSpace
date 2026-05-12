@@ -674,26 +674,28 @@
       "board": "港",
       "source_etf": "direct",
       "position_role": "潮玩IP平台，Pop Mart全球化消费品牌，高ROE成长股",
-      "prebuy_conclusion": "ROE 77%+全球扩张强劲，IP集中（Labubu）是核心风险，OCF/NI=85%略低于90%阈值。当前HK$168偏贵，等回调至HK$147以下分批建仓",
+      "prebuy_conclusion": "[2025H1已验证] ROE 30.4%(2024)/年化~39%(2025H1)，海外收入占比38.9%(2024)、美洲+1142%；前瞻PE约21-23x处于合理偏低区。Labubu高集中度为核心风险，需持续监控IP衰退信号。当前HK(HK-175)，可逐步建仓。",
       "watch_reason": "IP工厂运营能力极强，海外东南亚/北美/欧洲渗透加速；盲盒模式制造稀缺感；增长动能持续验证",
-      "current_price": 168.1,
-      "price_date": "2026-05-08",
+      "current_price": 162.4,
+      "price_date": "2026-05-12",
       "dv_ttm": 1.4,
       "price_bands": [
-        263,
-        189,
-        147
+        250,
+        175,
+        130
       ],
-      "price_bands_basis": "pe_ttm.y3_range",
-      "price_bands_date": "2026-05-08",
-      "valuation_anchor": "PE ~40x，历史中高位，当前168.1高于中性底189需更大回调",
+      "price_bands_basis": "pe_fwd.2025e_3y+ps1",
+      "price_bands_date": "2026-05-12",
+      "valuation_anchor": "前瞻PE约22x(2025E)；偏贵>250(33x+)，中性175-250(23-33x)，较好130-175(17-23x)，理想<130(<17x)",
       "risk_flags": [
-        "IP集中风险：Labubu单IP销售占比过高，爆款退潮时收入弹性大",
-        "OCF/NI=85%略低于90%质量门槛，需跟踪"
+        "IP集中风险：Labubu单IP销售占比极高，爆款退潮时收入弹性大",
+        "WVR+VIE双重结构：创始人超级投票权+VIE，治理折价持续",
+        "IP时尚周期风险：潮玩热度受流行文化驱动，周期难以预判"
       ],
       "next_earnings_date": "2026-08-20",
       "next_earnings_type": "中期业绩",
-      "cycle_is_cyclical": false
+      "cycle_is_cyclical": false,
+      "last_reviewed": "2026-05-12"
     },
     {
       "name": "安踏体育",
