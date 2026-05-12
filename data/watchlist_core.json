@@ -281,6 +281,35 @@
       "next_earnings_type": "半年报",
       "cycle_is_cyclical": true,
       "cycle_position": "底部"
+    },
+    {
+      "name": "NVIDIA",
+      "code": "NVDA.US",
+      "market": "US",
+      "board": "纳",
+      "source_etf": "direct",
+      "position_role": "全球AI算力基础设施最核心卖铲资产，CUDA生态护城河极深，长期底仓",
+      "watch_reason": "AI超级周期卖铲垄断者，FCF （Margin 44.8%），净现金 .52B，PEG 0.35，FY2027E+73%增速确定性强",
+      "prebuy_conclusion": "逻辑清晰，等待更合适价格或财报验证点。-254为持有观察区，-211为主动买入区，当前。⚠️ 分析基于FY2026年报，Q1 FY2027（2026-05-20 AMC）尚未纳入",
+      "current_price": 219.44,
+      "price_date": "2026-05-12",
+      "price_bands": [
+        254,
+        211,
+        169
+      ],
+      "valuation_anchor": "FY2027E EPS .45，合理PE 25-30x对应-254；PEG=0.35",
+      "risk_flags": [
+        "H20出口禁令：FY2027 H1损失.5B（.5B库存减值+.5B直接收入损失+Q2再损）",
+        "AI资本开支降温风险：戴维斯双杀隐患，四大云厂商砍单即触发",
+        "商誉暴增.6B至.83B（FY2026），疑似Groq准并购协议，10-K附注待核实",
+        "客户集中：四大云厂商占收入重大比例"
+      ],
+      "dv_ttm": 0.02,
+      "next_earnings_date": "2026-05-20",
+      "next_earnings_type": "季报",
+      "cycle_is_cyclical": false,
+      "pending_earnings_note": "Q1 FY2027（2026-05-20 AMC）结果尚未纳入分析，财报发布后需更新公司页及本条目，并将next_earnings_date更新为下一期日期"
     }
   ],
   "tier": "core",
