@@ -1018,6 +1018,297 @@
       "next_earnings_type": "半年报",
       "cycle_is_cyclical": false,
       "cycle_position": null
+    },
+    {
+      "name": "思源电气",
+      "code": "002028.SZ",
+      "source_etf": "931994",
+      "position_role": "A股电网设备龙头，继电保护+变压器+出海三线驱动，护城河在国网认证体系和技术积累",
+      "watch_reason": "ROE 18%，出海收入占比超30%且快速增长，受益国网'十五五'4万亿投资，全球电力紧缺下中国电网装备出口壁垒低。",
+      "current_price": 195.25,
+      "price_date": "2026-04-28",
+      "board": "深",
+      "dv_ttm": null,
+      "price_bands": [
+        200.0,
+        160.0,
+        120.0
+      ],
+      "valuation_anchor": "PE 3年P80=48x/P50=38x/P20=29x对应200/160/120元；当前PE分位90.6%偏贵，目标布局区120-160元。",
+      "risk_flags": [
+        "业绩持续性待验证",
+        "估值偏高风险"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false
+    },
+    {
+      "name": "东方电缆",
+      "code": "603606.SH",
+      "source_etf": "931994",
+      "position_role": "海底电缆龙头，受益海上风电+跨区特高压海缆需求爆发，ROE 22%+高质量成长",
+      "watch_reason": "ROE 22%，海缆订单能见度高（排至2027年），海上风电全球加速装机，竞争对手产能受限，中国出口壁垒低。",
+      "current_price": 62.15,
+      "price_date": "2026-04-28",
+      "board": "沪",
+      "dv_ttm": null,
+      "price_bands": [
+        85.0,
+        70.0,
+        55.0
+      ],
+      "valuation_anchor": "PE 3年P80=40x/P50=33x/P20=26x对应85/70/55元；当前PE分位适中，55-70元为合理布局区。",
+      "risk_flags": [
+        "业绩持续性待验证",
+        "估值偏高风险"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false
+    },
+    {
+      "name": "国电南瑞",
+      "code": "600406.SH",
+      "source_etf": "931994",
+      "position_role": "电网数字化龙头（国网系），SCADA/EMS/继电保护全产品线，受益电力数字化+AI算力电网升级",
+      "watch_reason": "ROE 15.8%（2025年报），电力数字化不可逆趋势，国网信息化投资加速，AI算力促进电网智能化需求。",
+      "current_price": 26.85,
+      "price_date": "2026-05-12",
+      "board": "沪",
+      "dv_ttm": null,
+      "price_bands": [
+        29.7,
+        25.4,
+        22.0
+      ],
+      "valuation_anchor": "PE 3年P80=27.8x/P50=26.0x/P20=23.8x对应29.7/25.4/22元；当前PE分位40%（25.18x），处于中性区间。",
+      "risk_flags": [
+        "业绩持续性待验证",
+        "估值偏高风险"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false
+    },
+    {
+      "name": "宁德时代",
+      "code": "300750.SZ",
+      "source_etf": "931747",
+      "position_role": "全球储能+动力电池龙头，储能系统全球市占率第一，AI数据中心储能领域战略布局",
+      "watch_reason": "全球储能护城河最深，ROE恢复中，固态电池研发领先，数据中心电力调峰储能需求爆发式增长。",
+      "current_price": 437.0,
+      "price_date": "2026-05-08",
+      "board": "创",
+      "dv_ttm": null,
+      "price_bands": [
+        480.0,
+        400.0,
+        360.0
+      ],
+      "valuation_anchor": "PE 3年P80=28x/P50=25x/P20=19x对应480/400/360/300元；当前PE分位82%，等PE回落至22-23x区间（360-400元）再建仓。",
+      "risk_flags": [
+        "业绩持续性待验证",
+        "估值偏高风险"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false
+    },
+    {
+      "name": "中密控股",
+      "code": "300470.SZ",
+      "source_etf": "核电主题",
+      "position_role": "核电密封件+工业密封细分龙头，PB历史极低分位，ROE 20%+高质量，错误定价机会",
+      "watch_reason": "密封件核电认证壁垒极高，中国核电'十五五'新增30-40台机组带动备件需求，ROE 20%但PB仅1.2%历史分位，市场严重低估。",
+      "current_price": 33.99,
+      "price_date": "2026-05-08",
+      "board": "创",
+      "dv_ttm": null,
+      "price_bands": [
+        42.0,
+        34.0,
+        28.0
+      ],
+      "valuation_anchor": "PB历史分位1.2%极低（全市场罕见），对应价格区间28-42元；ROE 20%+支撑成长股逻辑，当前价格接近合理区间低端。",
+      "risk_flags": [
+        "业绩持续性待验证",
+        "估值偏高风险"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false
+    },
+    {
+      "name": "广州发展",
+      "code": "600098.SH",
+      "source_etf": "931897",
+      "position_role": "华南清洁能源运营商，PE历史底+PB破净+股息率4.9%，高股息低估值底仓",
+      "watch_reason": "PE 3年历史6.2%分位+PB破净+DYR 4.9%，三指标同时在历史低位极为罕见；华南电力需求持续增长，清洁能源转型加速。",
+      "current_price": 7.15,
+      "price_date": "2026-05-11",
+      "board": "沪",
+      "dv_ttm": 4.9,
+      "price_bands": [
+        9.5,
+        7.5,
+        6.3
+      ],
+      "valuation_anchor": "PE历史极低+PB<1；6.3元以下DYR>5.5%为极好安全边际；9.5元以上进入历史偏贵区；当前7.15元处于'较好区间'。",
+      "risk_flags": [
+        "业绩持续性待验证",
+        "估值偏高风险"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": true,
+      "cycle_position": "底部"
+    },
+    {
+      "name": "华电国际",
+      "code": "600027.SH",
+      "source_etf": "931897",
+      "position_role": "华电集团旗下火电+新能源运营商，PB分位6.6%极低，高股息转型标的",
+      "watch_reason": "PB分位6.6%极低，火电+新能源双轮驱动，煤价下行利润改善，数据中心基荷需求受益。",
+      "current_price": 5.23,
+      "price_date": "2026-05-11",
+      "board": "沪",
+      "dv_ttm": null,
+      "price_bands": [
+        7.0,
+        5.5,
+        4.7
+      ],
+      "valuation_anchor": "PB分位6.6%极低；4.7元以下为较好入场区，5.5-7.0元为中性区，>7.0元偏贵。",
+      "risk_flags": [
+        "业绩持续性待验证",
+        "估值偏高风险"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": true,
+      "cycle_position": "复苏早期"
+    },
+    {
+      "name": "杰瑞股份",
+      "code": "002353.SZ",
+      "source_etf": "燃气轮机主题",
+      "position_role": "燃气轮机整机中国稀缺供应商，切入AI数据中心稳定供电，累计签约>11亿美元",
+      "watch_reason": "敏电能源燃气轮机累计签约>11亿美元，AI数据中心对稳定基荷供电需求激增，是国内唯一具备整机交付能力的民营上市公司。",
+      "current_price": 146.38,
+      "price_date": "2026-05-08",
+      "board": "深",
+      "dv_ttm": null,
+      "price_bands": [
+        150.0,
+        100.0,
+        70.0
+      ],
+      "valuation_anchor": "历史PE带已失效（旧业务12-18x）；前瞻PE 2026E≈38x；150元以上历史极高风险，100-150元前瞻逻辑合理，70-100元赔率改善。",
+      "risk_flags": [
+        "业绩持续性待验证",
+        "估值偏高风险"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false
+    },
+    {
+      "name": "德业股份",
+      "code": "605117.SH",
+      "source_etf": "931747",
+      "position_role": "储能+光伏逆变器出海龙头，受益欧洲+东南亚市场高速增长，ROE高质量",
+      "watch_reason": "储能逆变器出海高速增长，ROE维持高位，欧洲市场认证壁垒构成护城河，中小市值成长性优于宁德时代。",
+      "current_price": 140.7,
+      "price_date": "2026-04-27",
+      "board": "沪",
+      "dv_ttm": null,
+      "price_bands": [
+        165.0,
+        145.0,
+        120.0
+      ],
+      "valuation_anchor": "PE P80≈48x/P50≈42x/P20≈35x对应165/145/120元；120元以下安全边际充足。",
+      "risk_flags": [
+        "业绩持续性待验证",
+        "估值偏高风险"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false
+    },
+    {
+      "name": "神马电力",
+      "code": "603530.SH",
+      "source_etf": "931994",
+      "position_role": "输电铁塔+钢结构出海龙头，ROE 2025年飙升至24.2%，出海订单驱动高速增长",
+      "watch_reason": "ROE从12%飙升至24.2%（2025年报），海外输电基础设施市场份额快速扩大，竞争对手稀缺，订单能见度高。",
+      "current_price": 64.28,
+      "price_date": "2026-05-11",
+      "board": "沪",
+      "dv_ttm": null,
+      "price_bands": [
+        68.0,
+        55.0,
+        45.0
+      ],
+      "valuation_anchor": "PB极贵（历史93.9%分位）；估值贵是因为ROE飙升市场重新定价；等PB分位自然回落，布局区45-55元。",
+      "risk_flags": [
+        "ROE飙升可持续性待验证，需半年报确认",
+        "PB分位93.9%历史极高，向上空间有限"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false
+    },
+    {
+      "name": "阳光电源",
+      "code": "300274.SZ",
+      "source_etf": "931747",
+      "position_role": "光伏+储能逆变器/系统集成龙头，全球市占率第一，受益AI数据中心绿电配套储能",
+      "watch_reason": "储能系统全球市占率第一，光储双主线驱动，ROE 20%+，OCF持续强劲，AI数据中心绿电占比要求80%带来长期需求。",
+      "current_price": 144.04,
+      "price_date": "2026-05-11",
+      "board": "创",
+      "dv_ttm": null,
+      "price_bands": [
+        160.0,
+        130.0,
+        95.0
+      ],
+      "valuation_anchor": "PE超历史q8（90%分位以上）；等PE回落至22x区间（约130元以下）再布局，95元以下为积极加仓区。",
+      "risk_flags": [
+        "当前PE超历史90%分位，估值已充分反映预期",
+        "欧洲关税政策变化风险"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false
+    },
+    {
+      "name": "国投电力",
+      "code": "600886.SH",
+      "source_etf": "931897",
+      "position_role": "水电+储能运营商，PE 3年历史1%分位+股息率约3.7%，低估优质电力资产",
+      "watch_reason": "PE 3年历史1%分位极低，水电业务OCF极优质，雅砻江梯级水电战略价值极高，股息率3.7%+。",
+      "current_price": 13.56,
+      "price_date": "2026-05-08",
+      "board": "沪",
+      "dv_ttm": 3.76,
+      "price_bands": [
+        17.3,
+        15.89,
+        14.86
+      ],
+      "valuation_anchor": "PE历史分位1%极低（q2v=15.99x，q5v=16.82x，q8v=18.62x）；当前14.6x低于q2v，处于极低估值区间。",
+      "risk_flags": [
+        "来水量季节性波动影响发电量",
+        "新能源投资带来短期资本开支压力"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": true,
+      "cycle_position": "复苏早期"
     }
   ],
   "tier": "growth",

@@ -227,8 +227,62 @@
       "next_earnings_date": "2026-05-13",
       "next_earnings_type": "季度业绩（Q1）",
       "cycle_is_cyclical": false
+    },
+    {
+      "board": "纳",
+      "code": "GOOGL.US",
+      "current_price": 393.88,
+      "cycle_is_cyclical": false,
+      "cycle_position": null,
+      "dv_ttm": 0.21,
+      "name": "Alphabet(Google)",
+      "next_earnings_date": "2026-07-23",
+      "next_earnings_type": "季报",
+      "position_role": "AI基础设施核心锚+搜索垄断底仓，3年以上持有",
+      "prebuy_conclusion": "逻辑清晰，等待更合适价格；当前🟡中性区($368-$422)，等回撤至$300-$368建仓；下次验证Q2 2026财报2026-07-23",
+      "price_bands": [
+        422,
+        368,
+        300
+      ],
+      "price_date": "2026-05-11",
+      "risk_flags": [
+        "FY2026 CapEx $180-190B，FCF接近归零，ROI待验证",
+        "DOJ Ad Tech案最终救济未明，或影响广告技术资产",
+        "DOJ Search案行为救济执行，慢变量侵蚀分发护城河",
+        "PE处于5年历史高位80-90分位，估值回撤风险"
+      ],
+      "source_etf": "direct",
+      "valuation_anchor": "FY2026E PE 28.9x（非GAAP EPS共识$13.62），历史5年区间19-31x，当前80-90分位",
+      "watch_reason": "Search垄断90%+Cloud AI+63%+$462B积压订单+高利润模式+三板斧逻辑完整"
+    },
+    {
+      "name": "长江电力",
+      "code": "600900.SH",
+      "source_etf": "931897",
+      "position_role": "水电运营绝对龙头，三峡+乌东德+白鹤滩四梯级水电，分红率85%，A股最优质的类债资产",
+      "prebuy_conclusion": "长期持有型核心底仓。当前26.97元PE处3年0%分位，历史性低估，DYR 3.70%，是近年最优入场窗口，建议分批建仓。",
+      "watch_reason": "ROE 17%+稳定，分红率85%+，水电零燃料成本，OCF/净利>100%，三峡梯级装机无法复制，AI供电绿电溢价长期受益。",
+      "current_price": 26.97,
+      "price_date": "2026-05-08",
+      "board": "沪",
+      "dv_ttm": 3.7,
+      "price_bands": [
+        41.22,
+        36.43,
+        32.82
+      ],
+      "risk_flags": [
+        "来水量受气候影响，丰枯年发电量差异约15%",
+        "高分红率压缩再投资空间，成长性受限"
+      ],
+      "valuation_anchor": "PS调整后PE q8v=41.22/q5v=36.43/q2v=32.82；当前26.97元远低于q2v，处于3年0%分位极端低估区；DYR 3.70%+。",
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": true,
+      "cycle_position": "底部"
     }
   ],
   "tier": "core",
-  "updated_at": "2026-05-09"
+  "updated_at": "2026-05-12"
 }
