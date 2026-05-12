@@ -36,7 +36,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 python .\scripts\generate_daily_report.py --vault-name ZephyrSpace --date 2026-04-18
 ```
 
-### 指数成分股 PreBuy 分析（触发词：用 prebuy 分析[指数名]）
+### 指数成分股 PreBuy 分析（触发词：选股 [指数名]）
 
 完整 SOP 在 `AGENTS.md`，执行摘要：
 
@@ -47,7 +47,7 @@ python .\scripts\generate_daily_report.py --vault-name ZephyrSpace --date 2026-0
 5. 写入 watchlist JSON（主 Agent 执行，子 Agent 不得直接写文件）
 6. 运行 `sync_watchlist.ps1` 同步到外部项目
 
-### 指数整体 PreBuy（触发词：对[指数]做指数PreBuy / [指数]适合建仓吗）
+### 指数整体 PreBuy（触发词：指数估值 [指数名] / [指数]适合建仓吗）
 
 完整 SOP 在 `index-prebuy.skill`，分析对象是指数本身（不拆解个股），输出到指数页 + `data/watchlist_index.json`，并在写入后运行 `.\scripts\sync_watchlist.ps1` 同步到 `E:\Work\Python\Finance\api\config\watchlist_index.json`。
 
