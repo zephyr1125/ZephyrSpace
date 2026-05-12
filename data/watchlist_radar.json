@@ -1,6 +1,61 @@
 {
-  "updated_at": "2026-05-09",
+  "updated_at": "2026-05-12",
   "entries": [
+    {
+      "name": "保利发展",
+      "code": "600048.SH",
+      "source_etf": "931775",
+      "position_role": "央企地产龙头 / 地产修复周期仓，只做观察不做底仓",
+      "prebuy_conclusion": "继续研究，不适合现在当底仓重仓买；若你没有明确地产修复判断，这票不该碰。",
+      "watch_reason": "央企信用、低融资成本和现金流韧性仍在，是房地产深度调整期里少数仍具融资与拿地能力的龙头样本；但利润、ROE 和分红都处于明显弱势阶段。",
+      "current_price": 6.43,
+      "price_date": "2026-05-08",
+      "board": "沪",
+      "price_bands": [
+        8.0,
+        6.4,
+        5.6
+      ],
+      "risk_flags": [
+        "2025年归母净利润同比下滑79%，2026Q1归母净利润再降57%，说明利润端仍未走出底部",
+        "ROE极低，地产板块低PB不能直接等同于便宜，股东回报率不足",
+        "资产减值与信用减值压力仍在，若房价和去化继续承压，后续仍可能侵蚀利润"
+      ],
+      "valuation_anchor": "地产修复PB锚定：追高区>8.0(修复预期先于盈利修复，赔率差) / 中性区6.4-8.0(低PB但利润未修复) / 较好区间5.6-6.4(可小仓位研究性布局) / 更低区间<5.6(前提是现金流和信用优势未被破坏，安全边际更好)",
+      "entry_trigger": "股价跌至6.0元附近以下，或2026H1归母净利润降幅较Q1的-57%明显收窄，同时经营现金流继续为正",
+      "dv_ttm": 2.64,
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": true,
+      "cycle_position": "出清期"
+    },
+    {
+      "name": "阳光电源",
+      "code": "300274.SZ",
+      "source_etf": "932246",
+      "position_role": "储能系统与逆变器平台龙头，作为储能主线景气与海外交付节奏的核心观察点",
+      "prebuy_conclusion": "Q1 2026净利同比-40%，短期承压，基本面护城河未变，但赔率需重新审视，建议等半年报验证再加仓。",
+      "watch_reason": "全球逆变器和储能系统龙头，系统平台属性强，储能高增、海外扩张和AIDC电源是中长期主线，但当前关键矛盾是H1利润修复能否验证。",
+      "current_price": 144.45,
+      "price_date": "2026-05-11",
+      "board": "创",
+      "price_bands": [
+        175.0,
+        155.0,
+        130.0
+      ],
+      "risk_flags": [
+        "Q1 2026归母净利同比-40.12%，若后续季度不改善，FY2026全年净利大概率下滑",
+        "若FY2026净利降至90-100亿，前向PE将抬升至27-30x，安全边际显著收窄",
+        "海外项目确认节奏和汇兑损失仍可能持续扰动季度表现"
+      ],
+      "valuation_anchor": "以FY2025利润134.61亿对应TTM PE为锚：追高区>175(PE>26x，近期利好已充分反映) / 中性区155-175(PE23-26x，等待修复验证) / 较好区间130-155(PE19-23x，可观察性布局) / 更低区间<130(TTM低位，若逻辑不变则安全边际更好)",
+      "entry_trigger": "2026H1净利同比降幅收窄至-20%以内且股价仍低于155元，或股价跌至120元以下且储能出货逻辑未被证伪",
+      "dv_ttm": 1.53,
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false
+    },
     {
       "name": "陕西煤业",
       "code": "601225.SH",
@@ -1380,23 +1435,24 @@
       "board": "纳",
       "source_etf": "direct",
       "position_role": "商业航天端到端平台，Neutron火箭期权",
-      "prebuy_conclusion": "优质成长平台，当前估值偏高（EV/FY26E Rev ~50x），.68处于中性区；Neutron首飞验证前不追高，等待。",
-      "watch_reason": "$1.85B backlog收入可见性强，毛利率快速改善至34%，等$60以下或Neutron进展明确再建仓",
-      "current_price": 79.68,
-      "price_date": "2026-04-24",
+      "prebuy_conclusion": "财报兑现强于预期，但估值仍偏热；更适合持有观察，不追高，等价格窗口。",
+      "watch_reason": "Q1 2026营收200.3M美元、GAAP毛利率38.2%、积压订单2.2B美元，平台化路径继续增强；但首飞前估值仍高度依赖Neutron执行零失误。",
+      "current_price": 78.58,
+      "price_date": "2026-05-07",
       "price_bands": [
         85.0,
-        62.0,
-        38.0
+        70.0,
+        60.0
       ],
-      "valuation_anchor": "FY2026E Revenue $854M，EV/Revenue ~50x（偏贵）",
+      "valuation_anchor": "FY2026E Revenue 高增长+Neutron期权估值：追高区>85(市场开始按Neutron成功+国防平台化充分定价) / 中性区70-85(财报兑现但赔率一般) / 较好区间60-70(基本面强、价格开始顺手) / 更低区间<60(若逻辑不变则安全边际明显改善)",
       "risk_flags": [
-        "Neutron已两次延迟Q4 2026仍有风险",
-        "EV/Revenue ~50x容错空间小",
-        "EBITDA转正要等FY2027-2028"
+        "Neutron首飞仍是估值中枢关键变量，若再次延迟或首飞失败，股价回撤会很剧烈",
+        "高估值已提前反映Neutron成功、国防合同放量和并购整合顺利三件事同时成立",
+        "Q2指引虽强，但FY2026仍是高增长不盈利的一年，EBITDA转正仍要继续等待"
       ],
+      "entry_trigger": "股价回落至70美元以下且Neutron 2026Q4首飞时间线未再延迟；或股价低于60美元且Q2 2026营收达到225M美元以上、积压订单维持20亿美元以上",
       "dv_ttm": 0.0,
-      "next_earnings_date": "2026-05-08",
+      "next_earnings_date": "2026-08-06（估算）",
       "next_earnings_type": "季报",
       "tier": "radar"
     },
@@ -1663,27 +1719,26 @@
       "board": "纽",
       "tier": "radar",
       "source_etf": "direct",
-      "position_role": "美股雷达池 - 楼宇自动化+数据中心冷却转型标的，等Q2 FY2026财报验证",
-      "prebuy_conclusion": "逻辑清晰，等待更合适价格或验证点 - 战略重心聚焦楼宇自动化+数据中心，订单创纪录；但GAAP/Non-GAAP差60%+、转型成本仍高；等\\ FY2026财报（5月6日）验证。⚠️ 分析基于Q1 FY2026，Q2 FY2026（2026-05-06）尚未纳入",
-      "watch_reason": "AI数据中心冷却/楼宇自控双赛道，转型逻辑清晰；Q1 FY2026调整后EPS+40%、订单创纪录是强信号；财年截至9/30，需多期财报积累GAAP口径改善证据",
-      "current_price": 145.08,
-      "price_date": "2026-05-01",
+      "position_role": "楼宇自动化+数据中心冷却转型标的，Q2已验证但当前仍更适合等回调",
+      "prebuy_conclusion": "Q2 FY2026已验证转型逻辑继续成立；可以继续跟踪，但当前仍更适合等回调，而不是追高。",
+      "watch_reason": "Q2营收+8%、调整后EPS+45%、Orders+30%、Backlog 200亿美元并上调全年指引，说明数据中心和大项目需求没有降温；但估值和Non-GAAP依赖仍需继续观察。",
+      "current_price": 139.25,
+      "price_date": "2026-05-07",
       "price_bands": [
         155,
-        130,
-        110
+        132,
+        112
       ],
-      "valuation_anchor": "FY2026E EPS ~\\.80（Non-GAAP）：追高区>\\(>32x) / 中性区\\-155(27-32x，含当前) / 较好区间\\-130(22-27x，转型验证后可建仓) / 更低区间<\\(<22x，安全边际充足)",
+      "valuation_anchor": "FY2026E 调整后EPS估值锚：追高区>155(>32x，转型溢价已充分定价) / 中性区132-155(约28-32x，Q2已验证但赔率一般) / 较好区间112-132(约23-28x，转型继续兑现时可研究性布局) / 更低区间<112(<23x，安全边际明显改善)",
       "risk_flags": [
-        "GAAP EPS \\.97 vs 调整后~\\.80，差距60%+，大量剥离/重组费用影响真实盈利",
-        "转型过程中营收规模收缩（剥离非核心业务），增长验证期较长",
-        "Q2 FY2026（2026-05-06）财报待发，转型执行存在不确定性"
+        "当前仍在中性区上沿，即使Q2交卷很好也不属于便宜工业股",
+        "GAAP与Non-GAAP仍有显著差距，需继续跟踪重组与摊销调整是否长期化",
+        "重组与转型费用仍在持续，H1 FY2026相关费用已达144M美元"
       ],
-      "entry_trigger": "股价跌至\\（Forward PE <27x）且Q2 FY2026 Non-GAAP EPS同比增速维持≥35%；或连续2个季度GAAP净利润转正且无重大一次性项目",
-      "dv_ttm": 1.72,
-      "next_earnings_date": "2026-05-06",
+      "entry_trigger": "股价跌至132美元以下且Q3 FY2026 Orders同比仍保持双位数增长；或股价跌至112美元以下且调整后EPS增速仍不低于15%",
+      "dv_ttm": 1.1,
+      "next_earnings_date": "2026-08-05（估算）",
       "next_earnings_type": "季报",
-      "pending_earnings_note": "Q2 FY2026（2026-05-06）结果尚未纳入分析，财报发布后需更新公司页及本条目，并将next_earnings_date更新为下一期日期",
       "cycle_is_cyclical": false
     },
     {
@@ -2275,6 +2330,230 @@
       "next_earnings_date": "2026-08-31",
       "next_earnings_type": "中期业绩",
       "cycle_is_cyclical": false
+    },
+    {
+      "name": "华利集团",
+      "code": "300979.SZ",
+      "board": "深",
+      "source_etf": "801130.SI",
+      "position_role": "港A最大运动鞋OEM，Nike/Adidas核心代工厂，困境反转候选",
+      "prebuy_conclusion": "PE 3年5.4%分位极端低估，Q1利润-49.5%为关税特殊冲击，OCF良好，等关税缓和",
+      "watch_reason": "ROE历史高达30%+，客户粘性极强，PE历史最低分位，关税解除后弹性极大",
+      "current_price": 37.96,
+      "price_date": "2026-05-08",
+      "dv_ttm": 3.15,
+      "price_bands": [
+        52.0,
+        42.0,
+        34.0
+      ],
+      "valuation_anchor": "PE 3年5.4%分位(15.7x)，关税恢复后EPS可弹性修复；追高>52 / 中性42-52 / 较好34-42 / 更低<34",
+      "risk_flags": [
+        "美越关税46%未落地仍高悬，若长期维持将永久损害竞争力",
+        "Q1 2026利润-49.5%，若H1整体降幅仍>40%则反转逻辑失效",
+        "产能转移（印度/印尼）有助但需1-2年，短期成本上升"
+      ],
+      "entry_trigger": "中美关税协议达成且越南关税降至<30%，或2026H1利润降幅收窄至<20%",
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false,
+      "cycle_position": null
+    },
+    {
+      "name": "福恩股份",
+      "code": "001312.SZ",
+      "board": "深",
+      "source_etf": "801130.SI",
+      "position_role": "功能性服装一体化制造，2023年上市新股，军民两用面料",
+      "prebuy_conclusion": "2025利润-16%，PE 3年54.5%分位，2029年3.94亿股（占比69%）大规模解禁，风险极大",
+      "watch_reason": "ROE20%+技术护城河尚可，但解禁压力压制中长期股价，只做极低价格关注",
+      "current_price": 25.51,
+      "price_date": "2026-05-08",
+      "dv_ttm": 0.78,
+      "price_bands": [
+        30.0,
+        24.0,
+        18.0
+      ],
+      "valuation_anchor": "PE 3年54.5%分位偏贵；追高>30 / 中性24-30 / 较好18-24 / 更低<18（极端估值折价）",
+      "risk_flags": [
+        "2029年3.94亿股限售解禁（占总股本69%），股价压制极强",
+        "2025年营收-10.6%、净利润-16%，下行趋势未见拐点",
+        "新股流通盘有限，PE 3年54%分位估值偏贵"
+      ],
+      "entry_trigger": "2026年报ROE恢复至20%且营收增速转正，且距解禁日>18个月时股价回落至18元以下",
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false,
+      "cycle_position": null
+    },
+    {
+      "name": "伟星股份",
+      "code": "002003.SZ",
+      "board": "深",
+      "source_etf": "801130.SI",
+      "position_role": "拉链/纽扣等服装辅料全球龙头，出口制造，轻工细分王者",
+      "prebuy_conclusion": "PE 3年14.9%分位，ROE15.6%（12-15%⚠️边界），2025利润-8.3%，出口链关税冲击",
+      "watch_reason": "细分市场全球第一，护城河明确，估值历史低位，等关税明朗或业绩企稳",
+      "current_price": 9.85,
+      "price_date": "2026-05-08",
+      "dv_ttm": 4.23,
+      "price_bands": [
+        14.0,
+        11.0,
+        9.0
+      ],
+      "valuation_anchor": "PE 3年14.9%分位(18.4x)；追高>14 / 中性11-14 / 较好9-11 / 更低<9",
+      "risk_flags": [
+        "出口为主，美关税对越南制造影响波及下游采购意愿",
+        "2025年利润-8.3%，下行趋势未确认触底",
+        "ROE15.6%在15%边界线（标准15%），基本面尚可但不突出"
+      ],
+      "entry_trigger": "2026中报利润降幅收窄至<5%，且越南客户订单维持稳定（无显著转单）",
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false,
+      "cycle_position": null
+    },
+    {
+      "name": "比音勒芬",
+      "code": "002832.SZ",
+      "board": "深",
+      "source_etf": "801130.SI",
+      "position_role": "高尔夫/高端运动服装品牌，轻奢定位，大陆消费品",
+      "prebuy_conclusion": "PE69.2%分位偏贵，净利润已连续2年跌40%，存货周转天数352天，等待业绩真正见底",
+      "watch_reason": "ROE13.1%尚可，品牌定位清晰，但利润持续下滑未见底，当前估值无安全边际",
+      "current_price": 19.59,
+      "price_date": "2026-05-08",
+      "dv_ttm": 3.68,
+      "price_bands": [
+        26.0,
+        20.0,
+        15.0
+      ],
+      "valuation_anchor": "PE 3年69.2%分位(18.5x)偏贵；追高>26 / 中性20-26 / 较好15-20 / 更低<15",
+      "risk_flags": [
+        "净利润连续2年跌幅超20%（2023→2025累计-40%），无明确底部信号",
+        "存货周转天数352天（远高行业正常120-180天），库存积压风险",
+        "高端消费受宏观压制，消费降级持续时间不确定"
+      ],
+      "entry_trigger": "2026中报净利润降幅收窄至<10%，且存货周转天数降至270天以下",
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false,
+      "cycle_position": null
+    },
+    {
+      "name": "开润股份",
+      "code": "300577.SZ",
+      "board": "深",
+      "source_etf": "801130.SI",
+      "position_role": "旅行箱包OEM+自有品牌，小米生态系统合作+品牌转型标的",
+      "prebuy_conclusion": "PE 3年17.5%分位，但营收+36%含并购水分，有机增长仅+6.5%，需等待品牌逻辑验证",
+      "watch_reason": "ROE14.5%（⚠️边界），自有品牌转型叙事吸引人，但并购商誉风险+有机增长存疑",
+      "current_price": 21.38,
+      "price_date": "2026-05-08",
+      "dv_ttm": 1.94,
+      "price_bands": [
+        28.0,
+        22.0,
+        18.0
+      ],
+      "valuation_anchor": "PE 3年17.5%分位(14.9x)；追高>28 / 中性22-28 / 较好18-22 / 更低<18",
+      "risk_flags": [
+        "2025营收+36%主要靠并购，有机增长仅6.5%，增长质量存疑",
+        "商誉风险（并购账面资产合理性待验证）",
+        "品牌业务规模偏小，OEM仍是主要利润来源，转型节奏慢"
+      ],
+      "entry_trigger": "2026中报品牌业务营收有机增速>15%（剔除并购），且ROE提升至16%以上",
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false,
+      "cycle_position": null
+    },
+    {
+      "name": "台华新材",
+      "code": "603055.SH",
+      "board": "沪",
+      "source_etf": "801130.SI",
+      "position_role": "锦纶原液着色差异化新材料，功能性纤维，周期+成长混合",
+      "prebuy_conclusion": "PE 3年53%分位估值中性，ROE10.1%（⚠️低于12%）锦纶周期低谷，等产能出清",
+      "watch_reason": "差异化锦纶技术有护城河，但行业产能过剩周期中等待回升信号",
+      "current_price": 9.18,
+      "price_date": "2026-05-08",
+      "dv_ttm": 1.96,
+      "price_bands": [
+        12.5,
+        9.5,
+        7.5
+      ],
+      "valuation_anchor": "PE 3年53%分位估值中性；追高>12.5 / 中性9.5-12.5 / 较好7.5-9.5 / 更低<7.5",
+      "risk_flags": [
+        "锦纶行业产能过剩，ROE10.1%处于历史低位，盈利修复节奏不确定",
+        "化纤原料价格波动（己内酰胺）直接影响毛利率",
+        "技术壁垒相对有限，下游客户议价能力较强"
+      ],
+      "entry_trigger": "锦纶行业开工率回升至75%+，或公司半年报毛利率回升至20%以上（当前约17%）",
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": true,
+      "cycle_position": "出清期"
+    },
+    {
+      "name": "海澜之家",
+      "code": "600398.SH",
+      "board": "沪",
+      "source_etf": "801130.SI",
+      "position_role": "大众男装品牌龙头，高股息防御，等待净利润止跌信号",
+      "prebuy_conclusion": "DYR6.2%高股息有吸引力，PE64.4%分位偏贵，净利4年下滑，等价格回落至5.4元再动",
+      "watch_reason": "PE P20分位约5.4元，DYR届时可达8%+，届时估值+高股息性价比才成立",
+      "current_price": 6.61,
+      "price_date": "2026-05-08",
+      "dv_ttm": 6.2,
+      "price_bands": [
+        8.5,
+        7.0,
+        5.4
+      ],
+      "valuation_anchor": "PE 3年64.4%分位(14.6x)偏贵，P20分位约5.4元；追高>8.5 / 中性7-8.5 / 较好5.4-7 / 更低<5.4",
+      "risk_flags": [
+        "净利润连续4年下滑（2022→2025），主业衰退趋势未止",
+        "高分红率约85%，若利润继续下滑分红将面临削减",
+        "线上竞争激烈，线下流量下沉，缺乏明确反弹催化剂"
+      ],
+      "entry_trigger": "股价回落至5.4元以下（PE<12x），或连续2个季度净利润同比正增长",
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false,
+      "cycle_position": "收缩期"
+    },
+    {
+      "name": "新澳股份",
+      "code": "603889.SH",
+      "board": "沪",
+      "source_etf": "801130.SI",
+      "position_role": "羊绒纱线精纺制造，轻工出口制造，稳定分红型底仓候选",
+      "prebuy_conclusion": "ROE13.1%（⚠️边界），PE55.4%分位中性，DYR3.5%，历史治理红旗，护城河较薄",
+      "watch_reason": "ROE尚可但历史治理问题存在，估值不便宜，需等更低价格或ROE改善信号",
+      "current_price": 8.5,
+      "price_date": "2026-05-08",
+      "dv_ttm": 3.5,
+      "price_bands": [
+        12.0,
+        9.0,
+        7.0
+      ],
+      "valuation_anchor": "PE 3年55.4%分位估值中性；追高>12 / 中性9-12 / 较好7-9 / 更低<7",
+      "risk_flags": [
+        "历史治理红旗（关联交易、应收账款异常增长），管理层诚信待持续跟踪",
+        "ROE13.1%在⚠️边界，制造业护城河薄，竞争格局分散",
+        "羊绒原料价格波动风险，毛利率敏感"
+      ],
+      "entry_trigger": "ROE持续提升至15%以上（连续2年），且无新增治理红旗；或股价回落至7元以下",
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": true,
+      "cycle_position": "复苏早期"
     }
   ],
   "tier": "radar",

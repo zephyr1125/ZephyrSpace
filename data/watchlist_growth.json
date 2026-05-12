@@ -1,6 +1,32 @@
 {
-  "updated_at": "2026-05-09",
+  "updated_at": "2026-05-12",
   "entries": [
+    {
+      "name": "美的集团",
+      "code": "000333.SZ",
+      "source_etf": "980081",
+      "position_role": "家电龙头底仓兼工业自动化延伸，属于高质量消费制造成长股",
+      "prebuy_conclusion": "逻辑完整，估值偏高，建议等待性价比。",
+      "watch_reason": "综合家电龙头叠加库卡和楼宇科技的第二增长曲线，ROE约20%、OCF/净利1.21、分红稳定增长，适合长期跟踪和分档布局。",
+      "current_price": 81.04,
+      "price_date": "2026-05-11",
+      "board": "深",
+      "dv_ttm": 5.31,
+      "price_bands": [
+        90.38,
+        76.99,
+        73.26
+      ],
+      "valuation_anchor": "PE 3年历史分位+PS+3政策加权：追高区>90.38(PE 80%分位上沿经PS+3上调10%) / 中性区76.99-90.38(PE 50%-80%分位，逻辑对但赔率一般) / 较好区间73.26-76.99(PE 20%-50%分位，可研究性布局) / 更低区间<73.26(PE<20%分位，安全边际更佳)",
+      "risk_flags": [
+        "2026Q1营收和归母净利增速骤降至+2.5%/+2.0%，需验证是否只是高基数效应",
+        "海外收入约40%，美国关税冲击和东南亚产能转移节奏仍需跟踪",
+        "库卡相关商誉约272亿元，若汽车周期再度承压存在减值压力"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false
+    },
     {
       "code": "601398.SH",
       "board": "沪",
@@ -273,17 +299,29 @@
     {
       "code": "605599.SH",
       "board": "沪",
-      "position_role": "黄金零售",
-      "watch_reason": "ROE26.2%+零有息负债+Q1利润率骤降",
+      "position_role": "黄金零售周期股，消费品护城河，分红防御底仓",
+      "watch_reason": "ROE26.2%+零负债+黄金周期受益+高分红，PE历史底部安全边际好",
       "name": "菜百股份",
-      "cycle_is_cyclical": false,
-      "current_price": 28.5,
-      "cycle_position": null,
+      "cycle_is_cyclical": true,
+      "current_price": 18.66,
+      "cycle_position": "景气高峰",
       "price_bands": [
-        24,
-        19.19,
-        15
-      ]
+        23.0,
+        18.5,
+        15.0
+      ],
+      "price_date": "2026-05-08",
+      "dv_ttm": 4.18,
+      "valuation_anchor": "PE 3年6.7%分位(12.0x)；追高>23 / 中性18.5-23 / 较好15-18.5 / 更低<15",
+      "risk_flags": [
+        "Q1 2026净利润率从4.0%收窄至2.79%，利润率压缩趋势需持续跟踪",
+        "黄金价格大幅回调将直接冲击营收和净利",
+        "北京市场集中度高，扩张节奏慢"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "source_etf": "801130.SI",
+      "prebuy_conclusion": "PE历史低位+OCF优质+分红4.18%，当前价格合理布局区间"
     },
     {
       "code": "600988.SH",
@@ -899,6 +937,87 @@
       "next_earnings_date": "2026-08-31",
       "next_earnings_type": "中期业绩",
       "cycle_is_cyclical": false
+    },
+    {
+      "name": "周大生",
+      "code": "002867.SZ",
+      "board": "深",
+      "source_etf": "801130.SI",
+      "position_role": "黄金珠宝加盟品牌，股息+估值修复双驱动，消费周期混合型",
+      "prebuy_conclusion": "营收下滑为加盟库存周期失真，净利+9%，PE18.6%分位+股息6.8%，赔率较好",
+      "watch_reason": "ROE提升至17%，加盟模式轻资产，股息率6.8%极强安全垫；需跟踪CFO修复",
+      "current_price": 13.23,
+      "price_date": "2026-05-08",
+      "dv_ttm": 6.8,
+      "price_bands": [
+        20.0,
+        15.5,
+        12.0
+      ],
+      "valuation_anchor": "PE 3年18.6%分位(12.5x)；追高>20 / 中性15.5-20 / 较好12-15.5 / 更低<12",
+      "risk_flags": [
+        "2025年CFO大降75%至4.64亿，派息率88%高于FCF，分红可持续性存疑",
+        "金价高企导致加盟商减少补货，营收-36%（虽部分为光学失真仍有真实压力）",
+        "加盟为主模式管控力弱于直营，门店扩张放缓"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": true,
+      "cycle_position": "复苏早期"
+    },
+    {
+      "name": "健盛集团",
+      "code": "603558.SH",
+      "board": "沪",
+      "source_etf": "801130.SI",
+      "position_role": "功能性袜业出口OEM龙头，Lululemon/Nike供应商，高ROE成长标的",
+      "prebuy_conclusion": "ROE17.3%持续提升，OCF/净利150%，Q1利润+51.7%，PE仅13.7%分位，赔率最优",
+      "watch_reason": "ROE持续提升+超优OCF+PE历史低位，出口链关税是主要风险但业绩已验证逆势增长",
+      "current_price": 13.38,
+      "price_date": "2026-05-08",
+      "dv_ttm": 4.41,
+      "price_bands": [
+        18.0,
+        14.0,
+        12.0
+      ],
+      "valuation_anchor": "PE 3年13.7%分位(10.5x)；追高>18 / 中性14-18 / 较好12-14 / 更低<12",
+      "risk_flags": [
+        "越南工厂占比高，美国对越南46%关税若落地将直接冲击毛利",
+        "客户集中度较高（Lululemon/Nike），单一大客户风险",
+        "小市值45亿，流动性较低，波动较大"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false,
+      "cycle_position": null
+    },
+    {
+      "name": "水星家纺",
+      "code": "603365.SH",
+      "board": "沪",
+      "source_etf": "801130.SI",
+      "position_role": "家纺品牌龙头，毛利率高+零杠杆+高股息，消费品护城河防御底仓",
+      "prebuy_conclusion": "毛利率41%，OCF/净利121%，零杠杆，DYR5.4%，Q1反弹印证底部回暖，品牌政策直接受益",
+      "watch_reason": "高股息安全垫+五部委品牌政策直接受益+Q1复苏信号；等待ROE向15%靠拢",
+      "current_price": 20.26,
+      "price_date": "2026-05-08",
+      "dv_ttm": 5.4,
+      "price_bands": [
+        24.0,
+        20.5,
+        17.0
+      ],
+      "valuation_anchor": "PE 5年58.5%分位(12.6x)；追高>24 / 中性20.5-24 / 较好17-20.5 / 更低<17",
+      "risk_flags": [
+        "家纺行业整体承压，大众消费需求疲软",
+        "加盟渠道管控挑战，ROE12.4%未达消费品15%理想水平",
+        "PE处5年58%分位，估值中性而非便宜"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false,
+      "cycle_position": null
     }
   ],
   "tier": "growth",
