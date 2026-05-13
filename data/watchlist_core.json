@@ -207,25 +207,28 @@
       "board": "港",
       "source_etf": "direct",
       "position_role": "中国互联网综合垄断平台，微信社交+游戏广告+金融科技，长期核心底仓",
-      "prebuy_conclusion": "护城河最强（微信11.5亿MAU），OCF/NI=135%，ROE~21%。当前HK$471.4处于中性区，可分批建仓",
-      "watch_reason": "微信生态不可复制；游戏全球份额第一；广告AI驱动效率提升；OCF持续优质；持续回购支撑股价",
-      "current_price": 471.4,
-      "price_date": "2026-05-08",
+      "prebuy_conclusion": "Q1 2026: 游戏+22%/广告+20% 超预期，IFRS净利+21.5%，非IFRS+11%。Forward PE 14.3x，60日低位。Capex大增+46%（FY2026E 1150亿），回购放缓，短期FCF承压但属AI投资期。当前是近三年最佳入场窗口",
+      "watch_reason": "微信13亿MAU不可替代；游戏/广告AI赋能超预期；十五五+政治局会议AI主线直接受益；Forward PE 14.3x历史低位",
+      "current_price": 457.2,
+      "price_date": "2026-05-13",
       "dv_ttm": 1.1,
       "price_bands": [
         583,
         477,
         371
       ],
-      "price_bands_basis": "pe_ttm.y3_range",
-      "price_bands_date": "2026-05-08",
-      "valuation_anchor": "PE历史分位~50%，中性区，当前471.4在中性底477附近",
+      "price_bands_basis": "pe_ttm.manual_3y",
+      "price_bands_date": "2026-05-13",
+      "valuation_anchor": "Trailing PE 17.2x（P20~P50间），Forward PE 14.3x（接近P20），历史最低估区间",
       "risk_flags": [
-        "监管政策风险（游戏版号/金融科技合规）",
-        "VIE结构存在理论解散风险，地缘博弈加剧时估值折价"
+        "FY2026E Capex +46%（1150亿），FCF短期受压，回购节奏放缓",
+        "营收Q1小幅miss（+9% vs 预期+10%），金融科技增速趋缓",
+        "监管政策风险（游戏版号/金融科技/数据安全）",
+        "VIE结构存在理论解散风险，中美博弈加剧时估值折价",
+        "AI芯片出口管制（H800/A100限制）影响算力扩张节奏"
       ],
-      "next_earnings_date": "2026-05-13",
-      "next_earnings_type": "季度业绩（Q1）",
+      "next_earnings_date": "2026-08-15",
+      "next_earnings_type": "季度业绩（Q2/中期）",
       "cycle_is_cyclical": false
     },
     {
@@ -313,5 +316,5 @@
     }
   ],
   "tier": "core",
-  "updated_at": "2026-05-12"
+  "updated_at": "2026-05-13"
 }
