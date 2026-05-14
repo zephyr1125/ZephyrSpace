@@ -1324,12 +1324,12 @@
       "board": "沪",
       "dv_ttm": 4.22,
       "price_bands": [
-        47.8,
-        44.1,
-        37.41
+        47.75,
+        39.67,
+        37.44
       ],
-      "price_bands_basis": "pb.y3",
-      "price_bands_date": "2026-05-12",
+      "price_bands_basis": "pb.y3+ps-2",
+      "price_bands_date": "2026-05-14",
       "valuation_anchor": "PB 3年历史分位（周期股，PE分位失真）：追高区>47.80(PB 80%分位 2.07x) / 中性区44.10-47.80(PB 50%-80%分位) / 较好区37.41-44.10(PB 20%-50%分位) / 理想区<37.41(PB<20%分位 1.62x)",
       "risk_flags": [
         "双碳长期结构逆风，煤炭需求天花板明确，须关注十五五能源政策",
@@ -1339,7 +1339,7 @@
       "next_earnings_date": "2026-08-31",
       "next_earnings_type": "半年报",
       "cycle_is_cyclical": true,
-      "cycle_position": "复苏早期"
+      "cycle_position": "底部/复苏早期"
     },
     {
       "name": "阿里巴巴",
