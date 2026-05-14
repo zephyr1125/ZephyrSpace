@@ -286,6 +286,34 @@
       "cycle_position": "底部"
     },
     {
+      "name": "ASML Holding",
+      "code": "ASML.US",
+      "market": "US",
+      "board": "纳",
+      "source_etf": "direct",
+      "position_role": "全球EUV光刻机唯一供应商，半导体先进制程不可绕过的关键基础设施，长期核心底仓",
+      "watch_reason": "EUV 100%垄断，全球无替代品；AI资本开支驱动先进制程需求持续；FCF/净利120%+；深度分析96/100",
+      "prebuy_conclusion": "逻辑清晰，等待更合适价格或验证点。当前$1,582处于中性区上端（FY2026E PE ~43x），等待回调至$1,185-$1,440绿灯区或Q2 2026财报（2026-07-15）验证后建仓",
+      "current_price": 1581.58,
+      "price_date": "2026-05-14",
+      "price_bands": [
+        1740,
+        1440,
+        1185
+      ],
+      "valuation_anchor": "FY2026E EPS ~$37（€34共识），43x为中性区上端；历史5年PE均值38-42x；同业KLAC 34x/LRCX 38x/AMAT 32x；PEG ~1.43x（同业最低）",
+      "dv_ttm": 1.5,
+      "risk_flags": [
+        "中国收入占比~25-30%，出口管制持续收紧风险",
+        "高端EUV年产能~60台，下游若资本开支收缩则积压订单转单风险",
+        "Intel/Samsung先进制程迟滞，TSMC依赖度过高",
+        "FY2026E PE 43x处于历史中高端，正面意外已定价"
+      ],
+      "next_earnings_date": "2026-07-15",
+      "next_earnings_type": "季报",
+      "cycle_is_cyclical": false
+    },
+    {
       "name": "NVIDIA",
       "code": "NVDA.US",
       "market": "US",
@@ -316,5 +344,5 @@
     }
   ],
   "tier": "core",
-  "updated_at": "2026-05-13"
+  "updated_at": "2026-05-14"
 }
