@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-12",
+  "updated_at": "2026-05-14",
   "entries": [
     {
       "name": "保利发展",
@@ -2751,6 +2751,33 @@
       "next_earnings_type": "半年报",
       "cycle_is_cyclical": true,
       "cycle_position": "复苏早期"
+    },
+    {
+      "name": "张裕",
+      "code": "000869.SZ",
+      "source_etf": "",
+      "position_role": "satellite",
+      "prebuy_conclusion": "国内葡萄酒龙头遭遇品类结构性萎缩，2025净利大降但OCF健康（3.51亿），PB处历史0.28%极低分位，2026Q1营收首次转正+8.3%，等待业绩修复确认。",
+      "watch_reason": "品牌价值型公司极度低估，PB历史极低分位，等待行业底部确认和业绩拐点",
+      "current_price": 19.1,
+      "price_date": "2026-05-14",
+      "board": "A",
+      "dv_ttm": 0,
+      "price_bands": [
+        26.8,
+        24.3,
+        21.5
+      ],
+      "valuation_anchor": "pb.y3+ps+1",
+      "risk_flags": [
+        "行业结构性萎缩",
+        "净利大幅下滑（一次性+经营双重）",
+        "进口酒长期竞争"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false,
+      "entry_trigger": "2026H1营收持续正增长+净利修复至2亿以上可升growth"
     }
   ],
   "tier": "radar",

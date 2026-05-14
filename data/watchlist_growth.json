@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-13",
+  "updated_at": "2026-05-14",
   "entries": [
     {
       "name": "美的集团",
@@ -1375,6 +1375,32 @@
       "dv_ttm": 0.0,
       "next_earnings_date": "2026-08-15",
       "next_earnings_type": "季度业绩（Q1 FY2027）",
+      "cycle_is_cyclical": false
+    },
+    {
+      "name": "中国食品",
+      "code": "00506.HK",
+      "source_etf": "",
+      "position_role": "satellite",
+      "prebuy_conclusion": "中粮旗下中国最大可口可乐装瓶商，特许经营护城河极强，净现金45亿FCF21亿+，当前PE~10x高于历史P80，需等回调至3.16港币以下再建仓。",
+      "watch_reason": "特许经营权不可复制，现金流高质量，等待估值回归历史合理区间",
+      "current_price": 3.59,
+      "price_date": "2026-05-14",
+      "board": "HK",
+      "dv_ttm": 0,
+      "price_bands": [
+        3.16,
+        2.9,
+        2.68
+      ],
+      "valuation_anchor": "pe_ttm.y3+ps+6",
+      "risk_flags": [
+        "当前估值高于历史P80",
+        "港股流动性偏弱（日均HK）",
+        "增长依赖利润率而非量增"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "中期业绩",
       "cycle_is_cyclical": false
     }
   ],
