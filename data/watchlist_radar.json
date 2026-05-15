@@ -2870,6 +2870,93 @@
       "next_earnings_date": "2026-08-31",
       "next_earnings_type": "半年报",
       "cycle_is_cyclical": false
+    },
+    {
+      "name": "潍柴动力",
+      "code": "000338.SZ",
+      "source_etf": "931752",
+      "position_role": "中国最大发动机制造商，AIDC/电力能源转型中，指数权重23.7%必跟标的",
+      "prebuy_conclusion": "PE=26.8x和PB=3.18x均处于近3年99.9%最高分位，归母净利-4.15%，当前价格极度高估，不是买点。AIDC备用电源(+259%)和大缸径发动机(+65%)转型逻辑清晰，OCF=2.59x极佳。等PE回落至<18x（约22元）再介入；当前仅跟踪不建仓。",
+      "watch_reason": "中国最大发动机制造商（年营收2318亿），931752指数权重23.7%，AIDC数据中心备用电源转型是重要增量；OCF质量优秀（2.59x），等估值合理后是非常好的长期标的。",
+      "current_price": 32.7,
+      "price_date": "2026-05-12",
+      "board": "深",
+      "dv_ttm": 2.8,
+      "price_bands": [
+        32.7,
+        26.0,
+        22.0
+      ],
+      "price_bands_basis": "PE历史分位：当前99.9%极贵；中性区约26元（PE~20x，P50附近）；积极买入区<22元（PE<18x，历史P20以下）",
+      "price_bands_date": "2026-05-12",
+      "valuation_anchor": "entry_trigger=PE<=18x（约22元）；当前PE=26.8x在99.9%分位，等待回调约-33%",
+      "risk_flags": [
+        "PE/PB双双处于近3年99.9%最高分位，当前极度高估，安全边际为负",
+        "FY2025归母净利-4.15%，主业重卡发动机增速放缓",
+        "A/H溢价30-60%+，港股(2338.HK)定价更合理"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": true,
+      "cycle_position": "复苏中期"
+    },
+    {
+      "name": "徐工机械",
+      "code": "000425.SZ",
+      "source_etf": "931752",
+      "position_role": "中国工程机械行业第二大公司，国企龙头，指数权重仅次于潍柴",
+      "prebuy_conclusion": "PE=18.1x（历史75.2%分位）+PB=1.91x（历史77.4%分位），双双偏高；ROE=11%，2026Q1净利+0.8%增速几乎停滞。国企效率制约ROE上行，当前估值不具吸引力。等PB跌至1.5x以下（约8元）再积极介入。",
+      "watch_reason": "中国工程机械行业第二大公司（2025年营收1008亿），国企背景+政策支持；产品矩阵完整，海外市场扩张持续；OCF质量优秀（FY2025=211%），长期关注价值高，等待合理估值窗口。",
+      "current_price": 10.21,
+      "price_date": "2026-05-12",
+      "board": "深",
+      "dv_ttm": 1.97,
+      "price_bands": [
+        11.5,
+        10.21,
+        8.0
+      ],
+      "price_bands_basis": "PE历史分位：追高>11.5元（PE>20x）；合理观察区10.21元（PE18x，P75）；积极买入<8元（PB<1.5x，PE约13x，P30以下）",
+      "price_bands_date": "2026-05-12",
+      "valuation_anchor": "entry_trigger=PB<1.5x（约8元）或PE<13x，届时ROE~11%对应合理估值",
+      "risk_flags": [
+        "PE/PB双双处于75-77%分位，当前估值偏贵，安全边际不足",
+        "2026Q1净利+0.8%几乎停滞，增长动力明显减弱",
+        "国企效率制约，历史ROE长期低于民营同行三一重工"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": true,
+      "cycle_position": "复苏中期"
+    },
+    {
+      "name": "中国重汽",
+      "code": "000951.SZ",
+      "source_etf": "931752",
+      "position_role": "国内重卡市占率第一（26.7%），海外出口+国内替换需求双引擎",
+      "prebuy_conclusion": "PE=14.4x（历史31.9%分位，合理）但PB=1.56x（历史93.1%分位，极贵），PE/PB出现显著分歧。Q1 2026净利+46.8%延续强劲增长，海外出口+国内替换双引擎逻辑清晰；但PB极度偏高表明净资产已被充分定价，ROE=10.58%偏低。等PB回落至历史P50（1.33，约19元）以下再考虑建仓。",
+      "watch_reason": "重卡行业龙头（市占率26.7%），HOWO品牌在东南亚/中东/非洲具有较强竞争力；2025年营收+28%+净利+13%，Q1 2026净利+47%，景气趋势强；国资委下属，政策支持稳定。PB过高时跟踪，等回调后建仓。",
+      "current_price": 22.24,
+      "price_date": "2026-05-15",
+      "board": "深",
+      "dv_ttm": 3.72,
+      "price_bands": [
+        25.0,
+        22.24,
+        19.0
+      ],
+      "price_bands_basis": "PB历史分位：追高>25元（PB>1.65x）；当前观察区22.24元（PB=1.56，93%分位）；积极买入<19元（PB~1.33，历史P50）",
+      "price_bands_date": "2026-05-15",
+      "valuation_anchor": "entry_trigger=PB<1.33x（历史P50，约19元），当前PB=1.56需等待回调约15%",
+      "risk_flags": [
+        "PB=1.56x处于历史93.1%分位（极贵），净资产已被充分定价",
+        "ROE=10.58%偏低，与高PB估值不匹配",
+        "OCF/NP=33.7%偏低（工作资本占用，应收账款扩张）"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": true,
+      "cycle_position": "复苏中期"
     }
   ],
   "tier": "radar",
