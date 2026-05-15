@@ -1638,6 +1638,31 @@
       "next_earnings_type": "半年报",
       "cycle_is_cyclical": true,
       "cycle_position": "复苏中期"
+    },
+    {
+      "name": "汇川技术",
+      "code": "300124.SZ",
+      "source_etf": "932438",
+      "position_role": "工业自动化龙头，变频器+伺服+PLC三位一体，人形机器人关键部件延伸",
+      "prebuy_conclusion": "估值极度偏贵（PE 3年99.3%分位），等回落至P50（<=64元）再分批介入；基本面扎实但Q1 2026盈利承压（净利-23.4%），拟港股H股上市存摊薄风险",
+      "watch_reason": "国内工业自动化龙头，通用伺服32%市占率，积极布局人形机器人核心零部件；长期受益工业自动化复苏与机器人放量",
+      "current_price": 77.32,
+      "price_date": "2026-05-15",
+      "board": "创",
+      "dv_ttm": null,
+      "price_bands": [
+        77,
+        64,
+        58
+      ],
+      "valuation_anchor": "PE 3年分位：追高区>77（当前99.3%分位）/ 中性区64-77（P50-P80，等待区）/ 较好区间58-64（P20-P50）/ 更低区间<58（<P20，积极建仓）",
+      "risk_flags": [
+        "Q1 2026净利润-23.4%、毛利率趋势下滑（29.1% vs 一年前34.6%），盈利修复拐点尚未确认",
+        "拟港股H股上市（2026-04-28申报），存在股权摊薄风险，需关注发行节奏与募资用途"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false
     }
   ],
   "tier": "growth",

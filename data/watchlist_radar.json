@@ -2957,6 +2957,84 @@
       "next_earnings_type": "半年报",
       "cycle_is_cyclical": true,
       "cycle_position": "复苏中期"
+    },
+    {
+      "name": "双林股份",
+      "code": "300100.SZ",
+      "source_etf": "932438",
+      "position_role": "谐波减速器+汽车零部件，机器人精密传动核心标的",
+      "prebuy_conclusion": "谐波减速器布局正确但Q1 2026净利-47%、OCF近零，安全边际不足；等H1 2026数据修复确认再建仓",
+      "watch_reason": "谐波减速器国产化率低，布局人形机器人精密传动件有结构性机会；业绩修复后重新评估",
+      "current_price": 33.15,
+      "price_date": "2026-05-15",
+      "board": "创",
+      "dv_ttm": null,
+      "price_bands": [
+        35,
+        29,
+        23
+      ],
+      "entry_trigger": "H1 2026归母净利润同比降幅收窄至-15%以内，且股价回落至P50以下（<=29元）",
+      "valuation_anchor": "PE 3年分位：追高区>35（>P80=46.2x）/ 中性区29-35（P50-P80）/ 较好区间23-29（P20-P50）/ 更低区间<23（<P20）",
+      "risk_flags": [
+        "Q1 2026归母净利润-47.4%、OCF骤降至接近零，业绩急剧恶化",
+        "PB 5.82x远超历史中位1.91x，估值主要靠机器人叙事支撑，基本面无支撑"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false
+    },
+    {
+      "name": "长盛轴承",
+      "code": "300718.SZ",
+      "source_etf": "932438",
+      "position_role": "含油轴承细分龙头，高毛利精密制造，机器人配件潜在供应商",
+      "prebuy_conclusion": "护城河清晰（毛利35%、净利率20%）且Q1 2026增速加速，但PE 90.7x极高；合理价<=36元（P50），当前79.35元溢价122%，无安全边际",
+      "watch_reason": "含油轴承细分龙头，竞争壁垒真实；毛利率35%在精密制造中属高质量；静待估值合理化",
+      "current_price": 79.35,
+      "price_date": "2026-05-15",
+      "board": "创",
+      "dv_ttm": null,
+      "price_bands": [
+        88,
+        45,
+        36
+      ],
+      "entry_trigger": "股价回调至PE P50区间（<=36元），且半年报确认毛利率维持>33%、净利润同比正增长",
+      "valuation_anchor": "PE 3年分位：追高区>88（超P80=94.4x）/ 中性区45-88（P50-P80）/ 较好区间36-45（P20-P50）/ 更低区间<36（<P20，安全边际充足）",
+      "risk_flags": [
+        "PE 90.7x、PB 13.15x，机器人主题炒作泡沫风险极大，叙事逆转将回归历史P50（约36元）",
+        "PS 18.7x在精密制造中属历史最高位；市值237亿对应年营收12.68亿，严重高估"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false
+    },
+    {
+      "name": "今天国际",
+      "code": "300532.SZ",
+      "source_etf": "932438",
+      "position_role": "智能物流装备/自动化立体仓储，等待业绩拐点",
+      "prebuy_conclusion": "营收零增长+毛利三年连降+Q1 2026 OCF转负；PE=23.1x接近P80，无安全边际；等营收回正且毛利率>22%才考虑布局",
+      "watch_reason": "立体仓储/智能物流中型标的，若制造业资本开支回暖可受益；当前处于业绩低谷，等待拐点",
+      "current_price": 7.88,
+      "price_date": "2026-05-15",
+      "board": "创",
+      "dv_ttm": null,
+      "price_bands": [
+        7.94,
+        5.83,
+        3.95
+      ],
+      "entry_trigger": "连续两个季度营收同比转正，且毛利率回升至22%以上，同时股价回落至P50（<=5.83元）",
+      "valuation_anchor": "PE 3年分位：追高区>7.94（>P80=23.3x）/ 中性区5.83-7.94（P50-P80）/ 较好区间3.95-5.83（P20-P50）/ 更低区间<3.95（<P20）",
+      "risk_flags": [
+        "FY2025营收-0.3%、Q1 2026营收-11.8%，毛利率加速下滑至20.7%，无明确修复时间表",
+        "资产负债率62.6%偏高，Q1 2026 OCF大幅为负，财务弹性有限"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false
     }
   ],
   "tier": "radar",
