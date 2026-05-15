@@ -350,26 +350,33 @@
       ]
     },
     {
-      "cycle_is_cyclical": 0,
+      "cycle_is_cyclical": false,
       "board": "沪",
-      "current_price": 65.16,
+      "current_price": 65.15,
       "next_earnings_date": "2026-08-31",
       "next_earnings_type": "半年报",
       "name": "科沃斯",
-      "price_date": "2026-03-31",
-      "risk_flags": [],
-      "price_bands": [
-        78.2,
-        65.16,
-        55.4
+      "price_date": "2026-05-15",
+      "risk_flags": [
+        "追觅持续低价竞争，欧洲市场价格战使毛利率承压",
+        "人民币升值影响出口汇兑收益",
+        "FY2026利润拐点尚未确认，需半年报验证",
+        "市场份额被石头/追觅双向挤压"
       ],
-      "watch_reason": "超低估值+业绩复苏",
-      "position_role": "growth",
+      "price_bands": [
+        90,
+        65,
+        55
+      ],
+      "watch_reason": "扫地机器人+商用清洁双龙头，ROE 21.65%，当前PE历史分位22.8%（3年极低）。FY2025利润改善（毛利率+2.8pct），赔率极佳；等2026H1半年报确认利润拐点后可加仓。",
+      "position_role": "消费机器人赛道弹性仓，等利润拐点确认",
       "code": "603486.SH",
-      "valuation_anchor": "高ROE+低PE",
-      "prebuy_conclusion": "PE处3年22%分位，极低估值；FY2025净利+118%，业绩复苏趋势明确",
+      "valuation_anchor": "PE历史分位锚定：追高区>90（P50中性目标）/ 中性区65-90（P20-P50）/ 较好区间55-65（P10估算，赔率极佳）/ 保守区<55",
+      "prebuy_conclusion": "ROE 21.65%，PE分位22.8%历史极低赔率佳。FY2025毛利率改善是正面信号，但FY2026利润拐点需半年报验证（追觅价格战+汇兑风险是主要不确定性）。65元以下可初步建仓，目标P50对应90元（+38%）。",
       "dv_ttm": 0,
-      "cycle_position": null
+      "cycle_position": "复苏中期",
+      "price_bands_basis": "pe_ttm.lixinger_3y",
+      "price_bands_date": "2026-05-15"
     },
     {
       "cycle_is_cyclical": 0,
@@ -1036,25 +1043,31 @@
       "name": "思源电气",
       "code": "002028.SZ",
       "source_etf": "931994",
-      "position_role": "A股电网设备龙头，继电保护+变压器+出海三线驱动，护城河在国网认证体系和技术积累",
-      "watch_reason": "ROE 18%，出海收入占比超30%且快速增长，受益国网'十五五'4万亿投资，全球电力紧缺下中国电网装备出口壁垒低。",
-      "current_price": 195.25,
-      "price_date": "2026-04-28",
+      "position_role": "电力设备核心仓，等估值回调",
+      "watch_reason": "国内输配变压器+保护继电器龙头，ROE 22.63%，全球化布局加速。电网投资十五五2.3万亿驱动，订单持续高增。但当前PE分位89.2%，需等回调至150-165元建仓。",
+      "current_price": 190.0,
+      "price_date": "2026-05-15",
       "board": "深",
-      "dv_ttm": null,
+      "dv_ttm": 0.9,
       "price_bands": [
-        200.0,
-        160.0,
-        120.0
+        185,
+        165,
+        150
       ],
-      "valuation_anchor": "PE 3年P80=48x/P50=38x/P20=29x对应200/160/120元；当前PE分位90.6%偏贵，目标布局区120-160元。",
+      "valuation_anchor": "PE历史分位锚定：追高区>185（P85+，当前位置偏贵）/ 中性区165-185（P50-P85）/ 较好区间150-165（目标建仓区，FY2026E PE 30-33x）/ 保守区<150",
       "risk_flags": [
-        "业绩持续性待验证",
-        "估值偏高风险"
+        "当前PE分位89.2%，估值严重偏贵，追高风险极高",
+        "2026Q1毛利率下滑0.5pct，需观察是否趋势性压缩",
+        "电网集采竞争加剧，招标价格压力",
+        "景气高峰期行业估值波动大，存在大幅回调可能"
       ],
-      "next_earnings_date": "2026-08-31",
-      "next_earnings_type": "半年报",
-      "cycle_is_cyclical": false
+      "next_earnings_date": "2026-10-31",
+      "next_earnings_type": "三季报",
+      "cycle_is_cyclical": true,
+      "price_bands_basis": "pe_ttm.lixinger_3y",
+      "price_bands_date": "2026-05-15",
+      "cycle_position": "景气高峰",
+      "prebuy_conclusion": "基本面一流（ROE 22.63%，净利率15%，订单饱满），全球电网升级长逻辑极清晰，但当前PE分位89.2%（190元）严重偏贵，无安全边际。目标建仓区150-165元（FY2026E PE 30-33x），等待回调入场。"
     },
     {
       "name": "东方电缆",
@@ -1469,6 +1482,75 @@
       "next_earnings_type": "半年报",
       "cycle_is_cyclical": true,
       "cycle_position": "复苏中期"
+    },
+    {
+      "name": "石头科技",
+      "code": "688169.SH",
+      "board": "科",
+      "current_price": 122.12,
+      "price_date": "2026-05-15",
+      "price_bands": [
+        140,
+        126,
+        110
+      ],
+      "price_bands_basis": "pe_ttm.lixinger_3y",
+      "price_bands_date": "2026-05-15",
+      "valuation_anchor": "PE历史分位锚定：追高区>140（P80+）/ 中性区126-140（P50-P80）/ 较好区间110-126（P20-P50，标准建仓）/ 保守区<110（P20以下，首仓）",
+      "cycle_is_cyclical": false,
+      "cycle_position": "复苏中期",
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "watch_reason": "全球扫地机器人龙头（市占40%+），品牌+技术双护城河。FY2025战略投入致净利-31%，2026Q1恢复+21%，拐点信号出现。以旧换新退坡后自然回补+出海双驱动，等价格窗口。",
+      "prebuy_conclusion": "扫地机器人龙头，技术壁垒深。FY2025战略投入压利润（-31%），2026Q1已恢复+21%，ROE 10.14%处偏低但属主动研发压制非质量问题，PE历史分位43.5%（122元）估值中性。等110元以下（P20）建仓，关注2026H1半年报净利同比恢复幅度。",
+      "position_role": "消费机器人赛道成长仓，等价格窗口",
+      "risk_flags": [
+        "FY2025净利-31%，利润拐点真实性需2026H1验证",
+        "追觅低价竞争持续，国内份额博弈激烈",
+        "ROE 10.14%偏低，若研发投入未换来市场份额则需重估",
+        "以旧换新政策2026年续期不确定"
+      ],
+      "source_etf": "direct",
+      "dv_ttm": null
+    },
+    {
+      "name": "美图公司",
+      "code": "01357.HK",
+      "board": "港",
+      "market": "HK",
+      "hk_code": "1357",
+      "company_type": "中概互联网",
+      "vie_structure": true,
+      "wvr_structure": false,
+      "us_sanction_risk": false,
+      "dual_listing": "HK only",
+      "hk_connect": true,
+      "price_currency": "HKD",
+      "current_price": 4.77,
+      "price_date": "2026-05-15",
+      "price_bands": [
+        8.6,
+        6.0,
+        4.6
+      ],
+      "price_bands_basis": "p_fcf.manual_3y",
+      "price_bands_date": "2026-05-15",
+      "valuation_anchor": "P/FCF历史分位锚定：追高区>8.60（P/FCF>30x历史高分位）/ 中性区6.00-8.60（P/FCF 21-30x）/ 合理入场区4.60-6.00（P/FCF 16-21x，历史Q50附近，当前位置）/ 更低区<4.60（P/FCF<16x，安全边际充足）",
+      "cycle_is_cyclical": false,
+      "cycle_position": "复苏中期",
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "中期业绩",
+      "watch_reason": "中国最大移动影像AI平台，SaaS转型加速。FY2025非IFRS净利+65%，FCF+74%，Q1 2026付费用户+30%。当前P/FCF 16.7x处于历史低分位，政策PS=+13，小仓位试错逻辑成立。",
+      "prebuy_conclusion": "SaaS转型已从故事变现实（非IFRS净利9.65亿+65%，FCF 12亿+74%），P/FCF 16.7x处于历史合理低位，政策PS=+13强支撑。VIE结构+IFRS/非IFRS口径差异是主要风险点。≤3%小仓位，等2026H1中期业绩确认订阅收入增速维持>40%后可加仓。",
+      "position_role": "港股AI SaaS小仓位试错，等业绩验证",
+      "risk_flags": [
+        "VIE结构风险，境外股东控制依赖合同安排",
+        "IFRS净利-12.7%（版权图库退出损失），与非IFRS口径差异需持续跟踪",
+        "FY2025新增长期有息负债12.9亿HKD，疑为可换股债券，摊薄风险待确认",
+        "微信/抖音/快手内置AI修图功能构成竞品威胁"
+      ],
+      "source_etf": "direct",
+      "dv_ttm": null
     }
   ],
   "tier": "growth",

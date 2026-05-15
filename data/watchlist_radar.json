@@ -2682,27 +2682,33 @@
       "name": "应流股份",
       "code": "603308.SH",
       "source_etf": "燃气轮机主题",
-      "position_role": "燃气轮机高温合金精铸件OEM认证稀缺供应商，服务Siemens/GE/罗罗等全球龙头",
-      "watch_reason": "全球燃气轮机三大OEM（Siemens Energy/GE/罗罗）认证壁垒极高，中国唯一具备多品牌认证的精铸件供应商，燃机爆发直接受益。",
-      "current_price": 78.76,
-      "price_date": "2026-05-08",
+      "position_role": "高温合金精铸造稀缺标的，长线跟踪等低吸",
+      "watch_reason": "国内高温合金精铸造龙头，已获GE航空/Siemens Energy等全球tier-1认证，AI数据中心+国产大飞机双驱动。但PE分位97.2%+ROE偏低+治理红旗，需等回调并治理改善后介入。",
+      "current_price": 73.74,
+      "price_date": "2026-05-15",
       "board": "沪",
       "dv_ttm": null,
       "price_bands": [
-        80.0,
-        50.0,
-        35.0
+        80,
+        65,
+        55
       ],
-      "valuation_anchor": "历史PE带已失效（旧业务低PE）；前瞻2027E PE约26.5x；80元以上极度偏贵，50-80元仍贵，35元以下赔率改善。",
+      "valuation_anchor": "PE历史分位锚定：追高区>80（PE极高）/ 中性区65-80（PE仍偏高）/ 观察区55-65 / 入场触发区<55（2027E PE ~42x，治理红旗改善后考虑建仓）",
       "risk_flags": [
-        "控股股东质押比例48.43%，股价下跌风险大",
-        "PE 141x极高，业绩兑现风险大",
-        "ROE 6.9%低于行业门槛，修复需2年"
+        "PE分位97.2%，估值严重高估，当前无安全边际",
+        "控股股东质押率高（约60%），存在强平风险",
+        "2025年关联收购应流航空（当年亏损5000万），上交所已发监管工作函质疑",
+        "ROE 7.25%偏低，大额capex（5亿/年）持续压制回报率",
+        "航空精铸件客户集中，认证到量产周期3-5年"
       ],
-      "entry_trigger": "控股股东质押比例降至30%以下，且PE回落至历史中位（40-50x区间，股价50元附近）",
-      "next_earnings_date": "2026-08-31",
-      "next_earnings_type": "半年报",
-      "cycle_is_cyclical": false
+      "entry_trigger": "股价回落至55元以下（2027E PE ~42x）且控股股东质押率降至40%以下、ROE连续两季度改善至10%+，方可评估建仓",
+      "next_earnings_date": "2026-10-31",
+      "next_earnings_type": "三季报",
+      "cycle_is_cyclical": true,
+      "price_bands_basis": "pe_ttm.lixinger_3y",
+      "price_bands_date": "2026-05-15",
+      "cycle_position": "复苏中期",
+      "prebuy_conclusion": "技术壁垒真实（全球tier-1精铸认证），2026Q1+34%成长信号真实。但PE分位97.2%（73.74元）极贵，ROE 7.25%偏低，控股股东高质押+关联收购四重制约。等55元以下+ROE改善至12%+质押率下降后重新评估。"
     },
     {
       "name": "南网科技",
