@@ -127,6 +127,5 @@ obsidian property:set vault=ZephyrSpace path="01-公司/SpaceX.md" property=关�
 ### 禁止项
 
 - 不自动改写公司主页面
-- 不给出买入/卖出建议
 - 不批量重命名目录或重写信息架构
 - 单条翻译/抓取失败不得阻塞整份日报生成

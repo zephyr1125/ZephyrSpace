@@ -72,19 +72,30 @@
       ]
     },
     {
+      "name": "盐津铺子",
       "code": "002847.SZ",
       "board": "深",
-      "position_role": "休闲零食成长",
-      "watch_reason": "ROE38.7%+OCF优质+FCF负需跟踪",
-      "name": "盐津铺子",
-      "cycle_is_cyclical": false,
-      "current_price": 58.72,
-      "cycle_position": null,
+      "source_etf": "direct",
+      "position_role": "渠道+大单品驱动的休闲零食制造商，魔芋/鹌鹑蛋大单品成长逻辑，高质量ROE",
+      "prebuy_conclusion": "逻辑清晰，当前价格合理，可按计划买入（标准仓位2-5%）；分批建仓，首批≤50%，等2026H1验证OCF和毛利率",
+      "watch_reason": "大单品爆发力强（魔芋+107%）+ROE约35%高质量+执行力强；从高位腰斩提供安全边际；PS+3政策顺风（消费升级）",
+      "current_price": 56.06,
+      "price_date": "2026-05-11",
+      "dv_ttm": null,
       "price_bands": [
-        96,
-        76,
-        65
-      ]
+        70,
+        66,
+        50
+      ],
+      "valuation_anchor": "2026E PE定价+PS+3政策加权（绿灯区上界+10%）。[0]=70(22x+,追高区) / [1]=66(PS加权后中性底,约21x) / [2]=50(16x,绿灯区下界，安全边际充足) / <50为强买入区",
+      "risk_flags": [
+        "实控人张学文2025年高位套现3.84亿+高管套现5235万，治理信号负面；需关注张学武是否发起新减持",
+        "2025年OCF同比-19.84%至9.09亿，OCF/净利从177%急降至82%；短债激增74%（2025H1）；若2026H1继续恶化升级为一票否决",
+        "魔芋原料2025年价格翻倍+30+品牌涌入赛道，毛利率面临再度下压风险"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false
     },
     {
       "code": "002668.SZ",
