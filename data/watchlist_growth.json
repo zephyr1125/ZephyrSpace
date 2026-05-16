@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-15",
+  "updated_at": "2026-05-16",
   "entries": [
     {
       "name": "美的集团",
@@ -1765,6 +1765,35 @@
       "next_earnings_date": "2026-08-31",
       "next_earnings_type": "半年报",
       "cycle_is_cyclical": false
+    },
+    {
+      "board": "纳",
+      "code": "TSLA.US",
+      "current_price": 422.24,
+      "cycle_is_cyclical": false,
+      "cycle_position": null,
+      "dv_ttm": 0,
+      "name": "特斯拉",
+      "next_earnings_date": "2026-07-22",
+      "next_earnings_type": "季报",
+      "position_role": "电动车+AI/Robotaxi/Optimus平台期权，等待商业化验证节点或价格回落",
+      "prebuy_conclusion": "逻辑清晰，等待更合适价格或验证点；当前🟡中性区(-500, PE~210x FY2026E Non-GAAP)，汽车毛利率Q1已回升至21.1%，但Robotaxi/FSD收入贡献仍为零",
+      "price_bands": [
+        500,
+        350,
+        250
+      ],
+      "price_date": "2026-05-15",
+      "risk_flags": [
+        "🔴 估值与盈利严重脱节：GAAP PE ~387x，FY2025 ROIC~7%低于资本成本，AI/Robotaxi期权0收入",
+        "🔴 CEO关键人/政治风险：马斯克多公司分心+DOGE参与导致欧洲品牌受损+销量下滑",
+        "🔴 中国市场竞争与地缘风险：BYD销量超越，中国收入占~20%面临关税反制",
+        "🟡 汽车利润率压力：毛利率从25%→18%，价格战仍在持续",
+        "🟡 Robotaxi商业化延迟：德州推出慢于预期，监管批准不确定"
+      ],
+      "source_etf": "direct",
+      "valuation_anchor": "FY2026E Non-GAAP EPS .01（分析师一致预期）：追高区>(>248x) / 中性区-500(174-248x，当前) / 较好区间-350(124-174x) / 安全边际<(<124x)",
+      "watch_reason": "FSD/Robotaxi+Optimus+储能三大AI期权+品牌+数据优势；Q1 2026毛利率21.1%企稳反弹；若Robotaxi商业化成功，是极强的平台重估标的"
     }
   ],
   "tier": "growth",
