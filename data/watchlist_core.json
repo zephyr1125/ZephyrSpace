@@ -128,27 +128,6 @@
       ]
     },
     {
-      "cycle_is_cyclical": 0,
-      "board": "科",
-      "current_price": 1038.0,
-      "next_earnings_date": "2026-08-31",
-      "next_earnings_type": "半年报",
-      "name": "石头科技",
-      "price_date": "2026-03-31",
-      "risk_flags": [],
-      "price_bands": [
-        1245.6,
-        1038.0,
-        883.3
-      ],
-      "watch_reason": "高ROE低PE+龙头地位",
-      "position_role": "core",
-      "code": "688169.SH",
-      "valuation_anchor": "高ROE+低PE",
-      "prebuy_conclusion": "龙头企业，基本面优秀（ROE18.5%，净利增速22.3%），PE处于合理区间",
-      "dv_ttm": 0
-    },
-    {
       "name": "东鹏饮料",
       "code": "605499.SH",
       "board": "沪",
@@ -242,7 +221,7 @@
       "next_earnings_date": "2026-07-23",
       "next_earnings_type": "季报",
       "position_role": "AI基础设施核心锚+搜索垄断底仓，3年以上持有",
-      "prebuy_conclusion": "逻辑清晰，等待更合适价格；当前🟡中性区($368-$422)，等回撤至$300-$368建仓；下次验证Q2 2026财报2026-07-23",
+      "prebuy_conclusion": "深度分析85/100卓越；搜索垄断90%+Cloud+63%+backlog；FY2026 FCF受CapEx压制接近归零；Ad Tech案救济悬而未决；等回撤至-，中性区-",
       "price_bands": [
         422,
         368,
@@ -257,7 +236,7 @@
       ],
       "source_etf": "direct",
       "valuation_anchor": "FY2026E PE 28.9x（非GAAP EPS共识$13.62），历史5年区间19-31x，当前80-90分位",
-      "watch_reason": "Search垄断90%+Cloud AI+63%+$462B积压订单+高利润模式+三板斧逻辑完整"
+      "watch_reason": "深度分析A9+B18+C17+D12+E17+F12=85；Search垄断飞轮+Cloud AI爆发+优质资本分配"
     },
     {
       "name": "长江电力",
@@ -393,6 +372,34 @@
       "next_earnings_date": "2026-08-31",
       "next_earnings_type": "半年报",
       "cycle_is_cyclical": false
+    },
+    {
+      "board": "纳",
+      "code": "AAPL.US",
+      "current_price": 271.35,
+      "cycle_is_cyclical": false,
+      "cycle_position": "成熟期",
+      "dv_ttm": 0.38,
+      "name": "苹果(AAPL)",
+      "next_earnings_date": "2026-07-29",
+      "next_earnings_type": "季报",
+      "position_role": "消费科技核心仓，生态护城河+Services飞轮，3年以上持有",
+      "prebuy_conclusion": "深度分析89/100卓越；22亿活跃设备生态锁定+Services(毛利76%)+FCF全球标杆；DMA监管渐进侵蚀护城河，AI执行短板；中性区-，等",
+      "price_bands": [
+        300,
+        265,
+        243
+      ],
+      "price_date": "2026-04-30",
+      "risk_flags": [
+        "DMA/DOJ监管侵蚀App Store 30%佣金，Services毛利率长期承压",
+        "Apple Intelligence延期发布，AI换机周期推迟",
+        "中国市场收入占17-20%，地缘政治与供应链风险",
+        "Tim Cook接班人不明确，创始人文化传承风险"
+      ],
+      "source_etf": "direct",
+      "valuation_anchor": "FY2026E EPS .80，forward PE 30-31x（中性区），5年均值约27-28x",
+      "watch_reason": "深度分析A10+B17+C18+D12+E19+F13=89；生态系统护城河最强+Services飞轮+FCF质量全球标杆"
     }
   ],
   "tier": "core",
