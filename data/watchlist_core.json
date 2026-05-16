@@ -400,6 +400,33 @@
       "source_etf": "direct",
       "valuation_anchor": "FY2026E EPS .80，forward PE 30-31x（中性区），5年均值约27-28x",
       "watch_reason": "深度分析A10+B17+C18+D12+E19+F13=89；生态系统护城河最强+Services飞轮+FCF质量全球标杆"
+    },
+    {
+      "watch_reason": "全球建设机械绝对龙头，C维度18/20，30+年Dividend Aristocrat，CI/RI/E&T三大业务跨周期，FCF稳健支撑回购+分红（近5年回购约$25B）",
+      "next_earnings_type": "季报",
+      "price_bands": [
+        840,
+        660,
+        500
+      ],
+      "cycle_is_cyclical": true,
+      "code": "CAT.US",
+      "current_price": 888.31,
+      "next_earnings_date": "2026-07-29",
+      "name": "卡特彼勒(CAT)",
+      "position_role": "美股工程机械全球绝对龙头，多维护城河+Dividend Aristocrat，长期底仓",
+      "risk_flags": [
+        "宏观周期下行：FY2025营收-3.6%，CI/RI双双同步下行，宏观建设投资放缓",
+        "关税冲击：2025年关税成本约$7-9亿，供应链重组在途",
+        "估值充分定价：PE TTM 44x，Forward PE~37x，安全边际不足，需等回调"
+      ],
+      "prebuy_conclusion": "深度分析89/100卓越，逻辑清晰，但当前$888估值极贵（PE TTM 44x，约95%历史分位，Forward PE~37x仍偏高）。等待回调至$660-840（FW PE 27-35x）建仓，任何>20%回调均为核心买点。分析师共识目标价$795（低于现价-10.5%），当前不宜追高。",
+      "price_date": "2026-05-16",
+      "valuation_anchor": "FY2026E EPS共识~$24定价：追高区>$840(>35xFE,当前$888在此)/中性区$660-840(27-35xFE,等回调建仓)/较好区间$500-660(21-27xFE)/更低区间<$500(<21xFE,历史底部)",
+      "source_etf": "direct",
+      "cycle_position": "收缩期",
+      "dv_ttm": 2.3,
+      "board": "纽"
     }
   ],
   "tier": "core",
