@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-15",
+  "updated_at": "2026-05-16",
   "entries": [
     {
       "name": "兴业银行",
@@ -680,34 +680,6 @@
       "entry_trigger": "价格回落至26-33元（PE<=27x）且Q1-Q2连续ROE维持>=12.5%验证改善非一次性",
       "next_earnings_date": "2026-08-31（估算）",
       "next_earnings_type": "半年报"
-    },
-    {
-      "name": "盐湖股份",
-      "code": "000792.SZ",
-      "source_etf": "direct",
-      "position_role": "盐湖提锂+钾肥双主业，察尔汗盐湖资源型周期底仓",
-      "prebuy_conclusion": "Q1 2026净利+154.78%（年化净利约100-120亿），前向PE改善至约16-20x，周期进入复苏中期，可小仓位试探建仓，等H1验证后加仓；PB仍在88%历史分位，不宜重仓。",
-      "watch_reason": "察尔汗盐湖全球稀缺、不可复制；盐湖提锂成本行业最低；ROE 20%+（2025），OCF/净利141%，财务质量一线；等锂钾价格底部+价格窗口。",
-      "current_price": 37.02,
-      "price_bands": [
-        45.0,
-        38.0,
-        30.0
-      ],
-      "risk_flags": [
-        "锂钾价格强周期：2024年净利润腰斩（-41%），利润大幅波动",
-        "近12个月无可查分红记录（DV TTM=None），分红政策不稳定",
-        "国企决策效率偏低，产能扩张和分红决策可能滞后预期"
-      ],
-      "valuation_anchor": "基于Q1 2026年化净利约100-120亿（市值1980亿）：追高区>45(前向PE>22x) / 中性区38-45(前向PE 16-22x) / 较好区间30-38(前向PE 13-16x，当前价位处于此区间) / 更低区间<30(前向PE<13x，安全边际充足)",
-      "price_date": "2026-04-30",
-      "board": "深",
-      "entry_trigger": "Q1已验证可小仓位建仓（37-38元区间）；加仓触发：H1 2026净利≥55亿 OR 股价回落至30元以下（前向PE<13x）",
-      "dv_ttm": null,
-      "next_earnings_date": "2026-08-31",
-      "next_earnings_type": "半年报",
-      "cycle_is_cyclical": true,
-      "cycle_position": "复苏中期"
     },
     {
       "name": "大博医疗",
@@ -1666,37 +1638,6 @@
       "tier": "radar"
     },
     {
-      "name": "泸州老窖",
-      "code": "000568.SZ",
-      "source_etf": "399997",
-      "position_role": "高端白酒第三极 / 股息底仓",
-      "prebuy_conclusion": "从Core降档至Growth。Q1 2026净利-19.3%、营收-14.2%，景气底部持续，不符合Core持仓要求。ROE 29%底层质量尚可，长期仍值得跟踪。",
-      "watch_reason": "中证白酒指数权重第三，ROE 30%，PE历史低位，三年85亿/年分红承诺，底仓逻辑扎实。",
-      "current_price": 100.2,
-      "price_bands": [
-        135,
-        120,
-        75
-      ],
-      "risk_flags": [
-        "2025年报净利-19.6%，Q1 2026延续-19.3%，景气底部持续",
-        "⚠️2025年报扣非/净利26.99%异常，需核查年报原文确认利润质量",
-        "国窖批价约920-940元仍低于出厂价950元，渠道去库未完成",
-        "白酒消费税后移政策讨论持续，落地将压制利润空间"
-      ],
-      "valuation_anchor": "EPS 7.38元(2025年报实际)；PE 12x=88元底/PE 16x=118元中/PE 18x=133元顶；PS+5绿灯上界+15%至~120元",
-      "price_date": "2026-04-28",
-      "board": "深",
-      "dv_ttm": 5.94,
-      "next_earnings_date": "2026-08-31",
-      "next_earnings_type": "半年报",
-      "policy_score": 5,
-      "last_updated": "2026-04-29",
-      "cycle_is_cyclical": true,
-      "cycle_position": "底部",
-      "tier": "radar"
-    },
-    {
       "name": "中国海油",
       "code": "600938.SH",
       "source_etf": null,
@@ -1834,34 +1775,6 @@
       "next_earnings_time": "2026-08"
     },
     {
-      "name": "石头科技",
-      "code": "688169.SH",
-      "source_etf": "H30590",
-      "board": "科",
-      "position_role": "消费机器人SLAM技术领先，PB历史极低，等待毛利率企稳",
-      "prebuy_conclusion": "PE 21.1x处于3年31%分位、PB处于历史0.28%极低分位，已隐含大量悲观预期；但FY25毛利率从50%坍塌至42%、ROE从16%降至10%，量涨利缩信号明确，纳入radar等待毛利率企稳。",
-      "watch_reason": "扫地机器人SLAM算法领先，海外占比55%+，具身智能算法积累厚；低估值提供安全垫，等基本面改善升档",
-      "current_price": 117.86,
-      "price_date": "2026-04-29",
-      "price_bands": [
-        150,
-        125,
-        107
-      ],
-      "valuation_anchor": "EPS_TTM≈5.57元；P80=150.1元(PE26.9x)追高，P50=124.6元(PE22.4x)中性，P20=107.2元(PE19.2x)较好买入",
-      "entry_trigger": "FY26H1（2026-08-31）毛利率回升至≥45%，且库存增速≤营收增速；或股价跌至≤107元（PE≤19x，P20）且毛利率确认企稳",
-      "risk_flags": [
-        "FY25毛利率从50%坍塌至42%（-8pp），ROE从16%降至10%，量涨利缩趋势明确",
-        "库存从14.9亿激增至26.6亿（+78% YoY），Q1 2026进一步升至32.2亿，渠道健康度存疑",
-        "美国关税持续加码，海外收入占55%+，毛利率压力来源之一"
-      ],
-      "dv_ttm": 0.66,
-      "cycle_is_cyclical": false,
-      "next_earnings_date": "2026-08-31",
-      "next_earnings_type": "半年报",
-      "next_earnings_time": "2026-08"
-    },
-    {
       "name": "伟创电气",
       "code": "688698.SH",
       "source_etf": "H30590",
@@ -1912,34 +1825,6 @@
         "拟用13亿闲置资金（占净资产48%）做委托理财/证券投资，主业投入意愿存疑"
       ],
       "dv_ttm": 2.68,
-      "cycle_is_cyclical": false,
-      "next_earnings_date": "2026-08-31",
-      "next_earnings_type": "半年报",
-      "next_earnings_time": "2026-08"
-    },
-    {
-      "name": "快克智能",
-      "code": "603203.SH",
-      "source_etf": "H30590",
-      "board": "沪",
-      "position_role": "焊接设备细分龙头，PE历史极高，等待估值大幅回落",
-      "prebuy_conclusion": "PE=79.75x处于3年历史99.86%分位（极度高估，历史P80仅20.2元/PE20.2x）；Q1营收+33%复苏初现，但2025年净利-34.8%异常，当前价格严重虚高，纳入radar等待回落至P80以下（20元）。",
-      "watch_reason": "锡焊设备细分龙头（波峰焊/AOI），Q1 2026营收+33%复苏信号，基本面修复后估值将大幅压缩",
-      "current_price": 46.88,
-      "price_date": "2026-04-30",
-      "price_bands": [
-        20,
-        17,
-        16
-      ],
-      "valuation_anchor": "EPS_TTM≈0.588元；P80=20.21元(PE34.4x)为正常估值上限，P50=17.18元(PE29x)中性，P20=15.52元(PE26x)较好买入；当前46.88元远超P80，等待价格腰斩",
-      "entry_trigger": "股价回落至P80以下（≤20元），且2026H1净利增速≥20%验证复苏，并确认2025年净利下滑原因（EBIT上升但净利异常下滑的原因得到解释）",
-      "risk_flags": [
-        "PE=79.75x处于3年历史99.86%分位，极度高估，历史正常P80仅20.2元",
-        "2025年净利同比-34.8%异常下滑（EBIT与净利背离，原因不明），利润质量存疑",
-        "高管刘志宏、窦小明在29-40元区间持续减持，内部人对高位无信心"
-      ],
-      "dv_ttm": 1.36,
       "cycle_is_cyclical": false,
       "next_earnings_date": "2026-08-31",
       "next_earnings_type": "半年报",
@@ -2562,31 +2447,6 @@
       "next_earnings_type": "半年报",
       "cycle_is_cyclical": true,
       "cycle_position": "复苏早期"
-    },
-    {
-      "name": "宏发股份",
-      "code": "600885.SH",
-      "source_etf": "931994",
-      "position_role": "继电器全球龙头，出海+智能化双逻辑，ROE 20%+高质量，等PE回落",
-      "watch_reason": "继电器全球市占率前三，ROE 20%+，出海收入占50%以上，AI边缘计算+新能源车+光伏等新场景持续扩展。",
-      "current_price": 28.49,
-      "price_date": "2026-04-28",
-      "board": "沪",
-      "dv_ttm": null,
-      "price_bands": [
-        27.0,
-        23.0,
-        21.0
-      ],
-      "valuation_anchor": "PE P80=25x/P50=22x/P20=19x对应27/23/21元；当前PE超P80，等回调至23元附近（PE约22x）再建仓。",
-      "risk_flags": [
-        "当前PE超P80，估值偏贵",
-        "大客户集中度风险"
-      ],
-      "entry_trigger": "PE回落至P50以下（PE<22x，股价<23元）且业绩增速确认维持15%+",
-      "next_earnings_date": "2026-08-31",
-      "next_earnings_type": "半年报",
-      "cycle_is_cyclical": false
     },
     {
       "name": "四方股份",
