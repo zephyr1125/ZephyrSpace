@@ -341,6 +341,58 @@
       "next_earnings_type": "季报",
       "cycle_is_cyclical": false,
       "pending_earnings_note": "Q1 FY2027（2026-05-20 AMC）结果尚未纳入分析，财报发布后需更新公司页及本条目，并将next_earnings_date更新为下一期日期"
+    },
+    {
+      "name": "贵州茅台",
+      "code": "600519.SH",
+      "board": "沪",
+      "source_etf": "direct",
+      "position_role": "A股消费最深护城河，茅台品牌+稀缺性+定价权三位一体，长期核心底仓",
+      "prebuy_conclusion": "护城河深度A股第一，ROE 34.4%连续多年稳定，PE处3年17.4%分位。当前1332.95元低于PS调整后Q2v（1466元），进入绿灯区，是可建仓窗口。红旗：前董秘被查事件持续跟踪。",
+      "watch_reason": "品牌护城河极深，定价权无可撼动；ROE 34%+；PE历史低位；分红稳定增长；AI/数字化不会替代茅台消费场景",
+      "current_price": 1332.95,
+      "price_date": "2026-05-15",
+      "price_bands": [
+        2000,
+        1674,
+        1466
+      ],
+      "valuation_anchor": "PE_TTM Q8v=2000/Q5v=1522（PS+2调整→1674）/Q2v=1333（PS+2调整→1466）；当前1332.95元低于PS调整后Q2v，处3年17.4%极低分位",
+      "dv_ttm": 4.0,
+      "risk_flags": [
+        "前董秘蒋焰被查，管理层风险事件持续跟踪",
+        "Q1 2026毛利率小幅压缩至89.8%，直营vs批发结构变化需关注",
+        "营收-1.2% YoY（低基数叠加渠道库存去化），短期增长承压"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false
+    },
+    {
+      "name": "招商银行",
+      "code": "600036.SH",
+      "board": "沪",
+      "source_etf": "direct",
+      "position_role": "A股零售银行最优质标的，轻型银行模式，ROE/NIM/资产质量均居国内银行首位",
+      "prebuy_conclusion": "当前37.65元PB处3年7%分位历史极低。激进≤43元/合理≤40元/理想≤38元。零售转型护城河深、拨备充足（拨备覆盖率430%+）、NIM 2.0%行业领先、股息率5.35%。无硬红旗，当前为历史底部加仓窗口。",
+      "watch_reason": "ROE 12%+，NIM行业最高，拨备覆盖率430%领先同业；零售银行护城河深（财富管理+信用卡+APP月活1.1亿）；PB历史极低，股息率5.35%高安全垫",
+      "current_price": 37.65,
+      "price_date": "2026-05-15",
+      "price_bands": [
+        55,
+        43,
+        40
+      ],
+      "valuation_anchor": "PB分位定价：PB<0.8x=绿灯(≤40元)/PB 0.8-1.0x=中性(40-50元)/PB>1.1x=追高(>55元)；当前PB=0.7x处3年7%极低分位",
+      "dv_ttm": 5.35,
+      "risk_flags": [
+        "NIM 2.0%虽行业领先但仍面临利率下行压制，2026年LPR若再降影响息差",
+        "净利润增速趋缓（2025年+1.2%），高速增长阶段结束，进入稳态收益模式",
+        "零售贷款资产质量：信用卡不良率有上行趋势，需跟踪消费信贷周期"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false
     }
   ],
   "tier": "core",
