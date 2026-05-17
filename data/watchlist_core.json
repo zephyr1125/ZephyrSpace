@@ -402,17 +402,6 @@
       "watch_reason": "深度分析A10+B17+C18+D12+E19+F13=89；生态系统护城河最强+Services飞轮+FCF质量全球标杆"
     },
     {
-      "watch_reason": "全球建设机械绝对龙头，C维度18/20，30+年Dividend Aristocrat，CI/RI/E&T三大业务跨周期，FCF稳健支撑回购+分红（近5年回购约$25B）",
-      "next_earnings_type": "季报",
-      "price_bands": [
-        840,
-        660,
-        500
-      ],
-      "cycle_is_cyclical": true,
-      "code": "CAT.US",
-      "current_price": 888.31,
-      "next_earnings_date": "2026-07-29",
       "name": "卡特彼勒(CAT)",
       "position_role": "美股工程机械全球绝对龙头，多维护城河+Dividend Aristocrat，长期底仓",
       "risk_flags": [
@@ -426,9 +415,47 @@
       "source_etf": "direct",
       "cycle_position": "收缩期",
       "dv_ttm": 2.3,
-      "board": "纽"
+      "board": "纽",
+      "watch_reason": "全球建设机械绝对龙头，C维度18/20，30+年Dividend Aristocrat，CI/RI/E&T三大业务跨周期，FCF稳健支撑回购+分红（近5年回购约$25B）",
+      "next_earnings_type": "季报",
+      "price_bands": [
+        840,
+        660,
+        500
+      ],
+      "cycle_is_cyclical": true,
+      "code": "CAT.US",
+      "current_price": 888.31,
+      "next_earnings_date": "2026-07-29"
+    },
+    {
+      "name": "福耀玻璃",
+      "code": "600660.SH",
+      "board": "沪",
+      "source_etf": "direct",
+      "position_role": "全球汽车玻璃第一（国内>70%/全球37%），认证壁垒+规模护城河，智能玻璃升级长期成长型核心底仓",
+      "watch_reason": "深度分析90/100卓越；E财务质量满分20/20；ROE 25.56%净利率驱动；OCF/净利连续5年>100%；31年连续分红；全球37%市占率护城河量化明确",
+      "prebuy_conclusion": "深度分析90/100，全球汽车玻璃第一（国内>70%/全球37%），ROE 25.56%净利率驱动，OCF/净利129%，连续31年分红分红率55-83%。当前PE15.7x处3年历史极低分位，是高质量公司的稀有底价窗口。主要风险：美国关税政策不确定性（海外收入45%）；2026Q1费用端异常待H1验证。",
+      "current_price": 56.0,
+      "price_date": "2026-05-16",
+      "price_bands": [
+        67,
+        60,
+        53
+      ],
+      "valuation_anchor": "EPS 2025=3.57元；追高区>67元(PE>19.5x,3年q50以上)/中性区60-67元(PE17.4-19.5x)/较好区间53-60元(PE15.4-17.4x,当前在此)/更低区间<53元(<15.4x历史极端悲观情景)",
+      "dv_ttm": 2.2,
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false,
+      "risk_flags": [
+        "美国关税升级：海外收入45%，北美占比约15-17%，关税政策不确定性",
+        "2026Q1费用端+7亿YoY异常（毛利增加但净利-15.7%），H1待验证具体原因",
+        "单产品集中度>91%（汽车玻璃），汽车行业结构性变化长期风险",
+        "家族控股74%，曹晖接班时间尚短，信息透明度约束"
+      ]
     }
   ],
   "tier": "core",
-  "updated_at": "2026-05-14"
+  "updated_at": "2026-05-17"
 }
