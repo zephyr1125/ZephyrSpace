@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-18",
+  "updated_at": "2026-05-18T22:38:49+08:00",
   "entries": [
     {
       "name": "美的集团",
@@ -1915,6 +1915,42 @@
         "report_date": "2026-05-18",
         "report_path": "深度分析/格力电器 深度分析 2026-05-18.md"
       }
+    },
+    {
+      "name": "小米集团",
+      "code": "01810.HK",
+      "board": "港",
+      "source_etf": "direct",
+      "position_role": "AIoT生态平台+新能源汽车新锐，港股成长股，深度分析75分",
+      "prebuy_conclusion": "[深度分析75/100，2026-05-18] AIoT护城河深厚（10.79亿台连接），汽车首年盈利超预期（411k辆），ROE从13.4%提升至18.3%。OCF短期承压（74%），林斌减持计划和SU7召回是主要黄旗。当前HK$30.66（PE约18.6x），处于较好区间，可分批建仓。Growth tier，初始仓位建议5%。",
+      "watch_reason": "AIoT生态护城河持续深化（10.79亿台，用户黏性高）；汽车业务从0到411k辆首年盈利，FY2026预期50-60万辆利润率弹性显著；ROE改善质量好（利润率驱动，非杠杆）",
+      "current_price": 30.66,
+      "price_date": "2026-05-18",
+      "dv_ttm": null,
+      "price_bands": [
+        38,
+        33,
+        25
+      ],
+      "price_bands_basis": "pe_ttm_adj",
+      "price_bands_date": "2026-05-18",
+      "valuation_anchor": "调整净利润TTM PE：追高>23x(>HK$38)，中性20-23x(HK$33-38)，较好15-20x(HK$25-33)，理想<15x(<HK$25)；FW PE约15x（HK$30.66，基于FY2026预期~500亿）",
+      "risk_flags": [
+        "林斌减持：2025-12-28公告，2026年12月起每年<=5亿美元B类股，4年内<=20亿美元",
+        "SU7召回：2025-09-19，116,887辆SU7标准版（>30%已交付量），叠加高速NOA死亡事故",
+        "OCF承压：约309亿（FY2024:501亿，-38%），OCF/GAAP净利润74%",
+        "VIE结构+AB股双重控制，治理折价持续"
+      ],
+      "next_earnings_date": "2026-08-20",
+      "next_earnings_type": "中期业绩",
+      "cycle_is_cyclical": false,
+      "deep_analysis": {
+        "score": 75,
+        "rating": "4stars",
+        "report_date": "2026-05-18",
+        "report_path": "深度分析/小米集团 深度分析 2026-05-18.md"
+      },
+      "last_reviewed": "2026-05-18"
     }
   ],
   "tier": "growth",
