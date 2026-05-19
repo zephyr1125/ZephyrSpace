@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-19T18:01:53+08:00",
+  "updated_at": "2026-05-19T22:16:07+08:00",
   "entries": [
     {
       "name": "美的集团",
@@ -2028,6 +2028,60 @@
       ],
       "next_earnings_date": "2026-08-31",
       "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false
+    },
+    {
+      "name": "沪电股份",
+      "code": "002463.SZ",
+      "source_etf": "direct",
+      "position_role": "AI PCB全球龙头（市占率10.3%），AI算力服务器+汽车电子双驱动，等回调至90-95元建仓",
+      "prebuy_conclusion": "当前102.6元（PE ~46x）逻辑完整但赔率一般，建议等待回调至90-95元（PE 40-42x）建仓；深度分析82/100，基本面极优，H股申请带来短期估值压力，落地后折价有望收窄",
+      "watch_reason": "深度分析82/100；全球PCB市占率10.3%第一；AI算力服务器PCB客户导入确认；WUS GROUP控股稳定；H股落地后估值折价有望收窄",
+      "current_price": 102.6,
+      "price_date": "2026-05-19",
+      "board": "深",
+      "dv_ttm": 0.49,
+      "price_bands": [
+        100,
+        90,
+        80
+      ],
+      "valuation_anchor": "当前PE ~46x（EPS ~2.24元）；行业可比PE 40-60x；H股折价预期20-30%；深度分析82/100",
+      "risk_flags": [
+        "🔴 H股IPO折价风险：2025-11申请港交所上市，H股可能以折价定价，A股可能跟随承压",
+        "🔴 AI CapEx周期依赖：算力扩张若放缓，AI PCB需求首当其冲",
+        "🟡 WUS GROUP持续减持：从14.4%→11.26%，高估值区间减持压力持续",
+        "🟡 铜价上涨成本传导风险：原材料铜箔/CCL上涨短期压缩毛利率"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false
+    },
+    {
+      "name": "拼多多",
+      "code": "PDD.US",
+      "source_etf": "direct",
+      "position_role": "中国电商双平台龙头（拼多多国内+Temu跨境），以ex-cash PE 5.4x的隐含零Temu估值买入",
+      "prebuy_conclusion": "当前$94.97（PE 9.4x，ex-cash PE 5.4x），标准建仓区间上沿；关税压制Temu估值，市场已将Temu完全归零，存在隐含期权价值；分批建仓，重点观察关税进展",
+      "watch_reason": "深度分析80/100；世界级财务质量（OCF/NI 1.08x，净现金约$41/股占股价43%）；ROE 27.3%净利率驱动；国内拼多多护城河深厚；ex-cash PE 5.4x意味Temu期权几乎免费",
+      "current_price": 94.97,
+      "price_date": "2026-05-18",
+      "board": "纳",
+      "dv_ttm": 0,
+      "price_bands": [
+        145,
+        100,
+        80
+      ],
+      "valuation_anchor": "FY2025净利润993.6亿RMB（$136.7亿USD）；PE 9.4x（TTM），ex-cash PE 5.4x；PB 2.23x；净现金约$41/股（占股价43%）；深度分析80/100",
+      "risk_flags": [
+        "🔴 美国关税145%：Temu全托管模式成本优势受压，de minimis豁免已终止，Temu盈利路径高度不确定",
+        "🔴 Google Play事件：PDD全面否认恶意代码指控，截至2026-05仍未重返Google Play，声誉风险持续",
+        "🟡 治理弱点：无分红/无回购，双层股权+VIE三重保护，4169亿RMB净现金未分配给股东",
+        "🟡 监管不确定性：中美跨境数据/电商平台监管趋严"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "季报",
       "cycle_is_cyclical": false
     }
   ],
