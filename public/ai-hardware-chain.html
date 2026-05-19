@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI硬件产业链全景图 | ZephyrSpace</title>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&family=Noto+Sans+SC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f5f0e6;
+  --card: #fffdf8;
+  --teal: #0e7490;
+  --blue: #2563a0;
+  --amber: #c2770c;
+  --text: #1c1917;
+  --text-sec: #57534e;
+  --muted: #888;
+  --border: rgba(120,113,108,0.18);
+  --border-mid: rgba(120,113,108,0.12);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Sans SC', system-ui, sans-serif;
+  min-height: 100vh;
+  position: relative;
+}
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 0;
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 44px 24px 72px;
+  position: relative; z-index: 1;
+}
+
+/* Nav */
+.nav { margin-bottom: 36px; }
+.back-btn {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 8px 18px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  text-decoration: none;
+  color: var(--teal);
+  font-size: 0.83rem; font-weight: 500;
+  transition: all 0.18s;
+}
+.back-btn:hover {
+  background: var(--teal); color: #fff;
+  border-color: var(--teal);
+  transform: translateX(-2px);
+}
+
+/* Hero */
+.hero { text-align: center; margin-bottom: 44px; }
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: var(--teal); color: #fff;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem; letter-spacing: 0.08em;
+  padding: 5px 14px; border-radius: 999px;
+  margin-bottom: 20px;
+}
+.hero h1 {
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: clamp(2rem, 4.8vw, 3.1rem);
+  font-weight: 700; line-height: 1.15;
+  margin-bottom: 14px;
+}
+.hero-sub {
+  font-size: 0.96rem; font-weight: 300;
+  color: var(--text-sec); line-height: 1.75;
+  max-width: 620px; margin: 0 auto 28px;
+}
+.hero-sub strong { color: var(--text); font-weight: 500; }
+
+/* Direction strip */
+.dir-strip {
+  display: flex; align-items: center; gap: 12px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 11px 22px;
+  max-width: 640px; margin: 0 auto;
+}
+.dir-lbl {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem; font-weight: 600;
+  white-space: nowrap;
+}
+.dir-lbl.up   { color: #7c3aed; }
+.dir-lbl.down { color: #c2770c; }
+.dir-bar {
+  flex: 1; height: 6px; border-radius: 999px;
+  background: linear-gradient(to right, #7c3aed, #4f46e5, #0284c7, #0e7490, #0d9488, #059669, #d97706, #c2770c);
+}
+
+/* ── Chain ── */
+.chain { display: flex; flex-direction: column; gap: 0; margin-top: 32px; }
+
+/* Connector */
+.conn {
+  display: flex; justify-content: center; align-items: center;
+  height: 30px; position: relative;
+}
+.conn-line {
+  position: absolute; left: 50%; top: 0; bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--fc), var(--tc));
+  opacity: 0.28;
+  transform: translateX(-50%);
+}
+.conn-icon {
+  position: relative; z-index: 1;
+  width: 22px; height: 22px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.65rem; color: var(--muted);
+}
+
+/* Layer card */
+.lcard {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.lcard:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+.lcard-bar { height: 4px; background: var(--lc); }
+.lcard-body { padding: 22px 28px 26px; }
+
+/* Layer header */
+.lhead {
+  display: flex; align-items: flex-start;
+  justify-content: space-between; gap: 12px;
+  margin-bottom: 12px;
+}
+.lhead-left { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.lnum {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.67rem; font-weight: 600;
+  color: var(--lc);
+  background: rgba(0,0,0,0.04);
+  padding: 2px 8px; border-radius: 4px;
+  white-space: nowrap; letter-spacing: 0.04em;
+}
+.ltitle {
+  font-family: 'Newsreader', serif;
+  font-size: 1.28rem; font-weight: 600;
+}
+.leng {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.67rem;
+  color: var(--lc);
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 3px 10px; border-radius: 999px;
+  white-space: nowrap;
+  align-self: flex-start; margin-top: 2px;
+}
+
+/* Layer desc */
+.ldesc {
+  font-size: 0.875rem; line-height: 1.68;
+  color: var(--text-sec); margin-bottom: 18px;
+}
+.ldesc strong { color: var(--text); font-weight: 500; }
+
+/* Sectors grid */
+.sgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+  gap: 10px;
+}
+.sbox {
+  border-radius: 10px; padding: 12px 14px;
+  background: rgba(0,0,0,0.025);
+  border: 1px solid rgba(0,0,0,0.07);
+}
+.stitle {
+  font-size: 0.77rem; font-weight: 700;
+  color: var(--lc); margin-bottom: 9px;
+  display: flex; align-items: center; gap: 6px;
+}
+.sdot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--lc); flex-shrink: 0;
+}
+.tags { display: flex; flex-wrap: wrap; gap: 5px; }
+
+/* Company tags */
+.tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.695rem; font-weight: 400;
+  padding: 3px 8px; border-radius: 5px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text-sec);
+  white-space: nowrap;
+}
+.tag.h {  /* hero / global leader */
+  background: var(--lc); color: #fff;
+  border-color: var(--lc); font-weight: 600;
+}
+.tag.cn { /* China company */
+  color: var(--lc);
+  border-color: rgba(0,0,0,0.1);
+  background: rgba(255,255,255,0.7);
+}
+
+/* Key insight */
+.insight {
+  margin-top: 16px; padding: 10px 14px;
+  border-left: 3px solid var(--lc);
+  border-radius: 0 8px 8px 0;
+  background: rgba(255,255,255,0.55);
+  font-size: 0.82rem; line-height: 1.55;
+  color: var(--text-sec);
+}
+.insight strong { color: var(--lc); font-weight: 600; }
+
+/* Footer */
+footer {
+  margin-top: 60px; padding-top: 24px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.73rem; color: var(--muted);
+  line-height: 1.9;
+}
+
+@media (max-width: 640px) {
+  .page { padding: 24px 16px 48px; }
+  .lcard-body { padding: 16px 18px 20px; }
+  .sgrid { grid-template-columns: 1fr; }
+  .lhead { flex-direction: column; }
+  .dir-strip { flex-direction: column; gap: 8px; }
+  .dir-bar { width: 80%; height: 6px; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <nav class="nav">
+    <a href="index.html" class="back-btn">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      返回首页
+    </a>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-badge">
+      <svg width="9" height="9" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" fill="currentColor"/></svg>
+      AI-HARDWARE · SUPPLY CHAIN MAP
+    </div>
+    <h1>AI 硬件产业链全景图</h1>
+    <p class="hero-sub">
+      以<strong>数据中心</strong>为需求原点，沿供应链逐层向上游溯源，覆盖 AI 算力基础设施
+      <strong>八大产业层</strong>，解析每层的核心价值、技术壁垒与全球龙头企业。
+    </p>
+    <div class="dir-strip">
+      <span class="dir-lbl up">↑ 上游 · 半导体设备/材料</span>
+      <div class="dir-bar"></div>
+      <span class="dir-lbl down">数据中心 · 下游 ↓</span>
+    </div>
+  </div>
+
+  <div class="chain">
+
+    <!-- ═══ L8 半导体设备 ═══ -->
+    <div class="lcard" style="--lc:#7c3aed">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L8 · 最上游</span>
+            <span class="ltitle">半导体设备</span>
+          </div>
+          <span class="leng">Semiconductor Equipment</span>
+        </div>
+        <p class="ldesc">
+          芯片制造所需的全套生产工具，涵盖<strong>光刻机、刻蚀机、薄膜沉积（CVD/PVD）、离子注入、
+          量测检测</strong>等核心设备。技术壁垒极高，全球前五大设备商合计市占率超 70%，
+          出口管制使该层成为 AI 算力竞争的最上游卡点。
+        </p>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>光刻机（核心卡点）</div>
+            <div class="tags">
+              <span class="tag h">ASML</span>
+              <span class="tag">Nikon</span>
+              <span class="tag">Canon</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>刻蚀 / CVD / PVD</div>
+            <div class="tags">
+              <span class="tag h">Applied Materials</span>
+              <span class="tag h">Lam Research</span>
+              <span class="tag">Tokyo Electron</span>
+              <span class="tag cn">北方华创</span>
+              <span class="tag cn">中微公司</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>量测检测（OCD / 缺陷）</div>
+            <div class="tags">
+              <span class="tag h">KLA</span>
+              <span class="tag">Onto Innovation</span>
+              <span class="tag cn">中科飞测</span>
+              <span class="tag cn">精测电子</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>离子注入 / 热处理</div>
+            <div class="tags">
+              <span class="tag">Axcelis</span>
+              <span class="tag">Mattson</span>
+              <span class="tag cn">拓荆科技</span>
+              <span class="tag cn">华海清科</span>
+            </div>
+          </div>
+        </div>
+        <div class="insight">
+          <strong>核心壁垒：</strong>ASML EUV 光刻机是 3nm 以下制程的唯一入口，单台售价约 1.5 亿美元，
+          全球仅 ASML 可制造。美国主导出口管制封堵国产替代，现有国产设备覆盖节点在 28nm 以上。
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line" style="--fc:#7c3aed;--tc:#4f46e5"></div>
+      <div class="conn-icon">↓</div>
+    </div>
+
+    <!-- ═══ L7 半导体材料 ═══ -->
+    <div class="lcard" style="--lc:#4f46e5">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L7</span>
+            <span class="ltitle">半导体材料</span>
+          </div>
+          <span class="leng">Semiconductor Materials</span>
+        </div>
+        <p class="ldesc">
+          芯片生产的原料端，覆盖<strong>硅片、光刻胶、特种气体、CMP 抛光液/垫、靶材、掩膜版</strong>
+          等数十类关键材料。每类材料技术护城河深厚，日本和欧美厂商主导供应，
+          中国正积极推进国产替代但部分环节仍存在较大差距。
+        </p>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>硅片（基底材料）</div>
+            <div class="tags">
+              <span class="tag h">信越化学</span>
+              <span class="tag h">SUMCO</span>
+              <span class="tag">SK Siltron</span>
+              <span class="tag cn">沪硅产业</span>
+              <span class="tag cn">中欣晶圆</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>光刻胶</div>
+            <div class="tags">
+              <span class="tag h">JSR</span>
+              <span class="tag h">东京应化 TOK</span>
+              <span class="tag">Shin-Etsu</span>
+              <span class="tag cn">南大光电</span>
+              <span class="tag cn">晶瑞电材</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>特种气体</div>
+            <div class="tags">
+              <span class="tag h">Linde</span>
+              <span class="tag">Air Products</span>
+              <span class="tag">Air Liquide</span>
+              <span class="tag cn">华特气体</span>
+              <span class="tag cn">雅克科技</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>CMP 抛光液 / 垫</div>
+            <div class="tags">
+              <span class="tag h">CMC Materials</span>
+              <span class="tag">Cabot Micro</span>
+              <span class="tag cn">安集科技</span>
+              <span class="tag cn">鼎龙股份</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>靶材 / 掩膜版</div>
+            <div class="tags">
+              <span class="tag">Hoya</span>
+              <span class="tag">Photronics</span>
+              <span class="tag cn">江丰电子</span>
+              <span class="tag cn">清溢光电</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>湿化学品 / 前驱体</div>
+            <div class="tags">
+              <span class="tag">Stella Chemifa</span>
+              <span class="tag">BASF</span>
+              <span class="tag cn">格林达</span>
+              <span class="tag cn">苏州晶瑞</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line" style="--fc:#4f46e5;--tc:#0284c7"></div>
+      <div class="conn-icon">↓</div>
+    </div>
+
+    <!-- ═══ L6 EDA / IP ═══ -->
+    <div class="lcard" style="--lc:#0284c7">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L6</span>
+            <span class="ltitle">芯片设计工具（EDA / IP 核）</span>
+          </div>
+          <span class="leng">EDA · IP Cores</span>
+        </div>
+        <p class="ldesc">
+          <strong>EDA（电子设计自动化）</strong>是所有芯片设计的软件基础，涵盖逻辑综合、仿真、布局布线、
+          良率分析等完整工具链。<strong>IP 核</strong>提供可复用的标准电路模块，大幅降低设计门槛。
+          全球 AI 芯片设计公司的每一款产品都依赖这一层。
+        </p>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>EDA 全流程工具链</div>
+            <div class="tags">
+              <span class="tag h">Synopsys</span>
+              <span class="tag h">Cadence</span>
+              <span class="tag">Siemens EDA</span>
+              <span class="tag">Ansys</span>
+              <span class="tag cn">华大九天</span>
+              <span class="tag cn">概伦电子</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>处理器架构 IP</div>
+            <div class="tags">
+              <span class="tag h">ARM</span>
+              <span class="tag">SiFive（RISC-V）</span>
+              <span class="tag">MIPS</span>
+              <span class="tag cn">平头哥（RISC-V）</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>互连 / 接口 IP</div>
+            <div class="tags">
+              <span class="tag">Synopsys DesignWare</span>
+              <span class="tag">Cadence Tensilica</span>
+              <span class="tag cn">芯原股份</span>
+              <span class="tag cn">摩尔线程（IP授权）</span>
+            </div>
+          </div>
+        </div>
+        <div class="insight">
+          <strong>出口管制高危层：</strong>Synopsys + Cadence 合计占全球 EDA 市场约 70%。
+          美国已将先进 EDA 工具（尤其是 3nm 以下节点）纳入对华出口限制，
+          直接制约中国设计先进 AI 芯片的能力。
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line" style="--fc:#0284c7;--tc:#0e7490"></div>
+      <div class="conn-icon">↓</div>
+    </div>
+
+    <!-- ═══ L5 晶圆代工 ═══ -->
+    <div class="lcard" style="--lc:#0e7490">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L5</span>
+            <span class="ltitle">晶圆代工（Foundry）</span>
+          </div>
+          <span class="leng">Wafer Fabrication</span>
+        </div>
+        <p class="ldesc">
+          接受芯片设计公司的 <strong>GDS 版图文件</strong>，通过数百道工序将设计转化为实际芯片的制造环节。
+          AI GPU/TPU/ASIC 等先进芯片全部依赖 <strong>3nm / 4nm / 5nm</strong> 制程晶圆厂，
+          台积电占 AI 芯片代工市场约 90%，是整条供应链的单点最大瓶颈。
+        </p>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>先进制程（≤5nm）</div>
+            <div class="tags">
+              <span class="tag h">TSMC</span>
+              <span class="tag">Samsung Foundry</span>
+              <span class="tag">Intel Foundry</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>中国晶圆代工</div>
+            <div class="tags">
+              <span class="tag cn">中芯国际 SMIC</span>
+              <span class="tag cn">华虹半导体</span>
+              <span class="tag cn">合肥晶合</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>特色工艺 / 成熟制程</div>
+            <div class="tags">
+              <span class="tag">GlobalFoundries</span>
+              <span class="tag">UMC 联电</span>
+              <span class="tag">Tower Semiconductor</span>
+            </div>
+          </div>
+        </div>
+        <div class="insight">
+          <strong>TSMC 护城河：</strong>N3/N4 制程良率全球领先，NVIDIA H100/H200/B200、
+          AMD MI300、Apple M 系列均在台积电生产。
+          CoWoS 先进封装产能曾是 2023-2024 年最大供应瓶颈之一。
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line" style="--fc:#0e7490;--tc:#0d9488"></div>
+      <div class="conn-icon">↓</div>
+    </div>
+
+    <!-- ═══ L4 先进封装 ═══ -->
+    <div class="lcard" style="--lc:#0d9488">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L4</span>
+            <span class="ltitle">先进封装与测试（OSAT）</span>
+          </div>
+          <span class="leng">Advanced Packaging · Test</span>
+        </div>
+        <p class="ldesc">
+          通过 <strong>CoWoS 2.5D 封装、HBM 堆叠、Chiplet 集成、3D IC</strong> 等技术，
+          将多颗裸片（Die）整合为高密度计算单元，大幅提升算力密度和带宽。
+          先进封装已与制程工艺同等重要，成为 AI 芯片性能提升的关键路径。
+        </p>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>CoWoS / SoIC（2.5D/3D）</div>
+            <div class="tags">
+              <span class="tag h">TSMC CoWoS</span>
+              <span class="tag">Samsung HBM-PIM</span>
+              <span class="tag">Intel EMIB</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>OSAT 封装测试</div>
+            <div class="tags">
+              <span class="tag h">ASE Group</span>
+              <span class="tag">Amkor</span>
+              <span class="tag cn">长电科技</span>
+              <span class="tag cn">通富微电</span>
+              <span class="tag cn">华天科技</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>芯片测试设备（ATE）</div>
+            <div class="tags">
+              <span class="tag h">Advantest</span>
+              <span class="tag">Teradyne</span>
+              <span class="tag cn">华峰测控</span>
+              <span class="tag cn">长川科技</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>封装基板 / ABF 载板</div>
+            <div class="tags">
+              <span class="tag h">Ibiden</span>
+              <span class="tag">Shinko</span>
+              <span class="tag">Unimicron 欣兴</span>
+              <span class="tag cn">深南电路</span>
+              <span class="tag cn">珠海越亚</span>
+            </div>
+          </div>
+        </div>
+        <div class="insight">
+          <strong>AI 封装瓶颈：</strong>NVIDIA H100 每颗 GPU 需约 600mm² CoWoS interposer，
+          并叠加 6 颗 HBM3 DRAM。台积电 CoWoS 产能自 2023 年起成为 GPU 供货的核心制约，
+          带动 Ibiden 等 ABF 基板厂商大幅扩产。
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line" style="--fc:#0d9488;--tc:#059669"></div>
+      <div class="conn-icon">↓</div>
+    </div>
+
+    <!-- ═══ L3 核心器件 ═══ -->
+    <div class="lcard" style="--lc:#059669">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L3</span>
+            <span class="ltitle">核心器件层</span>
+          </div>
+          <span class="leng">Core Components</span>
+        </div>
+        <p class="ldesc">
+          AI 服务器的核心组件集合，包括<strong>AI 加速芯片（GPU/TPU/NPU）、
+          高带宽存储（HBM）、高速网络互联、光模块</strong>及高速 PCB。
+          这一层直接决定 AI 算力的性能天花板，NVIDIA GPU 在训练芯片市场占垄断地位。
+        </p>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>AI 加速芯片（GPU / NPU）</div>
+            <div class="tags">
+              <span class="tag h">NVIDIA</span>
+              <span class="tag">AMD Instinct</span>
+              <span class="tag">Google TPU</span>
+              <span class="tag">AWS Trainium</span>
+              <span class="tag">Intel Gaudi</span>
+              <span class="tag cn">华为昇腾</span>
+              <span class="tag cn">寒武纪</span>
+              <span class="tag cn">海光信息</span>
+              <span class="tag cn">壁仞科技</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>HBM 高带宽存储</div>
+            <div class="tags">
+              <span class="tag h">SK Hynix</span>
+              <span class="tag">Samsung</span>
+              <span class="tag">Micron</span>
+              <span class="tag cn">长鑫存储（规划中）</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>高速网络互联</div>
+            <div class="tags">
+              <span class="tag h">NVIDIA（InfiniBand）</span>
+              <span class="tag h">Broadcom（以太网）</span>
+              <span class="tag">Arista</span>
+              <span class="tag">Marvell</span>
+              <span class="tag cn">华为</span>
+              <span class="tag cn">锐捷网络</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>光模块（400G / 800G）</div>
+            <div class="tags">
+              <span class="tag h">Coherent</span>
+              <span class="tag">Lumentum</span>
+              <span class="tag cn">中际旭创</span>
+              <span class="tag cn">天孚通信</span>
+              <span class="tag cn">新易盛</span>
+              <span class="tag cn">华工科技</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>NVMe SSD / DRAM</div>
+            <div class="tags">
+              <span class="tag">Samsung</span>
+              <span class="tag">SK Hynix</span>
+              <span class="tag">Micron</span>
+              <span class="tag">Western Digital</span>
+              <span class="tag cn">长江存储</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>高速 PCB / CCL</div>
+            <div class="tags">
+              <span class="tag h">TTM Technologies</span>
+              <span class="tag">Tripod Technology</span>
+              <span class="tag cn">沪电股份</span>
+              <span class="tag cn">生益科技</span>
+              <span class="tag cn">南亚新材</span>
+            </div>
+          </div>
+        </div>
+        <div class="insight">
+          <strong>NVIDIA 垄断格局：</strong>H100/H200/B200 GPU 占全球 AI 训练芯片市场约 80%。
+          CUDA 生态经过十余年积累形成的软件护城河，使竞争对手即便在硬件参数追平后
+          仍难以撼动市场份额。
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line" style="--fc:#059669;--tc:#d97706"></div>
+      <div class="conn-icon">↓</div>
+    </div>
+
+    <!-- ═══ L2 AI 服务器 / ODM ═══ -->
+    <div class="lcard" style="--lc:#d97706">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L2</span>
+            <span class="ltitle">AI 服务器 / 整机集成（ODM）</span>
+          </div>
+          <span class="leng">AI Servers · ODM</span>
+        </div>
+        <p class="ldesc">
+          将 GPU、CPU、高速网络、存储、散热等组件集成为可交付的
+          <strong>AI 训练集群与推理服务器</strong>。台系 ODM 厂商通过深度绑定 NVIDIA 供应链，
+          直接对云厂商供货，国内服务器厂商在组装与本土化方面具备竞争优势。
+        </p>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>台系 ODM（云厂商直采）</div>
+            <div class="tags">
+              <span class="tag h">广达 Quanta</span>
+              <span class="tag h">纬颖 Wiwynn</span>
+              <span class="tag">英业达 Inventec</span>
+              <span class="tag">纬创 Wistron</span>
+              <span class="tag">鸿海 Foxconn</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>AI 服务器品牌厂商</div>
+            <div class="tags">
+              <span class="tag h">Supermicro</span>
+              <span class="tag">Dell</span>
+              <span class="tag">HPE</span>
+              <span class="tag cn">浪潮信息</span>
+              <span class="tag cn">新华三 H3C</span>
+              <span class="tag cn">联想</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>液冷散热（高密度机柜）</div>
+            <div class="tags">
+              <span class="tag h">Vertiv</span>
+              <span class="tag">Schneider Electric</span>
+              <span class="tag cn">英维克</span>
+              <span class="tag cn">申菱环境</span>
+              <span class="tag cn">依米康</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>大功率电源 / UPS</div>
+            <div class="tags">
+              <span class="tag">Delta Electronics 台达</span>
+              <span class="tag">Lite-On 光宝</span>
+              <span class="tag cn">伊戈尔</span>
+              <span class="tag cn">科士达</span>
+            </div>
+          </div>
+        </div>
+        <div class="insight">
+          <strong>AI 服务器超级周期：</strong>全球 AI 服务器市场 2024 年约 800 亿美元，
+          预计 2026 年突破 1500 亿美元，年增速约 40%。台系 ODM 中广达、纬颖因深度绑定
+          NVIDIA DGX/HGX 供应链，毛利率持续提升，受益最为直接。
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line" style="--fc:#d97706;--tc:#c2770c"></div>
+      <div class="conn-icon">↓</div>
+    </div>
+
+    <!-- ═══ L1 数据中心 ═══ -->
+    <div class="lcard" style="--lc:#c2770c">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L1 · 最下游</span>
+            <span class="ltitle">数据中心（终端需求层）</span>
+          </div>
+          <span class="leng">Data Center · Cloud</span>
+        </div>
+        <p class="ldesc">
+          产业链的<strong>最终需求来源</strong>，由超大规模云厂商（Hyperscaler）的
+          资本开支决策驱动整条供应链。AI 大模型训练与推理的爆发式增长催生了
+          新一轮数据中心建设超级周期，全球主要云厂商 2025 年合计 AI 基础设施
+          资本开支指引已超过 <strong>3000 亿美元</strong>。
+        </p>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>全球超大规模云厂商</div>
+            <div class="tags">
+              <span class="tag h">Microsoft Azure</span>
+              <span class="tag h">AWS</span>
+              <span class="tag h">Google Cloud</span>
+              <span class="tag h">Meta</span>
+              <span class="tag">Oracle Cloud</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>中国云厂商</div>
+            <div class="tags">
+              <span class="tag h">阿里云</span>
+              <span class="tag h">腾讯云</span>
+              <span class="tag">字节跳动</span>
+              <span class="tag">百度智能云</span>
+              <span class="tag">华为云</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>AI 原生算力运营商</div>
+            <div class="tags">
+              <span class="tag">CoreWeave</span>
+              <span class="tag">Lambda Labs</span>
+              <span class="tag">xAI（马斯克）</span>
+              <span class="tag cn">智算中心（国资）</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>数据中心 REIT / 托管</div>
+            <div class="tags">
+              <span class="tag h">Equinix</span>
+              <span class="tag">Digital Realty</span>
+              <span class="tag">Iron Mountain</span>
+              <span class="tag cn">世纪互联</span>
+              <span class="tag cn">光环新网</span>
+            </div>
+          </div>
+        </div>
+        <div class="insight">
+          <strong>需求引擎：</strong>微软、亚马逊、谷歌、Meta 四家 2025 年合计 AI 资本开支超 3000 亿美元，
+          年增长约 50%。这一"军备竞赛"式投入是拉动 L2～L8 全链供应的根本驱动力，
+          任何云厂商资本开支预期的变化都会沿供应链向上游传导。
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /chain -->
+
+  <footer>
+    <div>AI 硬件产业链全景图 · ZephyrSpace Research</div>
+    <div style="margin-top:4px;opacity:0.7">数据截至 2025 年 · 仅供研究参考，不构成投资建议</div>
+  </footer>
+
+</div><!-- /page -->
+</body>
+</html>
