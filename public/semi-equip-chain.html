@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>半导体设备上游产业链全景图 | ZephyrSpace</title>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&family=Noto+Sans+SC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f5f0e6;
+  --card: #fffdf8;
+  --teal: #0e7490;
+  --blue: #2563a0;
+  --amber: #c2770c;
+  --text: #1c1917;
+  --text-sec: #57534e;
+  --muted: #888;
+  --border: rgba(120,113,108,0.18);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Sans SC', system-ui, sans-serif;
+  min-height: 100vh;
+  position: relative;
+}
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 0;
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 44px 24px 72px;
+  position: relative; z-index: 1;
+}
+
+/* Nav */
+.nav { margin-bottom: 36px; display: flex; gap: 10px; flex-wrap: wrap; }
+.btn-nav {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 8px 18px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.83rem; font-weight: 500;
+  transition: all 0.18s;
+  color: var(--teal);
+}
+.btn-nav:hover {
+  background: var(--teal); color: #fff;
+  border-color: var(--teal);
+}
+.btn-nav.alt { color: #7c3aed; }
+.btn-nav.alt:hover { background: #7c3aed; border-color: #7c3aed; color: #fff; }
+
+/* Hero */
+.hero { text-align: center; margin-bottom: 44px; }
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: #1e40af; color: #fff;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem; letter-spacing: 0.08em;
+  padding: 5px 14px; border-radius: 999px;
+  margin-bottom: 20px;
+}
+.hero h1 {
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: clamp(2rem, 4.8vw, 3.1rem);
+  font-weight: 700; line-height: 1.15;
+  margin-bottom: 14px;
+}
+.hero-sub {
+  font-size: 0.96rem; font-weight: 300;
+  color: var(--text-sec); line-height: 1.75;
+  max-width: 640px; margin: 0 auto 28px;
+}
+.hero-sub strong { color: var(--text); font-weight: 500; }
+
+/* Chain link banner */
+.chain-link-banner {
+  display: flex; align-items: center; gap: 12px;
+  background: var(--card);
+  border: 1px solid rgba(124,58,237,0.25);
+  border-radius: 12px; padding: 12px 20px;
+  max-width: 740px; margin: 0 auto 28px;
+  font-size: 0.83rem; color: var(--text-sec);
+}
+.chain-link-banner .dot {
+  width: 12px; height: 12px; border-radius: 50%;
+  background: #7c3aed; flex-shrink: 0;
+}
+.chain-link-banner a {
+  color: #7c3aed; font-weight: 600; text-decoration: none;
+  font-family: 'JetBrains Mono', monospace; font-size: 0.78rem;
+}
+.chain-link-banner a:hover { text-decoration: underline; }
+
+/* Direction strip */
+.dir-strip {
+  display: flex; align-items: center; gap: 12px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px; padding: 11px 22px;
+  max-width: 640px; margin: 0 auto;
+}
+.dir-lbl {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem; font-weight: 600; white-space: nowrap;
+}
+.dir-lbl.up   { color: #0c4a6e; }
+.dir-lbl.down { color: #7c3aed; }
+.dir-bar {
+  flex: 1; height: 6px; border-radius: 999px;
+  background: linear-gradient(to right, #0c4a6e, #164e63, #1e40af, #3730a3, #5b21b6, #7c3aed);
+}
+
+/* ── Chain ── */
+.chain { display: flex; flex-direction: column; gap: 0; margin-top: 32px; }
+
+/* Connector */
+.conn {
+  display: flex; justify-content: center; align-items: center;
+  height: 30px; position: relative;
+}
+.conn-line {
+  position: absolute; left: 50%; top: 0; bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--fc), var(--tc));
+  opacity: 0.28; transform: translateX(-50%);
+}
+.conn-icon {
+  position: relative; z-index: 1;
+  width: 22px; height: 22px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.65rem; color: var(--muted);
+}
+
+/* Layer card */
+.lcard {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px; overflow: hidden;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.lcard:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+.lcard-bar { height: 4px; background: var(--lc); }
+.lcard-body { padding: 22px 28px 26px; }
+
+/* Anchor card (L1 — bridging card) */
+.lcard.anchor {
+  border: 2px solid rgba(124,58,237,0.35);
+  background: linear-gradient(135deg, var(--card) 80%, rgba(124,58,237,0.04));
+}
+.anchor-note {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: 'JetBrains Mono', monospace; font-size: 0.68rem;
+  color: #7c3aed;
+  background: rgba(124,58,237,0.08);
+  border: 1px solid rgba(124,58,237,0.2);
+  padding: 2px 10px; border-radius: 999px;
+  margin-bottom: 8px;
+}
+
+/* Layer header */
+.lhead {
+  display: flex; align-items: flex-start;
+  justify-content: space-between; gap: 12px;
+  margin-bottom: 12px;
+}
+.lhead-left { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.lnum {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.67rem; font-weight: 600;
+  color: var(--lc);
+  background: rgba(0,0,0,0.04);
+  padding: 2px 8px; border-radius: 4px;
+  white-space: nowrap; letter-spacing: 0.04em;
+}
+.ltitle {
+  font-family: 'Newsreader', serif;
+  font-size: 1.28rem; font-weight: 600;
+}
+.leng {
+  font-family: 'JetBrains Mono', monospace; font-size: 0.67rem;
+  color: var(--lc);
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 3px 10px; border-radius: 999px;
+  white-space: nowrap; align-self: flex-start; margin-top: 2px;
+}
+
+/* Layer desc */
+.ldesc {
+  font-size: 0.875rem; line-height: 1.68;
+  color: var(--text-sec); margin-bottom: 18px;
+}
+.ldesc strong { color: var(--text); font-weight: 500; }
+
+/* Sectors grid */
+.sgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+  gap: 10px;
+}
+.sbox {
+  border-radius: 10px; padding: 12px 14px;
+  background: rgba(0,0,0,0.025);
+  border: 1px solid rgba(0,0,0,0.07);
+}
+.stitle {
+  font-size: 0.77rem; font-weight: 700;
+  color: var(--lc); margin-bottom: 9px;
+  display: flex; align-items: center; gap: 6px;
+}
+.sdot { width: 7px; height: 7px; border-radius: 50%; background: var(--lc); flex-shrink: 0; }
+.tags { display: flex; flex-wrap: wrap; gap: 5px; }
+
+.tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.695rem;
+  padding: 3px 8px; border-radius: 5px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text-sec); white-space: nowrap;
+}
+.tag.h  { background: var(--lc); color: #fff; border-color: var(--lc); font-weight: 600; }
+.tag.cn { color: var(--lc); border-color: rgba(0,0,0,0.1); background: rgba(255,255,255,0.7); }
+
+/* Key insight */
+.insight {
+  margin-top: 16px; padding: 10px 14px;
+  border-left: 3px solid var(--lc);
+  border-radius: 0 8px 8px 0;
+  background: rgba(255,255,255,0.55);
+  font-size: 0.82rem; line-height: 1.55;
+  color: var(--text-sec);
+}
+.insight strong { color: var(--lc); font-weight: 600; }
+
+/* Bottom bridge */
+.bridge-hint {
+  margin-top: 16px; padding: 10px 16px;
+  background: rgba(124,58,237,0.06);
+  border: 1px dashed rgba(124,58,237,0.3);
+  border-radius: 8px;
+  font-size: 0.82rem; color: #7c3aed;
+  display: flex; align-items: center; gap: 8px;
+}
+.bridge-hint a { color: #7c3aed; font-weight: 600; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; }
+
+/* Footer */
+footer {
+  margin-top: 60px; padding-top: 24px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.73rem; color: var(--muted); line-height: 1.9;
+}
+
+@media (max-width: 640px) {
+  .page { padding: 24px 16px 48px; }
+  .lcard-body { padding: 16px 18px 20px; }
+  .sgrid { grid-template-columns: 1fr; }
+  .lhead { flex-direction: column; }
+  .nav { gap: 8px; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <nav class="nav">
+    <a href="index.html" class="btn-nav">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      返回首页
+    </a>
+    <a href="ai-hardware-chain.html" class="btn-nav alt">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      下游延伸：AI 硬件产业链 →
+    </a>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-badge">
+      <svg width="9" height="9" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" fill="currentColor"/></svg>
+      SEMI-EQUIPMENT · UPSTREAM CHAIN
+    </div>
+    <h1>半导体设备上游产业链全景图</h1>
+    <p class="hero-sub">
+      以<strong>半导体设备整机</strong>为起点，继续向上游溯源，深入解析设备背后的
+      <strong>七大基础产业层</strong>——从精密子系统、光学激光到工业母机，
+      揭示芯片制造能力的真正基础。
+    </p>
+
+    <div class="chain-link-banner">
+      <span class="dot"></span>
+      <span>本图是 <a href="ai-hardware-chain.html">《AI 硬件产业链全景图》</a> 的上游延伸——两图中的「半导体设备」层颜色一致，可衔接阅读</span>
+    </div>
+
+    <div class="dir-strip">
+      <span class="dir-lbl up">↑ 上游（工业母机/基础工业）</span>
+      <div class="dir-bar"></div>
+      <span class="dir-lbl down">（设备整机）下游 ↓</span>
+    </div>
+  </div>
+
+  <div class="chain">
+
+    <!-- ═══ L7 工业母机与数控系统 ═══ -->
+    <div class="lcard" style="--lc:#0c4a6e">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L7 · 最上游</span>
+            <span class="ltitle">工业母机与数控系统</span>
+          </div>
+          <span class="leng">Machine Tools · CNC</span>
+        </div>
+        <p class="ldesc">
+          制造精密设备所用的设备——<strong>工业母机</strong>。超精密机床、五轴加工中心及
+          <strong>CNC 数控系统</strong>决定了精密零件的几何精度极限，是国家制造能力的最高边界。
+          半导体设备所有金属结构件、精密腔体、运动机台，最终都由这一层来加工成型。
+        </p>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>超精密 / 五轴加工机床</div>
+            <div class="tags">
+              <span class="tag h">DMG Mori</span>
+              <span class="tag h">Makino 牧野</span>
+              <span class="tag">Yasda 日本精机</span>
+              <span class="tag">Kern Microtechnik</span>
+              <span class="tag cn">科德数控</span>
+              <span class="tag cn">纽威数控</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>CNC 数控控制系统</div>
+            <div class="tags">
+              <span class="tag h">Fanuc 发那科</span>
+              <span class="tag h">Siemens SINUMERIK</span>
+              <span class="tag">Heidenhain</span>
+              <span class="tag">Mitsubishi CNC</span>
+              <span class="tag cn">华中数控</span>
+              <span class="tag cn">广州数控</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>工业设计与仿真软件</div>
+            <div class="tags">
+              <span class="tag h">Siemens NX / Teamcenter</span>
+              <span class="tag">Dassault CATIA</span>
+              <span class="tag">PTC Creo</span>
+              <span class="tag cn">中望 CAD/CAM</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>精密磨床 / 研磨抛光</div>
+            <div class="tags">
+              <span class="tag h">Studer（迈克龙集团）</span>
+              <span class="tag">Okamoto 冈本</span>
+              <span class="tag">Haas Automation</span>
+              <span class="tag cn">华辰装备</span>
+            </div>
+          </div>
+        </div>
+        <div class="insight">
+          <strong>中国最突出短板：</strong>高端五轴联动加工中心国产化率不足 5%，DMG Mori 和 Makino 主导全球市场。
+          数控系统 Fanuc 独占中国 60% 以上市场份额，华中数控/广州数控仅在低端领域有竞争力。
+          工业母机是「卡脖子链」上最被忽视但最基础的一环。
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line" style="--fc:#0c4a6e;--tc:#164e63"></div>
+      <div class="conn-icon">↓</div>
+    </div>
+
+    <!-- ═══ L6 超精密测量与计量 ═══ -->
+    <div class="lcard" style="--lc:#164e63">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L6</span>
+            <span class="ltitle">超精密测量与计量仪器</span>
+          </div>
+          <span class="leng">Metrology · Precision Measurement</span>
+        </div>
+        <p class="ldesc">
+          <strong>「无法测量就无法制造」</strong>——纳米乃至皮米级精度的测量能力是半导体设备制造的前提。
+          坐标测量机、干涉仪、光学表面测量仪等计量仪器贯穿设备研发、生产、
+          校准和在线过程控制的全流程。
+        </p>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>坐标测量机（CMM）</div>
+            <div class="tags">
+              <span class="tag h">Zeiss Metrology</span>
+              <span class="tag h">Hexagon / Renishaw</span>
+              <span class="tag">Mitutoyo 三丰</span>
+              <span class="tag cn">海克斯康（国代）</span>
+              <span class="tag cn">天准科技</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>光学干涉仪 / 波面测量</div>
+            <div class="tags">
+              <span class="tag h">Zygo（AMETEK 旗下）</span>
+              <span class="tag">Veeco</span>
+              <span class="tag">Bruker</span>
+              <span class="tag cn">苏州光环</span>
+              <span class="tag cn">南京英田</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>纳米位移 / 角度编码器</div>
+            <div class="tags">
+              <span class="tag h">Heidenhain</span>
+              <span class="tag">Renishaw</span>
+              <span class="tag">PI（Physik Instrumente）</span>
+              <span class="tag cn">天准科技</span>
+              <span class="tag cn">禾赛科技</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>原子力 / 扫描探针显微镜</div>
+            <div class="tags">
+              <span class="tag h">Bruker</span>
+              <span class="tag">Park Systems</span>
+              <span class="tag">NT-MDT</span>
+              <span class="tag cn">中科纳米</span>
+            </div>
+          </div>
+        </div>
+        <div class="insight">
+          <strong>皮米级精度：</strong>Zygo 干涉仪精度可达 0.1nm（100 皮米）量级，是 ASML 光刻机内部
+          对准系统和镜组面形检测的核心工具。Heidenhain 光栅尺精度 ±1nm，
+          是所有精密运动台定位的事实标准，全球无可替代的第二供应商。
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line" style="--fc:#164e63;--tc:#1e3a8a"></div>
+      <div class="conn-icon">↓</div>
+    </div>
+
+    <!-- ═══ L5 特种功能材料 ═══ -->
+    <div class="lcard" style="--lc:#1e3a8a">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L5</span>
+            <span class="ltitle">特种功能材料（设备构件用）</span>
+          </div>
+          <span class="leng">Specialty Structural Materials</span>
+        </div>
+        <p class="ldesc">
+          半导体设备的反应腔室、卡盘、窗口、喷头等关键构件，须在
+          <strong>强腐蚀、高温、等离子体</strong>环境下长期稳定运行，对材料纯度和特性要求极苛。
+          石英、工程陶瓷和特种合金是设备「耗材消耗」中最大的采购品类。
+        </p>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>石英 / 熔融石英部件</div>
+            <div class="tags">
+              <span class="tag h">Momentive（石英玻璃）</span>
+              <span class="tag h">Heraeus 贺利氏</span>
+              <span class="tag">Shin-Etsu Quartz</span>
+              <span class="tag cn">菲利华</span>
+              <span class="tag cn">锦州神工半导体</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>半导体级工程陶瓷</div>
+            <div class="tags">
+              <span class="tag h">Kyocera 京瓷</span>
+              <span class="tag">Coorstek</span>
+              <span class="tag">日本特殊陶业</span>
+              <span class="tag cn">锦州神工</span>
+              <span class="tag cn">中材高新（SiC/AlN）</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>特种合金（Ni 基/不锈钢/铝合金）</div>
+            <div class="tags">
+              <span class="tag">Carpenter Technology</span>
+              <span class="tag">Haynes International</span>
+              <span class="tag cn">抚顺特钢</span>
+              <span class="tag cn">宝武特冶</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>工程塑料 PEEK / PTFE</div>
+            <div class="tags">
+              <span class="tag h">Victrex PEEK</span>
+              <span class="tag">Solvay</span>
+              <span class="tag cn">中研高分子</span>
+              <span class="tag cn">沃特股份</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>防腐涂层 / 等离子喷涂</div>
+            <div class="tags">
+              <span class="tag h">Entegris</span>
+              <span class="tag">Saint-Gobain</span>
+              <span class="tag cn">科美特</span>
+              <span class="tag cn">博鲁克表面技术</span>
+            </div>
+          </div>
+        </div>
+        <div class="insight">
+          <strong>国产替代大机会：</strong>石英环、陶瓷卡盘（ESC 基材）、SiC 腔室衬套是刻蚀设备高消耗的易耗品，
+          国内晶圆厂扩产带动需求。菲利华、锦州神工已进入部分国产设备供应链，
+          但顶级纯度要求的 12 英寸设备用料仍依赖进口。
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line" style="--fc:#1e3a8a;--tc:#3730a3"></div>
+      <div class="conn-icon">↓</div>
+    </div>
+
+    <!-- ═══ L4 精密机械传动部件 ═══ -->
+    <div class="lcard" style="--lc:#3730a3">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L4</span>
+            <span class="ltitle">精密机械传动与运动控制部件</span>
+          </div>
+          <span class="leng">Precision Mechanics · Motion Control</span>
+        </div>
+        <p class="ldesc">
+          设备机台的「骨架与肌肉」，精密轴承、导轨、滚珠丝杠的精度等级
+          直接决定设备能否实现<strong>纳米级重复定位精度</strong>。
+          密封件保障真空腔室的可靠性，精密工作台集成多轴运动用于晶圆扫描与对准。
+        </p>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>精密轴承（ABEC-9 级）</div>
+            <div class="tags">
+              <span class="tag h">NSK 日本精工</span>
+              <span class="tag h">Schaeffler / FAG</span>
+              <span class="tag">NTN</span>
+              <span class="tag">SKF</span>
+              <span class="tag cn">哈尔滨轴承</span>
+              <span class="tag cn">洛阳轴承</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>精密导轨 / 滚珠丝杠</div>
+            <div class="tags">
+              <span class="tag h">THK</span>
+              <span class="tag h">NSK</span>
+              <span class="tag">HIWIN 上银（台湾）</span>
+              <span class="tag cn">南京工艺装备</span>
+              <span class="tag cn">汉江机床</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>精密工作台 / 六自由度台</div>
+            <div class="tags">
+              <span class="tag h">PI（Physik Instrumente）</span>
+              <span class="tag">Aerotech</span>
+              <span class="tag">Newport（MKS）</span>
+              <span class="tag cn">天准科技</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>真空兼容密封件（FFKM）</div>
+            <div class="tags">
+              <span class="tag h">Parker Hannifin（Kalrez）</span>
+              <span class="tag">Trelleborg</span>
+              <span class="tag">Freudenberg</span>
+              <span class="tag cn">中密控股</span>
+            </div>
+          </div>
+        </div>
+        <div class="insight">
+          <strong>精度瓶颈：</strong>ABEC-9 级精密轴承几何公差要求亚微米级，全球能量产的供应商屈指可数。
+          半导体光刻机的晶圆台采用磁悬浮技术规避传统轴承精度限制，
+          但精密轴承在刻蚀、CVD、研磨等其他设备中仍不可替代。
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line" style="--fc:#3730a3;--tc:#4f46e5"></div>
+      <div class="conn-icon">↓</div>
+    </div>
+
+    <!-- ═══ L3 精密光学与激光系统 ═══ -->
+    <div class="lcard" style="--lc:#4f46e5">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L3</span>
+            <span class="ltitle">精密光学元件与激光系统</span>
+          </div>
+          <span class="leng">Precision Optics · Laser Systems</span>
+        </div>
+        <p class="ldesc">
+          光刻机、量测设备、激光退火/切割设备的核心「眼睛和光源」。
+          EUV/DUV <strong>激光光源</strong>产生曝光用紫外光，
+          超高精度<strong>光学镜组</strong>将光束精准投影到硅片上，
+          精度要求达到<strong>原子尺度表面粗糙度（&lt;0.1nm RMS）</strong>。
+        </p>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>超精密光学镜组（EUV/DUV）</div>
+            <div class="tags">
+              <span class="tag h">Carl Zeiss（ASML 独供）</span>
+              <span class="tag">Nikon Precision</span>
+              <span class="tag">Canon 光学</span>
+              <span class="tag cn">长春光机所</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>EUV / DUV 激光光源</div>
+            <div class="tags">
+              <span class="tag h">Cymer（ASML 旗下）</span>
+              <span class="tag h">Gigaphoton（小松）</span>
+              <span class="tag cn">科益虹源</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>工业激光器（CO₂ / UV / 固态）</div>
+            <div class="tags">
+              <span class="tag h">Coherent（II-VI 合并）</span>
+              <span class="tag h">IPG Photonics</span>
+              <span class="tag">Trumpf</span>
+              <span class="tag cn">锐科激光</span>
+              <span class="tag cn">创鑫激光</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>光学薄膜 / 镀膜 / 棱镜</div>
+            <div class="tags">
+              <span class="tag">Jenoptik</span>
+              <span class="tag">Optimax Systems</span>
+              <span class="tag cn">南京英田光学</span>
+              <span class="tag cn">长光所</span>
+              <span class="tag cn">福晶科技</span>
+            </div>
+          </div>
+        </div>
+        <div class="insight">
+          <strong>蔡司垄断 EUV 镜组：</strong>ASML 每台 EUV 光刻机含约 11 块光学镜片，
+          由蔡司独家供应，表面粗糙度要求 &lt;0.1nm RMS（相当于原子间距 1/3），
+          制作周期长达数月，产能是 EUV 机台交货的核心瓶颈之一。
+          EUV 光源由 ASML 旗下 Cymer 提供，100kW 级 CO₂ 激光轰击液态锡滴产生 13.5nm 极紫外光。
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line" style="--fc:#4f46e5;--tc:#6d28d9"></div>
+      <div class="conn-icon">↓</div>
+    </div>
+
+    <!-- ═══ L2 关键电子与流程控制子系统 ═══ -->
+    <div class="lcard" style="--lc:#6d28d9">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L2</span>
+            <span class="ltitle">关键电子与流程控制子系统</span>
+          </div>
+          <span class="leng">Electronic Sub-systems · Process Control</span>
+        </div>
+        <p class="ldesc">
+          设备的「神经系统」，控制等离子体能量、真空环境、气体流量、晶圆传输等
+          所有工艺参数。<strong>RF 射频电源、真空泵、质量流量控制器（MFC）、
+          机械臂</strong>等子系统高度专业化，少数供应商形成寡头垄断。
+          这一层是半导体设备 BOM 成本最高的单一组件层。
+        </p>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>RF 射频电源系统</div>
+            <div class="tags">
+              <span class="tag h">Advanced Energy（AE）</span>
+              <span class="tag h">MKS Instruments</span>
+              <span class="tag cn">锐石创芯</span>
+              <span class="tag cn">珠海炬力（射频）</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>真空泵 / 真空系统</div>
+            <div class="tags">
+              <span class="tag h">Edwards Vacuum（Atlas Copco）</span>
+              <span class="tag h">Pfeiffer Vacuum（Busch）</span>
+              <span class="tag">Kashiyama</span>
+              <span class="tag cn">中科仪器</span>
+              <span class="tag cn">汉钟精机</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>质量流量控制器（MFC）</div>
+            <div class="tags">
+              <span class="tag h">MKS Instruments</span>
+              <span class="tag">Brooks Automation</span>
+              <span class="tag">Horiba Stec</span>
+              <span class="tag cn">北方华创（流量）</span>
+              <span class="tag cn">苏州纳微</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>晶圆传输机械臂</div>
+            <div class="tags">
+              <span class="tag h">Brooks Automation</span>
+              <span class="tag">Yaskawa 安川</span>
+              <span class="tag">Kawasaki 川崎</span>
+              <span class="tag cn">沈阳新松</span>
+              <span class="tag cn">北方华创（传片）</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>工艺传感器（真空计 / 压力）</div>
+            <div class="tags">
+              <span class="tag h">Inficon</span>
+              <span class="tag">MKS Baratron</span>
+              <span class="tag">Pfeiffer</span>
+              <span class="tag cn">东方中科</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>静电卡盘（ESC） / 加热台</div>
+            <div class="tags">
+              <span class="tag h">Entegris</span>
+              <span class="tag">Cohu（热台）</span>
+              <span class="tag">Applied Materials（自研）</span>
+              <span class="tag cn">创威纳</span>
+            </div>
+          </div>
+        </div>
+        <div class="insight">
+          <strong>MKS「设备中的设备厂」：</strong>MKS Instruments 一家独自提供射频电源、MFC、
+          真空计、过程控制软件等多个关键子系统，被业界称为「设备中的设备厂」。
+          Advanced Energy 的射频电源占全球半导体设备市场约 50% 份额——
+          AMAT 和 Lam Research 的刻蚀机用的几乎都是 AE 的 RF 源。
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line" style="--fc:#6d28d9;--tc:#7c3aed"></div>
+      <div class="conn-icon">↓</div>
+    </div>
+
+    <!-- ═══ L1 半导体设备整机 OEM（衔接层）═══ -->
+    <div class="lcard anchor" style="--lc:#7c3aed">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="anchor-note">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          与《AI 硬件产业链》L8 衔接
+        </div>
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L1 · 最下游</span>
+            <span class="ltitle">半导体设备整机 OEM</span>
+          </div>
+          <span class="leng">Semiconductor Equipment OEM</span>
+        </div>
+        <p class="ldesc">
+          整合上游全部六层子系统，完成<strong>工艺调试、系统集成与良率优化</strong>，
+          向晶圆代工厂、存储厂、IDM 交付完整设备。设备 OEM 的核心竞争力在于
+          工艺配方积累（Recipe Know-how）与全球快速服务网络，而非单纯的零件采购能力。
+        </p>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>光刻机</div>
+            <div class="tags">
+              <span class="tag h">ASML</span>
+              <span class="tag">Nikon</span>
+              <span class="tag">Canon</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>CVD / PVD / 刻蚀</div>
+            <div class="tags">
+              <span class="tag h">Applied Materials</span>
+              <span class="tag h">Lam Research</span>
+              <span class="tag">Tokyo Electron（TEL）</span>
+              <span class="tag cn">北方华创</span>
+              <span class="tag cn">中微公司</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>量测 / 检测</div>
+            <div class="tags">
+              <span class="tag h">KLA</span>
+              <span class="tag">Onto Innovation</span>
+              <span class="tag cn">中科飞测</span>
+              <span class="tag cn">精测电子</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>离子注入 / CMP / 扩散</div>
+            <div class="tags">
+              <span class="tag">Axcelis</span>
+              <span class="tag">Entegris CMP</span>
+              <span class="tag cn">拓荆科技</span>
+              <span class="tag cn">华海清科</span>
+            </div>
+          </div>
+        </div>
+        <div class="bridge-hint">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          <span>下游延伸：这一层是 <a href="ai-hardware-chain.html">《AI 硬件产业链全景图》</a> 中的 <strong>L8（最上游层）</strong>，点击可查看从半导体设备到数据中心的完整下游链路</span>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /chain -->
+
+  <footer>
+    <div>半导体设备上游产业链全景图 · ZephyrSpace Research</div>
+    <div style="margin-top:4px;opacity:0.7">数据截至 2025 年 · 仅供研究参考，不构成投资建议</div>
+  </footer>
+
+</div><!-- /page -->
+</body>
+</html>
