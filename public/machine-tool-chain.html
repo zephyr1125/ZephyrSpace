@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>工业母机上游产业链全景图 | ZephyrSpace</title>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&family=Noto+Sans+SC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f5f0e6;
+  --card: #fffdf8;
+  --teal: #0e7490;
+  --blue: #2563a0;
+  --amber: #c2770c;
+  --text: #1c1917;
+  --text-sec: #57534e;
+  --muted: #888;
+  --border: rgba(120,113,108,0.18);
+  --bridge: #0c4a6e;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Sans SC', system-ui, sans-serif;
+  min-height: 100vh;
+  position: relative;
+}
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  opacity: 0.04; pointer-events: none; z-index: 0;
+}
+.page {
+  position: relative; z-index: 1;
+  max-width: 1100px; margin: 0 auto;
+  padding: 44px 24px 80px;
+}
+
+/* Nav */
+.nav { margin-bottom: 36px; display: flex; gap: 10px; flex-wrap: wrap; }
+.btn-nav {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 8px 18px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.83rem; font-weight: 500;
+  transition: all 0.18s;
+  color: var(--teal);
+}
+.btn-nav:hover { background: var(--teal); color: #fff; border-color: var(--teal); }
+.btn-nav.alt { color: var(--bridge); }
+.btn-nav.alt:hover { background: var(--bridge); border-color: var(--bridge); color: #fff; }
+
+/* Chain link banner */
+.chain-link-banner {
+  display: flex; align-items: center; gap: 12px;
+  background: var(--card);
+  border: 1px solid rgba(12,74,110,0.25);
+  border-radius: 12px; padding: 12px 20px;
+  max-width: 740px; margin: 0 auto 28px;
+  font-size: 0.83rem; color: var(--text-sec);
+}
+.chain-link-banner .dot {
+  width: 12px; height: 12px; border-radius: 50%;
+  background: var(--bridge); flex-shrink: 0;
+}
+.chain-link-banner a {
+  color: var(--bridge); font-weight: 600; text-decoration: none;
+  font-family: 'JetBrains Mono', monospace; font-size: 0.78rem;
+}
+.chain-link-banner a:hover { text-decoration: underline; }
+
+/* Hero */
+.hero { text-align: center; margin-bottom: 44px; }
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: #14532d; color: #fff;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem; letter-spacing: 0.08em;
+  padding: 5px 14px; border-radius: 999px;
+  margin-bottom: 18px;
+}
+h1 {
+  font-family: 'Newsreader', serif;
+  font-size: clamp(1.7rem, 4vw, 2.6rem);
+  font-weight: 700; line-height: 1.2;
+  margin-bottom: 14px;
+}
+.hero-sub {
+  font-size: 0.92rem; color: var(--text-sec); line-height: 1.7;
+  max-width: 640px; margin: 0 auto 28px;
+}
+.hero-sub strong { color: var(--text); font-weight: 500; }
+
+/* Direction strip */
+.dir-strip {
+  display: flex; align-items: center; gap: 12px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px; padding: 10px 20px;
+  max-width: 540px; margin: 0 auto;
+}
+.dir-bar { flex: 1; height: 2px; background: linear-gradient(to right, #3d6617, var(--bridge)); border-radius: 1px; }
+.dir-lbl { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; color: var(--muted); white-space: nowrap; }
+.dir-lbl.up { color: #3d6617; }
+.dir-lbl.down { color: var(--bridge); }
+
+/* Chain */
+.chain { display: flex; flex-direction: column; gap: 0; }
+
+/* Connector */
+.conn { display: flex; flex-direction: column; align-items: center; padding: 6px 0; }
+.conn-line { width: 2px; height: 28px; background: linear-gradient(to bottom, var(--fc), var(--tc)); }
+.conn-icon { font-size: 0.72rem; color: var(--muted); line-height: 1; }
+
+/* Layer card */
+.lcard {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: box-shadow 0.18s, transform 0.18s;
+}
+.lcard:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+.lcard-bar { height: 4px; background: var(--lc); }
+.lcard-body { padding: 22px 28px 26px; }
+
+/* Anchor card (L1 — bridging card) */
+.lcard.anchor {
+  border: 2px solid rgba(12,74,110,0.35);
+  background: linear-gradient(135deg, var(--card) 80%, rgba(12,74,110,0.04));
+}
+.anchor-note {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: 'JetBrains Mono', monospace; font-size: 0.68rem;
+  color: var(--bridge);
+  background: rgba(12,74,110,0.08);
+  border: 1px solid rgba(12,74,110,0.2);
+  padding: 2px 10px; border-radius: 999px;
+  margin-bottom: 8px;
+}
+
+/* Layer header */
+.lhead {
+  display: flex; align-items: flex-start;
+  justify-content: space-between; gap: 12px;
+  margin-bottom: 12px;
+}
+.lhead-left { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.lnum {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.67rem; font-weight: 600;
+  color: var(--lc);
+  background: rgba(0,0,0,0.04);
+  padding: 2px 8px; border-radius: 4px;
+  white-space: nowrap; letter-spacing: 0.04em;
+}
+.ltitle {
+  font-family: 'Newsreader', serif;
+  font-size: 1.28rem; font-weight: 600;
+}
+.leng {
+  font-family: 'JetBrains Mono', monospace; font-size: 0.67rem;
+  color: var(--lc);
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 3px 10px; border-radius: 999px;
+  white-space: nowrap; align-self: flex-start; margin-top: 2px;
+}
+
+/* Layer desc */
+.ldesc {
+  font-size: 0.875rem; line-height: 1.68;
+  color: var(--text-sec); margin-bottom: 18px;
+}
+.ldesc strong { color: var(--text); font-weight: 500; }
+
+/* Sectors grid */
+.sgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+  gap: 10px;
+}
+.sbox {
+  border-radius: 10px; padding: 12px 14px;
+  background: rgba(0,0,0,0.025);
+  border: 1px solid rgba(0,0,0,0.07);
+}
+.stitle {
+  font-size: 0.77rem; font-weight: 700;
+  color: var(--lc); margin-bottom: 9px;
+  display: flex; align-items: center; gap: 6px;
+}
+.sdot { width: 7px; height: 7px; border-radius: 50%; background: var(--lc); flex-shrink: 0; }
+.tags { display: flex; flex-wrap: wrap; gap: 5px; }
+
+.tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.695rem;
+  padding: 3px 8px; border-radius: 5px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text-sec); white-space: nowrap;
+}
+.tag.h  { background: var(--lc); color: #fff; border-color: var(--lc); font-weight: 600; }
+.tag.cn { color: var(--lc); border-color: rgba(0,0,0,0.1); background: rgba(255,255,255,0.7); }
+
+/* Key insight */
+.insight {
+  margin-top: 16px; padding: 10px 14px;
+  border-left: 3px solid var(--lc);
+  border-radius: 0 8px 8px 0;
+  background: rgba(255,255,255,0.55);
+  font-size: 0.82rem; line-height: 1.55;
+  color: var(--text-sec);
+}
+.insight strong { color: var(--lc); font-weight: 600; }
+
+/* Bridge hint */
+.bridge-hint {
+  margin-top: 16px; padding: 10px 16px;
+  background: rgba(12,74,110,0.06);
+  border: 1px dashed rgba(12,74,110,0.3);
+  border-radius: 8px;
+  font-size: 0.82rem; color: var(--bridge);
+  display: flex; align-items: center; gap: 8px;
+}
+.bridge-hint a { color: var(--bridge); font-weight: 600; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; }
+
+/* Footer */
+footer {
+  margin-top: 60px; padding-top: 24px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.73rem; color: var(--muted); line-height: 1.9;
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <nav class="nav">
+    <a href="index.html" class="btn-nav">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      返回首页
+    </a>
+    <a href="semi-equip-chain.html" class="btn-nav alt">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      下游延伸：半导体设备产业链 →
+    </a>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-badge">
+      <svg width="9" height="9" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" fill="currentColor"/></svg>
+      MACHINE TOOLS · UPSTREAM CHAIN
+    </div>
+    <h1>工业母机上游产业链全景图</h1>
+    <p class="hero-sub">
+      以<strong>工业母机整机</strong>为起点，继续向上游溯源，深入解析机床背后的
+      <strong>七大基础产业层</strong>——从数控系统、伺服传动到基础冶金材料，
+      揭示精密制造能力的真正根基。
+    </p>
+
+    <div class="chain-link-banner">
+      <span class="dot"></span>
+      <span>本图是 <a href="semi-equip-chain.html">《半导体设备上游产业链全景图》</a> 的上游延伸——两图中的「工业母机与数控系统」层颜色一致，可衔接阅读</span>
+    </div>
+
+    <div class="dir-strip">
+      <span class="dir-lbl up">↑ 上游（基础材料 / 大地）</span>
+      <div class="dir-bar"></div>
+      <span class="dir-lbl down">（工业母机整机）下游 ↓</span>
+    </div>
+  </div>
+
+  <div class="chain">
+
+    <!-- ═══ L7 基础工业材料 ═══ -->
+    <div class="lcard" style="--lc:#3d6617">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L7 · 最上游</span>
+            <span class="ltitle">基础工业材料</span>
+          </div>
+          <span class="leng">Industrial Base Materials</span>
+        </div>
+        <p class="ldesc">
+          机床的基础物质层，直接决定刀具切削极限、主轴轴承寿命与伺服电机功率密度。
+          <strong>工具钢与硬质合金</strong>决定刀具能加工的材料上限；<strong>稀土永磁体</strong>
+          是伺服电机的核心磁路；<strong>精密铸铁与花岗岩</strong>构成机床床身的稳定性基础。
+        </p>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>工具钢 / 高速钢（HSS）</div>
+            <div class="tags">
+              <span class="tag h">Böhler（奥钢联）</span>
+              <span class="tag h">Uddeholm</span>
+              <span class="tag">Erasteel</span>
+              <span class="tag cn">东北特钢</span>
+              <span class="tag cn">宝钢特钢</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>硬质合金基材（WC-Co 粉末）</div>
+            <div class="tags">
+              <span class="tag h">Sandvik Hyperion</span>
+              <span class="tag">H.C. Starck</span>
+              <span class="tag">Kennametal Tungsten</span>
+              <span class="tag cn">自贡硬质合金</span>
+              <span class="tag cn">厦门金鹭粉末</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>钕铁硼永磁体（伺服电机磁钢）</div>
+            <div class="tags">
+              <span class="tag h">TDK</span>
+              <span class="tag cn">中科三环</span>
+              <span class="tag cn">正海磁材</span>
+              <span class="tag cn">宁波韵升</span>
+              <span class="tag cn">金力永磁</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>精密铸铁 / 花岗岩基础件</div>
+            <div class="tags">
+              <span class="tag h">Georg Fischer</span>
+              <span class="tag">Hüttenes-Albertus（铸造辅料）</span>
+              <span class="tag cn">仪征铸造</span>
+              <span class="tag cn">青岛同日（花岗岩平台）</span>
+            </div>
+          </div>
+        </div>
+        <div class="insight">
+          <strong>战略要点：</strong>中国稀土储量占全球 60%，钕铁硼产量占全球 90% 以上，
+          是产业链中极少数中国具备全球定价权的领域。高牌号磁体（N52H/N55）仍落后日本 TDK；
+          工具钢则几乎完全依赖欧洲进口。
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line" style="--fc:#3d6617;--tc:#206b34"></div>
+      <div class="conn-icon">↓</div>
+    </div>
+
+    <!-- ═══ L6 精密切削刀具 ═══ -->
+    <div class="lcard" style="--lc:#206b34">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L6</span>
+            <span class="ltitle">精密切削刀具与工具系统</span>
+          </div>
+          <span class="leng">Precision Cutting Tools</span>
+        </div>
+        <p class="ldesc">
+          机床与工件之间直接接触的<strong>消耗性"牙齿"</strong>。
+          刀具材质（硬质合金/CBN/金刚石）、涂层技术（PVD/CVD）和
+          <strong>刀柄/工具系统</strong>（BT、HSK、CAPTO 标准）共同决定加工效率、
+          表面质量与换刀稳定性。全球刀具市场规模约 300 亿美元/年。
+        </p>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>数控刀片（硬质合金 / CBN / PCD）</div>
+            <div class="tags">
+              <span class="tag h">Sandvik Coromant</span>
+              <span class="tag h">Iscar（伯克希尔旗下）</span>
+              <span class="tag h">Kennametal</span>
+              <span class="tag">Seco Tools</span>
+              <span class="tag">Mitsubishi Carbide</span>
+              <span class="tag cn">株洲钻石 ZCC-CT</span>
+              <span class="tag cn">欧科亿</span>
+              <span class="tag cn">华锐精密</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>刀柄 / 工具系统（BT / HSK / CAPTO）</div>
+            <div class="tags">
+              <span class="tag h">BIG DAISHOWA</span>
+              <span class="tag h">Schunk（夹紧+刀柄）</span>
+              <span class="tag">Rego-Fix（ER弹性筒夹）</span>
+              <span class="tag">Haimer</span>
+              <span class="tag cn">拓普工具</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>刀具涂层（PVD / CVD 镀膜设备与服务）</div>
+            <div class="tags">
+              <span class="tag h">Oerlikon Balzers</span>
+              <span class="tag">IHI Ionbond</span>
+              <span class="tag">Sulzer Metco</span>
+              <span class="tag cn">凯峰先进材料</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>整体硬质合金铣刀 / 钻头</div>
+            <div class="tags">
+              <span class="tag h">Walter（山特维克旗下）</span>
+              <span class="tag">Gühring</span>
+              <span class="tag">YG-1（韩）</span>
+              <span class="tag cn">厦门金鹭</span>
+              <span class="tag cn">成都成量</span>
+            </div>
+          </div>
+        </div>
+        <div class="insight">
+          <strong>中国竞争力：</strong>国产刀具在通用中低端领域（汽车、工程机械等）已形成竞争力，
+          株洲钻石、欧科亿毛利率超 40%。精密加工（航空钛合金、高温合金）及超硬材料（CBN/PCD）
+          刀具仍依赖欧日进口。
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line" style="--fc:#206b34;--tc:#0f6e4a"></div>
+      <div class="conn-icon">↓</div>
+    </div>
+
+    <!-- ═══ L5 高精度主轴系统 ═══ -->
+    <div class="lcard" style="--lc:#0f6e4a">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L5</span>
+            <span class="ltitle">高精度主轴系统</span>
+          </div>
+          <span class="leng">High-Precision Spindle Systems</span>
+        </div>
+        <p class="ldesc">
+          主轴是机床的<strong>"心脏"</strong>，直接决定转速上限（rpm）、
+          径向/轴向跳动量（μm 级）与加工表面粗糙度。
+          <strong>电主轴</strong>（Motor-in-Spindle）将伺服电机与主轴一体化，
+          可达每分钟数万转；<strong>主轴轴承</strong>是支撑精度与寿命的关键限制件。
+        </p>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>高速电主轴（内装式 / 外置式）</div>
+            <div class="tags">
+              <span class="tag h">GMN Paul Müller</span>
+              <span class="tag h">HSD Mechatronics</span>
+              <span class="tag">Fischer Precise</span>
+              <span class="tag">Kessler（德国）</span>
+              <span class="tag">Step-Tec（迈克龙集团）</span>
+              <span class="tag cn">广州昊志机电</span>
+              <span class="tag cn">北京精雕</span>
+              <span class="tag cn">上海工具厂</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>超精密主轴轴承（P4 / P2 级）</div>
+            <div class="tags">
+              <span class="tag h">NSK 精工</span>
+              <span class="tag h">FAG / Schaeffler</span>
+              <span class="tag h">SKF</span>
+              <span class="tag">Nachi（不二越）</span>
+              <span class="tag cn">洛阳 LYC</span>
+              <span class="tag cn">瓦轴集团</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>动平衡与振动检测</div>
+            <div class="tags">
+              <span class="tag h">申克 SCHENCK</span>
+              <span class="tag">Balance Systems</span>
+              <span class="tag">Marposs</span>
+              <span class="tag cn">广州大铁（振动检测）</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>主轴热管理 / 冷却系统</div>
+            <div class="tags">
+              <span class="tag">Pfannenberg</span>
+              <span class="tag">Rittal 威图</span>
+              <span class="tag cn">上海沃克</span>
+              <span class="tag cn">苏州同岺</span>
+            </div>
+          </div>
+        </div>
+        <div class="insight">
+          <strong>国产突破口：</strong>广州昊志机电是国内电主轴龙头，在通用机床市场份额超 30%；
+          高端超精密电主轴（20000 rpm+ / 跳动 &lt;0.5μm）仍被 GMN/HSD 垄断，
+          主轴轴承 P2 级依赖日德进口。
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line" style="--fc:#0f6e4a;--tc:#0a7060"></div>
+      <div class="conn-icon">↓</div>
+    </div>
+
+    <!-- ═══ L4 精密传动与运动部件 ═══ -->
+    <div class="lcard" style="--lc:#0a7060">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L4</span>
+            <span class="ltitle">精密传动与运动部件</span>
+          </div>
+          <span class="leng">Precision Transmission &amp; Motion</span>
+        </div>
+        <p class="ldesc">
+          将伺服电机的<strong>旋转运动转化为直线运动</strong>，或在关节处实现高精度减速。
+          <strong>滚珠丝杠</strong>和<strong>直线导轨</strong>决定各轴的定位精度与重复精度（μm 级），
+          <strong>谐波 / RV 减速器</strong>则是工业机器人与机床摆头关节的核心传动件。
+        </p>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>滚珠丝杠（进给传动）</div>
+            <div class="tags">
+              <span class="tag h">NSK 精工</span>
+              <span class="tag h">THK</span>
+              <span class="tag h">Hiwin 上银（台湾）</span>
+              <span class="tag">PMI（台湾银泰）</span>
+              <span class="tag">Bosch Rexroth</span>
+              <span class="tag cn">陕西汉江机床</span>
+              <span class="tag cn">南京工艺</span>
+              <span class="tag cn">山东博特精工</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>直线导轨 / 线性模组</div>
+            <div class="tags">
+              <span class="tag h">Schneeberger</span>
+              <span class="tag h">INA / FAG（Schaeffler）</span>
+              <span class="tag h">THK</span>
+              <span class="tag">Hiwin</span>
+              <span class="tag cn">银泰精密</span>
+              <span class="tag cn">南京工艺</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>谐波减速器</div>
+            <div class="tags">
+              <span class="tag h">Harmonic Drive（日本）</span>
+              <span class="tag">HDSI（美，Harmonic Drive 美洲）</span>
+              <span class="tag cn">绿的谐波</span>
+              <span class="tag cn">来福谐波</span>
+              <span class="tag cn">苏州汇川</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>RV 减速器（摆线针轮）</div>
+            <div class="tags">
+              <span class="tag h">Nabtesco（纳博特斯克）</span>
+              <span class="tag">Sumitomo（住友）</span>
+              <span class="tag cn">秦川机床</span>
+              <span class="tag cn">双环传动</span>
+              <span class="tag cn">中大力德</span>
+            </div>
+          </div>
+        </div>
+        <div class="insight">
+          <strong>国产进展：</strong>滚珠丝杠/导轨领域 Hiwin 与国产品牌（南京工艺等）已在中端机床实现替代；
+          谐波减速器绿的谐波毛利超 50%，但高精度（&lt;1 角分回差）型号仍与 Harmonic Drive 有差距；
+          RV 减速器国产替代率约 40%。
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line" style="--fc:#0a7060;--tc:#086e6e"></div>
+      <div class="conn-icon">↓</div>
+    </div>
+
+    <!-- ═══ L3 伺服驱动与运动控制 ═══ -->
+    <div class="lcard" style="--lc:#086e6e">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L3</span>
+            <span class="ltitle">伺服驱动与运动控制</span>
+          </div>
+          <span class="leng">Servo Drives &amp; Motion Control</span>
+        </div>
+        <p class="ldesc">
+          机床各轴的<strong>"肌肉"</strong>。伺服电机将电能高效转化为精准的旋转力矩，
+          伺服驱动器闭环控制电流/速度/位置三环；
+          <strong>PLC / 运动控制器</strong>统筹多轴协调运动，
+          是 CNC 系统指令的最终执行层。
+        </p>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>伺服电机 + 驱动器</div>
+            <div class="tags">
+              <span class="tag h">Fanuc α/β 伺服系列</span>
+              <span class="tag h">Yaskawa Σ-7</span>
+              <span class="tag h">Siemens SIMOTICS</span>
+              <span class="tag">Bosch Rexroth IndraDrive</span>
+              <span class="tag">Mitsubishi HF-KP</span>
+              <span class="tag cn">汇川技术 SV660</span>
+              <span class="tag cn">禾川科技</span>
+              <span class="tag cn">雷赛智能</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>PLC / 工业控制器</div>
+            <div class="tags">
+              <span class="tag h">Siemens S7-1500</span>
+              <span class="tag h">Mitsubishi MELSEC</span>
+              <span class="tag">Rockwell ControlLogix</span>
+              <span class="tag">ABB AC500</span>
+              <span class="tag cn">汇川 H5U</span>
+              <span class="tag cn">信捷电气</span>
+              <span class="tag cn">和利时</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>直线电机 / 力矩电机（直驱）</div>
+            <div class="tags">
+              <span class="tag h">Siemens 1FN 直线</span>
+              <span class="tag">Bosch Rexroth</span>
+              <span class="tag">Etel（海克斯康旗下）</span>
+              <span class="tag cn">台达电子</span>
+              <span class="tag cn">富士电机（华东）</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>工业通信与总线（EtherCAT / PROFIBUS）</div>
+            <div class="tags">
+              <span class="tag h">Beckhoff（EtherCAT 标准方）</span>
+              <span class="tag">Siemens PROFINET</span>
+              <span class="tag">Omron</span>
+              <span class="tag cn">汇川 CANopen</span>
+            </div>
+          </div>
+        </div>
+        <div class="insight">
+          <strong>汇川技术突破：</strong>国产伺服市场份额第一（约 14%），已在新能源设备、
+          纺织机械、印刷包装等领域替代 Yaskawa，但高端五轴加工中心轴驱动仍依赖 Fanuc/Siemens，
+          主要壁垒是与 CNC 系统的深度协议绑定。
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line" style="--fc:#086e6e;--tc:#0a5c72"></div>
+      <div class="conn-icon">↓</div>
+    </div>
+
+    <!-- ═══ L2 CNC数控系统与工业软件 ═══ -->
+    <div class="lcard" style="--lc:#0a5c72">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L2</span>
+            <span class="ltitle">CNC 数控系统与工业软件</span>
+          </div>
+          <span class="leng">CNC Controllers &amp; Industrial Software</span>
+        </div>
+        <p class="ldesc">
+          机床的<strong>"大脑"</strong>。CNC 控制器解析 G 代码、实时规划多轴插补路径，
+          并通过伺服接口闭环控制各轴运动。
+          <strong>CAD/CAM 软件</strong>将 3D 设计转化为刀具路径（NC 程序），
+          是机床"思维"的上游输入。
+        </p>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>CNC 运动控制器（机床专用）</div>
+            <div class="tags">
+              <span class="tag h">Fanuc（全球 ~60% 市占）</span>
+              <span class="tag h">Siemens SINUMERIK 840D</span>
+              <span class="tag">Mitsubishi M70 / M80</span>
+              <span class="tag">Heidenhain TNC 640</span>
+              <span class="tag cn">华中数控 HNC-848</span>
+              <span class="tag cn">广州数控 GSK 25i</span>
+              <span class="tag cn">科德数控（自研 CNC）</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>CAD / CAM 编程软件</div>
+            <div class="tags">
+              <span class="tag h">Mastercam（美）</span>
+              <span class="tag h">Siemens NX CAM</span>
+              <span class="tag">Hypermill（Open Mind）</span>
+              <span class="tag">Dassault CATIA Machining</span>
+              <span class="tag">PTC Creo NC</span>
+              <span class="tag cn">中望 CAM</span>
+              <span class="tag cn">山大华天 CAXA</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>机床仿真 / 数字孪生</div>
+            <div class="tags">
+              <span class="tag h">Vericut（CGTech，美）</span>
+              <span class="tag">Siemens NX Machining Simulation</span>
+              <span class="tag">Eureka（西班牙）</span>
+              <span class="tag cn">工业和信息化部「工业数字孪生」项目</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>MES / 产线管理软件</div>
+            <div class="tags">
+              <span class="tag h">Siemens Opcenter（原 Camstar）</span>
+              <span class="tag">Rockwell FactoryTalk</span>
+              <span class="tag cn">优也科技</span>
+              <span class="tag cn">CIMCO（NC 管理）</span>
+            </div>
+          </div>
+        </div>
+        <div class="insight">
+          <strong>Fanuc 护城河：</strong>CNC 系统价值不在硬件而在 30 年积累的插补算法、
+          伺服参数数据库与全球服务网络。Fanuc 在国内新安装机床中占比超 50%，
+          国产数控仅在 3 轴以下及中低端加工中心有竞争力，五轴联动软件精度差距约 5~10 年。
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line" style="--fc:#0a5c72;--tc:#0c4a6e"></div>
+      <div class="conn-icon">↓</div>
+    </div>
+
+    <!-- ═══ L1 工业母机整机 OEM（衔接层）═══ -->
+    <div class="lcard anchor" style="--lc:#0c4a6e">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="anchor-note">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          与《半导体设备上游产业链》L7 衔接
+        </div>
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L1 · 最下游</span>
+            <span class="ltitle">工业母机整机 OEM</span>
+          </div>
+          <span class="leng">Machine Tool OEM</span>
+        </div>
+        <p class="ldesc">
+          整合上游六层全部子系统，完成<strong>机床总装、精度调试与验收</strong>，
+          向半导体设备厂、航空航天、汽车模具等下游交付完整机床。
+          整机竞争力的核心是<strong>热补偿算法、几何精度标定</strong>与长期服务口碑，
+          而非单纯的零件采购能力。高端五轴机床须通过精度留样（如球杆仪 Ballbar 检测）。
+        </p>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>五轴联动 / 超精密加工中心</div>
+            <div class="tags">
+              <span class="tag h">DMG Mori（德日合资）</span>
+              <span class="tag h">Makino 牧野</span>
+              <span class="tag h">Mazak 山崎马扎克</span>
+              <span class="tag">Okuma 大隈</span>
+              <span class="tag">Hermle</span>
+              <span class="tag">Kern Microtechnik</span>
+              <span class="tag cn">科德数控</span>
+              <span class="tag cn">纽威数控</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>车铣复合 / 卧式加工中心</div>
+            <div class="tags">
+              <span class="tag h">Mazak Integrex</span>
+              <span class="tag">Chiron</span>
+              <span class="tag">Grob</span>
+              <span class="tag">Doosan（韩）</span>
+              <span class="tag cn">沈阳机床 i5</span>
+              <span class="tag cn">北一机床</span>
+              <span class="tag cn">通用技术集团</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>外圆 / 平面磨床</div>
+            <div class="tags">
+              <span class="tag h">Studer（迈克龙集团）</span>
+              <span class="tag">Okamoto 冈本</span>
+              <span class="tag">Haas Automation</span>
+              <span class="tag">Blohm + Jung（Körber）</span>
+              <span class="tag cn">华辰装备</span>
+              <span class="tag cn">中国砂轮</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>超精密机床（nm 级）</div>
+            <div class="tags">
+              <span class="tag h">Moore Nanotechnology（美）</span>
+              <span class="tag h">Yasda 日本精机</span>
+              <span class="tag">Kern</span>
+              <span class="tag cn">北京精雕（高精度雕铣）</span>
+              <span class="tag cn">国防科大精密机床实验室</span>
+            </div>
+          </div>
+        </div>
+        <div class="insight">
+          <strong>中国最突出短板：</strong>高端五轴联动加工中心国产化率不足 5%，
+          进口依存度极高（日德美为主）。高精度超精密机床（误差 &lt;0.1μm）
+          国内除少数研究机构外几乎空白，是「卡脖子链」最基础的一环。
+        </div>
+        <div class="bridge-hint">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          <span>下游延伸：这一层是 <a href="semi-equip-chain.html">《半导体设备上游产业链全景图》</a> 中的 <strong>L7（最上游层）</strong>，点击可查看从工业母机到半导体设备整机的完整下游链路</span>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /chain -->
+
+  <footer>
+    <div>工业母机上游产业链全景图 · ZephyrSpace Research</div>
+    <div style="margin-top:4px;opacity:0.7">数据截至 2025 年 · 仅供研究参考，不构成投资建议</div>
+  </footer>
+
+</div>
+</body>
+</html>
