@@ -770,33 +770,6 @@
       "cycle_is_cyclical": false
     },
     {
-      "name": "蜜雪集团",
-      "code": "02097.HK",
-      "board": "港",
-      "source_etf": "direct",
-      "position_role": "全球规模第一现制饮品连锁，极致性价比模式，下沉市场主导者",
-      "prebuy_conclusion": "ROE 30%+全球门店超45000家+供应链护城河深，H股全流通后短期供应压力是主要风险。当前HK$287.6处于中性区，等回调至HK$198以下分批建仓",
-      "watch_reason": "极致性价比模式在经济下行期更具韧性；东南亚扩张快速；供应链垂直整合降低加盟商成本",
-      "current_price": 287.6,
-      "price_date": "2026-05-08",
-      "dv_ttm": null,
-      "price_bands": [
-        396,
-        288,
-        198
-      ],
-      "price_bands_basis": "pe_ttm.y3_range",
-      "price_bands_date": "2026-05-08",
-      "valuation_anchor": "当前288处于中性底288，估值合理区间上沿",
-      "risk_flags": [
-        "H股全流通期供应压力：大量内资持有人可能通过港股套现",
-        "食品安全/门店质量管控难度随门店数量增加而上升"
-      ],
-      "next_earnings_date": "2026-08-31",
-      "next_earnings_type": "中期业绩",
-      "cycle_is_cyclical": false
-    },
-    {
       "name": "普拉达",
       "code": "01913.HK",
       "board": "港",
@@ -1404,34 +1377,6 @@
       "next_earnings_type": "半年报",
       "cycle_is_cyclical": true,
       "cycle_position": "景气高峰"
-    },
-    {
-      "name": "中微公司",
-      "code": "688012.SH",
-      "source_etf": "direct",
-      "position_role": "国产刻蚀设备唯一选手，先进制程国产替代护城河极深，成长科技核心仓",
-      "prebuy_conclusion": "技术护城河极深（国内唯一可做5nm及以下刻蚀），订单排至2027年，能见度极高。ROE 9.97%偏低系研发高投入压制，PE 99x历史100%分位。等待并购众硅整合落地、ROE回升验证后，342元以下可分批建仓。",
-      "watch_reason": "全球仅Lam/AMAT/中微三家能做先进刻蚀，护城河不可复制。2026Q1订单同比+80%，AI算力驱动先进制程扩产，国产替代叠加台积电/三星验证，长期天花板极高。",
-      "current_price": 387.0,
-      "price_date": "2026-05-15",
-      "board": "科",
-      "dv_ttm": null,
-      "price_bands": [
-        342,
-        273,
-        213
-      ],
-      "valuation_anchor": "PE历史分位锚定（科创板高PE公司参考PS辅助）：追高区>387（当前价历史100%极贵，不操作）/ 中性区342-387（PE历史60-80%分位，小仓研究）/ 较好区间273-342（PE历史20-60%分位，标准建仓）/ 更低区间<213（PE历史<20%分位，较高安全边际）",
-      "risk_flags": [
-        "ROE 9.97%偏低（行业顶级护城河但盈利效率不足），若高研发投入后续ROE未能回升至15%以上则需重新评估",
-        "并购杭州众硅CMP设备业务（2026-05获批），整合风险和商誉摊薄压力待观察",
-        "PE 99x处于历史100%分位，估值严重透支，安全边际极差",
-        "国际客户（台积电/三星）认证进展不确定性，若验证慢于预期增速将受压"
-      ],
-      "next_earnings_date": "2026-08-31",
-      "next_earnings_type": "半年报",
-      "cycle_is_cyclical": true,
-      "cycle_position": "复苏中期"
     },
     {
       "name": "石头科技",
