@@ -2271,6 +2271,62 @@
       "next_earnings_date": "2026-08-31",
       "next_earnings_type": "半年报",
       "cycle_is_cyclical": false
+    },
+    {
+      "name": "安集科技",
+      "code": "688019.SH",
+      "source_etf": "direct",
+      "position_role": "A股半导体CMP抛光液+湿电子化学品国产龙头，工艺耗材复购型护城河，成长型重仓候选",
+      "prebuy_conclusion": "高质量成长公司，83/100，但PE约69x/3年分位100%，估值极贵。不追高，等回调。合理区间180-225元（40-50x 2025利润），较优区间135-157元（30-35x），理想区间90-112元（20-25x）。现金流2025走弱（OCF/净利56%）需跟踪2026H1验证。",
+      "watch_reason": "CMP抛光液全球份额13%（2025），湿电子化学品全球6%；技术认证护城河+高复购模式；ROE 25.15%持续优秀；全球半导体国产替代最纯正标的之一。",
+      "current_price": 323.84,
+      "price_date": "2026-05-20",
+      "board": "科",
+      "price_bands": [
+        225,
+        157,
+        112
+      ],
+      "risk_flags": [
+        "2025 OCF/净利仅56%，存货+69.92%，营运资金压力真实",
+        "前五大客户占比75.65%，买方高度集中，晶圆厂capex周期敏感",
+        "分红率8-11%偏低，近年融资工具活跃（简易定增+可转债+2026定增授权）"
+      ],
+      "valuation_anchor": "2025归母净利7.86亿元，EPS约4.50元；合理PE 35-50x对应157-225元；当前PE 69x处于历史极高分位",
+      "dv_ttm": 0.3,
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false,
+      "deep_analysis_score": 83,
+      "deep_analysis_date": "2026-05-20"
+    },
+    {
+      "name": "鼎龙股份",
+      "code": "300054.SZ",
+      "source_etf": "direct",
+      "position_role": "A股半导体CMP抛光垫+显示材料平台型耗材公司，材料复购模式优于设备项目制",
+      "prebuy_conclusion": "优质耗材平台，79/100，但PE约88x/3年分位99%，估值极贵。不追高，等回调。较优区间58-62元（53-57x 2026E），理想区间50-55元。2026Q1净利+77.99%验证平台兑现；H股发行计划（≤10%）和可转债为已知摊薄风险。",
+      "watch_reason": "CMP抛光垫国产龙头（单月破4万片），显示材料+抛光液+先进封装材料多品类放量；耗材复购型商业模式，客户导入后需求连续；正剥离打印耗材聚焦半导体+新能源材料。",
+      "current_price": 77.0,
+      "price_date": "2026-05-20",
+      "board": "创",
+      "price_bands": [
+        70,
+        62,
+        50
+      ],
+      "risk_flags": [
+        "H股发行计划（≤总股本10%）+9.10亿可转债+期权，三重融资稀释叠加",
+        "2026收购皓飞新材切入锂电辅材，平台扩张边界变宽，资源分散风险上升",
+        "打印耗材业务收入-12.97%，旧业务拖累仍在消化中"
+      ],
+      "valuation_anchor": "国信证券预测2026归母净利11.15亿元；当前市值约688亿，对应2026E PE约62x，估值偏贵",
+      "dv_ttm": 0.5,
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false,
+      "deep_analysis_score": 79,
+      "deep_analysis_date": "2026-05-20"
     }
   ],
   "tier": "growth",
