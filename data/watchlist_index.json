@@ -517,30 +517,32 @@
       "lx_code": "931897",
       "name": "中证绿色电力指数",
       "related_etfs": [
-        "563980.SH 绿色电力ETF"
+        "563980.SH 绿色电力ETF",
+        "562550 绿电ETF(用户持仓)"
       ],
       "category": "公用事业能源",
       "cycle_position": "收缩期",
-      "prebuy_conclusion": "等待回调 — 3年分位73%，绿电装机供过于求导致电价承压，PE=19x但盈利能力受消纳限制",
-      "current_pe": 19.01,
-      "current_dy": 2.65,
-      "pe_3y_percentile": 73.0,
-      "pe_5y_percentile": 53.0,
-      "current_index_price": 1194.73,
+      "prebuy_conclusion": "不适合当前介入 — 当前PE=20.63x已突破3年P80(19.95x)，3年分位85.2%，指数点位1312处于追高区，需回落至1268以下观望，1134附近再分批买入",
+      "current_pe": 20.63,
+      "current_dy": 2.44,
+      "pe_3y_percentile": 85.2,
+      "pe_5y_percentile": 60.4,
+      "current_index_price": 1312,
       "price_bands": [
-        1262,
-        1121,
-        1067
+        1268,
+        1134,
+        1080
       ],
-      "valuation_anchor": "中证绿色电力指数PE-TTM 3年P20/P50/P80分位换算点位",
+      "valuation_anchor": "3年PE分位换算（2026-05-19 1312点/20.63x基准）：P80对应PE=19.95x→点位1268 / P50对应PE=17.83x→点位1134 / P20对应PE=16.98x→点位1080；数据来源：理杏仁MCW分位(fundamental)+candlestick价格，单一数据源",
       "risk_flags": [
-        "分位73%偏贵",
-        "绿电消纳和电价政策不确定",
-        "装机过剩压低利用小时数"
+        "3年PE分位85.2%，已突破P80历史高估区，近3周上涨+9.8%后估值压力显著",
+        "指数股息率仅2.44%，远低于公用事业板块应有的4%+吸引力",
+        "绿电消纳限制和电价市场化压低盈利质量，50只成分股中38只不达基本面粗筛门槛",
+        "装机过剩格局短期难以逆转，风光利用小时数持续承压"
       ],
-      "price_date": "2026-04-30",
+      "price_date": "2026-05-19",
       "note_path": "05-A股指数/931897 中证绿色电力指数.md",
-      "last_updated": "2026-05-01"
+      "last_updated": "2026-05-20"
     },
     {
       "index_code": "931643.CSI",
