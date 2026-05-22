@@ -1973,6 +1973,32 @@
       "next_earnings_type": "半年报",
       "cycle_is_cyclical": true,
       "cycle_position": "景气高峰"
+    },
+    {
+      "name": "润泽科技",
+      "code": "300442.SZ",
+      "source_etf": "direct",
+      "position_role": "AI算力基础设施龙头，IDC/AIDC双轮驱动，REIT资本循环支撑扩张",
+      "prebuy_conclusion": "全面分析完成（深度71/100，优质）。IDC+8.58%/AIDC+72.97%增长真实；但2025净利被REIT处置收益37.65亿严重抬高（真实经营ROE约16%，报表ROE 42.76%失真），扣非PE约80x严重高估，当前股价93.35元远超安全区间上限46元，建议等待合理进场窗口（目标扣非PE 30-40x，对应35-46元）。",
+      "watch_reason": "国内IDC/AIDC头部运营商，自主物业模式建立规模壁垒，REIT持续扩募实现资本高效循环；AI算力需求爆发推动AIDC收入+72.97%，IDC+8.58%，增长真实。深度分析71/100（优质），基本面扎实但估值虚高，需等待价格窗口。",
+      "current_price": 93.35,
+      "price_date": "2026-05-22",
+      "board": "创",
+      "dv_ttm": null,
+      "price_bands": [
+        46.4,
+        34.8,
+        25.5
+      ],
+      "valuation_anchor": "扣非EPS约1.16元（2025年扣非净利19.01亿/总股本16.38亿股），理性PE区间22-40x；报表PE 29x因REIT一次性收益严重失真，不宜直接使用",
+      "risk_flags": [
+        "2025净利润被REIT处置收益37.65亿严重抬高，报表ROE 42.76% vs 真实经营ROE约16%，报表PE估值失真",
+        "客户高度集中：前五大客户占营收95.52%，第一大客户48.59%，单客户流失风险极高",
+        "FCF连续三年深负（2025年约-88亿），大规模AIDC扩产导致，短期改善路径有限"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false
     }
   ],
   "tier": "growth",
