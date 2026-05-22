@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>人形机器人产业链全景图 | ZephyrSpace</title>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&family=Noto+Sans+SC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f5f0e6;
+  --card: #fffdf8;
+  --teal: #0e7490;
+  --blue: #2563a0;
+  --amber: #c2770c;
+  --text: #1c1917;
+  --text-sec: #57534e;
+  --muted: #888;
+  --border: rgba(120,113,108,0.18);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Sans SC', system-ui, sans-serif;
+  min-height: 100vh;
+  position: relative;
+}
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 0;
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 44px 24px 72px;
+  position: relative; z-index: 1;
+}
+
+/* Nav */
+.nav { margin-bottom: 36px; display: flex; gap: 10px; flex-wrap: wrap; }
+.btn-nav {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 8px 18px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.83rem; font-weight: 500;
+  transition: all 0.18s;
+  color: var(--teal);
+}
+.btn-nav:hover { background: var(--teal); color: #fff; border-color: var(--teal); }
+.btn-nav.amber { color: var(--amber); }
+.btn-nav.amber:hover { background: var(--amber); border-color: var(--amber); color: #fff; }
+
+/* Hero */
+.hero { text-align: center; margin-bottom: 48px; }
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: #065f46; color: #fff;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem; letter-spacing: 0.08em;
+  padding: 5px 14px; border-radius: 999px;
+  margin-bottom: 20px;
+}
+.hero h1 {
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: clamp(2rem, 4.8vw, 3.1rem);
+  font-weight: 700; line-height: 1.15;
+  margin-bottom: 14px;
+}
+.hero-sub {
+  font-size: 0.96rem; font-weight: 300;
+  color: var(--text-sec); line-height: 1.75;
+  max-width: 680px; margin: 0 auto 28px;
+}
+.hero-sub strong { color: var(--text); font-weight: 500; }
+
+/* Cost breakdown strip */
+.cost-strip {
+  display: flex; gap: 0;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px; overflow: hidden;
+  max-width: 720px; margin: 0 auto 20px;
+}
+.cost-item {
+  flex: 1; padding: 10px 4px;
+  text-align: center; border-right: 1px solid var(--border);
+  font-size: 0.75rem;
+}
+.cost-item:last-child { border-right: none; }
+.cost-pct {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.95rem; font-weight: 600;
+  display: block; margin-bottom: 2px;
+}
+.cost-label { color: var(--text-sec); font-size: 0.68rem; }
+
+/* Direction strip */
+.dir-strip {
+  display: flex; align-items: center; gap: 12px;
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 11px 22px;
+  max-width: 600px; margin: 0 auto;
+}
+.dir-lbl {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem; font-weight: 600; white-space: nowrap;
+}
+.dir-lbl.up   { color: #78350f; }
+.dir-lbl.down { color: #b45309; }
+.dir-bar {
+  flex: 1; height: 6px; border-radius: 999px;
+  background: linear-gradient(to right, #78350f, #3f6212, #1e3a8a, #065f46, #0e7490, #7c3aed, #b45309);
+}
+
+/* Chain */
+.chain { display: flex; flex-direction: column; gap: 0; margin-top: 36px; }
+
+/* Connector */
+.conn {
+  display: flex; justify-content: center; align-items: center;
+  height: 30px; position: relative;
+}
+.conn-line {
+  position: absolute; left: 50%; top: 0; bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--fc), var(--tc));
+  opacity: 0.3; transform: translateX(-50%);
+}
+.conn-icon {
+  position: relative; z-index: 1;
+  width: 22px; height: 22px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.65rem; color: var(--muted);
+}
+
+/* Layer card */
+.lcard {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px; overflow: hidden;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.lcard:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+.lcard-bar { height: 4px; background: var(--lc); }
+.lcard-body { padding: 22px 28px 26px; }
+
+/* Critical layer special style */
+.lcard.critical {
+  border: 2px solid rgba(6,95,70,0.4);
+  background: linear-gradient(135deg, var(--card) 85%, rgba(6,95,70,0.04));
+}
+.critical-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: 'JetBrains Mono', monospace; font-size: 0.68rem;
+  color: #065f46;
+  background: rgba(6,95,70,0.08);
+  border: 1px solid rgba(6,95,70,0.25);
+  padding: 2px 10px; border-radius: 999px;
+  margin-bottom: 8px;
+}
+
+/* Layer header */
+.lhead {
+  display: flex; align-items: flex-start;
+  justify-content: space-between; gap: 12px;
+  margin-bottom: 12px;
+}
+.lhead-left { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.lnum {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.67rem; font-weight: 600;
+  color: var(--lc);
+  background: rgba(0,0,0,0.04);
+  padding: 2px 8px; border-radius: 4px;
+  white-space: nowrap; letter-spacing: 0.04em;
+}
+.ltitle {
+  font-family: 'Newsreader', serif;
+  font-size: 1.28rem; font-weight: 600;
+}
+.leng {
+  font-family: 'JetBrains Mono', monospace; font-size: 0.67rem;
+  color: var(--lc);
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 3px 10px; border-radius: 999px;
+  white-space: nowrap; align-self: flex-start; margin-top: 2px;
+}
+.lcost {
+  font-family: 'JetBrains Mono', monospace; font-size: 0.72rem;
+  font-weight: 700; color: var(--lc);
+  background: rgba(0,0,0,0.05);
+  padding: 3px 10px; border-radius: 999px;
+  white-space: nowrap;
+}
+
+/* Layer desc */
+.ldesc {
+  font-size: 0.875rem; line-height: 1.68;
+  color: var(--text-sec); margin-bottom: 18px;
+}
+.ldesc strong { color: var(--text); font-weight: 500; }
+
+/* Sectors grid */
+.sgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 10px;
+}
+.sgrid.wide { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+.sbox {
+  border-radius: 10px; padding: 12px 14px;
+  background: rgba(0,0,0,0.025);
+  border: 1px solid rgba(0,0,0,0.07);
+}
+.stitle {
+  font-size: 0.77rem; font-weight: 700;
+  color: var(--lc); margin-bottom: 9px;
+  display: flex; align-items: center; gap: 6px;
+}
+.sdot { width: 7px; height: 7px; border-radius: 50%; background: var(--lc); flex-shrink: 0; }
+.tags { display: flex; flex-wrap: wrap; gap: 5px; }
+.tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.695rem;
+  padding: 3px 8px; border-radius: 5px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text-sec); white-space: nowrap;
+}
+.tag.h  { background: var(--lc); color: #fff; border-color: var(--lc); font-weight: 600; }
+.tag.cn { color: var(--lc); border-color: rgba(0,0,0,0.1); background: rgba(255,255,255,0.7); }
+.tag.warn { color: #b45309; border-color: rgba(180,83,9,0.3); background: rgba(254,243,199,0.7); }
+
+/* Insight */
+.insight {
+  margin-top: 16px; padding: 10px 14px;
+  border-left: 3px solid var(--lc);
+  border-radius: 0 8px 8px 0;
+  background: rgba(255,255,255,0.55);
+  font-size: 0.82rem; line-height: 1.55;
+  color: var(--text-sec);
+}
+.insight strong { color: var(--lc); font-weight: 600; }
+
+/* Bottleneck alert */
+.bottleneck {
+  margin-top: 12px; padding: 9px 13px;
+  background: rgba(180,83,9,0.06);
+  border: 1px dashed rgba(180,83,9,0.35);
+  border-radius: 8px;
+  font-size: 0.81rem; color: #92400e;
+  display: flex; align-items: flex-start; gap: 8px; line-height: 1.5;
+}
+.bottleneck .icon { font-size: 0.9rem; flex-shrink: 0; }
+
+/* Sub-section divider inside card */
+.sub-divider {
+  display: flex; align-items: center; gap: 10px;
+  margin: 16px 0 12px;
+  font-family: 'JetBrains Mono', monospace; font-size: 0.68rem;
+  color: var(--muted); letter-spacing: 0.06em;
+}
+.sub-divider::before, .sub-divider::after {
+  content: ''; flex: 1; height: 1px;
+  background: var(--border);
+}
+
+/* Footer */
+footer {
+  margin-top: 60px; padding-top: 24px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.73rem; color: var(--muted); line-height: 1.9;
+}
+
+@media (max-width: 640px) {
+  .page { padding: 24px 16px 48px; }
+  .lcard-body { padding: 16px 18px 20px; }
+  .sgrid { grid-template-columns: 1fr; }
+  .lhead { flex-direction: column; }
+  .nav { gap: 8px; }
+  .cost-strip { flex-direction: column; }
+  .cost-item { border-right: none; border-bottom: 1px solid var(--border); }
+  .cost-item:last-child { border-bottom: none; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <nav class="nav">
+    <a href="index.html" class="btn-nav">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      返回首页
+    </a>
+    <a href="machine-tool-chain.html" class="btn-nav">工业母机产业链</a>
+    <a href="semi-equip-chain.html" class="btn-nav">半导体设备产业链</a>
+    <a href="ai-hardware-chain.html" class="btn-nav amber">
+      AI 硬件产业链
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </nav>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-badge">
+      <svg width="9" height="9" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" fill="currentColor"/></svg>
+      HUMANOID ROBOT · SUPPLY CHAIN MAP
+    </div>
+    <h1>人形机器人产业链全景图</h1>
+    <p class="hero-sub">
+      以<strong>人形机器人整机</strong>为终点，从基础材料逐层向上溯源，
+      覆盖<strong>八大产业层</strong>——原材料、轻量化结构、计算芯片、
+      <strong>关节执行器（最核心层）</strong>、感知传感、运动控制、
+      具身智能软件直至整机集成。
+      揭示人形机器人产业的真正技术壁垒与国产替代机会。
+    </p>
+
+    <!-- Cost breakdown -->
+    <div class="cost-strip">
+      <div class="cost-item" style="border-top: 3px solid #065f46">
+        <span class="cost-pct" style="color:#065f46">35–40%</span>
+        <span class="cost-label">减速器</span>
+      </div>
+      <div class="cost-item" style="border-top: 3px solid #0e7490">
+        <span class="cost-pct" style="color:#0e7490">15–20%</span>
+        <span class="cost-label">电机</span>
+      </div>
+      <div class="cost-item" style="border-top: 3px solid #7c3aed">
+        <span class="cost-pct" style="color:#7c3aed">12–16%</span>
+        <span class="cost-label">传感器</span>
+      </div>
+      <div class="cost-item" style="border-top: 3px solid #1d4ed8">
+        <span class="cost-pct" style="color:#1d4ed8">10–14%</span>
+        <span class="cost-label">芯片/计算</span>
+      </div>
+      <div class="cost-item" style="border-top: 3px solid #3f6212">
+        <span class="cost-pct" style="color:#3f6212">8–12%</span>
+        <span class="cost-label">结构/电池</span>
+      </div>
+      <div class="cost-item" style="border-top: 3px solid #b45309">
+        <span class="cost-pct" style="color:#b45309">8–15%</span>
+        <span class="cost-label">软件/其他</span>
+      </div>
+    </div>
+
+    <div class="dir-strip">
+      <span class="dir-lbl up">↑ 上游（基础原材料）</span>
+      <div class="dir-bar"></div>
+      <span class="dir-lbl down">（整机集成）下游 ↓</span>
+    </div>
+  </div>
+
+  <div class="chain">
+
+    <!-- ═══════════════════════════════════════════
+         L8 · 基础材料层
+         ════════════════════════════════════════════ -->
+    <div class="lcard" style="--lc:#78350f">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L8 · 最上游</span>
+            <span class="ltitle">基础原材料</span>
+          </div>
+          <span class="leng">Raw Materials</span>
+        </div>
+        <p class="ldesc">
+          人形机器人所用一切材料的最初来源——
+          <strong>稀土永磁</strong>（高性能电机不可或缺）、
+          <strong>碳纤维前驱体</strong>（轻量化骨架）、
+          <strong>特种合金</strong>（铝/钛/镁）及<strong>工程塑料</strong>（非承重结构）。
+          中国在稀土矿藏与分离冶炼上占全球主导地位，构成罕见的战略优势。
+        </p>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>稀土矿开采与分离冶炼</div>
+            <div class="tags">
+              <span class="tag cn">北方稀土</span>
+              <span class="tag cn">中国稀土</span>
+              <span class="tag cn">五矿稀土</span>
+              <span class="tag cn">江西铜业（稀土）</span>
+              <span class="tag cn">盛和资源</span>
+              <span class="tag">MP Materials（美）</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>高性能稀土永磁材料（NdFeB）</div>
+            <div class="tags">
+              <span class="tag cn">中科三环</span>
+              <span class="tag cn">宁波韵升</span>
+              <span class="tag cn">正海磁材</span>
+              <span class="tag cn">金力永磁</span>
+              <span class="tag h">TDK（日本）</span>
+              <span class="tag h">信越化学（日本）</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>碳纤维原丝（PAN 前驱体）</div>
+            <div class="tags">
+              <span class="tag h">Toray（东丽，日本）</span>
+              <span class="tag h">Teijin（帝人）</span>
+              <span class="tag h">Hexcel（美国）</span>
+              <span class="tag cn">中复神鹰</span>
+              <span class="tag cn">光威复材</span>
+              <span class="tag cn">中简科技</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>特种合金原料（铝/钛/镁）</div>
+            <div class="tags">
+              <span class="tag h">Alcoa（铝，美国）</span>
+              <span class="tag h">TIMET（钛）</span>
+              <span class="tag cn">宝钛股份（钛）</span>
+              <span class="tag cn">云海金属（镁合金）</span>
+              <span class="tag cn">南山铝业</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>高性能工程塑料（PEEK/PA66/POM）</div>
+            <div class="tags">
+              <span class="tag h">Victrex（PEEK，英国）</span>
+              <span class="tag h">Solvay（比利时）</span>
+              <span class="tag h">DSM（荷兰）</span>
+              <span class="tag cn">中研高分子</span>
+              <span class="tag cn">沃特股份</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>电池关键材料（正/负极/电解液）</div>
+            <div class="tags">
+              <span class="tag cn">振华新材（正极）</span>
+              <span class="tag cn">贝特瑞（负极）</span>
+              <span class="tag cn">天赐材料（电解液）</span>
+              <span class="tag cn">恩捷股份（隔膜）</span>
+              <span class="tag cn">星源材质</span>
+            </div>
+          </div>
+        </div>
+        <div class="insight">
+          <strong>稀土战略优势：</strong>中国稀土储量占全球 35%，但冶炼分离产能占全球 85%+。
+          高性能钕铁硼（NdFeB）永磁材料是驱动人形机器人所有高性能电机的核心材料，
+          中国供应商中科三环、宁波韵升在全球永磁市场占有率超过 50%。
+          这是罕见的中国在机器人产业链中具备真正上游控制力的环节。
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line" style="--fc:#78350f;--tc:#3f6212"></div>
+      <div class="conn-icon">↓</div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         L7 · 轻量化结构 & 能源系统
+         ════════════════════════════════════════════ -->
+    <div class="lcard" style="--lc:#3f6212">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L7</span>
+            <span class="ltitle">轻量化骨架 · 精密结构 · 能源系统</span>
+          </div>
+          <span class="leng">Lightweight Structures · Energy · Bearings</span>
+        </div>
+        <p class="ldesc">
+          人形机器人的「骨骼与血液」。
+          <strong>碳纤维/铝合金复合骨架</strong>在保证强度的同时实现轻量化（目标整机 ≤ 50kg）；
+          <strong>高密度电池</strong>提供续航（目标单次≥2小时连续作业）；
+          <strong>精密轴承</strong>是所有旋转关节的基础支撑件，精度等级直接影响关节寿命和运动精度。
+        </p>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>碳纤维复合材料成型（骨架）</div>
+            <div class="tags">
+              <span class="tag cn">中简科技</span>
+              <span class="tag cn">光威复材</span>
+              <span class="tag h">Hexcel（预浸料）</span>
+              <span class="tag h">Toray Composites</span>
+              <span class="tag cn">宏图高科</span>
+              <span class="tag cn">博云新材</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>铝/镁/钛合金精密铸锻件</div>
+            <div class="tags">
+              <span class="tag cn">广东坚美（铝型材）</span>
+              <span class="tag cn">万丰奥威</span>
+              <span class="tag cn">爱柯迪（压铸）</span>
+              <span class="tag h">Precision Castparts（美）</span>
+              <span class="tag cn">宝钛股份（钛件）</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>关节精密轴承（薄壁/交叉滚子）</div>
+            <div class="tags">
+              <span class="tag h">NSK（日本）</span>
+              <span class="tag h">Schaeffler / FAG</span>
+              <span class="tag h">SKF（瑞典）</span>
+              <span class="tag h">THK（线性+旋转）</span>
+              <span class="tag cn">洛阳轴承</span>
+              <span class="tag cn">瓦轴集团</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>机器人专用电池组（锂电/固态电池）</div>
+            <div class="tags">
+              <span class="tag cn">宁德时代</span>
+              <span class="tag cn">欣旺达</span>
+              <span class="tag cn">比亚迪</span>
+              <span class="tag cn">孚能科技</span>
+              <span class="tag h">QuantumScape（固态，美）</span>
+              <span class="tag h">Solid Power（固态）</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>高柔性线缆 & 连接器</div>
+            <div class="tags">
+              <span class="tag h">Igus（耐弯折线缆，德）</span>
+              <span class="tag h">Lemo（连接器，瑞士）</span>
+              <span class="tag cn">中航光电</span>
+              <span class="tag cn">瑞可达</span>
+              <span class="tag cn">九毛九（柔性线缆）</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>密封件 & 减振元件</div>
+            <div class="tags">
+              <span class="tag h">Parker Hannifin（Kalrez）</span>
+              <span class="tag h">Freudenberg</span>
+              <span class="tag cn">中密控股</span>
+              <span class="tag cn">科博龙（减振）</span>
+            </div>
+          </div>
+        </div>
+        <div class="insight">
+          <strong>轻量化是核心设计目标：</strong>Tesla Optimus 目标整机重量 57kg，宇树 H1 为 47kg。
+          碳纤维骨架相比铝合金可减重 30-40%，但成本高出约 5 倍，批量化后成本差距将收窄。
+          固态电池成熟后（预计 2027-2028 年），能量密度可提升至 400Wh/kg+，
+          机器人续航能力将实现质的飞跃。
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line" style="--fc:#3f6212;--tc:#1e3a8a"></div>
+      <div class="conn-icon">↓</div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         L6 · 计算芯片平台
+         ════════════════════════════════════════════ -->
+    <div class="lcard" style="--lc:#1e3a8a">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L6</span>
+            <span class="ltitle">计算芯片平台</span>
+          </div>
+          <span class="leng">SoC · AI Inference · Edge Computing</span>
+        </div>
+        <p class="ldesc">
+          人形机器人的「神经中枢硬件」。
+          整机需要同时运行<strong>视觉推理、运动规划、姿态控制</strong>三类实时计算任务，
+          对算力密度、功耗比和实时性要求极高。
+          AI 推理芯片决定了机器人「思考速度」，而运动控制芯片负责「肌肉指令」的精确执行。
+          当前 NVIDIA 在机器人 AI 计算平台上处于绝对主导地位。
+        </p>
+        <div class="sgrid wide">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>机器人 AI 推理 SoC / GPU 平台</div>
+            <div class="tags">
+              <span class="tag h">NVIDIA Jetson AGX Orin</span>
+              <span class="tag h">NVIDIA Thor（次代，专用于机器人）</span>
+              <span class="tag h">Qualcomm Robotics RB 系列</span>
+              <span class="tag cn">华为昇腾 310/910</span>
+              <span class="tag cn">寒武纪 MLU370</span>
+              <span class="tag cn">燧原科技</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>视觉处理 / 边缘 AI 芯片</div>
+            <div class="tags">
+              <span class="tag h">NVIDIA Orin NX（视觉子系统）</span>
+              <span class="tag h">Intel Movidius Myriad X</span>
+              <span class="tag cn">地平线征程 5/6</span>
+              <span class="tag cn">黑芝麻华山 A1000</span>
+              <span class="tag cn">芯驰科技</span>
+              <span class="tag cn">瑞芯微 RK3588</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>实时运动控制 MCU / DSP</div>
+            <div class="tags">
+              <span class="tag h">TI TMS320（C2000 系列）</span>
+              <span class="tag h">STMicroelectronics STM32H7</span>
+              <span class="tag h">Microchip dsPIC</span>
+              <span class="tag cn">兆易创新 GD32</span>
+              <span class="tag cn">国民技术</span>
+              <span class="tag cn">灵动微</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>通信芯片 & 无线模组</div>
+            <div class="tags">
+              <span class="tag h">Qualcomm（WiFi7 / BT5.3）</span>
+              <span class="tag h">MediaTek Filogic</span>
+              <span class="tag cn">紫光展锐</span>
+              <span class="tag cn">移远通信（5G 模组）</span>
+              <span class="tag cn">广和通</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>电源管理 IC（PMIC）</div>
+            <div class="tags">
+              <span class="tag h">TI（LM/TPS 系列）</span>
+              <span class="tag h">ADI（ADSP）</span>
+              <span class="tag h">Infineon</span>
+              <span class="tag cn">南芯科技</span>
+              <span class="tag cn">芯朋微</span>
+              <span class="tag cn">英集芯</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>FPGA / 可编程逻辑（实时控制加速）</div>
+            <div class="tags">
+              <span class="tag h">Xilinx / AMD Zynq</span>
+              <span class="tag h">Intel Cyclone / Agilex</span>
+              <span class="tag cn">紫光同创</span>
+              <span class="tag cn">安路科技</span>
+              <span class="tag cn">高云半导体</span>
+            </div>
+          </div>
+        </div>
+        <div class="insight">
+          <strong>NVIDIA 的机器人战略：</strong>Jetson 平台已成为 95%+ 机器人厂商的首选计算平台，
+          NVIDIA Isaac ROS 和 Isaac Sim 仿真平台进一步锁定开发生态。
+          Thor 芯片专为人形机器人设计，提供 2000 TOPS 推理算力+实时运动控制协处理器。
+          国产芯片在算力密度和软件生态上仍落后 2-3 代，预计 2026-2027 年有望接近差距。
+        </div>
+        <div class="bottleneck">
+          <span class="icon">⚠</span>
+          <span>
+            <strong>制裁风险：</strong>NVIDIA Jetson 系列已被纳入出口管制关注范围，
+            高端算力芯片（H100/A100 类）受到严格限制。国产机器人厂商正加速推进华为昇腾、
+            地平线平台替代方案，但软件生态迁移成本高。
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line" style="--fc:#1e3a8a;--tc:#1d4ed8"></div>
+      <div class="conn-icon">↓</div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         L5 · 伺服驱动 & 运动控制系统
+         ════════════════════════════════════════════ -->
+    <div class="lcard" style="--lc:#1d4ed8">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L5</span>
+            <span class="ltitle">伺服驱动 · 运动控制 · 现场总线</span>
+          </div>
+          <span class="leng">Servo Drive · Motion Controller · Fieldbus</span>
+        </div>
+        <p class="ldesc">
+          连接「大脑指令」与「肌肉执行」的关键中间层——
+          <strong>伺服驱动器</strong>接收上层运动规划指令，精确控制电机的电流、速度和位置；
+          <strong>实时控制器</strong>执行全身动力学解算（每毫秒级更新）；
+          <strong>现场总线</strong>（EtherCAT/CAN FD）负责全身 50+ 个关节的毫秒级数据同步。
+          人形机器人的流畅运动高度依赖本层的实时性和精确性。
+        </p>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>关节伺服驱动器（一体化/分布式）</div>
+            <div class="tags">
+              <span class="tag h">ELMO Motion Control（以色列）</span>
+              <span class="tag h">Kollmorgen AKD</span>
+              <span class="tag h">Maxon ESCON 系列</span>
+              <span class="tag cn">汇川技术 IS810</span>
+              <span class="tag cn">英威腾</span>
+              <span class="tag cn">禾川科技</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>主控 / 实时运动控制器</div>
+            <div class="tags">
+              <span class="tag h">Beckhoff（EtherCAT 发明方）</span>
+              <span class="tag h">National Instruments（NI）</span>
+              <span class="tag cn">固高科技（GTS 系列）</span>
+              <span class="tag cn">研华科技</span>
+              <span class="tag cn">华普微</span>
+              <span class="tag cn">新时达（STEP）</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>现场总线协议 & 网卡（EtherCAT / CAN FD）</div>
+            <div class="tags">
+              <span class="tag h">Beckhoff EtherCAT（主站）</span>
+              <span class="tag h">HMS Industrial Networks</span>
+              <span class="tag h">Vector（CAN 协议）</span>
+              <span class="tag cn">广州信星科技</span>
+              <span class="tag cn">上海迈信</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>全身动力学仿真 & 控制算法</div>
+            <div class="tags">
+              <span class="tag h">KUKA（MathWorks 合作）</span>
+              <span class="tag h">Siemens NX Motion</span>
+              <span class="tag cn">慧灵科技（DH 参数建模）</span>
+              <span class="tag cn">Mujin（开放式）</span>
+            </div>
+          </div>
+        </div>
+        <div class="insight">
+          <strong>全身协调控制是核心难点：</strong>人形机器人需要同时控制 30-60 个自由度，
+          每个关节位置/速度/力矩闭环控制频率需达到 1-10kHz。
+          EtherCAT 总线可实现 100μs 级同步精度，是当前机器人分布式关节方案的事实标准。
+          汇川技术已针对人形机器人推出专用关节驱动器方案，与整机厂商深度绑定。
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line" style="--fc:#1d4ed8;--tc:#065f46"></div>
+      <div class="conn-icon">↓</div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         L4 · 关节与执行器系统（核心层）
+         ════════════════════════════════════════════ -->
+    <div class="lcard critical" style="--lc:#065f46">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+
+        <div class="critical-badge">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          产业链最核心层 · 成本占比 35–40% · 最大国产替代机遇
+        </div>
+
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L4 · 核心</span>
+            <span class="ltitle">关节传动系统 · 执行器</span>
+          </div>
+          <span class="leng">Joint Actuators · Reducers · Motors</span>
+        </div>
+        <p class="ldesc">
+          人形机器人的「肌肉系统」——技术壁垒最高、成本占比最大的核心层。
+          <strong>减速器</strong>将高速小扭矩电机输出转换为低速大扭矩关节运动，决定机器人精度与寿命；
+          <strong>驱动电机</strong>提供原始动力；
+          <strong>线性执行器</strong>用于手臂伸缩等直线运动场景。
+          该层是<strong>中国机器人产业最大技术短板</strong>，也是最重要的国产替代投资主线。
+        </p>
+
+        <!-- Sub 1: 谐波减速器 -->
+        <div class="sub-divider">细分一：谐波减速器（关节首选，精度最高）</div>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>国际谐波减速器（全球主导）</div>
+            <div class="tags">
+              <span class="tag h">Harmonic Drive Systems（日本，市占≈60%）</span>
+              <span class="tag h">Nidec-Shimpo（日本）</span>
+              <span class="tag h">Leadshine（台湾）</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>国产谐波减速器（追赶者）</div>
+            <div class="tags">
+              <span class="tag cn">绿的谐波（A股龙头，已批量）</span>
+              <span class="tag cn">来福谐波</span>
+              <span class="tag cn">中技克美（苏州）</span>
+              <span class="tag cn">大族激光传动</span>
+              <span class="tag cn">柯力传感（新进入）</span>
+              <span class="tag warn">⚠ 精度差距约 0.5-1 弧分</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sub 2: 行星/RV减速器 -->
+        <div class="sub-divider">细分二：行星减速器 & RV 减速器（重载关节）</div>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>精密行星减速器（轻载/中载）</div>
+            <div class="tags">
+              <span class="tag h">Neugart（德国）</span>
+              <span class="tag h">Wittenstein（α 系列，德国）</span>
+              <span class="tag h">Apex Dynamics（台湾）</span>
+              <span class="tag cn">科峰智能</span>
+              <span class="tag cn">恒锋工具</span>
+              <span class="tag cn">大族精密传动</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>RV 减速器（重载腰/腿关节）</div>
+            <div class="tags">
+              <span class="tag h">Nabtesco（纳博特斯克，日本，全球市占≈60%）</span>
+              <span class="tag h">Sumitomo（住友重机械）</span>
+              <span class="tag cn">秦川机床</span>
+              <span class="tag cn">中大力德</span>
+              <span class="tag cn">双环传动（正在进入）</span>
+              <span class="tag warn">⚠ RV 国产化率不足 30%</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>摆线针轮减速器（高扭矩密度）</div>
+            <div class="tags">
+              <span class="tag h">Nabtesco RD/RDS 系列</span>
+              <span class="tag h">SEW-Eurodrive</span>
+              <span class="tag cn">环动科技</span>
+              <span class="tag cn">武汉精华</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sub 3: 伺服电机（关节专用） -->
+        <div class="sub-divider">细分三：关节专用伺服电机（低速高扭矩 / 高功率密度）</div>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>高功率密度伺服电机（国际）</div>
+            <div class="tags">
+              <span class="tag h">Yaskawa（安川）</span>
+              <span class="tag h">Siemens Simotics</span>
+              <span class="tag h">Fanuc αi 系列</span>
+              <span class="tag h">Mitsubishi HG-SR</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>高功率密度伺服电机（国产）</div>
+            <div class="tags">
+              <span class="tag cn">汇川技术（SV660 系列）</span>
+              <span class="tag cn">步科股份</span>
+              <span class="tag cn">雷赛智能</span>
+              <span class="tag cn">禾川科技</span>
+              <span class="tag cn">英威腾</span>
+              <span class="tag cn">国茂精密</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>外转子无框力矩电机（直驱关节）</div>
+            <div class="tags">
+              <span class="tag h">Allied Motion（美国）</span>
+              <span class="tag h">Frameless Motor（Kollmorgen）</span>
+              <span class="tag cn">宇树科技（自研）</span>
+              <span class="tag cn">智元机器人（自研）</span>
+              <span class="tag cn">鑫磊磁电</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sub 4: 空心杯/特种微电机 -->
+        <div class="sub-divider">细分四：空心杯电机 & 无刷微电机（手部 / 小关节 / 手指）</div>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>精密空心杯电机（国际垄断）</div>
+            <div class="tags">
+              <span class="tag h">Maxon Group（瑞士，顶级精度）</span>
+              <span class="tag h">Faulhaber（德国，超小型）</span>
+              <span class="tag h">MinebeaMitsumi（日本）</span>
+              <span class="tag h">Portescap（美国）</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>国产空心杯 & 无刷微电机</div>
+            <div class="tags">
+              <span class="tag cn">鸣志电器（OEM+自研）</span>
+              <span class="tag cn">拓邦股份</span>
+              <span class="tag cn">江苏雷利</span>
+              <span class="tag cn">佳昂科技</span>
+              <span class="tag cn">深圳友速驱动</span>
+              <span class="tag warn">⚠ 顶级精度仍依赖 Maxon/Faulhaber</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sub 5: 线性执行器 -->
+        <div class="sub-divider">细分五：线性执行器 & 电缸（躯干 / 髋 / 踝关节直线运动）</div>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>高性能线性执行器（国际）</div>
+            <div class="tags">
+              <span class="tag h">LinMot（瑞士）</span>
+              <span class="tag h">Thomson Linear（美国）</span>
+              <span class="tag h">IAI（日本）</span>
+              <span class="tag h">Actuonix</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>国产线性执行器 / 电缸</div>
+            <div class="tags">
+              <span class="tag cn">银星精密</span>
+              <span class="tag cn">禾川科技（丝杠电缸）</span>
+              <span class="tag cn">博特高科</span>
+              <span class="tag cn">力泰智能</span>
+              <span class="tag cn">众为兴</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>精密滚珠丝杠（线性执行器核心件）</div>
+            <div class="tags">
+              <span class="tag h">THK（日本）</span>
+              <span class="tag h">NSK（日本）</span>
+              <span class="tag h">HIWIN 上银（台湾）</span>
+              <span class="tag cn">南京工艺装备</span>
+              <span class="tag cn">汉江机床</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="insight">
+          <strong>谐波减速器：人形机器人最重要的单一零部件。</strong>一台人形机器人需要 20-40 个谐波减速器，
+          单价 2,000-15,000 元，合计成本占整机 25-35%。
+          绿的谐波已能满足国产中低端机器人需求，但顶级精度（≤±1 弧秒）仍只有日本 Harmonic Drive 能提供。
+          国内 Tesla Optimus 试产线已采购绿的谐波，验证国产化路径可行性。
+          谐波减速器国产替代是未来 3 年机器人产业链最确定的投资主线之一。
+        </div>
+        <div class="bottleneck">
+          <span class="icon">⚠</span>
+          <span>
+            <strong>三大卡脖子点：</strong>①谐波减速器（Harmonic Drive 日本垄断，精度碾压国产）；
+            ②精密空心杯电机（Maxon/Faulhaber 垄断，手部灵巧操作不可替代）；
+            ③高精度 RV 减速器（Nabtesco 垄断，重载腿部关节核心件）。
+            三者合计约占整机成本 30%，是制约中国人形机器人量产的最关键瓶颈。
+          </span>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line" style="--fc:#065f46;--tc:#0e7490"></div>
+      <div class="conn-icon">↓</div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         L3 · 感知系统层
+         ════════════════════════════════════════════ -->
+    <div class="lcard" style="--lc:#0e7490">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L3</span>
+            <span class="ltitle">感知系统</span>
+          </div>
+          <span class="leng">Perception · Sensors · Proprioception</span>
+        </div>
+        <p class="ldesc">
+          人形机器人的「感官」——同时包含对外部环境的感知（<strong>视觉/激光雷达</strong>）
+          和对自身状态的本体感知（<strong>力觉/触觉/编码器/IMU</strong>）。
+          <strong>六维力矩传感器</strong>是实现柔顺交互的核心，是继减速器之后第二大技术壁垒；
+          <strong>高精度编码器</strong>提供关节位置反馈，决定控制精度。
+          中国在消费级视觉传感器已有较强竞争力，但高精度力觉传感器仍高度依赖进口。
+        </p>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>深度相机 / RGB-D 视觉传感器</div>
+            <div class="tags">
+              <span class="tag h">Intel RealSense D435i</span>
+              <span class="tag h">Microsoft Azure Kinect</span>
+              <span class="tag h">Stereolabs ZED 2</span>
+              <span class="tag cn">奥比中光（Orbbec）</span>
+              <span class="tag cn">图漾科技</span>
+              <span class="tag cn">华睿科技</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>六维力 / 力矩传感器（关节&末端）</div>
+            <div class="tags">
+              <span class="tag h">ATI Industrial Automation（美，顶级精度）</span>
+              <span class="tag h">Schunk（德国）</span>
+              <span class="tag cn">宇立仪器</span>
+              <span class="tag cn">坤维科技</span>
+              <span class="tag cn">申豪科技</span>
+              <span class="tag warn">⚠ ATI 精度难以追赶</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>触觉传感器 / 电子皮肤</div>
+            <div class="tags">
+              <span class="tag h">BioTac（SynTouch，美）</span>
+              <span class="tag h">Tactile Telerobot（德）</span>
+              <span class="tag cn">柔灵科技</span>
+              <span class="tag cn">飞荐科技</span>
+              <span class="tag cn">知行科技（触觉皮肤）</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>IMU / 惯性测量单元（全身姿态）</div>
+            <div class="tags">
+              <span class="tag h">Bosch Sensortec BMI088</span>
+              <span class="tag h">ADI（ADIS16xxx 系列）</span>
+              <span class="tag h">VectorNav（高精度）</span>
+              <span class="tag cn">芯动联科</span>
+              <span class="tag cn">维特智能</span>
+              <span class="tag cn">航天九院（MEMS IMU）</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>关节位置编码器（绝对值 / 多圈）</div>
+            <div class="tags">
+              <span class="tag h">Renishaw（英国，光学编码器）</span>
+              <span class="tag h">Heidenhain（德国）</span>
+              <span class="tag h">多摩川精机（日本）</span>
+              <span class="tag cn">禾川科技（磁编码器）</span>
+              <span class="tag cn">格瑞博特</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>激光雷达 / 3D 环境感知（导航用）</div>
+            <div class="tags">
+              <span class="tag cn">禾赛科技（Hesai）</span>
+              <span class="tag cn">速腾聚创（Robosense）</span>
+              <span class="tag h">Velodyne（已被 Ouster 收购）</span>
+              <span class="tag cn">北科天绘</span>
+              <span class="tag cn">一径科技</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>麦克风阵列 / 语音感知</div>
+            <div class="tags">
+              <span class="tag h">Knowles（MEMS 麦克，美）</span>
+              <span class="tag h">InvenSense（TDK）</span>
+              <span class="tag cn">科大讯飞（麦克风阵列方案）</span>
+              <span class="tag cn">思必驰</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>机器视觉集成系统（工业端）</div>
+            <div class="tags">
+              <span class="tag h">Cognex（康耐视，美）</span>
+              <span class="tag h">Keyence（基恩士，日）</span>
+              <span class="tag cn">海康机器人</span>
+              <span class="tag cn">大华技术</span>
+              <span class="tag cn">矩视智能</span>
+            </div>
+          </div>
+        </div>
+        <div class="insight">
+          <strong>灵巧手的感知瓶颈：</strong>实现类人手部操作需要在每根手指指尖集成
+          ≥6 维力觉 + 滑觉 + 温度感知，目前全球仅 ATI 和少数欧洲实验室能提供接近人类感知密度的触觉传感器。
+          中国奥比中光在结构光 3D 视觉领域已达到国际主流水平，
+          但高精度关节编码器和六维力传感器仍面临较大差距。
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line" style="--fc:#0e7490;--tc:#7c3aed"></div>
+      <div class="conn-icon">↓</div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         L2 · 具身智能 & 软件层
+         ════════════════════════════════════════════ -->
+    <div class="lcard" style="--lc:#7c3aed">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L2</span>
+            <span class="ltitle">具身智能 · AI 软件 · 操作系统</span>
+          </div>
+          <span class="leng">Embodied AI · Robot OS · Simulation</span>
+        </div>
+        <p class="ldesc">
+          人形机器人的「大脑软件」——决定机器人能否完成复杂任务的核心层。
+          <strong>具身大模型</strong>将语言理解与物理操作连接，使机器人能执行自然语言指令；
+          <strong>机器人操作系统</strong>提供感知-规划-执行的标准化框架；
+          <strong>仿真平台</strong>通过大规模模拟训练加速技能习得（sim-to-real 迁移）。
+          这一层是当前最活跃的研究前沿，也是技术差距相对较小的层级。
+        </p>
+        <div class="sgrid wide">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>具身智能大模型 / 多模态推理（国际）</div>
+            <div class="tags">
+              <span class="tag h">Google DeepMind RT-2 / Gemini Robotics</span>
+              <span class="tag h">OpenAI（ChatGPT + robotics 研究）</span>
+              <span class="tag h">Physical Intelligence π0（Pieter Abbeel）</span>
+              <span class="tag h">Figure AI（OpenAI 合作）</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>具身智能大模型（国产）</div>
+            <div class="tags">
+              <span class="tag cn">华为盘古（机器人版）</span>
+              <span class="tag cn">百度文心（机器人）</span>
+              <span class="tag cn">腾讯混元（具身）</span>
+              <span class="tag cn">智元机器人（自研）</span>
+              <span class="tag cn">宇树科技（自研运动模型）</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>机器人操作系统 / 中间件（ROS）</div>
+            <div class="tags">
+              <span class="tag h">ROS 2（Open Robotics，开源）</span>
+              <span class="tag h">NVIDIA Isaac ROS 2</span>
+              <span class="tag h">Microsoft Azure ROS</span>
+              <span class="tag cn">阿里云 RoboMaster OS</span>
+              <span class="tag cn">达闼科技 HARIX</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>物理仿真平台 & 强化学习环境</div>
+            <div class="tags">
+              <span class="tag h">NVIDIA Isaac Sim / Isaac Gym</span>
+              <span class="tag h">MuJoCo（Google DeepMind，开源）</span>
+              <span class="tag h">PyBullet（开源）</span>
+              <span class="tag h">Genesis（MIT 开源，高速仿真）</span>
+              <span class="tag cn">华为 MindSpore RL</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>运动规划 & SLAM 导航算法</div>
+            <div class="tags">
+              <span class="tag h">MoveIt 2（ROS 生态，开源）</span>
+              <span class="tag h">OMPL（开源运动规划库）</span>
+              <span class="tag cn">思岚科技（SLAM）</span>
+              <span class="tag cn">正浩科技</span>
+              <span class="tag cn">速腾聚创（融合定位）</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>操作技能学习 & 示教系统</div>
+            <div class="tags">
+              <span class="tag h">Lerobot（HuggingFace，开源）</span>
+              <span class="tag h">ACT / Diffusion Policy（斯坦福）</span>
+              <span class="tag cn">傅利叶智能（示教方案）</span>
+              <span class="tag cn">灵动宇达</span>
+              <span class="tag cn">实在智能</span>
+            </div>
+          </div>
+        </div>
+        <div class="insight">
+          <strong>Sim-to-Real 是关键技术突破口：</strong>强化学习在仿真器中训练数亿步策略，
+          迁移到现实机器人（Sim-to-Real Transfer）是当前主流路径。
+          NVIDIA Isaac Gym 可运行 4096 个并行仿真环境，单 GPU 日训练量等效 1 年真实经验。
+          Genesis（2024 年 MIT 开源）运行速度是 Isaac Gym 的 80 倍，
+          预计将大幅加速国内外机器人技能习得速度。
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line" style="--fc:#7c3aed;--tc:#b45309"></div>
+      <div class="conn-icon">↓</div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         L1 · 整机 / 系统集成层
+         ════════════════════════════════════════════ -->
+    <div class="lcard" style="--lc:#b45309">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L1 · 最下游</span>
+            <span class="ltitle">整机 · 系统集成 · 应用部署</span>
+          </div>
+          <span class="leng">Full System · OEM · Deployment</span>
+        </div>
+        <p class="ldesc">
+          产业链的终端——将上游所有零部件集成为可交付的<strong>人形机器人整机</strong>。
+          全球竞争格局处于<strong>快速形成期</strong>（2023-2026 年）：
+          Tesla Optimus 以汽车级供应链规模化为目标；
+          国内以<strong>优必选、宇树、智元</strong>为代表的新势力已实现小批量交付；
+          传统工业机器人巨头（ABB、KUKA、Fanuc）也加速入场。
+          预计 2025 年全球人形机器人出货量将突破 10 万台，2030 年达百万台级别。
+        </p>
+
+        <!-- 国际整机 -->
+        <div class="sub-divider">国际整机厂商（领导者）</div>
+        <div class="sgrid wide">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>汽车/科技巨头入场（最强量产能力）</div>
+            <div class="tags">
+              <span class="tag h">Tesla Optimus Gen 2（目标：自产自用→对外销售）</span>
+              <span class="tag h">Boston Dynamics Atlas（Hyundai 旗下）</span>
+              <span class="tag h">Agility Robotics Digit（Amazon 入股，仓储物流）</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>专注人形机器人初创（融资热点）</div>
+            <div class="tags">
+              <span class="tag h">Figure AI（OpenAI + Microsoft + BMW）</span>
+              <span class="tag h">1X Technologies（OpenAI 投资）</span>
+              <span class="tag h">Apptronik（Samsung SDI 投资）</span>
+              <span class="tag h">Sanctuary AI（Microsoft 合作）</span>
+              <span class="tag h">Skild AI（卡内基梅隆孵化）</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>传统机器人巨头转型探索</div>
+            <div class="tags">
+              <span class="tag h">ABB（YuMi 协作→人形研究）</span>
+              <span class="tag h">KUKA（美的旗下，人形研究院）</span>
+              <span class="tag h">Fanuc（人形原型 2024 披露）</span>
+              <span class="tag h">Yaskawa 安川（MOTOMAN 衍生）</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 国内整机 -->
+        <div class="sub-divider">国内整机厂商（追赶者）</div>
+        <div class="sgrid wide">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>国内第一梯队（已商业化交付）</div>
+            <div class="tags">
+              <span class="tag cn">优必选（Walker X，A 股上市）</span>
+              <span class="tag cn">宇树科技（H1/G1，自研驱动一体关节）</span>
+              <span class="tag cn">智元机器人（远征 A2，2024 量产）</span>
+              <span class="tag cn">傅利叶智能（GR-1，医疗康复场景）</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>国内第二梯队（快速追赶中）</div>
+            <div class="tags">
+              <span class="tag cn">达闼科技（云端大脑架构）</span>
+              <span class="tag cn">开普勒 Kepler K1</span>
+              <span class="tag cn">银河通用（北大孵化）</span>
+              <span class="tag cn">逐际动力</span>
+              <span class="tag cn">帕西尼感知</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>科技巨头战略布局（非独立产品线）</div>
+            <div class="tags">
+              <span class="tag cn">小米（CyberOne，研究机）</span>
+              <span class="tag cn">华为（生态合作，不直接做整机）</span>
+              <span class="tag cn">腾讯（Robotics X 实验室）</span>
+              <span class="tag cn">百度（RT-X 研究合作）</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 应用场景 -->
+        <div class="sub-divider">目标应用场景（按成熟度排序）</div>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>工业制造（最快落地）</div>
+            <div class="tags">
+              <span class="tag h">汽车工厂：整车组装、质检</span>
+              <span class="tag h">电子制造：SMT 配套、搬运</span>
+              <span class="tag cn">Tesla Optimus 自产自用</span>
+              <span class="tag cn">宇树 G1 工厂试部署</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>仓储物流（大规模需求）</div>
+            <div class="tags">
+              <span class="tag h">Agility Digit + Amazon 仓库</span>
+              <span class="tag cn">京东机器人仓储</span>
+              <span class="tag cn">菜鸟（阿里物流）机器人</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>医疗康复 & 陪护（政策支持）</div>
+            <div class="tags">
+              <span class="tag cn">傅利叶 GR-1（康复训练）</span>
+              <span class="tag cn">达闼科技 Cloud Ginger</span>
+              <span class="tag cn">优必选 Walker（养老院）</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>危险作业（中远期）</div>
+            <div class="tags">
+              <span class="tag h">电力巡检、核电维护</span>
+              <span class="tag h">矿山、消防救援</span>
+              <span class="tag cn">国家电网（机器人采购框架）</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="insight">
+          <strong>国内产业政策超预期推动：</strong>工信部 2023 年印发《人形机器人创新发展指导意见》，
+          明确 2025 年实现批量生产、2027 年在重点行业大规模应用。
+          上海、北京、深圳相继出台专项扶持政策和购买补贴。
+          2024 年 A 股人形机器人相关标的超 50 家，形成完整的本土产业链生态。
+          预计 2026 年国内整机出货量将超过全球其他地区总和。
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /.chain -->
+
+  <!-- Summary box -->
+  <div style="margin-top:48px; background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 24px 28px;">
+    <div style="font-family:'Newsreader',serif; font-size:1.12rem; font-weight:600; margin-bottom:14px;">产业链投资主线与竞争格局总结</div>
+    <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); gap:12px;">
+      <div style="padding:12px 14px; background:rgba(6,95,70,0.06); border:1px solid rgba(6,95,70,0.2); border-radius:10px;">
+        <div style="font-size:0.78rem; font-weight:700; color:#065f46; margin-bottom:6px;">🔑 最确定主线：减速器国产替代</div>
+        <div style="font-size:0.8rem; color:var(--text-sec); line-height:1.5;">绿的谐波、来福谐波等已具备量产能力，随机器人出货量放量，2025-2027 年需求有望爆发式增长。</div>
+      </div>
+      <div style="padding:12px 14px; background:rgba(30,58,138,0.06); border:1px solid rgba(30,58,138,0.2); border-radius:10px;">
+        <div style="font-size:0.78rem; font-weight:700; color:#1e3a8a; margin-bottom:6px;">💡 高壁垒平台：NVIDIA 生态</div>
+        <div style="font-size:0.8rem; color:var(--text-sec); line-height:1.5;">Isaac Sim + Jetson + Thor 构建机器人计算垂直生态，软件粘性极强，NVIDIA 机器人业务占比预计 2027 年超 20%。</div>
+      </div>
+      <div style="padding:12px 14px; background:rgba(180,83,9,0.06); border:1px solid rgba(180,83,9,0.2); border-radius:10px;">
+        <div style="font-size:0.78rem; font-weight:700; color:#b45309; margin-bottom:6px;">🚀 整机量产时间表</div>
+        <div style="font-size:0.8rem; color:var(--text-sec); line-height:1.5;">Tesla 目标 2025 年 Optimus 1 万台，2026 年 10 万台。国内宇树/智元 2025 年预计合计出货 5000+ 台。</div>
+      </div>
+      <div style="padding:12px 14px; background:rgba(124,58,237,0.06); border:1px solid rgba(124,58,237,0.2); border-radius:10px;">
+        <div style="font-size:0.78rem; font-weight:700; color:#7c3aed; margin-bottom:6px;">🤖 具身智能：下一个 ChatGPT 时刻</div>
+        <div style="font-size:0.8rem; color:var(--text-sec); line-height:1.5;">RT-2 / π0 类模型正在解决「通用操作技能」问题。2025-2026 年有望出现类似 GPT-4 级别的具身模型突破。</div>
+      </div>
+      <div style="padding:12px 14px; background:rgba(63,98,18,0.06); border:1px solid rgba(63,98,18,0.2); border-radius:10px;">
+        <div style="font-size:0.78rem; font-weight:700; color:#3f6212; margin-bottom:6px;">⚡ 电池技术决定商业化进程</div>
+        <div style="font-size:0.8rem; color:var(--text-sec); line-height:1.5;">当前续航 2h 是最大商业化障碍。固态电池（CATL 计划 2027 量产）将彻底改变人形机器人使用场景边界。</div>
+      </div>
+      <div style="padding:12px 14px; background:rgba(120,53,15,0.06); border:1px solid rgba(120,53,15,0.2); border-radius:10px;">
+        <div style="font-size:0.78rem; font-weight:700; color:#78350f; margin-bottom:6px;">🌐 稀土：中国唯一上游控制力</div>
+        <div style="font-size:0.8rem; color:var(--text-sec); line-height:1.5;">高性能 NdFeB 永磁材料供应链 85% 在中国，是机器人产业链中中国拥有真正战略控制力的唯一环节。</div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>ZephyrSpace · 人形机器人产业链全景图</p>
+    <p>数据截至 2026年5月 · 公司列举仅供研究参考，不构成投资建议</p>
+    <p>颜色标注：<span style="background:#065f46;color:#fff;padding:1px 6px;border-radius:3px;font-size:0.68rem;">深绿底白字</span> 为全球主导供应商 · <span style="color:#065f46;border:1px solid rgba(6,95,70,0.4);padding:1px 6px;border-radius:3px;font-size:0.68rem;">深绿字</span> 为中国大陆供应商</p>
+  </footer>
+
+</div>
+</body>
+</html>
