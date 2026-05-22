@@ -616,7 +616,7 @@ fs_dict = {d["stockCode"]: d for d in fs_resp.get("data", [])}
 
 ### 注意事项
 
-- **并行执行**：第 3~4 步可多家公司同时开 agent 处理，提高效率（每批 3~4 家）
+- **并行执行**：第 3~4 步可多家公司同时开 agent 处理，提高效率（每批 最多 6 家）
 - **已有页面**：若公司页已存在且有完整 PreBuy 分析，应更新价格和结论，而非重写整页
 - **价格日期**：统一用最近的 A 股交易日（非周末），`price_date` 格式 `YYYY-MM-DD`
 - **粗筛门槛可调**：若指数整体估值偏高（如科技主题），可适当放宽 PE 上限，但需在总结中注明
@@ -797,6 +797,8 @@ agent-review-deep：审核深度分析报告（算术 + 来源 + 增速方向 + 
 
 - 新公司：深度总分（审核后最终版）≥85→Core；70-84→Growth；55-69→Radar；<55→不建议入
 - 已有公司：更新 prebuy_conclusion、price_bands、last_updated
+- `price_bands` 必须保持为 3 个数字的降序数组 `[avoid_min, watch_min, consider_min]`；禁止写成带文案的对象，否则后端 `_expand_price_bands()` 会因下标访问报错
+- 所有 watchlist JSON 必须用 UTF-8 **无 BOM** 写入；BOM 会导致外部 `/stock-watchlist` 解析异常
 - 写入后运行 `sync_watchlist.ps1` 同步
 - 档位由公司基本面质量决定，与当前股价无关
 

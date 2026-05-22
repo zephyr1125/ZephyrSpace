@@ -1,4 +1,4 @@
-﻿{
+{
   "version": 1,
   "entries": [
     {
@@ -299,16 +299,16 @@
       "board": "纳",
       "source_etf": "direct",
       "position_role": "全球AI算力基础设施最核心卖铲资产，CUDA生态护城河极深，长期底仓",
-      "watch_reason": "AI超级周期卖铲垄断者，FCF （Margin 44.8%），净现金 .52B，PEG 0.35，FY2027E+73%增速确定性强",
-      "prebuy_conclusion": "逻辑清晰，Q1 FY2027已纳入；下一次财报预计2026-08-26 AMC，继续跟踪AI capex与估值。",
+      "watch_reason": "Q1 FY2027营收816.15亿美元、Q2指引910亿美元，Blackwell继续兑现；FCF强、PEG低，仍是AI卖铲核心。",
+      "prebuy_conclusion": "逻辑清晰，Q1 FY2027已纳入；财报后估值锚已上修，下一次财报预计2026-08-26 AMC，继续跟踪AI capex与估值。",
       "current_price": 219.44,
       "price_date": "2026-05-12",
       "price_bands": [
-        254,
-        211,
-        169
+        261,
+        218,
+        174
       ],
-      "valuation_anchor": "FY2027E EPS .45，合理PE 25-30x对应-254；PEG=0.35",
+      "valuation_anchor": "Q1 FY2027已纳入，FY2027E Non-GAAP EPS约$8.70；合理PE 20-30x对应$174-$261，Q1后估值锚小幅上修",
       "risk_flags": [
         "H20出口禁令：FY2027 H1损失.5B（.5B库存减值+.5B直接收入损失+Q2再损）",
         "AI资本开支降温风险：戴维斯双杀隐患，四大云厂商砍单即触发",
