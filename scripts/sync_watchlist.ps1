@@ -20,6 +20,9 @@ foreach ($f in $files) {
     $dstFile = Join-Path $dst $f
     if (Test-Path $srcFile) {
         Copy-Item $srcFile $dstFile -Force
+        $text = [System.IO.File]::ReadAllText($dstFile)
+        $utf8NoBom = [System.Text.UTF8Encoding]::new($false)
+        [System.IO.File]::WriteAllText($dstFile, $text, $utf8NoBom)
         Write-Host "  Synced: $f"
     } else {
         Write-Warning "  Missing: $srcFile"
