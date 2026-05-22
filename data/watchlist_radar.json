@@ -2961,6 +2961,35 @@
       "next_earnings_type": "半年报",
       "cycle_is_cyclical": true,
       "cycle_position": "出清期"
+    },
+    {
+      "name": "柯力传感",
+      "code": "603662.SH",
+      "source_etf": "direct",
+      "position_role": "国内称重/力传感器龙头，人形机器人触觉感知层早期卡位",
+      "prebuy_conclusion": "深度分析67/100（良好）。FY2025营收约11亿，ROE 12.1%（偏低），毛利率44.8%（提升中），PE 61.9x处于近3年78%分位（含机器人叙事溢价明显）。2026Q1净利同比-45%，机器人业务仍早期。当前高PE不适合建仓，等叙事溢价消退至PE 35-40x再考虑。",
+      "watch_reason": "国内力传感器龙头，机器人触觉感知真实送样进展，等PE去溢价后有望成为优质标的",
+      "current_price": 67.42,
+      "price_date": "2026-05-21",
+      "board": "沪",
+      "dv_ttm": 0.8,
+      "price_bands": {
+        "strong_buy": "≤45元（PE~41x，叙事消退后强力入场）",
+        "buy": "45-58元（PE 41-53x，理想建仓区间）",
+        "hold": "58-75元（PE 53-68x，当前区间，观察等待）",
+        "sell": "≥75元（PE>68x，叙事高位，不追）"
+      },
+      "valuation_anchor": "PE TTM 61.9x（3年78%分位），机器人叙事溢价约40%，等溢价回归",
+      "risk_flags": [
+        "PE 62x处于历史78%分位，叙事溢价明显",
+        "2026Q1净利同比-45%，近期基本面转弱",
+        "ROE 12%偏低，主业天花板较明显"
+      ],
+      "entry_trigger": "PE回落至45x以下（约52元），或机器人触觉模组营收占比突破10%且净利同比转正",
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false,
+      "deep_analysis": "67/100 | 2026-05-22 | 良好，等PE去溢价后建仓"
     }
   ],
   "tier": "radar",

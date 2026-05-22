@@ -2442,6 +2442,91 @@
       "next_earnings_type": "半年报",
       "cycle_is_cyclical": false,
       "deep_analysis": "83/100 | 2026-05-22 | growth适配，A股当前不建仓，H股优先"
+    },
+    {
+      "name": "瑞芯微",
+      "code": "603893.SH",
+      "source_etf": "direct",
+      "position_role": "国产SoC芯片龙头，人形机器人感知控制芯片核心候选，国产替代受益",
+      "prebuy_conclusion": "深度分析82/100（优质）。FY2025营收约41亿，归母净利约11亿，ROE 25.8%，营收同比+40%，研发投入约25%。ARM架构SoC芯片，应用IoT/平板/机器人控制，国产替代+机器人叙事共振。当前PE约68x处于高分位，叙事溢价明显。建议等候150-175元区间建仓。",
+      "watch_reason": "国产ARM SoC龙头，人形机器人控制层核心芯片卡位，ROE/成长性优秀，国产替代长期逻辑",
+      "current_price": 187.1,
+      "price_date": "2026-05-21",
+      "board": "沪",
+      "dv_ttm": 0.3,
+      "price_bands": {
+        "strong_buy": "≤150元（PE~55x，近3年低位，强力建仓）",
+        "buy": "150-175元（PE 55-64x，合理区间，标准建仓）",
+        "hold": "175-210元（PE 64-77x，持有）",
+        "sell": "≥210元（PE>77x，当前价位，等回调）"
+      },
+      "valuation_anchor": "PE TTM约68x（近3年75-80%分位），含机器人叙事溢价",
+      "risk_flags": [
+        "PE 68x估值偏贵，机器人叙事退潮风险",
+        "与联发科/全志等的竞争加剧，定价权有限",
+        "出口合规及地缘政治风险（ARM授权）"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false,
+      "deep_analysis": "82/100 | 2026-05-22 | 优质，等PE回落至55-64x区间建仓"
+    },
+    {
+      "name": "移远通信",
+      "code": "603236.SH",
+      "source_etf": "direct",
+      "position_role": "全球蜂窝物联网模组收入份额第一，人形机器人通信层核心供应商",
+      "prebuy_conclusion": "深度分析73/100（优质）。FY2025营收约162亿，全球模组收入份额34%，前五大客户仅20%（客户分散优秀），毛利率17%（偏低），2025 OCF-6.58亿（现金流弱，主因备货扩张）。PE约28x估值合理。建议70元附近关注，等OCF转正确认后建仓。",
+      "watch_reason": "全球蜂窝模组份额第一，客户极分散，人形机器人5G/NB-IoT模组受益，估值合理，等现金流修复",
+      "current_price": 74.51,
+      "price_date": "2026-05-21",
+      "board": "沪",
+      "dv_ttm": 0.5,
+      "price_bands": {
+        "strong_buy": "≤55元（PE~21x，低位建仓）",
+        "buy": "55-70元（PE 21-27x，合理区间，等OCF转正确认）",
+        "hold": "70-85元（PE 27-33x，持有）",
+        "sell": "≥85元（PE>33x，高估）"
+      },
+      "valuation_anchor": "PE TTM约28x，处于历史中位，需等OCF质量改善",
+      "risk_flags": [
+        "2025年经营现金流-6.58亿，现金流质量待验证",
+        "毛利率仅17%，低毛利赛道定价权弱",
+        "上游芯片依赖高通/联发科，海外合规风险"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false,
+      "deep_analysis": "73/100 | 2026-05-22 | 优质，等OCF转正再建仓"
+    },
+    {
+      "name": "爱柯迪",
+      "code": "600933.SH",
+      "source_etf": "direct",
+      "position_role": "汽车铝合金精密压铸龙头，特斯拉供应商，人形机器人铝压铸结构件受益",
+      "prebuy_conclusion": "深度分析79/100（优质）。FY2025营收约87亿，归母净利约11亿，ROE 13.2%，PE约16x（低估值）。特斯拉供应商认证+比亚迪/吉利等主要客户。轻量化铝压铸需求随新能源渗透率提升持续增长。当前价格区间合理，可逢低建仓。",
+      "watch_reason": "汽车铝压铸龙头+特斯拉供应商，低PE 16x估值，新能源轻量化+机器人结构件双逻辑，ROE稳健",
+      "current_price": 17.5,
+      "price_date": "2026-05-21",
+      "board": "沪",
+      "dv_ttm": 1.8,
+      "price_bands": {
+        "strong_buy": "≤13元（PE~11x，深度价值区间）",
+        "buy": "13-16元（PE 11-14x，合理区间，标准建仓）",
+        "hold": "16-20元（PE 14-17x，当前位置，持有）",
+        "sell": "≥20元（PE>17x，高位减仓）"
+      },
+      "valuation_anchor": "PE TTM约16x（低估值），PB约2x，特斯拉供应商溢价",
+      "risk_flags": [
+        "特斯拉客户集中度偏高，主要客户减量风险",
+        "铝价波动成本传导能力有限，毛利率受压",
+        "重资产制造业，资本支出周期波动大"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": true,
+      "cycle_position": "复苏中期",
+      "deep_analysis": "79/100 | 2026-05-22 | 优质，当前16元附近可建仓"
     }
   ],
   "tier": "growth",

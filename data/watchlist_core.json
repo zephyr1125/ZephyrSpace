@@ -458,8 +458,37 @@
       "next_earnings_date": "2026-08-31",
       "next_earnings_type": "中期业绩",
       "cycle_is_cyclical": false
+    },
+    {
+      "name": "宁德时代",
+      "code": "300750.SZ",
+      "source_etf": "direct",
+      "position_role": "全球动力电池+储能双龙头，人形机器人动力系统核心供应商，核心仓位压舱石",
+      "prebuy_conclusion": "深度分析89/100（卓越）。FY2025营收约3600亿，归母净利约500亿，ROE 24.9%，OCF质量极强，全球份额约37%（动力）+30%（储能）。护城河：4680电芯/CTP/CTB技术+全球主机厂深度绑定认证。当前PE约24x处于低历史分位，价格合理。建议核心仓位，分批于310-385元区间建仓。",
+      "watch_reason": "全球电池双龙头，人形机器人动力电池+高密度储能电池需求爆发最大受益者，ROE/现金流极强，当前PE低位",
+      "current_price": 411.63,
+      "price_date": "2026-05-21",
+      "board": "创",
+      "dv_ttm": 0.8,
+      "price_bands": {
+        "strong_buy": "≤312元（PE~18x，近3年低位，强力建仓）",
+        "buy": "312-385元（PE 18-22x，合理估值区间，标准建仓）",
+        "hold": "385-476元（PE 22-28x，持有观察）",
+        "sell": "≥476元（PE>28x，估值偏贵，减仓考虑）"
+      },
+      "valuation_anchor": "PE TTM约24x（近3年历史低分位），储能景气+机器人叙事支撑溢价",
+      "risk_flags": [
+        "行业价格战持续，2025毛利率承压",
+        "海外扩产+关税壁垒（欧盟/美国）风险",
+        "大股东及高管持续减持，情绪扰动"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": true,
+      "cycle_position": "复苏中期",
+      "deep_analysis": "89/100 | 2026-05-22 | 卓越，核心仓位适配"
     }
   ],
   "tier": "core",
-  "updated_at": "2026-05-20"
+  "updated_at": "2026-05-22"
 }
