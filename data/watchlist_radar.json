@@ -989,6 +989,34 @@
       "tier": "radar"
     },
     {
+      "name": "Rocket Lab",
+      "code": "RKLB.US",
+      "market": "US",
+      "board": "纳",
+      "source_etf": "direct",
+      "position_role": "商业航天端到端平台，Neutron火箭期权",
+      "prebuy_conclusion": "财报兑现强于预期，但估值仍偏热；更适合持有观察，不追高，等价格窗口。",
+      "watch_reason": "Q1 2026营收200.3M美元、GAAP毛利率38.2%、积压订单2.2B美元，平台化路径继续增强；但首飞前估值仍高度依赖Neutron执行零失误。",
+      "current_price": 78.58,
+      "price_date": "2026-05-07",
+      "price_bands": [
+        85.0,
+        70.0,
+        60.0
+      ],
+      "valuation_anchor": "FY2026E Revenue 高增长+Neutron期权估值：追高区>85(市场开始按Neutron成功+国防平台化充分定价) / 中性区70-85(财报兑现但赔率一般) / 较好区间60-70(基本面强、价格开始顺手) / 更低区间<60(若逻辑不变则安全边际明显改善)",
+      "risk_flags": [
+        "Neutron首飞仍是估值中枢关键变量，若再次延迟或首飞失败，股价回撤会很剧烈",
+        "高估值已提前反映Neutron成功、国防合同放量和并购整合顺利三件事同时成立",
+        "Q2指引虽强，但FY2026仍是高增长不盈利的一年，EBITDA转正仍要继续等待"
+      ],
+      "entry_trigger": "股价回落至70美元以下且Neutron 2026Q4首飞时间线未再延迟；或股价低于60美元且Q2 2026营收达到225M美元以上、积压订单维持20亿美元以上",
+      "dv_ttm": 0.0,
+      "next_earnings_date": "2026-08-06（估算）",
+      "next_earnings_type": "季报",
+      "tier": "radar"
+    },
+    {
       "name": "瑞芯微",
       "code": "603893.SH",
       "source_etf": "930713",

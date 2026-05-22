@@ -69,6 +69,21 @@
       ]
     },
     {
+      "code": "001221.SZ",
+      "board": "深",
+      "position_role": "汽车零部件",
+      "watch_reason": "PE分位1.7%+OCF连续>100%+零商誉",
+      "name": "悍高集团",
+      "cycle_is_cyclical": false,
+      "current_price": 52.33,
+      "cycle_position": null,
+      "price_bands": [
+        76.9,
+        70.1,
+        65.5
+      ]
+    },
+    {
       "code": "600660.SH",
       "board": "沪",
       "position_role": "汽车玻璃龙头",
@@ -99,6 +114,21 @@
       ]
     },
     {
+      "code": "600415.SH",
+      "board": "沪",
+      "position_role": "商贸平台龙头",
+      "watch_reason": "PE分位1.1%+ROE上行+Q1营收+45%",
+      "name": "小商品城",
+      "cycle_is_cyclical": false,
+      "current_price": 13.25,
+      "cycle_position": null,
+      "price_bands": [
+        19.8,
+        16.95,
+        13.25
+      ]
+    },
+    {
       "code": "600285.SH",
       "board": "沪",
       "position_role": "医药消费",
@@ -111,6 +141,21 @@
         28.0,
         25.1,
         23.0
+      ]
+    },
+    {
+      "code": "300015.SZ",
+      "board": "创",
+      "position_role": "眼科医疗龙头",
+      "watch_reason": "龙头确定+PE32x+Q1业绩验证",
+      "name": "爱尔眼科",
+      "cycle_is_cyclical": false,
+      "current_price": 78.5,
+      "cycle_position": null,
+      "price_bands": [
+        50,
+        40,
+        30
       ]
     },
     {
@@ -471,6 +516,33 @@
       "cycle_is_cyclical": false
     },
     {
+      "name": "康臣药业",
+      "code": "01681.HK",
+      "board": "港",
+      "source_etf": "direct",
+      "position_role": "中成药特色品种+化学药双引擎，高股息防御成长，本批次最优标的",
+      "prebuy_conclusion": "PE 11.5x强买区+4.7%股息+OCF/NI=112%，基本面清晰，当前HK$15.5处于绿灯区，可立刻布局",
+      "watch_reason": "尿毒清颗粒等特色品种市场份额稳固；中药配方颗粒放量；管理层持续增持；高股息提供安全边际",
+      "current_price": 15.5,
+      "price_date": "2026-05-08",
+      "dv_ttm": 4.7,
+      "price_bands": [
+        27,
+        21,
+        16
+      ],
+      "price_bands_basis": "pe_ttm.y3_range",
+      "price_bands_date": "2026-05-08",
+      "valuation_anchor": "PE 11.5x，历史底部，绿灯区16以下对应PE~12x",
+      "risk_flags": [
+        "集采风险：中成药纳入集采后毛利率大幅下降的尾部风险",
+        "港股流动性偏低，中小市值折价"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "中期业绩",
+      "cycle_is_cyclical": false
+    },
+    {
       "name": "健盛集团",
       "code": "603558.SH",
       "board": "沪",
@@ -767,6 +839,36 @@
       "next_earnings_type": "半年报",
       "cycle_is_cyclical": true,
       "cycle_position": "景气高峰"
+    },
+    {
+      "name": "石头科技",
+      "code": "688169.SH",
+      "board": "科",
+      "current_price": 122.12,
+      "price_date": "2026-05-15",
+      "price_bands": [
+        140,
+        126,
+        110
+      ],
+      "price_bands_basis": "pe_ttm.lixinger_3y",
+      "price_bands_date": "2026-05-15",
+      "valuation_anchor": "PE历史分位锚定：追高区>140（P80+）/ 中性区126-140（P50-P80）/ 较好区间110-126（P20-P50，标准建仓）/ 保守区<110（P20以下，首仓）",
+      "cycle_is_cyclical": false,
+      "cycle_position": "复苏中期",
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "watch_reason": "全球扫地机器人龙头（市占40%+），品牌+技术双护城河。FY2025战略投入致净利-31%，2026Q1恢复+21%，拐点信号出现。以旧换新退坡后自然回补+出海双驱动，等价格窗口。",
+      "prebuy_conclusion": "扫地机器人龙头，技术壁垒深。FY2025战略投入压利润（-31%），2026Q1已恢复+21%，ROE 10.14%处偏低但属主动研发压制非质量问题，PE历史分位43.5%（122元）估值中性。等110元以下（P20）建仓，关注2026H1半年报净利同比恢复幅度。",
+      "position_role": "消费机器人赛道成长仓，等价格窗口",
+      "risk_flags": [
+        "FY2025净利-31%，利润拐点真实性需2026H1验证",
+        "追觅低价竞争持续，国内份额博弈激烈",
+        "ROE 10.14%偏低，若研发投入未换来市场份额则需重估",
+        "以旧换新政策2026年续期不确定"
+      ],
+      "source_etf": "direct",
+      "dv_ttm": null
     },
     {
       "name": "三一重工",
