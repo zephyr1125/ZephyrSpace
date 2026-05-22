@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>英伟达 Vera Rubin 机架生态圈产业链 | ZephyrSpace</title>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&family=Noto+Sans+SC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f5f0e6;
+  --card: #fffdf8;
+  --teal: #0e7490;
+  --blue: #2563a0;
+  --amber: #c2770c;
+  --text: #1c1917;
+  --text-sec: #57534e;
+  --muted: #888;
+  --border: rgba(120,113,108,0.18);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Sans SC', system-ui, sans-serif;
+  min-height: 100vh;
+  position: relative;
+}
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 0;
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 44px 24px 72px;
+  position: relative; z-index: 1;
+}
+
+/* Nav */
+.nav { margin-bottom: 36px; display: flex; gap: 10px; flex-wrap: wrap; }
+.btn-nav {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 8px 18px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.83rem; font-weight: 500;
+  transition: all 0.18s;
+  color: var(--teal);
+}
+.btn-nav:hover { background: var(--teal); color: #fff; border-color: var(--teal); }
+.btn-nav.amber { color: var(--amber); }
+.btn-nav.amber:hover { background: var(--amber); border-color: var(--amber); color: #fff; }
+.btn-nav.active {
+  background: var(--teal); color: #fff; border-color: var(--teal);
+  cursor: default;
+}
+
+/* Hero */
+.hero { text-align: center; margin-bottom: 48px; }
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: #1e3a5f; color: #fff;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem; letter-spacing: 0.08em;
+  padding: 5px 14px; border-radius: 999px;
+  margin-bottom: 20px;
+}
+.hero h1 {
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: clamp(1.9rem, 4.5vw, 3rem);
+  font-weight: 700; line-height: 1.15;
+  margin-bottom: 14px;
+}
+.hero-sub {
+  font-size: 0.96rem; font-weight: 300;
+  color: var(--text-sec); line-height: 1.75;
+  max-width: 700px; margin: 0 auto 28px;
+}
+.hero-sub strong { color: var(--text); font-weight: 500; }
+
+/* Cost growth strip */
+.cost-strip {
+  display: flex; gap: 0;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px; overflow: hidden;
+  max-width: 780px; margin: 0 auto 18px;
+}
+.cost-item {
+  flex: 1; padding: 10px 4px;
+  text-align: center; border-right: 1px solid var(--border);
+  font-size: 0.75rem;
+}
+.cost-item:last-child { border-right: none; }
+.cost-pct {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9rem; font-weight: 600;
+  display: block; margin-bottom: 2px;
+}
+.cost-label { color: var(--text-sec); font-size: 0.68rem; line-height: 1.3; display: block; }
+
+/* Comparison table */
+.compare-strip {
+  display: flex; gap: 12px; justify-content: center;
+  flex-wrap: wrap; margin-bottom: 20px;
+}
+.compare-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 10px; padding: 12px 18px; text-align: center; min-width: 160px;
+}
+.compare-card .gen {
+  font-family: 'JetBrains Mono', monospace; font-size: 0.67rem;
+  color: var(--muted); letter-spacing: 0.06em; margin-bottom: 6px;
+}
+.compare-card .price {
+  font-family: 'Newsreader', serif; font-size: 1.4rem; font-weight: 700;
+  color: var(--text); line-height: 1;
+}
+.compare-card .price-sub { font-size: 0.7rem; color: var(--text-sec); margin-top: 4px; }
+.compare-card .stats { margin-top: 8px; display: flex; flex-direction: column; gap: 3px; }
+.compare-card .stat-row { display: flex; justify-content: space-between; gap: 12px; font-size: 0.73rem; }
+.compare-card .stat-key { color: var(--text-sec); }
+.compare-card .stat-val { font-family: 'JetBrains Mono', monospace; font-weight: 600; }
+.arrow-divider { display: flex; align-items: center; font-size: 1.3rem; color: var(--amber); }
+
+/* Direction strip */
+.dir-strip {
+  display: flex; align-items: center; gap: 12px;
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 11px 22px;
+  max-width: 600px; margin: 0 auto;
+}
+.dir-lbl {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem; font-weight: 600; white-space: nowrap;
+}
+.dir-lbl.up   { color: #78350f; }
+.dir-lbl.down { color: #1e3a8a; }
+.dir-bar {
+  flex: 1; height: 6px; border-radius: 999px;
+  background: linear-gradient(to right, #78350f, #6d28d9, #0e7490, #1e3a8a, #065f46, #2563a0, #374151);
+}
+
+/* Chain */
+.chain { display: flex; flex-direction: column; gap: 0; margin-top: 36px; }
+
+/* Connector */
+.conn {
+  display: flex; justify-content: center; align-items: center;
+  height: 30px; position: relative;
+}
+.conn-line {
+  position: absolute; left: 50%; top: 0; bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--fc), var(--tc));
+  opacity: 0.3; transform: translateX(-50%);
+}
+.conn-icon {
+  position: relative; z-index: 1;
+  width: 22px; height: 22px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.65rem; color: var(--muted);
+}
+
+/* Layer card */
+.lcard {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px; overflow: hidden;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.lcard:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+.lcard-bar { height: 4px; background: var(--lc); }
+.lcard-body { padding: 22px 28px 26px; }
+
+/* Critical layer special style */
+.lcard.critical {
+  border: 2px solid rgba(6,95,70,0.4);
+  background: linear-gradient(135deg, var(--card) 85%, rgba(6,95,70,0.04));
+}
+.critical-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: 'JetBrains Mono', monospace; font-size: 0.68rem;
+  color: #065f46;
+  background: rgba(6,95,70,0.08);
+  border: 1px solid rgba(6,95,70,0.25);
+  padding: 2px 10px; border-radius: 999px;
+  margin-bottom: 8px;
+}
+.nvidia-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: 'JetBrains Mono', monospace; font-size: 0.68rem;
+  color: #1d4ed8;
+  background: rgba(29,78,216,0.08);
+  border: 1px solid rgba(29,78,216,0.25);
+  padding: 2px 10px; border-radius: 999px;
+  margin-bottom: 8px;
+}
+
+/* Layer header */
+.lhead {
+  display: flex; align-items: flex-start;
+  justify-content: space-between; gap: 12px;
+  margin-bottom: 12px;
+}
+.lhead-left { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.lnum {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.67rem; font-weight: 600;
+  color: var(--lc);
+  background: rgba(0,0,0,0.04);
+  padding: 2px 8px; border-radius: 4px;
+  white-space: nowrap; letter-spacing: 0.04em;
+}
+.ltitle {
+  font-family: 'Newsreader', serif;
+  font-size: 1.28rem; font-weight: 600;
+}
+.leng {
+  font-family: 'JetBrains Mono', monospace; font-size: 0.67rem;
+  color: var(--lc);
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 3px 10px; border-radius: 999px;
+  white-space: nowrap; align-self: flex-start; margin-top: 2px;
+}
+.lgrowth {
+  font-family: 'JetBrains Mono', monospace; font-size: 0.8rem;
+  font-weight: 700; color: var(--lc);
+  background: rgba(0,0,0,0.05);
+  padding: 4px 12px; border-radius: 999px;
+  white-space: nowrap;
+}
+
+/* Layer desc */
+.ldesc {
+  font-size: 0.875rem; line-height: 1.68;
+  color: var(--text-sec); margin-bottom: 18px;
+}
+.ldesc strong { color: var(--text); font-weight: 500; }
+
+/* Sectors grid */
+.sgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 10px;
+}
+.sgrid.wide { grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); }
+.sbox {
+  border-radius: 10px; padding: 12px 14px;
+  background: rgba(0,0,0,0.025);
+  border: 1px solid rgba(0,0,0,0.07);
+}
+.stitle {
+  font-size: 0.77rem; font-weight: 700;
+  color: var(--lc); margin-bottom: 9px;
+  display: flex; align-items: center; gap: 6px;
+}
+.sdot { width: 7px; height: 7px; border-radius: 50%; background: var(--lc); flex-shrink: 0; }
+.tags { display: flex; flex-wrap: wrap; gap: 5px; }
+.tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.695rem;
+  padding: 3px 8px; border-radius: 5px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text-sec); white-space: nowrap;
+}
+.tag.h  { background: var(--lc); color: #fff; border-color: var(--lc); font-weight: 600; }
+.tag.cn { color: var(--lc); border-color: rgba(0,0,0,0.1); background: rgba(255,255,255,0.7); }
+.tag.warn { color: #b45309; border-color: rgba(180,83,9,0.3); background: rgba(254,243,199,0.7); }
+
+/* Insight */
+.insight {
+  margin-top: 16px; padding: 10px 14px;
+  border-left: 3px solid var(--lc);
+  border-radius: 0 8px 8px 0;
+  background: rgba(255,255,255,0.55);
+  font-size: 0.82rem; line-height: 1.55;
+  color: var(--text-sec);
+}
+.insight strong { color: var(--lc); font-weight: 600; }
+
+/* Growth highlight box */
+.growth-box {
+  margin-top: 12px; padding: 9px 13px;
+  background: rgba(6,95,70,0.04);
+  border: 1px solid rgba(6,95,70,0.2);
+  border-radius: 8px;
+  font-size: 0.81rem; color: #065f46;
+  display: flex; align-items: flex-start; gap: 8px; line-height: 1.5;
+}
+.growth-box .icon { font-size: 0.9rem; flex-shrink: 0; }
+
+/* Bottleneck alert */
+.bottleneck {
+  margin-top: 12px; padding: 9px 13px;
+  background: rgba(180,83,9,0.06);
+  border: 1px dashed rgba(180,83,9,0.35);
+  border-radius: 8px;
+  font-size: 0.81rem; color: #92400e;
+  display: flex; align-items: flex-start; gap: 8px; line-height: 1.5;
+}
+.bottleneck .icon { font-size: 0.9rem; flex-shrink: 0; }
+
+/* Sub-section divider inside card */
+.sub-divider {
+  display: flex; align-items: center; gap: 10px;
+  margin: 16px 0 12px;
+  font-family: 'JetBrains Mono', monospace; font-size: 0.68rem;
+  color: var(--muted); letter-spacing: 0.06em;
+}
+.sub-divider::before, .sub-divider::after {
+  content: ''; flex: 1; height: 1px;
+  background: var(--border);
+}
+
+/* Demand end card */
+.demand-card {
+  background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 100%);
+  border-radius: 14px; overflow: hidden;
+  margin-top: 36px; color: #fff;
+  padding: 28px 32px;
+}
+.demand-card h3 {
+  font-family: 'Newsreader', serif; font-size: 1.3rem; font-weight: 700;
+  margin-bottom: 6px;
+}
+.demand-card .sub { font-size: 0.82rem; opacity: 0.8; margin-bottom: 20px; line-height: 1.5; }
+.demand-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 10px; }
+.demand-item {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 10px; padding: 12px 14px;
+}
+.demand-item .dname {
+  font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; font-weight: 600;
+  color: #fff; margin-bottom: 4px;
+}
+.demand-item .dcap { font-size: 0.73rem; opacity: 0.75; line-height: 1.4; }
+
+/* Footer */
+footer {
+  margin-top: 60px; padding-top: 24px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.73rem; color: var(--muted); line-height: 1.9;
+}
+
+@media (max-width: 640px) {
+  .page { padding: 24px 16px 48px; }
+  .lcard-body { padding: 16px 18px 20px; }
+  .sgrid { grid-template-columns: 1fr; }
+  .lhead { flex-direction: column; }
+  .nav { gap: 8px; }
+  .cost-strip { flex-direction: column; }
+  .cost-item { border-right: none; border-bottom: 1px solid var(--border); }
+  .cost-item:last-child { border-bottom: none; }
+  .compare-strip { flex-direction: column; align-items: center; }
+  .demand-grid { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <nav class="nav">
+    <a href="index.html" class="btn-nav">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      返回首页
+    </a>
+    <a href="humanoid-robot-chain.html" class="btn-nav">人形机器人产业链</a>
+    <a href="ai-hardware-chain.html" class="btn-nav">AI 硬件产业链</a>
+    <a href="nvidia-rubin-chain.html" class="btn-nav active">
+      Vera Rubin 生态圈
+    </a>
+  </nav>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-badge">
+      <svg width="9" height="9" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" fill="currentColor"/></svg>
+      NVIDIA · VERA RUBIN VR200 · SUPPLY CHAIN MAP
+    </div>
+    <h1>英伟达 Vera Rubin 机架生态圈</h1>
+    <p class="hero-sub">
+      摩根士丹利深度拆解：<strong>VR200 机架单价约 $780 万</strong>，较 GB300（$400 万）近乎翻倍。
+      GPU 占比从 65% 降至 <strong>51%</strong>，内存从 5–10% 飙升至 <strong>25–30%</strong>——
+      真正的大赢家是提供<strong>「镐与铲」</strong>的零部件供应商，而非英伟达本身。
+      PCB +233%、MLCC +182%、内存 +435%，一次机架升级造就整条供应链的价值重估。
+    </p>
+
+    <!-- Component cost growth strip: GB300→VR200 -->
+    <div class="cost-strip">
+      <div class="cost-item" style="border-top: 3px solid #065f46">
+        <span class="cost-pct" style="color:#065f46">+435%</span>
+        <span class="cost-label">内存<br>★ 最大赢家</span>
+      </div>
+      <div class="cost-item" style="border-top: 3px solid #1e3a8a">
+        <span class="cost-pct" style="color:#1e3a8a">+233%</span>
+        <span class="cost-label">PCB<br>印刷电路板</span>
+      </div>
+      <div class="cost-item" style="border-top: 3px solid #6d28d9">
+        <span class="cost-pct" style="color:#6d28d9">+182%</span>
+        <span class="cost-label">MLCC<br>被动元件</span>
+      </div>
+      <div class="cost-item" style="border-top: 3px solid #0e7490">
+        <span class="cost-pct" style="color:#0e7490">+82%</span>
+        <span class="cost-label">ABF 载板<br>封装基板</span>
+      </div>
+      <div class="cost-item" style="border-top: 3px solid #2563a0">
+        <span class="cost-pct" style="color:#2563a0">+57%</span>
+        <span class="cost-label">GPU<br>核心算力</span>
+      </div>
+      <div class="cost-item" style="border-top: 3px solid #c2770c">
+        <span class="cost-pct" style="color:#c2770c">+38%</span>
+        <span class="cost-label">ODM<br>附加值</span>
+      </div>
+      <div class="cost-item" style="border-top: 3px solid #b45309">
+        <span class="cost-pct" style="color:#b45309">+32%</span>
+        <span class="cost-label">电源供应<br>PSU</span>
+      </div>
+      <div class="cost-item" style="border-top: 3px solid #78350f">
+        <span class="cost-pct" style="color:#78350f">+12%</span>
+        <span class="cost-label">散热液冷<br>Thermal</span>
+      </div>
+    </div>
+    <p style="font-size:0.72rem;color:var(--muted);margin-bottom:18px;font-family:'JetBrains Mono',monospace;">
+      ↑ 各组件成本涨幅（GB300 → VR200），数据来源：摩根士丹利 2026年5月
+    </p>
+
+    <!-- GB300 vs VR200 comparison -->
+    <div class="compare-strip">
+      <div class="compare-card">
+        <div class="gen">BLACKWELL · GB300</div>
+        <div class="price">$400万</div>
+        <div class="price-sub">ODM 采购价（估算）</div>
+        <div class="stats">
+          <div class="stat-row">
+            <span class="stat-key">GPU 占比</span>
+            <span class="stat-val" style="color:#2563a0">~65%</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-key">内存 占比</span>
+            <span class="stat-val" style="color:#374151">5–10%</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-key">ODM 毛利率</span>
+            <span class="stat-val" style="color:#374151">~2.7%</span>
+          </div>
+        </div>
+      </div>
+      <div class="arrow-divider">→</div>
+      <div class="compare-card" style="border: 2px solid rgba(6,95,70,0.3); background: linear-gradient(135deg,var(--card) 80%, rgba(6,95,70,0.04))">
+        <div class="gen" style="color:#065f46">VERA RUBIN · VR200</div>
+        <div class="price" style="color:#065f46">$780万</div>
+        <div class="price-sub">ODM 采购价（摩根士丹利估算）</div>
+        <div class="stats">
+          <div class="stat-row">
+            <span class="stat-key">GPU 占比</span>
+            <span class="stat-val" style="color:#2563a0">~51%</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-key">内存 占比</span>
+            <span class="stat-val" style="color:#065f46;font-weight:700">25–30% ↑↑</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-key">ODM 毛利率</span>
+            <span class="stat-val" style="color:#c2770c">~1.9% ↓</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dir-strip">
+      <span class="dir-lbl up">↑ 上游（零部件）</span>
+      <div class="dir-bar"></div>
+      <span class="dir-lbl down">（整机/云厂商）下游 ↓</span>
+    </div>
+  </div>
+
+  <div class="chain">
+
+    <!-- ═══════════════════════════════════════════
+         L8 · MLCC 被动元件
+         ════════════════════════════════════════════ -->
+    <div class="lcard" style="--lc:#78350f">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L8 · 最上游被动元件</span>
+            <span class="ltitle">MLCC 多层陶瓷电容</span>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+            <span class="leng">MLCC · Passive Components</span>
+            <span class="lgrowth" style="color:#78350f">+182% vs GB300</span>
+          </div>
+        </div>
+        <p class="ldesc">
+          VR200 每架 MLCC 成本约 <strong>$4,300</strong>，较 GB300 的 $1,500 增长 182%。
+          计算板与交换机板的 MLCC 用量大幅提升，新引入的 <strong>BlueField-4</strong> 和 <strong>ConnectX-9</strong>
+          模块进一步贡献了额外的 MLCC 价值量。AI 服务器 MLCC 需求如此强劲，
+          各 ODM 厂商正在赶在 2026 年下半年 Rubin 机架量产爬坡前<strong>激进锁库存</strong>。
+        </p>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>日系 MLCC 龙头</div>
+            <div class="tags">
+              <span class="tag h">村田制作所 Murata</span>
+              <span class="tag h">TDK</span>
+              <span class="tag h">太阳诱电 Taiyo Yuden</span>
+              <span class="tag h">京瓷 Kyocera</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>台系 MLCC 供应商</div>
+            <div class="tags">
+              <span class="tag h">国巨 Yageo</span>
+              <span class="tag h">华新科 Walsin</span>
+              <span class="tag h">三星电机 Samsung Electro-Mechanics</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>高容量 / 高耐压 MLCC（AI专用）</div>
+            <div class="tags">
+              <span class="tag warn">高端 AI 服务器专用型号持续缺货</span>
+              <span class="tag">每板用量快速增长</span>
+              <span class="tag">计算板涨幅 > 交换机板</span>
+            </div>
+          </div>
+        </div>
+        <div class="insight">
+          <strong>国产化挑战：</strong>高端 MLCC（尤其 0402/0201 规格、X5R/X7R 高容量型号）
+          日系三家（Murata/TDK/Taiyo Yuden）合计占全球 AI 服务器市场 70%+，国产替代路径尚不清晰。
+          台系国巨、华新科在中低端有布局，但 AI 服务器所需高端规格仍以日系为主。
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line" style="--fc:#78350f;--tc:#6d28d9"></div>
+      <div class="conn-icon">↓</div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         L7 · ABF 载板 / 封装基板
+         ════════════════════════════════════════════ -->
+    <div class="lcard" style="--lc:#6d28d9">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L7</span>
+            <span class="ltitle">ABF 载板 · 封装基板</span>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+            <span class="leng">ABF Substrate · IC Packaging</span>
+            <span class="lgrowth" style="color:#6d28d9">+82% vs GB300</span>
+          </div>
+        </div>
+        <p class="ldesc">
+          ABF（味之素堆积薄膜）载板是将 GPU、CPU、NVLink 等芯片封装上板的关键介质。
+          VR200 载板成本较 GB300 增长约 <strong>82%</strong>，由两个因素驱动：
+          ①每颗芯片载板单价上涨（Rubin GPU 与 Vera CPU 尺寸更大、层数更多）；
+          ②用量增加——VR200 中 <strong>NVLink</strong> 和 <strong>ConnectX</strong> 芯片数量是
+          Blackwell 系统的 <strong>2 倍</strong>。
+        </p>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>日本 ABF 载板龙头（NVIDIA 主供）</div>
+            <div class="tags">
+              <span class="tag h">Ibiden（揖斐电）</span>
+              <span class="tag h">Shinko Electric（新光电气）</span>
+              <span class="tag h">Kyocera（京瓷）</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>台湾 / 欧洲载板供应商</div>
+            <div class="tags">
+              <span class="tag h">欣兴电子 Unimicron</span>
+              <span class="tag h">景硕科技 Kinsus</span>
+              <span class="tag h">AT&S（奥地利）</span>
+              <span class="tag cn">南亚科技</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>载板需求驱动因素</div>
+            <div class="tags">
+              <span class="tag">Rubin GPU 载板尺寸扩大</span>
+              <span class="tag">Vera CPU 新增需求</span>
+              <span class="tag warn">NVLink Switch 用量×2</span>
+              <span class="tag warn">ConnectX-9 用量×2</span>
+              <span class="tag">BlueField-4 新增</span>
+            </div>
+          </div>
+        </div>
+        <div class="bottleneck">
+          <span class="icon">⚠</span>
+          <span>ABF 载板产能扩建周期约 2–3 年，当前全球前三供应商（Ibiden/Shinko/Kyocera）
+          均为日资，产能高度集中。AI 服务器爆发式增长下，载板供给已成为 NVIDIA 供应链
+          的潜在瓶颈之一。台湾欣兴、景硕正加速扩产，但短期仍以日系为主。</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line" style="--fc:#6d28d9;--tc:#0f766e"></div>
+      <div class="conn-icon">↓</div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         L6 · 散热 / 液冷
+         ════════════════════════════════════════════ -->
+    <div class="lcard" style="--lc:#0f766e">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L6</span>
+            <span class="ltitle">散热 · 液冷系统</span>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+            <span class="leng">Thermal · Liquid Cooling</span>
+            <span class="lgrowth" style="color:#0f766e">+12% vs GB300</span>
+          </div>
+        </div>
+        <p class="ldesc">
+          Vera Rubin 机架<strong>全面采用液冷方案</strong>——风冷已不足以满足其热密度需求。
+          大摩测算，假设 VR200 计算托盘沿用 <strong>Bianca 板设计</strong>，
+          叠加机架级分流管配置，单机架液冷组件总价值约 <strong>$72,080</strong>。
+          涨幅相对温和（+12%），但液冷已从可选项变为标配，市场渗透率快速提升。
+        </p>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>液冷整体解决方案</div>
+            <div class="tags">
+              <span class="tag h">Vertiv（美国，综合热管理）</span>
+              <span class="tag h">CoolIT Systems（加拿大）</span>
+              <span class="tag h">Asetek（丹麦）</span>
+              <span class="tag cn">台达电子（液冷模组）</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>CDU 冷量分配单元 & 管路</div>
+            <div class="tags">
+              <span class="tag h">Aavid（英国 Boyd）</span>
+              <span class="tag h">Nortek Air Solutions</span>
+              <span class="tag cn">华纬国际</span>
+              <span class="tag cn">高澜股份</span>
+              <span class="tag cn">英维克</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>浸没式 / 直接液冷（DLC）</div>
+            <div class="tags">
+              <span class="tag h">GRC（Green Revolution Cooling）</span>
+              <span class="tag h">LiquidStack</span>
+              <span class="tag h">Submer（西班牙）</span>
+              <span class="tag cn">曙光数创</span>
+              <span class="tag cn">中科曙光</span>
+            </div>
+          </div>
+        </div>
+        <div class="insight">
+          <strong>液冷已成数据中心标配：</strong>主要超大规模云厂商（AWS/Google/Azure/Meta）
+          新建 AI 数据中心均以液冷为默认方案，Rubin Ultra（2027年）功耗将进一步提升，
+          液冷渗透率将从当前约 30% 迅速向 60%+ 迈进。Vertiv 是唯一全球性液冷综合服务商，
+          而中国市场由英维克、高澜等国产厂商争夺份额。
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line" style="--fc:#0f766e;--tc:#c2770c"></div>
+      <div class="conn-icon">↓</div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         L5 · 电源供应
+         ════════════════════════════════════════════ -->
+    <div class="lcard" style="--lc:#c2770c">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L5</span>
+            <span class="ltitle">电源供应 · HVDC 直流供电</span>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+            <span class="leng">PSU · HVDC · Power Infrastructure</span>
+            <span class="lgrowth" style="color:#c2770c">+32% vs GB300</span>
+          </div>
+        </div>
+        <p class="ldesc">
+          VR200 标配 <strong>110kW 电源架</strong>，部分美国云厂商正为其采用 HVDC 独立电源架。
+          <strong>台达电子</strong>已与至少三家美国云服务商在 ASIC 电源架 HVDC 项目上展开合作，
+          预计 2026 年下半年小规模部署。更重磅的是：英伟达计划 2027 年下半年推出的
+          <strong>Rubin Ultra 平台</strong>将全面采用 <strong>800V 直流供电</strong>，
+          这将开启一个全新的电源基础设施市场。
+        </p>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>服务器电源供应器（PSU）</div>
+            <div class="tags">
+              <span class="tag h">台达电子 Delta Electronics</span>
+              <span class="tag h">光宝科技 Lite-On</span>
+              <span class="tag h">Bel Fuse（美国）</span>
+              <span class="tag h">Murata Power（美）</span>
+              <span class="tag cn">华为数字能源</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>HVDC 高压直流供电（新兴）</div>
+            <div class="tags">
+              <span class="tag h">台达电子（明确参与，3家云厂合作）</span>
+              <span class="tag h">Vertiv（HVDC 机柜）</span>
+              <span class="tag h">ABB（配电设备）</span>
+              <span class="tag warn">Rubin Ultra 2027年全面转 800V HVDC</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>机架级配电单元（rPDU）</div>
+            <div class="tags">
+              <span class="tag h">Vertiv</span>
+              <span class="tag h">Schneider Electric（APC）</span>
+              <span class="tag h">Eaton</span>
+              <span class="tag cn">科华数据</span>
+              <span class="tag cn">易事特</span>
+            </div>
+          </div>
+        </div>
+        <div class="growth-box">
+          <span class="icon">📈</span>
+          <span><strong>HVDC 转型：</strong>从传统 48V 直流 / 交流到 800V HVDC，是数据中心电力架构的一次范式转移。
+          台达电子凭借提前布局成为最直接的受益者；国内华为数字能源也正在快速推进 HVDC 方案，
+          这是少数国产供应商有机会切入全球顶级 AI 数据中心的领域之一。</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line" style="--fc:#c2770c;--tc:#1e3a8a"></div>
+      <div class="conn-icon">↓</div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         L4 · PCB 印刷电路板
+         ════════════════════════════════════════════ -->
+    <div class="lcard" style="--lc:#1e3a8a">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L4</span>
+            <span class="ltitle">PCB · 印刷电路板</span>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+            <span class="leng">PCB · Substrate · CCL</span>
+            <span class="lgrowth" style="color:#1e3a8a">+233% vs GB300</span>
+          </div>
+        </div>
+        <p class="ldesc">
+          VR200 的 PCB 成本较 GB300 暴增 <strong>233%</strong>，总耗用价值约 <strong>$11.7 万</strong>
+          （GB300 仅为 $3.5 万）。涨幅由三大因素驱动：
+          ① <strong>层数升级</strong>——计算板 22层→26层，交换机托盘 24层→32层；
+          ② <strong>CCL 等级提升</strong>——从 M7 升至 M8；
+          ③ <strong>新增模块</strong>——引入 44层中架 PCB（Midplane，GB300 中不存在）、
+          ConnectX 模块 PCB、BlueField 模块 PCB，大幅增加了 PCB 数量。
+        </p>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>台湾 PCB 供应商（受益最直接）</div>
+            <div class="tags">
+              <span class="tag h">欣兴电子 Unimicron（台股涨 8–10%）</span>
+              <span class="tag h">臻鼎科技 Zhen Ding（FPC+硬板）</span>
+              <span class="tag h">耀华电子 Elite Material</span>
+              <span class="tag h">金像电子 Tripod</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>CCL 覆铜板（PCB 上游材料）</div>
+            <div class="tags">
+              <span class="tag h">松下 Megtron 8（M8，AI 服务器主流）</span>
+              <span class="tag h">台光电子 ITEQ</span>
+              <span class="tag h">南亚塑胶 Nan Ya PCB</span>
+              <span class="tag cn">生益科技（国产 M6+）</span>
+              <span class="tag cn">华正新材</span>
+              <span class="tag warn">M8 CCL 为 VR200 主流等级，国产 M8 尚处突破阶段</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>VR200 PCB 层数升级对比</div>
+            <div class="tags">
+              <span class="tag warn">计算板: 22L → 26L HDI</span>
+              <span class="tag warn">交换机板: 24L → 32L</span>
+              <span class="tag warn">新增中架 PCB: 44L（全新引入）</span>
+              <span class="tag">ConnectX 模块 PCB（新增）</span>
+              <span class="tag">BlueField 模块 PCB（新增）</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>美国 / 日本 PCB 厂商</div>
+            <div class="tags">
+              <span class="tag h">TTM Technologies（美国）</span>
+              <span class="tag h">Sanmina（EMS+PCB）</span>
+              <span class="tag h">Ibiden（日本，也做 PCB）</span>
+            </div>
+          </div>
+        </div>
+        <div class="insight">
+          <strong>国产 CCL 突破点：</strong>生益科技是国内 CCL 龙头，M6 已规模量产，
+          M8 高频高速 CCL 正在突破中。AI 服务器持续推高 CCL 等级要求，
+          国产 M8 若能量产上车，将是重大国产化里程碑，受益于 VR200 及后续 Rubin Ultra 的巨大需求。
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line" style="--fc:#1e3a8a;--tc:#065f46"></div>
+      <div class="conn-icon">↓</div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         L3 · 内存 / 存储（CRITICAL）
+         ════════════════════════════════════════════ -->
+    <div class="lcard critical" style="--lc:#065f46">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="critical-badge">
+          <svg width="8" height="8" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" fill="currentColor"/></svg>
+          ★ 最大价值重估层 · 成本占比从 5–10% 飙升至 25–30%
+        </div>
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L3 · 核心受益层</span>
+            <span class="ltitle">内存 · HBM4 · SOCAMM</span>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+            <span class="leng">HBM4 · SOCAMM · DRAM · Storage</span>
+            <span class="lgrowth" style="color:#065f46">+435% vs GB300</span>
+          </div>
+        </div>
+        <p class="ldesc">
+          <strong>内存是此次 Rubin 机架生态最大的价值重估赢家。</strong>
+          按旧价格计算，内存在 GB200 NVL72 机架中仅占物料清单的 5%–10%；
+          但内存用量增加加上目前定价大幅提升，内存在 VR200 机架中已占
+          <strong>25%–30%</strong> 的巨额比重，成本涨幅高达 <strong>435%</strong>。
+          GPU 在机架成本中的占比已从约 65% 降至约 <strong>51%</strong>。
+          VR200 引入了新型 <strong>SOCAMM</strong>（小外形压缩附着内存模块）格式，
+          部分超大规模云厂商正考虑直接自采 SOCAMM，绕开英伟达的转售利润。
+        </p>
+        <div class="sgrid wide">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>HBM4 高带宽内存（Rubin GPU 核心）</div>
+            <div class="tags">
+              <span class="tag h">SK Hynix（HBM4 最大供应商）</span>
+              <span class="tag h">Samsung（HBM4，追赶中）</span>
+              <span class="tag h">Micron（美光，HBM4 第三方）</span>
+              <span class="tag warn">HBM4 供应高度集中，SK Hynix 份额 >50%</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>SOCAMM（新型内存模块，VR200 专有）</div>
+            <div class="tags">
+              <span class="tag h">SK Hynix（SOCAMM 封装主力）</span>
+              <span class="tag h">Samsung（SOCAMM 供应商）</span>
+              <span class="tag">超大规模云厂商可直接采购，降低机架成本约 $110 万</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>存储概念股（受情绪驱动，财报后暴涨）</div>
+            <div class="tags">
+              <span class="tag h">闪迪 SanDisk（涨超 10%）</span>
+              <span class="tag h">希捷 Seagate（涨近 8%）</span>
+              <span class="tag h">西部数据 WD（涨超 5%）</span>
+              <span class="tag h">美光 Micron（涨超 4%）</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>DRAM / LPDDR（其他内存需求）</div>
+            <div class="tags">
+              <span class="tag h">SK Hynix LPDDR5X</span>
+              <span class="tag h">Samsung DDR5</span>
+              <span class="tag h">Micron DDR5</span>
+              <span class="tag cn">长鑫存储 CXMT（DDR5，追赶中）</span>
+              <span class="tag warn">国产 HBM 尚无量产，长存/长鑫均在攻关</span>
+            </div>
+          </div>
+        </div>
+        <div class="bottleneck">
+          <span class="icon">⚠</span>
+          <span><strong>国产内存缺位警示：</strong>HBM4 与 SOCAMM 封装均由韩国三家（SK Hynix / Samsung / Micron）
+          垄断。中国长鑫存储（CXMT）的 HBM 尚在研发阶段，长江存储（YMTC）专注 NAND 闪存。
+          在 AI 服务器供应链中，内存是国产化程度最低、依赖度最高的环节之一。</span>
+        </div>
+        <div class="growth-box">
+          <span class="icon">📊</span>
+          <span><strong>SOCAMM 直采模式的博弈：</strong>若超大规模云厂商直接向 SK Hynix 采购 SOCAMM，
+          可将 VR200 机架成本从 $780 万降至约 $670 万（节省 $110 万/架）。
+          英伟达基准情形下以 70% 毛利率转售 SOCAMM，这一利润将随直采模式推广而收窄。</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line" style="--fc:#065f46;--tc:#2563a0"></div>
+      <div class="conn-icon">↓</div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         L2 · 核心算力芯片（NVIDIA）
+         ════════════════════════════════════════════ -->
+    <div class="lcard" style="--lc:#2563a0">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="nvidia-badge">
+          <svg width="8" height="8" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" fill="currentColor"/></svg>
+          NVIDIA 独占控制 · 机架成本占比 51%（降自 65%）
+        </div>
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L2 · 核心算力</span>
+            <span class="ltitle">NVIDIA 核心芯片平台</span>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+            <span class="leng">Rubin GPU · Vera CPU · NVLink 5 · ConnectX-9</span>
+            <span class="lgrowth" style="color:#2563a0">GPU 本身 +57%</span>
+          </div>
+        </div>
+        <p class="ldesc">
+          NVIDIA 对 VR200 机架核心算力部分保持<strong>绝对垄断</strong>。
+          Vera Rubin 代际引入了全新的 <strong>Rubin GPU</strong>（下一代 AI 训练/推理）、
+          基于 ARM 的 <strong>Vera CPU</strong>（替代 Grace CPU）、
+          <strong>NVLink 5 交换机</strong>（比 Blackwell 用量翻倍）和
+          <strong>ConnectX-9 / BlueField-4</strong> 网络芯片。
+          虽然 GPU 本身价格增长 57%，但其在整机成本中的<strong>占比却从 65% 降至 51%</strong>，
+          反映的是其他零部件成本更快的涨幅——尤其是内存。
+        </p>
+        <div class="sgrid wide">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>NVIDIA（芯片设计，唯一供应商）</div>
+            <div class="tags">
+              <span class="tag h">Rubin GPU（AI 训练/推理，下代）</span>
+              <span class="tag h">Vera CPU（ARM-based，替代 Grace）</span>
+              <span class="tag h">NVLink 5 Switch（互联，×2 用量）</span>
+              <span class="tag h">ConnectX-9 InfiniBand NIC</span>
+              <span class="tag h">BlueField-4 DPU（数据处理单元）</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>TSMC（芯片制造，唯一代工方）</div>
+            <div class="tags">
+              <span class="tag h">TSMC 3nm / N2（Rubin GPU 制程）</span>
+              <span class="tag h">CoWoS-L 先进封装（HBM 整合）</span>
+              <span class="tag h">SoIC 3D 堆叠封装</span>
+              <span class="tag warn">TSMC 台湾产能集中是地缘风险点</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>竞争态势（挑战 NVIDIA 的玩家）</div>
+            <div class="tags">
+              <span class="tag">AMD MI400（Instinct）</span>
+              <span class="tag">Intel Gaudi 4</span>
+              <span class="tag">Google TPU v6</span>
+              <span class="tag">AWS Trainium 3</span>
+              <span class="tag">Meta MTIA</span>
+              <span class="tag cn">华为昇腾 910C</span>
+              <span class="tag warn">短期内均难撼动 NVIDIA CUDA 生态护城河</span>
+            </div>
+          </div>
+        </div>
+        <div class="insight">
+          <strong>NVIDIA 护城河的本质：</strong>GPU 本身的价格涨幅（+57%）反而是所有核心组件中最小的。
+          NVIDIA 真正的护城河不在于硬件溢价，而在于 CUDA 软件生态——
+          全球数百万开发者、数万个 AI 模型基于 CUDA 优化，迁移成本极高。
+          即便竞争对手硬件性能相当，软件生态切换壁垒也足以维持 NVIDIA 的定价权。
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line" style="--fc:#2563a0;--tc:#374151"></div>
+      <div class="conn-icon">↓</div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         L1 · ODM / OEM 整机组装
+         ════════════════════════════════════════════ -->
+    <div class="lcard" style="--lc:#374151">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L1 · 整机集成</span>
+            <span class="ltitle">ODM / OEM 整机组装</span>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+            <span class="leng">ODM · OEM · Rack Integration</span>
+            <span class="lgrowth" style="color:#374151">附加值 +38%，毛利率 ↓1.9%</span>
+          </div>
+        </div>
+        <p class="ldesc">
+          ODM 厂商负责将所有零部件组装、测试并交付为完整 VR200 机架。
+          尽管机架售价从 GB300 的 $400 万跃升至 VR200 的 <strong>$780 万</strong>（近乎翻倍），
+          ODM 毛利率却从约 <strong>2.7% 降至约 1.9%</strong>——
+          但<strong>绝对利润额</strong>从约 $10.8 万增长至约 $14.96 万（+38%），仍在增加。
+          摩根士丹利认为，绝对美元利润才是关键指标。
+          此外，<strong>寄售模式</strong>正在兴起——鸿海、广达已率先提及，
+          大客户自采零件由 ODM 只负责组装，将显著减轻 ODM 的营运资金压力。
+        </p>
+        <div class="sgrid wide">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>台湾 ODM 厂商（主力）</div>
+            <div class="tags">
+              <span class="tag h">广达电脑 Quanta（率先提寄售，台股涨8-10%）</span>
+              <span class="tag h">纬颖科技 Wiwynn（富士康分拆，超规模云专供）</span>
+              <span class="tag h">英业达 Inventec</span>
+              <span class="tag h">鸿海 Foxconn（2026 Q4 提寄售模式）</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>OEM 品牌厂商（加价转卖）</div>
+            <div class="tags">
+              <span class="tag h">戴尔 Dell（XE 系列 AI 服务器）</span>
+              <span class="tag h">惠普 HPE（ProLiant）</span>
+              <span class="tag h">联想 Lenovo（ThinkSystem）</span>
+              <span class="tag h">华硕 ASUS（Pro WS 系列）</span>
+              <span class="tag h">技嘉 Gigabyte</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>寄售模式（Consignment）趋势</div>
+            <div class="tags">
+              <span class="tag warn">鸿海：2025 Q4 率先提及</span>
+              <span class="tag warn">广达：2026 Q1 确认部分项目转型</span>
+              <span class="tag">减轻 ODM 营运资金压力</span>
+              <span class="tag">云厂商自采 SOCAMM 可省 $110万/架</span>
+              <span class="tag">ODM 专注组装+测试，轻资产化</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>VR200 机架关键指标</div>
+            <div class="tags">
+              <span class="tag warn">机架单价：$780万（ODM）/ 更高（OEM）</span>
+              <span class="tag">ODM 绝对利润：约 $14.96万/架</span>
+              <span class="tag">ODM 毛利率：~1.9%（降自 2.7%）</span>
+              <span class="tag">组装复杂度：新增4+模块，附加值↑38%</span>
+            </div>
+          </div>
+        </div>
+        <div class="insight">
+          <strong>附加值增长来源：</strong>大摩预计 ODM 附加值增长约 38%，这与市场原本预期「计算托盘标准化导致附加值下降」
+          截然相反。Rubin 系统引入了更多需要 ODM 组装和测试的额外模块（BlueField-4、ConnectX-9、
+          中架 PCB 等），反而提升了 ODM 的工时价值。绝对利润额的增长才是 ODM 股的核心逻辑。
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /chain -->
+
+  <!-- ═══════════════════════════════════════════
+       需求端：超大规模云厂商
+       ════════════════════════════════════════════ -->
+  <div class="demand-card">
+    <h3>终端需求 · 超大规模云厂商</h3>
+    <p class="sub">
+      VR200 机架的最终买家——他们的资本开支决定了整条产业链的景气度。
+      2026 年全球前五大云厂商 AI 基础设施资本开支合计预计超过 <strong>$3,000 亿美元</strong>，
+      且仍在加速。Vera Rubin 机架是他们的下一代 AI 训练基础设施核心。
+    </p>
+    <div class="demand-grid">
+      <div class="demand-item">
+        <div class="dname">Microsoft Azure</div>
+        <div class="dcap">OpenAI 最大算力提供方，2026 资本开支约 $800亿+</div>
+      </div>
+      <div class="demand-item">
+        <div class="dname">Google Cloud</div>
+        <div class="dcap">TPU 自研 + 大量采购 NVIDIA，Gemini 模型训练主力</div>
+      </div>
+      <div class="demand-item">
+        <div class="dname">AWS Amazon</div>
+        <div class="dcap">Trainium 自研芯片 + NVIDIA 双线并行，最大规模数据中心运营商</div>
+      </div>
+      <div class="demand-item">
+        <div class="dname">Meta</div>
+        <div class="dcap">Llama 系列训练，2026年承诺 6.5 万块 H100+ 扩建</div>
+      </div>
+      <div class="demand-item">
+        <div class="dname">xAI / Grok</div>
+        <div class="dcap">Elon Musk，Memphis 超级数据中心，快速扩张中</div>
+      </div>
+      <div class="demand-item">
+        <div class="dname">Oracle Cloud</div>
+        <div class="dcap">与 NVIDIA 深度绑定，OpenAI Stargate 项目重要参与方</div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>ZephyrSpace · 商业航天与 AI 硬件研究</p>
+    <p>数据来源：摩根士丹利分析师 Howard Kao 报告（2026年5月）· 财联社整理</p>
+    <p>NVIDIA 财报后英伟达股价 −1.77%，但 Rubin 生态圈供应商普涨 8–10%</p>
+    <p style="margin-top:8px;color:#bbb">本页面仅供研究参考，不构成投资建议</p>
+  </footer>
+
+</div>
+</body>
+</html>
