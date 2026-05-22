@@ -1,4 +1,4 @@
-{
+﻿{
   "updated_at": "2026-05-22",
   "entries": [
     {
@@ -1864,6 +1864,33 @@
       "cycle_is_cyclical": true,
       "cycle_position": "复苏中期",
       "deep_analysis": "79/100 | 2026-05-22 | 优质，当前16元附近可建仓"
+    },
+    {
+      "name": "IBM",
+      "code": "IBM.US",
+      "board": "纽",
+      "source_etf": "direct",
+      "position_role": "大型机近垄断+Red Hat混合云主导+企业AI（watsonx），深度分析77/100，Growth档成长仓位",
+      "prebuy_conclusion": "深度分析77/100优质；大型机~90%份额+Red Hat RHEL/OpenShift企业主导+Terraform IaC事实标准构成三重护城河；Gen AI book >.5B超预期；最大风险商誉.7B=净资产207%+净债务；FY2025 FCF .7B强劲；等回调至-240建仓（17.5x FY2026E Non-GAAP EPS）",
+      "watch_reason": "A9+B15+C15+D12+E14+F12=77；大型机垄断+Red Hat/Terraform双生态+Gen AI书单超预期；非GAAP FCF收益率6.2%+股息2.7%，适合3年以上成长仓位持有",
+      "current_price": 252.97,
+      "price_date": "2026-05-22",
+      "dv_ttm": 2.66,
+      "price_bands": [
+        295,
+        270,
+        235
+      ],
+      "valuation_anchor": "FY2026E Non-GAAP EPS共识~.45，Forward PE 18.8x（合理偏贵区间），历史区间12-22x，当前约55-65分位",
+      "risk_flags": [
+        "商誉.7B=净资产207%，Red Hat/HashiCorp减值是最大单一风险",
+        "净债务~，净债务/FCF 3.4x，高息环境再融资成本上升",
+        "Consulting受Gen AI替代压力，FY2025常数汇率+0%，占营收31%",
+        "大型机z17周期末（预计2027-2028）收入将下台阶"
+      ],
+      "next_earnings_date": "2026-07-22",
+      "next_earnings_type": "季报",
+      "cycle_is_cyclical": false
     }
   ],
   "tier": "growth",
