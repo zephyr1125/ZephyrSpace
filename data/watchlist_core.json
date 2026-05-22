@@ -1,4 +1,4 @@
-{
+﻿{
   "version": 1,
   "entries": [
     {
@@ -300,7 +300,7 @@
       "source_etf": "direct",
       "position_role": "全球AI算力基础设施最核心卖铲资产，CUDA生态护城河极深，长期底仓",
       "watch_reason": "AI超级周期卖铲垄断者，FCF （Margin 44.8%），净现金 .52B，PEG 0.35，FY2027E+73%增速确定性强",
-      "prebuy_conclusion": "逻辑清晰，等待更合适价格或财报验证点。-254为持有观察区，-211为主动买入区，当前。⚠️ 分析基于FY2026年报，Q1 FY2027（2026-05-20 AMC）尚未纳入",
+      "prebuy_conclusion": "逻辑清晰，Q1 FY2027已纳入；下一次财报预计2026-08-26 AMC，继续跟踪AI capex与估值。",
       "current_price": 219.44,
       "price_date": "2026-05-12",
       "price_bands": [
@@ -316,7 +316,7 @@
         "客户集中：四大云厂商占收入重大比例"
       ],
       "dv_ttm": 0.02,
-      "next_earnings_date": "2026-05-20",
+      "next_earnings_date": "2026-08-26",
       "next_earnings_type": "季报",
       "cycle_is_cyclical": false,
       "pending_earnings_note": "Q1 FY2027（2026-05-20 AMC）结果尚未纳入分析，财报发布后需更新公司页及本条目，并将next_earnings_date更新为下一期日期"
