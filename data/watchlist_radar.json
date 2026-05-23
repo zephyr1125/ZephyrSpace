@@ -1681,31 +1681,6 @@
       "prebuy_conclusion": "技术壁垒真实（全球tier-1精铸认证），2026Q1+34%成长信号真实。但PE分位97.2%（73.74元）极贵，ROE 7.25%偏低，控股股东高质押+关联收购四重制约。等55元以下+ROE改善至12%+质押率下降后重新评估。"
     },
     {
-      "name": "中国广核",
-      "code": "003816.SZ",
-      "source_etf": "核电主题",
-      "position_role": "中国第二大核电运营商，核电装机规模大，受益核电加速审批，PE分位过高需等回调",
-      "watch_reason": "中国第二大核电运营商，装机规模仅次于中国核电，核电政策受益确定性高，长期稳定分红。",
-      "current_price": 4.68,
-      "price_date": "2026-05-08",
-      "board": "深",
-      "dv_ttm": 2.6,
-      "price_bands": [
-        4.4,
-        4.0,
-        3.7
-      ],
-      "valuation_anchor": "PB P80=1.79x/P50=1.59x/P20=1.47x；当前4.68元PB超P80（100%分位），追高区，目标布局区3.7-4.0元。",
-      "risk_flags": [
-        "PE/PB均在3年100%分位，极度高估",
-        "核安全事件零容忍风险"
-      ],
-      "entry_trigger": "PB回落至P50附近（约4.0元以下），且无核安全事故公告",
-      "next_earnings_date": "2026-08-31",
-      "next_earnings_type": "半年报",
-      "cycle_is_cyclical": false
-    },
-    {
       "name": "张裕",
       "code": "000869.SZ",
       "source_etf": "",
