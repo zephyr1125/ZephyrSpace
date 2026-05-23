@@ -2,6 +2,22 @@
   "updated_at": "2026-05-22",
   "entries": [
     {
+      "name": "君实生物",
+      "code": "688180.SH",
+      "source_etf": "931152",
+      "position_role": "首个FDA获批国产PD-1，BTLA管线差异化，亏损收窄中，Radar跟踪",
+      "watch_reason": "特瑞普利单抗FDA获批(2023.10)+鼻咽癌差异化+BTLA全球首个III期。持续亏损是核心约束。",
+      "current_price": null, "price_date": "2026-05-22", "board": "科",
+      "price_bands": [null, null, null],
+      "valuation_anchor": "MC 381亿，亏损Biotech以管线NPV估值",
+      "risk_flags": ["持续亏损(2025归母-8.75亿)","PD-1赛道红海竞争","OCF仍为负"],
+      "entry_trigger": "首次季度盈利+特瑞普利单抗海外销售放量超预期+BTLA III期阳性",
+      "next_earnings_date": "2026-08-31", "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false,
+      "prebuy_conclusion": "深度分析57/100(⭐⭐⭐良好)。FDA获批PD-1有出海价值，但持续亏损+PD-1红海+CAGR仅20%。Radar跟踪，不建仓。[2026-05-23]",
+      "last_updated": "2026-05-23", "deep_score": 57
+    },
+    {
       "name": "兴业银行",
       "code": "601166.SH",
       "source_etf": "direct",

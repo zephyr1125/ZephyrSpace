@@ -2,6 +2,36 @@
   "updated_at": "2026-05-23",
   "entries": [
     {
+      "name": "艾力斯",
+      "code": "688578.SH",
+      "source_etf": "931152",
+      "position_role": "A股创新药盈利质量第一(ROE35%+毛利率97%)，伏美替尼EGFR TKI，单产品依赖是核心风险",
+      "watch_reason": "伏美替尼国内放量+美国NDA受理(ArriVent合作)，2022-2025营收CAGR87%。ROE35%/毛利率97%/OCF>净利。",
+      "current_price": null, "price_date": "2026-05-22", "board": "科",
+      "price_bands": [null, null, null],
+      "valuation_anchor": "MC 415亿，PE 17.2x(2025 EPS 4.86)。创新药盈利型估值合理偏低，但单产品风险压制估值上限。",
+      "risk_flags": ["伏美替尼>95%营收，单一产品致命风险","EGFR TKI赛道拥挤(奥希替尼+阿美替尼)","专利悬崖约2034年"],
+      "next_earnings_date": "2026-08-31", "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false,
+      "prebuy_conclusion": "深度分析69/100(⭐⭐⭐良好，逼近Growth门槛)。财务质量A股创新药第一，但单产品依赖是致命约束。Growth边缘小仓位<5%。[2026-05-23]",
+      "last_updated": "2026-05-23", "deep_score": 69
+    },
+    {
+      "name": "凯莱英",
+      "code": "002821.SZ",
+      "source_etf": "399989",
+      "position_role": "CDMO龙头，海外收入>70%，U型复苏中，GLP-1/CDMO驱动增长",
+      "watch_reason": "CDMO经历新冠U型周期后复苏(2025营收+14.9%)，在手订单13.85亿美元(+31.65%)，OCF极强。毛利率42%是制造业天花板。",
+      "current_price": null, "price_date": "2026-05-22", "board": "深",
+      "price_bands": [null, null, null],
+      "valuation_anchor": "MC 458亿，PE 40.4x(归母11.33亿)。CDMO估值偏高但含GLP-1增长预期。",
+      "risk_flags": ["中美地缘风险(CDMO全球供应链)","毛利率42%制造业天花板","inquiry=1需关注"],
+      "next_earnings_date": "2026-08-31", "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false,
+      "prebuy_conclusion": "深度分析64/100(⭐⭐⭐良好)。CDMO现金流优质+U型复苏验证，但毛利率天花板低+地缘风险。标准仓位2-5%。[2026-05-23]",
+      "last_updated": "2026-05-23", "deep_score": 64
+    },
+    {
       "name": "科伦药业",
       "code": "002422.SZ",
       "source_etf": "931152",
