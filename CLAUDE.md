@@ -47,6 +47,19 @@ python .\scripts\generate_daily_report.py --vault-name ZephyrSpace --date 2026-0
 5. 写入 watchlist JSON（主 Agent 执行，子 Agent 不得直接写文件）
 6. 运行 `sync_watchlist.ps1` 同步到外部项目
 
+### 全面分析 [公司名]（触发词：全面分析 XXX）
+
+**不需要二次确认，收到即执行。** 完整 6 步 SOP 必须读取 `deep-prebuy-skill/SKILL.md`，流程顺序：
+
+1. 深度分析 → 输出 `深度分析/[公司简称] 深度分析 YYYY-MM-DD.md`（100分制评分）
+2. 双 Agent 审核（逻辑 + 数据一致性）
+3. P1 修复（含评分联动检查，见坑15）
+4. PreBuy 公司页（引用修复后深度分析评分）
+5. Watchlist 写入（主 Agent 执行，先向用户确认档位）
+6. `sync_watchlist.ps1` + 清理临时文件 + Git Commit（最多3次）
+
+> ⚠️ 深度分析 Tavily 用量按 `deep-prebuy-skill/SKILL.md` 第 0.3 节 Tier 分级管控（央企上限1次，大型民企1次，中型2次，小市值/高风险3次）。
+
 ### 指数整体 PreBuy（触发词：指数估值 [指数名] / [指数]适合建仓吗）
 
 完整 SOP 在 `index-prebuy.skill`，分析对象是指数本身（不拆解个股），输出到指数页 + `data/watchlist_index.json`，并在写入后运行 `.\scripts\sync_watchlist.ps1` 同步到 `E:\Work\Python\Finance\api\config\watchlist_index.json`。
