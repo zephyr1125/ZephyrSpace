@@ -7,14 +7,26 @@
       "source_etf": "931152",
       "position_role": "A股创新药盈利质量第一(ROE35%+毛利率97%)，伏美替尼EGFR TKI，单产品依赖是核心风险",
       "watch_reason": "伏美替尼国内放量+美国NDA受理(ArriVent合作)，2022-2025营收CAGR87%。ROE35%/毛利率97%/OCF>净利。",
-      "current_price": null, "price_date": "2026-05-22", "board": "科",
-      "price_bands": [null, null, null],
+      "current_price": null,
+      "price_date": "2026-05-22",
+      "board": "科",
+      "price_bands": [
+        null,
+        null,
+        null
+      ],
       "valuation_anchor": "MC 415亿，PE 17.2x(2025 EPS 4.86)。创新药盈利型估值合理偏低，但单产品风险压制估值上限。",
-      "risk_flags": ["伏美替尼>95%营收，单一产品致命风险","EGFR TKI赛道拥挤(奥希替尼+阿美替尼)","专利悬崖约2034年"],
-      "next_earnings_date": "2026-08-31", "next_earnings_type": "半年报",
+      "risk_flags": [
+        "伏美替尼>95%营收，单一产品致命风险",
+        "EGFR TKI赛道拥挤(奥希替尼+阿美替尼)",
+        "专利悬崖约2034年"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
       "cycle_is_cyclical": false,
       "prebuy_conclusion": "深度分析69/100(⭐⭐⭐良好，逼近Growth门槛)。财务质量A股创新药第一，但单产品依赖是致命约束。Growth边缘小仓位<5%。[2026-05-23]",
-      "last_updated": "2026-05-23", "deep_score": 69
+      "last_updated": "2026-05-23",
+      "deep_score": 69
     },
     {
       "name": "凯莱英",
@@ -22,14 +34,26 @@
       "source_etf": "399989",
       "position_role": "CDMO龙头，海外收入>70%，U型复苏中，GLP-1/CDMO驱动增长",
       "watch_reason": "CDMO经历新冠U型周期后复苏(2025营收+14.9%)，在手订单13.85亿美元(+31.65%)，OCF极强。毛利率42%是制造业天花板。",
-      "current_price": null, "price_date": "2026-05-22", "board": "深",
-      "price_bands": [null, null, null],
+      "current_price": null,
+      "price_date": "2026-05-22",
+      "board": "深",
+      "price_bands": [
+        null,
+        null,
+        null
+      ],
       "valuation_anchor": "MC 458亿，PE 40.4x(归母11.33亿)。CDMO估值偏高但含GLP-1增长预期。",
-      "risk_flags": ["中美地缘风险(CDMO全球供应链)","毛利率42%制造业天花板","inquiry=1需关注"],
-      "next_earnings_date": "2026-08-31", "next_earnings_type": "半年报",
+      "risk_flags": [
+        "中美地缘风险(CDMO全球供应链)",
+        "毛利率42%制造业天花板",
+        "inquiry=1需关注"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
       "cycle_is_cyclical": false,
       "prebuy_conclusion": "深度分析64/100(⭐⭐⭐良好)。CDMO现金流优质+U型复苏验证，但毛利率天花板低+地缘风险。标准仓位2-5%。[2026-05-23]",
-      "last_updated": "2026-05-23", "deep_score": 64
+      "last_updated": "2026-05-23",
+      "deep_score": 64
     },
     {
       "name": "科伦药业",
@@ -40,9 +64,17 @@
       "current_price": null,
       "price_date": "2026-05-22",
       "board": "深",
-      "price_bands": [null, null, null],
+      "price_bands": [
+        null,
+        null,
+        null
+      ],
       "valuation_anchor": "MC 552亿，PE约32x(归母17.02亿)。主业PE偏高但含ADC期权溢价。",
-      "risk_flags": ["输液+仿制药主业2025营收-15%持续恶化","集采进一步压价风险","ADC价值在子公司科伦博泰(6990.HK)，母公司报表无法直接体现"],
+      "risk_flags": [
+        "输液+仿制药主业2025营收-15%持续恶化",
+        "集采进一步压价风险",
+        "ADC价值在子公司科伦博泰(6990.HK)，母公司报表无法直接体现"
+      ],
       "next_earnings_date": "2026-08-31",
       "next_earnings_type": "半年报",
       "cycle_is_cyclical": false,
@@ -60,7 +92,11 @@
       "price_date": "2026-05-22",
       "board": "科",
       "dv_ttm": 0,
-      "price_bands": [null, null, null],
+      "price_bands": [
+        null,
+        null,
+        null
+      ],
       "valuation_anchor": "PE 119x(2026-05-22)，Biotech扭亏初期PE缺乏参考意义，以PEG和管线NPV估值更合适",
       "risk_flags": [
         "泽布替尼占营收~70%，单一产品依赖极高",
@@ -2124,6 +2160,58 @@
         "资产负债率83.48%，权益乘数6.05x，高杠杆结构对抗系统性风险脆弱（资产减值16.5%即可归零净资产）",
         "商誉~51亿美元占净资产73%，来自IBM PC(2005)/Motorola(2014)/IBM x86(2014)三笔历史并购",
         "毛利率15.4%持续下滑，AI服务器BOM中高价值GPU占比稀释整体利润结构"
+      ]
+    },
+    {
+      "name": "中国海洋石油",
+      "code": "600938.SH",
+      "board": "沪",
+      "market": "A+H",
+      "source_etf": "direct",
+      "position_role": "全球最低成本石油生产商+中国海域独家经营权，通胀对冲+能源敞口",
+      "prebuy_conclusion": "80/100 ⭐⭐⭐⭐优质。全球最低桶油成本7.90+中国海域独家经营权+负债率仅27%，建议核心仓位(8-10%)，Brent<0分批加仓",
+      "watch_reason": "全球上市石油公司中最低桶油成本，成本优势是经济性护城河而非仅靠牌照。产量+7%持续增长，分红率45%",
+      "current_price": 40.93,
+      "price_date": "2026-05-22",
+      "dv_ttm": 3.21,
+      "price_bands": [
+        48.0,
+        38.0,
+        28.0
+      ],
+      "valuation_anchor": "周期股油价锚PE区间：追高区>48(Brent>5) / 中性区38-48(Brent5-85) / 较好区间28-38(Brent5-65) / 更低区间<28(Brent<5)",
+      "risk_flags": [
+        "商品生意无定价权：油价完全外生，FY2025 Brent8→净利-11.5%",
+        "年资本开支1205亿→FCF/净利仅70%，重资产模式芒格不喜",
+        "ROE从19.4%降至15.6%，油价弹性>1意味着油价再跌ROE可能跌破10%"
+      ]
+    },
+    {
+      "name": "农夫山泉",
+      "code": "09633.HK",
+      "market": "HK",
+      "board": "HK",
+      "hk_code": "9633",
+      "dual_listing": "HK only",
+      "hk_connect": true,
+      "price_currency": "HKD",
+      "source_etf": "direct",
+      "position_role": "中国消费品顶级财务模型，ROE 40%+净利率驱动，消费品赛道最优标的",
+      "prebuy_conclusion": "80/100 ⭐⭐⭐⭐优质。财务顶级(ROE 42%/净利率30%/零负债)但84%一人控股+品牌护城河有裂缝，建议核心仓位(8-10%)但仅在PE<22x建仓",
+      "watch_reason": "瓶装水+无糖茶双引擎，东方树叶市占率>50%证明反共识战略基因。ROE 40%+连续3年验证",
+      "current_price": 45.82,
+      "price_date": "2026-05-22",
+      "dv_ttm": 2.64,
+      "price_bands": [
+        55.0,
+        40.0,
+        30.0
+      ],
+      "valuation_anchor": "成长消费品PEG区间：追高区>55(PE>30x) / 中性区40-55(PE 22-30x) / 较好区间30-40(PE 16-22x) / 更低区间<30(PE<16x)",
+      "risk_flags": [
+        "钟睒睒84%绝对控股+无明确接班人，一人独大的治理结构风险",
+        "品牌护城河有裂缝：2024年舆论事件→包装水收入-21%",
+        "PE 27x永久偏高，好价格通常只在股灾/品牌危机时出现"
       ]
     }
   ],

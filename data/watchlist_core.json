@@ -10,11 +10,11 @@
       "current_price": 25.93,
       "price_date": "2026-05-22",
       "board": "沪",
-      "dv_ttm": 2.40,
+      "dv_ttm": 2.4,
       "price_bands": [
         28.67,
         26.86,
-        24.70
+        24.7
       ],
       "valuation_anchor": "PE TTM 24.93x，3年分位~32.6%；P20≈23.83x/P50≈25.92x/P80≈27.66x",
       "risk_flags": [
@@ -512,8 +512,59 @@
       "cycle_is_cyclical": true,
       "cycle_position": "复苏中期",
       "deep_analysis": "89/100 | 2026-05-22 | 卓越，核心仓位适配"
+    },
+    {
+      "name": "港交所",
+      "code": "00388.HK",
+      "market": "HK",
+      "hk_code": "0388",
+      "dual_listing": "HK only",
+      "hk_connect": true,
+      "price_currency": "HKD",
+      "source_etf": "direct",
+      "board": "HK",
+      "position_role": "全球唯一直营交易所+结算所垄断，芒格式收费站模型，组合核心压舱石",
+      "prebuy_conclusion": "91/100 ⭐⭐⭐⭐⭐卓越。法律垄断+网络效应双重护城河，净利率61%/ROE 33%/分红90%，建议核心仓位(12-15%)",
+      "watch_reason": "香港唯一交易所牌照+中央结算垄断，互联互通每次扩容都是增量，日均成交2320亿HKD(+93%)",
+      "current_price": 425.4,
+      "price_date": "2026-05-22",
+      "dv_ttm": 3.06,
+      "price_bands": [
+        500.0,
+        380.0,
+        300.0
+      ],
+      "valuation_anchor": "收费站PE区间：追高区>500(PE>35x) / 中性区380-500(PE 27-35x) / 较好区间300-380(PE 21-27x) / 更低区间<300(PE<21x)",
+      "risk_flags": [
+        "香港金融中心地位结构性衰落(中美脱钩极端情景，致命但概率低)",
+        "港股成交量高周期性(FY2025日均2320亿是景气高点，熊市可跌至800亿)",
+        "LME镍逼仓集体诉讼(一般级别，LME收入仅占11%)"
+      ]
+    },
+    {
+      "name": "中国移动",
+      "code": "600941.SH",
+      "board": "沪",
+      "source_etf": "direct",
+      "position_role": "10亿用户现金流年金+5G后FCF拐点，高股息压舱石，组合防守端核心",
+      "prebuy_conclusion": "85/100 ⭐⭐⭐⭐⭐卓越。10亿用户现金流垄断+5G CapEx拐点+分红率持续提升+4.9%股息率，建议核心仓位(10-12%)",
+      "watch_reason": "三大运营商寡头+牌照壁垒，10亿用户换号成本极高，5G后资本开支下降→FCF加速释放，母公司持续增持",
+      "current_price": 95.0,
+      "price_date": "2026-05-22",
+      "dv_ttm": 4.92,
+      "price_bands": [
+        110.0,
+        90.0,
+        70.0
+      ],
+      "valuation_anchor": "高股息PE区间：追高区>110(PE>17x) / 中性区90-110(PE 14-17x) / 较好区间70-90(PE 11-14x/DY>5%) / 更低区间<70(PE<11x/DY>7%)",
+      "risk_flags": [
+        "ROE仅9.8%，会计ROE被折旧系统性低估但静态仍偏低",
+        "营收+0.9%近乎零增长",
+        "OTT(微信通话等)长期侵蚀语音/短信高利润业务"
+      ]
     }
   ],
   "tier": "core",
-  "updated_at": "2026-05-22"
+  "updated_at": "2026-05-23"
 }
