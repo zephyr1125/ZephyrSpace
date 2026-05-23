@@ -2,6 +2,25 @@
   "updated_at": "2026-05-23",
   "entries": [
     {
+      "name": "科伦药业",
+      "code": "002422.SZ",
+      "source_etf": "931152",
+      "position_role": "输液龙头+科伦博泰ADC期权，ADC出海标杆但主业承压，65/100良好",
+      "watch_reason": "科伦博泰TROP2-ADC与默沙东118亿美元合作，中国ADC出海标杆；输液市占率40%提供现金流底盘。主业2025年营收-15%恶化是主要约束。",
+      "current_price": null,
+      "price_date": "2026-05-22",
+      "board": "深",
+      "price_bands": [null, null, null],
+      "valuation_anchor": "MC 552亿，PE约32x(归母17.02亿)。主业PE偏高但含ADC期权溢价。",
+      "risk_flags": ["输液+仿制药主业2025营收-15%持续恶化","集采进一步压价风险","ADC价值在子公司科伦博泰(6990.HK)，母公司报表无法直接体现"],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false,
+      "prebuy_conclusion": "深度分析65/100(⭐⭐⭐良好)。输液+仿制药现金流底盘+科伦博泰ADC期权。主业2025营收-15%恶化是核心约束。Growth边缘，建议2-5%标准仓位。[全面分析版2026-05-23]",
+      "last_updated": "2026-05-23",
+      "deep_score": 65
+    },
+    {
       "name": "百济神州",
       "code": "688235.SH",
       "source_etf": "931152",
