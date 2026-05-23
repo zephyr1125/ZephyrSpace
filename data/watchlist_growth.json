@@ -2,6 +2,30 @@
   "updated_at": "2026-05-23",
   "entries": [
     {
+      "name": "百济神州",
+      "code": "688235.SH",
+      "source_etf": "931152",
+      "position_role": "中国唯一全球化Biotech，泽布替尼全球37亿美元blockbuster，2025年首盈质变里程碑",
+      "watch_reason": "全球化Biotech唯一标的：泽布替尼best-in-class+全球60国获批+自建2500人商业化团队+管线接力(BCL2/BTK degrader)，79/100优质。",
+      "current_price": null,
+      "price_date": "2026-05-22",
+      "board": "科",
+      "dv_ttm": 0,
+      "price_bands": [null, null, null],
+      "valuation_anchor": "PE 119x(2026-05-22)，Biotech扭亏初期PE缺乏参考意义，以PEG和管线NPV估值更合适",
+      "risk_flags": [
+        "泽布替尼占营收~70%，单一产品依赖极高",
+        "盈利历史仅1年(2025首盈)，可持续性需跨周期验证",
+        "美国IRA小分子药价谈判2028年可能触发，美国高利润区面临结构性压力"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false,
+      "prebuy_conclusion": "深度分析79/100(⭐⭐⭐⭐优质)。中国全球化Biotech唯一标的，2025年扭亏质变里程碑，毛利率89%持续改善。但单一产品依赖+盈利历史短+PE 119x已定价大量预期。Growth档5-10%，当前价不宜重仓，等更好的安全边际。[全面分析版2026-05-23]",
+      "last_updated": "2026-05-23",
+      "deep_score": 79
+    },
+    {
       "name": "美的集团",
       "code": "000333.SZ",
       "source_etf": "980081",
