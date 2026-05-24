@@ -36,6 +36,44 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 python .\scripts\generate_daily_report.py --vault-name ZephyrSpace --date 2026-04-18
 ```
 
+### 财报下载（触发词：下载财报 [股票代码]）
+
+**不需要二次确认，收到即执行。** 按年报5-7年+半年报2-3年+季报窗口补位的规则，从巨潮资讯自动下载财报PDF到 `财报/_Inbox/`。
+
+```powershell
+# 单只股票
+python .\scripts\download_reports.py 600519
+
+# 多只
+python .\scripts\download_reports.py 600519 600276 300750
+
+# 仅预览
+python .\scripts\download_reports.py 600519 --dry-run
+```
+
+下载规则：
+- 年报：回溯 7 年（D2 兑现率追踪 / F2 资本配置跨周期 / E5 会计政策逐年查）
+- 半年报：回溯 3 年
+- 季报：仅当最新已发布报告是 Q1/Q3 时补位下载
+- 命名格式：`财报/_Inbox/[公司简称]_[年份]_[报告类型].pdf`
+
+### 财报 PDF 转换（触发词：转换财报）
+
+**不需要二次确认，收到即执行。** 将 `财报/_Inbox/` 中的原始财报 PDF 使用 MinerU 批量转换为结构化 Markdown。
+
+```powershell
+# 仅转换已有PDF
+python .\scripts\convert_annual_reports.py
+```
+
+### 财报下载+转换（触发词：下载并转换 [股票代码]）
+
+**不需要二次确认，收到即执行。** 下载财报PDF后立即转入MinerU转换，一条龙完成。
+
+```powershell
+python .\scripts\download_reports.py 600519 && python .\scripts\convert_annual_reports.py
+```
+
 ### 指数成分股 PreBuy 分析（触发词：选股 [指数名]）
 
 完整 SOP 在 `AGENTS.md`，执行摘要：
