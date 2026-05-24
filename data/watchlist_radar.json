@@ -2108,6 +2108,90 @@
       "prebuy_conclusion": "深度分析69/100(⭐⭐⭐良好)。执行力顶级但11%薄利+Apple致命依赖+66%高杠杆三重脆弱。标准仓位(2-5%)，等PE回落至22-23x区间再建仓。Radar跟踪。[2026-05-24]",
       "last_updated": "2026-05-24",
       "deep_score": 69
+    },
+    {
+      "name": "石头科技",
+      "code": "688169.SH",
+      "source_etf": "direct",
+      "position_role": "全球扫地机器人Top3品牌，海外营收>50%，品牌全球化成功但价格战严重侵蚀利润",
+      "watch_reason": "自有品牌转型成功，roborock海外认知度提升。但2025年毛利率50%→42%崩塌+营收+57%净利-31%是严重警报。等价格战缓和+利润率企稳。",
+      "current_price": null,
+      "price_date": "2026-05-22",
+      "board": "科",
+      "price_bands": [
+        null,
+        null,
+        null
+      ],
+      "valuation_anchor": "PE 23x在扫地机器人赛道合理偏低，但利润崩塌后PE失真。等毛利率企稳45%以上后重新评估。",
+      "risk_flags": [
+        "毛利率50%→42%崩塌",
+        "增收不增利(Rev+57% NP-31%)",
+        "扫地机器人价格战白热化"
+      ],
+      "entry_trigger": "毛利率连续两个季度回升至45%以上 OR PE回落至15x以下(深度价值区间) OR 自有品牌海外营收占比突破70%",
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false,
+      "prebuy_conclusion": "深度分析62/100(⭐⭐⭐良好)。全球扫地机器人Top3品牌，但毛利率崩塌+增收不增利触发双重警报。Radar跟踪，等利润率企稳。[2026-05-24]",
+      "last_updated": "2026-05-24",
+      "deep_score": 62
+    },
+    {
+      "name": "安井食品",
+      "code": "603345.SH",
+      "source_etf": "direct",
+      "position_role": "速冻火锅料绝对龙头(市占率>20%)，A+H上市，消费防御型标的但ROE持续下滑",
+      "watch_reason": "速冻食品龙头+全国渠道网络+品牌认知。但ROE从11.6%降至8.6%，毛利率4年下滑，measures=4+高管减持为治理瑕疵。",
+      "current_price": null,
+      "price_date": "2026-05-22",
+      "board": "沪",
+      "price_bands": [
+        null,
+        null,
+        null
+      ],
+      "valuation_anchor": "PE 22x在食品制造中合理偏低。等ROE回升至11%+毛利率企稳后更具吸引力。",
+      "risk_flags": [
+        "ROE从11.6%降至8.6%",
+        "毛利率4年持续下滑(23.3%→21.6%)",
+        "measures=4+高管减持"
+      ],
+      "entry_trigger": "ROE回升至11%以上 OR 毛利率企稳23%以上连续两个季度 OR 预制菜收入占比突破20%",
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false,
+      "prebuy_conclusion": "深度分析67/100(⭐⭐⭐良好)。速冻火锅料龙头，但ROE降至8.6%+毛利率下滑+治理瑕疵。Radar跟踪，等ROE回升+毛利率企稳。[2026-05-24]",
+      "last_updated": "2026-05-24",
+      "deep_score": 67
+    },
+    {
+      "name": "冰轮环境",
+      "code": "000811.SZ",
+      "source_etf": "direct",
+      "position_role": "六十年冷热管理专家，AI液冷+氢能+核电三风口概念，朱少醒20人超大团调研",
+      "watch_reason": "螺杆压缩机国内领先，HRSG全球竞争力(GE/西门子合作)。AI液冷+氢能+核电三风口提供想象空间。朱少醒20人调研团信号值得重视。",
+      "current_price": null,
+      "price_date": "2026-05-22",
+      "board": "深",
+      "price_bands": [
+        null,
+        null,
+        null
+      ],
+      "valuation_anchor": "PE 58x偏高，三风口概念已部分price-in。等AI液冷订单落地验证或PE回归40x以下。",
+      "risk_flags": [
+        "AI液冷等新业务仍在验证期",
+        "传统制冷业务受经济周期拖累",
+        "ROE仅9.3%且持续下滑"
+      ],
+      "entry_trigger": "AI液冷/数据中心温控收入占比突破20% OR HRSG联营公司年度利润>3亿 OR PE回落至35x以下",
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false,
+      "prebuy_conclusion": "深度分析64/100(⭐⭐⭐良好)。六十年冷热管理专家+三风口概念。ROE偏低+新业务早期，Radar跟踪，等AI液冷订单放量。[2026-05-24]",
+      "last_updated": "2026-05-24",
+      "deep_score": 64
     }
   ],
   "tier": "radar",

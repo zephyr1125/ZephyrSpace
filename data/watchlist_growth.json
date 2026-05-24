@@ -2294,6 +2294,60 @@
       "prebuy_conclusion": "深度分析82/100(⭐⭐⭐⭐优质)。梯媒垄断+70%毛利率+5%股息率+零治理瑕疵，防御型仓位优质选择。2025净利骤降若为一次性项目则当前是极佳买点，年报全文发布后建议复核E维度得分。[2026-05-24]",
       "last_updated": "2026-05-24",
       "deep_score": 82
+    },
+    {
+      "name": "乖宝宠物",
+      "code": "301498.SZ",
+      "source_etf": "direct",
+      "position_role": "宠物食品国产替代标杆，麦富迪品牌认知度国产第一，宠物经济长赛道+毛利率42%超级稳定",
+      "watch_reason": "代工→品牌转型成功，毛利率42%+三年几乎无波动(最强定价权证据)。宠物经济CAGR~15%+国产替代双顺风。Rev+29%持续高成长。朱少醒亲自现场调研。",
+      "current_price": null,
+      "price_date": "2026-05-22",
+      "board": "创",
+      "price_bands": [
+        null,
+        null,
+        null
+      ],
+      "valuation_anchor": "PE 31x匹配29%营收增速+品牌投入期。品牌建设期PE偏高合理，等PE/VC减持压力消化后更具赔率。",
+      "risk_flags": [
+        "PE/VC解禁退出压力(55次大股东变动)",
+        "品牌投入期利润增速放缓(NP+7.5% vs Rev+29%)",
+        "宠物食品行业进入门槛低"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false,
+      "prebuy_conclusion": "深度分析74/100(⭐⭐⭐⭐优质)。宠物食品品牌化标杆，毛利率42%超级稳定，宠物经济长赛道强顺风。Growth档位，等PE/VC减持结束后是更好加仓时机。[2026-05-24]",
+      "last_updated": "2026-05-24",
+      "deep_score": 74
+    },
+    {
+      "name": "联影医疗",
+      "code": "688271.SH",
+      "source_etf": "direct",
+      "position_role": "中国医学影像设备国产替代旗帜，CT/MR/PET-CT三项国产第一，五星技术护城河",
+      "watch_reason": "5星技术壁垒(三类医疗器械+全球屈指可数的CT/MRI/PET-CT能力)。2025年Rev+34%NP+48%强势反弹。毛利率47%+稳定。国产替代+医疗新基建双政策顺风。",
+      "current_price": null,
+      "price_date": "2026-05-22",
+      "board": "科",
+      "price_bands": [
+        null,
+        null,
+        null
+      ],
+      "valuation_anchor": "PE 50x在医疗器械中偏高，但技术稀缺性+国产替代战略价值支撑溢价。等ROE突破12%+OCF连续为正后再评估仓位升级。",
+      "risk_flags": [
+        "ROE仅8.6%(高研发投入压制)",
+        "2024年OCF为负",
+        "业绩大幅波动(Rev-10%→+34%)"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false,
+      "prebuy_conclusion": "深度分析71/100(⭐⭐⭐⭐优质)。医学影像国产替代旗帜+五星护城河。ROE 8.6%+OCF波动是主要拖累。Growth档位，标准仓位(5-10%)。[2026-05-24]",
+      "last_updated": "2026-05-24",
+      "deep_score": 71
     }
   ],
   "tier": "growth",
