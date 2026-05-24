@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-22",
+  "updated_at": "2026-05-24",
   "entries": [
     {
       "name": "君实生物",
@@ -7,15 +7,27 @@
       "source_etf": "931152",
       "position_role": "首个FDA获批国产PD-1，BTLA管线差异化，亏损收窄中，Radar跟踪",
       "watch_reason": "特瑞普利单抗FDA获批(2023.10)+鼻咽癌差异化+BTLA全球首个III期。持续亏损是核心约束。",
-      "current_price": null, "price_date": "2026-05-22", "board": "科",
-      "price_bands": [null, null, null],
+      "current_price": null,
+      "price_date": "2026-05-22",
+      "board": "科",
+      "price_bands": [
+        null,
+        null,
+        null
+      ],
       "valuation_anchor": "MC 381亿，亏损Biotech以管线NPV估值",
-      "risk_flags": ["持续亏损(2025归母-8.75亿)","PD-1赛道红海竞争","OCF仍为负"],
+      "risk_flags": [
+        "持续亏损(2025归母-8.75亿)",
+        "PD-1赛道红海竞争",
+        "OCF仍为负"
+      ],
       "entry_trigger": "首次季度盈利+特瑞普利单抗海外销售放量超预期+BTLA III期阳性",
-      "next_earnings_date": "2026-08-31", "next_earnings_type": "半年报",
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
       "cycle_is_cyclical": false,
       "prebuy_conclusion": "深度分析57/100(⭐⭐⭐良好)。FDA获批PD-1有出海价值，但持续亏损+PD-1红海+CAGR仅20%。Radar跟踪，不建仓。[2026-05-23]",
-      "last_updated": "2026-05-23", "deep_score": 57
+      "last_updated": "2026-05-23",
+      "deep_score": 57
     },
     {
       "name": "兴业银行",
@@ -2068,6 +2080,34 @@
       "next_earnings_type": "半年报",
       "cycle_is_cyclical": true,
       "cycle_position": "景气高峰"
+    },
+    {
+      "name": "立讯精密",
+      "code": "002475.SZ",
+      "source_etf": "direct",
+      "position_role": "Apple核心Tier1代工商+汽车/通信第二曲线，执行力顶级但薄利+大客户依赖+高杠杆结构性缺陷",
+      "watch_reason": "从富士康女工到3323亿营收帝国，王来春执行力是中国制造业标杆。汽车电子+通信互联第二曲线已显雏形，但毛利率仅11%+Apple占比>50%+资产负债率66%三重脆弱。PE 30.6x偏高(3年98%分位)，等估值回归后建仓。",
+      "current_price": 72.4,
+      "price_date": "2026-05-22",
+      "board": "深",
+      "price_bands": [
+        85.0,
+        68.0,
+        52.0
+      ],
+      "valuation_anchor": "PE近3年区间16-31x(Q50=23x)。追高PE>35x(>85元)/中性PE 28-35x(68-85元)/较好PE 21-28x(52-68元)/更低PE<21x(<52元)。当前72.4元/PE 30.6x偏高。EPS约2.36元(2025归母约166亿/70亿股)。",
+      "risk_flags": [
+        "Apple单一客户占比>50%，失去订单即致命",
+        "毛利率仅11%，成本端5%波动可吞噬一半利润",
+        "资产负债率66%+权益乘数逼近3x"
+      ],
+      "entry_trigger": "股价跌至62元以下(PE<24x，接近3年Q50=23x) OR 汽车+通信营收占比突破20%(降低Apple依赖度)",
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false,
+      "prebuy_conclusion": "深度分析69/100(⭐⭐⭐良好)。执行力顶级但11%薄利+Apple致命依赖+66%高杠杆三重脆弱。标准仓位(2-5%)，等PE回落至22-23x区间再建仓。Radar跟踪。[2026-05-24]",
+      "last_updated": "2026-05-24",
+      "deep_score": 69
     }
   ],
   "tier": "radar",
