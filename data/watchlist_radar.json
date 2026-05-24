@@ -2216,6 +2216,30 @@
       "cycle_is_cyclical": false,
       "last_updated": "2026-05-24",
       "deep_score": 63
+    },
+    {
+      "name": "万华化学",
+      "code": "600309.SH",
+      "source_etf": "direct",
+      "board": "沪",
+      "position_role": "全球MDI寡头第一，极宽护城河，但强周期+F维度警告，Radar跟踪",
+      "prebuy_conclusion": "深度分析58/100(⭐⭐⭐良好，F维度触发重大警告)。全球MDI最低成本生产商+极强现金流(净现比>100%)+极宽护城河(4星)。但强周期性(归母246→130亿)、石化扩张稀释回报、F维度治理警告。建议轻仓观察(≤2%),待治理黄旗消除+MDI价差触底后加仓。[2026-05-25]",
+      "watch_reason": "MDI全球成本领袖，护城河极深。当前处于周期低谷(净利7.2%/ROE13.8%)，等待MDI价差回升。核心催化剂：MDI价格反弹+F维度黄旗消除+分红率企稳。",
+      "current_price": null,
+      "price_date": "2026-05-25",
+      "valuation_anchor": "MC约2600亿(估算)，2024归母130.3亿≈PE 20x，低于化工行业加权PE 31x",
+      "risk_flags": [
+        "F维度触发重大警告(治理5/15)",
+        "强周期盈利剧烈波动(归母-47%)",
+        "高负债率65%",
+        "石化扩张稀释MDI护城河价值"
+      ],
+      "entry_trigger": "MDI价差触底+PE<15x+F维度黄旗消除≥2项",
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": true,
+      "last_updated": "2026-05-25",
+      "deep_score": 58
     }
   ],
   "tier": "radar",
