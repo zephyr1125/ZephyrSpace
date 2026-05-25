@@ -86,6 +86,60 @@ def load_watchlist(tiers=None):
     return companies
 
 
+def load_portfolio():
+    """从 Google Sheet 读取实际持仓（筛掉剩余份额=0 和 ETF/基金）"""
+    try:
+        from google.oauth2 import service_account
+        from googleapiclient.discovery import build
+
+        creds_path = "E:/Work/Python/Finance/api/auth/aoto-finance-198a2c5c89d4.json"
+        sheet_id = "1NW0f4SnDmPl-UY-JUpP_WVf8oJllmM3XhXn9dESOjVY"
+
+        creds = service_account.Credentials.from_service_account_file(
+            creds_path, scopes=['https://www.googleapis.com/auth/spreadsheets.readonly'])
+        service = build('sheets', 'v4', credentials=creds)
+
+        result = service.spreadsheets().values().get(
+            spreadsheetId=sheet_id, range='核算!A:O').execute()
+        rows = result.get('values', [])
+        if not rows:
+            return []
+        headers = rows[0]
+        code_col = headers.index('代码')
+        share_col = headers.index('剩余份额')
+        name_col = headers.index('名称')
+
+        companies = []
+        seen = set()
+        for row in rows[1:]:
+            if len(row) <= max(code_col, share_col):
+                continue
+            code = row[code_col].strip() if code_col < len(row) else ''
+            shares = row[share_col].strip() if share_col < len(row) else '0'
+            name = row[name_col].strip() if name_col < len(row) else ''
+
+            if not code:
+                continue
+            try:
+                if float(shares.replace(',', '')) == 0:
+                    continue
+            except ValueError:
+                pass
+
+            # 只保留 A 股（6位数字代码）
+            if not (code.isdigit() and len(code) == 6 and code.startswith(('0', '3', '6'))):
+                continue
+
+            if code not in seen:
+                seen.add(code)
+                companies.append({"name": name, "scode": code, "market": "A", "tier": "portfolio"})
+
+        return companies
+    except Exception as e:
+        print(f"[ERROR] Google Sheet: {e}")
+        return []
+
+
 def fetch_all(client, companies, days_back):
     """为所有公司拉取各类数据"""
     today = datetime.now()
@@ -104,7 +158,7 @@ def fetch_all(client, companies, days_back):
             "name": co["name"],
             "scode": scode,
             "tier": co["tier"],
-            "deep_score": co["deep_score"],
+            "deep_score": co.get("deep_score"),
             "announcements": [],
             "executive_trades": [],
             "penalties": [],
@@ -182,7 +236,11 @@ def fetch_all(client, companies, days_back):
             results.append(item)
 
         except Exception as e:
-            print(f"ERROR: {e}")
+            err_msg = str(e)
+            if "orgId" in err_msg or "未找到" in err_msg:
+                print(f"SKIP (非A股)")
+            else:
+                print(f"ERROR: {e}")
             results.append(item)
 
     return results
@@ -214,6 +272,11 @@ def classify_importance(item):
 
     # 标记其他类型的严重性
     for et in item.get("executive_trades", []):
+        reason = str(et.get("reason", "") or "")
+        # 分红送转导致的持股变动不是真实交易
+        if "分红" in reason or "送转" in reason or "红股" in reason:
+            et["importance"] = "IGNORE"
+            continue
         qty = abs(et.get("qty", 0) or 0)
         if qty > 100000:
             et["importance"] = "CRITICAL"
@@ -251,14 +314,19 @@ def classify_importance(item):
 def main():
     parser = argparse.ArgumentParser(description="周度Watchlist公告扫描")
     parser.add_argument("--days", type=int, default=7, help="回溯天数(默认7)")
-    parser.add_argument("--tier", type=str, default="core,growth,radar", help="档位过滤")
+    parser.add_argument("--tier", type=str, default="core,growth,radar", help="档位过滤, 或 portfolio")
     parser.add_argument("--output-dir", type=str, default=None)
     args = parser.parse_args()
 
     tiers = [t.strip() for t in args.tier.split(",")]
 
-    print(f"[SCAN] 加载 watchlist (tiers: {tiers})...")
-    companies = load_watchlist(tiers)
+    if "portfolio" in tiers:
+        print(f"[SCAN] 加载 Google Sheet 持仓...")
+        companies = load_portfolio()
+        tiers = ["portfolio"]
+    else:
+        print(f"[SCAN] 加载 watchlist (tiers: {tiers})...")
+        companies = load_watchlist(tiers)
     print(f"[SCAN] {len(companies)} 家公司")
 
     client = CninfoClient()
