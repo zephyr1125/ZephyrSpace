@@ -72,7 +72,5 @@ scripts/_ocr_test.txt
 scripts/_pharma_results.json
 scripts/_bad_bands.txt
 scripts/_fix_bands2.py
-# 粘贴图片
-Pasted image *.png
 bash.exe.stackdump
 copilot-session-*
