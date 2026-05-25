@@ -101,6 +101,19 @@ python .\scripts\download_reports.py 600519 && python .\scripts\convert_annual_r
 > ⚠️ 深度分析 Tavily 用量按 `deep-prebuy-skill/SKILL.md` 第 0.3 节 Tier 分级管控（央企上限1次，大型民企1次，中型2次，小市值/高风险3次）。
 > ⚠️ 分析完成后必须用财报 MD 文件复核关键数据（审计意见、管理层名单、业务分部收入），不能仅依赖 CNINFO API。
 
+### 周度监控（触发词：监控周报 / 扫描持仓 / 周报）
+
+**不需要二次确认，收到即执行。** 对 Watchlist 全部标的拉取最近一周公告+高管变动+处罚诉讼+业绩预告，AI 逐条分析过滤，输出 actionable 周报。
+
+```powershell
+# 第1步：数据拉取（脚本自动完成）
+python scripts/weekly_watchlist_scan.py
+
+# 第2步：AI 分析 + 生成报告（按 skills/weekly-watchlist-monitor/SKILL.md 执行）
+```
+
+报告输出到 `02-主题/周度监控/YYYY-MM-DD.md`。AI 分析按三档分级：🔴 CRITICAL（需行动）/ 🟡 WATCH（需关注）/ ⚫ IGNORE（流程性）。
+
 ### 指数整体 PreBuy（触发词：指数估值 [指数名] / [指数]适合建仓吗）
 
 完整 SOP 在 `index-prebuy.skill`，分析对象是指数本身（不拆解个股），输出到指数页 + `data/watchlist_index.json`，并在写入后运行 `.\scripts\sync_watchlist.ps1` 同步到 `E:\Work\Python\Finance\api\config\watchlist_index.json`。
