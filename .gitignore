@@ -65,3 +65,14 @@ venv/
 Thumbs.db
 desktop.ini
 
+# 财报Inbox（原始PDF+临时文件）
+财报/_Inbox/
+# 临时脚本输出
+scripts/_ocr_test.txt
+scripts/_pharma_results.json
+scripts/_bad_bands.txt
+scripts/_fix_bands2.py
+# 粘贴图片
+Pasted image *.png
+bash.exe.stackdump
+copilot-session-*

@@ -493,6 +493,10 @@ description: >-
 
 > 本维度不涉及 PE/PB 等估值指标，专注于财务数据揭示的经营质量。
 
+![[公司名 深度分析 YYYY-MM-DD_盈利成长能力.png]]
+
+> 上图展示了公司近 5-7 年盈利与成长能力的核心趋势。具体分析如下。
+
 ### E1. ROE 质量与杜邦分析
 
 **必做**（ROE ≥ 10% 时必须拆解，<10% 直接扣分）：
@@ -1106,6 +1110,27 @@ ipo = client.ipo_summary("600519")             # IPO概况
 profile = client.company_profile("600519")     # 公司概况
 ```
 
+**生成财务全景图**（深度分析报告中使用）：
+
+```python
+from scripts.generate_financial_charts import generate_profitability_growth_chart
+
+# 在 financial_multi_year() 之后立即调用
+chart_path = generate_profitability_growth_chart(
+    df,                          # financial_multi_year() 返回的 DataFrame
+    company_name="贵州茅台",
+    stock_code="600519",
+    output_path="深度分析/贵州茅台 深度分析 2026-05-24_盈利成长能力.png",
+)
+
+# 在深度分析报告的 E维度章节顶部用 Obsidian 语法嵌入：
+# ![[贵州茅台 深度分析 2026-05-24_盈利成长能力.png]]
+```
+
+> 图表包含 2x3 六面板：盈利能力趋势(ROE/毛利率/净利率)、成长能力(营收/利润增速)、
+> 营收与利润规模(双轴)、现金流质量(OCF/净利)、杜邦拆解、现金流结构。
+> CLI 独立使用：`python scripts/generate_financial_charts.py 600519 "贵州茅台"`
+
 **字段速查**（深度分析最常用）：
 | 用途 | CNINFO 字段 | 对应 SKILL.md 维度 |
 |------|------------|-------------------|
@@ -1321,7 +1346,7 @@ ls 财报/[公司名]/*.md
 ### 执行步骤
 
 1. **前置排除检查** → 若一票否决则终止；**判断公司 Tier（0.3）→ 确定 Tavily 用量上限**。若有 MD 文件，从 MD 读取审计意见和审计机构（搜索"标准无保留意见"/"会计师事务所"）；若无，从巨潮资讯在线查询。
-2. **E维度（先行）**：CNINFO API `financial_multi_year()` 拉取 5 年结构化财务数据（51 字段）→ 杜邦拆解 + 现金流质量。结构化数字**不依赖 MD 文件**，API 更快且已标准化。
+2. **E维度（先行）**：CNINFO API `financial_multi_year()` 拉取 5–7 年结构化财务数据 → **调用 `generate_financial_charts.py` 生成盈利成长能力全景图，保存到报告同目录** → 杜邦拆解 + 现金流质量。结构化数字**不依赖 MD 文件**，API 更快且已标准化。报告 E维度章节顶部用 `![[filename.png]]` 嵌入图表。
 3. **A维度**：查招股说明书 + 年报历史部分。若 MD 文件覆盖早期年份，可直接读取"公司业务概要"章节。
 4. **B维度**：API 毛利率趋势 + **MD 文件**中的"管理层讨论与分析"章节（B1 业务分部、B2 盈利模式、B3 定价权验证）。
 5. **C维度**：行业研报 + 理杏仁竞争对手对比。MD 文件中的"行业格局和趋势"章节可作为行业分析的直接引用来源。

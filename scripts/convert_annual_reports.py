@@ -28,6 +28,10 @@ TEMP_DIR = INBOX_DIR / "_mineru_temp"
 MINERU_CMD = "mineru"
 MINERU_BACKEND = "pipeline"
 
+# ── 分批控制 ──────────────────────────────────────────
+# 单批最大页数。GPU 内存有限，超过此值分批跑以免崩溃。
+MAX_PAGES_PER_BATCH = 600
+
 
 def extract_info(filename: str) -> dict | None:
     """从PDF文件名提取公司简称、年份、报告类型。
@@ -39,13 +43,19 @@ def extract_info(filename: str) -> dict | None:
     name = Path(filename).stem
 
     short_name, rest = None, name
+
+    # 格式1: "贵州茅台：xxx2024年年度报告.pdf"
     if "：" in name or ":" in name:
         parts = re.split(r"[：:]", name, maxsplit=1)
         short_name = parts[0].strip()
         rest = parts[1].strip()
-    elif "_" in name:
-        # 简式命名: 公司_年份_类型.pdf
-        short_name = name.split("_")[0].strip()
+    # 格式2: "公司_年份_类型.pdf" (download_reports.py 输出格式)
+    elif re.match(r'^(.+)_(\d{4})_(.+)\.pdf$', filename, re.IGNORECASE):
+        # filename has .pdf extension, name does not
+        m = re.match(r'^(.+)_(\d{4})_(.+)', name)
+        if m:
+            short_name = m.group(1).strip()
+            rest = f"{m.group(2)}年{m.group(3)}"
 
     if not short_name:
         print(f"  [WARN] 无法识别公司名: {filename}")
@@ -54,14 +64,17 @@ def extract_info(filename: str) -> dict | None:
     year_match = re.search(r"(\d{4})年", rest) if rest else re.search(r"(\d{4})", name)
     year = year_match.group(1) if year_match else "unknown"
 
-    if "半年度报告" in rest or "半年报" in rest:
-        rtype = "半年度报告"
-    elif "年度报告" in rest or "年报" in rest:
-        rtype = "年度报告"
-    elif "第一季度" in rest or "一季报" in rest:
-        rtype = "第一季度报告"
-    elif "第三季度" in rest or "三季报" in rest:
-        rtype = "第三季度报告"
+    if rest:
+        if "半年度报告" in rest or "半年报" in rest:
+            rtype = "半年度报告"
+        elif "年度报告" in rest or "年报" in rest:
+            rtype = "年度报告"
+        elif "第一季度" in rest or "一季报" in rest:
+            rtype = "第一季度报告"
+        elif "第三季度" in rest or "三季报" in rest:
+            rtype = "第三季度报告"
+        else:
+            rtype = "年报"
     else:
         rtype = "年报"
 
@@ -84,6 +97,47 @@ def scan_inbox() -> list[Path]:
     return pdfs
 
 
+def count_pdf_pages(pdf_path: Path) -> int:
+    """读取 PDF 页数（跨平台：优先 PyPDF2，兜底 pikepdf）"""
+    try:
+        from PyPDF2 import PdfReader
+        reader = PdfReader(str(pdf_path))
+        return len(reader.pages)
+    except Exception:
+        pass
+    try:
+        import pikepdf
+        with pikepdf.open(str(pdf_path)) as pdf:
+            return len(pdf.pages)
+    except Exception:
+        print(f"  [WARN] 无法读取页数: {pdf_path.name}，按 150 页估算")
+        return 150
+
+
+def split_into_batches(pdf_paths: list[Path]) -> list[list[Path]]:
+    """将 PDF 列表按总页数分组，每组不超过 MAX_PAGES_PER_BATCH 页。"""
+    pdf_info = [(p, count_pdf_pages(p)) for p in pdf_paths]
+    total_pages = sum(n for _, n in pdf_info)
+    print(f"\n[SCAN] {len(pdf_paths)} 个 PDF，共 {total_pages} 页")
+
+    batches = []
+    current_batch = []
+    current_pages = 0
+    for pdf, pages in pdf_info:
+        if current_pages + pages > MAX_PAGES_PER_BATCH and current_batch:
+            batches.append(current_batch)
+            current_batch = []
+            current_pages = 0
+        current_batch.append(pdf)
+        current_pages += pages
+    if current_batch:
+        batches.append(current_batch)
+
+    if len(batches) > 1:
+        print(f"[BATCH] 分为 {len(batches)} 批: {', '.join(f'{len(b)}文件/{sum(count_pdf_pages(p) for p in b)}页' for b in batches)}")
+    return batches
+
+
 def run_mineru(pdf_paths: list[Path]) -> bool:
     """将 PDF 复制到临时目录，一次性批量跑 MinerU。"""
     if TEMP_DIR.exists():
@@ -94,10 +148,7 @@ def run_mineru(pdf_paths: list[Path]) -> bool:
     for pdf in pdf_paths:
         shutil.copy2(pdf, temp_input / pdf.name)
 
-    print(f"\n{'='*60}")
-    print(f"[MinerU] 批量转换 {len(pdf_paths)} 个文件...")
-    print(f"{'='*60}\n")
-
+    print(f"\n[MINERU] {len(pdf_paths)} 个文件, ~{sum(count_pdf_pages(p) for p in pdf_paths)} 页")
     cmd = [MINERU_CMD, "-p", str(temp_input), "-o", str(TEMP_DIR), "-b", MINERU_BACKEND]
     print(f"[CMD] {' '.join(cmd)}")
 
@@ -164,27 +215,41 @@ def main():
     print(f"[INFO] Inbox: {INBOX_DIR}")
 
     pdf_files = scan_inbox()
-    print(f"\n[SCAN] 发现 {len(pdf_files)} 个 PDF:")
     for f in pdf_files:
-        print(f"  - {f.name}")
+        print(f"  - {f.name} ({count_pdf_pages(f)} 页)")
 
-    if not run_mineru(pdf_files):
-        sys.exit(1)
+    batches = split_into_batches(pdf_files)
 
-    print(f"\n{'='*60}")
-    print(f"[ORGANIZE] 整理输出文件...")
-    print(f"{'='*60}")
-    results = organize_outputs()
+    all_results = []
+    for i, batch in enumerate(batches):
+        if len(batches) > 1:
+            print(f"\n{'='*60}")
+            print(f"[BATCH {i+1}/{len(batches)}]")
+            print(f"{'='*60}")
 
-    if not results:
-        print("[WARN] 没有成功提取任何文件，保留临时目录以便排查。")
-        print(f"  临时目录: {TEMP_DIR}")
+        if not run_mineru(batch):
+            if i < len(batches) - 1:
+                print(f"[WARN] 第 {i+1} 批失败，继续下一批...")
+                continue
+            else:
+                sys.exit(1)
+
+        results = organize_outputs()
+        all_results.extend(results)
+
+        # 清理临时目录，准备下一批
+        if i < len(batches) - 1:
+            if TEMP_DIR.exists():
+                shutil.rmtree(TEMP_DIR)
+
+    if not all_results:
+        print("[WARN] 没有成功提取任何文件。")
         sys.exit(1)
 
     print(f"\n{'='*60}")
     print(f"[ARCHIVE] 归档原始 PDF...")
     print(f"{'='*60}")
-    archive_originals(results)
+    archive_originals(all_results)
 
     print(f"\n{'='*60}")
     print(f"[CLEANUP]")
@@ -193,10 +258,10 @@ def main():
 
     # 汇总
     print(f"\n{'='*60}")
-    print(f"[DONE] {len(results)} 份报告转换完成")
+    print(f"[DONE] {len(all_results)} 份报告转换完成")
     print(f"{'='*60}")
     by_company = {}
-    for r in results:
+    for r in all_results:
         by_company.setdefault(r["short_name"], []).append(r)
     for name, reports in by_company.items():
         print(f"\n  {name}/")
