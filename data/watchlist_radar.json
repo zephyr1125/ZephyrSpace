@@ -2240,6 +2240,30 @@
       "cycle_is_cyclical": true,
       "last_updated": "2026-05-25",
       "deep_score": 58
+    },
+    {
+      "name": "阳光电源",
+      "code": "300274.SZ",
+      "source_etf": "direct",
+      "board": "创业板",
+      "position_role": "全球逆变器龙头+储能第二极，规模效应释放中，但101条诉讼是重大治理黄旗，Radar跟踪",
+      "prebuy_conclusion": "深度分析63/100(⭐⭐⭐良好)。全球逆变器出货第一+ROE 30%+规模效应持续释放。但101条诉讼暴露合同管理短板+历史OCF波动+光伏周期性。轻仓观察(≤2%),待诉讼减少+OCF持续改善后升级。[2026-05-25]",
+      "watch_reason": "全球光伏逆变器出货量第一(市占率30%)，储能系统全球第二。营收4年CAGR42%，毛利率在扩张(23%→30%)。核心催化剂：诉讼明显减少+OCF持续改善+H股上市提升国际影响力。",
+      "current_price": null,
+      "price_date": "2026-05-25",
+      "valuation_anchor": "MC约1500亿(估算),2024归母110.4亿≈PE 13.6x,低于电气设备行业加权PE 31x",
+      "risk_flags": [
+        "101条诉讼(合同管理短板)",
+        "2021年OCF为负(-16.4亿)",
+        "光伏行业周期性和竞争加剧",
+        "高负债率65%"
+      ],
+      "entry_trigger": "诉讼降至<30条+OCF连续4季正向+PE<12x或行业悲观底",
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": true,
+      "last_updated": "2026-05-25",
+      "deep_score": 63
     }
   ],
   "tier": "radar",

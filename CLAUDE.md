@@ -89,6 +89,8 @@ python .\scripts\download_reports.py 600519 && python .\scripts\convert_annual_r
 
 **不需要二次确认，收到即执行。** 完整 6 步 SOP 必须读取 `deep-prebuy-skill/SKILL.md`，流程顺序：
 
+**前置步骤：先跑「下载并转换」**，等所有财报 PDF 全部转换为 MD 后，再开始写深度分析。禁止在财报转换完成前开始写分析。
+
 1. 深度分析 → 输出 `深度分析/[公司简称] 深度分析 YYYY-MM-DD.md`（100分制评分）
 2. 双 Agent 审核（逻辑 + 数据一致性）
 3. P1 修复（含评分联动检查，见坑15）
@@ -97,6 +99,7 @@ python .\scripts\download_reports.py 600519 && python .\scripts\convert_annual_r
 6. `sync_watchlist.ps1` + 清理临时文件 + Git Commit（最多3次）
 
 > ⚠️ 深度分析 Tavily 用量按 `deep-prebuy-skill/SKILL.md` 第 0.3 节 Tier 分级管控（央企上限1次，大型民企1次，中型2次，小市值/高风险3次）。
+> ⚠️ 分析完成后必须用财报 MD 文件复核关键数据（审计意见、管理层名单、业务分部收入），不能仅依赖 CNINFO API。
 
 ### 指数整体 PreBuy（触发词：指数估值 [指数名] / [指数]适合建仓吗）
 
