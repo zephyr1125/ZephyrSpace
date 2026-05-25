@@ -1,0 +1,522 @@
+{
+  "scan_date": "2026-05-25",
+  "days_back": 7,
+  "tiers": [
+    "core"
+  ],
+  "companies_scanned": 21,
+  "critical_items": 1,
+  "watch_items": 3,
+  "results": [
+    {
+      "name": "国电南瑞",
+      "scode": "600406",
+      "tier": "core",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-22",
+          "title": "国电南瑞2025年年度股东会的法律意见书",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-22",
+          "title": "国电南瑞2025年年度股东会决议公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "兴齐眼药",
+      "scode": "300573",
+      "tier": "core",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-21",
+          "title": "关于获得药品注册证书的公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2024-05-23",
+          "pledgor": "刘继东",
+          "pledgee": "海通证券股份有限公司",
+          "qty": 0,
+          "ratio": 3.97,
+          "importance": "WATCH"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "大豪科技",
+      "scode": "603025",
+      "tier": "core",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "锦江航运",
+      "scode": "601083",
+      "tier": "core",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-22",
+          "title": "锦江航运关于使用部分闲置募集资金进行现金管理到期赎回并继续进行现金管理的公告",
+          "importance": "IGNORE",
+          "match": "募集资金"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "诺普信",
+      "scode": "002215",
+      "tier": "core",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-22",
+          "title": "关于下属控股公司涉及诉讼的进展公告",
+          "importance": "CRITICAL",
+          "match": "诉讼"
+        },
+        {
+          "date": "2026-05-20",
+          "title": "关于回购注销限制性股票暨减少注册资本的债权人通知公告",
+          "importance": "WATCH",
+          "match": "回购"
+        },
+        {
+          "date": "2026-05-20",
+          "title": "国浩律师（深圳）事务所关于深圳诺普信作物科学股份有限公司2025年年度股东会的法律意见书",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-20",
+          "title": "2025年年度股东会决议公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2026-04-09",
+          "pledgor": "卢柏强",
+          "pledgee": "万联证券股份有限公司",
+          "qty": 0,
+          "ratio": 3.68,
+          "importance": "WATCH"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "华润三九",
+      "scode": "000999",
+      "tier": "core",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-20",
+          "title": "2025年度权益分派实施公告",
+          "importance": "WATCH",
+          "match": "权益分派"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2008-10-18",
+          "pledgor": "深圳三九药业有限公司",
+          "pledgee": "新三九控股有限公司",
+          "qty": 4600000,
+          "ratio": 0,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "东鹏饮料",
+      "scode": "605499",
+      "tier": "core",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-22",
+          "title": "H股公告-翌日披露报表",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-21",
+          "title": "H股公告-翌日披露报表",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-20",
+          "title": "H股公告-翌日披露报表",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-19",
+          "title": "H股公告-翌日披露表格",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-18",
+          "title": "H股公告-翌日披露报表",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-18",
+          "title": "东鹏饮料（集团）股份有限公司关于以集中竞价交易方式首次回购A股股份的进展公告",
+          "importance": "WATCH",
+          "match": "回购"
+        },
+        {
+          "date": "2026-05-18",
+          "title": "东鹏饮料（集团）股份有限公司关于使用部分闲置自有资金进行现金管理的进展公告",
+          "importance": "IGNORE",
+          "match": "现金管理"
+        }
+      ],
+      "executive_trades": [
+        {
+          "date": "2026-05-19",
+          "name": "卢义富",
+          "position": "董事、高级管理人员",
+          "qty": 144300,
+          "reason": "分红送转",
+          "importance": "CRITICAL"
+        },
+        {
+          "date": "2026-05-19",
+          "name": "彭得新",
+          "position": "高级管理人员",
+          "qty": 873503,
+          "reason": "分红送转",
+          "importance": "CRITICAL"
+        },
+        {
+          "date": "2026-05-19",
+          "name": "林木勤",
+          "position": "董事、高级管理人员",
+          "qty": 77597290,
+          "reason": "分红送转",
+          "importance": "CRITICAL"
+        },
+        {
+          "date": "2026-05-19",
+          "name": "林木港",
+          "position": "董事、高级管理人员",
+          "qty": 8145488,
+          "reason": "分红送转",
+          "importance": "CRITICAL"
+        },
+        {
+          "date": "2026-05-19",
+          "name": "蒋薇薇",
+          "position": "董事、高级管理人员",
+          "qty": 156000,
+          "reason": "分红送转",
+          "importance": "CRITICAL"
+        }
+      ],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "艾力斯",
+      "scode": "688578",
+      "tier": "core",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "腾讯控股",
+      "scode": "00700",
+      "tier": "core",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "Alphabet(Google)",
+      "scode": "GOOGL",
+      "tier": "core",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "长江电力",
+      "scode": "600900",
+      "tier": "core",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-21",
+          "title": "长江电力2025年年度股东会决议公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-21",
+          "title": "北京市天元律师事务所关于中国长江电力股份有限公司2025年年度股东会的法律意见",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2017-12-15",
+          "pledgor": "云南省能源投资集团有限公司",
+          "pledgee": "未披露",
+          "qty": 73576456,
+          "ratio": 0,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "ASML Holding",
+      "scode": "ASML",
+      "tier": "core",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "NVIDIA",
+      "scode": "NVDA",
+      "tier": "core",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "贵州茅台",
+      "scode": "600519",
+      "tier": "core",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-21",
+          "title": "贵州茅台关于召开2025年度股东会的通知",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-21",
+          "title": "贵州茅台独立董事候选人声明与承诺（王鑫）",
+          "importance": "IGNORE",
+          "match": "独立董事"
+        },
+        {
+          "date": "2026-05-21",
+          "title": "贵州茅台独立董事候选人声明与承诺（郭田勇）",
+          "importance": "IGNORE",
+          "match": "独立董事"
+        },
+        {
+          "date": "2026-05-21",
+          "title": "贵州茅台关于聘任董事会秘书的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-21",
+          "title": "贵州茅台独立董事候选人声明与承诺（盛雷鸣）",
+          "importance": "IGNORE",
+          "match": "独立董事"
+        },
+        {
+          "date": "2026-05-21",
+          "title": "贵州茅台独立董事提名人声明与承诺",
+          "importance": "IGNORE",
+          "match": "独立董事"
+        },
+        {
+          "date": "2026-05-21",
+          "title": "贵州茅台关于与关联方签订《商标许可协议》的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-21",
+          "title": "贵州茅台第四届董事会2026年度第八次会议决议公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "招商银行",
+      "scode": "600036",
+      "tier": "core",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "苹果(AAPL)",
+      "scode": "AAPL",
+      "tier": "core",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "卡特彼勒(CAT)",
+      "scode": "CAT",
+      "tier": "core",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "蜜雪集团",
+      "scode": "02097",
+      "tier": "core",
+      "deep_score": 82,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "宁德时代",
+      "scode": "300750",
+      "tier": "core",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2023-11-24",
+          "pledgor": "李平",
+          "pledgee": "中信建投证券股份有限公司",
+          "qty": 1692700,
+          "ratio": 0.04,
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2023-11-24",
+          "pledgor": "李平",
+          "pledgee": "中信建投证券股份有限公司",
+          "qty": 5307300,
+          "ratio": 0.12,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "港交所",
+      "scode": "00388",
+      "tier": "core",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "中国移动",
+      "scode": "600941",
+      "tier": "core",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-21",
+          "title": "关于中国移动有限公司2026年股东周年大会法律意见书",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-21",
+          "title": "中国移动：2026年股东周年大会决议公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-20",
+          "title": "中国移动：2025年末期利润分配方案的进展公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    }
+  ]
+}
