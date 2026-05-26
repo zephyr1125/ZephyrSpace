@@ -53,31 +53,6 @@
       ]
     },
     {
-      "current_price": 108.5,
-      "price_date": "2026-04-30",
-      "next_earnings_type": "半年报",
-      "dv_ttm": null,
-      "next_earnings_date": "2026-08-31",
-      "cycle_is_cyclical": false,
-      "price_bands": [
-        180,
-        120,
-        60
-      ],
-      "source_etf": "direct",
-      "name": "大豪科技",
-      "watch_reason": "绣花机/袜机电控系统全球垄断(市占80-90%)，B2B模式替换成本极高客户黏性强。ROE连续3年提升(19%→26%→28%)，2026Q1净利+41%加速。PE 23.4x处3年7%分位极低。⚠️2026年2-4月4位董事集中减持4%为重要负面信号，需等减持完成。",
-      "valuation_anchor": "PE 30.2x (历史极低分位0.4%)",
-      "prebuy_conclusion": "全球缝制电控绝对垄断+ROE28%持续提升+PE 7%分位极低。减持事件是短期噪音不改变基本面质量，但要求更高安全边际。建议core标准仓位(5-8%)，等减持全部完成后建仓，初仓不超过3%。",
-      "code": "603025.SH",
-      "position_role": "缝制设备电控全球第一(绣花机80%+/袜机85%+市占)，技术壁垒型专精特新，ROE28%质量价值标的",
-      "board": "沪",
-      "risk_flags": [
-        "关税压力",
-        "下游纺织出口"
-      ]
-    },
-    {
       "valuation_anchor": "PE 10.6x (历史最低)",
       "cycle_position": "复苏中期",
       "price_bands": [

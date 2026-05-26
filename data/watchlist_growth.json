@@ -2,6 +2,33 @@
   "updated_at": "2026-05-25",
   "entries": [
     {
+      "name": "大豪科技",
+      "code": "603025.SH",
+      "board": "沪",
+      "source_etf": "direct",
+      "position_role": "缝制设备电控全球垄断(绣花机>80%/袜机>85%市占)，技术壁垒极深但OCF/NI硬伤+赛道狭小，降档至growth观察",
+      "watch_reason": "深度分析69/100良好。缝制电控全球垄断护城河极深，ROE 26.1%持续提升，但OCF/NI 7年均值68.6%是结构性硬伤，2026Q1四董事集中减持4%为重大负面信号。PE处3年7%分位极低提供安全边际。",
+      "prebuy_conclusion": "深度分析69/100良好，建议growth标准持仓2-5%。垄断地位真实但OCF/NI 54%远低于core要求(>90%)+红旗≥3条。等OCF/NI回升至>80%+减持消化后可重新评估core。",
+      "current_price": 16.47,
+      "price_date": "2026-04-30",
+      "dv_ttm": 1.8,
+      "price_bands": [
+        22.9,
+        18.2,
+        16.5
+      ],
+      "valuation_anchor": "PE分位定价：追高区>22.9(PE>32.6x,P80)/中性区18.2-22.9(PE 25.9-32.6x,P50-P80)/较好区间16.5-18.2(PE 23.5-25.9x,P20-P50)。当前16.47处P7极低分位。",
+      "risk_flags": [
+        "OCF/NI 7年均值68.6%，FY2025仅53.9%，利润现金转化率长期不达标",
+        "2026Q1四董事(持股5-11%)同步减持4%总股本，套现约5亿元",
+        "下游纺织服装关税逆风+赛道狭小(TAM 50-80亿)"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false,
+      "deep_analysis": "69/100 | 2026-05-26 | 良好，建议growth标准持仓"
+    },
+    {
       "name": "艾力斯",
       "code": "688578.SH",
       "source_etf": "931152",
