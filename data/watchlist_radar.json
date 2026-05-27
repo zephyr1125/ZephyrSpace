@@ -1075,35 +1075,6 @@
       "tier": "radar"
     },
     {
-      "name": "中国铝业",
-      "code": "601600.SH",
-      "ts_code": "601600.SH",
-      "source_etf": "930708",
-      "board": "沪",
-      "position_role": "铝行业央企龙头，电解铝+氧化铝全产业链，PS+3政策顺风；复苏中期成长仓",
-      "prebuy_conclusion": "基本面扎实，ROE=17.6%，OCF/净利=132%，国央企PS+3。PB历史分位89.7%偏高，赔率偏差。等9-11元较好区间建仓，当前11.66元中性区低端可小仓参与（周期仓≤5%）。",
-      "watch_reason": "国内最大铝业央企，铝-氧化铝一体化覆盖完整，受益铝价复苏+新能源铝需求增长；ROE 17%+OCF现金流质量优秀",
-      "current_price": 11.66,
-      "price_date": "2026-04-28",
-      "price_bands": [
-        15.0,
-        11.0,
-        9.0
-      ],
-      "valuation_anchor": "PB分位+PE复合定价；2025净利126.74亿，合理PE 11-16x，PB历史中位约2.0-2.5x",
-      "risk_flags": [
-        "PB历史89.7%分位偏高，若铝价回调则估值压缩风险大",
-        "国央企资本配置效率偏低，ROE在历史高位后面临均值回归风险"
-      ],
-      "dv_ttm": 2.21,
-      "next_earnings_date": "2026-08-31",
-      "next_earnings_type": "半年报",
-      "cycle_is_cyclical": true,
-      "cycle_position": "复苏中期",
-      "entry_trigger": null,
-      "tier": "radar"
-    },
-    {
       "name": "神火股份",
       "code": "000933.SZ",
       "ts_code": "000933.SZ",
