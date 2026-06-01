@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-30",
+  "updated_at": "2026-06-02",
   "entries": [
     {
       "name": "大豪科技",
@@ -2555,6 +2555,34 @@
       "next_earnings_type": "半年报",
       "cycle_is_cyclical": false,
       "deep_analysis": "76/100 | 2026-05-29 | 优质,建议growth重仓5-10%"
+    },
+    {
+      "name": "中航高科",
+      "code": "600862.SH",
+      "board": "沪",
+      "source_etf": "direct",
+      "position_role": "航空复材国内垄断(军品预浸料>60%),C919核心供应商,4星护城河,74.5分优质下沿,growth底仓压舱石",
+      "watch_reason": "深度分析74.5/100优质。OCF/净利116%极佳,扣非占比99%,零杠杆。PE 27x处5年10%分位历史底部。护城河极深(国内唯一全流程航空复材),但短期业绩双降+ROE 14%稍低+国企激励不足",
+      "prebuy_conclusion": "深度分析74.5/100(优质下沿),建议growth观察仓2-3%,待2026中报验证营收企稳+董事长过渡期结束后可加至5-10%",
+      "current_price": 17.82,
+      "price_date": "2026-05-29",
+      "dv_ttm": 1.25,
+      "price_bands": [
+        23.0,
+        20.0,
+        16.5
+      ],
+      "valuation_anchor": "PE分位锚:追高区>23.0(PE>35x,P80)/中性区20.0-23.0(PE 30-35x,P50-P80)/较好区间16.5-20.0(PE 25-30x,P20-P50)。当前PE 26.9x处5y 10.1%分位",
+      "risk_flags": [
+        "业务95%集中于单一子公司,客户>70%来自航空工业体系",
+        "2025营收/利润双降,2026目标-15%,十四五→十五五真空期",
+        "军品审价机制约束毛利率上限",
+        "董事长代行三职过渡期,国企激励机制不足"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "中报",
+      "cycle_is_cyclical": false,
+      "deep_analysis": "74.5/100 | 2026-06-01 | 优质下沿,growth观察仓2-3%"
     }
   ],
   "tier": "growth",
