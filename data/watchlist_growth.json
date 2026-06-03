@@ -2583,34 +2583,6 @@
       "next_earnings_type": "中报",
       "cycle_is_cyclical": false,
       "deep_analysis": "74.5/100 | 2026-06-01 | 优质下沿,growth观察仓2-3%"
-    },
-    {
-      "name": "创科实业",
-      "code": "0669.HK",
-      "market": "HK",
-      "board": "HK",
-      "source_etf": "direct",
-      "position_role": "全球电动工具双料冠军(Milwaukee#1专业+Ryobi#1消费)，电池平台锁定+行业最高毛利率41.2%+净现金$7亿，growth底仓压舱石",
-      "watch_reason": "深度分析84/100优质。双品牌全球#1+电池平台网络效应+连续10年毛利率提升至41.2%行业最高，FCF连续3年>$12亿。主要风险为Home Depot集中度(~45%营收)和中美关税暴露，需定期跟踪。",
-      "prebuy_conclusion": "深度分析84/100优质，建议growth标准持仓5-10%。双品牌全球霸主+电池平台锁定+财务质量卓越，但Home Depot单一客户集中度和关税风险限制其进入core。等价格落入较好区间时分批建仓。",
-      "current_price": 118.4,
-      "price_date": "2026-06-03",
-      "dv_ttm": 2.57,
-      "price_bands": [
-        138.0,
-        113.0,
-        90.0
-      ],
-      "valuation_anchor": "PE历史区间定价：追高区>138(PE>27x,P80+) / 中性区113-138(PE 22-27x,P50-P80) / 较好区间90-113(PE 17.5-22x,P20-P50) / 更低区间<90(PE<17.5x,接近52周低位)。FY2025 EPS US$0.6561≈HK$5.12。",
-      "risk_flags": [
-        "Home Depot集中度(~45%营收)：Ryobi在HD独家销售，单一客户依赖在制造业中属极高水平",
-        "中美关税暴露：制造在亚洲(中国/越南)，销售~75%在北美，关税升级可能超出产能多元化应对能力",
-        "创始人81岁年龄风险：Horst Pudwill虽已CEO交班，但创始人家族战略眼光不可替代"
-      ],
-      "next_earnings_date": "2026-08-31",
-      "next_earnings_type": "中期业绩",
-      "cycle_is_cyclical": false,
-      "deep_analysis": "84/100 | 2026-06-03 | 优质，建议growth标准持仓"
     }
   ],
   "tier": "growth",
