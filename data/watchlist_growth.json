@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-03",
+  "updated_at": "2026-06-04",
   "entries": [
     {
       "name": "大豪科技",
@@ -2583,6 +2583,36 @@
       "next_earnings_type": "中报",
       "cycle_is_cyclical": false,
       "deep_analysis": "74.5/100 | 2026-06-01 | 优质下沿,growth观察仓2-3%"
+    },
+    {
+      "name": "携程",
+      "code": "09961.HK",
+      "source_etf": "direct",
+      "market": "HK",
+      "board": "HK",
+      "position_role": "中国OTA绝对龙头(growth tier)，平台经济典范，国际化+AI提效双驱动",
+      "watch_reason": "深度分析82/100优质。60%+市场份额+双面网络效应+品牌护城河极深，净利率32%，核心PE~14x合理偏低。国际OTA预订量+60%高增长，回购+首度分红回报改善。",
+      "prebuy_conclusion": "深度分析82/100优质，建议growth标准持仓5-10%。公司质量极优(护城河+盈利+管理)，核心PE~14x处历史偏低区间。主要风险：美团/抖音竞争+ROE 12%待改善+国际盈利未验证。",
+      "current_price": 59.0,
+      "price_date": "2026-06-04",
+      "price_bands": [
+        75.0,
+        55.0,
+        40.0
+      ],
+      "valuation_anchor": "核心PE分位定价：追高区>75 HKD(核心PE>16x)/中性区55-75(核心PE 12-16x)/较好区间40-55(核心PE 9-12x)。当前59 HKD(核心PE~14x)处中性偏低区间。",
+      "risk_flags": [
+        "美团+抖音双线竞争侵蚀中低端/休闲旅游场景份额",
+        "ROE仅12%(核心)，现金占比过高拖累资本效率",
+        "国际OTA高增长(+60%)但盈利尚未验证",
+        "商誉593亿(Skyscanner)，占总资产23%"
+      ],
+      "dv_ttm": 0.0,
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": true,
+      "deep_score": 82,
+      "deep_analysis": "82/100 | 2026-06-04 | 优质，建议growth标准持仓5-10%"
     }
   ],
   "tier": "growth",

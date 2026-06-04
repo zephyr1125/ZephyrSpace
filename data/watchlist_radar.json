@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-29",
+  "updated_at": "2026-06-04",
   "entries": [
     {
       "name": "君实生物",
@@ -2227,6 +2227,35 @@
       "next_earnings_type": "半年报",
       "cycle_is_cyclical": false,
       "deep_score": 55
+    },
+    {
+      "name": "华虹公司",
+      "code": "688347.SH",
+      "source_etf": "direct",
+      "board": "科",
+      "position_role": "中国特色工艺晶圆代工龙头，功率器件/eNVM/模拟电源三大平台，强周期弹性标的",
+      "watch_reason": "深度分析55/100良好(下限)。特色工艺护城河深+325亿现金抗周期，但处于周期深度低谷(TTM GM 1.5%)，少数股东亏损吸收掩盖真实亏损14亿。等周期复苏信号。",
+      "prebuy_conclusion": "深度分析55/100良好(下限边界)，E维度触发严重警告，建议radar跟踪。等待毛利率恢复至≥20%保持2季度+ROE转正+PB<2.5x后评估。当前PB 8.96x极度脱离基本面。",
+      "current_price": 227.0,
+      "price_date": "2026-06-04",
+      "price_bands": [
+        85.0,
+        63.0,
+        50.0
+      ],
+      "valuation_anchor": "PB分位定价(强周期股)：追高区>85(PB>3.4x)/中性区63-85(PB 2.5-3.4x)/较好区间50-63(PB 2.0-2.5x)。当前227元(PB 8.96x)严重脱离基本面。",
+      "risk_flags": [
+        "E维度触发严重警告：ROE 0.87%→TTM -0.89%，GM 1.5%TTM，总净利实际亏损-10.32亿",
+        "少数股东亏损吸收结构：归母+3.81亿掩盖合并亏损-10.32亿，少数股东承受力存疑",
+        "12英寸无锡新线折旧暴增(固定资产+46%)+产能利用率不足=利润双重挤压",
+        "成熟制程价格战加剧，国内产能过剩"
+      ],
+      "entry_trigger": "毛利率恢复至≥20%保持2个季度以上+ROE(TTM)转正+PB回落至<2.5x(约<63元)",
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": true,
+      "deep_score": 55,
+      "deep_analysis": "55/100 | 2026-06-04 | 良好(下限)，E维度警告，建议radar跟踪"
     }
   ],
   "tier": "radar",
