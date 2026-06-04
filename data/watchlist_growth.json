@@ -2613,6 +2613,34 @@
       "cycle_is_cyclical": true,
       "deep_score": 82,
       "deep_analysis": "82/100 | 2026-06-04 | 优质，建议growth标准持仓5-10%"
+    },
+    {
+      "name": "同程旅行",
+      "code": "0780.HK",
+      "board": "港",
+      "source_etf": "direct",
+      "position_role": "中国OTA第二极，微信生态独占流量入口+下沉市场王者，现金流极优的港股消费互联网配置",
+      "prebuy_conclusion": "深度分析78/100优质，建议Growth标准持仓5-10%。微信生态独家流量+极优现金流(OCF/净利181.8%)构成长期竞争优势，但AI颠覆和行业竞争加剧需持续跟踪。",
+      "watch_reason": "中国OTA行业第二大(GMV份额~15%)，微信生态独家入口(自2014年)+87%非一线城市用户提供结构性优势。OCF/净利181.8%行业顶级的现金流质量。OTA+酒管(3000+酒店)+支付纵向延伸。核心跟踪：AI Agent对OTA渠道的颠覆风险、行业竞争格局变化、万达酒管整合进展。",
+      "current_price": 14.01,
+      "price_date": "2026-06-04",
+      "dv_ttm": 1.8,
+      "price_bands": [
+        17.0,
+        14.0,
+        11.0
+      ],
+      "valuation_anchor": "前瞻PE定价：追高区>HKD17(Fwd PE>15x)/中性区HKD14-17(Fwd PE 12-15x)/较好区间HKD11-14(Fwd PE 9.5-12x)/更低区间<HKD11(Fwd PE<9.5x)。2026E经调整EPS约HKD1.47(对应34亿RMB经调整净利)，当前14.01对应Fwd PE~9.5x处较好区间边缘。",
+      "risk_flags": [
+        "AI Agent可能颠覆传统OTA预订渠道，OTA去中介化是中长期结构性威胁",
+        "行业竞争加剧(京东三年0佣金杀入酒旅、美团持续补贴、抖音内容种草)",
+        "万达酒管+新生支付整合不及预期风险",
+        "度假业务持续拖累(2025年-6.9%，已确认4.5亿商誉减值)"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "中期业绩",
+      "cycle_is_cyclical": false,
+      "deep_analysis": "78/100 | 2026-06-04 | 优质，建议Growth标准持仓5-10%"
     }
   ],
   "tier": "growth",
