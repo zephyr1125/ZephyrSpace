@@ -1,0 +1,128 @@
+{
+  "api": "最新收盘价溢价率信息API",
+  "apiKey": "cn/fund/hot/f_nlacan",
+  "url": "https://open.lixinger.com/api/cn/fund/hot/f_nlacan",
+  "method": "POST",
+  "params": [
+    {
+      "name": "token",
+      "required": "Yes",
+      "type": "String",
+      "descriptions": [
+        "我的Token页有用户专属且唯一的Token。"
+      ]
+    },
+    {
+      "name": "stockCodes",
+      "required": "Yes",
+      "type": "Array",
+      "descriptions": [
+        "基金代码数组。"
+      ],
+      "constraints": [
+        "stockCodes长度>=1且<=100。",
+        "请参考基金信息API获取合法的stockCode。"
+      ],
+      "example": "[\"161725\",\"005827\"]"
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "stockCode",
+      "type": "String",
+      "description": "股票代码"
+    },
+    {
+      "name": "f_c_d",
+      "type": "Date",
+      "description": "价格时间"
+    },
+    {
+      "name": "f_c_c",
+      "type": "Number",
+      "description": "收盘价格"
+    },
+    {
+      "name": "f_c_cr",
+      "type": "Number",
+      "description": "收盘价涨跌幅"
+    },
+    {
+      "name": "f_c_a",
+      "type": "Number",
+      "description": "成交金额"
+    },
+    {
+      "name": "f_nv_eicpd",
+      "type": "Date",
+      "description": "净值估算日期"
+    },
+    {
+      "name": "f_nv_esnv",
+      "type": "Number",
+      "description": "净值估算前值"
+    },
+    {
+      "name": "f_nv_esvd",
+      "type": "Date",
+      "description": "净值估算前值时间"
+    },
+    {
+      "name": "f_nv_eicpcr",
+      "type": "Number",
+      "description": "净值估算对应的指数涨跌幅"
+    },
+    {
+      "name": "f_nv_env",
+      "type": "Number",
+      "description": "净值估算值"
+    },
+    {
+      "name": "f_nv_d",
+      "type": "Date",
+      "description": "净值日期"
+    },
+    {
+      "name": "f_nv",
+      "type": "Number",
+      "description": "基金净值"
+    },
+    {
+      "name": "f_nv_cr",
+      "type": "Number",
+      "description": "净值涨跌幅"
+    },
+    {
+      "name": "f_pnv_pr",
+      "type": "Number",
+      "description": "收盘价溢价率"
+    },
+    {
+      "name": "f_pnv_pr_avg_d5",
+      "type": "Number",
+      "description": "最近5个交易日平均溢价率"
+    },
+    {
+      "name": "f_pnv_pr_avg_d10",
+      "type": "Number",
+      "description": "最近10个交易日平均溢价率"
+    },
+    {
+      "name": "f_pnv_pr_avg_d20",
+      "type": "Number",
+      "description": "最近20个交易日平均溢价率"
+    }
+  ],
+  "requestExample": [
+    {
+      "desc": "示例1: get by {stockType} codes",
+      "requestBody": {
+        "stockCodes": [
+          "161725",
+          "005827"
+        ],
+        "token": "***********"
+      }
+    }
+  ]
+}

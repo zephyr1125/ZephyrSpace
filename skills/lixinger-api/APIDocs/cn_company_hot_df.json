@@ -1,0 +1,69 @@
+{
+  "api": "分红融资API",
+  "apiKey": "cn/company/hot/df",
+  "url": "https://open.lixinger.com/api/cn/company/hot/df",
+  "method": "POST",
+  "params": [
+    {
+      "name": "token",
+      "required": "Yes",
+      "type": "String",
+      "descriptions": [
+        "我的Token页有用户专属且唯一的Token。"
+      ]
+    },
+    {
+      "name": "stockCodes",
+      "required": "Yes",
+      "type": "Array",
+      "descriptions": [
+        "股票代码数组。"
+      ],
+      "constraints": [
+        "stockCodes长度>=1且<=100。",
+        "请参考股票信息API获取合法的stockCode。"
+      ],
+      "example": "[\"300750\",\"600519\",\"600157\"]"
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "stockCode",
+      "type": "String",
+      "description": "股票代码"
+    },
+    {
+      "name": "dfr_fs",
+      "type": "Number",
+      "description": "上市以来A股总分红融资比"
+    },
+    {
+      "name": "da_fs",
+      "type": "Number",
+      "description": "上市以来A股总分红"
+    },
+    {
+      "name": "fa_fs",
+      "type": "Number",
+      "description": "上市以来A股总融资"
+    },
+    {
+      "name": "financingFlag",
+      "type": "Number",
+      "description": "上市后是否有股权激励外的融资"
+    }
+  ],
+  "requestExample": [
+    {
+      "desc": "示例1: get by {stockType} codes",
+      "requestBody": {
+        "stockCodes": [
+          "300750",
+          "600519",
+          "600157"
+        ],
+        "token": "***********"
+      }
+    }
+  ]
+}

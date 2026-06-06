@@ -1,0 +1,141 @@
+{
+  "api": "投资者",
+  "apiKey": "macro/investor",
+  "url": "https://open.lixinger.com/api/macro/investor",
+  "method": "POST",
+  "params": [
+    {
+      "name": "token",
+      "required": "Yes",
+      "type": "String",
+      "descriptions": [
+        "我的Token页有用户专属且唯一的Token。"
+      ]
+    },
+    {
+      "name": "startDate",
+      "required": "Yes",
+      "type": "String: YYYY-MM-DD(北京时间)",
+      "descriptions": [
+        "信息起始时间。"
+      ],
+      "constraints": [
+        "开始和结束的时间间隔不超过10年"
+      ]
+    },
+    {
+      "name": "endDate",
+      "required": "Yes",
+      "type": "String: YYYY-MM-DD(北京时间)",
+      "descriptions": [
+        "信息结束时间。"
+      ]
+    },
+    {
+      "name": "limit",
+      "required": "No",
+      "type": "Number",
+      "descriptions": [
+        "返回最近数据的数量。"
+      ],
+      "constraints": [
+        "limit仅在请求数据为date range的情况下生效。"
+      ]
+    },
+    {
+      "name": "areaCode",
+      "required": "Yes",
+      "type": "String",
+      "descriptions": [
+        "地区代码。"
+      ],
+      "example": "cn",
+      "items": [
+        {
+          "label": "大陆",
+          "value": "cn"
+        }
+      ]
+    },
+    {
+      "name": "metricsList",
+      "required": "Yes",
+      "type": "Array",
+      "descriptions": [
+        "指标数组。"
+      ],
+      "example": "'ni'",
+      "regions": [
+        {
+          "label": "大陆支持:",
+          "items": [
+            {
+              "label": "自然人",
+              "value": "ni",
+              "ectByGranularity": []
+            },
+            {
+              "label": "A股自然人",
+              "value": "nia",
+              "ectByGranularity": []
+            },
+            {
+              "label": "B股自然人",
+              "value": "nib",
+              "ectByGranularity": []
+            },
+            {
+              "label": "非自然人",
+              "value": "non_ni",
+              "ectByGranularity": []
+            },
+            {
+              "label": "A股非自然人",
+              "value": "non_nia",
+              "ectByGranularity": []
+            },
+            {
+              "label": "B股非自然人",
+              "value": "non_nib",
+              "ectByGranularity": []
+            },
+            {
+              "label": "新增自然人(月)",
+              "value": "nni_m",
+              "ectByGranularity": []
+            },
+            {
+              "label": "新增非自然人(月)",
+              "value": "n_non_ni_m",
+              "ectByGranularity": []
+            },
+            {
+              "label": "新增自然人(周)",
+              "value": "nni_w",
+              "ectByGranularity": []
+            },
+            {
+              "label": "新增非自然人(周)",
+              "value": "n_non_ni_w",
+              "ectByGranularity": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "requestExample": [
+    {
+      "desc": "示例1: 通过时间范围获取",
+      "requestBody": {
+        "areaCode": "cn",
+        "startDate": "2016-05-29",
+        "endDate": "2026-05-29",
+        "metricsList": [
+          "ni"
+        ],
+        "token": "***********"
+      }
+    }
+  ]
+}

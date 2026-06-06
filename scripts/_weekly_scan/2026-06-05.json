@@ -1,0 +1,446 @@
+{
+  "scan_date": "2026-06-05",
+  "days_back": 7,
+  "tiers": [
+    "portfolio"
+  ],
+  "companies_scanned": 15,
+  "critical_items": 0,
+  "watch_items": 10,
+  "results": [
+    {
+      "name": "摩根新兴市场",
+      "scode": "378006",
+      "tier": "portfolio",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "长江电力",
+      "scode": "600900",
+      "tier": "portfolio",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2017-12-15",
+          "pledgor": "云南省能源投资集团有限公司",
+          "pledgee": "未披露",
+          "qty": 73576456,
+          "ratio": 0,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "宏发股份",
+      "scode": "600885",
+      "tier": "portfolio",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-29",
+          "title": "宏发股份：2025年度可持续发展报告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "宏发股份：2025年度可持续发展报告摘要",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "宏发股份：第十一届董事会第十六次会议决议公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2026-02-14",
+          "pledgor": "有格创业投资有限公司",
+          "pledgee": "中国工商银行股份有限公司长泰支行",
+          "qty": 0,
+          "ratio": 0.65,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "福耀玻璃",
+      "scode": "600660",
+      "tier": "portfolio",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-01",
+          "title": "H股市场公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2023-03-29",
+          "pledgor": "河仁慈善基金会",
+          "pledgee": "中国银行股份有限公司福建省分行",
+          "qty": 0,
+          "ratio": 2.68,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "东鹏饮料",
+      "scode": "605499",
+      "tier": "portfolio",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-02",
+          "title": "H股公告-截至二零二六年五月三十一日止之股份发行人的证券变动月报表",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-02",
+          "title": "H股公告-翌日披露报表",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-01",
+          "title": "东鹏饮料（集团）股份有限公司关于以集中竞价交易方式回购A股股份的进展公告",
+          "importance": "WATCH",
+          "match": "回购"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "东鹏饮料（集团）股份有限公司关于2025年年度暨2026年第一季度业绩说明会情况的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "东鹏饮料（集团）股份有限公司关于控股股东增持公司H股股份计划的公告",
+          "importance": "WATCH",
+          "match": "增持"
+        },
+        {
+          "date": "2026-05-28",
+          "title": "H股公告-翌日披露报表",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "美的集团",
+      "scode": "000333",
+      "tier": "portfolio",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-02",
+          "title": "关于回购A股股份事项前十名股东和前十名无限售条件股东持股情况的公告",
+          "importance": "WATCH",
+          "match": "回购"
+        },
+        {
+          "date": "2026-06-02",
+          "title": "关于以集中竞价交易方式回购A股股份进展情况的公告",
+          "importance": "WATCH",
+          "match": "回购"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "关于公司高级管理人员离任的公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2023-11-09",
+          "pledgor": "美的控股有限公司",
+          "pledgee": "中信证券股份有限公司",
+          "qty": 0,
+          "ratio": 1.42,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "海康威视",
+      "scode": "002415",
+      "tier": "portfolio",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-29",
+          "title": "关于为子公司提供担保的进展公告",
+          "importance": "WATCH",
+          "match": "担保"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2020-10-20",
+          "pledgor": "新疆普康投资有限合伙企业",
+          "pledgee": "招商财富资产管理有限公司",
+          "qty": 0,
+          "ratio": 0.19,
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2020-10-20",
+          "pledgor": "新疆普康投资有限合伙企业",
+          "pledgee": "招商财富资产管理有限公司",
+          "qty": 0,
+          "ratio": 0.32,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "宁德时代",
+      "scode": "300750",
+      "tier": "portfolio",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-04",
+          "title": "关于2026年A股员工持股计划完成非交易过户的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-04",
+          "title": "关于选举2026年A股员工持股计划管理委员会委员的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-03",
+          "title": "H股公告（截至2026年5月31日止股份发行人的证券变动月报表）",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-01",
+          "title": "关于2026年度第三期绿色科技创新债券发行完成的公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2023-11-24",
+          "pledgor": "李平",
+          "pledgee": "中信建投证券股份有限公司",
+          "qty": 1692700,
+          "ratio": 0.04,
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2023-11-24",
+          "pledgor": "李平",
+          "pledgee": "中信建投证券股份有限公司",
+          "qty": 5307300,
+          "ratio": 0.12,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "国电南瑞",
+      "scode": "600406",
+      "tier": "portfolio",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "国电电力",
+      "scode": "600795",
+      "tier": "portfolio",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "新易盛",
+      "scode": "300502",
+      "tier": "portfolio",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-04",
+          "title": "2025年年度分红派息、转增股本实施公告",
+          "importance": "WATCH",
+          "match": "分红"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2023-11-03",
+          "pledgor": "高光荣",
+          "pledgee": "华泰证券(上海)资产管理有限公司",
+          "qty": 0,
+          "ratio": 1.37,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "贵州茅台",
+      "scode": "600519",
+      "tier": "portfolio",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-02",
+          "title": "贵州茅台关于调整2025年年度利润分配方案每股分红金额的公告",
+          "importance": "WATCH",
+          "match": "分红"
+        },
+        {
+          "date": "2026-06-02",
+          "title": "贵州茅台2025年度股东会会议资料",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "深信服",
+      "scode": "300454",
+      "tier": "portfolio",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-03",
+          "title": "深信服科技股份有限公司关于职工代表董事换届选举的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-03",
+          "title": "北京市金杜（深圳）律师事务所关于深信服科技股份有限公司2025年年度股东会之法律意见书",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-03",
+          "title": "深信服科技股份有限公司2025年年度股东会决议公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-02",
+          "title": "深信服科技股份有限公司关于回购股份进展情况的公告",
+          "importance": "WATCH",
+          "match": "回购"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2021-09-10",
+          "pledgor": "何朝曦",
+          "pledgee": "中信建投证券股份有限公司",
+          "qty": 0,
+          "ratio": 0.12,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "瑞芯微",
+      "scode": "603893",
+      "tier": "portfolio",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-04",
+          "title": "2026年第一次临时股东会会议资料",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-04",
+          "title": "董事会薪酬与考核委员会关于2026年股票期权与限制性股票激励计划首次授予激励对象名单的核查意见及公示情况说明",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "乐鑫科技",
+      "scode": "688018",
+      "tier": "portfolio",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-31",
+          "title": "中信证券股份有限公司关于乐鑫信息科技（上海）股份有限公司差异化分红的核查意见",
+          "importance": "WATCH",
+          "match": "分红"
+        },
+        {
+          "date": "2026-05-31",
+          "title": "乐鑫科技2025年年度权益分派实施公告",
+          "importance": "WATCH",
+          "match": "权益分派"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    }
+  ]
+}

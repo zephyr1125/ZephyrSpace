@@ -1,0 +1,5860 @@
+{
+  "scan_date": "2026-06-04",
+  "days_back": 7,
+  "tiers": [
+    "core",
+    "growth",
+    "radar"
+  ],
+  "companies_scanned": 200,
+  "critical_items": 9,
+  "watch_items": 85,
+  "results": [
+    {
+      "name": "国电南瑞",
+      "scode": "600406",
+      "tier": "core",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "兴齐眼药",
+      "scode": "300573",
+      "tier": "core",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-28",
+          "title": "关于收到深圳证券交易所《关于终止对沈阳兴齐眼药股份有限公司申请向特定对象发行股票审核的决定》的公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2024-05-23",
+          "pledgor": "刘继东",
+          "pledgee": "海通证券股份有限公司",
+          "qty": 0,
+          "ratio": 3.97,
+          "importance": "WATCH"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "锦江航运",
+      "scode": "601083",
+      "tier": "core",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "诺普信",
+      "scode": "002215",
+      "tier": "core",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-29",
+          "title": "关于调整2022年限制性股票激励计划授予股份回购价格的公告",
+          "importance": "WATCH",
+          "match": "回购"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "关于调整2023年限制性股票激励计划授予股份回购价格的公告",
+          "importance": "WATCH",
+          "match": "回购"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "国浩律师（深圳）事务所关于深圳诺普信作物科学股份有限公司2022年第一期、第二期限制性股票激励计划第三个解锁期解锁条件成就、回购价格调整及2023年限制性股票激励计划第二个解锁期解锁条件成就、回购价格调整相关事项的法律意见书",
+          "importance": "WATCH",
+          "match": "回购"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "董事会薪酬与考核委员会关于股权激励获得股份解除限售与调整回购价格的核查意见",
+          "importance": "WATCH",
+          "match": "回购"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "关于公司2022年第一期、第二期限制性股票激励计划第三个解锁期解锁条件成就的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "关于公司2023年限制性股票激励计划第二个解锁期解锁条件成就的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "第七届董事会第十三次会议（临时）决议公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2026-04-09",
+          "pledgor": "卢柏强",
+          "pledgee": "万联证券股份有限公司",
+          "qty": 0,
+          "ratio": 3.68,
+          "importance": "WATCH"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "华润三九",
+      "scode": "000999",
+      "tier": "core",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2008-10-18",
+          "pledgor": "深圳三九药业有限公司",
+          "pledgee": "新三九控股有限公司",
+          "qty": 4600000,
+          "ratio": 0,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "东鹏饮料",
+      "scode": "605499",
+      "tier": "core",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-02",
+          "title": "H股公告-截至二零二六年五月三十一日止之股份发行人的证券变动月报表",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-02",
+          "title": "H股公告-翌日披露报表",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-01",
+          "title": "东鹏饮料（集团）股份有限公司关于以集中竞价交易方式回购A股股份的进展公告",
+          "importance": "WATCH",
+          "match": "回购"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "东鹏饮料（集团）股份有限公司关于2025年年度暨2026年第一季度业绩说明会情况的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "东鹏饮料（集团）股份有限公司关于控股股东增持公司H股股份计划的公告",
+          "importance": "WATCH",
+          "match": "增持"
+        },
+        {
+          "date": "2026-05-28",
+          "title": "H股公告-翌日披露报表",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "腾讯控股",
+      "scode": "00700",
+      "tier": "core",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "Alphabet(Google)",
+      "scode": "GOOGL",
+      "tier": "core",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "长江电力",
+      "scode": "600900",
+      "tier": "core",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2017-12-15",
+          "pledgor": "云南省能源投资集团有限公司",
+          "pledgee": "未披露",
+          "qty": 73576456,
+          "ratio": 0,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "ASML Holding",
+      "scode": "ASML",
+      "tier": "core",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "NVIDIA",
+      "scode": "NVDA",
+      "tier": "core",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "贵州茅台",
+      "scode": "600519",
+      "tier": "core",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-02",
+          "title": "贵州茅台关于调整2025年年度利润分配方案每股分红金额的公告",
+          "importance": "WATCH",
+          "match": "分红"
+        },
+        {
+          "date": "2026-06-02",
+          "title": "贵州茅台2025年度股东会会议资料",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-27",
+          "title": "贵州茅台关于回购股份实施结果暨股份变动的公告",
+          "importance": "WATCH",
+          "match": "回购"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "招商银行",
+      "scode": "600036",
+      "tier": "core",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-02",
+          "title": "招商银行股份有限公司关于召开2025年度股东会的通知",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-02",
+          "title": "招商银行股份有限公司2025年度股东会文件",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-28",
+          "title": "招商银行股份有限公司董事会决议公告",
+          "importance": "IGNORE",
+          "match": "董事会决议公告"
+        },
+        {
+          "date": "2026-05-28",
+          "title": "招商银行股份有限公司日常关联交易公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "苹果(AAPL)",
+      "scode": "AAPL",
+      "tier": "core",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "卡特彼勒(CAT)",
+      "scode": "CAT",
+      "tier": "core",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "蜜雪集团",
+      "scode": "02097",
+      "tier": "core",
+      "deep_score": 82,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "宁德时代",
+      "scode": "300750",
+      "tier": "core",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-04",
+          "title": "关于2026年A股员工持股计划完成非交易过户的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-04",
+          "title": "关于选举2026年A股员工持股计划管理委员会委员的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-03",
+          "title": "H股公告（截至2026年5月31日止股份发行人的证券变动月报表）",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-01",
+          "title": "关于2026年度第三期绿色科技创新债券发行完成的公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2023-11-24",
+          "pledgor": "李平",
+          "pledgee": "中信建投证券股份有限公司",
+          "qty": 1692700,
+          "ratio": 0.04,
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2023-11-24",
+          "pledgor": "李平",
+          "pledgee": "中信建投证券股份有限公司",
+          "qty": 5307300,
+          "ratio": 0.12,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "港交所",
+      "scode": "00388",
+      "tier": "core",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "中国移动",
+      "scode": "600941",
+      "tier": "core",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-28",
+          "title": "中国移动：2025年末期利润分派A股实施公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "创科实业",
+      "scode": "0669",
+      "tier": "core",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "大豪科技",
+      "scode": "603025",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-27",
+          "title": "北京大豪科技股份有限公司股东减持股份计划公告",
+          "importance": "CRITICAL",
+          "match": "减持"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "艾力斯",
+      "scode": "688578",
+      "tier": "growth",
+      "deep_score": 69,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "凯莱英",
+      "scode": "002821",
+      "tier": "growth",
+      "deep_score": 64,
+      "announcements": [
+        {
+          "date": "2026-06-02",
+          "title": "H股公告：证券变动月报表",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "科伦药业",
+      "scode": "002422",
+      "tier": "growth",
+      "deep_score": 65,
+      "announcements": [
+        {
+          "date": "2026-06-03",
+          "title": "2026年度第三期科技创新债券发行结果的公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2026-05-22",
+          "pledgor": "刘革新",
+          "pledgee": "中国银河证券股份有限公司",
+          "qty": NaN,
+          "ratio": 0.42,
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2026-05-22",
+          "pledgor": "刘革新",
+          "pledgee": "中国银河证券股份有限公司",
+          "qty": 18540000.0,
+          "ratio": 1.17,
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2026-05-22",
+          "pledgor": "刘革新",
+          "pledgee": "华泰证券(上海)资产管理有限公司",
+          "qty": NaN,
+          "ratio": 0.24,
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2026-05-22",
+          "pledgor": "刘革新",
+          "pledgee": "华泰证券(上海)资产管理有限公司",
+          "qty": NaN,
+          "ratio": 0.52,
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2026-05-22",
+          "pledgor": "刘革新",
+          "pledgee": "华泰证券(上海)资产管理有限公司",
+          "qty": 12000000.0,
+          "ratio": 0.75,
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2026-05-22",
+          "pledgor": "刘革新",
+          "pledgee": "中国银河证券股份有限公司",
+          "qty": NaN,
+          "ratio": 0.76,
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2026-05-22",
+          "pledgor": "刘革新",
+          "pledgee": "华泰证券(上海)资产管理有限公司",
+          "qty": NaN,
+          "ratio": 0.21,
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2026-05-22",
+          "pledgor": "刘革新",
+          "pledgee": "华泰证券(上海)资产管理有限公司",
+          "qty": 3000000.0,
+          "ratio": 0.19,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "百济神州",
+      "scode": "688235",
+      "tier": "growth",
+      "deep_score": 79,
+      "announcements": [
+        {
+          "date": "2026-06-01",
+          "title": "百济神州有限公司关于持股5%以上股东权益变动触及1%刻度的提示性公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "美的集团",
+      "scode": "000333",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-02",
+          "title": "关于回购A股股份事项前十名股东和前十名无限售条件股东持股情况的公告",
+          "importance": "WATCH",
+          "match": "回购"
+        },
+        {
+          "date": "2026-06-02",
+          "title": "关于以集中竞价交易方式回购A股股份进展情况的公告",
+          "importance": "WATCH",
+          "match": "回购"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "关于公司高级管理人员离任的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-27",
+          "title": "关于在库卡机器人自动化（广东）股份有限公司实施多元化员工持股计划方案的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-27",
+          "title": "第五届董事会第十六次会议决议公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2023-11-09",
+          "pledgor": "美的控股有限公司",
+          "pledgee": "中信证券股份有限公司",
+          "qty": 0,
+          "ratio": 1.42,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "盐津铺子",
+      "scode": "002847",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2025-11-06",
+          "pledgor": "张学文",
+          "pledgee": "云南国际信托有限公司",
+          "qty": 0,
+          "ratio": 1.28,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "特宝生物",
+      "scode": "688278",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-03",
+          "title": "特宝生物：关于以集中竞价交易方式回购公司股份比例达到1%暨回购进展的公告",
+          "importance": "WATCH",
+          "match": "回购"
+        },
+        {
+          "date": "2026-06-01",
+          "title": "特宝生物：关于以集中竞价交易方式首次回购公司股份暨回购进展的公告",
+          "importance": "WATCH",
+          "match": "回购"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "特宝生物：关于2025年年度权益分派实施后调整回购股份价格上限的公告",
+          "importance": "WATCH",
+          "match": "回购"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2023-07-08",
+          "pledgor": "蔡智华",
+          "pledgee": "未披露",
+          "qty": 0,
+          "ratio": 2.809,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "悍高集团",
+      "scode": "001221",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "福耀玻璃",
+      "scode": "600660",
+      "tier": "growth",
+      "deep_score": 90,
+      "announcements": [
+        {
+          "date": "2026-06-01",
+          "title": "H股市场公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2023-03-29",
+          "pledgor": "河仁慈善基金会",
+          "pledgee": "中国银行股份有限公司福建省分行",
+          "qty": 0,
+          "ratio": 2.68,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "山金国际",
+      "scode": "000975",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-01",
+          "title": "关于为子公司提供担保的进展公告",
+          "importance": "WATCH",
+          "match": "担保"
+        }
+      ],
+      "executive_trades": [
+        {
+          "date": "2026-05-28",
+          "name": "王水",
+          "position": "董事",
+          "qty": 30000,
+          "reason": "竞价交易",
+          "importance": "WATCH"
+        }
+      ],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2024-08-10",
+          "pledgor": "王水",
+          "pledgee": "长江证券股份有限公司",
+          "qty": 0,
+          "ratio": 0.5,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "小商品城",
+      "scode": "600415",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-29",
+          "title": "关于向香港联合交易所有限公司递交H股发行上市的申请并刊发申请资料的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-28",
+          "title": "关于召开2026年第一次临时股东会的通知",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-28",
+          "title": "第十届董事会第七次会议决议公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-28",
+          "title": "独立董事候选人声明与承诺（黄钟伟）",
+          "importance": "IGNORE",
+          "match": "独立董事"
+        },
+        {
+          "date": "2026-05-28",
+          "title": "独立董事提名人声明与承诺（黄钟伟）",
+          "importance": "IGNORE",
+          "match": "独立董事"
+        },
+        {
+          "date": "2026-05-28",
+          "title": "关于补选第十届董事会独立董事的公告",
+          "importance": "IGNORE",
+          "match": "独立董事"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "羚锐制药",
+      "scode": "600285",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2026-04-30",
+          "pledgor": "河南羚锐集团有限公司",
+          "pledgee": "未披露",
+          "qty": 0,
+          "ratio": 0.05,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "菜百股份",
+      "scode": "605599",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-03",
+          "title": "北京菜市口百货股份有限公司2025年年度权益分派实施公告",
+          "importance": "WATCH",
+          "match": "权益分派"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2025-09-29",
+          "pledgor": "浙江明牌实业股份有限公司",
+          "pledgee": "中信银行股份有限公司绍兴分行",
+          "qty": 30000000.0,
+          "ratio": 3.86,
+          "importance": "WATCH"
+        },
+        {
+          "date": "2025-09-29",
+          "pledgor": "浙江明牌实业股份有限公司",
+          "pledgee": "未披露",
+          "qty": NaN,
+          "ratio": 3.86,
+          "importance": "WATCH"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "科沃斯",
+      "scode": "603486",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-02",
+          "title": "关于为全资子公司提供担保进展的公告",
+          "importance": "WATCH",
+          "match": "担保"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "福特科技",
+      "scode": "605558",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "圣农发展",
+      "scode": "002299",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2020-04-24",
+          "pledgor": "福建圣农控股集团有限公司",
+          "pledgee": "招商银行股份有限公司福州分行",
+          "qty": 0,
+          "ratio": 0,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "南微医学",
+      "scode": "688029",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "安徽合力",
+      "scode": "600761",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-02",
+          "title": "安徽合力股份有限公司关于使用暂时闲置募集资金进行现金管理到期赎回的公告",
+          "importance": "IGNORE",
+          "match": "募集资金"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "泸州老窖",
+      "scode": "000568",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-02",
+          "title": "关于部分限制性股票回购注销完成的公告",
+          "importance": "WATCH",
+          "match": "回购"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2021-05-18",
+          "pledgor": "泸州市兴泸投资集团有限公司",
+          "pledgee": "中信建投证券股份有限公司",
+          "qty": 0,
+          "ratio": 4.1,
+          "importance": "WATCH"
+        },
+        {
+          "date": "2021-05-18",
+          "pledgor": "泸州市兴泸投资集团有限公司",
+          "pledgee": "中信建投证券股份有限公司",
+          "qty": 0,
+          "ratio": 2.87,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "顺丰控股",
+      "scode": "002352",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-02",
+          "title": "H股公告-截至2026年5月31日止月份之股份发行人的证券变动月报表",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-01",
+          "title": "关于回购公司A股股份的进展公告",
+          "importance": "WATCH",
+          "match": "回购"
+        },
+        {
+          "date": "2026-05-28",
+          "title": "H股公告-翌日披露报表",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-28",
+          "title": "关于回购公司A股股份比例达到3%的进展公告",
+          "importance": "WATCH",
+          "match": "回购"
+        },
+        {
+          "date": "2026-05-27",
+          "title": "H股公告-翌日披露报表",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-27",
+          "title": "关于控股子公司参与投资股权投资基金的进展公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2026-05-13",
+          "pledgor": "深圳明德控股发展有限公司",
+          "pledgee": "集友银行有限公司福州分行",
+          "qty": 0,
+          "ratio": 0.44,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "泡泡玛特",
+      "scode": "09992",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "安踏体育",
+      "scode": "02020",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "华润万象生活",
+      "scode": "01209",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "巨子生物",
+      "scode": "02367",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "赤子城科技",
+      "scode": "09911",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "康臣药业",
+      "scode": "01681",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "健盛集团",
+      "scode": "603558",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-01",
+          "title": "健盛集团关于股份回购进展公告",
+          "importance": "WATCH",
+          "match": "回购"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2025-11-13",
+          "pledgor": "张茂义",
+          "pledgee": "国金证券股份有限公司",
+          "qty": 11270000,
+          "ratio": 3.29,
+          "importance": "WATCH"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "水星家纺",
+      "scode": "603365",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "思源电气",
+      "scode": "002028",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-03",
+          "title": "关于召开2025年度股东会的通知",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-03",
+          "title": "关于开展商品期货套期保值业务的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-03",
+          "title": "第八届董事会第二十九次会议决议公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-03",
+          "title": "关于控股子公司江苏省如高高压电器有限公司-产能扩充建设项目投资的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-03",
+          "title": "关于修订《公司章程》的公告",
+          "importance": "IGNORE",
+          "match": "章程"
+        },
+        {
+          "date": "2026-06-02",
+          "title": "关于回购公司股份的进展公告",
+          "importance": "WATCH",
+          "match": "回购"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "东方电缆",
+      "scode": "603606",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2022-05-28",
+          "pledgor": "宁波东方集团有限公司",
+          "pledgee": "兴业银行股份有限公司宁波分行",
+          "qty": 0,
+          "ratio": 1.6,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "中密控股",
+      "scode": "300470",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2021-01-20",
+          "pledgor": "四川川机投资有限责任公司",
+          "pledgee": "国金证券股份有限公司",
+          "qty": 0,
+          "ratio": 0.585,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "杰瑞股份",
+      "scode": "002353",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-29",
+          "title": "2025年年度权益分派实施公告",
+          "importance": "WATCH",
+          "match": "权益分派"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2026-01-05",
+          "pledgor": "刘贞峰",
+          "pledgee": "中信证券股份有限公司",
+          "qty": NaN,
+          "ratio": 0.88,
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2026-01-05",
+          "pledgor": "刘贞峰",
+          "pledgee": "中信证券股份有限公司",
+          "qty": 8000000.0,
+          "ratio": 0.78,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "德业股份",
+      "scode": "605117",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-01",
+          "title": "关于2022年股票期权激励计划预留授予部分第二个行权期到期未行权的股票期权注销完成的公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [
+        {
+          "date": "2026-05-29",
+          "name": "刘书剑",
+          "position": "高级管理人员",
+          "qty": 29635,
+          "reason": "分红送转",
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2026-05-29",
+          "name": "季德海",
+          "position": "高级管理人员",
+          "qty": 79027,
+          "reason": "分红送转",
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2026-05-29",
+          "name": "张和君",
+          "position": "董事",
+          "qty": 80991053,
+          "reason": "分红送转",
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2026-05-29",
+          "name": "谈最",
+          "position": "董事、高级管理人员",
+          "qty": 39514,
+          "reason": "分红送转",
+          "importance": "IGNORE"
+        }
+      ],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2025-02-12",
+          "pledgor": "宁波梅山保税港区艾思睿投资管理有限公司",
+          "pledgee": "未披露",
+          "qty": 0,
+          "ratio": 0.43,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "国投电力",
+      "scode": "600886",
+      "tier": "growth",
+      "deep_score": 78,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "阿里巴巴",
+      "scode": "09988",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "北方华创",
+      "scode": "002371",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-29",
+          "title": "关于2025年员工持股计划完成股票购买的公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "三一重工",
+      "scode": "600031",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-02",
+          "title": "三一重工股份有限公司2025年年度股东会决议公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-02",
+          "title": "关于三一重工2025年年度股东会的法律意见书",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2022-11-04",
+          "pledgor": "周福贵",
+          "pledgee": "未披露",
+          "qty": 0,
+          "ratio": 0.03,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "山推股份",
+      "scode": "000680",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-02",
+          "title": "2025年度权益分派实施公告",
+          "importance": "WATCH",
+          "match": "权益分派"
+        },
+        {
+          "date": "2026-06-01",
+          "title": "关于选举董事长、副董事长、董事会专门委员会委员并聘任高级管理人员、证券事务代表的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-01",
+          "title": "第十二届董事会第一次会议决议公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-27",
+          "title": "关于发行境外上市股份（H股）获得中国证监会备案的公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2009-10-17",
+          "pledgor": "山东工程机械集团有限公司",
+          "pledgee": "中国光大银行股份有限公司济南分行、中国工商银行股份有限公司济宁分行",
+          "qty": 0,
+          "ratio": 0,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "同力股份",
+      "scode": "920599",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-31",
+          "title": "第六届董事会第八次会议决议公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-31",
+          "title": "关于竞价回购股份方案公告",
+          "importance": "WATCH",
+          "match": "回购"
+        },
+        {
+          "date": "2026-05-31",
+          "title": "股东增持股份结果公告",
+          "importance": "WATCH",
+          "match": "增持"
+        },
+        {
+          "date": "2026-05-31",
+          "title": "关于召开2026年第二次临时股东会通知公告（提供网络投票）",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "汇川技术",
+      "scode": "300124",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-03",
+          "title": "关于深圳市汇川技术股份有限公司第七期股权激励计划相关价格调整的法律意见书",
+          "importance": "WATCH",
+          "match": "股权激励"
+        },
+        {
+          "date": "2026-06-03",
+          "title": "第六届董事会第十五次会议决议公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-03",
+          "title": "关于调整第六期股权激励计划、第七期股权激励计划所涉权益工具回购价格、授予价格及行权价格的公告",
+          "importance": "WATCH",
+          "match": "回购"
+        },
+        {
+          "date": "2026-06-03",
+          "title": "关于深圳市汇川技术股份有限公司第六期股权激励计划相关价格调整的法律意见书",
+          "importance": "WATCH",
+          "match": "股权激励"
+        },
+        {
+          "date": "2026-06-01",
+          "title": "关于回购公司股份的进展公告",
+          "importance": "WATCH",
+          "match": "回购"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2023-01-05",
+          "pledgor": "朱兴明",
+          "pledgee": "国泰君安证券股份有限公司",
+          "qty": NaN,
+          "ratio": 0.04,
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2023-01-05",
+          "pledgor": "朱兴明",
+          "pledgee": "国泰君安证券股份有限公司",
+          "qty": 1000000.0,
+          "ratio": 0.04,
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2023-01-05",
+          "pledgor": "深圳市汇川投资有限公司",
+          "pledgee": "招商证券股份有限公司",
+          "qty": 6000000.0,
+          "ratio": 0.23,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "中国平安",
+      "scode": "601318",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-01",
+          "title": "中国平安H股公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-01",
+          "title": "中国平安2025年年度权益分派实施公告",
+          "importance": "WATCH",
+          "match": "权益分派"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2013-11-13",
+          "pledgor": "工布江达江南实业发展有限公司",
+          "pledgee": "未披露",
+          "qty": 8800000,
+          "ratio": 0.111,
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2013-11-13",
+          "pledgor": "同盈贸易有限公司、隆福集团有限公司、商发控股有限公司",
+          "pledgee": "UBS AG, London Branch",
+          "qty": 880153318,
+          "ratio": 11.12,
+          "importance": "CRITICAL"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "中国太保",
+      "scode": "601601",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-02",
+          "title": "中国太保H股公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "特斯拉",
+      "scode": "TSLA",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "宏发股份",
+      "scode": "600885",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-29",
+          "title": "宏发股份：2025年度可持续发展报告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "宏发股份：2025年度可持续发展报告摘要",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "宏发股份：第十一届董事会第十六次会议决议公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2026-02-14",
+          "pledgor": "有格创业投资有限公司",
+          "pledgee": "中国工商银行股份有限公司长泰支行",
+          "qty": 0,
+          "ratio": 0.65,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "生益科技",
+      "scode": "600183",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-29",
+          "title": "生益科技董事减持股份计划公告",
+          "importance": "CRITICAL",
+          "match": "减持"
+        },
+        {
+          "date": "2026-05-28",
+          "title": "生益科技2025年年度权益分派实施公告",
+          "importance": "WATCH",
+          "match": "权益分派"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2008-07-24",
+          "pledgor": "东莞市电子工业总公司",
+          "pledgee": "未披露",
+          "qty": 67500000,
+          "ratio": 0,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "盐湖股份",
+      "scode": "000792",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2024-12-12",
+          "pledgor": "青海省国有资产投资管理有限公司",
+          "pledgee": "中国华融资产管理股份有限公司青海省分公司",
+          "qty": NaN,
+          "ratio": 0.46,
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2024-12-12",
+          "pledgor": "青海省国有资产投资管理有限公司",
+          "pledgee": "中国工商银行股份有限公司西宁城西支行",
+          "qty": 25000000.0,
+          "ratio": 0.46,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "格力电器",
+      "scode": "000651",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2026-03-25",
+          "pledgor": "珠海明骏投资合伙企业(有限合伙)",
+          "pledgee": "中国农业银行股份有限公司珠海分行",
+          "qty": 0,
+          "ratio": 1.99,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "小米集团",
+      "scode": "01810",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "新易盛",
+      "scode": "300502",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-04",
+          "title": "2025年年度分红派息、转增股本实施公告",
+          "importance": "WATCH",
+          "match": "分红"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2023-11-03",
+          "pledgor": "高光荣",
+          "pledgee": "华泰证券(上海)资产管理有限公司",
+          "qty": 0,
+          "ratio": 1.37,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "中际旭创",
+      "scode": "300308",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-31",
+          "title": "中际旭创关于网络传闻的澄清公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-28",
+          "title": "关于公司第四期限制性股票激励计划首次授予部分第一个归属期归属结果暨股份上市公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-27",
+          "title": "独立董事提名人声明与承诺(一)",
+          "importance": "IGNORE",
+          "match": "独立董事"
+        },
+        {
+          "date": "2026-05-27",
+          "title": "独立董事候选人声明与承诺(成波）",
+          "importance": "IGNORE",
+          "match": "独立董事"
+        },
+        {
+          "date": "2026-05-27",
+          "title": "独立董事提名人声明与承诺(三)",
+          "importance": "IGNORE",
+          "match": "独立董事"
+        },
+        {
+          "date": "2026-05-27",
+          "title": "独立董事候选人声明与承诺(黄国滨)",
+          "importance": "IGNORE",
+          "match": "独立董事"
+        },
+        {
+          "date": "2026-05-27",
+          "title": "独立董事候选人声明与承诺(屈文洲）",
+          "importance": "IGNORE",
+          "match": "独立董事"
+        },
+        {
+          "date": "2026-05-27",
+          "title": "独立董事提名人声明与承诺(二)",
+          "importance": "IGNORE",
+          "match": "独立董事"
+        },
+        {
+          "date": "2026-05-27",
+          "title": "独立董事候选人声明与承诺(战淑萍）",
+          "importance": "IGNORE",
+          "match": "独立董事"
+        },
+        {
+          "date": "2026-05-27",
+          "title": "独立董事提名人声明与承诺(四)",
+          "importance": "IGNORE",
+          "match": "独立董事"
+        },
+        {
+          "date": "2026-05-27",
+          "title": "关于召开2026年第二次临时股东会的通知",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-27",
+          "title": "第五届董事会第三十三次会议决议公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2026-05-22",
+          "pledgor": "苏州益兴福企业管理中心(有限合伙)",
+          "pledgee": "中信证券股份有限公司",
+          "qty": NaN,
+          "ratio": 0.06,
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2026-05-22",
+          "pledgor": "苏州益兴福企业管理中心(有限合伙)",
+          "pledgee": "中信证券股份有限公司",
+          "qty": 350000.0,
+          "ratio": 0.03,
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2026-05-22",
+          "pledgor": "苏州益兴福企业管理中心(有限合伙)",
+          "pledgee": "国泰海通证券股份有限公司",
+          "qty": 1380000.0,
+          "ratio": 0.12,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "天孚通信",
+      "scode": "300394",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "沪电股份",
+      "scode": "002463",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2014-04-18",
+          "pledgor": "中新苏州工业园区创业投资有限公司",
+          "pledgee": "中国建设银行股份有限公司苏州工业园区支行",
+          "qty": 50000000,
+          "ratio": 3.58,
+          "importance": "WATCH"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "拼多多",
+      "scode": "PDD",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "海康威视",
+      "scode": "002415",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-29",
+          "title": "关于为子公司提供担保的进展公告",
+          "importance": "WATCH",
+          "match": "担保"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2020-10-20",
+          "pledgor": "新疆普康投资有限合伙企业",
+          "pledgee": "招商财富资产管理有限公司",
+          "qty": 0,
+          "ratio": 0.19,
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2020-10-20",
+          "pledgor": "新疆普康投资有限合伙企业",
+          "pledgee": "招商财富资产管理有限公司",
+          "qty": 0,
+          "ratio": 0.32,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "大华股份",
+      "scode": "002236",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2025-08-02",
+          "pledgor": "傅利泉",
+          "pledgee": "招商证券股份有限公司",
+          "qty": 0,
+          "ratio": 0.17,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "国电电力",
+      "scode": "600795",
+      "tier": "growth",
+      "deep_score": 68,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "拓荆科技",
+      "scode": "688072",
+      "tier": "growth",
+      "deep_score": 76,
+      "announcements": [
+        {
+          "date": "2026-05-28",
+          "title": "中信建投证券股份有限公司关于拓荆科技股份有限公司差异化分红事项的核查意见",
+          "importance": "WATCH",
+          "match": "分红"
+        },
+        {
+          "date": "2026-05-28",
+          "title": "2025年年度权益分派实施公告",
+          "importance": "WATCH",
+          "match": "权益分派"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2025-09-27",
+          "pledgor": "共青城芯鑫和投资合伙企业(有限合伙)",
+          "pledgee": "中国证券登记结算有限责任公司上海分公司",
+          "qty": 0,
+          "ratio": 0.72,
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2025-09-27",
+          "pledgor": "共青城芯鑫盛投资合伙企业(有限合伙)",
+          "pledgee": "中国证券登记结算有限责任公司上海分公司",
+          "qty": 0,
+          "ratio": 0.52,
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2025-09-27",
+          "pledgor": "共青城芯鑫阳投资合伙企业(有限合伙)",
+          "pledgee": "中国证券登记结算有限责任公司上海分公司",
+          "qty": 0,
+          "ratio": 0.26,
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2025-09-27",
+          "pledgor": "共青城芯鑫龙投资合伙企业(有限合伙)",
+          "pledgee": "中国证券登记结算有限责任公司上海分公司",
+          "qty": 0,
+          "ratio": 0.52,
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2025-09-27",
+          "pledgor": "共青城芯鑫全投资合伙企业(有限合伙)",
+          "pledgee": "中国证券登记结算有限责任公司上海分公司",
+          "qty": 0,
+          "ratio": 0.58,
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2025-09-27",
+          "pledgor": "共青城芯鑫成投资合伙企业(有限合伙)",
+          "pledgee": "中国证券登记结算有限责任公司上海分公司",
+          "qty": 0,
+          "ratio": 0.52,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "雅克科技",
+      "scode": "002409",
+      "tier": "growth",
+      "deep_score": 74,
+      "announcements": [
+        {
+          "date": "2026-06-03",
+          "title": "关于全资子公司对参股公司增资暨关联交易的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-03",
+          "title": "第七届董事会第二次会议决议公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2021-11-09",
+          "pledgor": "沈琦",
+          "pledgee": "招商证券资产管理有限公司",
+          "qty": 0,
+          "ratio": 1.79,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "中微公司",
+      "scode": "688012",
+      "tier": "growth",
+      "deep_score": 78,
+      "announcements": [
+        {
+          "date": "2026-06-03",
+          "title": "董事会薪酬与考核委员会关于2023年限制性股票激励计划第三个归属期及2025年限制性股票激励计划第一个归属期归属名单的核查意见",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-03",
+          "title": "关于公司2025年限制性股票激励计划第一个归属期符合归属条件的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-03",
+          "title": "第三届董事会第十三次会议决议公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-03",
+          "title": "关于调整公司2023年、2024年、2025年及2026年限制性股票激励计划相关事项的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-03",
+          "title": "关于作废处理2023年、2025年限制性股票激励计划部分限制性股票的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-03",
+          "title": "关于公司2023年限制性股票激励计划第三个归属期符合归属条件的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-03",
+          "title": "关于2023年第三个归属期、2025年第一个归属期符合归属条件暨部分作废之法律意见书",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-03",
+          "title": "关于调整2023、2024、2025及2026年限制性股票激励计划相关事项之法律意见书",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "上海市锦天城律师事务所关于中微半导体设备（上海）股份有限公司实施2025年年度权益分派后调整发行股份及支付现金购买资产并募集配套资金发行价格和发行数量之法律意见书",
+          "importance": "WATCH",
+          "match": "权益分派"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "关于实施2025年年度权益分派后调整发行股份及支付现金购买资产的股份发行价格和发行数量的公告",
+          "importance": "WATCH",
+          "match": "权益分派"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "关于发行股份及支付现金购买资产并募集配套资金之标的资产过户完成的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "中信证券股份有限公司关于中微半导体设备（上海）股份有限公司发行股份及支付现金购买资产并募集配套资金之募集配套资金之标的资产过户情况之独立财务顾问核查意见",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "上海市锦天城律师事务所关于中微半导体设备（上海）股份有限公司发行股份及支付现金购买资产并募集配套资金标的资产过户情况之法律意见书",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [
+        {
+          "date": "2026-05-29",
+          "name": "CONG HAI",
+          "position": "董事、高级管理人员、核心技术人员",
+          "qty": 21566,
+          "reason": "分红送转",
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2026-05-29",
+          "name": "JIN JU",
+          "position": "高级管理人员",
+          "qty": 12250,
+          "reason": "分红送转",
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2026-05-29",
+          "name": "何奕",
+          "position": "高级管理人员",
+          "qty": 29400,
+          "reason": "分红送转",
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2026-05-29",
+          "name": "刘志强",
+          "position": "核心技术人员",
+          "qty": 5410,
+          "reason": "分红送转",
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2026-05-29",
+          "name": "姜勇",
+          "position": "核心技术人员",
+          "qty": 16046,
+          "reason": "分红送转",
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2026-05-29",
+          "name": "姜银鑫",
+          "position": "高级管理人员",
+          "qty": 6946,
+          "reason": "分红送转",
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2026-05-29",
+          "name": "尹志尧",
+          "position": "董事、高级管理人员、核心技术人员",
+          "qty": 1971043,
+          "reason": "分红送转",
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2026-05-29",
+          "name": "张凯",
+          "position": "核心技术人员",
+          "qty": 463,
+          "reason": "分红送转",
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2026-05-29",
+          "name": "陈伟文",
+          "position": "高级管理人员",
+          "qty": 197850,
+          "reason": "分红送转",
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2026-05-29",
+          "name": "陳煌琳",
+          "position": "核心技术人员",
+          "qty": 5531,
+          "reason": "分红送转",
+          "importance": "IGNORE"
+        }
+      ],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "安集科技",
+      "scode": "688019",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-03",
+          "title": "部分董事及高管减持股份计划公告",
+          "importance": "CRITICAL",
+          "match": "减持"
+        },
+        {
+          "date": "2026-06-02",
+          "title": "2025年年度权益分派实施公告",
+          "importance": "WATCH",
+          "match": "权益分派"
+        },
+        {
+          "date": "2026-06-01",
+          "title": "部分董事及高管减持股份计划时间届满暨未减持股份的结果公告",
+          "importance": "CRITICAL",
+          "match": "减持"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "鼎龙股份",
+      "scode": "300054",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-28",
+          "title": "关于2024年股票期权激励计划部分股票期权注销完成的公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2026-05-15",
+          "pledgor": "朱顺全",
+          "pledgee": "华泰证券股份有限公司",
+          "qty": 2950000,
+          "ratio": 0.31,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "牧原股份",
+      "scode": "002714",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-01",
+          "title": "章程修正案",
+          "importance": "IGNORE",
+          "match": "章程"
+        },
+        {
+          "date": "2026-06-01",
+          "title": "公司章程（2026年6月）",
+          "importance": "IGNORE",
+          "match": "章程"
+        },
+        {
+          "date": "2026-06-01",
+          "title": "关于董事长辞任、选举董事长等事项的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-01",
+          "title": "关于聘任公司终身荣誉董事长暨关联交易的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-01",
+          "title": "关于召开2026年第二次临时股东会的通知",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-01",
+          "title": "第五届董事会独立董事专门会议第五次会议决议",
+          "importance": "IGNORE",
+          "match": "独立董事"
+        },
+        {
+          "date": "2026-06-01",
+          "title": "第五届董事会第十六次会议决议公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-27",
+          "title": "牧原食品集团股份有限公司2026年度跟踪评级报告",
+          "importance": "WATCH",
+          "match": "评级"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2026-01-07",
+          "pledgor": "牧原实业集团有限公司",
+          "pledgee": "财通证券资产管理有限公司",
+          "qty": 0,
+          "ratio": 0.87,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "新宙邦",
+      "scode": "300037",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2022-04-25",
+          "pledgor": "张桂文",
+          "pledgee": "中信证券股份有限公司",
+          "qty": 0,
+          "ratio": 0.12,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "天赐材料",
+      "scode": "002709",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-02",
+          "title": "关于注销募集资金现金管理专用结算账户的公告",
+          "importance": "IGNORE",
+          "match": "募集资金"
+        },
+        {
+          "date": "2026-06-01",
+          "title": "关于与楚能新能源签订生产材料采购合作协议的进展公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2022-02-11",
+          "pledgor": "徐金富",
+          "pledgee": "安信证券股份有限公司",
+          "qty": 0,
+          "ratio": 0.537,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "中国广核",
+      "scode": "003816",
+      "tier": "growth",
+      "deep_score": 80,
+      "announcements": [
+        {
+          "date": "2026-06-03",
+          "title": "境内同步披露公告-截至二零二六年五月三十一日止股份发行人的证券变动月报表",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-02",
+          "title": "关于台山2号机组换料大修进展的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "关于可转债转让及转股导致控股股东持股比例变动触及1%整数倍的公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2024-04-18",
+          "pledgor": "广东恒健投资控股有限公司",
+          "pledgee": "广发证券股份有限公司",
+          "qty": 662000000,
+          "ratio": 1.31,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "双环传动",
+      "scode": "002472",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-03",
+          "title": "关于2022年股票期权激励计划部分股票期权注销完成的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-01",
+          "title": "关于公司为全资子公司提供担保的进展公告",
+          "importance": "WATCH",
+          "match": "担保"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2025-03-10",
+          "pledgor": "李瑜",
+          "pledgee": "国信证券股份有限公司",
+          "qty": 0,
+          "ratio": 0.3,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "三花智控",
+      "scode": "002050",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-03",
+          "title": "H股公告-截至2026年5月31日止之股份发行人的证券变动月报表",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2025-09-26",
+          "pledgor": "浙江三花绿能实业集团有限公司",
+          "pledgee": "浙商证券股份有限公司",
+          "qty": 0,
+          "ratio": 3.36,
+          "importance": "WATCH"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "瑞芯微",
+      "scode": "603893",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "移远通信",
+      "scode": "603236",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-03",
+          "title": "2025EnvironmentalSocialandGovernance(ESG)Report",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-02",
+          "title": "关于调整2023年股票期权激励计划行权价格和行权数量的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-02",
+          "title": "上海市锦天城律师事务所关于公司2023年股票期权激励计划行权价格和行权数量调整相关事项的法律意见书",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [
+        {
+          "date": "2026-06-01",
+          "name": "张栋",
+          "position": "董事",
+          "qty": 1419488,
+          "reason": "分红送转",
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2026-06-01",
+          "name": "朱伟峰",
+          "position": "董事",
+          "qty": 2000,
+          "reason": "分红送转",
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2026-06-01",
+          "name": "杨中志",
+          "position": "董事",
+          "qty": 1456,
+          "reason": "分红送转",
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2026-06-01",
+          "name": "郑雷",
+          "position": "董事",
+          "qty": 2912,
+          "reason": "分红送转",
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2026-06-01",
+          "name": "钱鹏鹤",
+          "position": "董事",
+          "qty": 17988096,
+          "reason": "分红送转",
+          "importance": "IGNORE"
+        }
+      ],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "爱柯迪",
+      "scode": "600933",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-02",
+          "title": "关于实施2025年度权益分派时“爱迪转债”停止转股的提示性公告",
+          "importance": "WATCH",
+          "match": "权益分派"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "IBM",
+      "scode": "IBM",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "金钼股份",
+      "scode": "601958",
+      "tier": "growth",
+      "deep_score": 83,
+      "announcements": [
+        {
+          "date": "2026-06-02",
+          "title": "金钼股份2025年年度股东会会议材料",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-02",
+          "title": "金钼股份关于召开2025年年度股东会的通知",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-28",
+          "title": "金钼股份股票交易异常波动公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "江丰电子",
+      "scode": "300666",
+      "tier": "growth",
+      "deep_score": 76,
+      "announcements": [
+        {
+          "date": "2026-05-29",
+          "title": "关于增加公司经营场所及修订《公司章程》的公告",
+          "importance": "IGNORE",
+          "match": "章程"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "宁波江丰电子材料股份有限公司章程（2026年5月）",
+          "importance": "IGNORE",
+          "match": "章程"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "关于增设募集资金专项账户并授权签署监管协议的公告",
+          "importance": "IGNORE",
+          "match": "募集资金"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "关于召开2026年第二次临时股东会的通知",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "第四届董事会第三十五次会议决议公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-28",
+          "title": "关于与关联人共同收购北京凯德石英股份有限公司控制权暨关联交易进展暨取得北京证券交易所合规性确认的公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2026-04-27",
+          "pledgor": "姚力军",
+          "pledgee": "中信证券股份有限公司",
+          "qty": 2024000,
+          "ratio": 0.76,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "紫金矿业",
+      "scode": "601899",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-02",
+          "title": "紫金矿业集团股份有限公司关于调整2025年年度股东会现场会议召开地点的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "紫金矿业H股市场公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2018-12-14",
+          "pledgor": "闽西兴杭国有资产投资经营有限公司",
+          "pledgee": "云南国际信托有限公司",
+          "qty": 0,
+          "ratio": 1.26,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "润泽科技",
+      "scode": "300442",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-01",
+          "title": "关于特定股东减持股份的预披露公告",
+          "importance": "CRITICAL",
+          "match": "减持"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2022-07-18",
+          "pledgor": "苏州工业园区合杰创业投资中心(有限合伙)",
+          "pledgee": "杨思清",
+          "qty": 1000000,
+          "ratio": 1.0,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "工业富联",
+      "scode": "601138",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-29",
+          "title": "富士康工业互联网股份有限公司2025年年度股东会会议资料",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "联想集团",
+      "scode": "0992",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "农夫山泉",
+      "scode": "09633",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "迈瑞医疗",
+      "scode": "300760",
+      "tier": "growth",
+      "deep_score": 84,
+      "announcements": [
+        {
+          "date": "2026-05-29",
+          "title": "关于控股股东部分股份解除质押的公告",
+          "importance": "WATCH",
+          "match": "质押"
+        }
+      ],
+      "executive_trades": [
+        {
+          "date": "2026-06-04",
+          "name": "李朝阳",
+          "position": "高管",
+          "qty": 5000,
+          "reason": "竞价交易",
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2026-05-28",
+          "name": "李朝阳",
+          "position": "高管",
+          "qty": 10000,
+          "reason": "竞价交易",
+          "importance": "IGNORE"
+        }
+      ],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2026-05-29",
+          "pledgor": "Magnifice(HK)Limited",
+          "pledgee": "招商银行股份有限公司纽约分行",
+          "qty": 0,
+          "ratio": 0.82,
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2026-05-29",
+          "pledgor": "Magnifice(HK)Limited",
+          "pledgee": "招商银行股份有限公司纽约分行",
+          "qty": 0,
+          "ratio": 0.3,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "爱尔眼科",
+      "scode": "300015",
+      "tier": "growth",
+      "deep_score": 73,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2026-03-16",
+          "pledgor": "爱尔医疗投资集团有限公司",
+          "pledgee": "深圳平安汇通投资管理有限公司",
+          "qty": 0,
+          "ratio": 1.17,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "分众传媒",
+      "scode": "002027",
+      "tier": "growth",
+      "deep_score": 82,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2015-12-24",
+          "pledgor": "易贤忠",
+          "pledgee": "分众多媒体技术（上海）有限公司",
+          "qty": 20000000,
+          "ratio": 6.62,
+          "importance": "WATCH"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "乖宝宠物",
+      "scode": "301498",
+      "tier": "growth",
+      "deep_score": 74,
+      "announcements": [
+        {
+          "date": "2026-06-02",
+          "title": "关于回购股份的进展公告",
+          "importance": "WATCH",
+          "match": "回购"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "联影医疗",
+      "scode": "688271",
+      "tier": "growth",
+      "deep_score": 71,
+      "announcements": [
+        {
+          "date": "2026-06-01",
+          "title": "联影医疗关于股份回购进展公告",
+          "importance": "WATCH",
+          "match": "回购"
+        },
+        {
+          "date": "2026-05-31",
+          "title": "联影医疗2026年限制性股票激励计划（草案）摘要公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-31",
+          "title": "联影医疗关于拟为部分客户提供担保的公告",
+          "importance": "WATCH",
+          "match": "担保"
+        },
+        {
+          "date": "2026-05-31",
+          "title": "联影医疗2026年限制性股票激励计划首次授予激励对象名单",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-31",
+          "title": "联影医疗2026年限制性股票激励计划（草案）",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-31",
+          "title": "联影医疗关于召开2025年年度股东会的通知",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-31",
+          "title": "联影医疗董事会薪酬与考核委员会关于公司2026年限制性股票激励计划（草案）的核查意见",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-31",
+          "title": "联影医疗2026年限制性股票激励计划实施考核管理办法",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-31",
+          "title": "联影医疗第二届董事会第三十一次会议决议公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-31",
+          "title": "联影医疗关于增加2026年度日常关联交易预计的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-31",
+          "title": "上海市通力律师事务所关于上海联影医疗科技股份有限公司2026年限制性股票激励计划(草案)之法律意见书",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-31",
+          "title": "联影医疗第二届董事会独立董事第八次专门会议决议",
+          "importance": "IGNORE",
+          "match": "独立董事"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "翰森制药",
+      "scode": "3692",
+      "tier": "growth",
+      "deep_score": 84,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "信达生物",
+      "scode": "1801",
+      "tier": "growth",
+      "deep_score": 80,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "中国铝业",
+      "scode": "601600",
+      "tier": "growth",
+      "deep_score": 72,
+      "announcements": [
+        {
+          "date": "2026-06-02",
+          "title": "北京金诚同达律师事务所关于中国铝业回购注销部分限制性股票及调整回购价格、首次授予部分第三个解除限售期解除限售条件成就法律意见书",
+          "importance": "WATCH",
+          "match": "回购"
+        },
+        {
+          "date": "2026-06-02",
+          "title": "中国铝业关于拟续聘会计师事务所的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-02",
+          "title": "中国铝业关于回购注销部分激励对象已获授但尚未解除限售的限制性股票及调整回购价格的公告",
+          "importance": "WATCH",
+          "match": "回购"
+        },
+        {
+          "date": "2026-06-02",
+          "title": "中国铝业第九届董事会第十四次会议决议公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-02",
+          "title": "中国铝业关于回购注销部分限制性股票减少注册资本暨通知债权人的公告",
+          "importance": "WATCH",
+          "match": "回购"
+        },
+        {
+          "date": "2026-06-02",
+          "title": "中国铝业关于2021年限制性股票激励计划首次授予部分第三个解除限售期解除限售条件成就的公告",
+          "importance": "WATCH",
+          "match": "限售"
+        },
+        {
+          "date": "2026-06-02",
+          "title": "中国铝业截至二零二六年五月三十一日止股份发行人的证券变动月报表",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "银河娱乐",
+      "scode": "0027",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "美高梅中国",
+      "scode": "2282",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "金沙中国",
+      "scode": "1928",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "三环集团",
+      "scode": "300408",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-03",
+          "title": "关于发行境外上市股份（H股）获得中国证监会备案的公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "联瑞新材",
+      "scode": "688300",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-03",
+          "title": "联瑞新材关于实施2025年年度权益分派调整可转债转股价格的公告",
+          "importance": "WATCH",
+          "match": "权益分派"
+        },
+        {
+          "date": "2026-06-03",
+          "title": "联瑞新材2025年年度权益分派实施公告",
+          "importance": "WATCH",
+          "match": "权益分派"
+        },
+        {
+          "date": "2026-06-03",
+          "title": "联瑞新材第四届董事会第二十三次会议决议公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "江苏联瑞新材料股份有限公司主体与相关债项2026年度跟踪评级报告",
+          "importance": "WATCH",
+          "match": "评级"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "联瑞新材关于“联瑞转债”跟踪信用评级结果的公告",
+          "importance": "WATCH",
+          "match": "评级"
+        },
+        {
+          "date": "2026-05-28",
+          "title": "联瑞新材关于“联瑞转债”交易异常波动的公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "菲利华",
+      "scode": "300395",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-04",
+          "title": "关于开立募集资金专户并签订募集资金三方监管协议的公告",
+          "importance": "IGNORE",
+          "match": "募集资金"
+        },
+        {
+          "date": "2026-05-28",
+          "title": "关于实际控制人部分股份解除质押的公告",
+          "importance": "CRITICAL",
+          "match": "实际控制人"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2026-05-28",
+          "pledgor": "邓家贵",
+          "pledgee": "广发证券股份有限公司",
+          "qty": 0,
+          "ratio": 0.07,
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2026-05-28",
+          "pledgor": "邓家贵",
+          "pledgee": "广发证券股份有限公司",
+          "qty": 0,
+          "ratio": 0.07,
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2026-05-28",
+          "pledgor": "邓家贵",
+          "pledgee": "广发证券股份有限公司",
+          "qty": 0,
+          "ratio": 0.07,
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2026-05-28",
+          "pledgor": "邓家贵",
+          "pledgee": "广发证券股份有限公司",
+          "qty": 0,
+          "ratio": 0.07,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "广联达",
+      "scode": "002410",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-01",
+          "title": "关于修订《公司章程》及配套制度的公告",
+          "importance": "IGNORE",
+          "match": "章程"
+        },
+        {
+          "date": "2026-06-01",
+          "title": "广联达科技股份有限公司董事会提名与治理委员会工作细则",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-01",
+          "title": "关于召开2026年第一次临时股东会的通知",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-01",
+          "title": "第七届董事会第二次会议决议公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2026-05-20",
+          "pledgor": "刁志中",
+          "pledgee": "招商证券股份有限公司",
+          "qty": 4450000,
+          "ratio": 0.27,
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2026-05-20",
+          "pledgor": "刁志中",
+          "pledgee": "招商证券股份有限公司",
+          "qty": 6050000,
+          "ratio": 0.37,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "深信服",
+      "scode": "300454",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-03",
+          "title": "深信服科技股份有限公司关于职工代表董事换届选举的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-03",
+          "title": "北京市金杜（深圳）律师事务所关于深信服科技股份有限公司2025年年度股东会之法律意见书",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-03",
+          "title": "深信服科技股份有限公司2025年年度股东会决议公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-02",
+          "title": "深信服科技股份有限公司关于回购股份进展情况的公告",
+          "importance": "WATCH",
+          "match": "回购"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2021-09-10",
+          "pledgor": "何朝曦",
+          "pledgee": "中信建投证券股份有限公司",
+          "qty": 0,
+          "ratio": 0.12,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "恒生电子",
+      "scode": "600570",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-02",
+          "title": "恒生电子股份有限公司2025年年度权益分派实施公告",
+          "importance": "WATCH",
+          "match": "权益分派"
+        },
+        {
+          "date": "2026-06-02",
+          "title": "北京竞天公诚（杭州）律师事务所关于恒生电子股份有限公司差异化分红事项之法律意见书",
+          "importance": "WATCH",
+          "match": "分红"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2015-01-07",
+          "pledgor": "杭州恒生电子集团有限公司",
+          "pledgee": "浙商银行股份有限公司杭州建国支行",
+          "qty": 0,
+          "ratio": 0,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "中航高科",
+      "scode": "600862",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2008-01-12",
+          "pledgor": "江苏省技术进出口公司",
+          "pledgee": "中国银行江苏省分行",
+          "qty": 15720000,
+          "ratio": 0,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "携程",
+      "scode": "09961",
+      "tier": "growth",
+      "deep_score": 82,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "同程旅行",
+      "scode": "0780",
+      "tier": "growth",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "君实生物",
+      "scode": "688180",
+      "tier": "radar",
+      "deep_score": 57,
+      "announcements": [
+        {
+          "date": "2026-06-03",
+          "title": "君实生物H股公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "兴业银行",
+      "scode": "601166",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-01",
+          "title": "兴业银行关于实施2025年年度A股权益分派时“兴业转债”停止转股的提示性公告",
+          "importance": "WATCH",
+          "match": "权益分派"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2014-05-29",
+          "pledgor": "福建省青山纸业股份有限公司",
+          "pledgee": "中国银行股份有限公司沙县支行",
+          "qty": 0,
+          "ratio": 0.432,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "邮储银行",
+      "scode": "601658",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-03",
+          "title": "中国邮政储蓄银行股份有限公司关于董事任职及董事离任的公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "保利发展",
+      "scode": "600048",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-28",
+          "title": "保利发展控股集团股份有限公司关于归还临时补充流动资金的募集资金的公告",
+          "importance": "IGNORE",
+          "match": "募集资金"
+        },
+        {
+          "date": "2026-05-28",
+          "title": "保利发展控股集团股份有限公司2026年第5次临时董事会决议公告",
+          "importance": "IGNORE",
+          "match": "董事会决议公告"
+        },
+        {
+          "date": "2026-05-28",
+          "title": "保利发展控股集团股份有限公司关于使用部分闲置募集资金临时补充流动资金的公告",
+          "importance": "IGNORE",
+          "match": "募集资金"
+        },
+        {
+          "date": "2026-05-28",
+          "title": "中国国际金融股份有限公司关于保利发展控股集团股份有限公司使用部分闲置募集资金临时补充流动资金的核查意见",
+          "importance": "IGNORE",
+          "match": "募集资金"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "埃斯顿",
+      "scode": "002747",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-01",
+          "title": "H股公告-截至2026年5月31日止月份之股份发行人的证券变动月报表",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2026-05-16",
+          "pledgor": "南京派雷斯特科技有限公司",
+          "pledgee": "华泰证券(上海)资产管理有限公司",
+          "qty": 0,
+          "ratio": 1.14,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "陕西煤业",
+      "scode": "601225",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-01",
+          "title": "陕西煤业股份有限公司第四届董事会第八次会议决议公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-01",
+          "title": "陕西煤业2025年年度股东会会议材料",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-01",
+          "title": "陕西煤业股份有限公司关于子公司所属企业办理融资租赁业务暨关联交易的公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "双汇发展",
+      "scode": "000895",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2015-01-21",
+          "pledgor": "罗特克斯有限公司",
+          "pledgee": "中国银行(香港)有限公司",
+          "qty": 0,
+          "ratio": 0,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "重庆啤酒",
+      "scode": "600132",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "科博达",
+      "scode": "603786",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-27",
+          "title": "科博达技术股份有限公司关于2025年度暨2026年第一季度业绩说明会召开情况的公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "思特威",
+      "scode": "688213",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "佰维存储",
+      "scode": "688525",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-02",
+          "title": "关于变更注册资本并完成工商变更登记的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-02",
+          "title": "股东减持计划完成暨减持股份结果公告",
+          "importance": "CRITICAL",
+          "match": "减持"
+        },
+        {
+          "date": "2026-06-02",
+          "title": "关于2024年限制性股票激励计划预留授予第二个归属期归属结果暨股份上市的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-28",
+          "title": "上海市锦天城（深圳）律师事务所关于深圳佰维存储科技股份有限公司2026年第二次临时股东会的法律意见书",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-28",
+          "title": "2026年第二次临时股东会决议公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [
+        {
+          "date": "2026-06-02",
+          "name": "邱宏浩",
+          "position": "核心技术人员",
+          "qty": 27000,
+          "reason": "股权激励实施",
+          "importance": "WATCH"
+        }
+      ],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "伊利股份",
+      "scode": "600887",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-29",
+          "title": "内蒙古伊利实业集团股份有限公司第十二届董事会临时会议决议公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "内蒙古伊利实业集团股份有限公司关于为全资子公司提供担保的进展公告",
+          "importance": "WATCH",
+          "match": "担保"
+        },
+        {
+          "date": "2026-05-28",
+          "title": "内蒙古伊利实业集团股份有限公司2025年年度权益分派实施公告",
+          "importance": "WATCH",
+          "match": "权益分派"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2026-03-17",
+          "pledgor": "呼和浩特投资有限责任公司",
+          "pledgee": "未披露",
+          "qty": 0,
+          "ratio": 0.18,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "Firefly Aerospace",
+      "scode": "FLY",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "紫光国微",
+      "scode": "002049",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-03",
+          "title": "上海市锦天城律师事务所关于紫光国芯微电子股份有限公司发行股份及支付现金购买资产并募集配套资金暨关联交易之相关人员买卖股票情况之专项核查意见",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-03",
+          "title": "西南证券股份有限公司关于紫光国芯微电子股份有限公司本次交易相关内幕信息知情人买卖股票情况的自查报告的核查意见",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-03",
+          "title": "关于发行股份及支付现金购买资产并募集配套资金暨关联交易相关主体买卖股票情况自查报告的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-02",
+          "title": "可转换公司债券2026年付息公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2022-06-11",
+          "pledgor": "西藏紫光春华投资有限公司",
+          "pledgee": "北京银行股份有限公司清华园支行",
+          "qty": 0,
+          "ratio": 16.14,
+          "importance": "CRITICAL"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "科达利",
+      "scode": "002850",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-03",
+          "title": "关于提前赎回科利转债的第十二次提示性公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-02",
+          "title": "关于提前赎回科利转债的第十一次提示性公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-01",
+          "title": "关于提前赎回科利转债的第十次提示性公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-31",
+          "title": "关于提前赎回科利转债的第九次提示性公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "关于完成工商变更登记的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-28",
+          "title": "关于提前赎回科利转债的第八次提示性公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-27",
+          "title": "关于提前赎回科利转债的第七次提示性公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2024-09-23",
+          "pledgor": "励建立",
+          "pledgee": "中国银河证券股份有限公司",
+          "qty": 0,
+          "ratio": 0.74,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "先导智能",
+      "scode": "300450",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-03",
+          "title": "H股公告-证券变动月报表",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "关于募集资金专户完成销户的公告",
+          "importance": "IGNORE",
+          "match": "募集资金"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2022-03-25",
+          "pledgor": "江苏欣导创业投资合伙企业(有限合伙)",
+          "pledgee": "上海浦东发展银行股份有限公司无锡分行",
+          "qty": 0,
+          "ratio": 2.05,
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2022-03-25",
+          "pledgor": "江苏欣导创业投资合伙企业(有限合伙)",
+          "pledgee": "中信银行股份有限公司无锡分行",
+          "qty": 0,
+          "ratio": 2.15,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "璞泰来",
+      "scode": "603659",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-03",
+          "title": "上海璞泰来新能源科技集团股份有限公司关于控股股东股份质押及解押的公告",
+          "importance": "WATCH",
+          "match": "质押"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "上海璞泰来新能源科技集团股份有限公司2026年第二次临时股东会会议材料",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "上海璞泰来新能源科技集团股份有限公司关于对子公司提供的担保进展公告",
+          "importance": "WATCH",
+          "match": "担保"
+        }
+      ],
+      "executive_trades": [
+        {
+          "date": "2026-05-29",
+          "name": "刘勇标",
+          "position": "高级管理人员",
+          "qty": 340000,
+          "reason": "股权激励实施",
+          "importance": "CRITICAL"
+        },
+        {
+          "date": "2026-05-28",
+          "name": "刘芳",
+          "position": "高级管理人员",
+          "qty": 190400,
+          "reason": "股权激励实施",
+          "importance": "CRITICAL"
+        }
+      ],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2026-06-04",
+          "pledgor": "梁丰",
+          "pledgee": "中信证券股份有限公司",
+          "qty": 14490000.0,
+          "ratio": 0.68,
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2026-06-04",
+          "pledgor": "梁丰",
+          "pledgee": "国通信托有限责任公司",
+          "qty": 25000000.0,
+          "ratio": 1.17,
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2026-06-04",
+          "pledgor": "梁丰",
+          "pledgee": "未披露",
+          "qty": NaN,
+          "ratio": 0.78,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "大博医疗",
+      "scode": "002901",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-01",
+          "title": "关于回购公司股份的进展公告",
+          "importance": "WATCH",
+          "match": "回购"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "锦波生物",
+      "scode": "920982",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-31",
+          "title": "关于2025年股票期权激励计划部分股票期权注销完成暨预留部分股票期权权益失效公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-31",
+          "title": "回购进展情况公告",
+          "importance": "WATCH",
+          "match": "回购"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "心脉医疗",
+      "scode": "688016",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-29",
+          "title": "心脉医疗：2025年年度权益分派实施公告",
+          "importance": "WATCH",
+          "match": "权益分派"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "北京市嘉源律师事务所关于上海微创心脉医疗科技（集团）股份有限公司差异化分红事项之专项法律意见书",
+          "importance": "WATCH",
+          "match": "分红"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "乐鑫科技",
+      "scode": "688018",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-31",
+          "title": "中信证券股份有限公司关于乐鑫信息科技（上海）股份有限公司差异化分红的核查意见",
+          "importance": "WATCH",
+          "match": "分红"
+        },
+        {
+          "date": "2026-05-31",
+          "title": "乐鑫科技2025年年度权益分派实施公告",
+          "importance": "WATCH",
+          "match": "权益分派"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "荣昌生物",
+      "scode": "688331",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-01",
+          "title": "H股公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "伟测科技",
+      "scode": "688372",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "明泰铝业",
+      "scode": "601677",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2019-02-01",
+          "pledgor": "马廷义",
+          "pledgee": "华泰证券股份有限公司",
+          "qty": 0,
+          "ratio": 0.56,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "中孚实业",
+      "scode": "600595",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-28",
+          "title": "河南中孚实业股份有限公司关于担保实施进展公告",
+          "importance": "WATCH",
+          "match": "担保"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2025-08-16",
+          "pledgor": "河南豫联能源集团有限责任公司",
+          "pledgee": "未披露",
+          "qty": 0,
+          "ratio": 1.0,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "华友钴业",
+      "scode": "603799",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-01",
+          "title": "华友钴业2026年度第六期超短期融资券发行结果公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2026-03-26",
+          "pledgor": "华友控股集团有限公司",
+          "pledgee": "嘉兴银行股份有限公司桐乡支行",
+          "qty": 3500000.0,
+          "ratio": 0.18,
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2026-03-26",
+          "pledgor": "华友控股集团有限公司",
+          "pledgee": "未披露",
+          "qty": NaN,
+          "ratio": 0.21,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "腾远钴业",
+      "scode": "301219",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-29",
+          "title": "关于实际控制人之一致行动人、部分高级管理人员股份减持的预披露公告",
+          "importance": "CRITICAL",
+          "match": "减持"
+        },
+        {
+          "date": "2026-05-28",
+          "title": "2025年年度权益分派实施公告",
+          "importance": "WATCH",
+          "match": "权益分派"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "洛阳钼业",
+      "scode": "603993",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2023-10-24",
+          "pledgor": "洛阳矿业集团有限公司",
+          "pledgee": "宁德时代新能源科技股份有限公司",
+          "qty": 0,
+          "ratio": 24.68,
+          "importance": "CRITICAL"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "海光信息",
+      "scode": "688041",
+      "tier": "radar",
+      "deep_score": 72,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "泰鸿万立",
+      "scode": "603210",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-02",
+          "title": "浙江泰鸿万立科技股份有限公司2025年年度权益分派实施公告",
+          "importance": "WATCH",
+          "match": "权益分派"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "紫光股份",
+      "scode": "000938",
+      "tier": "radar",
+      "deep_score": 49,
+      "announcements": [
+        {
+          "date": "2026-06-01",
+          "title": "2026年第三次临时股东会法律意见书",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-01",
+          "title": "2026年第三次临时股东会决议公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "关于紫光国际与投资者受让新华三少数股东所持全部股权交割完成的公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2022-06-30",
+          "pledgor": "西藏紫光通信投资有限公司",
+          "pledgee": "中国进出口银行",
+          "qty": 0,
+          "ratio": 26.07,
+          "importance": "CRITICAL"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "联合健康",
+      "scode": "UNH",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "铂科新材",
+      "scode": "300811",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-03",
+          "title": "关于2023年限制性股票与股票期权激励计划之股票期权第三个行权期行权条件成就的公告（更正后）",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-03",
+          "title": "北京市天元律师事务所关于公司2023年限制性股票与股票期权激励计划调整股票期权行权价格及数量和限制性股票授予价格及数量、第三个归属期归属条件及第三个行权期行权条件成就及作废部分限制性股票、注销部分股票期权事项的法律意见（更正后）",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-03",
+          "title": "关于2023年限制性股票与股票期权激励计划之限制性股票第三个归属期归属条件成就的公告（更正后）",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-03",
+          "title": "关于2023年限制性股票与股票期权激励计划调整行权价格相关事项的更正公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-03",
+          "title": "关于调整股票期权行权价格及数量和限制性股票授予价格及数量的公告（更正后）",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-01",
+          "title": "董事会专门委员会议事规则（2026年6月）",
+          "importance": "IGNORE",
+          "match": "议事规则"
+        },
+        {
+          "date": "2026-06-01",
+          "title": "董事会审计委员会议事规则（草案）（H股上市后适用）",
+          "importance": "IGNORE",
+          "match": "议事规则"
+        },
+        {
+          "date": "2026-06-01",
+          "title": "独立董事工作制度（草案）（H股发行上市后适用）",
+          "importance": "IGNORE",
+          "match": "独立董事"
+        },
+        {
+          "date": "2026-06-01",
+          "title": "董事会薪酬与考核委员会议事规则（草案）（H股发行上市后适用）",
+          "importance": "IGNORE",
+          "match": "议事规则"
+        },
+        {
+          "date": "2026-06-01",
+          "title": "董事和高级管理人员持有和买卖公司股票管理制度（草案）（H股发行上市后适用）",
+          "importance": "IGNORE",
+          "match": "制度"
+        },
+        {
+          "date": "2026-06-01",
+          "title": "对外投资管理办法（草案）（H股发行上市后适用）",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-01",
+          "title": "董事会战略与ESG委员会议事规则（草案）（H股上市后适用）",
+          "importance": "IGNORE",
+          "match": "议事规则"
+        },
+        {
+          "date": "2026-06-01",
+          "title": "对外担保决策管理制度（草案）（H股发行上市后适用）",
+          "importance": "WATCH",
+          "match": "担保"
+        },
+        {
+          "date": "2026-06-01",
+          "title": "董事会议事规则（草案）（H股发行上市后适用）",
+          "importance": "IGNORE",
+          "match": "议事规则"
+        },
+        {
+          "date": "2026-06-01",
+          "title": "董事和高级管理人员离职管理制度（草案）（H股发行上市后适用）",
+          "importance": "IGNORE",
+          "match": "制度"
+        },
+        {
+          "date": "2026-06-01",
+          "title": "董事会多元化政策（草案）（H股发行上市后适用）",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-01",
+          "title": "关于修订于H股发行上市后适用的《公司章程》及修订、制定相关内部治理制度的公告",
+          "importance": "IGNORE",
+          "match": "章程"
+        },
+        {
+          "date": "2026-06-01",
+          "title": "关于公司董事会战略委员会调整为董事会战略与ESG委员会并修订相关制度的公告",
+          "importance": "IGNORE",
+          "match": "制度"
+        },
+        {
+          "date": "2026-06-01",
+          "title": "董事会提名委员会议事规则（草案）（H股发行上市后适用）",
+          "importance": "IGNORE",
+          "match": "议事规则"
+        },
+        {
+          "date": "2026-06-01",
+          "title": "境外发行证券和上市相关保密及档案管理工作制度（2026年6月）",
+          "importance": "IGNORE",
+          "match": "制度"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2024-02-05",
+          "pledgor": "阮佳林",
+          "pledgee": "广发证券股份有限公司",
+          "qty": 0,
+          "ratio": 0.41,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "山西汾酒",
+      "scode": "600809",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "海天味业",
+      "scode": "603288",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-03",
+          "title": "H股公告-截至二零二六年五月三十一日止月份之股份发行人的证券变动月报表",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2022-02-11",
+          "pledgor": "陈军阳",
+          "pledgee": "招商证券股份有限公司",
+          "qty": 970000,
+          "ratio": 0.023,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "青岛啤酒",
+      "scode": "600600",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "美光科技",
+      "scode": "MU",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "Rocket Lab",
+      "scode": "RKLB",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "巨化股份",
+      "scode": "600160",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-02",
+          "title": "巨化股份2025年年度权益分派实施公告",
+          "importance": "WATCH",
+          "match": "权益分派"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2019-12-17",
+          "pledgor": "袁志敏",
+          "pledgee": "广发证券资产管理(广东)有限公司",
+          "qty": 0,
+          "ratio": 0.88,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "神火股份",
+      "scode": "000933",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2023-12-08",
+          "pledgor": "河南神火集团有限公司",
+          "pledgee": "中原银行股份有限公司商丘分行",
+          "qty": 0,
+          "ratio": 10.22,
+          "importance": "CRITICAL"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "中国海油",
+      "scode": "600938",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-03",
+          "title": "中国海洋石油有限公司2025年度股东周年大会决议公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-03",
+          "title": "北京市金杜律师事务所关于中国海洋石油有限公司2025年度股东周年大会之法律意见书",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "江森自控",
+      "scode": "JCI",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "Quanta Services",
+      "scode": "PWR",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "三星电气",
+      "scode": "601567",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-02",
+          "title": "上海市锦天城律师事务所关于宁波三星医疗电气股份有限公司差异化分红事项的法律意见书",
+          "importance": "WATCH",
+          "match": "分红"
+        },
+        {
+          "date": "2026-06-02",
+          "title": "三星电气2025年年度权益分派实施公告",
+          "importance": "WATCH",
+          "match": "权益分派"
+        },
+        {
+          "date": "2026-06-01",
+          "title": "三星电气关于签订海外经营合同的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-01",
+          "title": "三星电气关于子公司经营合同预中标的提示性公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "三星电气关于召开2025年度暨2026年第一季度业绩说明会的公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2017-04-22",
+          "pledgor": "郑江",
+          "pledgee": "浙江浙商证券资产管理有限公司",
+          "qty": 0,
+          "ratio": 0,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "伟创电气",
+      "scode": "688698",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-01",
+          "title": "2025年年度权益分派实施公告",
+          "importance": "WATCH",
+          "match": "权益分派"
+        },
+        {
+          "date": "2026-06-01",
+          "title": "国泰海通关于伟创电气差异化权益分派特殊除权除息业务申请的核查意见",
+          "importance": "WATCH",
+          "match": "权益分派"
+        },
+        {
+          "date": "2026-05-28",
+          "title": "股东询价转让结果报告书暨持股5%以上股东权益变触及1%和5%整数倍的提示性公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-28",
+          "title": "国泰海通证券股份有限公司关于苏州伟创电气科技股份有限公司股东向特定机构投资者询价转让股份的核查报告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-28",
+          "title": "苏州伟创电气科技股份有限公司简式权益变动报告书（控股股东及其一致行动人）",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "鱼跃医疗",
+      "scode": "002223",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2023-04-12",
+          "pledgor": "江苏鱼跃科技发展有限公司",
+          "pledgee": "中国银行股份有限公司丹阳支行",
+          "qty": 0,
+          "ratio": 0,
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2023-04-12",
+          "pledgor": "江苏鱼跃科技发展有限公司",
+          "pledgee": "中国银行股份有限公司丹阳支行",
+          "qty": 0,
+          "ratio": 0,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "中国巨石",
+      "scode": "600176",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-29",
+          "title": "中国巨石2026年第一次临时股东会法律意见书（嘉源）",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "中国巨石股份有限公司关于2025年限制性股票激励计划内幕信息知情人买卖公司股票情况的自查报告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "中国巨石关于向激励对象首次授予限制性股票的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "中国巨石董事会薪酬与考核委员会关于公司2025年限制性股票激励计划预留授予相关事项的核查意见",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "中国巨石董事会薪酬与考核委员会关于公司2025年限制性股票激励计划首次授予相关事项的核查意见",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "中国巨石2025年限制性股票激励计划首次授予激励对象名单(首次授予日)",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "关于中国巨石2025年限制性股票激励计划调整及授予相关事项的法律意见书",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "中国巨石2025年限制性股票激励计划预留授予激励对象名单(预留授予日)",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "中国巨石关于巨石集团有限公司与巨石集团香港有限公司共同关于对巨石集团淮安有限公司增资80,000万元的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "中国巨石关于调整2025年限制性股票激励计划首次授予价格的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "中国巨石第七届董事会第三十二次会议决议公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "中国巨石股份有限公司2026年第一次临时股东会决议公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "关于中国巨石2025年限制性股票激励计划调整及授予相关事项的法律意见书",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "中国巨石股份有限公司关于向激励对象预留授予限制性股票的公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2026-03-07",
+          "pledgor": "振石控股集团有限公司",
+          "pledgee": "中信银行股份有限公司嘉兴桐乡支行",
+          "qty": 32918400.0,
+          "ratio": 0.82,
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2026-03-07",
+          "pledgor": "振石控股集团有限公司",
+          "pledgee": "未披露",
+          "qty": NaN,
+          "ratio": 0.82,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "中通快递",
+      "scode": "02057",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "老铺黄金",
+      "scode": "06181",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "紫金黄金国际",
+      "scode": "02259",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "珩湾科技",
+      "scode": "01523",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "华利集团",
+      "scode": "300979",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "伟星股份",
+      "scode": "002003",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2026-01-08",
+          "pledgor": "伟星集团有限公司",
+          "pledgee": "中国工商银行股份有限公司临海支行",
+          "qty": 70000000.0,
+          "ratio": 5.89,
+          "importance": "WATCH"
+        },
+        {
+          "date": "2026-01-08",
+          "pledgor": "伟星集团有限公司",
+          "pledgee": "中国工商银行股份有限公司临海支行",
+          "qty": NaN,
+          "ratio": 1.93,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "海澜之家",
+      "scode": "600398",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-27",
+          "title": "海澜之家集团股份有限公司关于发行H股并上市的进展公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2026-03-28",
+          "pledgor": "海澜集团有限公司",
+          "pledgee": "交通银行股份有限公司无锡分行",
+          "qty": 100000000.0,
+          "ratio": 2.08,
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2026-03-28",
+          "pledgor": "海澜集团有限公司",
+          "pledgee": "未披露",
+          "qty": NaN,
+          "ratio": 2.08,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "金盘科技",
+      "scode": "688676",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-03",
+          "title": "关于签订募集资金专户存储三方监管协议的公告",
+          "importance": "IGNORE",
+          "match": "募集资金"
+        },
+        {
+          "date": "2026-06-03",
+          "title": "关于召开2026年第一季度业绩说明会的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-28",
+          "title": "2026年第二次临时股东会会议资料",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "比亚迪",
+      "scode": "002594",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-01",
+          "title": "H股公告（股份发行人及根据《上市规则》第十九B章上市的香港预托证券发行人的证券变动月报表）",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-01",
+          "title": "2026年5月产销快报",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2024-05-22",
+          "pledgor": "吕向阳",
+          "pledgee": "兴业银行股份有限公司深圳分行",
+          "qty": 1150000,
+          "ratio": 0.04,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "中国核电",
+      "scode": "601985",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-27",
+          "title": "中国核电关于参加中核集团集中投资者交流季的公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "图南股份",
+      "scode": "300855",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "川投能源",
+      "scode": "600674",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-28",
+          "title": "四川川投能源股份有限公司2025年度股东会会议材料",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-27",
+          "title": "四川川投能源股份有限公司关于召开2025年年度暨2026年第一季度业绩说明会的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-27",
+          "title": "四川川投能源股份有限公司关于公司控股股东权益变动的进展公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "应流股份",
+      "scode": "603308",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-03",
+          "title": "应流股份关于归还临时补充流动资金的募集资金的公告",
+          "importance": "IGNORE",
+          "match": "募集资金"
+        },
+        {
+          "date": "2026-05-28",
+          "title": "应流股份2026年度第一期科技创新债券发行结果公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2026-01-31",
+          "pledgor": "霍山应流投资管理有限公司",
+          "pledgee": "中信证券股份有限公司",
+          "qty": 10000000.0,
+          "ratio": 1.47,
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2026-01-31",
+          "pledgor": "霍山应流投资管理有限公司",
+          "pledgee": "中信证券股份有限公司",
+          "qty": 60000000.0,
+          "ratio": 8.84,
+          "importance": "WATCH"
+        },
+        {
+          "date": "2026-01-31",
+          "pledgor": "霍山应流投资管理有限公司",
+          "pledgee": "未披露",
+          "qty": NaN,
+          "ratio": 8.84,
+          "importance": "WATCH"
+        },
+        {
+          "date": "2026-01-31",
+          "pledgor": "霍山应流投资管理有限公司",
+          "pledgee": "未披露",
+          "qty": NaN,
+          "ratio": 4.42,
+          "importance": "WATCH"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "张裕",
+      "scode": "000869",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-01",
+          "title": "关于回购公司境内上市外资股（B股）进展情况的公告",
+          "importance": "WATCH",
+          "match": "回购"
+        },
+        {
+          "date": "2026-05-28",
+          "title": "公司薪酬管理制度",
+          "importance": "IGNORE",
+          "match": "制度"
+        },
+        {
+          "date": "2026-05-28",
+          "title": "董事、高级管理人员薪酬方案",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-28",
+          "title": "董事和高级管理人员薪酬管理制度",
+          "importance": "IGNORE",
+          "match": "制度"
+        },
+        {
+          "date": "2026-05-28",
+          "title": "关于召开2026年第一次临时股东会的通知",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-28",
+          "title": "2026年第三次临时董事会决议公告",
+          "importance": "IGNORE",
+          "match": "董事会决议公告"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "中芯国际",
+      "scode": "688981",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-06-03",
+          "title": "中芯国际关于召开2026年度股东会的通知",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-03",
+          "title": "港股公告：暂停办理股份过户登记",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-03",
+          "title": "中芯国际2026年度股东会会议资料",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-02",
+          "title": "港股公告：证券变动月报表",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "潍柴动力",
+      "scode": "000338",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-28",
+          "title": "潍柴动力股份有限公司独立董事候选人声明与承诺",
+          "importance": "IGNORE",
+          "match": "独立董事"
+        },
+        {
+          "date": "2026-05-28",
+          "title": "潍柴动力股份有限公司关于独立非执行董事变更的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-28",
+          "title": "潍柴动力股份有限公司独立董事提名人声明与承诺",
+          "importance": "IGNORE",
+          "match": "独立董事"
+        },
+        {
+          "date": "2026-05-28",
+          "title": "潍柴动力股份有限公司关于召开2025年度股东会的通知",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-28",
+          "title": "潍柴动力股份有限公司2026年第四次临时董事会会议决议公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "徐工机械",
+      "scode": "000425",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-31",
+          "title": "关于首次回购公司股份暨回购公司股份并用于注销的进展公告",
+          "importance": "WATCH",
+          "match": "回购"
+        },
+        {
+          "date": "2026-05-28",
+          "title": "关于回购股份用于注销并减少注册资本暨通知债权人的公告",
+          "importance": "WATCH",
+          "match": "回购"
+        },
+        {
+          "date": "2026-05-28",
+          "title": "2025年年度股东会法律意见书",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-28",
+          "title": "2025年年度股东会决议公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-28",
+          "title": "关于回购公司股份并用于注销的报告书",
+          "importance": "WATCH",
+          "match": "回购"
+        },
+        {
+          "date": "2026-05-28",
+          "title": "关于公司2023年限制性股票激励计划首次授予部分第二个解除限售期解除限售股票上市流通的公告",
+          "importance": "WATCH",
+          "match": "限售"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2025-10-31",
+          "pledgor": "天津茂信企业管理合伙企业(有限合伙)",
+          "pledgee": "中国银行股份有限公司澳门分行",
+          "qty": 473639239.0,
+          "ratio": 4.03,
+          "importance": "WATCH"
+        },
+        {
+          "date": "2025-10-31",
+          "pledgor": "天津茂信企业管理合伙企业(有限合伙)",
+          "pledgee": "中国银行股份有限公司澳门分行",
+          "qty": NaN,
+          "ratio": 6.2,
+          "importance": "WATCH"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "中国重汽",
+      "scode": "000951",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "长盛轴承",
+      "scode": "300718",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-28",
+          "title": "关于子公司拟购买土地使用权并投资建设项目的进展公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "中国神华",
+      "scode": "601088",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-28",
+          "title": "中国神华关于独立非执行董事离任的公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "中国石油",
+      "scode": "601857",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "绿的谐波",
+      "scode": "688017",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "特变电工",
+      "scode": "600089",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2026-04-02",
+          "pledgor": "新疆宏联创业投资有限公司",
+          "pledgee": "广发证券股份有限公司",
+          "qty": 0,
+          "ratio": 0.49,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "柯力传感",
+      "scode": "603662",
+      "tier": "radar",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-29",
+          "title": "柯力传感关于2025年度暨2026年第一季度业绩说明会召开情况的公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "浪潮信息",
+      "scode": "000977",
+      "tier": "radar",
+      "deep_score": 44,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2023-11-02",
+          "pledgor": "浪潮集团有限公司",
+          "pledgee": "中国银河证券股份有限公司",
+          "qty": 0,
+          "ratio": 1.81,
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2023-11-02",
+          "pledgor": "浪潮集团有限公司",
+          "pledgee": "中国银河证券股份有限公司",
+          "qty": 0,
+          "ratio": 2.27,
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2023-11-02",
+          "pledgor": "浪潮集团有限公司",
+          "pledgee": "中国银河证券股份有限公司",
+          "qty": 0,
+          "ratio": 2.17,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "立讯精密",
+      "scode": "002475",
+      "tier": "radar",
+      "deep_score": 69,
+      "announcements": [
+        {
+          "date": "2026-06-02",
+          "title": "关于“立讯转债“可能满足赎回条件的提示性公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-02",
+          "title": "关于股份回购进展情况的公告",
+          "importance": "WATCH",
+          "match": "回购"
+        }
+      ],
+      "executive_trades": [
+        {
+          "date": "2026-05-29",
+          "name": "肖云兮",
+          "position": "董秘",
+          "qty": 5300,
+          "reason": "股权激励",
+          "importance": "IGNORE"
+        }
+      ],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2026-02-28",
+          "pledgor": "香港立讯有限公司",
+          "pledgee": "澳门国际银行股份有限公司",
+          "qty": NaN,
+          "ratio": 0.36,
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2026-02-28",
+          "pledgor": "香港立讯有限公司",
+          "pledgee": "澳门国际银行股份有限公司",
+          "qty": 13500000.0,
+          "ratio": 0.19,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "石头科技",
+      "scode": "688169",
+      "tier": "radar",
+      "deep_score": 62,
+      "announcements": [
+        {
+          "date": "2026-06-02",
+          "title": "北京石头世纪科技股份有限公司关于以集中竞价交易方式首次回购公司股份的公告",
+          "importance": "WATCH",
+          "match": "回购"
+        },
+        {
+          "date": "2026-06-01",
+          "title": "北京石头世纪科技股份有限公司第三届董事会第十七次会议决议公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-01",
+          "title": "北京石头世纪科技股份有限公司关于以集中竞价交易方式回购公司股份的回购报告书",
+          "importance": "WATCH",
+          "match": "回购"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "北京石头世纪科技股份有限公司关于收到公司控股股东、实际控制人、董事长兼总经理提议回购公司股份的提示性公告",
+          "importance": "CRITICAL",
+          "match": "实际控制人"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "北京石头世纪科技股份有限公司2022年限制性股票激励计划第四个归属期归属结果暨股份上市公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "安井食品",
+      "scode": "603345",
+      "tier": "radar",
+      "deep_score": 67,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "冰轮环境",
+      "scode": "000811",
+      "tier": "radar",
+      "deep_score": 64,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2021-06-30",
+          "pledgor": "烟台冰轮投资有限公司",
+          "pledgee": "招商银行股份有限公司烟台分行",
+          "qty": 0,
+          "ratio": 5.02,
+          "importance": "WATCH"
+        },
+        {
+          "date": "2021-06-30",
+          "pledgor": "烟台冰轮控股有限公司",
+          "pledgee": "招商银行股份有限公司烟台分行",
+          "qty": 0,
+          "ratio": 5.44,
+          "importance": "WATCH"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "法拉电子",
+      "scode": "600563",
+      "tier": "radar",
+      "deep_score": 63,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2008-08-30",
+          "pledgor": "厦门建发集团有限公司",
+          "pledgee": "厦门国际信托有限公司",
+          "qty": 22500000,
+          "ratio": 0,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "万华化学",
+      "scode": "600309",
+      "tier": "radar",
+      "deep_score": 58,
+      "announcements": [
+        {
+          "date": "2026-06-02",
+          "title": "万华化学独立董事提名人声明与承诺",
+          "importance": "IGNORE",
+          "match": "独立董事"
+        },
+        {
+          "date": "2026-06-02",
+          "title": "万华化学独立董事候选人声明与承诺（马玉国）",
+          "importance": "IGNORE",
+          "match": "独立董事"
+        },
+        {
+          "date": "2026-06-02",
+          "title": "万华化学独立董事候选人声明与承诺（武常岐）",
+          "importance": "IGNORE",
+          "match": "独立董事"
+        },
+        {
+          "date": "2026-06-02",
+          "title": "万华化学独立董事候选人声明与承诺（王化成）",
+          "importance": "IGNORE",
+          "match": "独立董事"
+        },
+        {
+          "date": "2026-06-02",
+          "title": "万华化学独立董事候选人声明与承诺（李君涛）",
+          "importance": "IGNORE",
+          "match": "独立董事"
+        },
+        {
+          "date": "2026-06-02",
+          "title": "万华化学关于召开2026年第一次临时股东会的通知",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "万华化学关于高级管理人员买入公司股票的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-27",
+          "title": "万华化学关于选举职工董事的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-27",
+          "title": "万华化学关于董事会换届选举的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-27",
+          "title": "万华化学关于使用闲置资金购买结构性存款的公告",
+          "importance": "IGNORE",
+          "match": "闲置资金"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2026-03-10",
+          "pledgor": "烟台中诚投资股份有限公司",
+          "pledgee": "未披露",
+          "qty": 0,
+          "ratio": 0.8,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "阳光电源",
+      "scode": "300274",
+      "tier": "radar",
+      "deep_score": 63,
+      "announcements": [
+        {
+          "date": "2026-06-01",
+          "title": "关于2022年限制性股票激励计划首次授予部分第四个归属期归属结果暨股份上市公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-01",
+          "title": "关于控股股东部分股份解除质押及质押的公告",
+          "importance": "WATCH",
+          "match": "质押"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "关于2026年员工持股计划完成股票购买的公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2026-06-01",
+          "pledgor": "曹仁贤",
+          "pledgee": "招商证券",
+          "qty": NaN,
+          "ratio": 0.38,
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2026-06-01",
+          "pledgor": "曹仁贤",
+          "pledgee": "招商证券",
+          "qty": 3000000.0,
+          "ratio": 0.14,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "万国数据",
+      "scode": "09698",
+      "tier": "radar",
+      "deep_score": 55,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "华虹公司",
+      "scode": "688347",
+      "tier": "radar",
+      "deep_score": 55,
+      "announcements": [
+        {
+          "date": "2026-06-03",
+          "title": "关于完成公司名称变更登记的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-06-03",
+          "title": "华虹宏力半导体有限公司组织章程细则",
+          "importance": "IGNORE",
+          "match": "章程"
+        },
+        {
+          "date": "2026-06-03",
+          "title": "证券简称变更实施公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "大华会计师事务所（特殊普通合伙）关于华虹半导体有限公司发行股份购买资产并募集配套资金暨关联交易申请的审核问询函中有关财务事项的说明",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "国泰海通证券股份有限公司关于华虹半导体有限公司发行股份购买资产并募集配套资金暨关联交易之独立财务顾问报告（修订稿）",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "国泰海通证券股份有限公司关于华虹半导体有限公司发行股份购买资产并募集配套资金暨关联交易申请的审核问询函回复之核查意见",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "华虹半导体有限公司发行股份购买资产并募集配套资金暨关联交易报告书（修订稿）",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "华虹半导体有限公司发行股份购买资产并募集配套资金暨关联交易报告书摘要（修订稿）",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "关于发行股份购买资产并募集配套资金暨关联交易审核问询函回复的提示性公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "华虹半导体有限公司关于发行股份购买资产并募集配套资金暨关联交易报告书（修订稿）修订说明的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "安永华明会计师事务所（特殊普通合伙）关于华虹半导体有限公司发行股份购买资产并募集配套资金暨关联交易申请的审核问询函中备考财务报表相关财务问题的专项核查意见",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "上海市通力律师事务所关于华虹半导体有限公司发行股份购买资产并募集配套资金暨关联交易之补充法律意见书",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "上海东洲资产评估有限公司关于发行股份购买资产并募集配套资金暨关联交易申请的审核问询函中资产评估相关问题回复核查意见",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-29",
+          "title": "华虹半导体有限公司关于发行股份购买资产并募集配套资金暨关联交易申请的审核问询函回复",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "api": "指数跟踪基金信息API",
+  "apiKey": "us/index/tracking-fund",
+  "url": "https://open.lixinger.com/api/us/index/tracking-fund",
+  "method": "POST",
+  "params": [
+    {
+      "name": "token",
+      "required": "Yes",
+      "type": "String",
+      "descriptions": [
+        "我的Token页有用户专属且唯一的Token。"
+      ]
+    },
+    {
+      "name": "stockCode",
+      "required": "Yes",
+      "type": "String",
+      "descriptions": [
+        "股票代码"
+      ],
+      "constraints": [
+        "请参考指数信息API获取合法的stockCode。"
+      ]
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "name",
+      "type": "String",
+      "description": "基金名称"
+    },
+    {
+      "name": "stockCode",
+      "type": "String",
+      "description": "基金代码"
+    },
+    {
+      "name": "shortName",
+      "type": "String",
+      "description": "简称"
+    },
+    {
+      "name": "areaCode",
+      "type": "String",
+      "description": "地区代码"
+    },
+    {
+      "name": "market",
+      "type": "String",
+      "description": "市场"
+    },
+    {
+      "name": "exchange",
+      "type": "String",
+      "description": "交易所"
+    }
+  ],
+  "requestExample": [
+    {
+      "desc": "示例1: 获取指定指数跟踪基金信息",
+      "requestBody": {
+        "stockCode": ".INX",
+        "token": "***********"
+      }
+    }
+  ]
+}

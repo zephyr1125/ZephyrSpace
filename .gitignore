@@ -41,6 +41,7 @@ scripts/*_data.json
 
 # 环境变量（含 API Token 等敏感信息）
 .env
+skills/lixinger-api/token.json
 .env.*
 !.env.example
 
@@ -74,3 +75,19 @@ scripts/_bad_bands.txt
 scripts/_fix_bands2.py
 bash.exe.stackdump
 copilot-session-*
+
+# =========================
+# Obsidian 粘贴图片
+# =========================
+Pasted image *.png
+Pasted image *.jpg
+
+# =========================
+# 脚本临时/缓存文件
+# =========================
+scripts/_*.json
+scripts/_*.txt
+scripts/_*.py
+scripts/deep_data/
+scripts/runze_deep_data/
+!.gitignore

@@ -1,0 +1,74 @@
+{
+  "api": "基金经理信息API",
+  "apiKey": "cn/fund-manager",
+  "url": "https://open.lixinger.com/api/cn/fund-manager",
+  "method": "POST",
+  "params": [
+    {
+      "name": "token",
+      "required": "Yes",
+      "type": "String",
+      "descriptions": [
+        "我的Token页有用户专属且唯一的Token。"
+      ]
+    },
+    {
+      "name": "stockCodes",
+      "required": "No",
+      "type": "Array",
+      "descriptions": [
+        "基金经理代码数组。"
+      ],
+      "constraints": [
+        "stockCodes长度>=1且<=100。",
+        "请参考基金信息API获取合法的stockCode。"
+      ],
+      "example": "[\"8801388323\",\"8801372475\"]"
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "name",
+      "type": "String",
+      "description": "基金经理姓名"
+    },
+    {
+      "name": "birthYear",
+      "type": "Number",
+      "description": "出生年份"
+    },
+    {
+      "name": "resume",
+      "type": "String",
+      "description": "履历"
+    },
+    {
+      "name": "stockCode",
+      "type": "String",
+      "description": "基金经理代码"
+    },
+    {
+      "name": "gender",
+      "type": "String",
+      "description": "性别"
+    }
+  ],
+  "requestExample": [
+    {
+      "desc": "示例1: 获取所有基金经理信息",
+      "requestBody": {
+        "token": "***********"
+      }
+    },
+    {
+      "desc": "示例2: 获取指定基金经理信息",
+      "requestBody": {
+        "stockCodes": [
+          "8801388323",
+          "8801372475"
+        ],
+        "token": "***********"
+      }
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "api": "最新费用信息API",
+  "apiKey": "cn/fund/hot/ff",
+  "url": "https://open.lixinger.com/api/cn/fund/hot/ff",
+  "method": "POST",
+  "params": [
+    {
+      "name": "token",
+      "required": "Yes",
+      "type": "String",
+      "descriptions": [
+        "我的Token页有用户专属且唯一的Token。"
+      ]
+    },
+    {
+      "name": "stockCodes",
+      "required": "Yes",
+      "type": "Array",
+      "descriptions": [
+        "基金代码数组。"
+      ],
+      "constraints": [
+        "stockCodes长度>=1且<=100。",
+        "请参考基金信息API获取合法的stockCode。"
+      ],
+      "example": "[\"161725\",\"005827\"]"
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "stockCode",
+      "type": "String",
+      "description": "股票代码"
+    },
+    {
+      "name": "f_fr_d",
+      "type": "Date",
+      "description": "费用率日期"
+    },
+    {
+      "name": "f_m_fr",
+      "type": "Number",
+      "description": "管理费用率"
+    },
+    {
+      "name": "f_c_fr",
+      "type": "Number",
+      "description": "托管费用率"
+    },
+    {
+      "name": "f_mac_fr",
+      "type": "Number",
+      "description": "管理与管托费用率"
+    }
+  ],
+  "requestExample": [
+    {
+      "desc": "示例1: get by {stockType} codes",
+      "requestBody": {
+        "stockCodes": [
+          "161725",
+          "005827"
+        ],
+        "token": "***********"
+      }
+    }
+  ]
+}

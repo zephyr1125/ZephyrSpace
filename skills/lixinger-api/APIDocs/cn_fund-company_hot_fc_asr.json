@@ -1,0 +1,98 @@
+{
+  "api": "基金公司资产规模排名API",
+  "apiKey": "cn/fund-company/hot/fc_asr",
+  "url": "https://open.lixinger.com/api/cn/fund-company/hot/fc_asr",
+  "method": "POST",
+  "params": [
+    {
+      "name": "token",
+      "required": "Yes",
+      "type": "String",
+      "descriptions": [
+        "我的Token页有用户专属且唯一的Token。"
+      ]
+    },
+    {
+      "name": "stockCodes",
+      "required": "Yes",
+      "type": "Array",
+      "descriptions": [
+        "基金公司代码数组。"
+      ],
+      "constraints": [
+        "stockCodes长度>=1且<=100。",
+        "请参考基金信息API获取合法的stockCode。"
+      ],
+      "example": "[\"50110000\",\"50030000\"]"
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "stockCode",
+      "type": "String",
+      "description": "股票代码"
+    },
+    {
+      "name": "fc_as_r_d",
+      "type": "Date",
+      "description": "最新数据时间"
+    },
+    {
+      "name": "fc_as_rp",
+      "type": "Number",
+      "description": "资产规模排名"
+    },
+    {
+      "name": "fc_nb_as_rp",
+      "type": "Number",
+      "description": "非债券基金资产规模排名"
+    },
+    {
+      "name": "fc_h_as_rp",
+      "type": "Number",
+      "description": "混合型资产规模排名"
+    },
+    {
+      "name": "fc_e_as_rp",
+      "type": "Number",
+      "description": "股票型资产规模排名"
+    },
+    {
+      "name": "fc_q_as_rp",
+      "type": "Number",
+      "description": "QDII型资产规模排名"
+    },
+    {
+      "name": "fc_b_as_rp",
+      "type": "Number",
+      "description": "债券型资产规模排名"
+    },
+    {
+      "name": "fc_all_fn",
+      "type": "Number",
+      "description": "基金数量"
+    },
+    {
+      "name": "fc_all_mn",
+      "type": "Number",
+      "description": "基金经理数量"
+    },
+    {
+      "name": "fc_all_fn_rp",
+      "type": "Number",
+      "description": "基金数量排名"
+    }
+  ],
+  "requestExample": [
+    {
+      "desc": "示例1: get by {stockType} codes",
+      "requestBody": {
+        "stockCodes": [
+          "50110000",
+          "50030000"
+        ],
+        "token": "***********"
+      }
+    }
+  ]
+}

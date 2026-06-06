@@ -1,0 +1,97 @@
+{
+  "api": "基金公司信息API",
+  "apiKey": "cn/fund-company",
+  "url": "https://open.lixinger.com/api/cn/fund-company",
+  "method": "POST",
+  "params": [
+    {
+      "name": "token",
+      "required": "Yes",
+      "type": "String",
+      "descriptions": [
+        "我的Token页有用户专属且唯一的Token。"
+      ]
+    },
+    {
+      "name": "stockCodes",
+      "required": "No",
+      "type": "Array",
+      "descriptions": [
+        "基金公司代码数组。"
+      ],
+      "constraints": [
+        "stockCodes长度>=1且<=100。",
+        "请参考基金信息API获取合法的stockCode。"
+      ],
+      "example": "[\"50110000\",\"50030000\"]"
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "name",
+      "type": "String",
+      "description": "基金公司名称"
+    },
+    {
+      "name": "stockCode",
+      "type": "String",
+      "description": "基金公司代码"
+    },
+    {
+      "name": "inceptionDate",
+      "type": "Date",
+      "description": "成立日期"
+    },
+    {
+      "name": "fundsNum",
+      "type": "Number",
+      "description": "基金数量"
+    },
+    {
+      "name": "assetScale",
+      "type": "Number",
+      "description": "总资产规模"
+    },
+    {
+      "name": "fundCollectionType",
+      "type": "String",
+      "description": "基金公司类型",
+      "items": [
+        {
+          "label": "基金公司",
+          "value": "fund_company"
+        },
+        {
+          "label": "证券公司",
+          "value": "securities_company"
+        },
+        {
+          "label": "证券公司资产管理子公司",
+          "value": "securities_company_amsc"
+        },
+        {
+          "label": "保险资产管理公司",
+          "value": "insurance_am_company"
+        }
+      ]
+    }
+  ],
+  "requestExample": [
+    {
+      "desc": "示例1: 获取所有基金公司信息",
+      "requestBody": {
+        "token": "***********"
+      }
+    },
+    {
+      "desc": "示例2: 获取指定基金公司信息",
+      "requestBody": {
+        "stockCodes": [
+          "50110000",
+          "50030000"
+        ],
+        "token": "***********"
+      }
+    }
+  ]
+}

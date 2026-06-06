@@ -37,6 +37,27 @@ python scripts/weekly_watchlist_scan.py --days 14
 - 业绩预告/快报
 - 股东质押（最新状态）
 
+### 第 1.5 步：智堡补充数据（**对 CRITICAL/WATCH 标的强制执行**）
+
+CNINFO 覆盖公告和监管数据，但有三块关键盲区。周度扫描脚本运行后，对每只标记为 CRITICAL 或 WATCH 的标的，补充智堡数据：
+
+```python
+from scripts.wisburg_api import WisburgClient
+wisburg = WisburgClient()
+
+for ticker in critical_and_watch_tickers:
+    wisburg_data = wisburg.weekly_scan_bundle(ticker)
+    # 将 wisburg_data 作为附件写入对应标的的数据节点
+```
+
+**智堡补充的三块盲区**：
+
+| 盲区 | 智堡端点 | 为什么重要 | 分析要点 |
+|------|---------|-----------|---------|
+| **卖方评级/预测变化** | `/api/reports` (search + `startTime`) | 大行上调/下调评级是市场定价触发器，公告系统完全不覆盖 | 是否有机构大幅调整预测？评级变化方向？ |
+| **电话会关键信息** | `/api/earningscalls` | 业绩发布后数周纪要上架——管理层表态变化比公告更早暴露问题 | 管理层语调变化、指引修正、对竞争/监管的新表述 |
+| **行业级宏观信号** | `/api/feed` + `/api/market-daily` | 如"霍尔木兹海峡重开"对能源股、"AI基建引爆能源周期"对电力设备——现有扫描全盲 | 同名行业多标的出现同类信号时，升级为行业级关注 |
+
 脚本已做**预分级**（基于关键词匹配）：
 - `CRITICAL`：业绩预告/处罚/诉讼/减持/并购重组/冻结/退市
 - `WATCH`：增持/回购/质押解禁/评级/分红/股权激励

@@ -1,0 +1,119 @@
+{
+  "api": "股东人数变化API",
+  "apiKey": "cn/company/hot/shnc",
+  "url": "https://open.lixinger.com/api/cn/company/hot/shnc",
+  "method": "POST",
+  "params": [
+    {
+      "name": "token",
+      "required": "Yes",
+      "type": "String",
+      "descriptions": [
+        "我的Token页有用户专属且唯一的Token。"
+      ]
+    },
+    {
+      "name": "stockCodes",
+      "required": "Yes",
+      "type": "Array",
+      "descriptions": [
+        "股票代码数组。"
+      ],
+      "constraints": [
+        "stockCodes长度>=1且<=100。",
+        "请参考股票信息API获取合法的stockCode。"
+      ],
+      "example": "[\"300750\",\"600519\",\"600157\"]"
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "stockCode",
+      "type": "String",
+      "description": "股票代码"
+    },
+    {
+      "name": "shnc_rld",
+      "type": "Date",
+      "description": "最新数据时间"
+    },
+    {
+      "name": "shnc_rln",
+      "type": "Number",
+      "description": "最新股东人数"
+    },
+    {
+      "name": "shnc_d10",
+      "type": "Number",
+      "description": "10天股东人数变化"
+    },
+    {
+      "name": "shnc_d20",
+      "type": "Number",
+      "description": "20天股东人数变化"
+    },
+    {
+      "name": "shnc_d30",
+      "type": "Number",
+      "description": "30天股东人数变化"
+    },
+    {
+      "name": "shnc_d60",
+      "type": "Number",
+      "description": "60天股东人数变化"
+    },
+    {
+      "name": "shnc_d90",
+      "type": "Number",
+      "description": "90天股东人数变化"
+    },
+    {
+      "name": "shnc_qld",
+      "type": "Date",
+      "description": "最新季度数据时间"
+    },
+    {
+      "name": "shnc_qln",
+      "type": "Number",
+      "description": "最新季度股东人数"
+    },
+    {
+      "name": "shnc_q1",
+      "type": "Number",
+      "description": "1个季度股东人数变化"
+    },
+    {
+      "name": "shnc_q2",
+      "type": "Number",
+      "description": "2个季度股东人数变化"
+    },
+    {
+      "name": "shnc_q3",
+      "type": "Number",
+      "description": "3个季度股东人数变化"
+    },
+    {
+      "name": "shnc_y1",
+      "type": "Number",
+      "description": "1年股东人数变化"
+    },
+    {
+      "name": "shnc_y2",
+      "type": "Number",
+      "description": "2年股东人数变化"
+    }
+  ],
+  "requestExample": [
+    {
+      "desc": "示例1: get by {stockType} codes",
+      "requestBody": {
+        "stockCodes": [
+          "300750",
+          "600519",
+          "600157"
+        ],
+        "token": "***********"
+      }
+    }
+  ]
+}

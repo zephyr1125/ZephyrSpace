@@ -1,0 +1,114 @@
+{
+  "api": "基金概况API",
+  "apiKey": "cn/fund/profile",
+  "instruction": "主基金代码和子基金代码获取相同的数据。",
+  "url": "https://open.lixinger.com/api/cn/fund/profile",
+  "method": "POST",
+  "params": [
+    {
+      "name": "token",
+      "required": "Yes",
+      "type": "String",
+      "descriptions": [
+        "我的Token页有用户专属且唯一的Token。"
+      ]
+    },
+    {
+      "name": "stockCodes",
+      "required": "Yes",
+      "type": "Array",
+      "descriptions": [
+        "基金代码数组。"
+      ],
+      "constraints": [
+        "stockCodes长度>=1且<=100。",
+        "请参考基金信息API获取合法的stockCode。"
+      ],
+      "example": "[\"161725\",\"005827\"]"
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "date",
+      "type": "Date",
+      "description": "财报日期"
+    },
+    {
+      "name": "c_name",
+      "type": "String",
+      "description": "基金托管人"
+    },
+    {
+      "name": "e_t_short_name",
+      "type": "String",
+      "description": "场内简称"
+    },
+    {
+      "name": "f_c_name",
+      "type": "String",
+      "description": "基金公司"
+    },
+    {
+      "name": "inception_date",
+      "type": "Date",
+      "description": "合同生效日"
+    },
+    {
+      "name": "op_mode",
+      "type": "String",
+      "description": "运作方式"
+    },
+    {
+      "name": "m_stock_code",
+      "type": "String",
+      "description": "基金主代码"
+    },
+    {
+      "name": "investment_o",
+      "type": "String",
+      "description": "投资目标"
+    },
+    {
+      "name": "investment_s",
+      "type": "String",
+      "description": "投资策略"
+    },
+    {
+      "name": "p_c_benchmark",
+      "type": "Array",
+      "description": "业绩比较基准"
+    },
+    {
+      "name": "risk_r_c",
+      "type": "String",
+      "description": "风险收益特征"
+    },
+    {
+      "name": "ipo_date",
+      "type": "Date",
+      "description": "上市日期"
+    },
+    {
+      "name": "s_f_stock_codes",
+      "type": "Array",
+      "description": "子基金代码"
+    },
+    {
+      "name": "feeder_funds",
+      "type": "Array",
+      "description": "联接基金"
+    }
+  ],
+  "requestExample": [
+    {
+      "desc": "示例1: 获取指定基金信息",
+      "requestBody": {
+        "stockCodes": [
+          "161725",
+          "005827"
+        ],
+        "token": "***********"
+      }
+    }
+  ]
+}

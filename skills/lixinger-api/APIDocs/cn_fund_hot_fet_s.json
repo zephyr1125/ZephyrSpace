@@ -1,0 +1,133 @@
+{
+  "api": "最新场内份额信息API",
+  "apiKey": "cn/fund/hot/fet_s",
+  "url": "https://open.lixinger.com/api/cn/fund/hot/fet_s",
+  "method": "POST",
+  "params": [
+    {
+      "name": "token",
+      "required": "Yes",
+      "type": "String",
+      "descriptions": [
+        "我的Token页有用户专属且唯一的Token。"
+      ]
+    },
+    {
+      "name": "stockCodes",
+      "required": "Yes",
+      "type": "Array",
+      "descriptions": [
+        "基金代码数组。"
+      ],
+      "constraints": [
+        "stockCodes长度>=1且<=100。",
+        "请参考基金信息API获取合法的stockCode。"
+      ],
+      "example": "[\"161725\",\"005827\"]"
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "stockCode",
+      "type": "String",
+      "description": "股票代码"
+    },
+    {
+      "name": "last_data_date",
+      "type": "Date",
+      "description": "数据时间"
+    },
+    {
+      "name": "fet_s_d_nv",
+      "type": "Number",
+      "description": "净值"
+    },
+    {
+      "name": "fet_s_d_nv_cr",
+      "type": "Number",
+      "description": "净值涨跌幅"
+    },
+    {
+      "name": "fet_s",
+      "type": "Number",
+      "description": "基金场内份额"
+    },
+    {
+      "name": "fet_s_d_as",
+      "type": "Number",
+      "description": "基金场内规模"
+    },
+    {
+      "name": "fet_s_ni_1d",
+      "type": "Number",
+      "description": "过去1个交易日场内基金资金净流入"
+    },
+    {
+      "name": "fet_s_ni_5d",
+      "type": "Number",
+      "description": "过去5个交易日场内基金资金净流入"
+    },
+    {
+      "name": "fet_s_ni_20d",
+      "type": "Number",
+      "description": "过去20个交易日场内基金资金净流入"
+    },
+    {
+      "name": "fet_s_ni_60d",
+      "type": "Number",
+      "description": "过去60个交易日场内基金资金净流入"
+    },
+    {
+      "name": "fet_s_ni_120d",
+      "type": "Number",
+      "description": "过去120个交易日场内基金资金净流入"
+    },
+    {
+      "name": "fet_s_ni_240d",
+      "type": "Number",
+      "description": "过去240个交易日场内基金资金净流入"
+    },
+    {
+      "name": "fet_s_rc_1d",
+      "type": "Number",
+      "description": "过去1个交易日场内基金份额变化"
+    },
+    {
+      "name": "fet_s_rc_5d",
+      "type": "Number",
+      "description": "过去5个交易日场内基金份额变化"
+    },
+    {
+      "name": "fet_s_rc_20d",
+      "type": "Number",
+      "description": "过去20个交易日场内基金份额变化"
+    },
+    {
+      "name": "fet_s_rc_60d",
+      "type": "Number",
+      "description": "过去60个交易日场内基金份额变化"
+    },
+    {
+      "name": "fet_s_rc_120d",
+      "type": "Number",
+      "description": "过去120个交易日场内基金份额变化"
+    },
+    {
+      "name": "fet_s_rc_240d",
+      "type": "Number",
+      "description": "过去240个交易日场内基金份额变化"
+    }
+  ],
+  "requestExample": [
+    {
+      "desc": "示例1: get by {stockType} codes",
+      "requestBody": {
+        "stockCodes": [
+          "161725",
+          "005827"
+        ],
+        "token": "***********"
+      }
+    }
+  ]
+}

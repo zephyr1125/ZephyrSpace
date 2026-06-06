@@ -1,0 +1,447 @@
+{
+  "scan_date": "2026-05-28",
+  "days_back": 7,
+  "tiers": [
+    "portfolio"
+  ],
+  "companies_scanned": 16,
+  "critical_items": 0,
+  "watch_items": 2,
+  "results": [
+    {
+      "name": "摩根新兴市场",
+      "scode": "378006",
+      "tier": "portfolio",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "长江电力",
+      "scode": "600900",
+      "tier": "portfolio",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-21",
+          "title": "长江电力2025年年度股东会决议公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-21",
+          "title": "北京市天元律师事务所关于中国长江电力股份有限公司2025年年度股东会的法律意见",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2017-12-15",
+          "pledgor": "云南省能源投资集团有限公司",
+          "pledgee": "未披露",
+          "qty": 73576456,
+          "ratio": 0,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "招商银行",
+      "scode": "600036",
+      "tier": "portfolio",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "宏发股份",
+      "scode": "600885",
+      "tier": "portfolio",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-25",
+          "title": "宏发股份：关于为控股子公司提供财务资助暨关联交易的进展公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-20",
+          "title": "宏发股份：关于完成注册资本变更登记并换发营业执照的公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2026-02-14",
+          "pledgor": "有格创业投资有限公司",
+          "pledgee": "中国工商银行股份有限公司长泰支行",
+          "qty": 0,
+          "ratio": 0.65,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "悍高集团",
+      "scode": "001221",
+      "tier": "portfolio",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-26",
+          "title": "悍高集团股份有限公司2025年年度权益分派实施公告",
+          "importance": "WATCH",
+          "match": "权益分派"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "羚锐制药",
+      "scode": "600285",
+      "tier": "portfolio",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-21",
+          "title": "羚锐制药第十届董事会第一次会议决议公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-21",
+          "title": "羚锐制药关于召开2025年年度暨2026年第一季度业绩说明会的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-20",
+          "title": "羚锐制药关于选举第十届董事会职工代表董事的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-20",
+          "title": "河南羚锐制药股份有限公司董事、高级管理人员薪酬管理制度",
+          "importance": "IGNORE",
+          "match": "制度"
+        },
+        {
+          "date": "2026-05-20",
+          "title": "羚锐制药2025年年度股东会决议公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-20",
+          "title": "关于河南羚锐制药股份有限公司2025年年度股东会之法律意见书",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2026-04-30",
+          "pledgor": "河南羚锐集团有限公司",
+          "pledgee": "未披露",
+          "qty": 0,
+          "ratio": 0.05,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "福耀玻璃",
+      "scode": "600660",
+      "tier": "portfolio",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "伊利股份",
+      "scode": "600887",
+      "tier": "portfolio",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-21",
+          "title": "内蒙古伊利实业集团股份有限公司关于参加内蒙古辖区上市公司2026年投资者网上集体接待日活动的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-21",
+          "title": "内蒙古伊利实业集团股份有限公司第十二届董事会临时会议决议公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-20",
+          "title": "北京天驰君泰律师事务所关于内蒙古伊利实业集团股份有限公司2025年年度股东会的法律意见书",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-20",
+          "title": "内蒙古伊利实业集团股份有限公司2025年年度股东会决议公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "东鹏饮料",
+      "scode": "605499",
+      "tier": "portfolio",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-26",
+          "title": "H股公告-翌日披露报表",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-26",
+          "title": "H股公告-翌日披露报表",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-22",
+          "title": "H股公告-翌日披露报表",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-21",
+          "title": "H股公告-翌日披露报表",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-20",
+          "title": "H股公告-翌日披露报表",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "美的集团",
+      "scode": "000333",
+      "tier": "portfolio",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-27",
+          "title": "关于在库卡机器人自动化（广东）股份有限公司实施多元化员工持股计划方案的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-27",
+          "title": "第五届董事会第十六次会议决议公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2023-11-09",
+          "pledgor": "美的控股有限公司",
+          "pledgee": "中信证券股份有限公司",
+          "qty": 0,
+          "ratio": 1.42,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "海康威视",
+      "scode": "002415",
+      "tier": "portfolio",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2020-10-20",
+          "pledgor": "新疆普康投资有限合伙企业",
+          "pledgee": "招商财富资产管理有限公司",
+          "qty": 0,
+          "ratio": 0.19,
+          "importance": "IGNORE"
+        },
+        {
+          "date": "2020-10-20",
+          "pledgor": "新疆普康投资有限合伙企业",
+          "pledgee": "招商财富资产管理有限公司",
+          "qty": 0,
+          "ratio": 0.32,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "宁德时代",
+      "scode": "300750",
+      "tier": "portfolio",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "国电南瑞",
+      "scode": "600406",
+      "tier": "portfolio",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-22",
+          "title": "国电南瑞2025年年度股东会的法律意见书",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-22",
+          "title": "国电南瑞2025年年度股东会决议公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "国电电力",
+      "scode": "600795",
+      "tier": "portfolio",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    },
+    {
+      "name": "新易盛",
+      "scode": "300502",
+      "tier": "portfolio",
+      "deep_score": null,
+      "announcements": [],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [
+        {
+          "date": "2023-11-03",
+          "pledgor": "高光荣",
+          "pledgee": "华泰证券(上海)资产管理有限公司",
+          "qty": 0,
+          "ratio": 1.37,
+          "importance": "IGNORE"
+        }
+      ],
+      "forecasts": []
+    },
+    {
+      "name": "贵州茅台",
+      "scode": "600519",
+      "tier": "portfolio",
+      "deep_score": null,
+      "announcements": [
+        {
+          "date": "2026-05-27",
+          "title": "贵州茅台关于回购股份实施结果暨股份变动的公告",
+          "importance": "WATCH",
+          "match": "回购"
+        },
+        {
+          "date": "2026-05-21",
+          "title": "贵州茅台关于召开2025年度股东会的通知",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-21",
+          "title": "贵州茅台独立董事候选人声明与承诺（王鑫）",
+          "importance": "IGNORE",
+          "match": "独立董事"
+        },
+        {
+          "date": "2026-05-21",
+          "title": "贵州茅台独立董事候选人声明与承诺（郭田勇）",
+          "importance": "IGNORE",
+          "match": "独立董事"
+        },
+        {
+          "date": "2026-05-21",
+          "title": "贵州茅台关于聘任董事会秘书的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-21",
+          "title": "贵州茅台独立董事候选人声明与承诺（盛雷鸣）",
+          "importance": "IGNORE",
+          "match": "独立董事"
+        },
+        {
+          "date": "2026-05-21",
+          "title": "贵州茅台独立董事提名人声明与承诺",
+          "importance": "IGNORE",
+          "match": "独立董事"
+        },
+        {
+          "date": "2026-05-21",
+          "title": "贵州茅台关于与关联方签订《商标许可协议》的公告",
+          "importance": "UNKNOWN"
+        },
+        {
+          "date": "2026-05-21",
+          "title": "贵州茅台第四届董事会2026年度第八次会议决议公告",
+          "importance": "UNKNOWN"
+        }
+      ],
+      "executive_trades": [],
+      "penalties": [],
+      "lawsuits": [],
+      "pledges": [],
+      "forecasts": []
+    }
+  ]
+}

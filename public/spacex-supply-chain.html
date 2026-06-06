@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SpaceX 产业链全景图 | ZephyrSpace</title>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&family=Noto+Sans+SC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f5f0e6;
+  --card: #fffdf8;
+  --teal: #0e7490;
+  --blue: #2563a0;
+  --amber: #c2770c;
+  --text: #1c1917;
+  --text-sec: #57534e;
+  --muted: #888;
+  --border: rgba(120,113,108,0.18);
+  --border-mid: rgba(120,113,108,0.12);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Sans SC', system-ui, sans-serif;
+  min-height: 100vh;
+  position: relative;
+}
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 0;
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 44px 24px 72px;
+  position: relative; z-index: 1;
+}
+
+/* Nav */
+.nav { margin-bottom: 36px; display: flex; gap: 10px; flex-wrap: wrap; }
+.btn-nav {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 8px 18px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.83rem; font-weight: 500;
+  transition: all 0.18s;
+  color: var(--teal);
+}
+.btn-nav:hover { background: var(--teal); color: #fff; border-color: var(--teal); }
+.btn-nav.alt { color: #7c3aed; }
+.btn-nav.alt:hover { background: #7c3aed; border-color: #7c3aed; color: #fff; }
+
+/* Hero */
+.hero { text-align: center; margin-bottom: 44px; }
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: var(--teal); color: #fff;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem; letter-spacing: 0.08em;
+  padding: 5px 14px; border-radius: 999px;
+  margin-bottom: 20px;
+}
+.hero h1 {
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: clamp(2rem, 4.8vw, 3.1rem);
+  font-weight: 700; line-height: 1.15;
+  margin-bottom: 14px;
+}
+.hero-sub {
+  font-size: 0.96rem; font-weight: 300;
+  color: var(--text-sec); line-height: 1.75;
+  max-width: 660px; margin: 0 auto 28px;
+}
+.hero-sub strong { color: var(--text); font-weight: 500; }
+
+/* Direction strip */
+.dir-strip {
+  display: flex; align-items: center; gap: 12px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 11px 22px;
+  max-width: 640px; margin: 0 auto;
+}
+.dir-lbl {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem; font-weight: 600;
+  white-space: nowrap;
+}
+.dir-lbl.up   { color: #7c3aed; }
+.dir-lbl.down { color: #c2770c; }
+.dir-bar {
+  flex: 1; height: 6px; border-radius: 999px;
+  background: linear-gradient(to right, #7c3aed, #4f46e5, #0284c7, #0e7490, #0d9488, #059669, #d97706, #c2770c);
+}
+
+/* ── Chain ── */
+.chain { display: flex; flex-direction: column; gap: 0; margin-top: 32px; }
+
+/* Connector */
+.conn {
+  display: flex; justify-content: center; align-items: center;
+  height: 34px; position: relative;
+}
+.conn-line {
+  position: absolute; left: 50%; top: 0; bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--fc), var(--tc));
+  opacity: 0.28;
+  transform: translateX(-50%);
+}
+.conn-icon {
+  position: relative; z-index: 1;
+  width: 22px; height: 22px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.65rem; color: var(--muted);
+}
+
+/* Layer card */
+.lcard {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.lcard:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+.lcard-bar { height: 4px; background: var(--lc); }
+.lcard-body { padding: 22px 28px 26px; }
+
+/* Layer header */
+.lhead {
+  display: flex; align-items: flex-start;
+  justify-content: space-between; gap: 12px;
+  margin-bottom: 12px;
+}
+.lhead-left { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.lnum {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.67rem; font-weight: 600;
+  color: var(--lc);
+  background: rgba(0,0,0,0.04);
+  padding: 2px 8px; border-radius: 4px;
+  white-space: nowrap; letter-spacing: 0.04em;
+}
+.ltitle {
+  font-family: 'Newsreader', serif;
+  font-size: 1.28rem; font-weight: 600;
+}
+.leng {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.67rem;
+  color: var(--lc);
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 3px 10px; border-radius: 999px;
+  white-space: nowrap;
+  align-self: flex-start; margin-top: 2px;
+}
+
+/* Layer desc */
+.ldesc {
+  font-size: 0.875rem; line-height: 1.68;
+  color: var(--text-sec); margin-bottom: 18px;
+}
+.ldesc strong { color: var(--text); font-weight: 500; }
+
+/* Sectors grid */
+.sgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+  gap: 10px;
+}
+.sbox {
+  border-radius: 10px; padding: 12px 14px;
+  background: rgba(0,0,0,0.025);
+  border: 1px solid rgba(0,0,0,0.07);
+}
+.stitle {
+  font-size: 0.77rem; font-weight: 700;
+  color: var(--lc); margin-bottom: 9px;
+  display: flex; align-items: center; gap: 6px;
+}
+.sdot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--lc); flex-shrink: 0;
+}
+.tags { display: flex; flex-wrap: wrap; gap: 5px; }
+
+/* Company tags */
+.tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.695rem; font-weight: 400;
+  padding: 3px 8px; border-radius: 5px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text-sec);
+  white-space: nowrap;
+}
+.tag.h {  /* hero / global leader */
+  background: var(--lc); color: #fff;
+  border-color: var(--lc); font-weight: 600;
+}
+.tag.cn { /* China company */
+  color: var(--lc);
+  border-color: rgba(0,0,0,0.1);
+  background: rgba(255,255,255,0.7);
+}
+
+/* Key insight */
+.insight {
+  margin-top: 16px; padding: 10px 14px;
+  border-left: 3px solid var(--lc);
+  border-radius: 0 8px 8px 0;
+  background: rgba(255,255,255,0.55);
+  font-size: 0.82rem; line-height: 1.55;
+  color: var(--text-sec);
+}
+.insight strong { color: var(--lc); font-weight: 600; }
+
+/* Footer */
+footer {
+  margin-top: 60px; padding-top: 24px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.73rem; color: var(--muted);
+  line-height: 1.9;
+}
+
+@media (max-width: 640px) {
+  .page { padding: 24px 16px 48px; }
+  .lcard-body { padding: 16px 18px 20px; }
+  .sgrid { grid-template-columns: 1fr; }
+  .lhead { flex-direction: column; }
+  .dir-strip { flex-direction: column; gap: 8px; }
+  .dir-bar { width: 80%; height: 6px; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <nav class="nav">
+    <a href="index.html" class="btn-nav">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      返回首页
+    </a>
+    <a href="ai-hardware-chain.html" class="btn-nav alt">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      AI 硬件产业链（交叉：RF半导体 / 相控阵 / 光通信）
+    </a>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-badge">
+      <svg width="9" height="9" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" fill="currentColor"/></svg>
+      SPACEX · SUPPLY CHAIN MAP
+    </div>
+    <h1>SpaceX 产业链全景图</h1>
+    <p class="hero-sub">
+      以 <strong>SpaceX 五大终端业务</strong>（商业发射、Starlink 宽带、载人/货运、国家安全、企业服务）
+      为需求原点，沿供应链向上溯源 <strong>六大产业层</strong>，覆盖火箭制造、卫星通信、航天器三大
+      技术体系，逐层拆解中美供应链格局与核心企业。
+    </p>
+
+    <div class="dir-strip">
+      <span class="dir-lbl up">↑ 上游 · 基础材料与制造设备</span>
+      <div class="dir-bar"></div>
+      <span class="dir-lbl down">SpaceX 终端服务 · 下游 ↓</span>
+    </div>
+  </div>
+
+  <div class="chain">
+
+    <!-- ═══ L6 基础材料与制造设备 ═══ -->
+    <div class="lcard" style="--lc:#7c3aed">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L6 · 最上游</span>
+            <span class="ltitle">基础材料与制造设备</span>
+          </div>
+          <span class="leng">Raw Materials &amp; Mfg Equipment</span>
+        </div>
+        <p class="ldesc">
+          航天工业的<strong>物理基础层</strong>，涵盖特种金属冶炼、高性能纤维原丝、增材制造设备、
+          测试验证平台。认证周期极长（进入 SpaceX 供应链需 <strong>5-8 年</strong>），
+          一旦通过认证即形成极强壁垒。中国在特种金属（铌合金、钛合金）、美国在增材设备和测试仪器领域各具优势。
+        </p>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>特种金属与高温合金</div>
+            <div class="tags">
+              <span class="tag h">ATI</span>
+              <span class="tag h">Carpenter Tech</span>
+              <span class="tag">Haynes Intl</span>
+              <span class="tag cn">西部材料 (C103铌合金)</span>
+              <span class="tag cn">钢研高纳</span>
+              <span class="tag cn">宝钛股份</span>
+              <span class="tag cn">西部超导</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>碳纤维原丝与预浸料</div>
+            <div class="tags">
+              <span class="tag h">Hexcel</span>
+              <span class="tag h">Toray 东丽</span>
+              <span class="tag">Teijin 帝人</span>
+              <span class="tag cn">光威复材 (T700/T800)</span>
+              <span class="tag cn">中复神鹰</span>
+              <span class="tag cn">中简科技</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>RF半导体衬底 (SiC/GaN)</div>
+            <div class="tags">
+              <span class="tag h">Wolfspeed</span>
+              <span class="tag h">Coherent (II-VI)</span>
+              <span class="tag">Soitec</span>
+              <span class="tag cn">天岳先进 (SiC)</span>
+              <span class="tag cn">天科合达 (SiC)</span>
+              <span class="tag cn">三安光电 (GaN/SiC)</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>增材制造设备/金属粉末</div>
+            <div class="tags">
+              <span class="tag h">Velo3D</span>
+              <span class="tag h">GE Additive</span>
+              <span class="tag">3D Systems</span>
+              <span class="tag cn">铂力特 (BLT)</span>
+              <span class="tag cn">华曙高科</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>航天级振动/环境测试设备</div>
+            <div class="tags">
+              <span class="tag h">Keysight</span>
+              <span class="tag">National Instruments</span>
+              <span class="tag">Tektronix</span>
+              <span class="tag cn">苏试试验</span>
+              <span class="tag cn">中科星图(测控)</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>高纯特种气体</div>
+            <div class="tags">
+              <span class="tag h">Linde</span>
+              <span class="tag">Air Products</span>
+              <span class="tag">Air Liquide</span>
+              <span class="tag cn">华特气体</span>
+              <span class="tag cn">雅克科技</span>
+            </div>
+          </div>
+        </div>
+        <div class="insight">
+          <strong>中国在特种金属环节优势突出：</strong>西部材料的 C103 铌合金是猛禽发动机燃烧室关键材料，占 SpaceX 该品类供应链 70%+。
+          美国在碳纤维（Hexcel）、增材设备（Velo3D）和测试仪器（Keysight）等环节保持领先。
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line" style="--fc:#7c3aed;--tc:#4f46e5"></div>
+      <div class="conn-icon">↓</div>
+    </div>
+
+    <!-- ═══ L5 先进材料与核心元器件 ═══ -->
+    <div class="lcard" style="--lc:#4f46e5">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L5</span>
+            <span class="ltitle">先进材料与核心元器件</span>
+          </div>
+          <span class="leng">Advanced Materials &amp; Components</span>
+        </div>
+        <p class="ldesc">
+          L6 基础材料经精密加工后形成的<strong>可直接装配的中间品</strong>——锻铸件、结构板材、
+          RF 芯片、抗辐照 IC、精密轴承、特种涂层。该层是航天供应链中<strong>技术密度最高</strong>
+          的环节之一，美国在宇航级 FPGA/抗辐照 IC 领域占据主导，中国在精密铸锻件和高频连接器环节
+          已深度嵌入 SpaceX 全球供应链。
+        </p>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>高温合金精密铸锻件</div>
+            <div class="tags">
+              <span class="tag h">Precision Castparts</span>
+              <span class="tag h">Howmet Aerospace</span>
+              <span class="tag">Arconic</span>
+              <span class="tag cn">应流股份 (涡轮泵铸件)</span>
+              <span class="tag cn">派克新材 (锻件)</span>
+              <span class="tag cn">图南股份</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>碳纤维结构件/蜂窝夹层</div>
+            <div class="tags">
+              <span class="tag h">Hexcel</span>
+              <span class="tag">Rock West</span>
+              <span class="tag">Toray Composite</span>
+              <span class="tag cn">光威复材</span>
+              <span class="tag cn">中航高科</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>GaN/GaAs RF毫米波芯片</div>
+            <div class="tags">
+              <span class="tag h">Qorvo</span>
+              <span class="tag h">MACOM</span>
+              <span class="tag">Analog Devices</span>
+              <span class="tag cn">铖昌科技 (T/R芯片)</span>
+              <span class="tag cn">臻镭科技 (ADC/DAC)</span>
+              <span class="tag cn">国博电子 (T/R组件)</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>宇航级FPGA / 抗辐照IC</div>
+            <div class="tags">
+              <span class="tag h">AMD (Xilinx太空级)</span>
+              <span class="tag h">Microchip (Microsemi)</span>
+              <span class="tag">BAE Systems</span>
+              <span class="tag cn">复旦微电 (FPGA)</span>
+              <span class="tag cn">772所 CETC</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>精密特种轴承与密封件</div>
+            <div class="tags">
+              <span class="tag h">Timken</span>
+              <span class="tag">RBC Bearings</span>
+              <span class="tag">SKF Aerospace</span>
+              <span class="tag cn">国机精工 (航天轴承)</span>
+              <span class="tag cn">五洲新春</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>高频连接器与特种线缆</div>
+            <div class="tags">
+              <span class="tag h">Amphenol</span>
+              <span class="tag h">TE Connectivity</span>
+              <span class="tag cn">信维通信 (星链独供)</span>
+              <span class="tag cn">陕西华达 (星网)</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>航天级绝热/涂层材料</div>
+            <div class="tags">
+              <span class="tag">PPG Aerospace</span>
+              <span class="tag">Lord (Parker)</span>
+              <span class="tag cn">再升科技 (超细玻纤棉)</span>
+            </div>
+          </div>
+        </div>
+        <div class="insight">
+          <strong>中国在精密铸件/连接器环节已通过 NASA 认证：</strong>应流股份是国内唯一具备猛禽发动机核心铸件量产能力的企业，
+          超捷股份的钛合金紧固件耐受 1600℃/10万次疲劳寿命；信维通信独供星链地面终端高频连接器，2025 年订单超 10 亿元。
+          但在宇航级 FPGA（美国占垄断地位）和高端 RF 芯片领域仍有明显差距。
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line" style="--fc:#4f46e5;--tc:#0284c7"></div>
+      <div class="conn-icon">↓</div>
+    </div>
+
+    <!-- ═══ L4 关键零部件 ═══ -->
+    <div class="lcard" style="--lc:#0284c7">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L4</span>
+            <span class="ltitle">关键零部件</span>
+          </div>
+          <span class="leng">Critical Components &amp; Parts</span>
+        </div>
+        <p class="ldesc">
+          将 L5 的先进材料与元器件进一步集成为具备独立功能的<strong>零部件单元</strong>——
+          涡轮泵、推力室、相控阵波束赋形芯片、激光通信终端、电推进器、空间级太阳能电池。
+          该层直接决定火箭和卫星的<strong>性能上限</strong>，SpaceX 大量关键零部件已自研
+          （涡轮泵、推力室、激光终端），但外部供应商在特定环节仍不可替代。
+        </p>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>涡轮泵（发动机心脏）</div>
+            <div class="tags">
+              <span class="tag h">SpaceX (in-house)</span>
+              <span class="tag">Barber-Nichols</span>
+              <span class="tag">Aerojet (L3Harris)</span>
+              <span class="tag cn">航天六院 (CASC)</span>
+              <span class="tag cn">应流股份 (铸件)</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>推力室 / 喷注器</div>
+            <div class="tags">
+              <span class="tag h">SpaceX (in-house)</span>
+              <span class="tag">Ursa Major</span>
+              <span class="tag cn">航天六院</span>
+              <span class="tag cn">斯瑞新材 (内衬)</span>
+              <span class="tag cn">铂力特 (3D打印)</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>相控阵波束赋形芯片</div>
+            <div class="tags">
+              <span class="tag h">STMicro (星链 50亿+颗)</span>
+              <span class="tag h">ADI (波束赋形)</span>
+              <span class="tag">Qorvo (Anokiwave)</span>
+              <span class="tag cn">铖昌科技 (T/R 芯片)</span>
+              <span class="tag cn">雷电微力 (毫米波)</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>星载激光通信终端</div>
+            <div class="tags">
+              <span class="tag h">SpaceX (in-house)</span>
+              <span class="tag">Mynaric (市占70%)</span>
+              <span class="tag">CACI (SA Photonics)</span>
+              <span class="tag cn">中科院上光所</span>
+              <span class="tag cn">航天电子</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>霍尔效应 / 离子电推进</div>
+            <div class="tags">
+              <span class="tag h">SpaceX (Krypton in-house)</span>
+              <span class="tag">Busek</span>
+              <span class="tag">Aerojet Rocketdyne</span>
+              <span class="tag cn">510所 兰州 (LIPS)</span>
+              <span class="tag cn">航天五院</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>高效太阳能电池片 (III-V族)</div>
+            <div class="tags">
+              <span class="tag h">SolAero (Rocket Lab)</span>
+              <span class="tag h">Spectrolab (Boeing)</span>
+              <span class="tag">Airbus DS</span>
+              <span class="tag cn">中电科 18所</span>
+              <span class="tag cn">航天八院</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>航天级锂电池组</div>
+            <div class="tags">
+              <span class="tag h">EaglePicher</span>
+              <span class="tag">SAFT (TotalEnergies)</span>
+              <span class="tag cn">航天电源 (CASC)</span>
+              <span class="tag cn">中电科 18所</span>
+            </div>
+          </div>
+        </div>
+        <div class="insight">
+          <strong>SpaceX 深度自研 vs 战略外购的边界：</strong>涡轮泵、推力室（Merlin/Raptor）和激光通信终端为 SpaceX 完全自研；
+          相控阵芯片由意法半导体供货（十年合作、累计出货超 50 亿颗、日产 500 万+颗）；
+          电推进器（Krypton 霍尔推进器）为自研。中国在电推进（510所）和 T/R 芯片（铖昌科技）环节具备独立能力。
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line" style="--fc:#0284c7;--tc:#0e7490"></div>
+      <div class="conn-icon">↓</div>
+    </div>
+
+    <!-- ═══ L3 核心子系统 ═══ -->
+    <div class="lcard" style="--lc:#0e7490">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L3</span>
+            <span class="ltitle">核心子系统</span>
+          </div>
+          <span class="leng">Core Subsystems</span>
+        </div>
+        <p class="ldesc">
+          零部件集成为具备<strong>完整功能边界</strong>的子系统——液体火箭发动机整机、通信转发器载荷、
+          航电飞控计算机、热防护系统（TPS）、生命支持（ECLSS）。SpaceX 在此层的<strong>垂直整合程度
+          全球最高</strong>（Merlin/Raptor 发动机 100% 自研），中国国家队（CASC）在子系统层面具备
+          完整谱系，民营商业航天公司正加速追赶。
+        </p>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>液体火箭发动机（整机）</div>
+            <div class="tags">
+              <span class="tag h">SpaceX (Merlin/Raptor)</span>
+              <span class="tag h">Blue Origin (BE-4)</span>
+              <span class="tag">Aerojet (RL10/RS-25)</span>
+              <span class="tag cn">航天六院 (YF系列)</span>
+              <span class="tag cn">蓝箭航天 (天鹊 TQ)</span>
+              <span class="tag cn">星际荣耀 (焦点)</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>卫星通信转发器载荷</div>
+            <div class="tags">
+              <span class="tag h">SpaceX (in-house)</span>
+              <span class="tag">Northrop Grumman</span>
+              <span class="tag">Maxar</span>
+              <span class="tag cn">航天五院 CAST</span>
+              <span class="tag cn">银河航天 (星载)</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>航电 / GNC 飞控系统</div>
+            <div class="tags">
+              <span class="tag h">SpaceX (in-house)</span>
+              <span class="tag">Honeywell</span>
+              <span class="tag">L3Harris</span>
+              <span class="tag cn">航天九院</span>
+              <span class="tag cn">航天电子</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>热防护系统 (TPS)</div>
+            <div class="tags">
+              <span class="tag h">SpaceX (PICA-X/陶瓷瓦)</span>
+              <span class="tag">NASA Ames (PICA)</span>
+              <span class="tag cn">航天材料及工艺研究所</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>环境控制/生命支持 (ECLSS)</div>
+            <div class="tags">
+              <span class="tag h">SpaceX (in-house)</span>
+              <span class="tag">Collins Aerospace (RTX)</span>
+              <span class="tag">Paragon SDC</span>
+              <span class="tag cn">航天五院 (神舟)</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>卫星平台 / 总线</div>
+            <div class="tags">
+              <span class="tag h">SpaceX (Starlink custom)</span>
+              <span class="tag">Maxar (SSL bus)</span>
+              <span class="tag">Northrop (GEOStar)</span>
+              <span class="tag cn">航天五院 (DFH bus)</span>
+              <span class="tag cn">银河航天 (平板)</span>
+              <span class="tag cn">微纳星空</span>
+            </div>
+          </div>
+        </div>
+        <div class="insight">
+          <strong>SpaceX 子系统自研率超 80%：</strong>Merlin 1D 推重比 184:1（全球最高之一），
+          Raptor 3 全流量分级燃烧循环仅 SpaceX 实现工程化量产（月产 50+ 台）。
+          中国航天六院的液氧煤油/液氢液氧发动机谱系完整，蓝箭航天的天鹊液氧甲烷发动机
+          是全球首个入轨的民营液氧甲烷发动机。差距主要在<strong>可重复使用寿命</strong>和<strong>量产成本</strong>。
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line" style="--fc:#0e7490;--tc:#059669"></div>
+      <div class="conn-icon">↓</div>
+    </div>
+
+    <!-- ═══ L2 整机/整箭集成 ═══ -->
+    <div class="lcard" style="--lc:#059669">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L2</span>
+            <span class="ltitle">整机 / 整箭集成</span>
+          </div>
+          <span class="leng">Vehicle &amp; System Integration</span>
+        </div>
+        <p class="ldesc">
+          将子系统集成为<strong>可飞行的完整航天器</strong>——运载火箭、通信卫星、载人/货运飞船、
+          用户终端、信关站。这是 SpaceX <strong>最核心的竞争壁垒层</strong>：垂直整合能力使其
+          单颗星链卫星出厂仅 <strong>72 小时</strong>、成本控制在 <strong>25-50 万美元</strong>，
+          猎鹰 9 号一级可重复使用超 <strong>25 次</strong>，全面碾压传统航天厂商的成本结构。
+        </p>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>运载火箭（可重复使用）</div>
+            <div class="tags">
+              <span class="tag h">SpaceX (F9/FH/Starship)</span>
+              <span class="tag">ULA (Vulcan Centaur)</span>
+              <span class="tag">Rocket Lab (Electron/Neutron)</span>
+              <span class="tag cn">长征系列 (一院/八院)</span>
+              <span class="tag cn">蓝箭 (朱雀二号/三号)</span>
+              <span class="tag cn">天兵科技 (天龙)</span>
+              <span class="tag cn">星河动力 (智神星)</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>通信卫星整星</div>
+            <div class="tags">
+              <span class="tag h">SpaceX (Starlink v2/v3)</span>
+              <span class="tag">Maxar (WorldView Legion)</span>
+              <span class="tag">Northrop Grumman</span>
+              <span class="tag cn">航天五院 (星网)</span>
+              <span class="tag cn">银河航天 (小蜘蛛)</span>
+              <span class="tag cn">长光卫星 (吉林一号)</span>
+              <span class="tag cn">微纳星空</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>载人 / 货运飞船</div>
+            <div class="tags">
+              <span class="tag h">SpaceX (Dragon 2)</span>
+              <span class="tag">Boeing (Starliner)</span>
+              <span class="tag">Sierra (Dream Chaser)</span>
+              <span class="tag cn">航天五院 (神舟/天舟)</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>地面用户终端</div>
+            <div class="tags">
+              <span class="tag h">SpaceX (Dishy in-house)</span>
+              <span class="tag">Kymeta (平板天线)</span>
+              <span class="tag cn">银河航天</span>
+              <span class="tag cn">中国星网</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>信关站与地面网络</div>
+            <div class="tags">
+              <span class="tag h">SpaceX (in-house)</span>
+              <span class="tag">Hughes (EchoStar)</span>
+              <span class="tag">Viasat</span>
+              <span class="tag cn">中国星网</span>
+              <span class="tag cn">中国卫通</span>
+            </div>
+          </div>
+        </div>
+        <div class="insight">
+          <strong>SpaceX 的成本碾压逻辑：</strong>猎鹰 9 号单次发射成本约 6700 万美元（复用模式），
+          同级火箭中全球最低；Starship 目标将每公斤入轨成本降至 10 美元以下（当前行业平均 2000-5000 美元）。
+          中国民营火箭公司（蓝箭、天兵、星河动力）正从固体向液体可回收方向演进，
+          朱雀三号已实现入轨+回收，整体差距约 <strong>5-8 年</strong>。
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line" style="--fc:#059669;--tc:#c2770c"></div>
+      <div class="conn-icon">↓</div>
+    </div>
+
+    <!-- ═══ L1 SpaceX 终端服务 ═══ -->
+    <div class="lcard" style="--lc:#c2770c">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L1 · 最下游</span>
+            <span class="ltitle">SpaceX 终端服务层</span>
+          </div>
+          <span class="leng">End Services</span>
+        </div>
+        <p class="ldesc">
+          产业链的<strong>最终需求来源</strong>，SpaceX 五大终端业务直接面向政府、企业和消费者。
+          2025 年发射 <strong>165+ 次</strong>（占全球发射次数超 60%），星链活跃用户约
+          <strong>500 万</strong>，年收入预估超 <strong>300 亿美元</strong>。
+          正推进史上最大 IPO（估值目标约 1.5 万亿美元），是整条供应链的终极需求驱动器。
+        </p>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>商业发射服务</div>
+            <div class="tags">
+              <span class="tag h">SpaceX (165+次/年)</span>
+              <span class="tag">ULA</span>
+              <span class="tag">Rocket Lab</span>
+              <span class="tag cn">蓝箭航天</span>
+              <span class="tag cn">星河动力</span>
+              <span class="tag cn">天兵科技</span>
+              <span class="tag cn">中科宇航</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>低轨卫星宽带</div>
+            <div class="tags">
+              <span class="tag h">Starlink (~500万用户)</span>
+              <span class="tag">Amazon Kuiper (筹备)</span>
+              <span class="tag cn">中国星网 (国网星座)</span>
+              <span class="tag cn">银河航天</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>载人 / 货运航天运输</div>
+            <div class="tags">
+              <span class="tag h">SpaceX (NASA Crew-10)</span>
+              <span class="tag">Boeing (Starliner)</span>
+              <span class="tag">Sierra Space</span>
+              <span class="tag cn">航天五院 (神舟/天舟)</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>国家安全 / 军事发射</div>
+            <div class="tags">
+              <span class="tag h">SpaceX (NSSL Phase 3)</span>
+              <span class="tag">ULA</span>
+              <span class="tag cn">航天一院 (CALT)</span>
+              <span class="tag cn">航天八院 (SAST)</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>企业/海事/航空宽带</div>
+            <div class="tags">
+              <span class="tag h">Starlink Business/Maritime</span>
+              <span class="tag">OneWeb (Eutelsat)</span>
+              <span class="tag">Viasat (传统GEO)</span>
+              <span class="tag cn">(暂无商业对标)</span>
+            </div>
+          </div>
+        </div>
+        <div class="insight">
+          <strong>需求引擎效应：</strong>SpaceX 2025 年发射 165+ 次（每周 3+ 次），星链在轨卫星超 5,500 颗。
+          发射频次和卫星制造规模拉动上游全链扩产——西部材料铌合金订单 2025 前三季度 10.2 亿元（同比 +200%+）、
+          信维通信星链连接器订单超 10 亿元。若 Starship 全面商用化（单次部署 100+ 颗 v3 卫星），
+          供应链需求有望再上台阶。
+          <strong>中国方面：</strong>星网星座规划超 1.2 万颗卫星、"千帆星座"启动组网，
+          将催生中国版商业航天供应链上游需求的指数级增长。
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /chain -->
+
+  <footer>
+    <div>SpaceX 产业链全景图 · ZephyrSpace Research</div>
+    <div style="margin-top:4px;opacity:0.7">
+      数据截至 2025 年底 / 2026 年 Q1 · 部分供应链关系来源于公开研报与媒体报道，请以公司官方披露为准 · 不构成投资建议
+    </div>
+    <div style="margin-top:3px;opacity:0.55">
+      交叉参考：<a href="ai-hardware-chain.html" style="color:var(--teal)">AI 硬件产业链全景图</a>
+      （RF半导体 / 相控阵 / 光通信环节可衔接阅读）
+    </div>
+  </footer>
+
+</div><!-- /page -->
+</body>
+</html>

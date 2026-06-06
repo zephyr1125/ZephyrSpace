@@ -1041,6 +1041,41 @@ class CninfoClient:
         save_path = Path(output_dir) / fname
         return self.download_report(row["PDF_URL"], save_path)
 
+    # ── 23. 互动易 Q&A (irm.cninfo.com.cn) ──────────────────
+
+    def irm_qa(self, scode, pages=3, answered_only=True):
+        """互动易投资者问答 -> DataFrame（无需 mcode,公共API）"""
+        r = requests.post(
+            "https://irm.cninfo.com.cn/newircs/index/queryKeyboardInfo",
+            params={"_t": "1691144074"}, data={"keyWord": scode},
+            headers={"User-Agent": "Mozilla/5.0"}, timeout=10,
+        )
+        org_id = r.json()["data"][0]["secid"]
+
+        rows = []
+        for page in range(1, pages + 1):
+            r = requests.post(
+                "https://irm.cninfo.com.cn/newircs/company/question",
+                params={
+                    "_t": "1691142650", "stockcode": scode,
+                    "orgId": org_id, "pageSize": "50", "pageNum": str(page),
+                    "keyWord": "", "startDay": "", "endDay": "",
+                },
+                headers={"User-Agent": "Mozilla/5.0"}, timeout=10,
+            )
+            for item in r.json().get("rows", []):
+                answer = (item.get("attachedContent") or "").strip()
+                if answered_only and not answer:
+                    continue
+                rows.append({
+                    "提问时间": pd.Timestamp(item.get("pubDate", 0), unit="ms"),
+                    "提问者": item.get("authorName", ""),
+                    "问题": item.get("mainContent", ""),
+                    "回答内容": answer,
+                    "回答者": item.get("attachedAuthor", ""),
+                })
+        return pd.DataFrame(rows)
+
     # ── 批量快捷方法 ──────────────────────────────────────
 
     def deep_analysis_bundle(self, scode, years=None):

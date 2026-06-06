@@ -1,0 +1,68 @@
+{
+  "api": "最新资产规模信息API",
+  "apiKey": "cn/fund/hot/f_as",
+  "url": "https://open.lixinger.com/api/cn/fund/hot/f_as",
+  "method": "POST",
+  "params": [
+    {
+      "name": "token",
+      "required": "Yes",
+      "type": "String",
+      "descriptions": [
+        "我的Token页有用户专属且唯一的Token。"
+      ]
+    },
+    {
+      "name": "stockCodes",
+      "required": "Yes",
+      "type": "Array",
+      "descriptions": [
+        "基金代码数组。"
+      ],
+      "constraints": [
+        "stockCodes长度>=1且<=100。",
+        "请参考基金信息API获取合法的stockCode。"
+      ],
+      "example": "[\"161725\",\"005827\"]"
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "stockCode",
+      "type": "String",
+      "description": "股票代码"
+    },
+    {
+      "name": "f_tas",
+      "type": "Number",
+      "description": "总资产规模"
+    },
+    {
+      "name": "f_tas_d",
+      "type": "Date",
+      "description": "总资产规模日期"
+    },
+    {
+      "name": "fet_as",
+      "type": "Number",
+      "description": "基金场内规模"
+    },
+    {
+      "name": "fet_as_d",
+      "type": "Date",
+      "description": "基金场内规模日期"
+    }
+  ],
+  "requestExample": [
+    {
+      "desc": "示例1: get by {stockType} codes",
+      "requestBody": {
+        "stockCodes": [
+          "161725",
+          "005827"
+        ],
+        "token": "***********"
+      }
+    }
+  ]
+}

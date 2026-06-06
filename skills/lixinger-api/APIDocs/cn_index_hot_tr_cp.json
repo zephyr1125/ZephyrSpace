@@ -1,0 +1,142 @@
+{
+  "api": "全收益率API",
+  "apiKey": "cn/index/hot/tr_cp",
+  "url": "https://open.lixinger.com/api/cn/index/hot/tr_cp",
+  "method": "POST",
+  "params": [
+    {
+      "name": "token",
+      "required": "Yes",
+      "type": "String",
+      "descriptions": [
+        "我的Token页有用户专属且唯一的Token。"
+      ]
+    },
+    {
+      "name": "stockCodes",
+      "required": "Yes",
+      "type": "Array",
+      "descriptions": [
+        "指数代码数组。"
+      ],
+      "constraints": [
+        "stockCodes长度>=1且<=100。",
+        "请参考指数信息API获取合法的stockCode。"
+      ],
+      "example": "[\"000016\"]"
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "stockCode",
+      "type": "String",
+      "description": "股票代码"
+    },
+    {
+      "name": "last_data_date",
+      "type": "Date",
+      "description": "数据时间"
+    },
+    {
+      "name": "start_date",
+      "type": "Date",
+      "description": "数据起始时间"
+    },
+    {
+      "name": "istrcpc",
+      "type": "Number",
+      "description": "指定时间全收益涨跌幅"
+    },
+    {
+      "name": "tr_cpc_fys",
+      "type": "Number",
+      "description": "今年以来全收益涨跌幅"
+    },
+    {
+      "name": "tr_cpc_w1",
+      "type": "Number",
+      "description": "近一个周全收益年化涨跌幅"
+    },
+    {
+      "name": "tr_cpc_w2",
+      "type": "Number",
+      "description": "近二个周全收益年化涨跌幅"
+    },
+    {
+      "name": "tr_cpc_m1",
+      "type": "Number",
+      "description": "近一个月全收益年化涨跌幅"
+    },
+    {
+      "name": "tr_cpc_m3",
+      "type": "Number",
+      "description": "近三个月全收益年化涨跌幅"
+    },
+    {
+      "name": "tr_cpc_m6",
+      "type": "Number",
+      "description": "近六个月全收益年化涨跌幅"
+    },
+    {
+      "name": "tr_cpc_y1",
+      "type": "Number",
+      "description": "近一年全收益年化涨跌幅"
+    },
+    {
+      "name": "tr_cp_cac_y2",
+      "type": "Number",
+      "description": "近二年全收益率年化涨跌幅"
+    },
+    {
+      "name": "tr_cp_cac_y3",
+      "type": "Number",
+      "description": "近三年全收益率年化涨跌幅"
+    },
+    {
+      "name": "tr_cp_cac_y5",
+      "type": "Number",
+      "description": "近五年全收益年化涨跌幅"
+    },
+    {
+      "name": "tr_cp_cac_y10",
+      "type": "Number",
+      "description": "近十年全收益年化涨跌幅"
+    },
+    {
+      "name": "tr_cp_cac_fs",
+      "type": "Number",
+      "description": "有数据以来全收益年化涨跌幅"
+    },
+    {
+      "name": "tr_cp_cuc_y2",
+      "type": "Number",
+      "description": "近二年全收益累计涨跌幅"
+    },
+    {
+      "name": "tr_cp_cuc_y3",
+      "type": "Number",
+      "description": "近三年全收益累计涨跌幅"
+    },
+    {
+      "name": "tr_cp_cuc_y5",
+      "type": "Number",
+      "description": "近五年全收益累计涨跌幅"
+    },
+    {
+      "name": "tr_cp_cuc_y10",
+      "type": "Number",
+      "description": "近十年全收益累计涨跌幅"
+    }
+  ],
+  "requestExample": [
+    {
+      "desc": "示例1: get by {stockType} codes",
+      "requestBody": {
+        "stockCodes": [
+          "000016"
+        ],
+        "token": "***********"
+      }
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "api": "高管增减持API",
+  "apiKey": "cn/company/hot/esc",
+  "instruction": "计算股本为流通A股",
+  "url": "https://open.lixinger.com/api/cn/company/hot/esc",
+  "method": "POST",
+  "params": [
+    {
+      "name": "token",
+      "required": "Yes",
+      "type": "String",
+      "descriptions": [
+        "我的Token页有用户专属且唯一的Token。"
+      ]
+    },
+    {
+      "name": "stockCodes",
+      "required": "Yes",
+      "type": "Array",
+      "descriptions": [
+        "股票代码数组。"
+      ],
+      "constraints": [
+        "stockCodes长度>=1且<=100。",
+        "请参考股票信息API获取合法的stockCode。"
+      ],
+      "example": "[\"300750\",\"600519\",\"600157\"]"
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "stockCode",
+      "type": "String",
+      "description": "股票代码"
+    },
+    {
+      "name": "last_data_date",
+      "type": "Date",
+      "description": "数据时间"
+    },
+    {
+      "name": "escm_last",
+      "type": "Number",
+      "description": "最新高管增减持金额"
+    },
+    {
+      "name": "esc_cap_rc_last",
+      "type": "Number",
+      "description": "最新高管增减持股份占流通A股比例"
+    },
+    {
+      "name": "escm_m1",
+      "type": "Number",
+      "description": "过去1个月累计高管增减持金额"
+    },
+    {
+      "name": "escm_m3",
+      "type": "Number",
+      "description": "过去3个月累计高管增减持金额"
+    },
+    {
+      "name": "escm_m6",
+      "type": "Number",
+      "description": "过去6个月累计高管增减持金额"
+    },
+    {
+      "name": "escm_y1",
+      "type": "Number",
+      "description": "过去1年累计高管增减持金额"
+    },
+    {
+      "name": "escm_y2",
+      "type": "Number",
+      "description": "过去2年累计高管增减持金额"
+    },
+    {
+      "name": "escm_y3",
+      "type": "Number",
+      "description": "过去3年累计高管增减持金额"
+    },
+    {
+      "name": "esc_cap_rc_m1",
+      "type": "Number",
+      "description": "过去1个月累计高管增减持占流通A股比例"
+    },
+    {
+      "name": "esc_cap_rc_m3",
+      "type": "Number",
+      "description": "过去3个月累计高管增减持占流通A股比例"
+    },
+    {
+      "name": "esc_cap_rc_m6",
+      "type": "Number",
+      "description": "过去6个月累计高管增减持占流通A股比例"
+    },
+    {
+      "name": "esc_cap_rc_y1",
+      "type": "Number",
+      "description": "过去1年累计高管增减持占流通A股比例"
+    },
+    {
+      "name": "esc_cap_rc_y2",
+      "type": "Number",
+      "description": "过去2年累计高管增减持占流通A股比例"
+    },
+    {
+      "name": "esc_cap_rc_y3",
+      "type": "Number",
+      "description": "过去3年累计高管增减持占流通A股比例"
+    }
+  ],
+  "requestExample": [
+    {
+      "desc": "示例1: get by {stockType} codes",
+      "requestBody": {
+        "stockCodes": [
+          "300750",
+          "600519",
+          "600157"
+        ],
+        "token": "***********"
+      }
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "api": "公司概况API",
+  "apiKey": "cn/company/profile",
+  "url": "https://open.lixinger.com/api/cn/company/profile",
+  "method": "POST",
+  "params": [
+    {
+      "name": "token",
+      "required": "Yes",
+      "type": "String",
+      "descriptions": [
+        "我的Token页有用户专属且唯一的Token。"
+      ]
+    },
+    {
+      "name": "stockCodes",
+      "required": "Yes",
+      "type": "Array",
+      "descriptions": [
+        "股票代码数组。"
+      ],
+      "constraints": [
+        "stockCodes长度>=1且<=100。",
+        "请参考股票信息API获取合法的stockCode。"
+      ],
+      "example": "[\"300750\",\"600519\",\"600157\"]"
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "stockCode",
+      "type": "String",
+      "description": "股票代码"
+    },
+    {
+      "name": "companyName",
+      "type": "String",
+      "description": "公司名称"
+    },
+    {
+      "name": "historyStockNames",
+      "type": "Array",
+      "description": "历史名称",
+      "items": [
+        {
+          "label": "新名称",
+          "value": "newName"
+        },
+        {
+          "label": "老名称",
+          "value": "oldName"
+        }
+      ]
+    },
+    {
+      "name": "province",
+      "type": "String",
+      "description": "省份"
+    },
+    {
+      "name": "city",
+      "type": "String",
+      "description": "城市"
+    },
+    {
+      "name": "actualControllerTypes",
+      "type": "Array",
+      "description": "实际控制人类型",
+      "items": [
+        {
+          "label": "自然人",
+          "value": "natural_person"
+        },
+        {
+          "label": "集体",
+          "value": "collective"
+        },
+        {
+          "label": "外企",
+          "value": "foreign_company"
+        },
+        {
+          "label": "国有",
+          "value": "state_owned"
+        }
+      ]
+    },
+    {
+      "name": "actualControllerName",
+      "type": "String",
+      "description": "实际控制人"
+    }
+  ],
+  "requestExample": [
+    {
+      "desc": "示例1: 获取指定公司信息",
+      "requestBody": {
+        "stockCodes": [
+          "300750",
+          "600519",
+          "600157"
+        ],
+        "token": "***********"
+      }
+    }
+  ]
+}

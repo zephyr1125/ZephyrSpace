@@ -1,0 +1,78 @@
+{
+  "api": "基金经理信息API",
+  "apiKey": "cn/fund-manager/hot/fmi",
+  "url": "https://open.lixinger.com/api/cn/fund-manager/hot/fmi",
+  "method": "POST",
+  "params": [
+    {
+      "name": "token",
+      "required": "Yes",
+      "type": "String",
+      "descriptions": [
+        "我的Token页有用户专属且唯一的Token。"
+      ]
+    },
+    {
+      "name": "stockCodes",
+      "required": "Yes",
+      "type": "Array",
+      "descriptions": [
+        "基金经理代码数组。"
+      ],
+      "constraints": [
+        "stockCodes长度>=1且<=100。",
+        "请参考基金信息API获取合法的stockCode。"
+      ],
+      "example": "[\"8801388323\",\"8801372475\"]"
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "stockCode",
+      "type": "String",
+      "description": "股票代码"
+    },
+    {
+      "name": "fm_my",
+      "type": "Number",
+      "description": "管理年限"
+    },
+    {
+      "name": "fm_mfn",
+      "type": "Number",
+      "description": "当前管理的基金数量"
+    },
+    {
+      "name": "fm_a_mfn",
+      "type": "Number",
+      "description": "历史上总共管理的基金数量"
+    },
+    {
+      "name": "fm_as",
+      "type": "Number",
+      "description": "当前管理的基金资产规模"
+    },
+    {
+      "name": "fm_nb_as",
+      "type": "Number",
+      "description": "当前管理的非债券基金资产规模"
+    },
+    {
+      "name": "fm_r_fd",
+      "type": "Number",
+      "description": "代表基金的ID"
+    }
+  ],
+  "requestExample": [
+    {
+      "desc": "示例1: get by {stockType} codes",
+      "requestBody": {
+        "stockCodes": [
+          "8801388323",
+          "8801372475"
+        ],
+        "token": "***********"
+      }
+    }
+  ]
+}

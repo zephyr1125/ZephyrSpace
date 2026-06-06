@@ -1,0 +1,102 @@
+{
+  "api": "互联互通API",
+  "apiKey": "cn/industry/hot/mm_ha/sw_2021",
+  "url": "https://open.lixinger.com/api/cn/industry/hot/mm_ha/sw_2021",
+  "method": "POST",
+  "params": [
+    {
+      "name": "token",
+      "required": "Yes",
+      "type": "String",
+      "descriptions": [
+        "我的Token页有用户专属且唯一的Token。"
+      ]
+    },
+    {
+      "name": "stockCodes",
+      "required": "Yes",
+      "type": "Array",
+      "descriptions": [
+        "行业代码数组。"
+      ],
+      "constraints": [
+        "stockCodes长度>=1且<=100。",
+        "请参考行业信息API获取合法的stockCode。"
+      ],
+      "example": "[\"490000\"]"
+    }
+  ],
+  "responseParams": [
+    {
+      "name": "stockCode",
+      "type": "String",
+      "description": "股票代码"
+    },
+    {
+      "name": "last_data_date",
+      "type": "Date",
+      "description": "数据时间"
+    },
+    {
+      "name": "mm_sha",
+      "type": "Number",
+      "description": "陆股通持仓金额"
+    },
+    {
+      "name": "mm_sha_mc_r",
+      "type": "Number",
+      "description": "陆股通持仓金额占市值比例"
+    },
+    {
+      "name": "mm_sh_nba_q1",
+      "type": "Number",
+      "description": "陆股通过去1个季度净买入金额"
+    },
+    {
+      "name": "mm_sh_nba_q2",
+      "type": "Number",
+      "description": "陆股通过去2个季度净买入金额"
+    },
+    {
+      "name": "mm_sh_nba_q3",
+      "type": "Number",
+      "description": "陆股通过去3个季度净买入金额"
+    },
+    {
+      "name": "mm_sh_nba_q4",
+      "type": "Number",
+      "description": "陆股通过去4个季度净买入金额"
+    },
+    {
+      "name": "mm_sha_mc_rc_q1",
+      "type": "Number",
+      "description": "陆股通过去1个季度持股金额占市值变化比例"
+    },
+    {
+      "name": "mm_sha_mc_rc_q2",
+      "type": "Number",
+      "description": "陆股通过去2个季度持股金额占市值变化比例"
+    },
+    {
+      "name": "mm_sha_mc_rc_q3",
+      "type": "Number",
+      "description": "陆股通过去3个季度持股金额占市值变化比例"
+    },
+    {
+      "name": "mm_sha_mc_rc_q4",
+      "type": "Number",
+      "description": "陆股通过去4个季度持股金额占市值变化比例"
+    }
+  ],
+  "requestExample": [
+    {
+      "desc": "示例1: get by {stockType} codes",
+      "requestBody": {
+        "stockCodes": [
+          "490000"
+        ],
+        "token": "***********"
+      }
+    }
+  ]
+}
