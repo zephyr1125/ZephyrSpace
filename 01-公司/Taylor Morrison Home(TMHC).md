@@ -118,7 +118,7 @@ Taylor Morrison Home 是美国第5-6大住宅建商（按收入），在全美21
 
 ## 深度分析报告
 
-[[深度分析/Taylor Morrison Home 深度分析 2026-06-01|Taylor Morrison Home 深度分析（2026-06-01）]]
+[[深度分析/Taylor Morrison Home 深度分析 81 2026-06-01|Taylor Morrison Home 深度分析（2026-06-01）]]
 - 评分：81 / 100
 - 评级：⭐⭐⭐⭐（优质）
 - 核心结论：运营执行优秀、资本纪律良好、管理层历经周期考验的中型建商，无独特护城河但管理品质突出。已被 Berkshire 以 $72.50/股（0.91x TBV）全现金收购。
