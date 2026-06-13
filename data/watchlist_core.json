@@ -1,575 +1,601 @@
 {
-  "version": 1,
-  "entries": [
-    {
-      "name": "国电南瑞",
-      "code": "600406.SH",
-      "source_etf": "931994",
-      "position_role": "电网调度自动化/继保/控制系统绝对龙头，系统控制层护城河极深（C=18/20），高确定性核心底仓",
-      "watch_reason": "系统控制层绝对龙头（调度自动化+继保+EMS+配电自动化），十五五电网智能化顺风，ROE稳定~16%，现金流极强（净现比~143%），含回购后股东回报~65.6%，87/100卓越评级。",
-      "current_price": 25.93,
-      "price_date": "2026-05-22",
-      "board": "沪",
-      "dv_ttm": 2.4,
-      "price_bands": [
-        28.67,
-        26.86,
-        24.7
-      ],
-      "valuation_anchor": "PE TTM 24.93x，3年分位~32.6%；P20≈23.83x/P50≈25.92x/P80≈27.66x",
-      "risk_flags": [
-        "国家电网单一客户依赖（2025年占销售55.40%），若国网投资放缓业绩受压",
-        "应收账款体量大：2025年末340.11亿元（占营收51%），1年以上账龄28.9%",
-        "成长新引擎（能源低碳/海外）毛利率偏低（~20%），结构升级仍在进行中"
-      ],
-      "next_earnings_date": "2026-08-31",
-      "next_earnings_type": "半年报",
-      "cycle_is_cyclical": false,
-      "prebuy_conclusion": "深度分析87/100（⭐⭐⭐⭐⭐ 卓越），电网控制层系统护城河+高现金流质量+央企平台稳定，适合作为核心仓位。当前PE 24.93x处于3年P20-P50较好入场区间，可分批布局。主要约束：国网客户集中（55.4%）+应收账款占营收51%。[全面分析版2026-05-23，深度87分]"
-    },
-    {
-      "current_price": 69.45,
-      "price_date": "2026-04-30",
-      "next_earnings_type": "半年报",
-      "dv_ttm": null,
-      "next_earnings_date": "2026-08-31",
-      "cycle_is_cyclical": false,
-      "price_bands": [
-        90,
-        65,
-        40
-      ],
-      "source_etf": "direct",
-      "name": "兴齐眼药",
-      "watch_reason": "国内眼科制药产品矩阵最完整企业(51个批文/30个医保)，阿托品近视防控药放量驱动2025净利+106%至6.96亿。ROE39%+ROA34%(低杠杆高盈利)，OCF/净利92%现金质量优秀。PE 22.6x处3年0%分位历史最低，P20对应约85元(vs当前69元)，安全边际充足。",
-      "valuation_anchor": "PE 22.6x (历史最低分位0%)",
-      "prebuy_conclusion": "高质量成长核心仓。阿托品近视防控政策背书+ROE39%低杠杆高盈利+PE历史最低分位三重优势。当前69.45元低于P20对应85元，赔率极佳。建议core标准仓位(8-10%)，分批买入。",
-      "code": "300573.SZ",
-      "position_role": "眼科制药龙头，阿托品近视防控核心标的，ROE39%+PE极低分位，A股医药中确定性最高的成长核心仓",
-      "board": "深",
-      "risk_flags": [
-        "阿托品集中度风险",
-        "医保覆盖变动"
-      ]
-    },
-    {
-      "valuation_anchor": "PE 10.6x (历史最低)",
-      "cycle_position": "复苏中期",
-      "price_bands": [
-        16,
-        12,
-        7
-      ],
-      "dv_ttm": 5.2,
-      "board": "沪",
-      "name": "锦江航运",
-      "source_etf": "direct",
-      "next_earnings_date": "2026-08-31",
-      "next_earnings_type": "半年报",
-      "price_date": "2026-04-30",
-      "current_price": 12.11,
-      "risk_flags": [
-        "航运周期",
-        "长江运力过剩"
-      ],
-      "code": "601083.SH",
-      "watch_reason": "以上海为核心枢纽的集装箱航运企业，港航协同模式。ROE连续3年提升(10.5%→12.2%→16.6%)趋势明确，OCF/净利>165%现金质量极优。PE 10.6x处3年1.7%分位极端低估，股息率4.03%。航运运价周期性是最主要风险。",
-      "prebuy_conclusion": "ROE上升趋势(10.5%→16.6%)+OCF/净利165%+PE 1.7%分位+股息率4%四重验证。航运周期是双刃剑(景气回落利润快速下滑)。建议core标准仓位(5-8%)，以高股息为安全垫，等运价回调时加仓。",
-      "cycle_is_cyclical": true,
-      "position_role": "上海枢纽集装箱航运企业，区域航线运力经营+港航协同，ROE上升趋势明确，周期复苏价值标的"
-    },
-    {
-      "current_price": 10.92,
-      "price_date": "2026-04-30",
-      "next_earnings_type": "半年报",
-      "dv_ttm": 2.1,
-      "next_earnings_date": "2026-08-31",
-      "cycle_is_cyclical": false,
-      "price_bands": [
-        15,
-        11,
-        8
-      ],
-      "source_etf": "direct",
-      "name": "诺普信",
-      "watch_reason": "国内重要农药生产企业，农业刚需属性提供周期下行防御。ROE 16.3%(2025年)，毛利率37.4%+净利率11%。PE 14.1x估值合理偏低。OCF数据待补充(需深度调研)。适合作为周期防御底仓配置。",
-      "valuation_anchor": "PE 14.1x (合理)",
-      "prebuy_conclusion": "农药龙头+ROE16.3%+PE14x估值合理偏低，农业刚需属性在周期下行时提供防御价值。公司页数据偏薄(OCF缺失、红旗未核)，需进一步深度调研。建议core轻仓(3-5%)，等深度调研完成+OCF数据确认后再考虑加仓。",
-      "code": "002215.SZ",
-      "position_role": "国内农药制造龙头，ROE16%+PE低估值，农业刚需属性提供防御性底仓价值",
-      "board": "深",
-      "risk_flags": [
-        "农药行业竞争",
-        "原材料波动"
-      ]
-    },
-    {
-      "current_price": 25.91,
-      "price_date": "2026-04-30",
-      "next_earnings_type": "半年报",
-      "dv_ttm": 2.5,
-      "next_earnings_date": "2026-08-31",
-      "cycle_is_cyclical": false,
-      "price_bands": [
-        35,
-        26,
-        18
-      ],
-      "source_etf": "direct",
-      "name": "华润三九",
-      "watch_reason": "华润集团旗下医药上市平台，产品覆盖OTC、处方药及中成药。ROE 16.3%(2025年)，毛利率54%为医药消费中最高一档。PE 13.4x处历史低位，央企背景+品牌矩阵提供稳定性。OCF数据待深度调研补充。",
-      "valuation_anchor": "PE 13.4x (低位)",
-      "prebuy_conclusion": "央企医药平台+ROE16.3%+毛利54%+PE13.4x低估值，是医药消费方向防御型底仓候选。公司页数据偏薄(OCF缺失、红旗未核)，需进一步深度调研。建议core轻仓(3-5%)，等深度调研完成+OCF数据确认后加仓。",
-      "code": "000999.SZ",
-      "position_role": "华润系OTC+处方药+中成药平台，央企医药旗舰，毛利54%+PE低估值，防御型医药底仓",
-      "board": "深",
-      "risk_flags": [
-        "政策医保政策调整",
-        "OTC销售压力"
-      ]
-    },
-    {
-      "name": "东鹏饮料",
-      "code": "605499.SH",
-      "board": "沪",
-      "current_price": 203.84,
-      "price_date": "2026-05-03",
-      "next_earnings_type": "半年报",
-      "next_earnings_date": "2026-08-31",
-      "cycle_is_cyclical": false,
-      "price_bands": [
-        240,
-        200,
-        175
-      ],
-      "source_etf": "direct",
-      "watch_reason": "中国能量饮料双寡头(销量第一)，6年营收CAGR 30.5%+净利CAGR 40.7%，ROE 46.9%+OCF/NI均值166%现金牛，零处罚/零诉讼/零质押/零商誉/零高管减持六项零记录，分红率59%年派5元/股。深度分析87/100卓越。",
-      "valuation_anchor": "PE 26.1x (基于FY2026E增速25-30%+EPS 9.8-10.2元的合理估值，PEG约1.0x)",
-      "prebuy_conclusion": "深度分析87/100卓越。能量饮料双寡头+超级现金牛+治理完美，但单品集中>90%+渠道杠杆脆弱性需持续跟踪。当前PE 26.1x合理但非低估，建议核心仓位5-10%，175-200元区间布局；若Q2/Q3增速降至<20%则降仓至标准2-5%。",
-      "position_role": "中国能量饮料双寡头(销量第一)，ROE47%+OCF/NI166%超级现金牛，治理完美，消费成长核心仓5-10%",
-      "dv_ttm": 2.5,
-      "deep_analysis": "87/100 | 2026-05-26 | 卓越，核心仓位适配",
-      "risk_flags": [
-        "单品集中>90%：东鹏特饮贡献绝大多数营收，补水啦等新品尚未形成第二曲线",
-        "渠道杠杆脆弱：权益乘数2.84x，增速放缓→经销商缩减预付→ROE从47%快速回落",
-        "增速边际放缓：Q1 2026降至21.5%，30%+增速不可持续，PE估值面临收缩风险"
-      ]
-    },
-    {
-      "name": "腾讯控股",
-      "code": "00700.HK",
-      "board": "港",
-      "source_etf": "direct",
-      "position_role": "中国互联网综合垄断平台，微信社交+游戏广告+金融科技，长期核心底仓",
-      "prebuy_conclusion": "Q1 2026: 游戏+22%/广告+20% 超预期，IFRS净利+21.5%，非IFRS+11%。Forward PE 14.3x，60日低位。Capex大增+46%（FY2026E 1150亿），回购放缓，短期FCF承压但属AI投资期。当前是近三年最佳入场窗口",
-      "watch_reason": "微信13亿MAU不可替代；游戏/广告AI赋能超预期；十五五+政治局会议AI主线直接受益；Forward PE 14.3x历史低位",
-      "current_price": 457.2,
-      "price_date": "2026-05-13",
-      "dv_ttm": 1.1,
-      "price_bands": [
-        583,
-        477,
-        371
-      ],
-      "price_bands_basis": "pe_ttm.manual_3y",
-      "price_bands_date": "2026-05-13",
-      "valuation_anchor": "Trailing PE 17.2x（P20~P50间），Forward PE 14.3x（接近P20），历史最低估区间",
-      "risk_flags": [
-        "FY2026E Capex +46%（1150亿），FCF短期受压，回购节奏放缓",
-        "营收Q1小幅miss（+9% vs 预期+10%），金融科技增速趋缓",
-        "监管政策风险（游戏版号/金融科技/数据安全）",
-        "VIE结构存在理论解散风险，中美博弈加剧时估值折价",
-        "AI芯片出口管制（H800/A100限制）影响算力扩张节奏"
-      ],
-      "next_earnings_date": "2026-08-15",
-      "next_earnings_type": "季度业绩（Q2/中期）",
-      "cycle_is_cyclical": false
-    },
-    {
-      "board": "纳",
-      "code": "GOOGL.US",
-      "current_price": 393.88,
-      "cycle_is_cyclical": false,
-      "cycle_position": null,
-      "dv_ttm": 0.21,
-      "name": "Alphabet(Google)",
-      "next_earnings_date": "2026-07-23",
-      "next_earnings_type": "季报",
-      "position_role": "AI基础设施核心锚+搜索垄断底仓，3年以上持有",
-      "prebuy_conclusion": "深度分析85/100卓越；搜索垄断90%+Cloud+63%+backlog；FY2026 FCF受CapEx压制接近归零；Ad Tech案救济悬而未决；等回撤至-，中性区-",
-      "price_bands": [
-        422,
-        368,
-        300
-      ],
-      "price_date": "2026-05-11",
-      "risk_flags": [
-        "FY2026 CapEx $180-190B，FCF接近归零，ROI待验证",
-        "DOJ Ad Tech案最终救济未明，或影响广告技术资产",
-        "DOJ Search案行为救济执行，慢变量侵蚀分发护城河",
-        "PE处于5年历史高位80-90分位，估值回撤风险"
-      ],
-      "source_etf": "direct",
-      "valuation_anchor": "FY2026E PE 28.9x（非GAAP EPS共识$13.62），历史5年区间19-31x，当前80-90分位",
-      "watch_reason": "深度分析A9+B18+C17+D12+E17+F12=85；Search垄断飞轮+Cloud AI爆发+优质资本分配"
-    },
-    {
-      "name": "长江电力",
-      "code": "600900.SH",
-      "position_role": "A股水电绝对龙头，四大电站，ROE 15.79%，长期稳定分红，核心底仓",
-      "watch_reason": "护城河最强，3年PE分位1.2%历史极低，低估由盈利抬升驱动，典型越跌越买标的",
-      "board": "沪",
-      "cycle_is_cyclical": false,
-      "risk_flags": [
-        "水电来水量受气候影响，枯水年业绩波动",
-        "长期电价改革若推进市场化可能压缩溢价",
-        "分红增长预期已price-in，成长空间有限"
-      ],
-      "current_price": 27.25,
-      "price_date": "2026-05-19",
-      "dv_ttm": 3.67,
-      "price_bands": [
-        35.87,
-        30.16,
-        27.99
-      ],
-      "valuation_anchor": "5年PE分位换算（2026-05-19 27.25元/PE18.5x基准）：P80=24.3x→35.87元 / P50=20.4x→30.16元 / P20=19.0x→27.99元；当前5年15.9%分位/3年1.2%分位；数据来源：理杏仁",
-      "next_earnings_date": "2026-08-31",
-      "next_earnings_type": "半年报",
-      "prebuy_conclusion": "结论：长江电力仍是本批护城河最强、确定性最高的底仓标的，当前 PE 18.48x 处于 3 年 1.2% / 5 年 15.9% 分位，现价 27.25 元已低于 5 年 P20 对应的 27.99 元，属于历史低估区。且当前价较 52 周高点 31.19 元仅回落 12.6%，低 PE 更多来自 2025 年和 2026Q1 盈利持续增长抬升 EPS，而不是股价大幅下跌，是“公司变好后的便宜”。\n\n2026 Q1 归母净利润同比 +30.5%，2025 全年净利润 345 亿（+6.17%）且分红规划明确（1.00元/股），基本面无重大红旗。水电为非化石能源，与十五五“双碳”目标完全契合，政",
-      "last_updated": "2026-05-20"
-    },
-    {
-      "name": "ASML Holding",
-      "code": "ASML.US",
-      "market": "US",
-      "board": "纳",
-      "source_etf": "direct",
-      "position_role": "全球EUV光刻机唯一供应商，半导体先进制程不可绕过的关键基础设施，长期核心底仓",
-      "watch_reason": "EUV 100%垄断，全球无替代品；AI资本开支驱动先进制程需求持续；FCF/净利120%+；深度分析96/100",
-      "prebuy_conclusion": "逻辑清晰，等待更合适价格或验证点。当前$1,582处于中性区上端（FY2026E PE ~43x），等待回调至$1,185-$1,440绿灯区或Q2 2026财报（2026-07-15）验证后建仓",
-      "current_price": 1581.58,
-      "price_date": "2026-05-14",
-      "price_bands": [
-        1740,
-        1440,
-        1185
-      ],
-      "valuation_anchor": "FY2026E EPS ~$37（€34共识），43x为中性区上端；历史5年PE均值38-42x；同业KLAC 34x/LRCX 38x/AMAT 32x；PEG ~1.43x（同业最低）",
-      "dv_ttm": 1.5,
-      "risk_flags": [
-        "中国收入占比~25-30%，出口管制持续收紧风险",
-        "高端EUV年产能~60台，下游若资本开支收缩则积压订单转单风险",
-        "Intel/Samsung先进制程迟滞，TSMC依赖度过高",
-        "FY2026E PE 43x处于历史中高端，正面意外已定价"
-      ],
-      "next_earnings_date": "2026-07-15",
-      "next_earnings_type": "季报",
-      "cycle_is_cyclical": false
-    },
-    {
-      "name": "NVIDIA",
-      "code": "NVDA.US",
-      "market": "US",
-      "board": "纳",
-      "source_etf": "direct",
-      "position_role": "全球AI算力基础设施最核心卖铲资产，CUDA生态护城河极深，长期底仓",
-      "watch_reason": "Q1 FY2027营收816.15亿美元、Q2指引910亿美元，Blackwell继续兑现；FCF强、PEG低，仍是AI卖铲核心。",
-      "prebuy_conclusion": "逻辑清晰，Q1 FY2027已纳入；财报后估值锚已上修，下一次财报预计2026-08-26 AMC，继续跟踪AI capex与估值。",
-      "current_price": 219.44,
-      "price_date": "2026-05-12",
-      "price_bands": [
-        261,
-        218,
-        174
-      ],
-      "valuation_anchor": "Q1 FY2027已纳入，FY2027E Non-GAAP EPS约$8.70；合理PE 20-30x对应$174-$261，Q1后估值锚小幅上修",
-      "risk_flags": [
-        "H20出口禁令：FY2027 H1损失.5B（.5B库存减值+.5B直接收入损失+Q2再损）",
-        "AI资本开支降温风险：戴维斯双杀隐患，四大云厂商砍单即触发",
-        "商誉暴增.6B至.83B（FY2026），疑似Groq准并购协议，10-K附注待核实",
-        "客户集中：四大云厂商占收入重大比例"
-      ],
-      "dv_ttm": 0.02,
-      "next_earnings_date": "2026-08-26",
-      "next_earnings_type": "季报",
-      "cycle_is_cyclical": false,
-      "pending_earnings_note": "Q1 FY2027（2026-05-20 AMC）结果尚未纳入分析，财报发布后需更新公司页及本条目，并将next_earnings_date更新为下一期日期"
-    },
-    {
-      "name": "贵州茅台",
-      "code": "600519.SH",
-      "board": "沪",
-      "source_etf": "direct",
-      "position_role": "A股消费最深护城河，茅台品牌+稀缺性+定价权三位一体，长期核心底仓",
-      "prebuy_conclusion": "护城河深度A股第一，ROE 34.4%连续多年稳定，PE处3年17.4%分位。当前1332.95元低于PS调整后Q2v（1466元），进入绿灯区，是可建仓窗口。红旗：前董秘被查事件持续跟踪。",
-      "watch_reason": "品牌护城河极深，定价权无可撼动；ROE 34%+；PE历史低位；分红稳定增长；AI/数字化不会替代茅台消费场景",
-      "current_price": 1332.95,
-      "price_date": "2026-05-15",
-      "price_bands": [
-        2000,
-        1674,
-        1466
-      ],
-      "valuation_anchor": "PE_TTM Q8v=2000/Q5v=1522（PS+2调整→1674）/Q2v=1333（PS+2调整→1466）；当前1332.95元低于PS调整后Q2v，处3年17.4%极低分位",
-      "dv_ttm": 4.0,
-      "risk_flags": [
-        "前董秘蒋焰被查，管理层风险事件持续跟踪",
-        "Q1 2026毛利率小幅压缩至89.8%，直营vs批发结构变化需关注",
-        "营收-1.2% YoY（低基数叠加渠道库存去化），短期增长承压"
-      ],
-      "next_earnings_date": "2026-08-31",
-      "next_earnings_type": "半年报",
-      "cycle_is_cyclical": false
-    },
-    {
-      "name": "招商银行",
-      "code": "600036.SH",
-      "board": "沪",
-      "source_etf": "direct",
-      "position_role": "A股零售银行最优质标的，轻型银行模式，ROE/NIM/资产质量均居国内银行首位",
-      "prebuy_conclusion": "当前37.65元PB处3年7%分位历史极低。激进≤43元/合理≤40元/理想≤38元。零售转型护城河深、拨备充足（拨备覆盖率430%+）、NIM 2.0%行业领先、股息率5.35%。无硬红旗，当前为历史底部加仓窗口。",
-      "watch_reason": "ROE 12%+，NIM行业最高，拨备覆盖率430%领先同业；零售银行护城河深（财富管理+信用卡+APP月活1.1亿）；PB历史极低，股息率5.35%高安全垫",
-      "current_price": 37.65,
-      "price_date": "2026-05-15",
-      "price_bands": [
-        55,
-        43,
-        40
-      ],
-      "valuation_anchor": "PB分位定价：PB<0.8x=绿灯(≤40元)/PB 0.8-1.0x=中性(40-50元)/PB>1.1x=追高(>55元)；当前PB=0.7x处3年7%极低分位",
-      "dv_ttm": 5.35,
-      "risk_flags": [
-        "NIM 2.0%虽行业领先但仍面临利率下行压制，2026年LPR若再降影响息差",
-        "净利润增速趋缓（2025年+1.2%），高速增长阶段结束，进入稳态收益模式",
-        "零售贷款资产质量：信用卡不良率有上行趋势，需跟踪消费信贷周期"
-      ],
-      "next_earnings_date": "2026-08-31",
-      "next_earnings_type": "半年报",
-      "cycle_is_cyclical": false
-    },
-    {
-      "board": "纳",
-      "code": "AAPL.US",
-      "current_price": 271.35,
-      "cycle_is_cyclical": false,
-      "cycle_position": "成熟期",
-      "dv_ttm": 0.38,
-      "name": "苹果(AAPL)",
-      "next_earnings_date": "2026-07-29",
-      "next_earnings_type": "季报",
-      "position_role": "消费科技核心仓，生态护城河+Services飞轮，3年以上持有",
-      "prebuy_conclusion": "深度分析89/100卓越；22亿活跃设备生态锁定+Services(毛利76%)+FCF全球标杆；DMA监管渐进侵蚀护城河，AI执行短板；中性区-，等",
-      "price_bands": [
-        300,
-        265,
-        243
-      ],
-      "price_date": "2026-04-30",
-      "risk_flags": [
-        "DMA/DOJ监管侵蚀App Store 30%佣金，Services毛利率长期承压",
-        "Apple Intelligence延期发布，AI换机周期推迟",
-        "中国市场收入占17-20%，地缘政治与供应链风险",
-        "Tim Cook接班人不明确，创始人文化传承风险"
-      ],
-      "source_etf": "direct",
-      "valuation_anchor": "FY2026E EPS .80，forward PE 30-31x（中性区），5年均值约27-28x",
-      "watch_reason": "深度分析A10+B17+C18+D12+E19+F13=89；生态系统护城河最强+Services飞轮+FCF质量全球标杆"
-    },
-    {
-      "name": "卡特彼勒(CAT)",
-      "position_role": "美股工程机械全球绝对龙头，多维护城河+Dividend Aristocrat，长期底仓",
-      "risk_flags": [
-        "宏观周期下行：FY2025营收-3.6%，CI/RI双双同步下行，宏观建设投资放缓",
-        "关税冲击：2025年关税成本约$7-9亿，供应链重组在途",
-        "估值充分定价：PE TTM 44x，Forward PE~37x，安全边际不足，需等回调"
-      ],
-      "prebuy_conclusion": "深度分析89/100卓越，逻辑清晰，但当前$888估值极贵（PE TTM 44x，约95%历史分位，Forward PE~37x仍偏高）。等待回调至$660-840（FW PE 27-35x）建仓，任何>20%回调均为核心买点。分析师共识目标价$795（低于现价-10.5%），当前不宜追高。",
-      "price_date": "2026-05-16",
-      "valuation_anchor": "FY2026E EPS共识~$24定价：追高区>$840(>35xFE,当前$888在此)/中性区$660-840(27-35xFE,等回调建仓)/较好区间$500-660(21-27xFE)/更低区间<$500(<21xFE,历史底部)",
-      "source_etf": "direct",
-      "cycle_position": "收缩期",
-      "dv_ttm": 2.3,
-      "board": "纽",
-      "watch_reason": "全球建设机械绝对龙头，C维度18/20，30+年Dividend Aristocrat，CI/RI/E&T三大业务跨周期，FCF稳健支撑回购+分红（近5年回购约$25B）",
-      "next_earnings_type": "季报",
-      "price_bands": [
-        840,
-        660,
-        500
-      ],
-      "cycle_is_cyclical": true,
-      "code": "CAT.US",
-      "current_price": 888.31,
-      "next_earnings_date": "2026-07-29"
-    },
-    {
-      "name": "蜜雪集团",
-      "code": "02097.HK",
-      "board": "港",
-      "source_etf": "direct",
-      "position_role": "全球最大现制饮品加盟连锁，加盟供应链平台型消费龙头，极致性价比心智+高ROE低杠杆，适合长期核心底仓",
-      "prebuy_conclusion": "深度分析审核总分82/100，四星优质。当前价HK\\.40，PE 14.9x处于low较好区（上市以来PE区间14.3x-34.5x）。2025年收入335.60亿/净利润59.27亿/净利率17.66%/ROE约29.76%，财务质量极强。核心观察点：同店增速企稳（2024Q3 SSSG -0.6%）、H股全流通后减持压力、海外4,467家门店优化进展。中期业绩（预计2026年8月）是下一个重要验证节点。",
-      "watch_reason": "加盟供应链模式=向加盟商卖原料/包材/设备，非直营餐饮，商业模式稳定可复制；59,823家门店网络+五大生产基地+28个仓储中心构成竞争壁垒；极致低价心智（2-8元/杯）叠加下沉市场渗透，加盟商切换成本高。ROE~30%、低负债率、OCF稳健。",
-      "current_price": 257.4,
-      "price_date": "2026-05-20",
-      "dv_ttm": 1.5,
-      "price_bands": [
-        340.0,
-        280.0,
-        230.0
-      ],
-      "price_bands_basis": "上市以来PE区间（14.3x-34.5x）+港股消费龙头折价因子",
-      "price_bands_date": "2026-05-20",
-      "valuation_anchor": "当前PE 14.9x，处于low区（230-280 HKD）；激进买入区<230 HKD（PE<12.8x）；high区>340 HKD（PE>19x）",
-      "risk_flags": [
-        "H股全流通计划：上市锁定期届满后大股东/早期投资人可减持，潜在股价供给压力",
-        "同店增速承压：2024Q3 SSSG -0.6%，若持续转负将动摇增长逻辑",
-        "加盟末端食安/用工事件：加盟商行为难以100%管控，尾部风险影响品牌",
-        "海外门店优化未完成：东南亚4,467家门店，印尼/越南部分门店仍处优化期",
-        "上市时间短（2025年3月），历史PE分位样本不足，估值锚点参考性有限"
-      ],
-      "deep_score": 82,
-      "next_earnings_date": "2026-08-31",
-      "next_earnings_type": "中期业绩",
-      "cycle_is_cyclical": false
-    },
-    {
-      "name": "宁德时代",
-      "code": "300750.SZ",
-      "source_etf": "direct",
-      "position_role": "全球动力电池+储能双龙头，人形机器人动力系统核心供应商，核心仓位压舱石",
-      "prebuy_conclusion": "深度分析89/100（卓越）。FY2025营收约3600亿，归母净利约500亿，ROE 24.9%，OCF质量极强，全球份额约37%（动力）+30%（储能）。护城河：4680电芯/CTP/CTB技术+全球主机厂深度绑定认证。当前PE约24x处于低历史分位，价格合理。建议核心仓位，分批于310-385元区间建仓。",
-      "watch_reason": "全球电池双龙头，人形机器人动力电池+高密度储能电池需求爆发最大受益者，ROE/现金流极强，当前PE低位",
-      "current_price": 411.63,
-      "price_date": "2026-05-21",
-      "board": "创",
-      "dv_ttm": 0.8,
-      "price_bands": [
-        476,
-        385,
-        312
-      ],
-      "valuation_anchor": "PE TTM约24x（近3年历史低分位），储能景气+机器人叙事支撑溢价",
-      "risk_flags": [
-        "行业价格战持续，2025毛利率承压",
-        "海外扩产+关税壁垒（欧盟/美国）风险",
-        "大股东及高管持续减持，情绪扰动"
-      ],
-      "next_earnings_date": "2026-08-31",
-      "next_earnings_type": "半年报",
-      "cycle_is_cyclical": true,
-      "cycle_position": "复苏中期",
-      "deep_analysis": "89/100 | 2026-05-22 | 卓越，核心仓位适配"
-    },
-    {
-      "name": "港交所",
-      "code": "00388.HK",
-      "market": "HK",
-      "hk_code": "0388",
-      "dual_listing": "HK only",
-      "hk_connect": true,
-      "price_currency": "HKD",
-      "source_etf": "direct",
-      "board": "HK",
-      "position_role": "全球唯一直营交易所+结算所垄断，芒格式收费站模型，组合核心压舱石",
-      "prebuy_conclusion": "91/100 ⭐⭐⭐⭐⭐卓越。法律垄断+网络效应双重护城河，净利率61%/ROE 33%/分红90%，建议核心仓位(12-15%)",
-      "watch_reason": "香港唯一交易所牌照+中央结算垄断，互联互通每次扩容都是增量，日均成交2320亿HKD(+93%)",
-      "current_price": 425.4,
-      "price_date": "2026-05-22",
-      "dv_ttm": 3.06,
-      "price_bands": [
-        500.0,
-        380.0,
-        300.0
-      ],
-      "valuation_anchor": "收费站PE区间：追高区>500(PE>35x) / 中性区380-500(PE 27-35x) / 较好区间300-380(PE 21-27x) / 更低区间<300(PE<21x)",
-      "risk_flags": [
-        "香港金融中心地位结构性衰落(中美脱钩极端情景，致命但概率低)",
-        "港股成交量高周期性(FY2025日均2320亿是景气高点，熊市可跌至800亿)",
-        "LME镍逼仓集体诉讼(一般级别，LME收入仅占11%)"
-      ]
-    },
-    {
-      "name": "中国移动",
-      "code": "600941.SH",
-      "board": "沪",
-      "source_etf": "direct",
-      "position_role": "10亿用户现金流年金+5G后FCF拐点，高股息压舱石，组合防守端核心",
-      "prebuy_conclusion": "85/100 ⭐⭐⭐⭐⭐卓越。10亿用户现金流垄断+5G CapEx拐点+分红率持续提升+4.9%股息率，建议核心仓位(10-12%)",
-      "watch_reason": "三大运营商寡头+牌照壁垒，10亿用户换号成本极高，5G后资本开支下降→FCF加速释放，母公司持续增持",
-      "current_price": 95.0,
-      "price_date": "2026-05-22",
-      "dv_ttm": 4.92,
-      "price_bands": [
-        110.0,
-        90.0,
-        70.0
-      ],
-      "valuation_anchor": "高股息PE区间：追高区>110(PE>17x) / 中性区90-110(PE 14-17x) / 较好区间70-90(PE 11-14x/DY>5%) / 更低区间<70(PE<11x/DY>7%)",
-      "risk_flags": [
-        "ROE仅9.8%，会计ROE被折旧系统性低估但静态仍偏低",
-        "营收+0.9%近乎零增长",
-        "OTT(微信通话等)长期侵蚀语音/短信高利润业务"
-      ]
-    },
-    {
-      "name": "创科实业",
-      "code": "0669.HK",
-      "market": "HK",
-      "board": "HK",
-      "source_etf": "direct",
-      "position_role": "全球电动工具双料冠军(Milwaukee#1专业+Ryobi#1消费)，电池平台锁定+毛利率41.2%行业最高+净现金$7亿+股息CAGR 17%，全球寡头核心底仓",
-      "watch_reason": "深度分析84/100优质。双品牌全球#1寡头地位(CR5=72%)+电池平台网络效应创造类经常性收入+OCF/净利194%+FCF连续3年>$12亿。全球无绳化+OPE电动化双顺风。主要风险为Home Depot集中度(~45%营收)和中美关税暴露。",
-      "prebuy_conclusion": "深度分析84/100优质，core核心底仓。双品牌全球寡头地位(市占率21%持续提升)+电池平台锁定+财务质量卓越(净现金$7亿+FCF>$12亿×3年)，护城河深度和财务纪律均满足core标准。Home Depot集中度和关税风险需持续跟踪但属于已知可控风险。",
-      "current_price": 118.4,
-      "price_date": "2026-06-03",
-      "dv_ttm": 2.57,
-      "price_bands": [
-        138.0,
-        113.0,
-        90.0
-      ],
-      "valuation_anchor": "PE历史区间定价：追高区>138(PE>27x,P80+) / 中性区113-138(PE 22-27x,P50-P80) / 较好区间90-113(PE 17.5-22x,P20-P50) / 更低区间<90(PE<17.5x,接近52周低位)。FY2025 EPS US$0.6561≈HK$5.12。",
-      "risk_flags": [
-        "Home Depot集中度(~45%营收)：Ryobi在HD独家销售，单一客户依赖在制造业中属极高水平",
-        "中美关税暴露：制造在亚洲(中国/越南)，销售~75%在北美，关税升级可能超出产能多元化应对能力",
-        "创始人81岁年龄风险：Horst Pudwill虽已CEO交班，但创始人家族战略眼光不可替代"
-      ],
-      "next_earnings_date": "2026-08-31",
-      "next_earnings_type": "中期业绩",
-      "cycle_is_cyclical": false,
-      "deep_analysis": "84/100 | 2026-06-03 | 优质，core核心底仓"
-    },
-    {
-      "name": "中航沈飞",
-      "code": "600760.SH",
-      "board": "沪",
-      "source_etf": "direct",
-      "position_role": "中国战斗机总装绝对龙头，歼-15/16/35唯一或主战平台，护城河不可替代，军工板块罕见的质量+估值双重合理标的",
-      "prebuy_conclusion": "深度分析79/100（⭐⭐⭐⭐优质），核心底仓5-10%。35x PE+19.8% ROE在军工板块独一无二——战斗机总装垄断护城河(C=18/20)+行业内最优财务质量(E=16/20)+高管近期集体增持。核心催化剂：歼-35批产放量(预计2027-2028)。主要约束：营收增速从25%降至5%，十五五订单尚未大规模下达。",
-      "watch_reason": "中国歼击机摇篮，1951年建厂，歼-15(唯一舰载机)+歼-16(重型多用途)+歼-35(五代隐身舰载机)三大主力机型总装。ROE 19.8%在军工主机厂鹤立鸡群，OCF/NI 109%利润含金量高，PE 35x处军工板块最低档(板块中位数119x)，商誉=0、资产负债率仅28%。十五五先进战斗力建设直接受益，军贸突破为潜在期权。",
-      "current_price": 40.5,
-      "price_date": "2026-06-05",
-      "dv_ttm": null,
-      "price_bands": [
-        52.0,
-        40.0,
-        32.0
-      ],
-      "valuation_anchor": "PE TTM 35.3x（板块中位数119x），PE分位~36%（历史中低水平）。price_bands基于PE区间：P80≈45x→52元/P50≈35x→40元/P20≈28x→32元",
-      "risk_flags": [
-        "营收增速持续放缓：从FY2021 +25%降至FY2025 +4.2%，歼-16订单高峰已过，歼-35批产放量时间不确定",
-        "单一客户依赖：军方是唯一客户(营收95%+)，采购节奏由国防预算和国家决策主导，公司无主动拓展客户能力",
-        "军品定价天花板：成本加成模式限制毛利率上限(8-10%)，原材料/人工成本上涨可能挤压利润",
-        "军贸拓展不确定：歼-35出口许可审批进度不可控，历史上中国战斗机军贸出口规模有限"
-      ],
-      "next_earnings_date": "2026-08-31",
-      "next_earnings_type": "半年报",
-      "cycle_is_cyclical": false,
-      "deep_analysis": "79/100 | 2026-06-07 | 优质，core核心底仓"
-    }
-  ],
-  "tier": "core",
-  "updated_at": "2026-06-08"
+ "version": 2,
+ "entries": [
+  {
+   "name": "国电南瑞",
+   "code": "600406.SH",
+   "source_etf": "931994",
+   "position_role": "电网调度自动化/继保/控制系统绝对龙头，系统控制层护城河极深（C=18/20），高确定性核心底仓",
+   "watch_reason": "系统控制层绝对龙头（调度自动化+继保+EMS+配电自动化），十五五电网智能化顺风，ROE稳定~16%，现金流极强（净现比~143%），含回购后股东回报~65.6%，87/100卓越评级。",
+   "current_price": 25.93,
+   "price_date": "2026-05-22",
+   "board": "沪",
+   "dv_ttm": 2.4,
+   "price_bands": [
+    28.67,
+    26.86,
+    24.7
+   ],
+   "valuation_anchor": "PE TTM 24.93x，3年分位~32.6%；P20≈23.83x/P50≈25.92x/P80≈27.66x",
+   "risk_flags": [
+    "国家电网单一客户依赖（2025年占销售55.40%），若国网投资放缓业绩受压",
+    "应收账款体量大：2025年末340.11亿元（占营收51%），1年以上账龄28.9%",
+    "成长新引擎（能源低碳/海外）毛利率偏低（~20%），结构升级仍在进行中"
+   ],
+   "next_earnings_date": "2026-08-31",
+   "next_earnings_type": "半年报",
+   "cycle_is_cyclical": false,
+   "prebuy_conclusion": "深度分析87/100（⭐⭐⭐⭐⭐ 卓越），电网控制层系统护城河+高现金流质量+央企平台稳定，适合作为核心仓位。当前PE 24.93x处于3年P20-P50较好入场区间，可分批布局。主要约束：国网客户集中（55.4%）+应收账款占营收51%。[全面分析版2026-05-23，深度87分]"
+  },
+  {
+   "current_price": 69.45,
+   "price_date": "2026-04-30",
+   "next_earnings_type": "半年报",
+   "dv_ttm": null,
+   "next_earnings_date": "2026-08-31",
+   "cycle_is_cyclical": false,
+   "price_bands": [
+    90,
+    65,
+    40
+   ],
+   "source_etf": "direct",
+   "name": "兴齐眼药",
+   "watch_reason": "国内眼科制药产品矩阵最完整企业(51个批文/30个医保)，阿托品近视防控药放量驱动2025净利+106%至6.96亿。ROE39%+ROA34%(低杠杆高盈利)，OCF/净利92%现金质量优秀。PE 22.6x处3年0%分位历史最低，P20对应约85元(vs当前69元)，安全边际充足。",
+   "valuation_anchor": "PE 22.6x (历史最低分位0%)",
+   "prebuy_conclusion": "高质量成长核心仓。阿托品近视防控政策背书+ROE39%低杠杆高盈利+PE历史最低分位三重优势。当前69.45元低于P20对应85元，赔率极佳。建议core标准仓位(8-10%)，分批买入。",
+   "code": "300573.SZ",
+   "position_role": "眼科制药龙头，阿托品近视防控核心标的，ROE39%+PE极低分位，A股医药中确定性最高的成长核心仓",
+   "board": "深",
+   "risk_flags": [
+    "阿托品集中度风险",
+    "医保覆盖变动"
+   ]
+  },
+  {
+   "valuation_anchor": "PE 10.6x (历史最低)",
+   "cycle_position": "复苏中期",
+   "price_bands": [
+    16,
+    12,
+    7
+   ],
+   "dv_ttm": 5.2,
+   "board": "沪",
+   "name": "锦江航运",
+   "source_etf": "direct",
+   "next_earnings_date": "2026-08-31",
+   "next_earnings_type": "半年报",
+   "price_date": "2026-04-30",
+   "current_price": 12.11,
+   "risk_flags": [
+    "航运周期",
+    "长江运力过剩"
+   ],
+   "code": "601083.SH",
+   "watch_reason": "以上海为核心枢纽的集装箱航运企业，港航协同模式。ROE连续3年提升(10.5%→12.2%→16.6%)趋势明确，OCF/净利>165%现金质量极优。PE 10.6x处3年1.7%分位极端低估，股息率4.03%。航运运价周期性是最主要风险。",
+   "prebuy_conclusion": "ROE上升趋势(10.5%→16.6%)+OCF/净利165%+PE 1.7%分位+股息率4%四重验证。航运周期是双刃剑(景气回落利润快速下滑)。建议core标准仓位(5-8%)，以高股息为安全垫，等运价回调时加仓。",
+   "cycle_is_cyclical": true,
+   "position_role": "上海枢纽集装箱航运企业，区域航线运力经营+港航协同，ROE上升趋势明确，周期复苏价值标的"
+  },
+  {
+   "current_price": 10.92,
+   "price_date": "2026-04-30",
+   "next_earnings_type": "半年报",
+   "dv_ttm": 2.1,
+   "next_earnings_date": "2026-08-31",
+   "cycle_is_cyclical": false,
+   "price_bands": [
+    15,
+    11,
+    8
+   ],
+   "source_etf": "direct",
+   "name": "诺普信",
+   "watch_reason": "国内重要农药生产企业，农业刚需属性提供周期下行防御。ROE 16.3%(2025年)，毛利率37.4%+净利率11%。PE 14.1x估值合理偏低。OCF数据待补充(需深度调研)。适合作为周期防御底仓配置。",
+   "valuation_anchor": "PE 14.1x (合理)",
+   "prebuy_conclusion": "农药龙头+ROE16.3%+PE14x估值合理偏低，农业刚需属性在周期下行时提供防御价值。公司页数据偏薄(OCF缺失、红旗未核)，需进一步深度调研。建议core轻仓(3-5%)，等深度调研完成+OCF数据确认后再考虑加仓。",
+   "code": "002215.SZ",
+   "position_role": "国内农药制造龙头，ROE16%+PE低估值，农业刚需属性提供防御性底仓价值",
+   "board": "深",
+   "risk_flags": [
+    "农药行业竞争",
+    "原材料波动"
+   ]
+  },
+  {
+   "current_price": 25.91,
+   "price_date": "2026-04-30",
+   "next_earnings_type": "半年报",
+   "dv_ttm": 2.5,
+   "next_earnings_date": "2026-08-31",
+   "cycle_is_cyclical": false,
+   "price_bands": [
+    35,
+    26,
+    18
+   ],
+   "source_etf": "direct",
+   "name": "华润三九",
+   "watch_reason": "华润集团旗下医药上市平台，产品覆盖OTC、处方药及中成药。ROE 16.3%(2025年)，毛利率54%为医药消费中最高一档。PE 13.4x处历史低位，央企背景+品牌矩阵提供稳定性。OCF数据待深度调研补充。",
+   "valuation_anchor": "PE 13.4x (低位)",
+   "prebuy_conclusion": "央企医药平台+ROE16.3%+毛利54%+PE13.4x低估值，是医药消费方向防御型底仓候选。公司页数据偏薄(OCF缺失、红旗未核)，需进一步深度调研。建议core轻仓(3-5%)，等深度调研完成+OCF数据确认后加仓。",
+   "code": "000999.SZ",
+   "position_role": "华润系OTC+处方药+中成药平台，央企医药旗舰，毛利54%+PE低估值，防御型医药底仓",
+   "board": "深",
+   "risk_flags": [
+    "政策医保政策调整",
+    "OTC销售压力"
+   ]
+  },
+  {
+   "name": "东鹏饮料",
+   "code": "605499.SH",
+   "board": "沪",
+   "current_price": 203.84,
+   "price_date": "2026-05-03",
+   "next_earnings_type": "半年报",
+   "next_earnings_date": "2026-08-31",
+   "cycle_is_cyclical": false,
+   "price_bands": [
+    240,
+    200,
+    175
+   ],
+   "source_etf": "direct",
+   "watch_reason": "中国能量饮料双寡头(销量第一)，6年营收CAGR 30.5%+净利CAGR 40.7%，ROE 46.9%+OCF/NI均值166%现金牛，零处罚/零诉讼/零质押/零商誉/零高管减持六项零记录，分红率59%年派5元/股。深度分析87/100卓越。",
+   "valuation_anchor": "PE 26.1x (基于FY2026E增速25-30%+EPS 9.8-10.2元的合理估值，PEG约1.0x)",
+   "prebuy_conclusion": "深度分析87/100卓越。能量饮料双寡头+超级现金牛+治理完美，但单品集中>90%+渠道杠杆脆弱性需持续跟踪。当前PE 26.1x合理但非低估，建议核心仓位5-10%，175-200元区间布局；若Q2/Q3增速降至<20%则降仓至标准2-5%。",
+   "position_role": "中国能量饮料双寡头(销量第一)，ROE47%+OCF/NI166%超级现金牛，治理完美，消费成长核心仓5-10%",
+   "dv_ttm": 2.5,
+   "deep_analysis": "87/100 | 2026-05-26 | 卓越，核心仓位适配",
+   "risk_flags": [
+    "单品集中>90%：东鹏特饮贡献绝大多数营收，补水啦等新品尚未形成第二曲线",
+    "渠道杠杆脆弱：权益乘数2.84x，增速放缓→经销商缩减预付→ROE从47%快速回落",
+    "增速边际放缓：Q1 2026降至21.5%，30%+增速不可持续，PE估值面临收缩风险"
+   ]
+  },
+  {
+   "name": "腾讯控股",
+   "code": "00700.HK",
+   "board": "港",
+   "source_etf": "direct",
+   "position_role": "中国互联网综合垄断平台，微信社交+游戏广告+金融科技，长期核心底仓",
+   "prebuy_conclusion": "Q1 2026: 游戏+22%/广告+20% 超预期，IFRS净利+21.5%，非IFRS+11%。Forward PE 14.3x，60日低位。Capex大增+46%（FY2026E 1150亿），回购放缓，短期FCF承压但属AI投资期。当前是近三年最佳入场窗口",
+   "watch_reason": "微信13亿MAU不可替代；游戏/广告AI赋能超预期；十五五+政治局会议AI主线直接受益；Forward PE 14.3x历史低位",
+   "current_price": 457.2,
+   "price_date": "2026-05-13",
+   "dv_ttm": 1.1,
+   "price_bands": [
+    583,
+    477,
+    371
+   ],
+   "price_bands_basis": "pe_ttm.manual_3y",
+   "price_bands_date": "2026-05-13",
+   "valuation_anchor": "Trailing PE 17.2x（P20~P50间），Forward PE 14.3x（接近P20），历史最低估区间",
+   "risk_flags": [
+    "FY2026E Capex +46%（1150亿），FCF短期受压，回购节奏放缓",
+    "营收Q1小幅miss（+9% vs 预期+10%），金融科技增速趋缓",
+    "监管政策风险（游戏版号/金融科技/数据安全）",
+    "VIE结构存在理论解散风险，中美博弈加剧时估值折价",
+    "AI芯片出口管制（H800/A100限制）影响算力扩张节奏"
+   ],
+   "next_earnings_date": "2026-08-15",
+   "next_earnings_type": "季度业绩（Q2/中期）",
+   "cycle_is_cyclical": false
+  },
+  {
+   "board": "纳",
+   "code": "GOOGL.US",
+   "current_price": 393.88,
+   "cycle_is_cyclical": false,
+   "cycle_position": null,
+   "dv_ttm": 0.21,
+   "name": "Alphabet(Google)",
+   "next_earnings_date": "2026-07-23",
+   "next_earnings_type": "季报",
+   "position_role": "AI基础设施核心锚+搜索垄断底仓，3年以上持有",
+   "prebuy_conclusion": "深度分析85/100卓越；搜索垄断90%+Cloud+63%+backlog；FY2026 FCF受CapEx压制接近归零；Ad Tech案救济悬而未决；等回撤至-，中性区-",
+   "price_bands": [
+    422,
+    368,
+    300
+   ],
+   "price_date": "2026-05-11",
+   "risk_flags": [
+    "FY2026 CapEx $180-190B，FCF接近归零，ROI待验证",
+    "DOJ Ad Tech案最终救济未明，或影响广告技术资产",
+    "DOJ Search案行为救济执行，慢变量侵蚀分发护城河",
+    "PE处于5年历史高位80-90分位，估值回撤风险"
+   ],
+   "source_etf": "direct",
+   "valuation_anchor": "FY2026E PE 28.9x（非GAAP EPS共识$13.62），历史5年区间19-31x，当前80-90分位",
+   "watch_reason": "深度分析A9+B18+C17+D12+E17+F12=85；Search垄断飞轮+Cloud AI爆发+优质资本分配"
+  },
+  {
+   "name": "长江电力",
+   "code": "600900.SH",
+   "position_role": "A股水电绝对龙头，四大电站，ROE 15.79%，长期稳定分红，核心底仓",
+   "watch_reason": "护城河最强，3年PE分位1.2%历史极低，低估由盈利抬升驱动，典型越跌越买标的",
+   "board": "沪",
+   "cycle_is_cyclical": false,
+   "risk_flags": [
+    "水电来水量受气候影响，枯水年业绩波动",
+    "长期电价改革若推进市场化可能压缩溢价",
+    "分红增长预期已price-in，成长空间有限"
+   ],
+   "current_price": 27.25,
+   "price_date": "2026-05-19",
+   "dv_ttm": 3.67,
+   "price_bands": [
+    35.87,
+    30.16,
+    27.99
+   ],
+   "valuation_anchor": "5年PE分位换算（2026-05-19 27.25元/PE18.5x基准）：P80=24.3x→35.87元 / P50=20.4x→30.16元 / P20=19.0x→27.99元；当前5年15.9%分位/3年1.2%分位；数据来源：理杏仁",
+   "next_earnings_date": "2026-08-31",
+   "next_earnings_type": "半年报",
+   "prebuy_conclusion": "结论：长江电力仍是本批护城河最强、确定性最高的底仓标的，当前 PE 18.48x 处于 3 年 1.2% / 5 年 15.9% 分位，现价 27.25 元已低于 5 年 P20 对应的 27.99 元，属于历史低估区。且当前价较 52 周高点 31.19 元仅回落 12.6%，低 PE 更多来自 2025 年和 2026Q1 盈利持续增长抬升 EPS，而不是股价大幅下跌，是“公司变好后的便宜”。\n\n2026 Q1 归母净利润同比 +30.5%，2025 全年净利润 345 亿（+6.17%）且分红规划明确（1.00元/股），基本面无重大红旗。水电为非化石能源，与十五五“双碳”目标完全契合，政",
+   "last_updated": "2026-05-20"
+  },
+  {
+   "name": "ASML Holding",
+   "code": "ASML.US",
+   "market": "US",
+   "board": "纳",
+   "source_etf": "direct",
+   "position_role": "全球EUV光刻机唯一供应商，半导体先进制程不可绕过的关键基础设施，长期核心底仓",
+   "watch_reason": "EUV 100%垄断，全球无替代品；AI资本开支驱动先进制程需求持续；FCF/净利120%+；深度分析96/100",
+   "prebuy_conclusion": "逻辑清晰，等待更合适价格或验证点。当前$1,582处于中性区上端（FY2026E PE ~43x），等待回调至$1,185-$1,440绿灯区或Q2 2026财报（2026-07-15）验证后建仓",
+   "current_price": 1581.58,
+   "price_date": "2026-05-14",
+   "price_bands": [
+    1740,
+    1440,
+    1185
+   ],
+   "valuation_anchor": "FY2026E EPS ~$37（€34共识），43x为中性区上端；历史5年PE均值38-42x；同业KLAC 34x/LRCX 38x/AMAT 32x；PEG ~1.43x（同业最低）",
+   "dv_ttm": 1.5,
+   "risk_flags": [
+    "中国收入占比~25-30%，出口管制持续收紧风险",
+    "高端EUV年产能~60台，下游若资本开支收缩则积压订单转单风险",
+    "Intel/Samsung先进制程迟滞，TSMC依赖度过高",
+    "FY2026E PE 43x处于历史中高端，正面意外已定价"
+   ],
+   "next_earnings_date": "2026-07-15",
+   "next_earnings_type": "季报",
+   "cycle_is_cyclical": false
+  },
+  {
+   "name": "NVIDIA",
+   "code": "NVDA.US",
+   "market": "US",
+   "board": "纳",
+   "source_etf": "direct",
+   "position_role": "全球AI算力基础设施最核心卖铲资产，CUDA生态护城河极深，长期底仓",
+   "watch_reason": "Q1 FY2027营收816.15亿美元、Q2指引910亿美元，Blackwell继续兑现；FCF强、PEG低，仍是AI卖铲核心。",
+   "prebuy_conclusion": "逻辑清晰，Q1 FY2027已纳入；财报后估值锚已上修，下一次财报预计2026-08-26 AMC，继续跟踪AI capex与估值。",
+   "current_price": 219.44,
+   "price_date": "2026-05-12",
+   "price_bands": [
+    261,
+    218,
+    174
+   ],
+   "valuation_anchor": "Q1 FY2027已纳入，FY2027E Non-GAAP EPS约$8.70；合理PE 20-30x对应$174-$261，Q1后估值锚小幅上修",
+   "risk_flags": [
+    "H20出口禁令：FY2027 H1损失.5B（.5B库存减值+.5B直接收入损失+Q2再损）",
+    "AI资本开支降温风险：戴维斯双杀隐患，四大云厂商砍单即触发",
+    "商誉暴增.6B至.83B（FY2026），疑似Groq准并购协议，10-K附注待核实",
+    "客户集中：四大云厂商占收入重大比例"
+   ],
+   "dv_ttm": 0.02,
+   "next_earnings_date": "2026-08-26",
+   "next_earnings_type": "季报",
+   "cycle_is_cyclical": false,
+   "pending_earnings_note": "Q1 FY2027（2026-05-20 AMC）结果尚未纳入分析，财报发布后需更新公司页及本条目，并将next_earnings_date更新为下一期日期"
+  },
+  {
+   "name": "贵州茅台",
+   "code": "600519.SH",
+   "board": "沪",
+   "source_etf": "direct",
+   "position_role": "A股消费最深护城河，茅台品牌+稀缺性+定价权三位一体，长期核心底仓",
+   "prebuy_conclusion": "护城河深度A股第一，ROE 34.4%连续多年稳定，PE处3年17.4%分位。当前1332.95元低于PS调整后Q2v（1466元），进入绿灯区，是可建仓窗口。红旗：前董秘被查事件持续跟踪。",
+   "watch_reason": "品牌护城河极深，定价权无可撼动；ROE 34%+；PE历史低位；分红稳定增长；AI/数字化不会替代茅台消费场景",
+   "current_price": 1332.95,
+   "price_date": "2026-05-15",
+   "price_bands": [
+    2000,
+    1674,
+    1466
+   ],
+   "valuation_anchor": "PE_TTM Q8v=2000/Q5v=1522（PS+2调整→1674）/Q2v=1333（PS+2调整→1466）；当前1332.95元低于PS调整后Q2v，处3年17.4%极低分位",
+   "dv_ttm": 4.0,
+   "risk_flags": [
+    "前董秘蒋焰被查，管理层风险事件持续跟踪",
+    "Q1 2026毛利率小幅压缩至89.8%，直营vs批发结构变化需关注",
+    "营收-1.2% YoY（低基数叠加渠道库存去化），短期增长承压"
+   ],
+   "next_earnings_date": "2026-08-31",
+   "next_earnings_type": "半年报",
+   "cycle_is_cyclical": false
+  },
+  {
+   "name": "招商银行",
+   "code": "600036.SH",
+   "board": "沪",
+   "source_etf": "direct",
+   "position_role": "A股零售银行最优质标的，轻型银行模式，ROE/NIM/资产质量均居国内银行首位",
+   "prebuy_conclusion": "当前37.65元PB处3年7%分位历史极低。激进≤43元/合理≤40元/理想≤38元。零售转型护城河深、拨备充足（拨备覆盖率430%+）、NIM 2.0%行业领先、股息率5.35%。无硬红旗，当前为历史底部加仓窗口。",
+   "watch_reason": "ROE 12%+，NIM行业最高，拨备覆盖率430%领先同业；零售银行护城河深（财富管理+信用卡+APP月活1.1亿）；PB历史极低，股息率5.35%高安全垫",
+   "current_price": 37.65,
+   "price_date": "2026-05-15",
+   "price_bands": [
+    55,
+    43,
+    40
+   ],
+   "valuation_anchor": "PB分位定价：PB<0.8x=绿灯(≤40元)/PB 0.8-1.0x=中性(40-50元)/PB>1.1x=追高(>55元)；当前PB=0.7x处3年7%极低分位",
+   "dv_ttm": 5.35,
+   "risk_flags": [
+    "NIM 2.0%虽行业领先但仍面临利率下行压制，2026年LPR若再降影响息差",
+    "净利润增速趋缓（2025年+1.2%），高速增长阶段结束，进入稳态收益模式",
+    "零售贷款资产质量：信用卡不良率有上行趋势，需跟踪消费信贷周期"
+   ],
+   "next_earnings_date": "2026-08-31",
+   "next_earnings_type": "半年报",
+   "cycle_is_cyclical": false
+  },
+  {
+   "board": "纳",
+   "code": "AAPL.US",
+   "current_price": 271.35,
+   "cycle_is_cyclical": false,
+   "cycle_position": "成熟期",
+   "dv_ttm": 0.38,
+   "name": "苹果(AAPL)",
+   "next_earnings_date": "2026-07-29",
+   "next_earnings_type": "季报",
+   "position_role": "消费科技核心仓，生态护城河+Services飞轮，3年以上持有",
+   "prebuy_conclusion": "深度分析89/100卓越；22亿活跃设备生态锁定+Services(毛利76%)+FCF全球标杆；DMA监管渐进侵蚀护城河，AI执行短板；中性区-，等",
+   "price_bands": [
+    300,
+    265,
+    243
+   ],
+   "price_date": "2026-04-30",
+   "risk_flags": [
+    "DMA/DOJ监管侵蚀App Store 30%佣金，Services毛利率长期承压",
+    "Apple Intelligence延期发布，AI换机周期推迟",
+    "中国市场收入占17-20%，地缘政治与供应链风险",
+    "Tim Cook接班人不明确，创始人文化传承风险"
+   ],
+   "source_etf": "direct",
+   "valuation_anchor": "FY2026E EPS .80，forward PE 30-31x（中性区），5年均值约27-28x",
+   "watch_reason": "深度分析A10+B17+C18+D12+E19+F13=89；生态系统护城河最强+Services飞轮+FCF质量全球标杆"
+  },
+  {
+   "name": "卡特彼勒(CAT)",
+   "position_role": "美股工程机械全球绝对龙头，多维护城河+Dividend Aristocrat，长期底仓",
+   "risk_flags": [
+    "宏观周期下行：FY2025营收-3.6%，CI/RI双双同步下行，宏观建设投资放缓",
+    "关税冲击：2025年关税成本约$7-9亿，供应链重组在途",
+    "估值充分定价：PE TTM 44x，Forward PE~37x，安全边际不足，需等回调"
+   ],
+   "prebuy_conclusion": "深度分析89/100卓越，逻辑清晰，但当前$888估值极贵（PE TTM 44x，约95%历史分位，Forward PE~37x仍偏高）。等待回调至$660-840（FW PE 27-35x）建仓，任何>20%回调均为核心买点。分析师共识目标价$795（低于现价-10.5%），当前不宜追高。",
+   "price_date": "2026-05-16",
+   "valuation_anchor": "FY2026E EPS共识~$24定价：追高区>$840(>35xFE,当前$888在此)/中性区$660-840(27-35xFE,等回调建仓)/较好区间$500-660(21-27xFE)/更低区间<$500(<21xFE,历史底部)",
+   "source_etf": "direct",
+   "cycle_position": "收缩期",
+   "dv_ttm": 2.3,
+   "board": "纽",
+   "watch_reason": "全球建设机械绝对龙头，C维度18/20，30+年Dividend Aristocrat，CI/RI/E&T三大业务跨周期，FCF稳健支撑回购+分红（近5年回购约$25B）",
+   "next_earnings_type": "季报",
+   "price_bands": [
+    840,
+    660,
+    500
+   ],
+   "cycle_is_cyclical": true,
+   "code": "CAT.US",
+   "current_price": 888.31,
+   "next_earnings_date": "2026-07-29"
+  },
+  {
+   "name": "蜜雪集团",
+   "code": "02097.HK",
+   "board": "港",
+   "source_etf": "direct",
+   "position_role": "全球最大现制饮品加盟连锁，加盟供应链平台型消费龙头，极致性价比心智+高ROE低杠杆，适合长期核心底仓",
+   "prebuy_conclusion": "深度分析审核总分82/100，四星优质。当前价HK\\.40，PE 14.9x处于low较好区（上市以来PE区间14.3x-34.5x）。2025年收入335.60亿/净利润59.27亿/净利率17.66%/ROE约29.76%，财务质量极强。核心观察点：同店增速企稳（2024Q3 SSSG -0.6%）、H股全流通后减持压力、海外4,467家门店优化进展。中期业绩（预计2026年8月）是下一个重要验证节点。",
+   "watch_reason": "加盟供应链模式=向加盟商卖原料/包材/设备，非直营餐饮，商业模式稳定可复制；59,823家门店网络+五大生产基地+28个仓储中心构成竞争壁垒；极致低价心智（2-8元/杯）叠加下沉市场渗透，加盟商切换成本高。ROE~30%、低负债率、OCF稳健。",
+   "current_price": 257.4,
+   "price_date": "2026-05-20",
+   "dv_ttm": 1.5,
+   "price_bands": [
+    340.0,
+    280.0,
+    230.0
+   ],
+   "price_bands_basis": "上市以来PE区间（14.3x-34.5x）+港股消费龙头折价因子",
+   "price_bands_date": "2026-05-20",
+   "valuation_anchor": "当前PE 14.9x，处于low区（230-280 HKD）；激进买入区<230 HKD（PE<12.8x）；high区>340 HKD（PE>19x）",
+   "risk_flags": [
+    "H股全流通计划：上市锁定期届满后大股东/早期投资人可减持，潜在股价供给压力",
+    "同店增速承压：2024Q3 SSSG -0.6%，若持续转负将动摇增长逻辑",
+    "加盟末端食安/用工事件：加盟商行为难以100%管控，尾部风险影响品牌",
+    "海外门店优化未完成：东南亚4,467家门店，印尼/越南部分门店仍处优化期",
+    "上市时间短（2025年3月），历史PE分位样本不足，估值锚点参考性有限"
+   ],
+   "deep_score": 82,
+   "next_earnings_date": "2026-08-31",
+   "next_earnings_type": "中期业绩",
+   "cycle_is_cyclical": false
+  },
+  {
+   "name": "宁德时代",
+   "code": "300750.SZ",
+   "source_etf": "direct",
+   "position_role": "全球动力电池+储能双龙头，人形机器人动力系统核心供应商，核心仓位压舱石",
+   "prebuy_conclusion": "深度分析89/100（卓越）。FY2025营收约3600亿，归母净利约500亿，ROE 24.9%，OCF质量极强，全球份额约37%（动力）+30%（储能）。护城河：4680电芯/CTP/CTB技术+全球主机厂深度绑定认证。当前PE约24x处于低历史分位，价格合理。建议核心仓位，分批于310-385元区间建仓。",
+   "watch_reason": "全球电池双龙头，人形机器人动力电池+高密度储能电池需求爆发最大受益者，ROE/现金流极强，当前PE低位",
+   "current_price": 411.63,
+   "price_date": "2026-05-21",
+   "board": "创",
+   "dv_ttm": 0.8,
+   "price_bands": [
+    476,
+    385,
+    312
+   ],
+   "valuation_anchor": "PE TTM约24x（近3年历史低分位），储能景气+机器人叙事支撑溢价",
+   "risk_flags": [
+    "行业价格战持续，2025毛利率承压",
+    "海外扩产+关税壁垒（欧盟/美国）风险",
+    "大股东及高管持续减持，情绪扰动"
+   ],
+   "next_earnings_date": "2026-08-31",
+   "next_earnings_type": "半年报",
+   "cycle_is_cyclical": true,
+   "cycle_position": "复苏中期",
+   "deep_analysis": "89/100 | 2026-05-22 | 卓越，核心仓位适配"
+  },
+  {
+   "name": "港交所",
+   "code": "00388.HK",
+   "market": "HK",
+   "hk_code": "0388",
+   "dual_listing": "HK only",
+   "hk_connect": true,
+   "price_currency": "HKD",
+   "source_etf": "direct",
+   "board": "HK",
+   "position_role": "全球唯一直营交易所+结算所垄断，芒格式收费站模型，组合核心压舱石",
+   "prebuy_conclusion": "91/100 ⭐⭐⭐⭐⭐卓越。法律垄断+网络效应双重护城河，净利率61%/ROE 33%/分红90%，建议核心仓位(12-15%)",
+   "watch_reason": "香港唯一交易所牌照+中央结算垄断，互联互通每次扩容都是增量，日均成交2320亿HKD(+93%)",
+   "current_price": 425.4,
+   "price_date": "2026-05-22",
+   "dv_ttm": 3.06,
+   "price_bands": [
+    500.0,
+    380.0,
+    300.0
+   ],
+   "valuation_anchor": "收费站PE区间：追高区>500(PE>35x) / 中性区380-500(PE 27-35x) / 较好区间300-380(PE 21-27x) / 更低区间<300(PE<21x)",
+   "risk_flags": [
+    "香港金融中心地位结构性衰落(中美脱钩极端情景，致命但概率低)",
+    "港股成交量高周期性(FY2025日均2320亿是景气高点，熊市可跌至800亿)",
+    "LME镍逼仓集体诉讼(一般级别，LME收入仅占11%)"
+   ]
+  },
+  {
+   "name": "中国移动",
+   "code": "600941.SH",
+   "board": "沪",
+   "source_etf": "direct",
+   "position_role": "10亿用户现金流年金+5G后FCF拐点，高股息压舱石，组合防守端核心",
+   "prebuy_conclusion": "85/100 ⭐⭐⭐⭐⭐卓越。10亿用户现金流垄断+5G CapEx拐点+分红率持续提升+4.9%股息率，建议核心仓位(10-12%)",
+   "watch_reason": "三大运营商寡头+牌照壁垒，10亿用户换号成本极高，5G后资本开支下降→FCF加速释放，母公司持续增持",
+   "current_price": 95.0,
+   "price_date": "2026-05-22",
+   "dv_ttm": 4.92,
+   "price_bands": [
+    110.0,
+    90.0,
+    70.0
+   ],
+   "valuation_anchor": "高股息PE区间：追高区>110(PE>17x) / 中性区90-110(PE 14-17x) / 较好区间70-90(PE 11-14x/DY>5%) / 更低区间<70(PE<11x/DY>7%)",
+   "risk_flags": [
+    "ROE仅9.8%，会计ROE被折旧系统性低估但静态仍偏低",
+    "营收+0.9%近乎零增长",
+    "OTT(微信通话等)长期侵蚀语音/短信高利润业务"
+   ]
+  },
+  {
+   "name": "创科实业",
+   "code": "0669.HK",
+   "market": "HK",
+   "board": "HK",
+   "source_etf": "direct",
+   "position_role": "全球电动工具双料冠军(Milwaukee#1专业+Ryobi#1消费)，电池平台锁定+毛利率41.2%行业最高+净现金$7亿+股息CAGR 17%，全球寡头核心底仓",
+   "watch_reason": "深度分析84/100优质。双品牌全球#1寡头地位(CR5=72%)+电池平台网络效应创造类经常性收入+OCF/净利194%+FCF连续3年>$12亿。全球无绳化+OPE电动化双顺风。主要风险为Home Depot集中度(~45%营收)和中美关税暴露。",
+   "prebuy_conclusion": "深度分析84/100优质，core核心底仓。双品牌全球寡头地位(市占率21%持续提升)+电池平台锁定+财务质量卓越(净现金$7亿+FCF>$12亿×3年)，护城河深度和财务纪律均满足core标准。Home Depot集中度和关税风险需持续跟踪但属于已知可控风险。",
+   "current_price": 118.4,
+   "price_date": "2026-06-03",
+   "dv_ttm": 2.57,
+   "price_bands": [
+    138.0,
+    113.0,
+    90.0
+   ],
+   "valuation_anchor": "PE历史区间定价：追高区>138(PE>27x,P80+) / 中性区113-138(PE 22-27x,P50-P80) / 较好区间90-113(PE 17.5-22x,P20-P50) / 更低区间<90(PE<17.5x,接近52周低位)。FY2025 EPS US$0.6561≈HK$5.12。",
+   "risk_flags": [
+    "Home Depot集中度(~45%营收)：Ryobi在HD独家销售，单一客户依赖在制造业中属极高水平",
+    "中美关税暴露：制造在亚洲(中国/越南)，销售~75%在北美，关税升级可能超出产能多元化应对能力",
+    "创始人81岁年龄风险：Horst Pudwill虽已CEO交班，但创始人家族战略眼光不可替代"
+   ],
+   "next_earnings_date": "2026-08-31",
+   "next_earnings_type": "中期业绩",
+   "cycle_is_cyclical": false,
+   "deep_analysis": "84/100 | 2026-06-03 | 优质，core核心底仓"
+  },
+  {
+   "name": "中航沈飞",
+   "code": "600760.SH",
+   "board": "沪",
+   "source_etf": "direct",
+   "position_role": "中国战斗机总装绝对龙头，歼-15/16/35唯一或主战平台，护城河不可替代，军工板块罕见的质量+估值双重合理标的",
+   "prebuy_conclusion": "深度分析79/100（⭐⭐⭐⭐优质），核心底仓5-10%。35x PE+19.8% ROE在军工板块独一无二——战斗机总装垄断护城河(C=18/20)+行业内最优财务质量(E=16/20)+高管近期集体增持。核心催化剂：歼-35批产放量(预计2027-2028)。主要约束：营收增速从25%降至5%，十五五订单尚未大规模下达。",
+   "watch_reason": "中国歼击机摇篮，1951年建厂，歼-15(唯一舰载机)+歼-16(重型多用途)+歼-35(五代隐身舰载机)三大主力机型总装。ROE 19.8%在军工主机厂鹤立鸡群，OCF/NI 109%利润含金量高，PE 35x处军工板块最低档(板块中位数119x)，商誉=0、资产负债率仅28%。十五五先进战斗力建设直接受益，军贸突破为潜在期权。",
+   "current_price": 40.5,
+   "price_date": "2026-06-05",
+   "dv_ttm": null,
+   "price_bands": [
+    52.0,
+    40.0,
+    32.0
+   ],
+   "valuation_anchor": "PE TTM 35.3x（板块中位数119x），PE分位~36%（历史中低水平）。price_bands基于PE区间：P80≈45x→52元/P50≈35x→40元/P20≈28x→32元",
+   "risk_flags": [
+    "营收增速持续放缓：从FY2021 +25%降至FY2025 +4.2%，歼-16订单高峰已过，歼-35批产放量时间不确定",
+    "单一客户依赖：军方是唯一客户(营收95%+)，采购节奏由国防预算和国家决策主导，公司无主动拓展客户能力",
+    "军品定价天花板：成本加成模式限制毛利率上限(8-10%)，原材料/人工成本上涨可能挤压利润",
+    "军贸拓展不确定：歼-35出口许可审批进度不可控，历史上中国战斗机军贸出口规模有限"
+   ],
+   "next_earnings_date": "2026-08-31",
+   "next_earnings_type": "半年报",
+   "cycle_is_cyclical": false,
+   "deep_analysis": "79/100 | 2026-06-07 | 优质，core核心底仓"
+  },
+  {
+   "name": "宁波银行",
+   "code": "002142.SZ",
+   "source_etf": "direct",
+   "position_role": "A股城商行龙头，差异化中小企业金融+长三角深耕，防御型银行底仓（提供稳定性+分红）",
+   "watch_reason": "城商行第一梯队，18年差异化战略零漂移、7年业绩零负增长（利润CAGR13.5%），资产质量行业领先，净利率40.8%。2026年完成有序代际交接（陆华裕退休→内部培养的庄灵君任董事长），管理层档案80/100优秀。无实控人三方制衡（开发投资18.74%/OCBC≈20%/雅戈尔10%），治理干净。分红连续19年且2024+50%、2025首推中期分红+估值提升计划。",
+   "current_price": 32.7,
+   "price_date": "2026-06-12",
+   "board": "深",
+   "dv_ttm": 3.67,
+   "price_bands": [
+    40.0,
+    33.0,
+    28.0
+   ],
+   "valuation_anchor": "价值/底仓股：PB+股息率锚。BVPS≈35.2元。追高区>40(PB>1.14x/接近卖方高目标43) / 中性区33-40(PB0.94-1.14x) / 较好区间28-33(PB0.80-0.94x,DY3.7-4.3%) / 更低区间<28(PB<0.80x,DY>4.3%)。当前32.7元=PB0.93x/PE7.2x/DY3.67%，处较好区间，PB已较历史溢价大幅压缩。",
+   "risk_flags": [
+    "ROE由2019年17.1%持续降至2025年13.1%，杜邦分解主因资产周转率下降（以量补价模式边际回报递减），结构性而非周期性",
+    "利率市场化+LPR下行压缩净息差，叠加大行下沉抢中小企业客户，定价权受行业性侵蚀",
+    "历史现金分红率偏低（~15-22%），高速扩张依赖持续资本补充（优先股/可转债/股本扩张）对普通股形成摊薄"
+   ],
+   "next_earnings_date": "2026-08-28",
+   "next_earnings_type": "半年报",
+   "cycle_is_cyclical": false,
+   "prebuy_conclusion": "深度分析73/100（⭐⭐⭐⭐优质）+管理层档案80/100（⭐⭐⭐⭐优秀）。城商行龙头，账面干净、传承有序、资产质量行业领先，适合作为银行板块防御型核心底仓（5-10%）。核心矛盾：ROE 17%→13%下行。当前PB0.93x/DY3.67%处较好区间，可分批布局，跌破PB0.80x（<28元）积极加仓。[管理层档案2026-06-13，80分]"
+  }
+ ],
+ "tier": "core",
+ "updated_at": "2026-06-13"
 }
