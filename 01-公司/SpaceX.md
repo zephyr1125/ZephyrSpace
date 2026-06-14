@@ -7,10 +7,10 @@ aliases:
   - 商业发射
   - 低轨卫星互联网
   - 载人航天
-可投资性: 暂不可直接投资
+可投资性: SPCX (Nasdaq, 2026-06-12上市)
 阶段: 成熟期
 关注级别: 核心
-最后更新日期: 2026-04-05
+最后更新日期: 2026-06-14
 ---
 
 # SpaceX
@@ -87,3 +87,10 @@ SpaceX 成立于 2002 年，是当前全球最重要的商业航天公司之一�
 - [Starlink 性能页面](https://www.starlink.com/us/residential/starlink-speeds-and-performance)
 - [SpaceX Starship 概览资料](https://www.spacex.com/vehicles/starship/assets/media/Starbase%20Overview.pdf)
 - [SpaceX Axiom-1 任务页](https://www.spacex.com/launches/ax-1/index.html)
+
+## 深度分析报告
+
+[[深度分析/SpaceX 深度分析 2026-06-14|SpaceX 深度分析（2026-06-14）]]
+- 评分：57 / 100
+- 评级：⭐⭐⭐ 良好
+- 核心结论：商业发射垄断+星链现金牛+垂直整合壁垒极深，但AI烧钱无底洞（Capex $207亿/年）+$2万亿估值脱离基本面+Musk 85%投票权是关键人/治理双重风险。建议2-3%卫星仓位，不适合核心重仓。
