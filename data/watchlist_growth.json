@@ -2699,6 +2699,33 @@
       "next_earnings_type": "Q1 FY2027 Earnings",
       "cycle_is_cyclical": false,
       "deep_analysis": "74/100 | 2026-06-15 | 优质，建议growth标准持仓2-5%"
+    },
+    {
+      "name": "吉比特",
+      "code": "603444.SH",
+      "board": "沪",
+      "source_etf": "direct",
+      "position_role": "A股精品游戏研发标杆，问道IP+杖剑传说双引擎，高分红(78%)高ROE(33%)，growth标的",
+      "prebuy_conclusion": "深度分析78/100优质，建议growth标准仓位2-5%。核心优势：A股游戏最佳治理(78%分红+零再融资)+ROE 33.3%+新品爆发V型反转。核心隐患：游戏hit-driven属性(C维度仅50分)+问道IP老化(流水-6.6%)+海外占比低(15%)。",
+      "watch_reason": "A股游戏行业'分红王'+精品自研标杆。问道IP运营18年，杖剑传说2025年首年流水25亿(海内外)，三款新游驱动FY2025营收+67.9%。ROE 33.3%，毛利率93.9%，OCF/净利156%，零负债。78%分红率+累积分红>64亿远超IPO融资额。核心跟踪：新游Pipeline、问道IP衰减速度、海外扩张进度。",
+      "current_price": 420.0,
+      "price_date": "2026-06-13",
+      "dv_ttm": 16.67,
+      "price_bands": [
+        500,
+        400,
+        300
+      ],
+      "valuation_anchor": "PE估值(15-20x为游戏研发商合理区间，高分红+高ROE应享溢价)：追高区>500元(PE>20x，透支新游乐观预期)/中性区400-500(PE 16-20x)/较好区间300-400(PE 12-16x，安全边际充足)/更低区间<300(PE<12x，深度价值)。当前~420元处中性区。股息率~16.7%提供强下行保护。",
+      "risk_flags": [
+        "游戏行业hit-driven属性：FY2023-2024连续2年营收下滑，2025年爆发能否持续2-3年不确定",
+        "问道IP持续老化：2025年流水同比-6.55%，核心IP终有生命周期",
+        "海外收入占比仅15%：欧美市场2026H1待验证，出海战略处早期"
+      ],
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false,
+      "deep_analysis": "78/100 | 2026-06-15 | 优质，建议growth标准持仓2-5%"
     }
   ],
   "tier": "growth",
