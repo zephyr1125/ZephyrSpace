@@ -2670,6 +2670,35 @@
       "next_earnings_type": "中期业绩",
       "cycle_is_cyclical": false,
       "deep_analysis": "78/100 | 2026-06-04 | 优质，建议Growth标准持仓5-10%"
+    },
+    {
+      "name": "ARM",
+      "code": "ARM.US",
+      "board": "纳",
+      "market": "US",
+      "source_etf": "direct",
+      "position_role": "全球CPU架构IP垄断授权商，AI数据中心计算基础设施核心受益者，成长型growth标的",
+      "prebuy_conclusion": "深度分析74/100优质，建议growth标准仓位2-5%。核心优势：移动端95%市占率+服务器CPU份额快速提升(17.7%)+97%毛利率轻资产模式。核心隐患：FTC反垄断调查(FTC+EU+韩国三辖区)+SoftBank 86%绝对控制+$704M关联交易(14%收入)。等FTC调查结果明朗后重新评估仓位上限。",
+      "watch_reason": "全球CPU架构近乎双寡头之一(移动端95%、服务器17.7%且快速增长)。AI推理负载从GPU向CPU迁移(70-80%)的最大受益者。Royalty+License双引擎驱动，97%毛利率极轻资产。2026年AGI CPU自研芯片从'卖地图'到'也挖矿'，战略赌注大但天花板高。核心跟踪：FTC调查进展、AGI CPU客户adoption、SoftBank关联交易趋势。",
+      "current_price": 380.81,
+      "price_date": "2026-06-12",
+      "dv_ttm": 0,
+      "price_bands": [
+        400,
+        250,
+        150
+      ],
+      "valuation_anchor": "前瞻PE+AI增长溢价定价(当前453x TTM PE极度依赖AI增长叙事兑现)：追高区>400(接近ATH$428，FTC风险未price-in)/中性区250-400(若FTC结案无行动，当前增长可支撑)/较好区间150-250(接近50日均线~$244与200日均线~$165之间，赔率改善)/更低区间<150(接近52周低点$100，深度价值区)。当前$381处追高区边缘，需FTC明朗化后才适合建仓。",
+      "risk_flags": [
+        "FTC+欧盟+韩国三辖区反垄断调查，可能强制FRAND许可条款从根本上改变商业模式",
+        "SoftBank 86%绝对控制+$704M关联交易(占FY2026收入14.3%，年增384%)，少数股东权益保护存结构性缺陷",
+        "AGI CPU自研芯片从'中立IP授权商'变为'客户竞争对手'，可能引发大客户转向RISC-V",
+        "ROE仅10.9%(FY2026)因R&D投入占收入56%，Non-GAAP与GAAP差异大(SBC占收入~20%)"
+      ],
+      "next_earnings_date": "2026-07-29",
+      "next_earnings_type": "Q1 FY2027 Earnings",
+      "cycle_is_cyclical": false,
+      "deep_analysis": "74/100 | 2026-06-15 | 优质，建议growth标准持仓2-5%"
     }
   ],
   "tier": "growth",
