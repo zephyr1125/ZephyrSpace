@@ -156,6 +156,35 @@ python scripts/weekly_watchlist_scan.py --tier portfolio
 
 完整 SOP 在 `skills/weekly-satellite-review/SKILL.md`，输出存档到 `02-主题/周度复盘/YYYY-MM-DD.md`。
 
+### Microsoft To Do 队列自动分析（触发词：/loop 看个股）
+
+**动态自驱循环，跑完一个立刻看下一个。** 从 Microsoft To Do 的「任务」清单 → 「看个股」任务读取未打勾子任务（约定都是公司名），逐个执行全面分析，完成后回写分数并打勾。
+
+启动方式：用户输入 `/loop 看个股`，Claude 按下方流程自驱运转。
+
+每轮循环：
+
+1. **取队列头部**：`python scripts/todo_next.py`
+   - 输出 `NONE` → `ScheduleWakeup 1800` 秒后再来
+   - 输出公司名 `<X>` → 进入第 2 步
+
+2. **缓存命中检查**：`python scripts/todo_check_cache.py "<X>"`（输出 JSON）
+   - `reusable: true` → 跑 `python scripts/todo_mark.py "<X>" <deep_score> <mgmt_score> --reuse` → `ScheduleWakeup 60` 秒后立即下一轮
+   - `reusable: false` → 进入第 3 步
+
+3. **跑完整全面分析**：按 CLAUDE.md「拉取财报并全面分析 <X>」执行 6 步 SOP（深度分析 + 双 Agent 审核 + P1 修复 + 管理层档案 + watchlist 写入 + commit）
+   - 完成后 `ls 深度分析/<X>*` 和 `ls 管理层档案/<X>*` 读出新文件名里的两个分数
+   - 跑 `python scripts/todo_mark.py "<X>" <deep_score> <mgmt_score>`
+   - `ScheduleWakeup 60` 秒后立即下一轮
+
+4. **任何步骤失败**：立即停 loop（不调 ScheduleWakeup），把错误和当前公司名告诉用户
+
+**约定**：
+- 「看个股」子任务只写公司名，不写其他内容
+- 子任务标题含 `/` 视为"已写入分数"，下次循环自动跳过（即使忘了打勾）
+- 复用旧档案时标题尾部会带 `♻` 标记
+- token 缓存在 `scripts/todo_data/token_cache.json`，过期自动刷新
+
 ### 指数整体 PreBuy（触发词：指数估值 [指数名] / [指数]适合建仓吗）
 
 完整 SOP 在 `index-prebuy.skill`，分析对象是指数本身（不拆解个股），输出到指数页 + `data/watchlist_index.json`，并在写入后运行 `.\scripts\sync_watchlist.ps1` 同步到 `E:\Work\Python\Finance\api\config\watchlist_index.json`。

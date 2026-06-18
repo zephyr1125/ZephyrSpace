@@ -90,4 +90,5 @@ scripts/_*.txt
 scripts/_*.py
 scripts/deep_data/
 scripts/runze_deep_data/
+scripts/todo_data/
 !.gitignore
