@@ -5,6 +5,7 @@
 """
 
 import json
+import os
 import sys
 from pathlib import Path
 from typing import Optional
@@ -13,7 +14,7 @@ import msal
 import urllib.request
 import urllib.error
 
-CLIENT_ID = "96ff9305-44ba-497f-ad6b-2960d624b528"
+CLIENT_ID = os.environ.get("MS_TODO_CLIENT_ID", "96ff9305-44ba-497f-ad6b-2960d624b528")
 AUTHORITY = "https://login.microsoftonline.com/common"
 SCOPES = ["Tasks.ReadWrite"]
 GRAPH_BASE = "https://graph.microsoft.com/v1.0"
