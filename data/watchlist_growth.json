@@ -2,6 +2,30 @@
  "updated_at": "2026-06-22T17:26:14.937562",
  "entries": [
   {
+   "name": "BlackBerry",
+   "code": "BB",
+   "source_etf": null,
+   "market": "NYSE / TSX",
+   "position_role": "汽车嵌入式RTOS(QNX)近乎垄断+政府安全通信NATO认证。Project Imperium聚焦后两业务均达Rule of 40。",
+   "watch_reason": "深度分析72/100（优质），管理层档案79/100（优秀）。Q1 FY2027营收52.9M(+26%)全面beat，两业务均达Rule of 40。Giamatteo管理层聚焦执行力是最大加分项。",
+   "current_price": 8.62,
+   "price_date": "2026-06-24",
+   "board": "NYSE",
+   "dv_ttm": 0,
+   "price_bands": [],
+   "valuation_anchor": "FY2027指引收入94-621M，Adj EBITDA 19-139M，Adj EPS /usr/bin/bash.16-0.20。市值~B，EV/Revenue ~6-7x。",
+   "risk_flags": [
+    "规模小（00M营收），单一OEM/政府合同波动影响显著",
+    "汽车周期暴露——全球汽车产量下行会直接影响QNX royalty",
+    "历史上收购成瘾（Cylance .4B失败）——需时间验证文化已改变",
+    "Giamatteo若离开，继任者方向不确定"
+   ],
+   "next_earnings_date": "2026-09-30",
+   "next_earnings_type": "Q2 FY2027季报",
+   "cycle_is_cyclical": true,
+   "prebuy_conclusion": "深度分析72/100（优质），管理层档案79/100（优秀）。QNX汽车RTOS准垄断+安全通信NATO认证+聚焦管理层。适合growth仓位（5-10%）。中小盘波动大需控制仓位。Q1 FY2027财报今日发布全面beat。建议分批建仓。[全面分析版2026-06-25]"
+  },
+  {
    "name": "三星电子",
    "code": "005930.KS",
    "source_etf": null,
