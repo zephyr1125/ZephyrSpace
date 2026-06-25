@@ -2,6 +2,30 @@
  "version": 3,
  "entries": [
   {
+   "name": "SK海力士",
+   "code": "000660.KS",
+   "source_etf": null,
+   "market": "韩国KOSPI",
+   "position_role": "全球HBM记忆体绝对霸主（市占率~60-70%），NVIDIA+TSMC三方联盟结构性护城河，AI算力基础设施不可替代的核心供应商",
+   "watch_reason": "深度分析85/100（卓越），管理层档案80/100（优秀）。HBM近乎垄断、逆周期资本配置能力卓越、三方联盟壁垒深厚。FY2025营收₩97万亿(+47%)，OP利润率49%。",
+   "current_price": null,
+   "price_date": "2026-06-25",
+   "board": "韩国",
+   "dv_ttm": null,
+   "price_bands": [],
+   "valuation_anchor": "记忆体强周期股，当前PE约12-15x（繁荣期），周期谷底PE为负。估值需配合行业周期模型。",
+   "risk_flags": [
+    "记忆体行业固有周期性——FY2023亏损₩9.1万亿→FY2025盈利₩43万亿，73ppt振幅",
+    "三星HBM4追赶（2026Q1量产），可能在2026H2缩小差距",
+    "中国无锡/大连工厂(~30%产能)暴露于美国对华出口管制",
+    "NVIDIA客户集中——HBM可能>60%收入来自单一客户"
+   ],
+   "next_earnings_date": "2026-07-31",
+   "next_earnings_type": "Q2 2026季报",
+   "cycle_is_cyclical": true,
+   "prebuy_conclusion": "深度分析85/100（卓越），管理层档案80/100（优秀）。HBM结构性垄断+NVIDIA生态锁定，适合core仓位，但记忆体周期性要求投资者具备周期判断力。建议分批建仓，每次记忆体价格回调时加仓。不适合\"买入并忘记\"策略。[全面分析版2026-06-25]"
+  },
+  {
    "name": "国电南瑞",
    "code": "600406.SH",
    "source_etf": "931994",
