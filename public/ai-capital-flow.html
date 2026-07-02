@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 资本流向瀑布图 | ZephyrSpace</title>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&family=Noto+Sans+SC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f5f0e6;
+  --card: #fffdf8;
+  --teal: #0e7490;
+  --blue: #2563a0;
+  --amber: #c2770c;
+  --text: #1c1917;
+  --text-sec: #57534e;
+  --muted: #888;
+  --border: rgba(120,113,108,0.18);
+  --border-mid: rgba(120,113,108,0.12);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Sans SC', system-ui, sans-serif;
+  min-height: 100vh;
+  position: relative;
+}
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 0;
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 44px 24px 72px;
+  position: relative; z-index: 1;
+}
+
+/* Nav */
+.nav { margin-bottom: 36px; display: flex; gap: 10px; flex-wrap: wrap; }
+.btn-nav {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 8px 18px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.83rem; font-weight: 500;
+  transition: all 0.18s;
+  color: var(--teal);
+}
+.btn-nav:hover { background: var(--teal); color: #fff; border-color: var(--teal); }
+.btn-nav.alt { color: #7c3aed; }
+.btn-nav.alt:hover { background: #7c3aed; border-color: #7c3aed; color: #fff; }
+
+/* Hero */
+.hero { text-align: center; margin-bottom: 38px; }
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: var(--teal); color: #fff;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem; letter-spacing: 0.08em;
+  padding: 5px 14px; border-radius: 999px;
+  margin-bottom: 20px;
+}
+.hero h1 {
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: clamp(2rem, 4.8vw, 3.1rem);
+  font-weight: 700; line-height: 1.15;
+  margin-bottom: 14px;
+}
+.hero-sub {
+  font-size: 0.96rem; font-weight: 300;
+  color: var(--text-sec); line-height: 1.75;
+  max-width: 660px; margin: 0 auto 28px;
+}
+.hero-sub strong { color: var(--text); font-weight: 500; }
+
+/* The gap headline — real revenue vs capex */
+.gap-box {
+  display: flex; align-items: stretch; justify-content: center;
+  gap: 0; max-width: 720px; margin: 0 auto 8px;
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 14px; overflow: hidden;
+}
+.gap-cell { flex: 1; padding: 18px 16px; text-align: center; position: relative; }
+.gap-cell + .gap-cell { border-left: 1px solid var(--border-mid); }
+.gap-k {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.66rem; letter-spacing: 0.05em;
+  color: var(--muted); margin-bottom: 6px;
+}
+.gap-v {
+  font-family: 'Newsreader', serif;
+  font-size: clamp(1.4rem, 3.4vw, 2.1rem); font-weight: 700;
+  line-height: 1;
+}
+.gap-v.small { color: #7c3aed; }
+.gap-v.big   { color: var(--amber); }
+.gap-v.x     { color: var(--teal); }
+.gap-note { font-size: 0.72rem; color: var(--text-sec); margin-top: 6px; }
+.gap-caption {
+  max-width: 720px; margin: 0 auto 26px;
+  font-size: 0.8rem; color: var(--text-sec); line-height: 1.6; text-align: center;
+}
+.gap-caption strong { color: var(--amber); font-weight: 600; }
+
+/* Direction strip */
+.dir-strip {
+  display: flex; align-items: center; gap: 12px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 11px 22px;
+  max-width: 640px; margin: 0 auto;
+}
+.dir-lbl {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem; font-weight: 600;
+  white-space: nowrap;
+}
+.dir-lbl.up   { color: #7c3aed; }
+.dir-lbl.down { color: #c2770c; }
+.dir-bar {
+  flex: 1; height: 6px; border-radius: 999px;
+  background: linear-gradient(to right, #7c3aed, #4f46e5, #0284c7, #0e7490, #0d9488, #059669, #d97706, #c2770c);
+}
+
+/* ── Chain ── */
+.chain { display: flex; flex-direction: column; gap: 0; margin-top: 32px; }
+
+/* Connector */
+.conn {
+  display: flex; justify-content: center; align-items: center;
+  height: 34px; position: relative;
+}
+.conn-line {
+  position: absolute; left: 50%; top: 0; bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, var(--fc), var(--tc));
+  opacity: 0.32;
+  transform: translateX(-50%);
+}
+.conn-icon {
+  position: relative; z-index: 1;
+  padding: 2px 9px; height: 22px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.62rem; color: var(--muted); white-space: nowrap;
+}
+
+/* Layer card */
+.lcard {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.lcard:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+.lcard-bar { height: 4px; background: var(--lc); }
+.lcard-body { padding: 22px 28px 26px; }
+
+/* Layer header */
+.lhead {
+  display: flex; align-items: flex-start;
+  justify-content: space-between; gap: 12px;
+  margin-bottom: 12px;
+}
+.lhead-left { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.lnum {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.67rem; font-weight: 600;
+  color: var(--lc);
+  background: rgba(0,0,0,0.04);
+  padding: 2px 8px; border-radius: 4px;
+  white-space: nowrap; letter-spacing: 0.04em;
+}
+.ltitle {
+  font-family: 'Newsreader', serif;
+  font-size: 1.28rem; font-weight: 600;
+}
+.lamt {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem; font-weight: 600;
+  color: #fff; background: var(--lc);
+  padding: 5px 12px; border-radius: 8px;
+  white-space: nowrap; align-self: flex-start;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.lamt small { font-weight: 400; opacity: 0.85; font-size: 0.78em; }
+
+/* Layer desc */
+.ldesc {
+  font-size: 0.875rem; line-height: 1.68;
+  color: var(--text-sec); margin-bottom: 18px;
+}
+.ldesc strong { color: var(--text); font-weight: 500; }
+
+/* Sectors grid */
+.sgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+  gap: 10px;
+}
+.sbox {
+  border-radius: 10px; padding: 12px 14px;
+  background: rgba(0,0,0,0.025);
+  border: 1px solid rgba(0,0,0,0.07);
+}
+.stitle {
+  font-size: 0.77rem; font-weight: 700;
+  color: var(--lc); margin-bottom: 5px;
+  display: flex; align-items: center; gap: 6px;
+}
+.sdot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--lc); flex-shrink: 0;
+}
+.samt {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.66rem; color: var(--text-sec);
+  margin-bottom: 8px; padding-left: 13px;
+}
+.tags { display: flex; flex-wrap: wrap; gap: 5px; }
+
+/* Company tags */
+.tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.695rem; font-weight: 400;
+  padding: 3px 8px; border-radius: 5px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text-sec);
+  white-space: nowrap;
+}
+.tag.h {
+  background: var(--lc); color: #fff;
+  border-color: var(--lc); font-weight: 600;
+}
+.tag.cn {
+  color: var(--lc);
+  border-color: rgba(0,0,0,0.1);
+  background: rgba(255,255,255,0.7);
+}
+
+/* Key insight */
+.insight {
+  margin-top: 16px; padding: 10px 14px;
+  border-left: 3px solid var(--lc);
+  border-radius: 0 8px 8px 0;
+  background: rgba(255,255,255,0.55);
+  font-size: 0.82rem; line-height: 1.55;
+  color: var(--text-sec);
+}
+.insight strong { color: var(--lc); font-weight: 600; }
+
+/* Circularity callout */
+.loop-card {
+  margin-top: 40px;
+  border: 2px solid rgba(194,119,12,0.4);
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--card) 78%, rgba(194,119,12,0.05));
+  padding: 26px 28px 28px;
+}
+.loop-card h3 {
+  font-family: 'Newsreader', serif;
+  font-size: 1.35rem; font-weight: 700;
+  color: var(--amber); margin-bottom: 6px;
+  display: flex; align-items: center; gap: 9px;
+}
+.loop-card .loop-sub { font-size: 0.85rem; color: var(--text-sec); line-height: 1.6; margin-bottom: 18px; }
+.loop-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 12px; }
+.loop-item {
+  background: rgba(255,255,255,0.6);
+  border: 1px solid rgba(194,119,12,0.2);
+  border-radius: 10px; padding: 14px 16px;
+}
+.loop-item .lt {
+  font-size: 0.78rem; font-weight: 700; color: var(--amber);
+  margin-bottom: 7px; font-family: 'JetBrains Mono', monospace;
+}
+.loop-flow { font-size: 0.84rem; line-height: 1.6; color: var(--text); }
+.loop-flow b { color: var(--teal); font-weight: 600; }
+.loop-note {
+  margin-top: 16px; padding: 12px 16px;
+  background: rgba(194,119,12,0.08);
+  border-radius: 8px; font-size: 0.83rem; line-height: 1.6; color: var(--text-sec);
+}
+.loop-note strong { color: var(--amber); }
+
+/* Footer */
+footer {
+  margin-top: 56px; padding-top: 24px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.73rem; color: var(--muted);
+  line-height: 1.9;
+}
+
+@media (max-width: 640px) {
+  .page { padding: 24px 16px 48px; }
+  .lcard-body { padding: 16px 18px 20px; }
+  .sgrid { grid-template-columns: 1fr; }
+  .lhead { flex-direction: column; }
+  .dir-strip { flex-direction: column; gap: 8px; }
+  .dir-bar { width: 80%; height: 6px; }
+  .gap-box { flex-direction: column; }
+  .gap-cell + .gap-cell { border-left: none; border-top: 1px solid var(--border-mid); }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <nav class="nav">
+    <a href="index.html" class="btn-nav">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      返回首页
+    </a>
+    <a href="ai-hardware-chain.html" class="btn-nav alt">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      配套阅读：AI 硬件产业链全景图
+    </a>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-badge">
+      <svg width="9" height="9" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" fill="currentColor"/></svg>
+      AI CAPITAL · MONEY FLOW WATERFALL
+    </div>
+    <h1>AI 资本流向瀑布图</h1>
+    <p class="hero-sub">
+      回答一个问题：<strong>这场 AI 军备竞赛的钱，到底从哪来、流到哪去？</strong>
+      与「产业链图」自下而上溯源不同，本图<strong>顺着资金方向自上而下</strong>——从钱的<strong>源头（资本）</strong>
+      一路追到钱的<strong>归宿（芯片与制造）</strong>，并标注每一层 2025 年的大致<strong>资金量级</strong>。
+    </p>
+
+    <!-- Headline: the gap -->
+    <div class="gap-box">
+      <div class="gap-cell">
+        <div class="gap-k">终端真实付费（年化）</div>
+        <div class="gap-v small">~$60B</div>
+        <div class="gap-note">用户/企业真正掏出的现金</div>
+      </div>
+      <div class="gap-cell">
+        <div class="gap-k">2025 全球 AI 资本开支</div>
+        <div class="gap-v big">~$500B</div>
+        <div class="gap-note">实际砸下去的钱</div>
+      </div>
+      <div class="gap-cell">
+        <div class="gap-k">缺口倍数</div>
+        <div class="gap-v x">≈ 8×</div>
+        <div class="gap-note">靠 FCF + 借债 + 股权填平</div>
+      </div>
+    </div>
+    <p class="gap-caption">
+      你的直觉是对的：<strong>真正的「水龙头」不是用户，而是头部公司的资产负债表。</strong>
+      用户付费只是细流，约 7~8 倍的缺口靠云厂商自由现金流、债券、私募信贷与一级市场股权填平——
+      本质是<strong>把「未来 AI 收入」提前贴现的一次信用扩张</strong>。
+    </p>
+
+    <div class="dir-strip">
+      <span class="dir-lbl up">↑ 钱的源头 · 资本</span>
+      <div class="dir-bar"></div>
+      <span class="dir-lbl down">钱的归宿 · 芯片/制造 ↓</span>
+    </div>
+  </div>
+
+  <div class="chain">
+
+    <!-- ═══ L0 终端真实付费 ═══ -->
+    <div class="lcard" style="--lc:#7c3aed">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L0 · 源头之一（细流）</span>
+            <span class="ltitle">终端真实付费</span>
+          </div>
+          <span class="lamt">~$50–70B <small>/ 年化</small></span>
+        </div>
+        <p class="ldesc">
+          唯一从产业<strong>体外真正流入</strong>的现金——个人订阅、企业软件、API 调用付费。
+          看似在涨，但相对下游每年 ~$500B 的投入仍是<strong>杯水车薪</strong>。
+          这也是「AI 泡沫」争论的核心：<strong>收入端能否在债务到期前追上投入端</strong>。
+        </p>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>个人订阅</div>
+            <div class="samt">量级 ~$20–30B（年化运营收入）</div>
+            <div class="tags">
+              <span class="tag h">ChatGPT Plus/Pro</span>
+              <span class="tag">Copilot</span>
+              <span class="tag">Gemini</span>
+              <span class="tag">Perplexity</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>企业软件 & API</div>
+            <div class="samt">量级 ~$25–40B</div>
+            <div class="tags">
+              <span class="tag h">OpenAI API</span>
+              <span class="tag h">Anthropic API</span>
+              <span class="tag">企业 Copilot 席位</span>
+              <span class="tag">行业 SaaS 加价</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>广告/搜索内嵌（隐性）</div>
+            <div class="samt">不单独计价，藏在主业收入里</div>
+            <div class="tags">
+              <span class="tag h">Google 搜索 AI</span>
+              <span class="tag h">Meta 推荐/广告</span>
+              <span class="tag">字节/腾讯</span>
+            </div>
+          </div>
+        </div>
+        <div class="insight">
+          <strong>关键反差：</strong>OpenAI 2025 年化收入约 $12–13B、Anthropic 约 $5–9B 已是全行业头部，
+          但合计仍不到同年资本开支的 5%。<strong>真金白银的现金流入，远撑不起当下的建设节奏。</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line" style="--fc:#7c3aed;--tc:#4f46e5"></div>
+      <div class="conn-icon">细流不够 → 靠资本补</div>
+    </div>
+
+    <!-- ═══ L1 资本供给层 ═══ -->
+    <div class="lcard" style="--lc:#4f46e5">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L1 · 真正的水龙头</span>
+            <span class="ltitle">资本供给层</span>
+          </div>
+          <span class="lamt">填补 ~$400B+ <small>缺口</small></span>
+        </div>
+        <p class="ldesc">
+          这才是<strong>钱的真正源头</strong>：用头部公司的资产负债表与资本市场，把 L0 与 L2 之间的巨大缺口填平。
+          四条主水管——<strong>自由现金流、债券、私募信贷/表外 SPV、一级市场股权</strong>，外加主权资金兜底。
+        </p>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>自由现金流（最硬的钱）</div>
+            <div class="samt">巨头主业 FCF 年 ~$200–250B</div>
+            <div class="tags">
+              <span class="tag h">微软</span>
+              <span class="tag h">谷歌</span>
+              <span class="tag h">Meta</span>
+              <span class="tag h">亚马逊</span>
+              <span class="tag cn">阿里/腾讯</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>债券融资（开始加杠杆）</div>
+            <div class="samt">2025 新发 ~$100B+</div>
+            <div class="tags">
+              <span class="tag h">Meta $30B 债</span>
+              <span class="tag h">Oracle 大额发债</span>
+              <span class="tag">亚马逊 $15B</span>
+              <span class="tag">Alphabet 债</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>私募信贷 / 表外 SPV</div>
+            <div class="samt">数据中心专项 ~$50–80B</div>
+            <div class="tags">
+              <span class="tag h">Blue Owl</span>
+              <span class="tag">Apollo / KKR</span>
+              <span class="tag">Meta Hyperion SPV</span>
+              <span class="tag">CoreWeave 抵押融资</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>一级市场股权（烧钱方）</div>
+            <div class="samt">2025 大额募资 ~$60–70B</div>
+            <div class="tags">
+              <span class="tag h">OpenAI ($40B 轮)</span>
+              <span class="tag h">Anthropic ($13B)</span>
+              <span class="tag">xAI (~$20B)</span>
+              <span class="tag">SoftBank 领投</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>主权 / 政府</div>
+            <div class="samt">框架级承诺（多年累计）</div>
+            <div class="tags">
+              <span class="tag h">Stargate ($500B 计划)</span>
+              <span class="tag">MGX / 中东主权</span>
+              <span class="tag cn">东数西算 / 智算中心</span>
+            </div>
+          </div>
+        </div>
+        <div class="insight">
+          <strong>风险所在：</strong>FCF 是「自己赚的钱」尚算稳健，但债券 + 私募信贷 + 表外 SPV 的比重正快速上升。
+          <strong>当资金来源从「现金流」转向「借来的钱」，整个链条对利率与 AI 变现进度的敏感度急剧放大。</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line" style="--fc:#4f46e5;--tc:#0284c7"></div>
+      <div class="conn-icon">资本 → 拨给花钱的人</div>
+    </div>
+
+    <!-- ═══ L2 资本开支决策层 ═══ -->
+    <div class="lcard" style="--lc:#0284c7">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L2 · 花钱的人</span>
+            <span class="ltitle">资本开支决策层（Capex）</span>
+          </div>
+          <span class="lamt">~$450–500B <small>/ 2025</small></span>
+        </div>
+        <p class="ldesc">
+          拿到资本后真正<strong>下单的人</strong>。不到 10 家公司决定了全球 80% 以上的 AI 资本开支——
+          他们的 capex 指引一旦变化，会沿整条链向下游瞬间传导。
+        </p>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>美系超大规模云厂商</div>
+            <div class="samt">五家合计 ~$400–420B</div>
+            <div class="tags">
+              <span class="tag h">亚马逊 ~$100B+</span>
+              <span class="tag h">微软 ~$80–90B</span>
+              <span class="tag h">谷歌 ~$85–90B</span>
+              <span class="tag h">Meta ~$70B</span>
+              <span class="tag">Oracle 高增</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>中国云厂商</div>
+            <div class="samt">合计 ~$40–60B</div>
+            <div class="tags">
+              <span class="tag cn">阿里云</span>
+              <span class="tag cn">腾讯</span>
+              <span class="tag cn">字节跳动</span>
+              <span class="tag cn">百度</span>
+              <span class="tag cn">华为云</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>Neocloud（算力专营）</div>
+            <div class="samt">合计 ~$25–35B</div>
+            <div class="tags">
+              <span class="tag h">CoreWeave</span>
+              <span class="tag">Lambda</span>
+              <span class="tag">Crusoe</span>
+              <span class="tag">Nebius</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>模型实验室自建</div>
+            <div class="samt">大型自建集群</div>
+            <div class="tags">
+              <span class="tag h">xAI Colossus</span>
+              <span class="tag h">OpenAI Stargate</span>
+              <span class="tag">Meta 超级集群</span>
+            </div>
+          </div>
+        </div>
+        <div class="insight">
+          <strong>集中度极高：</strong>美系四大 + Oracle 的资本开支同比仍在以 ~40–50% 增长。
+          这是拉动下游 L3–L6 全链需求的<strong>唯一引擎</strong>——也是单点风险所在。
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line" style="--fc:#0284c7;--tc:#0e7490"></div>
+      <div class="conn-icon">capex 拆分 ① 土建与电力</div>
+    </div>
+
+    <!-- ═══ L3 数据中心 & 电力 ═══ -->
+    <div class="lcard" style="--lc:#0e7490">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L3 · 钱的去向 ①</span>
+            <span class="ltitle">数据中心 & 电力基建</span>
+          </div>
+          <span class="lamt">~$150–200B <small>(capex 35–40%)</small></span>
+        </div>
+        <p class="ldesc">
+          资本开支并非全买 GPU——<strong>约 35–40% 流向「机房与电」</strong>：土地、园区土建、电力接入、
+          电网设备、备电与液冷。这部分常被忽视，却正在成为<strong>比缺芯更硬的瓶颈</strong>。
+        </p>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>土建 / 园区 / IDC REIT</div>
+            <div class="samt">量级 ~$60–90B</div>
+            <div class="tags">
+              <span class="tag h">Equinix</span>
+              <span class="tag h">Digital Realty</span>
+              <span class="tag cn">世纪互联</span>
+              <span class="tag cn">光环新网</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>电力 / 电网 / 变压器</div>
+            <div class="samt">量级 ~$50–70B</div>
+            <div class="tags">
+              <span class="tag h">GE Vernova</span>
+              <span class="tag h">Eaton</span>
+              <span class="tag">Schneider</span>
+              <span class="tag cn">特变电工</span>
+              <span class="tag cn">金风/电气龙头</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>液冷 / 温控 / 备电</div>
+            <div class="samt">量级 ~$30–50B</div>
+            <div class="tags">
+              <span class="tag h">Vertiv</span>
+              <span class="tag cn">英维克</span>
+              <span class="tag cn">申菱环境</span>
+              <span class="tag cn">科士达</span>
+            </div>
+          </div>
+        </div>
+        <div class="insight">
+          <strong>新瓶颈：</strong>北美多地电网接入排队已到 2028 年以后，电力与变压器交期成为
+          GPU 装机的<strong>实际节流阀</strong>——「有卡没电」正在取代「有钱没卡」。
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line" style="--fc:#0e7490;--tc:#0d9488"></div>
+      <div class="conn-icon">capex 拆分 ② 算力整机</div>
+    </div>
+
+    <!-- ═══ L4 服务器 ODM ═══ -->
+    <div class="lcard" style="--lc:#0d9488">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L4 · 过路财神</span>
+            <span class="ltitle">服务器 / 整机集成（ODM）</span>
+          </div>
+          <span class="lamt">~$200–250B <small>/ AI 服务器</small></span>
+        </div>
+        <p class="ldesc">
+          把 GPU、CPU、网络、存储、散热集成为可交付的 AI 训练/推理机柜。
+          钱在这里<strong>大进大出</strong>——账面收入很大，但毛利仅 5–10%，
+          <strong>绝大部分货款立即转付给上游芯片厂</strong>。
+        </p>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>台系 ODM（云厂商直采）</div>
+            <div class="samt">承接大头订单</div>
+            <div class="tags">
+              <span class="tag h">广达 Quanta</span>
+              <span class="tag h">纬颖 Wiwynn</span>
+              <span class="tag">鸿海 Foxconn</span>
+              <span class="tag">纬创 Wistron</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>品牌服务器厂</div>
+            <div class="samt">企业/主权客户为主</div>
+            <div class="tags">
+              <span class="tag h">Supermicro</span>
+              <span class="tag">Dell</span>
+              <span class="tag">HPE</span>
+              <span class="tag cn">浪潮信息</span>
+              <span class="tag cn">联想</span>
+            </div>
+          </div>
+        </div>
+        <div class="insight">
+          <strong>毛利洼地：</strong>一台 GPU 服务器里 ~70–80% 成本是 NVIDIA 模块。ODM 赚的是「组装与交付」，
+          <strong>真正的利润在更上游</strong>——这正是钱继续向下流的原因。
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line" style="--fc:#0d9488;--tc:#059669"></div>
+      <div class="conn-icon">货款转付 → 芯片厂</div>
+    </div>
+
+    <!-- ═══ L5 核心芯片 ═══ -->
+    <div class="lcard" style="--lc:#059669">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L5 · 价值汇集点 💰</span>
+            <span class="ltitle">核心芯片与组件</span>
+          </div>
+          <span class="lamt">NVIDIA 数据中心 ~$180–200B <small>年化</small></span>
+        </div>
+        <p class="ldesc">
+          整条资金链<strong>最大的「蓄水池」</strong>。约 60–70% 的留存价值沉淀在这一层，
+          NVIDIA 一家就吸走绝大部分——数据中心业务年化已逼近 $200B，<strong>毛利率约 75%</strong>。
+        </p>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>GPU / 加速器（核心）</div>
+            <div class="samt">NVIDIA 占训练芯片 ~80%+</div>
+            <div class="tags">
+              <span class="tag h">NVIDIA</span>
+              <span class="tag">AMD Instinct</span>
+              <span class="tag cn">华为昇腾</span>
+              <span class="tag cn">寒武纪</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>自研 ASIC（去 N 化）</div>
+            <div class="samt">量级 ~$20–30B 并高增</div>
+            <div class="tags">
+              <span class="tag h">Broadcom (TPU/Trainium)</span>
+              <span class="tag h">Marvell</span>
+              <span class="tag">Google TPU</span>
+              <span class="tag">AWS Trainium</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>HBM 高带宽存储</div>
+            <div class="samt">量级 ~$40B+ 并紧缺</div>
+            <div class="tags">
+              <span class="tag h">SK 海力士</span>
+              <span class="tag">三星</span>
+              <span class="tag">美光</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>网络 / 光模块</div>
+            <div class="samt">量级 ~$30–40B</div>
+            <div class="tags">
+              <span class="tag h">Broadcom</span>
+              <span class="tag">Arista</span>
+              <span class="tag cn">中际旭创</span>
+              <span class="tag cn">新易盛</span>
+            </div>
+          </div>
+        </div>
+        <div class="insight">
+          <strong>钱在这里「停住」：</strong>NVIDIA ~75% 的毛利意味着每流入 $100，约 $75 以利润/留存形式
+          沉淀在这一层，仅 ~$25 继续向上游支付。<strong>这是整条链利润分配最不均衡的环节。</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line" style="--fc:#059669;--tc:#c2770c"></div>
+      <div class="conn-icon">COGS 支付 → 制造端</div>
+    </div>
+
+    <!-- ═══ L6 最上游制造 ═══ -->
+    <div class="lcard" style="--lc:#c2770c">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L6 · 钱的最终归宿</span>
+            <span class="ltitle">最上游制造（代工 / 封装 / 设备）</span>
+          </div>
+          <span class="lamt">TSMC AI 收入 ~$50–60B</span>
+        </div>
+        <p class="ldesc">
+          NVIDIA 等芯片厂的成本（COGS）最终流到这里——<strong>晶圆代工、先进封装、设备与材料</strong>。
+          这是资金瀑布的<strong>最后一级</strong>，也是整条链最深的技术护城河所在。
+        </p>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>晶圆代工（Foundry）</div>
+            <div class="samt">TSMC AI/HPC 收入 ~$50–60B</div>
+            <div class="tags">
+              <span class="tag h">TSMC</span>
+              <span class="tag">Samsung</span>
+              <span class="tag cn">中芯国际</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>先进封装（CoWoS）</div>
+            <div class="samt">产能为 GPU 供货瓶颈</div>
+            <div class="tags">
+              <span class="tag h">TSMC CoWoS</span>
+              <span class="tag">ASE</span>
+              <span class="tag cn">长电科技</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>设备 / 材料（最上游）</div>
+            <div class="samt">资本开支拉动设备投资</div>
+            <div class="tags">
+              <span class="tag h">ASML</span>
+              <span class="tag">Applied Materials</span>
+              <span class="tag cn">北方华创</span>
+            </div>
+          </div>
+        </div>
+        <div class="insight">
+          <strong>承上接续：</strong>本层即《AI 硬件产业链全景图》的最上游。资金流到此为止，
+          再往上是<strong>产业链（物料流）</strong>的范畴——两图在此处衔接，方向相反、互为镜像。
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /chain -->
+
+  <!-- ═══ 循环性警示 ═══ -->
+  <div class="loop-card">
+    <h3>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+      资金的「循环嫌疑」——为什么这张图值得警惕
+    </h3>
+    <p class="loop-sub">
+      这套资金流最大的争议在于<strong>钱在头部几家之间打转</strong>：同一笔资本，既是某家的「投资」，又变成另一家的「收入」，
+      最后多半回到 NVIDIA。一旦终端真实付费（L0）追不上，这个回路就需要不断有新资本注入维持。
+    </p>
+    <div class="loop-grid">
+      <div class="loop-item">
+        <div class="lt">回路 A · NVIDIA 自循环</div>
+        <div class="loop-flow"><b>NVIDIA</b> 承诺投资 OpenAI（~$100B）→ OpenAI 租 <b>Oracle/微软</b> 算力 → 两家回头大量采购 <b>NVIDIA</b> GPU</div>
+      </div>
+      <div class="loop-item">
+        <div class="lt">回路 B · 微软 ↔ OpenAI</div>
+        <div class="loop-flow"><b>微软</b> 注资 OpenAI → OpenAI 把钱花在 <b>Azure</b> 算力 → Azure 拿这笔收入去买 <b>NVIDIA</b></div>
+      </div>
+      <div class="loop-item">
+        <div class="lt">回路 C · Oracle ↔ OpenAI</div>
+        <div class="loop-flow"><b>OpenAI</b> 签 Oracle ~$300B 多年算力大单 → <b>Oracle</b> 发债扩建数据中心 → 采购 <b>NVIDIA</b> 装机</div>
+      </div>
+    </div>
+    <p class="loop-note">
+      <strong>看图要点：</strong>顺着箭头读「钱去哪了」很清楚，但要额外盯三件事——
+      ① L0 真实付费 vs L2 资本开支的<strong>缺口是否收窄</strong>；
+      ② L1 里<strong>债务/表外融资占比</strong>是否失控；
+      ③ L5 的循环交易里<strong>有多少是「真需求」、多少是「互相输血」</strong>。这三点决定瀑布能流多久。
+    </p>
+  </div>
+
+  <footer>
+    <div>AI 资本流向瀑布图 · ZephyrSpace Research</div>
+    <div style="margin-top:4px;opacity:0.7">金额为 2025 年公开指引/市场估算的<strong>量级范围</strong>，非精确值 · 仅供研究参考，不构成投资建议</div>
+  </footer>
+
+</div><!-- /page -->
+</body>
+</html>
