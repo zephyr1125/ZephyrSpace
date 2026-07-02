@@ -156,6 +156,51 @@ python scripts/weekly_watchlist_scan.py --tier portfolio
 
 完整 SOP 在 `skills/weekly-satellite-review/SKILL.md`，输出存档到 `02-主题/周度复盘/YYYY-MM-DD.md`。
 
+### 估值分析（触发词：估值 XXX / 使用合适算法对XXX估值 / valuation XXX）
+
+**不需要二次确认，收到即执行。** 对指定公司执行多方法估值（PE分位/PEG/EV-EBITDA/FCF Yield/DDM/逆向DCF/SOTP），完成后自动检索 watchlist JSON 更新 price_bands 并同步到 Finance 项目。完整 SOP 读 `skills/valuation/SKILL.md`。
+
+```powershell
+# 同步到 Finance 项目
+.\scripts\sync_watchlist.ps1
+```
+
+**核心流程**：
+1. 拉取最新行情+财务+一致预期
+2. 根据公司特征选择 4-6 种估值方法
+3. 多方法加权 → 合理价中枢 + 四级价格区间
+4. `grep` 检索所有 watchlist JSON → 命中则更新 `price_bands`/`current_price`/`valuation_anchor`
+5. 运行 `sync_watchlist.ps1` 同步到 `E:\Work\Python\Finance\api\config\`
+
+### AI 泡沫破裂仪表盘（触发词：AI泡沫打分 / 泡沫仪表盘 / 破裂指数 / 泡沫监测）
+
+**每周末跑一遍。** 对 7 个先行指标（超大厂 capex 指引、大模型融资、二手 GPU 租赁价、数据中心私募信贷、NVIDIA 数据中心收入环比、Neocloud 风险、循环交易占比）逐项打分，输出 0–100「破裂临近指数」+ 等级 + 对应组合减仓/加仓动作，并维护周度总账观察趋势（动量比绝对值更重要）。完整 SOP 读 `skills/ai-bubble-watch/SKILL.md`。
+
+```powershell
+# 第1步：抓取证据（脚本）
+python scripts/ai_bubble_scan.py            # 全量；或 --only R2,R3,R4,Y2 周中快查高频项
+# 第2步：AI 逐项打分 + 生成报告（按 skills/ai-bubble-watch/SKILL.md）
+```
+
+报告输出到 `02-主题/AI泡沫监测/YYYY-MM-DD.md`，总账追加到 `02-主题/AI泡沫监测/_仪表盘总账.md`。低频指标（capex/NVIDIA环比/循环交易）非财报季沿用上期分数。
+
+### 泡泡玛特 IP 监控（触发词：泡泡玛特监控 / Pop Mart IP 监控 / 潮玩IP跟踪 / Labubu监控 / 泡泡玛特IP周报）
+
+**每周运行一次。** 对泡泡玛特旗下 IP（THE MONSTERS/Labubu、Molly、Skullpanda、Crybaby、Dimoo 等）进行二级市场价格、社媒热度、卖盘压力和 IP 扩散情况的周度跟踪。不分析财报、不估值建模、不给买卖建议——只输出 IP 健康度评分、风险信号和趋势变化。
+
+完整 SOP 读 `popmart-ip-monitor/SKILL.md`。执行摘要：
+
+1. 加载 `config/watchlist.yaml` 获取监控 IP/SKU 清单
+2. 数据采集：WebFetch 得物/闲鱼/StockX 公开单品页 → 提取价格/成交/挂单；WebSearch 社媒关键词 → 定性热度判断
+3. 按 §8–§10 计算指标 + 健康度评分（0–100，A–E 五档）
+4. 读上一期报告/快照 → 增量对比（§11）
+5. 写快照 `data/snapshots/YYYY-MM-DD.json` + 报告 `reports/YYYY-MM-DD-popmart-ip-monitor.md`
+6. 同步输出到 `02-主题/泡泡玛特IP监控/YYYY-MM-DD.md`（Obsidian 可浏览）
+7. 更新 `02-主题/泡泡玛特IP监控/_index.md` 报告索引表
+
+> ⚠️ 数据采集是最大瓶颈。首期可能只能做到 qualitative_only 级别。随时间序列累积，结论会越来越硬。
+> ⚠️ 核心验证问题：泡泡玛特到底是在吃一个超级爆款的红利，还是已经具备持续创造、运营、放大多个全球消费 IP 的组织能力。
+
 ### Microsoft To Do 队列自动分析（触发词：/loop 看个股）
 
 **动态自驱循环，跑完一个立刻看下一个。** 从 Microsoft To Do 的「任务」清单 → 「看个股」任务读取未打勾子任务（约定都是公司名），逐个执行全面分析，完成后回写分数并打勾。
@@ -188,6 +233,21 @@ python scripts/weekly_watchlist_scan.py --tier portfolio
 ### 指数整体 PreBuy（触发词：指数估值 [指数名] / [指数]适合建仓吗）
 
 完整 SOP 在 `index-prebuy.skill`，分析对象是指数本身（不拆解个股），输出到指数页 + `data/watchlist_index.json`，并在写入后运行 `.\scripts\sync_watchlist.ps1` 同步到 `E:\Work\Python\Finance\api\config\watchlist_index.json`。
+
+### 财报预告监控（触发词：某某时间范围的财报预告 / XX至XX的业绩预告 / 财报预告监控 / 业绩预告扫描）
+
+**不需要二次确认，收到即执行。** 在指定时间范围内拉取全市场业绩预告清单（CNINFO），逐只补全估值、最近季度营收/净利同比、申万2021二级行业分类（理杏仁），增量写入季度文档并维护行业聚合表。完整 SOP 读 `.claude/skills/forecast-preview-monitor/SKILL.md`。
+
+```powershell
+# 时间范围 + 自动季度 label（如 end 在 Q2 → 2026Q2财报预告）
+python scripts/forecast_monitor.py 2026-06-01 2026-07-02
+# 显式指定 label（增量写同一份文档）
+python scripts/forecast_monitor.py 2026-06-20 2026-07-02 --label 2026Q2财报预告
+```
+
+输出：权威数据 `data/forecast_scan/<label>.json` + 文档 `02-主题/财报预告/<label>.md`（申万二级行业分布表 + 个股预告列表）。同一 label 反复跑 = 增量合并。
+
+> ⚠️ label 按结束日期所在**自然季度**自动生成，但半年报预告应归入 Q2、三季报预告归入 Q3——跨季度时用 `--label` 显式指定，避免 7 月扫到的半年报预告被误标为 Q3。
 
 ## Watchlist 管理
 
