@@ -1,0 +1,536 @@
+{
+  "date": "2026-06-25",
+  "generated_at": "2026-06-25T16:14:22",
+  "indicators": {
+    "R1": {
+      "label": "超大厂 capex 指引下修",
+      "tier": "red",
+      "freq": "low",
+      "queries": [
+        {
+          "query": "Microsoft Amazon Google Meta Oracle capex guidance 2026 AI spending",
+          "topic": "news",
+          "days": 14,
+          "results": [
+            {
+              "title": "Is Meta Overspending On AI? - Forbes",
+              "url": "https://www.forbes.com/sites/greatspeculations/2026/06/12/is-meta-overspending-on-ai/",
+              "published_date": "Fri, 12 Jun 2026 00:00:00 GMT",
+              "content": "### A Spending Strategy of Unprecedented Magnitude\n\nIn its most recent update, Meta informed investors to brace for significant spending levels. The company now projects that capital expenditures for 2026 will range from $125 billion to $145 billion. That figure alone is staggering, but what should cause concern is the increase from the previous estimate of $115 billion to $135 billion. The spendi"
+            },
+            {
+              "title": "Big tech spending on data centers balloons to $850B, with Meta and Microsoft investing tens of billions - New York Post",
+              "url": "https://nypost.com/2026/06/24/business/big-tech-spending-on-data-centers-balloons-to-850b-with-meta-and-microsoft-investing-tens-of-billions/",
+              "published_date": "Wed, 24 Jun 2026 15:30:45 GMT",
+              "content": "Email\n\nNew York Post\n\nSwitch between CA and NY editions here.\n\nEdition\n\n#### Recommended\n\n#### Shop now\n\nIt’s Prime Day 2—Here’s the 150+ best deals on Amazon, updated 24/7\n\nBusiness\n\n# Big tech spending on data centers balloons to $850B, with Meta and Microsoft investing tens of billions\n\nBy\n\nMarc Vartabedian\n\nPublished  June 24, 2026, 11:30 a.m. ET\n\nSee more of our coverage in your search result"
+            },
+            {
+              "title": "Building, backing, and buying AI in 2026 - PitchBook",
+              "url": "https://pitchbook.com/video-library/building-backing-and-buying-ai-in-2026",
+              "published_date": "Mon, 15 Jun 2026 15:54:54 GMT",
+              "content": "# Building, backing, and buying AI in 2026\n\nBuilding, backing, and buying AI in 2026\n\nThough the tech industry is on track to spend nearly $600 billion on AI infrastructure in 2026, M&A is hardly part of that equation. The Big Five of Google, Meta, Microsoft, Amazon, and Apple, dropped from thirty-three acquisitions in 2017 to only twelve in 2026 YTD, showing a growing preference for back and buil"
+            },
+            {
+              "title": "Data centre capex to top $1tn despite AI's shortcomings - Telecoms",
+              "url": "https://www.telecoms.com/ai/data-centre-capex-to-top-1tn-despite-ai-s-shortcomings",
+              "published_date": "Thu, 11 Jun 2026 12:37:06 GMT",
+              "content": "AI\n Digital Ecosystem\n News\n\n# Data centre capex to top $1tn despite AI's shortcomings\n\nAs if it were needed, yet more evidence of AI market mania has surfaced in analyst insights served up by Gartner and Dell'Oro.\n\nNick Wood,\nFreelance writer\n\nJune 11, 2026\n\n3 Min Read\n\nThe latter reiterated its forecast that capital expenditure on data centres will surge in the second half of this year, topping "
+            },
+            {
+              "title": "$5.5T AI Boom Meets a Hawkish Fed: Self-Funding Cycle, or Tech's Biggest Leveraged Bet? - Moomoo",
+              "url": "https://www.moomoo.com/community/feed/5-5t-ai-boom-meets-a-hawkish-fed-self-funding-116770673786890",
+              "published_date": "Thu, 18 Jun 2026 10:38:00 GMT",
+              "content": "JPMorgan’s latest AI Capex 2.0 report now expects total AI capex to reach US$5.5tn, through 2030, up from its previous forecast of US$5.1tn. It also expects the debt-financing component of the AI buildout to reach US$4.1tn, while hyperscaler capex rises to around US$650bn in 2026 and potentially above US$1.1tn in 2027.  \n  \n\nOutside JPMorgan’s report, the key areas to watch are the AI server suppl"
+            }
+          ]
+        },
+        {
+          "query": "hyperscaler capex cut lower AI data center spending slowdown",
+          "topic": "news",
+          "days": 21,
+          "results": [
+            {
+              "title": "Data centre capex to top $1tn despite AI's shortcomings - Telecoms",
+              "url": "https://www.telecoms.com/ai/data-centre-capex-to-top-1tn-despite-ai-s-shortcomings",
+              "published_date": "Thu, 11 Jun 2026 12:37:06 GMT",
+              "content": "\"Despite exceptionally strong spending growth in 1H26, capex growth is expected to accelerate further in 2H26, driven by the ramp of Nvidia Rubin systems and refresh cycles for hyperscaler custom accelerator platforms,\" said Fung.\n\nRelated:\nEricsson builds software bridge to AI-native RAN\n\n\"Beyond hyperscalers, select enterprise verticals and sovereign cloud providers are increasing AI infrastruct"
+            },
+            {
+              "title": "$5.5T AI Boom Meets a Hawkish Fed: Self-Funding Cycle, or Tech's Biggest Leveraged Bet? - Moomoo",
+              "url": "https://www.moomoo.com/community/feed/5-5t-ai-boom-meets-a-hawkish-fed-self-funding-116770673786890",
+              "published_date": "Thu, 18 Jun 2026 10:38:00 GMT",
+              "content": "JPMorgan’s latest AI Capex 2.0 report now expects total AI capex to reach US$5.5tn, through 2030, up from its previous forecast of US$5.1tn. It also expects the debt-financing component of the AI buildout to reach US$4.1tn, while hyperscaler capex rises to around US$650bn in 2026 and potentially above US$1.1tn in 2027.  \n  \n\nOutside JPMorgan’s report, the key areas to watch are the AI server suppl"
+            },
+            {
+              "title": "The data center construction boom has entered a new chapter - Consultancy-me.com",
+              "url": "https://www.consultancy-me.com/news/amp/13587/the-data-center-construction-boom-has-entered-a-new-chapter",
+              "published_date": "Fri, 05 Jun 2026 11:04:00 GMT",
+              "content": "There are clear signs that AI momentum and growth will remain strong, which will continue to translate into robust demand for data centre construction.\n\nThe pace of new construction growth has begun to stabilizeThe hyperscaler investment pullback many expected didn’t occur – their investments increased meaningfully in 2025 and are expected to grow in the coming years. That said, hyperscalers are f"
+            },
+            {
+              "title": "Ciena sees AI networking market reaching $50 billion by 2029 - RCR Wireless News",
+              "url": "https://www.rcrwireless.com/20260605/network-infrastructure/ciena-ai",
+              "published_date": "Fri, 05 Jun 2026 13:47:46 GMT",
+              "content": "Spending shift – The company expects a growing share of hyperscaler capital expenditure to be directed toward networking infrastructure as operators seek to monetize AI compute investments.\n\nCapacity investments – Ciena plans to spend $250 million-$275 million in capital expenditures this year while expanding manufacturing and supply capacity to meet demand.\n\nCiena said artificial intelligence-dri"
+            },
+            {
+              "title": "Investors may be hitting pause on the AI run-up - Axios",
+              "url": "https://www.axios.com/2026/06/24/ai-stocks-chips-selloff",
+              "published_date": "Wed, 24 Jun 2026 09:02:31 GMT",
+              "content": "Although the price of compute can change expectations for some of the memory-chip stocks — like Micron — it doesn't have much bearing overall on the valuation of the hyperscaler stocks or investor expectations overall, he says.\n If anything, a drop in compute pricing would be a benefit for hyperscalers who are spending so much money on the stuff.\n \"I'm not in the camp who believes that the drivers"
+            }
+          ]
+        }
+      ]
+    },
+    "R2": {
+      "label": "大模型融资遇冷",
+      "tier": "red",
+      "freq": "high",
+      "queries": [
+        {
+          "query": "OpenAI funding round valuation 2026 raise",
+          "topic": "news",
+          "days": 14,
+          "results": [
+            {
+              "title": "1st half of 2026 breaks VC records thanks to OpenAI and Anthropic investments | NVCA/Pitchbook - GamesBeat",
+              "url": "https://gamesbeat.com/1st-half-of-2026-breaks-vc-records-thanks-to-openai-and-anthropic-investments-nvca-pitchbook/",
+              "published_date": "Tue, 23 Jun 2026 04:01:00 GMT",
+              "content": "At the late stage, Waymo, the Alphabet-backed autonomous driving company, raised a $16 billion Series D round that alone represented 27% of total late-stage YTD deal value. The AI premium in median deal sizes further illustrates this dynamic: While the gap between AI and non-AI median deal sizes remains modest at Series B and C, at 12.5% and 7.5%, respectively, it expands sharply at Series D+, whe"
+            },
+            {
+              "title": "OpenAI burned $3.7 billion in first quarter of 2026- The Information - Investing.com",
+              "url": "https://www.investing.com/news/stock-market-news/openai-burned-37-billion-in-first-quarter-of-2026-the-information-93CH-4746236",
+              "published_date": "Wed, 17 Jun 2026 00:18:30 GMT",
+              "content": "Cash burn and revenue both tripled compared to the same period in 2025, highlighting the continued financial challenges of generating profits from artificial intelligence despite strong demand, the report said.\n\nThe company held more than $73 billion in cash and marketable securities at the end of the first quarter, up from $40 billion at the end of December. The increase reflects a large funding "
+            },
+            {
+              "title": "Leaked financial docs show OpenAI is losing billions of dollars a year - Ars Technica",
+              "url": "https://arstechnica.com/ai/2026/06/leaked-financial-docs-show-openai-is-losing-billions-of-dollars-a-year/",
+              "published_date": "Tue, 16 Jun 2026 16:18:07 GMT",
+              "content": "In March, OpenAI raised $122 billion of financing in a funding round that valued the company at $852 billion. The company reports over 900 million weekly active users of ChatGPT, though only about 50 million of those are paid subscribers.\n\nKyle Orland  Senior Gaming Editor\n\nKyle Orland  Senior Gaming Editor\n\nKyle Orland has been the Senior Gaming Editor at Ars Technica since 2012, writing primaril"
+            },
+            {
+              "title": "OpenAI’s financials have leaked, showing $21 billion in losses against $13 billion in revenue - Fortune",
+              "url": "https://fortune.com/2026/06/16/openai-financials-leaked-losses-revenue-profit/",
+              "published_date": "Tue, 16 Jun 2026 10:06:00 GMT",
+              "content": "Current price of silver as of Monday, June 15, 2026\n\nBy Joseph HostetlerJune 15, 2026\n\n1 day ago\n\nBig Tech\n\nHundreds of Stanford students walked out of their grad ceremony to protest Google CEO’s commencement speech. It wasn’t all about AI\n\nBy Tristan BoveJune 15, 2026\n\n24 hours ago\n\nTeam USA star Ricardo Pepi grew up in a trailer in El Paso—and his parents pawned their car title to fuel his socce"
+            },
+            {
+              "title": "OpenAI Reports Rapid Revenue Growth, Larger Losses - Let's Data Science",
+              "url": "https://letsdatascience.com/news/openai-reports-rapid-revenue-growth-larger-losses-3db37681",
+              "published_date": "Tue, 16 Jun 2026 20:35:35 GMT",
+              "content": "### Prior Forecasts and Context\n\nInternal management documents previously reported by The Information and summarized by Yahoo Finance projected a $14 billion loss for 2026 and a path to very large revenues by 2029. Those figures predated the leaked 2025 audited statements and were forward-looking estimates, not audited results. The revenue trajectory - $3.7B to $13B in one year - is the clearest s"
+            }
+          ]
+        },
+        {
+          "query": "Anthropic xAI funding round struggle down round valuation",
+          "topic": "news",
+          "days": 21,
+          "results": [
+            {
+              "title": "Ahead of its IPO, Anthropic’s Daniela Amodei shrugs off doubts about AI’s returns - TechCrunch",
+              "url": "https://techcrunch.com/2026/06/04/ahead-of-its-ipo-anthropics-daniela-amodei-shrugs-off-doubts-about-ais-returns/",
+              "published_date": "Thu, 04 Jun 2026 22:43:26 GMT",
+              "content": "Marina Temkin\n\nPrivate investors have been falling over themselves to get a piece of Anthropic, given the AI model maker is growing at a dizzying pace. Multiple investors told TechCrunch that the company’s $65 billion fundraise at a $965 billion valuation, announced last week, was greatly oversubscribed. Now, with that private demand still strong, Anthropic has revealed that it’s taking steps towa"
+            },
+            {
+              "title": "1st half of 2026 breaks VC records thanks to OpenAI and Anthropic investments | NVCA/Pitchbook - GamesBeat",
+              "url": "https://gamesbeat.com/1st-half-of-2026-breaks-vc-records-thanks-to-openai-and-anthropic-investments-nvca-pitchbook/",
+              "published_date": "Tue, 23 Jun 2026 04:01:00 GMT",
+              "content": "Funding exits were the largest ever in the first quarter, and if its deal value were a full-year total, it would have been the third largest, according to a report by Pitchbook and the National Venture Capital Association (NVCA).\n\nBy itself, OpenAI’s $122 billion round collected more value than all other quarterly totals ever. The deal was more than four times larger than the second-biggest deal o"
+            },
+            {
+              "title": "The Tech Download: Anthropic’s IPO sets up first big test of AI boom valuations - CNBC",
+              "url": "https://www.cnbc.com/2026/06/05/tech-download-anthropic-ipo-ai-valuations.html",
+              "published_date": "Fri, 05 Jun 2026 11:00:01 GMT",
+              "content": "But several very well funded competitors vying for the same market — including the likes of Google, Meta, OpenAI and SpaceX — could disrupt that lead, Luria said. \"Much of their current usage is for trials and experimentation and that may not sustain.\"\n\n## The big picture\n\nWhatever the case, the filing is expected to have far-reaching impacts beyond Anthropic.\n\n\"That disclosure will not only repri"
+            },
+            {
+              "title": "Menlo Ventures Raises Record $3 Billion Following Anthropic Success - Zamin.uz",
+              "url": "https://zamin.uz/en/technology/208800-menlo-ventures-raises-record-3-billion-following-anthropic-success.html",
+              "published_date": "Tue, 23 Jun 2026 19:52:18 GMT",
+              "content": "According to Bloomberg, Menlo Ventures' stake in the Anthropic project is currently valued at approximately $14 billion. This figure could go down in history as one of the most profitable deals in the venture market. The company had previously bet all its resources on this model creator, taking a significant risk.\n\n## From Risk to Massive Returns\n\nIn early 2024, Menlo Ventures led the Series D inv"
+            },
+            {
+              "title": "Anthropic on the Eve of IPO: Daniela Amodei Dismisses AI Doubts - Zamin.uz",
+              "url": "https://zamin.uz/en/technology/205376-anthropic-on-the-eve-of-ipo-daniela-amodei-dismisses-ai-doubts.html",
+              "published_date": "Thu, 04 Jun 2026 22:55:03 GMT",
+              "content": "Asosiy kontentga oʻtish\n\n Uzbekistan\n World\n Society\n Tech\n Sport\n Auto\n Culture\n Economy\n\n Ўзбекча\n O'zbek\n Русский\n Türkçe\n Қазақша\n Français\n Español\n Deutsch\n\n# Anthropic on the Eve of IPO: Daniela Amodei Dismisses AI Doubts\n\n·47·Technology\n\nAs Anthropic prepares for its major IPO, co-founder Daniela Amodei addressed doubts about profitability in the artificial intelligence (AI) sector. Last w"
+            }
+          ]
+        }
+      ]
+    },
+    "R3": {
+      "label": "二手 GPU 租赁价断崖",
+      "tier": "red",
+      "freq": "high",
+      "queries": [
+        {
+          "query": "H100 GPU rental price per hour 2026 drop trend",
+          "topic": "general",
+          "days": 30,
+          "results": [
+            {
+              "title": "AI GPU Rental Market Trends (June 2026): Complete Industry Analysis",
+              "url": "https://www.thundercompute.com/blog/ai-gpu-rental-market-trends",
+              "published_date": "",
+              "content": "## Current GPU Pricing Trends - June 2026\n\nH100 rental prices have seen some of the most dramatic shifts, leaving behind historical peaks near $8/hr to a much broader market range today. Across tracked providers, H100 80GB pricing now runs from $1.38/hr to $11.06/hr.\n\nThat's where Thunder Compute stands out by offering H100 GPUs at $1.38/hr. These are standard on-demand prices, not promotional rat"
+            },
+            {
+              "title": "NVIDIA H100 Price Guide 2026: GPU Costs, Cloud Pricing & Buy vs ...",
+              "url": "https://jarvislabs.ai/blog/h100-price",
+              "published_date": "",
+              "content": "### H100 Price Trends: Complete Analysis\n\nCloud pricing for H100 GPUs has seen dramatic evolution throughout 2025. Understanding these trends helps predict future costs and optimal timing for purchases or rentals.\n\nHistorical Price Evolution:\n\n   Q4 2024: $8.00-$10.00 per hour (peak scarcity pricing)\n   Q1 2025: $5.50-$7.00 per hour (initial supply improvements)\n   Q2 2025: $3.50-$4.50 per hour (a"
+            },
+            {
+              "title": "H100 Price Spike: Understanding the 10% Surge in GPU Rental Costs - Silicon Data — GPU Performance Data for Companies",
+              "url": "https://www.silicondata.com/blog/h100-price-spike",
+              "published_date": "",
+              "content": "## Market Forces and Price Discovery in a Constrained Environment\n\nAs we navigate the GPU marketplace into 2026, we find that a clear market price for H100 compute remains elusive. The process of price discovery is profoundly challenging. This is not a transparent commodity market. Our research reveals a stark pricing chasm: H100 GPUs rent for as low as ~$1.90 per hour on specialist providers like"
+            },
+            {
+              "title": "2026 Cost of Renting or Buying NVIDIA H100 GPUs for Data Centers",
+              "url": "https://www.gmicloud.ai/en/blog/2026-cost-of-renting-or-uying-nvidia-h100-gpus-for-data-centers",
+              "published_date": "",
+              "content": "GMI Cloud offers the most cost-effective H100 GPU rental at $2.00/hour for H100 PCIe and $2.40/hour for H100 SXM—40-60% below hyperscale cloud providers charging $4-8/hour. Specialized providers like Vast.ai ($2-4/hour marketplace pricing) and RunPod ($1.90/hour variable) occasionally match or undercut GMI Cloud on headline rates but lack reliability, enterprise support, and specialized features l"
+            },
+            {
+              "title": "Launching our H100 1 Year Rental Price Index",
+              "url": "https://newsletter.semianalysis.com/p/the-great-gpu-shortage-rental-capacity",
+              "published_date": "",
+              "content": "#### Claude Code is the Inflection Point\n\nThis inflection point means that demand has spiked and there’s been a run on GPUs at the hyperscalers and Neoclouds.\n\nThis new source of demand has spiked pricing for products and services across the supply chain, from DRAM and NAND memory to fiber optic cables, datacenter colocation and gas turbines.\n\nGPU Rental Pricing is the latest of many compute relat"
+            }
+          ]
+        },
+        {
+          "query": "A100 H100 GPU rental price collapse oversupply idle",
+          "topic": "news",
+          "days": 30,
+          "results": [
+            {
+              "title": "Nvidia's stock struggles as Kalshi traders bet chip prices are coming down - CNBC",
+              "url": "https://www.cnbc.com/2026/06/22/nvidias-stock-struggles-as-kalshi-traders-bet-chip-prices-are-coming-down.html",
+              "published_date": "Mon, 22 Jun 2026 19:08:17 GMT",
+              "content": "\"Regardless of the precise rationale, these GPU rental agreements should put to rest lingering concerns about NVDA losing share to [application-specific integrated circuits], at least in the short term,\" the analysts wrote.\n\n— CNBC's Yun Li contributed to this story.\n\nDisclosure: CNBC and Kalshi have a commercial relationship that includes customer acquisition and a minority investment.\n\nChoose CN"
+            },
+            {
+              "title": "The new oil? Inside the effort to turn AI computing power into a tradeable commodity - CNBC",
+              "url": "https://www.cnbc.com/2026/06/16/the-new-oil-inside-the-effort-to-turn-ai-computing-power-into-a-tradeable-commodity.html",
+              "published_date": "Tue, 16 Jun 2026 14:04:35 GMT",
+              "content": "The Harvard MBA said traders who believe they have insight into future supply-and-demand dynamics should be able to express those views through the market, helping establish prices for the broader industry.\n\nThe ProShares and Rex Shares filings for ETFs are contingent on regulatory approval of the futures market. Still, they suggest some investors already view AI compute as a potentially tradable "
+            },
+            {
+              "title": "Google Pays SpaceX $920M a Month for AI Compute in $30B Deal - OpenTools",
+              "url": "https://opentools.ai/news/google-spacex-920m-month-ai-compute-deal",
+              "published_date": "Sat, 06 Jun 2026 04:19:13 GMT",
+              "content": "Updated 11 minutes ago\n\nAI Infrastructure\n\n# Google Pays SpaceX $920M a Month for AI Compute in $30B Deal\n\nGoogle has signed a $30 billion deal to rent AI compute from SpaceX, paying $920 million per month for 110,000 NVIDIA GPUs. The agreement, announced days before SpaceX's historic IPO, reveals that even one of the world's largest AI compute owners can't build capacity fast enough to meet deman"
+            },
+            {
+              "title": "Why soaring memory prices could be Nvidia's next big advantage - Business Insider",
+              "url": "https://www.businessinsider.com/nvidia-soaring-memory-costs-ai-systems-2026-6",
+              "published_date": "Thu, 11 Jun 2026 09:00:03 GMT",
+              "content": "HOME   Subscribe\n\nThis story is available exclusively to Business Insider subscribers. Become an Insider and start reading now. Have an account? .\n\nJump to\n\n1. Main content\n2. Search\n3. Account\n4. Jump to top of page\n\n## Follow Following\n\nEvery time publishes a story, you’ll get an alert straight to your inbox!\n\nLook out for an alert in your inbox the next time publishes a story!\n\nEvery time a new"
+            },
+            {
+              "title": "The First GPU Out of China Can’t Compete Against Nvidia… Yet - Gizmodo",
+              "url": "https://gizmodo.com/first-gpu-out-of-china-cant-compete-against-nvidia-yet-2000763441",
+              "published_date": "Tue, 26 May 2026 16:30:35 GMT",
+              "content": "These new GPUs are a confluence of rising tensions between Chinese companies and Nvidia, as well as an obvious gap in the market created by Nvidia’s terrible track record on graphics card prices. What makes the LX 7G100 interesting, despite poor performance, is how it’s a full-fledged GPU compatible with Windows and DirectX 12 as well as the latest Vulkan, OpenCL, and OpenGL gaming APIs. The marke"
+            }
+          ]
+        }
+      ]
+    },
+    "R4": {
+      "label": "数据中心私募信贷/SPV 风险",
+      "tier": "red",
+      "freq": "high",
+      "queries": [
+        {
+          "query": "data center private credit spread AI debt distress",
+          "topic": "news",
+          "days": 21,
+          "results": [
+            {
+              "title": "How A $27 Billion Bond Deal Quietly Funds Big Tech's AI Build-Out - Forbes",
+              "url": "https://www.forbes.com/sites/daraabasiita/2026/06/17/how-a-27-billion-bond-deal-quietly-funds-big-techs-ai-build-out/",
+              "published_date": "Wed, 17 Jun 2026 00:00:00 GMT",
+              "content": "A new financing model, utilizing 144A private placement bonds, is rapidly funding the booming AI data center industry. Meta's $27.3 billion Hyperion campus deal pioneered this approach, which has since seen over $40 billion in additional placements. These bonds receive high credit ratings, often A+ or AAA, because they are backed by long-term leases from creditworthy tenants, effectively treating "
+            },
+            {
+              "title": "AI Data Center Bonds Are Being Priced As Project Finance At Last - Forbes",
+              "url": "https://www.forbes.com/sites/daraabasiita/2026/06/18/ai-data-center-bonds-are-being-priced-as-project-finance-at-last/",
+              "published_date": "Thu, 18 Jun 2026 00:00:00 GMT",
+              "content": "There is an old rule in lending that a name on the door is worth less than a claim on the cash. Bond investors who spent two years buying data-centre debt on the strength of the tenant rather than the structure are now relearning it. In a note on June 10, Citigroup credit analysts Daniel Sorid and Mathew Jacob found that the spread on a bond issued by QTS for a Microsoft-linked facility had widene"
+            },
+            {
+              "title": "Private credit lenders say their big software bet faces an AI reckoning — but not a ‘SaaSpocalypse' - CNBC",
+              "url": "https://www.cnbc.com/2026/06/10/ai-private-credit-software.html",
+              "published_date": "Wed, 10 Jun 2026 15:29:17 GMT",
+              "content": "Squawk Box Europe\n\n\"We have been continuing to lend into software, and as a result of the dynamics... spreads are widening, documentation is tightening, loan to values are going down. As a credit investor, that can be a very, very attractive dynamic.\"\n\nPrivate credit has emerged as a major source of capital to the software sector, with alternative lenders' exposure growing to between 20% and 30% o"
+            },
+            {
+              "title": "AI Debt Floods The Bond Market, And Fidelity Is Backing Away - Forbes",
+              "url": "https://www.forbes.com/sites/daraabasiita/2026/06/06/ai-debt-floods-the-bond-market-and-fidelity-is-backing-away/",
+              "published_date": "Sat, 06 Jun 2026 00:00:00 GMT",
+              "content": "That is why the spread, the extra yield over Treasurys, matters so much. When it is thin, the buyer is taking on the chance of a downgrade for very little payment. Fidelity’s read is that the current spread does not cover it, particularly on the longest-dated bonds, where a downgrade would do the most damage.\n\nThe caution is not limited to one fund company. Since the middle of 2025, the cost of in"
+            },
+            {
+              "title": "Apollo and Blackstone close landmark $35bn Anthropic AI chip financing deal - Private Equity Wire",
+              "url": "https://www.privateequitywire.co.uk/apollo-and-blackstone-close-landmark-35bn-anthropic-ai-chip-financing-deal/",
+              "published_date": "Tue, 09 Jun 2026 10:35:28 GMT",
+              "content": "The package highlights accelerating competition among private credit and alternative asset managers to finance data centre expansion and semiconductor capacity, as technology firms increasingly turn to structured credit markets to meet the capital demands of artificial intelligence development.\n\nUnder the structure, a special purpose vehicle acquires the chips and leases them to Anthropic, with de"
+            }
+          ]
+        },
+        {
+          "query": "AI data center bonds ABS downgrade SPV CoreWeave Meta financing",
+          "topic": "news",
+          "days": 21,
+          "results": [
+            {
+              "title": "How A $27 Billion Bond Deal Quietly Funds Big Tech's AI Build-Out - Forbes",
+              "url": "https://www.forbes.com/sites/daraabasiita/2026/06/17/how-a-27-billion-bond-deal-quietly-funds-big-techs-ai-build-out/",
+              "published_date": "Wed, 17 Jun 2026 00:00:00 GMT",
+              "content": "A new financing model, utilizing 144A private placement bonds, is rapidly funding the booming AI data center industry. Meta's $27.3 billion Hyperion campus deal pioneered this approach, which has since seen over $40 billion in additional placements. These bonds receive high credit ratings, often A+ or AAA, because they are backed by long-term leases from creditworthy tenants, effectively treating "
+            },
+            {
+              "title": "CoreWeave nets €7B orderbook for European bond debut - PitchBook",
+              "url": "https://pitchbook.com/news/articles/coreweave-nets-7b-orderbook-for-european-bond-debut",
+              "published_date": "Fri, 12 Jun 2026 14:48:49 GMT",
+              "content": "Meeting the relentless demand from hyperscalers such as Microsoft and Meta, and AI groups like Anthropic, has required a tremendous amount of new capital. CoreWeave has raised $17.35 billion in new debt and $3 billion in equity this year alone. For unsecured bond investors, CoreWeave represents a different risk profile than both PolarDC and the data center owners that have been responsible for a l"
+            },
+            {
+              "title": "AI Data Center Bonds Are Being Priced As Project Finance At Last - Forbes",
+              "url": "https://www.forbes.com/sites/daraabasiita/2026/06/18/ai-data-center-bonds-are-being-priced-as-project-finance-at-last/",
+              "published_date": "Thu, 18 Jun 2026 00:00:00 GMT",
+              "content": "## The wider market is sorting strong structures from weak\n\nOther deals show the same discipline arriving from a different direction. CoreWeave's $8.5 billion delayed-draw term loan, which closed in March, was built around GPU infrastructure tied to named customer commitments and carried an investment-grade rating; investors took it because the structure matched the risk. At the corporate end of t"
+            },
+            {
+              "title": "AI Debt Floods The Bond Market, And Fidelity Is Backing Away - Forbes",
+              "url": "https://www.forbes.com/sites/daraabasiita/2026/06/06/ai-debt-floods-the-bond-market-and-fidelity-is-backing-away/",
+              "published_date": "Sat, 06 Jun 2026 00:00:00 GMT",
+              "content": "In its midyear outlook, published June 3, Fidelity told clients it is steering its core bond portfolios away from one of the fastest-growing slices of the investment-grade market: the wave of new debt that Amazon, Alphabet, Meta, Microsoft and Oracle are selling to pay for data centers, chips and the power to run them. The reason is not that Fidelity expects these companies to miss a payment. It i"
+            },
+            {
+              "title": "Apollo and Blackstone close landmark $35bn Anthropic AI chip financing deal - Private Equity Wire",
+              "url": "https://www.privateequitywire.co.uk/apollo-and-blackstone-close-landmark-35bn-anthropic-ai-chip-financing-deal/",
+              "published_date": "Tue, 09 Jun 2026 10:35:28 GMT",
+              "content": "The package highlights accelerating competition among private credit and alternative asset managers to finance data centre expansion and semiconductor capacity, as technology firms increasingly turn to structured credit markets to meet the capital demands of artificial intelligence development.\n\nUnder the structure, a special purpose vehicle acquires the chips and leases them to Anthropic, with de"
+            }
+          ]
+        }
+      ]
+    },
+    "Y1": {
+      "label": "NVIDIA 数据中心收入环比",
+      "tier": "yellow",
+      "freq": "low",
+      "queries": [
+        {
+          "query": "NVIDIA data center revenue quarter QoQ growth 2026 earnings",
+          "topic": "news",
+          "days": 21,
+          "results": [
+            {
+              "title": "Nvidia Stock Just Did Something for the First Time in More Than 5 Years. Here's What History Says Happens Next. - The Motley Fool",
+              "url": "https://www.fool.com/investing/2026/06/13/nvidia-stock-just-did-this-for-the-first-time-in-x/",
+              "published_date": "Sat, 13 Jun 2026 12:55:00 GMT",
+              "content": "The current range represents a reversion to a pre-AI boom rhythm. Against this backdrop, the current sideways trading seen in Nvidia is the first real extended stretch of valuation stability since the world began pricing the company as the indispensable king of AI infrastructure build-outs.\n\n## Don't let valuation distract you from Nvidia's guidance\n\nNvidia's valuation profile looks even more stri"
+            },
+            {
+              "title": "Data center IT component revenue up 116% in 1Q 2026 – Dell'Oro - Light Reading",
+              "url": "https://www.lightreading.com/data-centers/data-center-it-semiconductor-and-component-revenue-increased-116-in-1q-2026-dell-oro",
+              "published_date": "Wed, 17 Jun 2026 16:54:50 GMT",
+              "content": "NVIDIA remained the largest vendor by total revenue, followed by Samsung and SK Hynix. Memory vendors benefited from rising DRAM and NAND prices and growing HBM adoption, while cloud service providers deploying custom accelerators, CPUs, and networking silicon gained market share. [...] The Data Center IT semiconductor and component is on track for triple-digit growth for full-year 2026. Elevated "
+            },
+            {
+              "title": "Nvidia Just Announced a Potential Windfall for Shareholders - The Motley Fool",
+              "url": "https://www.fool.com/investing/2026/06/11/nvidia-just-announced-a-potential-windfall-for-sha/",
+              "published_date": "Thu, 11 Jun 2026 07:02:00 GMT",
+              "content": "Image source: Getty Images.\n\n## The dominant force in AI\n\nBefore we address the potential windfall, it's helpful to understand the magnitude of Nvidia's success, which continues to accelerate. For its fiscal 2027 first quarter (ended April 26), the company generated record revenue that soared 85% year over year to $81.6 billion, while also accelerating 20% quarter over quarter. Nvidia's gross prof"
+            },
+            {
+              "title": "Nvidia Latest Big Borrower: AI Data Centers, Suppliers Racking Up Debt - Investor's Business Daily",
+              "url": "https://www.investors.com/news/technology/ai-data-centers-suppliers-nvidia-debt/",
+              "published_date": "Tue, 16 Jun 2026 15:03:30 GMT",
+              "content": "The firm noted capacity constraints at Alphabet (GOOGL) unit Google, Microsoft (MSFT) and OpenAI.\n\nThe top four U.S. hyperscalers — Google, Amazon (AMZN), Microsoft and Meta Platforms (META) — have collectively guided to $700 billion to $725 billion of total capex in 2026. That would be up about 75% from the $410 billion they spent in 2025.\n\n## Nvidia Joins Wave Of Debt Offerings\n\n\"The funding mix"
+            },
+            {
+              "title": "Qualcomm forecasts $15 billion data center chip sales by 2029, shares soar - Reuters",
+              "url": "https://www.reuters.com/business/retail-consumer/qualcomm-bets-ai-chips-break-smartphone-reliance-faces-crowded-race-2026-06-24/",
+              "published_date": "Wed, 24 Jun 2026 21:35:50 GMT",
+              "content": "Purchase Licensing Rights\n\n## Read Next\n\n ANALYSIS\n\n  Alo Yoga primed for public offering or sale after owner's sale of wholesale T-shirt business\n Businesscategory\n\n  FedEx shares slide after margin drop, company eyes 11% rise in 2026 revenue\n Retail & Consumercategory\n\n  US online spending hits $8.3 billion as Amazon Prime Day kicks off, Adobe says\n Financecategory\n\n  SpaceX short selling bets i"
+            }
+          ]
+        }
+      ]
+    },
+    "Y2": {
+      "label": "Neocloud 客户集中度/取消",
+      "tier": "yellow",
+      "freq": "high",
+      "queries": [
+        {
+          "query": "CoreWeave customer concentration Microsoft cancel order 2026",
+          "topic": "news",
+          "days": 21,
+          "results": [
+            {
+              "title": "CoreWeave nets €7B orderbook for European bond debut - PitchBook",
+              "url": "https://pitchbook.com/news/articles/coreweave-nets-7b-orderbook-for-european-bond-debut",
+              "published_date": "Fri, 12 Jun 2026 14:48:49 GMT",
+              "content": "Meeting the relentless demand from hyperscalers such as Microsoft and Meta, and AI groups like Anthropic, has required a tremendous amount of new capital. CoreWeave has raised $17.35 billion in new debt and $3 billion in equity this year alone. For unsecured bond investors, CoreWeave represents a different risk profile than both PolarDC and the data center owners that have been responsible for a l"
+            },
+            {
+              "title": "Corning Stock Rises. Glassmaker Scores Multibillion-Dollar Deal With Amazon - Barron's",
+              "url": "https://www.barrons.com/articles/corning-stock-amazon-c9d2db36",
+              "published_date": "Mon, 08 Jun 2026 13:22:00 GMT",
+              "content": "SUBSCRIBE NOW\n\nBarron’s Investor Circle\n\n### Chart of the Day: The U.S. Dollar at a Critical Inflection Point 0·23 hours ago Image 3### On the Radar: Yelp 0·Jun 8, 2026 Image 4### Chart of the Day: Teva Pharmaceutical’s Technical Setup Continues to Improve 0·Jun 5, 2026 Image 5### Chart of the Week: Freeport-McMoRan Builds Strong Base, Suggesting Imminent Breakout. 0·Jun 4, 2026 Image 6\n\nSubscribe"
+            },
+            {
+              "title": "Intel’s Cancelled Arctic Sound ‘Xe-HP’ GPU Resurfaces With Dual Tiles & Quad-HBM2E, a Ghost From Its Abandoned 2021 Roadmap - Wccftech",
+              "url": "https://wccftech.com/intel-cancelled-arctic-sound-xe-hp-gpu-resurfaces-dual-tiles-quad-hbm2e/",
+              "published_date": "Sun, 14 Jun 2026 16:05:10 GMT",
+              "content": "46 Active Readers\n #### Lara Croft’s PlayStation 1 Debut Returns as a Modern Remake, but the Demo Proved Exploration Still Beats the Gunplay\n\n  46 Active Readers\n #### Upgrade Your Storage And Performance With Samsung’s 4TB 9100 PRO PCIe NVMe Gen 5 SSD, Now 41% Off On Amazon, With Its New Price Dropping To $799.99\n\n  38 Active Readers\n #### Microsoft CEO Satya Nadella Says Xbox Must Finally Become"
+            },
+            {
+              "title": "Databricks strikes deal to buy Panther Labs - iTnews",
+              "url": "https://www.itnews.com.au/news/databricks-strikes-deal-to-buy-panther-labs-626680",
+              "published_date": "Tue, 16 Jun 2026 18:30:00 GMT",
+              "content": "### Sponsored Whitepapers\n\n2026 Identity Security Landscape Are Australian organisations as cyber-ready as they think? Are New Zealand organisations as cyber-ready as they think? From visibility to execution: Fixing the SaaS management gap When cyber risk has no clear owner: A practical guide for senior Australian business leaders\n\n### Events\n\n iTnews State of Security Breakfast\n iTnews State of D"
+            },
+            {
+              "title": "SpaceX lands Google AI compute deal after Anthropic pact ahead of IPO - Reuters",
+              "url": "https://www.reuters.com/business/media-telecom/spacex-signs-cloud-deal-with-google-2026-06-05/",
+              "published_date": "Fri, 05 Jun 2026 20:04:54 GMT",
+              "content": "Our Standards: The Thomson Reuters Trust Principles., opens new tab\n\nPurchase Licensing Rights\n\n## Read Next\n\n Media & Telecomcategory\n\n  US Supreme Court backs federal regulators in wins for FCC and SEC\n Legalcategory\n\n  Trump's lawyers sought to halt discovery in $10 billion BBC lawsuit\n Worldcategory\n\n  California to decide soon whether it will seek to block Paramount deal\n Worldcategory\n\n  Exc"
+            }
+          ]
+        },
+        {
+          "query": "neocloud Lambda Nebius Crusoe order cancellation financial trouble",
+          "topic": "news",
+          "days": 21,
+          "results": [
+            {
+              "title": "Crusoe secures 5 gigawatts of data center contracts, pauses Wyoming project - Crypto Briefing",
+              "url": "https://cryptobriefing.com/crusoe-5-gigawatt-data-center-contracts/",
+              "published_date": "Tue, 09 Jun 2026 19:28:07 GMT",
+              "content": "The flagship piece of Crusoe’s portfolio is the Stargate AI data center campus in Abilene, Texas. This project is being developed in partnership with OpenAI and Oracle. Beyond Stargate, Crusoe’s client roster includes Microsoft and energy infrastructure firm Tallgrass. CEO and co-founder Chase Lochmiller has positioned the company as a builder of modular, energy-efficient data centers specifically"
+            },
+            {
+              "title": "Post Market Wrap: June 9, 2026 - CNBC",
+              "url": "https://www.cnbc.com/video/2026/06/09/post-market-wrap-june-9-2026.html",
+              "published_date": "Tue, 09 Jun 2026 21:42:26 GMT",
+              "content": "32 min ago\n\nwatch now\n\nwatch now\n\nVIDEO04:11\n\nTom Lee: Latest market action is healthy and won't derail the tech trade\n\nan hour ago\n\nwatch now\n\nwatch now\n\nVIDEO05:36\n\nEnd of 'token-maxxing' could derail the AI rally, says Wells Fargo's Ohsung Kwon\n\n5 hours ago\n\nwatch now\n\nwatch now\n\nVIDEO11:00\n\nTrading the market downturn: The committee's next move\n\n5 hours ago\n\nwatch now\n\nwatch now\n\nVIDEO02:53\n\nO"
+            },
+            {
+              "title": "Crusoe CEO weighs in on concerns around waining data center demand - CNBC",
+              "url": "https://www.cnbc.com/video/2026/06/09/crusoe-ceo-weighs-in-on-concerns-around-waining-data-center-demand.html",
+              "published_date": "Tue, 09 Jun 2026 21:20:52 GMT",
+              "content": "Watchlist\n\nInvesting Club\n\n Trust Portfolio\n Analysis\n Trade Alerts\n Meeting Videos\n Homestretch\n Jim's Columns\n Education\n Subscribe\n\nPRO\n\n Pro News\n Josh Brown\n Mike Santoli\n Calls of the Day\n My Portfolio\n Livestream\n Full Episodes\n Stock Screener\n Market Forecast\n Options Investing\n Chart Investing\n Subscribe\n\nLivestream\n\n Make It\n select\n\n USA\n INTL\n\n Livestream\n\n Livestream\n\nWatchlist\n\nSIGN "
+            },
+            {
+              "title": "FLOW Cryptocurrency Investor News: If You Have Suffered Losses in FLOW Cryptocurrency, You Are ... - Caledonian Record",
+              "url": "https://www.caledonianrecord.com/flow-cryptocurrency-investor-news-if-you-have-suffered-losses-in-flow-cryptocurrency-you-are/article_64611b5b-8230-5741-af07-26c7e7fdf6f2.html",
+              "published_date": "Sat, 20 Jun 2026 20:20:46 GMT",
+              "content": "#### Articles\n\n Danville High School Graduates Head Custodian, Maria Norton, With Class Of 2026\n Danville Community Mourns Crash Victims\n Two Danville Children Killed In Car Crash\n St. Johnsbury Police Chief Pierce Submits Letter Of Resignation\n ‘Snake Man’ Facing Sexual Assault Charge\n Police Logs\n St. Johnsbury Salvation Army Closes After 23 Years\n St. Johnsbury Country Store Conversion: Space T"
+            },
+            {
+              "title": "How Amazon and the White House ended Anthropic's Fable - Axios",
+              "url": "https://www.axios.com/2026/06/13/anthropic-amazon-white-house",
+              "published_date": "Sat, 13 Jun 2026 20:02:48 GMT",
+              "content": "Anthropic had previously notified the government multiple times about the planned June 9 release of Fable — which is a general-use version of Mythos —and the government did not object, a source close to the company said.\n   But calls from Amazon — as well as at least five other companies to a variety of senior administration officials Thursday evening and Friday morning — led to the model being sh"
+            }
+          ]
+        }
+      ]
+    },
+    "Y3": {
+      "label": "循环交易(vendor financing)占比",
+      "tier": "yellow",
+      "freq": "low",
+      "queries": [
+        {
+          "query": "Nvidia circular financing OpenAI Oracle vendor financing concern",
+          "topic": "news",
+          "days": 21,
+          "results": [
+            {
+              "title": "SpaceX’s Stratospheric IPO Launch Has a Couple of Heavy-Duty Stowaways - Gizmodo",
+              "url": "https://gizmodo.com/spacexs-stratospheric-ipo-launch-has-a-couple-of-heavy-duty-stowaways-2000771290",
+              "published_date": "Fri, 12 Jun 2026 20:10:40 GMT",
+              "content": "Bloomberg published a helpful graphic in January that visualizes the web of circular deals being woven across the AI industry. But the number of such agreements has continued to grow since that time. In March, for example, Amazon committed $50 billion to OpenAI as part of the ChatGPT-maker’s most recent funding round, while OpenAI said it would invest an additional $100 billion into its existing p"
+            },
+            {
+              "title": "AI researcher Gary Marcus sees problems ahead for tech stocks with ties to OpenAI - Business Insider",
+              "url": "https://www.businessinsider.com/gary-marcus-ai-openai-ipo-nvidia-orcl-nvda-crwv-02026-6",
+              "published_date": "Wed, 17 Jun 2026 13:35:01 GMT",
+              "content": "The ChatGPT maker recently confidentially filed an S-1, only to follow up with news that it was considering price cuts. Marcus, an AI researcher who has written multiple books on the subject, posted to X that he sees this as bad news not just for OpenAI but for tech stocks like Nvidia, Oracle and CoreWeave with high exposure to it.\n\n\"Their values rely to a significant degree on the expectation tha"
+            },
+            {
+              "title": "Nvidia locks in $25B of high-grade bonds, adding to AI sprint - PitchBook",
+              "url": "https://pitchbook.com/news/articles/nvidia-locks-in-25b-of-high-grade-bonds-adding-to-ai-sprint",
+              "published_date": "Wed, 17 Jun 2026 14:08:43 GMT",
+              "content": "High-Grade Bonds\n\n# Nvidia locks in $25B of high-grade bonds, adding to AI sprint\n\n## On June 11, S&P Global Ratings upgraded Nvidia to AA, from AA-, fueled by strong AI-driven growth that the agency said is “outpacing our baseline projections.”\n\nNvidia Corp. on June 15 priced $25 billion of investment-grade senior notes in seven parts spanning maturities from 2028 through 2056, as AI and data cen"
+            },
+            {
+              "title": "Oracle Raises Massive Debt for AI Infrastructure - Let's Data Science",
+              "url": "https://letsdatascience.com/news/oracle-raises-massive-debt-for-ai-infrastructure-29a877c1",
+              "published_date": "Thu, 11 Jun 2026 01:01:13 GMT",
+              "content": "Reuters reports that Oracle is substantially increasing its financing and data-center investment to support AI infrastructure, and that the company expects to raise nearly $40 billion in 2027 through a combination of debt and equity financing. Reuters also reports fiscal 2026 capital spending reached $55.66 billion, above Oracle's prior target, and Bloomberg places the annual total at $55.7 billio"
+            },
+            {
+              "title": "Oracle (ORCL) Cuts 21,000 Jobs As It Prepares $50 Billion AI Buildout - Yahoo Finance",
+              "url": "https://finance.yahoo.com/technology/ai/articles/oracle-orcl-cuts-21-000-221026147.html",
+              "published_date": "Mon, 22 Jun 2026 22:10:26 GMT",
+              "content": "⚠️ The combination of workforce cuts, negative free cash flow, and plans to raise up to US$50b in funding increases execution and financing risk if AI infrastructure demand or customer commitments change.\n ⚠️ Concentration in a small set of AI customers, including OpenAI, means contract renegotiations, delays, or technical shifts could have an outsized impact compared with more diversified cloud p"
+            }
+          ]
+        },
+        {
+          "query": "AI related party revenue circular deals accounting scrutiny",
+          "topic": "news",
+          "days": 21,
+          "results": [
+            {
+              "title": "IRS rolls out introductory AI guidelines for tax practitioners - Accounting Today",
+              "url": "https://www.accountingtoday.com/news/irs-rolls-out-introductory-ai-guidelines-for-tax-practitioners",
+              "published_date": "Wed, 24 Jun 2026 15:00:37 GMT",
+              "content": "For example, according to 10.27(a) of Circular 230, \"A practitioner may not charge an unconscionable fee in connection with any matter before the Internal Revenue Service.\" Based on this, the IRS said that cost savings from AI should be passed on openly, with billing practices that reflect the efficiencies gained from the use of generative AI. Practitioners should not only disclose, in general or "
+            },
+            {
+              "title": "AI Is Reshaping Audit Risk Faster Than Standards Can Keep Up - Forbes",
+              "url": "https://www.forbes.com/sites/yvonnehinson/2026/06/15/how-accounting-must-redraw-responsibility-for-ai-errors/",
+              "published_date": "Mon, 15 Jun 2026 00:00:00 GMT",
+              "content": "Imagine an accounting AI agent that classifies 10,000 transactions overnight, drafts the workpapers and flags three anomalies for review. A staff accountant checks the flagged items and signs off. Six months later, a restatement reveals that the AI missed a pattern of misclassified revenue — the kind an experienced accountant would have caught but that never appeared in the system’s exception repo"
+            },
+            {
+              "title": "What accounting firms fear about GenAI — and what’s worth worrying about - Thomson Reuters tax and accounting",
+              "url": "https://tax.thomsonreuters.com/en/insights/white-papers/what-accounting-firms-fear-about-genai-and-whats-worth-worrying-about",
+              "published_date": "Fri, 19 Jun 2026 14:52:42 GMT",
+              "content": "A key challenge here is to ensure that AI-powered automation doesn't lead to over-reliance on technology. While AI can handle many tasks, human oversight is still critical. Firms must strike a balance between automation and human input, where AI takes on repetitive tasks, and staff provide value through deeper analysis, judgment, and client relationship building. [...] Our technology powers the pr"
+            },
+            {
+              "title": "Why generic AI still falls short in enterprise finance - Accounting Today",
+              "url": "https://www.accountingtoday.com/opinion/why-generic-ai-still-falls-short-in-enterprise-finance",
+              "published_date": "Tue, 09 Jun 2026 13:50:20 GMT",
+              "content": "Many organizations are responding by formalizing governance around AI use in finance. Cross-functional review groups that include finance, IT, legal and compliance are becoming common, ensuring new capabilities align with control frameworks before they are deployed. This approach helps prevent fragmented tools, inconsistent data and what many leaders are beginning to describe as AI sprawl, where n"
+            },
+            {
+              "title": "HMRC plans £350k experiment to test automation tools for self-assessment returns - PublicTechnology",
+              "url": "https://www.publictechnology.net/2026/06/22/economics-and-finance/hmrc-plans-350k-experiment-to-test-automation-tools-for-self-assessment-returns/",
+              "published_date": "Mon, 22 Jun 2026 12:38:58 GMT",
+              "content": "The PoCs are intended to examine how transaction data can be “produced or captured – automatically, manually or via a hybrid approach [and then] transferred to accounting software”, the notice adds. The experiment will also test how this data is “coordinated and used by accounting software to calculate tax liabilities across multiple income and expense streams [before being] transferred to HMRC vi"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
