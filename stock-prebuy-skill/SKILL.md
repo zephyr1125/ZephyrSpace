@@ -3,7 +3,7 @@ name: stock-prebuy-review
 description: >-
   在用户准备买入某只上市公司股票前使用，用于做买入前基本面尽调、红旗排查和买入逻辑验证。
   适用场景：个股研究、买入前排雷、基本面核查、财报质量审视、现金流质量、商业模式分析、
-  治理与股东行为、监管司法风险、估值合理性判断（含历史百分位、PEG、隐含增速）、
+  治理与股东行为、监管司法风险、估值合理性判断（含历史百分位、PEG、隐含增速、绝对估值：DCF/EPV/RI/DDM/SOTP/反向DCF）、
   价格走势与买入时机分析（近60日走势、量价异动、分档价格区间建议）、买入逻辑验证、红旗识别、
   A股特有风险（限售解禁、大股东减持、股权质押、政策突变、再融资摊薄、商誉、实控人）。
   适用市场：A股、港股中资公司。
@@ -479,6 +479,288 @@ d = get_valuation_percentile("300059", COMPANY_TYPE_ENDPOINT["non_financial"])
 3. 市值差异是否反映了合理的竞争地位差距？
 
 > ⚠️ **横向PE对比的陷阱**：只比PE不比业务纯度和增长质量是无效比较。同一行业不同商业模式（OEM vs 品牌、上游vs下游）的估值体系不可直接类比，必须注明业务差异并说明对比的合理性。
+
+### 9B. 绝对估值（补充参考）
+
+> ⚠️ **定位说明**：
+> - 绝对估值**独立于 9A 的相对估值**，不作为 `price_bands` 或 watchlist 档位的计算输入
+> - 目的是提供一个不依赖市场情绪的内在价值锚点，与 9A 相对估值交叉验证
+> - 所有假设必须显式声明，输出估值**区间判断**（低估/合理/高估），而非精确目标价
+> - 若关键假设（增速或 WACC）微小变动（±1%）导致估值变动 >30%，标注"低置信度"
+> - 本节结论写入公司页 `## 估值与买入赔率` 区块，紧接在 9A 横向对比之后
+
+#### 9B.0 公司类型分流（决定用哪种绝对估值法）
+
+| 公司类型 | 判断条件 | 适用方法 | 原因 |
+|---|---|---|---|
+| **金融类** | 银行 / 保险 / 券商 | 剩余收益模型（RI） | 金融企业无传统 FCF，存贷款即经营本身 |
+| **稳定现金流** | 消费龙头/水电/公用事业；近 3 年 FCF 变异系数 < 30% | 简化两阶段 DCF | FCF 可预测，DCF 适用 |
+| **周期股** | 模块 13 确认为周期股（化工/钢铁/煤炭/航运/养殖等） | 归一化盈利 EPV | 周期股利润大起大落，EPV 取跨周期均值 |
+| **高成长/亏损** | PE < 0，或（营收增速 > 30% 且 PE > 60x） | 反向 DCF | 传统 DCF 对高成长公司终端价值占比过高 |
+| **多元控股** | ≥ 3 个显著不同的业务板块，无单一主导 | 分部估值法（SOTP） | 整体 PE 对多元化公司无意义 |
+| **高分红** | 近 3 年分红率 > 50%，且盈利稳定 | 股息折现模型（DDM） | 对"债券替代品"最简单有效 |
+| **默认/其他** | 以上均不匹配 | EPV（盈利能⼒价值） | 最少假设，通用性最强 |
+
+> 若公司同时满足多个条件（如"稳定现金流 + 高分红"），优先选更具体的类型（高分红 > 稳定现金流 > 默认）。
+
+#### 9B.1 WACC / 要求回报率速算（所有方法共用）
+
+```python
+# ===== WACC 速算（非金融公司）=====
+
+# 权益成本（CAPM 简化）
+risk_free_rate = 0.025   # 中国 10 年期国债收益率（约 2.5%）
+erp = 0.06               # A 股股权风险溢价（5-7%，默认 6%）
+
+# Beta 估算（理杏仁 fundamental 接口不含 beta 字段，按以下规则估算）：
+#   稳定消费/公用事业           beta ≈ 0.7-0.9
+#   一般制造业/均衡型           beta ≈ 1.0
+#   周期股（化工/钢铁/有色）     beta ≈ 1.0-1.3
+#   高成长科技/小市值           beta ≈ 1.2-1.5
+# 也可用 Tavily 搜索 "{ticker} beta A股 近1年" 获取更精确值
+beta = 1.0  # 默认 1.0，有更精确数据后修正
+
+cost_of_equity = risk_free_rate + beta * erp  # e.g., 0.025 + 1.0×0.06 = 8.5%
+
+# 债务成本
+cost_of_debt_pre_tax = 0.04   # 默认 4%，优质公司可更低
+
+# WACC
+# 权重从 E4 资本结构取：equity_weight = 净资产/(净资产+有息负债)
+equity_weight = 0.75  # 默认值，用实际数据替换
+debt_weight = 1 - equity_weight
+tax_rate = 0.25  # 法定所得税率
+wacc = equity_weight * cost_of_equity + debt_weight * cost_of_debt_pre_tax * (1 - tax_rate)
+
+# 要求回报率（用于 RI / DDM / EPV，不单独计算 WACC 时用）
+required_return = cost_of_equity  # 通常 8-11%
+```
+
+> ⚠️ **WACC 不是精确数字**。8% vs 10% 的差异在显式期影响有限，但在终端价值中影响巨大。当 WACC 变动 1% 导致估值变动 >20% 时，必须在结果中标注"WACC 敏感"。
+
+#### 9B.2 执行对应估值方法
+
+---
+
+**方法 ①：剩余收益模型（RI）—— 金融类**
+
+```python
+# 原理：股权价值 = 当期净资产 + 未来剩余收益的现值
+# 剩余收益 = (ROE - 权益成本率) × 期初净资产
+
+# 输入
+current_book_value = 净资产  # 亿元，理杏仁 fs/bank: ta - tl
+current_roe = 最近年报 ROE   # 小数，银行从东方财富 WEIGHTAVG_ROE
+cost_of_equity = required_return  # 从 9B.1
+
+# 投影假设（保守）：ROE 在 3 年内从当前值线性衰减至权益成本率
+# 衰减后剩余收益 = 0（ROE = 权益成本率时无超额回报，不需终值）
+projection_years = 3
+bv = current_book_value
+pv_ri = 0
+
+for t in range(1, projection_years + 1):
+    roe_t = current_roe - (current_roe - cost_of_equity) * (t / (projection_years + 1))
+    roe_t = max(roe_t, cost_of_equity * 0.8)  # 不低过权益成本的 80%
+    ri = (roe_t - cost_of_equity) * bv
+    pv_ri += ri / ((1 + cost_of_equity) ** t)
+    dividend_payout = 0.30  # 从 F2 分红率取
+    bv = bv * (1 + roe_t * (1 - dividend_payout))  # 净资产增长
+
+equity_value = current_book_value + pv_ri       # 亿元
+per_share = equity_value / 总股本（亿股）       # 元/股
+```
+
+> 输出格式：`剩余收益模型：每股 XX 元（假设：ROE 从 X% 3 年衰减至 X%，权益成本 X%）`
+
+---
+
+**方法 ②：简化两阶段 DCF —— 稳定现金流**
+
+```python
+# 阶段 1：未来 5 年显式 FCF；阶段 2：永续增长（Gordon Growth）
+
+# 输入
+base_fcf = 近 3 年（经营现金流 - 折旧摊销）均值  # 亿元
+# 或"经营现金流 × 0.7"作为近似的 FCF（仅当无 Capex 明细时）
+# ⚠️ 若公司有官方 FCF 口径，以官方为准
+
+fcf_growth = 近 3 年 FCF CAGR × 0.7  # 打 7 折保守化
+fcf_growth = min(fcf_growth, 0.15)     # 上限 15%
+terminal_g = 0.025                      # 永续增长率，上限 3%（≈ 名义 GDP 增速）
+wacc = 9B.1 计算的 wacc
+
+# 显式期折现
+pv_explicit = 0
+fcf_t = base_fcf
+for t in range(1, 6):
+    fcf_t = fcf_t * (1 + fcf_growth)
+    pv_explicit += fcf_t / ((1 + wacc) ** t)
+
+# 终端价值
+terminal_value = fcf_t * (1 + terminal_g) / (wacc - terminal_g)
+pv_terminal = terminal_value / ((1 + wacc) ** 5)
+
+# 企业价值 → 股权价值
+enterprise_value = pv_explicit + pv_terminal
+equity_value = enterprise_value + 现金及等价物 - 有息负债 - 少数股东权益
+per_share = equity_value / 总股本
+
+# 置信度检查
+tv_ratio = pv_terminal / enterprise_value
+if tv_ratio > 0.70:
+    print(f"⚠️ 终端价值占比 {tv_ratio:.0%}，>70%，标注'低置信度'")
+```
+
+> 输出格式：`DCF 估值：每股 XX 元（假设：FCF 增速 X%，WACC X%，永续增长 X%，终端占比 X%）`
+> 估值区间：下界 = WACC + 1% 场景，上界 = 增速 + 1% 场景
+
+---
+
+**方法 ③：归一化盈利 EPV —— 周期股 / 默认**
+
+```python
+# 原理：取跨周期平均盈利，按"零增长永续"折现 → 价值地板
+
+# 归一化经营利润（取最近一个完整周期的算术平均）
+# 周期长度参考：化工 3-5 年，钢铁/煤炭 5-7 年，航运 5-7 年
+op_profits = [近 N 年经营利润]  # 亿元，从理杏仁 fs/non_financial
+# 取"营业利润"或"利润总额"（不含非经常性）
+normalized_ebit = sum(op_profits) / len(op_profits)
+
+# 不剔除亏损年份——亏损本身就是周期的一部分
+# 但剔除单次 > 年利润 30% 的重大非经常性项目（资产出售、大额减值等）
+
+normalized_nopat = normalized_ebit * (1 - 0.25)  # 税后
+
+# EPV
+wacc = 9B.1 计算的 wacc
+epv = normalized_nopat / wacc
+
+# 调整项
+excess_cash = max(0, 现金及等价物 - 短期有息负债)
+total_debt = 有息负债总额
+
+equity_value = epv + excess_cash - total_debt
+per_share = equity_value / 总股本
+
+# 变异系数检查
+import statistics
+cv = statistics.stdev(op_profits) / abs(statistics.mean(op_profits))
+if cv > 0.30:
+    print(f"⚠️ 近 {len(op_profits)} 年经营利润变异系数 {cv:.0%}，>30%，标注'低置信度'")
+```
+
+> 输出格式：`EPV：每股 XX 元（近 N 年均盈利 XX 亿，WACC X%，变异系数 X%）`
+> 解读：这是公司的"零增长地板价"——即使未来不再增长，可持续盈利也支撑这个价值。
+
+---
+
+**方法 ④：反向 DCF —— 高成长/亏损**
+
+```python
+# 不计算"公司值多少钱"，而是回答"当前股价隐含了多少增速"
+
+current_market_cap = 总市值（亿元）    # 理杏仁 fundamental: mc / 1e8
+wacc = 9B.1 计算的 wacc
+terminal_g = 0.025
+
+# 二分搜索：找到使 DCF ≈ 当前市值的隐含 5 年 FCF CAGR
+def find_implied_growth(market_cap, base_fcf, wacc, terminal_g):
+    lo, hi = 0.0, 0.50  # 搜索 0-50%
+    for _ in range(50):
+        mid = (lo + hi) / 2
+        pv_explicit = 0
+        fcf_t = base_fcf
+        for t in range(1, 6):
+            fcf_t *= (1 + mid)
+            pv_explicit += fcf_t / ((1 + wacc) ** t)
+        terminal = fcf_t * (1 + terminal_g) / (wacc - terminal_g)
+        ev = pv_explicit + terminal / ((1 + wacc) ** 5)
+        if ev > market_cap * 1.05:
+            hi = mid
+        elif ev < market_cap * 0.95:
+            lo = mid
+        else:
+            return mid
+    return (lo + hi) / 2
+
+implied_cagr = find_implied_growth(current_market_cap, base_fcf, wacc, terminal_g)
+# 若 base_fcf ≤ 0（公司亏损），反向 DCF 失效，标注"亏损公司，反向 DCF 不适用"
+```
+
+> 输出格式：`反向 DCF：当前股价隐含未来 5 年 FCF CAGR ≈ X%（WACC = X%）`
+> 判断参考：隐含增速 > 20% 且公司历史上从未达到 → 偏乐观；隐含增速 < 5% 而近年增速 > 15% → 偏保守
+
+---
+
+**方法 ⑤：分部估值法（SOTP）—— 多元控股**
+
+```markdown
+| 业务板块 | 营收占比 | 适用方法 | 估值（亿元） | 依据 |
+|---|---|---|---|---|
+| 板块 A | X% | PE | XX | 可比公司 PE 中位数 Xx |
+| 板块 B | X% | PB/EPV | XX | 说明 |
+| 板块 C | X% | DCF | XX | 自算 |
+| **分部合计** | | | **XX 亿** | |
+| 减：集团费用现值 | | | -XX | 近 3 年均值 × 10 |
+| 减：净债务 | | | -XX | |
+| **权益价值** | | | **XX 亿** | |
+| **每股价值** | | | **XX 元** | |
+```
+
+> 每个板块选最合适的估值法（复用 9B.0 分流逻辑），至少 2 个板块有可比公司锚定。
+
+---
+
+**方法 ⑥：股息折现模型（DDM）—— 高分红**
+
+```python
+# 仅适用于分红率 > 50%、盈利稳定的"债券替代品"
+
+current_dps = 最近一年每股分红（元）   # 理杏仁 dividend 接口
+dividend_growth = 近 3 年股息 CAGR × 0.8  # 8 折保守化
+dividend_growth = min(dividend_growth, 0.05)  # 上限 5%
+required_return = 9B.1 的 cost_of_equity
+
+if dividend_growth >= required_return:
+    print("⚠️ 股息增速 ≥ 折现率，戈登模型失效，改用 EPV")
+
+per_share = current_dps * (1 + dividend_growth) / (required_return - dividend_growth)
+
+# 支付能力验证
+payout_ratio = current_dps / eps
+if payout_ratio > 0.80:
+    print("⚠️ 分红率 > 80%，可持续性存疑")
+```
+
+> 输出格式：`DDM：每股 XX 元（股息增速 X%，要求回报 X%，分红率 X%）`
+
+---
+
+#### 9B.3 估值三角验证
+
+将绝对估值与相对估值做交叉验证，写入公司页 `## 估值与买入赔率` 区块：
+
+| 估值来源 | 方法 | 参考区间（元/股） | 置信度 |
+|---|---|---|---|
+| 绝对估值（9B） | [方法名] | XX - YY | 高/中/低 |
+| 相对估值（9A） | price_bands（历史分位） | [bands[2]] - [bands[0]] | — |
+| 当前股价 | — | XX 元 | — |
+
+**三角验证判断**：
+
+| 信号 | 含义 | 处理 |
+|---|---|---|
+| ✅ 方向一致 | 绝对估值和相对估值结论同向（都便宜/合理/贵） | 高置信度，可据此调整仓位判断 |
+| ⚠️ 方向矛盾 | 一个说便宜一个说贵 | 标注"估值信号矛盾"，分析矛盾来源（如周期股 PE"虚假低位"） |
+| 🔴 区间过宽 | 绝对估值上界/下界 > 1.5 倍 | 标注"低置信度"，不做仓位参考 |
+
+> ⚠️ **硬约束**：
+> 1. 绝对估值结果**不修改** `price_bands`（price_bands 始终基于历史分位）
+> 2. 绝对估值结果**不改变** watchlist 档位
+> 3. 若 9B 和 9A 方向矛盾，在最终结论 J 节中注明分歧及原因
+> 4. 禁止输出"目标价 87.3 元"式的精确数字——绝对估值只做区间判断，结论只表述为"当前价格低于/接近/高于内在价值估算区间"
 
 红旗：
 - 只拿横向 PE 比，不看业务纯度和增长质量
@@ -1558,6 +1840,7 @@ ROE = 净利率 × 资产周转率 × 财务杠杆
 - 成交量/换手率异常信号
 - 政策加成调整说明（PS 取值来自 G 节，周期调整来自 H 节）
 - **最终价格区间表**（含所有调整后的最终数值，标题注明调整来源）
+- **绝对估值三角验证**（9B.3 的交叉验证表，仅当 9B 与 9A 方向矛盾或一致时有分析价值，正常一带而过）
 - 明确的时机判断：当前价位适合买入 / 等回调 / 不急
 
 ### J. 当前结论

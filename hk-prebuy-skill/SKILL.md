@@ -3,7 +3,7 @@ name: hk-prebuy
 description: >-
   在用户准备买入某只港股前使用，用于做买入前基本面尽调、红旗排查和买入逻辑验证。
   适用场景：个股研究、买入前排雷、基本面核查、财报质量审视、现金流质量、商业模式分析、
-  治理与股东行为、监管司法风险、估值合理性判断（含历史百分位、PEG、隐含增速）、
+  治理与股东行为、监管司法风险、估值合理性判断（含历史百分位、PEG、隐含增速、绝对估值：DCF/EPV/RI/DDM/SOTP/反向DCF）、
   价格走势与买入时机分析（近60日走势、量价异动、分档价格区间建议）、买入逻辑验证、红旗识别。
   港股特有风险：同股不同权(WVR)、VIE结构、做空机构、AH溢价、美国制裁/实体清单、流动性、南向资金、配股摊薄。
   适用市场：港股（H股/红筹/真港资公司/双重上市公司）。
@@ -343,6 +343,270 @@ def calc_hk_price_bands(current_price, latest_eps, q20_pe, q50_pe, q80_pe):
 - 只拿横向 PE 比，不看业务纯度和增长质量
 - PE 处于历史 3 年 80% 分位以上且增速放缓
 - 亏损公司用 PB 分位：PB > 历史 80% 分位同样高风险
+
+### 9B. 绝对估值（补充参考）
+
+> ⚠️ **定位说明**：
+> - 绝对估值**独立于 9A 的相对估值**，不作为 `price_bands` 或 watchlist 档位的计算输入
+> - 目的是提供一个不依赖市场情绪的内在价值锚点，与 9A 相对估值交叉验证
+> - 所有假设必须显式声明，输出估值**区间判断**（低估/合理/高估），而非精确目标价
+> - 若关键假设（增速或 WACC）微小变动（±1%）导致估值变动 > 30%，标注"低置信度"
+> - 本节结论写入公司页 `## 估值与买入赔率` 区块
+
+#### 9B.0 公司类型分流（决定用哪种绝对估值法）
+
+| 公司类型 | 判断条件 | 适用方法 | 原因 |
+|---|---|---|---|
+| **金融类** | 银行 / 保险 / 券商 | 剩余收益模型（RI） | 金融企业无传统 FCF，存贷款即经营本身 |
+| **稳定现金流** | 消费龙头/公用事业；近 3 年 FCF 变异系数 < 30% | 简化两阶段 DCF | FCF 可预测，DCF 适用 |
+| **周期股** | 模块 13 确认为周期股（航运/地产/商品等） | 归一化盈利 EPV | 周期股利润大起大落，EPV 取跨周期均值 |
+| **高成长/亏损** | PE < 0，或（营收增速 > 30% 且 PE > 60x） | 反向 DCF | 传统 DCF 对高成长公司终端价值占比过高 |
+| **多元控股** | ≥ 3 个显著不同的业务板块（如长和系、复星） | 分部估值法（SOTP） | 整体 PE 对多元化公司无意义 |
+| **高分红** | 近 3 年分红率 > 50%，且盈利稳定 | 股息折现模型（DDM） | 对"债券替代品"最简单有效 |
+| **默认/其他** | 以上均不匹配 | EPV（盈利能⼒价值） | 最少假设，通用性最强 |
+
+> 若公司同时满足多个条件，优先选更具体的类型。
+
+#### 9B.1 WACC / 要求回报率速算（所有方法共用）
+
+```python
+# ===== WACC 速算（港股版，无理杏仁）=====
+
+# 权益成本（CAPM 简化）
+# 港股无风险利率：HKD 与 USD 挂钩，可用 US 10Y Treasury ≈ 3.5-4.5%
+# 或 HKD 外汇基金票据 ≈ 3-4%
+risk_free_rate = 0.04    # 默认 4%
+erp = 0.07               # 港股股权风险溢价（6-8%，比 A 股高 1-2pct，因国际投资者要求更高回报）
+
+# Beta 估算（港股无理杏仁 beta，按以下规则）：
+#   公用事业/REITs              beta ≈ 0.5-0.7
+#   稳定消费/电讯               beta ≈ 0.7-0.9
+#   一般制造业/均衡型           beta ≈ 1.0
+#   周期股（航运/地产/商品）    beta ≈ 1.0-1.3
+#   高成长科技/新经济           beta ≈ 1.2-1.5
+# 也可用 Tavily 搜索 "{ticker} beta HK stock" 或 yfinance 计算
+beta = 1.0  # 默认 1.0
+
+cost_of_equity = risk_free_rate + beta * erp  # e.g., 0.04 + 1.0×0.07 = 11.0%
+
+# 债务成本
+cost_of_debt_pre_tax = 0.05   # 港股默认 5%（HKD 利率环境高于人民币）
+
+# WACC
+equity_weight = 0.75  # 默认值，用实际数据替换
+debt_weight = 1 - equity_weight
+tax_rate = 0.165      # 香港利得税 16.5%（H 股/红筹按内地 25%）
+wacc = equity_weight * cost_of_equity + debt_weight * cost_of_debt_pre_tax * (1 - tax_rate)
+
+# 要求回报率（用于 RI / DDM / EPV，不单独计算 WACC 时用）
+required_return = cost_of_equity  # 通常 10-13%（港股高于 A 股）
+```
+
+> ⚠️ **港股 vs A 股的折现率差异**：港股权益成本通常比 A 股高 1-3pct（无风险利率更高 + 国际投资者要求更高 ERP），因此即使用同一估值方法，港股绝对估值通常比 A 股低。这是合理的——反映了流动性折价和国际投资者对中国风险的定价。
+
+#### 9B.2 执行对应估值方法
+
+---
+
+**方法 ①：剩余收益模型（RI）—— 金融类**
+
+```python
+# 原理：股权价值 = 当期净资产 + 未来剩余收益的现值
+# 港股数据源：stockanalysis.com financials 页面获取 ROE + BVPS
+
+# 输入
+current_book_value = 净资产  # 亿 HKD，从 stockanalysis.com balance-sheet
+current_roe = 最近年报 ROE   # 小数，stockanalysis.com ratios 页面
+cost_of_equity = required_return  # 从 9B.1
+
+# 投影假设（保守）：ROE 在 3 年内从当前值线性衰减至权益成本率
+projection_years = 3
+bv = current_book_value
+pv_ri = 0
+
+for t in range(1, projection_years + 1):
+    roe_t = current_roe - (current_roe - cost_of_equity) * (t / (projection_years + 1))
+    roe_t = max(roe_t, cost_of_equity * 0.8)
+    ri = (roe_t - cost_of_equity) * bv
+    pv_ri += ri / ((1 + cost_of_equity) ** t)
+    dividend_payout = 0.30  # 从分红率取
+    bv = bv * (1 + roe_t * (1 - dividend_payout))
+
+equity_value = current_book_value + pv_ri       # 亿 HKD
+per_share = equity_value / 总股本（亿股）       # HKD/股
+```
+
+> 输出格式：`剩余收益模型：每股 XX HKD（假设：ROE 从 X% 3 年衰减至 X%，权益成本 X%）`
+
+---
+
+**方法 ②：简化两阶段 DCF —— 稳定现金流**
+
+```python
+# 与 A 股版逻辑相同，数据源改为 stockanalysis.com cash-flow-statement
+
+# 输入
+base_fcf = 近 3 年（经营现金流 - CapEx）均值  # 亿 HKD
+# 港股现金流量表：stockanalysis.com → cash-flow-statement
+# "Cash from Operations" - "Capital Expenditures"
+# 若无法区分维持/扩张 Capex，用"经营现金流 × 0.7"近似
+
+fcf_growth = 近 3 年 FCF CAGR × 0.7  # 保守化
+fcf_growth = min(fcf_growth, 0.15)     # 上限 15%
+terminal_g = 0.025                      # 永续增长率（≈ 长期名义 GDP），上限 3%
+wacc = 9B.1 计算的 wacc
+
+pv_explicit = 0
+fcf_t = base_fcf
+for t in range(1, 6):
+    fcf_t = fcf_t * (1 + fcf_growth)
+    pv_explicit += fcf_t / ((1 + wacc) ** t)
+
+terminal_value = fcf_t * (1 + terminal_g) / (wacc - terminal_g)
+pv_terminal = terminal_value / ((1 + wacc) ** 5)
+
+enterprise_value = pv_explicit + pv_terminal
+equity_value = enterprise_value + 现金及等价物 - 有息负债 - 少数股东权益
+per_share = equity_value / 总股本   # HKD/股
+
+tv_ratio = pv_terminal / enterprise_value
+if tv_ratio > 0.70:
+    print(f"⚠️ 终端价值占比 {tv_ratio:.0%}，>70%，标注'低置信度'")
+```
+
+> 输出格式：`DCF 估值：每股 XX HKD（假设：FCF 增速 X%，WACC X%，永续增长 X%，终端占比 X%）`
+
+---
+
+**方法 ③：归一化盈利 EPV —— 周期股 / 默认**
+
+```python
+# 与 A 股版逻辑相同，盈利数据从 stockanalysis.com 获取
+
+# 归一化经营利润（取最近一个完整周期的算术平均）
+op_profits = [近 N 年经营利润]  # 亿 HKD，stockanalysis.com financials: "Operating Income"
+normalized_ebit = sum(op_profits) / len(op_profits)
+
+# 不剔除亏损年份，但剔除单次 > 年利润 30% 的重大非经常性项目
+normalized_nopat = normalized_ebit * (1 - 0.165)  # 香港利得税 16.5%
+
+wacc = 9B.1 计算的 wacc
+epv = normalized_nopat / wacc
+
+excess_cash = max(0, 现金及等价物 - 短期有息负债)
+total_debt = 有息负债总额
+
+equity_value = epv + excess_cash - total_debt
+per_share = equity_value / 总股本   # HKD/股
+
+# 变异系数检查
+import statistics
+cv = statistics.stdev(op_profits) / abs(statistics.mean(op_profits))
+if cv > 0.30:
+    print(f"⚠️ 近 {len(op_profits)} 年经营利润变异系数 {cv:.0%}，>30%，标注'低置信度'")
+```
+
+> 输出格式：`EPV：每股 XX HKD（近 N 年均盈利 XX 亿 HKD，WACC X%，变异系数 X%）`
+> 解读：公司的"零增长地板价"。
+
+---
+
+**方法 ④：反向 DCF —— 高成长/亏损**
+
+```python
+# 与 A 股版逻辑相同，市值从 yfinance 获取
+current_market_cap = 总市值  # 亿 HKD，yfinance: info['marketCap'] / 1e8
+wacc = 9B.1 计算的 wacc
+terminal_g = 0.025
+
+def find_implied_growth(market_cap, base_fcf, wacc, terminal_g):
+    lo, hi = 0.0, 0.50
+    for _ in range(50):
+        mid = (lo + hi) / 2
+        pv_explicit = 0
+        fcf_t = base_fcf
+        for t in range(1, 6):
+            fcf_t *= (1 + mid)
+            pv_explicit += fcf_t / ((1 + wacc) ** t)
+        terminal = fcf_t * (1 + terminal_g) / (wacc - terminal_g)
+        ev = pv_explicit + terminal / ((1 + wacc) ** 5)
+        if ev > market_cap * 1.05:
+            hi = mid
+        elif ev < market_cap * 0.95:
+            lo = mid
+        else:
+            return mid
+    return (lo + hi) / 2
+
+implied_cagr = find_implied_growth(current_market_cap, base_fcf, wacc, terminal_g)
+```
+
+> 输出格式：`反向 DCF：当前股价隐含未来 5 年 FCF CAGR ≈ X%（WACC = X%）`
+
+---
+
+**方法 ⑤：分部估值法（SOTP）—— 多元控股**
+
+```markdown
+| 业务板块 | 营收占比 | 适用方法 | 估值（亿 HKD） | 依据 |
+|---|---|---|---|---|
+| 板块 A | X% | PE | XX | 可比公司 PE 中位数 Xx |
+| 板块 B | X% | PB/EPV | XX | 说明 |
+| **分部合计** | | | **XX 亿** | |
+| 减：集团费用现值 | | | -XX | |
+| 减：净债务 | | | -XX | |
+| **权益价值** | | | **XX 亿 HKD** | |
+| **每股价值** | | | **XX HKD** | |
+```
+
+---
+
+**方法 ⑥：股息折现模型（DDM）—— 高分红**
+
+```python
+current_dps = 最近一年每股分红（HKD）  # stockanalysis.com dividends 或 yfinance
+dividend_growth = 近 3 年股息 CAGR × 0.8
+dividend_growth = min(dividend_growth, 0.05)
+required_return = 9B.1 的 cost_of_equity
+
+if dividend_growth >= required_return:
+    print("⚠️ 改用 EPV")
+
+per_share = current_dps * (1 + dividend_growth) / (required_return - dividend_growth)
+
+payout_ratio = current_dps / eps
+if payout_ratio > 0.80:
+    print("⚠️ 分红率 > 80%，可持续性存疑")
+```
+
+> 输出格式：`DDM：每股 XX HKD（股息增速 X%，要求回报 X%，分红率 X%）`
+
+---
+
+#### 9B.3 估值三角验证
+
+| 估值来源 | 方法 | 参考区间（HKD/股） | 置信度 |
+|---|---|---|---|
+| 绝对估值（9B） | [方法名] | XX - YY | 高/中/低 |
+| 相对估值（9A） | price_bands（历史分位） | [bands[2]] - [bands[0]] | — |
+| 当前股价 | — | XX HKD | — |
+
+**三角验证判断**：
+
+| 信号 | 含义 | 处理 |
+|---|---|---|
+| ✅ 方向一致 | 绝对估值和相对估值结论同向 | 高置信度 |
+| ⚠️ 方向矛盾 | 一个说便宜一个说贵 | 标注"估值信号矛盾"，分析来源 |
+| 🔴 区间过宽 | 绝对估值上界/下界 > 1.5 倍 | 标注"低置信度"，不做仓位参考 |
+
+> ⚠️ **港股特有考量**：
+> - A+H 双重上市公司：绝对估值应参考 A 股估值水平——若 H 股绝对估值显著低于 A 股，注明"H 股折价已反映在价格中，估值三角验证以 H 股价格为准"
+> - 港股绝对估值折现率通常高于 A 股 1-3pct（流动性折价 + 国际投资者风险溢价），因此同公司的 H 股绝对估值理应低于 A 股
+
+> ⚠️ **硬约束**：
+> 1. 绝对估值结果**不修改** `price_bands`（始终基于历史分位）
+> 2. 绝对估值结果**不改变** watchlist 档位
+> 3. 禁止输出"目标价 87.3 HKD"式的精确数字——只做区间判断
 
 #### 模块 10：催化剂与验证时间线
 
@@ -921,6 +1185,7 @@ HKFRS 下投资物业公允价值变动计入损益，A 股会计不允许。地
 - 南向资金近期净流入趋势（如可查）
 - 政策加成调整说明
 - **最终价格区间表**（HKD 计价，含所有调整后最终数值）
+- **绝对估值三角验证**（9B.3 的交叉验证表，仅当 9B 与 9A 方向矛盾或一致时有分析价值）
 - 明确的时机判断
 
 ### J. 当前结论
