@@ -1,0 +1,253 @@
+{
+  "snapshot_date": "2026-06-29",
+  "is_first": true,
+  "previous_snapshot": null,
+  "data_quality_overall": "medium",
+  "data_sources_available": ["web_search", "news_articles", "analyst_reports"],
+  "data_sources_unavailable": ["dewu_direct", "xianyu_direct", "stockx_direct", "social_quantitative"],
+  "collection_method": "WebSearch + WebFetch 公开页面，得物/StockX 具体价格来自新闻报道和券商报告引用",
+
+  "skus": [
+    {
+      "sku_id": "monsters_have_a_seat_plush",
+      "ip_name": "THE MONSTERS",
+      "name": "坐坐系列毛绒公仔",
+      "official_price": 199,
+      "estimated_market_price": 220,
+      "premium_rate": 0.11,
+      "data_quality": "low",
+      "status": "转弱",
+      "notes": "经典款仍有小幅溢价，但受百万补货冲击，价格承压"
+    },
+    {
+      "sku_id": "monsters_exciting_macao_blind",
+      "ip_name": "THE MONSTERS",
+      "name": "心动马卡龙系列盲盒",
+      "official_price": 69,
+      "estimated_market_price": 80,
+      "premium_rate": 0.16,
+      "data_quality": "medium",
+      "status": "自然回落",
+      "notes": "StockX 交投活跃，secret款均价$138（溢价452%），但常规款回落至接近原价"
+    },
+    {
+      "sku_id": "monsters_fall_in_wild_blind",
+      "ip_name": "THE MONSTERS",
+      "name": "旷野系列盲盒",
+      "official_price": 69,
+      "estimated_market_price": 750,
+      "premium_rate": 9.87,
+      "data_quality": "medium",
+      "status": "强势健康",
+      "notes": "即 Wings of Fantasy，StockX均价$1243（溢价700-1400%），是当前Labubu最强势系列"
+    },
+    {
+      "sku_id": "monsters_vinyl_face_doll",
+      "ip_name": "THE MONSTERS",
+      "name": "Zimomo 搪胶脸公仔",
+      "official_price": 599,
+      "estimated_market_price": 900,
+      "premium_rate": 0.50,
+      "data_quality": "low",
+      "status": "高位稳定",
+      "notes": "限量款，供需偏紧，溢价约50%，但流动性低"
+    },
+    {
+      "sku_id": "molly_classic_blind",
+      "ip_name": "MOLLY",
+      "name": "经典系列盲盒",
+      "official_price": 69,
+      "estimated_market_price": 75,
+      "premium_rate": 0.09,
+      "data_quality": "low",
+      "status": "转弱",
+      "notes": "常规款溢价已压缩至10%以内，粉丝群体稳定但缺乏新增长"
+    },
+    {
+      "sku_id": "molly_400pct",
+      "ip_name": "MOLLY",
+      "name": "400% 大娃",
+      "official_price": 799,
+      "estimated_market_price": 5600,
+      "premium_rate": 6.01,
+      "data_quality": "low",
+      "status": "强势健康",
+      "notes": "20周年限定款，全球2026只，二手价约$800+美元，溢价7-8倍"
+    },
+    {
+      "sku_id": "skullpanda_sound_blind",
+      "ip_name": "SKULLPANDA",
+      "name": "声音系列盲盒",
+      "official_price": 69,
+      "estimated_market_price": 57,
+      "premium_rate": -0.17,
+      "data_quality": "medium",
+      "status": "转弱",
+      "notes": "整盒从708跌至580元，跌幅约18%，跌破发售价"
+    },
+    {
+      "sku_id": "skullpanda_warmth_blind",
+      "ip_name": "SKULLPANDA",
+      "name": "温暖系列盲盒",
+      "official_price": 69,
+      "estimated_market_price": 85,
+      "premium_rate": 0.23,
+      "data_quality": "low",
+      "status": "自然回落",
+      "notes": "较老系列，估计仍有小幅溢价但非热点"
+    },
+    {
+      "sku_id": "crybaby_cry_blind",
+      "ip_name": "CRYBABY",
+      "name": "哭泣系列盲盒",
+      "official_price": 69,
+      "estimated_market_price": 75,
+      "premium_rate": 0.09,
+      "data_quality": "low",
+      "status": "数据不足",
+      "notes": "公开数据极少，推测溢价温和，未出现极端行情"
+    },
+    {
+      "sku_id": "dimoo_story_blind",
+      "ip_name": "DIMOO",
+      "name": "故事系列盲盒",
+      "official_price": 69,
+      "estimated_market_price": 207,
+      "premium_rate": 2.00,
+      "data_quality": "medium",
+      "status": "强势健康",
+      "notes": "Space Travel系列二手价涨幅超200%，但老隐藏款安全感溢价缩水51%"
+    }
+  ],
+
+  "ips": {
+    "THE MONSTERS": {
+      "health_score": 58,
+      "rating": "C",
+      "avg_premium_rate": 2.66,
+      "avg_premium_rate_ex_outlier": 0.26,
+      "volume_activity": 1.1,
+      "sell_pressure": 1.5,
+      "breadth_score": 55,
+      "persistence_score": 50,
+      "social_score": 68,
+      "healthy_sku_count": 2,
+      "total_sku_count": 4,
+      "delta_vs_prev": null,
+      "trend_judgment": "边际转弱",
+      "key_risk": "2026年6月成为分水岭——复古理发店系列首次大面积破发，百万补货击穿炒货逻辑，隐藏款从峰值跌88-92%"
+    },
+    "MOLLY": {
+      "health_score": 62,
+      "rating": "C",
+      "avg_premium_rate": 3.05,
+      "avg_premium_rate_ex_outlier": 0.10,
+      "volume_activity": 0.9,
+      "sell_pressure": 1.0,
+      "breadth_score": 55,
+      "persistence_score": 80,
+      "social_score": 60,
+      "healthy_sku_count": 1,
+      "total_sku_count": 2,
+      "delta_vs_prev": null,
+      "trend_judgment": "高位稳定",
+      "key_risk": "营收占比从16.1%降至7.8%，限量款仍有溢价但常规款溢价压缩，粉丝老龄化风险"
+    },
+    "SKULLPANDA": {
+      "health_score": 60,
+      "rating": "C",
+      "avg_premium_rate": 0.03,
+      "volume_activity": 0.8,
+      "sell_pressure": 1.1,
+      "breadth_score": 55,
+      "persistence_score": 60,
+      "social_score": 70,
+      "healthy_sku_count": 1,
+      "total_sku_count": 2,
+      "delta_vs_prev": null,
+      "trend_judgment": "边际转弱",
+      "key_risk": "两极分化严重——联名款溢价10倍，常规款破发18%；高度依赖联名稀缺性"
+    },
+    "CRYBABY": {
+      "health_score": 52,
+      "rating": "C",
+      "avg_premium_rate": 0.09,
+      "volume_activity": 0.8,
+      "sell_pressure": 1.0,
+      "breadth_score": 60,
+      "persistence_score": 50,
+      "social_score": 55,
+      "healthy_sku_count": 0,
+      "total_sku_count": 1,
+      "delta_vs_prev": null,
+      "trend_judgment": "数据不足",
+      "key_risk": "公开数据极少，缺乏爆发性联名事件，可能处于不上不下的尴尬位置"
+    },
+    "DIMOO": {
+      "health_score": 55,
+      "rating": "C",
+      "avg_premium_rate": 2.00,
+      "volume_activity": 1.2,
+      "sell_pressure": 1.0,
+      "breadth_score": 60,
+      "persistence_score": 45,
+      "social_score": 65,
+      "healthy_sku_count": 1,
+      "total_sku_count": 1,
+      "delta_vs_prev": null,
+      "trend_judgment": "边际转弱",
+      "key_risk": "新旧系列分化严重：Space Travel溢价200%+，老隐藏款腰斩51%；IP热度快速向新品转移说明留存力不足"
+    }
+  },
+
+  "company_level": {
+    "multi_ip_health_index": 0.0,
+    "labubu_concentration": 0.38,
+    "labubu_concentration_warning": true,
+    "non_labubu_healthy_count": 0,
+    "bubble_risk_index": 0.25,
+    "total_sku_count": 10,
+    "healthy_sku_count": 3,
+    "weakening_sku_count": 4,
+    "data_insufficient_count": 1
+  },
+
+  "social_summary": {
+    "labubu": {
+      "platforms": ["抖音", "小红书", "微博", "TikTok", "Instagram"],
+      "trend": "mixed",
+      "key_topics": ["世界杯亮相刷屏", "复古理发店破发热议", "段永平逆势加仓", "官方百万补货争议"],
+      "sentiment": "两极分化",
+      "data_quality": "qualitative_only"
+    },
+    "molly": {
+      "platforms": ["抖音", "小红书"],
+      "trend": "stable",
+      "key_topics": ["20周年纪念效应", "精细化运营"],
+      "sentiment": "中性偏正",
+      "data_quality": "qualitative_only"
+    },
+    "skullpanda": {
+      "platforms": ["小红书", "Instagram"],
+      "trend": "stable",
+      "key_topics": ["Shadowverse联名热度", "北美青年文化符号"],
+      "sentiment": "正面",
+      "data_quality": "qualitative_only"
+    }
+  },
+
+  "sources_used": [
+    "四川在线/cbgc.scol.com.cn - LABUBU发布新品遇冷",
+    "新浪财经 - LABUBU新品大跌30%",
+    "网易/什么值得买 - 段永平逆势加仓",
+    "九方智投/中国蓝新闻 - LABUBU世界杯联名溢价7倍",
+    "东方财富 - Labubu亮相世界杯开幕式",
+    "NewsBreak - Labubu Price Guide 2026",
+    "齐鲁晚报/第一财经 - Labubu二手价雪崩最高跌88%",
+    "什么值得买 - Labubu集体跳水潮玩价格崩盘",
+    "DoNews - LABUBU新品破发股价腰斩",
+    "信达证券/华创证券 - 泡泡玛特研报",
+    "Korea Times - Can Pop Mart sustain the Labubu juggernaut",
+    "DesignRush - Labubu World Cup Cameo"
+  ]
+}

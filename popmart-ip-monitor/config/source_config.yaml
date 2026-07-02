@@ -1,0 +1,126 @@
+# 数据源配置
+# 定义各平台的采集参数和 URL 模板
+
+sources:
+
+  # ---- 二级市场 ----
+
+  dewu:
+    enabled: true
+    region: cn
+    base_url: "https://www.dewu.com"
+    currency: CNY
+    data_quality: medium                  # 有成交价和挂单价，但透明度有限
+    notes: "国内潮玩二级市场最活跃平台，成交价数据较可靠"
+    # URL template: {base_url}/product/{sku_dewu_id}
+
+  xianyu:
+    enabled: true
+    region: cn
+    base_url: "https://www.goofish.com"
+    currency: CNY
+    data_quality: medium                  # 挂单价为主，成交价需从"已卖出"筛选
+    notes: "挂单数据丰富，适合做卖盘压力观察；成交价需手动筛选"
+
+  stockx:
+    enabled: true
+    region: global
+    base_url: "https://stockx.com"
+    currency: USD
+    data_quality: high                    # 有公开成交价时间序列
+    notes: "海外潮玩二级市场透明度最高的平台，有完整交易历史"
+
+  ebay:
+    enabled: true
+    region: global
+    base_url: "https://www.ebay.com"
+    currency: USD
+    data_quality: medium
+    notes: "海外市场补充参考，注意区分一手和二手"
+
+  taobao:
+    enabled: false                        # 默认关闭，一手为主
+    region: cn
+    currency: CNY
+    data_quality: low
+    notes: "一手市场为主，二级市场数据需筛选"
+
+  # ---- 社媒 ----
+
+  xiaohongshu:
+    enabled: true
+    region: cn
+    platform_type: social
+    data_quality: qualitative_only
+    notes: "搜索 IP 名 + 关键词（溢价/抢购/二手/价格），人工定性判断热度"
+
+  douyin:
+    enabled: true
+    region: cn
+    platform_type: social
+    data_quality: qualitative_only
+    notes: "搜索话题标签，观察播放量和近7日增量"
+
+  weibo:
+    enabled: true
+    region: cn
+    platform_type: social
+    data_quality: qualitative_only
+    notes: "搜索超话和热搜，观察讨论量和情绪"
+
+  bilibili:
+    enabled: true
+    region: cn
+    platform_type: social
+    data_quality: qualitative_only
+    notes: "搜索开箱/测评视频，观察播放量和弹幕互动"
+
+  tiktok:
+    enabled: true
+    region: global
+    platform_type: social
+    data_quality: qualitative_only
+    notes: "搜索 #popmart #labubu 等标签，观察播放量和近期增量"
+
+  instagram:
+    enabled: true
+    region: global
+    platform_type: social
+    data_quality: qualitative_only
+    notes: "搜索官方账号和粉丝账号，观察互动量"
+
+  google_trends:
+    enabled: true
+    region: global
+    platform_type: search
+    data_quality: medium
+    notes: "Google Trends 搜索 'Pop Mart' 'Labubu' 'Molly' 等关键词，获取相对搜索热度指数"
+    url_template: "https://trends.google.com/trends/explore?q={keyword}&date=today%203-m"
+
+# ============================================================
+# WebFetch / WebSearch 采集参数
+# ============================================================
+fetch_config:
+  max_concurrent_requests: 3              # 并发上限（低频合规）
+  min_interval_seconds: 10                # 同一域名最小访问间隔
+  timeout_seconds: 20
+  user_agent: "Mozilla/5.0 (compatible; ZephyrResearch/1.0; +https://github.com/space-research)"
+  respect_robots_txt: true
+
+# ============================================================
+# 关键词配置（社媒搜索用）
+# ============================================================
+social_keywords:
+  common:
+    premium: ["溢价", "加价", "涨价", "炒价", "溢价多少"]
+    shortage: ["抢不到", "断货", "售罄", "排队", "限量"]
+    resell: ["二手", "转卖", "回血", "出坑", "退坑"]
+    quality: ["翻车", "瑕疵", "品控", "做工"]
+    hype: ["太火了", "疯抢", "太贵了", "值得买"]
+
+  ip_specific:
+    THE MONSTERS: ["labubu", "拉布布", "zimomo", "the monsters", "坐坐"]
+    MOLLY: ["molly", "茉莉", "400%"]
+    SKULLPANDA: ["skullpanda", "骷髅熊猫", "声音"]
+    CRYBABY: ["crybaby", "哭泣宝贝"]
+    DIMOO: ["dimoo"]

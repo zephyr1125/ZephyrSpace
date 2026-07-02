@@ -1,0 +1,163 @@
+# 泡泡玛特 IP 监控清单
+# 按需修改：增删 IP、调整 SKU、修改 official_price 和 launch_date
+company: Pop Mart
+ticker: "9992.HK"
+
+ips:
+  # ============================================================
+  # 核心验证组：THE MONSTERS / Labubu
+  # ============================================================
+  - ip_name: THE MONSTERS
+    aliases:
+      - Labubu
+      - Zimomo
+      - The Monsters
+      - 拉布布
+    group: core_validation
+    thesis_role: "验证公司是否过度依赖 Labubu / THE MONSTERS"
+    skus:
+      - sku_id: monsters_have_a_seat_plush
+        name: "THE MONSTERS 坐坐系列毛绒公仔"
+        category: "plush"
+        official_price: 199
+        launch_date: "2025-01-01"
+        rarity: "normal"
+        importance: high
+
+      - sku_id: monsters_exciting_macao_blind
+        name: "THE MONSTERS 心动马卡龙系列盲盒"
+        category: "blind_box"
+        official_price: 69
+        launch_date: "2025-03-01"
+        rarity: "normal"
+        importance: high
+
+      - sku_id: monsters_fall_in_wild_blind
+        name: "THE MONSTERS 旷野系列盲盒"
+        category: "blind_box"
+        official_price: 69
+        launch_date: "2025-06-01"
+        rarity: "normal"
+        importance: high
+
+      - sku_id: monsters_vinyl_face_doll
+        name: "Zimomo 搪胶脸公仔"
+        category: "vinyl_figure"
+        official_price: 599
+        launch_date: "2024-12-01"
+        rarity: "limited"
+        importance: high
+
+  # ============================================================
+  # 成熟老 IP：MOLLY
+  # ============================================================
+  - ip_name: MOLLY
+    aliases:
+      - Molly
+      - 茉莉
+    group: mature_ip
+    thesis_role: "验证老 IP 是否仍有韧性"
+    skus:
+      - sku_id: molly_classic_blind
+        name: "MOLLY 经典系列盲盒"
+        category: "blind_box"
+        official_price: 69
+        launch_date: "2024-06-01"
+        rarity: "normal"
+        importance: medium
+
+      - sku_id: molly_400pct
+        name: "MOLLY 400% 大娃"
+        category: "vinyl_figure"
+        official_price: 799
+        launch_date: "2024-09-01"
+        rarity: "limited"
+        importance: medium
+
+  # ============================================================
+  # 成熟老 IP：SKULLPANDA
+  # ============================================================
+  - ip_name: SKULLPANDA
+    aliases:
+      - Skullpanda
+      - 骷髅熊猫
+    group: mature_ip
+    thesis_role: "验证非 Labubu 核心 IP 是否仍有市场热度"
+    skus:
+      - sku_id: skullpanda_sound_blind
+        name: "SKULLPANDA 声音系列盲盒"
+        category: "blind_box"
+        official_price: 69
+        launch_date: "2025-04-01"
+        rarity: "normal"
+        importance: medium
+
+      - sku_id: skullpanda_warmth_blind
+        name: "SKULLPANDA 温暖系列盲盒"
+        category: "blind_box"
+        official_price: 69
+        launch_date: "2024-11-01"
+        rarity: "normal"
+        importance: medium
+
+  # ============================================================
+  # 成长观察组：CRYBABY
+  # ============================================================
+  - ip_name: CRYBABY
+    aliases:
+      - Crybaby
+      - 哭泣宝贝
+    group: growth_ip
+    thesis_role: "验证成长 IP 是否接力"
+    skus:
+      - sku_id: crybaby_cry_blind
+        name: "CRYBABY 哭泣系列盲盒"
+        category: "blind_box"
+        official_price: 69
+        launch_date: "2025-02-01"
+        rarity: "normal"
+        importance: medium
+
+  # ============================================================
+  # 成熟老 IP：DIMOO
+  # ============================================================
+  - ip_name: DIMOO
+    aliases:
+      - Dimoo
+    group: mature_ip
+    thesis_role: "验证中长期 IP 留存"
+    skus:
+      - sku_id: dimoo_story_blind
+        name: "DIMOO 故事系列盲盒"
+        category: "blind_box"
+        official_price: 69
+        launch_date: "2024-08-01"
+        rarity: "normal"
+        importance: medium
+
+  # ============================================================
+  # 新 IP 观察组
+  # ============================================================
+  - ip_name: NEW_IP_POOL
+    aliases: []
+    group: new_ip
+    thesis_role: "监控新 IP 是否出现早期爆款迹象"
+    skus: []
+
+# ============================================================
+# 平台优先级（数据采集顺序）
+# ============================================================
+platform_priority:
+  secondary_market:
+    - dewu       # 得物：国内潮玩二级市场首选
+    - xianyu     # 闲鱼：挂单/成交数据丰富
+    - stockx     # StockX：海外潮玩二级市场
+    - ebay       # eBay：海外市场参考
+    - taobao     # 淘宝：补充数据
+  social:
+    - xiaohongshu  # 小红书：国内核心社媒
+    - tiktok       # TikTok：海外社媒
+    - instagram    # Instagram：海外视觉社交
+    - douyin       # 抖音：国内短视频
+    - weibo        # 微博：国内话题热度
+    - bilibili     # B站：开箱/测评内容

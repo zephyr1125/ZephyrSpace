@@ -1,0 +1,9 @@
+{
+  "snapshot_date": "YYYY-MM-DD",
+  "is_first": true,
+  "data_quality_overall": "qualitative_only",
+  "skus": [],
+  "ips": {},
+  "company_level": {},
+  "notes": "首期快照模板。实际运行时替换为真实数据。"
+}

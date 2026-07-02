@@ -1,0 +1,108 @@
+# IP 健康度评分权重配置
+# 修改权重后下期报告自动使用新权重
+
+# ---- 六大维度权重（合计 1.0）----
+weights:
+  premium_score_weight: 0.20            # 溢价率得分
+  volume_score_weight: 0.20             # 成交活跃得分
+  persistence_score_weight: 0.20        # 持续时间/老品韧性得分
+  breadth_score_weight: 0.20            # SKU 扩散度得分
+  sell_pressure_penalty_weight: 0.10    # 卖盘压力惩罚（扣分项）
+  social_heat_score_weight: 0.10        # 社媒热度得分
+
+# ---- 溢价率得分映射 ----
+premium_score_map:
+  # premium_rate → score (0–100)
+  - threshold: 0.50    # ≥ 50% → 100
+    score: 100
+  - threshold: 0.30    # 30–50% → 85
+    score: 85
+  - threshold: 0.15    # 15–30% → 70
+    score: 70
+  - threshold: 0.05    # 5–15% → 55
+    score: 55
+  - threshold: 0.00    # 0–5% → 40
+    score: 40
+  - threshold: -0.10   # -10–0% → 25
+    score: 25
+  # below -10% → 10
+
+# ---- 成交活跃度得分映射 ----
+volume_score_map:
+  # volume_activity (当前/历史均值) → score
+  - threshold: 1.5     # ≥ 150% → 100
+    score: 100
+  - threshold: 1.0     # 100–150% → 80
+    score: 80
+  - threshold: 0.7     # 70–100% → 65
+    score: 65
+  - threshold: 0.4     # 40–70% → 45
+    score: 45
+  # below 40% → 20
+
+# ---- 持续时间得分映射 ----
+persistence_score_map:
+  # 基于老品韧性和新品回落幅度
+  # old_sku_resilience > 1.0 → 高分
+  # post_launch_drawdown > -0.1 → 新品健康
+  thresholds:
+    resilient: 1.0       # 老品价格高于90日均价
+    healthy_drawdown: -0.10   # 新品回落不超过10%
+    concerning_drawdown: -0.30  # 回落超过30%需警惕
+
+# ---- SKU 扩散度得分映射 ----
+breadth_score_map:
+  # healthy_sku_ratio = 健康SKU / 总监控SKU
+  - threshold: 0.8      # ≥ 80% → 100
+    score: 100
+  - threshold: 0.6      # 60–80% → 80
+    score: 80
+  - threshold: 0.4      # 40–60% → 55
+    score: 55
+  - threshold: 0.2      # 20–40% → 30
+    score: 30
+  # below 20% → 10
+
+# ---- 卖盘压力惩罚映射 ----
+sell_pressure_penalty_map:
+  # sell_pressure (当前/历史均值)
+  - threshold: 2.0      # ≥ 200% → -100
+    penalty: -100
+  - threshold: 1.5      # 150–200% → -70
+    penalty: -70
+  - threshold: 1.2      # 120–150% → -40
+    penalty: -40
+  - threshold: 1.0      # 100–120% → -15
+    penalty: -15
+  # below 100% → 0
+
+# ---- 社媒热度得分映射 ----
+social_score_map:
+  # qualitative信号 → score
+  strongly_positive: 95       # 多个平台热度明显上升
+  positive: 75                # 部分平台热度上升
+  stable: 60                  # 热度持平
+  declining: 35               # 热度下降
+  sharply_declining: 10       # 热度大幅下降
+  no_data: 50                 # 无数据 → 中性分
+
+# ---- 评级阈值 ----
+rating_thresholds:
+  A: 80      # ≥ 80
+  B: 65      # 65–79
+  C: 50      # 50–64
+  D: 30      # 30–49
+  E: 0       # 0–29
+
+# ---- 全公司级阈值 ----
+company_thresholds:
+  # Labubu 集中度 = THE MONSTERS 健康度 / sum(所有 IP 健康度)
+  concentration_warning: 0.50   # 超过 50% → 标记单一依赖风险
+  concentration_critical: 0.65  # 超过 65% → 标记严重单一依赖
+
+  # 泡沫风险：高溢价+低成交+卖盘升+价差大+社媒降
+  bubble_monitor_threshold: 0.30  # 超过 30% SKU 出现泡沫特征 → 标记
+
+  # 多 IP 扩散
+  multi_ip_healthy_min: 3      # 至少 3 个非 Labubu IP 评级 A/B
+  multi_ip_decline_warn: 1     # 仅有 ≤ 1 个非 Labubu IP 评级 A/B → 警告
