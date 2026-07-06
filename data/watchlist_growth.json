@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-07-03T21:30:00",
+ "updated_at": "2026-07-06T21:00:00",
  "entries": [
   {
    "name": "台积电",
@@ -3100,6 +3100,34 @@
    "next_earnings_type": "半年报",
    "cycle_is_cyclical": true,
    "cycle_position": "复苏中期"
+  },
+  {
+   "name": "华能水电",
+   "code": "600025",
+   "board": "上",
+   "market": "A",
+   "source_etf": null,
+   "position_role": "澜沧江流域独家水电开发平台，零燃料成本+超长资产寿命，OCF/净利>200%，纯内生增长零商誉",
+   "watch_reason": "深度分析81/100优质，管理层档案72/100优秀。澜沧江流域独家开发权=天然垄断，TB电站投产后Capex下行→FCF跳升。受来水+电价外生变量制约，央企体制缺市场化催化剂。",
+   "current_price": 9.23,
+   "price_date": "2026-07-06",
+   "dv_ttm": 2.22,
+   "price_bands": [
+    10.5,
+    8.8,
+    7.5
+   ],
+   "valuation_anchor": "PE TTM 20.14x(3Y P50≈19x)，2026E EPS≈0.48→Fwd PE 19.2x。FCF Yield 5.2%，逆向DCF隐含g≈4.0%。多方法加权合理价≈8.80元(±15%)。建仓区7.50-8.80元(PE 16-19x Fwd)。[估值更新2026-07-06]",
+   "risk_flags": [
+    "来水不确定性——水电业绩核心变量完全外生，连续干旱可致EPS下滑20-30%",
+    "电价缺乏定价权——云南省电力市场化交易，公司是price taker",
+    "央企体制天花板——零股权激励，管理层与股价/市值无利益绑定"
+   ],
+   "next_earnings_date": "2026-08-29",
+   "next_earnings_type": "2026半年报",
+   "cycle_is_cyclical": true,
+   "deep_analysis": "81/100 | 2026-07-06 | 优质，建议标准持仓5-10%",
+   "mgmt_archive": "72/100 | 2026-07-06 | 优秀"
   }
  ],
  "tier": "growth",
