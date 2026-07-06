@@ -501,6 +501,27 @@ Neutron 是 RKLB 的战略期权，而不是当前收入引擎。其价值在于
 
 ---
 
+## 管理层档案
+
+- [[管理层档案/Rocket Lab 管理层档案 76 2026-07-05|Rocket Lab 管理层档案（2026-07-05）]]
+  - 评分：**76 / 100**
+  - 评级：⭐⭐⭐⭐ 优秀
+  - 一句话：全球最令人印象深刻的航天创始人之一；Iridium $8B并购是职业生涯最大未验证赌注
+
+## 深度分析报告
+
+- [[深度分析/Rocket Lab 深度分析 61 2026-07-05|Rocket Lab 深度分析（2026-07-05）]] ⭐ 最新
+  - 评分：**61 / 100**
+  - 评级：⭐⭐⭐ 良好
+  - 核心结论：全球#2航天平台+国防壁垒+垂直整合执行力；但Neutron二元风险+Iridium整合未验证+持续烧钱
+
+## 估值分析
+
+- [[估值分析/Rocket Lab 估值分析 2026-07-05|Rocket Lab 估值分析（2026-07-05）]]
+  - 概率加权期望值：**~$45/股**
+  - 当前 $101 → 🔴🟡 边界（88x TTM P/S，零安全边际）
+  - 价格区间：[120, 90, 60]
+
 ## 参考来源
 
 - [Rocket Lab Q4 & FY2025 财报新闻稿](https://www.stocktitan.net/news/RKLB/rocket-lab-announces-fourth-quarter-and-full-year-2025-financial-ttbzymi7w9xd.html)（2026-02）

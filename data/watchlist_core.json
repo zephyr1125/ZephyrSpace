@@ -217,26 +217,29 @@
   {
    "board": "纳",
    "code": "GOOGL.US",
-   "current_price": 393.88,
+   "current_price": 360.00,
    "cycle_is_cyclical": false,
    "cycle_position": null,
-   "dv_ttm": 0.21,
+   "dv_ttm": 0.23,
    "name": "Alphabet(Google)",
-   "next_earnings_date": "2026-07-23",
+   "next_earnings_date": "2026-07-22",
    "next_earnings_type": "季报",
-   "position_role": "AI基础设施核心锚+搜索垄断底仓，3年以上持有",
-   "prebuy_conclusion": "深度分析85/100卓越；搜索垄断90%+Cloud+63%+backlog；FY2026 FCF受CapEx压制接近归零；Ad Tech案救济悬而未决；等回撤至-，中性区-",
+   "position_role": "AI基础设施核心锚+搜索垄断底仓+Cloud高增长，3年以上持有",
+   "prebuy_conclusion": "深度分析79/100优质；搜索垄断+Cloud 63%+$462B backlog；$180B capex压制FCF但方向正确；中性区偏下——估值合理",
    "price_bands": [
-    422,
-    368,
+    430,
+    360,
     300
    ],
-   "price_date": "2026-05-11",
+   "price_date": "2026-07-05",
    "risk_flags": [
-    "FY2026 CapEx $180-190B，FCF接近归零，ROI待验证",
-    "DOJ Ad Tech案最终救济未明，或影响广告技术资产",
-    "DOJ Search案行为救济执行，慢变量侵蚀分发护城河",
-    "PE处于5年历史高位80-90分位，估值回撤风险"
+    "FY2026 CapEx $180-190B→FCF接近归零，ROI至少要2028+验证",
+    "DOJ Ad Tech案最终救济未明+Search remedies执行中——慢变量侵蚀护城河",
+    "AI搜索(ChatGPT/Perplexity)长期可能颠覆传统搜索广告模式",
+    "AI人才持续流失——Transformer发明者大多已离开谷歌"
+   ],
+   "source_etf": "direct",
+   "valuation_anchor": "PE 25x FY2026E EPS $14.30→$358；正常化FCF Yield 3.75%→$400。加权合理价≈$373(+3.6%)。$180B capex压制短期FCF但$462B Cloud backlog+63%增速+TPU生态支撑长期价值。Q2财报(7/22)是关键验证点。[估值更新2026-07-05]",
    ],
    "source_etf": "direct",
    "valuation_anchor": "FY2026E PE 28.9x（非GAAP EPS共识$13.62），历史5年区间19-31x，当前80-90分位",
@@ -303,27 +306,26 @@
    "board": "纳",
    "source_etf": "direct",
    "position_role": "全球AI算力基础设施最核心卖铲资产，CUDA生态护城河极深，长期底仓",
-   "watch_reason": "Q1 FY2027营收816.15亿美元、Q2指引910亿美元，Blackwell继续兑现；FCF强、PEG低，仍是AI卖铲核心。",
-   "prebuy_conclusion": "逻辑清晰，Q1 FY2027已纳入；财报后估值锚已上修，下一次财报预计2026-08-26 AMC，继续跟踪AI capex与估值。",
-   "current_price": 219.44,
-   "price_date": "2026-05-12",
+   "watch_reason": "深度分析90/100卓越；Q1 FY2027营收$81.6B(+85%)、净利$58.3B；Blackwell史上最快爬坡；$80B回购+分红25倍提升。核心风险：AI capex周期+零继任者。",
+   "prebuy_conclusion": "逻辑清晰，基本面极强；Forward PE 20.5x/PEG 0.43在市场定价AI capex见顶恐惧；适合核心仓位但理想上限15-20%——Jensen 63岁零继任者是治理顶。",
+   "current_price": 194.83,
+   "price_date": "2026-07-02",
    "price_bands": [
-    261,
-    218,
-    174
+    280,
+    210,
+    160
    ],
-   "valuation_anchor": "Q1 FY2027已纳入，FY2027E Non-GAAP EPS约$8.70；合理PE 20-30x对应$174-$261，Q1后估值锚小幅上修",
+   "valuation_anchor": "TTM PE 30x/Fwd PE 20.5x(5Y均值38x)；PEG 0.43；FCF Yield ~4.1%。FY2027E EPS $9.50→Fwd PE极端保守。多方法加权合理价≈$246(+26%)——市场在定价AI capex见顶恐惧而非基本面恶化。[估值更新2026-07-05]",
    "risk_flags": [
-    "H20出口禁令：FY2027 H1损失.5B（.5B库存减值+.5B直接收入损失+Q2再损）",
-    "AI资本开支降温风险：戴维斯双杀隐患，四大云厂商砍单即触发",
-    "商誉暴增.6B至.83B（FY2026），疑似Groq准并购协议，10-K附注待核实",
-    "客户集中：四大云厂商占收入重大比例"
+    "AI capex周期逆转——四大云厂商任一家削减20%+ capex即触发戴维斯双杀",
+    "Jensen Huang 63岁零继任者——全球市值最高公司的最大治理风险",
+    "中国出口管制——H20已减值$4.5B，Vera Rubin若被禁售影响$30-40B",
+    "92%收入来自Data Center——过度集中，AI投资降温时几乎无缓冲"
    ],
-   "dv_ttm": 0.02,
+   "dv_ttm": 0.51,
    "next_earnings_date": "2026-08-26",
    "next_earnings_type": "季报",
-   "cycle_is_cyclical": false,
-   "pending_earnings_note": "Q1 FY2027（2026-05-20 AMC）结果尚未纳入分析，财报发布后需更新公司页及本条目，并将next_earnings_date更新为下一期日期"
+   "cycle_is_cyclical": false
   },
   {
    "name": "贵州茅台",
@@ -380,29 +382,30 @@
   {
    "board": "纳",
    "code": "AAPL.US",
-   "current_price": 271.35,
+   "current_price": 308.63,
    "cycle_is_cyclical": false,
    "cycle_position": "成熟期",
-   "dv_ttm": 0.38,
+   "dv_ttm": 0.34,
    "name": "苹果(AAPL)",
-   "next_earnings_date": "2026-07-29",
+   "next_earnings_date": "2026-07-30",
    "next_earnings_type": "季报",
    "position_role": "消费科技核心仓，生态护城河+Services飞轮，3年以上持有",
-   "prebuy_conclusion": "深度分析89/100卓越；22亿活跃设备生态锁定+Services(毛利76%)+FCF全球标杆；DMA监管渐进侵蚀护城河，AI执行短板；中性区-，等",
+   "prebuy_conclusion": "深度分析91/100卓越；25亿活跃设备六层生态+Services(毛利76%)+FCF全球标杆；DOJ反垄断2027开庭；CEO交接(2026-09 Ternus接班)；中性区偏上",
    "price_bands": [
-    300,
-    265,
-    243
+    320,
+    270,
+    230
    ],
-   "price_date": "2026-04-30",
+   "price_date": "2026-07-02",
    "risk_flags": [
-    "DMA/DOJ监管侵蚀App Store 30%佣金，Services毛利率长期承压",
-    "Apple Intelligence延期发布，AI换机周期推迟",
-    "中国市场收入占17-20%，地缘政治与供应链风险",
-    "Tim Cook接班人不明确，创始人文化传承风险"
+    "DOJ反垄断2027开庭——若强制侧载/降佣，Services毛利率76%可能结构性下降",
+    "Siri AI依赖Google Gemini→核心AI能力不自主；秋季交付质量待验证",
+    "CEO交接(2026-09 Tim Cook→John Ternus)+近2年C-suite密集离任+COO空缺",
+    "中国市场收入占17%，地缘政治+华为竞争+Siri AI不进入中国",
+    "当前$309处于中性区偏上(+12% vs 合理价$276)，追高风险"
    ],
    "source_etf": "direct",
-   "valuation_anchor": "FY2026E EPS .80，forward PE 30-31x（中性区），5年均值约27-28x",
+   "valuation_anchor": "TTM PE 37.0x（3Y P50≈31x/P80≈36x），FY2026E EPS $8.68→Fwd PE 35.6x。PEG=2.2x，FCF Yield 2.85%，逆向DCF隐含g≈6.7%。多方法加权合理价≈$276(±5%)。当前$309处于中性区偏上(+12%)，AI叙事部分定价。FQ3(7/30)和Siri AI秋季交付是关键验证点。[估值更新2026-07-05]",
    "watch_reason": "深度分析A10+B17+C18+D12+E19+F13=89；生态系统护城河最强+Services飞轮+FCF质量全球标杆"
   },
   {

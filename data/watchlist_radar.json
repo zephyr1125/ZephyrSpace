@@ -1026,25 +1026,86 @@
       "market": "US",
       "board": "纳",
       "source_etf": "direct",
-      "position_role": "商业航天端到端平台，Neutron火箭期权",
-      "prebuy_conclusion": "财报兑现强于预期，但估值仍偏热；更适合持有观察，不追高，等价格窗口。",
-      "watch_reason": "Q1 2026营收200.3M美元、GAAP毛利率38.2%、积压订单2.2B美元，平台化路径继续增强；但首飞前估值仍高度依赖Neutron执行零失误。",
-      "current_price": 78.58,
-      "price_date": "2026-05-07",
+      "position_role": "商业航天端到端平台，Neutron火箭期权+Iridium卫星通信",
+      "prebuy_conclusion": "深度分析61/100良好；Iridium $8B并购改变公司定位但整合风险极高；Neutron Q4首飞是二元催化剂；88x P/S无安全边际，等回调。",
+      "watch_reason": "全球#2商业发射+国防Prime+$2.2B backlog+Iridium L-band频谱权；但Neutron未飞+Iridium未整合+持续亏损+估值极度偏高。概率加权期望值~$45。",
+      "current_price": 101.00,
+      "price_date": "2026-07-02",
       "price_bands": [
-        85.0,
-        70.0,
+        120.0,
+        90.0,
         60.0
       ],
-      "valuation_anchor": "FY2026E Revenue 高增长+Neutron期权估值：追高区>85(市场开始按Neutron成功+国防平台化充分定价) / 中性区70-85(财报兑现但赔率一般) / 较好区间60-70(基本面强、价格开始顺手) / 更低区间<60(若逻辑不变则安全边际明显改善)",
+      "valuation_anchor": "88x TTM P/S；pro-forma含Iridium ~45x EV/Rev。SOTP ~$18-20；逆向DCF公允~$22-42；概率加权期望值~$45。当前$101定价'成为下一个SpaceX'——零安全边际。Neutron首飞(Q4 2026)+Iridium交割(2027中)是关键验证点。[估值更新2026-07-05]",
       "risk_flags": [
-        "Neutron首飞仍是估值中枢关键变量，若再次延迟或首飞失败，股价回撤会很剧烈",
-        "高估值已提前反映Neutron成功、国防合同放量和并购整合顺利三件事同时成立",
-        "Q2指引虽强，但FY2026仍是高增长不盈利的一年，EBITDA转正仍要继续等待"
+        "Neutron首飞(Q4 2026)是二元事件——失败或再度延迟将导致股价跌50%+",
+        "Iridium $8B并购整合风险——Beck经验范围外的赌注，2027中交割",
+        "88x TTM P/S——所有基本面估值方法均指向大幅高估，无安全边际",
+        "Beck单点依赖——四职合一+无内部继任者",
+        "持续亏损+FCF为负——即使Iridium贡献EBITDA，集团盈利仍需要2-3年"
       ],
-      "entry_trigger": "股价回落至70美元以下且Neutron 2026Q4首飞时间线未再延迟；或股价低于60美元且Q2 2026营收达到225M美元以上、积压订单维持20亿美元以上",
+      "entry_trigger": "股价回落至$60以下且Neutron首飞时间线未再延迟+Iridium交割进展顺利；或$40以下基本面未破坏时可更积极建仓",
       "dv_ttm": 0.0,
       "next_earnings_date": "2026-08-06（估算）",
+      "next_earnings_type": "季报",
+      "tier": "radar"
+    },
+    {
+      "name": "章源钨业",
+      "code": "002378.SZ",
+      "market": "A",
+      "board": "深",
+      "source_etf": "direct",
+      "position_role": "钨矿全产业链周期股，战略资源+光伏钨丝期权",
+      "prebuy_conclusion": "深度分析56/100良好；钨价历史高位+PB 96.9%分位+D/A 70%→周期顶部严禁追高；等PB<5x再评估。",
+      "watch_reason": "钨矿采矿权稀缺+全产业链+零再融资纪律+光伏钨丝新方向；但当前PB 14.54x处于5Y P96.9+正常化盈利仅2.5-3.5亿→极贵。合理价约10-12元。",
+      "current_price": 32.82,
+      "price_date": "2026-07-03",
+      "price_bands": [
+        35.0,
+        20.0,
+        12.0
+      ],
+      "valuation_anchor": "PB 14.54x（5Y P96.9）；正常化净利~2.5-3.5亿，正常化PE 113-158x。加权合理价约7-12元（PB 3-5x/正常化PE 25-50x）。周期顶部——等钨价回落+PB<5x再评估。[估值更新2026-07-05]",
+      "risk_flags": [
+        "钨价处于历史高位→Q1暴增近800%利润不可持续，均值回归是必然",
+        "PB 14.54x/5Y P96.9——历史上仅3.1%时间更贵，周期顶部追入是经典价值陷阱",
+        "D/A 70%+存货42亿(+57%)+经现流为负→钨价下行时财务压力倍增",
+        "家族绝对控制+零回购+历史低分红——少数股东利益保护不足",
+        "光伏钨丝规模尚小，暂无法对冲钨价下行风险"
+      ],
+      "entry_trigger": "PB<5x（约11元以下）+钨价从高点回落确认下行趋势+质押率继续下降至<15%；或PB<4x（约9元以下）基本面未破坏时更积极建仓",
+      "dv_ttm": 0.36,
+      "next_earnings_date": "2026-08-31",
+      "next_earnings_type": "半年报",
+      "tier": "radar"
+    },
+    {
+      "name": "英特尔(Intel)",
+      "code": "INTC.US",
+      "market": "US",
+      "board": "纳",
+      "source_etf": "direct",
+      "position_role": "半导体史上最大转机赌注——代工18A/14A期权",
+      "prebuy_conclusion": "深度分析53/100一般；概率加权期望值~$85；当前$122定价牛情景——$90以下再考虑建仓。",
+      "watch_reason": "陈立武15个月转机执行力出色(18A量产+NVIDIA$5B+苹果协议)；但代工仍亏$2.4B/季+FCF深度为负+落后TSMC 2-3年。$90以下转机赔率才不对称。",
+      "current_price": 122.00,
+      "price_date": "2026-07-05",
+      "price_bands": [
+        140.0,
+        100.0,
+        70.0
+      ],
+      "valuation_anchor": "GAAP亏损→传统PE/FCF失效。概率加权期望值~$85：熊$35-50(30%)+基准$70-90(45%)+牛$130-160(25%)。当前$122接近牛情景定价。分析师共识目标~$98(Hold)。[估值更新2026-07-05]",
+      "risk_flags": [
+        "代工$10.3B/年亏损→若2027年不能盈亏平衡需新一轮大规模融资",
+        "18A良率仍仅65-75%——要达到TSMC级别(90%+)还需1-2年",
+        "股价+456%已定价完美执行——任何挫折都将残酷惩罚",
+        "AMD蚕食x86份额+NVIDIA AI GPU几乎完全取代Intel在数据中心的地位"
+      ],
+      "entry_trigger": "$90以下(概率加权期望值附近)+代工季度亏损收窄趋势确认+18A良率突破85%",
+      "dv_ttm": 0.0,
+      "next_earnings_date": "2026-07-23",
       "next_earnings_type": "季报",
       "tier": "radar"
     },

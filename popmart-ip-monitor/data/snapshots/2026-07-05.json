@@ -1,0 +1,322 @@
+{
+  "snapshot_date": "2026-07-05",
+  "is_first": false,
+  "previous_snapshot": "2026-06-29",
+  "data_quality_overall": "medium",
+  "data_sources_available": ["web_search", "news_articles", "analyst_reports", "dewu_aggregated", "stockx_aggregated"],
+  "data_sources_unavailable": ["dewu_direct_api", "xianyu_direct_api", "stockx_direct_api", "social_quantitative"],
+  "collection_method": "WebSearch + WebFetch 公开页面，得物/闲鱼/StockX 价格来自新闻聚合和券商报告引用，社媒热度来自CBNData/第一财经定性分析",
+
+  "skus": [
+    {
+      "sku_id": "monsters_have_a_seat_plush",
+      "ip_name": "THE MONSTERS",
+      "name": "坐坐系列毛绒公仔",
+      "official_price": 199,
+      "estimated_market_price": 105,
+      "premium_rate": -0.47,
+      "price_change_7d": -0.05,
+      "data_quality": "medium",
+      "status": "失效",
+      "notes": "受Labubu整体降温+百万补货冲击，整盒从峰值1478跌至~630，单品均价~105，大幅破发"
+    },
+    {
+      "sku_id": "monsters_exciting_macao_blind",
+      "ip_name": "THE MONSTERS",
+      "name": "心动马卡龙系列盲盒",
+      "official_price": 69,
+      "estimated_market_price": 75,
+      "premium_rate": 0.09,
+      "price_change_7d": -0.03,
+      "data_quality": "medium",
+      "status": "自然回落",
+      "notes": "StockX full set $129，commons $35-80，常规款接近原价，secret款仍有溢价但整体降温"
+    },
+    {
+      "sku_id": "monsters_fall_in_wild_blind",
+      "ip_name": "THE MONSTERS",
+      "name": "旷野系列/Wings of Fantasy",
+      "official_price": 69,
+      "estimated_market_price": 750,
+      "premium_rate": 9.87,
+      "price_change_7d": 0.02,
+      "data_quality": "medium",
+      "status": "强势健康",
+      "notes": "StockX均价$1243（溢价700-1400%），较2025年末+23%，是Labubu最强单品，稀缺性+明星效应支撑"
+    },
+    {
+      "sku_id": "monsters_vinyl_face_doll",
+      "ip_name": "THE MONSTERS",
+      "name": "Zimomo 搪胶脸公仔",
+      "official_price": 599,
+      "estimated_market_price": 850,
+      "premium_rate": 0.42,
+      "price_change_7d": -0.05,
+      "data_quality": "low",
+      "status": "高位稳定",
+      "notes": "限量款供需偏紧，溢价~42%但流动性低，二手成交量稀疏"
+    },
+    {
+      "sku_id": "monsters_hair_salon_blind",
+      "ip_name": "THE MONSTERS",
+      "name": "复古理发店/美发沙龙系列 (Labubu 4.0)",
+      "official_price": 159,
+      "estimated_market_price": 100,
+      "premium_rate": -0.37,
+      "price_change_7d": null,
+      "data_quality": "medium",
+      "status": "转弱",
+      "notes": "6月25日首发，半小时内常规款破发至~100元(-37%)，史上首次。隐藏款'迷雾白噪音'~800元(5x)。但社媒'发型自由'话题病毒式传播，三平台预约3万"
+    },
+    {
+      "sku_id": "molly_classic_blind",
+      "ip_name": "MOLLY",
+      "name": "经典系列盲盒",
+      "official_price": 69,
+      "estimated_market_price": 75,
+      "premium_rate": 0.09,
+      "price_change_7d": 0.0,
+      "data_quality": "low",
+      "status": "转弱",
+      "notes": "常规款溢价压缩至10%以内，粉丝群体稳定但缺乏新增长，营收占比8%持续萎缩"
+    },
+    {
+      "sku_id": "molly_400pct",
+      "ip_name": "MOLLY",
+      "name": "400% 大娃",
+      "official_price": 799,
+      "estimated_market_price": 5600,
+      "premium_rate": 6.01,
+      "price_change_7d": 0.0,
+      "data_quality": "low",
+      "status": "强势健康",
+      "notes": "20周年限定款溢价7-8倍，Molly仍被大摩列为两大头部IP之一，但限量款流动性极低"
+    },
+    {
+      "sku_id": "skullpanda_sound_blind",
+      "ip_name": "SKULLPANDA",
+      "name": "声音系列盲盒",
+      "official_price": 69,
+      "estimated_market_price": 57,
+      "premium_rate": -0.17,
+      "price_change_7d": 0.0,
+      "data_quality": "medium",
+      "status": "转弱",
+      "notes": "整盒从708跌至580元，维持破发状态。上一款毛绒2月上市，下款'数月内'发布——处于产品空窗期"
+    },
+    {
+      "sku_id": "skullpanda_warmth_blind",
+      "ip_name": "SKULLPANDA",
+      "name": "温暖系列盲盒",
+      "official_price": 69,
+      "estimated_market_price": 85,
+      "premium_rate": 0.23,
+      "price_change_7d": 0.0,
+      "data_quality": "low",
+      "status": "自然回落",
+      "notes": "较老系列，小幅溢价但非热点。Shadowverse联名热度已过，Skullpanda整体处于产品空窗期"
+    },
+    {
+      "sku_id": "crybaby_cry_blind",
+      "ip_name": "CRYBABY",
+      "name": "哭泣系列盲盒",
+      "official_price": 69,
+      "estimated_market_price": 75,
+      "premium_rate": 0.09,
+      "price_change_7d": 0.0,
+      "data_quality": "low",
+      "status": "数据不足",
+      "notes": "公开数据极少，2025年营收29.3亿(+151%)但2026年产品管线缺乏亮点，大摩报告未单独提及"
+    },
+    {
+      "sku_id": "dimoo_story_blind",
+      "ip_name": "DIMOO",
+      "name": "故事系列盲盒",
+      "official_price": 69,
+      "estimated_market_price": 207,
+      "premium_rate": 2.00,
+      "price_change_7d": 0.0,
+      "data_quality": "medium",
+      "status": "强势健康",
+      "notes": "Space Travel溢价200%+，2025年营收+205%。大摩预告Dimoo×皮克斯联名即将推出，可能成为下一个催化剂"
+    }
+  ],
+
+  "ips": {
+    "THE MONSTERS": {
+      "health_score": 42,
+      "rating": "D",
+      "avg_premium_rate": 1.91,
+      "avg_premium_rate_ex_outlier": -0.08,
+      "volume_activity": 0.85,
+      "sell_pressure": 1.8,
+      "breadth_score": 55,
+      "persistence_score": 50,
+      "social_score": 80,
+      "healthy_sku_count": 2,
+      "total_sku_count": 5,
+      "delta_vs_prev": -16,
+      "trend_judgment": "明显失速",
+      "key_risk": "复古理发店(Labubu 4.0)首发半小时破发——Labubu史上首次。提价60%至159元+百万补货+50M月产能彻底击穿稀缺性。仅Wings of Fantasy维持超高溢价，新老断层加剧。"
+    },
+    "MOLLY": {
+      "health_score": 58,
+      "rating": "C",
+      "avg_premium_rate": 3.05,
+      "avg_premium_rate_ex_outlier": 0.09,
+      "volume_activity": 0.9,
+      "sell_pressure": 1.0,
+      "breadth_score": 55,
+      "persistence_score": 80,
+      "social_score": 60,
+      "healthy_sku_count": 1,
+      "total_sku_count": 2,
+      "delta_vs_prev": -4,
+      "trend_judgment": "高位稳定",
+      "key_risk": "营收占比从16.1%降至7.8%（2025年报），大摩仍列为头部IP但缺乏新品催化剂。20周年效应递减中。"
+    },
+    "SKULLPANDA": {
+      "health_score": 48,
+      "rating": "D",
+      "avg_premium_rate": 0.03,
+      "volume_activity": 0.75,
+      "sell_pressure": 1.15,
+      "breadth_score": 55,
+      "persistence_score": 50,
+      "social_score": 55,
+      "healthy_sku_count": 0,
+      "total_sku_count": 2,
+      "delta_vs_prev": -12,
+      "trend_judgment": "边际转弱",
+      "key_risk": "产品空窗期——上一款毛绒2月上市，下款'数月内'发布。Shadowverse联名热度消退后缺乏接力。声音系列持续破发。大摩未将其列为头部IP。"
+    },
+    "CRYBABY": {
+      "health_score": 50,
+      "rating": "C",
+      "avg_premium_rate": 0.09,
+      "volume_activity": 0.8,
+      "sell_pressure": 1.0,
+      "breadth_score": 60,
+      "persistence_score": 45,
+      "social_score": 50,
+      "healthy_sku_count": 0,
+      "total_sku_count": 1,
+      "delta_vs_prev": -2,
+      "trend_judgment": "数据不足",
+      "key_risk": "2025年营收29.3亿(+151%)但公开二级市场数据极少。大摩新品速递报告未提及Crybaby，可能被边缘化或作为长尾IP运营。"
+    },
+    "DIMOO": {
+      "health_score": 58,
+      "rating": "C",
+      "avg_premium_rate": 2.00,
+      "volume_activity": 1.2,
+      "sell_pressure": 1.0,
+      "breadth_score": 60,
+      "persistence_score": 45,
+      "social_score": 65,
+      "healthy_sku_count": 1,
+      "total_sku_count": 1,
+      "delta_vs_prev": 3,
+      "trend_judgment": "边际改善",
+      "key_risk": "新旧系列分化：Space Travel溢价200%+，老隐藏款腰斩51%。但皮克斯联名在即，可能成为DIMOO突破性催化剂。"
+    }
+  },
+
+  "company_level": {
+    "multi_ip_health_index": 0.0,
+    "labubu_concentration_revenue": 0.38,
+    "labubu_concentration_health_score": 0.16,
+    "labubu_concentration_warning": false,
+    "non_labubu_healthy_count": 0,
+    "bubble_risk_index": 0.35,
+    "total_sku_count": 11,
+    "healthy_sku_count": 3,
+    "weakening_sku_count": 5,
+    "data_insufficient_count": 1,
+    "new_sku_count": 1
+  },
+
+  "social_summary": {
+    "labubu": {
+      "platforms": ["抖音", "小红书", "微博", "TikTok", "Instagram"],
+      "trend": "strongly_positive",
+      "key_topics": ["发型自由DIY病毒式传播", "复古理发店破发热议", "美发沙龙三平台3万预约", "段永平举牌5.69%", "世界杯联名余热"],
+      "sentiment": "两极分化（社媒热度↑ 二手价格↓）",
+      "data_quality": "qualitative_only"
+    },
+    "molly": {
+      "platforms": ["小红书", "抖音"],
+      "trend": "stable",
+      "key_topics": ["20周年纪念长尾", "精细化运营"],
+      "sentiment": "中性偏正",
+      "data_quality": "qualitative_only"
+    },
+    "skullpanda": {
+      "platforms": ["小红书", "Instagram"],
+      "trend": "declining",
+      "key_topics": ["产品空窗期讨论", "Shadowverse联名回顾"],
+      "sentiment": "中性",
+      "data_quality": "qualitative_only"
+    },
+    "dimoo": {
+      "platforms": ["小红书", "Instagram"],
+      "trend": "stable",
+      "key_topics": ["皮克斯联名期待", "Space Travel持续热度"],
+      "sentiment": "正面",
+      "data_quality": "qualitative_only"
+    },
+    "crybaby": {
+      "platforms": [],
+      "trend": "no_data",
+      "key_topics": [],
+      "sentiment": "无数据",
+      "data_quality": "qualitative_only"
+    }
+  },
+
+  "key_events_this_week": [
+    {
+      "date": "2026-06-25",
+      "event": "Labubu 4.0 复古理发店/美发沙龙系列线上首发，定价159元（+60%），半小时内常规款破发至~100元",
+      "impact": "负面——Labubu史上首次首发即破发",
+      "significance": "high"
+    },
+    {
+      "date": "2026-06-29",
+      "event": "美发沙龙系列二次补货，线下门店仅展示无现货",
+      "impact": "中性——补货策略延续",
+      "significance": "medium"
+    },
+    {
+      "date": "2026-07-01",
+      "event": "美发沙龙'发型自由'话题在小红书/抖音病毒式传播，三平台预约近3万",
+      "impact": "正面——社媒热度远超传统拆盒内容",
+      "significance": "high"
+    },
+    {
+      "date": "2026-07-03",
+      "event": "摩根士丹利发布新品速递报告，维持增持评级，目标价247港元（+56%上行）",
+      "impact": "正面——Dimoo×皮克斯、Twinkle Twinkle等新品管线",
+      "significance": "high"
+    },
+    {
+      "date": "2026-07-02",
+      "event": "泡泡玛特一周动向：LABUBU新品二级市场破发，POP BAKERY甜品首店落地阿那亚",
+      "impact": "中性——IP多元化拓展",
+      "significance": "medium"
+    }
+  ],
+
+  "sources_used": [
+    "CBNData/第一财经 - LABUBU美发沙龙系列'发型自由'病毒传播分析",
+    "澎湃新闻/南方+/同花顺 - LABUBU新品常规款破发深度报道",
+    "摩根士丹利 - 泡泡玛特新品速递报告（2026-07-03），维持增持/目标价247HKD",
+    "NewsBreak - Labubu Price Guide 2026 (Wings of Fantasy StockX数据)",
+    "界面新闻/九方智投 - 段永平举牌5.69%成为第二大股东",
+    "亿邦动力 - 泡泡玛特一周动向：LABUBU破发+POP BAKERY首店",
+    "什么值得买 - Labubu二手价格跳水综合报道",
+    "信达证券/华创证券 - 泡泡玛特研报",
+    "StockX aggregated - Wings of Fantasy/Exciting Macaron价格",
+    "得物/闲鱼 aggregated - Labubu 3.0/4.0二级市场价格"
+  ]
+}

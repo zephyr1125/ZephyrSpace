@@ -279,6 +279,27 @@ Alphabet 是全球最重要的互联网平台公司之一，核心利润引擎�
 - [FinanceCharts: GOOGL Price History](https://www.financecharts.com/stocks/GOOGL/summary/price)
 - [AP: Alphabet's first-quarter profit soars as Google's big AI bets help push stock to new highs](https://apnews.com/article/2377ffef7a3f273e6ba1eedca6e17708)
 
+## 管理层档案
+
+- [[管理层档案/谷歌 管理层档案 79 2026-07-05|谷歌 管理层档案（2026-07-05）]]
+  - 评分：**79 / 100**
+  - 评级：⭐⭐⭐⭐ 优秀
+  - 一句话：Pichai——被低估的管家型CEO；$180B capex赌注是终极考验
+
+## 深度分析报告
+
+- [[深度分析/谷歌 深度分析 79 2026-07-05|谷歌 深度分析（2026-07-05）]] ⭐ 最新
+  - 评分：**79 / 100**
+  - 评级：⭐⭐⭐⭐ 优质
+  - 核心结论：搜索印钞机+Cloud 63%+TPU芯片；$180B capex→FCF归零+AI搜索颠覆+反垄断三线围剿
+
+## 估值分析
+
+- [[估值分析/谷歌 估值分析 2026-07-05|谷歌 估值分析（2026-07-05）]]
+  - 加权合理价：**~$373**（+3.6% vs 当前$360）
+  - PE 25x FY2026E / PEG 0.59——估值合理偏低
+  - 价格区间：[430, 360, 300]
+
 ## 返回入口
 
 - [[02-主题/人工智能]]
