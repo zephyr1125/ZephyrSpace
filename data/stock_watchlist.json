@@ -465,6 +465,34 @@
         "dv_ttm": 3.64,
         "next_earnings_date": "2026-07-28",
         "next_earnings_type": "FY2026 Q4全年财报"
+      },
+      {
+        "name": "Progressive",
+        "code": "PGR",
+        "market": "US",
+        "board": "纽",
+        "source_etf": "direct",
+        "position_role": "美国车险数据驱动型承保商龙头，CR持续领先同行3-5pp，浮动资金复利效应加速",
+        "prebuy_conclusion": "深度分析84/100(WATCH:承保周期见顶+佛州利润上限)，管理层档案88/100。公允价$233，当前$232。适合Core防御性配置。[全面分析+估值2026-07-07]",
+        "watch_reason": "CR 87.4%顶级+SNAPshot数据护城河+$72B浮动资金+$3.6B年投资收入。6%可变股息+13.7% FCF Yield。当前$232(PE 12x峰值/15x正常化)。",
+        "current_price": 231.67,
+        "price_date": "2026-07-07",
+        "price_bands": [
+          275,
+          250,
+          210
+        ],
+        "valuation_anchor": "正常化EPS $14-16×PE 15x→合理价$233。P/B 4.25x vs 5Y均值~4.0x。FCF Yield 13.7%。可变股息TTM ~6%。当前公允价而非低估。[估值更新2026-07-07]",
+        "risk_flags": [
+          "承保利润周期见顶——CR 87.4%为20年最佳，共识预期2026-2027回落至92-96%",
+          "佛州利润上限$9.5亿返还(2025)——其他州可能跟进，盈利上行永久受限",
+          "Geico(Berkshire)技术投资复苏可能重新开始增长",
+          "继任风险——Griffith 59岁/10年CEO，内部继任者池有限",
+          "房屋保险第二曲线增长慢于预期(+4% vs 双位数目标)"
+        ],
+        "dv_ttm": 13.9,
+        "next_earnings_date": "2026-07-15",
+        "next_earnings_type": "Q2 2026季报"
       }
     ],
     "growth": [
