@@ -51,8 +51,8 @@ aliases:
 | 角色 | 姓名 | 年龄(估) | 任期起始 | 持股（估） | 背景摘要 |
 |---|---|---|---|---|---|
 | President & CEO | Tricia Griffith | 59 | 2016-07（CEO）/ 2002年起高管 | ~50万股PGR（~$1.2亿+） | 1988年以客服代表加入Progressive，38年内部晋升——理赔→人力资源→COO→CEO。伊利诺伊州立大学BS |
-| CFO | Jay VanAntwerp | ~50 | 2024-05 | 未公开 | 2004年加入Progressive，历任财务规划、投资者关系、媒体业务线负责人。接替退休的John Sauerland |
-| COO | Pat Callahan | ~55 | 2024-05 | 未公开 | 1991年加入，历任理赔、个人险、商业险负责人 |
+| CFO | John Sauerland → **Andrew Quigg（2026-07接任）** | ~50 | 2015-04（Sauerland）/ 2026-07（Quigg） | 未公开 | Sauerland在任10年后于2026年7月3日退休。Quigg 2018年加入任首席策略官，内部晋升——保持了Progressive不外部空降CFO的传统 |
+| 个人险总裁 | Pat Callahan → **Lori Niederst（2027-01接任）** | ~55 | 1991-2027（Callahan，24年） | 未公开 | Callahan是承保机器的建筑师，将于2027年1月退休后转兼职顾问。Niederst内部晋升为Chief Personal Lines Officer |
 | 董事会主席（独立）| Lawton Fitt | ~70 | 2018-05（主席） | 未公开 | 前高盛合伙人，前皇家艺术学院秘书，Thomson Reuters董事 |
 
 ### 控制权结构
@@ -67,7 +67,7 @@ aliases:
 
 - **Tricia Griffith**：1988年以客服代表身份加入Progressive时年仅21岁——没有MBA、没有常春藤学位、没有投行/咨询背景。她在理赔部门一步步成长，历任首席人力资源官（2002-2008）、个人险总裁（2008-2015）、COO（2015-2016），2016年接替Glenn Renwick出任CEO。**这是保险业最纯粹的"从基层做起"的CEO故事**——Griffith理解Progressive的每一个运营细节，因为她做过其中大部分工作。她的管理风格是"数据驱动+共识建设+长期决策"，而非"大刀阔斧的战略转型"——这在承保行业恰恰是最稀缺的品质。
 
-- **核心团队稳定性**：2024年5月出现重要交班——长期CFO John Sauerland（在任~10年）退休，Jay VanAntwerp接任；COO职位由Pat Callahan接替。这是Griffith任内最重大的管理层变动，但均为内部晋升，过渡平稳。整体C-suite流动性极低，平均任期远超行业。
+- **核心团队稳定性**：2025-2026年出现Griffith任内最集中的高管交班——CFO John Sauerland（在任10年）2026年7月3日退休，由首席策略官Andrew Quigg内部接任；个人险总裁Pat Callahan（24年，承保机器的建筑师）将于2027年1月退休，Lori Niederst内部晋升；CAO Mariann Marshall已于2025年3月退休。**三人在同一年窗口内退休是Griffith任内最大的组织考验**——但每次继任均为内部晋升，延续了Progressive"不自外空降"的文化传统。
 
 - **Griffith的CEO遗产**：在任10年（2016-2026），Progressive的保费规模从$23B增至$83B+（3.6x），保单量从~13M增至~40M（3x），市值从~$20B增至~$130B（6.5x）。最大战略举措是2015年（Griffith上任前夕）开始的房屋保险扩张和持续对远程信息处理（Snapshot）的重金投资——这两项决策今天看都极为前瞻。
 
