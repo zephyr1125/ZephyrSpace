@@ -445,24 +445,26 @@
         "board": "纳",
         "source_etf": "direct",
         "position_role": "企业软件+云计算双飞轮，AI货币化最确定的平台",
-        "prebuy_conclusion": "逻辑清晰，当前价格合理，可按计划买入",
-        "watch_reason": "Azure Q3增速35%加速，OCF净现比137%，当前$425处🟢区间，Copilot渗透仅3.3%",
-        "current_price": 425.0,
-        "price_date": "2026-04-26",
+        "prebuy_conclusion": "深度分析85/100(WATCH:Activision+OpenAI排他性+监管升级)，管理层档案89/100(WATCH:SLT解散+AI安全事件+SVP集中减持)。基本面卓越但风险侧正在从可管理滑向需要严肃对待。当前$393(合理价$437折价10%)处🟢合理偏低区间。维持Core但建议缩仓位上限，FY2026 Q4财报(7/28-29)前不建议加仓。[全面分析+估值2026-07-07]",
+        "watch_reason": "Azure Q3 FY2026增速40%+AI收入$37B(+123%)+OCF/净利130%。当前$393(Forward PE 21x)处于2016年以来最低估值区间。深度分析85/100+管理层档案89/100。Core维持但缩仓位上限。",
+        "current_price": 393.31,
+        "price_date": "2026-07-07",
         "price_bands": [
-          640,
-          510,
-          420
+          520,
+          450,
+          380
         ],
-        "valuation_anchor": "FY2027E Non-GAAP EPS $19.14，当前22.2x FY2027E",
+        "valuation_anchor": "PE TTM 23.0x(5Y均值~33x)，FY2027E EPS≈$19.12→Fwd PE 20.6x。PEG=1.42，FCF Yield 2.54%(标准化3.5%→$446)。逆向DCF隐含10Y FCF CAGR≈7.2%。多方法加权合理价≈$437(±16%)。当前$393折价~10%。[估值更新2026-07-07]",
         "risk_flags": [
-          "AI Capex $64.6B收益不确定",
-          "FTC对Microsoft-OpenAI反垄断调查",
-          "Copilot货币化进展缓慢"
+          "AI Capex FY2026E ~$107B+，FCF严重压缩(FCF/净利48%)",
+          "Activision $68.7B整合失败风险——Game Pass 30M(vs 77M目标)，裁员3200人",
+          "OpenAI排他性丧失(2026-04协议修订)，Azure需竞争OpenAI工作负载",
+          "FTC民事调查令+EU DMA守门人+意大利AGCM——多国监管同时升级",
+          "Copilot付费渗透仅3-4%，消费制定价切换引发开发者反弹"
         ],
-        "dv_ttm": 3.32,
-        "next_earnings_date": "2026-04-29",
-        "next_earnings_type": "季报"
+        "dv_ttm": 3.64,
+        "next_earnings_date": "2026-07-28",
+        "next_earnings_type": "FY2026 Q4全年财报"
       }
     ],
     "growth": [
@@ -975,7 +977,7 @@
           "CIS行业竞争激烈，索尼三星技术压制，手机CIS份额提升难度大"
         ],
         "valuation_anchor": "PE TTM 33.26x（2026E PE 27.8x，2027E PE 22.1x）。PEG=1.63（2Y CAGR 16.9%），FCF Yield≈2.7%，逆向DCF隐含g≈10.5%。多方法加权合理价≈82元(±15%)。当前97.11元溢价18%处于中性偏贵区间。[估值更新2026-07-02]",
-        "dv_ttm": 0.50,
+        "dv_ttm": 0.5,
         "next_earnings_date": "2026-08-30",
         "next_earnings_type": "中报"
       },
