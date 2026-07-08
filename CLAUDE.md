@@ -133,18 +133,18 @@ python scripts/weekly_watchlist_scan.py
 
 报告输出到 `02-主题/周度监控/YYYY-MM-DD.md`。AI 分析按三档分级：🔴 CRITICAL（需行动）/ 🟡 WATCH（需关注）/ ⚫ IGNORE（流程性）。
 
-### 持仓周报（触发词：持仓周报 / 持仓新闻 / portfolio 周报）
+### 持仓周报（触发词：持仓周报 / 持仓新闻 / portfolio 周报 / 持仓公司新闻）
 
-**不需要二次确认，收到即执行。** 从 Google Sheet 核算 tab 读取实际持仓（过滤 ETF/基金），拉取最近一周公告+高管变动+质押+处罚+业绩预告，AI 逐条分析，输出持仓专属周报。
+**不需要二次确认，收到即执行。** 从 Google Sheet 核算 tab 读取实际持仓（过滤 ETF/基金），拉取最近一周公告+高管变动+质押+处罚+业绩预告，AI 逐条分析，输出持仓专属周报。完整 SOP 读 `skills/portfolio-weekly-monitor/SKILL.md`。
 
 ```powershell
 # 第1步：数据拉取（从 Google Sheets 读持仓 → CNINFO 拉数据）
 python scripts/weekly_watchlist_scan.py --tier portfolio
 
-# 第2步：AI 分析 + 生成报告
+# 第2步：AI 分析 + 生成报告（按 skills/portfolio-weekly-monitor/SKILL.md 执行）
 ```
 
-报告输出到 `02-主题/周度监控/YYYY-MM-DD-portfolio.md`。与全量 watchlist 周报的区别：仅覆盖 Google Sheet 中实际持有的标的，不包含 growth/radar 观察层。
+报告输出到 `02-主题/周度监控/YYYY-MM-DD-portfolio.md`。与全量 watchlist 周报的区别：仅覆盖 Google Sheet 中实际持有的标的，不包含 growth/radar 观察层；侧重"对我的持仓有何影响"视角，含持仓健康度速览和信心变化。
 
 ### 卫星仓周度复盘（触发词：/周度复盘 / 卫星仓复盘 / 周末复盘）
 
