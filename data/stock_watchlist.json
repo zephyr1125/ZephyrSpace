@@ -1254,11 +1254,11 @@
         "current_price": 222.65,
         "price_date": "2026-07-10",
         "price_bands": [
-          366,
-          293,
-          220
+          390,
+          335,
+          235
         ],
-        "valuation_anchor": "PE TTM 12.6x(10Y P50≈49x)，FY2026E Non-GAAP EPS≈$24.40→Fwd PE 9.1x。PEG=0.76，FCF Yield=11.5%，逆向DCF隐含g≈-4%。多方法加权合理价≈$360(+62%)。[估值更新2026-07-10]",
+        "valuation_anchor": "GAAP PE~12.9x/Non-GAAP Fwd PE 9.1x(10Y P50≈49x)，FY2026E GAAP EPS~$17.50/Non-GAAP $24.40。调整后FCF Yield~8-10%。合理价≈$310(+39%)，buyPrice=$235。[估值更新2026-07-10]",
         "risk_flags": [
           "CEO接班人未定（最大风险，候选短名单已出：Wadhwani/Chakravarthy）",
           "CFO Dan Durn离职，临时CFO Steve Day",
