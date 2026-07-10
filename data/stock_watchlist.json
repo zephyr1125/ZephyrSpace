@@ -445,16 +445,16 @@
         "board": "纳",
         "source_etf": "direct",
         "position_role": "企业软件+云计算双飞轮，AI货币化最确定的平台",
-        "prebuy_conclusion": "深度分析89/100(审查修正)，管理层档案89/100。89分=90分线附近，距双90差管理层约1分。当前$393.65合理偏低，五年年化~10%可期。维持Core仓位。FY2026 Q4财报(7/28-29)后建议重跑评分与估值。[全面分析+估值审查修正2026-07-07]",
-        "watch_reason": "深度分析89/100+管理层档案89/100。Azure+40%/AI$37B+123%/OCF$127.5B/RPO$627B。当前$393.65(Fwd PE 20.6x)处🟢合理偏低。",
-        "current_price": 393.65,
-        "price_date": "2026-07-07",
+        "prebuy_conclusion": "深度分析89/100(审查修正)，管理层档案89/100。当前$383.34(Forward PE 20.0x / PVGO%≈45%)处🟢🟢较好建仓区间。6方法加权合理价$435(+13%上行)，含🆕PVGO方法。维持Core仓位。FY2026 Q4财报(7/28-29)后建议重跑评分与估值。[全面分析+估值审查修正2026-07-09:新增PVGO方法]",
+        "watch_reason": "深度分析89/100+管理层档案89/100。Azure+40%/AI$37B+123%/OCF$127.5B。当前$383(Fwd PE 20.0x/PVGO%≈45%)处🟢🟢较好建仓。🆕PVGO: ROIC 30%+应享55%PVGO%→合理价$472。",
+        "current_price": 383.34,
+        "price_date": "2026-07-09",
         "price_bands": [
-          480,
-          430,
-          360
+          500,
+          450,
+          370
         ],
-        "valuation_anchor": "FY2027E调整后EPS≈$19-19.5×PE 22x→合理价≈$420(±$60)。当前$393.65(Fwd PE 20.6x)折价~6%。五年视角EPS CAGR 10%+PE 22x≈年化10%。[估值审查修正2026-07-07:删除标准化FCF方法]",
+        "valuation_anchor": "FY2027E EPS≈$19.12。6方法加权合理价≈$435(±$65)。PE历史分位$418/PEG$425/逆向DCF$416/EV-EBITDA$468/🆕PVGO$472(SSV=$212→PVGO%=45%→ROIC 30%+合理PVGO%=55%→$472)。当前$383对应20.0x FY2027E PE，折价~12%。PVGO% 45%处微软历史低位，2012年负值后10年年化27%。[估值更新2026-07-09:新增PVGO方法]",
         "risk_flags": [
           "AI Capex FY2026E现金口径~$100-110B(+55-70% YoY)，FCF持续承压",
           "Xbox/游戏战略重置——裁员3200人+4工作室剥离(多为ZeniMax旧资产非Activision核心)",
@@ -1248,24 +1248,25 @@
         "market": "US",
         "board": "纳",
         "source_etf": "direct",
-        "position_role": "创意软件事实垄断，Firefly AI货币化落地，FCF Yield ~10%",
-        "prebuy_conclusion": "逻辑清晰，当前价格合理，可按计划买入",
-        "watch_reason": "ARR $260亿+11%，Forward PE 10.4x处十年最低分位，CEO接班是短期不确定性",
-        "current_price": 245.0,
-        "price_date": "2026-04-26",
+        "position_role": "创意软件事实垄断，Firefly AI ARR>$500M(+3x)，FCF Yield 11.5%，PE 9.1x十年最低",
+        "prebuy_conclusion": "Q2 FY2026超预期+指引上调，估值处于极佳击球区，CEO人选公布是最大催化剂",
+        "watch_reason": "Q2 FY2026营收$6.62B(+13%)beat，Non-GAAP EPS$5.96(+18%)，FY2026E EPS$24.40。FCF Yield 11.5%，逆向DCF隐含FCF年萎缩-4%→严重错价。CEO候选短名单已出(Wadhwani/Chakravarthy)",
+        "current_price": 222.65,
+        "price_date": "2026-07-10",
         "price_bands": [
-          280,
-          245,
-          200
+          366,
+          293,
+          220
         ],
-        "valuation_anchor": "FY2026E Non-GAAP EPS $23.49，Forward PE ~10.4x",
+        "valuation_anchor": "PE TTM 12.6x(10Y P50≈49x)，FY2026E Non-GAAP EPS≈$24.40→Fwd PE 9.1x。PEG=0.76，FCF Yield=11.5%，逆向DCF隐含g≈-4%。多方法加权合理价≈$360(+62%)。[估值更新2026-07-10]",
         "risk_flags": [
-          "CEO接班人未定（最大风险）",
+          "CEO接班人未定（最大风险，候选短名单已出：Wadhwani/Chakravarthy）",
+          "CFO Dan Durn离职，临时CFO Steve Day",
           "Canva/Figma AI蚕食低端市场",
-          "Q2 FY2026指引偏弱"
+          "Q3 FY2026指引需跟踪（$6.67-6.72B）"
         ],
         "dv_ttm": 0.0,
-        "next_earnings_date": "2026-06-11",
+        "next_earnings_date": "2026-09（估算Q3 FY2026）",
         "next_earnings_type": "季报"
       },
       {
@@ -4280,13 +4281,13 @@
         "position_role": "消费电子SoC成长观察",
         "prebuy_conclusion": "降档至radar。Q1 2026 OCF=-4.82亿（比2025全年-2.30亿还差），存货危机明确恶化，触发不入条件①(OCF/净利<20%)。营收+23.9%但净利-7.95%（净利率9.12% vs 12.30%），费用端异常。PS+4但政策不覆盖硬红旗。等H1 2026存货<20亿且OCF转正后重新评估。",
         "watch_reason": "智能TV、机顶盒和边缘AI SoC具备国产替代和终端智能化逻辑，但当前现金流和库存质量需要验证。",
-        "current_price": 96.03,
-        "price_date": "2026-04-28",
+        "current_price": 104.56,
+        "price_date": "2026-07-09",
         "board": "科",
         "price_bands": [
-          70,
-          55,
-          42
+          140,
+          108,
+          85
         ],
         "risk_flags": [
           "🔴 Q1 2026 OCF=-4.82亿，触发不入条件①，存货危机恶化",
@@ -4294,7 +4295,7 @@
           "PE TTM 46.33x处5年55.2%分位，成长股估值溢价依赖利润兑现",
           "行业竞争加剧（晨星、全志等同类SoC厂商），份额压力"
         ],
-        "valuation_anchor": "EPS约2.07元(2025年报)；成长股框架PE 20-30x；PS+4，但硬红旗优先",
+        "valuation_anchor": "PE TTM 63.89x（5Y P50≈48x，当前偏高），2026E EPS≈3.37→Fwd PE 31x，2027E EPS≈4.55→Fwd PE 23x。PEG=0.50，逆向DCF隐含10Y CAGR≈16.7%，PVGO=64%。多方法加权合理价≈¥100(±8%)，现价¥104.56处于合理上沿。关键验证点：2026H1 OCF是否转正。[估值更新2026-07-10]",
         "dv_ttm": 0.0,
         "next_earnings_date": "2026-08-31",
         "next_earnings_type": "半年报",
@@ -4302,7 +4303,7 @@
         "cycle_position": "收缩期",
         "policy_score": 4,
         "entry_trigger": "H1 2026半年报：存货<20亿 AND 经营现金流>0 AND 净利率回升至>11%",
-        "last_updated": "2026-04-29"
+        "last_updated": "2026-07-10"
       },
       {
         "name": "赣锋锂业",
