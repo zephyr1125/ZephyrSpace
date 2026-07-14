@@ -9,7 +9,9 @@ aliases: ["Meta", "META", "Facebook", "Meta Platforms", "Meta Platforms Inc"]
 market: US
 board: 纳
 股息率_ttm: 0.31%
-最后更新日期: 2026-04-30
+最后更新日期: 2026-07-10
+深度分析: "[[深度分析/Meta 深度分析 83 2026-07-10]]"
+管理层档案: "[[管理层档案/Meta 管理层档案 78 2026-07-10]]"
 ---
 
 # Meta Platforms (META)
