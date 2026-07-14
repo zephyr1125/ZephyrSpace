@@ -13,9 +13,9 @@
       "price_date": "2026-07-14",
       "dv_ttm": 5.04,
       "price_bands": [
-        31.00,
-        25.00,
-        20.00
+        31.0,
+        25.0,
+        20.0
       ],
       "valuation_anchor": "PB 0.47x（BVPS≈36.5元），PE 2026E 10.0x（EPS 1.68）。PB-ROE为核心：当前PB隐含ROE永久=4.3%，若恢复至8%合理PB≈0.86x→31.3元。6法加权合理价≈25元(+48%)。DPS 0.85→股息率5.0%。追高>31(PB>0.85x)/中性25-31/较好20-25←当前<20属低估/低估<20。[估值更新2026-07-14]",
       "risk_flags": [
@@ -396,33 +396,6 @@
       "prebuy_conclusion": "高毛利(80%)+ROE23.5%+PE16x合理估值，是医药中少见的'合理价买优质公司'机会。增速不爆发(+10%营收)但稳定性强，更像稳健复利型growth而非弹性成长。建议growth标准仓位(3-5%)，作为医药板块防守型配置。"
     },
     {
-      "code": "605599.SH",
-      "board": "沪",
-      "position_role": "黄金零售周期股，消费品护城河，分红防御底仓",
-      "watch_reason": "ROE26.2%+零负债+黄金周期受益+高分红，PE历史底部安全边际好",
-      "name": "菜百股份",
-      "cycle_is_cyclical": true,
-      "current_price": 18.66,
-      "cycle_position": "景气高峰",
-      "price_bands": [
-        23.0,
-        18.5,
-        15.0
-      ],
-      "price_date": "2026-05-08",
-      "dv_ttm": 4.18,
-      "valuation_anchor": "PE 3年6.7%分位(12.0x)；追高>23 / 中性18.5-23 / 较好15-18.5 / 更低<15",
-      "risk_flags": [
-        "Q1 2026净利润率从4.0%收窄至2.79%，利润率压缩趋势需持续跟踪",
-        "黄金价格大幅回调将直接冲击营收和净利",
-        "北京市场集中度高，扩张节奏慢"
-      ],
-      "next_earnings_date": "2026-08-31",
-      "next_earnings_type": "半年报",
-      "source_etf": "801130.SI",
-      "prebuy_conclusion": "PE历史低位+OCF优质+分红4.18%，当前价格合理布局区间"
-    },
-    {
       "cycle_is_cyclical": false,
       "board": "沪",
       "current_price": 65.15,
@@ -450,60 +423,6 @@
       "cycle_position": "复苏中期",
       "price_bands_basis": "pe_ttm.lixinger_3y",
       "price_bands_date": "2026-05-15"
-    },
-    {
-      "name": "福特科技",
-      "code": "605558.SH",
-      "board": "沪",
-      "current_price": 18.5,
-      "price_date": "2026-04-30",
-      "next_earnings_type": "半年报",
-      "next_earnings_date": "2026-08-31",
-      "cycle_is_cyclical": false,
-      "price_bands": [
-        28,
-        18.5,
-        12
-      ],
-      "source_etf": "direct",
-      "watch_reason": "表面处理龙头+毛利28.5%+ROE20%",
-      "valuation_anchor": "PE 18x (合理)",
-      "prebuy_conclusion": "表面处理龙头，ROE20%，毛利28.5%，成本护城河稳定",
-      "position_role": "制造业专精特新标的",
-      "risk_flags": [
-        "产业周期",
-        "原材料成本"
-      ],
-      "cycle_position": null
-    },
-    {
-      "name": "圣农发展",
-      "code": "002299.SZ",
-      "source_etf": "direct",
-      "board": "深",
-      "position_role": "白羽鸡养殖龙头，禽肉周期复苏受益，兼具一体化产业链壁垒",
-      "prebuy_conclusion": "逻辑清晰，当前价格处于PE 3年P20底部区域（绿灯区），可研究性建仓1/3~1/2标准仓；等候鸡价确认继续上行后择机加仓",
-      "watch_reason": "中国最大白羽鸡一体化企业，成本管控能力领先，周期复苏+Q1净利+67%确认拐点",
-      "current_price": 18.6,
-      "price_date": "2026-05-07",
-      "dv_ttm": 2.68,
-      "price_bands": [
-        59.61,
-        31.0,
-        18.49
-      ],
-      "price_bands_basis": "pe_ttm.y3+ps2",
-      "price_bands_date": "2026-05-07",
-      "valuation_anchor": "PE历史3年分位定价+PS+2政策顺风加成。[0]=59.61(P80×1.10,追高区,周期高峰远期目标) / [1]=31.00(P50,中性底) / [2]=18.49(P20,较好区间,当前价附近) / <18.49为强买入区",
-      "risk_flags": [
-        "鸡价波动直接决定盈利：Q2-Q3鸡价若不能维持当前高位，Q1业绩惊喜可能是昙花一现",
-        "美国疫情风险：美国来源祖代鸡进口若受禽流感影响，将推升成本或制约扩产",
-        "饲料成本：豆粕/玉米价格若大幅上涨，将侵蚀复苏中的利润率"
-      ],
-      "next_earnings_date": "2026-08-31",
-      "next_earnings_type": "半年报",
-      "cycle_is_cyclical": true,
-      "cycle_position": "复苏中期"
     },
     {
       "name": "南微医学",
@@ -732,60 +651,6 @@
       "cycle_is_cyclical": false
     },
     {
-      "name": "赤子城科技",
-      "code": "09911.HK",
-      "board": "港",
-      "source_etf": "direct",
-      "position_role": "出海社交平台，MICO/YoYo多元文化社交，中东/东南亚新兴市场龙头",
-      "prebuy_conclusion": "ROE 45%+PE 11.9x，出海社交稀缺标的，当前HK$9.78明显低估，分批布局",
-      "watch_reason": "中东/北非/东南亚社交市场渗透率低，先发优势强；直播打赏ARPU持续提升；轻资产高ROE",
-      "current_price": 9.78,
-      "price_date": "2026-05-08",
-      "dv_ttm": null,
-      "price_bands": [
-        17,
-        12,
-        9
-      ],
-      "price_bands_basis": "pe_ttm.y3_range",
-      "price_bands_date": "2026-05-08",
-      "valuation_anchor": "PE 11.9x，历史低位，当前9.78接近最优区9以下",
-      "risk_flags": [
-        "中东政策监管风险，社交内容合规要求严格",
-        "市值偏小（~40亿HKD），流动性风险较高"
-      ],
-      "next_earnings_date": "2026-08-31",
-      "next_earnings_type": "中期业绩",
-      "cycle_is_cyclical": false
-    },
-    {
-      "name": "康臣药业",
-      "code": "01681.HK",
-      "board": "港",
-      "source_etf": "direct",
-      "position_role": "中成药特色品种+化学药双引擎，高股息防御成长，本批次最优标的",
-      "prebuy_conclusion": "PE 11.5x强买区+4.7%股息+OCF/NI=112%，基本面清晰，当前HK$15.5处于绿灯区，可立刻布局",
-      "watch_reason": "尿毒清颗粒等特色品种市场份额稳固；中药配方颗粒放量；管理层持续增持；高股息提供安全边际",
-      "current_price": 15.5,
-      "price_date": "2026-05-08",
-      "dv_ttm": 4.7,
-      "price_bands": [
-        27,
-        21,
-        16
-      ],
-      "price_bands_basis": "pe_ttm.y3_range",
-      "price_bands_date": "2026-05-08",
-      "valuation_anchor": "PE 11.5x，历史底部，绿灯区16以下对应PE~12x",
-      "risk_flags": [
-        "集采风险：中成药纳入集采后毛利率大幅下降的尾部风险",
-        "港股流动性偏低，中小市值折价"
-      ],
-      "next_earnings_date": "2026-08-31",
-      "next_earnings_type": "中期业绩",
-      "cycle_is_cyclical": false
-    },
-    {
       "name": "健盛集团",
       "code": "603558.SH",
       "board": "沪",
@@ -806,33 +671,6 @@
         "越南工厂占比高，美国对越南46%关税若落地将直接冲击毛利",
         "客户集中度较高（Lululemon/Nike），单一大客户风险",
         "小市值45亿，流动性较低，波动较大"
-      ],
-      "next_earnings_date": "2026-08-31",
-      "next_earnings_type": "半年报",
-      "cycle_is_cyclical": false,
-      "cycle_position": null
-    },
-    {
-      "name": "水星家纺",
-      "code": "603365.SH",
-      "board": "沪",
-      "source_etf": "801130.SI",
-      "position_role": "家纺品牌龙头，毛利率高+零杠杆+高股息，消费品护城河防御底仓",
-      "prebuy_conclusion": "毛利率41%，OCF/净利121%，零杠杆，DYR5.4%，Q1反弹印证底部回暖，品牌政策直接受益",
-      "watch_reason": "高股息安全垫+五部委品牌政策直接受益+Q1复苏信号；等待ROE向15%靠拢",
-      "current_price": 20.26,
-      "price_date": "2026-05-08",
-      "dv_ttm": 5.4,
-      "price_bands": [
-        24.0,
-        20.5,
-        17.0
-      ],
-      "valuation_anchor": "PE 5年58.5%分位(12.6x)；追高>24 / 中性20.5-24 / 较好17-20.5 / 更低<17",
-      "risk_flags": [
-        "家纺行业整体承压，大众消费需求疲软",
-        "加盟渠道管控挑战，ROE12.4%未达消费品15%理想水平",
-        "PE处5年58%分位，估值中性而非便宜"
       ],
       "next_earnings_date": "2026-08-31",
       "next_earnings_type": "半年报",
@@ -1060,35 +898,6 @@
       "next_earnings_type": "半年报",
       "cycle_is_cyclical": true,
       "cycle_position": "景气高峰"
-    },
-    {
-      "name": "同力股份",
-      "code": "920599.BJ",
-      "source_etf": "931752",
-      "position_role": "矿用宽体自卸车专精特新龙头，北交所高ROE成长标的",
-      "prebuy_conclusion": "ROE=23.3%（北交所最优质工程机械标的），OCF/净利=1.70（现金质量佳），PE=10.2x（历史56.8%分位）中性。基本面扎实，但北交所流动性较低（仓位上限50%）；当前估值合理，等PE回落至8-9x再积极加仓。",
-      "watch_reason": "矿用宽体自卸车细分市场龙头（新能源矿卡占比约65%），ROE持续>23%，OCF优秀，新能源+智慧矿山转型战略清晰；北交所专精特新企业，成长属性强于多数工程机械同行。",
-      "current_price": 18.97,
-      "price_date": "2026-05-15",
-      "board": "北",
-      "dv_ttm": 2.5,
-      "price_bands": [
-        22.0,
-        18.97,
-        15.0
-      ],
-      "price_bands_basis": "PE分位：追高>22元（PE>12x，P80上沿）；合理区18-22元（PE 10-12x）；积极买入<15元（PE<8x，安全边际充足）",
-      "price_bands_date": "2026-05-15",
-      "valuation_anchor": "ROE=23.3%+PE=10.2x（56.8%分位），北交所流动性折价约20-30%纳入考虑，仓位上限50%",
-      "risk_flags": [
-        "北交所流动性偏低，建仓/退出成本较高，仓位上限为标准仓50%",
-        "股东减持：2026-05持股5%以上股东权益变动触及1%提示（需跟踪减持计划）",
-        "矿用宽体车市场规模有限，增长天花板约300-400亿元"
-      ],
-      "next_earnings_date": "2026-08-31",
-      "next_earnings_type": "半年报",
-      "cycle_is_cyclical": true,
-      "cycle_position": "复苏中期"
     },
     {
       "name": "汇川技术",
@@ -2868,6 +2677,35 @@
       "next_earnings_type": "半年报",
       "cycle_is_cyclical": true,
       "deep_analysis": "75/100 | 2026-07-08 | 优质 | 管理层79/100 | 维持growth标准仓位2-5%。当前100.95元中性偏贵，等回调80-90元加仓"
+    },
+    {
+      "name": "亿联网络",
+      "code": "300628.SZ",
+      "board": "深",
+      "market": "A",
+      "source_etf": "direct",
+      "position_role": "全球SIP话机第一品牌(连续9年，市占率~40%)，轻资产Fabless模式(零商誉+零并购+零有息负债)，净利润率45%+堪比茅台。三大产品线：桌面通信终端(49%)、会议产品(40%，+21.95%第二曲线)、云办公终端(10%)",
+      "watch_reason": "深度分析82/100优质，管理层档案80/100优秀。SIP全球垄断+45%净利率+28%ROE+四位创始人20年零减持2023年逆势增持~1.05亿——A股科技公司治理标杆。年度中期双分红从未中断(DPS 1.80元，股息率5.3%)。当前PE 16.36x处于3Y历史P10以下，多方法加权合理价~43元(+27%)。FY2025边际恶化(增收不增利+OCF降27%)+关税风险限制core层，建议growth 5-8%。[三件套2026-07-14]",
+      "current_price": 33.87,
+      "price_date": "2026-07-14",
+      "dv_ttm": 5.31,
+      "price_bands": [
+        52.0,
+        43.0,
+        34.0
+      ],
+      "valuation_anchor": "PE TTM 16.36x(FY2025 EPS 2.055)。FY2026E EPS≈2.36(+15%)→Fwd PE 14.4x。PEG≈1.1，FCF Yield≈3.7%，逆向DCF隐含g≈3-4%(极度悲观)。2023年增持~1.05亿验证信心。6法加权合理价≈43元(+27%)。追高>52(PE>22x)/中性43-52/较好34-43←当前33.87处下沿/低估<34。[估值更新2026-07-14]",
+      "risk_flags": [
+        "中美关税风险——80%收入来自欧美，全部生产外包至中国代工厂，关税升级将同时冲击营收和利润率",
+        "FY2025增收不增利——营收+7.33%但净利-1.78%，三品类毛利率同步下滑1-3pct，OCF同比-27%",
+        "继任计划真空——张联昌2025年辞职后，陈智松(60岁)重掌总经理，四位创始人紧密圈子使外部职业经理人难以融入",
+        "桌面通信终端持续下滑——FY2025 -3.59%，SIP话机市场接近渗透率天花板",
+        "缺MD年报文件——会计政策稳健性审计未执行，E5.5维度受限"
+      ],
+      "next_earnings_date": "2026-08-26",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false,
+      "deep_analysis": "82/100 ⭐⭐⭐⭐ 优质。SIP全球垄断+45%净利率+创始人零减持逆势增持。FY2025增收不增利+关税+继任是核心隐忧。估值合理价~43元。[2026-07-14]"
     }
   ],
   "tier": "growth",
