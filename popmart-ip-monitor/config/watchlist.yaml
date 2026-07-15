@@ -138,6 +138,29 @@ ips:
   # ============================================================
   # 新 IP 观察组
   # ============================================================
+  - ip_name: TWINKLE TWINKLE
+    aliases:
+      - Twinkle Twinkle
+      - 星星人
+      - 星星
+    group: new_ip
+    thesis_role: "监控新 IP 是否出现早期爆款迹象（大摩：中国销售或达 Labubu 一半，最有望接棒的新IP）"
+    skus:
+      - sku_id: twinkle_heartbeat_figure
+        name: "TWINKLE TWINKLE 怦然星動系列手办 (HK$)"
+        category: "figure"
+        official_price: 81
+        launch_date: "2025-06-01"
+        rarity: "normal"
+        importance: high
+      - sku_id: twinkle_heytea_collab
+        name: "喜茶 × 星星人 联名（定性观察，无官方发售价）"
+        category: "collab"
+        official_price: null
+        launch_date: "2025-12-01"
+        rarity: "collab"
+        importance: medium
+
   - ip_name: NEW_IP_POOL
     aliases: []
     group: new_ip

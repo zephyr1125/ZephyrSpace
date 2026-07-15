@@ -29,6 +29,8 @@ import requests
 from dotenv import load_dotenv
 
 load_dotenv()
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from scripts.cninfo_api import CninfoClient
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
 
 VAULT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -99,6 +101,50 @@ def guess_direction(title):
     if "补充" in title:
         return "补充说明"
     return "未标明"
+
+
+# ================= CNINFO 结构化预告 =================
+_cninfo_client = None
+
+
+def _get_cninfo():
+    global _cninfo_client
+    if _cninfo_client is None:
+        _cninfo_client = CninfoClient()
+    return _cninfo_client
+
+
+def cninfo_structured_forecast(code):
+    """从 CNINFO p_stock2238 获取结构化业绩预告数据。失败返回 None。"""
+    try:
+        df = _get_cninfo().performance_forecast(code, limit=3)
+        if df.empty:
+            return None
+        row = df.iloc[0]
+        np_low = row.get("净利润下限(元)")
+        np_high = row.get("净利润上限(元)")
+        chg_low = row.get("净利润增减幅下限(%)")
+        chg_high = row.get("净利润增减幅上限(%)")
+
+        def safe_float(v):
+            if v is None:
+                return None
+            try:
+                f = float(v)
+                return f if f == f else None  # NaN → None
+            except (ValueError, TypeError):
+                return None
+
+        return {
+            "forecast_type": row.get("业绩类型", None),
+            "forecast_content": row.get("业绩预告内容", None),
+            "np_forecast_low": safe_float(np_low),
+            "np_forecast_high": safe_float(np_high),
+            "np_change_low": safe_float(chg_low),
+            "np_change_high": safe_float(chg_high),
+        }
+    except Exception:
+        return None
 
 
 # ================= 理杏仁 =================
@@ -214,7 +260,7 @@ def render_md(store, label):
 
     lines = []
     lines.append(f"# {label}\n")
-    lines.append(f"> 数据源：CNINFO 公告清单 + 理杏仁估值/财务/申万行业")
+    lines.append(f"> 数据源：CNINFO 结构化预告 + 理杏仁估值/财务/申万行业")
     lines.append(f"> 累计收录：**{n}** 家公司")
     if store.get("scan_log"):
         last = store["scan_log"][-1]
@@ -246,11 +292,27 @@ def render_md(store, label):
 
     # ---- 个股列表 ----
     lines.append("## 个股预告列表\n")
-    lines.append("| 公告日 | 代码 | 简称 | 方向 | 申万二级 | PE_ttm | PB | 市值 | 营收同比 | 净利同比 |")
-    lines.append("|---|---|---|---|---|---:|---:|---:|---:|---:|")
+    lines.append("| 公告日 | 代码 | 简称 | 方向 | 预告净利区间 | 净利增幅 | 申万二级 | PE_ttm | PB | 市值 | 营收同比 | 净利同比 |")
+    lines.append("|---|---|---|---|---|---|---|---:|---:|---:|---:|---:|")
     for r in rows:
+        # 净利区间
+        lo = r.get("np_forecast_low")
+        hi = r.get("np_forecast_high")
+        if lo is not None and hi is not None:
+            fc_cell = f"{fmt_yi_compact(lo)}~{fmt_yi_compact(hi)}" if lo != hi else fmt_yi_compact(lo)
+        else:
+            fc_cell = "-"
+        # 增幅区间
+        cl = r.get("np_change_low")
+        ch = r.get("np_change_high")
+        if cl is not None and ch is not None:
+            chg_cell = f"{cl:+.1f}%~{ch:+.1f}%" if cl != ch else f"{cl:+.1f}%"
+        else:
+            chg_cell = "-"
+
         lines.append(
             f"| {r.get('date','-')} | {r['code']} | {r.get('name','-')} | {r.get('direction','-')} | "
+            f"{fc_cell} | {chg_cell} | "
             f"{r.get('sw_l2') or '-'} | {fmt_num(r.get('pe_ttm'))} | {fmt_num(r.get('pb'),2)} | "
             f"{fmt_yi(r.get('mc'))} | {fmt_pct(r.get('toi_yoy'))} | {fmt_pct(r.get('np_yoy'))} |")
     lines.append("")
@@ -258,7 +320,8 @@ def render_md(store, label):
     # ---- 说明 ----
     lines.append("---\n")
     lines.append("**口径说明**：")
-    lines.append("- 「方向」来自公告标题正则（预增/预减/扭亏等），标题未写方向则标「未标明」，可参考净利同比推断。")
+    lines.append("- 「方向」优先使用 CNINFO 结构化 API (`p_stock2238`) 的业绩类型；不可用时回退标题正则。")
+    lines.append("- 「预告净利区间/净利增幅」来自 CNINFO 结构化预告 API，是公司预测值。")
     lines.append("- 「营收/净利同比」为理杏仁最近一期财报（累计口径）vs 去年同期，是**已实现**同比，非预告预测值。")
     lines.append("- 行业平均同比仅纳入有同比数据的公司。")
     return "\n".join(lines)
@@ -290,22 +353,34 @@ def main():
     fund = lx_fundamentals(codes, args.end) if codes else {}
 
     added = updated = 0
-    print(f"[3/4] 理杏仁逐只补财务+行业（{len(codes)} 只）...")
+    pre_existing_codes = set(existing.keys())
+    print(f"[3/4] 理杏仁逐只补财务+行业+CNINFO结构化预告（{len(codes)} 只）...")
     for idx, it in enumerate(items, 1):
         c = it["code"]
         is_new = c not in existing
         y = lx_fs_yoy(c, args.end) or {}
         sw_l2, sw_l1 = lx_sw_level2(c)
         f = fund.get(c, {})
+        # CNINFO 结构化预告（净利润区间+业绩类型，优先于标题正则）
+        fc = cninfo_structured_forecast(c)
         rec = {
             "code": c, "name": it["name"], "date": it["date"],
-            "direction": guess_direction(it["title"]), "title": it["title"],
+            "direction": (fc.get("forecast_type") if fc and fc.get("forecast_type")
+                          else guess_direction(it["title"])),
+            "title": it["title"],
             "url": it["url"], "sw_l2": sw_l2, "sw_l1": sw_l1,
             "pe_ttm": f.get("pe_ttm"), "pb": f.get("pb"),
             "ps_ttm": f.get("ps_ttm"), "mc": f.get("mc"), "dyr": f.get("dyr"),
             "latest_period": y.get("period"),
             "toi": y.get("toi"), "toi_yoy": y.get("toi_yoy"),
             "np": y.get("np"), "np_yoy": y.get("np_yoy"),
+            # 结构化预告字段
+            "forecast_type": fc.get("forecast_type") if fc else None,
+            "forecast_content": fc.get("forecast_content") if fc else None,
+            "np_forecast_low": fc.get("np_forecast_low") if fc else None,
+            "np_forecast_high": fc.get("np_forecast_high") if fc else None,
+            "np_change_low": fc.get("np_change_low") if fc else None,
+            "np_change_high": fc.get("np_change_high") if fc else None,
         }
         existing[c] = rec
         added += 1 if is_new else 0
@@ -330,6 +405,79 @@ def main():
     print(f"[4/4] 完成：新增 {added} / 更新 {updated}，累计 {len(existing)} 家")
     print(f"      JSON  → {store_path}")
     print(f"      文档  → {doc_path}")
+
+    # ---- 本次新增/更新明细表 ----
+    if added or updated:
+        batch_codes = [x["code"] for x in items]
+        added_codes = [c for c in batch_codes if c not in pre_existing_codes]
+        updated_codes = [c for c in batch_codes if c in pre_existing_codes]
+
+        hdr = f"{'代码':<8} {'简称':<10} {'公告日':<12} {'方向':<14} {'申万二级':<10} " \
+              f"{'预告净利区间':<28} {'净利增幅':<22} {'PE':>8} {'市值':>8}"
+
+        if added_codes:
+            print(f"\n{'─'*80}")
+            print(f"📋 新增 {len(added_codes)} 家（{args.start} ~ {args.end}）")
+            print(f"{'─'*80}")
+            print(hdr)
+            print("-" * 130)
+            for c in sorted(added_codes, key=lambda c: (existing[c].get("date", ""), c)):
+                _print_company_row(existing[c])
+
+        if updated_codes:
+            print(f"\n{'─'*80}")
+            print(f"🔄 更新 {len(updated_codes)} 家（{args.start} ~ {args.end}）")
+            print(f"{'─'*80}")
+            print(hdr)
+            print("-" * 130)
+            for c in sorted(updated_codes, key=lambda c: (existing[c].get("date", ""), c)):
+                _print_company_row(existing[c])
+
+    print()
+
+
+def _print_company_row(r):
+    """格式化打印一条公司预告记录"""
+    # 净利区间
+    lo = r.get("np_forecast_low")
+    hi = r.get("np_forecast_high")
+    if lo is not None and hi is not None:
+        if lo == hi:
+            fc_str = f"{fmt_yi_compact(lo)}"
+        else:
+            fc_str = f"{fmt_yi_compact(lo)} ~ {fmt_yi_compact(hi)}"
+    else:
+        fc_str = "-"
+
+    # 增幅区间
+    cl = r.get("np_change_low")
+    ch = r.get("np_change_high")
+    if cl is not None and ch is not None:
+        if cl == ch:
+            chg_str = f"{cl:+.1f}%"
+        else:
+            chg_str = f"{cl:+.1f}% ~ {ch:+.1f}%"
+    else:
+        chg_str = "-"
+
+    pe_str = f"{r.get('pe_ttm', 0):.1f}" if r.get("pe_ttm") else "-"
+    mc_str = fmt_yi(r.get("mc")) if r.get("mc") else "-"
+
+    print(f"{r['code']:<8} {r.get('name',''):<10} {r.get('date',''):<12} "
+          f"{r.get('direction',''):<14} {r.get('sw_l2') or '-':<10} "
+          f"{fc_str:<28} {chg_str:<22} {pe_str:>8} {mc_str:>8}")
+
+
+def fmt_yi_compact(v):
+    """格式化预告净利润（输入为万元）为易读单位。"""
+    if v is None:
+        return "-"
+    sign = "-" if v < 0 else ""
+    v = abs(v)
+    if v >= 10000:
+        return f"{sign}{v/10000:.2f}亿"
+    else:
+        return f"{sign}{v:.0f}万"
 
 
 if __name__ == "__main__":

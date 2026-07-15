@@ -2,10 +2,9 @@
 
 ## 总体设计
 
-Watchlist 由三个分层 JSON 文件组成，按档位分类：
+Watchlist 由两个分层 JSON 文件组成，按档位分类：
 - **watchlist_core.json** - CORE 档（强护城河底仓）
 - **watchlist_growth.json** - GROWTH 档（成长机会）
-- **watchlist_radar.json** - RADAR 档（跟踪观察）
 
 ## 统一必填字段模板
 
@@ -31,7 +30,9 @@ Watchlist 由三个分层 JSON 文件组成，按档位分类：
 | 16 | `valuation_anchor` | string | 估值锚点 | "PE 22.6x (历史最低分位0%)" | 核心估值指标+历史参考 |
 | 17 | `watch_reason` | string | 跟踪理由 | "ROE39%+PE低估值+阿托品放量" | 简洁关键词，3-5个要点 |
 
-## RADAR 档额外字段
+## 已废弃的 RADAR 字段（历史说明）
+
+> RADAR 档已于2026-07-15删除。下列字段仅用于理解历史数据，不得写入当前 core/growth 文件。
 
 RADAR 档可以（但非必须）包含以下额外字段，用于更深度的跟踪：
 
@@ -54,7 +55,7 @@ RADAR 档可以（但非必须）包含以下额外字段，用于更深度的�
 ```json
 {
   "version": 1,
-  "tier": "core|growth|radar",
+  "tier": "core|growth",
   "updated_at": "2026-05-03T10:56:21Z",
   "entries": [
     { /* 公司条目，必须包含所有16个必填字段 */ }
@@ -162,10 +163,9 @@ assert entry["cycle_position"] in valid_positions, f"Invalid position: {entry['c
 - [ ] 为所有 GROWTH 条目补充 `cycle_position` 字段
 - [ ] 非周期股填 null，周期股填对应周期阶段
 
-### Phase 2：清理 RADAR（下周）
-- [ ] 移除已过期字段：`last_updated`, `last_reviewed`, `last_close`, `next_earnings_time`, `ts_code`, `pending_earnings_note`
-- [ ] 保留可选字段：`added_date`, `entry_trigger`, `industry`, `sub_sector` 等
-- [ ] 重新验证所有 `cycle_position` 值的正确性
+### Phase 2：删除 RADAR（已完成）
+- [x] 删除 `watchlist_radar.json`
+- [x] 当前有效档位收敛为 core/growth
 
 ### Phase 3：代码审查工具（本周末）
 - [ ] 编写 Python 验证脚本 `validate_watchlist.py`

@@ -293,7 +293,6 @@ grep -l "代码\|公司名" data/watchlist_*.json
 检索范围：
 - `data/watchlist_core.json`
 - `data/watchlist_growth.json`
-- `data/watchlist_radar.json`
 - `data/watchlist_index.json`
 
 检索关键词：股票代码（如 `600406.SH`）和公司简称（如 `国电南瑞`）。

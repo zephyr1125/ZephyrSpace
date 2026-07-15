@@ -81,13 +81,15 @@ python .\scripts\download_reports.py 600519 && python .\scripts\convert_annual_r
 1. 在 `05-A股指数/` 建立指数专题页（使用模板）
 2. 拉取全成分股 → 量化粗筛（四条硬门槛：市值、ROE/股息率、营收同比）
 3. 对候选公司创建/更新 `01-公司/` 页面，执行完整 PreBuy 分析
-4. 按 `data/WATCHLIST_RULES.md` 决策：core / growth / radar / 不入
+4. 按 `data/WATCHLIST_RULES.md` 决策：core / growth / 不入
 5. 写入 watchlist JSON（主 Agent 执行，子 Agent 不得直接写文件）
 6. 运行 `sync_watchlist.ps1` 同步到外部项目
 
 ### 全面分析 [公司名]（触发词：全面分析 XXX）
 
 **不需要二次确认，收到即执行。** 默认不拉取财报 PDF，以 CNINFO API + 巨潮资讯在线数据 + 理杏仁 + Tavily 等外部源完成分析。完整 6 步 SOP 必须读取 `deep-prebuy-skill/SKILL.md`，流程顺序：
+
+**⚠️ 前置检查**：分析前先 `grep` `00-首页/低分公司登记.md` 搜索目标公司名。若命中，警告用户「该公司在低分登记表中已有记录（深分XX/管档XX），是否仍要重新分析？」继续前需用户确认。
 
 1. 深度分析 → 输出 `深度分析/[公司简称] 深度分析 YYYY-MM-DD.md`（100分制评分）
 2. 双 Agent 审核（逻辑 + 数据一致性）
@@ -98,6 +100,8 @@ python .\scripts\download_reports.py 600519 && python .\scripts\convert_annual_r
 
 > ⚠️ 深度分析 Tavily 用量按 `deep-prebuy-skill/SKILL.md` 第 0.3 节 Tier 分级管控（央企上限1次，大型民企1次，中型2次，小市值/高风险3次）。
 > ⚠️ 分析完成后若存在本地财报 MD 文件，用其复核关键数据（审计意见、管理层名单、业务分部收入）；若无 MD 文件，以巨潮资讯在线年报摘要为准。
+> ⚠️ **分析完成后**：若深分 < 70，写入 `00-首页/低分公司登记.md`「后续新增」区。若公司已有记录但新分 ≥ 70，更新备注「已提升至 XX 分」。
+> 🔴 **单分<70即停（强制）**：管理层档案或深度分析任一项得分 < 70，**立即停止该公司的后续所有分析步骤**（不继续深分/估值/公司页），并将已有得分写入 `00-首页/低分公司登记.md`。
 
 ### 拉取财报并全面分析 [公司名]（触发词：拉取财报并全面分析 XXX）
 
@@ -111,6 +115,8 @@ python .\scripts\download_reports.py 600519 && python .\scripts\convert_annual_r
 
 **不需要二次确认，收到即执行。** 对公司管理层进行独立100分制尽调评估。完整 SOP 必须读取 `management-archive/SKILL.md`，流程顺序：
 
+**⚠️ 前置检查**：分析前先 `grep` `00-首页/低分公司登记.md` 搜索目标公司名。若命中，警告用户「该公司在低分登记表中已有记录（深分XX/管档XX），是否仍要重新分析？」继续前需用户确认。
+
 1. 数据拉取（CNINFO + 理杏仁 + 智堡 + 年报MD + Tavily 兜底）
 2. 按模板撰写初稿 → 输出 `管理层档案/[公司简称] 管理层档案.md`（含100分制评分）
 3. 双 Agent 并行审核（逻辑一致性 + 数据准确性）
@@ -119,6 +125,7 @@ python .\scripts\download_reports.py 600519 && python .\scripts\convert_annual_r
 
 > ⚠️ 管理层档案与深度分析的关系：推荐先建管理层档案 → 再做深度分析 → F 维度直接引用本档案结论。
 > ⚠️ 全面分析时，管理层档案作为前置步骤（在深度分析之前完成）。
+> ⚠️ **分析完成后**：若管档 < 70，写入 `00-首页/低分公司登记.md`「后续新增」区。若公司已有记录但新分 ≥ 70，更新备注「已提升至 XX 分」。
 
 ### 周度监控（触发词：监控周报 / 扫描持仓 / 周报）
 
@@ -144,7 +151,7 @@ python scripts/weekly_watchlist_scan.py --tier portfolio
 # 第2步：AI 分析 + 生成报告（按 skills/portfolio-weekly-monitor/SKILL.md 执行）
 ```
 
-报告输出到 `02-主题/周度监控/YYYY-MM-DD-portfolio.md`。与全量 watchlist 周报的区别：仅覆盖 Google Sheet 中实际持有的标的，不包含 growth/radar 观察层；侧重"对我的持仓有何影响"视角，含持仓健康度速览和信心变化。
+报告输出到 `02-主题/周度监控/YYYY-MM-DD-portfolio.md`。与全量 watchlist 周报的区别：仅覆盖 Google Sheet 中实际持有的标的，不包含 growth 观察层；侧重"对我的持仓有何影响"视角，含持仓健康度速览和信心变化。
 
 ### 卫星仓周度复盘（触发词：/周度复盘 / 卫星仓复盘 / 周末复盘）
 
@@ -251,12 +258,12 @@ python scripts/forecast_monitor.py 2026-06-20 2026-07-02 --label 2026Q2财报预
 
 ## Watchlist 管理
 
-三档分层：core（底仓）/ growth（成长）/ radar（跟踪）
+两档分层：core（底仓）/ growth（成长）；radar 已废弃
 - 档位由基本面质量决定，与当前股价无关
 - 子 Agent 完成 PreBuy 后输出「建议档位：xxx」，**不写文件**
 - 主 Agent 汇总后向用户确认，确认后一次性写入
 
-**关键文件**：`watchlist_core.json`、`watchlist_growth.json`、`watchlist_radar.json`、`watchlist_meta.json`（元数据 + tier 定义）
+**关键文件**：`watchlist_core.json`、`watchlist_growth.json`、`watchlist_meta.json`（元数据 + tier 定义）
 
 修改任何 watchlist 文件前必须阅读 `data/WATCHLIST_RULES.md`。
 

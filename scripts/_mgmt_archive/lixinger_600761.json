@@ -1,0 +1,48 @@
+{
+  "fundamental": {
+    "code": 1,
+    "message": "success",
+    "data": [
+      {
+        "date": "2026-07-14T00:00:00+08:00",
+        "dyr": 0.0372,
+        "mc": 14349060379.71,
+        "pb": 1.3401,
+        "pe_ttm": 11.6812,
+        "sp": 16.11,
+        "stockCode": "600761"
+      }
+    ]
+  },
+  "fs": {
+    "code": 0,
+    "error": {
+      "name": "ValidationError",
+      "messages": [
+        {
+          "value": [
+            "dps",
+            "payoutRatio",
+            "totalShares",
+            "floatShares"
+          ],
+          "path": [
+            "metricsList"
+          ],
+          "message": "(dps,payoutRatio,totalShares,floatShares) are invalid fs metrics"
+        }
+      ]
+    }
+  },
+  "pe_band": {
+    "code": 1,
+    "message": "no data",
+    "data": []
+  },
+  "company": {
+    "code": 0,
+    "error": {
+      "message": "api is not found"
+    }
+  }
+}

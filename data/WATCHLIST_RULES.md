@@ -2,7 +2,7 @@
 
 > **重要：任何 AI 在修改 watchlist 文件之前，必须先完整阅读本文件。**
 
-本文件是 watchlist 分拆文件（`watchlist_meta.json` / `watchlist_core.json` / `watchlist_growth.json` / `watchlist_radar.json`）的配套规则说明，定义了三档 watchlist 的分层标准、进入/退出条件和操作约定。
+本文件是 watchlist 分拆文件（`watchlist_meta.json` / `watchlist_core.json` / `watchlist_growth.json`）的配套规则说明，定义 core/growth 两档的分层标准、进入/退出条件和操作约定。Radar 已于 2026-07-15 废弃并删除。
 
 ---
 
@@ -10,9 +10,9 @@
 
 - **只收录已完成完整 PreBuy 分析的公司**（对应 `01-公司/` 下存在完整模板页面）。
 - 三档是确信度和操作意图的分层，不是市值或行业的分类。
-- 每次新增公司，**必须先判断档位再填写字段**，不允许"先放 radar 再看"的懒惰做法。
+- 每次新增公司，**必须先判断档位再填写字段**；不满足 core/growth 的公司只保留研究页，不进入 watchlist。
 - 价格区间字段（`price_bands`）是触发操作的核心，必须根据 PreBuy 页的结论填写，不得留空。
-- **档位（core/growth/radar）由公司基本面质量决定，与当前股价无关。** 价格仅影响 `price_bands` 的操作区间——即"何时买"，而非"是否进入 watchlist 或进入哪个档位"。好公司在价格高时同样应留在 watchlist，以便价格回落时能第一时间识别机会。
+- **档位（core/growth）由公司基本面质量决定，与当前股价无关。** 价格仅影响 `price_bands` 的操作区间——即"何时买"，而非"是否进入 watchlist 或进入哪个档位"。
 
 ---
 
@@ -65,12 +65,14 @@
 
 **退出条件**：
 - 升档至 core：估值回落至历史合理区间，且护城河进一步夯实，可调整至 core
-- 降档至 radar：出现基本面恶化信号（净利下滑超 20% 且非一次性、毛利率持续下行、现金流恶化），或成长逻辑被证伪
+- 移出 watchlist：出现基本面恶化信号（净利下滑超20%且非一次性、毛利率持续下行、现金流恶化），或成长逻辑被证伪
 - 移出 watchlist：基本面持续恶化超过 2 个季度，原有逻辑不再成立
 
 ---
 
-### 🟡 雷达池 `radar`
+### 🟡 已废弃的雷达池 `radar`（历史规则，不得再使用）
+
+> Radar 档及 `watchlist_radar.json` 已于 2026-07-15 删除。本节仅保留历史解释；任何新公司若不满足 core/growth，均只记录在研究页或指数专题页，不写入 watchlist。
 
 **定位**：有关注价值，但存在较多不确定性。只跟踪，不主动买入。出现明确信号后再考虑是否升档。
 
@@ -124,14 +126,12 @@
 | ② 无明确有时限的修复路径 | `entry_trigger` 本质是"等主业好转"——无法确定扣非净利/现金流何时恢复；若修复时间线超过 3 年或完全不可预期则触发 | 中科蓝讯：TWS市场饱和+主业增速+1.2%，无法预期扣非何时改善 |
 | ③ 结构性治理或合规风险 | 外资母公司持股 > 50% 且叠加出口管制风险；或审计意见非标；或存在持续关联交易掩盖利润转移 | 盛美上海：ACMR持股74.5% + 美国出口管制双重叠加 |
 
-**与 radar 的区别**：
-- radar 的公司：有明确、可量化的入场触发器，等信号达成再评估
-- 不入的公司：结构性问题无法通过等待或价格下跌来规避，进入任何档位都不合适
+**与普通观察对象的区别**：普通观察对象可以保留研究页等待验证，但不写入 watchlist；结构性问题公司则明确标记“不入”。
 
 **操作说明**：
 1. 在对应公司页面的 `## PreBuy 结论` 中注明"**不入 watchlist**，原因：[触发的标准+具体数据]"
 2. 在对应指数专题页的成分股表中，将该公司状态标记为"❌ 不入"
-3. **不写入** `stock_watchlist.json`
+3. **不写入** `watchlist_core.json` 或 `watchlist_growth.json`
 
 ---
 
@@ -150,7 +150,7 @@
    → 触发 2 条及以上 → ❌ 不入 watchlist（在公司页和指数专题页注明，不写入 JSON）
 
 3. PreBuy 结论是否支持"可以布局/可以买"（而非"纯观察"）？
-   → 否（纯观察/逻辑未验证） → 先判断是否有具体入场触发器；有 → radar；无 → 只记录在指数专题页，不进 watchlist
+   → 否（纯观察/逻辑未验证） → 只记录在公司页或指数专题页，不进 watchlist
 
 4. 护城河是否为垄断/极强级别？净现比 > 90%？ROE 稳定 > 15%？红旗 ≤ 2？
    → 是 → core
@@ -159,9 +159,7 @@
    → 是 → growth
 
 6. 以上都不满足（红旗多/逻辑存疑/周期不明/纯主题工具）
-   → 是否有具体可量化的入场触发器（价格/季报/政策）？
-      有 → radar（必须填写 entry_trigger 字段）
-      无 → 不进 watchlist，记录在指数专题页成分股表即可
+   → 不进 watchlist，记录在公司页或指数专题页即可
 ```
 
 ---
@@ -223,7 +221,7 @@
 **字段一致性硬规则**：
 
 - watchlist 记录必须使用同一套标准字段：`name`、`code`、`source_etf`、`position_role`、`prebuy_conclusion`、`watch_reason`、`current_price`、`price_date`、`board`、`price_bands`、`risk_flags`、`valuation_anchor`、`dv_ttm`。
-- `radar` 档额外必须有 `entry_trigger`。
+- Radar 已废弃，不再使用 `entry_trigger` 作为 watchlist 字段。
 - 美股/港股可额外有 `market`，美股固定为 `"US"`，港股固定为 `"HK"`。
 - 禁止把中间筛选字段直接写入最终 JSON，例如 `ts_code`、`sector`、`tier`、`thesis`、`pe_range`、`roe_ttm`、`revenue_growth`、`market_cap_bn`、`notes`。
 - 若需要保留这些信息，必须合并进 `position_role`、`watch_reason`、`prebuy_conclusion`、`risk_flags` 或 `valuation_anchor`。
@@ -238,9 +236,9 @@
 
 - **core（核心池）**：13 家，垄断级护城河+净现比>90%+ROE稳定>15%+红旗≤2
 - **growth（成长池）**：42 家，基本面优秀、成长逻辑清晰的公司
-- **radar（雷达池）**：21 家，需要更多验证或有明显红旗但具备明确入场触发器的公司
+- **radar（雷达池）**：已废弃；原观察对象不再保存在 watchlist JSON。
 
-完整列表见 `data/stock_watchlist.json`。
+完整有效列表见 `data/watchlist_core.json` 与 `data/watchlist_growth.json`。
 
 ---
 
@@ -248,6 +246,7 @@
 
 | 日期 | 变更说明 |
 |---|---|
+| 2026-07-15 | 删除旧 `stock_watchlist.json` 与 `watchlist_radar.json`，watchlist 收敛为 core/growth 两档 |
 | 2026-04-26 | 初版，从 primary/secondary 两档重构为 core/growth/radar 三档 |
 | 2026-04-26 | 新增 valuation_anchor 必填字段；radar 删除电网主题工具/利润来源复杂类 9 家；修复批次1+2共12家公司的 price_bands 至估值锚口径；schema_version 升至 4 |
 | 2026-04-26 | price_bands 由"至少3档"改为**固定4档**，标签和 action 固定（追高区/中性区/较好区间/更低区间）；思源电气5档合并为4档；更新 AGENT_INSTRUCTION 和 required_fields 说明 |

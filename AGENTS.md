@@ -112,17 +112,16 @@
 
 ## Watchlist 管理约定
 
-watchlist 数据已拆分为 4 个文件，放在 `data/` 目录：
+watchlist 数据采用 core/growth 两档，放在 `data/` 目录：
 
 | 文件 | 内容 | 大小参考 |
 |---|---|---|
 | `watchlist_meta.json` | schema、tier_definitions、AGENT_INSTRUCTION 等元数据 | ~10KB |
 | `watchlist_core.json` | core tier 数组（核心池，约 13 家） | ~15KB |
 | `watchlist_growth.json` | growth tier 数组（成长池，约 61 家） | ~72KB |
-| `watchlist_radar.json` | radar tier 数组（雷达池，约 83 家） | ~114KB |
 
 **读写规则（重要）**：
-- 新增/更新公司时，**只改对应 tier 的文件**，不碰其他三个
+- 新增/更新公司时，**只改对应 tier 的文件**，不碰其他文件
 - 读取 `AGENT_INSTRUCTION`、`tier_definitions`、`decision_tree` 时，读 `watchlist_meta.json`
 - 每次修改后，运行 `.\scripts\sync_watchlist.ps1` 同步到外部项目
 
@@ -398,7 +397,7 @@ Copy-Item "E:\ObsidianVaults\ZephyrSpace\hk-prebuy-skill\SKILL.md" `
 | **金融** | 银行、保险、证券 | 100亿 | 10% | ≥4% | ≥-10% | 改用PB≤1.5x替代PE |
 | **通用/混合** | 宽基或跨行业主题 | 40亿 | 12% | 无 | ≥-15% | ROE降序 |
 
-> ⚠️ **PE 不再作为硬过滤条件**。高 PE 只代表当前价格贵，不代表公司基本面差。粗筛目的是找出**基本面优质**的公司长期跟踪，价格贵的公司纳入 radar tier，等价格窗口出现再行动。PE 仅在 watchlist 分档和价格区间建议中作为参考。
+> ⚠️ **PE 不再作为硬过滤条件**。高 PE 只代表当前价格贵，不代表公司基本面差。粗筛目的是找出**基本面优质**的公司长期跟踪；价格贵的优质公司仍按质量进入 core/growth，并通过价格区间等待窗口。PE 仅在价格区间建议中作为参考。
 >
 > 唯一例外：PE ≤ 0 或 NaN 视为当期亏损，直接排除。
 
@@ -508,7 +507,7 @@ fs_dict = {d["stockCode"]: d for d in fs_resp.get("data", [])}
 
 **PE 不参与硬过滤**，但在粗筛结果表中保留展示，供 PreBuy 阶段做估值参考：
 - PE ≤ 0 或 NaN → 当期亏损，直接排除
-- PE 偏高（如 >50x）→ 通过筛选，但在 PreBuy 中标注"当前估值偏贵，建议 radar tier，等价格窗口"
+- PE 偏高（如 >50x）→ 通过筛选，但在 PreBuy 中标注“当前估值偏贵，等待价格窗口”；档位仍按公司质量判断
 
 > 粗筛阶段**不写页面**，只输出候选名单，并标注 ⚠️ 边界模糊公司。
 
@@ -552,12 +551,12 @@ fs_dict = {d["stockCode"]: d for d in fs_resp.get("data", [])}
 ### 第 5 步：评估 Watchlist 入选资格
 
 完成所有 PreBuy 分析后：
-1. 阅读 `data/WATCHLIST_RULES.md` 和 `data/stock_watchlist.json` 头部 `AGENT_INSTRUCTION`
+1. 阅读 `data/WATCHLIST_RULES.md` 和 `data/watchlist_meta.json` 中的 `AGENT_INSTRUCTION`
 2. **先过"不入"出口**（满足任意2条即排除，不写入 JSON）：
    - ① OCF/净利 < 20% 或非经常性损益 > 60% 净利
    - ② 无明确有时限修复路径（超3年或不可预期）
    - ③ 结构性治理/合规风险
-3. 对剩余公司按决策树判断：是否入选、应放哪个档位（core/growth/radar）
+3. 对剩余公司按决策树判断：是否入选、应放哪个档位（core/growth）
 4. **已在 watchlist 的**：确认档位是否仍正确，如需则更新 `prebuy_conclusion`
 5. **新入选的**：按 `required_fields` 填入必填字段
 6. **不入选的（含"不入"出口）**：在总结中说明原因（红旗过多 / 逻辑未验证 / 不满足质量门槛 / 触发"不入"规则）
@@ -795,7 +794,7 @@ agent-review-deep：审核深度分析报告（算术 + 来源 + 增速方向 + 
 
 ### 第 5 步：Watchlist 写入
 
-- 新公司：深度总分（审核后最终版）≥85→Core；70-84→Growth；55-69→Radar；<55→不建议入
+- 新公司：深度总分（审核后最终版）≥85→Core；70-84→Growth；<70→不建议入
 - 已有公司：更新 prebuy_conclusion、price_bands、last_updated
 - `price_bands` 必须保持为 3 个数字的降序数组 `[avoid_min, watch_min, consider_min]`；禁止写成带文案的对象，否则后端 `_expand_price_bands()` 会因下标访问报错
 - 所有 watchlist JSON 必须用 UTF-8 **无 BOM** 写入；BOM 会导致外部 `/stock-watchlist` 解析异常
@@ -818,5 +817,4 @@ agent-review-deep：审核深度分析报告（算术 + 来源 + 增速方向 + 
 |---|---|---|
 | 85-100 | Core | 核心仓位 >10% |
 | 70-84 | Growth | 成长仓位 5-10% |
-| 55-69 | Radar | 标准仓位 2-5% |
-| <55 | 不建议入 | radar 观察，不建仓 |
+| <70 | 不建议入 | 仅保留研究页，不进入 watchlist |

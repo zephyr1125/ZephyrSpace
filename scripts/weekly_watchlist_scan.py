@@ -56,13 +56,12 @@ IGNORE_PATTERNS = [
 def load_watchlist(tiers=None):
     """从 watchlist JSON 加载股票列表"""
     if tiers is None:
-        tiers = ["core", "growth", "radar"]
+        tiers = ["core", "growth"]
 
     companies = []
     tier_files = {
         "core": "data/watchlist_core.json",
         "growth": "data/watchlist_growth.json",
-        "radar": "data/watchlist_radar.json",
     }
 
     for tier in tiers:
@@ -314,7 +313,7 @@ def classify_importance(item):
 def main():
     parser = argparse.ArgumentParser(description="周度Watchlist公告扫描")
     parser.add_argument("--days", type=int, default=7, help="回溯天数(默认7)")
-    parser.add_argument("--tier", type=str, default="core,growth,radar", help="档位过滤, 或 portfolio")
+    parser.add_argument("--tier", type=str, default="core,growth", help="档位过滤, 或 portfolio")
     parser.add_argument("--output-dir", type=str, default=None)
     args = parser.parse_args()
 

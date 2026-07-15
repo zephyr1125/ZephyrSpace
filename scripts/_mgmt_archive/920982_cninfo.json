@@ -1,0 +1,55 @@
+{
+  "profile": {
+    "total": 1,
+    "records": [
+      {
+        "ORGNAME": "山西锦波生物医药股份有限公司",
+        "F001V": "Shanxi Jinbo Bio-pharmaceutical Co., Ltd.",
+        "F002V": null,
+        "ASECCODE": "920982",
+        "ASECNAME": "锦波生物",
+        "BSECCODE": null,
+        "BSECNAME": null,
+        "HSECCODE": null,
+        "HSECNAME": null,
+        "F044V": "国证Ａ指,巨潮小盘",
+        "MARKET": "北交所",
+        "F032V": "医药制造业",
+        "F003V": "杨霞",
+        "F007N": 11506.534,
+        "F010D": "2008-03-28",
+        "F006D": "2023-07-20",
+        "F011V": "www.sxjbswyy.com",
+        "F012V": "sxjbsw001@163.com",
+        "F013V": "0351-7779886",
+        "F014V": "0351-7778504",
+        "F004V": "山西省综改示范区太原唐槐园区锦波街18号",
+        "F005V": "山西省综改示范区太原唐槐园区锦波街18号",
+        "F006V": "030032",
+        "F015V": "重组胶原蛋白产品和抗HPV生物蛋白产品为核心的各类医疗器械、功能性护肤品的研发、生产及销售。",
+        "F016V": "一般项目：新材料技术研发；医疗器械、化妆品、卫生用品、多肽类原料、消毒剂（不含危险化学品）、胶原蛋白的研发、生产和销售；生物医药的技术咨询服务、技术转让；货物进出口、技术进出口（依法须经批准的项目，经相关部门批准后方可开展经营活动）。（除依法须经批准的项目外，凭营业执照依法自主开展经营活动）",
+        "F017V": null,
+        "F018V": "唐梦华",
+        "F042V": "高嵩",
+        "F052V": null,
+        "F053V": null
+      }
+    ],
+    "count": 1,
+    "resultmsg": "success",
+    "resultcode": 200
+  },
+  "exec_trades": {
+    "error": "403 Client Error: Forbidden for url: http://webapi.cninfo.com.cn/api/stock/p_stock2218"
+  },
+  "top10": {
+    "error": "403 Client Error: Forbidden for url: http://webapi.cninfo.com.cn/api/stock/p_stock2209"
+  },
+  "dividends": "  每股分红(元)  公告日期       股权登记日  F011N F010N  ... F025D 除权除息日     分红年度  发放日期  分红类型\n0    None  None  2026-06-16    NaN  None  ...  None  None   2025年报  None  年度分红\n1    None  None  2025-09-18    NaN  None  ...  None  None  2025半年报  None  中期分红\n2    None  None  2025-06-10    3.0  None  ...  None  None   2024年报  None  年度分红\n3    None  None  2024-09-12    NaN  None  ...  None  None  2024半年报  None  中期分红\n4    None  None  2024-04-22    3.0  None  ...  None  None   2023年报  None  年度分红\n5    None  None  2023-09-25    NaN  None  ...  None  None  2023半年报  None  中期分红\n6    None  None  2021-09-09    NaN  None  ...  None  None  2021半年报  None  中期分红\n7    None  None  2019-12-12    6.0  None  ...  None  None  2019三季报  None  季度分红\n\n[8 rows x 11 columns]",
+  "penalties": "Empty DataFrame\nColumns: []\nIndex: []",
+  "pledge": "Empty DataFrame\nColumns: []\nIndex: []",
+  "irm": "                   提问时间  ...   回答者\n0   2026-06-26 03:51:20  ...  鹏翎股份\n1   2026-06-29 01:47:34  ...  华菱钢铁\n2   2026-06-27 15:02:57  ...  华菱钢铁\n3   2026-06-29 04:42:16  ...  华菱钢铁\n4   2026-06-20 09:45:12  ...  华菱钢铁\n..                  ...  ...   ...\n145 2026-07-02 16:10:01  ...  华仁药业\n146 2026-07-02 07:21:53  ...  富奥股份\n147 2026-07-02 06:10:36  ...  美联新材\n148 2026-07-02 03:23:05  ...  惠城环保\n149 2026-07-02 02:22:15  ...  炼石航空\n\n[150 rows x 5 columns]",
+  "ratings": {
+    "error": "403 Client Error: Forbidden for url: http://webapi.cninfo.com.cn/api/sysapi/p_stock2205"
+  }
+}

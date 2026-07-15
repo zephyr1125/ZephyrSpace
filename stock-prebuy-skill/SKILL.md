@@ -1102,7 +1102,7 @@ PS 影响三个输出维度：
 
 | 情形 | 建议 |
 |---|---|
-| PS ≥ +3 且基本面达 growth 标准 | 可考虑从 radar 升至 growth |
+| PS ≥ +3 且基本面达 growth 标准 | 可考虑纳入 growth；此前仅研究页观察的公司需重新完成准入判断 |
 | PS ≥ +3 且基本面达 core 标准 | 政策加分可作为升 core 的辅助条件之一（不能替代护城河判断） |
 | PS ≤ -3 | 不升档；若已在 growth，注明「政策逆风，建议观察不加仓」 |
 
@@ -1227,7 +1227,7 @@ d = resp.json()["data"][0]
 
 **13.6 写入 Watchlist（模块 14 完成后立即执行）**
 
-确认为周期股后，在 `stock_watchlist.json` 对应条目写入以下两个字段：
+确认为周期股后，在 `watchlist_core.json` 或 `watchlist_growth.json` 对应条目写入以下两个字段：
 
 ```json
 "cycle_is_cyclical": true,

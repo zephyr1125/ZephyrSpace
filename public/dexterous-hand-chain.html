@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>灵巧手上游产业链全景图 | ZephyrSpace</title>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&family=Noto+Sans+SC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f5f0e6;
+  --card: #fffdf8;
+  --teal: #0e7490;
+  --blue: #2563a0;
+  --amber: #c2770c;
+  --text: #1c1917;
+  --text-sec: #57534e;
+  --muted: #888;
+  --border: rgba(120,113,108,0.18);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Sans SC', system-ui, sans-serif;
+  min-height: 100vh;
+  position: relative;
+}
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 0;
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 44px 24px 72px;
+  position: relative; z-index: 1;
+}
+
+/* Nav */
+.nav { margin-bottom: 36px; display: flex; gap: 10px; flex-wrap: wrap; }
+.btn-nav {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 8px 18px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.83rem; font-weight: 500;
+  transition: all 0.18s;
+  color: var(--teal);
+}
+.btn-nav:hover { background: var(--teal); color: #fff; border-color: var(--teal); }
+.btn-nav.amber { color: var(--amber); }
+.btn-nav.amber:hover { background: var(--amber); border-color: var(--amber); color: #fff; }
+
+/* Hero */
+.hero { text-align: center; margin-bottom: 48px; }
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: #92400e; color: #fff;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem; letter-spacing: 0.08em;
+  padding: 5px 14px; border-radius: 999px;
+  margin-bottom: 20px;
+}
+.hero h1 {
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: clamp(2rem, 4.8vw, 3.1rem);
+  font-weight: 700; line-height: 1.15;
+  margin-bottom: 14px;
+}
+.hero-sub {
+  font-size: 0.96rem; font-weight: 300;
+  color: var(--text-sec); line-height: 1.75;
+  max-width: 700px; margin: 0 auto 28px;
+}
+.hero-sub strong { color: var(--text); font-weight: 500; }
+
+/* Cost breakdown strip */
+.cost-strip {
+  display: flex; gap: 0;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px; overflow: hidden;
+  max-width: 720px; margin: 0 auto 20px;
+}
+.cost-item {
+  flex: 1; padding: 10px 4px;
+  text-align: center; border-right: 1px solid var(--border);
+  font-size: 0.75rem;
+}
+.cost-item:last-child { border-right: none; }
+.cost-pct {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.95rem; font-weight: 600;
+  display: block; margin-bottom: 2px;
+}
+.cost-label { color: var(--text-sec); font-size: 0.68rem; }
+
+/* Direction strip */
+.dir-strip {
+  display: flex; align-items: center; gap: 12px;
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 11px 22px;
+  max-width: 600px; margin: 0 auto;
+}
+.dir-lbl {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem; font-weight: 600; white-space: nowrap;
+}
+.dir-lbl.up   { color: #78350f; }
+.dir-lbl.down { color: #b45309; }
+.dir-bar {
+  flex: 1; height: 6px; border-radius: 999px;
+  background: linear-gradient(to right, #78350f, #3f6212, #065f46, #0e7490, #7c3aed, #b45309);
+}
+
+/* Chain */
+.chain { display: flex; flex-direction: column; gap: 0; margin-top: 36px; }
+
+/* Connector */
+.conn {
+  display: flex; justify-content: center; align-items: center;
+  height: 30px; position: relative;
+}
+.conn-line {
+  position: absolute; left: 50%; top: 0; bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--fc), var(--tc));
+  opacity: 0.3; transform: translateX(-50%);
+}
+.conn-icon {
+  position: relative; z-index: 1;
+  width: 22px; height: 22px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.65rem; color: var(--muted);
+}
+
+/* Layer card */
+.lcard {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px; overflow: hidden;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.lcard:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+.lcard-bar { height: 4px; background: var(--lc); }
+.lcard-body { padding: 22px 28px 26px; }
+
+/* Critical layer special style */
+.lcard.critical {
+  border: 2px solid rgba(6,95,70,0.4);
+  background: linear-gradient(135deg, var(--card) 85%, rgba(6,95,70,0.04));
+}
+.critical-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: 'JetBrains Mono', monospace; font-size: 0.68rem;
+  color: #065f46;
+  background: rgba(6,95,70,0.08);
+  border: 1px solid rgba(6,95,70,0.25);
+  padding: 2px 10px; border-radius: 999px;
+  margin-bottom: 8px;
+}
+
+/* Sensor critical layer */
+.lcard.critical-sensor {
+  border: 2px solid rgba(14,116,144,0.4);
+  background: linear-gradient(135deg, var(--card) 85%, rgba(14,116,144,0.04));
+}
+.critical-sensor-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: 'JetBrains Mono', monospace; font-size: 0.68rem;
+  color: #0e7490;
+  background: rgba(14,116,144,0.08);
+  border: 1px solid rgba(14,116,144,0.25);
+  padding: 2px 10px; border-radius: 999px;
+  margin-bottom: 8px;
+}
+
+/* Layer header */
+.lhead {
+  display: flex; align-items: flex-start;
+  justify-content: space-between; gap: 12px;
+  margin-bottom: 12px;
+}
+.lhead-left { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.lnum {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.67rem; font-weight: 600;
+  color: var(--lc);
+  background: rgba(0,0,0,0.04);
+  padding: 2px 8px; border-radius: 4px;
+  white-space: nowrap; letter-spacing: 0.04em;
+}
+.ltitle {
+  font-family: 'Newsreader', serif;
+  font-size: 1.28rem; font-weight: 600;
+}
+.leng {
+  font-family: 'JetBrains Mono', monospace; font-size: 0.67rem;
+  color: var(--lc);
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 3px 10px; border-radius: 999px;
+  white-space: nowrap; align-self: flex-start; margin-top: 2px;
+}
+
+/* Layer desc */
+.ldesc {
+  font-size: 0.875rem; line-height: 1.68;
+  color: var(--text-sec); margin-bottom: 18px;
+}
+.ldesc strong { color: var(--text); font-weight: 500; }
+
+/* Sectors grid */
+.sgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 10px;
+}
+.sgrid.wide { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+.sbox {
+  border-radius: 10px; padding: 12px 14px;
+  background: rgba(0,0,0,0.025);
+  border: 1px solid rgba(0,0,0,0.07);
+}
+.stitle {
+  font-size: 0.77rem; font-weight: 700;
+  color: var(--lc); margin-bottom: 9px;
+  display: flex; align-items: center; gap: 6px;
+}
+.sdot { width: 7px; height: 7px; border-radius: 50%; background: var(--lc); flex-shrink: 0; }
+.tags { display: flex; flex-wrap: wrap; gap: 5px; }
+.tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.695rem;
+  padding: 3px 8px; border-radius: 5px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text-sec); white-space: nowrap;
+}
+.tag.h  { background: var(--lc); color: #fff; border-color: var(--lc); font-weight: 600; }
+.tag.cn { color: var(--lc); border-color: rgba(0,0,0,0.1); background: rgba(255,255,255,0.7); }
+.tag.warn { color: #b45309; border-color: rgba(180,83,9,0.3); background: rgba(254,243,199,0.7); }
+
+/* Insight */
+.insight {
+  margin-top: 16px; padding: 10px 14px;
+  border-left: 3px solid var(--lc);
+  border-radius: 0 8px 8px 0;
+  background: rgba(255,255,255,0.55);
+  font-size: 0.82rem; line-height: 1.55;
+  color: var(--text-sec);
+}
+.insight strong { color: var(--lc); font-weight: 600; }
+
+/* Bottleneck alert */
+.bottleneck {
+  margin-top: 12px; padding: 9px 13px;
+  background: rgba(180,83,9,0.06);
+  border: 1px dashed rgba(180,83,9,0.35);
+  border-radius: 8px;
+  font-size: 0.81rem; color: #92400e;
+  display: flex; align-items: flex-start; gap: 8px; line-height: 1.5;
+}
+.bottleneck .icon { font-size: 0.9rem; flex-shrink: 0; }
+
+/* Sub-section divider inside card */
+.sub-divider {
+  display: flex; align-items: center; gap: 10px;
+  margin: 16px 0 12px;
+  font-family: 'JetBrains Mono', monospace; font-size: 0.68rem;
+  color: var(--muted); letter-spacing: 0.06em;
+}
+.sub-divider::before, .sub-divider::after {
+  content: ''; flex: 1; height: 1px;
+  background: var(--border);
+}
+
+/* Bridge hint */
+.bridge-hint {
+  margin-top: 16px; padding: 10px 16px;
+  background: rgba(180,83,9,0.06);
+  border: 1px dashed rgba(180,83,9,0.3);
+  border-radius: 8px;
+  font-size: 0.82rem; color: #b45309;
+  display: flex; align-items: center; gap: 8px;
+}
+.bridge-hint a { color: #b45309; font-weight: 600; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; }
+
+/* Footer */
+footer {
+  margin-top: 60px; padding-top: 24px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.73rem; color: var(--muted); line-height: 1.9;
+}
+
+@media (max-width: 640px) {
+  .page { padding: 24px 16px 48px; }
+  .lcard-body { padding: 16px 18px 20px; }
+  .sgrid { grid-template-columns: 1fr; }
+  .lhead { flex-direction: column; }
+  .nav { gap: 8px; }
+  .cost-strip { flex-direction: column; }
+  .cost-item { border-right: none; border-bottom: 1px solid var(--border); }
+  .cost-item:last-child { border-bottom: none; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <nav class="nav">
+    <a href="index.html" class="btn-nav">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      返回首页
+    </a>
+    <a href="humanoid-robot-chain.html" class="btn-nav">人形机器人产业链</a>
+    <a href="ai-hardware-chain.html" class="btn-nav">AI 硬件产业链</a>
+    <a href="dexterous-hand-chain.html" class="btn-nav amber">
+      灵巧手上游
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </nav>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-badge">
+      <svg width="9" height="9" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" fill="currentColor"/></svg>
+      DEXTEROUS HAND · UPSTREAM SUPPLY CHAIN
+    </div>
+    <h1>灵巧手上游产业链全景图</h1>
+    <p class="hero-sub">
+      以<strong>机器人灵巧手</strong>为终点，从基础材料逐层向上游溯源，
+      覆盖<strong>六大产业层</strong>——特种材料、精密机械、微型驱动、
+      <strong>触觉传感（最大技术壁垒）</strong>、控制电子直至整手集成。
+      灵巧手占人形机器人整机成本约<strong>17%</strong>，是量产落地的「最后一厘米」，
+      也是国产替代最活跃、技术路线最丰富的核心战场。
+    </p>
+
+    <!-- Cost breakdown -->
+    <div class="cost-strip">
+      <div class="cost-item" style="border-top: 3px solid #b45309">
+        <span class="cost-pct" style="color:#b45309">35–43%</span>
+        <span class="cost-label">微型丝杠/传动</span>
+      </div>
+      <div class="cost-item" style="border-top: 3px solid #0e7490">
+        <span class="cost-pct" style="color:#0e7490">20–25%</span>
+        <span class="cost-label">触觉传感器</span>
+      </div>
+      <div class="cost-item" style="border-top: 3px solid #065f46">
+        <span class="cost-pct" style="color:#065f46">13–15%</span>
+        <span class="cost-label">空心杯电机</span>
+      </div>
+      <div class="cost-item" style="border-top: 3px solid #3f6212">
+        <span class="cost-pct" style="color:#3f6212">6–8%</span>
+        <span class="cost-label">微型减速器</span>
+      </div>
+      <div class="cost-item" style="border-top: 3px solid #7c3aed">
+        <span class="cost-pct" style="color:#7c3aed">5–8%</span>
+        <span class="cost-label">控制/电子</span>
+      </div>
+      <div class="cost-item" style="border-top: 3px solid #78350f">
+        <span class="cost-pct" style="color:#78350f">8–12%</span>
+        <span class="cost-label">结构件/其他</span>
+      </div>
+    </div>
+
+    <div class="dir-strip">
+      <span class="dir-lbl up">↑ 上游（基础材料）</span>
+      <div class="dir-bar"></div>
+      <span class="dir-lbl down">（灵巧手整机）下游 ↓</span>
+    </div>
+  </div>
+
+  <div class="chain">
+
+    <!-- ═══════════════════════════════════════════
+         L6 · 基础材料层
+         ════════════════════════════════════════════ -->
+    <div class="lcard" style="--lc:#78350f">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L6 · 最上游</span>
+            <span class="ltitle">特种功能材料</span>
+          </div>
+          <span class="leng">Specialty Materials</span>
+        </div>
+        <p class="ldesc">
+          灵巧手所用一切零部件的最初物质来源——
+          <strong>特种工程塑料（PEEK/PI/PA）</strong>用于手指骨架与传动齿轮、
+          <strong>硅胶/弹性体</strong>作为人工皮肤基底材料、
+          <strong>形状记忆合金（SMA/Nitinol）</strong>是新型微型驱动方案的关键材料、
+          <strong>钛合金/铝合金微精密铸件</strong>用于高刚度轻量化指节结构。
+          材料纯度、疲劳寿命和生物相容性直接影响灵巧手在精密操作场景的表现。
+        </p>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>特种工程塑料 PEEK / PI / LCP</div>
+            <div class="tags">
+              <span class="tag h">Victrex（PEEK，英国）</span>
+              <span class="tag h">Solvay（PEEK/PI，比利时）</span>
+              <span class="tag h">DuPont（Vespel PI，美国）</span>
+              <span class="tag cn">中研高分子（PEEK 国产龙头）</span>
+              <span class="tag cn">沃特股份（LCP/PEEK）</span>
+              <span class="tag cn">金发科技</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>碳纤维复合材料（手指骨架）</div>
+            <div class="tags">
+              <span class="tag h">Toray 东丽（日本）</span>
+              <span class="tag h">Hexcel（美国）</span>
+              <span class="tag cn">光威复材</span>
+              <span class="tag cn">中复神鹰</span>
+              <span class="tag cn">中简科技</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>医用级硅胶 / 热塑性弹性体（人工皮肤）</div>
+            <div class="tags">
+              <span class="tag h">Wacker（德国）</span>
+              <span class="tag h">Dow Corning（美国）</span>
+              <span class="tag h">Momentive（美国）</span>
+              <span class="tag cn">硅宝科技</span>
+              <span class="tag cn">回天新材</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>形状记忆合金 SMA / Nitinol</div>
+            <div class="tags">
+              <span class="tag h">SAES Getters（意大利）</span>
+              <span class="tag h">Nitinol Devices（美国）</span>
+              <span class="tag h">Furukawa 古河（日本）</span>
+              <span class="tag cn">有研新材</span>
+              <span class="tag cn">法尔胜</span>
+              <span class="tag warn">⚠ SMA 驱动方案仍处实验室阶段</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>钛合金 / 铝合金微精密铸件</div>
+            <div class="tags">
+              <span class="tag h">TIMET（钛，美国）</span>
+              <span class="tag cn">宝钛股份</span>
+              <span class="tag cn">爱柯迪（铝合金精密压铸）</span>
+              <span class="tag cn">铂力特（3D 打印钛合金）</span>
+              <span class="tag cn">华曙高科</span>
+            </div>
+          </div>
+        </div>
+        <div class="insight">
+          <strong>材料创新是灵巧手性能突破的底层驱动力：</strong>PEEK 密度仅 1.3g/cm³（约为铝合金的 1/2），
+          比强度超过钛合金，是实现手指轻量化的核心材料。国内中研高分子已实现 PEEK 千吨级量产，
+          在机器人领域的应用正在快速拓展。形状记忆合金（SMA）驱动的「人工肌肉」方案无需传统电机和减速器，
+          在 Shadow Robot 和部分实验室灵巧手中已有原型验证，是下一代微型驱动的重要方向。
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line" style="--fc:#78350f;--tc:#3f6212"></div>
+      <div class="conn-icon">↓</div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         L5 · 微型精密机械零部件
+         ════════════════════════════════════════════ -->
+    <div class="lcard" style="--lc:#3f6212">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L5</span>
+            <span class="ltitle">微型精密机械零部件</span>
+          </div>
+          <span class="leng">Micro Precision Mechanics</span>
+        </div>
+        <p class="ldesc">
+          灵巧手的「骨骼与韧带」——所有运动与力传递的物理载体。
+          <strong>微型丝杠（直径 &lt;4mm）</strong>是灵巧手价值量最高的单一零部件（占手部 BOM 的 35–43%），
+          将电机旋转运动转化为手指直线推拉；
+          <strong>腱绳（高分子纤维/钢丝）</strong>实现远距离柔性力传递，使电机可从前臂驱动手指（Tesla Gen3 方案）；
+          <strong>微型轴承（内径 &lt;3mm）</strong>保障关节低摩擦自由转动。
+          微型化和耐久性是本层的核心工程挑战。
+        </p>
+        <div class="sgrid wide">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>微型行星滚柱丝杠（直径 2–4mm）</div>
+            <div class="tags">
+              <span class="tag h">THK（日本）</span>
+              <span class="tag h">NSK（日本）</span>
+              <span class="tag h">HIWIN 上银（台湾）</span>
+              <span class="tag cn">五洲新春（反向式滚柱丝杠已研发成功）</span>
+              <span class="tag cn">恒立液压（投资 15 亿建线性驱动器项目）</span>
+              <span class="tag cn">贝斯特（已出样）</span>
+              <span class="tag cn">双林股份（灵巧手滚珠丝杠已研制）</span>
+              <span class="tag cn">浙江荣泰（灵巧手微型丝杠一供，单机 48 根）</span>
+              <span class="tag cn">北特科技（投资 18.5 亿建丝杠基地）</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>腱绳 / 驱动线（UHMWPE / 钨钢丝）</div>
+            <div class="tags">
+              <span class="tag h">Dyneema（DSM，荷兰）</span>
+              <span class="tag h">Spectra（Honeywell，美国）</span>
+              <span class="tag cn">同益中（UHMWPE 纤维）</span>
+              <span class="tag cn">恒力化纤</span>
+              <span class="tag cn">江苏恒神</span>
+              <span class="tag warn">⚠ 腱绳疲劳寿命是绳驱方案最大痛点</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>微型精密轴承（内径 1–3mm）</div>
+            <div class="tags">
+              <span class="tag h">MinebeaMitsumi（日本，全球微型轴承龙头）</span>
+              <span class="tag h">NSK（日本）</span>
+              <span class="tag h">SKF（瑞典）</span>
+              <span class="tag cn">洛阳轴承</span>
+              <span class="tag cn">瓦轴集团</span>
+              <span class="tag cn">人本股份</span>
+              <span class="tag warn">⚠ 内径<3mm 的微型轴承国产化率极低</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>微型精密齿轮 & 齿条</div>
+            <div class="tags">
+              <span class="tag h">小原齿轮（日本）</span>
+              <span class="tag h">KHK（日本）</span>
+              <span class="tag cn">兆威机电（微型齿轮模组自研）</span>
+              <span class="tag cn">双环传动</span>
+              <span class="tag cn">中大力德</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>精密弹簧 & 弹性储能元件</div>
+            <div class="tags">
+              <span class="tag h">三住（MISUMI，日本）</span>
+              <span class="tag h">Associated Spring（美国）</span>
+              <span class="tag cn">力司百灵</span>
+              <span class="tag cn">浙江美力</span>
+            </div>
+          </div>
+        </div>
+        <div class="insight">
+          <strong>微型丝杠是灵巧手产业链「皇冠上的明珠」：</strong>每只灵巧手需 12–48 根微型丝杠（因方案而异），
+          以单根 500–2000 元计算，合计价值量 6000–96,000 元，是 BOM 占比最高的单一品类。
+          目前全球微型丝杠产能集中在日本 THK/NSK，国内五洲新春、恒立液压、北特科技等正加速扩产。
+          浙江荣泰已成为某头部厂商灵巧手微型丝杠一供，单机用量 48 根，这是国产微型丝杠在大批量场景的首个里程碑。
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line" style="--fc:#3f6212;--tc:#065f46"></div>
+      <div class="conn-icon">↓</div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         L4 · 微型驱动与传动（核心层）
+         ════════════════════════════════════════════ -->
+    <div class="lcard critical" style="--lc:#065f46">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+
+        <div class="critical-badge">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          产业链核心层 · 占灵巧手成本 20–25% · 国产替代最活跃战场
+        </div>
+
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L4 · 核心</span>
+            <span class="ltitle">微型驱动电机与精密减速传动</span>
+          </div>
+          <span class="leng">Micro Actuators · Reducers · Motors</span>
+        </div>
+        <p class="ldesc">
+          灵巧手的「肌肉系统」——技术壁垒最高、技术路线最丰富的核心层。
+          <strong>空心杯电机</strong>凭借零齿槽效应、高转速（最高 80,000rpm）和极低惯量，
+          是当前灵巧手驱动的主流方案（每只手需 6–12 个）；
+          <strong>无刷有齿槽电机</strong>以更高扭矩密度和更低成本正在部分替代空心杯；
+          <strong>微型减速器</strong>（行星/谐波）将高速低扭转为低速高扭，直接决定手指的抓取力与力控精度。
+          国际 Maxon/Faulhaber 仍垄断顶级精度市场，但国产替代正在加速突破。
+        </p>
+
+        <!-- Sub 1: 空心杯电机 -->
+        <div class="sub-divider">细分一：空心杯电机（灵巧手驱动主流方案，单机 6–12 个）</div>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>国际空心杯电机（顶级精度垄断）</div>
+            <div class="tags">
+              <span class="tag h">Maxon Group（瑞士，全球龙头）</span>
+              <span class="tag h">Faulhaber（德国，超微型先驱）</span>
+              <span class="tag h">Portescap（美国）</span>
+              <span class="tag warn">⚠ 顶级精度（<±1μm 轴向跳动）只有这三家能稳定量产</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>国产空心杯电机（快速追赶）</div>
+            <div class="tags">
+              <span class="tag cn">鸣志电器（龙头，获特斯拉 1 万套灵巧手订单）</span>
+              <span class="tag cn">鼎智科技（8mm 空心杯，转速 8 万 rpm，已小批量供货）</span>
+              <span class="tag cn">拓邦股份（7–40mm 全覆盖，向 10+ 家龙头送样）</span>
+              <span class="tag cn">江苏雷利（8mm/10mm，灵巧手已迭代至第三代）</span>
+              <span class="tag cn">雷赛智能（子公司灵巧驱控，年产能 12 万台）</span>
+              <span class="tag cn">卧龙电驱（精度 0.01°，供全身+手部）</span>
+              <span class="tag cn">禾川科技</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sub 2: 无刷有齿槽/无框电机 -->
+        <div class="sub-divider">细分二：无刷有齿槽电机 & 无框力矩电机（新兴替代方案）</div>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>无刷有齿槽电机（高扭矩密度，成本更低）</div>
+            <div class="tags">
+              <span class="tag h">Maxon EC 系列</span>
+              <span class="tag h">Faulhaber B 系列</span>
+              <span class="tag cn">伟创电气（布局无刷有齿槽，低成本路线）</span>
+              <span class="tag cn">雷赛智能</span>
+              <span class="tag cn">鸣志电器</span>
+              <span class="tag warn">⚠ 技术路线尚未收敛，空心杯 vs 有齿槽仍在博弈</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>无框力矩电机（手指根部关节直驱）</div>
+            <div class="tags">
+              <span class="tag h">Kollmorgen（美国）</span>
+              <span class="tag h">Allied Motion（美国）</span>
+              <span class="tag cn">步科股份</span>
+              <span class="tag cn">禾川科技</span>
+              <span class="tag cn">雷赛智能</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sub 3: 微型减速器 -->
+        <div class="sub-divider">细分三：微型减速器（行星减速 / 谐波减速 / 摆线针轮）</div>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>微型行星减速器（灵巧手主流，占减速器 ~70%）</div>
+            <div class="tags">
+              <span class="tag h">Neugart（德国）</span>
+              <span class="tag h">Apex Dynamics（台湾）</span>
+              <span class="tag cn">兆威机电（微型行星模组龙头）</span>
+              <span class="tag cn">鼎智科技（空心杯+减速箱配套国内领先）</span>
+              <span class="tag cn">宁波东力</span>
+              <span class="tag cn">中大力德</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>微型谐波减速器（高精度手指关节）</div>
+            <div class="tags">
+              <span class="tag h">Harmonic Drive Systems（日本）</span>
+              <span class="tag cn">绿的谐波（国产龙头，全球市占率 35%）</span>
+              <span class="tag cn">来福谐波</span>
+              <span class="tag cn">隆盛科技（谐波+传感器+灵巧手全面布局）</span>
+              <span class="tag cn">国茂精密</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>微型摆线针轮 / RV 减速器</div>
+            <div class="tags">
+              <span class="tag h">Nabtesco（日本）</span>
+              <span class="tag cn">双环传动</span>
+              <span class="tag cn">秦川机床</span>
+              <span class="tag cn">环动科技</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sub 4: 新型驱动 -->
+        <div class="sub-divider">细分四：新型微型驱动方案（压电 / SMA / 介电弹性体）</div>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>压电超声电机（纳米精度，无电磁干扰）</div>
+            <div class="tags">
+              <span class="tag h">PI（Physik Instrumente，德国）</span>
+              <span class="tag h">Nanomotion（以色列）</span>
+              <span class="tag cn">江苏紫金</span>
+              <span class="tag cn">上海超声电机研究所</span>
+              <span class="tag warn">⚠ 成本极高，仅用于实验室和特种场景</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>SMA 形状记忆合金驱动线</div>
+            <div class="tags">
+              <span class="tag h">SAES（意大利）</span>
+              <span class="tag h">Miga Motor（美国）</span>
+              <span class="tag cn">有研新材</span>
+              <span class="tag warn">⚠ 响应速度慢、疲劳寿命短，距离量产较远</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="insight">
+          <strong>空心杯电机：国产替代最确定的投资主线之一。</strong>
+          鸣志电器已获特斯拉 1 万套灵巧手订单，标志国产空心杯电机首次进入全球顶级人形机器人供应链。
+          鼎智科技 8mm 空心杯电机转速达 80,000rpm，性能参数已接近 Faulhaber 同级产品。
+          但顶级精度（轴向跳动 &lt;±1μm、噪声 &lt;25dBA）仍只有 Maxon/Faulhaber 能量产，
+          这一精度差距约需 2–3 年追赶。鸣志电器与鼎智科技是最有希望率先突破的两家。
+        </div>
+        <div class="bottleneck">
+          <span class="icon">⚠</span>
+          <span>
+            <strong>三大卡脖子点：</strong>①空心杯电机顶级精度（Maxon/Faulhaber 垄断，差距约 2–3 年）；
+            ②微型减速器寿命与背隙（高负载下国产行星减速器寿命仅为日德产品的 50–60%）；
+            ③腱绳疲劳寿命（绳驱方案下腱绳反复弯折 100 万次后强度衰减 >30%，制约商用可靠性）。
+          </span>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line" style="--fc:#065f46;--tc:#0e7490"></div>
+      <div class="conn-icon">↓</div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         L3 · 触觉与力觉传感（核心层）
+         ════════════════════════════════════════════ -->
+    <div class="lcard critical-sensor" style="--lc:#0e7490">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+
+        <div class="critical-sensor-badge">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          最大技术壁垒层 · 占灵巧手成本 20–25% · 决定灵巧操作能力上限
+        </div>
+
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L3 · 核心</span>
+            <span class="ltitle">触觉传感 · 力觉传感 · 电子皮肤</span>
+          </div>
+          <span class="leng">Tactile Sensing · Force · E-Skin</span>
+        </div>
+        <p class="ldesc">
+          灵巧手的「感官系统」——实现类人手部操作的前提，是技术壁垒最高、价值量最大的单一子系统。
+          <strong>触觉传感器（阵列式）</strong>检测压力分布、材质纹理和接触状态，是抓取易碎/柔软物体的核心；
+          <strong>六维力/力矩传感器</strong>测量指尖三维力+三维力矩，实现精确力控（±0.01N 精度）；
+          <strong>电子皮肤</strong>将触觉感知大面积、高密度地覆盖手指表面（目标 ≥100 个传感点/cm²）；
+          <strong>关节磁编码器</strong>提供 0.01° 级角度反馈，实现亚毫米级指尖位置精度。
+        </p>
+
+        <!-- Sub 1: 触觉传感器 -->
+        <div class="sub-divider">细分一：触觉传感器 & 电子皮肤（价值量最高环节）</div>
+        <div class="sgrid wide">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>国际触觉传感器标杆</div>
+            <div class="tags">
+              <span class="tag h">GelSight（美国，视触觉传感器先驱）</span>
+              <span class="tag h">SynTouch BioTac（美国，多模态触觉）</span>
+              <span class="tag h">PPS（美国，电容式阵列触觉）</span>
+              <span class="tag h">Tekscan（美国，薄膜压力分布）</span>
+              <span class="tag warn">⚠ 国际厂商单价 $500–3000/传感器，难以规模化降本</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>国产触觉传感器（规模化突破）</div>
+            <div class="tags">
+              <span class="tag cn">汉威科技（FPT 压力触觉模组，电子皮肤已向本体厂小批量供货）</span>
+              <span class="tag cn">福莱新材（第二代触觉传感器，获 10 万套订单，中试线已建成）</span>
+              <span class="tag cn">奥迪威（柔性传感器+材质识别全覆盖）</span>
+              <span class="tag cn">日盈电子（压阻式电子皮肤，送样验证阶段）</span>
+              <span class="tag cn">长盈精密（独家供应 Tesla Gen3 指尖传感器柔性板）</span>
+              <span class="tag cn">恒辉安防（电阻式电子皮肤，2026 年约 2000–3000 万订单）</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sub 2: 六维力传感器 -->
+        <div class="sub-divider">细分二：六维力/力矩传感器（指尖 ±0.01N 精度力控）</div>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>国际六维力传感器（顶级精度）</div>
+            <div class="tags">
+              <span class="tag h">ATI Industrial Automation（美国，行业金标准）</span>
+              <span class="tag h">Schunk（德国）</span>
+              <span class="tag h">Robotiq（加拿大）</span>
+              <span class="tag h">OnRobot（丹麦）</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>国产六维力传感器（加速追赶）</div>
+            <div class="tags">
+              <span class="tag cn">柯力传感（国产力学传感器龙头，华为等 50+ 家客户送样获批量订单）</span>
+              <span class="tag cn">宇立仪器（国产六维力先行者）</span>
+              <span class="tag cn">坤维科技</span>
+              <span class="tag cn">安培龙（MEMS 硅应变计+玻璃微熔技术，客户验证中）</span>
+              <span class="tag cn">东华测试（力/扭矩/多维力感知系统方案）</span>
+              <span class="tag cn">申豪科技</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sub 3: 编码器与MEMS -->
+        <div class="sub-divider">细分三：关节编码器 & MEMS 惯性/温度传感器</div>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>微型磁编码器（关节角度 0.01°）</div>
+            <div class="tags">
+              <span class="tag h">Renishaw（英国，光编码器精度之王）</span>
+              <span class="tag h">Heidenhain（德国）</span>
+              <span class="tag h">多摩川精机（日本，磁编码器）</span>
+              <span class="tag cn">禾川科技（磁编码器）</span>
+              <span class="tag cn">格瑞博特</span>
+              <span class="tag cn">汇川技术</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>MEMS 惯性传感器 / 滑觉 / 温度</div>
+            <div class="tags">
+              <span class="tag h">Bosch Sensortec（德国）</span>
+              <span class="tag h">TDK InvenSense（日本/美国）</span>
+              <span class="tag h">STMicroelectronics</span>
+              <span class="tag cn">芯动联科（MEMS 陀螺+加速度计）</span>
+              <span class="tag cn">明皜传感</span>
+              <span class="tag cn">美新半导体</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="insight">
+          <strong>触觉传感器是灵巧手「从能抓到会操作」的关键跃迁：</strong>
+          2025 年被称为触觉传感器量产元年。汉威科技已建立「触觉—平衡—力控—嗅觉」完整产品矩阵，
+          福莱新材第二代触觉传感器获 10 万套行业最大订单，中试线组装完毕。
+          长盈精密独家供应 Tesla Gen3 指尖传感器柔性板，触觉分辨率达 0.1mm。
+          但与国际顶尖水平（GelSight 的 μm 级纹理识别）相比，国产触觉传感器在分辨率、耐久性和一致性上仍有差距。
+          电子皮肤的终极目标是实现人类指尖级别的感知密度（~100 个机械感受器/cm²），
+          当前全球最先进的电子皮肤仅达到约 30–50 个传感点/cm²。
+        </div>
+        <div class="bottleneck">
+          <span class="icon">⚠</span>
+          <span>
+            <strong>触觉传感三大核心挑战：</strong>①高密度阵列串扰（传感点间距 <1mm 时相邻通道互相干扰）；
+            ②百万次循环耐久（灵巧手每天抓取 1000 次，一年需 36.5 万次循环→传感器须保证 100 万次+ 无衰减）；
+            ③多模态融合（压力+温度+滑觉+纹理在单一柔性基底上的集成）。
+            这三个问题全球范围内均未完全解决，是学术界和产业界的共同攻关方向。
+          </span>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line" style="--fc:#0e7490;--tc:#7c3aed"></div>
+      <div class="conn-icon">↓</div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         L2 · 控制与通信电子
+         ════════════════════════════════════════════ -->
+    <div class="lcard" style="--lc:#7c3aed">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L2</span>
+            <span class="ltitle">嵌入式控制与通信电子</span>
+          </div>
+          <span class="leng">Embedded Control · FPC · Communication</span>
+        </div>
+        <p class="ldesc">
+          灵巧手的「神经系统」——连接上层 AI 规划指令与底层电机/传感器的关键电子层。
+          <strong>微型电机驱动 IC</strong>为每根手指的 2–3 个电机提供精确的电流环/速度环/位置环控制；
+          <strong>嵌入式 MCU/DSP</strong>运行实时运动控制算法（阻抗控制/导纳控制），要求 <1ms 循环周期；
+          <strong>柔性电路板（FPC）</strong>在手指狭小空间内实现高密度电气互连（单根手指需 15–25 路信号）；
+          <strong>微型连接器</strong>需承受手指关节百万次弯折而不失效。
+        </p>
+        <div class="sgrid wide">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>微型电机驱动 IC（GaN / MOSFET 栅极驱动）</div>
+            <div class="tags">
+              <span class="tag h">TI（DRV 系列，美国）</span>
+              <span class="tag h">ST（L6470 系列，意法）</span>
+              <span class="tag h">Trinamic（ADITrino，德国）</span>
+              <span class="tag cn">峰岹科技（BLDC 驱动 IC 国产龙头）</span>
+              <span class="tag cn">晶丰明源</span>
+              <span class="tag cn">中颖电子</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>实时控制 MCU / DSP</div>
+            <div class="tags">
+              <span class="tag h">TI C2000（TMS320，实时控制金标准）</span>
+              <span class="tag h">ST STM32H7 / STM32G4</span>
+              <span class="tag h">Microchip dsPIC33</span>
+              <span class="tag cn">兆易创新 GD32</span>
+              <span class="tag cn">国民技术</span>
+              <span class="tag cn">灵动微电子</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>柔性电路板 FPC（手指内部高密度互连）</div>
+            <div class="tags">
+              <span class="tag h">NOK（日本旗胜）</span>
+              <span class="tag h">住友电工（日本）</span>
+              <span class="tag cn">鹏鼎控股（FPC 全球龙头，苹果供应链）</span>
+              <span class="tag cn">东山精密（FPC+刚性板）</span>
+              <span class="tag cn">长盈精密（Tesla 指尖传感器 FPC 独供）</span>
+              <span class="tag cn">弘信电子</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>微型连接器 & 高柔性线缆</div>
+            <div class="tags">
+              <span class="tag h">Molex（美国）</span>
+              <span class="tag h">TE Connectivity（美国）</span>
+              <span class="tag h">JST（日本）</span>
+              <span class="tag cn">中航光电（微型连接器）</span>
+              <span class="tag cn">瑞可达</span>
+              <span class="tag cn">立讯精密</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>电源管理 IC（PMIC，微型化封装）</div>
+            <div class="tags">
+              <span class="tag h">TI（TPS 系列）</span>
+              <span class="tag h">ADI / Maxim</span>
+              <span class="tag cn">南芯科技</span>
+              <span class="tag cn">芯朋微</span>
+              <span class="tag cn">英集芯</span>
+            </div>
+          </div>
+        </div>
+        <div class="insight">
+          <strong>灵巧手电子系统微型化是工程极限挑战：</strong>单根手指内部空间直径仅 12–18mm，
+          需要容纳 2–3 个电机+减速器+编码器+FPC+触觉传感器+腱绳/丝杠，
+          留给 PCB 和连接器的空间极为有限（通常 ≤5mm 厚度）。
+          Tesla Gen3 方案将电机从前臂通过腱绳驱动手指，手指内部仅保留传动+传感+FPC，
+          大幅降低了手指电子系统集成难度，这可能成为行业主流架构。
+        </div>
+      </div>
+    </div>
+
+    <div class="conn">
+      <div class="conn-line" style="--fc:#7c3aed;--tc:#b45309"></div>
+      <div class="conn-icon">↓</div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         L1 · 灵巧手整机集成
+         ════════════════════════════════════════════ -->
+    <div class="lcard" style="--lc:#b45309">
+      <div class="lcard-bar"></div>
+      <div class="lcard-body">
+        <div class="lhead">
+          <div class="lhead-left">
+            <span class="lnum">L1 · 最下游</span>
+            <span class="ltitle">灵巧手整机集成</span>
+          </div>
+          <span class="leng">Hand System Integration</span>
+        </div>
+        <p class="ldesc">
+          产业链的终端——将上游所有零部件集成为可规模化交付的<strong>灵巧手整机</strong>。
+          整手集成的核心竞争力在于<strong>系统架构设计</strong>（驱动/传动/传感三系统的空间布局与力传递路径）、
+          <strong>控制算法</strong>（多指协同抓取规划、柔顺力控）和<strong>规模化制造能力</strong>（精密装配良率）。
+          2025 年全球灵巧手出货量约 2–3 万台，2030 年预计突破 200 万台（CAGR 72%），
+          行业正处于「百家争鸣」的技术收敛前夜。
+        </p>
+
+        <!-- 国际整手 -->
+        <div class="sub-divider">国际灵巧手厂商（技术先驱，多处于实验室/小批量阶段）</div>
+        <div class="sgrid wide">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>学术/研究级灵巧手（高复杂度，高成本）</div>
+            <div class="tags">
+              <span class="tag h">Shadow Robot（英国，Dexterous Hand，20+ 自由度，$100 万+）</span>
+              <span class="tag h">DLR Hand（德国宇航中心，12 自由度）</span>
+              <span class="tag h">Robonaut 2 Hand（NASA/GM，12 自由度）</span>
+              <span class="tag h">Allegro Hand（韩科院，16 自由度）</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>工业级灵巧手（协作机器人末端）</div>
+            <div class="tags">
+              <span class="tag h">Schunk 5-Finger Hand（德国，$10 万+）</span>
+              <span class="tag h">Robotiq 3-Finger Gripper（加拿大）</span>
+              <span class="tag h">Soft Robotics mGrip（美国，软体抓取）</span>
+              <span class="tag h">OnRobot RG 系列（丹麦）</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>科技巨头自研灵巧手</div>
+            <div class="tags">
+              <span class="tag h">Tesla Optimus Gen3 Hand（22 自由度，腱绳+丝杠驱动）</span>
+              <span class="tag h">Figure 03 Hand（OpenAI 合作，家庭场景）</span>
+              <span class="tag h">1X Technologies（OpenAI 投资，挪威）</span>
+              <span class="tag h">Sanctuary AI（微软合作）</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 国内整手 -->
+        <div class="sub-divider">国内灵巧手厂商（规模化领先，技术快速迭代）</div>
+        <div class="sgrid wide">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>国内第一梯队（已实现批量交付）</div>
+            <div class="tags">
+              <span class="tag cn">因时机器人（2025 年交付量破万台，国内出货第一）</span>
+              <span class="tag cn">灵心巧手（全球高自由度灵巧手市占率超 80%，月交付千台）</span>
+              <span class="tag cn">帕西尼感知（触觉传感+灵巧手一体化方案）</span>
+              <span class="tag cn">兆威机电（ZWHAND 仿生灵巧手，指关节内置全驱动力单元）</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>国内第二梯队（已发布产品或获订单）</div>
+            <div class="tags">
+              <span class="tag cn">雷赛智能（DH116/DH2015 系列灵巧手，子公司灵巧驱控）</span>
+              <span class="tag cn">傲意科技</span>
+              <span class="tag cn">灵巧智能</span>
+              <span class="tag cn">松延动力</span>
+              <span class="tag cn">傅利叶智能</span>
+              <span class="tag cn">钧舵机器人</span>
+              <span class="tag cn">大寰机器人</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>上市公司跨界布局</div>
+            <div class="tags">
+              <span class="tag cn">鸣志电器（电机→手指模组→整手延伸）</span>
+              <span class="tag cn">隆盛科技（谐波+传感器+灵巧手全面布局）</span>
+              <span class="tag cn">拓普集团（获明确订单，深度绑定 Tesla）</span>
+              <span class="tag cn">蓝思科技（获明确订单，绑定头部客户）</span>
+              <span class="tag cn">江苏雷利（连杆+绳驱双路线，灵巧手迭代至第三代）</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 技术路线对比 -->
+        <div class="sub-divider">灵巧手三大技术路线对比（2025年格局）</div>
+        <div class="sgrid">
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>腱绳驱动（Tesla Gen3 方案，占比 ~40%）</div>
+            <div class="tags">
+              <span class="tag">电机置于前臂，手指自重轻</span>
+              <span class="tag">腱绳疲劳是最大痛点</span>
+              <span class="tag h">代表：Tesla Optimus、Shadow</span>
+              <span class="tag cn">代表：因时机器人</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>连杆传动（刚性强，占比 ~30%）</div>
+            <div class="tags">
+              <span class="tag">结构紧凑，传动效率高</span>
+              <span class="tag">适应性差，冲击载荷大</span>
+              <span class="tag h">代表：DLR Hand</span>
+              <span class="tag cn">代表：兆威机电 ZWHAND</span>
+            </div>
+          </div>
+          <div class="sbox">
+            <div class="stitle"><span class="sdot"></span>微型电机内置（手指独立驱动，占比 ~30%）</div>
+            <div class="tags">
+              <span class="tag">力控最精准，灵活度最高</span>
+              <span class="tag">手指重量大，散热困难</span>
+              <span class="tag cn">代表：灵心巧手、帕西尼感知</span>
+              <span class="tag h">代表：Schunk 五指手</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="insight">
+          <strong>中国灵巧手产业正在定义「规模化」：</strong>2025 年中国灵巧手整机出货量占全球 70%+，
+          因时机器人、灵心巧手率先突破万台级交付。但技术收敛远未完成——
+          腱绳/连杆/内置电机三条路线仍在博弈，行业标准化程度低，零部件互不兼容。
+          预计 2027–2028 年行业将出现技术收敛信号（类似电动车从多技术路线到纯电主导的过程）。
+          当前阶段，核心投资逻辑不是押注某个整手品牌，而是布局<strong>被所有路线共同需要的「卖铲人」</strong>
+          ——微型丝杠、触觉传感器和空心杯电机供应商。
+        </div>
+        <div class="bridge-hint">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          <span>下游延伸：灵巧手作为末端执行器，集成到 <a href="humanoid-robot-chain.html">《人形机器人产业链全景图》</a> 的 <strong>L4（关节与执行器层）</strong>，点击可查看从基础材料到整机的完整人形机器人产业链</span>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /.chain -->
+
+  <!-- Summary box -->
+  <div style="margin-top:48px; background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 24px 28px;">
+    <div style="font-family:'Newsreader',serif; font-size:1.12rem; font-weight:600; margin-bottom:14px;">灵巧手产业链投资主线与关键判断</div>
+    <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); gap:12px;">
+      <div style="padding:12px 14px; background:rgba(6,95,70,0.06); border:1px solid rgba(6,95,70,0.2); border-radius:10px;">
+        <div style="font-size:0.78rem; font-weight:700; color:#065f46; margin-bottom:6px;">🔑 最确定主线：空心杯电机国产替代</div>
+        <div style="font-size:0.8rem; color:var(--text-sec); line-height:1.5;">鸣志电器获特斯拉 1 万套订单，鼎智科技 8mm 空心杯转速达 8 万 rpm。国产性能已接近 Maxon/Faulhaber 中端产品线，是未来 3 年进展最确定的环节。</div>
+      </div>
+      <div style="padding:12px 14px; background:rgba(14,116,144,0.06); border:1px solid rgba(14,116,144,0.2); border-radius:10px;">
+        <div style="font-size:0.78rem; font-weight:700; color:#0e7490; margin-bottom:6px;">🔬 最大技术壁垒：触觉传感器</div>
+        <div style="font-size:0.8rem; color:var(--text-sec); line-height:1.5;">汉威科技、福莱新材（10 万套订单）率先突破规模化。但高密度阵列（≥100 点/cm²）和百万次耐久仍是全球性难题，一旦突破将重塑产业格局。</div>
+      </div>
+      <div style="padding:12px 14px; background:rgba(180,83,9,0.06); border:1px solid rgba(180,83,9,0.2); border-radius:10px;">
+        <div style="font-size:0.78rem; font-weight:700; color:#b45309; margin-bottom:6px;">🏭 最大价值单品：微型丝杠</div>
+        <div style="font-size:0.8rem; color:var(--text-sec); line-height:1.5;">占灵巧手 BOM 的 35–43%，浙江荣泰已成一供（单机 48 根）。五洲新春、北特科技、恒立液压等重资产投入扩产，产能释放节奏决定产业规模化速度。</div>
+      </div>
+      <div style="padding:12px 14px; background:rgba(124,58,237,0.06); border:1px solid rgba(124,58,237,0.2); border-radius:10px;">
+        <div style="font-size:0.78rem; font-weight:700; color:#7c3aed; margin-bottom:6px;">⚡ 技术路线未收敛 = 「卖铲人」逻辑</div>
+        <div style="font-size:0.8rem; color:var(--text-sec); line-height:1.5;">腱绳/连杆/内置电机三条路线并存，2027-2028 年前难以收敛。最优策略不是押注整手品牌，而是布局被所有路线共同需要的上游核心零部件。</div>
+      </div>
+      <div style="padding:12px 14px; background:rgba(63,98,18,0.06); border:1px solid rgba(63,98,18,0.2); border-radius:10px;">
+        <div style="font-size:0.78rem; font-weight:700; color:#3f6212; margin-bottom:6px;">📈 行业增速：2030 年市场 207 亿元</div>
+        <div style="font-size:0.8rem; color:var(--text-sec); line-height:1.5;">2025 年灵巧手行业空间约 13.6 亿元，2030 年预计达 207 亿元（CAGR 72%）。核心驱动：人形机器人从万台级→百万台级的量产爬坡。</div>
+      </div>
+      <div style="padding:12px 14px; background:rgba(120,53,15,0.06); border:1px solid rgba(120,53,15,0.2); border-radius:10px;">
+        <div style="font-size:0.78rem; font-weight:700; color:#78350f; margin-bottom:6px;">🏗️ 关键催化剂：Tesla Gen3 定型</div>
+        <div style="font-size:0.8rem; color:var(--text-sec); line-height:1.5;">Tesla Optimus Gen3 灵巧手方案（22 自由度，腱绳+丝杠+视触觉组合）将成为行业风向标，带动供应链统一标准和批量采购。</div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>ZephyrSpace · 灵巧手上游产业链全景图</p>
+    <p>数据截至 2026年7月 · 公司列举仅供研究参考，不构成投资建议</p>
+    <p>颜色标注：<span style="background:#065f46;color:#fff;padding:1px 6px;border-radius:3px;font-size:0.68rem;">深绿底白字</span> 为全球主导供应商 · <span style="color:#065f46;border:1px solid rgba(6,95,70,0.4);padding:1px 6px;border-radius:3px;font-size:0.68rem;">深绿字</span> 为中国大陆供应商 · <span style="color:#b45309;border:1px solid rgba(180,83,9,0.3);padding:1px 6px;border-radius:3px;font-size:0.68rem;">琥珀色</span> 为风险/警告</p>
+  </footer>
+
+</div>
+</body>
+</html>

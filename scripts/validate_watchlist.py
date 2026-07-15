@@ -216,8 +216,7 @@ def main():
     
     files_to_check = [
         data_dir / 'watchlist_core.json',
-        data_dir / 'watchlist_growth.json',
-        data_dir / 'watchlist_radar.json'
+        data_dir / 'watchlist_growth.json'
     ]
     
     all_passed = True

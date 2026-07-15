@@ -1,0 +1,73 @@
+{
+  "cn/company/penalty": {
+    "code": 0,
+    "error": {
+      "message": "api is not found"
+    }
+  },
+  "cn/company/inquiry": {
+    "code": 0,
+    "error": {
+      "name": "ValidationError",
+      "messages": [
+        {
+          "path": [
+            "startDate"
+          ],
+          "message": "\"startDate\" is required"
+        },
+        {
+          "path": [
+            "stockCode"
+          ],
+          "message": "\"stockCode\" is required"
+        }
+      ]
+    }
+  },
+  "cn/company/dividend": {
+    "code": 0,
+    "error": {
+      "name": "ValidationError",
+      "messages": [
+        {
+          "path": [
+            "stockCode"
+          ],
+          "message": "\"stockCode\" is required"
+        }
+      ]
+    }
+  },
+  "cn/company/executive": {
+    "code": 0,
+    "error": {
+      "message": "api is not found"
+    }
+  },
+  "fundamental2": {
+    "code": 0,
+    "error": {
+      "name": "ValidationError",
+      "messages": [
+        {
+          "value": [
+            "mc",
+            "pe_ttm",
+            "pb",
+            "dyr",
+            "sp",
+            "roe_ttm",
+            "totalShares",
+            "floatShares",
+            "eps_ttm"
+          ],
+          "path": [
+            "metricsList"
+          ],
+          "message": "(roe_ttm,totalShares,floatShares,eps_ttm) are invalid price metrics"
+        }
+      ]
+    }
+  }
+}
