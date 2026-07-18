@@ -2,220 +2,133 @@
 
 ## 总体设计
 
-Watchlist 由两个分层 JSON 文件组成，按档位分类：
-- **watchlist_core.json** - CORE 档（强护城河底仓）
-- **watchlist_growth.json** - GROWTH 档（成长机会）
+Watchlist 由四个研究等级文件组成：
 
-## 统一必填字段模板
+- `watchlist_strategic.json`：战略核心 `S_STRATEGIC`
+- `watchlist_core.json`：核心关注 `A_CORE`
+- `watchlist_growth.json`：成长关注 `B_GROWTH`
+- `watchlist_out_of_scope.json`：未入池 `NONE`，保留研究和持仓跟踪入口
 
-所有公司条目必须包含以下16个必填字段（按字母顺序）：
+旧版 Watchlist 与 Radar 均已废弃。公司研究、风险描述、当前行情和价格带保留在公司页及估值报告中，不再复制进 Watchlist。
 
-| # | 字段名 | 类型 | 含义 | 示例 | 备注 |
-|---|---|---|---|---|---|
-| 1 | `board` | string | 上市板块 | "深"、"沪"、"科"、"北" | ⚠️**严格格式**：仅允许单字符 "深"/"沪"/"科"/"北"/"港"/"美"/"纽"/"纳"。禁止 "科创板"、"沪深"、"创" 等非标格式 |
-| 2 | `code` | string | 股票代码 | "300573.SZ" | 格式：6位纯数字+后缀(.SZ/.SH/.HK/.US) |
-| 3 | `current_price` | number | 当前股价 | 69.45 | 浮点数，单位：人民币 |
-| 4 | `cycle_is_cyclical` | boolean | 是否周期股 | false | true=周期股，false=非周期股 |
-| 5 | `cycle_position` | string / null | 周期位置 | "底部" | **[NEW]**必填。枚举值：底部/复苏早期/复苏中期/景气高峰/收缩期/出清期。非周期股传 null |
-| 6 | `dv_ttm` | number / null | 股息率TTM | 2.1 | 百分比后的数值（如 2.1 代表2.1%）；不分红传 null |
-| 7 | `name` | string | 公司名称 | "兴齐眼药" | 中文全称 |
-| 8 | `next_earnings_date` | string | 下期财报发布日期 | "2026-08-31" | 格式：YYYY-MM-DD |
-| 9 | `next_earnings_type` | string | 下期财报类型 | "半年报" | 枚举值：一季报/半年报/三季报/年报 |
-| 10 | `position_role` | string | 投资定位 | "高ROE低PE核心档标的" | 用一句话描述在portfolio中的角色 |
-| 11 | `prebuy_conclusion` | string | 分析结论 | "眼科制药高质量成长，ROE39%，PE历史最低" | 不超过100字 |
-| 12 | `price_bands` | array[number] | 价格区间 | [90, 65, 40] | ⚠️**严格格式**：必须是 **array[number]** 类型，不允许对象格式 `{"buy": {...}}`。排列顺序 [买入价, 持有价, 卖出价]（从高到低）。null 表示待补充 |
-| 13 | `price_date` | string | 价格日期 | "2026-04-30" | 格式：YYYY-MM-DD，记录当前价格何时取得 |
-| 14 | `risk_flags` | array[string] | 风险项 | ["阿托品集中度风险", "医保覆盖变动"] | 关键风险列表，3-5项 |
-| 15 | `source_etf` | string | 数据来源 | "direct" / "980081" | "direct"=直接PreBuy，否则填入相关ETF代码 |
-| 16 | `valuation_anchor` | string | 估值锚点 | "PE 22.6x (历史最低分位0%)" | 核心估值指标+历史参考 |
-| 17 | `watch_reason` | string | 跟踪理由 | "ROE39%+PE低估值+阿托品放量" | 简洁关键词，3-5个要点 |
+## 条目规范字段
 
-## 已废弃的 RADAR 字段（历史说明）
+| 字段 | 类型 | 说明 |
+|---|---|---|
+| `name` | string | 公司简称，与公司页标题一致 |
+| `code` | string | 股票代码，包含市场后缀 |
+| `board` | string | 上市板块简称 |
+| `target_price` | number | 最新估值报告中的加权合理估值；币种与股票交易币种一致 |
+| `valuation_certainty` | number | `target_price` 的可靠程度，范围 `0.00–1.00`，最多两位小数 |
+| `dv_ttm` | number / null | 股息率 TTM，单位 `%` |
+| `next_earnings_date` | string / null | 下一期财报日期，格式 `YYYY-MM-DD`。**必须来自公司官方公告确认的真实日期**；未确认时务必写 `null`。禁止用交易所法定截止日（08-31/04-30/10-31）或历史推算值填充 |
+| `next_earnings_type` | string / null | 下一期财报类型。`next_earnings_date` 为 `null` 时此字段也必须为 `null` |
+| `cycle_is_cyclical` | boolean | 是否为周期股 |
+| `cycle_position` | string / null | 周期位置；非周期股可为 `null` |
+| `cScore` | number | 公司深度分析评分 |
+| `mScore` | number | 管理层评分 |
+| `watchlistLevel` | string | `S_STRATEGIC` / `A_CORE` / `B_GROWTH` / `NONE` |
+| `trackingStatus` | string | 静态值仅允许 `WATCHING` / `ARCHIVED`；消费端发现真实持仓时动态输出 `HOLDING` |
+| `strategicCoreType` | string / null | S级战略类型，非S级必须为 `null` |
+| `lastFundamentalReviewDate` | string / null | 最近完整基本面复核日期 |
+| `lastRedFlagReviewDate` | string / null | 最近治理、诉讼、审计和管理层红线复核日期 |
 
-> RADAR 档已于2026-07-15删除。下列字段仅用于理解历史数据，不得写入当前 core/growth 文件。
+每条 entry 必须且只能包含以上17个字段。允许为空的字段必须显式填写 `null`，不得省略。
 
-RADAR 档可以（但非必须）包含以下额外字段，用于更深度的跟踪：
+## 三层分级规则
 
-| 字段名 | 类型 | 含义 | 备注 |
-|---|---|---|---|
-| `added_date` | string | 添加到RADAR日期 | 格式：YYYY-MM-DD |
-| `entry_trigger` | string | 入场触发条件 | 描述何时可升档到CORE/GROWTH |
-| `industry` | string | 一级行业 | 如"医药生物" |
-| `sub_sector` | string | 细分行业 | 如"医疗器械" |
-| `market_cap_bn` | number | 市值（亿元） | 整数 |
-| `pe_ttm` | number | PE估值 | 最新PE倍数 |
-| `pb` | number | PB估值 | 最新PB倍数 |
-| `roe_latest` | number | 最新ROE | 百分比后的数值 |
-| `roe_year` | number | 年度ROE | 百分比后的数值 |
-| `policy_score` | number | 政策支持度 | 1-10分 |
-| `notes` | string | 补充备注 | 自由文本 |
+按红线、S、A、B、NONE的顺序判断，同一公司只进入最高满足等级：
 
-## 文件顶层结构
+- `S_STRATEGIC`：总分≥170，两项均≥82，`valuation_certainty`≥0.80，现金流质量与盈利稳定性通过，且无重大红线。
+- `A_CORE`：总分≥160，两项均≥80。
+- `B_GROWTH`：总分≥150，两项均≥75。
+- `NONE`：不满足以上条件或触发重大治理、财务异常、投资逻辑证伪红线。
 
-```json
-{
-  "version": 1,
-  "tier": "core|growth",
-  "updated_at": "2026-05-03T10:56:21Z",
-  "entries": [
-    { /* 公司条目，必须包含所有16个必填字段 */ }
-  ]
-}
+阈值均包含边界。关键字段缺失时不得推断或补高分。
+
+## 战略核心类型
+
+`strategicCoreType` 仅用于S级公司的投资功能分类，不改变等级：
+
+- `COMPOUNDER`：稳定复利型
+- `DEFENSIVE`：防御现金流型
+- `GROWTH`：高成长型
+- `POLICY_INFRA`：政策基础设施型
+- `CYCLICAL_QUALITY`：优质周期型
+
+## 研究有效期
+
+- S级红线复核超过90天：消费端显示“待复核”。
+- S级红线复核超过180天：消费端显示“S级—资料过期”。
+- 财报、管理层变动、重大诉讼、监管调查或资本运作发生后，应立即重新复核。
+- 资料过期不自动修改研究等级，但不得显示为无条件S级。
+
+## 跟踪状态
+
+`watchlistLevel` 与 `trackingStatus` 相互独立。静态配置记录研究跟踪意图；Finance 后端根据核算表实时持仓覆盖为 `HOLDING`。因此，`NONE + HOLDING` 是合法且必须支持的组合。
+
+## 已移除字段
+
+以下字段不得再写入 `core` 或 `growth`：
+
+- `position`
+- `position_role`
+- `source_etf`
+- `watch_reason`
+- `current_price`
+- `price_date`
+- `price_bands`
+- `price_bands_basis`
+- `price_bands_date`
+- `valuation_anchor`
+- `risk_flags`
+- `prebuy_conclusion`
+- `targetPrice`（由 `target_price` 取代）
+- `buyPrice`
+- `maxWeight`
+- `entry_trigger`
+- entry 级 `tier`
+- `deep_rating`
+- `deep_score`
+- `mgmt_score`
+- entry 级 `last_updated`
+- `market`（由标准化后的 `code` 推导）
+- `deep_analysis`
+- `mgmt_archive`
+
+## 估值字段规则
+
+1. `target_price` 必须直接取最新估值报告的最终“加权合理估值”，不得取买入价、乐观情景价或价格区间上沿。
+2. 同一条目只允许一个有效目标价字段，即 `target_price`。
+3. `target_price` 必须为大于 `0` 的数字。
+4. `valuation_certainty` 衡量目标价误差范围，不评价公司或管理层质量，不得与 `cScore`、`mScore` 重复计分。
+5. 认定时依次检查盈利和现金流可预测性、商业模式和资本强度、资产负债表和融资需求、估值方法收敛度，以及周期、客户、监管、技术、商品、临床和资本开支等尾部风险。
+6. 参考区间：`0.80–0.90` 极高，`0.70–0.79` 较高，`0.60–0.69` 中等，`0.50–0.59` 中低，`0.40–0.49` 较低，低于 `0.40` 很低。
+7. 高质量公司也可能估值确定性低；低增长但现金流稳定的公司可能估值确定性高。不得因偏好公司而上调。
+8. 财报、商业模式、资本结构或主要估值假设变化时，必须重新评估。
+
+买入价由使用方自动计算，不写入 Watchlist：
+
+```text
+buy_price = target_price × (0.68 + 0.14 × valuation_certainty)
 ```
 
-## 规范要求
+## 周期字段规则
 
-### 1. 必填字段验证
+`cycle_position` 的有效值为：`底部`、`复苏早期`、`复苏中期`、`景气高峰`、`收缩期`、`出清期` 或 `null`。禁止组合值和自由文本。
 
-写入任何watchlist文件前，**必须确保**：
-- [ ] 所有16个必填字段都存在
-- [ ] 没有字段为 undefined（null 只在指定字段允许）
-- [ ] 字段类型与规范一致
-- [ ] code 格式为 `XXXXXX.XX` 格式
+## 验证
 
-### 2. cycle_position 枚举值规范
+修改后运行：
 
-**关键规则**：`cycle_position` 必须是**单一精确枚举值**，不允许：
-- ❌ 双值组合（如"底部/复苏早期"）
-- ❌ 过渡描述（如"景气高峰→接近收缩期"）
-- ❌ 自由文本（如"低位运行"）
-- ✅ 精确单值（如"底部" 或 null）
-
-```python
-# 验证逻辑
-valid_positions = {"底部", "复苏早期", "复苏中期", "景气高峰", "收缩期", "出清期", None}
-assert entry["cycle_position"] in valid_positions, f"Invalid position: {entry['cycle_position']}"
+```powershell
+$env:PYTHONUTF8='1'
+python .\scripts\validate_watchlist.py
 ```
 
-### 3. price_bands 排序规范
-
-必须从高到低排列 `[buy_high, hold_mid, sell_low]`：
-```python
-# 示例
-"price_bands": [120, 75, 40]  # ✓ 正确
-"price_bands": [40, 75, 120]  # ✗ 错误
-```
-
-### 4. next_earnings_* 字段维护规范
-
-- `next_earnings_date` 必须是**年末日期**（MM-DD 部分）对应财报类型：
-  - 一季报 → YYYY-03-31
-  - 半年报 → YYYY-06-30
-  - 三季报 → YYYY-09-30
-  - 年报 → YYYY-12-31
-
-- 不允许使用已过期的 `next_earnings_time` 字段（已废弃）
-
-### 5. dv_ttm 和 roe 字段规范
-
-- 数值格式为百分比后的数值（如 2.1 代表 2.1%）
-- 不分红的公司 dv_ttm 传 null（不传空字符串）
-- ROE 为负时仍需正常填写数值（不传特殊值）
-
-### 6. board 字段严格格式规范 ⭐
-
-**必须是单字符枚举值，不允许全名或组合值**：
-
-| board 值 | 含义 | 接受格式 | ❌ 不接受的格式 |
-|---------|------|--------|---------|
-| `"深"` | 深交所主板 | "深" | "深圳"、"深交"、"创" |
-| `"沪"` | 上交所主板 | "沪" | "上海"、"沪交"、"沪深" |
-| `"科"` | 科创板 | "科" | "科创"、"科创板" |
-| `"北"` | 北交所 | "北" | "北京"、"北交" |
-| `"港"` | 港交所 | "港" | "香港"、"HK" |
-| `"美"` | 美股 | "美" | "纳斯达克"、"NYSE" |
-| `"纽"` | 纽交所 | "纽" | "纽交" |
-| `"纳"` | 纳斯达克 | "纳" | "纳指" |
-
-**常见错误修正**：
-- ❌ "沪深" → ✅ 根据 code 后缀判断：".SZ" = "深"，".SH" = "沪"
-- ❌ "科创板" → ✅ "科"
-- ❌ "创" → ✅ "科"
-
-### 7. price_bands 字段严格格式规范 ⭐
-
-**必须是数值数组，严禁对象格式**：
-
-```python
-# ❌ 错误格式（对象）
-"price_bands": {
-    "buy": {"price": 90, "desc": "分批建仓"},
-    "hold": {"price": 65, "desc": "当前价"},
-    "sell": {"price": 40, "desc": "止盈"}
-}
-
-# ✅ 正确格式（数组）
-"price_bands": [90, 65, 40]
-
-# ✅ 允许 null（待补充）
-"price_bands": null
-```
-
-**数值排序必须从高到低** `[buy_high, hold_mid, sell_low]`：
-```python
-[120, 75, 40]   # ✓ 正确
-[40, 75, 120]   # ✗ 错误排序
-```
-
-## 迁移计划
-
-### Phase 1：修复 GROWTH（立即）
-- [ ] 为所有 GROWTH 条目补充 `cycle_position` 字段
-- [ ] 非周期股填 null，周期股填对应周期阶段
-
-### Phase 2：删除 RADAR（已完成）
-- [x] 删除 `watchlist_radar.json`
-- [x] 当前有效档位收敛为 core/growth
-
-### Phase 3：代码审查工具（本周末）
-- [ ] 编写 Python 验证脚本 `validate_watchlist.py`
-- [ ] 集成到 `sync_watchlist.ps1`，同步时自动检查
-- [ ] 任何不符合规范的条目拒绝写入
-
-## 未来写入规范
-
-所有后续写入 watchlist 的 Agent 必须：
-1. 使用 `WATCHLIST_SCHEMA.md` 作为参考
-2. 在提交前运行本地验证脚本
-3. 不允许自由添加新字段（需经主 Agent 审核）
-4. 任何大于 1 个字段的结构调整需提交 Issue 讨论
-
-## 检查清单
-
-写入前必须 Pass 的检查项：
-
-```python
-def validate_watchlist_entry(entry, tier='core'):
-    errors = []
-    
-    # 必填字段检查
-    required_fields = {
-        'board', 'code', 'current_price', 'cycle_is_cyclical', 'cycle_position',
-        'dv_ttm', 'name', 'next_earnings_date', 'next_earnings_type', 
-        'position_role', 'prebuy_conclusion', 'price_bands', 'price_date',
-        'risk_flags', 'source_etf', 'valuation_anchor', 'watch_reason'
-    }
-    
-    for field in required_fields:
-        if field not in entry:
-            errors.append(f"Missing required field: {field}")
-    
-    # cycle_position 枚举检查
-    if entry.get('cycle_position') is not None:
-        valid = {"底部", "复苏早期", "复苏中期", "景气高峰", "收缩期", "出清期"}
-        if entry['cycle_position'] not in valid:
-            errors.append(f"Invalid cycle_position: {entry['cycle_position']}")
-    
-    # price_bands 排序检查
-    if isinstance(entry.get('price_bands'), list) and len(entry['price_bands']) == 3:
-        if not (entry['price_bands'][0] > entry['price_bands'][1] > entry['price_bands'][2]):
-            errors.append(f"price_bands not in descending order: {entry['price_bands']}")
-    
-    return errors
-```
+验证通过后再运行 `scripts/sync_watchlist.ps1`。
 
 ---
 
-**最后更新**：2026-05-03  
-**维护者**：Agent  
-**版本**：1.0
+**最后更新**：2026-07-17
+**Schema 版本**：23

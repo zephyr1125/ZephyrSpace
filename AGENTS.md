@@ -116,13 +116,13 @@ watchlist 数据采用 core/growth 两档，放在 `data/` 目录：
 
 | 文件 | 内容 | 大小参考 |
 |---|---|---|
-| `watchlist_meta.json` | schema、tier_definitions、AGENT_INSTRUCTION 等元数据 | ~10KB |
+| `watchlist_meta.json` | schema、必填字段、档位定义、周期枚举等精简元数据 | ~5KB |
 | `watchlist_core.json` | core tier 数组（核心池，约 13 家） | ~15KB |
 | `watchlist_growth.json` | growth tier 数组（成长池，约 61 家） | ~72KB |
 
 **读写规则（重要）**：
 - 新增/更新公司时，**只改对应 tier 的文件**，不碰其他文件
-- 读取 `AGENT_INSTRUCTION`、`tier_definitions`、`decision_tree` 时，读 `watchlist_meta.json`
+- 读取 `AGENT_INSTRUCTION`、`required_fields`、`tier_definitions`、`cycle_positions` 时，读 `watchlist_meta.json`
 - 每次修改后，运行 `.\scripts\sync_watchlist.ps1` 同步到外部项目
 
 > 🚫 **任何 Agent（包括主 Agent 和子 Agent）在用户确认前，均不得写入任何 watchlist 文件。**
@@ -137,7 +137,7 @@ watchlist 数据采用 core/growth 两档，放在 `data/` 目录：
 
 **在修改任何 watchlist 文件之前，必须**：
 
-1. 阅读 `watchlist_meta.json` 中的 `AGENT_INSTRUCTION`、`tier_definitions`、`decision_tree`
+1. 阅读 `watchlist_meta.json` 中的 `AGENT_INSTRUCTION`、`required_fields`、`tier_definitions`、`cycle_positions`
 2. 只收录已完成完整 PreBuy 分析的公司（`01-公司/` 下有对应页面）
 3. 完整规则见 `data/WATCHLIST_RULES.md`
 
@@ -174,19 +174,20 @@ watchlist 数据采用 core/growth 两档，放在 `data/` 目录：
 5. **更新 watchlist JSON（必须同时更新以下两个字段，缺一不可）**：
    ```json
    "next_earnings_type": "半年报",
-   "next_earnings_date": "2026-08-31"
+   "next_earnings_date": null
    ```
+   > ⚠️ **`null` 规则（强制）**：若无法从公司官方公告确认具体财报日期（董事会会议通知等），`next_earnings_date` 必须写 `null`，禁止用交易所法定截止日（`08-31`/`04-30`/`10-31`）填充。`null` = 待后续通过搜索/Tavily 确认真日期后再补。
    > ⚠️ **已踩坑**：只更新了 `next_earnings_type`，漏掉 `next_earnings_date`，会导致 Watchlist 视图仍显示旧的财报日期。两个字段必须在同一个脚本里一并更新。
-5. 更新 `prebuy_conclusion` 纳入最新季报简评
+5. 将最新季报简评保留在公司页；Watchlist 不再保存 `prebuy_conclusion`
 6. **运行 `sync_watchlist.ps1`** 同步
 
-**A股季报 → 下一期日期参考**：
-| 当前类型 | 改为 | `next_earnings_date` |
+**A股季报 → 下一期类型参考**（`next_earnings_date` 一律写 `null`，待公司官方公告确认后再补）：
+| 当前类型 | 改为 `next_earnings_type` | `next_earnings_date` |
 |---|---|---|
-| 一季报 (3月) | 半年报 | `YYYY-08-31` |
-| 半年报 (6月) | 三季报 | `YYYY-10-31` |
-| 三季报 (9月) | 年报 | `YYYY+1-04-30` |
-| 年报 (12月) | 一季报 | `YYYY+1-04-30` |
+| 一季报 (3月) | 半年报 | `null`（待确认） |
+| 半年报 (6月) | 三季报 | `null`（待确认） |
+| 三季报 (9月) | 年报 | `null`（待确认） |
+| 年报 (12月) | 一季报 | `null`（待确认） |
 
 **子 Agent 季报更新分工**：
 - 子 Agent 职责：更新公司页（含财报数据 + 治理事件检查），输出建议的 watchlist 字段更新（key-value 格式）
@@ -557,7 +558,7 @@ fs_dict = {d["stockCode"]: d for d in fs_resp.get("data", [])}
    - ② 无明确有时限修复路径（超3年或不可预期）
    - ③ 结构性治理/合规风险
 3. 对剩余公司按决策树判断：是否入选、应放哪个档位（core/growth）
-4. **已在 watchlist 的**：确认档位是否仍正确，如需则更新 `prebuy_conclusion`
+4. **已在 watchlist 的**：确认档位是否仍正确；若重做估值则更新 `target_price`
 5. **新入选的**：按 `required_fields` 填入必填字段
 6. **不入选的（含"不入"出口）**：在总结中说明原因（红旗过多 / 逻辑未验证 / 不满足质量门槛 / 触发"不入"规则）
 
@@ -617,7 +618,7 @@ fs_dict = {d["stockCode"]: d for d in fs_resp.get("data", [])}
 
 - **并行执行**：第 3~4 步可多家公司同时开 agent 处理，提高效率（每批 最多 6 家）
 - **已有页面**：若公司页已存在且有完整 PreBuy 分析，应更新价格和结论，而非重写整页
-- **价格日期**：统一用最近的 A 股交易日（非周末），`price_date` 格式 `YYYY-MM-DD`
+- **价格日期**：记录在公司页或估值报告中；Watchlist 不再保存 `price_date`
 - **粗筛门槛可调**：若指数整体估值偏高（如科技主题），可适当放宽 PE 上限，但需在总结中注明
 
 ---
@@ -795,8 +796,11 @@ agent-review-deep：审核深度分析报告（算术 + 来源 + 增速方向 + 
 ### 第 5 步：Watchlist 写入
 
 - 新公司：深度总分（审核后最终版）≥85→Core；70-84→Growth；<70→不建议入
-- 已有公司：更新 prebuy_conclusion、price_bands、last_updated
-- `price_bands` 必须保持为 3 个数字的降序数组 `[avoid_min, watch_min, consider_min]`；禁止写成带文案的对象，否则后端 `_expand_price_bands()` 会因下标访问报错
+- 已有公司：根据最新完整估值报告更新 `target_price`，并独立重评 `valuation_certainty`
+- `valuation_certainty` 取值 `0.00–1.00`（最多两位小数），只衡量目标价可靠程度，不得与 `cScore`、`mScore` 重复计分；必须评估盈利/现金流可预测性、商业模式和资本强度、资产负债表和融资需求、估值方法收敛度及主要尾部风险
+- 参考区间：`0.80–0.90` 极高、`0.70–0.79` 较高、`0.60–0.69` 中等、`0.50–0.59` 中低、`0.40–0.49` 较低、`<0.40` 很低；不得因偏好公司而上调，主要估值假设变化时必须重评
+- 自动计算 `buy_price = target_price × (0.68 + 0.14 × valuation_certainty)`；`buy_price` 仅作为使用端派生值，不写入 Watchlist
+- Watchlist 不再保存 `prebuy_conclusion`、实时价格、价格日期、价格带、估值锚或风险摘要
 - 所有 watchlist JSON 必须用 UTF-8 **无 BOM** 写入；BOM 会导致外部 `/stock-watchlist` 解析异常
 - 写入后运行 `sync_watchlist.ps1` 同步
 - 档位由公司基本面质量决定，与当前股价无关

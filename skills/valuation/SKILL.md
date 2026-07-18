@@ -2,7 +2,7 @@
 name: valuation
 description: >-
   对指定公司执行多方法估值分析（PE分位/PEG/EV-EBITDA/FCF Yield/逆向DCF/SOTP等），
-  完成后自动检索 watchlist JSON 文件，若标的存在则更新 price_bands、current_price、valuation_anchor，
+  完成后自动检索 watchlist JSON 文件，若标的存在则更新 target_price，并确保 valuation_certainty 存在，
   并同步到外部 Finance 项目。
   触发词：估值、用合适算法估值、给XX估值、valuation。
   适用市场：A股、港股、美股。
@@ -17,7 +17,7 @@ description: >-
 核心原则：
 - **多方法交叉验证**：至少使用 4-7 种估值方法，加权得出合理价中枢，不依赖单一方法
 - **方法选择按公司特征定**：成长型用 PEG + 逆向 DCF，成熟型用 PE 分位 + DDM，制造型用 EV/EBITDA + FCF Yield，预期分歧大时加 PVGO
-- **分析完成后自动联动 watchlist**：检索所有 watchlist JSON，命中则更新 price_bands
+- **分析完成后自动联动 watchlist**：检索 core/growth，命中则把最终加权合理估值写入 `target_price`
 
 ---
 
@@ -297,25 +297,47 @@ grep -l "代码\|公司名" data/watchlist_*.json
 
 检索关键词：股票代码（如 `600406.SH`）和公司简称（如 `国电南瑞`）。
 
-### 4.2 更新 price_bands
+### 4.2 更新精简估值字段
 
 若命中，用 Read 工具定位到该条目，然后 Edit 更新以下字段：
 
 ```json
-"current_price": <最新收盘价>,
-"price_date": "<YYYY-MM-DD>",
-"price_bands": [
-  <追高区边界>,
-  <中性区上界>,
-  <低估区下界>
-],
-"valuation_anchor": "<PE TTM XXx（3Y P50≈XXx），2026E EPS≈XX→Fwd PE XXx。PEG=XX，FCF Yield XX%，逆向DCF隐含g≈XX%。多方法加权合理价≈XX元(±XX%)。[估值更新YYYY-MM-DD]>"
+"target_price": <最终加权合理估值>,
+"valuation_certainty": <0.00-1.00，最多两位小数>
 ```
 
-**price_bands 格式约定**：
-- `[0]`：追高区下界（PE >此值不宜追高）
-- `[1]`：中性区上界（合理偏贵 vs 合理偏低的分界）
-- `[2]`：低估区上界（PE <此值有安全边际）
+`target_price` 必须取报告最终结论中的加权合理估值，不得取买入价、乐观情景价或区间上沿。Watchlist 不再保存实时价格、价格带、估值锚和风险摘要。
+
+> ⚠️ **估值分析不修改 `next_earnings_date` / `next_earnings_type`**。这两个字段由公司 PreBuy 分析或专门的财报日期扫描流程维护。若发现该条目日期为 `null`，在告知用户的总结中提醒"财报日期待确认"即可，不要自行估算填入。
+
+#### Valuation Certainty 认定
+
+`valuation_certainty` 只衡量当前 `target_price` 作为合理价值中枢的可靠程度，不评价公司质量或管理层质量，不得与 `cScore`、`mScore` 重复计分。
+
+必须逐项评估：
+
+1. 盈利和现金流是否可预测；
+2. 商业模式与资本强度是否稳定；
+3. 资产负债表和融资需求是否清晰；
+4. 不同估值方法是否收敛；
+5. 是否存在周期、单一客户、监管、技术迭代、商品价格、临床结果或重大资本开支等尾部风险。
+
+参考区间：
+
+- `0.80–0.90`：极高确定性，现金流稳定、估值区间窄、主要假设较少；
+- `0.70–0.79`：较高确定性，基本面稳定，但仍受行业、监管或中期增长假设影响；
+- `0.60–0.69`：中等确定性，需要一定增长、订单或行业景气判断；
+- `0.50–0.59`：中低确定性，盈利波动、技术迭代或周期因素明显；
+- `0.40–0.49`：较低确定性，高度依赖远期增长、客户集中或资本开支回报；
+- `<0.40`：很低确定性，存在商品、临床、转型、单一客户或二元事件等高不确定性。
+
+认定时优先估计目标价误差范围。高质量公司也可能确定性较低，低增长但现金流稳定的公司反而可能较高。不得因偏好公司而上调；财报、商业模式、资本结构或主要估值假设变化时必须重评。
+
+买入价自动计算，但不写入 Watchlist：
+
+```text
+buy_price = target_price × (0.68 + 0.14 × valuation_certainty)
+```
 
 ### 4.3 同步到 Finance 项目
 
@@ -325,7 +347,7 @@ grep -l "代码\|公司名" data/watchlist_*.json
 
 ### 4.4 告知用户
 
-总结更新了哪些标的、在哪个 watchlist 中、新的 price_bands 是什么。
+总结更新了哪些标的、在哪个 watchlist 中、新的 `target_price`、`valuation_certainty` 和自动计算的 `buy_price`。
 
 ---
 
@@ -340,7 +362,7 @@ grep -l "代码\|公司名" data/watchlist_*.json
 5. **敏感性分析**：PE × EPS 矩阵
 6. **风险与催化剂**
 7. **一句话结论**
-8. **Watchlist 更新确认**：更新了哪个文件、新的 price_bands
+8. **Watchlist 更新确认**：更新了哪个文件、新的 `target_price`、`valuation_certainty` 和自动计算的 `buy_price`
 
 ---
 
@@ -352,11 +374,13 @@ grep -l "代码\|公司名" data/watchlist_*.json
 → 第0步：拉取 tushare 行情 + 财务 + web_search 一致预期 + 读取已有深度分析
 → 第1步：选择 PE分位/PEG/EV-EBITDA/FCF Yield/DDM/逆向DCF/PVGO（7种）
 → 第2步：执行多方法估值，加权合理价 ≈ 26.7元
-→ 第3步：输出价格区间 [30.00, 26.50, 22.50]
+→ 第3步：确定最终加权合理估值 26.7 元
 → 第4步：grep data/watchlist_*.json → 命中 watchlist_core.json
-          更新 current_price=22.83, price_bands=[30.00, 26.50, 22.50]
+          独立评估 valuation_certainty=0.82
+          更新 target_price=26.7, valuation_certainty=0.82
+          自动计算 buy_price=26.7×(0.68+0.14×0.82)=21.22（不写入Watchlist）
           运行 sync_watchlist.ps1
-→ 第5步：告知用户「已更新 watchlist_core.json 国电南瑞 price_bands」
+→ 第5步：告知用户「已更新 watchlist_core.json 国电南瑞 target_price」
 ```
 
 ---

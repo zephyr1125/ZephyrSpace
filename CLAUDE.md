@@ -165,7 +165,7 @@ python scripts/weekly_watchlist_scan.py --tier portfolio
 
 ### 估值分析（触发词：估值 XXX / 使用合适算法对XXX估值 / valuation XXX）
 
-**不需要二次确认，收到即执行。** 对指定公司执行多方法估值（PE分位/PEG/EV-EBITDA/FCF Yield/DDM/逆向DCF/SOTP），完成后自动检索 watchlist JSON 更新 price_bands 并同步到 Finance 项目。完整 SOP 读 `skills/valuation/SKILL.md`。
+**不需要二次确认，收到即执行。** 对指定公司执行多方法估值（PE分位/PEG/EV-EBITDA/FCF Yield/DDM/逆向DCF/SOTP），完成后自动检索 watchlist JSON，将加权合理估值写入 `target_price` 并同步到 Finance 项目。完整 SOP 读 `skills/valuation/SKILL.md`。
 
 ```powershell
 # 同步到 Finance 项目
@@ -176,7 +176,7 @@ python scripts/weekly_watchlist_scan.py --tier portfolio
 1. 拉取最新行情+财务+一致预期
 2. 根据公司特征选择 4-6 种估值方法
 3. 多方法加权 → 合理价中枢 + 四级价格区间
-4. `grep` 检索所有 watchlist JSON → 命中则更新 `price_bands`/`current_price`/`valuation_anchor`
+4. `grep` 检索 core/growth → 命中则更新 `target_price`，按目标价误差范围独立认定 `valuation_certainty`（0.00–1.00），并计算 `buy_price = target_price × (0.68 + 0.14 × valuation_certainty)`；`buy_price` 不写入 Watchlist
 5. 运行 `sync_watchlist.ps1` 同步到 `E:\Work\Python\Finance\api\config\`
 
 ### AI 泡沫破裂仪表盘（触发词：AI泡沫打分 / 泡沫仪表盘 / 破裂指数 / 泡沫监测）
@@ -262,6 +262,22 @@ python scripts/forecast_monitor.py 2026-06-20 2026-07-02 --label 2026Q2财报预
 - 档位由基本面质量决定，与当前股价无关
 - 子 Agent 完成 PreBuy 后输出「建议档位：xxx」，**不写文件**
 - 主 Agent 汇总后向用户确认，确认后一次性写入
+
+### `next_earnings_date` 必填规则（强制）
+
+> 🔴 **`null` = 未知，与"限期日占位符"严格区分。**
+>
+> **写入 watchlist 时，`next_earnings_date` 只允许以下两种值：**
+> 1. **公司官方公告确认的具体日期**（如 `"2026-08-12"`，腾讯董事会6/22已公告）
+> 2. **`null`** — 未知、待确认
+>
+> **禁止写入的值（违反即 P1，必须修复）：**
+> - ❌ 交易所法定截止日（如 `08-31`、`04-30`、`10-31`、`03-31`）— 这是占位符不是真实日期
+> - ❌ 平台默认填充或历史规律推算的日期（如 `09-10`、`09-24`）
+> - ❌ 基于"大多数同类公司"推测的日期
+> - ❌ 基于 A 股日期推测的 H 股日期
+>
+> **判别方法**：写入前必须确认该日期来自**公司官方公告**（董事会会议通知、业绩发布日期公告等）。若仅来自东方财富/同花顺等平台的预约披露日历，这些平台自己也常以限期日填充，不可直接采信。必须用 Tavily 搜索「[公司名] [日期附近] 董事会 业绩 披露」做二次确认；搜不到官方公告 → 写 `null`。
 
 **关键文件**：`watchlist_core.json`、`watchlist_growth.json`、`watchlist_meta.json`（元数据 + tier 定义）
 

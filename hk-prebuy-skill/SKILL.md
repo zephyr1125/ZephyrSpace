@@ -999,44 +999,38 @@ next_date, next_type = get_hk_next_earnings("1299")  # 友邦 → 半年报
 
 将结果写入公司页 frontmatter：
 ```yaml
-下一财报日: 2026-08-31
+下一财报日:  # 已确认填日期，未确认留空
 下一财报类型: 中期业绩
 ```
 
-# 季报公司示例：
+# 季报公司示例（已确认具体日期）：
 ```yaml
 下一财报日: 2026-05-13
 下一财报类型: 季度业绩（Q1）
 ```
 
-### 第 3.6 步：计算 price_bands 并写入 watchlist
+> 🔴 **`null` 规则（强制）**：若无法从公司官方公告确认具体财报日期，`next_earnings_date` 必须写 `null`，不得用交易所法定截止日（`08-31`/`03-31`）或历史规律推算值填充。`null` = 待后续通过搜索确认后再补。详细规则见 `CLAUDE.md` § Watchlist 管理。
 
-**港股 price_bands 计算方法**（用历史 PE/PB 分位 × 每股盈利/净资产）：
+### 第 3.6 步：计算估值确定性并写入 Watchlist
 
-```
-price_bands[0]（追高线）= Q80 PE × 最新年化 EPS
-price_bands[1]（中性底）= Q50 PE × 最新年化 EPS
-price_bands[2]（最优区）= Q20 PE × 最新年化 EPS
-```
+价格带保留在公司页或估值报告中，不写入 Watchlist。Watchlist 只写最终加权合理估值和估值确定性：
 
-银行/保险改用 PB 分位：
-```
-price_bands[0] = Q80 PB × 最新每股净资产（BPS）
-```
-
-写入格式：
 ```json
 {
-  "price_bands": [HKD数字, HKD数字, HKD数字],
-  "price_bands_basis": "pe_ttm.manual_3y",
-  "price_bands_date": "2026-05-09"
+  "target_price": 100.0,
+  "valuation_certainty": 0.72
 }
 ```
 
-`price_bands_basis` 取值说明：
-- `pe_ttm.manual_3y`：手算3年PE分位
-- `pb.manual_3y`：手算3年PB分位（银行/保险）
-- 政策加成后追加 `+psN`，如 `pe_ttm.manual_3y+ps2`
+`valuation_certainty` 取值 `0.00–1.00`，最多两位小数，只评估目标价误差范围，不与公司或管理层评分重复。依次检查盈利和现金流可预测性、商业模式与资本强度、资产负债表和融资需求、估值方法收敛度，以及周期、客户、监管、技术、商品、临床和资本开支等尾部风险。
+
+参考区间：`0.80–0.90` 极高、`0.70–0.79` 较高、`0.60–0.69` 中等、`0.50–0.59` 中低、`0.40–0.49` 较低、`<0.40` 很低。不得因偏好公司而上调；主要假设变化时必须重评。
+
+买入价自动计算但不写入 Watchlist：
+
+```text
+buy_price = target_price × (0.68 + 0.14 × valuation_certainty)
+```
 
 ### 第 4 步：写反证条件
 
@@ -1216,7 +1210,7 @@ HKFRS 下投资物业公允价值变动计入损益，A 股会计不允许。地
   "dual_listing": "HK only",
   "hk_connect": true,
   "price_currency": "HKD",
-  "next_earnings_date": "2026-08-31",
+  "next_earnings_date": null,
   "next_earnings_type": "中期业绩"
 }
 ```

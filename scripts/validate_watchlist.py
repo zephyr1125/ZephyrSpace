@@ -18,21 +18,38 @@ from pathlib import Path
 REQUIRED_FIELDS = {
     'board',
     'code',
-    'current_price',
+    'cScore',
     'cycle_is_cyclical',
     'cycle_position',
     'dv_ttm',
+    'mScore',
     'name',
     'next_earnings_date',
     'next_earnings_type',
-    'position_role',
-    'prebuy_conclusion',
-    'price_bands',
-    'price_date',
-    'risk_flags',
-    'source_etf',
-    'valuation_anchor',
-    'watch_reason'
+    'target_price',
+    'valuation_certainty',
+    'watchlistLevel',
+    'trackingStatus',
+    'strategicCoreType',
+    'lastFundamentalReviewDate',
+    'lastRedFlagReviewDate'
+}
+
+REMOVED_FIELDS = {
+    'position', 'position_role', 'source_etf', 'watch_reason',
+    'current_price', 'price_date', 'price_bands', 'price_bands_basis',
+    'price_bands_date', 'valuation_anchor', 'risk_flags',
+    'prebuy_conclusion', 'targetPrice', 'buyPrice', 'maxWeight',
+    'entry_trigger', 'tier', 'deep_rating', 'deep_score', 'mgmt_score',
+    'last_updated', 'market', 'deep_analysis', 'mgmt_archive'
+}
+
+CANONICAL_FIELDS = REQUIRED_FIELDS
+
+VALID_LEVELS = {'S_STRATEGIC', 'A_CORE', 'B_GROWTH', 'NONE'}
+VALID_TRACKING_STATUSES = {'WATCHING', 'ARCHIVED'}
+VALID_STRATEGIC_TYPES = {
+    'COMPOUNDER', 'DEFENSIVE', 'GROWTH', 'POLICY_INFRA', 'CYCLICAL_QUALITY'
 }
 
 # cycle_position 有效值
@@ -57,11 +74,11 @@ VALID_EARNINGS_TYPES = {
 # board 有效值
 VALID_BOARDS = {
     '深',
+    '创',
     '沪',
     '科',
     '北',
     '港',
-    '美',
     '纽',
     '纳'
 }
@@ -76,10 +93,61 @@ def validate_entry(entry, entry_idx=0, tier='unknown'):
     for field in REQUIRED_FIELDS:
         if field not in entry:
             errors.append(f"  [字段缺失] {field}")
-        elif entry[field] is None and field not in ['cycle_position', 'dv_ttm']:
+        elif entry[field] is None and field not in [
+            'cycle_position', 'dv_ttm', 'next_earnings_date', 'next_earnings_type',
+            'strategicCoreType', 'lastFundamentalReviewDate', 'lastRedFlagReviewDate'
+        ]:
             errors.append(f"  [字段为空] {field} 不允许为 null")
-    
-    # 2. cycle_position 枚举检查
+
+    extra_fields = set(entry) - CANONICAL_FIELDS
+    if extra_fields:
+        errors.append(f"  [额外字段] {sorted(extra_fields)}")
+
+    # 2. 已废弃字段检查
+    for field in REMOVED_FIELDS:
+        if field in entry:
+            errors.append(f"  [废弃字段] {field} 不应继续存在")
+
+    # 3. 新估值字段检查
+    target_price = entry.get('target_price')
+    if not isinstance(target_price, (int, float)) or isinstance(target_price, bool) or target_price <= 0:
+        errors.append(f"  [类型错误] target_price 必须是大于 0 的数字，当前为 {target_price!r}")
+
+    certainty = entry.get('valuation_certainty')
+    if not isinstance(certainty, (int, float)) or isinstance(certainty, bool):
+        errors.append(f"  [类型错误] valuation_certainty 必须是数字，当前为 {certainty!r}")
+    elif not 0 <= certainty <= 1:
+        errors.append(f"  [范围错误] valuation_certainty 必须在 0.00-1.00，当前为 {certainty!r}")
+    elif round(certainty, 2) != certainty:
+        errors.append(f"  [精度错误] valuation_certainty 最多保留两位小数，当前为 {certainty!r}")
+
+    # 4. 三层分级与跟踪状态检查
+    level = entry.get('watchlistLevel')
+    if level not in VALID_LEVELS:
+        errors.append(f"  [等级错误] watchlistLevel = {level!r}")
+    tracking_status = entry.get('trackingStatus')
+    if tracking_status not in VALID_TRACKING_STATUSES:
+        errors.append(f"  [跟踪状态错误] trackingStatus = {tracking_status!r}；HOLDING 由消费端动态生成")
+    strategic_type = entry.get('strategicCoreType')
+    if level == 'S_STRATEGIC' and strategic_type not in VALID_STRATEGIC_TYPES:
+        errors.append(f"  [战略类型错误] S级必须填写 strategicCoreType，当前为 {strategic_type!r}")
+    if level != 'S_STRATEGIC' and strategic_type is not None:
+        errors.append("  [战略类型错误] 非S级 strategicCoreType 必须为 null")
+
+    c_score = entry.get('cScore')
+    m_score = entry.get('mScore')
+    if isinstance(c_score, (int, float)) and isinstance(m_score, (int, float)):
+        total = c_score + m_score
+        if level == 'S_STRATEGIC' and not (
+            total >= 170 and c_score >= 82 and m_score >= 82 and certainty >= 0.80
+        ):
+            errors.append("  [等级门槛] S级评分或估值确定性不达标")
+        elif level == 'A_CORE' and not (total >= 160 and c_score >= 80 and m_score >= 80):
+            errors.append("  [等级门槛] A级评分不达标")
+        elif level == 'B_GROWTH' and not (total >= 150 and c_score >= 75 and m_score >= 75):
+            errors.append("  [等级门槛] B级评分不达标")
+
+    # 5. cycle_position 枚举检查
     if 'cycle_position' in entry:
         val = entry['cycle_position']
         if val is not None and val not in VALID_CYCLE_POSITIONS:
@@ -91,28 +159,11 @@ def validate_entry(entry, entry_idx=0, tier='unknown'):
             else:
                 errors.append(f"  [枚举错误] cycle_position = '{val}' （无效枚举值）")
     
-    # 3. next_earnings_type 枚举检查
-    if 'next_earnings_type' in entry:
-        if entry['next_earnings_type'] not in VALID_EARNINGS_TYPES:
-            errors.append(f"  [枚举错误] next_earnings_type = '{entry['next_earnings_type']}'")
+    # 6. next_earnings_type 枚举检查
+    if entry.get('next_earnings_type') is not None and not isinstance(entry['next_earnings_type'], str):
+        errors.append("  [类型错误] next_earnings_type 必须是字符串或 null")
     
-    # 4. price_bands 格式和排序检查
-    if 'price_bands' in entry:
-        pb = entry['price_bands']
-        if pb is None:
-            warnings.append(f"  [待补充] price_bands = null （需要补充价格区间）")
-        elif isinstance(pb, dict):
-            # 对象格式错误
-            errors.append(f"  [格式错误] price_bands 是对象格式 {{...}}，应转换为数组格式 [买, 持, 卖]")
-        elif isinstance(pb, list):
-            if len(pb) != 3:
-                errors.append(f"  [格式错误] price_bands 应为3个元素，但有 {len(pb)} 个")
-            elif not (pb[0] > pb[1] > pb[2]):
-                errors.append(f"  [排序错误] price_bands {pb} 不是降序 (应为 [买入高, 持有中, 卖出低])")
-        else:
-            errors.append(f"  [类型错误] price_bands 应为数组或null，但是 {type(pb).__name__}")
-    
-    # 4b. board 格式检查
+    # 7. board 格式检查
     if 'board' in entry:
         board = entry['board']
         if board is None:
@@ -120,27 +171,23 @@ def validate_entry(entry, entry_idx=0, tier='unknown'):
         elif board not in VALID_BOARDS:
             errors.append(f"  [格式错误] board = '{board}' （无效值，应为 {VALID_BOARDS}）")
     
-    # 5. code 格式检查
+    # 8. code 格式检查
     if 'code' in entry:
         code = entry['code']
-        if not isinstance(code, str) or '.' not in code:
-            errors.append(f"  [格式错误] code = '{code}' （应为 XXXXXX.XX 格式）")
-    
-    # 6. risk_flags 检查
-    if 'risk_flags' in entry:
-        rf = entry['risk_flags']
-        if not isinstance(rf, list):
-            errors.append(f"  [类型错误] risk_flags 应为数组，但是 {type(rf)}")
-        elif len(rf) == 0:
-            warnings.append(f"  [缺内容] risk_flags 为空数组")
-    
-    # 7. 日期格式检查
-    for date_field in ['price_date', 'next_earnings_date']:
+        if not isinstance(code, str) or not code.endswith(('.SH', '.SZ', '.HK', '.US')):
+            errors.append(f"  [格式错误] code = '{code}' （必须带 .SH/.SZ/.HK/.US 后缀）")
+
+    # 9. 日期格式检查
+    for date_field in ['next_earnings_date', 'lastFundamentalReviewDate', 'lastRedFlagReviewDate']:
         if date_field in entry:
             date_val = entry[date_field]
+            if date_val is None:
+                continue
             if isinstance(date_val, str):
                 if not _is_valid_date(date_val):
                     errors.append(f"  [日期格式] {date_field} = '{date_val}' （应为 YYYY-MM-DD）")
+            else:
+                errors.append(f"  [类型错误] {date_field} 必须是字符串或 null")
     
     return errors, warnings
 
@@ -172,8 +219,12 @@ def validate_file(filepath):
         print(f"❌ 缺失顶层 'entries' 字段")
         return False
     
-    tier = data.get('tier', 'unknown')
+    tier = data.get('watchlistLevel', data.get('tier', 'unknown'))
     entries = data['entries']
+
+    if tier not in VALID_LEVELS:
+        print(f"❌ 顶层 watchlistLevel 无效：{tier!r}")
+        return False
     
     print(f"📊 基本信息：tier={tier}, entries={len(entries)}")
     
@@ -183,6 +234,8 @@ def validate_file(filepath):
     
     for idx, entry in enumerate(entries, 1):
         errors, warnings = validate_entry(entry, idx, tier)
+        if entry.get('watchlistLevel') != tier:
+            errors.append(f"  [等级不一致] entry={entry.get('watchlistLevel')!r}, file={tier!r}")
         
         if errors or warnings:
             name = entry.get('name', f'Entry {idx}')
@@ -215,8 +268,10 @@ def main():
     data_dir = Path(__file__).parent.parent / 'data'
     
     files_to_check = [
+        data_dir / 'watchlist_strategic.json',
         data_dir / 'watchlist_core.json',
-        data_dir / 'watchlist_growth.json'
+        data_dir / 'watchlist_growth.json',
+        data_dir / 'watchlist_out_of_scope.json'
     ]
     
     all_passed = True

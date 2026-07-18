@@ -3,7 +3,7 @@
   将 vault 中的 watchlist 分拆文件同步到外部 Finance 项目。
 
 .DESCRIPTION
-  watchlist 采用 meta/core/growth 两档配置，并包含独立指数列表，每次修改后
+  watchlist 采用 meta/strategic/core/growth/out_of_scope 配置，并包含独立指数列表，每次修改后
   运行此脚本将其同步到 E:\Work\Python\Finance\api\config\。
 
 .EXAMPLE
@@ -13,7 +13,14 @@
 $src = "$PSScriptRoot\..\data"
 $dst = "E:\Work\Python\Finance\api\config"
 
-$files = @("watchlist_meta.json", "watchlist_core.json", "watchlist_growth.json", "watchlist_index.json")
+$files = @(
+    "watchlist_meta.json",
+    "watchlist_strategic.json",
+    "watchlist_core.json",
+    "watchlist_growth.json",
+    "watchlist_out_of_scope.json",
+    "watchlist_index.json"
+)
 $deprecatedFiles = @("stock_watchlist.json", "watchlist_radar.json")
 
 foreach ($f in $deprecatedFiles) {

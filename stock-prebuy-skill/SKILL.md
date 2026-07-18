@@ -784,53 +784,65 @@ if payout_ratio > 0.80:
 
 目的：掌握下次「成绩单」发布时间，在财报窗口期前评估仓位风险，并跟踪买入逻辑是否得到验证。
 
-用 A 股法定披露截止日估算下一期：
+> 🔴 **关键规则：`null` = 未知。** 若无法从公司官方公告（董事会会议通知等）确认具体披露日期，`next_earnings_date` 必须写 `null`。
+> **禁止使用以下值填充：**
+> - 交易所法定截止日（`08-31`、`04-30`、`10-31`）
+> - 平台默认预约日（东方财富/同花顺常以截止日填充）
+> - 历史规律推算或同类公司类推
+>
+> **正确做法**：
+> 1. 先用 Tavily 搜索 `"[公司名] [当前年月] 董事会 业绩披露 预告"` 查找公司官方公告
+> 2. 搜到官方公告确认的日期 → 写入 `next_earnings_date`
+> 3. 搜不到 → 写 `null`，在 `next_earnings_type` 中标注预期财报类型
 
 ```python
+# 辅助：确定下一期财报类型（不改日期）
 from datetime import date
 
-def get_next_earnings_estimate(today=None):
-    """根据A股法定披露截止日规则，估算下一期财报日期和类型。"""
+def get_next_earnings_type(today=None):
+    """根据A股披露周期，返回下一期财报类型。日期不填。"""
     if today is None:
         today = date.today()
     y, m = today.year, today.month
     if m < 4:
-        return f"{y}-04-30", "一季报"
+        return "一季报"
     elif m < 8:
-        return f"{y}-08-31", "半年报"
+        return "半年报"
     elif m < 10:
-        return f"{y}-10-31", "三季报"
+        return "三季报"
     else:
-        return f"{y+1}-04-30", "年报"
+        return "年报"
 
-next_date, next_type = get_next_earnings_estimate()
+next_type = get_next_earnings_type()
 ```
 
-> 📌 若需精确到公司实际预约日（而非法定截止日），可用东方财富财经日历验证：
+> 📌 若需查找公司实际预约日期（非截止日），可用东方财富财经日历辅助：
 > `https://datacenter-web.eastmoney.com/api/data/v1/get?reportName=RPT_PUBLIC_OP_NEWREPORT&filter=(SECURITY_CODE%3D%22{6位代码}%22)&pageNumber=1&pageSize=5`
+> ⚠️ 东方财富返回的预约日有时也是平台默认填充的截止日（尤其在披露季早期），不可直接采信。必须用 Tavily 搜索公司公告二次确认。
 
-A股法定截止日参考：
+**A股法定披露截止日供参考（不可写入 watchlist）**：
 
-| 财报类型 | 法定截止 | `next_earnings_date` |
-|---|---|---|
-| 一季报 | 4月30日 | `YYYY-04-30` |
-| 半年报 | 8月31日 | `YYYY-08-31` |
-| 三季报 | 10月31日 | `YYYY-10-31` |
-| 年报 | 次年4月30日 | `YYYY+1-04-30` |
+| 财报类型 | 法定截止 |
+|---|---|
+| 一季报 | 4月30日 |
+| 半年报 | 8月31日 |
+| 三季报 | 10月31日 |
+| 年报 | 次年4月30日 |
 
 写入两处：
 
 **a. 公司页 frontmatter**：
 ```yaml
-下一财报日: 2026-08-31
+下一财报日:  # 已确认填日期，未确认留空
 下一财报类型: 半年报
 ```
 
-**b. watchlist JSON（两个字段必须同时更新，缺一不可）**：
+**b. watchlist JSON（两个字段必须同时存在，类型可填、日期未确认则 null）**：
 ```json
-"next_earnings_date": "2026-08-31",
+"next_earnings_date": null,
 "next_earnings_type": "半年报"
 ```
+> `next_earnings_date` 为 `null` 时 `next_earnings_type` 可填预期类型（半年报/年报等），方便后续按类型批量检索待确认项。
 
 > ⚠️ 财报发布前 2 周是高风险窗口：不在此窗口内新建仓，已持仓者评估是否需要减仓或加止损。每次财报发布后须更新为下下期。
 
@@ -1098,7 +1110,7 @@ PS 影响三个输出维度：
 
 **③ Watchlist 档位建议**
 
-> ⚠️ **档位由公司质量决定，与当前股价无关。** 估值偏贵只影响「何时买入」和 price_bands，不影响公司应属哪个档位。高估值的优质公司依然保留在 growth/core 档，等待合理价格区间出现时再行动。
+> ⚠️ **档位由公司质量决定，与当前股价无关。** 估值偏贵只影响估值报告中的操作判断，不影响公司应属哪个档位。Watchlist 仅保存估值报告的加权合理估值 `target_price` 与 `valuation_certainty`。
 
 | 情形 | 建议 |
 |---|---|
@@ -1231,14 +1243,14 @@ d = resp.json()["data"][0]
 
 ```json
 "cycle_is_cyclical": true,
-"cycle_position": "景气高峰"   // 取值见 cycle_position_schema：底部/复苏早期/复苏中期/景气高峰/收缩期/出清期
+"cycle_position": "景气高峰"   // 取值见 watchlist_meta.json 的 cycle_positions
 ```
 
 规则：
 - **非周期股**：省略这两个字段，不写 `false` 占位
 - **弱周期（成长弹性 > 周期弹性）**：仍写 `cycle_is_cyclical: true`，并在 `notes` 补注「弱周期，结论权重减半」
 - **每次 PreBuy 更新时同步刷新** `cycle_position`，不允许字段值过期停留
-- 取值必须与 `cycle_position_schema` 中的 6 个枚举严格一致，不得自造其他表述
+- 取值必须与 `watchlist_meta.json` 的 `cycle_positions` 中6个枚举严格一致，不得自造其他表述
 
 ---
 
@@ -1346,43 +1358,35 @@ def calc_price_bands(stock_code, current_price, company_type="non_financial"):
 
 注意：本模块不做技术分析预测（不画 K 线形态、不判断支撑阻力位的精确点位），只做基于估值和近期走势的买入时机风险评估。
 
-**价格区间写入规则（公司页 + watchlist 必做）**
+**价格区间与 Watchlist 写入规则**
 
 **① 公司页内的价格区间表**
 
 1. **内容为最终值**：表格数值已叠加所有调整（PS 政策加成、周期位置调整），不展示原始 P80/P50/P20（原始分位可在表格前参考列出）
 2. **位置在章节最后**：「近60日走势概述」→「政策加成说明」→「最终价格区间表」（顺序固定）
 3. **表格标题**注明调整来源：如「最终价格区间（含PS+3政策顺风加成）」
-4. **与 watchlist 保持一致**：`price_bands[0]` 对应红/黄分界，`[1]` 对应黄/绿，`[2]` 对应绿/双绿
+4. **与估值报告保持一致**：价格带只保留在公司页或估值报告中，不写入 Watchlist
 
-**② 写入 watchlist JSON**
+**② 写入 Watchlist JSON**
 
-用 `calc_price_bands()` 的输出，叠加模块12（PS）和模块13（周期）调整后写入。
+Watchlist 不写入价格带，只写入估值报告最终加权合理估值和独立认定的估值确定性：
 
-| 字段 | 含义 |
-|---|---|
-| `price_bands[0]` | 追高线（含调整），当前价超过此值 → 🔴 |
-| `price_bands[1]` | 中性底（P50 历史估值），当前价在 [1]~[0] → 🟡 |
-| `price_bands[2]` | 最优区起点（P20 历史估值），当前价 < [2] → 🟢🟢 |
-| `price_bands_basis` | 分位来源+PS加成（如 `pe_ttm.y3+ps3` / `pb.y3+ps1`） |
-| `price_bands_date` | 估值数据日期，格式 `YYYY-MM-DD` |
-
-写入格式示例：
 ```json
 {
-  "price_bands": [47.4, 43.12, 40.05],
-  "price_bands_basis": "pb.y3+ps3",
-  "price_bands_date": "2026-04-30"
+  "target_price": 100.0,
+  "valuation_certainty": 0.72
 }
 ```
 
-写入规则：
-- `price_bands[0]`：P80 价格，若 PS ≥ +1 叠加政策加成（+10% 对应 ×1.10）
-- `price_bands[1]`：P50 价格，不做 PS 调整
-- `price_bands[2]`：P20 价格，不调整
-- PE < 0（亏损）：`price_bands = null`，notes 注明「当期亏损，price_bands 暂不适用」
-- 银行/保险：`price_bands_basis` 以 `pb.y3` 为前缀
-- 每次做 PreBuy 更新时同步刷新，不允许保留旧值
+`valuation_certainty` 范围为 `0.00–1.00`，最多两位小数。它只衡量目标价误差范围，不评价公司或管理层质量。认定时必须检查盈利和现金流可预测性、商业模式和资本强度、资产负债表与融资需求、不同估值方法收敛度，以及周期、客户、监管、技术、商品、临床和资本开支等尾部风险。
+
+参考区间：`0.80–0.90` 极高、`0.70–0.79` 较高、`0.60–0.69` 中等、`0.50–0.59` 中低、`0.40–0.49` 较低、`<0.40` 很低。不得因偏好公司而上调；主要假设变化时必须重评。
+
+买入价自动计算但不写入 Watchlist：
+
+```text
+buy_price = target_price × (0.68 + 0.14 × valuation_certainty)
+```
 
 ---
 
