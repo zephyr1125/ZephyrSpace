@@ -1,6 +1,6 @@
 {
-  "schema_version": 23,
-  "last_updated": "2026-07-17",
+  "schema_version": 26,
+  "last_updated": "2026-07-20",
   "AGENT_INSTRUCTION": "修改前必须阅读 data/WATCHLIST_RULES.md 和 data/WATCHLIST_SCHEMA.md；按 S_STRATEGIC、A_CORE、B_GROWTH、NONE 的最高满足等级写入对应文件。trackingStatus 的 HOLDING 状态由 Finance 核算表动态覆盖，不得仅凭静态配置推断持仓。",
   "required_fields": [
     "name: 公司简称，与 01-公司/ 页面标题一致",
@@ -8,8 +8,8 @@
     "board: 沪/深/创/科/北/港/纽/纳",
     "cScore: 公司深度分析评分，数字类型",
     "mScore: 管理层评分，数字类型",
-    "target_price: 最新估值报告最终加权合理估值，正数",
-    "valuation_certainty: 目标价可靠程度，0.00-1.00；独立于 cScore 和 mScore",
+    "target_price: 最新估值报告最终加权合理估值，正数；NONE在停止正式估值时为 null",
+    "valuation_certainty: 目标价可靠程度，0.00-1.00；NONE在停止正式估值时为 null；独立于 cScore 和 mScore",
     "dv_ttm: 股息率 TTM，数字或 null",
     "next_earnings_date: 下一期财报日期，YYYY-MM-DD 或 null",
     "next_earnings_type: 下一期财报类型，字符串或 null",
@@ -38,6 +38,7 @@
       "label": "核心关注",
       "description": "买了就放的长期底仓。护城河足够深，价格合理时可主动建仓，无需等待特定催化剂。注意：档位由基本面质量决定，与当前股价无关；估值信息由 target_price 与 valuation_certainty 表达，不影响质量分档。",
       "entry_criteria": [
+        "双评分合计不低于160，且两项均不低于76",
         "护城河：行业垄断、品牌定价权、或不可复制资产（水电/核电/牌照）",
         "盈利质量：净现比 > 90%，ROE > 15% 且过去3年持续稳定",
         "成长要求：不需高增长，但不能出现结构性利润下滑",
@@ -51,6 +52,7 @@
       "label": "成长关注",
       "description": "高质量成长公司，护城河尚未达到垄断级别，或有关键成长节点仍待业绩验证。注意：档位由基本面质量决定，与当前股价无关；core 与 growth 的区别在于护城河深度和成长验证程度。",
       "entry_criteria": [
+        "双评分合计不低于150，且两项均不低于70",
         "基本面质量：净现比 > 80%，ROE > 15% 或处于上升趋势",
         "成长逻辑：有清晰的中长期成长驱动力，且已有历史业绩印证方向正确",
         "护城河：有可识别的差异化壁垒（技术/品牌/渠道/规模），不需垄断级别",
