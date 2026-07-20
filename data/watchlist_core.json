@@ -61,6 +61,25 @@
       "lastRedFlagReviewDate": null
     },
     {
+      "name": "CME Group",
+      "code": "CME.US",
+      "board": "纳",
+      "cScore": 87,
+      "mScore": 84,
+      "target_price": 260,
+      "valuation_certainty": 0.62,
+      "dv_ttm": 4.63,
+      "next_earnings_date": null,
+      "next_earnings_type": null,
+      "cycle_is_cyclical": true,
+      "cycle_position": null,
+      "watchlistLevel": "A_CORE",
+      "trackingStatus": "WATCHING",
+      "strategicCoreType": null,
+      "lastFundamentalReviewDate": "2026-07-20",
+      "lastRedFlagReviewDate": null
+    },
+    {
       "name": "福耀玻璃",
       "code": "600660.SH",
       "board": "沪",
