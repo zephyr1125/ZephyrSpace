@@ -16,11 +16,11 @@ aliases:
 market: US
 board: 纳
 最后更新日期: 2026-07-20
-watchlistLevel: A_CORE
-cScore: 81
-mScore: 80
-target_price: 265
-valuation_certainty: 0.60
+watchlistLevel: B_GROWTH
+cScore: 80
+mScore: 77
+target_price: 250
+valuation_certainty: 0.55
 ---
 
 # Amazon.com（AMZN）
