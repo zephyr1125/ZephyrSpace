@@ -5,7 +5,7 @@ aliases: [Donaldson, Donaldson Company, DCI]
 细分赛道: 过滤系统与替换滤芯
 可投资性: 中
 阶段: 稳健增长
-关注级别: Growth
+关注级别: A_CORE
 最后更新日期: 2026-07-17
 market: US
 board: 纽
@@ -43,4 +43,3 @@ board: 纽
 - [[02-主题/高ROE低PE候选池]]
 - [[Parker-Hannifin(PH)]]
 - [[Pentair(PNR)]]
-

@@ -5,7 +5,7 @@ aliases: [MSA Safety, MSA, Mine Safety Appliances]
 细分赛道: 消防与职业安全防护设备
 可投资性: 中
 阶段: 成熟期
-关注级别: Growth
+关注级别: A_CORE
 最后更新日期: 2026-07-17
 market: US
 board: 纽
@@ -40,4 +40,3 @@ board: 纽
 - [[02-主题/高ROE低PE候选池]]
 - [[Pentair(PNR)]]
 - [[Cboe Global Markets(CBOE)]]
-

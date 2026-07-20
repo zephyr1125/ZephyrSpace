@@ -18,8 +18,8 @@ Watchlist 由四个研究等级文件组成：
 | `name` | string | 公司简称，与公司页标题一致 |
 | `code` | string | 股票代码，包含市场后缀 |
 | `board` | string | 上市板块简称 |
-| `target_price` | number | 最新估值报告中的加权合理估值；币种与股票交易币种一致 |
-| `valuation_certainty` | number | `target_price` 的可靠程度，范围 `0.00–1.00`，最多两位小数 |
+| `target_price` | number / null | 最新估值报告中的加权合理估值；币种与股票交易币种一致。仅当 `NONE` 因质量门槛停止正式估值时可为 `null` |
+| `valuation_certainty` | number / null | `target_price` 的可靠程度，范围 `0.00–1.00`，最多两位小数。仅当 `NONE` 因质量门槛停止正式估值时可为 `null` |
 | `dv_ttm` | number / null | 股息率 TTM，单位 `%` |
 | `next_earnings_date` | string / null | 下一期财报日期，格式 `YYYY-MM-DD`。**必须来自公司官方公告确认的真实日期**；未确认时务必写 `null`。禁止用交易所法定截止日（08-31/04-30/10-31）或历史推算值填充 |
 | `next_earnings_type` | string / null | 下一期财报类型。`next_earnings_date` 为 `null` 时此字段也必须为 `null` |
@@ -40,8 +40,8 @@ Watchlist 由四个研究等级文件组成：
 按红线、S、A、B、NONE的顺序判断，同一公司只进入最高满足等级：
 
 - `S_STRATEGIC`：总分≥170，两项均≥82，`valuation_certainty`≥0.80，现金流质量与盈利稳定性通过，且无重大红线。
-- `A_CORE`：总分≥160，两项均≥80。
-- `B_GROWTH`：总分≥150，两项均≥75。
+- `A_CORE`：总分≥160，两项均≥76。
+- `B_GROWTH`：总分≥150，两项均≥70。
 - `NONE`：不满足以上条件或触发重大治理、财务异常、投资逻辑证伪红线。
 
 阈值均包含边界。关键字段缺失时不得推断或补高分。
@@ -98,16 +98,16 @@ Watchlist 由四个研究等级文件组成：
 
 ## 估值字段规则
 
-1. `target_price` 必须直接取最新估值报告的最终“加权合理估值”，不得取买入价、乐观情景价或价格区间上沿。
+1. `S_STRATEGIC`、`A_CORE`、`B_GROWTH`的`target_price`必须直接取最新估值报告的最终“加权合理估值”，不得取买入价、乐观情景价或价格区间上沿。
 2. 同一条目只允许一个有效目标价字段，即 `target_price`。
-3. `target_price` 必须为大于 `0` 的数字。
+3. `S_STRATEGIC`、`A_CORE`、`B_GROWTH`的`target_price`必须为大于`0`的数字。`NONE`若因质量门槛停止正式估值，`target_price`和`valuation_certainty`必须同时为`null`，且不计算买入价或设置正式价格分区。
 4. `valuation_certainty` 衡量目标价误差范围，不评价公司或管理层质量，不得与 `cScore`、`mScore` 重复计分。
 5. 认定时依次检查盈利和现金流可预测性、商业模式和资本强度、资产负债表和融资需求、估值方法收敛度，以及周期、客户、监管、技术、商品、临床和资本开支等尾部风险。
 6. 参考区间：`0.80–0.90` 极高，`0.70–0.79` 较高，`0.60–0.69` 中等，`0.50–0.59` 中低，`0.40–0.49` 较低，低于 `0.40` 很低。
 7. 高质量公司也可能估值确定性低；低增长但现金流稳定的公司可能估值确定性高。不得因偏好公司而上调。
 8. 财报、商业模式、资本结构或主要估值假设变化时，必须重新评估。
 
-买入价由使用方自动计算，不写入 Watchlist：
+存在有效估值时，买入价由使用方自动计算，不写入 Watchlist：
 
 ```text
 buy_price = target_price × (0.68 + 0.14 × valuation_certainty)
@@ -130,5 +130,5 @@ python .\scripts\validate_watchlist.py
 
 ---
 
-**最后更新**：2026-07-17
-**Schema 版本**：23
+**最后更新**：2026-07-19
+**Schema 版本**：26

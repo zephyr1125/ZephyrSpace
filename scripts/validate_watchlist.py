@@ -95,7 +95,8 @@ def validate_entry(entry, entry_idx=0, tier='unknown'):
             errors.append(f"  [字段缺失] {field}")
         elif entry[field] is None and field not in [
             'cycle_position', 'dv_ttm', 'next_earnings_date', 'next_earnings_type',
-            'strategicCoreType', 'lastFundamentalReviewDate', 'lastRedFlagReviewDate'
+            'strategicCoreType', 'lastFundamentalReviewDate', 'lastRedFlagReviewDate',
+            'target_price', 'valuation_certainty'
         ]:
             errors.append(f"  [字段为空] {field} 不允许为 null")
 
@@ -109,20 +110,24 @@ def validate_entry(entry, entry_idx=0, tier='unknown'):
             errors.append(f"  [废弃字段] {field} 不应继续存在")
 
     # 3. 新估值字段检查
+    level = entry.get('watchlistLevel')
     target_price = entry.get('target_price')
-    if not isinstance(target_price, (int, float)) or isinstance(target_price, bool) or target_price <= 0:
+    certainty = entry.get('valuation_certainty')
+    # NONE因质量门槛停止正式估值时，两个估值字段必须同时为空。
+    valuation_paused = level == 'NONE' and target_price is None and certainty is None
+    if level == 'NONE' and (target_price is None) != (certainty is None):
+        errors.append("  [估值字段] NONE停止正式估值时 target_price 与 valuation_certainty 必须同时为 null")
+    elif not valuation_paused and (not isinstance(target_price, (int, float)) or isinstance(target_price, bool) or target_price <= 0):
         errors.append(f"  [类型错误] target_price 必须是大于 0 的数字，当前为 {target_price!r}")
 
-    certainty = entry.get('valuation_certainty')
-    if not isinstance(certainty, (int, float)) or isinstance(certainty, bool):
+    if not valuation_paused and (not isinstance(certainty, (int, float)) or isinstance(certainty, bool)):
         errors.append(f"  [类型错误] valuation_certainty 必须是数字，当前为 {certainty!r}")
-    elif not 0 <= certainty <= 1:
+    elif not valuation_paused and not 0 <= certainty <= 1:
         errors.append(f"  [范围错误] valuation_certainty 必须在 0.00-1.00，当前为 {certainty!r}")
-    elif round(certainty, 2) != certainty:
+    elif not valuation_paused and round(certainty, 2) != certainty:
         errors.append(f"  [精度错误] valuation_certainty 最多保留两位小数，当前为 {certainty!r}")
 
     # 4. 三层分级与跟踪状态检查
-    level = entry.get('watchlistLevel')
     if level not in VALID_LEVELS:
         errors.append(f"  [等级错误] watchlistLevel = {level!r}")
     tracking_status = entry.get('trackingStatus')
@@ -142,9 +147,9 @@ def validate_entry(entry, entry_idx=0, tier='unknown'):
             total >= 170 and c_score >= 82 and m_score >= 82 and certainty >= 0.80
         ):
             errors.append("  [等级门槛] S级评分或估值确定性不达标")
-        elif level == 'A_CORE' and not (total >= 160 and c_score >= 80 and m_score >= 80):
+        elif level == 'A_CORE' and not (total >= 160 and c_score >= 76 and m_score >= 76):
             errors.append("  [等级门槛] A级评分不达标")
-        elif level == 'B_GROWTH' and not (total >= 150 and c_score >= 75 and m_score >= 75):
+        elif level == 'B_GROWTH' and not (total >= 150 and c_score >= 70 and m_score >= 70):
             errors.append("  [等级门槛] B级评分不达标")
 
     # 5. cycle_position 枚举检查

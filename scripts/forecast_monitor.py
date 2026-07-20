@@ -7,8 +7,9 @@
   2) 理杏仁 fundamental/non_financial 批量补估值（PE/PB/PS/市值/股息率）
   3) 理杏仁 fs/non_financial 逐只补最近季度营收/净利润 → 算同比
   4) 理杏仁 company/industries 逐只补申万2021二级行业分类
-  5) 合并进 data/forecast_scan/<label>.json（按 code 去重，保留最新一次）
-  6) 渲染 02-主题/财报预告/<label>.md（个股列表 + 行业聚合表）
+  5) CNINFO hisAnnouncement/query 拉「正式半年报」→ 与 Watchlist 交叉比对
+  6) 合并进 data/forecast_scan/<label>.json（按 code 去重，保留最新一次）
+  7) 渲染 02-主题/财报预告/<label>.md（行业聚合表 + Watchlist 半年报告警 + 个股预告列表）
 
 用法:
   python scripts/forecast_monitor.py 2026-06-01 2026-07-03
@@ -40,9 +41,22 @@ DOC_DIR = os.path.join(VAULT, "02-主题", "财报预告")
 # ================= CNINFO =================
 CNINFO_ENDPOINT = "http://www.cninfo.com.cn/new/hisAnnouncement/query"
 CATEGORY_FORECAST = "category_yjygjxz_szsh"
+CATEGORY_SEMIANNUAL = "category_bndbg_szsh"
+
+# ================= Watchlist =================
+WATCHLIST_FILES = [
+    ("S_STRATEGIC", "data/watchlist_strategic.json"),
+    ("A_CORE", "data/watchlist_core.json"),
+    ("B_GROWTH", "data/watchlist_growth.json"),
+]
 
 
-def cninfo_forecasts(start, end, plate="sz;sh;bj", page_size=30, sleep=0.3):
+def cninfo_forecasts(start, end, plate="sz;sh;bj", page_size=30, sleep=0.3,
+                     category=None):
+    """拉取 CNINFO 公告清单。category 默认 CATEGORY_FORECAST（业绩预告），
+    可传入 CATEGORY_SEMIANNUAL 拉取正式半年报。"""
+    if category is None:
+        category = CATEGORY_FORECAST
     out, page = [], 1
     while True:
         r = requests.post(
@@ -51,7 +65,7 @@ def cninfo_forecasts(start, end, plate="sz;sh;bj", page_size=30, sleep=0.3):
                 "pageNum": str(page), "pageSize": str(page_size),
                 "column": "szse", "tabName": "fulltext", "plate": plate,
                 "stock": "", "searchkey": "", "secid": "",
-                "category": CATEGORY_FORECAST, "trade": "",
+                "category": category, "trade": "",
                 "seDate": f"{start}~{end}", "sortName": "time",
                 "sortType": "desc", "isHLtitle": "true",
             },
@@ -84,6 +98,49 @@ def cninfo_forecasts(start, end, plate="sz;sh;bj", page_size=30, sleep=0.3):
         if a["code"] not in by_code:
             by_code[a["code"]] = a
     return list(by_code.values())
+
+
+def load_watchlist_a_share_codes():
+    """读取三个 watchlist JSON，返回 {bare_6digit_code: {name, tier, code_with_suffix}}。
+    仅匹配 A 股（.SH/.SZ 后缀），CNINFO 不覆盖 H 股/美股。"""
+    watchlist = {}
+    for tier, rel_path in WATCHLIST_FILES:
+        full_path = os.path.join(VAULT, rel_path)
+        if not os.path.exists(full_path):
+            continue
+        with open(full_path, encoding="utf-8") as f:
+            data = json.load(f)
+        for entry in data.get("entries", []):
+            code = entry.get("code", "")
+            if not isinstance(code, str) or not code:
+                continue
+            if code.endswith(".SH") or code.endswith(".SZ"):
+                bare = code.split(".")[0]
+                watchlist[bare] = {
+                    "name": entry.get("name", ""),
+                    "tier": tier,
+                    "code_with_suffix": code,
+                }
+    return watchlist
+
+
+def cross_reference_watchlist(announcements, watchlist):
+    """过滤公告清单，仅保留 watchlist 中的标的，附加 tier 信息。
+    按 tier 优先级（S > A > B）+ 日期降序排列。"""
+    TIER_ORDER = {"S_STRATEGIC": 0, "A_CORE": 1, "B_GROWTH": 2}
+    hits = []
+    for a in announcements:
+        code = a["code"]
+        if code in watchlist:
+            wl = watchlist[code]
+            hits.append({
+                **a,
+                "tier": wl["tier"],
+                "watchlist_name": wl["name"],
+                "code_with_suffix": wl["code_with_suffix"],
+            })
+    hits.sort(key=lambda x: (TIER_ORDER.get(x["tier"], 9), x["date"]))
+    return hits
 
 
 # ============ 标题方向正则 ============
@@ -260,11 +317,14 @@ def render_md(store, label):
 
     lines = []
     lines.append(f"# {label}\n")
-    lines.append(f"> 数据源：CNINFO 结构化预告 + 理杏仁估值/财务/申万行业")
+    lines.append("> 数据源：CNINFO 结构化预告 + 半年报 Watchlist 交叉比对 + 理杏仁估值/财务/申万行业")
     lines.append(f"> 累计收录：**{n}** 家公司")
     if store.get("scan_log"):
         last = store["scan_log"][-1]
         lines.append(f"> 最近扫描：{last['ran_at']}（区间 {last['start']}~{last['end']}，新增 {last['added']} / 更新 {last['updated']}）")
+    sa_count = len(store.get("semiannual_alerts", []))
+    if sa_count:
+        lines.append(f"> 🔔 Watchlist 半年报已披露：**{sa_count}** 家（需更新三件套）")
     lines.append("")
 
     # ---- 行业聚合表 ----
@@ -289,6 +349,19 @@ def render_md(store, label):
         lines.append(f"| {key} | {g['l1']} | {g['n']} | {share} | "
                      f"{fmt_pct(avg(g['toi']))} | {fmt_pct(avg(g['np']))} |")
     lines.append("")
+
+    # ---- Watchlist 半年报告警 ----
+    semiannual_alerts = store.get("semiannual_alerts", [])
+    if semiannual_alerts:
+        lines.append("## ⚠️ Watchlist 公司半年报已披露（需更新三件套）\n")
+        lines.append("> 以下 Watchlist 公司在扫描区间内已发布正式半年报，建议安排三件套分析更新。\n")
+        lines.append("| 公告日 | 代码 | 简称 | Watchlist 档位 | 公告标题 |")
+        lines.append("|---|---|---|---|---|")
+        for a in semiannual_alerts:
+            lines.append(f"| {a['date']} | {a.get('code_with_suffix', a['code'])} "
+                         f"| {a.get('watchlist_name', a.get('name', '-'))} "
+                         f"| {a['tier']} | {a['title']} |")
+        lines.append("")
 
     # ---- 个股列表 ----
     lines.append("## 个股预告列表\n")
@@ -389,6 +462,37 @@ def main():
             print(f"      ... {idx}/{len(codes)}")
         time.sleep(0.15)
 
+    # ---- [5/5] 半年报扫描 + Watchlist 交叉比对 ----
+    print(f"\n[5/5] CNINFO 拉取 {args.start}~{args.end} 正式半年报 + Watchlist 交叉比对 ...")
+    watchlist = load_watchlist_a_share_codes()
+    semiannual_all = cninfo_forecasts(args.start, args.end, category=CATEGORY_SEMIANNUAL)
+    print(f"      全市场半年报：{len(semiannual_all)} 份")
+    semiannual_hits = cross_reference_watchlist(semiannual_all, watchlist)
+
+    # 合并到 store（按 code 去重，新 code 追加，已有 code 更新日期/标题）
+    existing_alerts = {a["code"]: a for a in store.get("semiannual_alerts", [])}
+    sa_added = 0
+    sa_new_codes = set()
+    for sa in semiannual_hits:
+        c = sa["code"]
+        if c not in existing_alerts:
+            existing_alerts[c] = {**sa, "first_seen": dt.datetime.utcnow().strftime("%Y-%m-%d")}
+            sa_added += 1
+            sa_new_codes.add(c)
+        else:
+            existing_alerts[c].update({k: sa[k] for k in ["date", "title", "url"] if k in sa})
+    store["semiannual_alerts"] = sorted(
+        existing_alerts.values(),
+        key=lambda x: ({"S_STRATEGIC": 0, "A_CORE": 1, "B_GROWTH": 2}.get(x.get("tier", ""), 9),
+                       x.get("date", "")),
+    )
+    print(f"      → 命中 Watchlist：{len(semiannual_hits)} 家（本次新增 {sa_added}，累计 {len(store['semiannual_alerts'])} 家）")
+    if semiannual_hits:
+        for sa in semiannual_hits:
+            tag = "🆕" if sa["code"] in sa_new_codes else "  "
+            print(f"         {tag} [{sa['tier']}] {sa.get('code_with_suffix', sa['code'])} "
+                  f"{sa.get('watchlist_name', sa.get('name', '-'))}  {sa['date']}")
+
     store["scan_log"].append({
         "ran_at": dt.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"),
         "start": args.start, "end": args.end,
@@ -432,6 +536,18 @@ def main():
             print("-" * 130)
             for c in sorted(updated_codes, key=lambda c: (existing[c].get("date", ""), c)):
                 _print_company_row(existing[c])
+
+    # ---- 半年报 Watchlist 告警 ----
+    if store.get("semiannual_alerts"):
+        print(f"\n{'═'*80}")
+        print(f"🔔 Watchlist 公司半年报已披露 — 以下标的需更新三件套分析（累计 {len(store['semiannual_alerts'])} 家）")
+        print(f"{'═'*80}")
+        TIER_LABEL = {"S_STRATEGIC": "战略", "A_CORE": "核心", "B_GROWTH": "成长"}
+        for a in store["semiannual_alerts"]:
+            tier_cn = TIER_LABEL.get(a["tier"], a["tier"])
+            print(f"  [{tier_cn}] {a.get('code_with_suffix', a['code']):<12} "
+                  f"{a.get('watchlist_name', a.get('name', '-')):<10} "
+                  f"{a['date']}  {a['title'][:50]}")
 
     print()
 

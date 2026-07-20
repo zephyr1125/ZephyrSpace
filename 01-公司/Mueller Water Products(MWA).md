@@ -5,7 +5,7 @@ aliases: [Mueller Water Products, MWA]
 细分赛道: 市政水务基础设施、阀门、消防栓与智能计量
 可投资性: 中
 阶段: 稳健增长
-关注级别: Growth
+关注级别: A_CORE
 最后更新日期: 2026-07-17
 market: US
 board: 纽

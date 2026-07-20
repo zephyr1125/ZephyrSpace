@@ -5,13 +5,14 @@ from __future__ import annotations
 
 import json
 import re
+import sys
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
 COMPANY_DIR = ROOT / "01-公司"
-TODAY = "2026-07-17"
+TODAY = "2026-07-19"
 
 STRATEGIC_META = {
     "长江电力": "DEFENSIVE",
@@ -78,7 +79,12 @@ def classify(entry: dict) -> str:
     if not isinstance(c_score, (int, float)) or not isinstance(m_score, (int, float)):
         return "NONE"
     total = c_score + m_score
-    certainty = round(float(entry.get("valuation_certainty", -1)), 4)
+    certainty_raw = entry.get("valuation_certainty")
+    certainty = (
+        round(float(certainty_raw), 4)
+        if isinstance(certainty_raw, (int, float)) and not isinstance(certainty_raw, bool)
+        else -1
+    )
     if (
         entry["name"] in STRATEGIC_META
         and total >= 170
@@ -87,9 +93,9 @@ def classify(entry: dict) -> str:
         and certainty >= 0.80
     ):
         return "S_STRATEGIC"
-    if total >= 160 and c_score >= 80 and m_score >= 80:
+    if total >= 160 and c_score >= 76 and m_score >= 76:
         return "A_CORE"
-    if total >= 150 and c_score >= 75 and m_score >= 75:
+    if total >= 150 and c_score >= 70 and m_score >= 70:
         return "B_GROWTH"
     return "NONE"
 
@@ -98,17 +104,19 @@ def enrich(entry: dict, level: str) -> dict:
     """添加研究分级与跟踪字段，保留现有估值和财报数据。"""
     result = dict(entry)
     result["watchlistLevel"] = level
-    result["trackingStatus"] = "WATCHING"
+    result["trackingStatus"] = result.get("trackingStatus", "WATCHING")
     result["strategicCoreType"] = STRATEGIC_META.get(result["name"])
-    result["lastFundamentalReviewDate"] = fundamental_review_date(result["name"])
-    result["lastRedFlagReviewDate"] = TODAY if level == "S_STRATEGIC" else None
+    result["lastFundamentalReviewDate"] = result.get(
+        "lastFundamentalReviewDate", fundamental_review_date(result["name"])
+    )
+    result["lastRedFlagReviewDate"] = result.get("lastRedFlagReviewDate")
     return result
 
 
 def write_group(filename: str, level: str, entries: list[dict]) -> None:
     """写出单一研究等级文件。"""
     payload = {
-        "version": 7,
+        "version": json.loads((DATA_DIR / filename).read_text(encoding="utf-8")).get("version", 1),
         "watchlistLevel": level,
         "updated_at": TODAY,
         "entries": entries,
@@ -121,7 +129,64 @@ def write_group(filename: str, level: str, entries: list[dict]) -> None:
     )
 
 
+def promote_growth_to_core() -> None:
+    """仅迁移成长池中满足最新 A 级门槛的条目，避免影响其他层级。"""
+    core_path = DATA_DIR / "watchlist_core.json"
+    growth_path = DATA_DIR / "watchlist_growth.json"
+    core = json.loads(core_path.read_text(encoding="utf-8"))
+    growth = json.loads(growth_path.read_text(encoding="utf-8"))
+
+    promoted = []
+    retained = []
+    for entry in growth["entries"]:
+        if classify(entry) == "A_CORE":
+            promoted_entry = dict(entry)
+            promoted_entry["watchlistLevel"] = "A_CORE"
+            promoted_entry["strategicCoreType"] = None
+            promoted.append(promoted_entry)
+        else:
+            retained.append(entry)
+
+    core["entries"].extend(promoted)
+    write_group("watchlist_core.json", "A_CORE", core["entries"])
+    write_group("watchlist_growth.json", "B_GROWTH", retained)
+    names = "、".join(entry["name"] for entry in promoted)
+    print(f"成长池升入 A 级：{len(promoted)} 家：{names}")
+
+
+def promote_none_to_growth() -> None:
+    """仅迁移未入池中满足最新 B 级门槛的条目，避免影响其他层级。"""
+    growth_path = DATA_DIR / "watchlist_growth.json"
+    none_path = DATA_DIR / "watchlist_out_of_scope.json"
+    growth = json.loads(growth_path.read_text(encoding="utf-8"))
+    none = json.loads(none_path.read_text(encoding="utf-8"))
+
+    promoted = []
+    retained = []
+    for entry in none["entries"]:
+        if classify(entry) == "B_GROWTH":
+            promoted_entry = dict(entry)
+            promoted_entry["watchlistLevel"] = "B_GROWTH"
+            promoted_entry["strategicCoreType"] = None
+            promoted.append(promoted_entry)
+        else:
+            retained.append(entry)
+
+    growth["entries"].extend(promoted)
+    write_group("watchlist_growth.json", "B_GROWTH", growth["entries"])
+    write_group("watchlist_out_of_scope.json", "NONE", retained)
+    names = "、".join(entry["name"] for entry in promoted)
+    print(f"NONE 池升入 B 级：{len(promoted)} 家：{names}")
+
+
 def main() -> None:
+    if "--promote-growth-to-core" in sys.argv:
+        promote_growth_to_core()
+        return
+    if "--promote-none-to-growth" in sys.argv:
+        promote_none_to_growth()
+        return
+
     groups = {level: [] for level in ("S_STRATEGIC", "A_CORE", "B_GROWTH", "NONE")}
     for raw in load_entries():
         level = classify(raw)

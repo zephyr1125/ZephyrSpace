@@ -5,7 +5,7 @@ aliases: [网易, NetEase, NTES]
 细分赛道: 在线游戏、音乐与教育服务
 可投资性: 中
 阶段: 成熟期
-关注级别: Growth
+关注级别: A_CORE
 最后更新日期: 2026-07-17
 market: US
 board: 纳
@@ -40,4 +40,3 @@ board: 纳
 - [[02-主题/高ROE低PE候选池]]
 - [[EXL Service(EXLS)]]
 - [[Tradeweb Markets(TW)]]
-
