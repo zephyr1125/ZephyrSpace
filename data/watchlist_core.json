@@ -23,6 +23,25 @@
       "lastRedFlagReviewDate": null
     },
     {
+      "name": "伯克希尔哈撒韦",
+      "code": "BRK.B.US",
+      "board": "纽",
+      "cScore": 88,
+      "mScore": 86,
+      "target_price": 510,
+      "valuation_certainty": 0.70,
+      "dv_ttm": null,
+      "next_earnings_date": "2026-07-31",
+      "next_earnings_type": "季报",
+      "cycle_is_cyclical": true,
+      "cycle_position": null,
+      "watchlistLevel": "A_CORE",
+      "trackingStatus": "WATCHING",
+      "strategicCoreType": null,
+      "lastFundamentalReviewDate": "2026-07-20",
+      "lastRedFlagReviewDate": "2026-07-20"
+    },
+    {
       "name": "Visa",
       "code": "V",
       "board": "美",
