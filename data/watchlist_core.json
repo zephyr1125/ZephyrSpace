@@ -23,6 +23,25 @@
       "lastRedFlagReviewDate": null
     },
     {
+      "name": "Visa",
+      "code": "V",
+      "board": "美",
+      "cScore": 89,
+      "mScore": 84,
+      "target_price": 365,
+      "valuation_certainty": 0.60,
+      "dv_ttm": 0.75,
+      "next_earnings_date": "2026-07-28",
+      "next_earnings_type": "季报",
+      "cycle_is_cyclical": false,
+      "cycle_position": null,
+      "watchlistLevel": "A_CORE",
+      "trackingStatus": "WATCHING",
+      "strategicCoreType": null,
+      "lastFundamentalReviewDate": "2026-07-20",
+      "lastRedFlagReviewDate": null
+    },
+    {
       "name": "福耀玻璃",
       "code": "600660.SH",
       "board": "沪",
