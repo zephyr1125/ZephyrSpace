@@ -3,9 +3,9 @@ aliases: [AJG估值, Gallagher估值]
 公司: "[[01-公司/Gallagher(AJG)]]"
 股票代码: AJG
 分析日期: 2026-07-20
-合理价中枢: $250
-估值区间: "[220, 250, 290]"
-valuation_certainty: 0.58
+合理价中枢: $240
+估值区间: "[210, 240, 280]"
+valuation_certainty: 0.53
 ---
 
 # Gallagher（AJG）估值分析

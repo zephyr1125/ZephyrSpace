@@ -9,11 +9,11 @@ aliases: [AJG, Gallagher, Arthur J Gallagher]
 最后更新日期: 2026-07-20
 market: US
 board: 纽
-watchlistLevel: A_CORE
-cScore: 81
-mScore: 83
-target_price: 250
-valuation_certainty: 0.58
+watchlistLevel: B_GROWTH
+cScore: 79
+mScore: 78
+target_price: 240
+valuation_certainty: 0.53
 ---
 
 # Gallagher（AJG）
