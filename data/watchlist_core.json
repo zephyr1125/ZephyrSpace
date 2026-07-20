@@ -42,6 +42,25 @@
       "lastRedFlagReviewDate": null
     },
     {
+      "name": "Gallagher",
+      "code": "AJG.US",
+      "board": "纽",
+      "cScore": 81,
+      "mScore": 83,
+      "target_price": 250,
+      "valuation_certainty": 0.58,
+      "dv_ttm": 1.10,
+      "next_earnings_date": "2026-07-30",
+      "next_earnings_type": "季报",
+      "cycle_is_cyclical": false,
+      "cycle_position": null,
+      "watchlistLevel": "A_CORE",
+      "trackingStatus": "WATCHING",
+      "strategicCoreType": null,
+      "lastFundamentalReviewDate": "2026-07-20",
+      "lastRedFlagReviewDate": "2026-07-20"
+    },
+    {
       "name": "AutoZone",
       "code": "AZO.US",
       "board": "纽",
