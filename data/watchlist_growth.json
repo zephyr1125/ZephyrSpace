@@ -881,10 +881,10 @@
       "name": "阿里巴巴",
       "code": "09988.HK",
       "board": "港",
-      "cScore": 72,
-      "mScore": 79,
-      "target_price": 130,
-      "valuation_certainty": 0.6,
+      "cScore": 76,
+      "mScore": 74,
+      "target_price": 120,
+      "valuation_certainty": 0.49,
       "dv_ttm": 0.91,
       "next_earnings_date": null,
       "next_earnings_type": null,
@@ -893,7 +893,7 @@
       "watchlistLevel": "B_GROWTH",
       "trackingStatus": "WATCHING",
       "strategicCoreType": null,
-      "lastFundamentalReviewDate": "2026-07-15",
+      "lastFundamentalReviewDate": "2026-07-20",
       "lastRedFlagReviewDate": null
     },
     {
