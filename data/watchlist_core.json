@@ -23,6 +23,25 @@
       "lastRedFlagReviewDate": null
     },
     {
+      "name": "AutoZone",
+      "code": "AZO.US",
+      "board": "纽",
+      "cScore": 80,
+      "mScore": 84,
+      "target_price": 3150,
+      "valuation_certainty": 0.65,
+      "dv_ttm": null,
+      "next_earnings_date": null,
+      "next_earnings_type": null,
+      "cycle_is_cyclical": false,
+      "cycle_position": null,
+      "watchlistLevel": "A_CORE",
+      "trackingStatus": "WATCHING",
+      "strategicCoreType": null,
+      "lastFundamentalReviewDate": "2026-07-20",
+      "lastRedFlagReviewDate": "2026-07-20"
+    },
+    {
       "name": "Amazon",
       "code": "AMZN.US",
       "board": "纳",
