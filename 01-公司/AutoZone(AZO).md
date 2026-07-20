@@ -9,11 +9,11 @@ aliases: [AZO, AutoZone]
 最后更新日期: 2026-07-20
 market: US
 board: 纽
-watchlistLevel: A_CORE
-cScore: 80
-mScore: 84
-target_price: 3150
-valuation_certainty: 0.65
+watchlistLevel: B_GROWTH
+cScore: 78
+mScore: 79
+target_price: 3000
+valuation_certainty: 0.57
 ---
 
 # AutoZone（AZO）
