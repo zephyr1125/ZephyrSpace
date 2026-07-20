@@ -4,6 +4,25 @@
   "updated_at": "2026-07-20",
   "entries": [
     {
+      "name": "Roper Technologies",
+      "code": "ROP.US",
+      "board": "纳",
+      "cScore": 81,
+      "mScore": 76,
+      "target_price": 380,
+      "valuation_certainty": 0.55,
+      "dv_ttm": 1.02,
+      "next_earnings_date": "2026-07-23",
+      "next_earnings_type": "季报",
+      "cycle_is_cyclical": false,
+      "cycle_position": null,
+      "watchlistLevel": "B_GROWTH",
+      "trackingStatus": "WATCHING",
+      "strategicCoreType": null,
+      "lastFundamentalReviewDate": "2026-07-20",
+      "lastRedFlagReviewDate": null
+    },
+    {
       "name": "百龙创园",
       "code": "605016.SH",
       "board": "沪",
