@@ -23,6 +23,25 @@
       "lastRedFlagReviewDate": null
     },
     {
+      "name": "Amazon",
+      "code": "AMZN.US",
+      "board": "纳",
+      "cScore": 81,
+      "mScore": 80,
+      "target_price": 265,
+      "valuation_certainty": 0.60,
+      "dv_ttm": null,
+      "next_earnings_date": "2026-07-30",
+      "next_earnings_type": "季报",
+      "cycle_is_cyclical": false,
+      "cycle_position": null,
+      "watchlistLevel": "A_CORE",
+      "trackingStatus": "WATCHING",
+      "strategicCoreType": null,
+      "lastFundamentalReviewDate": "2026-07-20",
+      "lastRedFlagReviewDate": "2026-07-20"
+    },
+    {
       "name": "伯克希尔哈撒韦",
       "code": "BRK.B.US",
       "board": "纽",
