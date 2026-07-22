@@ -159,9 +159,9 @@
       "name": "三环集团",
       "code": "300408.SZ",
       "board": "创",
-      "cScore": 81,
+      "cScore": 84,
       "mScore": 78,
-      "target_price": 76.12,
+      "target_price": 92.11,
       "valuation_certainty": 0.55,
       "dv_ttm": null,
       "next_earnings_date": "2026-08-28",
@@ -171,7 +171,7 @@
       "watchlistLevel": "B_GROWTH",
       "trackingStatus": "WATCHING",
       "strategicCoreType": null,
-      "lastFundamentalReviewDate": "2026-05-29",
+      "lastFundamentalReviewDate": "2026-07-22",
       "lastRedFlagReviewDate": null
     },
     {
