@@ -1030,6 +1030,26 @@
       "lastFundamentalReview": "2026-07-22",
       "lastMgmtArchive": "2026-07-22",
       "lastValuation": "2026-07-22"
+    },
+    {
+      "name": "上港集团",
+      "code": "600018.SH",
+      "board": "沪",
+      "cScore": 76,
+      "mScore": 74,
+      "target_price": 5.60,
+      "valuation_certainty": 0.59,
+      "dv_ttm": 3.74,
+      "next_earnings_date": null,
+      "next_earnings_type": null,
+      "cycle_is_cyclical": false,
+      "cycle_position": null,
+      "watchlistLevel": "B_GROWTH",
+      "trackingStatus": "WATCHING",
+      "strategicCoreType": null,
+      "lastFundamentalReview": "2026-07-22",
+      "lastMgmtArchive": "2026-07-22",
+      "lastValuation": "2026-07-22"
     }
   ],
   "valuation_certainty_scale": "0.00-1.00; measures target-price reliability, not company quality",
