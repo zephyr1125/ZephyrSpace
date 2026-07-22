@@ -1009,6 +1009,26 @@
       "strategicCoreType": null,
       "lastFundamentalReviewDate": "2026-05-02",
       "lastRedFlagReviewDate": null
+    },
+    {
+      "name": "BOSS直聘",
+      "code": "02076.HK",
+      "board": "港",
+      "cScore": 77,
+      "mScore": 74,
+      "target_price": 72,
+      "valuation_certainty": 0.58,
+      "dv_ttm": 1.08,
+      "next_earnings_date": null,
+      "next_earnings_type": null,
+      "cycle_is_cyclical": false,
+      "cycle_position": null,
+      "watchlistLevel": "B_GROWTH",
+      "trackingStatus": "WATCHING",
+      "strategicCoreType": null,
+      "lastFundamentalReview": "2026-07-22",
+      "lastMgmtArchive": "2026-07-22",
+      "lastValuation": "2026-07-22"
     }
   ],
   "valuation_certainty_scale": "0.00-1.00; measures target-price reliability, not company quality",
