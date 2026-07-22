@@ -138,8 +138,8 @@
     },
     {
       "name": "Visa",
-      "code": "V",
-      "board": "美",
+      "code": "V.US",
+      "board": "纽",
       "cScore": 89,
       "mScore": 84,
       "target_price": 365,
@@ -1050,11 +1050,11 @@
     },
     {
       "name": "网易",
-      "code": "NTES.US",
-      "board": "纳",
+      "code": "09999.HK",
+      "board": "港",
       "cScore": 84,
       "mScore": 79,
-      "target_price": 145,
+      "target_price": 225,
       "valuation_certainty": 0.62,
       "dv_ttm": null,
       "next_earnings_date": null,
@@ -1064,8 +1064,8 @@
       "watchlistLevel": "A_CORE",
       "trackingStatus": "WATCHING",
       "strategicCoreType": null,
-      "lastFundamentalReviewDate": "2026-07-17",
-      "lastRedFlagReviewDate": "2026-07-17"
+      "lastFundamentalReviewDate": "2026-07-22",
+      "lastRedFlagReviewDate": "2026-07-22"
     },
     {
       "name": "Mueller Water Products",
