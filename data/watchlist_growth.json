@@ -232,25 +232,6 @@
       "lastRedFlagReviewDate": null
     },
     {
-      "name": "思源电气",
-      "code": "002028.SZ",
-      "board": "深",
-      "cScore": 80,
-      "mScore": 78,
-      "target_price": 156,
-      "valuation_certainty": 0.58,
-      "dv_ttm": 0.35,
-      "next_earnings_date": "2026-08-15",
-      "next_earnings_type": "半年报",
-      "cycle_is_cyclical": true,
-      "cycle_position": "景气高峰",
-      "watchlistLevel": "B_GROWTH",
-      "trackingStatus": "WATCHING",
-      "strategicCoreType": null,
-      "lastFundamentalReviewDate": "2026-06-17",
-      "lastRedFlagReviewDate": null
-    },
-    {
       "name": "百济神州",
       "code": "688235.SH",
       "board": "科",
