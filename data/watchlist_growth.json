@@ -1010,6 +1010,26 @@
       "lastFundamentalReview": "2026-07-22",
       "lastMgmtArchive": "2026-07-22",
       "lastValuation": "2026-07-22"
+    },
+    {
+      "name": "思源电气",
+      "code": "002028.SZ",
+      "board": "深",
+      "cScore": 80,
+      "mScore": 76,
+      "target_price": 160,
+      "valuation_certainty": 0.59,
+      "dv_ttm": 0.57,
+      "next_earnings_date": null,
+      "next_earnings_type": null,
+      "cycle_is_cyclical": false,
+      "cycle_position": null,
+      "watchlistLevel": "B_GROWTH",
+      "trackingStatus": "WATCHING",
+      "strategicCoreType": "GLOBAL_CHALLENGER",
+      "lastFundamentalReview": "2026-07-22",
+      "lastMgmtArchive": "2026-07-22",
+      "lastValuation": "2026-07-22"
     }
   ],
   "valuation_certainty_scale": "0.00-1.00; measures target-price reliability, not company quality",
