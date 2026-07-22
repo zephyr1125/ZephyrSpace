@@ -4,6 +4,25 @@
   "updated_at": "2026-07-22",
   "entries": [
     {
+      "name": "AMD",
+      "code": "AMD.US",
+      "board": "纳",
+      "cScore": 83,
+      "mScore": 88,
+      "target_price": 390,
+      "valuation_certainty": 0.48,
+      "dv_ttm": null,
+      "next_earnings_date": "2026-08-04",
+      "next_earnings_type": "Q2 2026季报",
+      "cycle_is_cyclical": false,
+      "cycle_position": null,
+      "watchlistLevel": "A_CORE",
+      "trackingStatus": "WATCHING",
+      "strategicCoreType": null,
+      "lastFundamentalReviewDate": "2026-07-22",
+      "lastRedFlagReviewDate": "2026-07-22"
+    },
+    {
       "name": "O'Reilly Automotive",
       "code": "ORLY.US",
       "board": "纳",
