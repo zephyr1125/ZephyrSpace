@@ -1,7 +1,7 @@
 {
   "version": 12,
   "watchlistLevel": "B_GROWTH",
-  "updated_at": "2026-07-22",
+  "updated_at": "2026-07-23",
   "entries": [
     {
       "name": "Hasbro",
@@ -135,6 +135,25 @@
       "strategicCoreType": null,
       "lastFundamentalReviewDate": "2026-07-08",
       "lastRedFlagReviewDate": null
+    },
+    {
+      "name": "药明康德",
+      "code": "603259.SH",
+      "board": "沪",
+      "cScore": 77,
+      "mScore": 76,
+      "target_price": 118,
+      "valuation_certainty": 0.44,
+      "dv_ttm": 1.88,
+      "next_earnings_date": "2026-08-03",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": false,
+      "cycle_position": null,
+      "watchlistLevel": "B_GROWTH",
+      "trackingStatus": "WATCHING",
+      "strategicCoreType": null,
+      "lastFundamentalReviewDate": "2026-07-23",
+      "lastRedFlagReviewDate": "2026-07-23"
     },
     {
       "name": "分众传媒",
@@ -463,19 +482,19 @@
       "name": "IBM",
       "code": "IBM.US",
       "board": "纽",
-      "cScore": 77,
-      "mScore": 78,
-      "target_price": 245,
-      "valuation_certainty": 0.75,
+      "cScore": 73,
+      "mScore": 76,
+      "target_price": 210,
+      "valuation_certainty": 0.50,
       "dv_ttm": 2.66,
-      "next_earnings_date": "2026-07-22",
+      "next_earnings_date": null,
       "next_earnings_type": "季报",
       "cycle_is_cyclical": false,
       "cycle_position": null,
       "watchlistLevel": "B_GROWTH",
       "trackingStatus": "WATCHING",
       "strategicCoreType": null,
-      "lastFundamentalReviewDate": "2026-05-22",
+      "lastFundamentalReviewDate": "2026-07-23",
       "lastRedFlagReviewDate": null
     },
     {
