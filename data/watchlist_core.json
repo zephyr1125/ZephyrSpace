@@ -1,7 +1,7 @@
 {
   "version": 10,
   "watchlistLevel": "A_CORE",
-  "updated_at": "2026-07-22",
+  "updated_at": "2026-07-24",
   "entries": [
     {
       "name": "AMD",
@@ -459,6 +459,25 @@
       "strategicCoreType": null,
       "lastFundamentalReviewDate": "2026-07-20",
       "lastRedFlagReviewDate": "2026-07-20"
+    },
+    {
+      "name": "Procter & Gamble",
+      "code": "PG.US",
+      "board": "纽",
+      "cScore": 82,
+      "mScore": 79,
+      "target_price": 150,
+      "valuation_certainty": 0.74,
+      "dv_ttm": null,
+      "next_earnings_date": "2026-07-29",
+      "next_earnings_type": "Q4 FY2026季报+全年",
+      "cycle_is_cyclical": false,
+      "cycle_position": null,
+      "watchlistLevel": "A_CORE",
+      "trackingStatus": "WATCHING",
+      "strategicCoreType": null,
+      "lastFundamentalReviewDate": "2026-07-24",
+      "lastRedFlagReviewDate": "2026-07-24"
     },
     {
       "name": "First Solar",
