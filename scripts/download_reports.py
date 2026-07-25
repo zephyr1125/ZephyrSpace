@@ -139,7 +139,7 @@ def determine_reports_to_download(scode):
 
     # ── 半年报：回溯 2-3 年 ──
     # 最新可获取半年报 = 上一年（当年半年报通常8月发布）
-    semi_end = current_year - 1 if today.month < 8 else current_year
+    semi_end = current_year - 1 if today.month < 7 else current_year
     for y in range(semi_end - 2, semi_end + 1):
         to_download.append(("半年报", y, f"{y}-06-01", f"{y}-10-31"))
 

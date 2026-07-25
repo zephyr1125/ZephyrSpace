@@ -463,9 +463,12 @@ def main():
         time.sleep(0.15)
 
     # ---- [5/5] 半年报扫描 + Watchlist 交叉比对 ----
-    print(f"\n[5/5] CNINFO 拉取 {args.start}~{args.end} 正式半年报 + Watchlist 交叉比对 ...")
+    # 盘后公告在 CNINFO 中常被标为次日 00:00，end 自动 +1 天确保覆盖
+    end_date = dt.datetime.strptime(args.end, "%Y-%m-%d")
+    end_plus_one = (end_date + dt.timedelta(days=1)).strftime("%Y-%m-%d")
+    print(f"\n[5/5] CNINFO 拉取 {args.start}~{end_plus_one} 正式半年报 + Watchlist 交叉比对 ...")
     watchlist = load_watchlist_a_share_codes()
-    semiannual_all = cninfo_forecasts(args.start, args.end, category=CATEGORY_SEMIANNUAL)
+    semiannual_all = cninfo_forecasts(args.start, end_plus_one, category=CATEGORY_SEMIANNUAL)
     print(f"      全市场半年报：{len(semiannual_all)} 份")
     semiannual_hits = cross_reference_watchlist(semiannual_all, watchlist)
 

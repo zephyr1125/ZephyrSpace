@@ -16,8 +16,8 @@ Watchlist 由四个研究等级文件组成：
 | 字段 | 类型 | 说明 |
 |---|---|---|
 | `name` | string | 公司简称，与公司页标题一致 |
-| `code` | string | 股票代码，包含市场后缀 |
-| `board` | string | 上市板块简称 |
+| `code` | string | 股票代码，**必须包含市场后缀**。A股：`XXXXXX.SH`（沪）/`XXXXXX.SZ`（深）；港股：`XXXXX.HK`；美股：`TICKER.US`。禁止省略后缀（如 `V` → 必须写 `V.US`） |
+| `board` | string | 上市板块简称。有效值：`沪`（上交所主板）、`深`（深交所主板）、`创`（创业板）、`科`（科创板）、`北`（北交所）、`港`（港交所）、`纽`（纽交所）、`纳`（纳斯达克）。美股必须用 `纽`/`纳`，禁止写 `美` |
 | `target_price` | number / null | 最新估值报告中的加权合理估值；币种与股票交易币种一致。仅当 `NONE` 因质量门槛停止正式估值时可为 `null` |
 | `valuation_certainty` | number / null | `target_price` 的可靠程度，范围 `0.00–1.00`，最多两位小数。仅当 `NONE` 因质量门槛停止正式估值时可为 `null` |
 | `dv_ttm` | number / null | 股息率 TTM，单位 `%` |

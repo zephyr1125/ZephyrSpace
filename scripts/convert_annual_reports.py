@@ -3,8 +3,12 @@
 
 触发词：转换财报
 
+用法：
+  python scripts/convert_annual_reports.py                        # 转换 Inbox 中全部 PDF
+  python scripts/convert_annual_reports.py 002415_2026_半年报.pdf  # 只转换指定文件
+
 流程：
-  1. 扫描 财报/_Inbox/ 中所有PDF
+  1. 扫描 财报/_Inbox/ 中所有PDF（或指定文件）
   2. 复制到临时目录，调用MinerU批量转换
   3. 提取.md和图片到 财报/[公司名]/
   4. 原始PDF移入 _Inbox/_archived/
@@ -16,6 +20,7 @@ import re
 import shutil
 import subprocess
 import sys
+import requests
 from pathlib import Path
 from datetime import datetime
 
@@ -31,6 +36,39 @@ MINERU_BACKEND = "pipeline"
 # ── 分批控制 ──────────────────────────────────────────
 # 单批最大页数。GPU 内存有限，超过此值分批跑以免崩溃。
 MAX_PAGES_PER_BATCH = 600
+
+# ── 股票代码→公司名 映射缓存 ──────────────────────────
+_code_to_name = None
+
+
+def _load_code_to_name() -> dict[str, str]:
+    """从 CNINFO 加载股票代码→中文简称 映射。"""
+    global _code_to_name
+    if _code_to_name is None:
+        _code_to_name = {}
+        try:
+            r = requests.get(
+                "http://www.cninfo.com.cn/new/data/szse_stock.json",
+                timeout=30,
+            )
+            for item in r.json()["stockList"]:
+                code = item.get("code", "")
+                zwjc = (item.get("zwjc") or "").strip()
+                if code and zwjc:
+                    _code_to_name[code] = zwjc
+        except Exception as e:
+            print(f"  [WARN] 无法加载股票列表: {e}")
+    return _code_to_name
+
+
+def _resolve_company_name(raw_name: str) -> str:
+    """如果 raw_name 是6位股票代码，反查为公司简称；否则原样返回。"""
+    if re.match(r"^\d{6}$", raw_name):
+        name_map = _load_code_to_name()
+        resolved = name_map.get(raw_name)
+        if resolved:
+            return resolved
+    return raw_name
 
 
 def extract_info(filename: str) -> dict | None:
@@ -60,6 +98,9 @@ def extract_info(filename: str) -> dict | None:
     if not short_name:
         print(f"  [WARN] 无法识别公司名: {filename}")
         return None
+
+    # 若文件名中公司部分是6位代码，反查为公司简称
+    short_name = _resolve_company_name(short_name)
 
     year_match = re.search(r"(\d{4})年", rest) if rest else re.search(r"(\d{4})", name)
     year = year_match.group(1) if year_match else "unknown"
@@ -211,10 +252,22 @@ def cleanup():
 
 
 def main():
+    import argparse
+    parser = argparse.ArgumentParser(description="财报PDF批量转换（MinerU）")
+    parser.add_argument("files", nargs="*", help="指定要转换的PDF文件名（在 _Inbox 下），不指定则转换全部")
+    args = parser.parse_args()
+
     print(f"[START] 年报 PDF 转换 — {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print(f"[INFO] Inbox: {INBOX_DIR}")
 
-    pdf_files = scan_inbox()
+    if args.files:
+        pdf_files = [INBOX_DIR / f for f in args.files]
+        missing = [f for f, p in zip(args.files, pdf_files) if not p.exists()]
+        if missing:
+            print(f"[ERROR] 以下文件不存在: {', '.join(missing)}")
+            sys.exit(1)
+    else:
+        pdf_files = scan_inbox()
     for f in pdf_files:
         print(f"  - {f.name} ({count_pdf_pages(f)} 页)")
 

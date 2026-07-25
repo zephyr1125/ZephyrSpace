@@ -263,6 +263,23 @@ python scripts/forecast_monitor.py 2026-06-20 2026-07-02 --label 2026Q2财报预
 - 子 Agent 完成 PreBuy 后输出「建议档位：xxx」，**不写文件**
 - 主 Agent 汇总后向用户确认，确认后一次性写入
 
+### `code` 与 `board` 格式规则（强制）
+
+> 🔴 **股票代码必须包含市场后缀。** 写入 watchlist 时必须使用完整格式：
+> - A股沪市：`XXXXXX.SH`（如 `600519.SH`），board=`沪`
+> - A股深市：`XXXXXX.SZ`（如 `300750.SZ`），board=`深`
+> - 创业板：`XXXXXX.SZ`，board=`创`
+> - 科创板：`XXXXXX.SH`，board=`科`
+> - 北交所：`XXXXXX.SZ`，board=`北`
+> - 港股：`XXXXX.HK`（如 `00700.HK`），board=`港`
+> - 美股：`TICKER.US`（如 `V.US`、`NVDA.US`），board=`纽`（纽交所）/`纳`（纳斯达克）
+>
+> **禁止写入的值（违反即 P1）：**
+> - ❌ 美股裸代码（如 `V` → 必须写 `V.US`）
+> - ❌ 美股 board 写 `美`（必须写 `纽` 或 `纳`）
+> - ❌ 港股裸代码（如 `00700` → 必须写 `00700.HK`）
+> - ❌ A股不带后缀（如 `600519` → 必须写 `600519.SH`）
+
 ### `next_earnings_date` 必填规则（强制）
 
 > 🔴 **`null` = 未知，与"限期日占位符"严格区分。**
