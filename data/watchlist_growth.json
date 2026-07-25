@@ -1,5 +1,5 @@
 {
-  "version": 14,
+  "version": 15,
   "watchlistLevel": "B_GROWTH",
   "updated_at": "2026-07-25",
   "entries": [
@@ -45,11 +45,11 @@
       "name": "Roper Technologies",
       "code": "ROP.US",
       "board": "纳",
-      "cScore": 81,
-      "mScore": 76,
-      "target_price": 380,
-      "valuation_certainty": 0.55,
-      "dv_ttm": 1.02,
+      "cScore": 83,
+      "mScore": 85,
+      "target_price": 440,
+      "valuation_certainty": 0.58,
+      "dv_ttm": 0.90,
       "next_earnings_date": null,
       "next_earnings_type": null,
       "cycle_is_cyclical": false,
@@ -57,7 +57,7 @@
       "watchlistLevel": "B_GROWTH",
       "trackingStatus": "WATCHING",
       "strategicCoreType": null,
-      "lastFundamentalReviewDate": "2026-07-20",
+      "lastFundamentalReviewDate": "2026-07-25",
       "lastRedFlagReviewDate": null
     },
     {
