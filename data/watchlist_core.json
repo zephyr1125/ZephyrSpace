@@ -1031,25 +1031,6 @@
       "lastRedFlagReviewDate": null
     },
     {
-      "name": "EXL Service",
-      "code": "EXLS.US",
-      "board": "纳",
-      "cScore": 82,
-      "mScore": 80,
-      "target_price": 36,
-      "valuation_certainty": 0.58,
-      "dv_ttm": null,
-      "next_earnings_date": null,
-      "next_earnings_type": "Q3 2026季报",
-      "cycle_is_cyclical": false,
-      "cycle_position": null,
-      "watchlistLevel": "A_CORE",
-      "trackingStatus": "WATCHING",
-      "strategicCoreType": null,
-      "lastFundamentalReviewDate": "2026-07-17",
-      "lastRedFlagReviewDate": "2026-07-17"
-    },
-    {
       "name": "中信特钢",
       "code": "000708.SZ",
       "board": "深",
