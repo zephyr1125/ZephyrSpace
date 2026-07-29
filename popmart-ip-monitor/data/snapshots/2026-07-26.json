@@ -1,0 +1,559 @@
+{
+  "snapshot_date": "2026-07-26",
+  "is_first": false,
+  "previous_snapshot": "2026-07-19",
+  "data_quality_overall": "medium",
+  "methodology_note": "遵循 SKILL.md §1.5：四类信号不互替、禁止伪精确、IP 评估拆双维度（商业基本盘/边际趋势）、资本市场事件独立。所有 0-100 为「研判分，置信度低」，非测量值；成交/卖盘/社媒等无精确数据处改用定性（高/中/低）+置信度。",
+  "data_sources_available": ["web_search", "news_articles", "analyst_reports", "official_social_announcement", "dewu_aggregated", "xianyu_aggregated"],
+  "data_sources_unavailable": ["dewu_direct_api", "xianyu_direct_api", "stockx_direct_api", "social_quantitative", "official_sales_data", "dimoo_pixar_resale_data"],
+  "collection_method": "WebSearch + WebFetch 公开页面，得物/闲鱼价格来自新闻聚合和券商报告引用，社媒热度来自公开报道定性分析。本期关键进展：DIMOO×皮克斯 7/16-17 首发后已过10天，公开报道确认预售加购火爆（抖音26,000+/天猫20,000+），但二手成交价/成交量仍未进入公开聚合数据。HACIPUPU 新IP入榜。",
+  "key_data_gap_note": "DIMOO×皮克斯二手溢价+成交量仍缺失（首发10天后公开聚合仍未跟上，比上周预期更差——可能因未形成爆款级话题或数据聚合滞后）。Wings of Fantasy 仅获1月数据（$1,019-$1,700），7月最新价仍缺。HACIPUPU迷路汪汪首发二手数据空白。2026年中期业绩（预计8月20-25日）为最大待验证催化剂。",
+
+  "skus": [
+    {
+      "sku_id": "monsters_have_a_seat_plush",
+      "ip_name": "THE MONSTERS",
+      "name": "坐坐系列毛绒公仔",
+      "official_price": 199,
+      "estimated_market_price": 105,
+      "premium_rate": -0.47,
+      "data_quality": "medium",
+      "status": "失效",
+      "notes": "整盒从峰值1478跌至~632元（-57%），单品~105元（-47%）。产能从100万→5000万/月彻底瓦解稀缺逻辑"
+    },
+    {
+      "sku_id": "monsters_exciting_macao_blind",
+      "ip_name": "THE MONSTERS",
+      "name": "心动马卡龙系列盲盒",
+      "official_price": 69,
+      "estimated_market_price": 75,
+      "premium_rate": 0.09,
+      "data_quality": "medium",
+      "status": "自然回落",
+      "notes": "接近原价，整体降温延续"
+    },
+    {
+      "sku_id": "monsters_fall_in_wild_blind",
+      "ip_name": "THE MONSTERS",
+      "name": "旷野系列/Wings of Fantasy",
+      "official_price": 69,
+      "estimated_market_price": 3960,
+      "premium_rate": 56.4,
+      "price_change_note": "本周无新数据。仅获2026年1月数据：StockX均价$1,243，大号$1,019-$1,700（+7-14x）。2026年以来持续升值（6个月+47%），但7月无更新。锚点状态：可能仍强（基于1月趋势），但悬而未决已三周",
+      "data_quality": "low",
+      "status": "强势健康（锚点待验证，三周无新数据）",
+      "notes": "跨平台TYPA ~$550与StockX ~$1,243口径差异仍未解决。2026年1月趋势强（+23% from late 2025），但7月实际成交价未知"
+    },
+    {
+      "sku_id": "monsters_vinyl_face_doll",
+      "ip_name": "THE MONSTERS",
+      "name": "Zimomo 搪胶脸公仔",
+      "official_price": 599,
+      "estimated_market_price": 850,
+      "premium_rate": 0.42,
+      "data_quality": "low",
+      "status": "高位稳定",
+      "notes": "限量款供需偏紧，溢价~42%但流动性低"
+    },
+    {
+      "sku_id": "monsters_hair_salon_blind",
+      "ip_name": "THE MONSTERS",
+      "name": "复古理发店/美发沙龙系列 (Labubu 4.0)",
+      "official_price": 159,
+      "estimated_market_price": 77.5,
+      "premium_rate": -0.51,
+      "price_change_from_prev": "持平于77.5元区间（闲鱼7日均价），未继续大幅下探但未反弹",
+      "data_quality": "medium",
+      "status": "转弱（投机退潮深化，但产能扩张部分解释价格下跌）",
+      "notes": "闲鱼常规款近7日均价约77.5元（破发-51%），与上周持平——可能在70-80元区间企稳。热门款「丝绒午后」仍有77%溢价（282元）。隐藏款「爱心」从峰值跌73%（~264-271元），「!」跌48%（559元）。得物4.0整盒~1,088元（峰值1,916→-43%）。德银7/8称部分二手跌至~50元。关键背景：公司月产能从100万→5,000万只，稀缺性逻辑被主动瓦解——价格下跌至少部分来自供给侧而非需求崩塌。"
+    },
+    {
+      "sku_id": "molly_classic_blind",
+      "ip_name": "MOLLY",
+      "name": "经典系列盲盒",
+      "official_price": 69,
+      "estimated_market_price": 75,
+      "premium_rate": 0.09,
+      "data_quality": "low",
+      "status": "自然回落",
+      "notes": "常规款溢价压缩至10%以内。联名热度尚未传导至常规款二手价"
+    },
+    {
+      "sku_id": "molly_400pct",
+      "ip_name": "MOLLY",
+      "name": "400% 大娃",
+      "official_price": 799,
+      "estimated_market_price": 5600,
+      "premium_rate": 6.01,
+      "data_quality": "low",
+      "status": "强势健康",
+      "notes": "20周年限定款溢价7-8倍，限量款流动性极低"
+    },
+    {
+      "sku_id": "molly_starbucks_collab",
+      "ip_name": "MOLLY",
+      "name": "Molly×星巴克联名系列（7/8上线）",
+      "official_price": null,
+      "estimated_market_price": null,
+      "premium_rate": null,
+      "data_quality": "qualitative_only",
+      "status": "新品（第三周，联名热度持续）",
+      "notes": "150+主题店持续运营。透明冰杯/贴纸/吸管勺/马克杯等限定周边。二手溢价数据仍缺——已过两周半，若溢价强劲应已见报道，沉默可能暗示溢价温和"
+    },
+    {
+      "sku_id": "molly_crocs_collab",
+      "ip_name": "MOLLY",
+      "name": "Molly×Crocs联名洞洞鞋",
+      "official_price": null,
+      "estimated_market_price": null,
+      "premium_rate": null,
+      "data_quality": "qualitative_only",
+      "status": "新品（20周年联名潮，全球渠道发售中）",
+      "notes": "三款鞋型（Classic$109.95/Crush$139.95/Bae$139.95），新加坡及全球渠道"
+    },
+    {
+      "sku_id": "skullpanda_sound_blind",
+      "ip_name": "SKULLPANDA",
+      "name": "声音系列盲盒",
+      "official_price": 69,
+      "estimated_market_price": 57,
+      "premium_rate": -0.17,
+      "data_quality": "medium",
+      "status": "转弱",
+      "notes": "整盒580元，维持破发"
+    },
+    {
+      "sku_id": "skullpanda_warmth_blind",
+      "ip_name": "SKULLPANDA",
+      "name": "温暖系列盲盒",
+      "official_price": 69,
+      "estimated_market_price": 85,
+      "premium_rate": 0.23,
+      "data_quality": "low",
+      "status": "自然回落",
+      "notes": "小幅溢价但非热点"
+    },
+    {
+      "sku_id": "skullpanda_robertwun_collab",
+      "ip_name": "SKULLPANDA",
+      "name": "Skullpanda×Robert Wun 巴黎高定周（7/8）",
+      "official_price": null,
+      "estimated_market_price": null,
+      "premium_rate": null,
+      "data_quality": "qualitative_only",
+      "status": "品牌事件（高定跨界，事件已过）",
+      "notes": "7/8秀场已过。目前仍无联名产品发售确认。芭提雅Central Pattaya新店有Skullpanda独家产品"
+    },
+    {
+      "sku_id": "crybaby_cry_blind",
+      "ip_name": "CRYBABY",
+      "name": "哭泣系列盲盒",
+      "official_price": 69,
+      "estimated_market_price": 75,
+      "premium_rate": 0.09,
+      "data_quality": "low",
+      "status": "数据不足",
+      "notes": "监测SKU公开数据仍少"
+    },
+    {
+      "sku_id": "crybaby_tear_ocean_hidden",
+      "ip_name": "CRYBABY",
+      "name": "泪流成海·软软海獭（隐藏款）",
+      "official_price": 79,
+      "estimated_market_price": 600,
+      "premium_rate": 6.59,
+      "data_quality": "low",
+      "status": "强势健康",
+      "notes": "溢价~6-7x，有成交量支撑。心动系列+怪兽的眼泪系列7月新发，新品管线活跃"
+    },
+    {
+      "sku_id": "crybaby_heartbeat_series",
+      "ip_name": "CRYBABY",
+      "name": "心动系列盲盒（7月新品）",
+      "official_price": 69,
+      "estimated_market_price": null,
+      "premium_rate": null,
+      "data_quality": "qualitative_only",
+      "status": "新品（首发期，二手数据空白）",
+      "notes": "7月新发系列，以'哭泣是释放情绪的勇气'为治愈内核。北京特展8/1开幕联动"
+    },
+    {
+      "sku_id": "dimoo_story_blind",
+      "ip_name": "DIMOO",
+      "name": "故事系列盲盒/Space Travel",
+      "official_price": 69,
+      "estimated_market_price": 207,
+      "premium_rate": 2.00,
+      "data_quality": "medium",
+      "status": "强势健康",
+      "notes": "Space Travel溢价200%+维持。菲律宾首个DIMOO主题快闪店7/23开业（Glorietta Mall Makati，至9/23）"
+    },
+    {
+      "sku_id": "dimoo_pixar_collab",
+      "ip_name": "DIMOO",
+      "name": "DIMOO WORLD × PIXAR 联名系列",
+      "official_price": 129,
+      "estimated_market_price": null,
+      "premium_rate": null,
+      "data_quality": "qualitative_only",
+      "status": "新品（首发10天，预售火爆但二手数据空白）",
+      "notes": "7/16线上22:00、7/17线下正式发售。搪胶毛绒挂件129元/盒（6+1隐藏1:72）、手办盲盒69元/盒（12+1隐藏1:144）、萌粒19元/盒。预售加购火爆：毛绒天猫20,000+/抖音26,000+；手办天猫10,000+/抖音7,600+。菲律宾快闪店已开业（7/23-9/23）。二手溢价+成交量仍缺失（首发10天仍未进入公开聚合——可能因未形成爆款级话题，或数据聚合滞后）"
+    },
+    {
+      "sku_id": "twinkle_heartbeat_figure",
+      "ip_name": "TWINKLE TWINKLE",
+      "name": "怦然星動系列手办",
+      "official_price": 81,
+      "estimated_market_price": 123,
+      "premium_rate": 0.38,
+      "data_quality": "low",
+      "status": "自然回落",
+      "notes": "得物均价约123元。下半年首款vinyl-faced毛绒公仔定档。王宁明确表示加速Twinkle Twinkle孵化与多品类衍生"
+    },
+    {
+      "sku_id": "hacipupu_lost_dog_series",
+      "ip_name": "HACIPUPU",
+      "name": "迷路汪汪系列搪胶毛绒挂件盲盒（7月新品）",
+      "official_price": 109,
+      "estimated_market_price": null,
+      "premium_rate": null,
+      "data_quality": "qualitative_only",
+      "status": "新品（首发两周，二手数据空白）",
+      "notes": "7/9线上22:00、7/10线下发售。6+1隐藏（1:72），单盒109元/整盒654元。历史参考：HACIPUPU过往系列二手分化严重——二代庆典系列有溢价（热门款叮叮当~110元），三代平淡，新品期以折价为主。本轮首发数据待跟踪"
+    }
+  ],
+
+  "ips": {
+    "THE MONSTERS": {
+      "health_score": 37,
+      "health_score_note": "研判分，置信度低；侧重边际趋势，不等于商业价值。产能扩张（100万→5000万/月）部分解释价格下跌",
+      "rating": "D",
+      "basic_disk_score": 85,
+      "basic_disk_confidence": "medium",
+      "marginal_score": 37,
+      "marginal_confidence": "low",
+      "avg_premium_rate": 11.4,
+      "avg_premium_rate_ex_outlier": -0.23,
+      "volume_activity_qual": "低（国内降温延续，置信度低）",
+      "sell_pressure_qual": "高（产能扩张+黄牛离场，置信度低）",
+      "breadth_score": 45,
+      "persistence_score": 38,
+      "social_score": 72,
+      "social_note": "高（定性，置信度低）；'发型自由'长尾+破发讨论+产能扩张分析，与价格持续背离",
+      "healthy_sku_count": 2,
+      "total_sku_count": 5,
+      "delta_vs_prev": -1,
+      "trend_judgment": "投机退潮继续深化，但4.0部分款式可能已在70-80元区间企稳。产能从100万→5000万/月是重要供给侧背景——价格下跌至少部分来自公司主动去稀缺化，而非纯需求崩塌。Wings锚点三周无新数据",
+      "key_risk": "4.0多款持续低于发售价（-51%）；Wings锚点悬空三周；德银预测Q2增速仅+1.6%；但基本盘85未损，产能扩张→'回归消费本质'偏正面"
+    },
+    "MOLLY": {
+      "health_score": 63,
+      "health_score_note": "研判分，置信度低；本期边际评分最高IP——20周年联名潮三箭齐发，星巴克150+门店提供真实消费者触达",
+      "rating": "C",
+      "basic_disk_score": 70,
+      "basic_disk_confidence": "medium",
+      "marginal_score": 63,
+      "marginal_confidence": "low_medium",
+      "avg_premium_rate": 3.05,
+      "avg_premium_rate_ex_outlier": 0.09,
+      "volume_activity_qual": "中（置信度低，联名热度尚未传导至常规款二手）",
+      "sell_pressure_qual": "低（联名新品稀缺，置信度低）",
+      "breadth_score": 68,
+      "persistence_score": 82,
+      "social_score": 78,
+      "social_note": "高位维持；星巴克150+门店持续运营+Crocs全球发售+Ducati预热，多平台持续讨论",
+      "healthy_sku_count": 1,
+      "total_sku_count": 2,
+      "delta_vs_prev": 1,
+      "trend_judgment": "小幅改善——星巴克联名进入第三周，150+门店提供持续消费者触达（而非一次性事件）。但联名限定周边二手溢价沉默（已过两周半未见报道），可能暗示溢价温和",
+      "key_risk": "联名热度尚未传导至常规款二手价；星巴克联名周边二手溢价沉默（可能温和）；多重联名验证'运营能力'≠Molly自身IP吸引力提升"
+    },
+    "SKULLPANDA": {
+      "health_score": 55,
+      "health_score_note": "研判分，置信度低；巴黎高定周已过，MEGA官宣，后续催化剂待补充",
+      "rating": "C",
+      "basic_disk_score": 72,
+      "basic_disk_confidence": "medium",
+      "marginal_score": 55,
+      "marginal_confidence": "low",
+      "avg_premium_rate": 0.03,
+      "volume_activity_qual": "中（置信度低）",
+      "sell_pressure_qual": "中（置信度低）",
+      "breadth_score": 58,
+      "persistence_score": 55,
+      "social_score": 60,
+      "social_note": "回落（高定周热度自然消退）；MEGA官宣+芭提雅独家产品维持一定讨论",
+      "healthy_sku_count": 0,
+      "total_sku_count": 2,
+      "delta_vs_prev": -1,
+      "trend_judgment": "微降——巴黎高定周为一次性事件（已过），后续催化剂（MEGA发售、H2盲盒新品）待落地。当前处于催化剂间隙期",
+      "key_risk": "声音系列持续破发；高定周热度消退后无即时新催化剂；仍无H2盲盒新品预告；MEGA「α花的房间」仍未公布具体发售日"
+    },
+    "CRYBABY": {
+      "health_score": 59,
+      "health_score_note": "研判分，置信度低；新品管线7月最活跃IP——心动系列+怪兽的眼泪双线发售，北京特展8/1即将开幕",
+      "rating": "C",
+      "basic_disk_score": 60,
+      "basic_disk_confidence": "medium",
+      "marginal_score": 59,
+      "marginal_confidence": "low",
+      "avg_premium_rate": 3.34,
+      "volume_activity_qual": "中（泪流成海有成交支撑+新品推动，置信度低）",
+      "sell_pressure_qual": "中（置信度低）",
+      "breadth_score": 68,
+      "persistence_score": 50,
+      "social_score": 70,
+      "social_note": "显著上升；心动系列+怪兽的眼泪新品开箱+芭提雅巨型气球打卡+北京特展8/1预热，多线共热",
+      "healthy_sku_count": 1,
+      "total_sku_count": 3,
+      "delta_vs_prev": 1,
+      "trend_judgment": "小幅改善——从'多点展览'升级为'展览+新品双线推进'。心动系列+怪兽的眼泪双系列7月同步发售，是五大IP中新品管线最活跃的。北京特展8/1开幕为下周最强催化剂",
+      "key_risk": "度假系列隐藏款溢价降至6.7x（vs此前14x），整体溢价收窄；系列内部冷热不均；新品二手数据空白"
+    },
+    "DIMOO": {
+      "health_score": 63,
+      "health_score_note": "研判分，置信度低；皮克斯催化兑现+预售火爆，但二手成交数据仍缺失——从'预期驱动'进入'实绩验证'第二阶段",
+      "rating": "C",
+      "basic_disk_score": 62,
+      "basic_disk_confidence": "medium",
+      "marginal_score": 63,
+      "marginal_confidence": "low",
+      "avg_premium_rate": 2.00,
+      "volume_activity_qual": "待验证（皮克斯预售火爆但二手成交数据仍空白，置信度低）",
+      "sell_pressure_qual": "中（正常，置信度低）",
+      "breadth_score": 65,
+      "persistence_score": 52,
+      "social_score": 80,
+      "social_note": "显著上升；皮克斯联名开箱/测评持续产出+菲律宾首个DIMOO主题快闪店开业（7/23）——IP获得独立于泡泡玛特主品牌的主题店待遇",
+      "healthy_sku_count": 1,
+      "total_sku_count": 2,
+      "delta_vs_prev": 2,
+      "trend_judgment": "小幅改善——皮克斯预售火爆（抖音26,000+/天猫20,000+加购）是最强正向信号；菲律宾DIMOO主题快闪店开业标志IP独立性获公司战略级认可。但二手溢价数据仍缺失（首发10天后），正面解读：可能供不应求导致二手流通少；负面解读：可能未形成爆款级话题",
+      "key_risk": "二手溢价+成交量仍缺失（首发10天，超出预期——可能未形成爆款级讨论）；验证的是'全球IP运营/联名能力'非'原创IP制造能力'；仅靠Space Travel单SKU支撑溢价分"
+    },
+    "TWINKLE TWINKLE": {
+      "health_score": 58,
+      "health_score_note": "研判分，置信度低；王宁亲自确认加速孵化+vinyl-faced定档，最有望接棒Labubu的新IP",
+      "rating": "C",
+      "basic_disk_score": 52,
+      "basic_disk_confidence": "medium",
+      "marginal_score": 65,
+      "marginal_confidence": "low",
+      "avg_premium_rate": 0.38,
+      "volume_activity_qual": "中（置信度低，系统跟踪未建立）",
+      "sell_pressure_qual": "中（置信度低）",
+      "breadth_score": 60,
+      "persistence_score": 45,
+      "social_score": 65,
+      "social_note": "稳定偏正；王宁专访+vinyl-faced公仔期待+喜茶联名长尾+美国出圈讨论",
+      "healthy_sku_count": 0,
+      "total_sku_count": 1,
+      "delta_vs_prev": 0,
+      "trend_judgment": "持平——下半年vinyl-faced公仔是关键验证点。本期增量：王宁公开表态加速Twinkle孵化+多品类衍生（毛绒/手办/珠宝/生活方式），公司战略级背书加强",
+      "key_risk": "系统二手价跟踪仍未建立（近乎数据盲区）；2026年1月后无新系列（近7个月产品空窗）；商业基本盘仅52"
+    },
+    "HACIPUPU": {
+      "health_score": 50,
+      "health_score_note": "研判分，置信度低；首期入榜。迷路汪汪系列7/9-10首发，历史IP但本轮为新系列",
+      "rating": "C",
+      "basic_disk_score": 45,
+      "basic_disk_confidence": "low",
+      "marginal_score": 50,
+      "marginal_confidence": "low",
+      "avg_premium_rate": null,
+      "volume_activity_qual": "待验证（首发两周，二手数据空白，置信度低）",
+      "sell_pressure_qual": "待验证（置信度低）",
+      "breadth_score": 40,
+      "persistence_score": 40,
+      "social_score": 55,
+      "social_note": "温和；迷路汪汪系列开箱+狗狗主题治愈向讨论，但未形成爆款级传播",
+      "healthy_sku_count": 0,
+      "total_sku_count": 1,
+      "delta_vs_prev": null,
+      "trend_judgment": "首期入榜——历史参考：HACIPUPU二代庆典系列为巅峰（热门款溢价），三代平淡，新品期以折价为主。本轮迷路汪汪系列首发数据空白，暂给中性起步分。注意：HACIPUPU验证的是能力①（发现和签约新艺术家/IP），与Molly/Skullpanda/DIMOO验证的能力②不同",
+      "key_risk": "历史系列二手表现分化（二代强、三代弱、新品折价）；本轮首发二手数据空白；商业基本盘远低于五大成熟IP；需持续观察是否形成独立粉丝群"
+    }
+  },
+
+  "company_level": {
+    "multi_ip_health_index": 0.0,
+    "multi_ip_health_index_note": "仍零破A/B线（65+），但DIMOO 63、MOLLY 63均逼近B线——较上周Molly 62更接近",
+    "labubu_concentration_revenue": 0.38,
+    "labubu_concentration_health_score": 0.13,
+    "labubu_concentration_warning": true,
+    "non_labubu_healthy_count": 0,
+    "bubble_risk_qual": "低（投机退潮深化+产能扩张主动去稀缺化，泡沫特征持续减弱，置信度低）",
+    "total_ip_count": 7,
+    "total_sku_count": 19,
+    "healthy_sku_count": 4,
+    "weakening_sku_count": 5,
+    "data_insufficient_count": 4,
+    "new_sku_count": 3,
+    "multi_ip_catalyst_density": "极高（监控以来最高周——DIMOO×皮克斯正式发售+菲律宾主题店 / Molly×星巴克持续+Crocs全球 / Crybaby双系列新品+北京特展预热 / HACIPUPU新系列首发 / Skullpanda MEGA官宣 / Twinkle创始人战略背书）",
+    "supply_side_note": "本期关键供给侧发现：公司Labubu月产能从100万→5,000万只——价格下跌至少部分来自主动去稀缺化策略，'回归消费本质'对长期IP健康偏正面",
+    "four_state_summary": {
+      "speculative_cooldown_verified": true,
+      "speculative_cooldown_level": "strong",
+      "consumer_demand_decline_verified": false,
+      "multi_ip_relay_signal_appeared": true,
+      "multi_ip_relay_signal_level": "strengthening_with_early_validation",
+      "multi_ip_relay_success_verified": false,
+      "relay_note": "DIMOO×皮克斯预售火爆是最接近'需求验证'的信号（L3流量验证已获确认），但尚未进入L4销售验证（缺二手成交/售罄数据）。Molly/Crybaby仍处L2-L3。HACIPUPU新增为能力①的验证标的"
+    },
+    "signal_taxonomy": {
+      "official_sales": "仍缺。Q1官方+75-80%。德银预测Q2+1.6%、汇丰预测Q2+10%（中国+26%/海外-14%）。2026年中期业绩预计8/20-25披露——这是判别'消费需求是否退潮'的最权威证据，也是本监控启动以来最重要的催化剂",
+      "secondary_speculation": "4.0破发-51%（闲鱼7日均价77.5元）未继续下探但未反弹，可能在70-80元企稳。黄牛全面离场。Wings锚点三周无新数据。关键供给侧：月产能100万→5,000万——公司主动去稀缺化",
+      "operational_actions": "DIMOO×皮克斯正式发售+菲律宾主题店；Crybaby双系列新品+北京特展8/1；HACIPUPU迷路汪汪新系列；Molly星巴克联名第三周；Skullpanda MEGA官宣。运营资源持续扩散至更多IP",
+      "consumer_heat": "DIMOO皮克斯预售加购火爆（抖音26,000+/天猫20,000+）——L3流量验证已获确认，是本期最强的需求侧信号；Molly星巴克150+门店持续真实消费者触达（L3）；Crybaby新品开箱讨论（L3）；北京特展8/1预约情况待确认",
+      "capital_market": "段永平7/23表态'10年内大概率不卖'+'我才刚开始买'；与王宁7/20同看世界杯决赛；持股7.65%不变。股价~160.9（较上周163.6微跌）。大行降TP但维持买入。独立成章§4.7，不计入IP评分"
+    },
+    "capital_market_signals": {
+      "duan_yongping_stake": "7.65%（7/6增持后无新披露），按7/24收160.9港元计持仓市值~164亿港元（较上周-3亿）",
+      "duan_yongping_statement_0723": "「泡泡玛特我才刚开始买啊！我猜10年内大概率是不会卖的。」——7/23雪球发言。核心理由：2000亿市值、去年赚130亿利润、商业模式已跑通、企业文化好、未来10-20年平均年利润大概率不低于现在。同时戴头盔'不保证对的'",
+      "duan_wang_meeting_0720": "段永平与王宁7/20一同观看2026世界杯决赛，首次公开同框合影。段自称王宁'粉丝'",
+      "stock_price": "160.9港元（7/24收，周内-1.7%），52周区间140.1-339.8，PE(TTM)~14.5-15.9x，市值~2,110亿港元",
+      "rating_changes": "本周无新评级变动。此前：汇丰7/17降至持有/168.9、德银维持沽售/140、Citi 415→350、大摩323→278、富瑞→227.60、中金370→248。综合12个月TP仍~288（+79%上行空间）。市场预期极度分化",
+      "h1_earnings_expected": "2026年中期业绩预计8/20-25披露——本监控启动以来最重要催化剂",
+      "note": "段永平'10年不卖'是极罕见的公开长期承诺（其投资风格以集中+长期著称），对市场信心有显著提振作用。但此为资本市场信号，不计入任何IP健康度评分"
+    },
+    "emerging_ip_signals": [
+      "DIMOO×皮克斯预售加购火爆（抖音26,000+/天猫20,000+）——L3流量验证已获确认，是本期最强需求侧信号。菲律宾DIMOO主题快闪店开业——IP独立性获战略级认可",
+      "CRYBABY 7月双系列新品（心动+怪兽的眼泪）——五大IP中新品管线最活跃。北京特展8/1开幕为下周最强催化剂",
+      "HACIPUPU迷路汪汪系列首发——验证能力①（发现和签约新艺术家/IP），与Molly/Skullpanda/DIMOO验证的能力②形成互补",
+      "Twinkle Twinkle获王宁公开战略背书——'加速孵化+多品类衍生（毛绒/手办/珠宝/生活方式）'",
+      "公司Labubu月产能100万→5,000万——供给侧战略级调整，'回归消费本质'对长期IP矩阵健康偏正面"
+    ]
+  },
+
+  "social_summary": {
+    "labubu": {
+      "platforms": ["抖音", "小红书", "微博", "TikTok", "Instagram"],
+      "trend": "positive_but_price_decoupled",
+      "key_topics": ["发型自由DIY长尾延续", "4.0破发-51%持续讨论", "产能100万→5000万引发供给侧分析", "段永平10年不卖提振信心"],
+      "sentiment": "两极分化（社媒热度↑ + 段永平背书↑ 二手价格↓↓，背离继续加深）",
+      "data_quality": "qualitative_only"
+    },
+    "molly": {
+      "platforms": ["小红书", "抖音", "微博", "Instagram"],
+      "trend": "strongly_positive_sustained",
+      "key_topics": ["星巴克联名第三周打卡（150+门店持续）", "Crocs洞洞鞋全球发售", "Ducati联名预热", "20周年IP生命力"],
+      "sentiment": "正面（持续触达→区别于一次性事件）",
+      "data_quality": "qualitative_only"
+    },
+    "skullpanda": {
+      "platforms": ["小红书", "Instagram", "时尚媒体"],
+      "trend": "moderating_after_peak",
+      "key_topics": ["巴黎高定周回顾", "MEGA花的房间官宣期待", "芭提雅独家产品"],
+      "sentiment": "中性偏正（高定周热度自然消退，MEGA发售期待维持）",
+      "data_quality": "qualitative_only"
+    },
+    "dimoo": {
+      "platforms": ["小红书", "Instagram", "抖音", "微博"],
+      "trend": "strongly_positive",
+      "key_topics": ["皮克斯联名开箱/测评持续产出", "预售加购火爆（抖音26,000+）", "菲律宾首个DIMOO主题快闪店", "隐藏款巴斯光年搜寻"],
+      "sentiment": "正面（催化兑现+预售火爆+海外拓展三线共振）",
+      "data_quality": "qualitative_only"
+    },
+    "crybaby": {
+      "platforms": ["小红书", "Instagram", "抖音", "微博"],
+      "trend": "strongly_positive",
+      "key_topics": ["心动系列开箱", "怪兽的眼泪系列讨论", "芭提雅巨型气球打卡持续", "北京特展8/1预约期待"],
+      "sentiment": "正面（新品+展览多线并行，热度扩散）",
+      "data_quality": "qualitative_only"
+    },
+    "twinkle_twinkle": {
+      "platforms": ["小红书", "抖音", "Instagram"],
+      "trend": "stable_positive",
+      "key_topics": ["王宁专访加速孵化", "下半年vinyl-faced公仔期待", "喜茶联名长尾", "美国拥有率居首"],
+      "sentiment": "正面（创始人战略背书增强信心）",
+      "data_quality": "qualitative_only"
+    },
+    "hacipupu": {
+      "platforms": ["小红书", "抖音", "微博", "B站"],
+      "trend": "moderate_new_launch",
+      "key_topics": ["迷路汪汪系列开箱", "狗狗主题治愈向", "隐藏款摇尾嗷呜搜寻"],
+      "sentiment": "正面温和（非爆款级传播，属正常新品首发热度）",
+      "data_quality": "qualitative_only"
+    }
+  },
+
+  "key_events_this_week": [
+    {
+      "date": "2026-07-23",
+      "event": "段永平雪球发言：'泡泡玛特我才刚开始买啊！我猜10年内大概率是不会卖的。'——极罕见的公开长期承诺。同时确认清仓中国神华将资金全部置换为泡泡玛特",
+      "impact": "正面（资本市场信号，独立成章）——第二大股东（7.65%）公开承诺10年不卖，对市场信心有显著提振。但此为股东行为信号≠IP健康",
+      "significance": "high",
+      "category": "capital_market"
+    },
+    {
+      "date": "2026-07-20",
+      "event": "段永平与王宁一同观看2026世界杯决赛，首次公开同框合影。段自称王宁'粉丝'",
+      "impact": "正面（资本市场信号，独立成章）——重要股东与管理层关系深化",
+      "significance": "medium",
+      "category": "capital_market"
+    },
+    {
+      "date": "2026-07-23",
+      "event": "菲律宾首个DIMOO主题快闪店开业（Glorietta Mall Makati，至9/23），DIMOO×皮克斯全系列+限定产品在售。永久店10月跟进",
+      "impact": "正面（消费者热度/公司战略）——DIMOO获得独立于泡泡玛特主品牌的主题店待遇，标志IP独立性获战略级认可",
+      "significance": "high",
+      "category": "consumer_heat"
+    },
+    {
+      "date": "2026-07-16/17→持续",
+      "event": "DIMOO×皮克斯正式发售10天后：预售加购火爆（毛绒天猫20,000+/抖音26,000+，手办天猫10,000+/抖音7,600+），开箱/测评内容持续产出",
+      "impact": "正面（消费者热度）——L3流量验证已获确认，是本期最强的需求侧信号。但二手溢价+成交量仍缺失（L4销售验证未达成）",
+      "significance": "high",
+      "category": "consumer_heat"
+    },
+    {
+      "date": "2026-07-09/10→持续",
+      "event": "HACIPUPU迷路汪汪系列搪胶毛绒挂件盲盒7/9线上、7/10线下首发。6+1隐藏（1:72），单盒109元/整盒654元。历史IP新系列",
+      "impact": "待验证（运营动作落地）——验证公司能力①（发现和签约新艺术家/IP）。历史参考：HACIPUPU二代强、三代弱、新品期以折价为主",
+      "significance": "medium",
+      "category": "operational_action"
+    },
+    {
+      "date": "2026-07-01-15→持续",
+      "event": "Crybaby心动系列+怪兽的眼泪系列双线7月发售。北京特展'来自泪海的惊喜'8/1-9/5即将开幕。芭提雅巨型气球+新加坡S.E.A.海洋馆持续",
+      "impact": "正面（消费者热度+运营动作）——Crybaby为五大IP中7月新品管线最活跃的IP，北京特展开幕为下周最强催化剂",
+      "significance": "high",
+      "category": "consumer_heat"
+    },
+    {
+      "date": "2026-07-24",
+      "event": "股价收160.9港元（上周163.6，周内-1.7%），52周低位140.1。多间大行下调目标价但维持买入评级",
+      "impact": "中性偏弱（资本市场信号，极度分化，独立成章）",
+      "significance": "medium",
+      "category": "capital_market"
+    },
+    {
+      "date": "2026-07",
+      "event": "关键供给侧发现：泡泡玛特Labubu月产能从100万只→5,000万只——公司主动去稀缺化，价格下跌至少部分来自供给侧扩张而非需求崩塌",
+      "impact": "中性（对短期二手价负面、对长期IP健康正面——'回归消费本质'）",
+      "significance": "high",
+      "category": "operational_action"
+    }
+  ],
+
+  "sources_used": [
+    "段永平雪球7/23发言——'10年内大概率不卖'+'我才刚开始买'，多家财经媒体7/23-24报道",
+    "段永平与王宁7/20世界杯决赛合影——证券时报/每日经济新闻等报道",
+    "DIMOO×皮克斯预售加购数据——发现报告/券商周度跟踪（7月中旬）",
+    "菲律宾DIMOO主题快闪店——Philstar/ABS-CBN/BusinessMirror 7/24-25报道",
+    "Labubu 4.0二手价格聚合——什么值得买/网易/微信公众号（截至7/20）",
+    "Labubu产能数据——什么值得买深度分析（100万→5,000万/月）",
+    "德银7/8报告——Labubu 4.0二手跌至~50元、Q2增速或仅+1.6%、维持沽售/140",
+    "汇丰7/17报告——降级至持有/TP168.9、预计Q2+10%",
+    "大行目标价汇总——Citi 350/大摩278/富瑞227.60/中金248/德银140",
+    "HACIPUPU迷路汪汪系列发售——搜狐/新浪/FashionNetwork/B站 7/3-10报道",
+    "Crybaby心动系列+怪兽的眼泪+北京特展——新浪新闻/微博 7月报道",
+    "Molly×星巴克联名——搜狐/什么值得买 7/8报道",
+    "Skullpanda×Robert Wun高定周——Vogue HK/新浪时尚 7/8报道",
+    "Twinkle Twinkle王宁战略背书——雪球/大摩7/3新品速递",
+    "Wings of Fantasy价格——NewsBreak Labubu Price Guide 2026（1月数据）",
+    "泡泡玛特9992.HK股价——Yahoo Finance/同花顺/雪球（7/24收160.9港元）",
+    "2026年中期业绩披露预期——多家券商预测8/20-25",
+    "泡泡玛特2025年报——营收~371-413亿/净利~128-142亿/毛利率72.1%/ROE 77.6%"
+  ]
+}

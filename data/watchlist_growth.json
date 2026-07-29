@@ -4,6 +4,25 @@
   "updated_at": "2026-07-29",
   "entries": [
     {
+      "name": "津上机床中国",
+      "code": "01651.HK",
+      "board": "港",
+      "cScore": 80,
+      "mScore": 78,
+      "target_price": 52,
+      "valuation_certainty": 0.58,
+      "dv_ttm": null,
+      "next_earnings_date": null,
+      "next_earnings_type": "FY2027中报",
+      "cycle_is_cyclical": true,
+      "cycle_position": "景气高位",
+      "watchlistLevel": "B_GROWTH",
+      "trackingStatus": "WATCHING",
+      "strategicCoreType": null,
+      "lastFundamentalReviewDate": "2026-07-29",
+      "lastRedFlagReviewDate": "2026-07-29"
+    },
+    {
       "name": "NXP Semiconductors",
       "code": "NXPI.US",
       "board": "纳",

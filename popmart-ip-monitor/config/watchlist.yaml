@@ -161,6 +161,22 @@ ips:
         rarity: "collab"
         importance: medium
 
+  - ip_name: HACIPUPU
+    aliases:
+      - HACIPUPU
+      - 哈奇噗噗
+      - 星星人小狗
+    group: new_ip
+    thesis_role: "监控新 IP 是否出现早期爆款迹象（验证能力①：发现和签约新艺术家/IP）"
+    skus:
+      - sku_id: hacipupu_lost_dog_series
+        name: "HACIPUPU 迷路汪汪系列搪胶毛绒挂件盲盒"
+        category: "plush_pendant"
+        official_price: 109
+        launch_date: "2026-07-09"
+        rarity: "normal"
+        importance: medium
+
   - ip_name: NEW_IP_POOL
     aliases: []
     group: new_ip
