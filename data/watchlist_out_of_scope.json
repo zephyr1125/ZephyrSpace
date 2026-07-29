@@ -1,8 +1,27 @@
 {
-  "version": 9,
+  "version": 10,
   "watchlistLevel": "NONE",
-  "updated_at": "2026-07-19",
+  "updated_at": "2026-07-29",
   "entries": [
+    {
+      "name": "士兰微",
+      "code": "600460.SH",
+      "board": "沪",
+      "cScore": 63,
+      "mScore": 64,
+      "target_price": null,
+      "valuation_certainty": null,
+      "dv_ttm": 0.27,
+      "next_earnings_date": null,
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": true,
+      "cycle_position": "复苏早期",
+      "watchlistLevel": "NONE",
+      "trackingStatus": "WATCHING",
+      "strategicCoreType": null,
+      "lastFundamentalReviewDate": "2026-07-29",
+      "lastRedFlagReviewDate": "2026-07-29"
+    },
     {
       "name": "乐歌股份",
       "code": "300729.SZ",
