@@ -1297,24 +1297,6 @@
       "lastRedFlagReviewDate": "2026-07-17"
     },
     {
-      "name": "NXP Semiconductors",
-      "code": "NXPI.US",
-      "board": "纳",
-      "cScore": 83,
-      "mScore": 79,
-      "target_price": 275,
-      "valuation_certainty": 0.70,
-      "dv_ttm": null,
-      "next_earnings_date": null,
-      "next_earnings_type": "Q3 2026季报",
-      "cycle_is_cyclical": true,
-      "cycle_position": "复苏中期",
-      "watchlistLevel": "A_CORE",
-      "trackingStatus": "WATCHING",
-      "strategicCoreType": null,
-      "lastFundamentalReviewDate": "2026-07-29",
-      "lastRedFlagReviewDate": "2026-07-29"
-    },
     {
       "name": "中国移动",
       "code": "00941.HK",
