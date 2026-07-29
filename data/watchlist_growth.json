@@ -1147,34 +1147,6 @@
       "lastFundamentalReview": "2026-07-23",
       "lastMgmtArchive": "2026-07-23",
       "lastValuation": "2026-07-23"
-    },
-    {
-      "name": "亚翔集成",
-      "code": "603929.SH",
-      "board": "沪",
-      "cScore": 74,
-      "mScore": 73,
-      "target_price": 128,
-      "valuation_certainty": 0.50,
-      "dv_ttm": 1.6,
-      "next_earnings_date": null,
-      "next_earnings_type": "半年报",
-      "cycle_is_cyclical": true,
-      "cycle_position": "上行中段",
-      "watchlistLevel": "NONE",
-      "trackingStatus": "CYCLE_WATCH",
-      "strategicCoreType": null,
-      "maxWeight": 0,
-      "lastFundamentalReviewDate": "2026-07-29",
-      "lastRedFlagReviewDate": "2026-07-29",
-      "cycle_watch_reasons": [
-        "双评分合计147未达B_GROWTH门槛150",
-        "第一大客户收入占55.30%，前五大占92.29%",
-        "新加坡单一地区贡献72.4%营收和绝大多数利润",
-        "2026年4月31.15亿关联订单暴露控股股东业务依赖",
-        "72岁创始人兼CEO继任计划缺失已4个多月",
-        "FCF高度受应付款和预收款时点变化影响"
-      ]
     }
   ],
   "valuation_certainty_scale": "0.00-1.00; measures target-price reliability, not company quality",
