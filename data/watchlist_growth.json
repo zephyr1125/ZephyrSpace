@@ -371,7 +371,7 @@
       "cScore": 80,
       "mScore": 79,
       "target_price": 30,
-      "valuation_certainty": 0.62,
+      "valuation_certainty": 0.60,
       "dv_ttm": 1.1,
       "next_earnings_date": null,
       "next_earnings_type": null,
@@ -380,8 +380,8 @@
       "watchlistLevel": "B_GROWTH",
       "trackingStatus": "WATCHING",
       "strategicCoreType": null,
-      "lastFundamentalReviewDate": "2026-07-29",
-      "lastRedFlagReviewDate": "2026-07-29"
+      "lastFundamentalReviewDate": "2026-07-30",
+      "lastRedFlagReviewDate": "2026-07-30"
     },
     {
       "name": "安踏体育",
