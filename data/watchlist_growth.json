@@ -669,25 +669,6 @@
       "lastRedFlagReviewDate": "2026-07-19"
     },
     {
-      "name": "东鹏饮料",
-      "code": "605499.SH",
-      "board": "沪",
-      "cScore": 82,
-      "mScore": 73,
-      "target_price": 150,
-      "valuation_certainty": 0.58,
-      "dv_ttm": 5.77,
-      "next_earnings_date": null,
-      "next_earnings_type": "三季报（待公告）",
-      "cycle_is_cyclical": false,
-      "cycle_position": null,
-      "watchlistLevel": "B_GROWTH",
-      "trackingStatus": "WATCHING",
-      "strategicCoreType": null,
-      "lastFundamentalReviewDate": "2026-07-31",
-      "lastRedFlagReviewDate": null
-    },
-    {
       "name": "中际旭创",
       "code": "300308.SZ",
       "board": "创",
