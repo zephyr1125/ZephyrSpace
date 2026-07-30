@@ -841,25 +841,6 @@
       "lastRedFlagReviewDate": "2026-07-18"
     },
     {
-      "name": "乐鑫科技",
-      "code": "688018.SH",
-      "board": "科",
-      "cScore": 81,
-      "mScore": 78,
-      "target_price": 105,
-      "valuation_certainty": 0.65,
-      "dv_ttm": 0.65,
-      "next_earnings_date": null,
-      "next_earnings_type": "三季报（待公告）",
-      "cycle_is_cyclical": false,
-      "cycle_position": null,
-      "watchlistLevel": "A_CORE",
-      "trackingStatus": "WATCHING",
-      "strategicCoreType": null,
-      "lastFundamentalReviewDate": "2026-06-02",
-      "lastRedFlagReviewDate": null
-    },
-    {
       "name": "招商银行",
       "code": "600036.SH",
       "board": "沪",
