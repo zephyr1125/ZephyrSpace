@@ -1,5 +1,5 @@
 {
-  "version": 17,
+  "version": 18,
   "watchlistLevel": "B_GROWTH",
   "updated_at": "2026-07-30",
   "entries": [
@@ -1255,6 +1255,25 @@
       "next_earnings_date": null,
       "next_earnings_type": "Q2 FY2027季报",
       "cycle_is_cyclical": true,
+      "cycle_position": null,
+      "watchlistLevel": "B_GROWTH",
+      "trackingStatus": "WATCHING",
+      "strategicCoreType": null,
+      "lastFundamentalReviewDate": "2026-07-30",
+      "lastRedFlagReviewDate": "2026-07-30"
+    },
+    {
+      "name": "蜜雪集团",
+      "code": "02097.HK",
+      "board": "港",
+      "cScore": 82,
+      "mScore": 76,
+      "target_price": 250,
+      "valuation_certainty": 0.58,
+      "dv_ttm": null,
+      "next_earnings_date": null,
+      "next_earnings_type": "2026中期业绩",
+      "cycle_is_cyclical": false,
       "cycle_position": null,
       "watchlistLevel": "B_GROWTH",
       "trackingStatus": "WATCHING",
