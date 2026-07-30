@@ -8,10 +8,10 @@ aliases: ["Meta", "META", "Facebook", "Meta Platforms"]
 关注级别: Core
 market: US
 board: 纳
-cScore: 80
-mScore: 76
-targetPrice: 550
-buyPrice: 414
+cScore: 85
+mScore: 77
+targetPrice: 580
+buyPrice: 442
 最后更新日期: 2026-07-30
 ---
 
