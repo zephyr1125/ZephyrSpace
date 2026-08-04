@@ -23,25 +23,6 @@
       "lastRedFlagReviewDate": "2026-07-17"
     },
     {
-      "name": "万事达卡",
-      "code": "MA.US",
-      "board": "纽",
-      "cScore": 87,
-      "mScore": 89,
-      "target_price": 540,
-      "valuation_certainty": 0.86,
-      "dv_ttm": 0.57,
-      "next_earnings_date": "2026-07-30",
-      "next_earnings_type": "季报",
-      "cycle_is_cyclical": false,
-      "cycle_position": null,
-      "watchlistLevel": "S_STRATEGIC",
-      "trackingStatus": "WATCHING",
-      "strategicCoreType": "COMPOUNDER",
-      "lastFundamentalReviewDate": "2026-07-07",
-      "lastRedFlagReviewDate": "2026-07-17"
-    },
-    {
       "name": "长江电力",
       "code": "600900.SH",
       "board": "沪",

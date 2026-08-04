@@ -15,11 +15,11 @@ aliases:
 关注级别: 高
 market: US
 board: 纳
-最后更新日期: 2026-07-20
+最后更新日期: 2026-07-31
 watchlistLevel: B_GROWTH
 cScore: 80
 mScore: 77
-target_price: 250
+target_price: 255
 valuation_certainty: 0.55
 ---
 

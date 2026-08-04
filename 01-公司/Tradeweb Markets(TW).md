@@ -6,7 +6,7 @@ aliases: [Tradeweb Markets, Tradeweb, TW]
 可投资性: 高
 阶段: 成长期
 关注级别: Growth
-最后更新日期: 2026-07-17
+最后更新日期: 2026-07-31
 market: US
 board: 纳
 ---
@@ -25,9 +25,9 @@ board: 纳
 
 ## 研究档案
 
-- [[管理层档案/Tradeweb Markets 管理层档案 82 2026-07-17]]
-- [[深度分析/Tradeweb Markets 深度分析 86 2026-07-17]]
-- [[估值分析/Tradeweb Markets 估值分析 2026-07-17]]
+- [[管理层档案/Tradeweb Markets 管理层档案 82 2026-07-31]]（82/100，Q2 FY2026 更新）
+- [[深度分析/Tradeweb Markets 深度分析 86 2026-07-31]]（86/100，Q2 FY2026 更新）
+- [[估值分析/Tradeweb Markets 估值分析 2026-07-31]]（target $114，Q2 FY2026 更新）
 
 ## 关键监控
 

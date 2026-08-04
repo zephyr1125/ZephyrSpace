@@ -6,7 +6,7 @@ aliases: [AJG, Gallagher, Arthur J Gallagher]
 可投资性: 美股（NYSE）
 阶段: 成熟期+整合增长
 关注级别: 高
-最后更新日期: 2026-07-20
+最后更新日期: 2026-07-31
 market: US
 board: 纽
 watchlistLevel: B_GROWTH
@@ -25,10 +25,10 @@ valuation_certainty: 0.53
 - Q2财报：2026-07-30(预计)
 
 ## 深度分析
-[[深度分析/Gallagher 深度分析 81 2026-07-20]] — 81/100 ⭐⭐⭐⭐
+[[深度分析/Gallagher 深度分析 79 2026-07-31]] — 79/100 ⭐⭐⭐⭐（Q2 FY2026 更新）
 
 ## 管理层档案
-[[管理层档案/Gallagher 管理层档案 83 2026-07-20]] — 83/100 ⭐⭐⭐⭐
+[[管理层档案/Gallagher 管理层档案 78 2026-07-31]] — 78/100 ⭐⭐⭐⭐（Q2 FY2026 更新）
 
 ## 估值分析
-[[估值分析/Gallagher 估值分析 2026-07-20]] — 合理价$250 | 机械买入~$190
+[[估值分析/Gallagher 估值分析 2026-07-31]] — target $240 | certainty 0.53 | 当前 $256.46 高于target

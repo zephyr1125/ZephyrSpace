@@ -25,8 +25,8 @@ board: 纽
 
 ## 研究档案
 
-- [[管理层档案/Cboe Global Markets 管理层档案 84 2026-07-17]]
-- [[深度分析/Cboe Global Markets 深度分析 86 2026-07-17]]
+- [[管理层档案/Cboe Global Markets 管理层档案 86 2026-07-17]]
+- [[深度分析/Cboe Global Markets 深度分析 88 2026-07-17]]
 - [[估值分析/Cboe Global Markets 估值分析 2026-07-17]]
 
 ## 关键监控

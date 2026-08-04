@@ -8,21 +8,23 @@ aliases:
 可投资性: 可投资
 阶段: 跟踪
 关注级别: A_CORE
-最后更新日期: 2026-07-17
+最后更新日期: 2026-07-31
 ---
 
 # SK hynix（SKHY.US）
 
 ## PreBuy结论
 
-**HBM技术领导者，但当前$156.10已隐含接近峰值的长期利润；建议GROWTH观察，不追IPO热度。**
+**HBM技术领导者，Q2创纪录但76%利润率不可持续。周期顶峰"最好也最危险"——更适合B_GROWTH框架而非A_CORE稳定复利。当前$126.79→等待$85以下。**
 
-| 参数 | 裁决 |
+| 参数 | 复核修正后 |
 |---|---:|
-| cScore | 84 |
-| mScore | 79 |
-| Target Price | $95/ADS |
-| Valuation Certainty | 0.48 |
+| cScore | **82**（复核从 84 → 82） |
+| mScore | **77**（复核从 79 → 77） |
+| Target Price | **$80/ADS**（复核修正，此前 $100） |
+| Valuation Certainty | **0.45**（此前 0.48） |
+| Watchlist | **B_GROWTH**（从 A_CORE 移出） |
+| 当前参考价 | $126.79（2026-07-29 收盘） |
 | 机械买入价 | $71/ADS |
 | maxWeight | 2%例外上限 |
 | 建议档位 | GROWTH观察 |
