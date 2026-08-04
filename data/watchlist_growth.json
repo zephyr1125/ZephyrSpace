@@ -1,7 +1,7 @@
 {
-  "version": 19,
+  "version": 21,
   "watchlistLevel": "B_GROWTH",
-  "updated_at": "2026-07-30",
+  "updated_at": "2026-08-04",
   "entries": [
     {
       "name": "津上机床中国",
@@ -106,7 +106,7 @@
       "mScore": 81,
       "target_price": 410,
       "valuation_certainty": 0.64,
-      "dv_ttm": 0.90,
+      "dv_ttm": 0.9,
       "next_earnings_date": null,
       "next_earnings_type": null,
       "cycle_is_cyclical": false,
@@ -232,25 +232,6 @@
       "lastRedFlagReviewDate": null
     },
     {
-      "name": "药明康德",
-      "code": "603259.SH",
-      "board": "沪",
-      "cScore": 77,
-      "mScore": 76,
-      "target_price": 118,
-      "valuation_certainty": 0.44,
-      "dv_ttm": 1.88,
-      "next_earnings_date": "2026-08-03",
-      "next_earnings_type": "半年报",
-      "cycle_is_cyclical": false,
-      "cycle_position": null,
-      "watchlistLevel": "B_GROWTH",
-      "trackingStatus": "WATCHING",
-      "strategicCoreType": null,
-      "lastFundamentalReviewDate": "2026-07-23",
-      "lastRedFlagReviewDate": "2026-07-23"
-    },
-    {
       "name": "分众传媒",
       "code": "002027.SZ",
       "board": "深",
@@ -371,7 +352,7 @@
       "cScore": 80,
       "mScore": 79,
       "target_price": 30,
-      "valuation_certainty": 0.60,
+      "valuation_certainty": 0.6,
       "dv_ttm": 1.1,
       "next_earnings_date": null,
       "next_earnings_type": null,
@@ -1280,6 +1261,25 @@
       "strategicCoreType": null,
       "lastFundamentalReviewDate": "2026-07-30",
       "lastRedFlagReviewDate": "2026-07-30"
+    },
+    {
+      "name": "华测导航",
+      "code": "300627.SZ",
+      "board": "创",
+      "cScore": 78,
+      "mScore": 77,
+      "target_price": 26,
+      "valuation_certainty": 0.68,
+      "dv_ttm": null,
+      "next_earnings_date": null,
+      "next_earnings_type": "季报",
+      "cycle_is_cyclical": false,
+      "cycle_position": null,
+      "watchlistLevel": "B_GROWTH",
+      "trackingStatus": "WATCHING",
+      "strategicCoreType": null,
+      "lastFundamentalReviewDate": "2026-08-03",
+      "lastRedFlagReviewDate": "2026-08-03"
     }
   ],
   "valuation_certainty_scale": "0.00-1.00; measures target-price reliability, not company quality",
