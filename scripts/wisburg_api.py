@@ -64,16 +64,23 @@ class WisburgClient:
 
     def _api(self, path: str) -> dict:
         """底层 GET 请求"""
-        url = f"{self.BASE_URL}{path}"
-        req = urllib.request.Request(url, headers={
-            "Authorization": f"Bearer {self._key}",
-            "Accept": "application/json",
-        })
-        with urllib.request.urlopen(req) as r:
-            data = json.loads(r.read().decode("utf-8"))
-        if data.get("code") != 200:
-            raise RuntimeError(f"Wisburg API error {data.get('code')}: {data.get('message')}")
-        return data
+        from scripts.api_tracker import get_tracker
+
+        # 提取端点名（如 "/api/reports/90479" → "reports"）
+        endpoint = path.split("/api/")[-1].split("?")[0].split("/")[0] if "/api/" in path else path
+
+        tracker = get_tracker()
+        with tracker.track("wisburg", endpoint, essential=True):
+            url = f"{self.BASE_URL}{path}"
+            req = urllib.request.Request(url, headers={
+                "Authorization": f"Bearer {self._key}",
+                "Accept": "application/json",
+            })
+            with urllib.request.urlopen(req) as r:
+                data = json.loads(r.read().decode("utf-8"))
+            if data.get("code") != 200:
+                raise RuntimeError(f"Wisburg API error {data.get('code')}: {data.get('message')}")
+            return data
 
     def _list(self, endpoint: str, query: str = "", first: int = 20,
               after: str = "", start_time: str = "", end_time: str = "") -> list:

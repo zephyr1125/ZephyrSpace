@@ -451,25 +451,42 @@ class CninfoClient:
         return h
 
     def _get(self, path, params=None):
+        from scripts.api_tracker import get_tracker
+        import time
+        t0 = time.perf_counter()
         r = self.session.get(
             f"{self.BASE_URL}{path}", params=params,
             headers=self._headers(), timeout=30,
         )
+        elapsed = (time.perf_counter() - t0) * 1000
         r.raise_for_status()
         data = r.json()
-        if data.get("resultcode") in (401, 402, 416):
+        success = data.get("resultcode") not in (401, 402, 416)
+        # 提取端点名
+        endpoint = path.replace("/api/load/", "").replace("/api/sysapi/", "").replace("/api/stock/", "")
+        get_tracker().record_call("cninfo", endpoint, essential=True)
+        get_tracker().record_result("cninfo", endpoint, success=success, duration_ms=elapsed)
+        if not success:
             raise RuntimeError(f"API error {data.get('resultcode')}: {data.get('resultmsg')}")
         return data
 
     def _post(self, path, data=None, params=None):
+        from scripts.api_tracker import get_tracker
+        import time
+        t0 = time.perf_counter()
         r = self.session.post(
             f"{self.BASE_URL}{path}", data=data, params=params,
             headers=self._headers("application/x-www-form-urlencoded; charset=UTF-8"),
             timeout=30,
         )
+        elapsed = (time.perf_counter() - t0) * 1000
         r.raise_for_status()
         resp = r.json()
-        if isinstance(resp, dict) and resp.get("resultcode") in (401, 402, 416):
+        is_err = isinstance(resp, dict) and resp.get("resultcode") in (401, 402, 416)
+        endpoint = path.replace("/api/load/", "").replace("/api/sysapi/", "").replace("/api/stock/", "")
+        get_tracker().record_call("cninfo", endpoint, essential=True)
+        get_tracker().record_result("cninfo", endpoint, success=not is_err, duration_ms=elapsed)
+        if is_err:
             raise RuntimeError(f"API error {resp.get('resultcode')}: {resp.get('resultmsg')}")
         return resp
 

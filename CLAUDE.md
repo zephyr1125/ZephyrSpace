@@ -316,6 +316,40 @@ result = prebuy_web_research("东方财富", "300059.SZ")
 
 **规则**：Tavily 用于不确定 URL 的发现性搜索；财务数据验证（东方财富/stockanalysis 等已知 URL）继续用 `web_fetch`。
 
+## API 用量追踪
+
+每次分析（深度分析/管理层档案/估值分析/周度监控/AI泡沫仪表盘）自动追踪各 API 调用次数，数据存储在 `data/api_usage/YYYY-MM/` 目录。用于年度续约决策（智堡 ¥2000/年、理杏仁 ¥1800/年）。
+
+### Claude 执行规则
+
+分析开始时：
+```python
+from scripts.api_tracker import start_run, finish_run
+start_run("deep-analysis", "600519.SH", company_name="贵州茅台")
+```
+
+分析结束时：
+```python
+finish_run()
+```
+
+> ⚠️ `start_run` 必须在 API 调用之前执行，否则所有追踪静默跳过（NoOp 模式）。
+
+### 已仪器化的模块
+- `scripts/wisburg_api.py` — `_api()` 自动追踪全部 9 个端点
+- `scripts/cninfo_api.py` — `_get()` / `_post()` 自动追踪
+- `scripts/tavily_search.py` — `TavilyClient.search()` 透明代理追踪
+- `scripts/lixinger_api.py` — 统一客户端，`post()` 自动追踪（推荐替代分散的 `lx_post()`）
+- `scripts/ai_bubble_scan.py` — `run_query()` 自动追踪
+
+### 查看报告
+
+```powershell
+python scripts/api_usage_report.py                  # 本月汇总
+python scripts/api_usage_report.py --months 6       # 最近6个月趋势
+python scripts/api_usage_report.py --renewal         # 续约推荐表
+```
+
 ## tushare 数据陷阱（常见）
 
 1. `fina_indicator` limit=1 返回最新一期（可能是 Q1 季报），Q1 ROE 被系统性低估（只有年化 1/4）

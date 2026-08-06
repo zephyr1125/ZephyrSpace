@@ -23,8 +23,29 @@ def _get_client() -> TavilyClient:
         key = os.getenv('TAVILY_KEY')
         if not key:
             raise EnvironmentError("TAVILY_KEY 未在 .env 中设置")
-        _client = TavilyClient(api_key=key)
+        raw = TavilyClient(api_key=key)
+        _client = _TracingTavilyWrapper(raw)
     return _client
+
+
+class _TracingTavilyWrapper:
+    """透明代理 TavilyClient，自动追踪每次 search 调用"""
+
+    def __init__(self, delegate: TavilyClient):
+        self._d = delegate
+
+    def search(self, query: str, **kwargs):
+        from scripts.api_tracker import get_tracker
+        depth = kwargs.get("search_depth", "basic")
+        max_r = kwargs.get("max_results", 5)
+        tracker = get_tracker()
+        with tracker.track("tavily", "search", essential=True,
+                           context=f"depth={depth}, max={max_r}"):
+            return self._d.search(query, **kwargs)
+
+    def __getattr__(self, name):
+        # 代理其他属性/方法
+        return getattr(self._d, name)
 
 
 def _fmt(results: list) -> str:

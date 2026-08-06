@@ -99,12 +99,16 @@ INDICATORS = [
 
 def run_query(client, q, topic, days, max_results=5):
     """单条 Tavily 查询，返回精简结果列表；失败时返回带 error 的占位。"""
+    from scripts.api_tracker import get_tracker
     try:
         kwargs = {"query": q, "max_results": max_results, "search_depth": "advanced"}
         if topic == "news":
             kwargs["topic"] = "news"
             kwargs["days"] = days
-        resp = client.search(**kwargs)
+        tracker = get_tracker()
+        with tracker.track("tavily", "search", essential=True,
+                           context=f"ai-bubble {topic} days={days}"):
+            resp = client.search(**kwargs)
         out = []
         for r in resp.get("results", []):
             out.append({

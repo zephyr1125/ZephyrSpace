@@ -1,7 +1,7 @@
 {
   "version": 21,
   "watchlistLevel": "B_GROWTH",
-  "updated_at": "2026-08-04",
+  "updated_at": "2026-08-06",
   "entries": [
     {
       "name": "津上机床中国",
@@ -202,8 +202,8 @@
       "target_price": 215,
       "valuation_certainty": 0.6,
       "dv_ttm": null,
-      "next_earnings_date": null,
-      "next_earnings_type": null,
+      "next_earnings_date": "2026-08-20",
+      "next_earnings_type": "中期业绩",
       "cycle_is_cyclical": false,
       "cycle_position": null,
       "watchlistLevel": "B_GROWTH",
@@ -506,8 +506,8 @@
       "target_price": 40,
       "valuation_certainty": 0.63,
       "dv_ttm": null,
-      "next_earnings_date": null,
-      "next_earnings_type": null,
+      "next_earnings_date": "2026-08-17",
+      "next_earnings_type": "中期业绩",
       "cycle_is_cyclical": true,
       "cycle_position": null,
       "watchlistLevel": "B_GROWTH",
