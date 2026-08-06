@@ -9,10 +9,11 @@ aliases:
 关注级别: 核心
 watchlistLevel: A_CORE
 cScore: 83
-mScore: 77
-totalScore: 160
-targetPrice: 297
-valuationCertainty: 0.55
+mScore: 80
+totalScore: 163
+targetPrice: 360
+valuationCertainty: 0.60
+buyPrice: 275
 buyPrice: 225
 数据截止日期: 2026-08-06
 最后更新: 2026-08-06
@@ -41,8 +42,8 @@ buyPrice: 225
 
 | 指标 | 数值 |
 |------|------|
-| 加权合理价 | $297 |
-| 估值确定性 | 0.55(中) |
+| 加权合理价 | $360 |
+| 估值确定性 | 0.60(中) |
 | PE(TTM) | 15.1x |
 | P/B | 4.35x |
 | BV/股 | $85.31 |
@@ -50,7 +51,7 @@ buyPrice: 225
 ## 关键分析文件
 
 - [[深度分析/Kinsale Capital 深度分析 83 2026-08-06]]
-- [[管理层档案/Kinsale Capital 管理层档案 77 2026-08-06]]
+- [[管理层档案/Kinsale Capital 管理层档案 80 2026-08-06]]
 - [[估值分析/Kinsale Capital 估值分析 2026-08-06]]
 
 ## 仓位建议
