@@ -1,7 +1,7 @@
 {
-  "version": 12,
+  "version": 13,
   "watchlistLevel": "A_CORE",
-  "updated_at": "2026-08-06",
+  "updated_at": "2026-08-13",
   "entries": [
     {
       "name": "McDonald's",
@@ -180,17 +180,17 @@
       "board": "纽",
       "cScore": 87,
       "mScore": 80,
-      "target_price": 495,
+      "target_price": 500,
       "valuation_certainty": 0.67,
       "dv_ttm": null,
-      "next_earnings_date": "2026-08-08",
-      "next_earnings_type": "季报",
+      "next_earnings_date": null,
+      "next_earnings_type": "Q3 2026季报（待公告）",
       "cycle_is_cyclical": true,
       "cycle_position": null,
       "watchlistLevel": "A_CORE",
       "trackingStatus": "WATCHING",
       "strategicCoreType": null,
-      "lastFundamentalReviewDate": "2026-07-20",
+      "lastFundamentalReviewDate": "2026-08-13",
       "lastRedFlagReviewDate": "2026-07-20"
     },
     {
@@ -1447,6 +1447,25 @@
       "strategicCoreType": null,
       "lastFundamentalReviewDate": "2026-08-06",
       "lastRedFlagReviewDate": "2026-08-06"
+    },
+    {
+      "name": "Broadridge",
+      "code": "BR.US",
+      "board": "纽",
+      "cScore": 79,
+      "mScore": 82,
+      "target_price": 185,
+      "valuation_certainty": 0.55,
+      "dv_ttm": 2.58,
+      "next_earnings_date": null,
+      "next_earnings_type": null,
+      "cycle_is_cyclical": false,
+      "cycle_position": null,
+      "watchlistLevel": "A_CORE",
+      "trackingStatus": "WATCHING",
+      "strategicCoreType": null,
+      "lastFundamentalReviewDate": "2026-08-13",
+      "lastRedFlagReviewDate": "2026-08-13"
     }
   ],
   "valuation_certainty_scale": "0.00-1.00; measures target-price reliability, not company quality",
