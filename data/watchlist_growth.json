@@ -1,5 +1,5 @@
 {
-  "version": 23,
+  "version": 24,
   "watchlistLevel": "B_GROWTH",
   "updated_at": "2026-08-13",
   "entries": [
@@ -1294,25 +1294,6 @@
       "next_earnings_type": null,
       "cycle_is_cyclical": true,
       "cycle_position": "成长期",
-      "watchlistLevel": "B_GROWTH",
-      "trackingStatus": "WATCHING",
-      "strategicCoreType": null,
-      "lastFundamentalReviewDate": "2026-08-13",
-      "lastRedFlagReviewDate": "2026-08-13"
-    },
-    {
-      "name": "Deckers Outdoor",
-      "code": "DECK.US",
-      "board": "纽",
-      "cScore": 84,
-      "mScore": 86,
-      "target_price": 120,
-      "valuation_certainty": 0.63,
-      "dv_ttm": null,
-      "next_earnings_date": null,
-      "next_earnings_type": "Q2 FY2027季报",
-      "cycle_is_cyclical": false,
-      "cycle_position": null,
       "watchlistLevel": "B_GROWTH",
       "trackingStatus": "WATCHING",
       "strategicCoreType": null,
