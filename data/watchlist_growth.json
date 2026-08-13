@@ -1,7 +1,7 @@
 {
-  "version": 21,
+  "version": 22,
   "watchlistLevel": "B_GROWTH",
-  "updated_at": "2026-08-06",
+  "updated_at": "2026-08-13",
   "entries": [
     {
       "name": "津上机床中国",
@@ -1280,6 +1280,25 @@
       "strategicCoreType": null,
       "lastFundamentalReviewDate": "2026-08-03",
       "lastRedFlagReviewDate": "2026-08-03"
+    },
+    {
+      "name": "心动公司",
+      "code": "02400.HK",
+      "board": "港",
+      "cScore": 78,
+      "mScore": 82,
+      "target_price": 60,
+      "valuation_certainty": 0.55,
+      "dv_ttm": null,
+      "next_earnings_date": null,
+      "next_earnings_type": null,
+      "cycle_is_cyclical": true,
+      "cycle_position": "成长期",
+      "watchlistLevel": "B_GROWTH",
+      "trackingStatus": "WATCHING",
+      "strategicCoreType": null,
+      "lastFundamentalReviewDate": "2026-08-13",
+      "lastRedFlagReviewDate": "2026-08-13"
     }
   ],
   "valuation_certainty_scale": "0.00-1.00; measures target-price reliability, not company quality",
