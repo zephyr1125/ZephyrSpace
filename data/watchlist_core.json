@@ -1,5 +1,5 @@
 {
-  "version": 14,
+  "version": 15,
   "watchlistLevel": "A_CORE",
   "updated_at": "2026-08-13",
   "entries": [
@@ -1452,10 +1452,10 @@
       "name": "Broadridge",
       "code": "BR.US",
       "board": "纽",
-      "cScore": 79,
-      "mScore": 82,
-      "target_price": 185,
-      "valuation_certainty": 0.55,
+      "cScore": 80,
+      "mScore": 83,
+      "target_price": 190,
+      "valuation_certainty": 0.62,
       "dv_ttm": 2.58,
       "next_earnings_date": null,
       "next_earnings_type": null,
