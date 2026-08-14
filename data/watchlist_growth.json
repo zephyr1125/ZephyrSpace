@@ -1,7 +1,7 @@
 {
   "version": 24,
   "watchlistLevel": "B_GROWTH",
-  "updated_at": "2026-08-13",
+  "updated_at": "2026-08-14",
   "entries": [
     {
       "name": "津上机床中国",
@@ -882,19 +882,19 @@
       "code": "600285.SH",
       "board": "沪",
       "cScore": 76,
-      "mScore": 76,
-      "target_price": 24,
-      "valuation_certainty": 0.65,
-      "dv_ttm": 4.91,
-      "next_earnings_date": "2026-08-12",
-      "next_earnings_type": "半年报",
+      "mScore": 77,
+      "target_price": 23,
+      "valuation_certainty": 0.6,
+      "dv_ttm": 5.59,
+      "next_earnings_date": null,
+      "next_earnings_type": "三季报",
       "cycle_is_cyclical": false,
       "cycle_position": null,
       "watchlistLevel": "B_GROWTH",
       "trackingStatus": "WATCHING",
       "strategicCoreType": null,
-      "lastFundamentalReviewDate": "2026-07-19",
-      "lastRedFlagReviewDate": "2026-07-19"
+      "lastFundamentalReviewDate": "2026-08-14",
+      "lastRedFlagReviewDate": "2026-08-14"
     },
     {
       "name": "青岛港",
