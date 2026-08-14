@@ -229,7 +229,7 @@ def main():
     INBOX_DIR.mkdir(parents=True, exist_ok=True)
 
     result = download_single_report(args.scode, args.report, dry_run=args.dry_run)
-    if dry_run:
+    if args.dry_run:
         print("\n[DONE] 预览完成（--dry-run，未实际下载）")
     elif result:
         print(f"\n[DONE] 下载完成 -> {result}")
