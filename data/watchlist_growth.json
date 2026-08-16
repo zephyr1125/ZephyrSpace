@@ -1,7 +1,7 @@
 {
   "version": 24,
   "watchlistLevel": "B_GROWTH",
-  "updated_at": "2026-08-14",
+  "updated_at": "2026-08-15",
   "entries": [
     {
       "name": "津上机床中国",
@@ -1091,10 +1091,10 @@
       "name": "思源电气",
       "code": "002028.SZ",
       "board": "深",
-      "cScore": 80,
-      "mScore": 76,
-      "target_price": 160,
-      "valuation_certainty": 0.59,
+      "cScore": 79,
+      "mScore": 78,
+      "target_price": 150,
+      "valuation_certainty": 0.52,
       "dv_ttm": 0.57,
       "next_earnings_date": "2026-08-15",
       "next_earnings_type": "半年报",
@@ -1103,9 +1103,9 @@
       "watchlistLevel": "B_GROWTH",
       "trackingStatus": "WATCHING",
       "strategicCoreType": "GLOBAL_CHALLENGER",
-      "lastFundamentalReview": "2026-07-22",
-      "lastMgmtArchive": "2026-07-22",
-      "lastValuation": "2026-07-22"
+      "lastFundamentalReview": "2026-08-16",
+      "lastMgmtArchive": "2026-08-16",
+      "lastValuation": "2026-08-16"
     },
     {
       "name": "上港集团",
@@ -1299,6 +1299,25 @@
       "strategicCoreType": null,
       "lastFundamentalReviewDate": "2026-08-13",
       "lastRedFlagReviewDate": "2026-08-13"
+    },
+    {
+      "name": "Colgate-Palmolive",
+      "code": "CL.US",
+      "board": "纽",
+      "cScore": 79,
+      "mScore": 76,
+      "target_price": 82,
+      "valuation_certainty": 0.56,
+      "dv_ttm": 2.31,
+      "next_earnings_date": null,
+      "next_earnings_type": null,
+      "cycle_is_cyclical": false,
+      "cycle_position": null,
+      "watchlistLevel": "B_GROWTH",
+      "trackingStatus": "PRICE_ABOVE_TARGET",
+      "strategicCoreType": null,
+      "lastFundamentalReviewDate": "2026-08-15",
+      "lastRedFlagReviewDate": "2026-08-15"
     }
   ],
   "valuation_certainty_scale": "0.00-1.00; measures target-price reliability, not company quality",
