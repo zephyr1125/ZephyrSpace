@@ -1,7 +1,7 @@
 {
   "version": 24,
   "watchlistLevel": "B_GROWTH",
-  "updated_at": "2026-08-15",
+  "updated_at": "2026-08-17",
   "entries": [
     {
       "name": "津上机床中国",
@@ -1318,6 +1318,25 @@
       "strategicCoreType": null,
       "lastFundamentalReviewDate": "2026-08-15",
       "lastRedFlagReviewDate": "2026-08-15"
+    },
+    {
+      "name": "汇丰控股",
+      "code": "00005.HK",
+      "board": "港",
+      "cScore": 78,
+      "mScore": 80,
+      "target_price": 140,
+      "valuation_certainty": 0.62,
+      "dv_ttm": 3.6,
+      "next_earnings_date": null,
+      "next_earnings_type": "Q3 2026季报",
+      "cycle_is_cyclical": true,
+      "cycle_position": "景气高峰",
+      "watchlistLevel": "B_GROWTH",
+      "trackingStatus": "WATCHING",
+      "strategicCoreType": null,
+      "lastFundamentalReviewDate": "2026-08-17",
+      "lastRedFlagReviewDate": "2026-08-17"
     }
   ],
   "valuation_certainty_scale": "0.00-1.00; measures target-price reliability, not company quality",
