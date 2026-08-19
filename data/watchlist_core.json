@@ -863,10 +863,10 @@
       "name": "柏楚电子",
       "code": "688188.SH",
       "board": "科",
-      "cScore": 85,
+      "cScore": 84,
       "mScore": 80,
-      "target_price": 96,
-      "valuation_certainty": 0.62,
+      "target_price": 92,
+      "valuation_certainty": 0.60,
       "dv_ttm": null,
       "next_earnings_date": "2026-08-18",
       "next_earnings_type": "半年报",
@@ -875,8 +875,8 @@
       "watchlistLevel": "A_CORE",
       "trackingStatus": "WATCHING",
       "strategicCoreType": null,
-      "lastFundamentalReviewDate": "2026-07-18",
-      "lastRedFlagReviewDate": "2026-07-18"
+      "lastFundamentalReviewDate": "2026-08-19",
+      "lastRedFlagReviewDate": "2026-08-19"
     },
     {
       "name": "招商银行",
