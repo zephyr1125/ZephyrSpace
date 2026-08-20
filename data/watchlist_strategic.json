@@ -1,7 +1,7 @@
 {
   "version": 7,
   "watchlistLevel": "S_STRATEGIC",
-  "updated_at": "2026-07-25",
+  "updated_at": "2026-08-19",
   "entries": [
     {
       "name": "国电南瑞",
@@ -32,7 +32,7 @@
       "valuation_certainty": 0.88,
       "dv_ttm": 3.67,
       "next_earnings_date": null,
-      "next_earnings_type": null,
+      "next_earnings_type": "三季报",
       "cycle_is_cyclical": false,
       "cycle_position": null,
       "watchlistLevel": "S_STRATEGIC",

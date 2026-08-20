@@ -1,7 +1,7 @@
 {
   "version": 15,
   "watchlistLevel": "A_CORE",
-  "updated_at": "2026-08-19",
+  "updated_at": "2026-08-20",
   "entries": [
     {
       "name": "McDonald's",
@@ -313,7 +313,7 @@
       "board": "沪",
       "cScore": 87,
       "mScore": 80,
-      "target_price": 1150,
+      "target_price": 1220,
       "valuation_certainty": 0.75,
       "dv_ttm": 3.87,
       "next_earnings_date": null,
