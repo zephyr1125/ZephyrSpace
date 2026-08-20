@@ -1,0 +1,92 @@
+{
+  "meta": {
+    "skill_version": "v-9a809a56",
+    "git_commit": "5937d704",
+    "model": "n/a (replay)",
+    "judge_model": "null(确定性)",
+    "dataset_version": "0.1",
+    "run_name": "current",
+    "suite": "management_archive",
+    "run_at": "2026-08-20T21:41:54"
+  },
+  "summary": {
+    "cases_total": 5,
+    "cases_passed": 5,
+    "pass_rate": 1.0,
+    "mean_scores": {
+      "trigger": 1.0,
+      "workflow": null,
+      "structure": 0.86,
+      "facts": 1.0,
+      "grounding": 1.0,
+      "analysis": 0.7333,
+      "calibration": 0.95,
+      "regression": 0.75
+    },
+    "p0_total": 0,
+    "p1_total": 9,
+    "avg_tool_calls": null,
+    "avg_runtime_seconds": 0.0,
+    "top_failure_categories": [
+      [
+        "FORMAT_BACKLINK",
+        5
+      ],
+      [
+        "FACT_CAPITAL_ACTION",
+        5
+      ],
+      [
+        "ANALYSIS_UNCERTAINTY",
+        2
+      ],
+      [
+        "WORKFLOW_MISSING_TIMELINE",
+        2
+      ],
+      [
+        "SCORE_INCONSISTENCY",
+        2
+      ],
+      [
+        "FORMAT_TICKER_FORMAT",
+        2
+      ],
+      [
+        "GROUNDING_QUOTE_CONTEXT",
+        2
+      ],
+      [
+        "FACT_MANAGEMENT_TURNOVER",
+        1
+      ],
+      [
+        "ANALYSIS_ACTION_VS_OUTCOME",
+        1
+      ]
+    ],
+    "weighted_score_avg": 78.1
+  },
+  "trigger": {
+    "accuracy": 1.0,
+    "metrics": {
+      "total": 26,
+      "tp": 14,
+      "fp": 0,
+      "tn": 12,
+      "fn": 0,
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fpr": 0.0,
+      "fnr": 0.0
+    },
+    "gates": {
+      "trigger_accuracy": true
+    }
+  },
+  "pairwise": {
+    "pairs": [],
+    "pass": true
+  }
+}

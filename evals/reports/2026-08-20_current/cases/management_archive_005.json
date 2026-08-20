@@ -1,0 +1,117 @@
+{
+  "case_id": "management_archive_005",
+  "skill_version": "v-9a809a56",
+  "status": "PASS",
+  "scores": {
+    "trigger": 1.0,
+    "workflow": null,
+    "structure": 0.8,
+    "facts": 1.0,
+    "grounding": 1.0,
+    "analysis": 0.7667,
+    "calibration": 1.0,
+    "regression": 0.75
+  },
+  "weighted_score": 78.3,
+  "gates": {
+    "structure_filename": true,
+    "structure_line_count": true,
+    "structure_sections": true,
+    "structure_quick_reference_card": true,
+    "structure_frontmatter": true,
+    "structure_ticker_format": false,
+    "structure_score_math": true,
+    "structure_red_flag_rule": true,
+    "structure_rating_mapping": true,
+    "structure_backlink": false,
+    "structure.required_sections": true,
+    "structure.score_math": true,
+    "structure.minimum_lines": true,
+    "facts.critical_fact_accuracy": true,
+    "grounding.grounded_claim_rate": true,
+    "regression_stability": false,
+    "workflow.required_tool_recall": null,
+    "trigger_accuracy": true,
+    "p0_errors": true,
+    "critical_fact_accuracy": true,
+    "grounded_claim_rate": true,
+    "required_tool_recall": true,
+    "score_math": true,
+    "required_sections": true,
+    "minimum_lines": true
+  },
+  "errors": [
+    {
+      "severity": "P2",
+      "category": "FORMAT_TICKER_FORMAT",
+      "message": "[structure.ticker_format] 股票代码 '\"600703.SH\"' 不符合格式 (SH/SZ/HK/US)",
+      "location": null
+    },
+    {
+      "severity": "P2",
+      "category": "FORMAT_BACKLINK",
+      "message": "[structure.backlink] 深度分析页 三安光电 深度分析 36 2026-06-19.md 未引用本管理层档案",
+      "location": null
+    },
+    {
+      "severity": "P1",
+      "category": "ANALYSIS_ACTION_VS_OUTCOME",
+      "message": "[M3] 承诺被标为已兑现，但证据仅显示执行动作（投入/费用），无业务结果指标：\"InP光芯片国内领先，400G/800G将放量\"",
+      "location": null
+    },
+    {
+      "severity": "P1",
+      "category": "FACT_CAPITAL_ACTION",
+      "message": "[M4] 融资工具清单未覆盖: 增发, 配股, 可转债, H股, 优先股, 股权激励（可能遗漏摊薄工具）",
+      "location": null
+    }
+  ],
+  "metrics": {
+    "runtime_seconds": 0.0,
+    "line_count": 358,
+    "section_count": 11,
+    "critical_facts_correct": 10,
+    "critical_facts_evaluated": 10,
+    "critical_fact_accuracy": 1.0,
+    "fact_recall": 0.25,
+    "claims_total": 12,
+    "claims_grounded": 12,
+    "grounded_claim_rate": 1.0,
+    "analysis_judges": 6,
+    "analysis_total": 23,
+    "analysis_max": 30,
+    "judge_disagreements": 0,
+    "regression_pass": 6,
+    "regression_total": 8,
+    "p0": 0,
+    "p1": 2
+  },
+  "judge_disagreements": [
+    {
+      "dimension": "counter_evidence",
+      "score": 4
+    },
+    {
+      "dimension": "action_vs_outcome",
+      "score": 4
+    },
+    {
+      "dimension": "capital_allocation",
+      "score": 4
+    },
+    {
+      "dimension": "strategic_consistency",
+      "score": 4
+    },
+    {
+      "dimension": "crisis_handling",
+      "score": 3
+    },
+    {
+      "dimension": "uncertainty",
+      "score": 4
+    }
+  ],
+  "manual_review": false,
+  "output": "管理层档案\\三安光电 管理层档案 42 2026-06-19.md"
+}

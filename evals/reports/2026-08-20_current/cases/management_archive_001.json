@@ -1,0 +1,117 @@
+{
+  "case_id": "management_archive_001",
+  "skill_version": "v-9a809a56",
+  "status": "PASS",
+  "scores": {
+    "trigger": 1.0,
+    "workflow": null,
+    "structure": 0.9,
+    "facts": 1.0,
+    "grounding": 1.0,
+    "analysis": 0.7,
+    "calibration": 1.0,
+    "regression": 0.75
+  },
+  "weighted_score": 78.2,
+  "gates": {
+    "structure_filename": true,
+    "structure_line_count": true,
+    "structure_sections": true,
+    "structure_quick_reference_card": true,
+    "structure_frontmatter": true,
+    "structure_ticker_format": true,
+    "structure_score_math": true,
+    "structure_red_flag_rule": true,
+    "structure_rating_mapping": true,
+    "structure_backlink": false,
+    "structure.required_sections": true,
+    "structure.score_math": true,
+    "structure.minimum_lines": true,
+    "facts.critical_fact_accuracy": true,
+    "grounding.grounded_claim_rate": true,
+    "regression_stability": false,
+    "workflow.required_tool_recall": null,
+    "trigger_accuracy": true,
+    "p0_errors": true,
+    "critical_fact_accuracy": true,
+    "grounded_claim_rate": true,
+    "required_tool_recall": true,
+    "score_math": true,
+    "required_sections": true,
+    "minimum_lines": true
+  },
+  "errors": [
+    {
+      "severity": "P2",
+      "category": "FORMAT_BACKLINK",
+      "message": "[structure.backlink] 深度分析页 福耀玻璃 深度分析 88 2026-05-17.md 未引用本管理层档案",
+      "location": null
+    },
+    {
+      "severity": "P2",
+      "category": "ANALYSIS_UNCERTAINTY",
+      "message": "[management_archive_001] uncertainty 分析质量 2/5 偏低：未见信息不足标注，存在强推结论风险",
+      "location": null
+    },
+    {
+      "severity": "P1",
+      "category": "FACT_CAPITAL_ACTION",
+      "message": "[M4] 融资工具清单未覆盖: 可转债, H股, 优先股（可能遗漏摊薄工具）",
+      "location": null
+    },
+    {
+      "severity": "P1",
+      "category": "FACT_MANAGEMENT_TURNOVER",
+      "message": "[M8] 检测到短期密集离任 {'2025': 2} 但正文未识别该模式（或否认）",
+      "location": null
+    }
+  ],
+  "metrics": {
+    "runtime_seconds": 0.0,
+    "line_count": 451,
+    "section_count": 11,
+    "critical_facts_correct": 3,
+    "critical_facts_evaluated": 3,
+    "critical_fact_accuracy": 1.0,
+    "fact_recall": 0.0,
+    "claims_total": 19,
+    "claims_grounded": 19,
+    "grounded_claim_rate": 1.0,
+    "analysis_judges": 6,
+    "analysis_total": 21,
+    "analysis_max": 30,
+    "judge_disagreements": 0,
+    "regression_pass": 6,
+    "regression_total": 8,
+    "p0": 0,
+    "p1": 2
+  },
+  "judge_disagreements": [
+    {
+      "dimension": "counter_evidence",
+      "score": 4
+    },
+    {
+      "dimension": "action_vs_outcome",
+      "score": 4
+    },
+    {
+      "dimension": "capital_allocation",
+      "score": 4
+    },
+    {
+      "dimension": "strategic_consistency",
+      "score": 4
+    },
+    {
+      "dimension": "crisis_handling",
+      "score": 3
+    },
+    {
+      "dimension": "uncertainty",
+      "score": 2
+    }
+  ],
+  "manual_review": false,
+  "output": "管理层档案\\福耀玻璃 管理层档案 85 2026-07-14.md"
+}
