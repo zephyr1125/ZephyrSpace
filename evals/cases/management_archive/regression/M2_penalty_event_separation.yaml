@@ -1,0 +1,11 @@
+# M2: 处罚事件合并 —— 独立处罚必须分行
+id: regression_M2_penalty_event_separation
+m: M2
+title: 独立处罚事件必须单独一行，不得合并为笼统描述
+
+description: |
+  同一行内出现 >=2 个不同年份、或事项列含分号连接多个独立事件、或机构列含多个机构，
+  视为合并。合并即 FAIL（P1）。
+
+pass_condition: 每次独立处罚单独成行
+fail_condition: "如 '2023年央行处罚29.9亿；2021年市监总局处罚50万' 合并为一行"

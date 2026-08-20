@@ -1,0 +1,62 @@
+# Golden Facts: 比亚迪 (002594.SZ)
+company:
+  name: 比亚迪
+  ticker: 002594.SZ
+
+critical_facts:
+  chairman:
+    value: 王传福
+    as_of: "2026-08-01"
+    severity: P0
+    source_required: true
+  ceo:
+    value: 王传福
+    as_of: "2026-08-01"
+    severity: P0
+    source_required: true
+  controller:
+    value: 王传福
+    as_of: "2026-08-01"
+    severity: P0
+    source_required: true
+  controller_type:
+    value: 自然人
+    as_of: "2026-08-01"
+    severity: P1
+  penalties:
+    - date: 2026-04
+      regulator: 巴西劳工部
+      amount_cny: null
+      event: 奴役劳动黑名单
+      severity: P1
+    - date: 2025-12
+      regulator: 巴西劳工检察院
+      amount_cny: null
+      event: 促成承包商与劳工检察院和解
+      severity: P1
+  management_changes: []
+  capital_actions:
+    - type: merger
+      year: 2003
+      actual_amount_cny: null
+      note: "并购秦川汽车进入整车制造"
+      severity: P2
+
+known_positive_cases:
+  - id: mgmt_stability
+    claim: "无离任"
+    outcome: "2021-2026核心C-suite无离任"
+  - id: founder_hold
+    claim: "王传福持股"
+    outcome: "A股约16.90% + H股，创始人深度绑定"
+
+known_red_flags:
+  - id: brazil_labor
+    description: "巴西工厂劳工条件争议被列入黑名单"
+    severity: P1
+  - id: berkshire_sell
+    description: "伯克希尔2022年起持续减持比亚迪H股"
+    severity: P2
+
+forbidden_claims:
+  - "比亚迪近三年无任何海外监管事件"

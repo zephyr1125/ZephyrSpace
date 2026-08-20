@@ -1,0 +1,266 @@
+---
+# trigger_positive_01: 管理层档案
+id: trigger_positive_01
+
+company:
+  name: ""
+  ticker: 000000.SZ
+  market: A
+
+prompt: "管理层档案 腾讯"
+
+tags:
+  - trigger
+  - positive
+
+expected_behavior:
+  should_trigger: true
+  should_generate_archive: false
+  should_update_company_page: false
+---
+# trigger_positive_02: 老板档案
+id: trigger_positive_02
+
+company:
+  name: ""
+  ticker: 000000.SZ
+  market: A
+
+prompt: "老板档案 美的集团"
+
+tags:
+  - trigger
+  - positive
+
+expected_behavior:
+  should_trigger: true
+  should_generate_archive: false
+  should_update_company_page: false
+---
+# trigger_positive_03: 看看...管理层靠不靠谱
+id: trigger_positive_03
+
+company:
+  name: ""
+  ticker: 000000.SZ
+  market: A
+
+prompt: "看看宁德时代管理层靠不靠谱"
+
+tags:
+  - trigger
+  - positive
+
+expected_behavior:
+  should_trigger: true
+  should_generate_archive: false
+  should_update_company_page: false
+---
+# trigger_positive_04: 管理层尽调
+id: trigger_positive_04
+
+company:
+  name: ""
+  ticker: 000000.SZ
+  market: A
+
+prompt: "管理层尽调 比亚迪"
+
+tags:
+  - trigger
+  - positive
+
+expected_behavior:
+  should_trigger: true
+  should_generate_archive: false
+  should_update_company_page: false
+---
+# trigger_positive_05: 全面分析
+id: trigger_positive_05
+
+company:
+  name: ""
+  ticker: 000000.SZ
+  market: A
+
+prompt: "全面分析 中国中免"
+
+tags:
+  - trigger
+  - positive
+
+expected_behavior:
+  should_trigger: true
+  should_generate_archive: false
+  should_update_company_page: false
+---
+# trigger_positive_06: 管理层档案
+id: trigger_positive_06
+
+company:
+  name: ""
+  ticker: 000000.SZ
+  market: A
+
+prompt: "给福耀玻璃建长期管理层档案"
+
+tags:
+  - trigger
+  - positive
+
+expected_behavior:
+  should_trigger: true
+  should_generate_archive: false
+  should_update_company_page: false
+---
+# trigger_positive_07: 管理层评估
+id: trigger_positive_07
+
+company:
+  name: ""
+  ticker: 000000.SZ
+  market: A
+
+prompt: "管理层评估 三安光电"
+
+tags:
+  - trigger
+  - positive
+
+expected_behavior:
+  should_trigger: true
+  should_generate_archive: false
+  should_update_company_page: false
+---
+# trigger_positive_08: 管理层档案+代码
+id: trigger_positive_08
+
+company:
+  name: ""
+  ticker: 000000.SZ
+  market: A
+
+prompt: "管理层档案 福耀玻璃 600660"
+
+tags:
+  - trigger
+  - positive
+
+expected_behavior:
+  should_trigger: true
+  should_generate_archive: false
+  should_update_company_page: false
+---
+# trigger_positive_09: 拉取财报并全面分析
+id: trigger_positive_09
+
+company:
+  name: ""
+  ticker: 000000.SZ
+  market: A
+
+prompt: "拉取财报并全面分析 三安光电"
+
+tags:
+  - trigger
+  - positive
+
+expected_behavior:
+  should_trigger: true
+  should_generate_archive: false
+  should_update_company_page: false
+---
+# trigger_positive_10: 管理层质量
+id: trigger_positive_10
+
+company:
+  name: ""
+  ticker: 000000.SZ
+  market: A
+
+prompt: "评估一下宁德时代的管理层质量"
+
+tags:
+  - trigger
+  - positive
+
+expected_behavior:
+  should_trigger: true
+  should_generate_archive: false
+  should_update_company_page: false
+---
+# trigger_positive_11: 管理层怎么样
+id: trigger_positive_11
+
+company:
+  name: ""
+  ticker: 000000.SZ
+  market: A
+
+prompt: "美的集团的管理层怎么样"
+
+tags:
+  - trigger
+  - positive
+
+expected_behavior:
+  should_trigger: true
+  should_generate_archive: false
+  should_update_company_page: false
+---
+# trigger_positive_12: 管理层档案
+id: trigger_positive_12
+
+company:
+  name: ""
+  ticker: 000000.SZ
+  market: A
+
+prompt: "管理层档案 招商银行"
+
+tags:
+  - trigger
+  - positive
+
+expected_behavior:
+  should_trigger: true
+  should_generate_archive: false
+  should_update_company_page: false
+---
+# trigger_positive_13: 老板档案
+id: trigger_positive_13
+
+company:
+  name: ""
+  ticker: 000000.SZ
+  market: A
+
+prompt: "老板档案 中国平安"
+
+tags:
+  - trigger
+  - positive
+
+expected_behavior:
+  should_trigger: true
+  should_generate_archive: false
+  should_update_company_page: false
+---
+# trigger_positive_14: 管理层+背景
+id: trigger_positive_14
+
+company:
+  name: ""
+  ticker: 000000.SZ
+  market: A
+
+prompt: "宁德时代管理层的背景资料"
+
+tags:
+  - trigger
+  - positive
+
+expected_behavior:
+  should_trigger: true
+  should_generate_archive: false
+  should_update_company_page: false

@@ -1,0 +1,29 @@
+# management_archive_002: 腾讯控股（港股公司 - 数据源切换）
+id: management_archive_002
+
+company:
+  name: 腾讯控股
+  ticker: 00700.HK
+  market: H
+
+prompt: "管理层档案 腾讯"
+
+tags:
+  - hk
+  - internet
+  - no_controlling_shareholder
+
+expected_behavior:
+  should_trigger: true
+  should_generate_archive: true
+  should_update_company_page: true
+
+golden_facts_file: fixtures/golden_facts/00700.HK.yaml
+
+required_workflow:
+  lixinger_profile: true
+  lixinger_measures: true
+  lixinger_inquiry: true
+  wisburg_earnings_calls: true
+  dividends: true
+  personnel_announcements: true

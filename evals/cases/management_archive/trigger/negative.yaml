@@ -1,0 +1,228 @@
+---
+# trigger_negative_01: PE 查询
+id: trigger_negative_01
+
+company:
+  name: ""
+  ticker: 000000.SZ
+  market: A
+
+prompt: "腾讯现在 PE 多少？"
+
+tags:
+  - trigger
+  - negative
+
+expected_behavior:
+  should_trigger: false
+  should_generate_archive: false
+  should_update_company_page: false
+---
+# trigger_negative_02: 股价
+id: trigger_negative_02
+
+company:
+  name: ""
+  ticker: 000000.SZ
+  market: A
+
+prompt: "美的最近股价为什么跌？"
+
+tags:
+  - trigger
+  - negative
+
+expected_behavior:
+  should_trigger: false
+  should_generate_archive: false
+  should_update_company_page: false
+---
+# trigger_negative_03: 现金流
+id: trigger_negative_03
+
+company:
+  name: ""
+  ticker: 000000.SZ
+  market: A
+
+prompt: "长江电力的自由现金流是多少？"
+
+tags:
+  - trigger
+  - negative
+
+expected_behavior:
+  should_trigger: false
+  should_generate_archive: false
+  should_update_company_page: false
+---
+# trigger_negative_04: 估值
+id: trigger_negative_04
+
+company:
+  name: ""
+  ticker: 000000.SZ
+  market: A
+
+prompt: "宁德时代当前估值是否便宜？"
+
+tags:
+  - trigger
+  - negative
+
+expected_behavior:
+  should_trigger: false
+  should_generate_archive: false
+  should_update_company_page: false
+---
+# trigger_negative_05: 市盈率
+id: trigger_negative_05
+
+company:
+  name: ""
+  ticker: 000000.SZ
+  market: A
+
+prompt: "帮我算一下比亚迪的市盈率"
+
+tags:
+  - trigger
+  - negative
+
+expected_behavior:
+  should_trigger: false
+  should_generate_archive: false
+  should_update_company_page: false
+---
+# trigger_negative_06: 股息率
+id: trigger_negative_06
+
+company:
+  name: ""
+  ticker: 000000.SZ
+  market: A
+
+prompt: "招商银行的股息率是多少？"
+
+tags:
+  - trigger
+  - negative
+
+expected_behavior:
+  should_trigger: false
+  should_generate_archive: false
+  should_update_company_page: false
+---
+# trigger_negative_07: 指数行情
+id: trigger_negative_07
+
+company:
+  name: ""
+  ticker: 000000.SZ
+  market: A
+
+prompt: "今天上证指数涨了多少？"
+
+tags:
+  - trigger
+  - negative
+
+expected_behavior:
+  should_trigger: false
+  should_generate_archive: false
+  should_update_company_page: false
+---
+# trigger_negative_08: 财报数据
+id: trigger_negative_08
+
+company:
+  name: ""
+  ticker: 000000.SZ
+  market: A
+
+prompt: "福耀玻璃2025年营收是多少？"
+
+tags:
+  - trigger
+  - negative
+
+expected_behavior:
+  should_trigger: false
+  should_generate_archive: false
+  should_update_company_page: false
+---
+# trigger_negative_09: 技术面
+id: trigger_negative_09
+
+company:
+  name: ""
+  ticker: 000000.SZ
+  market: A
+
+prompt: "帮我看看美的的K线走势"
+
+tags:
+  - trigger
+  - negative
+
+expected_behavior:
+  should_trigger: false
+  should_generate_archive: false
+  should_update_company_page: false
+---
+# trigger_negative_10: 技术面
+id: trigger_negative_10
+
+company:
+  name: ""
+  ticker: 000000.SZ
+  market: A
+
+prompt: "茅台最近的技术面怎么样？"
+
+tags:
+  - trigger
+  - negative
+
+expected_behavior:
+  should_trigger: false
+  should_generate_archive: false
+  should_update_company_page: false
+---
+# trigger_negative_11: 对比
+id: trigger_negative_11
+
+company:
+  name: ""
+  ticker: 000000.SZ
+  market: A
+
+prompt: "中际旭创和天孚通信哪个增速快？"
+
+tags:
+  - trigger
+  - negative
+
+expected_behavior:
+  should_trigger: false
+  should_generate_archive: false
+  should_update_company_page: false
+---
+# trigger_negative_12: 财务指标
+id: trigger_negative_12
+
+company:
+  name: ""
+  ticker: 000000.SZ
+  market: A
+
+prompt: "请对比宁德时代和亿纬锂能的ROE"
+
+tags:
+  - trigger
+  - negative
+
+expected_behavior:
+  should_trigger: false
+  should_generate_archive: false
+  should_update_company_page: false

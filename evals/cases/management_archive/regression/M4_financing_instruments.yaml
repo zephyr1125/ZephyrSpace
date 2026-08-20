@@ -1,0 +1,10 @@
+# M4: 融资工具遗漏 —— 必须覆盖全部摊薄工具
+id: regression_M4_financing_instruments
+m: M4
+title: 资本配置记录必须覆盖 增发/配股/可转债/H股增发/优先股/股权激励
+
+description: |
+  六类工具中缺失任一即 FAIL（P1）。仅看 A 股增发/配股而遗漏 H 股/可转债为高频坑。
+
+pass_condition: 六类工具关键词全部出现（增发/配股/可转债/H股/优先股/股权激励）
+fail_condition: 缺失可转债或 H 股增发等工具

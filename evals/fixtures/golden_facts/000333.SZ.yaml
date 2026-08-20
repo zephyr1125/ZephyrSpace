@@ -1,0 +1,49 @@
+# Golden Facts: 美的集团 (000333.SZ)
+company:
+  name: 美的集团
+  ticker: 000333.SZ
+
+critical_facts:
+  chairman:
+    value: 方洪波
+    as_of: "2026-08-01"
+    severity: P0
+    source_required: true
+  ceo:
+    value: 方洪波
+    as_of: "2026-08-01"
+    severity: P0
+    source_required: true
+  controller:
+    value: 何享健家族
+    as_of: "2026-08-01"
+    severity: P0
+    source_required: true
+  controller_type:
+    value: 自然人
+    as_of: "2026-08-01"
+    severity: P1
+  penalties: []
+  management_changes: []
+  capital_actions:
+    - type: merger
+      year: 2016
+      actual_amount_cny: null
+      note: "要约收购KUKA（约45亿欧元）"
+      severity: P1
+
+known_positive_cases:
+  - id: founder_step_back
+    claim: "创始人主动后退"
+    outcome: "方洪波2012年接任董事长至今"
+  - id: no_selling
+    claim: "零减持"
+    outcome: "58年零减持"
+
+known_red_flags:
+  - id: kuka_timing
+    description: "KUKA收购时机偏高，整合多年才见效"
+    severity: P2
+
+forbidden_claims:
+  - "美的集团管理层频繁变动"

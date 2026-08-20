@@ -1,0 +1,19 @@
+# M6: 公告金额 vs 实际执行金额 —— 回购口径
+id: regression_M6_announced_vs_executed_buyback
+m: M6
+title: 回购金额必须使用实际执行口径，不得以公告上限替代
+
+description: |
+  主要评价使用实际执行金额。若 golden 指定实际金额 X 且公告上限 Y，
+  档案只出现 Y 而未见 X，即 FAIL（P1）。
+
+golden_facts:
+  critical_facts:
+    capital_actions:
+      - type: buyback
+        year: 2025
+        actual_amount_cny: 1830000000
+        announced_upper_bound_cny: 2500000000
+
+pass_condition: 出现实际执行金额 18.3亿
+fail_condition: 只写公告上限 25亿

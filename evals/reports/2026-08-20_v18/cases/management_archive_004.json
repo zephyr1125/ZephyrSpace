@@ -1,0 +1,135 @@
+{
+  "case_id": "management_archive_004",
+  "skill_version": "v-9a809a56",
+  "status": "FAIL",
+  "scores": {
+    "trigger": 1.0,
+    "workflow": null,
+    "structure": 0.8,
+    "facts": 0.8,
+    "grounding": 1.0,
+    "analysis": 0.7667,
+    "calibration": 1.0,
+    "regression": 0.375
+  },
+  "weighted_score": 71.4,
+  "gates": {
+    "structure_filename": true,
+    "structure_line_count": true,
+    "structure_sections": true,
+    "structure_quick_reference_card": true,
+    "structure_frontmatter": true,
+    "structure_ticker_format": false,
+    "structure_score_math": true,
+    "structure_red_flag_rule": true,
+    "structure_rating_mapping": true,
+    "structure_backlink": false,
+    "structure.required_sections": true,
+    "structure.score_math": true,
+    "structure.minimum_lines": true,
+    "facts.critical_fact_accuracy": false,
+    "grounding.grounded_claim_rate": true,
+    "regression_stability": false,
+    "workflow.required_tool_recall": null,
+    "trigger_accuracy": true,
+    "p0_errors": true,
+    "critical_fact_accuracy": false,
+    "grounded_claim_rate": true,
+    "required_tool_recall": true,
+    "score_math": true,
+    "required_sections": true,
+    "minimum_lines": true
+  },
+  "errors": [
+    {
+      "severity": "P2",
+      "category": "FORMAT_TICKER_FORMAT",
+      "message": "[structure.ticker_format] 股票代码 '\"002594.SZ' 不符合格式 (SH/SZ/HK/US)",
+      "location": null
+    },
+    {
+      "severity": "P2",
+      "category": "FORMAT_BACKLINK",
+      "message": "[structure.backlink] 深度分析页 比亚迪 估值分析 2026-06-29.md 未引用本管理层档案",
+      "location": null
+    },
+    {
+      "severity": "P1",
+      "category": "FACT_PENALTY",
+      "message": "[management_archive_004] 处罚 2025-12 巴西劳工检察院 承包商劳工条件和解 未完整呈现 (org=True, event=False, amount=True)",
+      "location": null
+    },
+    {
+      "severity": "P1",
+      "category": "FACT_PENALTY",
+      "message": "[M2] 检测到 1 处疑似合并的处罚记录（独立事件应分行）",
+      "location": null
+    },
+    {
+      "severity": "P1",
+      "category": "ANALYSIS_ACTION_VS_OUTCOME",
+      "message": "[M3] 承诺（含'将/预计/目标'）被标为已兑现，但未提供结果指标：\"2023年将成为全球新能源车销量第一\"",
+      "location": null
+    },
+    {
+      "severity": "P1",
+      "category": "ANALYSIS_ACTION_VS_OUTCOME",
+      "message": "[M3] 承诺（含'将/预计/目标'）被标为已兑现，但未提供结果指标：\"技术为王，研发投入不设上限\"",
+      "location": null
+    },
+    {
+      "severity": "P1",
+      "category": "FACT_CAPITAL_ACTION",
+      "message": "[M4] 融资工具清单未覆盖: 增发, 配股, 可转债, 优先股（可能遗漏摊薄工具）",
+      "location": null
+    },
+    {
+      "severity": "P1",
+      "category": "GROUNDING_QUOTE_CONTEXT",
+      "message": "[M7] 摘录可能缺失限定条件：— 深刻洞察：将增长约束从需求端准确归因到供给端",
+      "location": null
+    },
+    {
+      "severity": "P1",
+      "category": "GROUNDING_QUOTE_CONTEXT",
+      "message": "[M7] 摘录可能缺失限定条件：— 远期目标宣言，需要持续验证",
+      "location": null
+    },
+    {
+      "severity": "P1",
+      "category": "WORKFLOW_MISSING_TIMELINE",
+      "message": "[M8] 高管变动时间线记录不足（仅 1 行），无法判断稳定性",
+      "location": null
+    }
+  ],
+  "metrics": {
+    "runtime_seconds": 0.0,
+    "line_count": 362,
+    "section_count": 11,
+    "critical_facts_correct": 4,
+    "critical_facts_evaluated": 5,
+    "critical_fact_accuracy": 0.8,
+    "fact_recall": 0.25,
+    "claims_total": 14,
+    "claims_grounded": 14,
+    "grounded_claim_rate": 1.0,
+    "analysis_judges": 6,
+    "analysis_total": 23,
+    "analysis_max": 30,
+    "judge_disagreements": 0,
+    "regression_pass": 3,
+    "regression_total": 8,
+    "p0": 0,
+    "p1": 8
+  },
+  "judge_disagreements": {
+    "counter_evidence": 4,
+    "action_vs_outcome": 4,
+    "capital_allocation": 4,
+    "strategic_consistency": 4,
+    "crisis_handling": 4,
+    "uncertainty": 3
+  },
+  "manual_review": false,
+  "output": "管理层档案\\比亚迪 管理层档案 71 2026-06-29.md"
+}

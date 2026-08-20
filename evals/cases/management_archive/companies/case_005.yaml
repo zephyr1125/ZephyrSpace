@@ -1,0 +1,37 @@
+# management_archive_005: 三安光电（监管处罚 + 高管变动 - 红旗样本）
+id: management_archive_005
+
+company:
+  name: 三安光电
+  ticker: 600703.SH
+  market: A
+
+prompt: "看看三安光电的管理层靠不靠谱"
+
+tags:
+  - a_share
+  - regulatory_penalty
+  - management_turnover
+  - red_flags
+  - low_score
+
+expected_behavior:
+  should_trigger: true
+  should_generate_archive: true
+  should_update_company_page: true
+
+golden_facts_file: fixtures/golden_facts/600703.SH.yaml
+
+required_workflow:
+  company_profile: true
+  executive_trades: true
+  dividends: true
+  penalties: true
+  lawsuits: true
+  pledge: true
+  irm_qa: true
+  personnel_announcements: true
+  lixinger_profile: true
+  lixinger_measures: true
+  lixinger_inquiry: true
+  wisburg_earnings_calls: true

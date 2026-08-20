@@ -1,0 +1,245 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "GoldenFacts",
+  "type": "object",
+  "required": [
+    "company",
+    "critical_facts",
+    "known_positive_cases",
+    "known_red_flags"
+  ],
+  "properties": {
+    "company": {
+      "type": "object",
+      "required": [
+        "name",
+        "ticker"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "ticker": {
+          "type": "string"
+        }
+      }
+    },
+    "critical_facts": {
+      "type": "object",
+      "properties": {
+        "chairman": {
+          "$ref": "#/definitions/fact"
+        },
+        "ceo": {
+          "$ref": "#/definitions/fact"
+        },
+        "controller": {
+          "$ref": "#/definitions/fact"
+        },
+        "controller_type": {
+          "$ref": "#/definitions/fact"
+        },
+        "penalties": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "date",
+              "regulator",
+              "event"
+            ],
+            "properties": {
+              "date": {
+                "type": "string"
+              },
+              "regulator": {
+                "type": "string"
+              },
+              "amount_cny": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "event": {
+                "type": "string"
+              },
+              "severity": {
+                "enum": [
+                  "P0",
+                  "P1",
+                  "P2"
+                ]
+              }
+            }
+          }
+        },
+        "management_changes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "person",
+              "role",
+              "event",
+              "date"
+            ],
+            "properties": {
+              "person": {
+                "type": "string"
+              },
+              "role": {
+                "type": "string"
+              },
+              "event": {
+                "enum": [
+                  "resignation",
+                  "appointment",
+                  "dismissal",
+                  "retirement"
+                ]
+              },
+              "date": {
+                "type": "string"
+              },
+              "severity": {
+                "enum": [
+                  "P0",
+                  "P1",
+                  "P2"
+                ]
+              }
+            }
+          }
+        },
+        "capital_actions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "type",
+              "year"
+            ],
+            "properties": {
+              "type": {
+                "enum": [
+                  "buyback",
+                  "dividend",
+                  "ipo",
+                  "placement",
+                  "rights",
+                  "convertible",
+                  "h_share",
+                  "preferred",
+                  "merger"
+                ]
+              },
+              "year": {
+                "type": "integer"
+              },
+              "actual_amount_cny": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "announced_upper_bound_cny": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "severity": {
+                "enum": [
+                  "P0",
+                  "P1",
+                  "P2"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "known_positive_cases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "claim",
+          "outcome"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "claim": {
+            "type": "string"
+          },
+          "outcome": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "known_red_flags": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "description"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "severity": {
+            "enum": [
+              "P0",
+              "P1",
+              "P2"
+            ]
+          }
+        }
+      }
+    },
+    "forbidden_claims": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "definitions": {
+    "fact": {
+      "type": "object",
+      "required": [
+        "value",
+        "as_of"
+      ],
+      "properties": {
+        "value": {
+          "type": "string"
+        },
+        "as_of": {
+          "type": "string"
+        },
+        "severity": {
+          "enum": [
+            "P0",
+            "P1",
+            "P2"
+          ]
+        },
+        "source_required": {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}

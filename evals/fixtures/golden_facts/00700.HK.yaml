@@ -1,0 +1,60 @@
+# Golden Facts: 腾讯控股 (00700.HK)
+company:
+  name: 腾讯控股
+  ticker: 00700.HK
+
+critical_facts:
+  chairman:
+    value: 马化腾
+    as_of: "2026-08-01"
+    severity: P0
+    source_required: true
+  ceo:
+    value: 马化腾
+    as_of: "2026-08-01"
+    severity: P0
+    source_required: true
+  controller:
+    value: 马化腾
+    as_of: "2026-08-01"
+    severity: P0
+    source_required: true
+  controller_type:
+    value: 自然人
+    as_of: "2026-08-01"
+    severity: P1
+  penalties:
+    - date: "2023"
+      regulator: 中国人民银行
+      amount_cny: 2990000000      # 29.9亿元（财付通支付清算违规）
+      event: 财付通违反支付清算管理规定
+      severity: P0
+    - date: "2021"
+      regulator: 市场监管总局
+      amount_cny: 500000          # 50万元（腾讯音乐独家版权案）
+      event: 腾讯音乐独家版权
+      severity: P1
+  management_changes: []
+  capital_actions:
+    - type: buyback
+      year: 2025
+      actual_amount_cny: null
+      announced_upper_bound_cny: null
+      note: "2021-2025累计回购约2800亿港元"
+      severity: P1
+
+known_positive_cases:
+  - id: buyback_scale
+    claim: "大规模回购"
+    outcome: "2021-2025累计约2800亿港元"
+  - id: dividend_rising
+    claim: "现金分红持续提升"
+    outcome: "FY2021 DPS 1.60 -> FY2025 DPS 5.30 HKD"
+
+known_red_flags:
+  - id: prosus_sell
+    description: "Prosus/Naspers 持续减持"
+    severity: P2
+
+forbidden_claims:
+  - "腾讯无任何监管处罚记录"

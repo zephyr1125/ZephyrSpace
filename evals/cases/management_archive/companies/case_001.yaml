@@ -1,0 +1,36 @@
+# management_archive_001: 福耀玻璃（大型优质公司 - 正常路径）
+id: management_archive_001
+
+company:
+  name: 福耀玻璃
+  ticker: 600660.SH
+  market: A
+
+prompt: "管理层档案 福耀玻璃"
+
+tags:
+  - a_share
+  - large_cap
+  - family_controlled
+  - high_score
+
+expected_behavior:
+  should_trigger: true
+  should_generate_archive: true
+  should_update_company_page: true
+
+golden_facts_file: fixtures/golden_facts/600660.SH.yaml
+
+required_workflow:
+  company_profile: true
+  executive_trades: true
+  dividends: true
+  penalties: true
+  lawsuits: true
+  pledge: true
+  irm_qa: true
+  personnel_announcements: true
+  lixinger_profile: true
+  lixinger_measures: true
+  lixinger_inquiry: true
+  wisburg_earnings_calls: true

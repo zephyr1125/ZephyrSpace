@@ -1,0 +1,88 @@
+# Golden Facts: 三安光电 (600703.SH)
+# 高红旗样本：实控人 + 总经理 双留置
+company:
+  name: 三安光电
+  ticker: 600703.SH
+
+critical_facts:
+  chairman:
+    value: 林志强
+    as_of: "2026-08-01"
+    severity: P0
+    source_required: true
+  ceo:
+    value: 林科闯
+    as_of: "2026-04-07"
+    severity: P0
+    source_required: true
+  controller:
+    value: 林秀成
+    as_of: "2026-08-01"
+    severity: P0
+    source_required: true
+  controller_type:
+    value: 自然人
+    as_of: "2026-08-01"
+    severity: P1
+  penalties:
+    - date: "2026-03-21"
+      regulator: 国家监察委员会
+      amount_cny: null
+      event: 林秀成被留置
+      severity: P0
+    - date: "2026-04-07"
+      regulator: 重庆市渝中区监察委员会
+      amount_cny: null
+      event: 林科闯被留置
+      severity: P0
+    - date: 2020-01
+      regulator: 地方监管部门
+      amount_cny: 59000
+      event: 节能产品罚款
+      severity: P2
+  management_changes:
+    - person: 林科闯
+      role: 总经理
+      event: dismissal
+      date: 2026-04
+      severity: P0
+    - person: 张家宏
+      role: 副总经理
+      event: resignation
+      date: "2024"
+      severity: P2
+    - person: 韦大曼
+      role: 董事
+      event: resignation
+      date: "2024"
+      severity: P2
+    - person: 方崇品
+      role: 监事会主席
+      event: resignation
+      date: "2025"
+      severity: P2
+  capital_actions:
+    - type: placement
+      year: 2016
+      actual_amount_cny: null
+      note: "2015-2016定增约35亿元"
+      severity: P2
+
+known_positive_cases:
+  - id: succession
+    claim: "二代接班"
+    outcome: "林志强2017年7月接任董事长"
+
+known_red_flags:
+  - id: controller_detained
+    description: "实控人林秀成被留置立案调查"
+    severity: P0
+  - id: ceo_detained
+    description: "总经理林科闯被留置，总经理空缺"
+    severity: P0
+  - id: turnover_dense
+    description: "2024-2026多名高管离任/被留置"
+    severity: P1
+
+forbidden_claims:
+  - "三安光电实控人及核心管理层无任何负面事件"

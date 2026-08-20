@@ -1,0 +1,101 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "EvalCase",
+  "description": "一个 management-archive eval case 的定义",
+  "type": "object",
+  "required": [
+    "id",
+    "company",
+    "prompt"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "company": {
+      "type": "object",
+      "required": [
+        "name",
+        "ticker",
+        "market"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "ticker": {
+          "type": "string",
+          "pattern": "^(\\d{6}\\.(SH|SZ)|\\d{5}\\.HK|[A-Z]{1,5}\\.US)$"
+        },
+        "market": {
+          "enum": [
+            "A",
+            "H",
+            "US"
+          ]
+        }
+      }
+    },
+    "prompt": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "expected_behavior": {
+      "type": "object",
+      "properties": {
+        "should_trigger": {
+          "type": "boolean"
+        },
+        "should_generate_archive": {
+          "type": "boolean"
+        },
+        "should_update_company_page": {
+          "type": "boolean"
+        }
+      }
+    },
+    "golden_facts_file": {
+      "type": ["string", "null"]
+    },
+    "required_workflow": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "boolean"
+      }
+    },
+    "expected_sections": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "output": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "candidate 输出文件路径（相对 vault 根）"
+    },
+    "trace": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "candidate trace 文件路径（相对 vault 根）"
+    },
+    "expected_score_range": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "[min, max] 预期分数区间（用于评分校准层）"
+    }
+  }
+}

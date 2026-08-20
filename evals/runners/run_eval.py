@@ -1,0 +1,416 @@
+
+"""run_eval：完整 Eval 管线 CLI（plan §17 / §20 / §30）。
+
+用法：
+    python -m evals.runners.run_eval \
+        --suite management_archive --run-name v18 [--skill management-archive/SKILL.md] \
+        [--cases id1,id2] [--output-dir 管理层档案] [--runs-dir <dir>] \
+        [--baseline reports/<run>/summary.json] [--judge null|llm] [--allow-missing-output]
+
+输出：reports/<YYYY-MM-DD>_<run-name>/{summary.json, summary.md, cases/*.json,
+      failures.md, regressions.md, traces/}
+"""
+from __future__ import annotations
+
+import argparse
+import json
+import re
+import shutil
+import sys
+from collections import Counter
+from datetime import datetime
+from pathlib import Path
+from typing import Any, Dict, List, Optional, Tuple
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+
+from ..graders import analytical_quality, facts, grounding, regression, score_consistency, structure, workflow
+from ..graders import trigger as trigger_grader
+from ..graders.common import (
+    CONFIG, VAULT_ROOT, EvalCase, EvalError, GraderResult, default_reports_dir,
+    default_skill_path, gates_pass, load_archive, load_cases, p0_p1_counts, weighted_score,
+)
+from .run_skill import ReplayRunner, get_runner
+from .trace_recorder import load_trace
+
+WEIGHTS = CONFIG["weights"]
+GATES = CONFIG["gates"]
+
+
+# ---------------------------------------------------------------- pipeline
+
+def _run_single(case: EvalCase, skill_text: str, skill_version: str,
+                runner: ReplayRunner, baseline_scores: Dict[str, float],
+                trigger_accuracy: float) -> Dict[str, Any]:
+    artifacts = runner.run(case, default_skill_path())
+    result: Dict[str, Any] = {
+        "case_id": case.id,
+        "skill_version": skill_version,
+        "status": "PASS",
+        "scores": {d: None for d in WEIGHTS},
+        "weighted_score": None,
+        "gates": {},
+        "errors": [],
+        "metrics": {},
+        "judge_disagreements": [],
+        "manual_review": False,
+    }
+    if artifacts.error or artifacts.output_path is None:
+        result["status"] = "SKIP" if CONFIG.get("allow_missing_output") else "FAIL"
+        result["errors"].append(EvalError("P1", "WORKFLOW_MISSING_OUTPUT",
+                                          f"[{case.id}] {artifacts.error or '无输出文件'}").to_dict())
+        return result
+
+    doc = load_archive(artifacts.output_path)
+    result["metrics"]["runtime_seconds"] = round(artifacts.runtime_seconds, 2)
+    result["output"] = str(artifacts.output_path.relative_to(VAULT_ROOT))
+
+    # --- 各 grader ---
+    layers: Dict[str, GraderResult] = {
+        "structure": structure.grade(doc, case),
+        "facts": facts.grade(doc, case),
+        "grounding": grounding.grade(doc, case),
+        "analysis": analytical_quality.grade(doc, case),
+        "calibration": score_consistency.grade(doc, case, baseline_scores),
+        "regression": regression.grade(doc, case),
+    }
+    if artifacts.trace:
+        layers["workflow"] = workflow.grade(artifacts.trace, case)
+    else:
+        layers["workflow"] = workflow.grade(None, case)
+
+    # trigger：套件级结果注入每个 case
+    layers["trigger"] = GraderResult(name="trigger", score=trigger_accuracy,
+                                     gates={"trigger_accuracy": trigger_accuracy >= GATES["trigger_accuracy"]["min"]})
+
+    all_errors: List[EvalError] = []
+    for name, gr in layers.items():
+        result["scores"][name] = gr.score
+        result["gates"].update({f"{name}.{k}" if not k.startswith(name) else k: v for k, v in gr.gates.items()})
+        all_errors.extend(gr.errors)
+        for k, v in gr.metrics.items():
+            result["metrics"].setdefault(k, v)
+        if name == "analysis":
+            dim_scores = gr.details.get("dimension_scores", {})
+            result["judge_disagreements"] = [{"dimension": k, "score": v} for k, v in dim_scores.items()]
+            result["manual_review"] = bool(gr.metrics.get("manual_review", False))
+
+    # --- 错误与权重 ---
+    result["errors"] = [e.to_dict() for e in all_errors]
+    p0, p1 = p0_p1_counts(all_errors)
+    result["metrics"]["p0"] = p0
+    result["metrics"]["p1"] = p1
+    result["weighted_score"] = weighted_score(result["scores"])
+
+    # --- Hard Gates ---
+    gate_results = _evaluate_gates(result, layers, trigger_accuracy)
+    result["gates"].update(gate_results)
+    result["status"] = "PASS" if all(v is True for v in gate_results.values()) else "FAIL"
+    return result
+
+
+def _evaluate_gates(result: Dict[str, Any], layers: Dict[str, GraderResult],
+                    trigger_accuracy: float) -> Dict[str, bool]:
+    g: Dict[str, bool] = {}
+    g["p0_errors"] = result["metrics"].get("p0", 0) <= GATES["p0_errors"]["max"]
+    # critical fact accuracy
+    fa = layers["facts"]
+    g["critical_fact_accuracy"] = fa.gates.get("critical_fact_accuracy", True) is not False
+    # grounded claim rate
+    gr = layers["grounding"]
+    g["grounded_claim_rate"] = gr.gates.get("grounded_claim_rate", True) is not False
+    # required tool recall
+    wf = layers["workflow"]
+    g["required_tool_recall"] = wf.gates.get("required_tool_recall", True) is not False
+    # trigger accuracy
+    g["trigger_accuracy"] = trigger_accuracy >= GATES["trigger_accuracy"]["min"]
+    # structure 硬门槛
+    st = layers["structure"]
+    g["score_math"] = st.gates.get("score_math", False) is True
+    g["required_sections"] = st.gates.get("required_sections", False) is True
+    g["minimum_lines"] = st.gates.get("minimum_lines", False) is True
+    return g
+
+
+# ---------------------------------------------------------------- trigger layer
+
+def _run_trigger(trigger_cases: List[EvalCase], skill_text: str) -> GraderResult:
+    return trigger_grader.grade_cases(trigger_cases, skill_text)
+
+
+# ---------------------------------------------------------------- summary / report
+
+def _aggregate(results: List[Dict[str, Any]]) -> Dict[str, Any]:
+    evaluated = [r for r in results if r["status"] != "SKIP"]
+    passed = [r for r in evaluated if r["status"] == "PASS"]
+    scores = {d: [] for d in WEIGHTS}
+    for r in evaluated:
+        for d, v in r["scores"].items():
+            if v is not None:
+                scores[d].append(v)
+    mean = {d: (round(sum(v) / len(v), 4) if v else None) for d, v in scores.items()}
+
+    p0 = sum(r["metrics"].get("p0", 0) for r in evaluated)
+    p1 = sum(r["metrics"].get("p1", 0) for r in evaluated)
+    tool_calls = [r["metrics"].get("tool_calls") for r in evaluated if r["metrics"].get("tool_calls") is not None]
+    runtimes = [r["metrics"].get("runtime_seconds") for r in evaluated if r["metrics"].get("runtime_seconds") is not None]
+
+    # 失败聚类
+    fail_cats: Counter = Counter()
+    for r in evaluated:
+        for e in r["errors"]:
+            fail_cats[e["category"]] += 1
+
+    return {
+        "cases_total": len(evaluated),
+        "cases_passed": len(passed),
+        "pass_rate": round(len(passed) / len(evaluated), 4) if evaluated else 0.0,
+        "mean_scores": mean,
+        "p0_total": p0,
+        "p1_total": p1,
+        "avg_tool_calls": round(sum(tool_calls) / len(tool_calls), 2) if tool_calls else None,
+        "avg_runtime_seconds": round(sum(runtimes) / len(runtimes), 2) if runtimes else None,
+        "top_failure_categories": fail_cats.most_common(10),
+    }
+
+
+def _write_report(run_dir: Path, meta: Dict[str, Any], summary: Dict[str, Any],
+                  results: List[Dict[str, Any]], trigger_res: GraderResult,
+                  traces: Dict[str, Dict[str, Any]], pairwise: Dict[str, Any]) -> Dict[str, Any]:
+    run_dir.mkdir(parents=True, exist_ok=True)
+    cases_dir = run_dir / "cases"
+    cases_dir.mkdir(exist_ok=True)
+    traces_dir = run_dir / "traces"
+    traces_dir.mkdir(exist_ok=True)
+
+    for r in results:
+        (cases_dir / (r["case_id"] + ".json")).write_text(
+            json.dumps(r, ensure_ascii=False, indent=2), encoding="utf-8")
+    for cid, t in traces.items():
+        (traces_dir / (cid + ".json")).write_text(
+            json.dumps(t, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    overall = {
+        "meta": meta,
+        "summary": summary,
+        "trigger": {
+            "accuracy": trigger_res.score,
+            "metrics": trigger_res.metrics,
+            "gates": trigger_res.gates,
+        },
+        "pairwise": pairwise,
+    }
+    summary_json_path = run_dir / "summary.json"
+    summary_json_path.write_text(json.dumps(overall, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    (run_dir / "summary.md").write_text(_summary_md(meta, summary, trigger_res, pairwise), encoding="utf-8")
+    (run_dir / "failures.md").write_text(_failures_md(results), encoding="utf-8")
+    (run_dir / "regressions.md").write_text(_regressions_md(results), encoding="utf-8")
+    return overall
+
+
+def _summary_md(meta: Dict[str, Any], summary: Dict[str, Any], trigger_res: GraderResult,
+                pairwise: Dict[str, Any]) -> str:
+    lines = [
+        "# Eval Run Summary",
+        "",
+        f"- Skill Version: {meta['skill_version']}",
+        f"- Git Commit: {meta['git_commit']}",
+        f"- Model: {meta['model']}",
+        f"- Judge Model: {meta['judge_model']}",
+        f"- Dataset Version: {meta['dataset_version']}",
+        f"- Cases: {summary['cases_total']}",
+        f"- Pass Rate: {summary['pass_rate']:.1%}",
+        f"- Weighted Score: {summary.get('weighted_score_avg')}",
+        f"- P0 Count: {summary['p0_total']}",
+        f"- P1 Count: {summary['p1_total']}",
+        f"- Trigger Accuracy: {trigger_res.score if trigger_res.score is not None else 'N/A'}",
+        f"- Critical Fact Accuracy: {summary['mean_scores'].get('facts')}",
+        f"- Grounded Claim Rate: {summary['mean_scores'].get('grounding')}",
+        f"- Required Tool Recall: {summary['mean_scores'].get('workflow')}",
+        f"- Average Tool Calls: {summary.get('avg_tool_calls')}",
+        f"- Average Runtime (s): {summary.get('avg_runtime_seconds')}",
+        "",
+        "## Dimension Mean Scores",
+        "",
+        "| Dimension | Score |",
+        "|---|---|",
+    ]
+    for d, s in summary["mean_scores"].items():
+        lines.append(f"| {d} | {s if s is not None else 'N/A'} |")
+    lines += ["", "## Top Failure Categories", "", "| Failure | Count |", "|---|---|"]
+    for cat, cnt in summary["top_failure_categories"]:
+        lines.append(f"| {cat} | {cnt} |")
+    if pairwise.get("pairs"):
+        lines += ["", "## Pairwise Calibration", ""]
+        for p in pairwise["pairs"]:
+            lines.append(f"- {p.get('result', '?')} : {p.get('a')} vs {p.get('b')}")
+    return "\n".join(lines) + "\n"
+
+
+def _failures_md(results: List[Dict[str, Any]]) -> str:
+    lines = ["# Failures", ""]
+    any_fail = False
+    for r in results:
+        errs = r.get("errors", [])
+        if not errs:
+            continue
+        any_fail = True
+        lines.append(f"## {r['case_id']} ({r['status']})")
+        for e in errs:
+            lines.append(f"- [{e['severity']}] {e['category']}: {e['message']}")
+        lines.append("")
+    if not any_fail:
+        lines.append("无错误。")
+    return "\n".join(lines) + "\n"
+
+
+def _regressions_md(results: List[Dict[str, Any]]) -> str:
+    lines = ["# Regression (M1-M8)", ""]
+    for r in results:
+        reg = next((e for e in r["errors"] if "M" in e["category"]), None)
+        status = "PASS" if r["status"] == "PASS" else "FAIL"
+        lines.append(f"- {r['case_id']}: {status}" + (f" — {reg['message']}" if reg else ""))
+    return "\n".join(lines) + "\n"
+
+
+# ---------------------------------------------------------------- CLI
+
+def main(argv: Optional[List[str]] = None) -> int:
+    ap = argparse.ArgumentParser(description="management-archive Skill Eval Runner")
+    ap.add_argument("--suite", default=CONFIG["suite"])
+    ap.add_argument("--run-name", default="local")
+    ap.add_argument("--skill", default=str(default_skill_path()))
+    ap.add_argument("--skill-version", default=None)
+    ap.add_argument("--cases", default=None, help="逗号分隔的 case id 子集")
+    ap.add_argument("--output-dir", default=None, help="档案输出目录（相对 vault 根）")
+    ap.add_argument("--runs-dir", default=None, help="回放目录（含 <case_id>/output.md + trace.json）")
+    ap.add_argument("--baseline", default=None, help="baseline summary.json 路径")
+    ap.add_argument("--judge", default=None, choices=["null", "llm"])
+    ap.add_argument("--allow-missing-output", action="store_true")
+    ap.add_argument("--dry-run", action="store_true")
+    args = ap.parse_args(argv)
+
+    if args.judge:
+        CONFIG["judge"]["backend"] = args.judge
+    CONFIG["allow_missing_output"] = args.allow_missing_output
+
+    skill_path = Path(args.skill)
+    if not skill_path.is_absolute():
+        skill_path = VAULT_ROOT / skill_path
+    skill_text = skill_path.read_text(encoding="utf-8") if skill_path.exists() else ""
+    skill_version = args.skill_version or _detect_skill_version(skill_path)
+
+    # 加载 cases
+    cases = load_cases()
+    company_cases = [c for c in cases.values() if c.id.startswith("management_archive_")]
+    trigger_cases = [c for c in cases.values() if c.id.startswith("trigger_")]
+    if args.cases:
+        wanted = set(args.cases.split(","))
+        company_cases = [c for c in company_cases if c.id in wanted]
+        trigger_cases = [c for c in trigger_cases if c.id in wanted]
+
+    # runner
+    runner = ReplayRunner(
+        output_dir=Path(args.output_dir) if args.output_dir else None,
+        runs_dir=Path(args.runs_dir) if args.runs_dir else None,
+    )
+
+    # trigger layer
+    trigger_res = _run_trigger(trigger_cases, skill_text) if trigger_cases else GraderResult(name="trigger", score=None)
+
+    # baseline scores
+    baseline_scores: Dict[str, float] = {}
+    if args.baseline:
+        bp = Path(args.baseline)
+        if not bp.is_absolute():
+            bp = VAULT_ROOT / bp
+        if bp.exists():
+            bl = json.loads(bp.read_text(encoding="utf-8"))
+            bl_dir = bp.parent / "cases"
+            if bl_dir.exists():
+                for cf in bl_dir.glob("*.json"):
+                    cr = json.loads(cf.read_text(encoding="utf-8"))
+                    if cr.get("weighted_score") is not None:
+                        baseline_scores[cr["case_id"]] = cr["weighted_score"]
+
+    results: List[Dict[str, Any]] = []
+    traces: Dict[str, Dict[str, Any]] = {}
+    for case in company_cases:
+        r = _run_single(case, skill_text, skill_version, runner, baseline_scores,
+                        trigger_res.score if trigger_res.score is not None else 1.0)
+        results.append(r)
+        art = runner.run(case, skill_path)
+        if art.trace:
+            traces[case.id] = art.trace
+
+    # pairwise calibration（config 中 pairs 或 golden 顺序）
+    pairwise = _pairwise(results)
+
+    # suite 级加权
+    mean = {d: (round(sum(x["scores"][d] for x in results if x["scores"][d] is not None) / max(1, sum(1 for x in results if x["scores"][d] is not None)), 4) if any(x["scores"][d] is not None for x in results) else None) for d in WEIGHTS}
+    suite_weighted = weighted_score(mean)
+
+    summary = _aggregate(results)
+    summary["weighted_score_avg"] = suite_weighted
+
+    meta = {
+        "skill_version": skill_version,
+        "git_commit": _git_commit(),
+        "model": "n/a (replay)",
+        "judge_model": CONFIG["judge"]["llm"]["default_model"] if CONFIG["judge"]["backend"] == "llm" else "null(确定性)",
+        "dataset_version": CONFIG["dataset_version"],
+        "run_name": args.run_name,
+        "suite": args.suite,
+        "run_at": datetime.now().isoformat(timespec="seconds"),
+    }
+
+    run_dir = default_reports_dir() / (datetime.now().strftime("%Y-%m-%d") + "_" + args.run_name)
+    if args.dry_run:
+        print(json.dumps({"meta": meta, "summary": summary, "trigger": trigger_res.metrics}, ensure_ascii=False, indent=2))
+        return 0
+    _write_report(run_dir, meta, summary, results, trigger_res, traces, pairwise)
+    print(f"report -> {run_dir}")
+    print(json.dumps({"pass_rate": summary["pass_rate"], "weighted_score": suite_weighted,
+                      "p0": summary["p0_total"], "p1": summary["p1_total"]}, ensure_ascii=False))
+    return 0
+
+
+def _pairwise(results: List[Dict[str, Any]]) -> Dict[str, Any]:
+    total = {r["case_id"]: r["weighted_score"] for r in results if r["weighted_score"] is not None}
+    pairs_cfg = CONFIG["calibration"].get("pairs", [])
+    out: Dict[str, Any] = {"pairs": [], "pass": True}
+    for pr in pairs_cfg:
+        a, b = pr.get("a"), pr.get("b")
+        if a in total and b in total:
+            ok = total[a] > total[b]
+            out["pairs"].append({"a": a, "b": b, "score_a": total[a], "score_b": total[b],
+                                 "expected": pr.get("expected", "gt"), "result": "PASS" if ok else "FAIL"})
+            if not ok:
+                out["pass"] = False
+    return out
+
+
+def _detect_skill_version(skill_path: Path) -> str:
+    try:
+        import subprocess
+        out = subprocess.run(
+            ["git", "log", "-1", "--format=%h", "--", str(skill_path)],
+            capture_output=True, text=True, cwd=str(VAULT_ROOT))
+        return "v-" + (out.stdout.strip() or "local")
+    except Exception:
+        return "v-local"
+
+
+def _git_commit() -> str:
+    try:
+        import subprocess
+        out = subprocess.run(["git", "rev-parse", "--short", "HEAD"],
+                             capture_output=True, text=True, cwd=str(VAULT_ROOT))
+        return out.stdout.strip() or "n/a"
+    except Exception:
+        return "n/a"
+
+
+if __name__ == "__main__":
+    sys.exit(main())

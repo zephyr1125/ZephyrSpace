@@ -1,0 +1,158 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CaseEvalResult",
+  "type": "object",
+  "required": [
+    "case_id",
+    "skill_version",
+    "status",
+    "scores",
+    "weighted_score",
+    "gates"
+  ],
+  "properties": {
+    "case_id": {
+      "type": "string"
+    },
+    "skill_version": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "SKIP",
+        "N/A"
+      ]
+    },
+    "scores": {
+      "type": "object",
+      "properties": {
+        "trigger": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "workflow": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "structure": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "facts": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "grounding": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "analysis": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "calibration": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "regression": {
+          "type": [
+            "number",
+            "null"
+          ]
+        }
+      }
+    },
+    "weighted_score": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "gates": {
+      "type": "object"
+    },
+    "errors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "severity",
+          "category",
+          "message"
+        ],
+        "properties": {
+          "severity": {
+            "enum": [
+              "P0",
+              "P1",
+              "P2"
+            ]
+          },
+          "category": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "location": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "metrics": {
+      "type": "object",
+      "properties": {
+        "tool_calls": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "duplicate_tool_calls": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "runtime_seconds": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "estimated_cost": {
+          "type": [
+            "number",
+            "null"
+          ]
+        }
+      }
+    },
+    "judge_disagreements": {
+      "type": "array"
+    },
+    "manual_review": {
+      "type": "boolean"
+    }
+  }
+}

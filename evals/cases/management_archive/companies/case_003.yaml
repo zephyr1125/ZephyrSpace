@@ -1,0 +1,35 @@
+# management_archive_003: 美的集团（职业经理人治理）
+id: management_archive_003
+
+company:
+  name: 美的集团
+  ticker: 000333.SZ
+  market: A
+
+prompt: "老板档案 美的集团"
+
+tags:
+  - a_share
+  - professional_manager
+  - merger_history
+
+expected_behavior:
+  should_trigger: true
+  should_generate_archive: true
+  should_update_company_page: true
+
+golden_facts_file: fixtures/golden_facts/000333.SZ.yaml
+
+required_workflow:
+  company_profile: true
+  executive_trades: true
+  dividends: true
+  penalties: true
+  lawsuits: true
+  pledge: true
+  irm_qa: true
+  personnel_announcements: true
+  lixinger_profile: true
+  lixinger_measures: true
+  lixinger_inquiry: true
+  wisburg_earnings_calls: true

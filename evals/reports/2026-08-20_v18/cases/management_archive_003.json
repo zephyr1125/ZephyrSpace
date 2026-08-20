@@ -1,0 +1,111 @@
+{
+  "case_id": "management_archive_003",
+  "skill_version": "v-9a809a56",
+  "status": "PASS",
+  "scores": {
+    "trigger": 1.0,
+    "workflow": null,
+    "structure": 0.9,
+    "facts": 1.0,
+    "grounding": 1.0,
+    "analysis": 0.7333,
+    "calibration": 0.75,
+    "regression": 0.625
+  },
+  "weighted_score": 76.9,
+  "gates": {
+    "structure_filename": true,
+    "structure_line_count": true,
+    "structure_sections": true,
+    "structure_quick_reference_card": true,
+    "structure_frontmatter": true,
+    "structure_ticker_format": true,
+    "structure_score_math": true,
+    "structure_red_flag_rule": true,
+    "structure_rating_mapping": true,
+    "structure_backlink": false,
+    "structure.required_sections": true,
+    "structure.score_math": true,
+    "structure.minimum_lines": true,
+    "facts.critical_fact_accuracy": true,
+    "grounding.grounded_claim_rate": true,
+    "regression_stability": false,
+    "workflow.required_tool_recall": null,
+    "trigger_accuracy": true,
+    "p0_errors": true,
+    "critical_fact_accuracy": true,
+    "grounded_claim_rate": true,
+    "required_tool_recall": true,
+    "score_math": true,
+    "required_sections": true,
+    "minimum_lines": true
+  },
+  "errors": [
+    {
+      "severity": "P2",
+      "category": "FORMAT_BACKLINK",
+      "message": "[structure.backlink] 深度分析页 美的集团 深度分析 81 2026-06-28.md 未引用本管理层档案",
+      "location": null
+    },
+    {
+      "severity": "P2",
+      "category": "SCORE_INCONSISTENCY",
+      "message": "总分 87（>=85）但结论定位为'需要持续跟踪'，建议复核",
+      "location": null
+    },
+    {
+      "severity": "P2",
+      "category": "SCORE_INCONSISTENCY",
+      "message": "[calibration.conclusion_type] 总分 87（>=85）但结论定位为'需要持续跟踪'，建议复核",
+      "location": null
+    },
+    {
+      "severity": "P1",
+      "category": "ANALYSIS_ACTION_VS_OUTCOME",
+      "message": "[M3] 承诺（含'将/预计/目标'）被标为已兑现，但未提供结果指标：管理层关键承诺/说法（原文摘要）",
+      "location": null
+    },
+    {
+      "severity": "P1",
+      "category": "FACT_CAPITAL_ACTION",
+      "message": "[M4] 融资工具清单未覆盖: 优先股（可能遗漏摊薄工具）",
+      "location": null
+    },
+    {
+      "severity": "P1",
+      "category": "GROUNDING_QUOTE_CONTEXT",
+      "message": "[M7] 摘录可能缺失限定条件：\"美的正从传统家电企业转型为全球性工业科技集团。2B业务2025年已贡献27%收入，目标2030年提升至33%。\" ——",
+      "location": null
+    }
+  ],
+  "metrics": {
+    "runtime_seconds": 0.0,
+    "line_count": 392,
+    "section_count": 11,
+    "critical_facts_correct": 3,
+    "critical_facts_evaluated": 3,
+    "critical_fact_accuracy": 1.0,
+    "fact_recall": 0.6667,
+    "claims_total": 13,
+    "claims_grounded": 13,
+    "grounded_claim_rate": 1.0,
+    "analysis_judges": 6,
+    "analysis_total": 22,
+    "analysis_max": 30,
+    "judge_disagreements": 0,
+    "regression_pass": 5,
+    "regression_total": 8,
+    "p0": 0,
+    "p1": 3
+  },
+  "judge_disagreements": {
+    "counter_evidence": 4,
+    "action_vs_outcome": 4,
+    "capital_allocation": 4,
+    "strategic_consistency": 4,
+    "crisis_handling": 3,
+    "uncertainty": 3
+  },
+  "manual_review": false,
+  "output": "管理层档案\\美的集团 管理层档案 87 2026-06-05.md"
+}

@@ -1,0 +1,11 @@
+# M7: 原文断章取义 —— 保留限定条件
+id: regression_M7_quote_context_integrity
+m: M7
+title: 摘录必须保留限定条件，禁止把条件句摘成无条件句
+
+description: |
+  若原文为"在需求恢复的条件下，我们预计收入增长20%"，禁止摘成"我们预计收入增长20%"。
+  摘录含结果性表述（预计/增长/将）且缺限定条件（如果/若/在...条件下/需求恢复）即 FAIL（P1）。
+
+pass_condition: 摘录保留"在XX条件下"等限定
+fail_condition: 摘录丢失限定条件

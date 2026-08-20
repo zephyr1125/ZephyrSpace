@@ -1,0 +1,11 @@
+# M5: 减持忽略增持 —— 双向记录
+id: regression_M5_bidirectional_share_transactions
+m: M5
+title: 期间存在增持时禁止写"持续减持"
+
+description: |
+  若档案中出现"持续减持"表述且全文存在增持/买入记录，即 FAIL（P1）。
+  应保留完整叙事：如 "2024年9月底部增持 + 2025年6-9月集中套现"。
+
+pass_condition: 有增持记录时不使用"持续减持"绝对化表述
+fail_condition: "如 '2023-2025年持续减持' 但同期存在增持记录"

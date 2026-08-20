@@ -1,0 +1,35 @@
+# management_archive_004: 比亚迪（创始人公司 + 海外监管事件）
+id: management_archive_004
+
+company:
+  name: 比亚迪
+  ticker: 002594.SZ
+  market: A
+
+prompt: "管理层尽调 比亚迪"
+
+tags:
+  - a_share
+  - founder_led
+  - overseas_regulatory
+
+expected_behavior:
+  should_trigger: true
+  should_generate_archive: true
+  should_update_company_page: true
+
+golden_facts_file: fixtures/golden_facts/002594.SZ.yaml
+
+required_workflow:
+  company_profile: true
+  executive_trades: true
+  dividends: true
+  penalties: true
+  lawsuits: true
+  pledge: true
+  irm_qa: true
+  personnel_announcements: true
+  lixinger_profile: true
+  lixinger_measures: true
+  lixinger_inquiry: true
+  wisburg_earnings_calls: true

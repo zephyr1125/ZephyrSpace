@@ -1,0 +1,11 @@
+# M8: 高管变动未建立时间线
+id: regression_M8_management_turnover_timeline
+m: M8
+title: 高管变动必须建立近5年时间线并识别12个月密集离任模式
+
+description: |
+  组织与人才章节须有 >=2 行高管变动时间线（含年份/姓名/职务/变动类型）；
+  若任一年份离任 >=2 人且正文未识别密集离任模式，即 FAIL（P1）。
+
+pass_condition: 时间线 >=2 行，密集离任有识别
+fail_condition: 时间线 <2 行，或密集离任未被识别

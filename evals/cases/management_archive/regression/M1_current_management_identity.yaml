@@ -1,0 +1,16 @@
+# M1: 管理层信息依赖陈旧记忆 —— 姓名/职位写错
+id: regression_M1_current_management_identity
+m: M1
+title: 现任管理层身份必须来自最新年报，不得用历史人物替代
+
+description: |
+  根因：依赖"这家公司一直是XX领导"的历史记忆，未核查最新年报。
+  检查：董事长/CEO 必须为现任（golden facts 指定），档案中出现历史人物替代现任即 FAIL。
+
+golden_facts:
+  critical_facts:
+    chairman: {value: 林志强, as_of: 2026-08-01, severity: P0}
+    ceo: {value: 林科闯, as_of: 2026-04-07, severity: P0}
+
+pass_condition: 档案中出现 golden 指定的现任董事长/CEO
+fail_condition: 档案用历史人物（如 林秀成）当作现任董事长

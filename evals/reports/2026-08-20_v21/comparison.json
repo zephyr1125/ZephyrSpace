@@ -1,0 +1,90 @@
+{
+  "weighted_score": {
+    "baseline": 74.8,
+    "candidate": 78.1
+  },
+  "pass_rate": {
+    "baseline": 0.4,
+    "candidate": 1.0
+  },
+  "p0": {
+    "baseline": 0,
+    "candidate": 0
+  },
+  "p1": {
+    "baseline": 28,
+    "candidate": 9
+  },
+  "dimensions": {
+    "trigger": {
+      "baseline": 1.0,
+      "candidate": 1.0
+    },
+    "structure": {
+      "baseline": 0.86,
+      "candidate": 0.86
+    },
+    "facts": {
+      "baseline": 0.9067,
+      "candidate": 1.0
+    },
+    "grounding": {
+      "baseline": 1.0,
+      "candidate": 1.0
+    },
+    "analysis": {
+      "baseline": 0.7333,
+      "candidate": 0.7333
+    },
+    "calibration": {
+      "baseline": 0.95,
+      "candidate": 0.95
+    },
+    "regression": {
+      "baseline": 0.55,
+      "candidate": 0.75
+    }
+  },
+  "case_deltas": [
+    {
+      "case_id": "management_archive_001",
+      "baseline_score": 77.0,
+      "candidate_score": 78.2,
+      "delta": 1.2,
+      "baseline_status": "PASS",
+      "candidate_status": "PASS"
+    },
+    {
+      "case_id": "management_archive_002",
+      "baseline_score": 72.8,
+      "candidate_score": 78.2,
+      "delta": 5.4,
+      "baseline_status": "FAIL",
+      "candidate_status": "PASS"
+    },
+    {
+      "case_id": "management_archive_003",
+      "baseline_score": 76.9,
+      "candidate_score": 78.1,
+      "delta": 1.2,
+      "baseline_status": "PASS",
+      "candidate_status": "PASS"
+    },
+    {
+      "case_id": "management_archive_004",
+      "baseline_score": 71.4,
+      "candidate_score": 77.6,
+      "delta": 6.2,
+      "baseline_status": "FAIL",
+      "candidate_status": "PASS"
+    },
+    {
+      "case_id": "management_archive_005",
+      "baseline_score": 75.8,
+      "candidate_score": 78.3,
+      "delta": 2.5,
+      "baseline_status": "FAIL",
+      "candidate_status": "PASS"
+    }
+  ]
+}

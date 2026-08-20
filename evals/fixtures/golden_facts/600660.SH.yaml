@@ -1,0 +1,53 @@
+# Golden Facts: 福耀玻璃 (600660.SH)
+# 事实来源：公司年报/公告 + 公开报道 + 管理层档案交叉核验
+company:
+  name: 福耀玻璃
+  ticker: 600660.SH
+
+critical_facts:
+  chairman:
+    value: 曹德旺
+    as_of: "2026-08-01"
+    severity: P0
+    source_required: true
+  ceo:
+    value: 叶舒
+    as_of: "2026-08-01"
+    severity: P0
+    source_required: true
+  controller:
+    value: 曹德旺
+    as_of: "2026-08-01"
+    severity: P0
+    source_required: true
+  controller_type:
+    value: 自然人
+    as_of: "2026-08-01"
+    severity: P1
+  penalties: []          # 30余年零证券监管处罚（档案自述 + 公开记录一致）
+  management_changes: [] # 双轨接班平稳（曹晖+叶舒），无重大离任
+  capital_actions:
+    - type: dividend
+      year: 2025
+      actual_amount_cny: null
+      note: "2025年度分红21元/10股"
+      severity: P1
+
+known_positive_cases:
+  - id: focus_on_glass
+    claim: "只做汽车玻璃"
+    outcome: "30余年未跨界，清退早期地产投资"
+  - id: dividend_consistency
+    claim: "持续分红"
+    outcome: "分红30年持续增长，2025年21元/10股"
+
+known_red_flags:
+  - id: us_geopolitical
+    description: "美国工厂地缘政治风险"
+    severity: P2
+  - id: succession
+    description: "曹德旺个人光环过强，去曹德旺化是长期课题"
+    severity: P2
+
+forbidden_claims:
+  - "曹德旺减持过公司股份"
