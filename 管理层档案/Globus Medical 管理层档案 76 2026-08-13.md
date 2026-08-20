@@ -50,7 +50,7 @@ mScore: 76
 |---|---|---|
 | 扩大肌骨平台 | NuVasive完成 | 兑现 |
 | 美国脊柱份额提升 | Q2 +7%，连续第五季高于市场 | 兑现 |
-| 利润率杠杆 | Adjusted EBITDA margin 35.4%（+740bp）| 显著兑现 |
+| 利润率杠杆 | Adjusted EBITDA margin 35.4%（+740bp）；GAAP 营业利润率 23.1% | 显著兑现 |
 | 指引上调 | Non-GAAP EPS $4.70–4.80 → $4.95–5.05 | 兑现 |
 | Enabling增长 | Q2 -26%（战略转向租赁/rental）| 主动转向，收入确认待验证 |
 | Nevro协同 | Q2收入-14.3% | 下滑，回报未知 |
@@ -144,6 +144,7 @@ mScore: 76
 
 ## 来源
 
+- [2026Q2 财报新闻稿（IR官方 GlobeNewswire，2026-08-06）](https://www.globenewswire.com/news-release/2026/08/06/3340797/0/en/Globus-Medical-Reports-Second-Quarter-2026-Results.html)
 - [2026Q2 8-K 财报新闻稿 (Exhibit 99.1)](https://www.sec.gov/Archives/edgar/data/1237831/000162828026054353/gmed-q22026ex991.htm)
 - [2026Q2 10-Q](https://www.sec.gov/Archives/edgar/data/1237831/000162828026054450/gmed-20260630.htm)
 - [2026 Proxy](https://www.sec.gov/Archives/edgar/data/1237831/000162828026027196/gmed-20260424.htm)

@@ -132,7 +132,7 @@ cScore: 80
 |---|---|---|---|---|
 | NuVasive整合 | 交易完成 | 库存公允价值摊销高 | 成本下降、协同推进、毛利率+200bp | 兑现 |
 | 美国脊柱增长 | 整合期 | 恢复 | Q2 +7%，连续第五季高于市场 | 兑现中 |
-| Enabling增长 | 平台扩展 | 投放波动 | Q2 -26%（战略转向租赁/rental）| 主动转向，收入确认待验证 |
+| Enabling增长 | 平台扩展 | 投放波动 | Q2 -26%（战略转向租赁/rental）| 主动转向，但可能含租赁化收入确认延后（非纯会计时点），待验证 |
 | Nevro | 未发生 | 未发生 | Q2收入-14.3%，协同待验证 | 收入下滑，回报未知 |
 | 利润率 | 受并购压制 | 调整改善 | Adjusted EBITDA margin 35.4%（+740bp）| 显著改善 |
 
@@ -170,7 +170,7 @@ cScore: 80
 | ROE | 受合并影响 | 低 | 表面提升 | — | 需正常化 |
 | ROIC | 比ROE更重要 | — | — | — | 必须含商誉 |
 
-事实：2026Q2 Adjusted gross margin +200bp，Adjusted EBITDA margin 35.4%（去年同期28.0%，+740bp）——利润率结构性改善的实质证据。
+事实：2026Q2 Adjusted gross margin +200bp，Adjusted EBITDA margin 35.4%（去年同期28.0%，+740bp）；GAAP 营业利润率 23.1%（去年同期 10.2%）——利润率结构性改善的实质证据，但 Adjusted EBITDA 剔除了 SBC、摊销、并购及重组费用，应同时看 GAAP 口径。
 
 未知：精确三因子需平均资产与平均权益表，不补造。
 
@@ -254,6 +254,7 @@ cScore: 80
 
 ## 来源
 
+- [2026Q2 财报新闻稿（IR官方 GlobeNewswire，2026-08-06）](https://www.globenewswire.com/news-release/2026/08/06/3340797/0/en/Globus-Medical-Reports-Second-Quarter-2026-Results.html)
 - [2026Q2 8-K 财报新闻稿 (Exhibit 99.1)](https://www.sec.gov/Archives/edgar/data/1237831/000162828026054353/gmed-q22026ex991.htm)
 - [2026Q2 10-Q](https://www.sec.gov/Archives/edgar/data/1237831/000162828026054450/gmed-20260630.htm)
 - [FY2025 10-K](https://www.sec.gov/Archives/edgar/data/1237831/000162828026011209/gmed-20251231.htm)
