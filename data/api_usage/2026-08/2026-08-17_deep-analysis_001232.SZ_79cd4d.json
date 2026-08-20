@@ -1,0 +1,89 @@
+{
+  "run_id": "deep-analysis-001232.SZ-5a8bae2c",
+  "analysis_type": "deep-analysis",
+  "target": "001232.SZ",
+  "company_name": "嘉立创",
+  "started_at": "2026-08-17T19:39:43+08:00",
+  "finished_at": "2026-08-17T19:40:02+08:00",
+  "metadata": {},
+  "api_summary": {
+    "cninfo": {
+      "total_calls": 12,
+      "total_success": 12,
+      "total_failure": 0,
+      "total_duration_ms": 3949.0,
+      "essential_calls": 12,
+      "endpoints": {
+        "p_sysapi1133": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2303": {
+          "count": 1,
+          "success": 1
+        },
+        "p_sysapi1134": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2110": {
+          "count": 1,
+          "success": 1
+        },
+        "p_sysapi1139": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2205": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2218": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2248": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2246": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2220": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2219": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2209": {
+          "count": 1,
+          "success": 1
+        }
+      }
+    },
+    "lixinger": {
+      "total_calls": 3,
+      "total_success": 3,
+      "total_failure": 0,
+      "total_duration_ms": 11030.7,
+      "essential_calls": 3,
+      "endpoints": {
+        "cn/company/profile": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/measures": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/inquiry": {
+          "count": 1,
+          "success": 1
+        }
+      }
+    }
+  }
+}

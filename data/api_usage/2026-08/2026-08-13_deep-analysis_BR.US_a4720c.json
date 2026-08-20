@@ -1,0 +1,10 @@
+{
+  "run_id": "deep-analysis-BR.US-1dff6d0c",
+  "analysis_type": "deep-analysis",
+  "target": "BR.US",
+  "company_name": "Broadridge Financial Solutions",
+  "started_at": "2026-08-13T21:47:43+08:00",
+  "finished_at": "2026-08-13T21:47:48+08:00",
+  "metadata": {},
+  "api_summary": {}
+}

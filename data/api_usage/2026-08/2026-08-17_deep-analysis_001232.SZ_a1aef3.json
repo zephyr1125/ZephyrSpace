@@ -1,0 +1,24 @@
+{
+  "run_id": "deep-analysis-001232.SZ-57407260",
+  "analysis_type": "deep-analysis",
+  "target": "001232.SZ",
+  "company_name": "嘉立创",
+  "started_at": "2026-08-17T19:41:35+08:00",
+  "finished_at": "2026-08-17T19:41:37+08:00",
+  "metadata": {},
+  "api_summary": {
+    "tavily": {
+      "total_calls": 1,
+      "total_success": 1,
+      "total_failure": 0,
+      "total_duration_ms": 2120.6,
+      "essential_calls": 1,
+      "endpoints": {
+        "search": {
+          "count": 1,
+          "success": 1
+        }
+      }
+    }
+  }
+}

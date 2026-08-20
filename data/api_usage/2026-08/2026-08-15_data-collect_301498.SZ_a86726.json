@@ -1,0 +1,24 @@
+{
+  "run_id": "data-collect-301498.SZ-16c9d9ea",
+  "analysis_type": "data-collect",
+  "target": "301498.SZ",
+  "company_name": "乖宝宠物",
+  "started_at": "2026-08-15T16:51:18+08:00",
+  "finished_at": "2026-08-15T16:51:18+08:00",
+  "metadata": {},
+  "api_summary": {
+    "lixinger": {
+      "total_calls": 1,
+      "total_success": 1,
+      "total_failure": 0,
+      "total_duration_ms": 67.4,
+      "essential_calls": 1,
+      "endpoints": {
+        "cn/company/candlestick": {
+          "count": 1,
+          "success": 1
+        }
+      }
+    }
+  }
+}

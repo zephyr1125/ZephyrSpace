@@ -1,0 +1,80 @@
+{
+  "run_id": "deep-analysis-000792.SZ-9124f92f",
+  "analysis_type": "deep-analysis",
+  "target": "000792.SZ",
+  "company_name": "盐湖股份",
+  "started_at": "2026-08-14T11:17:17+08:00",
+  "finished_at": "2026-08-14T11:17:25+08:00",
+  "metadata": {},
+  "api_summary": {
+    "cninfo": {
+      "total_calls": 15,
+      "total_success": 15,
+      "total_failure": 0,
+      "total_duration_ms": 6014.9,
+      "essential_calls": 15,
+      "endpoints": {
+        "p_sysapi1133": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2303": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2329": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2330": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2334": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2218": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2209": {
+          "count": 1,
+          "success": 1
+        },
+        "p_sysapi1139": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2215": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2248": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2246": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2220": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2219": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2205": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2110": {
+          "count": 1,
+          "success": 1
+        }
+      }
+    }
+  }
+}

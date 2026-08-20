@@ -1,0 +1,32 @@
+{
+  "run_id": "deep-analysis-300673.SZ-1a840a2b",
+  "analysis_type": "deep-analysis",
+  "target": "300673.SZ",
+  "company_name": "佩蒂股份",
+  "started_at": "2026-08-15T17:18:48+08:00",
+  "finished_at": "2026-08-15T17:18:50+08:00",
+  "metadata": {},
+  "api_summary": {
+    "cninfo": {
+      "total_calls": 3,
+      "total_success": 3,
+      "total_failure": 0,
+      "total_duration_ms": 1127.6,
+      "essential_calls": 3,
+      "endpoints": {
+        "p_sysapi1133": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2303": {
+          "count": 1,
+          "success": 1
+        },
+        "p_sysapi1139": {
+          "count": 1,
+          "success": 1
+        }
+      }
+    }
+  }
+}

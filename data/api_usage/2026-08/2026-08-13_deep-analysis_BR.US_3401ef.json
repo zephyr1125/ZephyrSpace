@@ -1,0 +1,24 @@
+{
+  "run_id": "deep-analysis-BR.US-59de6ac3",
+  "analysis_type": "deep-analysis",
+  "target": "BR.US",
+  "company_name": "Broadridge Financial Solutions",
+  "started_at": "2026-08-13T21:49:26+08:00",
+  "finished_at": "2026-08-13T21:49:33+08:00",
+  "metadata": {},
+  "api_summary": {
+    "tavily": {
+      "total_calls": 1,
+      "total_success": 1,
+      "total_failure": 0,
+      "total_duration_ms": 5796.6,
+      "essential_calls": 1,
+      "endpoints": {
+        "search": {
+          "count": 1,
+          "success": 1
+        }
+      }
+    }
+  }
+}

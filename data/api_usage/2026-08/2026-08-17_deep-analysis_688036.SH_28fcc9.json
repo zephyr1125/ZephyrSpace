@@ -1,0 +1,159 @@
+{
+  "run_id": "deep-analysis-688036.SH-949cc9b5",
+  "analysis_type": "deep-analysis",
+  "target": "688036.SH",
+  "company_name": "传音控股",
+  "started_at": "2026-08-17T19:40:54+08:00",
+  "finished_at": "2026-08-17T19:41:18+08:00",
+  "metadata": {},
+  "api_summary": {
+    "cninfo": {
+      "total_calls": 15,
+      "total_success": 15,
+      "total_failure": 0,
+      "total_duration_ms": 6865.6,
+      "essential_calls": 15,
+      "endpoints": {
+        "p_sysapi1133": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2303": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2334": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2205": {
+          "count": 1,
+          "success": 1
+        },
+        "p_sysapi1139": {
+          "count": 1,
+          "success": 1
+        },
+        "p_sysapi1029": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2215": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2110": {
+          "count": 1,
+          "success": 1
+        },
+        "p_sysapi1134": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2209": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2218": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2219": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2220": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2248": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2246": {
+          "count": 1,
+          "success": 1
+        }
+      }
+    },
+    "lixinger": {
+      "total_calls": 6,
+      "total_success": 6,
+      "total_failure": 0,
+      "total_duration_ms": 11399.8,
+      "essential_calls": 6,
+      "endpoints": {
+        "cn/company/profile": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/senior-executive-shares-change": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/major-shareholders-shares-change": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/measures": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/inquiry": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/dividend": {
+          "count": 1,
+          "success": 1
+        }
+      }
+    },
+    "wisburg": {
+      "total_calls": 6,
+      "total_success": 6,
+      "total_failure": 0,
+      "total_duration_ms": 876.1,
+      "essential_calls": 6,
+      "endpoints": {
+        "reports": {
+          "count": 1,
+          "success": 1
+        },
+        "company-reports": {
+          "count": 1,
+          "success": 1
+        },
+        "earningscalls": {
+          "count": 1,
+          "success": 1
+        },
+        "feed": {
+          "count": 1,
+          "success": 1
+        },
+        "market-daily": {
+          "count": 1,
+          "success": 1
+        },
+        "images": {
+          "count": 1,
+          "success": 1
+        }
+      }
+    },
+    "tavily": {
+      "total_calls": 1,
+      "total_success": 1,
+      "total_failure": 0,
+      "total_duration_ms": 1046.2,
+      "essential_calls": 1,
+      "endpoints": {
+        "search": {
+          "count": 1,
+          "success": 1
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "run_id": "deep-analysis-300119.SZ-b564259d",
+  "analysis_type": "deep-analysis",
+  "target": "300119.SZ",
+  "company_name": "瑞普生物",
+  "started_at": "2026-08-15T15:41:45+08:00",
+  "finished_at": "2026-08-15T15:41:55+08:00",
+  "metadata": {},
+  "api_summary": {
+    "lixinger": {
+      "total_calls": 6,
+      "total_success": 6,
+      "total_failure": 0,
+      "total_duration_ms": 10353.4,
+      "essential_calls": 6,
+      "endpoints": {
+        "cn/company/profile": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/fundamental/non_financial": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/measures": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/inquiry": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/major-shareholders-shares-change": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/senior-executive-shares-change": {
+          "count": 1,
+          "success": 1
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "run_id": "deep-analysis-300119.SZ-4a8d32a3",
+  "analysis_type": "deep-analysis",
+  "target": "300119.SZ",
+  "company_name": "瑞普生物",
+  "started_at": "2026-08-15T15:39:41+08:00",
+  "finished_at": "2026-08-15T15:39:51+08:00",
+  "metadata": {},
+  "api_summary": {
+    "cninfo": {
+      "total_calls": 4,
+      "total_success": 4,
+      "total_failure": 0,
+      "total_duration_ms": 9618.2,
+      "essential_calls": 4,
+      "endpoints": {
+        "p_sysapi1133": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2303": {
+          "count": 1,
+          "success": 1
+        },
+        "p_sysapi1139": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2209": {
+          "count": 1,
+          "success": 1
+        }
+      }
+    }
+  }
+}
