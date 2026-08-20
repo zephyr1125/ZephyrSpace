@@ -44,6 +44,7 @@ from ..graders.common import (
     CONFIG, VAULT_ROOT, EvalCase, EvalError, GraderResult, default_reports_dir,
     default_skill_path, gates_pass, load_archive, load_cases, p0_p1_counts, weighted_score,
 )
+from . import ensure_env
 from .run_skill import ClaudeAgentRunner, ReplayRunner, get_runner
 from .trace_recorder import load_trace
 
@@ -348,6 +349,7 @@ def build_parser() -> argparse.ArgumentParser:
 
 
 def main(argv: Optional[List[str]] = None) -> int:
+    ensure_env()  # 启动即加载项目根 .env（幂等；不覆盖已有环境变量）
     args = build_parser().parse_args(argv)
 
     if args.judge:

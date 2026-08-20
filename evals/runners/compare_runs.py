@@ -16,6 +16,8 @@ from typing import Any, Dict, List, Optional
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
+from evals.runners import ensure_env
+
 
 def load_run(run_dir: Path) -> Dict[str, Any]:
     summary = json.loads((run_dir / "summary.json").read_text(encoding="utf-8"))
@@ -106,6 +108,7 @@ def _delta(v: Dict[str, Any]) -> Optional[float]:
 
 
 def main(argv: Optional[List[str]] = None) -> int:
+    ensure_env()  # 启动即加载项目根 .env（幂等）
     ap = argparse.ArgumentParser(description="Compare two eval runs")
     ap.add_argument("baseline", help="baseline run 目录")
     ap.add_argument("candidate", help="candidate run 目录")
