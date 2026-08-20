@@ -1,1 +1,8 @@
 date,ip_name,health_score,rating,avg_premium_rate,volume_activity,sell_pressure,breadth_score,persistence_score,social_score,healthy_sku_count,total_sku_count,delta_vs_prev
+2026-08-17,THE MONSTERS,35,D,11.4,低,高,42,32,74,2,6,-1
+2026-08-17,MOLLY,66,B,3.05,中,低,70,85,80,1,3,0
+2026-08-17,SKULLPANDA,61,C,0.03,中,中,63,53,57,0,3,1
+2026-08-17,CRYBABY,67,B,3.34,中偏高,中,76,56,78,1,5,1
+2026-08-17,DIMOO,68,B,2.00,待验证,中,65,50,71,1,2,0
+2026-08-17,TWINKLE TWINKLE,59,C,0.38,中,中,58,42,58,0,1,-2
+2026-08-17,HACIPUPU,50,C,,待验证,待验证,40,40,51,0,1,0
