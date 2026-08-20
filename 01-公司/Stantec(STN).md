@@ -6,7 +6,7 @@ aliases: [Stantec, STN]
 可投资性: 高
 阶段: 成熟增长期
 关注级别: Core
-最后更新日期: 2026-07-17
+最后更新日期: 2026-08-13
 market: US
 board: 纽
 ---
@@ -20,14 +20,14 @@ board: 纽
 - 公司质量：84/100
 - 管理层：82/100
 - 合理价值：约73美元；统一公式纪律买入价约56.6美元
-- 参考价：70.45美元（2026-07-17）
-- 当前判断：公司与管理层均通过80分线，但Page整合、营运资本波动和2026年10月CEO交接使现价安全边际不足。
+- 参考价：74.30美元（2026-08-12收盘）
+- 当前判断：公司与管理层均通过80分线，Q2 beat-and-raise（EBITDA率18.7%、调整EPS+18.4%、backlog创新高）确认执行；但Page整合、营运资本波动和2026年10月CEO交接使现价安全边际不足。
 
 ## 研究档案
 
-- [[管理层档案/Stantec 管理层档案 82 2026-07-17]]
-- [[深度分析/Stantec 深度分析 84 2026-07-17]]
-- [[估值分析/Stantec 估值分析 2026-07-17]]
+- [[管理层档案/Stantec 管理层档案 82 2026-08-13]]
+- [[深度分析/Stantec 深度分析 84 2026-08-13]]
+- [[估值分析/Stantec 估值分析 2026-08-13]]
 
 ## 公司简介
 
@@ -49,8 +49,10 @@ Stantec创立于1954年，总部位于加拿大埃德蒙顿，为全球政府、
 
 - 2025净收入C$6.5B，同比增长10.7%，有机增长5.0%。
 - 2025官方FCF C$641.5M，FCF/净利润1.3倍。
-- 2026Q1 backlog C$9.0B，约覆盖13个月工作。
-- 2026Q1有机增长3.6%，经营现金流为负C$2.3M。
+- 2026Q2净收入C$1,780.6M（+11.5%，有机3.7%），调整EPS C$1.61（+18.4%）。
+- 2026Q2调整EBITDA率18.7%（+90bp），backlog C$9.2B创新高（+17.5%）。
+- 2026Q2经营现金流转正C$118.6M；H1累计C$116.3M仍同比降C$118.4M，DSO 75天。
+- 2026全年调整EBITDA率指引上调至17.8%-18.3%。
 - Susan Reisbord将于2026-10-01接任CEO。
 
 ## 主要红旗
@@ -86,6 +88,9 @@ Stantec创立于1954年，总部位于加拿大埃德蒙顿，为全球政府、
 
 ## 参考来源
 
+- [Stantec 投资者新闻页](https://investors.stantec.com/news-releases)
+- [Stantec 2026 Q2 Results（Yahoo Finance 转载，已核验）](https://au.finance.yahoo.com/news/stantec-delivers-strong-second-quarter-210000085.html)
+- [Stantec 2026 Q2 Results（Barchart 转载，已核验）](https://www.barchart.com/story/news/3814203/stantec-delivers-strong-second-quarter-2026-results-expands-margins-and-raises-adjusted-ebitda-outlook-for-2026)
 - [Stantec 2025 Annual Report](https://www.stantec.com/content/dam/stantec/files/investor-relations/2025/stantec-2025-annual-report.pdf)
 - [Stantec 2026 Q1 Results](https://investors.stantec.com/news-releases/news-release-details/stantec-reports-first-quarter-2026-results-achieving-record)
 - [CEO succession announcement](https://www.stantec.com/en/news/2026/gord-johnston-transition-vice-chair-stantec-board-directors)
