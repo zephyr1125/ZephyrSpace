@@ -1,7 +1,7 @@
 {
-  "version": 12,
+  "version": 13,
   "watchlistLevel": "NONE",
-  "updated_at": "2026-07-31",
+  "updated_at": "2026-08-20",
   "entries": [
     {
       "name": "乐歌股份",
@@ -78,6 +78,25 @@
       "strategicCoreType": null,
       "lastFundamentalReviewDate": "2026-07-17",
       "lastRedFlagReviewDate": "2026-07-17"
+    },
+    {
+      "name": "敏实集团",
+      "code": "00425.HK",
+      "board": "港",
+      "cScore": 70,
+      "mScore": 62,
+      "target_price": 30.7,
+      "valuation_certainty": 0.5,
+      "dv_ttm": 2.77,
+      "next_earnings_date": "2026-08-25",
+      "next_earnings_type": "半年报",
+      "cycle_is_cyclical": true,
+      "cycle_position": null,
+      "watchlistLevel": "NONE",
+      "trackingStatus": "WATCHING",
+      "strategicCoreType": null,
+      "lastFundamentalReviewDate": "2026-08-20",
+      "lastRedFlagReviewDate": "2026-08-20"
     }
   ],
   "valuation_certainty_scale": "0.00-1.00; measures target-price reliability, not company quality",
