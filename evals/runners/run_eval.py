@@ -28,6 +28,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import shutil
 import sys
@@ -440,7 +441,10 @@ def main(argv: Optional[List[str]] = None) -> int:
         "git_commit": _git_commit(),
         "model": args.model or ("claude-cli" if args.mode == "live" else "n/a (replay)"),
         "mode": args.mode,
-        "judge_model": CONFIG["judge"]["llm"]["default_model"] if CONFIG["judge"]["backend"] == "llm" else "null(确定性)",
+        "judge_model": (
+            os.environ.get(CONFIG["judge"]["llm"]["model_env"])
+            or CONFIG["judge"]["llm"]["default_model"]
+        ) if CONFIG["judge"]["backend"] == "llm" else "null(确定性)",
         "dataset_version": CONFIG["dataset_version"],
         "run_name": args.run_name,
         "suite": args.suite,

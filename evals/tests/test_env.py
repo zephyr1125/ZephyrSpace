@@ -17,10 +17,21 @@ def test_ensure_env_loads_project_dotenv():
     env_file = root / ".env"
     if not env_file.exists():
         pytest.skip("项目根 .env 不存在")
+    # 动态读取 .env 实际值（不硬编码，配置会变）
+    expected = {}
+    for ln in env_file.read_text(encoding="utf-8").splitlines():
+        t = ln.strip()
+        if t.startswith("EVAL_LLM_BASE_URL="):
+            expected["base"] = t.split("=", 1)[1].strip()
+        elif t.startswith("EVAL_LLM_MODEL="):
+            expected["model"] = t.split("=", 1)[1].strip()
     os.environ.pop("EVAL_LLM_BASE_URL", None)
+    os.environ.pop("EVAL_LLM_MODEL", None)
     ensure_env()
-    assert os.environ.get("EVAL_LLM_BASE_URL") == "https://api.openai.com/v1"
-    assert "EVAL_LLM_MODEL" in os.environ
+    if "base" in expected:
+        assert os.environ.get("EVAL_LLM_BASE_URL") == expected["base"]
+    if "model" in expected:
+        assert os.environ.get("EVAL_LLM_MODEL") == expected["model"]
 
 
 def test_ensure_env_idempotent():
