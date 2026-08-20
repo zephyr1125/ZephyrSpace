@@ -10,6 +10,7 @@
 """
 from __future__ import annotations
 
+import json
 import re
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
@@ -45,8 +46,19 @@ def _tool_names(trace: Dict[str, Any]) -> List[str]:
 
 
 def required_tool_recall(trace: Dict[str, Any], case: EvalCase) -> Tuple[int, int, List[str]]:
-    """返回 (recalled, required, missing)。"""
+    """返回 (recalled, required, missing)。
+
+    Live 模式下 trace 同时包含工具级步骤（Bash/Read/Write/Task...）与数据源级步骤
+    （cninfo.xxx / lixinger.cn/... / wisburg.xxx / tavily.search）。required action
+    匹配同时检查 tool_name 与 arguments 文本（如 Bash 命令里出现 semantic 调用名）。
+    """
     names = [n.lower() for n in _tool_names(trace)]
+    argtexts = []
+    for s in trace.get("steps", []):
+        try:
+            argtexts.append(json.dumps(s.get("arguments", {}), ensure_ascii=False).lower())
+        except Exception:
+            argtexts.append(str(s.get("arguments", {})).lower())
     required = [k for k, v in (case.required_workflow or {}).items() if v]
     if not required:
         required = list(REQUIRED_ACTION_TOOLS.keys())
@@ -54,7 +66,9 @@ def required_tool_recall(trace: Dict[str, Any], case: EvalCase) -> Tuple[int, in
     missing = []
     for key in required:
         patterns = REQUIRED_ACTION_TOOLS.get(key, [key])
-        if any(any(p in n for p in patterns) for n in names):
+        hit = any(any(p in n for p in patterns) for n in names) or \
+             any(any(p in a for p in patterns) for a in argtexts)
+        if hit:
             recalled += 1
         else:
             missing.append(key)
@@ -68,13 +82,21 @@ def _args_issues(trace: Dict[str, Any], case: EvalCase) -> List[EvalError]:
     market = case.company.get("market", "A")
     base_code = ticker.split(".")[0]
     names = [s.get("tool_name", "").lower() for s in trace.get("steps", [])]
+    argtexts = []
+    for s in trace.get("steps", []):
+        try:
+            argtexts.append(json.dumps(s.get("arguments", {}), ensure_ascii=False).lower())
+        except Exception:
+            argtexts.append(str(s.get("arguments", {})).lower())
 
-    # 1) 市场接口选择：港股/美股不得调 CNINFO
+    # 1) 市场接口选择：港股/美股不得调 CNINFO（tool_name 或命令文本）
     if market in ("H", "US"):
         cninfo_hits = [n for n in names if "cninfo" in n]
-        if cninfo_hits:
+        arg_hits = [a[:80] for a in argtexts if "cninfo" in a]
+        if cninfo_hits or arg_hits:
             issues.append(EvalError("P1", "WORKFLOW_WRONG_MARKET",
-                                    f"[{case.id}] {market} 市场使用了 CNINFO 接口: {cninfo_hits[:3]}"))
+                                    f"[{case.id}] {market} 市场使用了 CNINFO 接口: "
+                                    f"{cninfo_hits[:3] or arg_hits[:1]}"))
     # 2) 电话会 detail 读取：search_earnings_calls 之后必须有 get_earnings_call_detail
     if any("search_earnings_calls" in n for n in names):
         if not any("get_earnings_call_detail" in n for n in names):

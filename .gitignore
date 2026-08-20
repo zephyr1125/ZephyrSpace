@@ -92,3 +92,8 @@ scripts/deep_data/
 scripts/runze_deep_data/
 scripts/todo_data/
 !.gitignore
+# =========================
+# Eval 运行产物（可再生，体积大不入库）
+# =========================
+evals/reports/**/live/**/claude_stream.jsonl
+evals/reports/**/.live/

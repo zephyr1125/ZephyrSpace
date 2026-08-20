@@ -211,9 +211,50 @@ Judge 稳定性控制（plan §27）：固定 model、temperature 0、prompt 版
 
 ## 7. Frozen Eval vs Live Eval（plan §26）
 
-- **Frozen Eval（当前实现）**：`ReplayRunner` 回放 vault 内既有档案，可复现、A/B 公平
-- **Live Eval（扩展点）**：`AgentRunner` 接口 + `TraceRecorder` 埋点，由宿主 agent
-  执行完整工作流并记录工具调用，即可跑 Live 模式（workflow 层随之启用）
+- **Frozen Eval**：`ReplayRunner` 回放 vault 内既有档案，可复现、A/B 公平
+- **Live Eval**：`ClaudeAgentRunner` 通过项目现有 agent 执行入口（Claude Code CLI）真实运行
+  management-archive Skill，捕获完整 trace 后走同一套 grader（workflow 层随之启用）
+
+### Live Eval 调用链
+
+```text
+python -m evals.runners.run_eval --mode live --skill management-archive/SKILL.md \
+        --case management_archive_001 --run-name live_fuyao
+  -> ClaudeAgentRunner.run(case, skill_path)
+    -> claude -p <prompt> --output-format stream-json --include-partial-messages \
+           --verbose --permission-mode bypassPermissions
+       （prompt 指示 agent 阅读 SKILL.md 并按数据拉取清单 + 模板执行）
+    -> 工具级 trace：解析 stream-json 的 tool_use/tool_result
+       （Bash / Read / Write / Edit / Task 子 agent / Glob / Grep）
+    -> 数据源级 trace：EVAL_TRACE_PATH 指向 trace_sources.jsonl，
+       api_tracker 转发器（dispatcher 层）记录 cninfo / lixinger / wisburg / tavily
+    -> 发现 管理层档案/ 下新建的档案文件 -> RunArtifacts
+  -> workflow grader 基于 merged trace 计算 required tool recall / 参数检查 / 重复调用
+```
+
+### 数据源 trace 埋点位置（dispatcher 层，一处覆盖全部）
+
+| 数据源 | 埋点 | 记录内容 |
+|---|---|---|
+| CNINFO | `scripts/api_tracker.py` 转发器（record_call/result） | 端点 ID → 语义名（p_stock2218 → executive_trades） |
+| 理杏仁 | 同上（`lixinger_api.py` 已 instrumented） | `lixinger.cn/company/measures` 等路径 |
+| 智堡 | 同上（`wisburg_api.py` 已 instrumented） | `wisburg.search_earnings_calls` 等 |
+| Tavily | 同上（`tavily_search.py` wrapper，context 含 query） | `tavily.search` + 搜索词 |
+| 本地文件读取 | 工具级 trace（Claude Read/Bash 命令） | Read 工具 / cat 命令 |
+| 子 Agent | 工具级 trace（Task 工具） | Task 名称与输入 |
+
+### Live 运行产物（reports/<run>/live/<case_id>/）
+
+```text
+output.md            # final output markdown（本次运行生成的档案全文）
+trace.json           # merged trace（工具级 + 数据源级）
+claude_stream.jsonl  # claude CLI 原始 stream-json
+trace_sources.jsonl  # api_tracker 转发器原始记录
+```
+
+> ⚠️ Live Eval 需要 wider 权限：claude CLI 的 Bash 工具要写 `~/.claude/session-env`
+> 并派生子进程，须在不受 workspace 文件沙箱限制的环境中运行（如
+> `python -m evals.runners.run_eval --mode live ...` 以 full-access 权限执行）。
 
 ---
 
@@ -262,6 +303,9 @@ required_workflow:
 | JSON report | ✅ summary.json + cases/*.json |
 | Markdown summary | ✅ summary.md + failures.md + regressions.md |
 | baseline vs candidate compare | ✅ compare_runs.py |
+| Live Eval（--mode live） | ✅ ClaudeAgentRunner 经 Claude Code CLI 真实执行 SKILL |
+| Live 数据源 trace | ✅ api_tracker 转发器（CNINFO/理杏仁/智堡/Tavily）+ 工具级 stream trace |
+| Live 产物（output/trace/路径/runtime/errors） | ✅ live/<case_id>/{output.md, trace.json, claude_stream.jsonl, trace_sources.jsonl} |
 | pytest 一键执行 | ✅ 52 passed |
 
 完整版扩展目标（plan §31）：20-30 家公司、50+ 触发用例、20+ 回归用例、300+ Golden Facts。

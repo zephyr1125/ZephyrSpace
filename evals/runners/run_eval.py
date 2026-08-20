@@ -2,13 +2,27 @@
 """run_eval：完整 Eval 管线 CLI（plan §17 / §20 / §30）。
 
 用法：
-    python -m evals.runners.run_eval \
-        --suite management_archive --run-name v18 [--skill management-archive/SKILL.md] \
-        [--cases id1,id2] [--output-dir 管理层档案] [--runs-dir <dir>] \
-        [--baseline reports/<run>/summary.json] [--judge null|llm] [--allow-missing-output]
+    # Frozen Eval（默认）：回放既有档案
+    python -m evals.runners.run_eval --suite management_archive --run-name v18
+
+    # Live Eval：通过 Claude Code CLI 真实执行 SKILL.md
+    python -m evals.runners.run_eval --mode live \
+        --skill management-archive/SKILL.md --case management_archive_005 --run-name live_sanan
+
+    # A/B
+    python -m evals.runners.compare_runs evals/reports/<baseline> evals/reports/<candidate>
+
+Live 模式参数：
+    --mode live|frozen（默认 frozen）
+    --cli <path>             claude CLI 路径（默认 "claude"）
+    --cli-timeout <s>        Live 运行超时（默认 1800s）
+    --model <name>           claude 会话模型
+    --skill <SKILL.md 路径>
+    --case <case_id>
 
 输出：reports/<YYYY-MM-DD>_<run-name>/{summary.json, summary.md, cases/*.json,
-      failures.md, regressions.md, traces/}
+      failures.md, regressions.md, traces/, live/<case_id>/{output.md, trace.json,
+      claude_stream.jsonl, trace_sources.jsonl}}
 """
 from __future__ import annotations
 
@@ -30,7 +44,7 @@ from ..graders.common import (
     CONFIG, VAULT_ROOT, EvalCase, EvalError, GraderResult, default_reports_dir,
     default_skill_path, gates_pass, load_archive, load_cases, p0_p1_counts, weighted_score,
 )
-from .run_skill import ReplayRunner, get_runner
+from .run_skill import ClaudeAgentRunner, ReplayRunner, get_runner
 from .trace_recorder import load_trace
 
 WEIGHTS = CONFIG["weights"]
@@ -40,9 +54,9 @@ GATES = CONFIG["gates"]
 # ---------------------------------------------------------------- pipeline
 
 def _run_single(case: EvalCase, skill_text: str, skill_version: str,
-                runner: ReplayRunner, baseline_scores: Dict[str, float],
+                runner: SkillRunner, skill_path: Path, baseline_scores: Dict[str, float],
                 trigger_accuracy: float) -> Dict[str, Any]:
-    artifacts = runner.run(case, default_skill_path())
+    artifacts = runner.run(case, skill_path)
     result: Dict[str, Any] = {
         "case_id": case.id,
         "skill_version": skill_version,
@@ -64,6 +78,14 @@ def _run_single(case: EvalCase, skill_text: str, skill_version: str,
     doc = load_archive(artifacts.output_path)
     result["metrics"]["runtime_seconds"] = round(artifacts.runtime_seconds, 2)
     result["output"] = str(artifacts.output_path.relative_to(VAULT_ROOT))
+    result["output_markdown"] = artifacts.final_markdown
+    result["live"] = {
+        "exit_code": artifacts.exit_code,
+        "stream_path": str(artifacts.stream_path) if artifacts.stream_path else None,
+        "sources_path": str(artifacts.sources_path) if artifacts.sources_path else None,
+        "tool_steps": len(artifacts.trace["steps"]) if artifacts.trace else 0,
+        "source_steps": sum(1 for s in (artifacts.trace["steps"] if artifacts.trace else []) if s.get("source_level")),
+    }
 
     # --- 各 grader ---
     layers: Dict[str, GraderResult] = {
@@ -106,7 +128,7 @@ def _run_single(case: EvalCase, skill_text: str, skill_version: str,
     gate_results = _evaluate_gates(result, layers, trigger_accuracy)
     result["gates"].update(gate_results)
     result["status"] = "PASS" if all(v is True for v in gate_results.values()) else "FAIL"
-    return result
+    return result, artifacts
 
 
 def _evaluate_gates(result: Dict[str, Any], layers: Dict[str, GraderResult],
@@ -276,20 +298,29 @@ def _regressions_md(results: List[Dict[str, Any]]) -> str:
 
 # ---------------------------------------------------------------- CLI
 
-def main(argv: Optional[List[str]] = None) -> int:
+def build_parser() -> argparse.ArgumentParser:
     ap = argparse.ArgumentParser(description="management-archive Skill Eval Runner")
     ap.add_argument("--suite", default=CONFIG["suite"])
     ap.add_argument("--run-name", default="local")
     ap.add_argument("--skill", default=str(default_skill_path()))
     ap.add_argument("--skill-version", default=None)
     ap.add_argument("--cases", default=None, help="逗号分隔的 case id 子集")
+    ap.add_argument("--case", dest="case", default=None, help="单个 case id（等价于 --cases <id>）")
     ap.add_argument("--output-dir", default=None, help="档案输出目录（相对 vault 根）")
     ap.add_argument("--runs-dir", default=None, help="回放目录（含 <case_id>/output.md + trace.json）")
     ap.add_argument("--baseline", default=None, help="baseline summary.json 路径")
     ap.add_argument("--judge", default=None, choices=["null", "llm"])
     ap.add_argument("--allow-missing-output", action="store_true")
     ap.add_argument("--dry-run", action="store_true")
-    args = ap.parse_args(argv)
+    ap.add_argument("--mode", default="frozen", choices=["frozen", "live"])
+    ap.add_argument("--cli", default="claude")
+    ap.add_argument("--cli-timeout", type=int, default=1800)
+    ap.add_argument("--model", default=None)
+    return ap
+
+
+def main(argv: Optional[List[str]] = None) -> int:
+    args = build_parser().parse_args(argv)
 
     if args.judge:
         CONFIG["judge"]["backend"] = args.judge
@@ -305,16 +336,28 @@ def main(argv: Optional[List[str]] = None) -> int:
     cases = load_cases()
     company_cases = [c for c in cases.values() if c.id.startswith("management_archive_")]
     trigger_cases = [c for c in cases.values() if c.id.startswith("trigger_")]
+    if args.case:
+        args.cases = args.case
     if args.cases:
         wanted = set(args.cases.split(","))
         company_cases = [c for c in company_cases if c.id in wanted]
         trigger_cases = [c for c in trigger_cases if c.id in wanted]
 
-    # runner
-    runner = ReplayRunner(
-        output_dir=Path(args.output_dir) if args.output_dir else None,
-        runs_dir=Path(args.runs_dir) if args.runs_dir else None,
-    )
+    # run 目录（live workspace 放其下）
+    run_dir = default_reports_dir() / (datetime.now().strftime("%Y-%m-%d") + "_" + args.run_name)
+
+    # runner（frozen / live）
+    if args.mode == "live":
+        live_dir = run_dir / "live"
+        live_dir.mkdir(parents=True, exist_ok=True)
+        runner = ClaudeAgentRunner(
+            cli=args.cli, runs_dir=live_dir, timeout_s=args.cli_timeout, model=args.model,
+        )
+    else:
+        runner = ReplayRunner(
+            output_dir=Path(args.output_dir) if args.output_dir else None,
+            runs_dir=Path(args.runs_dir) if args.runs_dir else None,
+        )
 
     # trigger layer
     trigger_res = _run_trigger(trigger_cases, skill_text) if trigger_cases else GraderResult(name="trigger", score=None)
@@ -337,12 +380,20 @@ def main(argv: Optional[List[str]] = None) -> int:
     results: List[Dict[str, Any]] = []
     traces: Dict[str, Dict[str, Any]] = {}
     for case in company_cases:
-        r = _run_single(case, skill_text, skill_version, runner, baseline_scores,
-                        trigger_res.score if trigger_res.score is not None else 1.0)
+        r, art = _run_single(case, skill_text, skill_version, runner, skill_path,
+                             baseline_scores,
+                             trigger_res.score if trigger_res.score is not None else 1.0)
         results.append(r)
-        art = runner.run(case, skill_path)
         if art.trace:
             traces[case.id] = art.trace
+        if art.output_path and art.final_markdown and args.mode == "live":
+            # Live 产物归档：output.md + trace.json 保留在 live/<case_id>/
+            wscase = run_dir / "live" / case.id
+            wscase.mkdir(parents=True, exist_ok=True)
+            (wscase / "output.md").write_text(art.final_markdown, encoding="utf-8")
+            if art.trace:
+                (wscase / "trace.json").write_text(
+                    json.dumps(art.trace, ensure_ascii=False, indent=2), encoding="utf-8")
 
     # pairwise calibration（config 中 pairs 或 golden 顺序）
     pairwise = _pairwise(results)
@@ -357,7 +408,8 @@ def main(argv: Optional[List[str]] = None) -> int:
     meta = {
         "skill_version": skill_version,
         "git_commit": _git_commit(),
-        "model": "n/a (replay)",
+        "model": args.model or ("claude-cli" if args.mode == "live" else "n/a (replay)"),
+        "mode": args.mode,
         "judge_model": CONFIG["judge"]["llm"]["default_model"] if CONFIG["judge"]["backend"] == "llm" else "null(确定性)",
         "dataset_version": CONFIG["dataset_version"],
         "run_name": args.run_name,
@@ -365,7 +417,6 @@ def main(argv: Optional[List[str]] = None) -> int:
         "run_at": datetime.now().isoformat(timespec="seconds"),
     }
 
-    run_dir = default_reports_dir() / (datetime.now().strftime("%Y-%m-%d") + "_" + args.run_name)
     if args.dry_run:
         print(json.dumps({"meta": meta, "summary": summary, "trigger": trigger_res.metrics}, ensure_ascii=False, indent=2))
         return 0

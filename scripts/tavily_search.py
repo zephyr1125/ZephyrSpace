@@ -39,8 +39,9 @@ class _TracingTavilyWrapper:
         depth = kwargs.get("search_depth", "basic")
         max_r = kwargs.get("max_results", 5)
         tracker = get_tracker()
+        # context 含 query：eval trace 需要记录搜索词
         with tracker.track("tavily", "search", essential=True,
-                           context=f"depth={depth}, max={max_r}"):
+                           context=f"query={query[:120]}, depth={depth}, max={max_r}"):
             return self._d.search(query, **kwargs)
 
     def __getattr__(self, name):

@@ -43,6 +43,91 @@ _VAULT_ROOT = Path(__file__).parent.parent
 _USAGE_DIR = _VAULT_ROOT / "data" / "api_usage"
 
 
+# ══════════════════════════════════════════════════════════════
+# Eval Trace 转发器（dispatcher 层埋点）
+# 设置环境变量 EVAL_TRACE_PATH=<jsonl 路径> 后，所有 instrumented API
+# （cninfo / lixinger / wisburg / tavily）调用都会追加写入 eval trace 记录。
+# 未设置时完全无副作用（NoOp）。
+# ══════════════════════════════════════════════════════════════
+
+_EVAL_TRACE_ENV = "EVAL_TRACE_PATH"
+
+# cninfo 端点 ID -> 语义方法名（供 workflow grader 的 required-action 匹配）
+_CNINFO_ENDPOINT_ALIASES = {
+    "p_sysapi1133": "company_profile",
+    "p_stock2205": "investment_ratings",
+    "p_sysapi1139": "dividends",
+    "p_stock2215": "share_changes",
+    "p_stock2218": "executive_trades",
+    "p_stock2219": "share_freeze",
+    "p_stock2220": "share_pledge",
+    "p_stock2248": "company_penalties",
+    "p_stock2246": "company_lawsuits",
+}
+
+
+def _eval_trace_path() -> Optional[str]:
+    return os.environ.get(_EVAL_TRACE_ENV) or None
+
+
+def _semantic_tool_name(api: str, endpoint: str) -> str:
+    if api == "cninfo":
+        return "cninfo." + _CNINFO_ENDPOINT_ALIASES.get(endpoint, endpoint)
+    return f"{api}.{endpoint}"
+
+
+def _eval_trace_append(record: dict):
+    path = _eval_trace_path()
+    if not path:
+        return
+    try:
+        with open(path, "a", encoding="utf-8") as f:
+            f.write(json.dumps(record, ensure_ascii=False) + "\n")
+    except Exception:
+        pass
+
+
+def _record_eval_call(api: str, endpoint: str, context: str = ""):
+    if not _eval_trace_path():
+        return
+    _eval_trace_append({
+        "event": "call",
+        "tool_name": _semantic_tool_name(api, endpoint),
+        "arguments": {"api": api, "endpoint": endpoint, "context": context},
+        "timestamp": _now_iso(),
+    })
+
+
+def _record_eval_result(api: str, endpoint: str, success: bool,
+                        duration_ms: float = 0, error: str = ""):
+    if not _eval_trace_path():
+        return
+    _eval_trace_append({
+        "event": "result",
+        "tool_name": _semantic_tool_name(api, endpoint),
+        "result_status": "ok" if success else "error",
+        "duration_ms": round(duration_ms, 1),
+        "error": error[:200] if error else "",
+        "timestamp": _now_iso(),
+    })
+
+
+@contextmanager
+def _eval_track(api: str, endpoint: str, context: str = ""):
+    """上下文管理器：同时写 eval trace（call + result）。无 EVAL_TRACE_PATH 时无副作用。"""
+    _record_eval_call(api, endpoint, context)
+    t0 = time.perf_counter()
+    success, error = True, ""
+    try:
+        yield
+    except Exception as e:
+        success, error = False, str(e)
+        raise
+    finally:
+        elapsed = (time.perf_counter() - t0) * 1000
+        _record_eval_result(api, endpoint, success, elapsed, error)
+
+
 def _ensure_dir(path: Path):
     """确保目录存在，失败静默"""
     try:
@@ -56,7 +141,7 @@ def _ensure_dir(path: Path):
 # ══════════════════════════════════════════════════════════════
 
 class NoOpTracker:
-    """所有方法都是空操作，任何情况下不抛异常"""
+    """所有方法都是空操作，任何情况下不抛异常（eval trace 转发除外）。"""
 
     def start_run(self, *args, **kwargs):
         return self
@@ -64,14 +149,16 @@ class NoOpTracker:
     def finish_run(self, *args, **kwargs):
         return self
 
-    def record_call(self, *args, **kwargs):
+    def record_call(self, api, endpoint, *, essential=True, context=""):
+        _record_eval_call(api, endpoint, context)
         return self
 
-    def record_result(self, *args, **kwargs):
+    def record_result(self, api, endpoint, *, success=True, duration_ms=0, call_id=-1):
+        _record_eval_result(api, endpoint, success, duration_ms)
         return self
 
-    def track(self, *args, **kwargs):
-        return _NoOpContext()
+    def track(self, api, endpoint, *, essential=True, context=""):
+        return _eval_track(api, endpoint, context)
 
     def session_stats(self):
         return {}
@@ -200,6 +287,7 @@ class ApiTracker:
         记录一次 API 调用的开始。通常在请求前调用。
         返回值是一个 call_id，用于后续 record_result 关联。
         """
+        _record_eval_call(api, endpoint, context)
         if not self._active:
             return -1
 
@@ -225,6 +313,7 @@ class ApiTracker:
         call_id: int = -1,
     ):
         """记录一次 API 调用的结果。通常在请求后调用。"""
+        _record_eval_result(api, endpoint, success, duration_ms, error="" if success else "call failed")
         if not self._active:
             return
 

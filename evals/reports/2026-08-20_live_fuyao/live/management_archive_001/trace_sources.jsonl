@@ -1,0 +1,62 @@
+{"event": "call", "tool_name": "cninfo.company_profile", "arguments": {"api": "cninfo", "endpoint": "p_sysapi1133", "context": ""}, "timestamp": "2026-08-20T22:11:50+08:00"}
+{"event": "result", "tool_name": "cninfo.company_profile", "result_status": "ok", "duration_ms": 782.5, "error": "", "timestamp": "2026-08-20T22:11:50+08:00"}
+{"event": "call", "tool_name": "cninfo.executive_trades", "arguments": {"api": "cninfo", "endpoint": "p_stock2218", "context": ""}, "timestamp": "2026-08-20T22:11:59+08:00"}
+{"event": "result", "tool_name": "cninfo.executive_trades", "result_status": "ok", "duration_ms": 877.0, "error": "", "timestamp": "2026-08-20T22:11:59+08:00"}
+{"event": "call", "tool_name": "cninfo.p_stock2209", "arguments": {"api": "cninfo", "endpoint": "p_stock2209", "context": ""}, "timestamp": "2026-08-20T22:12:00+08:00"}
+{"event": "result", "tool_name": "cninfo.p_stock2209", "result_status": "ok", "duration_ms": 270.3, "error": "", "timestamp": "2026-08-20T22:12:00+08:00"}
+{"event": "call", "tool_name": "cninfo.dividends", "arguments": {"api": "cninfo", "endpoint": "p_sysapi1139", "context": ""}, "timestamp": "2026-08-20T22:12:01+08:00"}
+{"event": "result", "tool_name": "cninfo.dividends", "result_status": "ok", "duration_ms": 962.5, "error": "", "timestamp": "2026-08-20T22:12:01+08:00"}
+{"event": "call", "tool_name": "cninfo.company_penalties", "arguments": {"api": "cninfo", "endpoint": "p_stock2248", "context": ""}, "timestamp": "2026-08-20T22:12:13+08:00"}
+{"event": "result", "tool_name": "cninfo.company_penalties", "result_status": "ok", "duration_ms": 716.4, "error": "", "timestamp": "2026-08-20T22:12:13+08:00"}
+{"event": "call", "tool_name": "cninfo.company_lawsuits", "arguments": {"api": "cninfo", "endpoint": "p_stock2246", "context": ""}, "timestamp": "2026-08-20T22:12:13+08:00"}
+{"event": "result", "tool_name": "cninfo.company_lawsuits", "result_status": "ok", "duration_ms": 287.2, "error": "", "timestamp": "2026-08-20T22:12:13+08:00"}
+{"event": "call", "tool_name": "cninfo.share_pledge", "arguments": {"api": "cninfo", "endpoint": "p_stock2220", "context": ""}, "timestamp": "2026-08-20T22:12:13+08:00"}
+{"event": "result", "tool_name": "cninfo.share_pledge", "result_status": "ok", "duration_ms": 164.3, "error": "", "timestamp": "2026-08-20T22:12:13+08:00"}
+{"event": "call", "tool_name": "cninfo.share_freeze", "arguments": {"api": "cninfo", "endpoint": "p_stock2219", "context": ""}, "timestamp": "2026-08-20T22:12:15+08:00"}
+{"event": "result", "tool_name": "cninfo.share_freeze", "result_status": "ok", "duration_ms": 1254.6, "error": "", "timestamp": "2026-08-20T22:12:15+08:00"}
+{"event": "call", "tool_name": "cninfo.company_penalties", "arguments": {"api": "cninfo", "endpoint": "p_stock2248", "context": ""}, "timestamp": "2026-08-20T22:12:25+08:00"}
+{"event": "result", "tool_name": "cninfo.company_penalties", "result_status": "ok", "duration_ms": 683.6, "error": "", "timestamp": "2026-08-20T22:12:25+08:00"}
+{"event": "call", "tool_name": "cninfo.company_lawsuits", "arguments": {"api": "cninfo", "endpoint": "p_stock2246", "context": ""}, "timestamp": "2026-08-20T22:12:25+08:00"}
+{"event": "result", "tool_name": "cninfo.company_lawsuits", "result_status": "ok", "duration_ms": 219.4, "error": "", "timestamp": "2026-08-20T22:12:25+08:00"}
+{"event": "call", "tool_name": "cninfo.share_pledge", "arguments": {"api": "cninfo", "endpoint": "p_stock2220", "context": ""}, "timestamp": "2026-08-20T22:12:25+08:00"}
+{"event": "result", "tool_name": "cninfo.share_pledge", "result_status": "ok", "duration_ms": 136.7, "error": "", "timestamp": "2026-08-20T22:12:25+08:00"}
+{"event": "call", "tool_name": "cninfo.company_penalties", "arguments": {"api": "cninfo", "endpoint": "p_stock2248", "context": ""}, "timestamp": "2026-08-20T22:12:32+08:00"}
+{"event": "result", "tool_name": "cninfo.company_penalties", "result_status": "ok", "duration_ms": 655.7, "error": "", "timestamp": "2026-08-20T22:12:32+08:00"}
+{"event": "call", "tool_name": "cninfo.company_lawsuits", "arguments": {"api": "cninfo", "endpoint": "p_stock2246", "context": ""}, "timestamp": "2026-08-20T22:12:32+08:00"}
+{"event": "result", "tool_name": "cninfo.company_lawsuits", "result_status": "ok", "duration_ms": 207.7, "error": "", "timestamp": "2026-08-20T22:12:32+08:00"}
+{"event": "call", "tool_name": "cninfo.share_pledge", "arguments": {"api": "cninfo", "endpoint": "p_stock2220", "context": ""}, "timestamp": "2026-08-20T22:12:32+08:00"}
+{"event": "result", "tool_name": "cninfo.share_pledge", "result_status": "ok", "duration_ms": 184.9, "error": "", "timestamp": "2026-08-20T22:12:32+08:00"}
+{"event": "call", "tool_name": "tavily.search", "arguments": {"api": "tavily", "endpoint": "search", "context": "query=600660.SH 福耀玻璃工业集团股份有限公司 监管处罚 违规 诉讼 负面 风险, depth=advanced, max=5"}, "timestamp": "2026-08-20T22:12:50+08:00"}
+{"event": "result", "tool_name": "tavily.search", "result_status": "ok", "duration_ms": 5990.6, "error": "", "timestamp": "2026-08-20T22:12:56+08:00"}
+{"event": "call", "tool_name": "lixinger.cn/company/profile", "arguments": {"api": "lixinger", "endpoint": "cn/company/profile", "context": ""}, "timestamp": "2026-08-20T22:13:22+08:00"}
+{"event": "result", "tool_name": "lixinger.cn/company/profile", "result_status": "ok", "duration_ms": 25358.1, "error": "", "timestamp": "2026-08-20T22:13:22+08:00"}
+{"event": "call", "tool_name": "tavily.search", "arguments": {"api": "tavily", "endpoint": "search", "context": "query=600660.SH 福耀玻璃 监管处罚 违规 诉讼 负面 风险, depth=advanced, max=5"}, "timestamp": "2026-08-20T22:13:31+08:00"}
+{"event": "result", "tool_name": "tavily.search", "result_status": "ok", "duration_ms": 7363.9, "error": "", "timestamp": "2026-08-20T22:13:38+08:00"}
+{"event": "call", "tool_name": "tavily.search", "arguments": {"api": "tavily", "endpoint": "search", "context": "query=600660.SH 福耀玻璃 最新公告 重大事件 融资 并购 管理层, depth=advanced, max=5"}, "timestamp": "2026-08-20T22:13:38+08:00"}
+{"event": "result", "tool_name": "tavily.search", "result_status": "ok", "duration_ms": 4683.7, "error": "", "timestamp": "2026-08-20T22:13:43+08:00"}
+{"event": "call", "tool_name": "tavily.search", "arguments": {"api": "tavily", "endpoint": "search", "context": "query=600660.SH 福耀玻璃 主营业务 市场地位 竞争格局 行业分析, depth=basic, max=3"}, "timestamp": "2026-08-20T22:13:43+08:00"}
+{"event": "result", "tool_name": "tavily.search", "result_status": "ok", "duration_ms": 2305.9, "error": "", "timestamp": "2026-08-20T22:13:45+08:00"}
+{"event": "call", "tool_name": "lixinger.cn/company/profile", "arguments": {"api": "lixinger", "endpoint": "cn/company/profile", "context": ""}, "timestamp": "2026-08-20T22:14:34+08:00"}
+{"event": "result", "tool_name": "lixinger.cn/company/profile", "result_status": "ok", "duration_ms": 28124.1, "error": "", "timestamp": "2026-08-20T22:14:34+08:00"}
+{"event": "call", "tool_name": "lixinger.cn/company/senior-executive-shares-change", "arguments": {"api": "lixinger", "endpoint": "cn/company/senior-executive-shares-change", "context": ""}, "timestamp": "2026-08-20T22:14:36+08:00"}
+{"event": "result", "tool_name": "lixinger.cn/company/senior-executive-shares-change", "result_status": "ok", "duration_ms": 1111.5, "error": "", "timestamp": "2026-08-20T22:14:36+08:00"}
+{"event": "call", "tool_name": "lixinger.cn/company/major-shareholders-shares-change", "arguments": {"api": "lixinger", "endpoint": "cn/company/major-shareholders-shares-change", "context": ""}, "timestamp": "2026-08-20T22:14:36+08:00"}
+{"event": "result", "tool_name": "lixinger.cn/company/major-shareholders-shares-change", "result_status": "ok", "duration_ms": 659.2, "error": "", "timestamp": "2026-08-20T22:14:36+08:00"}
+{"event": "call", "tool_name": "lixinger.cn/company/measures", "arguments": {"api": "lixinger", "endpoint": "cn/company/measures", "context": ""}, "timestamp": "2026-08-20T22:14:37+08:00"}
+{"event": "result", "tool_name": "lixinger.cn/company/measures", "result_status": "ok", "duration_ms": 362.4, "error": "", "timestamp": "2026-08-20T22:14:37+08:00"}
+{"event": "call", "tool_name": "lixinger.cn/company/inquiry", "arguments": {"api": "lixinger", "endpoint": "cn/company/inquiry", "context": ""}, "timestamp": "2026-08-20T22:14:38+08:00"}
+{"event": "result", "tool_name": "lixinger.cn/company/inquiry", "result_status": "ok", "duration_ms": 1320.1, "error": "", "timestamp": "2026-08-20T22:14:38+08:00"}
+{"event": "call", "tool_name": "lixinger.cn/company/measures", "arguments": {"api": "lixinger", "endpoint": "cn/company/measures", "context": ""}, "timestamp": "2026-08-20T22:14:55+08:00"}
+{"event": "result", "tool_name": "lixinger.cn/company/measures", "result_status": "ok", "duration_ms": 441.8, "error": "", "timestamp": "2026-08-20T22:14:55+08:00"}
+{"event": "call", "tool_name": "lixinger.cn/company/inquiry", "arguments": {"api": "lixinger", "endpoint": "cn/company/inquiry", "context": ""}, "timestamp": "2026-08-20T22:14:57+08:00"}
+{"event": "result", "tool_name": "lixinger.cn/company/inquiry", "result_status": "ok", "duration_ms": 1873.3, "error": "", "timestamp": "2026-08-20T22:14:57+08:00"}
+{"event": "call", "tool_name": "lixinger.cn/company/hot/df", "arguments": {"api": "lixinger", "endpoint": "cn/company/hot/df", "context": ""}, "timestamp": "2026-08-20T22:14:57+08:00"}
+{"event": "result", "tool_name": "lixinger.cn/company/hot/df", "result_status": "ok", "duration_ms": 223.8, "error": "", "timestamp": "2026-08-20T22:14:57+08:00"}
+{"event": "call", "tool_name": "lixinger.cn/company/hot/ple", "arguments": {"api": "lixinger", "endpoint": "cn/company/hot/ple", "context": ""}, "timestamp": "2026-08-20T22:14:57+08:00"}
+{"event": "result", "tool_name": "lixinger.cn/company/hot/ple", "result_status": "ok", "duration_ms": 358.5, "error": "", "timestamp": "2026-08-20T22:14:57+08:00"}
+{"event": "call", "tool_name": "wisburg.earningscalls", "arguments": {"api": "wisburg", "endpoint": "earningscalls", "context": ""}, "timestamp": "2026-08-20T22:15:12+08:00"}
+{"event": "result", "tool_name": "wisburg.earningscalls", "result_status": "ok", "duration_ms": 230.4, "error": "", "timestamp": "2026-08-20T22:15:12+08:00"}
+{"event": "call", "tool_name": "wisburg.company-reports", "arguments": {"api": "wisburg", "endpoint": "company-reports", "context": ""}, "timestamp": "2026-08-20T22:15:12+08:00"}
+{"event": "result", "tool_name": "wisburg.company-reports", "result_status": "ok", "duration_ms": 257.4, "error": "", "timestamp": "2026-08-20T22:15:13+08:00"}
+{"event": "call", "tool_name": "cninfo.dividends", "arguments": {"api": "cninfo", "endpoint": "p_sysapi1139", "context": ""}, "timestamp": "2026-08-20T22:25:41+08:00"}
+{"event": "result", "tool_name": "cninfo.dividends", "result_status": "ok", "duration_ms": 714.7, "error": "", "timestamp": "2026-08-20T22:25:41+08:00"}

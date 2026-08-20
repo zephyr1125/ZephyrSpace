@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "skill_version": "v-9a809a56",
+    "git_commit": "31871276",
+    "model": "claude-cli",
+    "mode": "live",
+    "judge_model": "null(确定性)",
+    "dataset_version": "0.1",
+    "run_name": "live_fuyao",
+    "suite": "management_archive",
+    "run_at": "2026-08-20T22:28:57"
+  },
+  "summary": {
+    "cases_total": 1,
+    "cases_passed": 1,
+    "pass_rate": 1.0,
+    "mean_scores": {
+      "trigger": 1.0,
+      "workflow": 1.0,
+      "structure": 0.9,
+      "facts": 1.0,
+      "grounding": 1.0,
+      "analysis": 0.7333,
+      "calibration": 1.0,
+      "regression": 0.75
+    },
+    "p0_total": 0,
+    "p1_total": 2,
+    "avg_tool_calls": 120.0,
+    "avg_runtime_seconds": 1140.73,
+    "top_failure_categories": [
+      [
+        "FORMAT_BACKLINK",
+        1
+      ],
+      [
+        "FACT_CAPITAL_ACTION",
+        1
+      ],
+      [
+        "FACT_MANAGEMENT_TURNOVER",
+        1
+      ]
+    ],
+    "weighted_score_avg": 93.7
+  },
+  "trigger": {
+    "accuracy": null,
+    "metrics": {},
+    "gates": {}
+  },
+  "pairwise": {
+    "pairs": [],
+    "pass": true
+  }
+}
