@@ -127,9 +127,11 @@ def _run_single(case: EvalCase, skill_text: str, skill_version: str,
     result["weighted_score"] = weighted_score(result["scores"])
 
     # --- Judge 统计（analytical + grounding 层的 LLM judge 结果）---
+    # judge_total = grounding claims + analytical 维度 的 LLM judge 调用总数（如 20 + 6 = 26）
     judge_err = sum(gr.metrics.get("judge_error_count", 0) for gr in layers.values())
     judge_total = sum(gr.metrics.get("judge_total", 0) for gr in layers.values())
     result["metrics"]["judge_error_count"] = judge_err
+    result["metrics"]["judge_total"] = judge_total  # 显式覆盖各层 setdefault 的局部值
     if judge_total:
         result["metrics"]["judge_success_rate"] = round((judge_total - judge_err) / judge_total, 4)
 
@@ -320,9 +322,14 @@ def _failures_md(results: List[Dict[str, Any]]) -> str:
 def _regressions_md(results: List[Dict[str, Any]]) -> str:
     lines = ["# Regression (M1-M8)", ""]
     for r in results:
-        reg = next((e for e in r["errors"] if "M" in e["category"]), None)
-        status = "PASS" if r["status"] == "PASS" else "FAIL"
-        lines.append(f"- {r['case_id']}: {status}" + (f" — {reg['message']}" if reg else ""))
+        gates = r.get("gates", {})
+        metrics = r.get("metrics", {})
+        p = metrics.get("regression_pass")
+        t = metrics.get("regression_total")
+        passed = gates.get("regression_stability") is True or (p is not None and t is not None and p == t)
+        status = "PASS" if passed else "FAIL"
+        detail = f" (M-pass {p}/{t})" if p is not None else ""
+        lines.append(f"- {r['case_id']}: {status}{detail}")
     return "\n".join(lines) + "\n"
 
 
