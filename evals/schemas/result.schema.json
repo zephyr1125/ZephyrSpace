@@ -22,7 +22,8 @@
         "PASS",
         "FAIL",
         "SKIP",
-        "N/A"
+        "N/A",
+        "INCOMPLETE"
       ]
     },
     "scores": {

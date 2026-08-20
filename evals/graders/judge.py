@@ -70,10 +70,13 @@ JUDGE_RUBRICS: Dict[str, Dict[str, Any]] = {
 @dataclass
 class JudgeResult:
     dimension: str
-    score: int            # 1..max_score
-    max_score: int
-    reason: str
+    score: Optional[int] = None   # 1..max_score；status=error 时为 None
+    max_score: int = 5
+    reason: str = ""
     evidence: List[str] = field(default_factory=list)
+    status: str = "success"       # success | error
+    error: Optional[str] = None   # status=error 时的失败原因
+    backend_name: str = "null"
 
     def to_dict(self) -> Dict[str, Any]:
         return {
@@ -82,11 +85,11 @@ class JudgeResult:
             "max_score": self.max_score,
             "reason": self.reason,
             "evidence": self.evidence,
+            "status": self.status,
+            "error": self.error,
             "judge_prompt_version": JUDGE_PROMPT_VERSION,
             "backend": self.backend_name,
         }
-
-    backend_name: str = "null"
 
 
 class JudgeBackend:
@@ -166,8 +169,16 @@ class NullJudgeBackend(JudgeBackend):
 
 
 class LLMJudgeBackend(JudgeBackend):
-    """OpenAI 兼容 chat completions 后端。"""
+    """OpenAI 兼容 chat completions 后端。
+
+    失败处理（不伪造分数）：
+    - 请求异常 / 超时 / HTTP 非 2xx / JSON 解析失败 / 结构不满足 schema
+      => 返回 status="error"、score=None、error=<原因>；调用方不得把该结果计入评分。
+    - 瞬时错误（5xx / 429 / 连接 / 超时）按 config 的 max_retries 重试。
+    """
     name = "llm"
+
+    TRANSIENT_HTTP = (429, 500, 502, 503, 504)
 
     def __init__(self, base_url: str, api_key: str, model: str):
         import requests  # 延迟导入
@@ -177,6 +188,9 @@ class LLMJudgeBackend(JudgeBackend):
         self.model = model
         self.temperature = float(CONFIG["judge"]["llm"].get("temperature", 0.0))
         self.timeout = int(CONFIG["judge"]["llm"].get("timeout_seconds", 120))
+        self.max_retries = int(CONFIG["judge"]["llm"].get("max_retries", 0))
+
+    # ------------------------------------------------------------ judge
 
     def judge(self, dimension: str, document_text: str, max_score: Optional[int] = None) -> JudgeResult:
         mx = max_score or JUDGE_RUBRICS.get(dimension, {}).get("max_score", 5)
@@ -194,26 +208,59 @@ class LLMJudgeBackend(JudgeBackend):
             "temperature": self.temperature,
             "response_format": {"type": "json_object"},
         }
-        try:
-            resp = self._requests.post(
-                self.base_url + "/chat/completions",
-                json=payload,
-                headers={"Authorization": "Bearer " + self.api_key},
-                timeout=self.timeout,
-            )
-            resp.raise_for_status()
-            content = resp.json()["choices"][0]["message"]["content"]
-            data = json.loads(content)
-            score = max(1, min(mx, int(data.get("score", 3))))
-            return JudgeResult(
-                dimension=dimension, score=score, max_score=mx,
-                reason=str(data.get("reason", "")),
-                evidence=[str(e) for e in data.get("evidence", [])],
-                backend_name=self.name,
-            )
-        except Exception as e:  # 兜底降级
-            return JudgeResult(dimension=dimension, score=3, max_score=mx,
-                               reason=f"LLM judge 失败，降级默认分: {e}", backend_name=self.name)
+        last_error: Optional[str] = None
+        for attempt in range(self.max_retries + 1):
+            try:
+                resp = self._requests.post(
+                    self.base_url + "/chat/completions",
+                    json=payload,
+                    headers={"Authorization": "Bearer " + self.api_key},
+                    timeout=self.timeout,
+                )
+                if resp.status_code < 200 or resp.status_code >= 300:
+                    last_error = f"http_error {resp.status_code}: {resp.text[:200]}"
+                    if resp.status_code in self.TRANSIENT_HTTP and attempt < self.max_retries:
+                        continue
+                    return self._error(dimension, mx, last_error)
+                body = resp.json()
+                content = body["choices"][0]["message"]["content"]
+                parsed = json.loads(content)
+                return self._validate(dimension, mx, parsed)
+            except json.JSONDecodeError as e:
+                return self._error(dimension, mx, f"json_parse_error: {e}")
+            except (KeyError, IndexError, TypeError) as e:
+                return self._error(dimension, mx, f"response_schema_error: {e}")
+            except Exception as e:  # noqa: BLE001 请求异常/超时等
+                last_error = f"request_failed: {e}"
+                if attempt < self.max_retries:
+                    continue
+                return self._error(dimension, mx, last_error)
+        return self._error(dimension, mx, last_error or "unknown_error")
+
+    # ------------------------------------------------------------ helpers
+
+    def _error(self, dimension: str, mx: int, msg: str) -> JudgeResult:
+        return JudgeResult(dimension=dimension, score=None, max_score=mx,
+                           reason="", evidence=[], status="error", error=msg,
+                           backend_name=self.name)
+
+    def _validate(self, dimension: str, mx: int, parsed: Any) -> JudgeResult:
+        if not isinstance(parsed, dict):
+            return self._error(dimension, mx, f"schema_error: 返回非 JSON 对象: {type(parsed).__name__}")
+        score_raw = parsed.get("score")
+        if isinstance(score_raw, bool) or not isinstance(score_raw, int):
+            return self._error(dimension, mx, f"schema_error: score 非整数: {score_raw!r}")
+        if not (1 <= score_raw <= mx):
+            return self._error(dimension, mx, f"schema_error: score {score_raw} 超出 1..{mx}")
+        reason = parsed.get("reason")
+        if not isinstance(reason, str):
+            return self._error(dimension, mx, f"schema_error: reason 非字符串: {reason!r}")
+        evidence = parsed.get("evidence") or []
+        if not isinstance(evidence, list) or not all(isinstance(x, str) for x in evidence):
+            return self._error(dimension, mx, "schema_error: evidence 必须为字符串数组")
+        return JudgeResult(dimension=dimension, score=score_raw, max_score=mx,
+                           reason=reason, evidence=evidence, status="success",
+                           backend_name=self.name)
 
 
 def get_backend() -> JudgeBackend:

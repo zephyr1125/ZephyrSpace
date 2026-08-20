@@ -65,7 +65,7 @@ def _has_evidence_anchor(claim: str, section_text: str) -> bool:
     return has_year or (has_num and has_source)
 
 
-def grade(doc: ArchiveDocument, case: EvalCase) -> GraderResult:
+def grade(doc: ArchiveDocument, case: Optional[EvalCase] = None) -> GraderResult:
     r = GraderResult(name="grounding")
     claims = extract_claims(doc)
     if not claims:
@@ -76,6 +76,8 @@ def grade(doc: ArchiveDocument, case: EvalCase) -> GraderResult:
     backend = get_backend()
     r.details["judge_backend"] = backend.name
     grounded = 0
+    judge_ok = 0
+    judge_err = 0
     per_claim: List[Dict[str, Any]] = []
     for c in claims:
         section_text = ""
@@ -91,24 +93,49 @@ def grade(doc: ArchiveDocument, case: EvalCase) -> GraderResult:
                     break
         if backend.name == "llm":
             res = backend.judge("grounding_claim", doc.text)
+            if res.status == "error":
+                judge_err += 1
+                per_claim.append({"claim": c["claim"], "bound": None,
+                                  "status": "error", "error": res.error})
+                continue  # 不计入 grounded / unbound
+            judge_ok += 1
             bound = res.score >= 2
-            detail = {"score": res.score, "reason": res.reason}
+            detail = {"score": res.score, "reason": res.reason, "status": "success"}
         else:
+            judge_ok += 1
             bound = _has_evidence_anchor(c["claim"], section_text)
-            detail = {"score": 3 if bound else 1, "reason": "确定性锚点匹配" if bound else "无年份/数字/来源锚"}
+            detail = {"score": 3 if bound else 1, "reason": "确定性锚点匹配" if bound else "无年份/数字/来源锚",
+                      "status": "success"}
         if bound:
             grounded += 1
         per_claim.append({"claim": c["claim"], "bound": bound, **detail})
 
-    rate = round(grounded / len(claims), 4)
-    r.score = rate
+    evaluated = len(claims) - judge_err
     r.metrics["claims_total"] = len(claims)
     r.metrics["claims_grounded"] = grounded
+    r.metrics["judge_total"] = judge_ok + judge_err
+    r.metrics["judge_error_count"] = judge_err
+    r.metrics["judge_success_rate"] = round(judge_ok / (judge_ok + judge_err), 4) if (judge_ok + judge_err) else None
+    r.details["claims"] = per_claim
+
+    if evaluated <= 0:
+        # 全部 claim 的 judge 均失败：不可评，不触发 gate
+        r.score = None
+        r.details["skipped_reason"] = f"全部 {len(claims)} 个 claim 的 judge 失败"
+        r.gates["grounded_claim_rate"] = None
+        return r
+
+    rate = round(grounded / evaluated, 4)
+    r.score = rate
     r.metrics["grounded_claim_rate"] = rate
     r.gates["grounded_claim_rate"] = rate >= CONFIG["gates"]["grounded_claim_rate"]["min"]
-    r.details["claims"] = per_claim
     for pc in per_claim:
-        if not pc["bound"]:
+        if pc.get("bound") is False:
+            cid = case.id if case else "?"
             r.add_error("P2", "GROUNDING_UNSUPPORTED_CLAIM",
-                        f"[{case.id}] 判断缺乏证据绑定：{pc['claim'][:50]}")
+                        f"[{cid}] 判断缺乏证据绑定：{pc['claim'][:50]}")
+        elif pc.get("status") == "error":
+            cid = case.id if case else "?"
+            r.add_error("P2", "JUDGE_ERROR",
+                        f"[{cid}] claim judge 失败（不计入评分）: {pc['error']}")
     return r

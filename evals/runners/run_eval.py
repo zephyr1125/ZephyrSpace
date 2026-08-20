@@ -124,11 +124,27 @@ def _run_single(case: EvalCase, skill_text: str, skill_version: str,
     result["metrics"]["p1"] = p1
     result["weighted_score"] = weighted_score(result["scores"])
 
+    # --- Judge 统计（analytical + grounding 层的 LLM judge 结果）---
+    judge_err = sum(gr.metrics.get("judge_error_count", 0) for gr in layers.values())
+    judge_total = sum(gr.metrics.get("judge_total", 0) for gr in layers.values())
+    result["metrics"]["judge_error_count"] = judge_err
+    if judge_total:
+        result["metrics"]["judge_success_rate"] = round((judge_total - judge_err) / judge_total, 4)
+
     # --- Hard Gates ---
     gate_results = _evaluate_gates(result, layers, trigger_accuracy)
     result["gates"].update(gate_results)
-    result["status"] = "PASS" if all(v is True for v in gate_results.values()) else "FAIL"
+    result["status"] = _decide_status(all(v is True for v in gate_results.values()), judge_err)
+    if result["status"] == "INCOMPLETE":
+        result["incomplete_reason"] = f"{judge_err} 个 judge 维度失败（analytical/grounding 已剔除错误结果）"
     return result, artifacts
+
+
+def _decide_status(gates_ok: bool, judge_err: int) -> str:
+    """正式 LLM Judge 模式下 judge 有失败 => INCOMPLETE（不进 pass/fail 与平均）；否则按 gates。"""
+    if judge_err > 0 and CONFIG["judge"].get("backend") == "llm":
+        return "INCOMPLETE"
+    return "PASS" if gates_ok else "FAIL"
 
 
 def _evaluate_gates(result: Dict[str, Any], layers: Dict[str, GraderResult],
@@ -163,7 +179,8 @@ def _run_trigger(trigger_cases: List[EvalCase], skill_text: str) -> GraderResult
 # ---------------------------------------------------------------- summary / report
 
 def _aggregate(results: List[Dict[str, Any]]) -> Dict[str, Any]:
-    evaluated = [r for r in results if r["status"] != "SKIP"]
+    # INCOMPLETE（LLM judge 有失败）不进 pass/fail 与平均分
+    evaluated = [r for r in results if r["status"] not in ("SKIP", "INCOMPLETE")]
     passed = [r for r in evaluated if r["status"] == "PASS"]
     scores = {d: [] for d in WEIGHTS}
     for r in evaluated:
@@ -177,6 +194,11 @@ def _aggregate(results: List[Dict[str, Any]]) -> Dict[str, Any]:
     tool_calls = [r["metrics"].get("tool_calls") for r in evaluated if r["metrics"].get("tool_calls") is not None]
     runtimes = [r["metrics"].get("runtime_seconds") for r in evaluated if r["metrics"].get("runtime_seconds") is not None]
 
+    # Judge 统计（含 incomplete 在内的全部 case）
+    judge_err = sum(r["metrics"].get("judge_error_count", 0) for r in results)
+    judge_total = sum(r["metrics"].get("judge_total", 0) for r in results)
+    incomplete = sum(1 for r in results if r["status"] == "INCOMPLETE")
+
     # 失败聚类
     fail_cats: Counter = Counter()
     for r in evaluated:
@@ -186,10 +208,13 @@ def _aggregate(results: List[Dict[str, Any]]) -> Dict[str, Any]:
     return {
         "cases_total": len(evaluated),
         "cases_passed": len(passed),
+        "cases_incomplete": incomplete,
         "pass_rate": round(len(passed) / len(evaluated), 4) if evaluated else 0.0,
         "mean_scores": mean,
         "p0_total": p0,
         "p1_total": p1,
+        "judge_error_count": judge_err,
+        "judge_success_rate": round((judge_total - judge_err) / judge_total, 4) if judge_total else None,
         "avg_tool_calls": round(sum(tool_calls) / len(tool_calls), 2) if tool_calls else None,
         "avg_runtime_seconds": round(sum(runtimes) / len(runtimes), 2) if runtimes else None,
         "top_failure_categories": fail_cats.most_common(10),
@@ -250,6 +275,9 @@ def _summary_md(meta: Dict[str, Any], summary: Dict[str, Any], trigger_res: Grad
         f"- Critical Fact Accuracy: {summary['mean_scores'].get('facts')}",
         f"- Grounded Claim Rate: {summary['mean_scores'].get('grounding')}",
         f"- Required Tool Recall: {summary['mean_scores'].get('workflow')}",
+        f"- Judge Success Rate: {summary.get('judge_success_rate')}",
+        f"- Judge Error Count: {summary.get('judge_error_count')}",
+        f"- Incomplete Cases: {summary.get('cases_incomplete')}",
         f"- Average Tool Calls: {summary.get('avg_tool_calls')}",
         f"- Average Runtime (s): {summary.get('avg_runtime_seconds')}",
         "",

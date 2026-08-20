@@ -207,6 +207,18 @@ $env:EVAL_LLM_MODEL    = "gpt-4o-mini"
 Judge 稳定性控制（plan §27）：固定 model、temperature 0、prompt 版本化
 （`JUDGE_PROMPT_VERSION`）、结构化 JSON 输出、关键 case 重复运行、双 judge 分歧检测。
 
+### LLM Judge 失败处理（不伪造分数）
+
+- API 请求失败 / HTTP 非 2xx / JSON 解析失败 / 返回结构不满足 schema
+  => `JudgeResult.status="error"`、`score=None`、`error=<原因>`；**绝不回退为 score=3**。
+- 瞬时错误（5xx / 429 / 连接 / 超时）按 `judge.llm.max_retries` 重试。
+- `analytical_quality` / `grounding` 将 error 结果**剔除出评分与平均**，并在 metrics 记录
+  `judge_error_count` / `judge_success_rate` / `judge_total`。
+- 正式 LLM Judge 模式（`judge.backend: llm`）下，任一 case 出现 judge 失败
+  => 该 case 标记 **INCOMPLETE**（不进 pass/fail 与套件平均分），summary 输出
+  `Judge Success Rate` / `Judge Error Count` / `Incomplete Cases`。
+- `NullJudgeBackend`（确定性）行为不变：永远 `status="success"`。
+
 ---
 
 ## 7. Frozen Eval vs Live Eval（plan §26）
