@@ -130,8 +130,12 @@ def _run_single(case: EvalCase, skill_text: str, skill_version: str,
     # judge_total = grounding claims + analytical 维度 的 LLM judge 调用总数（如 20 + 6 = 26）
     judge_err = sum(gr.metrics.get("judge_error_count", 0) for gr in layers.values())
     judge_total = sum(gr.metrics.get("judge_total", 0) for gr in layers.values())
+    judge_retry = sum(gr.metrics.get("judge_retry_count", 0) for gr in layers.values())
     result["metrics"]["judge_error_count"] = judge_err
     result["metrics"]["judge_total"] = judge_total  # 显式覆盖各层 setdefault 的局部值
+    result["metrics"]["judge_retry_count"] = judge_retry
+    result["metrics"]["judge_profile"] = CONFIG["judge"].get("profile")
+    result["metrics"]["judge_model"] = _effective_judge_model()
     if judge_total:
         result["metrics"]["judge_success_rate"] = round((judge_total - judge_err) / judge_total, 4)
 
@@ -142,6 +146,20 @@ def _run_single(case: EvalCase, skill_text: str, skill_version: str,
     if result["status"] == "INCOMPLETE":
         result["incomplete_reason"] = f"{judge_err} 个 judge 维度失败（analytical/grounding 已剔除错误结果）"
     return result, artifacts
+
+
+def _effective_judge_model() -> str:
+    """返回实际生效的 judge model：profile.model > EVAL_LLM_MODEL > default_model。"""
+    jc = CONFIG["judge"]
+    if jc.get("backend") != "llm":
+        return "null(确定性)"
+    prof_name = jc.get("profile")
+    if prof_name:
+        prof = (jc.get("judge_profiles") or {}).get(prof_name)
+        if prof and prof.get("model"):
+            return prof["model"]
+    return (os.environ.get(jc["llm"].get("model_env", "EVAL_LLM_MODEL"))
+            or jc["llm"].get("default_model", "gpt-4o-mini"))
 
 
 def _decide_status(gates_ok: bool, judge_err: int) -> str:
@@ -201,6 +219,7 @@ def _aggregate(results: List[Dict[str, Any]]) -> Dict[str, Any]:
     # Judge 统计（含 incomplete 在内的全部 case）
     judge_err = sum(r["metrics"].get("judge_error_count", 0) for r in results)
     judge_total = sum(r["metrics"].get("judge_total", 0) for r in results)
+    judge_retry = sum(r["metrics"].get("judge_retry_count", 0) for r in results)
     incomplete = sum(1 for r in results if r["status"] == "INCOMPLETE")
 
     # 失败聚类
@@ -218,6 +237,7 @@ def _aggregate(results: List[Dict[str, Any]]) -> Dict[str, Any]:
         "p0_total": p0,
         "p1_total": p1,
         "judge_error_count": judge_err,
+        "judge_retry_count": judge_retry,
         "judge_success_rate": round((judge_total - judge_err) / judge_total, 4) if judge_total else None,
         "avg_tool_calls": round(sum(tool_calls) / len(tool_calls), 2) if tool_calls else None,
         "avg_runtime_seconds": round(sum(runtimes) / len(runtimes), 2) if runtimes else None,
@@ -279,8 +299,10 @@ def _summary_md(meta: Dict[str, Any], summary: Dict[str, Any], trigger_res: Grad
         f"- Critical Fact Accuracy: {summary['mean_scores'].get('facts')}",
         f"- Grounded Claim Rate: {summary['mean_scores'].get('grounding')}",
         f"- Required Tool Recall: {summary['mean_scores'].get('workflow')}",
+        f"- Judge Profile: {meta.get('judge_profile') or '(未指定)'}",
         f"- Judge Success Rate: {summary.get('judge_success_rate')}",
         f"- Judge Error Count: {summary.get('judge_error_count')}",
+        f"- Judge Retry Count: {summary.get('judge_retry_count')}",
         f"- Incomplete Cases: {summary.get('cases_incomplete')}",
         f"- Average Tool Calls: {summary.get('avg_tool_calls')}",
         f"- Average Runtime (s): {summary.get('avg_runtime_seconds')}",
@@ -347,6 +369,8 @@ def build_parser() -> argparse.ArgumentParser:
     ap.add_argument("--runs-dir", default=None, help="回放目录（含 <case_id>/output.md + trace.json）")
     ap.add_argument("--baseline", default=None, help="baseline summary.json 路径")
     ap.add_argument("--judge", default=None, choices=["null", "llm"])
+    ap.add_argument("--judge-profile", default=None, choices=["fast", "release"],
+                    help="Judge 档位：fast=qwen-flash / release=qwen3.5-plus（model/timeout/retry 来自 profile）")
     ap.add_argument("--allow-missing-output", action="store_true")
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--mode", default="frozen", choices=["frozen", "live"])
@@ -362,6 +386,8 @@ def main(argv: Optional[List[str]] = None) -> int:
 
     if args.judge:
         CONFIG["judge"]["backend"] = args.judge
+    if args.judge_profile:
+        CONFIG["judge"]["profile"] = args.judge_profile
     CONFIG["allow_missing_output"] = args.allow_missing_output
 
     skill_path = Path(args.skill)
@@ -448,10 +474,8 @@ def main(argv: Optional[List[str]] = None) -> int:
         "git_commit": _git_commit(),
         "model": args.model or ("claude-cli" if args.mode == "live" else "n/a (replay)"),
         "mode": args.mode,
-        "judge_model": (
-            os.environ.get(CONFIG["judge"]["llm"]["model_env"])
-            or CONFIG["judge"]["llm"]["default_model"]
-        ) if CONFIG["judge"]["backend"] == "llm" else "null(确定性)",
+        "judge_model": _effective_judge_model(),
+        "judge_profile": CONFIG["judge"].get("profile"),
         "dataset_version": CONFIG["dataset_version"],
         "run_name": args.run_name,
         "suite": args.suite,

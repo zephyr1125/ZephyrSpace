@@ -14,6 +14,8 @@ from __future__ import annotations
 
 import json
 import os
+import time
+from pathlib import Path
 from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional
 
@@ -177,6 +179,7 @@ class JudgeResult:
     strengths: List[str] = field(default_factory=list)
     issues: List[str] = field(default_factory=list)
     evidence: List[str] = field(default_factory=list)
+    retries: int = 0              # 本次 judge 调用实际发生的重试次数
     status: str = "success"       # success | error
     error: Optional[str] = None   # status=error 时的失败原因
     backend_name: str = "null"
@@ -190,6 +193,7 @@ class JudgeResult:
             "strengths": self.strengths,
             "issues": self.issues,
             "evidence": self.evidence,
+            "retries": self.retries,
             "status": self.status,
             "error": self.error,
             "judge_prompt_version": JUDGE_PROMPT_VERSION,
@@ -274,26 +278,37 @@ class NullJudgeBackend(JudgeBackend):
 
 
 class LLMJudgeBackend(JudgeBackend):
-    """OpenAI 兼容 chat completions 后端。
+    """OpenAI 兼容 chat completions 后端（judge-v2 prompt）。
 
     失败处理（不伪造分数）：
-    - 请求异常 / 超时 / HTTP 非 2xx / JSON 解析失败 / 结构不满足 schema
-      => 返回 status="error"、score=None、error=<原因>；调用方不得把该结果计入评分。
-    - 瞬时错误（5xx / 429 / 连接 / 超时）按 config 的 max_retries 重试。
+    - 网络异常 / 超时 / HTTP 429 / 5xx：按 max_retries 指数退避重试
+    - JSON 解析失败 / schema 不满足：最多额外重试 1 次（格式类错误）
+    - 4xx 参数错误（400/401/403/404/422）：不重试
+    - 重试耗尽或不可重试错误 => status="error"、score=None；不降级为其它模型。
+    每次重试写入 retry log（EVAL_JUDGE_LOG 或 evals/reports/judge_retries.log）。
     """
     name = "llm"
 
     TRANSIENT_HTTP = (429, 500, 502, 503, 504)
+    NON_RETRY_4XX = (400, 401, 403, 404, 405, 422)
+    MAX_FORMAT_RETRIES = 1
 
-    def __init__(self, base_url: str, api_key: str, model: str):
+    def __init__(self, base_url: str, api_key: str, model: str,
+                 timeout_seconds: Optional[int] = None, max_retries: Optional[int] = None,
+                 profile_name: Optional[str] = None, backoff_base: float = 1.0):
         import requests  # 延迟导入
         self._requests = requests
         self.base_url = base_url.rstrip("/")
         self.api_key = api_key
         self.model = model
-        self.temperature = float(CONFIG["judge"]["llm"].get("temperature", 0.0))
-        self.timeout = int(CONFIG["judge"]["llm"].get("timeout_seconds", 120))
-        self.max_retries = int(CONFIG["judge"]["llm"].get("max_retries", 0))
+        self.profile_name = profile_name
+        llm_cfg = CONFIG["judge"].get("llm", {})
+        self.temperature = float(llm_cfg.get("temperature", 0.0))
+        self.timeout = int(timeout_seconds if timeout_seconds is not None else llm_cfg.get("timeout_seconds", 120))
+        self.max_retries = int(max_retries if max_retries is not None else llm_cfg.get("max_retries", 0))
+        self._backoff_base = float(backoff_base)
+        self._retry_log_path = os.environ.get("EVAL_JUDGE_LOG") or str(
+            Path(__file__).resolve().parents[2] / "evals" / "reports" / "judge_retries.log")
 
     # ------------------------------------------------------------ judge
 
@@ -334,8 +349,11 @@ class LLMJudgeBackend(JudgeBackend):
             "temperature": self.temperature,
             "response_format": {"type": "json_object"},
         }
-        last_error: Optional[str] = None
-        for attempt in range(self.max_retries + 1):
+
+        retries = 0
+        transient_used = 0
+        format_used = 0
+        while True:
             try:
                 resp = self._requests.post(
                     self.base_url + "/chat/completions",
@@ -343,32 +361,85 @@ class LLMJudgeBackend(JudgeBackend):
                     headers={"Authorization": "Bearer " + self.api_key},
                     timeout=self.timeout,
                 )
-                if resp.status_code < 200 or resp.status_code >= 300:
-                    last_error = f"http_error {resp.status_code}: {resp.text[:200]}"
-                    if resp.status_code in self.TRANSIENT_HTTP and attempt < self.max_retries:
+                status = resp.status_code
+                if status < 200 or status >= 300:
+                    err = f"http_error {status}: {resp.text[:200]}"
+                    if status in self.TRANSIENT_HTTP and transient_used < self.max_retries:
+                        transient_used += 1
+                        retries = transient_used + format_used
+                        self._log_retry(dimension, err, delay=self._backoff(dimension, transient_used + format_used))
+                        time.sleep(self._backoff(dimension, transient_used + format_used))
                         continue
-                    return self._error(dimension, mx, last_error)
+                    return self._error(dimension, mx, err, retries=retries)  # 4xx/其它不重试
                 body = resp.json()
                 content = body["choices"][0]["message"]["content"]
                 parsed = json.loads(content)
-                return self._validate(dimension, mx, parsed)
-            except json.JSONDecodeError as e:
-                return self._error(dimension, mx, f"json_parse_error: {e}")
-            except (KeyError, IndexError, TypeError) as e:
-                return self._error(dimension, mx, f"response_schema_error: {e}")
-            except Exception as e:  # noqa: BLE001 请求异常/超时等
-                last_error = f"request_failed: {e}"
-                if attempt < self.max_retries:
+                res = self._validate(dimension, mx, parsed)
+                if res.status == "error" and format_used < self.MAX_FORMAT_RETRIES:
+                    # 格式类错误：最多额外重试 1 次
+                    format_used += 1
+                    retries = transient_used + format_used
+                    self._log_retry(dimension, res.error or "format_error", delay=self._backoff(dimension, transient_used + format_used))
+                    time.sleep(self._backoff(dimension, transient_used + format_used))
                     continue
-                return self._error(dimension, mx, last_error)
-        return self._error(dimension, mx, last_error or "unknown_error")
+                res.retries = retries
+                return res
+            except json.JSONDecodeError as e:
+                err = f"json_parse_error: {e}"
+                if format_used < self.MAX_FORMAT_RETRIES:
+                    format_used += 1
+                    retries = transient_used + format_used
+                    self._log_retry(dimension, err, delay=self._backoff(dimension, transient_used + format_used))
+                    time.sleep(self._backoff(dimension, transient_used + format_used))
+                    continue
+                return self._error(dimension, mx, err, retries=retries)
+            except (KeyError, IndexError, TypeError) as e:
+                err = f"response_schema_error: {e}"
+                if format_used < self.MAX_FORMAT_RETRIES:
+                    format_used += 1
+                    retries = transient_used + format_used
+                    self._log_retry(dimension, err, delay=self._backoff(dimension, transient_used + format_used))
+                    time.sleep(self._backoff(dimension, transient_used + format_used))
+                    continue
+                return self._error(dimension, mx, err, retries=retries)
+            except Exception as e:  # noqa: BLE001 网络异常/超时等
+                err = f"request_failed: {e}"
+                if transient_used < self.max_retries:
+                    transient_used += 1
+                    retries = transient_used + format_used
+                    self._log_retry(dimension, err, delay=self._backoff(dimension, transient_used + format_used))
+                    time.sleep(self._backoff(dimension, transient_used + format_used))
+                    continue
+                return self._error(dimension, mx, err, retries=retries)
 
     # ------------------------------------------------------------ helpers
 
-    def _error(self, dimension: str, mx: int, msg: str) -> JudgeResult:
+    def _backoff(self, dimension: str, attempt: int) -> float:
+        """指数退避：base * 2^(attempt-1)，封顶 30s。"""
+        return min(self._backoff_base * (2 ** max(0, attempt - 1)), 30.0)
+
+    def _log_retry(self, dimension: str, error: str, delay: float) -> None:
+        """每次失败重试写入 JSONL log（EVAL_JUDGE_LOG 或默认 reports/judge_retries.log）。"""
+        import time as _t
+        from datetime import datetime as _dt
+        record = {
+            "timestamp": _dt.now().isoformat(timespec="seconds"),
+            "model": self.model,
+            "profile": self.profile_name,
+            "dimension": dimension,
+            "error": error[:300],
+            "delay_s": round(delay, 2),
+        }
+        try:
+            with open(self._retry_log_path, "a", encoding="utf-8") as f:
+                f.write(json.dumps(record, ensure_ascii=False) + "\n")
+        except Exception:
+            pass  # log 失败不阻塞
+
+    def _error(self, dimension: str, mx: int, msg: str, retries: int = 0) -> JudgeResult:
         return JudgeResult(dimension=dimension, score=None, max_score=mx,
-                           reason="", evidence=[], status="error", error=msg,
-                           backend_name=self.name)
+                           reason="", evidence=[], retries=retries,
+                           status="error", error=msg, backend_name=self.name)
 
     def _validate(self, dimension: str, mx: int, parsed: Any) -> JudgeResult:
         if not isinstance(parsed, dict):
@@ -395,13 +466,45 @@ class LLMJudgeBackend(JudgeBackend):
                            evidence=evidence, status="success", backend_name=self.name)
 
 
-def get_backend() -> JudgeBackend:
+def _resolve_judge_profile(profile: Optional[str]) -> Dict[str, Any]:
+    """解析 judge profile。未指定或不存在则抛 ValueError（避免静默用错档位）。"""
+    if not profile:
+        return {}
     cfg = CONFIG["judge"]
-    if cfg.get("backend") == "llm":
-        env = cfg["llm"]
-        base = os.environ.get(env["base_url_env"])
-        key = os.environ.get(env["api_key_env"])
-        if base and key:
-            model = os.environ.get(env["model_env"], env["default_model"])
-            return LLMJudgeBackend(base, key, model)
-    return NullJudgeBackend()
+    profiles = cfg.get("judge_profiles") or {}
+    if profile not in profiles:
+        raise ValueError(f"未知 judge profile: {profile!r}（可选：{sorted(profiles.keys())}）")
+    return profiles[profile]
+
+
+def get_backend(profile: Optional[str] = None) -> JudgeBackend:
+    """返回 judge backend。
+
+    - backend=llm 时：base_url / api_key 来自 .env（EVAL_LLM_BASE_URL / EVAL_LLM_API_KEY）；
+      model / timeout / max_retries 优先来自 profile（judge_profiles），其次 EVAL_LLM_MODEL，
+      最后 default_model。
+    - profile 参数 > CONFIG["judge"]["profile"]（--judge-profile 设置）。
+    - backend=null 或 key/base 缺失 => NullJudgeBackend（release profile 下调用方应视为配置错误，
+      不会静默降级为其它模型）。
+    """
+    cfg = CONFIG["judge"]
+    if cfg.get("backend") != "llm":
+        return NullJudgeBackend()
+    env = cfg.get("llm", {})
+    base = os.environ.get(env.get("base_url_env", "EVAL_LLM_BASE_URL"))
+    key = os.environ.get(env.get("api_key_env", "EVAL_LLM_API_KEY"))
+    if not (base and key):
+        return NullJudgeBackend()
+
+    prof_name = profile or cfg.get("profile")
+    prof = _resolve_judge_profile(prof_name) if prof_name else {}
+    model = (prof.get("model")
+             or os.environ.get(env.get("model_env", "EVAL_LLM_MODEL"))
+             or env.get("default_model", "gpt-4o-mini"))
+    return LLMJudgeBackend(
+        base, key, model,
+        timeout_seconds=prof.get("timeout_seconds"),
+        max_retries=prof.get("max_retries"),
+        profile_name=prof_name,
+    )
+

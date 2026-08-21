@@ -7,6 +7,7 @@ dataset_version: "0.1"
 
 judge:
   backend: null          # null | llm
+  profile: null          # 由 --judge-profile 设置：fast | release
   llm:
     base_url_env: EVAL_LLM_BASE_URL
     api_key_env: EVAL_LLM_API_KEY
@@ -15,6 +16,16 @@ judge:
     temperature: 0.0
     timeout_seconds: 120
     max_retries: 2
+  # 固定两套正式 Judge 档位：model / timeout / retry 优先来自 profile
+  judge_profiles:
+    fast:
+      model: qwen-flash
+      timeout_seconds: 120
+      max_retries: 1
+    release:
+      model: qwen3.5-plus
+      timeout_seconds: 300
+      max_retries: 2
   # 关键 judge case 重复运行次数（取均值/多数票）
   repeat_runs: 1
   # 高风险 case 双 judge 独立评分；差异过大置 manual_review

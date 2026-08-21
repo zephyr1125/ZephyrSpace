@@ -78,6 +78,7 @@ def grade(doc: ArchiveDocument, case: Optional[EvalCase] = None) -> GraderResult
     grounded = 0
     judge_ok = 0
     judge_err = 0
+    judge_retries = 0
     per_claim: List[Dict[str, Any]] = []
     for c in claims:
         section_text = ""
@@ -93,6 +94,7 @@ def grade(doc: ArchiveDocument, case: Optional[EvalCase] = None) -> GraderResult
                     break
         if backend.name == "llm":
             res = backend.judge("grounding_claim", doc.text)
+            judge_retries += res.retries
             if res.status == "error":
                 judge_err += 1
                 per_claim.append({"claim": c["claim"], "bound": None,
@@ -115,6 +117,7 @@ def grade(doc: ArchiveDocument, case: Optional[EvalCase] = None) -> GraderResult
     r.metrics["claims_grounded"] = grounded
     r.metrics["judge_total"] = judge_ok + judge_err
     r.metrics["judge_error_count"] = judge_err
+    r.metrics["judge_retry_count"] = judge_retries
     r.metrics["judge_success_rate"] = round(judge_ok / (judge_ok + judge_err), 4) if (judge_ok + judge_err) else None
     r.details["claims"] = per_claim
 

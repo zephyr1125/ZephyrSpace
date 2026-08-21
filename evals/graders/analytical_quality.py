@@ -31,10 +31,12 @@ def grade(doc: ArchiveDocument, case: Optional[EvalCase] = None) -> GraderResult
     disagreements: List[Dict[str, Any]] = []
     judge_ok = 0
     judge_err = 0
+    judge_retries = 0
     repeat = int(CONFIG["judge"].get("repeat_runs", 1))
     for dim in DIMENSIONS:
         res = backend.judge(dim, doc.text)
         r.details[dim] = res.to_dict()
+        judge_retries += res.retries
         if res.status == "error":
             judge_err += 1
             r.add_error("P2", "JUDGE_ERROR",
@@ -46,7 +48,9 @@ def grade(doc: ArchiveDocument, case: Optional[EvalCase] = None) -> GraderResult
         if repeat > 1 and backend.name == "llm":
             vals = [res.score]
             for _ in range(repeat - 1):
-                vals.append(backend.judge(dim, doc.text).score)
+                rr = backend.judge(dim, doc.text)
+                judge_retries += rr.retries
+                vals.append(rr.score)
             spread = max(vals) - min(vals)
             if spread > 1:
                 disagreements.append({"dimension": dim, "scores": vals})
@@ -54,6 +58,7 @@ def grade(doc: ArchiveDocument, case: Optional[EvalCase] = None) -> GraderResult
     total_judged = judge_ok + judge_err
     r.metrics["judge_total"] = total_judged
     r.metrics["judge_error_count"] = judge_err
+    r.metrics["judge_retry_count"] = judge_retries
     r.metrics["judge_success_rate"] = round(judge_ok / total_judged, 4) if total_judged else None
     r.metrics["judge_disagreements"] = len(disagreements)
 

@@ -107,7 +107,8 @@ def test_llm_http_404_is_error():
 
 
 def test_llm_json_parse_failure_is_error():
-    b = _llm_backend(FakeRequests([FakeResponse(200, text="not-json{{{")]))
+    # 格式类错误最多重试 1 次 -> 提供 2 个响应，两次都非法则 error
+    b = _llm_backend(FakeRequests([FakeResponse(200, text="not-json{{{"), FakeResponse(200, text="not-json{{{")]))
     r = b.judge("counter_evidence", "doc", 5)
     assert r.status == "error"
     assert "json_parse_error" in r.error
@@ -136,14 +137,14 @@ def test_llm_request_exception_is_error():
 ])
 def test_llm_schema_mismatch_is_error(bad):
     label, payload = bad
-    if label == "返回非对象":
-        b = _llm_backend(FakeRequests([FakeResponse(200, text=json.dumps(payload))]))
-    else:
-        b = _llm_backend(FakeRequests([FakeResponse(200, text=json.dumps(payload))]))
+    text = json.dumps(payload)
+    # 格式类错误最多重试 1 次 -> 提供 2 个相同响应，两次都失败则 error
+    b = _llm_backend(FakeRequests([FakeResponse(200, text=text), FakeResponse(200, text=text)]))
     r = b.judge("counter_evidence", "doc", 5)
     assert r.status == "error", label
     assert r.score is None, label
     assert "schema_error" in r.error or "response_schema_error" in r.error, label
+    assert r.retries == 1, label
 
 
 # ---------------------------------------------------------------- 重试
