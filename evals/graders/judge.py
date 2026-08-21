@@ -19,9 +19,11 @@ from typing import Any, Dict, List, Optional
 
 from .common import CONFIG
 
-JUDGE_PROMPT_VERSION = "judge-v1"
+JUDGE_PROMPT_VERSION = "judge-v2"
 
-JUDGE_RUBRICS: Dict[str, Dict[str, Any]] = {
+# ---------------------------------------------------------------- judge-v1（历史保留，仅供追溯）
+
+JUDGE_RUBRICS_V1: Dict[str, Dict[str, Any]] = {
     "counter_evidence": {
         "max_score": 5,
         "rubric": (
@@ -67,12 +69,113 @@ JUDGE_RUBRICS: Dict[str, Dict[str, Any]] = {
 }
 
 
+# ---------------------------------------------------------------- judge-v2（当前生效）
+
+def _v2_dim(name: str, anchors: Dict[int, str], ceilings: List[str]) -> Dict[str, Any]:
+    """构造 v2 维度：五档锚点 + ceiling rules + 渲染后的 rubric 文本（兼容旧引用）。"""
+    anchors_text = "\n".join(f"{k} 分：{v}" for k, v in sorted(anchors.items()))
+    ceilings_text = "\n".join(f"- {c}" for c in ceilings)
+    rubric = (
+        f"[{name}] 五档锚点：\n{anchors_text}\n"
+        f"Ceiling rules（触发即封顶）：\n{ceilings_text}"
+    )
+    return {
+        "max_score": 5,
+        "anchors": anchors,
+        "ceiling_rules": ceilings,
+        "rubric": rubric,
+    }
+
+
+def _v2_anchors(a5, a4, a3, a2, a1):
+    return {5: a5, 4: a4, 3: a3, 2: a2, 1: a1}
+
+
+JUDGE_RUBRICS: Dict[str, Dict[str, Any]] = {
+    "counter_evidence": _v2_dim(
+        "counter_evidence",
+        _v2_anchors(
+            a5="主动寻找多个反例，反证实质影响最终结论（结论强度/限定词随反证调整），反例与证据链完整",
+            a4="有明确、有效的反证讨论，反证进入最终判断，但反例数量或深度略有不足",
+            a3="有负面材料/反例，但未充分进入最终判断（列出了，但结论未被其影响）",
+            a2="主要是确认偏误；有反证迹象但被忽略或弱化，未主动寻找与主结论相反的证据",
+            a1="基本没有寻找反证，全部为顺向证据",
+        ),
+        ["仅列负面材料但未影响最终结论 -> 最高 3",
+         "未主动寻找与主结论相反证据 -> 最高 2"],
+    ),
+    "action_vs_outcome": _v2_dim(
+        "action_vs_outcome",
+        _v2_anchors(
+            a5="系统区分'执行了承诺动作'与'承诺结果真正兑现'，每条言行有来源与时间线，兑现判断有结果指标支撑",
+            a4="整体区分清晰，个别案例的依据略薄但不影响判断",
+            a3="大部分区分正确，但存在部分'执行=兑现'的模糊，或缺少后续时间验证",
+            a2="多个重要案例把执行动作直接当结果兑现（或方向反了）",
+            a1="普遍混淆动作与结果，兑现判断无依据",
+        ),
+        ["任一重要案例把执行动作直接当结果兑现 -> 最高 2",
+         "缺乏结果指标/后续时间验证 -> 最高 3"],
+    ),
+    "capital_allocation": _v2_dim(
+        "capital_allocation",
+        _v2_anchors(
+            a5="覆盖全部重大资本动作（融资/并购/回购/分红/扩产），逐笔给出用途、选择理由、机会成本、执行结果（ROIC/ROI）、周期位置，评价与证据一致",
+            a4="覆盖基本完整，个别动作的回报分析略简",
+            a3="覆盖主要动作，但存在明显遗漏，或对某笔重大动作只记录不分析",
+            a2="遗漏重大融资/并购/回购动作，或混淆公告金额与实际执行金额，或仅以分红高/融资多做表面判断",
+            a1="资本配置记录严重缺失，或主要判断明显错误",
+        ),
+        ["遗漏重大融资/并购/回购动作 -> 最高 3",
+         "混淆公告金额与实际执行金额 -> 最高 2",
+         "仅以分红高/融资多做表面判断 -> 最高 2"],
+    ),
+    "strategic_consistency": _v2_dim(
+        "strategic_consistency",
+        _v2_anchors(
+            a5="建立跨年（>=3 个时间点）战略时间线，明确区分'合理调整 vs 频繁摇摆'并给出判断依据",
+            a4="有跨年时间线，区分基本成立，个别年份依据不足",
+            a3="有跨年对照但未充分判断'合理调整 vs 摇摆'，或时间点不足 3 个",
+            a2="只统计关键词/年份堆砌，无'合理调整 vs 摇摆'判断",
+            a1="无战略时间线，无稳定性判断",
+        ),
+        ["没有跨年至少 3 个时间点的战略对照 -> 最高 3",
+         "只统计关键词，无合理调整 vs 摇摆判断 -> 最高 2"],
+    ),
+    "crisis_handling": _v2_dim(
+        "crisis_handling",
+        _v2_anchors(
+            a5="识别全部重大危机，逐一分析响应及时性/担责/行动/后续机制，评价有证据支撑",
+            a4="主要危机识别并分析完整，次要危机略简",
+            a3="有危机分析但只描述事件，未系统分析响应/责任/行动/机制",
+            a2="有重大危机但报告未识别，或主要危机处理判断明显错误",
+            a1="危机处理记录缺失，或判断严重错误",
+        ),
+        ["有重大危机但报告未识别 -> 最高 2",
+         "只描述事件，不分析响应/责任/行动/后续机制 -> 最高 3"],
+    ),
+    "uncertainty": _v2_dim(
+        "uncertainty",
+        _v2_anchors(
+            a5="对资料不足/待核实事项诚实标注，且不因信息不足强推结论，不确定处明确",
+            a4="整体谨慎，个别不确定处未标注但未影响结论",
+            a3="有'待核实/信息不足'标记但覆盖不充分，或个别地方推断略强",
+            a2="对资料不足事项做确定性结论（多处强推）",
+            a1="普遍以有限信息强推确定结论",
+        ),
+        ["对资料不足事项做确定性结论 -> 最高 2",
+         "'待核实/信息不足'标记不充分但整体谨慎 -> 最高 3"],
+    ),
+}
+
+
 @dataclass
 class JudgeResult:
     dimension: str
     score: Optional[int] = None   # 1..max_score；status=error 时为 None
     max_score: int = 5
     reason: str = ""
+    strengths: List[str] = field(default_factory=list)
+    issues: List[str] = field(default_factory=list)
     evidence: List[str] = field(default_factory=list)
     status: str = "success"       # success | error
     error: Optional[str] = None   # status=error 时的失败原因
@@ -84,6 +187,8 @@ class JudgeResult:
             "score": self.score,
             "max_score": self.max_score,
             "reason": self.reason,
+            "strengths": self.strengths,
+            "issues": self.issues,
             "evidence": self.evidence,
             "status": self.status,
             "error": self.error,
@@ -195,11 +300,32 @@ class LLMJudgeBackend(JudgeBackend):
     def judge(self, dimension: str, document_text: str, max_score: Optional[int] = None) -> JudgeResult:
         mx = max_score or JUDGE_RUBRICS.get(dimension, {}).get("max_score", 5)
         meta = JUDGE_RUBRICS.get(dimension, {})
+        anchors_text = "\n".join(f"{k} 分：{v}" for k, v in sorted(meta.get("anchors", {}).items()))
+        ceilings_text = "\n".join(f"- {c}" for c in meta.get("ceiling_rules", []))
         prompt = (
             f"你是管理层档案评估的外部 Judge（prompt 版本 {JUDGE_PROMPT_VERSION}）。\n"
-            f"维度：{dimension}\nRubric：{meta.get('rubric', '')}\n"
-            f"满分 {mx} 分。禁止因为文章长或语气专业而加分。\n"
-            f"请输出严格 JSON：{{\"score\": 1-{mx}, \"reason\": \"...\", \"evidence\": [\"...\"]}}\n"
+            f"维度：{dimension}\n"
+            f"满分 {mx} 分。\n"
+            f"\n"
+            f"评分前必须（先找问题，再评分）：\n"
+            f"1. 找出该维度的缺陷、遗漏、反例或限制条件；\n"
+            f"2. 如果未发现实质问题，明确说明为什么；\n"
+            f"3. 判断这些问题是否影响核心结论；\n"
+            f"4. 再根据 rubric 打分。\n"
+            f"\n"
+            f"禁止仅因为报告提到了 rubric 中的关键词、章节或分析要素就给予高分。\n"
+            f"\n"
+            f"5 分（卓越）必须同时满足：关键分析正确、关键证据充分、无明显重要遗漏、"
+            f"无明显因果跳跃、无与报告其他部分冲突、几乎没有实质改进空间。"
+            f"只要存在重要问题，就不得给 5。\n"
+            f"\n"
+            f"Rubric（五档锚点）：\n{anchors_text}\n"
+            f"\n"
+            f"Ceiling rules（触发即封顶）：\n{ceilings_text}\n"
+            f"\n"
+            f"禁止因为文章长或语气专业而加分。\n"
+            f"请输出严格 JSON：{{\"score\": 1-5, \"reason\": \"...\", \"strengths\": [\"...\"], "
+            f"\"issues\": [\"...\"], \"evidence\": [\"...\"]}}\n"
             f"reason 必须引用报告中的具体位置或原文片段。\n\n--- 报告 ---\n{document_text[:30000]}"
         )
         payload = {
@@ -258,9 +384,15 @@ class LLMJudgeBackend(JudgeBackend):
         evidence = parsed.get("evidence") or []
         if not isinstance(evidence, list) or not all(isinstance(x, str) for x in evidence):
             return self._error(dimension, mx, "schema_error: evidence 必须为字符串数组")
+        strengths = parsed.get("strengths") or []
+        issues = parsed.get("issues") or []
+        if not isinstance(strengths, list) or not all(isinstance(x, str) for x in strengths):
+            return self._error(dimension, mx, "schema_error: strengths 必须为字符串数组")
+        if not isinstance(issues, list) or not all(isinstance(x, str) for x in issues):
+            return self._error(dimension, mx, "schema_error: issues 必须为字符串数组")
         return JudgeResult(dimension=dimension, score=score_raw, max_score=mx,
-                           reason=reason, evidence=evidence, status="success",
-                           backend_name=self.name)
+                           reason=reason, strengths=strengths, issues=issues,
+                           evidence=evidence, status="success", backend_name=self.name)
 
 
 def get_backend() -> JudgeBackend:
