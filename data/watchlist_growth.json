@@ -194,25 +194,6 @@
       "lastRedFlagReviewDate": "2026-07-19"
     },
     {
-      "name": "网易",
-      "code": "09999.HK",
-      "board": "港",
-      "cScore": 82,
-      "mScore": 77,
-      "target_price": 215,
-      "valuation_certainty": 0.6,
-      "dv_ttm": null,
-      "next_earnings_date": "2026-08-20",
-      "next_earnings_type": "中期业绩",
-      "cycle_is_cyclical": false,
-      "cycle_position": null,
-      "watchlistLevel": "B_GROWTH",
-      "trackingStatus": "WATCHING",
-      "strategicCoreType": null,
-      "lastFundamentalReviewDate": "2026-07-22",
-      "lastRedFlagReviewDate": "2026-07-22"
-    },
-    {
       "name": "阳光电源",
       "code": "300274.SZ",
       "board": "创",
