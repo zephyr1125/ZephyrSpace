@@ -1375,6 +1375,25 @@
       "strategicCoreType": null,
       "lastFundamentalReviewDate": "2026-08-22",
       "lastRedFlagReviewDate": "2026-08-22"
+    },
+    {
+      "name": "亚朵集团",
+      "code": "ATAT.US",
+      "board": "纳",
+      "cScore": 79,
+      "mScore": 78,
+      "target_price": 38,
+      "valuation_certainty": 0.5,
+      "dv_ttm": null,
+      "next_earnings_date": "2026-08-20",
+      "next_earnings_type": "H1 2026业绩",
+      "cycle_is_cyclical": true,
+      "cycle_position": null,
+      "watchlistLevel": "B_GROWTH",
+      "trackingStatus": "WATCHING",
+      "strategicCoreType": null,
+      "lastFundamentalReviewDate": "2026-08-22",
+      "lastRedFlagReviewDate": "2026-07-19"
     }
   ],
   "valuation_certainty_scale": "0.00-1.00; measures target-price reliability, not company quality",
