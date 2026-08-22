@@ -4,6 +4,25 @@
   "updated_at": "2026-08-20",
   "entries": [
     {
+      "name": "IBM",
+      "code": "IBM.US",
+      "board": "纽",
+      "cScore": 72,
+      "mScore": 73,
+      "target_price": 190,
+      "valuation_certainty": 0.48,
+      "dv_ttm": 2.66,
+      "next_earnings_date": null,
+      "next_earnings_type": "Q3 2026季报",
+      "cycle_is_cyclical": false,
+      "cycle_position": null,
+      "watchlistLevel": "NONE",
+      "trackingStatus": "ARCHIVED",
+      "strategicCoreType": null,
+      "lastFundamentalReviewDate": "2026-07-23",
+      "lastRedFlagReviewDate": "2026-07-23"
+    },
+    {
       "name": "乐歌股份",
       "code": "300729.SZ",
       "board": "创",
