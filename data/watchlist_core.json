@@ -1319,10 +1319,10 @@
       "name": "亚朵集团",
       "code": "ATAT.US",
       "board": "纳",
-      "cScore": 82,
+      "cScore": 81,
       "mScore": 78,
       "target_price": 38,
-      "valuation_certainty": 0.6,
+      "valuation_certainty": 0.55,
       "dv_ttm": null,
       "next_earnings_date": "2026-08-20",
       "next_earnings_type": "H1 2026业绩",
@@ -1331,7 +1331,7 @@
       "watchlistLevel": "A_CORE",
       "trackingStatus": "WATCHING",
       "strategicCoreType": null,
-      "lastFundamentalReviewDate": "2026-07-19",
+      "lastFundamentalReviewDate": "2026-08-22",
       "lastRedFlagReviewDate": "2026-07-19"
     },
     {
