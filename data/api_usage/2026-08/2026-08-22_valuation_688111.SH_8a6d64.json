@@ -1,0 +1,41 @@
+{
+  "run_id": "valuation-688111.SH-b9267936",
+  "analysis_type": "valuation",
+  "target": "688111.SH",
+  "company_name": "金山办公",
+  "started_at": "2026-08-22T22:56:13+08:00",
+  "finished_at": "2026-08-22T22:56:16+08:00",
+  "metadata": {},
+  "api_summary": {
+    "lixinger": {
+      "total_calls": 1,
+      "total_success": 1,
+      "total_failure": 0,
+      "total_duration_ms": 90.9,
+      "essential_calls": 1,
+      "endpoints": {
+        "cn/company/fundamental/non_financial": {
+          "count": 1,
+          "success": 1
+        }
+      }
+    },
+    "cninfo": {
+      "total_calls": 2,
+      "total_success": 2,
+      "total_failure": 0,
+      "total_duration_ms": 1789.3,
+      "essential_calls": 2,
+      "endpoints": {
+        "p_stock2334": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2205": {
+          "count": 1,
+          "success": 1
+        }
+      }
+    }
+  }
+}
