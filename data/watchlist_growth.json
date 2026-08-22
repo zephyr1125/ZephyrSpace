@@ -1,7 +1,7 @@
 {
   "version": 24,
   "watchlistLevel": "B_GROWTH",
-  "updated_at": "2026-08-21",
+  "updated_at": "2026-08-22",
   "entries": [
     {
       "name": "津上机床中国",
@@ -1356,6 +1356,25 @@
       "strategicCoreType": null,
       "lastFundamentalReviewDate": "2026-08-20",
       "lastRedFlagReviewDate": "2026-08-20"
+    },
+    {
+      "name": "中信特钢",
+      "code": "000708.SZ",
+      "board": "深",
+      "cScore": 78,
+      "mScore": 78,
+      "target_price": 14,
+      "valuation_certainty": 0.55,
+      "dv_ttm": 4.74,
+      "next_earnings_date": null,
+      "next_earnings_type": "年报",
+      "cycle_is_cyclical": true,
+      "cycle_position": null,
+      "watchlistLevel": "B_GROWTH",
+      "trackingStatus": "WATCHING",
+      "strategicCoreType": null,
+      "lastFundamentalReviewDate": "2026-08-22",
+      "lastRedFlagReviewDate": "2026-08-22"
     }
   ],
   "valuation_certainty_scale": "0.00-1.00; measures target-price reliability, not company quality",

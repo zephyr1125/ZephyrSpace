@@ -1,7 +1,7 @@
 {
   "version": 15,
   "watchlistLevel": "A_CORE",
-  "updated_at": "2026-08-20",
+  "updated_at": "2026-08-22",
   "entries": [
     {
       "name": "McDonald's",
@@ -1028,25 +1028,6 @@
       "trackingStatus": "WATCHING",
       "strategicCoreType": null,
       "lastFundamentalReviewDate": "2026-07-10",
-      "lastRedFlagReviewDate": null
-    },
-    {
-      "name": "中信特钢",
-      "code": "000708.SZ",
-      "board": "深",
-      "cScore": 79,
-      "mScore": 84,
-      "target_price": 13,
-      "valuation_certainty": 0.55,
-      "dv_ttm": 4.86,
-      "next_earnings_date": "2026-08-21",
-      "next_earnings_type": "半年报",
-      "cycle_is_cyclical": true,
-      "cycle_position": null,
-      "watchlistLevel": "A_CORE",
-      "trackingStatus": "WATCHING",
-      "strategicCoreType": null,
-      "lastFundamentalReviewDate": null,
       "lastRedFlagReviewDate": null
     },
     {
