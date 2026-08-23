@@ -327,6 +327,25 @@
       "lastRedFlagReviewDate": null
     },
     {
+      "name": "深信服",
+      "code": "300454.SZ",
+      "board": "创",
+      "cScore": 80,
+      "mScore": 79,
+      "target_price": 108,
+      "valuation_certainty": 0.38,
+      "dv_ttm": null,
+      "next_earnings_date": null,
+      "next_earnings_type": "年报",
+      "cycle_is_cyclical": false,
+      "cycle_position": null,
+      "watchlistLevel": "B_GROWTH",
+      "trackingStatus": "WATCHING",
+      "strategicCoreType": null,
+      "lastFundamentalReviewDate": "2026-08-23",
+      "lastRedFlagReviewDate": null
+    },
+    {
       "name": "Adobe",
       "code": "ADBE.US",
       "board": "纳",

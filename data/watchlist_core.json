@@ -1183,25 +1183,6 @@
       "lastRedFlagReviewDate": null
     },
     {
-      "name": "深信服",
-      "code": "300454.SZ",
-      "board": "创",
-      "cScore": 82,
-      "mScore": 80,
-      "target_price": 110,
-      "valuation_certainty": 0.45,
-      "dv_ttm": null,
-      "next_earnings_date": null,
-      "next_earnings_type": "年报",
-      "cycle_is_cyclical": false,
-      "cycle_position": null,
-      "watchlistLevel": "A_CORE",
-      "trackingStatus": "WATCHING",
-      "strategicCoreType": null,
-      "lastFundamentalReviewDate": "2026-08-23",
-      "lastRedFlagReviewDate": null
-    },
-    {
       "name": "Meta",
       "code": "META.US",
       "board": "纳",
