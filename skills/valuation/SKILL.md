@@ -309,6 +309,8 @@ grep -l "代码\|公司名" data/watchlist_*.json
 `target_price` 必须取报告最终结论中的加权合理估值，不得取买入价、乐观情景价或区间上沿。Watchlist 不再保存实时价格、价格带、估值锚和风险摘要。
 
 > ⚠️ **估值分析不修改 `next_earnings_date` / `next_earnings_type`**。这两个字段由公司 PreBuy 分析或专门的财报日期扫描流程维护。若发现该条目日期为 `null`，在告知用户的总结中提醒"财报日期待确认"即可，不要自行估算填入。
+>
+> 🔴 **唯一例外——财报消费后清场**：当本次估值是基于**刚发布的财报**（半年报/中期业绩/季报/年报，即该条目的 `next_earnings_date` 已过期）时，收尾阶段必须把过期的 `next_earnings_date` 清为 `null`，并把 `next_earnings_type` 改为下一期报告类型（A股→`三季报`/`年报`，港交所→`第三季度业绩`/`末期业绩`）。只有官方公告确认的下一期具体日期才允许写入非 `null` 值，否则一律 `null`。此"清场"动作随 `sync_watchlist.ps1` 一并同步到 Finance 项目。
 
 #### Valuation Certainty 认定
 

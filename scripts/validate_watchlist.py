@@ -193,7 +193,16 @@ def validate_entry(entry, entry_idx=0, tier='unknown'):
                     errors.append(f"  [日期格式] {date_field} = '{date_val}' （应为 YYYY-MM-DD）")
             else:
                 errors.append(f"  [类型错误] {date_field} 必须是字符串或 null")
-    
+
+    # 10. next_earnings_date 过期检查（"next"财报日早于今天 = 财报已发布，字段未清场）
+    ned = entry.get('next_earnings_date')
+    if isinstance(ned, str) and _is_valid_date(ned):
+        if datetime.strptime(ned, '%Y-%m-%d').date() < datetime.now().date():
+            errors.append(
+                f"  [日期过期] next_earnings_date = '{ned}' 已早于今天，财报应已发布；"
+                f"请清为 null 或写入官方公告确认的下一期具体日期"
+            )
+
     return errors, warnings
 
 
