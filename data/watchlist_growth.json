@@ -370,8 +370,8 @@
       "board": "深",
       "cScore": 78,
       "mScore": 80,
-      "target_price": 30,
-      "valuation_certainty": 0.7,
+      "target_price": 28,
+      "valuation_certainty": 0.64,
       "dv_ttm": 1.04,
       "next_earnings_date": "2026-08-22",
       "next_earnings_type": "半年报",
@@ -380,7 +380,7 @@
       "watchlistLevel": "B_GROWTH",
       "trackingStatus": "WATCHING",
       "strategicCoreType": null,
-      "lastFundamentalReviewDate": "2026-06-27",
+      "lastFundamentalReviewDate": "2026-08-23",
       "lastRedFlagReviewDate": null
     },
     {
