@@ -783,25 +783,6 @@
       "lastRedFlagReviewDate": "2026-07-17"
     },
     {
-      "name": "宁波银行",
-      "code": "002142.SZ",
-      "board": "深",
-      "cScore": 73,
-      "mScore": 80,
-      "target_price": 33,
-      "valuation_certainty": 0.68,
-      "dv_ttm": 4.04,
-      "next_earnings_date": "2026-08-20",
-      "next_earnings_type": "半年报",
-      "cycle_is_cyclical": false,
-      "cycle_position": null,
-      "watchlistLevel": "B_GROWTH",
-      "trackingStatus": "WATCHING",
-      "strategicCoreType": null,
-      "lastFundamentalReviewDate": "2026-05-26",
-      "lastRedFlagReviewDate": null
-    },
-    {
       "name": "华明装备",
       "code": "002270.SZ",
       "board": "深",
