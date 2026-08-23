@@ -18,7 +18,7 @@
       "cycle_is_cyclical": false,
       "cycle_position": null,
       "watchlistLevel": "A_CORE",
-      "trackingStatus": "PRICE_ABOVE_TARGET",
+      "trackingStatus": "WATCHING",
       "strategicCoreType": null,
       "lastFundamentalReviewDate": "2026-08-05",
       "lastRedFlagReviewDate": "2026-08-05"
@@ -318,7 +318,7 @@
       "cycle_is_cyclical": false,
       "cycle_position": null,
       "watchlistLevel": "A_CORE",
-      "trackingStatus": "PRICE_ABOVE_TARGET",
+      "trackingStatus": "WATCHING",
       "strategicCoreType": null,
       "lastFundamentalReviewDate": "2026-08-15",
       "lastRedFlagReviewDate": "2026-08-15"
@@ -938,7 +938,7 @@
       "cycle_is_cyclical": true,
       "cycle_position": "景气高峰",
       "watchlistLevel": "A_CORE",
-      "trackingStatus": "PRICE_ABOVE_TARGET",
+      "trackingStatus": "WATCHING",
       "strategicCoreType": null,
       "lastFundamentalReviewDate": "2026-08-05",
       "lastRedFlagReviewDate": null

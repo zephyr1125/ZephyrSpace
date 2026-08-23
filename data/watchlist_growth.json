@@ -1378,7 +1378,7 @@
       "cycle_is_cyclical": false,
       "cycle_position": null,
       "watchlistLevel": "B_GROWTH",
-      "trackingStatus": "PRICE_ABOVE_TARGET",
+      "trackingStatus": "WATCHING",
       "strategicCoreType": null,
       "lastFundamentalReviewDate": "2026-08-15",
       "lastRedFlagReviewDate": "2026-08-15"
