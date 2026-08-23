@@ -1,5 +1,5 @@
 {
-  "version": 14,
+  "version": 15,
   "watchlistLevel": "NONE",
   "updated_at": "2026-08-23",
   "entries": [
@@ -116,25 +116,6 @@
       "strategicCoreType": null,
       "lastFundamentalReviewDate": "2026-08-20",
       "lastRedFlagReviewDate": "2026-08-20"
-    },
-    {
-      "name": "江苏银行",
-      "code": "600919.SH",
-      "board": "沪",
-      "cScore": 69,
-      "mScore": 80,
-      "target_price": 12,
-      "valuation_certainty": 0.54,
-      "dv_ttm": 4.72,
-      "next_earnings_date": null,
-      "next_earnings_type": "半年报",
-      "cycle_is_cyclical": false,
-      "cycle_position": null,
-      "watchlistLevel": "NONE",
-      "trackingStatus": "WATCHING",
-      "strategicCoreType": null,
-      "lastFundamentalReviewDate": "2026-08-23",
-      "lastRedFlagReviewDate": null
     }
   ],
   "valuation_certainty_scale": "0.00-1.00; measures target-price reliability, not company quality",
