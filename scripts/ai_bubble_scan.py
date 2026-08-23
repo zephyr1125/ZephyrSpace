@@ -28,6 +28,9 @@ import json
 import argparse
 from datetime import datetime, date
 
+# 让 `from scripts.api_tracker import ...` 可导入（脚本以 `python scripts/ai_bubble_scan.py` 运行时，cwd 不在 sys.path）
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 # ── 指标查询计划 ──────────────────────────────────────────────
 # freq: high = 每周都可能有新信号; low = 主要在财报季更新（无新数据则沿用上期）
 INDICATORS = [
