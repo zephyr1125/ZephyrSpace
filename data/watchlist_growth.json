@@ -1,7 +1,7 @@
 {
-  "version": 24,
+  "version": 25,
   "watchlistLevel": "B_GROWTH",
-  "updated_at": "2026-08-22",
+  "updated_at": "2026-08-23",
   "entries": [
     {
       "name": "Gallagher",
@@ -799,25 +799,6 @@
       "trackingStatus": "WATCHING",
       "strategicCoreType": null,
       "lastFundamentalReviewDate": "2026-05-26",
-      "lastRedFlagReviewDate": null
-    },
-    {
-      "name": "江苏银行",
-      "code": "600919.SH",
-      "board": "沪",
-      "cScore": 72,
-      "mScore": 81,
-      "target_price": 12,
-      "valuation_certainty": 0.67,
-      "dv_ttm": 4.98,
-      "next_earnings_date": "2026-08-20",
-      "next_earnings_type": "半年报",
-      "cycle_is_cyclical": false,
-      "cycle_position": null,
-      "watchlistLevel": "B_GROWTH",
-      "trackingStatus": "WATCHING",
-      "strategicCoreType": null,
-      "lastFundamentalReviewDate": "2026-06-13",
       "lastRedFlagReviewDate": null
     },
     {
