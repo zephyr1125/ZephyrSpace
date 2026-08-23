@@ -1,6 +1,6 @@
 {
-  "schema_version": 26,
-  "last_updated": "2026-07-20",
+  "schema_version": 27,
+  "last_updated": "2026-08-23",
   "AGENT_INSTRUCTION": "修改前必须阅读 data/WATCHLIST_RULES.md 和 data/WATCHLIST_SCHEMA.md；按 S_STRATEGIC、A_CORE、B_GROWTH、NONE 的最高满足等级写入对应文件。trackingStatus 的 HOLDING 状态由 Finance 核算表动态覆盖，不得仅凭静态配置推断持仓。",
   "required_fields": [
     "name: 公司简称，与 01-公司/ 页面标题一致",
@@ -13,6 +13,7 @@
     "dv_ttm: 股息率 TTM，数字或 null",
     "next_earnings_date: 下一期财报日期，YYYY-MM-DD 或 null",
     "next_earnings_type: 下一期财报类型，字符串或 null",
+    "lastEarningsIncorporated: 已纳入三件套分析的最后一份财报（如 2026H1/2026Q1/2025FY/FY2026/Q3 FY2026），未知或 NONE 档可为 null/缺省",
     "cycle_is_cyclical: 布尔值",
     "cycle_position: 周期位置；非周期股或暂无结论时为 null",
     "watchlistLevel: S_STRATEGIC/A_CORE/B_GROWTH/NONE",

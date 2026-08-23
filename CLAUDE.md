@@ -98,6 +98,8 @@ python .\scripts\download_reports.py 600519 && python .\scripts\convert_annual_r
 5. Watchlist 写入（主 Agent 执行，先向用户确认档位）
 6. `sync_watchlist.ps1` + 清理临时文件 + Git Commit（最多3次）
 
+> 🆕 **`lastEarningsIncorporated`（强制）**：第 5 步写入/更新 watchlist 时，必须把本次三件套分析所基于的**最后一份财报期**写入条目 `lastEarningsIncorporated`（规范值 `2026H1`/`2026Q1`/`2026Q2`/`2026Q3`/`2025FY`/`FY2026`/`Q3 FY2026`，详见 `data/WATCHLIST_SCHEMA.md`）。用于筛查「已发布财报但尚未更新分析」的公司。
+
 > ⚠️ 深度分析 Tavily 用量按 `deep-prebuy-skill/SKILL.md` 第 0.3 节 Tier 分级管控（央企上限1次，大型民企1次，中型2次，小市值/高风险3次）。
 > ⚠️ 分析完成后若存在本地财报 MD 文件，用其复核关键数据（审计意见、管理层名单、业务分部收入）；若无 MD 文件，以巨潮资讯在线年报摘要为准。
 > ⚠️ **分析完成后**：若深分 < 70，写入 `00-首页/低分公司登记.md`「后续新增」区。若公司已有记录但新分 ≥ 70，更新备注「已提升至 XX 分」。
@@ -176,7 +178,7 @@ python scripts/weekly_watchlist_scan.py --tier portfolio
 1. 拉取最新行情+财务+一致预期
 2. 根据公司特征选择 4-6 种估值方法
 3. 多方法加权 → 合理价中枢 + 四级价格区间
-4. `grep` 检索 core/growth → 命中则更新 `target_price`，按目标价误差范围独立认定 `valuation_certainty`（0.00–1.00），并计算 `buy_price = target_price × (0.68 + 0.14 × valuation_certainty)`；`buy_price` 不写入 Watchlist
+4. `grep` 检索 core/growth → 命中则更新 `target_price`，按目标价误差范围独立认定 `valuation_certainty`（0.00–1.00），并计算 `buy_price = target_price × (0.68 + 0.14 × valuation_certainty)`；`buy_price` 不写入 Watchlist。若本次估值基于某份财报，同步更新该条目的 `lastEarningsIncorporated` 为该报告期
 5. 运行 `sync_watchlist.ps1` 同步到 `E:\Work\Python\Finance\api\config\`
 
 ### AI 泡沫破裂仪表盘（触发词：AI泡沫打分 / 泡沫仪表盘 / 破裂指数 / 泡沫监测）

@@ -23,6 +23,7 @@ Watchlist 由四个研究等级文件组成：
 | `dv_ttm` | number / null | 股息率 TTM，单位 `%` |
 | `next_earnings_date` | string / null | 下一期财报日期，格式 `YYYY-MM-DD`。**必须来自公司官方公告确认的真实日期**；未确认时务必写 `null`。禁止用交易所法定截止日（08-31/04-30/10-31）或历史推算值填充 |
 | `next_earnings_type` | string / null | 下一期财报类型。`next_earnings_date` 为 `null` 时此字段也必须为 `null` |
+| `lastEarningsIncorporated` | string / null | 已纳入三件套分析（深度分析+管理层档案+估值分析）的**最后一份财报期**。用于筛查「已发布但尚未更新分析」的公司。规范值：`2026H1`（半年报/中期）、`2026Q1`/`2026Q2`/`2026Q3`（自然季度）、`2025FY`（自然年年度报告）、`FY2026`（非自然财年年报，如美股6月/3月/9月财年）、`Q3 FY2026` 等（非自然财年季度）。未知时填 `null`；NONE 档允许缺省。每次三件套更新后必须同步更新此字段 |
 | `cycle_is_cyclical` | boolean | 是否为周期股 |
 | `cycle_position` | string / null | 周期位置；非周期股可为 `null` |
 | `cScore` | number | 公司深度分析评分 |
@@ -33,7 +34,7 @@ Watchlist 由四个研究等级文件组成：
 | `lastFundamentalReviewDate` | string / null | 最近完整基本面复核日期 |
 | `lastRedFlagReviewDate` | string / null | 最近治理、诉讼、审计和管理层红线复核日期 |
 
-每条 entry 必须且只能包含以上17个字段。允许为空的字段必须显式填写 `null`，不得省略。
+每条 entry 必须且只能包含以上18个字段。允许为空的字段必须显式填写 `null`，不得省略；`lastEarningsIncorporated` 在 NONE 档允许缺省。
 
 ## 三层分级规则
 
@@ -130,5 +131,5 @@ python .\scripts\validate_watchlist.py
 
 ---
 
-**最后更新**：2026-07-19
-**Schema 版本**：26
+**最后更新**：2026-08-23
+**Schema 版本**：27

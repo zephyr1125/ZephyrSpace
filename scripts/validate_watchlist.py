@@ -44,7 +44,13 @@ REMOVED_FIELDS = {
     'last_updated', 'market', 'deep_analysis', 'mgmt_archive'
 }
 
-CANONICAL_FIELDS = REQUIRED_FIELDS
+OPTIONAL_FIELDS = {
+    # 已纳入三件套分析的最后一份财报（如 2026H1/2026Q1/2025FY/FY2026/Q3 FY2026）；
+    # 可 null；NONE 档允许缺省。
+    'lastEarningsIncorporated',
+}
+
+CANONICAL_FIELDS = REQUIRED_FIELDS | OPTIONAL_FIELDS
 
 VALID_LEVELS = {'S_STRATEGIC', 'A_CORE', 'B_GROWTH', 'NONE'}
 VALID_TRACKING_STATUSES = {'WATCHING', 'ARCHIVED'}
@@ -167,6 +173,11 @@ def validate_entry(entry, entry_idx=0, tier='unknown'):
     # 6. next_earnings_type 枚举检查
     if entry.get('next_earnings_type') is not None and not isinstance(entry['next_earnings_type'], str):
         errors.append("  [类型错误] next_earnings_type 必须是字符串或 null")
+
+    # 6b. lastEarningsIncorporated 类型检查（可 null；NONE 档允许缺省）
+    lie = entry.get('lastEarningsIncorporated')
+    if lie is not None and not isinstance(lie, str):
+        errors.append("  [类型错误] lastEarningsIncorporated 必须是字符串或 null")
     
     # 7. board 格式检查
     if 'board' in entry:
