@@ -593,25 +593,6 @@
       "lastRedFlagReviewDate": "2026-07-19"
     },
     {
-      "name": "史丹利",
-      "code": "002588.SZ",
-      "board": "深",
-      "cScore": 77,
-      "mScore": 76,
-      "target_price": 10.3,
-      "valuation_certainty": 0.52,
-      "dv_ttm": 0.315,
-      "next_earnings_date": "2026-08-20",
-      "next_earnings_type": "半年报",
-      "cycle_is_cyclical": false,
-      "cycle_position": null,
-      "watchlistLevel": "B_GROWTH",
-      "trackingStatus": "WATCHING",
-      "strategicCoreType": null,
-      "lastFundamentalReviewDate": "2026-07-20",
-      "lastRedFlagReviewDate": null
-    },
-    {
       "name": "国投电力",
       "code": "600886.SH",
       "board": "沪",
