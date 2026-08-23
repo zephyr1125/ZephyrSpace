@@ -1140,9 +1140,8 @@
       "watchlistLevel": "B_GROWTH",
       "trackingStatus": "WATCHING",
       "strategicCoreType": null,
-      "lastFundamentalReview": "2026-07-22",
-      "lastMgmtArchive": "2026-07-22",
-      "lastValuation": "2026-07-22"
+      "lastFundamentalReviewDate": "2026-07-22",
+      "lastRedFlagReviewDate": null
     },
     {
       "name": "思源电气",
@@ -1160,10 +1159,9 @@
       "cycle_position": null,
       "watchlistLevel": "B_GROWTH",
       "trackingStatus": "WATCHING",
-      "strategicCoreType": "GLOBAL_CHALLENGER",
-      "lastFundamentalReview": "2026-08-16",
-      "lastMgmtArchive": "2026-08-16",
-      "lastValuation": "2026-08-16"
+      "strategicCoreType": null,
+      "lastFundamentalReviewDate": "2026-08-16",
+      "lastRedFlagReviewDate": null
     },
     {
       "name": "上港集团",
@@ -1182,9 +1180,8 @@
       "watchlistLevel": "B_GROWTH",
       "trackingStatus": "WATCHING",
       "strategicCoreType": null,
-      "lastFundamentalReview": "2026-07-22",
-      "lastMgmtArchive": "2026-07-22",
-      "lastValuation": "2026-07-22"
+      "lastFundamentalReviewDate": "2026-07-22",
+      "lastRedFlagReviewDate": null
     },
     {
       "name": "ResMed",
@@ -1202,10 +1199,9 @@
       "cycle_position": null,
       "watchlistLevel": "B_GROWTH",
       "trackingStatus": "WATCHING",
-      "strategicCoreType": "GLOBAL_LEADER",
-      "lastFundamentalReview": "2026-08-13",
-      "lastMgmtArchive": "2026-08-13",
-      "lastValuation": "2026-08-13"
+      "strategicCoreType": null,
+      "lastFundamentalReviewDate": "2026-08-13",
+      "lastRedFlagReviewDate": null
     },
     {
       "name": "Allegion",
@@ -1223,10 +1219,9 @@
       "cycle_position": null,
       "watchlistLevel": "B_GROWTH",
       "trackingStatus": "WATCHING",
-      "strategicCoreType": "GLOBAL_LEADER",
-      "lastFundamentalReview": "2026-07-23",
-      "lastMgmtArchive": "2026-07-23",
-      "lastValuation": "2026-07-23"
+      "strategicCoreType": null,
+      "lastFundamentalReviewDate": "2026-07-23",
+      "lastRedFlagReviewDate": null
     },
     {
       "name": "Qualcomm",

@@ -1298,11 +1298,10 @@
       "cycle_is_cyclical": false,
       "cycle_position": null,
       "watchlistLevel": "A_CORE",
-      "trackingStatus": "TRACKING",
-      "strategicCoreType": "GLOBAL_LEADER",
-      "lastFundamentalReview": "2026-07-22",
-      "lastMgmtArchive": "2026-07-22",
-      "lastValuation": "2026-07-22"
+      "trackingStatus": "WATCHING",
+      "strategicCoreType": null,
+      "lastFundamentalReviewDate": "2026-07-22",
+      "lastRedFlagReviewDate": null
     },
     {
       "name": "福耀玻璃",
