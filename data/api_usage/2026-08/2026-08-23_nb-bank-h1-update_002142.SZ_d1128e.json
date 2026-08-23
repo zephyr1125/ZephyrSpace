@@ -1,0 +1,28 @@
+{
+  "run_id": "nb-bank-h1-update-002142.SZ-851afd22",
+  "analysis_type": "nb-bank-h1-update",
+  "target": "002142.SZ",
+  "company_name": "宁波银行",
+  "started_at": "2026-08-23T21:44:10+08:00",
+  "finished_at": "2026-08-23T21:44:10+08:00",
+  "metadata": {},
+  "api_summary": {
+    "lixinger": {
+      "total_calls": 2,
+      "total_success": 2,
+      "total_failure": 0,
+      "total_duration_ms": 162.5,
+      "essential_calls": 2,
+      "endpoints": {
+        "cn/company/fundamental/non_financial": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/candlestick": {
+          "count": 1,
+          "success": 1
+        }
+      }
+    }
+  }
+}

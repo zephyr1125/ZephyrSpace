@@ -1,0 +1,10 @@
+{"event": "call", "tool_name": "lixinger.hk/company/profile", "arguments": {"api": "lixinger", "endpoint": "hk/company/profile", "context": ""}, "timestamp": "2026-08-20T22:35:38+08:00"}
+{"event": "result", "tool_name": "lixinger.hk/company/profile", "result_status": "ok", "duration_ms": 5978.3, "error": "", "timestamp": "2026-08-20T22:35:38+08:00"}
+{"event": "call", "tool_name": "lixinger.hk/company/fs/non_financial", "arguments": {"api": "lixinger", "endpoint": "hk/company/fs/non_financial", "context": ""}, "timestamp": "2026-08-20T22:35:41+08:00"}
+{"event": "result", "tool_name": "lixinger.hk/company/fs/non_financial", "result_status": "ok", "duration_ms": 2229.2, "error": "", "timestamp": "2026-08-20T22:35:41+08:00"}
+{"event": "call", "tool_name": "lixinger.hk/company/profile", "arguments": {"api": "lixinger", "endpoint": "hk/company/profile", "context": ""}, "timestamp": "2026-08-20T22:35:55+08:00"}
+{"event": "result", "tool_name": "lixinger.hk/company/profile", "result_status": "ok", "duration_ms": 5936.7, "error": "", "timestamp": "2026-08-20T22:35:55+08:00"}
+{"event": "call", "tool_name": "lixinger.hk/company/profile", "arguments": {"api": "lixinger", "endpoint": "hk/company/profile", "context": ""}, "timestamp": "2026-08-20T22:36:05+08:00"}
+{"event": "result", "tool_name": "lixinger.hk/company/profile", "result_status": "ok", "duration_ms": 3683.0, "error": "", "timestamp": "2026-08-20T22:36:05+08:00"}
+{"event": "call", "tool_name": "tavily.search", "arguments": {"api": "tavily", "endpoint": "search", "context": "query=00700.HK 腾讯控股 监管处罚 违规 诉讼 负面 风险, depth=advanced, max=5"}, "timestamp": "2026-08-20T22:36:18+08:00"}
+{"event": "result", "tool_name": "tavily.search", "result_status": "ok", "duration_ms": 9397.6, "error": "", "timestamp": "2026-08-20T22:36:28+08:00"}

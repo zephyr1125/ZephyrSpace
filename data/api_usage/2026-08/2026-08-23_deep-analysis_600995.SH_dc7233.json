@@ -1,0 +1,24 @@
+{
+  "run_id": "deep-analysis-600995.SH-459c76dc",
+  "analysis_type": "deep-analysis",
+  "target": "600995.SH",
+  "company_name": "南网储能",
+  "started_at": "2026-08-23T21:43:29+08:00",
+  "finished_at": "2026-08-23T21:43:31+08:00",
+  "metadata": {},
+  "api_summary": {
+    "cninfo": {
+      "total_calls": 1,
+      "total_success": 1,
+      "total_failure": 0,
+      "total_duration_ms": 767.3,
+      "essential_calls": 1,
+      "endpoints": {
+        "p_stock2303": {
+          "count": 1,
+          "success": 1
+        }
+      }
+    }
+  }
+}
