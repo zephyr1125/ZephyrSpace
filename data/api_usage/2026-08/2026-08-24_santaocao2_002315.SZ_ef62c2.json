@@ -1,0 +1,44 @@
+{
+  "run_id": "santaocao2-002315.SZ-13658991",
+  "analysis_type": "santaocao2",
+  "target": "002315.SZ",
+  "company_name": "焦点科技",
+  "started_at": "2026-08-24T21:04:00+08:00",
+  "finished_at": "2026-08-24T21:04:04+08:00",
+  "metadata": {},
+  "api_summary": {
+    "lixinger": {
+      "total_calls": 10,
+      "total_success": 10,
+      "total_failure": 0,
+      "total_duration_ms": 4393.0,
+      "essential_calls": 10,
+      "endpoints": {
+        "cn/company/fundamental/non_financial": {
+          "count": 5,
+          "success": 5
+        },
+        "cn/company/hot/df": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/hot/ple": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/hot/esc": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/hot/mssc": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/candlestick": {
+          "count": 1,
+          "success": 1
+        }
+      }
+    }
+  }
+}

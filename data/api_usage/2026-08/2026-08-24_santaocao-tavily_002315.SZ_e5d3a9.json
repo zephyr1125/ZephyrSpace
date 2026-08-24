@@ -1,0 +1,24 @@
+{
+  "run_id": "santaocao-tavily-002315.SZ-7d87f284",
+  "analysis_type": "santaocao-tavily",
+  "target": "002315.SZ",
+  "company_name": "焦点科技",
+  "started_at": "2026-08-24T21:06:13+08:00",
+  "finished_at": "2026-08-24T21:06:18+08:00",
+  "metadata": {},
+  "api_summary": {
+    "tavily": {
+      "total_calls": 2,
+      "total_success": 2,
+      "total_failure": 0,
+      "total_duration_ms": 4255.5,
+      "essential_calls": 2,
+      "endpoints": {
+        "search": {
+          "count": 2,
+          "success": 2
+        }
+      }
+    }
+  }
+}

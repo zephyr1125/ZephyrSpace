@@ -1,7 +1,7 @@
 {
   "version": 15,
   "watchlistLevel": "A_CORE",
-  "updated_at": "2026-08-23",
+  "updated_at": "2026-08-24",
   "entries": [
     {
       "name": "AMD",
@@ -1497,6 +1497,26 @@
       "lastEarningsIncorporated": "FY2026",
       "cycle_is_cyclical": true,
       "cycle_position": "景气高峰",
+      "watchlistLevel": "A_CORE",
+      "trackingStatus": "WATCHING",
+      "strategicCoreType": null,
+      "lastFundamentalReviewDate": "2026-08-24",
+      "lastRedFlagReviewDate": "2026-08-24"
+    },
+    {
+      "name": "焦点科技",
+      "code": "002315.SZ",
+      "board": "深",
+      "cScore": 82,
+      "mScore": 81,
+      "target_price": 28.5,
+      "valuation_certainty": 0.62,
+      "dv_ttm": 4.0,
+      "next_earnings_date": null,
+      "next_earnings_type": null,
+      "lastEarningsIncorporated": "2026Q1",
+      "cycle_is_cyclical": false,
+      "cycle_position": null,
       "watchlistLevel": "A_CORE",
       "trackingStatus": "WATCHING",
       "strategicCoreType": null,

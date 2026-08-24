@@ -1,0 +1,186 @@
+{
+  "run_id": "santaocao-002315.SZ-e73703e3",
+  "analysis_type": "santaocao",
+  "target": "002315.SZ",
+  "company_name": "焦点科技",
+  "started_at": "2026-08-24T21:00:34+08:00",
+  "finished_at": "2026-08-24T21:01:26+08:00",
+  "metadata": {},
+  "api_summary": {
+    "cninfo": {
+      "total_calls": 18,
+      "total_success": 18,
+      "total_failure": 0,
+      "total_duration_ms": 28508.5,
+      "essential_calls": 18,
+      "endpoints": {
+        "p_sysapi1133": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2303": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2334": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2329": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2330": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2205": {
+          "count": 1,
+          "success": 1
+        },
+        "p_sysapi1139": {
+          "count": 1,
+          "success": 1
+        },
+        "p_sysapi1029": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2209": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2218": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2220": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2219": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2248": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2246": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2238": {
+          "count": 1,
+          "success": 1
+        },
+        "p_sysapi1134": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2332": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2333": {
+          "count": 1,
+          "success": 1
+        }
+      }
+    },
+    "lixinger": {
+      "total_calls": 14,
+      "total_success": 14,
+      "total_failure": 0,
+      "total_duration_ms": 18384.1,
+      "essential_calls": 14,
+      "endpoints": {
+        "cn/company/profile": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/fundamental/non_financial": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/fs/non_financial": {
+          "count": 2,
+          "success": 2
+        },
+        "cn/company/senior-executive-shares-change": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/major-shareholders-shares-change": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/measures": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/inquiry": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/dividend": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/hot/df": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/hot/ple": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/hot/esc": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/hot/mssc": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/candlestick": {
+          "count": 1,
+          "success": 1
+        }
+      }
+    },
+    "wisburg": {
+      "total_calls": 6,
+      "total_success": 6,
+      "total_failure": 0,
+      "total_duration_ms": 1740.5,
+      "essential_calls": 6,
+      "endpoints": {
+        "reports": {
+          "count": 1,
+          "success": 1
+        },
+        "company-reports": {
+          "count": 1,
+          "success": 1
+        },
+        "earningscalls": {
+          "count": 1,
+          "success": 1
+        },
+        "feed": {
+          "count": 1,
+          "success": 1
+        },
+        "market-daily": {
+          "count": 1,
+          "success": 1
+        },
+        "images": {
+          "count": 1,
+          "success": 1
+        }
+      }
+    }
+  }
+}
