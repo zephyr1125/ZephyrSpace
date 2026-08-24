@@ -1,0 +1,199 @@
+{
+  "run_id": "deep-analysis-603986.SH-b85f6fdc",
+  "analysis_type": "deep-analysis",
+  "target": "603986.SH",
+  "company_name": "兆易创新",
+  "started_at": "2026-08-24T21:38:59+08:00",
+  "finished_at": "2026-08-24T21:39:23+08:00",
+  "metadata": {},
+  "api_summary": {
+    "cninfo": {
+      "total_calls": 19,
+      "total_success": 19,
+      "total_failure": 0,
+      "total_duration_ms": 7098.5,
+      "essential_calls": 19,
+      "endpoints": {
+        "p_sysapi1133": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2110": {
+          "count": 1,
+          "success": 1
+        },
+        "p_sysapi1134": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2303": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2334": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2329": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2330": {
+          "count": 1,
+          "success": 1
+        },
+        "p_sysapi1139": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2209": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2215": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2218": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2248": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2246": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2220": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2219": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2205": {
+          "count": 1,
+          "success": 1
+        },
+        "p_info3097_inc": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2328": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2238": {
+          "count": 1,
+          "success": 1
+        }
+      }
+    },
+    "lixinger": {
+      "total_calls": 12,
+      "total_success": 12,
+      "total_failure": 0,
+      "total_duration_ms": 11556.7,
+      "essential_calls": 12,
+      "endpoints": {
+        "cn/company/profile": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/fundamental/non_financial": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/senior-executive-shares-change": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/major-shareholders-shares-change": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/measures": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/inquiry": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/dividend": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/hot/esc": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/hot/mssc": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/hot/df": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/hot/ple": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/candlestick": {
+          "count": 1,
+          "success": 1
+        }
+      }
+    },
+    "wisburg": {
+      "total_calls": 9,
+      "total_success": 9,
+      "total_failure": 0,
+      "total_duration_ms": 2361.2,
+      "essential_calls": 9,
+      "endpoints": {
+        "reports": {
+          "count": 2,
+          "success": 2
+        },
+        "company-reports": {
+          "count": 2,
+          "success": 2
+        },
+        "earningscalls": {
+          "count": 2,
+          "success": 2
+        },
+        "feed": {
+          "count": 1,
+          "success": 1
+        },
+        "market-daily": {
+          "count": 1,
+          "success": 1
+        },
+        "images": {
+          "count": 1,
+          "success": 1
+        }
+      }
+    },
+    "tavily": {
+      "total_calls": 1,
+      "total_success": 1,
+      "total_failure": 0,
+      "total_duration_ms": 2123.8,
+      "essential_calls": 1,
+      "endpoints": {
+        "search": {
+          "count": 1,
+          "success": 1
+        }
+      }
+    }
+  }
+}
