@@ -1,7 +1,7 @@
 {
   "version": 26,
   "watchlistLevel": "B_GROWTH",
-  "updated_at": "2026-08-24",
+  "updated_at": "2026-08-25",
   "entries": [
     {
       "name": "Gallagher",
@@ -1549,8 +1549,8 @@
       "board": "纽",
       "cScore": 76,
       "mScore": 78,
-      "target_price": 615,
-      "valuation_certainty": 0.6,
+      "target_price": 600,
+      "valuation_certainty": 0.52,
       "dv_ttm": 0.3,
       "next_earnings_date": null,
       "next_earnings_type": null,
@@ -1567,9 +1567,9 @@
       "name": "康龙化成",
       "code": "300759.SZ",
       "board": "创",
-      "cScore": 79,
-      "mScore": 72,
-      "target_price": 37,
+      "cScore": 80,
+      "mScore": 70,
+      "target_price": 35,
       "valuation_certainty": 0.45,
       "dv_ttm": 0.42,
       "next_earnings_date": null,
