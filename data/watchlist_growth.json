@@ -1562,6 +1562,26 @@
       "strategicCoreType": null,
       "lastFundamentalReviewDate": "2026-08-24",
       "lastRedFlagReviewDate": "2026-08-24"
+    },
+    {
+      "name": "康龙化成",
+      "code": "300759.SZ",
+      "board": "创",
+      "cScore": 79,
+      "mScore": 72,
+      "target_price": 37,
+      "valuation_certainty": 0.45,
+      "dv_ttm": 0.42,
+      "next_earnings_date": null,
+      "next_earnings_type": "三季报",
+      "lastEarningsIncorporated": "2026H1",
+      "cycle_is_cyclical": true,
+      "cycle_position": "复苏中期",
+      "watchlistLevel": "B_GROWTH",
+      "trackingStatus": "WATCHING",
+      "strategicCoreType": null,
+      "lastFundamentalReviewDate": "2026-08-24",
+      "lastRedFlagReviewDate": "2026-08-24"
     }
   ],
   "valuation_certainty_scale": "0.00-1.00; measures target-price reliability, not company quality",
