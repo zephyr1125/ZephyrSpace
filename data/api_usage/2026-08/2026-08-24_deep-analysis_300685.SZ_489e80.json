@@ -1,0 +1,24 @@
+{
+  "run_id": "deep-analysis-300685.SZ-fd84c1e4",
+  "analysis_type": "deep-analysis",
+  "target": "300685.SZ",
+  "company_name": "艾德生物",
+  "started_at": "2026-08-24T21:05:50+08:00",
+  "finished_at": "2026-08-24T21:05:55+08:00",
+  "metadata": {},
+  "api_summary": {
+    "tavily": {
+      "total_calls": 3,
+      "total_success": 3,
+      "total_failure": 0,
+      "total_duration_ms": 5221.6,
+      "essential_calls": 3,
+      "endpoints": {
+        "search": {
+          "count": 3,
+          "success": 3
+        }
+      }
+    }
+  }
+}
