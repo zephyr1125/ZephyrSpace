@@ -1,7 +1,7 @@
 {
   "version": 26,
   "watchlistLevel": "B_GROWTH",
-  "updated_at": "2026-08-23",
+  "updated_at": "2026-08-24",
   "entries": [
     {
       "name": "Gallagher",
@@ -1537,6 +1537,26 @@
       "lastEarningsIncorporated": "2026H1",
       "cycle_is_cyclical": true,
       "cycle_position": "景气高峰",
+      "watchlistLevel": "B_GROWTH",
+      "trackingStatus": "WATCHING",
+      "strategicCoreType": null,
+      "lastFundamentalReviewDate": "2026-08-24",
+      "lastRedFlagReviewDate": "2026-08-24"
+    },
+    {
+      "name": "Thermo Fisher Scientific",
+      "code": "TMO.US",
+      "board": "纽",
+      "cScore": 76,
+      "mScore": 78,
+      "target_price": 615,
+      "valuation_certainty": 0.6,
+      "dv_ttm": 0.3,
+      "next_earnings_date": null,
+      "next_earnings_type": null,
+      "lastEarningsIncorporated": "2026Q2",
+      "cycle_is_cyclical": false,
+      "cycle_position": null,
       "watchlistLevel": "B_GROWTH",
       "trackingStatus": "WATCHING",
       "strategicCoreType": null,
