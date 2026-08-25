@@ -116,26 +116,6 @@
       "strategicCoreType": null,
       "lastFundamentalReviewDate": "2026-08-20",
       "lastRedFlagReviewDate": "2026-08-20"
-    },
-    {
-      "name": "久立特材",
-      "code": "002318.SZ",
-      "board": "深",
-      "cScore": 67,
-      "mScore": 75,
-      "target_price": null,
-      "valuation_certainty": null,
-      "dv_ttm": 5.11,
-      "next_earnings_date": null,
-      "next_earnings_type": "三季报",
-      "lastEarningsIncorporated": "2026H1",
-      "cycle_is_cyclical": false,
-      "cycle_position": null,
-      "watchlistLevel": "NONE",
-      "trackingStatus": "WATCHING",
-      "strategicCoreType": null,
-      "lastFundamentalReviewDate": "2026-08-25",
-      "lastRedFlagReviewDate": "2026-08-25"
     }
   ],
   "valuation_certainty_scale": "0.00-1.00; measures target-price reliability, not company quality",
