@@ -64,26 +64,6 @@
       "lastRedFlagReviewDate": "2026-07-31"
     },
     {
-      "name": "中国广核",
-      "code": "01816.HK",
-      "board": "港",
-      "cScore": 80,
-      "mScore": 79,
-      "target_price": 3.1,
-      "valuation_certainty": 0.56,
-      "dv_ttm": 3.47,
-      "next_earnings_date": null,
-      "next_earnings_type": "2026末期业绩",
-      "lastEarningsIncorporated": "2026H1",
-      "cycle_is_cyclical": false,
-      "cycle_position": null,
-      "watchlistLevel": "B_GROWTH",
-      "trackingStatus": "WATCHING",
-      "strategicCoreType": null,
-      "lastFundamentalReviewDate": "2026-08-25",
-      "lastRedFlagReviewDate": null
-    },
-    {
       "name": "海康威视",
       "code": "002415.SZ",
       "board": "深",
