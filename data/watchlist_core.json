@@ -1,7 +1,7 @@
 {
   "version": 15,
   "watchlistLevel": "A_CORE",
-  "updated_at": "2026-08-24",
+  "updated_at": "2026-08-25",
   "entries": [
     {
       "name": "AMD",
@@ -842,26 +842,6 @@
       "strategicCoreType": null,
       "lastFundamentalReviewDate": "2026-07-19",
       "lastRedFlagReviewDate": "2026-07-19"
-    },
-    {
-      "name": "久立特材",
-      "code": "002318.SZ",
-      "board": "深",
-      "cScore": 81,
-      "mScore": 82,
-      "target_price": 16,
-      "valuation_certainty": 0.66,
-      "dv_ttm": 5.5,
-      "next_earnings_date": "2026-08-25",
-      "next_earnings_type": "半年报",
-      "lastEarningsIncorporated": "2026Q1",
-      "cycle_is_cyclical": false,
-      "cycle_position": null,
-      "watchlistLevel": "A_CORE",
-      "trackingStatus": "WATCHING",
-      "strategicCoreType": null,
-      "lastFundamentalReviewDate": "2026-07-14",
-      "lastRedFlagReviewDate": null
     },
     {
       "name": "亿联网络",
