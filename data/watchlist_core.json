@@ -1602,6 +1602,26 @@
       "strategicCoreType": null,
       "lastFundamentalReviewDate": "2026-08-26",
       "lastRedFlagReviewDate": "2026-08-26"
+    },
+    {
+      "name": "康臣药业",
+      "code": "01681.HK",
+      "board": "港",
+      "cScore": 78,
+      "mScore": 82,
+      "target_price": 20.0,
+      "valuation_certainty": 0.5,
+      "dv_ttm": 5.2,
+      "next_earnings_date": null,
+      "next_earnings_type": null,
+      "lastEarningsIncorporated": "2026H1",
+      "cycle_is_cyclical": false,
+      "cycle_position": null,
+      "watchlistLevel": "A_CORE",
+      "trackingStatus": "WATCHING",
+      "strategicCoreType": null,
+      "lastFundamentalReviewDate": "2026-08-26",
+      "lastRedFlagReviewDate": null
     }
   ],
   "valuation_certainty_scale": "0.00-1.00; measures target-price reliability, not company quality",

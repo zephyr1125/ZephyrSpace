@@ -144,26 +144,6 @@
       "lastRedFlagReviewDate": "2026-07-29"
     },
     {
-      "name": "康臣药业",
-      "code": "01681.HK",
-      "board": "港",
-      "cScore": 79,
-      "mScore": 78,
-      "target_price": 21.5,
-      "valuation_certainty": 0.54,
-      "dv_ttm": 5.2,
-      "next_earnings_date": null,
-      "next_earnings_type": null,
-      "lastEarningsIncorporated": "2026H1",
-      "cycle_is_cyclical": false,
-      "cycle_position": null,
-      "watchlistLevel": "B_GROWTH",
-      "trackingStatus": "WATCHING",
-      "strategicCoreType": null,
-      "lastFundamentalReviewDate": "2026-08-26",
-      "lastRedFlagReviewDate": null
-    },
-    {
       "name": "Hasbro",
       "code": "HAS.US",
       "board": "纳",
