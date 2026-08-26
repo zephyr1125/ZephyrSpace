@@ -1582,6 +1582,26 @@
       "strategicCoreType": null,
       "lastFundamentalReviewDate": "2026-08-25",
       "lastRedFlagReviewDate": null
+    },
+    {
+      "name": "三花智控",
+      "code": "02050.HK",
+      "board": "港",
+      "cScore": 84,
+      "mScore": 81,
+      "target_price": 24.5,
+      "valuation_certainty": 0.48,
+      "dv_ttm": 1.7,
+      "next_earnings_date": null,
+      "next_earnings_type": "三季报",
+      "lastEarningsIncorporated": "2026H1",
+      "cycle_is_cyclical": false,
+      "cycle_position": "复苏中期",
+      "watchlistLevel": "A_CORE",
+      "trackingStatus": "WATCHING",
+      "strategicCoreType": null,
+      "lastFundamentalReviewDate": "2026-08-26",
+      "lastRedFlagReviewDate": "2026-08-26"
     }
   ],
   "valuation_certainty_scale": "0.00-1.00; measures target-price reliability, not company quality",
