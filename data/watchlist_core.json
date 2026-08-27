@@ -1682,6 +1682,26 @@
       "strategicCoreType": null,
       "lastFundamentalReviewDate": "2026-08-27",
       "lastRedFlagReviewDate": "2026-08-27"
+    },
+    {
+      "name": "伊利股份",
+      "code": "600887.SH",
+      "board": "沪",
+      "cScore": 81,
+      "mScore": 80,
+      "target_price": 30,
+      "valuation_certainty": 0.55,
+      "dv_ttm": 5.22,
+      "next_earnings_date": null,
+      "next_earnings_type": "三季报",
+      "lastEarningsIncorporated": "2026H1",
+      "cycle_is_cyclical": false,
+      "cycle_position": null,
+      "watchlistLevel": "A_CORE",
+      "trackingStatus": "WATCHING",
+      "strategicCoreType": null,
+      "lastFundamentalReviewDate": "2026-08-27",
+      "lastRedFlagReviewDate": "2026-08-27"
     }
   ],
   "valuation_certainty_scale": "0.00-1.00; measures target-price reliability, not company quality",
