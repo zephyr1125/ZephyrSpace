@@ -804,26 +804,6 @@
       "lastRedFlagReviewDate": "2026-07-19"
     },
     {
-      "name": "海天味业",
-      "code": "603288.SH",
-      "board": "沪",
-      "cScore": 78,
-      "mScore": 76,
-      "target_price": 35.7,
-      "valuation_certainty": 0.65,
-      "dv_ttm": 3.78,
-      "next_earnings_date": null,
-      "next_earnings_type": "三季报",
-      "lastEarningsIncorporated": "2026H1",
-      "cycle_is_cyclical": false,
-      "cycle_position": null,
-      "watchlistLevel": "B_GROWTH",
-      "trackingStatus": "WATCHING",
-      "strategicCoreType": null,
-      "lastFundamentalReviewDate": "2026-08-27",
-      "lastRedFlagReviewDate": "2026-08-27"
-    },
-    {
       "name": "羚锐制药",
       "code": "600285.SH",
       "board": "沪",
