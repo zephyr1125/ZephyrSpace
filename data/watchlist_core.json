@@ -1,7 +1,7 @@
 {
   "version": 15,
   "watchlistLevel": "A_CORE",
-  "updated_at": "2026-08-27",
+  "updated_at": "2026-08-28",
   "entries": [
     {
       "name": "AMD",
@@ -1602,6 +1602,26 @@
       "strategicCoreType": null,
       "lastFundamentalReviewDate": "2026-08-25",
       "lastRedFlagReviewDate": null
+    },
+    {
+      "name": "中国财险",
+      "code": "02328.HK",
+      "board": "港",
+      "cScore": 84,
+      "mScore": 77,
+      "target_price": 15.5,
+      "valuation_certainty": 0.64,
+      "dv_ttm": 5.7,
+      "next_earnings_date": null,
+      "next_earnings_type": "第三季度业绩",
+      "lastEarningsIncorporated": "2026H1",
+      "cycle_is_cyclical": false,
+      "cycle_position": null,
+      "watchlistLevel": "A_CORE",
+      "trackingStatus": "WATCHING",
+      "strategicCoreType": null,
+      "lastFundamentalReviewDate": "2026-08-28",
+      "lastRedFlagReviewDate": "2026-08-28"
     },
     {
       "name": "三花智控",
