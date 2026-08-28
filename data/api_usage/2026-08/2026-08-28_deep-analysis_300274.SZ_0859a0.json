@@ -1,0 +1,24 @@
+{
+  "run_id": "deep-analysis-300274.SZ-f188924c",
+  "analysis_type": "deep-analysis",
+  "target": "300274.SZ",
+  "company_name": "阳光电源",
+  "started_at": "2026-08-28T21:24:09+08:00",
+  "finished_at": "2026-08-28T21:24:10+08:00",
+  "metadata": {},
+  "api_summary": {
+    "cninfo": {
+      "total_calls": 1,
+      "total_success": 1,
+      "total_failure": 0,
+      "total_duration_ms": 766.5,
+      "essential_calls": 1,
+      "endpoints": {
+        "p_stock2303": {
+          "count": 1,
+          "success": 1
+        }
+      }
+    }
+  }
+}

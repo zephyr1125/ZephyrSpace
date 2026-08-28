@@ -1,7 +1,7 @@
 {
   "version": 26,
   "watchlistLevel": "B_GROWTH",
-  "updated_at": "2026-08-27",
+  "updated_at": "2026-08-28",
   "entries": [
     {
       "name": "Gallagher",
@@ -247,21 +247,21 @@
       "name": "阳光电源",
       "code": "300274.SZ",
       "board": "创",
-      "cScore": 80,
-      "mScore": 79,
-      "target_price": 128,
-      "valuation_certainty": 0.45,
+      "cScore": 78,
+      "mScore": 81,
+      "target_price": 90,
+      "valuation_certainty": 0.5,
       "dv_ttm": 0.69,
-      "next_earnings_date": "2026-08-29",
-      "next_earnings_type": "半年报",
-      "lastEarningsIncorporated": "2026Q1",
+      "next_earnings_date": null,
+      "next_earnings_type": "三季报",
+      "lastEarningsIncorporated": "2026H1",
       "cycle_is_cyclical": true,
-      "cycle_position": "复苏中期",
+      "cycle_position": "收缩期",
       "watchlistLevel": "B_GROWTH",
       "trackingStatus": "WATCHING",
       "strategicCoreType": null,
-      "lastFundamentalReviewDate": "2026-07-08",
-      "lastRedFlagReviewDate": null
+      "lastFundamentalReviewDate": "2026-08-28",
+      "lastRedFlagReviewDate": "2026-08-28"
     },
     {
       "name": "分众传媒",
