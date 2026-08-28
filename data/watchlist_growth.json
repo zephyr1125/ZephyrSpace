@@ -1,5 +1,5 @@
 {
-  "version": 26,
+  "version": 27,
   "watchlistLevel": "B_GROWTH",
   "updated_at": "2026-08-28",
   "entries": [
@@ -261,26 +261,6 @@
       "trackingStatus": "WATCHING",
       "strategicCoreType": null,
       "lastFundamentalReviewDate": "2026-08-18",
-      "lastRedFlagReviewDate": null
-    },
-    {
-      "name": "三环集团",
-      "code": "300408.SZ",
-      "board": "创",
-      "cScore": 81,
-      "mScore": 77,
-      "target_price": 87,
-      "valuation_certainty": 0.55,
-      "dv_ttm": null,
-      "next_earnings_date": null,
-      "next_earnings_type": "三季报",
-      "lastEarningsIncorporated": "2026H1",
-      "cycle_is_cyclical": false,
-      "cycle_position": null,
-      "watchlistLevel": "B_GROWTH",
-      "trackingStatus": "WATCHING",
-      "strategicCoreType": null,
-      "lastFundamentalReviewDate": "2026-08-28",
       "lastRedFlagReviewDate": null
     },
     {
