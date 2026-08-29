@@ -117,6 +117,26 @@
       "strategicCoreType": null,
       "lastFundamentalReviewDate": "2026-08-27",
       "lastRedFlagReviewDate": null
+    },
+    {
+      "name": "携程",
+      "code": "TCOM.US",
+      "board": "纳",
+      "cScore": 75,
+      "mScore": 70,
+      "target_price": 48,
+      "valuation_certainty": 0.48,
+      "dv_ttm": 0.71,
+      "next_earnings_date": null,
+      "next_earnings_type": "Q2 2026季报",
+      "lastEarningsIncorporated": "2026Q1",
+      "cycle_is_cyclical": true,
+      "cycle_position": null,
+      "watchlistLevel": "NONE",
+      "trackingStatus": "WATCHING",
+      "strategicCoreType": null,
+      "lastFundamentalReviewDate": "2026-08-29",
+      "lastRedFlagReviewDate": "2026-08-29"
     }
   ],
   "valuation_certainty_scale": "0.00-1.00; measures target-price reliability, not company quality",

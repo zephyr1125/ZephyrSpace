@@ -544,26 +544,6 @@
       "lastRedFlagReviewDate": null
     },
     {
-      "name": "携程",
-      "code": "TCOM.US",
-      "board": "纳",
-      "cScore": 82,
-      "mScore": 72,
-      "target_price": 53,
-      "valuation_certainty": 0.52,
-      "dv_ttm": 0.71,
-      "next_earnings_date": null,
-      "next_earnings_type": "Q2 2026季报",
-      "lastEarningsIncorporated": "2026Q1",
-      "cycle_is_cyclical": true,
-      "cycle_position": null,
-      "watchlistLevel": "B_GROWTH",
-      "trackingStatus": "WATCHING",
-      "strategicCoreType": null,
-      "lastFundamentalReviewDate": "2026-07-19",
-      "lastRedFlagReviewDate": "2026-07-19"
-    },
-    {
       "name": "中际旭创",
       "code": "300308.SZ",
       "board": "创",
