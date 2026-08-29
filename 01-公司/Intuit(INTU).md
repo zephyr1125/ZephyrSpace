@@ -6,7 +6,7 @@ aliases: ["Intuit", "INTU", "财捷"]
 可投资性: 高
 阶段: 成熟期（转型AI）
 关注级别: Growth
-最后更新日期: 2026-07-10
+最后更新日期: 2026-08-27
 market: US
 board: 纳
 股息率_ttm: 1.15%
@@ -18,7 +18,7 @@ board: 纳
 
 **分析日期**：2026-05-02　**参考股价**：$393
 
-> ⚠️ **数据状态**：本页分析基于 **FY2025 年报（截至 2025-07-31）及 Q2 FY2026（截至 2026-01-31）季报**。**Q3 FY2026 财报（预计 2026-05-20 AMC，结果尚未发布）未纳入**。Q3 为全年最关键季度（含 2026 整个报税季，约占全年营收 40%），亦是 AI 对 TurboTax 冲击的首次真实市场验证。财报发布后需追加章节并更新结论及 Watchlist 日期为下一期。
+> **数据状态**：页面主体为 2026-05-02 的历史分析；最新 FY2026 年报期结果已在文末「FY2026 年报期更新」纳入。该更新优先于本页此前关于 Q3 FY2026 待发布的描述。
 
 ---
 
@@ -272,3 +272,26 @@ board: 纳
 
 - [[07-美股ETF/IGV 软件ETF]]：INTU 为 IGV 前十大持仓之一（约 3.3%），IGV 页内含财务简析入口
 - [[02-主题/美股科技与AI赛道]]（如存在）
+
+---
+
+## FY2026 年报期更新（2026-08-25 发布，2026-08-27 复核）
+
+**数据状态**：已纳入截至 2026-07-31 的 FY2026 业绩；FY2027 Q1 尚未发布。参考收盘价为 **$345.88**（Tiger 筛选器，2026-08-27）。
+
+| 项目 | FY2026 | 同比 / 说明 |
+|---|---:|---|
+| 总营收 | $21.4B | +14% |
+| GAAP 经营利润 / 净利润 | $5.884B / $4.566B | +20% / +18% |
+| GAAP / Non-GAAP EPS | $16.46 / $24.27 | 均 +20%；本期 Non-GAAP 仍剔除 SBC |
+| 经营现金流 / Capex | $8.838B / $0.221B | 报表 FCF 约 $8.617B |
+| SBC | $2.056B | 约为 GAAP 净利润 45%；FY2027 起不再从公司 Non-GAAP 指标中剔除 |
+| 回购 / 股息 | $5.412B / $1.347B | 加权稀释股数同比 -2% |
+
+Global Business Solutions 增长 16% 至 $12.9B，Online Ecosystem 增长 19% 至 $9.9B，QuickBooks Online Accounting 增长 23%；Consumer 增长 11% 至 $8.6B，Credit Karma 增长 20%。但 TurboTax 总收入仅增长 7%，全年美国报税单位减少 2%，增长更多来自 Live 服务升级、价格与组合，而非用户数量扩张。
+
+FY2027 指引总营收增长放缓至 9%–10%，TurboTax 仅 +2%–3%，Mailchimp 为 -1%–0%，且 Mailchimp 将单独列报。这要求下调终端增长假设。
+
+**更新后的 PreBuy 结论**：**逻辑清晰，等待 FY2027 Q1 的增长与利润率验证点；当前 $345.88 接近保守估值中性区，不适合把 FY2026 的强增长机械外推。** 不写入 Watchlist。
+
+**来源**：[FY2026 业绩与 FY2027 指引（Intuit）](https://investors.intuit.com/news-events/press-releases/detail/1320/intuit-reports-fourth-quarter-and-full-year-fiscal-2026-results-sets-fiscal-2027-guidance)，[FY2026 业绩 8-K（SEC）](https://investors.intuit.com/sec-filings/all-sec-filings/content/0000896878-26-000029/intu-20260825.htm)。
