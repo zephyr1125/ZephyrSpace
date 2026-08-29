@@ -1,0 +1,24 @@
+{
+  "run_id": "deep-analysis-000807.SZ-8a445c6d",
+  "analysis_type": "deep-analysis",
+  "target": "000807.SZ",
+  "company_name": "云铝股份",
+  "started_at": "2026-08-29T16:05:27+08:00",
+  "finished_at": "2026-08-29T16:05:31+08:00",
+  "metadata": {},
+  "api_summary": {
+    "tavily": {
+      "total_calls": 2,
+      "total_success": 2,
+      "total_failure": 0,
+      "total_duration_ms": 3988.4,
+      "essential_calls": 2,
+      "endpoints": {
+        "search": {
+          "count": 2,
+          "success": 2
+        }
+      }
+    }
+  }
+}
