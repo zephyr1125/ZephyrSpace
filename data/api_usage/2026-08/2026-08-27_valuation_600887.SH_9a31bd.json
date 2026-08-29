@@ -1,0 +1,24 @@
+{
+  "run_id": "valuation-600887.SH-bb346706",
+  "analysis_type": "valuation",
+  "target": "600887.SH",
+  "company_name": "伊利股份",
+  "started_at": "2026-08-27T21:42:55+08:00",
+  "finished_at": "2026-08-27T21:42:55+08:00",
+  "metadata": {},
+  "api_summary": {
+    "lixinger": {
+      "total_calls": 1,
+      "total_success": 1,
+      "total_failure": 0,
+      "total_duration_ms": 69.3,
+      "essential_calls": 1,
+      "endpoints": {
+        "cn/company/candlestick": {
+          "count": 1,
+          "success": 1
+        }
+      }
+    }
+  }
+}

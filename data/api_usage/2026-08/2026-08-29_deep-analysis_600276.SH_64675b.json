@@ -1,0 +1,24 @@
+{
+  "run_id": "deep-analysis-600276.SH-1e190164",
+  "analysis_type": "deep-analysis",
+  "target": "600276.SH",
+  "company_name": "恒瑞医药",
+  "started_at": "2026-08-29T16:37:55+08:00",
+  "finished_at": "2026-08-29T16:37:57+08:00",
+  "metadata": {},
+  "api_summary": {
+    "tavily": {
+      "total_calls": 1,
+      "total_success": 1,
+      "total_failure": 0,
+      "total_duration_ms": 2103.2,
+      "essential_calls": 1,
+      "endpoints": {
+        "search": {
+          "count": 1,
+          "success": 1
+        }
+      }
+    }
+  }
+}

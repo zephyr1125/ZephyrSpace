@@ -1,0 +1,44 @@
+{
+  "run_id": "deep-analysis-600276.SH-4691bc26",
+  "analysis_type": "deep-analysis",
+  "target": "600276.SH",
+  "company_name": "恒瑞医药",
+  "started_at": "2026-08-29T16:34:37+08:00",
+  "finished_at": "2026-08-29T16:34:40+08:00",
+  "metadata": {},
+  "api_summary": {
+    "cninfo": {
+      "total_calls": 6,
+      "total_success": 6,
+      "total_failure": 0,
+      "total_duration_ms": 1877.7,
+      "essential_calls": 6,
+      "endpoints": {
+        "p_sysapi1139": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2218": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2248": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2246": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2220": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2209": {
+          "count": 1,
+          "success": 1
+        }
+      }
+    }
+  }
+}

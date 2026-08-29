@@ -1,0 +1,37 @@
+{
+  "run_id": "test-analysis-000001.SZ-98edd8bf",
+  "analysis_type": "test-analysis",
+  "target": "000001.SZ",
+  "company_name": "TestCo",
+  "started_at": "2026-08-29T20:46:40+08:00",
+  "finished_at": "2026-08-29T20:46:40+08:00",
+  "metadata": {},
+  "api_summary": {
+    "tavily": {
+      "total_calls": 1,
+      "total_success": 1,
+      "total_failure": 0,
+      "total_duration_ms": 0.0,
+      "essential_calls": 1,
+      "endpoints": {
+        "search": {
+          "count": 1,
+          "success": 1
+        }
+      }
+    },
+    "wisburg": {
+      "total_calls": 2,
+      "total_success": 1,
+      "total_failure": 1,
+      "total_duration_ms": 623.4,
+      "essential_calls": 1,
+      "endpoints": {
+        "reports": {
+          "count": 2,
+          "success": 1
+        }
+      }
+    }
+  }
+}

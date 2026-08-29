@@ -1,0 +1,24 @@
+{
+  "run_id": "deep-analysis-300124.SZ-c120d8eb",
+  "analysis_type": "deep-analysis",
+  "target": "300124.SZ",
+  "company_name": "汇川技术",
+  "started_at": "2026-08-28T20:31:36+08:00",
+  "finished_at": "2026-08-28T20:31:37+08:00",
+  "metadata": {},
+  "api_summary": {
+    "lixinger": {
+      "total_calls": 1,
+      "total_success": 1,
+      "total_failure": 0,
+      "total_duration_ms": 1020.1,
+      "essential_calls": 1,
+      "endpoints": {
+        "cn/company/fundamental/non_financial": {
+          "count": 1,
+          "success": 1
+        }
+      }
+    }
+  }
+}

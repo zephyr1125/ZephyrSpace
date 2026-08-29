@@ -1,0 +1,40 @@
+{
+  "run_id": "valuation-00425.HK-253f101e",
+  "analysis_type": "valuation",
+  "target": "00425.HK",
+  "company_name": "敏实集团",
+  "started_at": "2026-08-29T16:02:55+08:00",
+  "finished_at": "2026-08-29T16:02:56+08:00",
+  "metadata": {},
+  "api_summary": {
+    "lixinger": {
+      "total_calls": 6,
+      "total_success": 6,
+      "total_failure": 0,
+      "total_duration_ms": 462.5,
+      "essential_calls": 6,
+      "endpoints": {
+        "hk/company/fundamental/non_financial": {
+          "count": 2,
+          "success": 2
+        },
+        "hk/company/candlestick": {
+          "count": 1,
+          "success": 1
+        },
+        "hk/company/fs/non_financial": {
+          "count": 1,
+          "success": 1
+        },
+        "hk/company/dividend": {
+          "count": 1,
+          "success": 1
+        },
+        "hk/company/latest-shareholders": {
+          "count": 1,
+          "success": 1
+        }
+      }
+    }
+  }
+}

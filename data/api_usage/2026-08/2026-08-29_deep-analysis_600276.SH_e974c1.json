@@ -1,0 +1,28 @@
+{
+  "run_id": "deep-analysis-600276.SH-b455f4a8",
+  "analysis_type": "deep-analysis",
+  "target": "600276.SH",
+  "company_name": "恒瑞医药",
+  "started_at": "2026-08-29T16:37:03+08:00",
+  "finished_at": "2026-08-29T16:37:03+08:00",
+  "metadata": {},
+  "api_summary": {
+    "wisburg": {
+      "total_calls": 2,
+      "total_success": 2,
+      "total_failure": 0,
+      "total_duration_ms": 519.6,
+      "essential_calls": 2,
+      "endpoints": {
+        "earningscalls": {
+          "count": 1,
+          "success": 1
+        },
+        "company-reports": {
+          "count": 1,
+          "success": 1
+        }
+      }
+    }
+  }
+}

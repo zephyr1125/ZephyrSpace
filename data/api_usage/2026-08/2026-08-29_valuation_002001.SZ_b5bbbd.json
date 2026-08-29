@@ -1,0 +1,48 @@
+{
+  "run_id": "valuation-002001.SZ-1a12d544",
+  "analysis_type": "valuation",
+  "target": "002001.SZ",
+  "company_name": "新和成",
+  "started_at": "2026-08-29T16:52:50+08:00",
+  "finished_at": "2026-08-29T16:52:52+08:00",
+  "metadata": {},
+  "api_summary": {
+    "lixinger": {
+      "total_calls": 13,
+      "total_success": 13,
+      "total_failure": 0,
+      "total_duration_ms": 1544.1,
+      "essential_calls": 13,
+      "endpoints": {
+        "cn/company/fundamental/non_financial": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/fs/non_financial": {
+          "count": 7,
+          "success": 7
+        },
+        "cn/company/dividend": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/hot/esc": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/hot/mssc": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/measures": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/inquiry": {
+          "count": 1,
+          "success": 1
+        }
+      }
+    }
+  }
+}

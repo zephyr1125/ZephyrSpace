@@ -1,0 +1,24 @@
+{
+  "run_id": "deep-analysis-00425.HK-fe5d03b2",
+  "analysis_type": "deep-analysis",
+  "target": "00425.HK",
+  "company_name": "敏实集团",
+  "started_at": "2026-08-29T16:06:25+08:00",
+  "finished_at": "2026-08-29T16:06:26+08:00",
+  "metadata": {},
+  "api_summary": {
+    "lixinger": {
+      "total_calls": 5,
+      "total_success": 5,
+      "total_failure": 0,
+      "total_duration_ms": 356.6,
+      "essential_calls": 5,
+      "endpoints": {
+        "hk/company/fs/non_financial": {
+          "count": 5,
+          "success": 5
+        }
+      }
+    }
+  }
+}
