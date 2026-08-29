@@ -89,7 +89,7 @@
       "valuation_certainty": 0.45,
       "dv_ttm": 2.77,
       "next_earnings_date": null,
-      "next_earnings_type": "半年报",
+      "next_earnings_type": null,
       "cycle_is_cyclical": true,
       "cycle_position": null,
       "watchlistLevel": "NONE",
