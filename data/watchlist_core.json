@@ -1,7 +1,7 @@
 {
   "version": 16,
   "watchlistLevel": "A_CORE",
-  "updated_at": "2026-08-28",
+  "updated_at": "2026-08-29",
   "entries": [
     {
       "name": "AMD",
@@ -1527,21 +1527,21 @@
       "name": "焦点科技",
       "code": "002315.SZ",
       "board": "深",
-      "cScore": 81,
+      "cScore": 82,
       "mScore": 84,
-      "target_price": 30.0,
-      "valuation_certainty": 0.6,
+      "target_price": 28.0,
+      "valuation_certainty": 0.57,
       "dv_ttm": 4.0,
       "next_earnings_date": null,
       "next_earnings_type": null,
-      "lastEarningsIncorporated": "2026Q1",
+      "lastEarningsIncorporated": "2026H1",
       "cycle_is_cyclical": false,
       "cycle_position": null,
       "watchlistLevel": "A_CORE",
       "trackingStatus": "WATCHING",
       "strategicCoreType": null,
-      "lastFundamentalReviewDate": "2026-08-24",
-      "lastRedFlagReviewDate": "2026-08-24"
+      "lastFundamentalReviewDate": "2026-08-29",
+      "lastRedFlagReviewDate": "2026-08-29"
     },
     {
       "name": "艾德生物",
