@@ -4,7 +4,7 @@ aliases: [Mueller Industries, MLI]
 公司质量评分: 84
 管理层评分: 80
 建议档位: core
-最后更新日期: 2026-07-17
+最后更新日期: 2026-08-29
 ---
 
 # Mueller Industries（MLI）公司页
@@ -13,7 +13,7 @@ aliases: [Mueller Industries, MLI]
 |---|---|
 | cScore | 84 |
 | mScore | 80 |
-| 当前价 | 58.97美元 |
+| 当前价 | 62.80美元（2026-08-28） |
 | target_price | 64美元 |
 | valuation_certainty | 0.68 |
 | 机械买入价 | 50美元 |
@@ -21,6 +21,7 @@ aliases: [Mueller Industries, MLI]
 | 建议档位 | core |
 
 > mScore 80 已按新七维标准重算：诚信透明17、资本配置22、战略稳定13、股东友好10、危机处理7、组织人才8、沟通判断3；总计80，档位不变。
+> **2026-08-29 Q2 更新**：三件套已推进至 2026Q2（lastEarningsIncorporated=2026Q2）。H1 净利 +21.2%、Bison 完成（record Q2）+ Chicago Extruded 落地、股息 +40%（$0.175/股）；但 Q2 单季净利仅 +1.5%、Piping 收入+27% 但经营利润-0.8%（价差收窄）、H1 OCF/净利 59.7%（Q2 恢复 85%）、回购放缓转向并购。评分维持 84/80、target 64、certainty 0.68。
 
 ## 主线
 
@@ -32,10 +33,11 @@ aliases: [Mueller Industries, MLI]
 ## 红旗
 
 - 铜价和建筑周期。
-- 一次性资产出售收益。
-- Q1现金流低于利润。
+- 一次性资产出售收益（2025Q2 保险收益基数）。
+- H1现金流低于利润（OCF/NI 59.7%，Q2 恢复 85%）。
+- Piping价差收窄（Q2 收入+27%/利润-0.8%）。
 - CEO薪酬过高。
-- Bison整合未知。
+- Bison/Chicago整合回报待验证。
 - 拆股口径错配。
 
 ## 当前动作
@@ -43,9 +45,10 @@ aliases: [Mueller Industries, MLI]
 - 继续core研究。
 - 不使用7.6倍错误PE。
 - 50美元为机械买入线。
+- 当前价 62.80 接近 fair（64），距买入价 50 约 25.6%，不买。
 
-- [[深度分析/Mueller Industries 深度分析 84 2026-07-17]]
-- [[管理层档案/Mueller Industries 管理层档案 80 2026-07-17]]
-- [[估值分析/Mueller Industries 估值分析 2026-07-17]]
+- [[深度分析/Mueller Industries 深度分析 84 2026-08-29|深度分析 84（2026-08-29，Q2 更新）]] / [[深度分析/Mueller Industries 深度分析 84 2026-07-17|07-17 版]]
+- [[管理层档案/Mueller Industries 管理层档案 80 2026-08-29|管理层档案 80（2026-08-29，Q2 更新）]] / [[管理层档案/Mueller Industries 管理层档案 80 2026-07-17|07-17 版]]
+- [[估值分析/Mueller Industries 估值分析 2026-08-29|估值分析（2026-08-29，Q2 更新）]] / [[估值分析/Mueller Industries 估值分析 2026-07-17|07-17 版]]
 
 

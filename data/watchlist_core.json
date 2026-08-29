@@ -133,15 +133,15 @@
       "valuation_certainty": 0.61,
       "dv_ttm": 4.63,
       "next_earnings_date": null,
-      "next_earnings_type": "Q3 2026季报",
-      "lastEarningsIncorporated": "2026Q1",
+      "next_earnings_type": null,
+      "lastEarningsIncorporated": "2026Q2",
       "cycle_is_cyclical": true,
       "cycle_position": null,
       "watchlistLevel": "A_CORE",
       "trackingStatus": "WATCHING",
       "strategicCoreType": null,
       "lastFundamentalReviewDate": "2026-07-23",
-      "lastRedFlagReviewDate": null
+      "lastRedFlagReviewDate": "2026-07-23"
     },
     {
       "name": "Cavco Industries",
@@ -514,14 +514,14 @@
       "dv_ttm": null,
       "next_earnings_date": null,
       "next_earnings_type": "Q3 2026季报",
-      "lastEarningsIncorporated": "2026Q1",
+      "lastEarningsIncorporated": "2026Q2",
       "cycle_is_cyclical": true,
       "cycle_position": null,
       "watchlistLevel": "A_CORE",
       "trackingStatus": "WATCHING",
       "strategicCoreType": null,
-      "lastFundamentalReviewDate": "2026-07-17",
-      "lastRedFlagReviewDate": "2026-07-17"
+      "lastFundamentalReviewDate": "2026-08-29",
+      "lastRedFlagReviewDate": "2026-08-29"
     },
     {
       "name": "Mueller Water Products",
