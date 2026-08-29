@@ -444,26 +444,6 @@
       "lastRedFlagReviewDate": "2026-08-22"
     },
     {
-      "name": "公牛集团",
-      "code": "603195.SH",
-      "board": "沪",
-      "cScore": 82,
-      "mScore": 82,
-      "target_price": 41,
-      "valuation_certainty": 0.66,
-      "dv_ttm": 5.11,
-      "next_earnings_date": null,
-      "next_earnings_type": "三季报",
-      "lastEarningsIncorporated": "2026H1",
-      "cycle_is_cyclical": false,
-      "cycle_position": null,
-      "watchlistLevel": "A_CORE",
-      "trackingStatus": "WATCHING",
-      "strategicCoreType": null,
-      "lastFundamentalReviewDate": "2026-08-28",
-      "lastRedFlagReviewDate": "2026-08-28"
-    },
-    {
       "name": "Alphabet(Google)",
       "code": "GOOGL.US",
       "board": "纳",
@@ -921,26 +901,6 @@
       "trackingStatus": "WATCHING",
       "strategicCoreType": null,
       "lastFundamentalReviewDate": "2026-08-28",
-      "lastRedFlagReviewDate": null
-    },
-    {
-      "name": "双环传动",
-      "code": "002472.SZ",
-      "board": "深",
-      "cScore": 77,
-      "mScore": 70,
-      "target_price": 36,
-      "valuation_certainty": 0.6,
-      "dv_ttm": 1.12,
-      "next_earnings_date": null,
-      "next_earnings_type": "三季报",
-      "lastEarningsIncorporated": "2026H1",
-      "cycle_is_cyclical": false,
-      "cycle_position": null,
-      "watchlistLevel": "NONE",
-      "trackingStatus": "WATCHING",
-      "strategicCoreType": null,
-      "lastFundamentalReviewDate": "2026-08-27",
       "lastRedFlagReviewDate": null
     },
     {
