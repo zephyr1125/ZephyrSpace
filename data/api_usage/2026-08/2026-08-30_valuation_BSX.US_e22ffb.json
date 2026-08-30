@@ -1,0 +1,28 @@
+{
+  "run_id": "valuation-BSX.US-caf9f1a0",
+  "analysis_type": "valuation",
+  "target": "BSX.US",
+  "company_name": "波士顿科学",
+  "started_at": "2026-08-30T10:57:23+08:00",
+  "finished_at": "2026-08-30T10:57:23+08:00",
+  "metadata": {},
+  "api_summary": {
+    "lixinger": {
+      "total_calls": 10,
+      "total_success": 1,
+      "total_failure": 9,
+      "total_duration_ms": 0,
+      "essential_calls": 1,
+      "endpoints": {
+        "cn/company/fundamental/non_financial": {
+          "count": 4,
+          "success": 0
+        },
+        "us/company/fundamental/non_financial": {
+          "count": 6,
+          "success": 1
+        }
+      }
+    }
+  }
+}
