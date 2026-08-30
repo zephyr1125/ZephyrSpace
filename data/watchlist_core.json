@@ -1742,6 +1742,26 @@
       "strategicCoreType": null,
       "lastFundamentalReviewDate": "2026-08-28",
       "lastRedFlagReviewDate": null
+    },
+    {
+      "name": "国电南瑞",
+      "code": "600406.SH",
+      "board": "沪",
+      "cScore": 85,
+      "mScore": 84,
+      "target_price": 24,
+      "valuation_certainty": 0.65,
+      "dv_ttm": 2.73,
+      "next_earnings_date": null,
+      "next_earnings_type": "三季报",
+      "lastEarningsIncorporated": "2026H1",
+      "cycle_is_cyclical": false,
+      "cycle_position": null,
+      "watchlistLevel": "A_CORE",
+      "trackingStatus": "WATCHING",
+      "strategicCoreType": null,
+      "lastFundamentalReviewDate": "2026-08-30",
+      "lastRedFlagReviewDate": "2026-07-17"
     }
   ],
   "valuation_certainty_scale": "0.00-1.00; measures target-price reliability, not company quality",

@@ -4,26 +4,6 @@
   "updated_at": "2026-08-30",
   "entries": [
     {
-      "name": "国电南瑞",
-      "code": "600406.SH",
-      "board": "沪",
-      "cScore": 86,
-      "mScore": 85,
-      "target_price": 25,
-      "valuation_certainty": 0.76,
-      "dv_ttm": 2.73,
-      "next_earnings_date": null,
-      "next_earnings_type": "三季报",
-      "lastEarningsIncorporated": "2026H1",
-      "cycle_is_cyclical": false,
-      "cycle_position": null,
-      "watchlistLevel": "S_STRATEGIC",
-      "trackingStatus": "WATCHING",
-      "strategicCoreType": "POLICY_INFRA",
-      "lastFundamentalReviewDate": "2026-07-15",
-      "lastRedFlagReviewDate": "2026-07-17"
-    },
-    {
       "name": "长江电力",
       "code": "600900.SH",
       "board": "沪",
