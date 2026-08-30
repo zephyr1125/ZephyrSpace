@@ -1,8 +1,27 @@
 {
   "version": 15,
   "watchlistLevel": "NONE",
-  "updated_at": "2026-08-29",
+  "updated_at": "2026-08-30",
   "entries": [
+    {
+      "name": "波士顿科学",
+      "code": "BSX.US",
+      "board": "纽",
+      "cScore": 77,
+      "mScore": 72,
+      "target_price": 58,
+      "valuation_certainty": 0.5,
+      "dv_ttm": null,
+      "next_earnings_date": null,
+      "next_earnings_type": null,
+      "cycle_is_cyclical": false,
+      "cycle_position": null,
+      "watchlistLevel": "NONE",
+      "trackingStatus": "WATCHING",
+      "strategicCoreType": null,
+      "lastFundamentalReviewDate": "2026-08-30",
+      "lastRedFlagReviewDate": "2026-08-30"
+    },
     {
       "name": "IBM",
       "code": "IBM.US",
