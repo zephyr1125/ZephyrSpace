@@ -1,0 +1,24 @@
+{
+  "run_id": "weekly-monitor-portfolio-164e15c0",
+  "analysis_type": "weekly-monitor",
+  "target": "portfolio",
+  "company_name": "持仓周报",
+  "started_at": "2026-08-30T10:36:44+08:00",
+  "finished_at": "2026-08-30T10:36:45+08:00",
+  "metadata": {},
+  "api_summary": {
+    "lixinger": {
+      "total_calls": 15,
+      "total_success": 15,
+      "total_failure": 0,
+      "total_duration_ms": 1140.5,
+      "essential_calls": 15,
+      "endpoints": {
+        "cn/company/candlestick": {
+          "count": 15,
+          "success": 15
+        }
+      }
+    }
+  }
+}
