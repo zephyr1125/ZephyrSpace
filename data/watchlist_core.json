@@ -207,10 +207,10 @@
       "name": "Deckers Outdoor",
       "code": "DECK.US",
       "board": "纽",
-      "cScore": 84,
-      "mScore": 83,
-      "target_price": 112,
-      "valuation_certainty": 0.6,
+      "cScore": 83,
+      "mScore": 82,
+      "target_price": 110,
+      "valuation_certainty": 0.55,
       "dv_ttm": null,
       "next_earnings_date": null,
       "next_earnings_type": "Q2 FY2027季报",
@@ -220,8 +220,8 @@
       "watchlistLevel": "A_CORE",
       "trackingStatus": "WATCHING",
       "strategicCoreType": null,
-      "lastFundamentalReviewDate": "2026-08-13",
-      "lastRedFlagReviewDate": "2026-08-13"
+      "lastFundamentalReviewDate": "2026-09-01",
+      "lastRedFlagReviewDate": "2026-09-01"
     },
     {
       "name": "Donaldson",
