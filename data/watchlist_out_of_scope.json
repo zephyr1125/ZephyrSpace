@@ -1,8 +1,27 @@
 {
-  "version": 15,
+  "version": 16,
   "watchlistLevel": "NONE",
-  "updated_at": "2026-08-30",
+  "updated_at": "2026-09-02",
   "entries": [
+    {
+      "name": "GitLab",
+      "code": "GTLB.US",
+      "board": "纳",
+      "cScore": 72,
+      "mScore": 72,
+      "target_price": 49,
+      "valuation_certainty": 0.5,
+      "dv_ttm": null,
+      "next_earnings_date": null,
+      "next_earnings_type": "Q3 FY2027财报",
+      "cycle_is_cyclical": false,
+      "cycle_position": null,
+      "watchlistLevel": "NONE",
+      "trackingStatus": "WATCHING",
+      "strategicCoreType": null,
+      "lastFundamentalReviewDate": "2026-09-02",
+      "lastRedFlagReviewDate": "2026-09-02"
+    },
     {
       "name": "波士顿科学",
       "code": "BSX.US",
