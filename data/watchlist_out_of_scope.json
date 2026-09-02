@@ -195,6 +195,26 @@
       "strategicCoreType": null,
       "lastFundamentalReviewDate": "2026-09-02",
       "lastRedFlagReviewDate": "2026-09-02"
+    },
+    {
+      "name": "百度",
+      "code": "9888.HK",
+      "board": "港",
+      "cScore": 60,
+      "mScore": 62,
+      "target_price": 103.0,
+      "valuation_certainty": 0.3,
+      "dv_ttm": 0.0,
+      "next_earnings_date": null,
+      "next_earnings_type": null,
+      "lastEarningsIncorporated": "2026Q2",
+      "cycle_is_cyclical": false,
+      "cycle_position": null,
+      "watchlistLevel": "NONE",
+      "trackingStatus": "WATCHING",
+      "strategicCoreType": null,
+      "lastFundamentalReviewDate": "2026-09-02",
+      "lastRedFlagReviewDate": "2026-09-02"
     }
   ],
   "valuation_certainty_scale": "0.00-1.00; measures target-price reliability, not company quality",
