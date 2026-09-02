@@ -1,0 +1,68 @@
+{
+  "run_id": "deep-analysis-002747.SZ-9e047908",
+  "analysis_type": "deep-analysis",
+  "target": "002747.SZ",
+  "company_name": "埃斯顿",
+  "started_at": "2026-09-02T21:29:08+08:00",
+  "finished_at": "2026-09-02T21:29:51+08:00",
+  "metadata": {},
+  "api_summary": {
+    "cninfo": {
+      "total_calls": 12,
+      "total_success": 12,
+      "total_failure": 0,
+      "total_duration_ms": 42995.3,
+      "essential_calls": 12,
+      "endpoints": {
+        "p_sysapi1133": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2303": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2334": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2329": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2330": {
+          "count": 1,
+          "success": 1
+        },
+        "p_sysapi1139": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2215": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2205": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2248": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2246": {
+          "count": 1,
+          "success": 1
+        },
+        "p_sysapi1134": {
+          "count": 1,
+          "success": 1
+        },
+        "p_sysapi1029": {
+          "count": 1,
+          "success": 1
+        }
+      }
+    }
+  }
+}
