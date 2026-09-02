@@ -117,6 +117,8 @@ GitLab 是**订阅制 + 用量制**的"一体化 DevSecOps 平台"：Free（开�
 
 **下次财报**：Q3 FY2027（约 2026-12 初）。**必盯**：净新增 ARR 是否维持 +40%；DBNR 是否续升；SBC/营收 是否降至 <20%；Flex/DAP consumption CRR 向 $100M+ 爬坡进度；回购续执行；GitHub 定价动作。
 
+**B_GROWTH 晋级门槛**（≥3 项同季改善即主动复核）：DBNR ≥120% ／ Revenue 稳定 ≥20% ／ SBC/Revenue 明显收敛至 <18% ／ GAAP 营业利润率持续向 0 靠拢 ／ C-suite 稳定 ≥1 年 → 若 cScore 上修至 76–78，合计 ~150 即可进入 B_GROWTH。
+
 ## 9. 相关公司 / 主题
 
 - [[01-公司/Microsoft(MSFT)]]（GitHub 母公司，主要竞争）
