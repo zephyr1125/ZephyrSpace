@@ -1542,6 +1542,26 @@
       "strategicCoreType": null,
       "lastFundamentalReviewDate": "2026-09-02",
       "lastRedFlagReviewDate": "2026-09-02"
+    },
+    {
+      "name": "浙江鼎力",
+      "code": "603338.SH",
+      "board": "沪",
+      "cScore": 80,
+      "mScore": 78,
+      "target_price": 65,
+      "valuation_certainty": 0.45,
+      "dv_ttm": 1.99,
+      "next_earnings_date": null,
+      "next_earnings_type": "三季报",
+      "lastEarningsIncorporated": "2026H1",
+      "cycle_is_cyclical": true,
+      "cycle_position": null,
+      "watchlistLevel": "B_GROWTH",
+      "trackingStatus": "WATCHING",
+      "strategicCoreType": null,
+      "lastFundamentalReviewDate": "2026-09-05",
+      "lastRedFlagReviewDate": "2026-09-05"
     }
   ],
   "valuation_certainty_scale": "0.00-1.00; measures target-price reliability, not company quality",
