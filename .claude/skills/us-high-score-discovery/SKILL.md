@@ -40,7 +40,9 @@ python scripts/us_high_score_pool.py
 ```
 
 - Tiger 现扫 + yfinance 缓存增量；首次 ~531 家 ~15-25 分钟后台，之后近零。
-- 初值阈值 ≥70 Ⅰ候选 / 60–70 Ⅱ候选（首跑校准后回填）。
+- 初值阈值 ≥70 Ⅰ候选 / 60–70 Ⅱ候选。校准记录（2026-09-05 全量首跑）：531 家硬排后 → 入池 111
+  （Ⅰ候选 66 / Ⅱ候选 45，全新 103）。头部：DexCom/Edwards/Novo/Novartis/Monster/Cintas/Fastenal/Trane/Ferrari 等；
+  含 NVO/NVS 等 ADR/外资，Run B 注意注册地属性与既有美股研究。阈值保留。
 
 ## Run B：分批复核（每次调用实际动作）
 
