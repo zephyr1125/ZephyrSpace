@@ -271,6 +271,19 @@ python scripts/forecast_monitor.py 2026-06-20 2026-07-02 --label 2026Q2财报预
 
 本 skill 只做上游候选排队：不写 watchlist、不自动开三件套；被推荐公司由用户触发「全面分析 XXX」。
 
+### 港股未收录高分企业筛查（触发词：寻找高分港股 / 港股高分企业普查 / 未收录优质港股）
+
+**不需要二次确认，收到即执行。** 同上一节的 A股版逻辑，数据层换港股：Tiger 选股器（市值≥HKD 200亿，
+无价格门槛）→ yfinance ~5年年报 → 质量分(去估值、重盈利/现金流轻成长) → 排金融/REIT → 覆盖标签。
+完整 SOP 读 `.claude/skills/hk-high-score-discovery/SKILL.md`，两种模式：
+
+1. **建/刷池（Run A，少跑）**：`python scripts/hk_high_score_pool.py` → `data/screens/港股高分候选池.json`。
+   首次全量 yfinance ~10 分钟，之后靠 `data/cache/` 增量近零。
+2. **分批复核（Run B，每次调用）**：池头 pending 前 5~8 家，**每家先做管理层/红旗 Web 核**（港股无批量
+   红旗数据：四大审计/保留意见、老千(股权集中/频繁供股/改名)、质押占用、做空史、处罚），再给判定并写回。
+
+港股版管理层面在 Run B 逐家 Web 核，比 A股版更重；批次 N 恒定小以控成本。
+
 ## Watchlist 管理
 
 两档分层：core（底仓）/ growth（成长）；radar 已废弃
