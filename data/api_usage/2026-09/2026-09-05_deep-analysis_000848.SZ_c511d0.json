@@ -1,0 +1,133 @@
+{
+  "run_id": "deep-analysis-000848.SZ-ce758bfd",
+  "analysis_type": "deep-analysis",
+  "target": "000848.SZ",
+  "company_name": "承德露露",
+  "started_at": "2026-09-05T10:46:58+08:00",
+  "finished_at": "2026-09-05T10:47:42+08:00",
+  "metadata": {},
+  "api_summary": {
+    "cninfo": {
+      "total_calls": 15,
+      "total_success": 15,
+      "total_failure": 0,
+      "total_duration_ms": 16506.9,
+      "essential_calls": 15,
+      "endpoints": {
+        "p_sysapi1133": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2303": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2334": {
+          "count": 1,
+          "success": 1
+        },
+        "p_sysapi1139": {
+          "count": 1,
+          "success": 1
+        },
+        "p_sysapi1029": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2215": {
+          "count": 1,
+          "success": 1
+        },
+        "p_sysapi1134": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2218": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2209": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2248": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2246": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2220": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2219": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2205": {
+          "count": 1,
+          "success": 1
+        },
+        "p_info3097_inc": {
+          "count": 1,
+          "success": 1
+        }
+      }
+    },
+    "lixinger": {
+      "total_calls": 11,
+      "total_success": 11,
+      "total_failure": 0,
+      "total_duration_ms": 22876.0,
+      "essential_calls": 11,
+      "endpoints": {
+        "cn/company/profile": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/hot/esc": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/hot/mssc": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/hot/df": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/hot/ple": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/measures": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/inquiry": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/dividend": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/senior-executive-shares-change": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/major-shareholders-shares-change": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/announcement": {
+          "count": 1,
+          "success": 1
+        }
+      }
+    }
+  }
+}
