@@ -284,6 +284,19 @@ python scripts/forecast_monitor.py 2026-06-20 2026-07-02 --label 2026Q2财报预
 
 港股版管理层面在 Run B 逐家 Web 核，比 A股版更重；批次 N 恒定小以控成本。
 
+### 美股未收录高分企业筛查（触发词：寻找高分美股 / 美股高分企业普查 / 未收录优质美股）
+
+**不需要二次确认，收到即执行。** 同 A/港股版逻辑，数据层：Tiger 选股器 `Market.US`（市值≥USD 300亿，无价格门槛，
+~531 家）→ yfinance ~5年年报 → 质量分(去估值、重盈利/现金流、ROE 上限 45% 防回购失真) → 排金融/REIT → 覆盖标签。
+完整 SOP 读 `.claude/skills/us-high-score-discovery/SKILL.md`：
+
+1. **建/刷池（Run A，少跑）**：`python scripts/us_high_score_pool.py` → `data/screens/美股高分候选池.json`。
+   首次全量 ~15-25 分钟后台，之后靠 `data/cache/us_high_score_fs_cache.json` 增量近零。
+2. **分批复核（Run B，每次调用）**：池头 pending 前 5~8 家，**每家先 Web 核管理层**（美股专属：DEF 14A 控制权/
+   B类股、非 GAAP vs GAAP 盈利质量/SBC、做空史、减持质押），再判定并写回。
+
+美股覆盖面宽、已研究多在 watchlist 硬排；纯中文页名无法反推 ticker 者可能误标「全新」，Run B 复核前可 grep 兜底。
+
 ## Watchlist 管理
 
 两档分层：core（底仓）/ growth（成长）；radar 已废弃
