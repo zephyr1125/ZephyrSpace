@@ -258,6 +258,19 @@ python scripts/forecast_monitor.py 2026-06-20 2026-07-02 --label 2026Q2财报预
 
 > ⚠️ label 按结束日期所在**自然季度**自动生成，但半年报预告应归入 Q2、三季报预告归入 Q3——跨季度时用 `--label` 显式指定，避免 7 月扫到的半年报预告被误标为 Q3。
 
+### A股未收录高分企业筛查（触发词：寻找高分A股 / 高分企业普查 / 未收录优质A股 / 不看价格找好公司）
+
+**不需要二次确认，收到即执行。** 不看当前股价，粗排全 A 股中大概率够 B_GROWTH/A_CORE 级（深分≥70/76+管档≥70/76）、
+且尚未被深度覆盖的公司。完整 SOP 读 `.claude/skills/cn-high-score-discovery/SKILL.md`，两种模式：
+
+1. **建/刷池（Run A，少跑）**：`python scripts/cn_high_score_pool.py` → 全 A 排除 watchlist/低分登记 → 理杏仁 fs
+   10 年年报算企业质量分(去估值维) + 管理层红旗批量 + 覆盖率标签 → `data/screens/A股高分候选池.json`。
+   API 用量大（~2000 次 fs），只在建/刷池时跑；财报季或半年一次即可。
+2. **分批复核（Run B，每次调用）**：对池头未复核前 5~8 家做 AI 精筛（红旗命中才下钻 CNINFO，边界才 Tavily），
+   给「建议开三件套/疑点/排除」并**写回池 JSON 状态**（主 Agent 写）。每次输出恒定小，跑几次逐步消化大列表。
+
+本 skill 只做上游候选排队：不写 watchlist、不自动开三件套；被推荐公司由用户触发「全面分析 XXX」。
+
 ## Watchlist 管理
 
 两档分层：core（底仓）/ growth（成长）；radar 已废弃
