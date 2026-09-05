@@ -245,7 +245,8 @@ def fetch_hk_quality(yahoo_symbol):
         return {"_financial": True, "名称": name, "行业": sector, "_ok": False, "_err": "金融/REIT 剔除"}
 
     n = min(len(ni), len(equity))
-    roe_year = [_nan(ni[i]) / _nan(equity[i]) for i in range(n) if _nan(equity[i]) != 0]
+    # ROE 分母需为正：负权益(如回购致账面负)会令 ROE 失真，该年跳过（美股常见，港股共享此函数一并受益）
+    roe_year = [_nan(ni[i]) / _nan(equity[i]) for i in range(n) if _nan(equity[i]) > 0]
     roa_year = [_nan(ni[i]) / _nan(assets[i]) for i in range(min(len(ni), len(assets)))
                 if _nan(assets[i]) > 0]
     roe_mean = 100 * _nmean(roe_year)
@@ -362,12 +363,15 @@ def quality_score(e):
     fcf_conv = _neutral(e["_fcf_conv"])
     high_turn = (math.isfinite(e["_roe_mean"]) and e["_roe_mean"] >= 18
                  and (not math.isfinite(fcf_conv) or fcf_conv >= 0.6) and e["_ocf_neg"] == 0)
+    # ROE 上限 45%：回购致权益基数极小/失真时 ROE 可上千，灌满盈利维无意义（美股常见）
+    rm = min(e["_roe_mean"], 45.0) if math.isfinite(e["_roe_mean"]) else float("nan")
+    rmin = min(e["_roe_min"], 45.0) if math.isfinite(e["_roe_min"]) else float("nan")
     gross_sub = linear(e["_gross"], 15, 60)
     npm_sub = linear(e["_npm"], 5, 20)
     if high_turn:
         gross_sub = max(gross_sub, 45)
         npm_sub = max(npm_sub, 45)
-    profit = (0.50 * linear(e["_roe_mean"], 10, 20) + 0.25 * linear(e["_roe_min"], 0, 12)
+    profit = (0.50 * linear(rm, 10, 20) + 0.25 * linear(rmin, 0, 12)
               + 0.25 * gross_sub)
 
     ar_gap = (rev3c - ar3c) if math.isfinite(ar3c) else float("nan")
