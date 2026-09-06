@@ -1662,6 +1662,26 @@
       "strategicCoreType": null,
       "lastFundamentalReviewDate": "2026-09-05",
       "lastRedFlagReviewDate": "2026-09-05"
+    },
+    {
+      "name": "万华化学",
+      "code": "600309.SH",
+      "board": "沪",
+      "cScore": 70,
+      "mScore": 80,
+      "target_price": 69,
+      "valuation_certainty": 0.45,
+      "dv_ttm": null,
+      "next_earnings_date": null,
+      "next_earnings_type": "三季报",
+      "lastEarningsIncorporated": "2026H1",
+      "cycle_is_cyclical": true,
+      "cycle_position": "复苏早期",
+      "watchlistLevel": "B_GROWTH",
+      "trackingStatus": "WATCHING",
+      "strategicCoreType": null,
+      "lastFundamentalReviewDate": "2026-09-06",
+      "lastRedFlagReviewDate": "2026-09-06"
     }
   ],
   "valuation_certainty_scale": "0.00-1.00; measures target-price reliability, not company quality",
