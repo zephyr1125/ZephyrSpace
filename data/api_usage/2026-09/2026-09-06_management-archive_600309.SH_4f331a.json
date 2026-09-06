@@ -1,0 +1,24 @@
+{
+  "run_id": "management-archive-600309.SH-0ea3861c",
+  "analysis_type": "management-archive",
+  "target": "600309.SH",
+  "company_name": "万华化学",
+  "started_at": "2026-09-06T15:25:31+08:00",
+  "finished_at": "2026-09-06T15:25:32+08:00",
+  "metadata": {},
+  "api_summary": {
+    "wisburg": {
+      "total_calls": 4,
+      "total_success": 4,
+      "total_failure": 0,
+      "total_duration_ms": 993.4,
+      "essential_calls": 4,
+      "endpoints": {
+        "reports": {
+          "count": 4,
+          "success": 4
+        }
+      }
+    }
+  }
+}

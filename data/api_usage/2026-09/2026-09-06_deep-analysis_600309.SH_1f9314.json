@@ -1,0 +1,28 @@
+{
+  "run_id": "deep-analysis-600309.SH-193db9ca",
+  "analysis_type": "deep-analysis",
+  "target": "600309.SH",
+  "company_name": "万华化学",
+  "started_at": "2026-09-06T15:31:41+08:00",
+  "finished_at": "2026-09-06T15:31:43+08:00",
+  "metadata": {},
+  "api_summary": {
+    "cninfo": {
+      "total_calls": 2,
+      "total_success": 2,
+      "total_failure": 0,
+      "total_duration_ms": 1220.5,
+      "essential_calls": 2,
+      "endpoints": {
+        "p_sysapi1087": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2205": {
+          "count": 1,
+          "success": 1
+        }
+      }
+    }
+  }
+}

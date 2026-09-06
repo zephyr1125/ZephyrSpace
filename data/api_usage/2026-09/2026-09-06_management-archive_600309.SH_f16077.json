@@ -1,0 +1,36 @@
+{
+  "run_id": "management-archive-600309.SH-16883586",
+  "analysis_type": "management-archive",
+  "target": "600309.SH",
+  "company_name": "万华化学",
+  "started_at": "2026-09-06T15:22:32+08:00",
+  "finished_at": "2026-09-06T15:22:35+08:00",
+  "metadata": {},
+  "api_summary": {
+    "lixinger": {
+      "total_calls": 4,
+      "total_success": 4,
+      "total_failure": 0,
+      "total_duration_ms": 1798.9,
+      "essential_calls": 4,
+      "endpoints": {
+        "cn/company/hot/esc": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/hot/mssc": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/hot/ple": {
+          "count": 1,
+          "success": 1
+        },
+        "cn/company/hot/df": {
+          "count": 1,
+          "success": 1
+        }
+      }
+    }
+  }
+}

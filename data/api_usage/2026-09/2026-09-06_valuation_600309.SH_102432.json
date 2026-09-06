@@ -1,0 +1,24 @@
+{
+  "run_id": "valuation-600309.SH-29ed027b",
+  "analysis_type": "valuation",
+  "target": "600309.SH",
+  "company_name": "万华化学",
+  "started_at": "2026-09-06T15:53:07+08:00",
+  "finished_at": "2026-09-06T15:53:07+08:00",
+  "metadata": {},
+  "api_summary": {
+    "lixinger": {
+      "total_calls": 1,
+      "total_success": 1,
+      "total_failure": 0,
+      "total_duration_ms": 83.9,
+      "essential_calls": 1,
+      "endpoints": {
+        "cn/company/fs/non_financial": {
+          "count": 1,
+          "success": 1
+        }
+      }
+    }
+  }
+}

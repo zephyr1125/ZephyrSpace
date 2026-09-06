@@ -1,0 +1,56 @@
+{
+  "run_id": "management-archive-600309.SH-f45c1ec9",
+  "analysis_type": "management-archive",
+  "target": "600309.SH",
+  "company_name": "万华化学",
+  "started_at": "2026-09-06T15:21:03+08:00",
+  "finished_at": "2026-09-06T15:21:08+08:00",
+  "metadata": {},
+  "api_summary": {
+    "cninfo": {
+      "total_calls": 9,
+      "total_success": 9,
+      "total_failure": 0,
+      "total_duration_ms": 3722.2,
+      "essential_calls": 9,
+      "endpoints": {
+        "p_sysapi1133": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2218": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2209": {
+          "count": 1,
+          "success": 1
+        },
+        "p_sysapi1139": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2215": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2248": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2246": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2220": {
+          "count": 1,
+          "success": 1
+        },
+        "p_stock2219": {
+          "count": 1,
+          "success": 1
+        }
+      }
+    }
+  }
+}
