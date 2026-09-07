@@ -1,7 +1,7 @@
 {
   "version": 28,
   "watchlistLevel": "B_GROWTH",
-  "updated_at": "2026-09-06",
+  "updated_at": "2026-09-07",
   "entries": [
     {
       "name": "海底捞",
@@ -1682,6 +1682,26 @@
       "strategicCoreType": null,
       "lastFundamentalReviewDate": "2026-09-06",
       "lastRedFlagReviewDate": "2026-09-06"
+    },
+    {
+      "name": "美亚光电",
+      "code": "002690.SZ",
+      "board": "深",
+      "cScore": 78,
+      "mScore": 78,
+      "target_price": 15.61,
+      "valuation_certainty": 0.68,
+      "dv_ttm": 4.41,
+      "next_earnings_date": null,
+      "next_earnings_type": "三季报",
+      "lastEarningsIncorporated": "2026H1",
+      "cycle_is_cyclical": false,
+      "cycle_position": null,
+      "watchlistLevel": "B_GROWTH",
+      "trackingStatus": "WATCHING",
+      "strategicCoreType": null,
+      "lastFundamentalReviewDate": "2026-09-07",
+      "lastRedFlagReviewDate": "2026-09-07"
     }
   ],
   "valuation_certainty_scale": "0.00-1.00; measures target-price reliability, not company quality",
