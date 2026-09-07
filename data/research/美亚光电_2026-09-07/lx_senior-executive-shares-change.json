@@ -1,0 +1,81 @@
+{
+  "code": 1,
+  "message": "success",
+  "data": [
+    {
+      "date": "2026-05-18T00:00:00+08:00",
+      "shareholderName": "郝先进",
+      "relationBetweenES": "本人",
+      "executiveName": "郝先进",
+      "duty": "董事、高管",
+      "beforeChangeShares": 32367499,
+      "changedShares": 499900,
+      "afterChangeShares": 32867399,
+      "avgPrice": 15.99,
+      "changeReason": "竞价交易",
+      "stockCode": "002690",
+      "changedSharesForCapitalizationProportion": 0.0006,
+      "sharesChangeAmount": 7993401
+    },
+    {
+      "shareholderName": "郝先进",
+      "relationBetweenES": "本人",
+      "executiveName": "郝先进",
+      "duty": "董事",
+      "beforeChangeShares": 32167500,
+      "changedShares": 200000,
+      "afterChangeShares": 32367500,
+      "avgPrice": 16.79,
+      "changeReason": "竞价交易",
+      "date": "2025-05-27T00:00:00+08:00",
+      "stockCode": "002690",
+      "changedSharesForCapitalizationProportion": 0.0002,
+      "sharesChangeAmount": 3358000
+    },
+    {
+      "shareholderName": "郝先进",
+      "relationBetweenES": "本人",
+      "executiveName": "郝先进",
+      "duty": "董事",
+      "beforeChangeShares": 31967500,
+      "changedShares": 200000,
+      "afterChangeShares": 32167500,
+      "avgPrice": 14.87,
+      "changeReason": "竞价交易",
+      "date": "2024-11-25T00:00:00+08:00",
+      "stockCode": "002690",
+      "changedSharesForCapitalizationProportion": 0.0002,
+      "sharesChangeAmount": 2974000
+    },
+    {
+      "shareholderName": "郝先进",
+      "relationBetweenES": "本人",
+      "executiveName": "郝先进",
+      "duty": "董事",
+      "beforeChangeShares": 31059600,
+      "changedShares": 907900,
+      "afterChangeShares": 31967500,
+      "avgPrice": 17.73,
+      "changeReason": "竞价交易",
+      "date": "2024-05-21T00:00:00+08:00",
+      "stockCode": "002690",
+      "changedSharesForCapitalizationProportion": 0.001,
+      "sharesChangeAmount": 16097067
+    },
+    {
+      "shareholderName": "郝先进",
+      "relationBetweenES": "本人",
+      "executiveName": "郝先进",
+      "duty": "董事",
+      "beforeChangeShares": 30692000,
+      "changedShares": 367500,
+      "afterChangeShares": 31059500,
+      "avgPrice": 25.17,
+      "changeReason": "竞价交易",
+      "date": "2023-06-05T00:00:00+08:00",
+      "stockCode": "002690",
+      "changedSharesForCapitalizationProportion": 0.0004,
+      "sharesChangeAmount": 9249975
+    }
+  ]
+}

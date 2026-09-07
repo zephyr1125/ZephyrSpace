@@ -1,0 +1,579 @@
+{
+  "code": 1,
+  "message": "success",
+  "data": [
+    {
+      "date": "2026-06-30T00:00:00+08:00",
+      "q": {
+        "ps": {
+          "toi": {
+            "t": 1065513664
+          },
+          "np": {
+            "t": 314952587
+          }
+        },
+        "cfs": {
+          "ncffoa": {
+            "t": 267305297
+          }
+        }
+      },
+      "currency": "CNY",
+      "reportDate": "2026-08-26T00:00:00+08:00",
+      "reportType": "interim_report",
+      "standardDate": "2026-06-30T00:00:00+08:00",
+      "stockCode": "002690"
+    },
+    {
+      "date": "2026-03-31T00:00:00+08:00",
+      "currency": "CNY",
+      "q": {
+        "ps": {
+          "toi": {
+            "t": 402138667
+          },
+          "np": {
+            "t": 115969450
+          }
+        },
+        "cfs": {
+          "ncffoa": {
+            "t": -39992671
+          }
+        }
+      },
+      "reportDate": "2026-04-25T00:00:00+08:00",
+      "reportType": "first_quarterly_report",
+      "standardDate": "2026-03-31T00:00:00+08:00",
+      "stockCode": "002690"
+    },
+    {
+      "date": "2025-12-31T00:00:00+08:00",
+      "currency": "CNY",
+      "q": {
+        "ps": {
+          "toi": {
+            "t": 2406863328
+          },
+          "np": {
+            "t": 719117651
+          }
+        },
+        "cfs": {
+          "ncffoa": {
+            "t": 962109305
+          }
+        }
+      },
+      "reportDate": "2026-03-31T00:00:00+08:00",
+      "reportType": "annual_report",
+      "standardDate": "2025-12-31T00:00:00+08:00",
+      "y": {
+        "bs": {
+          "ta": {
+            "t": 3608191142
+          },
+          "tl": {
+            "t": 681208418
+          }
+        },
+        "ps": {
+          "toi": {
+            "t": 2406863328
+          },
+          "np": {
+            "t": 719117651
+          }
+        },
+        "cfs": {
+          "ncffoa": {
+            "t": 962109305
+          }
+        }
+      },
+      "accountant": "吴琳、胡金金",
+      "accountingFirm": "容诚会计师事务所(特殊普通合伙)",
+      "auditOpinionType": "unqualified_opinion",
+      "stockCode": "002690"
+    },
+    {
+      "date": "2025-09-30T00:00:00+08:00",
+      "currency": "CNY",
+      "q": {
+        "ps": {
+          "toi": {
+            "t": 1694034533
+          },
+          "np": {
+            "t": 518860672
+          }
+        },
+        "cfs": {
+          "ncffoa": {
+            "t": 648784134
+          }
+        }
+      },
+      "reportDate": "2025-10-25T00:00:00+08:00",
+      "reportType": "third_quarterly_report",
+      "standardDate": "2025-09-30T00:00:00+08:00",
+      "stockCode": "002690"
+    },
+    {
+      "date": "2025-06-30T00:00:00+08:00",
+      "currency": "CNY",
+      "q": {
+        "ps": {
+          "toi": {
+            "t": 1022545125
+          },
+          "np": {
+            "t": 302763304
+          }
+        },
+        "cfs": {
+          "ncffoa": {
+            "t": 393495949
+          }
+        }
+      },
+      "reportDate": "2025-08-26T00:00:00+08:00",
+      "reportType": "interim_report",
+      "standardDate": "2025-06-30T00:00:00+08:00",
+      "stockCode": "002690"
+    },
+    {
+      "date": "2025-03-31T00:00:00+08:00",
+      "q": {
+        "ps": {
+          "toi": {
+            "t": 392340157
+          },
+          "np": {
+            "t": 108455127
+          }
+        },
+        "cfs": {
+          "ncffoa": {
+            "t": 57178542
+          }
+        }
+      },
+      "currency": "CNY",
+      "reportDate": "2025-04-26T00:00:00+08:00",
+      "reportType": "first_quarterly_report",
+      "standardDate": "2025-03-31T00:00:00+08:00",
+      "stockCode": "002690"
+    },
+    {
+      "date": "2024-12-31T00:00:00+08:00",
+      "currency": "CNY",
+      "q": {
+        "ps": {
+          "toi": {
+            "t": 2310770383
+          },
+          "np": {
+            "t": 649173516
+          }
+        },
+        "cfs": {
+          "ncffoa": {
+            "t": 877680665
+          }
+        }
+      },
+      "reportDate": "2025-03-28T00:00:00+08:00",
+      "reportType": "annual_report",
+      "standardDate": "2024-12-31T00:00:00+08:00",
+      "y": {
+        "bs": {
+          "ta": {
+            "t": 3337783991
+          },
+          "tl": {
+            "t": 549779198
+          }
+        },
+        "ps": {
+          "toi": {
+            "t": 2310770383
+          },
+          "np": {
+            "t": 649173516
+          }
+        },
+        "cfs": {
+          "ncffoa": {
+            "t": 877680665
+          }
+        }
+      },
+      "accountant": "吴琳、胡金金",
+      "accountingFirm": "容诚会计师事务所(特殊普通合伙)",
+      "auditOpinionType": "unqualified_opinion",
+      "stockCode": "002690"
+    },
+    {
+      "date": "2024-09-30T00:00:00+08:00",
+      "currency": "CNY",
+      "q": {
+        "ps": {
+          "toi": {
+            "t": 1577978094
+          },
+          "np": {
+            "t": 450027600
+          }
+        },
+        "cfs": {
+          "ncffoa": {
+            "t": 480887753
+          }
+        }
+      },
+      "reportDate": "2024-10-26T00:00:00+08:00",
+      "reportType": "third_quarterly_report",
+      "standardDate": "2024-09-30T00:00:00+08:00",
+      "stockCode": "002690"
+    },
+    {
+      "date": "2024-06-30T00:00:00+08:00",
+      "currency": "CNY",
+      "q": {
+        "ps": {
+          "toi": {
+            "t": 930254197
+          },
+          "np": {
+            "t": 271922773
+          }
+        },
+        "cfs": {
+          "ncffoa": {
+            "t": 174672476
+          }
+        }
+      },
+      "reportDate": "2024-08-22T00:00:00+08:00",
+      "reportType": "interim_report",
+      "standardDate": "2024-06-30T00:00:00+08:00",
+      "stockCode": "002690"
+    },
+    {
+      "date": "2024-03-31T00:00:00+08:00",
+      "currency": "CNY",
+      "q": {
+        "ps": {
+          "toi": {
+            "t": 331400005
+          },
+          "np": {
+            "t": 100900473
+          }
+        },
+        "cfs": {
+          "ncffoa": {
+            "t": -56559795
+          }
+        }
+      },
+      "reportDate": "2024-04-26T00:00:00+08:00",
+      "reportType": "first_quarterly_report",
+      "standardDate": "2024-03-31T00:00:00+08:00",
+      "stockCode": "002690"
+    },
+    {
+      "date": "2023-12-31T00:00:00+08:00",
+      "currency": "CNY",
+      "q": {
+        "ps": {
+          "toi": {
+            "t": 2425394367
+          },
+          "np": {
+            "t": 744834381
+          }
+        },
+        "cfs": {
+          "ncffoa": {
+            "t": 675345532
+          }
+        }
+      },
+      "reportDate": "2024-03-30T00:00:00+08:00",
+      "reportType": "annual_report",
+      "standardDate": "2023-12-31T00:00:00+08:00",
+      "y": {
+        "bs": {
+          "ta": {
+            "t": 3424730365
+          },
+          "tl": {
+            "t": 665652225
+          }
+        },
+        "ps": {
+          "toi": {
+            "t": 2425394367
+          },
+          "np": {
+            "t": 744834381
+          }
+        },
+        "cfs": {
+          "ncffoa": {
+            "t": 675345532
+          }
+        }
+      },
+      "accountant": "吴琳、陶秀珍",
+      "accountingFirm": "大华会计师事务所(特殊普通合伙)",
+      "auditOpinionType": "unqualified_opinion",
+      "stockCode": "002690"
+    },
+    {
+      "date": "2023-09-30T00:00:00+08:00",
+      "currency": "CNY",
+      "q": {
+        "ps": {
+          "toi": {
+            "t": 1657150332
+          },
+          "np": {
+            "t": 563165456
+          }
+        },
+        "cfs": {
+          "ncffoa": {
+            "t": 409291093
+          }
+        }
+      },
+      "reportDate": "2023-10-26T00:00:00+08:00",
+      "reportType": "third_quarterly_report",
+      "standardDate": "2023-09-30T00:00:00+08:00",
+      "stockCode": "002690"
+    },
+    {
+      "date": "2023-06-30T00:00:00+08:00",
+      "currency": "CNY",
+      "q": {
+        "ps": {
+          "toi": {
+            "t": 967301734
+          },
+          "np": {
+            "t": 346292255
+          }
+        },
+        "cfs": {
+          "ncffoa": {
+            "t": 193372771
+          }
+        }
+      },
+      "reportDate": "2023-08-24T00:00:00+08:00",
+      "reportType": "interim_report",
+      "standardDate": "2023-06-30T00:00:00+08:00",
+      "accountant": null,
+      "accountingFirm": null,
+      "auditOpinionType": null,
+      "stockCode": "002690"
+    },
+    {
+      "date": "2023-03-31T00:00:00+08:00",
+      "currency": "CNY",
+      "q": {
+        "ps": {
+          "toi": {
+            "t": 406964645
+          },
+          "np": {
+            "t": 125032073
+          }
+        },
+        "cfs": {
+          "ncffoa": {
+            "t": 845565
+          }
+        }
+      },
+      "reportDate": "2023-04-28T00:00:00+08:00",
+      "reportType": "first_quarterly_report",
+      "standardDate": "2023-03-31T00:00:00+08:00",
+      "stockCode": "002690"
+    },
+    {
+      "reportType": "annual_report",
+      "reportDate": "2023-03-31T00:00:00+08:00",
+      "currency": "CNY",
+      "standardDate": "2022-12-31T00:00:00+08:00",
+      "accountingFirm": "大华会计师事务所(特殊普通合伙)",
+      "accountant": "吴琳、王海涛",
+      "auditOpinionType": "unqualified_opinion",
+      "q": {
+        "ps": {
+          "toi": {
+            "t": 2117255683
+          },
+          "np": {
+            "t": 730112737
+          }
+        },
+        "cfs": {
+          "ncffoa": {
+            "t": 315953617
+          }
+        }
+      },
+      "date": "2022-12-31T00:00:00+08:00",
+      "y": {
+        "bs": {
+          "ta": {
+            "t": 3314919654
+          },
+          "tl": {
+            "t": 665698484
+          }
+        },
+        "ps": {
+          "toi": {
+            "t": 2117255683
+          },
+          "np": {
+            "t": 730112737
+          }
+        },
+        "cfs": {
+          "ncffoa": {
+            "t": 315953617
+          }
+        }
+      },
+      "stockCode": "002690"
+    },
+    {
+      "reportType": "third_quarterly_report",
+      "reportDate": "2022-10-29T00:00:00+08:00",
+      "currency": "CNY",
+      "standardDate": "2022-09-30T00:00:00+08:00",
+      "q": {
+        "ps": {
+          "toi": {
+            "t": 1499638186
+          },
+          "np": {
+            "t": 556932951
+          }
+        },
+        "cfs": {
+          "ncffoa": {
+            "t": 135518059
+          }
+        }
+      },
+      "date": "2022-09-30T00:00:00+08:00",
+      "stockCode": "002690"
+    },
+    {
+      "reportType": "interim_report",
+      "reportDate": "2022-08-17T00:00:00+08:00",
+      "currency": "CNY",
+      "standardDate": "2022-06-30T00:00:00+08:00",
+      "q": {
+        "ps": {
+          "toi": {
+            "t": 904261180
+          },
+          "np": {
+            "t": 324272836
+          }
+        },
+        "cfs": {
+          "ncffoa": {
+            "t": -29759237
+          }
+        }
+      },
+      "date": "2022-06-30T00:00:00+08:00",
+      "accountant": null,
+      "accountingFirm": null,
+      "auditOpinionType": null,
+      "stockCode": "002690"
+    },
+    {
+      "reportType": "first_quarterly_report",
+      "reportDate": "2022-04-27T00:00:00+08:00",
+      "currency": "CNY",
+      "standardDate": "2022-03-31T00:00:00+08:00",
+      "q": {
+        "ps": {
+          "toi": {
+            "t": 401892661
+          },
+          "np": {
+            "t": 113615317
+          }
+        },
+        "cfs": {
+          "ncffoa": {
+            "t": -147343968
+          }
+        }
+      },
+      "date": "2022-03-31T00:00:00+08:00",
+      "stockCode": "002690"
+    },
+    {
+      "reportType": "annual_report",
+      "reportDate": "2022-03-31T00:00:00+08:00",
+      "currency": "CNY",
+      "standardDate": "2021-12-31T00:00:00+08:00",
+      "q": {
+        "ps": {
+          "toi": {
+            "t": 1812878651
+          },
+          "np": {
+            "t": 511088538
+          }
+        },
+        "cfs": {
+          "ncffoa": {
+            "t": 578600273
+          }
+        }
+      },
+      "date": "2021-12-31T00:00:00+08:00",
+      "y": {
+        "bs": {
+          "ta": {
+            "t": 3252645512
+          },
+          "tl": {
+            "t": 747385457
+          }
+        },
+        "ps": {
+          "toi": {
+            "t": 1812878651
+          },
+          "np": {
+            "t": 511088538
+          }
+        },
+        "cfs": {
+          "ncffoa": {
+            "t": 578600273
+          }
+        }
+      },
+      "accountant": "吴琳、高山",
+      "accountingFirm": "大华会计师事务所(特殊普通合伙)",
+      "auditOpinionType": "unqualified_opinion",
+      "stockCode": "002690"
+    }
+  ]
+}

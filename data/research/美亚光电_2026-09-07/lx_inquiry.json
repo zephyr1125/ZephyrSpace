@@ -1,0 +1,13 @@
+{
+  "code": 1,
+  "message": "success",
+  "data": [
+    {
+      "date": "2021-11-19T00:00:00+08:00",
+      "type": "il",
+      "displayTypeText": "关注函",
+      "linkUrl": "http://reportdocs.static.szse.cn/UpFiles/fxklwxhj/LSD002690166225.pdf",
+      "linkType": "pdf"
+    }
+  ]
+}
