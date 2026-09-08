@@ -8,6 +8,17 @@ description: >-
   适用市场：A股、港股、美股。
 ---
 
+## 三件套跨模型复核（试点）
+
+当执行完整三件套或用户要求 DeepSeek second opinion 时，读取 Vault 内 `docs/deepseek-review.md`，使用 `scripts/deepseek_review.py`。
+复核分工为：Codex 子 Agent 核查最新原始事实和计算，DeepSeek API 先独立判断再对照初稿，主 Agent 按证据裁决。
+DeepSeek 未配置或失败时回退原有双 Codex 子 Agent，明确记录外部复核未完成，不得跳过审核。
+本节在试点范围内替代下文“双子 Agent”中的逻辑审核执行器，原有审核检查项、P0/P1 修复与评分联动要求继续有效。
+全套报告可合并一次外部复核，但必须覆盖公司质量、管理层和估值，不能省略任一维度。
+原始证据和规则不得夹带作者分数与目标价；外部意见须经核实，不能直接写入 Watchlist。
+
+
+
 # 估值分析（多方法 + Watchlist 联动）
 
 ## 概览
