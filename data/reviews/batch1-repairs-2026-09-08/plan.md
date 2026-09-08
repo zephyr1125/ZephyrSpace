@@ -10,4 +10,4 @@
 
 边界：不修改试验冻结材料/历史报告、不修改skill/Flash集成、不处理无关未提交scripts/_weekly_scan/2026-09-08.json。
 
-状态：18份新版报告、66组问题闭环、双Codex最终复验及Watchlist更新完成。主Agent执行分批提交、同步与推送收尾。详见docs/company-review-repairs-2026-09-08.md。
+状态：18份新版报告、66组问题闭环、双Codex最终复验及Watchlist更新完成。报告与Watchlist已分批提交；Finance六份配置同步且逐份语义比对一致。详见docs/company-review-repairs-2026-09-08.md。
