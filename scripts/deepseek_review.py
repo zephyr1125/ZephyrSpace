@@ -75,6 +75,15 @@ def validate_result(value):
     return value
 
 
+def parse_result(content):
+    """只去除完整外层代码围栏，不猜测或修补JSON内部内容。"""
+    content = content.strip()
+    fenced = re.fullmatch(r'```(?:json)?\s*\n([\s\S]*?)\n```', content)
+    if fenced:
+        content = fenced.group(1)
+    return validate_result(json.loads(content))
+
+
 def call_api(messages, key, model, max_tokens, timeout, diagnostic_path=None, thinking='enabled'):
     import requests
     started = time.monotonic()
@@ -107,7 +116,7 @@ def call_api(messages, key, model, max_tokens, timeout, diagnostic_path=None, th
     content = choice['message'].get('content') or ''
     if not content.strip():
         raise ValueError('模型返回空的最终答复，不能视为复核完成')
-    result = validate_result(json.loads(content))
+    result = parse_result(content)
     return {'result': result, 'model': raw.get('model', model), 'usage': raw.get('usage'),
             'request_id': raw.get('id'), 'elapsed_seconds': round(time.monotonic() - started, 2)}
 

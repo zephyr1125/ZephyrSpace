@@ -12,6 +12,14 @@ spec.loader.exec_module(review)
 
 
 class ReviewTests(unittest.TestCase):
+    def test_outer_fence_only(self):
+        content = '{"assessment":"结论","findings":[],"unknowns":[]}'
+        self.assertEqual(review.parse_result('```json\n' + content + '\n```'), review.parse_result(content))
+        with self.assertRaises(ValueError):
+            review.parse_result('解释\n```json\n' + content + '\n```')
+        with self.assertRaises(ValueError):
+            review.parse_result('{"assessment":"结论\', "findings":[]}')
+
     def test_blind_stage_excludes_draft(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
