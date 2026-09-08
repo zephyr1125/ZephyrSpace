@@ -1,0 +1,12 @@
+{
+  "secret_scan_staged_files": 95,
+  "secret_hits": [],
+  "watchlist_validation": {
+    "entries": 190,
+    "errors": 0,
+    "warnings": 0
+  },
+  "unrelated_watchlist_entries_unchanged": 184,
+  "diff_check_note": "默认检查包括CRLF提示；忽略CRLF后仅2处Markdown双空格换行和1处文末空行，未批量格式化已复核正文。",
+  "diff_check_remaining": "01-公司/伊利股份.md:117: trailing whitespace.\n+历史参照股息率（DV TTM）：`5.22%`  \n01-公司/恒瑞医药.md:28: trailing whitespace.\n+数据截止：`2026-09-08`  \n管理层档案/美的集团 管理层档案 88 2026-09-08.md:302: new blank line at EOF.\n"
+}

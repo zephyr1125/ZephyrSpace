@@ -1,0 +1,226 @@
+{
+  "company": "美的集团",
+  "ticker": "000333.SZ",
+  "old_paths": [
+    "深度分析/美的集团 深度分析 80 2026-08-28.md",
+    "管理层档案/美的集团 管理层档案 86 2026-08-28.md",
+    "估值分析/美的集团 估值分析 2026-08-28.md"
+  ],
+  "new_paths": [
+    "深度分析/美的集团 深度分析 81 2026-09-08.md",
+    "管理层档案/美的集团 管理层档案 88 2026-09-08.md",
+    "估值分析/美的集团 估值分析 2026-09-08.md"
+  ],
+  "company_page": "01-公司/美的集团.md",
+  "cScore": 81,
+  "mScore": 88,
+  "target_price": 85.83,
+  "valuation_certainty": 0.6,
+  "buy_price": 65.57,
+  "score_bridge": {
+    "company": "80→81，仅E5+1撤商誉准备存流量误扣",
+    "management": "86→88，诚信18→19撤提前失约认定，资本20→21消除稀释双扣；危机8不再用集团准备归因KUKA"
+  },
+  "repairs": [
+    {
+      "group": "D001",
+      "location": "管理层判断与执行局限/评分；深度E3",
+      "calculation_file": "calculations.json",
+      "new_file": "管理层档案/美的集团 管理层档案 88 2026-09-08.md",
+      "new_line": 92,
+      "old_accepted_claim": "全年指引未到期即用H1增速认定落空，并作为诚信扣分，期别不一致。公司稿已谨慎表述仍可能达标，管理稿没有新增证据支持确定失约。",
+      "source_evidence": "draft-management.md L45、96、108、255、312；draft-company.md L106；evidence.md源L82只给1—6月+3.55%。全年达标压力不等于已失约。",
+      "status": "fixed_or_conclusion_withdrawn",
+      "new_text": "### 判断与执行局限（不等于已失信）"
+    },
+    {
+      "group": "D002",
+      "location": "深度E5资产质量/评分桥；估值口径",
+      "calculation_file": "calculations.json",
+      "new_file": "深度分析/美的集团 深度分析 81 2026-09-08.md",
+      "new_line": 149,
+      "old_accepted_claim": "期末累计准备误写本期新计提，已传导资产质量及估值；正确净增加亦不能无条件等同当期计提。KUKA归属另归D006。",
+      "source_evidence": "evidence.md源L2970单位千元：期末1096473=10.96473亿，期初556411=5.56411亿，净增5.40062亿。draft-company.md L140同时写余额5.6→11.0和本期10.96；估值L16、60以此作折价依据。",
+      "status": "fixed_or_conclusion_withdrawn",
+      "new_text": "### E5. 资产质量（2/2）"
+    },
+    {
+      "group": "D003",
+      "location": "估值DDM敏感性表",
+      "calculation_file": "calculations.json",
+      "new_file": "估值分析/美的集团 估值分析 2026-09-08.md",
+      "new_line": 105,
+      "old_accepted_claim": "同参数DDM两侧敏感性有算术偏差，基准89元正确。只影响约1.6元情景边界，不足推翻正式中枢，统一P2。",
+      "source_evidence": "draft-valuation.md L74-87：D_t=4.5×1.06^(t-1)，t=1..5，Ke=9%；股利PV19.53678，g2=3%/3.5%/4%对应82.92221/89.02019/96.33777；初稿81.3/89/97.9。",
+      "status": "fixed_or_conclusion_withdrawn",
+      "new_text": "| DDM价值 | 82.922212 | 89.020193 | 96.337770 |"
+    },
+    {
+      "group": "D004",
+      "location": "深度E3金融损益匹配桥；公司页C/D",
+      "calculation_file": "calculations.json",
+      "new_file": "深度分析/美的集团 深度分析 81 2026-09-08.md",
+      "new_line": 135,
+      "old_accepted_claim": "净财务费用不等于全部汇兑损失，多类金融投资损益不等于全部对冲收益；官方仅称主要原因，原稿扩大到纯口径噪音、非经营恶化并维持评分，缺匹配归母税后桥。",
+      "source_evidence": "draft-company.md L131-134、当期判断；evidence.md源L84主要由于汇率分类，源L1371列利息费用8.62868亿与利息收入37.24784亿等，L110的67.45721亿涵盖多类金融工具损益。",
+      "status": "fixed_or_conclusion_withdrawn",
+      "new_text": "### E3. 增长质量（3/4）"
+    },
+    {
+      "group": "D005",
+      "location": "管理层资本动作、回报分层及最新官方公告",
+      "calculation_file": "calculations.json",
+      "new_file": "管理层档案/美的集团 管理层档案 88 2026-09-08.md",
+      "new_line": 123,
+      "old_accepted_claim": "拟分红与已回购合计称已返还、把激励回购也一概称资本返还成立。69.7亿与54.76亿是总体和特定A股回购计划差异，不能据差额推定虚假支付，候选建议将14.9亿直接指为限制性回购证据不足。",
+      "source_evidence": "draft-management.md L53已派14%、L177均为资本返还；evidence.md源L3673拟派37.24299亿待批准；L1192集中竞价54.76158亿，L3144集团库存股回购69.66807亿，L3142另有激励库存股。",
+      "status": "fixed_or_conclusion_withdrawn",
+      "new_text": "### 分红、回购与激励的分层"
+    },
+    {
+      "group": "D006",
+      "location": "管理层KUKA专项/危机处理评分",
+      "calculation_file": "calculations.json",
+      "new_file": "管理层档案/美的集团 管理层档案 88 2026-09-08.md",
+      "new_line": 131,
+      "old_accepted_claim": "原稿虽声明归属未知，却在负面案例用集团减值验证KUKA买入时点，并传导危机处理扣分，构成确定性归因冲突。独立于金额存流量错误。",
+      "source_evidence": "draft-management.md L43称不直接归因KUKA，L107称收购时点偏高被后续减值验证，L259将集团减值纳入危机处理；evidence.md源L2970只有集团合计准备，未分配至KUKA。",
+      "status": "fixed_or_conclusion_withdrawn",
+      "new_text": "### KUKA收购专项评估"
+    },
+    {
+      "group": "D007",
+      "location": "估值集团OCF-Capex退出权重",
+      "calculation_file": "calculations.json",
+      "new_file": "估值分析/美的集团 估值分析 2026-09-08.md",
+      "new_line": 107,
+      "old_accepted_claim": "简化FCF虽披露限制，仍直接纳入25%正式股权价值且缺归属、利息融资和金融业务桥，限制未约束结论。不能凭此猜修正价格或把营运资金一律扣掉。",
+      "source_evidence": "draft-valuation.md L93-106、153-164直接(536-130)/6%/76.3≈88.68元；evidence.md源L1385合并OCF含贷款垫款净增25.71334亿，筹资有少数股东股利4.97561亿；L1359有少数股东权益。",
+      "status": "fixed_or_conclusion_withdrawn",
+      "new_text": "### 集团OCF−Capex：保留诊断，正式权重0"
+    },
+    {
+      "group": "D008",
+      "location": "管理层控制权结构",
+      "calculation_file": "calculations.json",
+      "new_file": "管理层档案/美的集团 管理层档案 88 2026-09-08.md",
+      "new_line": 55,
+      "old_accepted_claim": "当前通过控股平台持股31.6%与28.49%原始披露冲突；个人H股穿透不能替代平台直接比例，法定主体亦应统一。",
+      "source_evidence": "draft-management.md L64、71-72；evidence.md源L3551美的控股有限公司、L3561期末直接持股和表决权28.49%，期初28.55%；L3553最终控制人何享健。",
+      "status": "fixed_or_conclusion_withdrawn",
+      "new_text": "### 控制权结构"
+    },
+    {
+      "group": "D009",
+      "location": "管理层资本动作及估值股本输入",
+      "calculation_file": "calculations.json",
+      "new_file": "管理层档案/美的集团 管理层档案 88 2026-09-08.md",
+      "new_line": 117,
+      "old_accepted_claim": "当期融资记2025，且仍用初始转股价作当前输入，时间线和摊薄参数失效；不否定四舍五入2.2%的近似值。",
+      "source_evidence": "draft-management.md L131、178；evidence.md源L1150发行2026-05-06，两笔86.24亿港元；L1152除息后91.82/109.78港元，可转172480006股；按披露日7628798092股，新增/旧股=2.2609%，新增/摊薄股本=2.2109%。",
+      "status": "fixed_or_conclusion_withdrawn",
+      "new_text": "| 2026-05-06 | H股零息可转债 | 两笔各86.24亿港元；现有转股价91.82/109.78港元，非初始96.82/115.76 |"
+    },
+    {
+      "group": "D010",
+      "location": "管理层股东友好度/公司页事实",
+      "calculation_file": "calculations.json",
+      "new_file": "管理层档案/美的集团 管理层档案 88 2026-09-08.md",
+      "new_line": 160,
+      "old_accepted_claim": "以零关联交易支持股东友好评分，与明确交易冲突。市场条款披露不等于无交易，也不推定侵占。",
+      "source_evidence": "draft-management.md L258；evidence.md源L3585：(784897+2741725)千元=35.26622亿；L3589销售2687367千元=26.87367亿；L3581正常商业条款。",
+      "status": "fixed_or_conclusion_withdrawn",
+      "new_text": "- 存在实质关联交易：H1采购/接受劳务35.26622亿元，销售/提供劳务26.87367亿元。半年报称正常商业条款，未有异常定价证据，不等于零关联交易。"
+    },
+    {
+      "group": "D011",
+      "location": "管理层6.1任职状态",
+      "calculation_file": "calculations.json",
+      "new_file": "管理层档案/美的集团 管理层档案 88 2026-09-08.md",
+      "new_line": 180,
+      "old_accepted_claim": "李国林历史离任是否后续重聘材料不足，不能直接判历史事件虚假；但当前状态与报告职位表缺解释，且结论笼统H1无新增与已披露卫昶离任冲突。表内相对六月基线无新增限定本身正确，需保留。",
+      "source_evidence": "draft-management.md L200、212、216、320；evidence.md源L942李国林列副总裁，L874卫昶2026-05-29离任；原稿L212已写H1新增1人，结论却写H1无新增。",
+      "status": "fixed_or_conclusion_withdrawn",
+      "new_text": "### 6.1 高管变动与任职状态"
+    },
+    {
+      "group": "D012",
+      "location": "估值价格分区/公司页I及当前操作",
+      "calculation_file": "calculations.json",
+      "new_file": "估值分析/美的集团 估值分析 2026-09-08.md",
+      "new_line": 140,
+      "old_accepted_claim": "同稿推荐75—81元建仓与统一机械线冲突，非一般估值分区措辞，足以影响行动。",
+      "source_evidence": "draft-valuation.md L169-175、203、210；rules.md公式：87×(0.68+0.14×0.65)=67.077，推荐区高11.8%—20.8%。",
+      "status": "fixed_or_conclusion_withdrawn",
+      "new_text": "机械买价=85.83×(0.68+0.14×0.60)=65.57412元，按分币65.57元。"
+    },
+    {
+      "group": "D013",
+      "location": "深度E4资本结构",
+      "calculation_file": "calculations.json",
+      "new_file": "深度分析/美的集团 深度分析 81 2026-09-08.md",
+      "new_line": 143,
+      "old_accepted_claim": "2273亿并非其他非流动资产科目金额，且缺资产性质、可动用性与到期桥即支持偿付极宽裕，口径和推论均过强。",
+      "source_evidence": "draft-company.md L137；evidence.md源L1345其他非流动资产707.43788亿、一年内到期非流动资产1585.30134亿，两科目合计2292.73922亿，仍不等于2273亿，更不能整包当即用现金。",
+      "status": "fixed_or_conclusion_withdrawn",
+      "new_text": "### E4. 资本结构（3）"
+    },
+    {
+      "group": "D014",
+      "location": "估值A股PB口径桥",
+      "calculation_file": "calculations.json",
+      "new_file": "估值分析/美的集团 估值分析 2026-09-08.md",
+      "new_line": 56,
+      "old_accepted_claim": "依初稿价格与最新归母权益、总股数，PB3.23无法闭合，缺口径桥成立；不能在行情缺档或A/H差价未核时断言供应商PB必错。",
+      "source_evidence": "draft-valuation.md L28及价格86.05；evidence.md源L82权益2128.61055亿，源L17股本76.28798092亿；每股27.9023元，86.05×76.28798092/2128.61055=3.08397455。",
+      "status": "fixed_or_conclusion_withdrawn",
+      "new_text": "| A股PB交叉检查 | 每股净资产27.9023元；86.05/27.9023=3.08397倍 |"
+    },
+    {
+      "group": "D015",
+      "location": "估值核心财务/公司页毛利率",
+      "calculation_file": "calculations.json",
+      "new_file": "估值分析/美的集团 估值分析 2026-09-08.md",
+      "new_line": 60,
+      "old_accepted_claim": "估值跨年核心财务表将制造业26.55%不加限定列整体毛利率，与合并营业收入成本复算不符；统一口径后整体为25.26%。",
+      "source_evidence": "draft-valuation.md L42；draft-company.md B3明确制造业26.55%；evidence.md源L3186、3188：(260042490-194366771)/260042490=25.25576455%，主营则约25.98%，均非26.55%。",
+      "status": "fixed_or_conclusion_withdrawn",
+      "new_text": "H1集团营业收入2600.42490亿元、营业成本1943.66771亿元，整体毛利率=(2600.42490−1943.66771)/2600.42490=25.25576%。制造业26.55%是另一范围，不能作为集团毛利率。"
+    }
+  ],
+  "suggested_watchlist": {
+    "cScore": 81,
+    "mScore": 88,
+    "target_price": 85.83,
+    "valuation_certainty": 0.6,
+    "lastEarningsIncorporated": "2026H1",
+    "next_earnings_type": "三季报",
+    "next_earnings_date": null
+  },
+  "sources": [
+    "财报/美的集团/美的集团2026半年度报告.md",
+    "https://static.cninfo.com.cn/finalpage/2026-09-03/1225544342.PDF",
+    "https://static.cninfo.com.cn/finalpage/2026-09-03/1225544482.PDF",
+    "https://static.cninfo.com.cn/finalpage/2026-08-29/1225531406.PDF",
+    "freshness-tavily.json",
+    "latest-announcements.json"
+  ],
+  "freshness_cutoff": "2026-09-08",
+  "limitations": [
+    "最新交易价格未重取，仅8月28日86.05元历史参照",
+    "未获得后续CTO任免及中期股利实施，分别列未核实和预案",
+    "FCF归属、融资、金融业务现金桥未完整，退出正式权重",
+    "历史年报/PE/卖方预测未逐项重取，EPS转明确研究假设"
+  ],
+  "self_checks": {
+    "report_line_counts": {
+      "深度分析/美的集团 深度分析 81 2026-09-08.md": 227,
+      "管理层档案/美的集团 管理层档案 88 2026-09-08.md": 302,
+      "估值分析/美的集团 估值分析 2026-09-08.md": 165
+    },
+    "company_sum": 81,
+    "management_sum": 88,
+    "all_defect_groups_covered": true,
+    "formula_and_ddm_reproducible": true
+  }
+}

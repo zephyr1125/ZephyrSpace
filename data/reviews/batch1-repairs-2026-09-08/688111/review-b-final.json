@@ -1,0 +1,192 @@
+{
+  "reviewer": "Codex B",
+  "ticker": "688111",
+  "checked_files": [
+    "深度分析/金山办公 深度分析 82 2026-09-08.md",
+    "管理层档案/金山办公 管理层档案 85 2026-09-08.md",
+    "估值分析/金山办公 估值分析 2026-09-08.md",
+    "01-公司/金山办公.md",
+    "data\\reviews\\batch1-repairs-2026-09-08\\688111\\recalculate.py"
+  ],
+  "coverage": [
+    {
+      "group": "D001",
+      "status": "closed",
+      "reason": "确信度因子加总0.45，200×0.743=148.60"
+    },
+    {
+      "group": "D002",
+      "status": "closed",
+      "reason": "资产改为118.5395亿元毛额，未额外加到PE，原损益误充资产撤销"
+    },
+    {
+      "group": "D003",
+      "status": "closed",
+      "reason": "未来SBC明确扣3.1/3.7/4.4亿元；无桥现金法退出"
+    },
+    {
+      "group": "D004",
+      "status": "closed",
+      "reason": "旧DCF时点公式可复算，正式权重零"
+    },
+    {
+      "group": "D005",
+      "status": "closed",
+      "reason": "零关联交易撤回，承认服务及关联基金"
+    },
+    {
+      "group": "D006",
+      "status": "closed",
+      "reason": "WPS香港51.38%与雷军间接11.44%分开"
+    },
+    {
+      "group": "D007",
+      "status": "closed",
+      "reason": "H1年化公式方向及标签已修"
+    },
+    {
+      "group": "D008",
+      "status": "closed",
+      "reason": "EV/EBITDA全正式估值权重为零"
+    },
+    {
+      "group": "D009",
+      "status": "closed",
+      "reason": "各维度加总80；管理81，跨稿当前数字一致"
+    },
+    {
+      "group": "D010",
+      "status": "closed",
+      "reason": "承认商誉1.8467亿及历史收购，评分解释不惩罚作者笔误"
+    },
+    {
+      "group": "D011",
+      "status": "closed",
+      "reason": "分项毛利撤回，整体84.8953%单列"
+    },
+    {
+      "group": "D012",
+      "status": "closed",
+      "reason": "75.79%仅业务占比，不再作为订阅/确信度证据"
+    }
+  ],
+  "findings": [],
+  "calculation_checks": {
+    "score": [
+      80,
+      81
+    ],
+    "cash_like_gross": 118.5395038984,
+    "target_unrounded": 200.123515,
+    "buy": 148.6,
+    "weighted_scenarios": [
+      151.95,
+      200.12,
+      241.86
+    ],
+    "DCF_diagnostic": [
+      181.61,
+      248.18,
+      337.71
+    ],
+    "conclusion": "正式估值及机械线可复算；不存在已退出现金法残留正式权重"
+  },
+  "uncovered_scope": [
+    "本轮未重新下载2021—2025完整年报及历史监管全集；原稿亦已标限制",
+    "最新回购原站防护，当前只核已有引用与存档，未把缺证判事实错误"
+  ],
+  "pass": true,
+  "pass_scope": "12组原D实质关闭，无P0/P1；有P2残留需主Agent处理",
+  "review_stage": "final",
+  "file_sha256": {
+    "深度分析/金山办公 深度分析 82 2026-09-08.md": "68b1563a323b554bb2100263f3951d6fc8a34d0bc6dfa2dcd68e1aee8f0ab7b1",
+    "管理层档案/金山办公 管理层档案 85 2026-09-08.md": "89008cc91419adb51e12fd4a91c0e8c14aedab96197e68e65b0224bb1a3fb731",
+    "估值分析/金山办公 估值分析 2026-09-08.md": "7c54312f05e883c174d5b9238a705901ec97b7e949ed1d33dd3d10fb37f46437",
+    "01-公司/金山办公.md": "b9970053c7e5093829d8ba5b7672d03c433ef20cfe9d3af84e71ab420241844a"
+  },
+  "resolved_first_review_findings": [
+    {
+      "priority": "P2",
+      "file": "管理层档案/金山办公 管理层档案 81 2026-09-08.md",
+      "location": "管理层评分表：资本配置能力、对股东友好度（约278—282行）",
+      "evidence": "资本配置已就回购力度、现金闲置、分红扣分；股东友好再以同样三项合计扣3分，末尾评分桥未说明互不重叠经济维度。",
+      "recommendation": "为同一事实明确唯一扣分归属，或解释两个维度分别惩罚的不同后果，统一评分全篇。"
+    },
+    {
+      "priority": "P2",
+      "file": "01-公司/金山办公.md",
+      "location": "17、68、123行",
+      "evidence": "下一财报类型仍为半年报；主要红旗保留未标2024期别的授权收入下降8.56%，与新版2026H1增长33.36%并列；当前操作标题仍写2026-07-28。",
+      "recommendation": "下一类型改三季报，旧红旗明确历史期别并更新当前趋势，修正当前操作日期。"
+    },
+    {
+      "priority": "P2",
+      "file": "data\\reviews\\batch1-repairs-2026-09-08\\688111\\recalculate.py",
+      "location": "scenarios 字段",
+      "evidence": "scenarios.bear/bull输出的是PEG保守与PE乐观单法值，另一weighted_scenarios才是正式151.95/200.12/241.86。正文正确但产物两个情景字段意义不一致。",
+      "recommendation": "scenarios统一正式综合值，单法值另命名。"
+    }
+  ],
+  "recalculation": {
+    "cScore": 82,
+    "mScore": 85,
+    "shares": 4.64013435,
+    "economic_profit": {
+      "2026": 19.4,
+      "2027": 23.3,
+      "2028": 27.6
+    },
+    "pe": 210.89906588588323,
+    "peg": 183.96019072163284,
+    "weighted": 200.12351582018306,
+    "target": 200,
+    "certainty": 0.45,
+    "buy": 148.6,
+    "single_method_examples": {
+      "peg_bear": 138.87528924674345,
+      "pe_bull": 256.5442959641891
+    },
+    "eps_pe_sensitivity": {
+      "21.3": [
+        160.66,
+        183.62,
+        192.8,
+        229.52
+      ],
+      "23.3": [
+        175.75,
+        200.86,
+        210.9,
+        251.07
+      ],
+      "25.3": [
+        190.83,
+        218.1,
+        229.0,
+        272.62
+      ]
+    },
+    "old_dcf_diagnostic": {
+      "0.11": 181.61272184649758,
+      "0.15": 248.1839493627092,
+      "0.19": 337.7148023264438
+    },
+    "cash_like_gross": 118.5395038984,
+    "lease_debt": 0.6439152463000001,
+    "h1_ocf_capex": 5.979917316899999,
+    "sbc_disclosure_difference": 1.5398238637000037,
+    "goodwill_to_equity": 0.012248598871890958,
+    "weighted_scenarios": [
+      151.94818658645087,
+      200.12351582018306,
+      241.85506611462662
+    ],
+    "scenarios": {
+      "bear": 151.94818658645087,
+      "base": 200.12351582018306,
+      "bull": 241.85506611462662
+    }
+  },
+  "conclusion": "逐D及首轮P2修复复验通过；本结论保留首轮列明原始资料覆盖限制。",
+  "post_review_verification": "金山：82=9+15+16+13+15+14，85=18+19+14+13+8+9+4；E1/F2/F2.5及资本/股东分开经济机制；公司三季报、历史授权同比、本日操作日期及综合scenarios已一致。"
+}

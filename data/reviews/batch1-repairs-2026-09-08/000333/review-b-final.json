@@ -1,0 +1,226 @@
+{
+  "reviewer": "Codex B",
+  "ticker": "000333",
+  "checked_files": [
+    "深度分析/美的集团 深度分析 81 2026-09-08.md",
+    "管理层档案/美的集团 管理层档案 88 2026-09-08.md",
+    "估值分析/美的集团 估值分析 2026-09-08.md",
+    "01-公司/美的集团.md",
+    "data\\reviews\\batch1-repairs-2026-09-08\\000333\\calculate.py"
+  ],
+  "coverage": [
+    {
+      "group": "D001",
+      "status": "closed",
+      "reason": "全年期限尚未到期已撤处罚，诚信19"
+    },
+    {
+      "group": "D002",
+      "status": "closed",
+      "reason": "商誉准备10.96473存量/5.40062净变动区别，E恢复1"
+    },
+    {
+      "group": "D003",
+      "status": "closed",
+      "reason": "DDM3/3.5/4%82.9222/89.0202/96.3378闭合"
+    },
+    {
+      "group": "D004",
+      "status": "closed",
+      "reason": "主分析撤全噪音，但管理174仍全因果残留"
+    },
+    {
+      "group": "D005",
+      "status": "closed",
+      "reason": "官方核中期预案及回购用途/时点分开"
+    },
+    {
+      "group": "D006",
+      "status": "closed",
+      "reason": "主评分不再集团准备归KUKA"
+    },
+    {
+      "group": "D007",
+      "status": "closed",
+      "reason": "FCF正式0，PE/DDM60/40"
+    },
+    {
+      "group": "D008",
+      "status": "closed",
+      "reason": "原报3561直接28.49%控制平台清楚"
+    },
+    {
+      "group": "D009",
+      "status": "closed",
+      "reason": "原报1150/1152确认2026融资及除息转股价"
+    },
+    {
+      "group": "D010",
+      "status": "closed",
+      "reason": "原报3585/3589确认35.26622/26.87367亿关联交易"
+    },
+    {
+      "group": "D011",
+      "status": "closed",
+      "reason": "H1离任与六月基线已区分，deep仍空缺事实化"
+    },
+    {
+      "group": "D012",
+      "status": "closed",
+      "reason": "65.57唯一买线，线上仅观察"
+    },
+    {
+      "group": "D013",
+      "status": "closed",
+      "reason": "707.43788+1585.30134=2292.73922非现金"
+    },
+    {
+      "group": "D014",
+      "status": "closed",
+      "reason": "A股价/同股本BVPS PB3.08397455并明示AH边界"
+    },
+    {
+      "group": "D015",
+      "status": "closed",
+      "reason": "原报收入成本算集团25.25576455%，制造业分列"
+    }
+  ],
+  "findings": [],
+  "recalculation": {
+    "company_score": [
+      8,
+      14,
+      16,
+      12,
+      18,
+      13
+    ],
+    "company_total": 81,
+    "management_score": [
+      19,
+      21,
+      14,
+      14,
+      8,
+      7,
+      5
+    ],
+    "management_total": 88,
+    "ddm": {
+      "rows": [
+        {
+          "t": 1,
+          "year": 2026,
+          "dps": 4.5,
+          "pv": 4.128440366972477
+        },
+        {
+          "t": 2,
+          "year": 2027,
+          "dps": 4.7700000000000005,
+          "pv": 4.014813567881491
+        },
+        {
+          "t": 3,
+          "year": 2028,
+          "dps": 5.0562000000000005,
+          "pv": 3.904314111884753
+        },
+        {
+          "t": 4,
+          "year": 2029,
+          "dps": 5.359572,
+          "pv": 3.7968559253191163
+        },
+        {
+          "t": 5,
+          "year": 2030,
+          "dps": 5.681146320000002,
+          "pv": 3.6923553035213437
+        }
+      ],
+      "dividend_pv": 19.536779275579182,
+      "terminal": 106.90884438545459,
+      "terminal_pv": 69.48341343899257,
+      "value": 89.02019271457175
+    },
+    "sensitivity": {
+      "0.03": 82.92221198602893,
+      "0.035": 89.02019271457175,
+      "0.04": 96.33776958882314
+    },
+    "scenario_values": {
+      "bear": 73.37014552089532,
+      "base": 85.82807708582871,
+      "bull": 98.3650472825959
+    },
+    "target_price": 85.83,
+    "valuation_certainty": 0.6,
+    "buy_price": 65.57,
+    "goodwill_provision": {
+      "opening": 5.56411,
+      "ending": 10.96473,
+      "change": 5.400619999999999
+    },
+    "gross_margin_pct": 25.25576454832439,
+    "book_value_per_share": 27.90230550513828,
+    "pb_a_share_reference": 3.0839745477001417,
+    "eps_profit_bridge": {
+      "2026": 472.985481704,
+      "2027": 518.758270256
+    },
+    "convertible_new_share_pct": 2.260906684381548,
+    "convertible_dilution_pct": 2.210919849713067,
+    "related_purchase_bn_cny": 3.526622,
+    "related_purchase_100m_cny": 35.26622,
+    "related_sales_100m_cny": 26.87367,
+    "interim_dividend_ratio_pct": 14.082635489014859,
+    "reverse_growth": 0.029791143323044333
+  },
+  "uncovered": [
+    "最新行情与完整历史PE序列未重新取得，已限制历史参照",
+    "历史逐年财务、2024离任再聘全链及所有资产组ROIC未重取，不能因缺证判成事实错误"
+  ],
+  "pass": true,
+  "conclusion": "逐D及首轮P2修复复验通过；保留原资料覆盖限制。",
+  "review_stage": "final",
+  "file_sha256": {
+    "深度分析/美的集团 深度分析 81 2026-09-08.md": "002ee95e03555ca2300456ed33f20bc1285530252151793f31cb2b87825c03d1",
+    "管理层档案/美的集团 管理层档案 88 2026-09-08.md": "be7976425e5ef2771a6df947c407506e96b8ceb238030b01d6c8b2666ad81754",
+    "估值分析/美的集团 估值分析 2026-09-08.md": "a043a501da26e49502411db16badbf9e91a2e4ef3cc4d5ced9cdbad11094acb4",
+    "01-公司/美的集团.md": "d8ee9c8681689d421e526a5017b6e4831a0888f1936461a91cadcd2b34a9e1b2"
+  },
+  "resolved_first_review_findings": [
+    {
+      "priority": "P2",
+      "location": "深度分析/美的集团 深度分析 81 2026-09-08.md:169",
+      "evidence": "确定写CTO空缺3个月、接任者未公布，与管理192限定未证实继任不能宣称完全空置冲突。",
+      "recommendation": "改继任及承接未核实，不能把缺证升级事实。"
+    },
+    {
+      "priority": "P2",
+      "location": "管理层档案/美的集团 管理层档案 88 2026-09-08.md:143",
+      "evidence": "仍确定KUKA致ROIC承压、家电ROIC高位，未提供资产组NOPAT/投入资本桥，且本稿133承认局部业绩不替代全球回报。",
+      "recommendation": "撤确定性趋势或补可复算证据；不是判公司ROIC实际为负。"
+    },
+    {
+      "priority": "P2",
+      "location": "管理层档案/美的集团 管理层档案 88 2026-09-08.md:174",
+      "evidence": "人民币升值造成扣非-25%（口径）仍把主要原因扩大为全因果，与新匹配桥限制不一致。",
+      "recommendation": "改主要原因及尚未完成税后归母桥。"
+    },
+    {
+      "priority": "P2",
+      "location": "01-公司/美的集团.md:182",
+      "evidence": "仍称当前价格偏高分位，但本轮未取最新行情/历史分位。",
+      "recommendation": "改历史参照在机械线上，撤当前分位。"
+    },
+    {
+      "priority": "P2",
+      "location": "深度分析/美的集团 深度分析 81 2026-09-08.md:129",
+      "evidence": "深报自身仅H1关键数、六年均值及零散2025数字，无至少三年完整经营序列；三年表仅位于估值报告29—42。",
+      "recommendation": "在深报纳三年经营数据表或明确嵌入最新估值对应表，以满足独立阅读完整性。"
+    }
+  ],
+  "post_review_verification": "CTO承接未知、KUKA/家电ROIC未知、汇率仅主要影响、公司当前分位撤销；深报补2021—2025数据及范围限制。81/88和85.83/65.57不变。"
+}

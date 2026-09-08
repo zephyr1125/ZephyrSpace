@@ -1,0 +1,91 @@
+{
+  "company_score": [
+    8,
+    14,
+    16,
+    12,
+    18,
+    13
+  ],
+  "company_total": 81,
+  "management_score": [
+    19,
+    21,
+    14,
+    14,
+    8,
+    7,
+    5
+  ],
+  "management_total": 88,
+  "ddm": {
+    "rows": [
+      {
+        "t": 1,
+        "year": 2026,
+        "dps": 4.5,
+        "pv": 4.128440366972477
+      },
+      {
+        "t": 2,
+        "year": 2027,
+        "dps": 4.7700000000000005,
+        "pv": 4.014813567881491
+      },
+      {
+        "t": 3,
+        "year": 2028,
+        "dps": 5.0562000000000005,
+        "pv": 3.904314111884753
+      },
+      {
+        "t": 4,
+        "year": 2029,
+        "dps": 5.359572,
+        "pv": 3.7968559253191163
+      },
+      {
+        "t": 5,
+        "year": 2030,
+        "dps": 5.681146320000002,
+        "pv": 3.6923553035213437
+      }
+    ],
+    "dividend_pv": 19.536779275579182,
+    "terminal": 106.90884438545459,
+    "terminal_pv": 69.48341343899257,
+    "value": 89.02019271457175
+  },
+  "sensitivity": {
+    "0.03": 82.92221198602893,
+    "0.035": 89.02019271457175,
+    "0.04": 96.33776958882314
+  },
+  "scenario_values": {
+    "bear": 73.37014552089532,
+    "base": 85.82807708582871,
+    "bull": 98.3650472825959
+  },
+  "target_price": 85.83,
+  "valuation_certainty": 0.6,
+  "buy_price": 65.57,
+  "goodwill_provision": {
+    "opening": 5.56411,
+    "ending": 10.96473,
+    "change": 5.400619999999999
+  },
+  "gross_margin_pct": 25.25576454832439,
+  "book_value_per_share": 27.90230550513828,
+  "pb_a_share_reference": 3.0839745477001417,
+  "eps_profit_bridge": {
+    "2026": 472.985481704,
+    "2027": 518.758270256
+  },
+  "convertible_new_share_pct": 2.260906684381548,
+  "convertible_dilution_pct": 2.210919849713067,
+  "related_purchase_bn_cny": 3.526622,
+  "related_purchase_100m_cny": 35.26622,
+  "related_sales_100m_cny": 26.87367,
+  "interim_dividend_ratio_pct": 14.082635489014859,
+  "reverse_growth": 0.029791143323044333
+}

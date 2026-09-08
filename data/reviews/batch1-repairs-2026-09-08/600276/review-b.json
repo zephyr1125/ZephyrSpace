@@ -1,0 +1,121 @@
+{
+  "reviewer": "Codex B",
+  "ticker": "600276",
+  "valuation_ticker": "01276.HK",
+  "checked_files": [
+    "深度分析/恒瑞医药 深度分析 79 2026-09-08.md",
+    "管理层档案/恒瑞医药 管理层档案 81 2026-09-08.md",
+    "估值分析/恒瑞医药 估值分析 2026-09-08.md",
+    "01-公司\\恒瑞医药.md",
+    "data\\reviews\\batch1-repairs-2026-09-08\\600276\\recalculate.py",
+    "https://manager.wisdomir.com/files/760/2026/0819/20260819220001_48713042_tc.pdf"
+  ],
+  "coverage": [
+    {
+      "group": "D001",
+      "status": "closed",
+      "reason": "D12、E16及总79各层闭合"
+    },
+    {
+      "group": "D002",
+      "status": "closed",
+      "reason": "2025基本1.19与期末重算区分，含库存66.372亿股用途明确"
+    },
+    {
+      "group": "D003",
+      "status": "closed",
+      "reason": "无现金敏感性全格依统一PE公式"
+    },
+    {
+      "group": "D004",
+      "status": "closed",
+      "reason": "资本21与股东11去重，管理81各处一致"
+    },
+    {
+      "group": "D005",
+      "status": "closed",
+      "reason": "全年目标未到期不裁失约，D2恢复1分、战略恢复1分"
+    },
+    {
+      "group": "D006",
+      "status": "closed",
+      "reason": "十年EPS增长/派息/18PE终值/Ke10明确，反解18.7719%可算"
+    },
+    {
+      "group": "D007",
+      "status": "closed",
+      "reason": "不再另加现金；金融净损益保留并披露，不发生收益资本化后再加资产"
+    },
+    {
+      "group": "D008",
+      "status": "closed",
+      "reason": "原报印刷7页非经常项目无许可剔除、22页14.22许可；税后率85%及L15/20/25假设标签和敏感性齐全"
+    }
+  ],
+  "findings": [
+    {
+      "priority": "P2",
+      "file": "管理层档案/恒瑞医药 管理层档案 81 2026-09-08.md",
+      "location": "快速参考主要优点；典型兑现案例2",
+      "evidence": "仍写Q3将收BMS 6亿美元，并把H1确认许可收入14.22亿称为可验证现金流入；原报仅支持预期Q3和收入确认，文末明确9月8日到账未知。",
+      "recommendation": "全部改预期且到账待核，许可收入与现金收款分开。"
+    },
+    {
+      "priority": "P2",
+      "file": "深度分析/恒瑞医药 深度分析 79 2026-09-08.md",
+      "location": "B4增长驱动力、E维度评分E2备注",
+      "evidence": "B4仍写BMS首付款Q3到账无预期标签；E2正文已修不可全归BD，但评分备注仍称主要为BD一次性基数。",
+      "recommendation": "同步为已核授权收款减少及其他现金支出影响待拆，不把全部压力视为无害时点。"
+    },
+    {
+      "priority": "P2",
+      "file": "深度分析/恒瑞医药 深度分析 79 2026-09-08.md",
+      "location": "E4、最终核心优势；公司页资产负债表",
+      "evidence": "货币资金+交易性金融资产388.4亿元毛额被反复简写成净现金388亿元实际值，未给租赁/限制/营运研发需求扣除桥；正式PE已不加此项，故未传入目标价。",
+      "recommendation": "统一称可识别金融资产毛额或补净额桥。"
+    }
+  ],
+  "calculation_checks": {
+    "scenarios": [
+      {
+        "scenario": "保守",
+        "license_revenue": 15,
+        "normal_profit": 63.167780574,
+        "eps_hkd": 1.0468956781547725,
+        "pe": 27,
+        "value": 28.266183310178857
+      },
+      {
+        "scenario": "基准",
+        "license_revenue": 20,
+        "normal_profit": 67.41778057399999,
+        "eps_hkd": 1.1173320080642188,
+        "pe": 30,
+        "value": 33.51996024192657
+      },
+      {
+        "scenario": "乐观",
+        "license_revenue": 25,
+        "normal_profit": 71.66778057399999,
+        "eps_hkd": 1.1877683379736652,
+        "pe": 33,
+        "value": 39.19635515313095
+      }
+    ],
+    "target_price": 33.52,
+    "valuation_certainty": 0.4,
+    "buy_price": 24.67,
+    "inverse_growth": {
+      "0": 0.19570505616288025,
+      "0.172": 0.18771882586432398,
+      "0.3": 0.18189040858569439
+    }
+  },
+  "primary_verification": "requests直接取得公司IR PDF并用PyMuPDF读取印刷6/7/20/21/22/146/147/148页，确认扣非、许可、BMS、SBC及财务净费用；web打开被安全限制，改直接原站只读成功。",
+  "uncovered_scope": [
+    "公司历史行业处罚全集与全部资本化项目未来现金归属未穷尽",
+    "长期许可15/20/25亿为假设，未将其可疑程度直接裁成事实错误"
+  ],
+  "pass": true,
+  "pass_scope": "原8D关闭，无P0/P1，正文与速览仍有P2标签残留"
+}

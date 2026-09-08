@@ -1,0 +1,152 @@
+{
+  "company": "招商银行",
+  "ticker": "600036",
+  "date": "2026-09-08",
+  "original_reports": [
+    "深度分析/招商银行 深度分析 84 2026-08-28.md",
+    "管理层档案/招商银行 管理层档案 82 2026-08-28.md",
+    "估值分析/招商银行 估值分析 2026-08-28.md"
+  ],
+  "new_reports": [
+    "深度分析/招商银行 深度分析 85 2026-09-08.md",
+    "管理层档案/招商银行 管理层档案 83 2026-09-08.md",
+    "估值分析/招商银行 估值分析 2026-09-08.md"
+  ],
+  "company_page": "01-公司/招商银行.md",
+  "cScore": 85,
+  "mScore": 83,
+  "target_price": 42,
+  "valuation_certainty": 0.65,
+  "buy_price": 32.38,
+  "repairs": [
+    {
+      "group": "D001",
+      "status": "fixed",
+      "path": "管理层档案/招商银行 管理层档案 83 2026-09-08.md",
+      "line": 118,
+      "section_or_anchor": "508.4352",
+      "accepted_scope": [
+        "年化近千亿明显高于已披露年度分红约508亿，纠错成立；累计分红/融资数十倍缺少完整历史分子分母，不能确定准确倍数，但当前论据链不闭合。",
+        "年化近千亿明显高于已披露年度分红约508亿，纠错成立；累计分红/融资数十倍缺少完整历史分子分母，不能确定准确倍数，但当前论据链不闭合。"
+      ],
+      "calculation_artifact": "data/reviews/batch1-repairs-2026-09-08/600036/calculations.json"
+    },
+    {
+      "group": "D002",
+      "status": "fixed",
+      "path": "深度分析/招商银行 深度分析 85 2026-09-08.md",
+      "line": 370,
+      "section_or_anchor": "水平仍具相对优势但趋势下降的 ROE",
+      "accepted_scope": [
+        "总结高且稳定ROE与同期持续下降及正文明确杠杆贡献矛盾。应说明水平相对优势与趋势下降，而非否定银行杠杆机制。",
+        "总结高且稳定ROE与同期持续下降及正文明确杠杆贡献矛盾。应说明水平相对优势与趋势下降，而非否定银行杠杆机制。"
+      ],
+      "calculation_artifact": "data/reviews/batch1-repairs-2026-09-08/600036/calculations.json"
+    },
+    {
+      "group": "D003",
+      "status": "fixed",
+      "path": "深度分析/招商银行 深度分析 85 2026-09-08.md",
+      "line": 135,
+      "section_or_anchor": "集团活期存款占比",
+      "accepted_scope": [
+        "并列负债优势指标未标主体，集团成本和母行活期比例混用，差异小但应统一或显式标注。"
+      ],
+      "calculation_artifact": "data/reviews/batch1-repairs-2026-09-08/600036/calculations.json"
+    },
+    {
+      "group": "D004",
+      "status": "fixed",
+      "path": "估值分析/招商银行 估值分析 2026-09-08.md",
+      "line": 149,
+      "section_or_anchor": "机械买入价=42",
+      "accepted_scope": [
+        "价格表推荐38–44建仓与同稿明确33.33机械线及34.99不新建仓互斥。",
+        "价格表推荐38–44建仓与同稿明确33.33机械线及34.99不新建仓互斥。"
+      ],
+      "calculation_artifact": "data/reviews/batch1-repairs-2026-09-08/600036/calculations.json"
+    },
+    {
+      "group": "D005",
+      "status": "fixed",
+      "path": "估值分析/招商银行 估值分析 2026-09-08.md",
+      "line": 48,
+      "section_or_anchor": "## 二、2026普通股盈利",
+      "accepted_scope": [
+        "预测1630归母直接除普通股数得到6.46，并驱动PE/DPS，未扣其他权益工具分配。管理层稿承认历史归母口径不等于已修复预测普通股现金归属。",
+        "预测1630归母直接除普通股数得到6.46，并驱动PE/DPS，未扣其他权益工具分配。管理层稿承认历史归母口径不等于已修复预测普通股现金归属。"
+      ],
+      "calculation_artifact": "data/reviews/batch1-repairs-2026-09-08/600036/calculations.json"
+    },
+    {
+      "group": "D006",
+      "status": "fixed",
+      "path": "深度分析/招商银行 深度分析 85 2026-09-08.md",
+      "line": 262,
+      "section_or_anchor": "贷款21.22亿元、表外22.62亿元",
+      "accepted_scope": [
+        "总信用减值同比增加被整体作为零售缓冲归因，忽略表外规模/结构及对公贷款增长，影响风险抵补论据。"
+      ],
+      "calculation_artifact": "data/reviews/batch1-repairs-2026-09-08/600036/calculations.json"
+    },
+    {
+      "group": "D007",
+      "status": "fixed",
+      "path": "估值分析/招商银行 估值分析 2026-09-08.md",
+      "line": 76,
+      "section_or_anchor": "## 三、四种正式方法",
+      "accepted_scope": [
+        "章节权重15%、25%未同步至最终18.75%、31.25%，文字不一致；最终加权表本身可复算且不含诊断DCF。",
+        "章节权重15%、25%未同步至最终18.75%、31.25%，文字不一致；最终加权表本身可复算且不含诊断DCF。"
+      ],
+      "calculation_artifact": "data/reviews/batch1-repairs-2026-09-08/600036/calculations.json"
+    },
+    {
+      "group": "D008",
+      "status": "fixed",
+      "path": "管理层档案/招商银行 管理层档案 83 2026-09-08.md",
+      "line": 229,
+      "section_or_anchor": "0.093793%",
+      "accepted_scope": [
+        "文内统一比例检验成立；无需认定历史罚款外部真实性即可指出自述金额与全部小于0.01%不一致。金额相对小结论仍可成立。"
+      ],
+      "calculation_artifact": "data/reviews/batch1-repairs-2026-09-08/600036/calculations.json"
+    },
+    {
+      "group": "D009",
+      "status": "fixed",
+      "path": "深度分析/招商银行 深度分析 85 2026-09-08.md",
+      "line": 280,
+      "section_or_anchor": "2025H1年化28.66%",
+      "accepted_scope": [
+        "将2025H1年化错标2025全年导致比较基线及风险趋势错误。同比恶化仍成立，对全年反略降，不得混述。"
+      ],
+      "calculation_artifact": "data/reviews/batch1-repairs-2026-09-08/600036/calculations.json"
+    }
+  ],
+  "score_bridge": "公司84→85：仅E2由4→5，撤与E5重复的零售资产风险扣分；E5仍1/2承担该风险。E=4+5+3+2+1+3=18，总分9+17+16+12+18+13=85。E2未发现独立利润质量缺陷；E5.5只评价披露/会计处理未见已证失当，不保证未来信用损失已充分覆盖。 管理层82→83：资本配置21→22，撤与股东友好重复的无回购/工具单一扣1分。资本配置余下3分仅为已观察到ROAE由2022年17.06%降至2026H1年化13.42%、资本回报持续弱化的约束，不因国资身份扣分，也不重复处罚分红工具；总分16+22+13+12+7+8+5=83。",
+  "freshness_limitations": [
+    "上交所PDF直链返回防护页，本地已归档H1原文用于逐表核算",
+    "历史完整原始年报/治理全集与市场历史分位未全部重取，已在正文标注",
+    "2026-09-08理杏仁日K已刷新；Tavily近期治理检索原响应已保存"
+  ],
+  "suggested_watchlist_updates": {
+    "cScore": 85,
+    "mScore": 83,
+    "target_price": 42,
+    "valuation_certainty": 0.65,
+    "lastEarningsIncorporated": "2026H1",
+    "next_earnings_type": "三季报",
+    "next_earnings_date": null
+  },
+  "tier_note": "主Agent按最新项目规则核定最高满足档位；不套skill双80默认，不由子Agent写入",
+  "line_counts": {
+    "深度分析/招商银行 深度分析 85 2026-09-08.md": 413,
+    "管理层档案/招商银行 管理层档案 83 2026-09-08.md": 349,
+    "估值分析/招商银行 估值分析 2026-09-08.md": 179
+  },
+  "validation": {
+    "original_sha256_unchanged": true,
+    "calculations_script": "data/reviews/batch1-repairs-2026-09-08/600036/recalculate.py"
+  }
+}

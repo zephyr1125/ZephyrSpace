@@ -1,0 +1,85 @@
+{
+  "original": {
+    "company": "深度分析/恒瑞医药 深度分析 78 2026-08-29.md",
+    "management": "管理层档案/恒瑞医药 管理层档案 78 2026-08-29.md",
+    "valuation": "估值分析/恒瑞医药 估值分析 2026-08-29.md"
+  },
+  "new": {
+    "company": "深度分析/恒瑞医药 深度分析 79 2026-09-08.md",
+    "management": "管理层档案/恒瑞医药 管理层档案 81 2026-09-08.md",
+    "valuation": "估值分析/恒瑞医药 估值分析 2026-09-08.md"
+  },
+  "company": "恒瑞医药",
+  "ticker": "01276.HK",
+  "company_page": "01-公司\\恒瑞医药.md",
+  "cScore": 79,
+  "mScore": 81,
+  "target_price": 33.52,
+  "valuation_certainty": 0.4,
+  "buy_price": 24.67,
+  "suggested_watchlist": {
+    "cScore": 79,
+    "mScore": 81,
+    "target_price": 33.52,
+    "valuation_certainty": 0.4,
+    "lastEarningsIncorporated": "2026H1",
+    "next_earnings_type": "三季报",
+    "next_earnings_date": null
+  },
+  "limitations": [
+    "许可边际税后率85%及持续许可15/20/25亿为研究假设，非已披露分部净利",
+    "BMS截至9月8日到账未取得官方确认",
+    "1.10为长期假设，已另列外汇局现汇1.15631敏感性",
+    "腾讯行情不是交易所官方认证"
+  ],
+  "repairs": [
+    {
+      "id": "D001",
+      "status": "fixed",
+      "location": "深报D/E标题及总分表",
+      "resolution": "D12/15、E16/20；总分79"
+    },
+    {
+      "id": "D002",
+      "status": "fixed",
+      "location": "估值一/三/最新股本",
+      "resolution": "年报EPS1.19、预测分母66.37199874亿股含库存，旧88亿换算纠正"
+    },
+    {
+      "id": "D003",
+      "status": "fixed",
+      "location": "估值四",
+      "resolution": "退出加现金模型，敏感性统一无现金公式重算"
+    },
+    {
+      "id": "D004",
+      "status": "fixed",
+      "location": "管理层三/九/评分去重",
+      "resolution": "资本21，股东11，低派息/非注销仅股东维度扣3"
+    },
+    {
+      "id": "D005",
+      "status": "fixed",
+      "location": "深报D/管理层二及九",
+      "resolution": "全年未到期不认失约，D2+1、战略+1"
+    },
+    {
+      "id": "D006",
+      "status": "fixed",
+      "location": "估值五",
+      "resolution": "列明十年分红/留存/期末18PE、Ke10、按46.32反解"
+    },
+    {
+      "id": "D007",
+      "status": "fixed",
+      "location": "估值三",
+      "resolution": "撤销经营PE加现金；正常化归母PE包含财务净损益、不另加资产"
+    },
+    {
+      "id": "D008",
+      "status": "fixed",
+      "location": "估值二/三",
+      "resolution": "核非经常清单无许可剔除，扣非年化后许可正常化15/20/25及税率桥"
+    }
+  ]
+}

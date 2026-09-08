@@ -1,0 +1,18 @@
+{
+  "cScore": 71,
+  "mScore": 83,
+  "target_price": 69,
+  "valuation_certainty": 0.45,
+  "buy_price": 51.26700000000001,
+  "ocf_parent": 2.6426644872236933,
+  "ocf_group": 2.3579302294365405,
+  "pledge_three": 0.06107091179836999,
+  "pledge_two": 0.12654464526483833,
+  "old_governance_bridge": 0.8235294117647058,
+  "new_governance_bridge": 0.8588235294117647,
+  "scenarios": [
+    56.519999999999996,
+    68.89999999999999,
+    74.2
+  ]
+}

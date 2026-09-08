@@ -1,0 +1,190 @@
+{
+  "company": "伊利股份",
+  "ticker": "600887.SH",
+  "old_paths": [
+    "深度分析/伊利股份 深度分析 81 2026-08-27.md",
+    "管理层档案/伊利股份 管理层档案 80 2026-08-27.md",
+    "估值分析/伊利股份 估值分析 2026-08-27.md"
+  ],
+  "new_paths": [
+    "深度分析/伊利股份 深度分析 80 2026-09-08.md",
+    "管理层档案/伊利股份 管理层档案 80 2026-09-08.md",
+    "估值分析/伊利股份 估值分析 2026-09-08.md"
+  ],
+  "company_page": "01-公司/伊利股份.md",
+  "cScore": 80,
+  "mScore": 80,
+  "target_price": 30.15,
+  "valuation_certainty": 0.5,
+  "buy_price": 22.61,
+  "score_bridge": {
+    "company": "81→80，仅F封顶加总修复；F1以关键人制衡解释，不与F2重复减持扣分",
+    "management": "80维持；次数、质押和关联交易修正不机械改分"
+  },
+  "repairs": [
+    {
+      "group": "D001",
+      "location": "深度F1/F2评分与2026-09-08纠错说明",
+      "calculation_file": "calculations.json",
+      "new_file": "深度分析/伊利股份 深度分析 80 2026-09-08.md",
+      "new_line": 523,
+      "old_accepted_claim": "同一减持分别扣稳定性及对齐，原稿自称团队极稳定并将事件定性为股东对齐问题，未给稳定性独立传导证据。成立的是评分解释冲突，不自动恢复两分。",
+      "source_evidence": "draft-company.md F1及L516-517；evidence.md源L937仅确认在任董事长兼总裁持股减少61,990,309股；rules.md同事实扣分须区分机制。",
+      "status": "fixed_or_conclusion_withdrawn",
+      "new_text": "| F1 管理层稳定性与制衡 | 5 | 3 | 核心团队稳定；董事长总裁集中及继任制衡不足扣2分，减持不在此重复扣分 |"
+    },
+    {
+      "group": "D002",
+      "location": "深度综合评分及F2.5、F小计",
+      "calculation_file": "calculations.json",
+      "new_file": "深度分析/伊利股份 深度分析 80 2026-09-08.md",
+      "new_line": 525,
+      "old_accepted_claim": "F2.5明示上限2却计2.5，再四舍五入抬高总分；按现有子项F=11，公司80。",
+      "source_evidence": "draft-company.md L516-520：3+3+2+3=11，其他维度8+15+17+13+16=69，总计80；表内11.5→12违反自身上限。",
+      "status": "fixed_or_conclusion_withdrawn",
+      "new_text": "| F2.5 资本配置纪律 | 2 | 2 | 正面先例计入2分上限，不额外加0.5分；澳优经济损失已在E5反映 |"
+    },
+    {
+      "group": "D003",
+      "location": "估值七期股利加终值DDM",
+      "calculation_file": "calculations.json",
+      "new_file": "估值分析/伊利股份 估值分析 2026-09-08.md",
+      "new_line": 91,
+      "old_accepted_claim": "展示表漏2032并错列终值PV成立；但补全时轴后25.7元可复算，不能说最终锚值错误或必须重算综合价值。属于计算展示的局部缺陷。",
+      "source_evidence": "draft-valuation.md L130-144：D2032=1.55×1.06^5=2.07425；七期股利PV=8.27645，终值PV=17.41350，合计25.68995。表中六行PV加17.55=24.71；evidence.md源L571给D0=1.38。",
+      "status": "fixed_or_conclusion_withdrawn",
+      "new_text": "| 2032 | 7 | 2.07425 | 1.09891 |"
+    },
+    {
+      "group": "D004",
+      "location": "估值快照及正常化远期PE；公司页PreBuy",
+      "calculation_file": "calculations.json",
+      "new_file": "估值分析/伊利股份 估值分析 2026-09-08.md",
+      "new_line": 58,
+      "old_accepted_claim": "当前远期PE和历史TTM分位不属同口径；低于P20亦不能推出低于P10。缺陷是分位与低估叙事，16倍主观估值选择本身不被否定。",
+      "source_evidence": "draft-valuation.md L47、52、106-119、271：26.45/2.07=12.7778，对比历史P20=14.87、P50=17.15；没有历史同期限forward序列或P10数据。",
+      "status": "fixed_or_conclusion_withdrawn",
+      "new_text": "| 历史PE分位 | 撤销“Forward低于TTM P20故<P10”推断；没有同期限远期序列，分位不输出 |"
+    },
+    {
+      "group": "D005",
+      "location": "估值合并现金流诊断退出正式权重",
+      "calculation_file": "calculations.json",
+      "new_file": "估值分析/伊利股份 估值分析 2026-09-08.md",
+      "new_line": 106,
+      "old_accepted_claim": "以合并OCF减资本支出直接给母公司每股权益价值缺少现金流归属、利息及债务正常化桥。不能把全部合并现金视为归母FCFE；不据此猜修正价格。",
+      "source_evidence": "draft-valuation.md L152-170：143.44-50=93.44亿，再除63.25亿股并用权益收益率；evidence.md源L1123利息归筹资现金流且含少数股东分红39,738,744.24元，源L1069有少数股东权益。H1数据只证明结构，不替换FY2025金额。",
+      "status": "fixed_or_conclusion_withdrawn",
+      "new_text": "## 合并现金流诊断：退出正式权重"
+    },
+    {
+      "group": "D006",
+      "location": "估值逆向股利加终值模型",
+      "calculation_file": "calculations.json",
+      "new_file": "估值分析/伊利股份 估值分析 2026-09-08.md",
+      "new_line": 114,
+      "old_accepted_claim": "所报隐含增速能由只折现末期股价重现，却漏说明期间零分配；持续分红公司不能将此称完整市场隐含回报。缺少期间分配及2027起点时点桥。",
+      "source_evidence": "draft-valuation.md L176-200：g=1.095×(26.45/(2.07×18))^(1/10)-1≈5.81%；等式没有十年股利；evidence.md源L571存在1.38元分红；同稿DDM设75%派息。",
+      "status": "fixed_or_conclusion_withdrawn",
+      "new_text": "## 逆向股利加终值模型：仅诊断"
+    },
+    {
+      "group": "D007",
+      "location": "管理层分红与股东回报",
+      "calculation_file": "calculations.json",
+      "new_file": "管理层档案/伊利股份 管理层档案 80 2026-09-08.md",
+      "new_line": 148,
+      "old_accepted_claim": "同截止日半年报为27次，原稿28次与原始披露冲突，未给截止日前新增一次的凭证。",
+      "source_evidence": "draft-management.md L140；evidence.md源L571：累计27次，672.95亿元。",
+      "status": "fixed_or_conclusion_withdrawn",
+      "new_text": "| 上市以来累计分红 | 672.95亿元、累计27次（2026H1半年报第571行；未证实截止后新增一次） |"
+    },
+    {
+      "group": "D008",
+      "location": "深度E4资本结构健康度",
+      "calculation_file": "calculations.json",
+      "new_file": "深度分析/伊利股份 深度分析 80 2026-09-08.md",
+      "new_line": 450,
+      "old_accepted_claim": "有息负债低于同日短借成立；并列的利息保障问题亦成立但归D010，以本条主要负债主张去重，非两个新增组。",
+      "source_evidence": "draft-company.md L444-448；evidence.md源L1069年末短借456.30626028亿，长借4.72479633亿，合计461.03105661亿>380亿。利息保障另见C020/D010。",
+      "status": "fixed_or_conclusion_withdrawn",
+      "new_text": "- 2025年末短期借款456.3063亿元、长期借款4.7248亿元；仅两项即461.0311亿元，故旧稿“全部有息负债380亿元”错误。数据来自半年报比较资产负债表，而非以2026H1替代2025年末。"
+    },
+    {
+      "group": "D009",
+      "location": "管理层对股东友好度、深度F3",
+      "calculation_file": "calculations.json",
+      "new_file": "管理层档案/伊利股份 管理层档案 80 2026-09-08.md",
+      "new_line": 172,
+      "old_accepted_claim": "无频繁关联交易的正面勾选与重大经常采购直接冲突。无异常不能替代无交易；不能因此推断利益输送。",
+      "source_evidence": "draft-management.md L164；evidence.md源L5464单位万元、L5466向Youran采购784505.39万元=78.450539亿元，上期77.107626亿元；公司稿会计关联交易段已承认关联采购，更构成内部不一致。",
+      "status": "fixed_or_conclusion_withdrawn",
+      "new_text": "- [x] 关联交易已披露：H1向China Youran采购78.450539亿元，上期77.107626亿元；这是经常性采购，不能写“无频繁关联交易”"
+    },
+    {
+      "group": "D010",
+      "location": "深度E4资本结构健康度",
+      "calculation_file": "calculations.json",
+      "new_file": "深度分析/伊利股份 深度分析 80 2026-09-08.md",
+      "new_line": 453,
+      "old_accepted_claim": "净财务费用绝对值不是毛利息支出，且稿内计算亦错误，不能据此声称利息保障极宽裕。",
+      "source_evidence": "draft-company.md L446-448：(129.94-6.91)/6.91=17.80463，非18.8；evidence.md源L1095将利息收入与利息费用分别列示，H1仅证明科目差异，不用于更正FY2025金额。",
+      "status": "fixed_or_conclusion_withdrawn",
+      "new_text": "- 财务费用为利息收入、利息支出、汇兑及其他项目的净额，其绝对值不是毛利息支出。撤销旧18.8倍利息保障及“负财务费用证明负担极轻”结论。"
+    },
+    {
+      "group": "D011",
+      "location": "管理层控制权结构、负面信号及减持事件；深度风险地图",
+      "calculation_file": "calculations.json",
+      "new_file": "管理层档案/伊利股份 管理层档案 80 2026-09-08.md",
+      "new_line": 83,
+      "old_accepted_claim": "最新62%与H1实数冲突成立；价格、套现金额及减持前69.42%仅缺公告，不能断错，也不能据材料缺档直接重扣治理分。",
+      "source_evidence": "draft-management.md L75、187与公司风险地图仍62%；evidence.md源L905：116338449/224756319=51.7620386%；源L937只有持股变动。",
+      "status": "fixed_or_conclusion_withdrawn",
+      "new_text": "- **股权质押比例**：2026-06-30，116,338,449/224,756,319=51.76%。旧69.42%为减持前历史估算，未重取公告；旧“减持后62%”删除。9月最新质押变动未核实。"
+    },
+    {
+      "group": "D012",
+      "location": "深度E1杜邦复算表",
+      "calculation_file": "calculations.json",
+      "new_file": "深度分析/伊利股份 深度分析 80 2026-09-08.md",
+      "new_line": 397,
+      "old_accepted_claim": "三因子与列示ROE不等且杠杆贡献解释颠倒，削弱正式ROE质量判断。加权ROE可不同但必须另列而非写等式。",
+      "source_evidence": "draft-company.md L393-405：2021为7.90%×1.08×2.09=17.83188%，非25.59%；2025=19.76%，非20.87%；(2.6-1)/2.6=61.5385%，并非约38%杠杆贡献。evidence.md源L106为加权ROE。",
+      "status": "fixed_or_conclusion_withdrawn",
+      "new_text": "### E1. ROE 质量与杜邦分析"
+    }
+  ],
+  "suggested_watchlist": {
+    "cScore": 80,
+    "mScore": 80,
+    "target_price": 30.15,
+    "valuation_certainty": 0.5,
+    "lastEarningsIncorporated": "2026H1",
+    "next_earnings_type": "三季报",
+    "next_earnings_date": null
+  },
+  "sources": [
+    "财报/伊利股份/伊利股份2026半年度报告.md",
+    "https://static.cninfo.com.cn/finalpage/2026-04-30/1225259471.PDF",
+    "freshness-tavily.json"
+  ],
+  "freshness_cutoff": "2026-09-08",
+  "limitations": [
+    "最新交易价格未重取，仅保留2026-08-27历史参照",
+    "9月1日/5日公告已发现索引但未取得官方正文，不据此认定交易实施",
+    "历史PE序列、卖方预测及FY2025完整股东FCF桥缺，预测标为研究假设、FCF移除正式权重",
+    "历史年报序列未逐年重新取原文，公司页已与完整报告统一"
+  ],
+  "self_checks": {
+    "report_line_counts": {
+      "深度分析/伊利股份 深度分析 80 2026-09-08.md": 621,
+      "管理层档案/伊利股份 管理层档案 80 2026-09-08.md": 373,
+      "估值分析/伊利股份 估值分析 2026-09-08.md": 169
+    },
+    "company_sum": 80,
+    "management_sum": 80,
+    "all_defect_groups_covered": true,
+    "formula_and_ddm_reproducible": true
+  }
+}

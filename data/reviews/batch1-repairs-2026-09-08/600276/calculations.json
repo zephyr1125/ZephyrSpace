@@ -1,0 +1,36 @@
+{
+  "scenarios": [
+    {
+      "scenario": "保守",
+      "license_revenue": 15,
+      "normal_profit": 63.167780574,
+      "eps_hkd": 1.0468956781547725,
+      "pe": 27,
+      "value": 28.266183310178857
+    },
+    {
+      "scenario": "基准",
+      "license_revenue": 20,
+      "normal_profit": 67.41778057399999,
+      "eps_hkd": 1.1173320080642188,
+      "pe": 30,
+      "value": 33.51996024192657
+    },
+    {
+      "scenario": "乐观",
+      "license_revenue": 25,
+      "normal_profit": 71.66778057399999,
+      "eps_hkd": 1.1877683379736652,
+      "pe": 33,
+      "value": 39.19635515313095
+    }
+  ],
+  "target_price": 33.52,
+  "valuation_certainty": 0.4,
+  "buy_price": 24.67,
+  "inverse_growth": {
+    "0": 0.19570505616288025,
+    "0.172": 0.18771882586432398,
+    "0.3": 0.18189040858569439
+  }
+}

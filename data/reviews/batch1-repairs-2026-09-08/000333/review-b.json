@@ -1,0 +1,154 @@
+{
+  "reviewer": "Codex B",
+  "ticker": "000333",
+  "checked_files": [
+    "深度分析/美的集团 深度分析 81 2026-09-08.md",
+    "管理层档案/美的集团 管理层档案 88 2026-09-08.md",
+    "估值分析/美的集团 估值分析 2026-09-08.md",
+    "01-公司/美的集团.md",
+    "财报/美的集团/美的集团2026半年度报告.md",
+    "data\\reviews\\batch1-repairs-2026-09-08\\000333\\calculate.py",
+    "https://static.cninfo.com.cn/finalpage/2026-09-03/1225544342.PDF",
+    "https://static.cninfo.com.cn/finalpage/2026-09-03/1225544482.PDF",
+    "https://static.cninfo.com.cn/finalpage/2026-08-29/1225531406.PDF"
+  ],
+  "coverage": [
+    {
+      "group": "D001",
+      "status": "closed",
+      "reason": "全年期限尚未到期已撤处罚，诚信19"
+    },
+    {
+      "group": "D002",
+      "status": "closed",
+      "reason": "商誉准备10.96473存量/5.40062净变动区别，E恢复1"
+    },
+    {
+      "group": "D003",
+      "status": "closed",
+      "reason": "DDM3/3.5/4%82.9222/89.0202/96.3378闭合"
+    },
+    {
+      "group": "D004",
+      "status": "open",
+      "reason": "主分析撤全噪音，但管理174仍全因果残留"
+    },
+    {
+      "group": "D005",
+      "status": "closed",
+      "reason": "官方核中期预案及回购用途/时点分开"
+    },
+    {
+      "group": "D006",
+      "status": "closed",
+      "reason": "主评分不再集团准备归KUKA"
+    },
+    {
+      "group": "D007",
+      "status": "closed",
+      "reason": "FCF正式0，PE/DDM60/40"
+    },
+    {
+      "group": "D008",
+      "status": "closed",
+      "reason": "原报3561直接28.49%控制平台清楚"
+    },
+    {
+      "group": "D009",
+      "status": "closed",
+      "reason": "原报1150/1152确认2026融资及除息转股价"
+    },
+    {
+      "group": "D010",
+      "status": "closed",
+      "reason": "原报3585/3589确认35.26622/26.87367亿关联交易"
+    },
+    {
+      "group": "D011",
+      "status": "open",
+      "reason": "H1离任与六月基线已区分，deep仍空缺事实化"
+    },
+    {
+      "group": "D012",
+      "status": "closed",
+      "reason": "65.57唯一买线，线上仅观察"
+    },
+    {
+      "group": "D013",
+      "status": "closed",
+      "reason": "707.43788+1585.30134=2292.73922非现金"
+    },
+    {
+      "group": "D014",
+      "status": "closed",
+      "reason": "A股价/同股本BVPS PB3.08397455并明示AH边界"
+    },
+    {
+      "group": "D015",
+      "status": "closed",
+      "reason": "原报收入成本算集团25.25576455%，制造业分列"
+    }
+  ],
+  "findings": [
+    {
+      "priority": "P2",
+      "location": "深度分析/美的集团 深度分析 81 2026-09-08.md:169",
+      "evidence": "确定写CTO空缺3个月、接任者未公布，与管理192限定未证实继任不能宣称完全空置冲突。",
+      "recommendation": "改继任及承接未核实，不能把缺证升级事实。"
+    },
+    {
+      "priority": "P2",
+      "location": "管理层档案/美的集团 管理层档案 88 2026-09-08.md:143",
+      "evidence": "仍确定KUKA致ROIC承压、家电ROIC高位，未提供资产组NOPAT/投入资本桥，且本稿133承认局部业绩不替代全球回报。",
+      "recommendation": "撤确定性趋势或补可复算证据；不是判公司ROIC实际为负。"
+    },
+    {
+      "priority": "P2",
+      "location": "管理层档案/美的集团 管理层档案 88 2026-09-08.md:174",
+      "evidence": "人民币升值造成扣非-25%（口径）仍把主要原因扩大为全因果，与新匹配桥限制不一致。",
+      "recommendation": "改主要原因及尚未完成税后归母桥。"
+    },
+    {
+      "priority": "P2",
+      "location": "01-公司/美的集团.md:182",
+      "evidence": "仍称当前价格偏高分位，但本轮未取最新行情/历史分位。",
+      "recommendation": "改历史参照在机械线上，撤当前分位。"
+    },
+    {
+      "priority": "P2",
+      "location": "深度分析/美的集团 深度分析 81 2026-09-08.md:129",
+      "evidence": "深报自身仅H1关键数、六年均值及零散2025数字，无至少三年完整经营序列；三年表仅位于估值报告29—42。",
+      "recommendation": "在深报纳三年经营数据表或明确嵌入最新估值对应表，以满足独立阅读完整性。"
+    }
+  ],
+  "recalculation": {
+    "scores": [
+      81,
+      88
+    ],
+    "DDM": 89.02019271457175,
+    "sensitivity": [
+      82.922211986,
+      89.020192715,
+      96.337769589
+    ],
+    "scenarios": [
+      73.370145521,
+      85.828077086,
+      98.365047283
+    ],
+    "target": 85.83,
+    "certainty": 0.6,
+    "buy": 65.57412,
+    "reverse_growth_pct": 2.9791143323,
+    "convertible_dilution_pct": 2.2109198497,
+    "PB": 3.0839745477,
+    "group_margin_pct": 25.2557645483
+  },
+  "uncovered": [
+    "最新行情与完整历史PE序列未重新取得，已限制历史参照",
+    "历史逐年财务、2024离任再聘全链及所有资产组ROIC未重取，不能因缺证判成事实错误"
+  ],
+  "pass": false,
+  "conclusion": "无P0/P1；D004/D011局部残留及其他P2待改，公式及目标可重算。"
+}

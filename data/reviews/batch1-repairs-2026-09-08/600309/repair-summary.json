@@ -1,0 +1,98 @@
+{
+  "original": {
+    "company": "深度分析/万华化学 深度分析 70 2026-09-06.md",
+    "management": "管理层档案/万华化学 管理层档案 80 2026-09-06.md",
+    "valuation": "估值分析/万华化学 估值分析 2026-09-06.md"
+  },
+  "new": {
+    "company": "深度分析/万华化学 深度分析 71 2026-09-08.md",
+    "management": "管理层档案/万华化学 管理层档案 83 2026-09-08.md",
+    "valuation": "估值分析/万华化学 估值分析 2026-09-08.md"
+  },
+  "company": "万华化学",
+  "ticker": "600309.SH",
+  "company_page": "01-公司\\万华化学.md",
+  "cScore": 71,
+  "mScore": 83,
+  "target_price": 69,
+  "valuation_certainty": 0.45,
+  "buy_price": 51.27,
+  "suggested_watchlist": {
+    "cScore": 71,
+    "mScore": 83,
+    "target_price": 69,
+    "valuation_certainty": 0.45,
+    "lastEarningsIncorporated": "2026H1",
+    "next_earnings_type": "三季报",
+    "next_earnings_date": null
+  },
+  "limitations": [
+    "新增70万吨实际投产未独立确认，不当已投产事实",
+    "近期处罚未获得新增原始决定，不能声称全市场无风险",
+    "分红实施上交所PDF未返回文字，以公司公告转载全文核对日期",
+    "历史均值5.30是研究正常化参考，非未来盈利预测"
+  ],
+  "repairs": [
+    {
+      "id": "D001",
+      "status": "fixed",
+      "location": "估值核心财务/公司页",
+      "resolution": "归母净现比264.27%，合并235.79%另标"
+    },
+    {
+      "id": "D002",
+      "status": "fixed",
+      "location": "深报F桥",
+      "resolution": "旧70/85=82.35%、本版72/85=84.71%，F独立解释不倒推"
+    },
+    {
+      "id": "D003",
+      "status": "fixed",
+      "location": "深报F/管理层末节/公司页",
+      "resolution": "三方质押6.11%，两方12.65%"
+    },
+    {
+      "id": "D004",
+      "status": "fixed",
+      "location": "管理层一/六/九",
+      "resolution": "公司工龄与现岗任期分开，组织8分保守不变"
+    },
+    {
+      "id": "D005",
+      "status": "fixed",
+      "location": "深报F2.5/末节",
+      "resolution": "购建现金−36.93%可确认，扩张峰值未认定"
+    },
+    {
+      "id": "D006",
+      "status": "fixed",
+      "location": "估值价格表/公司页",
+      "resolution": "四区间互斥，机械公式不变"
+    },
+    {
+      "id": "D007",
+      "status": "fixed",
+      "location": "管理层人物表/末节",
+      "resolution": "5000+10000=15000，8000之外2000不猜日期"
+    },
+    {
+      "id": "D008",
+      "status": "fixed",
+      "location": "管理层评分/深报资本回报风险",
+      "resolution": "撤除2分ROIC低于WACC无桥扣罚，资本19、战略14、总83"
+    },
+    {
+      "id": "D009",
+      "status": "fixed",
+      "location": "管理层言行一致",
+      "resolution": "无可比量化目标不算全部达标"
+    },
+    {
+      "id": "D010",
+      "status": "fixed",
+      "location": "管理层人物表",
+      "resolution": "华卫琦副总裁2010-04至2019-04"
+    }
+  ],
+  "final_review_score_bridge": "公司70→71：E4债务风险扣分保留，F2.5 1→2，F10→11；9+12+17+11+11+11=71。管理层83不变。仅改本日未发布修复稿，不动历史。"
+}

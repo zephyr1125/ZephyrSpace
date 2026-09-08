@@ -1,0 +1,124 @@
+{
+  "reviewer": "Codex B",
+  "ticker": "600887",
+  "checked_files": [
+    "深度分析/伊利股份 深度分析 80 2026-09-08.md",
+    "管理层档案/伊利股份 管理层档案 80 2026-09-08.md",
+    "估值分析/伊利股份 估值分析 2026-09-08.md",
+    "01-公司/伊利股份.md",
+    "财报/伊利股份/伊利股份2026半年度报告.md",
+    "data\\reviews\\batch1-repairs-2026-09-08\\600887\\calculate.py"
+  ],
+  "coverage": [
+    {
+      "group": "D001",
+      "status": "closed",
+      "reason": "F1改集中及继任风险，减持仅F2"
+    },
+    {
+      "group": "D002",
+      "status": "closed",
+      "reason": "F2.5封顶2，F11及总80闭合"
+    },
+    {
+      "group": "D003",
+      "status": "closed",
+      "reason": "七期股利与终值折现完整"
+    },
+    {
+      "group": "D004",
+      "status": "closed",
+      "reason": "撤远期PE对历史TTM分位"
+    },
+    {
+      "group": "D005",
+      "status": "closed",
+      "reason": "FCF正式0，PE60/DDM40"
+    },
+    {
+      "group": "D006",
+      "status": "closed",
+      "reason": "逆向纳10年分红并明示2.07作正常化t0"
+    },
+    {
+      "group": "D007",
+      "status": "closed",
+      "reason": "原报571为27次672.95亿"
+    },
+    {
+      "group": "D008",
+      "status": "closed",
+      "reason": "短借456.306+长借4.7248=461.031亿至少额"
+    },
+    {
+      "group": "D009",
+      "status": "closed",
+      "reason": "原报关联采购78.450539亿已披露"
+    },
+    {
+      "group": "D010",
+      "status": "closed",
+      "reason": "撤净财务费当毛息及覆盖倍数"
+    },
+    {
+      "group": "D011",
+      "status": "closed",
+      "reason": "原报905计算51.762%，未核成交额不作事实"
+    },
+    {
+      "group": "D012",
+      "status": "closed",
+      "reason": "撤错误杜邦贡献，区分输入口径"
+    }
+  ],
+  "findings": [
+    {
+      "priority": "P2",
+      "location": "深度分析/伊利股份 深度分析 80 2026-09-08.md:120",
+      "evidence": "称实控人郑俊怀→潘刚变更1次，与当前无实控人表述混淆。",
+      "recommendation": "改经营负责人更替，勿将经营控制等同法定实际控制。"
+    },
+    {
+      "priority": "P2",
+      "location": "深度分析/伊利股份 深度分析 80 2026-09-08.md:508；管理层档案/伊利股份 管理层档案 80 2026-09-08.md:160",
+      "evidence": "仍确定写ROIC>WACC；所谓ROIC趋势实际仅列ROE15—25%，无NOPAT/投入资本/WACC桥。不能据ROE支持该判断。",
+      "recommendation": "撤确定性ROIC判断或补经济口径计算；缺资料不是公司经营错误。"
+    },
+    {
+      "priority": "P2",
+      "location": "深度分析/伊利股份 深度分析 80 2026-09-08.md:548",
+      "evidence": "年末至H1应收/预付36.49%/36.64%写分别高于收入增速（同比4.13%），比较期别不一致；原报338清楚标上年期末。",
+      "recommendation": "标环比并撤与同比收入直接比较。"
+    },
+    {
+      "priority": "P2",
+      "location": "管理层档案/伊利股份 管理层档案 80 2026-09-08.md:264,270",
+      "evidence": "接口no data被下文升级为无交易所问询函；未检出不能验证零事件。",
+      "recommendation": "改本次检索未发现，披露覆盖限制。"
+    }
+  ],
+  "recalculation": {
+    "scores": [
+      80,
+      80
+    ],
+    "DDM": 25.68995,
+    "weighted_target": 30.14798,
+    "target": 30.15,
+    "certainty": 0.5,
+    "buy": 22.6125,
+    "scenarios": [
+      24.10397,
+      30.14798,
+      34.35215
+    ],
+    "reverse_growth_pct": 0.8194,
+    "pledge_pct": 51.76203699972503
+  },
+  "uncovered": [
+    "旧年报历史财务及完整监管记录未逐项重新取原文",
+    "9月实时行情与减持成交价额未核；报告已限定历史快照/未知"
+  ],
+  "pass": false,
+  "conclusion": "12D实质关闭；4项正文P2残留应修，未发现P0/P1。"
+}
