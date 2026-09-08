@@ -1,5 +1,5 @@
 {
-  "status": "content_and_watchlist_complete_git_and_sync_pending",
+  "status": "complete",
   "information_cutoff": "2026-09-08",
   "completion_date": "2026-09-09",
   "dual_final_reviews": [
@@ -69,11 +69,59 @@
     "count_unchanged": 644
   },
   "obsidian_company_links": "两公司CLI解析通过",
-  "commits": [],
+  "commits": [
+    {
+      "hash": "6d0fa23cfa90cfa57117d9431092d582a3fb0f42",
+      "subject": "fix: 修正康臣与华明三件套并重算估值"
+    },
+    {
+      "hash": "ec92a93cc13b5b9a09e19eebc75378961c827385",
+      "subject": "fix: 同步康臣与华明复核参数"
+    }
+  ],
   "finance_sync": {
-    "status": "pending"
+    "status": "complete",
+    "target": "E:/Work/Python/Finance/api/config",
+    "after_commit": "ec92a93cc13b5b9a09e19eebc75378961c827385",
+    "files": [
+      {
+        "file": "watchlist_meta.json",
+        "semantic_sha256": "23fb3970ee13c3c1a28612d566317a54bc1da9d8ba8e1724d9f8fd429d8ff5e6",
+        "matched": true
+      },
+      {
+        "file": "watchlist_strategic.json",
+        "semantic_sha256": "9e727002299525a4623b39a4b9f3fdc85043d9b54b63220680ab1d9502c9bc31",
+        "matched": true
+      },
+      {
+        "file": "watchlist_core.json",
+        "semantic_sha256": "78c8d34eed46b20e1d6808729db01d697a396528565229d63b5c28483cdb01b6",
+        "matched": true
+      },
+      {
+        "file": "watchlist_growth.json",
+        "semantic_sha256": "4ab35e47cd733026c56d83c3a897d67a40f90d4c1d7d341189187d38e856ad9e",
+        "matched": true
+      },
+      {
+        "file": "watchlist_out_of_scope.json",
+        "semantic_sha256": "f33d6aafd71a07960b09cb59146a73f6011cad2d85ece132d934584d25547d44",
+        "matched": true
+      },
+      {
+        "file": "watchlist_index.json",
+        "semantic_sha256": "cfc0e3bd41076109931abf2e255a6d8525ec34bcffce0ea6d94bc7213ca13817",
+        "matched": true
+      }
+    ]
   },
   "push": {
-    "status": "pending"
-  }
+    "status": "complete",
+    "remote": "origin",
+    "branch": "main",
+    "verified_business_commit": "ec92a93cc13b5b9a09e19eebc75378961c827385",
+    "remote_head_matched": true
+  },
+  "closure_record_commit_subject": "docs: 记录康臣与华明修复闭环"
 }
