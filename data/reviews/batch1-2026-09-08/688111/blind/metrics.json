@@ -1,0 +1,209 @@
+{
+  "reviewers": {
+    "codex_a": {
+      "proposed": 10,
+      "outcomes": {
+        "partial": 3,
+        "valid": 7
+      },
+      "defects": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010",
+        "D012"
+      ],
+      "correction_claims": 10,
+      "fully_valid_corrections": 7,
+      "invalid_corrections": 0,
+      "strict_valid_rate": 0.7
+    },
+    "codex_b": {
+      "proposed": 8,
+      "outcomes": {
+        "valid": 6,
+        "partial": 2
+      },
+      "defects": [
+        "D001",
+        "D003",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ],
+      "correction_claims": 8,
+      "fully_valid_corrections": 6,
+      "invalid_corrections": 0,
+      "strict_valid_rate": 0.75
+    },
+    "flash": {
+      "proposed": 7,
+      "outcomes": {
+        "partial": 5,
+        "insufficient": 1,
+        "non_defect": 1
+      },
+      "defects": [
+        "D002",
+        "D003",
+        "D008",
+        "D010",
+        "D011"
+      ],
+      "correction_claims": 7,
+      "fully_valid_corrections": 0,
+      "invalid_corrections": 0,
+      "strict_valid_rate": 0.0
+    }
+  },
+  "confirmed_union": {
+    "D001": {
+      "severity": "P1",
+      "reviewers": [
+        "codex_a",
+        "codex_b"
+      ]
+    },
+    "D002": {
+      "severity": "P1",
+      "reviewers": [
+        "flash",
+        "codex_a"
+      ]
+    },
+    "D003": {
+      "severity": "P1",
+      "reviewers": [
+        "codex_b",
+        "codex_a",
+        "flash"
+      ]
+    },
+    "D004": {
+      "severity": "P1",
+      "reviewers": [
+        "codex_a"
+      ]
+    },
+    "D005": {
+      "severity": "P1",
+      "reviewers": [
+        "codex_b"
+      ]
+    },
+    "D006": {
+      "severity": "P2",
+      "reviewers": [
+        "codex_a",
+        "codex_b"
+      ]
+    },
+    "D007": {
+      "severity": "P2",
+      "reviewers": [
+        "codex_a",
+        "codex_b"
+      ]
+    },
+    "D008": {
+      "severity": "P1",
+      "reviewers": [
+        "codex_a",
+        "flash",
+        "codex_b"
+      ]
+    },
+    "D009": {
+      "severity": "P2",
+      "reviewers": [
+        "codex_a",
+        "codex_b"
+      ]
+    },
+    "D010": {
+      "severity": "P1",
+      "reviewers": [
+        "codex_b",
+        "codex_a",
+        "flash"
+      ]
+    },
+    "D011": {
+      "severity": "P2",
+      "reviewers": [
+        "flash"
+      ]
+    },
+    "D012": {
+      "severity": "P1",
+      "reviewers": [
+        "codex_a"
+      ]
+    }
+  },
+  "combinations": {
+    "codex_pair": {
+      "found": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010",
+        "D012"
+      ],
+      "missed": {
+        "D011": "P2"
+      }
+    },
+    "a_flash": {
+      "found": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010",
+        "D011",
+        "D012"
+      ],
+      "missed": {
+        "D005": "P1"
+      }
+    },
+    "b_flash": {
+      "found": [
+        "D001",
+        "D002",
+        "D003",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010",
+        "D011"
+      ],
+      "missed": {
+        "D004": "P1",
+        "D012": "P1"
+      }
+    }
+  },
+  "note": "缺陷集合仅为已提议并核实的并集，部分成立只计被认可的错误部分，不代表穷尽真值。"
+}

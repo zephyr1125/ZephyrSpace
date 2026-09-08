@@ -1,0 +1,322 @@
+[
+  {
+    "id": "C001",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D001",
+    "severity": "P1",
+    "reason": "全年指引未到期即用H1增速认定落空，并作为诚信扣分，期别不一致。公司稿已谨慎表述仍可能达标，管理稿没有新增证据支持确定失约。",
+    "evidence": "draft-management.md L45、96、108、255、312；draft-company.md L106；evidence.md源L82只给1—6月+3.55%。全年达标压力不等于已失约。"
+  },
+  {
+    "id": "C002",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D002",
+    "severity": "P1",
+    "reason": "期末累计准备误写本期新计提，已传导资产质量及估值；正确净增加亦不能无条件等同当期计提。KUKA归属另归D006。",
+    "evidence": "evidence.md源L2970单位千元：期末1096473=10.96473亿，期初556411=5.56411亿，净增5.40062亿。draft-company.md L140同时写余额5.6→11.0和本期10.96；估值L16、60以此作折价依据。"
+  },
+  {
+    "id": "C003",
+    "outcome": "insufficient",
+    "kind": "scope_gap",
+    "is_correction": true,
+    "group": "",
+    "severity": "P2",
+    "reason": "仅凭2025末期3.8与2026中期0.5，无法否定2025全年4.3包含2025自身中期0.5的可能。缺2025完整分红与回购序列，不能认定跨年重复计算；应补归属年度/支付年度桥。",
+    "evidence": "evidence.md首部年度资料缺口；源L3182仅2025末期3.8元，共283.89299亿；源L3673是2026中期预案，并不证明2025没有中期股利。"
+  },
+  {
+    "id": "C004",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D001",
+    "severity": "P1",
+    "reason": "全年指引未到期即用H1增速认定落空，并作为诚信扣分，期别不一致。公司稿已谨慎表述仍可能达标，管理稿没有新增证据支持确定失约。",
+    "evidence": "draft-management.md L45、96、108、255、312；draft-company.md L106；evidence.md源L82只给1—6月+3.55%。全年达标压力不等于已失约。"
+  },
+  {
+    "id": "C005",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D003",
+    "severity": "P2",
+    "reason": "同参数DDM两侧敏感性有算术偏差，基准89元正确。只影响约1.6元情景边界，不足推翻正式中枢，统一P2。",
+    "evidence": "draft-valuation.md L74-87：D_t=4.5×1.06^(t-1)，t=1..5，Ke=9%；股利PV19.53678，g2=3%/3.5%/4%对应82.92221/89.02019/96.33777；初稿81.3/89/97.9。"
+  },
+  {
+    "id": "C006",
+    "outcome": "partial",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D005",
+    "severity": "P1",
+    "reason": "拟分红与已回购合计称已返还、把激励回购也一概称资本返还成立。69.7亿与54.76亿是总体和特定A股回购计划差异，不能据差额推定虚假支付，候选建议将14.9亿直接指为限制性回购证据不足。",
+    "evidence": "draft-management.md L53已派14%、L177均为资本返还；evidence.md源L3673拟派37.24299亿待批准；L1192集中竞价54.76158亿，L3144集团库存股回购69.66807亿，L3142另有激励库存股。"
+  },
+  {
+    "id": "C007",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D004",
+    "severity": "P1",
+    "reason": "净财务费用不等于全部汇兑损失，多类金融投资损益不等于全部对冲收益；官方仅称主要原因，原稿扩大到纯口径噪音、非经营恶化并维持评分，缺匹配归母税后桥。",
+    "evidence": "draft-company.md L131-134、当期判断；evidence.md源L84主要由于汇率分类，源L1371列利息费用8.62868亿与利息收入37.24784亿等，L110的67.45721亿涵盖多类金融工具损益。"
+  },
+  {
+    "id": "C008",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D004",
+    "severity": "P1",
+    "reason": "净财务费用不等于全部汇兑损失，多类金融投资损益不等于全部对冲收益；官方仅称主要原因，原稿扩大到纯口径噪音、非经营恶化并维持评分，缺匹配归母税后桥。",
+    "evidence": "draft-company.md L131-134、当期判断；evidence.md源L84主要由于汇率分类，源L1371列利息费用8.62868亿与利息收入37.24784亿等，L110的67.45721亿涵盖多类金融工具损益。"
+  },
+  {
+    "id": "C009",
+    "outcome": "invalid",
+    "kind": "improvement",
+    "is_correction": false,
+    "group": "",
+    "severity": "P2",
+    "reason": "候选五项求和错误；实际分部合计恰等于主营业务收入，非其所称240007625。原稿没有宣称分部覆盖全部合并收入；补收入桥可改进，但不能用错误加总支持缺陷或改母公司口径。",
+    "evidence": "evidence.md源L354：174340606+21625109+16620817+13137739+15282454=241006725千元，等于源L3186主营收入；加其他业务19035765=260042490千元。与营业总收入差另含利息收入。"
+  },
+  {
+    "id": "C010",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D007",
+    "severity": "P1",
+    "reason": "简化FCF虽披露限制，仍直接纳入25%正式股权价值且缺归属、利息融资和金融业务桥，限制未约束结论。不能凭此猜修正价格或把营运资金一律扣掉。",
+    "evidence": "draft-valuation.md L93-106、153-164直接(536-130)/6%/76.3≈88.68元；evidence.md源L1385合并OCF含贷款垫款净增25.71334亿，筹资有少数股东股利4.97561亿；L1359有少数股东权益。"
+  },
+  {
+    "id": "C011",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D005",
+    "severity": "P1",
+    "reason": "管理稿明确写已派14%、全部回购均为资本返还，不能被其回购用途待核提示抵消。预案与实施及激励和注销应分列。",
+    "evidence": "draft-management.md L53、130、177；evidence.md源L3673股利37.24299亿待临时股东会批准未确认负债；L1190计划改为注销用途已过股东会，L3142区分激励库存股与尚未注销回购股份。"
+  },
+  {
+    "id": "C012",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D006",
+    "severity": "P1",
+    "reason": "原稿虽声明归属未知，却在负面案例用集团减值验证KUKA买入时点，并传导危机处理扣分，构成确定性归因冲突。独立于金额存流量错误。",
+    "evidence": "draft-management.md L43称不直接归因KUKA，L107称收购时点偏高被后续减值验证，L259将集团减值纳入危机处理；evidence.md源L2970只有集团合计准备，未分配至KUKA。"
+  },
+  {
+    "id": "C013",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D008",
+    "severity": "P1",
+    "reason": "当前通过控股平台持股31.6%与28.49%原始披露冲突；个人H股穿透不能替代平台直接比例，法定主体亦应统一。",
+    "evidence": "draft-management.md L64、71-72；evidence.md源L3551美的控股有限公司、L3561期末直接持股和表决权28.49%，期初28.55%；L3553最终控制人何享健。"
+  },
+  {
+    "id": "C014",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D009",
+    "severity": "P1",
+    "reason": "当期融资记2025，且仍用初始转股价作当前输入，时间线和摊薄参数失效；不否定四舍五入2.2%的近似值。",
+    "evidence": "draft-management.md L131、178；evidence.md源L1150发行2026-05-06，两笔86.24亿港元；L1152除息后91.82/109.78港元，可转172480006股；按披露日7628798092股，新增/旧股=2.2609%，新增/摊薄股本=2.2109%。"
+  },
+  {
+    "id": "C015",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D003",
+    "severity": "P2",
+    "reason": "同参数DDM两侧敏感性有算术偏差，基准89元正确。只影响约1.6元情景边界，不足推翻正式中枢，统一P2。",
+    "evidence": "draft-valuation.md L74-87：D_t=4.5×1.06^(t-1)，t=1..5，Ke=9%；股利PV19.53678，g2=3%/3.5%/4%对应82.92221/89.02019/96.33777；初稿81.3/89/97.9。"
+  },
+  {
+    "id": "C016",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D010",
+    "severity": "P1",
+    "reason": "以零关联交易支持股东友好评分，与明确交易冲突。市场条款披露不等于无交易，也不推定侵占。",
+    "evidence": "draft-management.md L258；evidence.md源L3585：(784897+2741725)千元=35.26622亿；L3589销售2687367千元=26.87367亿；L3581正常商业条款。"
+  },
+  {
+    "id": "C017",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D007",
+    "severity": "P1",
+    "reason": "简化FCF虽披露限制，仍直接纳入25%正式股权价值且缺归属、利息融资和金融业务桥，限制未约束结论。不能凭此猜修正价格或把营运资金一律扣掉。",
+    "evidence": "draft-valuation.md L93-106、153-164直接(536-130)/6%/76.3≈88.68元；evidence.md源L1385合并OCF含贷款垫款净增25.71334亿，筹资有少数股东股利4.97561亿；L1359有少数股东权益。"
+  },
+  {
+    "id": "C018",
+    "outcome": "partial",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D011",
+    "severity": "P1",
+    "reason": "李国林历史离任是否后续重聘材料不足，不能直接判历史事件虚假；但当前状态与报告职位表缺解释，且结论笼统H1无新增与已披露卫昶离任冲突。表内相对六月基线无新增限定本身正确，需保留。",
+    "evidence": "draft-management.md L200、212、216、320；evidence.md源L942李国林列副总裁，L874卫昶2026-05-29离任；原稿L212已写H1新增1人，结论却写H1无新增。"
+  },
+  {
+    "id": "C019",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D001",
+    "severity": "P1",
+    "reason": "全年指引未到期即用H1增速认定落空，并作为诚信扣分，期别不一致。公司稿已谨慎表述仍可能达标，管理稿没有新增证据支持确定失约。",
+    "evidence": "draft-management.md L45、96、108、255、312；draft-company.md L106；evidence.md源L82只给1—6月+3.55%。全年达标压力不等于已失约。"
+  },
+  {
+    "id": "C020",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D012",
+    "severity": "P1",
+    "reason": "同稿推荐75—81元建仓与统一机械线冲突，非一般估值分区措辞，足以影响行动。",
+    "evidence": "draft-valuation.md L169-175、203、210；rules.md公式：87×(0.68+0.14×0.65)=67.077，推荐区高11.8%—20.8%。"
+  },
+  {
+    "id": "C021",
+    "outcome": "insufficient",
+    "kind": "scope_gap",
+    "is_correction": true,
+    "group": "",
+    "severity": "P2",
+    "reason": "仅凭2025末期3.8与2026中期0.5，无法否定2025全年4.3包含2025自身中期0.5的可能。缺2025完整分红与回购序列，不能认定跨年重复计算；应补归属年度/支付年度桥。",
+    "evidence": "evidence.md首部年度资料缺口；源L3182仅2025末期3.8元，共283.89299亿；源L3673是2026中期预案，并不证明2025没有中期股利。"
+  },
+  {
+    "id": "C022",
+    "outcome": "insufficient",
+    "kind": "scope_gap",
+    "is_correction": false,
+    "group": "",
+    "severity": "P2",
+    "reason": "分部毛利率在冻结材料不能核验；资产负债率却可由法定合并表直接复算，无需凭空金融抵销调整。材料不足不等于原稿错误。",
+    "evidence": "evidence.md源L1345资产643101789千元、L1359负债417308848千元，相除64.88999%；draft-company.md B3明确制造业口径，分部成本资料未提供。整体估值毛利率另见C030。"
+  },
+  {
+    "id": "C023",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D005",
+    "severity": "P1",
+    "reason": "管理稿明确写已派14%、全部回购均为资本返还，不能被其回购用途待核提示抵消。预案与实施及激励和注销应分列。",
+    "evidence": "draft-management.md L53、130、177；evidence.md源L3673股利37.24299亿待临时股东会批准未确认负债；L1190计划改为注销用途已过股东会，L3142区分激励库存股与尚未注销回购股份。"
+  },
+  {
+    "id": "C024",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D013",
+    "severity": "P1",
+    "reason": "2273亿并非其他非流动资产科目金额，且缺资产性质、可动用性与到期桥即支持偿付极宽裕，口径和推论均过强。",
+    "evidence": "draft-company.md L137；evidence.md源L1345其他非流动资产707.43788亿、一年内到期非流动资产1585.30134亿，两科目合计2292.73922亿，仍不等于2273亿，更不能整包当即用现金。"
+  },
+  {
+    "id": "C025",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D010",
+    "severity": "P1",
+    "reason": "以零关联交易支持股东友好评分，与明确交易冲突。市场条款披露不等于无交易，也不推定侵占。",
+    "evidence": "draft-management.md L258；evidence.md源L3585：(784897+2741725)千元=35.26622亿；L3589销售2687367千元=26.87367亿；L3581正常商业条款。"
+  },
+  {
+    "id": "C026",
+    "outcome": "partial",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D014",
+    "severity": "P2",
+    "reason": "依初稿价格与最新归母权益、总股数，PB3.23无法闭合，缺口径桥成立；不能在行情缺档或A/H差价未核时断言供应商PB必错。",
+    "evidence": "draft-valuation.md L28及价格86.05；evidence.md源L82权益2128.61055亿，源L17股本76.28798092亿；每股27.9023元，86.05×76.28798092/2128.61055=3.08397455。"
+  },
+  {
+    "id": "C027",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D002",
+    "severity": "P1",
+    "reason": "期末累计准备误写本期新计提，已传导资产质量及估值；正确净增加亦不能无条件等同当期计提。KUKA归属另归D006。",
+    "evidence": "evidence.md源L2970单位千元：期末1096473=10.96473亿，期初556411=5.56411亿，净增5.40062亿。draft-company.md L140同时写余额5.6→11.0和本期10.96；估值L16、60以此作折价依据。"
+  },
+  {
+    "id": "C028",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D008",
+    "severity": "P1",
+    "reason": "当前通过控股平台持股31.6%与28.49%原始披露冲突；个人H股穿透不能替代平台直接比例，法定主体亦应统一。",
+    "evidence": "draft-management.md L64、71-72；evidence.md源L3551美的控股有限公司、L3561期末直接持股和表决权28.49%，期初28.55%；L3553最终控制人何享健。"
+  },
+  {
+    "id": "C029",
+    "outcome": "invalid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "",
+    "severity": "P2",
+    "reason": "候选先用累计增速比相除判Q2约1%不成立，后又承认正确加权法可能支持4.7%；无季度基数只能列待核，不能据此纠错。国内海外增速同属资料缺口。",
+    "evidence": "evidence.md源L82仅H1累计3.55%；正确Q2增速=(gH1-w×gQ1)/(1-w)。若Q2=4.7%、Q1=2.5%，则w=(4.7-3.55)/(4.7-2.5)=52.2727%，数学上可成立。"
+  },
+  {
+    "id": "C030",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D015",
+    "severity": "P1",
+    "reason": "估值跨年核心财务表将制造业26.55%不加限定列整体毛利率，与合并营业收入成本复算不符；统一口径后整体为25.26%。",
+    "evidence": "draft-valuation.md L42；draft-company.md B3明确制造业26.55%；evidence.md源L3186、3188：(260042490-194366771)/260042490=25.25576455%，主营则约25.98%，均非26.55%。"
+  },
+  {
+    "id": "C031",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D012",
+    "severity": "P1",
+    "reason": "同稿推荐75—81元建仓与统一机械线冲突，非一般估值分区措辞，足以影响行动。",
+    "evidence": "draft-valuation.md L169-175、203、210；rules.md公式：87×(0.68+0.14×0.65)=67.077，推荐区高11.8%—20.8%。"
+  },
+  {
+    "id": "C032",
+    "outcome": "partial",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D002",
+    "severity": "P1",
+    "reason": "候选开头称10.96亿正确，随后又指出存流量问题，内部冲突。认可余额误写计提；驳回净增5.40亿必为新增计提、净额下降等于减值的推断。KUKA归因问题以C012/D006独立处理。",
+    "evidence": "evidence.md源L2970：准备10.96473-5.56411=5.40062亿；净商誉342.56859-315.76620=26.80239亿，包含总额变化等，不是减值流量表。draft-company.md L140明确误称本期10.96亿。"
+  }
+]

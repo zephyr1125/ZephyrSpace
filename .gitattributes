@@ -1,0 +1,2 @@
+# 冻结试验按原始字节计算SHA256，禁止Git换行转换破坏复核。
+/data/reviews/batch1-*/** -text

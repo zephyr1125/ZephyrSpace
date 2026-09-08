@@ -1,0 +1,12 @@
+{
+  "draft_coverage": "三份draft均完整读取",
+  "started_at": "2026-09-08T21:38:28+08:00",
+  "ended_at": "2026-09-08T21:42:13.9701148+08:00",
+  "start_note": "取上一公司timing写入并开始本家公司manifest/evidence同一工具调用时间，近似秒级",
+  "uncovered": [
+    "历史原始序列、行情与预测缺失",
+    "证据包非核心经营说明/合规条款未逐行覆盖",
+    "逆向DCF/PVGO完整模型链未展开单独发现，受12条上限约束"
+  ],
+  "network_used": false
+}

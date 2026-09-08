@@ -1,0 +1,312 @@
+[
+  {
+    "id": "C001",
+    "outcome": "insufficient",
+    "kind": "scope_gap",
+    "is_correction": true,
+    "group": "",
+    "severity": "P2",
+    "reason": "冻结行情及预测缺档成立，但缺档不证明数据错误；初稿已经解释API与自算TTM差异，并非未处理矛盾。机械买入价可条件复算，不能因行情缺失宣称公式无法复算。",
+    "evidence": "evidence.md首部材料缺口；draft-valuation.md L44-54、加权合理估值及价格区间：30×(0.68+0.14×0.55)=22.71。"
+  },
+  {
+    "id": "C002",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D001",
+    "severity": "P2",
+    "reason": "同一减持分别扣稳定性及对齐，原稿自称团队极稳定并将事件定性为股东对齐问题，未给稳定性独立传导证据。成立的是评分解释冲突，不自动恢复两分。",
+    "evidence": "draft-company.md F1及L516-517；evidence.md源L937仅确认在任董事长兼总裁持股减少61,990,309股；rules.md同事实扣分须区分机制。"
+  },
+  {
+    "id": "C003",
+    "outcome": "insufficient",
+    "kind": "scope_gap",
+    "is_correction": true,
+    "group": "",
+    "severity": "P2",
+    "reason": "冻结行情及预测缺档成立，但缺档不证明数据错误；初稿已经解释API与自算TTM差异，并非未处理矛盾。机械买入价可条件复算，不能因行情缺失宣称公式无法复算。",
+    "evidence": "evidence.md首部材料缺口；draft-valuation.md L44-54、加权合理估值及价格区间：30×(0.68+0.14×0.55)=22.71。"
+  },
+  {
+    "id": "C004",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D002",
+    "severity": "P1",
+    "reason": "F2.5明示上限2却计2.5，再四舍五入抬高总分；按现有子项F=11，公司80。",
+    "evidence": "draft-company.md L516-520：3+3+2+3=11，其他维度8+15+17+13+16=69，总计80；表内11.5→12违反自身上限。"
+  },
+  {
+    "id": "C005",
+    "outcome": "insufficient",
+    "kind": "scope_gap",
+    "is_correction": true,
+    "group": "",
+    "severity": "P2",
+    "reason": "9.1亿和6.3亿缺独立明细，不能验证其分类，也不能推定分类错误。原稿已明确三项不能整体加回，候选关于整体当作非经营项目的影响并不适用。",
+    "evidence": "evidence.md源L1095资产减值24.55875173亿、L3847商誉15.46544866亿，差9.09330307亿只能确定其余资产减值；draft-company.md L439及估值更新摘要明确经营减值、税项不可整体加回。"
+  },
+  {
+    "id": "C006",
+    "outcome": "insufficient",
+    "kind": "scope_gap",
+    "is_correction": false,
+    "group": "",
+    "severity": "P2",
+    "reason": "不同期别的H1数据不能反驳FY2025年度数据；记录年报材料缺口，不计纠错。",
+    "evidence": "evidence.md首部缺2023—2025完整年报；源L198-212为2026H1；draft-company.md L172-175、233-238为FY2025。"
+  },
+  {
+    "id": "C007",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D002",
+    "severity": "P1",
+    "reason": "F2.5明示上限2却计2.5，再四舍五入抬高总分；按现有子项F=11，公司80。",
+    "evidence": "draft-company.md L516-520：3+3+2+3=11，其他维度8+15+17+13+16=69，总计80；表内11.5→12违反自身上限。"
+  },
+  {
+    "id": "C008",
+    "outcome": "partial",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D003",
+    "severity": "P2",
+    "reason": "展示表漏2032并错列终值PV成立；但补全时轴后25.7元可复算，不能说最终锚值错误或必须重算综合价值。属于计算展示的局部缺陷。",
+    "evidence": "draft-valuation.md L130-144：D2032=1.55×1.06^5=2.07425；七期股利PV=8.27645，终值PV=17.41350，合计25.68995。表中六行PV加17.55=24.71；evidence.md源L571给D0=1.38。"
+  },
+  {
+    "id": "C009",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D004",
+    "severity": "P1",
+    "reason": "当前远期PE和历史TTM分位不属同口径；低于P20亦不能推出低于P10。缺陷是分位与低估叙事，16倍主观估值选择本身不被否定。",
+    "evidence": "draft-valuation.md L47、52、106-119、271：26.45/2.07=12.7778，对比历史P20=14.87、P50=17.15；没有历史同期限forward序列或P10数据。"
+  },
+  {
+    "id": "C010",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D005",
+    "severity": "P1",
+    "reason": "以合并OCF减资本支出直接给母公司每股权益价值缺少现金流归属、利息及债务正常化桥。不能把全部合并现金视为归母FCFE；不据此猜修正价格。",
+    "evidence": "draft-valuation.md L152-170：143.44-50=93.44亿，再除63.25亿股并用权益收益率；evidence.md源L1123利息归筹资现金流且含少数股东分红39,738,744.24元，源L1069有少数股东权益。H1数据只证明结构，不替换FY2025金额。"
+  },
+  {
+    "id": "C011",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D006",
+    "severity": "P1",
+    "reason": "所报隐含增速能由只折现末期股价重现，却漏说明期间零分配；持续分红公司不能将此称完整市场隐含回报。缺少期间分配及2027起点时点桥。",
+    "evidence": "draft-valuation.md L176-200：g=1.095×(26.45/(2.07×18))^(1/10)-1≈5.81%；等式没有十年股利；evidence.md源L571存在1.38元分红；同稿DDM设75%派息。"
+  },
+  {
+    "id": "C012",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D007",
+    "severity": "P2",
+    "reason": "同截止日半年报为27次，原稿28次与原始披露冲突，未给截止日前新增一次的凭证。",
+    "evidence": "draft-management.md L140；evidence.md源L571：累计27次，672.95亿元。"
+  },
+  {
+    "id": "C013",
+    "outcome": "invalid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "",
+    "severity": "P2",
+    "reason": "候选把15.47亿描述为尚含少数股东分担的全额减值，忽略原文已从全商誉26.14亿降至合并确认15.47亿。不能再机械按持股比例分摊。税务影响缺桥可待核，但不足证明加回错误；原稿已标推算非法定且拒绝整体核心利润加回。",
+    "evidence": "evidence.md源L3876明确26.137314亿为含少数股东全部商誉，15.465449亿为合并确认；源L3847为已确认商誉增加。draft-company.md H1损益表注明推算仅理解底色、非法定口径，估值摘要明确核心利润口径局限。"
+  },
+  {
+    "id": "C014",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D005",
+    "severity": "P1",
+    "reason": "以合并OCF减资本支出直接给母公司每股权益价值缺少现金流归属、利息及债务正常化桥。不能把全部合并现金视为归母FCFE；不据此猜修正价格。",
+    "evidence": "draft-valuation.md L152-170：143.44-50=93.44亿，再除63.25亿股并用权益收益率；evidence.md源L1123利息归筹资现金流且含少数股东分红39,738,744.24元，源L1069有少数股东权益。H1数据只证明结构，不替换FY2025金额。"
+  },
+  {
+    "id": "C015",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D003",
+    "severity": "P2",
+    "reason": "最终匿名措辞明确基准25.7可由补全2032复算，只纠正展示漏2032及终值现值错误，全部成立；与C008同属D003、P2。此次变更仅来自匿名化时序同步，不按身份改判。",
+    "evidence": "draft-valuation.md L130-144：D2032=1.55×1.06^5=2.07425；七期股利PV=8.27645，终值PV=17.41350，合计25.68995。表中六行PV加17.55=24.71；evidence.md源L571给D0=1.38。"
+  },
+  {
+    "id": "C016",
+    "outcome": "partial",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D008",
+    "severity": "P1",
+    "reason": "有息负债低于同日短借成立；并列的利息保障问题亦成立但归D010，以本条主要负债主张去重，非两个新增组。",
+    "evidence": "draft-company.md L444-448；evidence.md源L1069年末短借456.30626028亿，长借4.72479633亿，合计461.03105661亿>380亿。利息保障另见C020/D010。"
+  },
+  {
+    "id": "C017",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D009",
+    "severity": "P1",
+    "reason": "无频繁关联交易的正面勾选与重大经常采购直接冲突。无异常不能替代无交易；不能因此推断利益输送。",
+    "evidence": "draft-management.md L164；evidence.md源L5464单位万元、L5466向Youran采购784505.39万元=78.450539亿元，上期77.107626亿元；公司稿会计关联交易段已承认关联采购，更构成内部不一致。"
+  },
+  {
+    "id": "C018",
+    "outcome": "partial",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D011",
+    "severity": "P1",
+    "reason": "最新62%与H1实数冲突成立；价格、套现金额及减持前69.42%仅缺公告，不能断错，也不能据材料缺档直接重扣治理分。",
+    "evidence": "draft-management.md L75、187与公司风险地图仍62%；evidence.md源L905：116338449/224756319=51.7620386%；源L937只有持股变动。"
+  },
+  {
+    "id": "C019",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D011",
+    "severity": "P1",
+    "reason": "历史69%可以带日期保留；当前风险状态仍写62%与已更新51.8%冲突，应统一时点。",
+    "evidence": "draft-management.md L75、170、187；draft-company.md L574；evidence.md源L905：116338449/224756319=51.7620386%。"
+  },
+  {
+    "id": "C020",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D010",
+    "severity": "P1",
+    "reason": "净财务费用绝对值不是毛利息支出，且稿内计算亦错误，不能据此声称利息保障极宽裕。",
+    "evidence": "draft-company.md L446-448：(129.94-6.91)/6.91=17.80463，非18.8；evidence.md源L1095将利息收入与利息费用分别列示，H1仅证明科目差异，不用于更正FY2025金额。"
+  },
+  {
+    "id": "C021",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D011",
+    "severity": "P1",
+    "reason": "历史69%可以带日期保留；当前风险状态仍写62%与已更新51.8%冲突，应统一时点。",
+    "evidence": "draft-management.md L75、170、187；draft-company.md L574；evidence.md源L905：116338449/224756319=51.7620386%。"
+  },
+  {
+    "id": "C022",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D008",
+    "severity": "P1",
+    "reason": "同一期末负债下限就超过原稿估值；无需完整年报即可否定380亿。",
+    "evidence": "draft-company.md L444；evidence.md源L1069：2025-12-31短借456.30626028亿+长借4.72479633亿=461.03105661亿，尚未加其他项目。"
+  },
+  {
+    "id": "C023",
+    "outcome": "non_defect",
+    "kind": "confirmation",
+    "is_correction": false,
+    "group": "",
+    "severity": "P2",
+    "reason": "原稿明确仅方案未实施未计每股增厚；待核公告属于材料缺口，没有已证实传导矛盾。",
+    "evidence": "draft-management.md更新摘要、draft-valuation.md L34及催化剂：若获股东会通过并实施，不提前计入。"
+  },
+  {
+    "id": "C024",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D012",
+    "severity": "P1",
+    "reason": "三因子与列示ROE不等且杠杆贡献解释颠倒，削弱正式ROE质量判断。加权ROE可不同但必须另列而非写等式。",
+    "evidence": "draft-company.md L393-405：2021为7.90%×1.08×2.09=17.83188%，非25.59%；2025=19.76%，非20.87%；(2.6-1)/2.6=61.5385%，并非约38%杠杆贡献。evidence.md源L106为加权ROE。"
+  },
+  {
+    "id": "C025",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D006",
+    "severity": "P1",
+    "reason": "所报隐含增速能由只折现末期股价重现，却漏说明期间零分配；持续分红公司不能将此称完整市场隐含回报。缺少期间分配及2027起点时点桥。",
+    "evidence": "draft-valuation.md L176-200：g=1.095×(26.45/(2.07×18))^(1/10)-1≈5.81%；等式没有十年股利；evidence.md源L571存在1.38元分红；同稿DDM设75%派息。"
+  },
+  {
+    "id": "C026",
+    "outcome": "insufficient",
+    "kind": "scope_gap",
+    "is_correction": false,
+    "group": "",
+    "severity": "P2",
+    "reason": "期末51.8%正确，候选自己51.75%舍入不准确；期初69.42%仅缺外部公告，不是证实原稿错误。",
+    "evidence": "evidence.md源L905和L937：期末51.7620%，期初持股286746628股，无期初质押数。"
+  },
+  {
+    "id": "C027",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D012",
+    "severity": "P1",
+    "reason": "三因子与列示ROE不等且杠杆贡献解释颠倒，削弱正式ROE质量判断。加权ROE可不同但必须另列而非写等式。",
+    "evidence": "draft-company.md L393-405：2021为7.90%×1.08×2.09=17.83188%，非25.59%；2025=19.76%，非20.87%；(2.6-1)/2.6=61.5385%，并非约38%杠杆贡献。evidence.md源L106为加权ROE。"
+  },
+  {
+    "id": "C028",
+    "outcome": "non_defect",
+    "kind": "confirmation",
+    "is_correction": false,
+    "group": "",
+    "severity": "P2",
+    "reason": "属于正确性确认，不计缺陷。总商誉净额与归母权益比约1.18%可复算；不将确认条目转成新发现。",
+    "evidence": "evidence.md源L1069：633004681.58/53711364981.99=1.1785%；源L3839、3847原值减准备得到633004681.58元。"
+  },
+  {
+    "id": "C029",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D004",
+    "severity": "P1",
+    "reason": "当前远期PE和历史TTM分位不属同口径；低于P20亦不能推出低于P10。缺陷是分位与低估叙事，16倍主观估值选择本身不被否定。",
+    "evidence": "draft-valuation.md L47、52、106-119、271：26.45/2.07=12.7778，对比历史P20=14.87、P50=17.15；没有历史同期限forward序列或P10数据。"
+  },
+  {
+    "id": "C030",
+    "outcome": "non_defect",
+    "kind": "improvement",
+    "is_correction": false,
+    "group": "",
+    "severity": "P2",
+    "reason": "原稿已引用官方现金流原因并将可持续性列待Q3验证，没有断言合同负债减少是现金流改善原因。更细拆分是建议。",
+    "evidence": "draft-company.md L541-543；evidence.md源L316销售收现增加/采购付款减少，源L338预收货款减少，源L1069合同负债减少56.153829亿元。"
+  },
+  {
+    "id": "C031",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D009",
+    "severity": "P1",
+    "reason": "无频繁关联交易的正面勾选与重大经常采购直接冲突。无异常不能替代无交易；不能因此推断利益输送。",
+    "evidence": "draft-management.md L164；evidence.md源L5464单位万元、L5466向Youran采购784505.39万元=78.450539亿元，上期77.107626亿元；公司稿会计关联交易段已承认关联采购，更构成内部不一致。"
+  }
+]

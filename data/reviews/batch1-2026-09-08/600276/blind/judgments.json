@@ -1,0 +1,192 @@
+[
+  {
+    "id": "C001",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D001",
+    "severity": "P2",
+    "reason": "章节标题未同步，子项与总分正确；不据此改动总分。",
+    "evidence": "draft-company.md:251、306标题10/15、15/20；298–302合计11，389–395合计16。"
+  },
+  {
+    "id": "C002",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D002",
+    "severity": "P2",
+    "reason": "期末股数重算可用，但不能标成年报基本EPS或2026年8月TTM；88亿元对应1.4585而非1.48。与C004合并为每股口径核对缺陷。",
+    "evidence": "draft-valuation.md:32、34、69；evidence.md内2025年报L2039基本EPS1.19人民币、L116发行H股；77.11×1.10/66.37=1.278；88×1.10/66.37=1.45849。"
+  },
+  {
+    "id": "C003",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D003",
+    "severity": "P1",
+    "reason": "全表与明确声明的含现金公式矛盾，属于可直接复算的系统性表格错误。",
+    "evidence": "draft-valuation.md:160–168；1.48×29+4=46.92，表列42.9；1.41×27+4=42.07，表列38.1。"
+  },
+  {
+    "id": "C004",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D002",
+    "severity": "P2",
+    "reason": "88亿元与EPS1.48标签不一致，重复C002中的预测EPS问题。",
+    "evidence": "draft-valuation.md:69、165；88×1.10/66.37=1.45849；1.48×66.37/1.10=89.2978亿元，30倍差0.6453港元。"
+  },
+  {
+    "id": "C005",
+    "outcome": "insufficient",
+    "kind": "scope_gap",
+    "is_correction": true,
+    "group": "",
+    "severity": "P2",
+    "reason": "冻结包确实缺半年报及近期输入，但缺少材料不能推定原稿数字错误；应列待核项而非重要事实纠错。",
+    "evidence": "evidence.md:6明确未归档2026半年报；manifest截止2026-08-29；draft-valuation.md:47–57及数据来源引用半年报，不能以包外来源核验。"
+  },
+  {
+    "id": "C006",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D004",
+    "severity": "P1",
+    "reason": "同样的低派息、回购非注销被两维重复直接扣分，未提供独立经济机制，且文字认可研发再投资。仅成立重复扣分依据缺失，不代表应全加回7分。",
+    "evidence": "draft-management.md:257扣派息2及非注销2；259再扣派息1及非注销2；evidence.md内2025年报L1273现金分红率17.20%；rules要求区分重复事实的经济机制。"
+  },
+  {
+    "id": "C007",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D003",
+    "severity": "P1",
+    "reason": "全表与明确声明的含现金公式矛盾，属于可直接复算的系统性表格错误。",
+    "evidence": "draft-valuation.md:160–168；1.48×29+4=46.92，表列42.9；1.41×27+4=42.07，表列38.1。"
+  },
+  {
+    "id": "C008",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D005",
+    "severity": "P1",
+    "reason": "全年尚未结束，半年增速与激励门槛不能证明全年指引已经落空或撤回；其被用于执行与信用扣分，逻辑错误已成立，不需先证实半年数字。",
+    "evidence": "manifest截止2026-08-29；evidence.md内年报L1039及2026Q1 L67均为全年力争超过30%；draft-company.md:268–270明确落空，draft-management.md:79、89–95标为失信。"
+  },
+  {
+    "id": "C009",
+    "outcome": "non_defect",
+    "kind": "confirmation",
+    "is_correction": false,
+    "group": "",
+    "severity": "P2",
+    "reason": "主要是主观分数差异不构成错误的确认，并非具体纠错；其中2026H1尚未披露说法也不能由材料缺失推出。",
+    "evidence": "rules允许主观评分分歧；evidence.md:6仅说本地缺原始半年报；draft-management.md:254–263各维合计78。"
+  },
+  {
+    "id": "C010",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D006",
+    "severity": "P1",
+    "reason": "逆向DCF未列期间现金分配及再投资，给出的9–11%无法复算，却用来支持定价不激进。16.66%仅是无期间分配的条件例，并非裁定正确增速。",
+    "evidence": "draft-valuation.md:114–124；1.1×(47.94/(1.48×18))^(1/10)-1=16.6565%；evidence.md内年报L1273派息17.20%，不能默认为全额分配。"
+  },
+  {
+    "id": "C011",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D007",
+    "severity": "P1",
+    "reason": "总归母利润未经经营及正常化桥接便资本化再加现金，核心模型未闭合；现金收益重计与许可正常化是相关但不同机制，主组按现金重计D007，本项许可部分与D008重叠，不另算独立发现。不能量化认定高估金额。",
+    "evidence": "draft-valuation.md:69–87；evidence.md内2025年报L2039利息收入785,387,184.81元；L288许可33.92亿元含首付款；初稿未给2026E税后金融收益扣除桥。"
+  },
+  {
+    "id": "C012",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D007",
+    "severity": "P1",
+    "reason": "直接把总EPS称经营EPS且另加现金，缺少相应税后金融收益扣除，重要估值模型链不成立；未知预测金融收益金额，不机械按2025年金额扣2026年。",
+    "evidence": "draft-valuation.md:63–87；evidence.md内年报L2039利息7.8539亿元、公允价值变动1.7357亿元；2026E总归母88亿元无经营利润桥。"
+  },
+  {
+    "id": "C013",
+    "outcome": "partial",
+    "kind": "scope_gap",
+    "is_correction": false,
+    "group": "",
+    "severity": "P2",
+    "reason": "认可预测来源和净现金待核、公式不等于假设正确；但34.24是机械公式结果，并非52周最低区间推导。该项总体是输入验证改进，不计纠错。",
+    "evidence": "draft-valuation.md:69–81、210–211；46×(0.68+0.14×0.46)=34.2424；预测已明确标预测，evidence.md:6说明未冻结来源。"
+  },
+  {
+    "id": "C014",
+    "outcome": "insufficient",
+    "kind": "scope_gap",
+    "is_correction": true,
+    "group": "",
+    "severity": "P2",
+    "reason": "2025全年授权信息不能证明2025H1收款日期，也不能验证2026H1现金归因。原稿确有偏强归因，但候选未以同期反证证明其错误；H股融资本属筹资现金，不能作为OCF反向因素。",
+    "evidence": "draft-company.md:334–338称主要来自授权现金且列薪酬税费变化，并非完全归因；evidence.md内年报L114为全年许可、L116为H股融资；evidence.md:6缺半年报。"
+  },
+  {
+    "id": "C015",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D006",
+    "severity": "P1",
+    "reason": "逆向DCF未列期间现金分配及再投资，给出的9–11%无法复算，却用来支持定价不激进。16.66%仅是无期间分配的条件例，并非裁定正确增速。",
+    "evidence": "draft-valuation.md:114–124；1.1×(47.94/(1.48×18))^(1/10)-1=16.6565%；evidence.md内年报L1273派息17.20%，不能默认为全额分配。"
+  },
+  {
+    "id": "C016",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D005",
+    "severity": "P1",
+    "reason": "全年尚未结束，半年增速与激励门槛不能证明全年指引已经落空或撤回；其被用于执行与信用扣分，逻辑错误已成立，不需先证实半年数字。",
+    "evidence": "manifest截止2026-08-29；evidence.md内年报L1039及2026Q1 L67均为全年力争超过30%；draft-company.md:268–270明确落空，draft-management.md:79、89–95标为失信。"
+  },
+  {
+    "id": "C017",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D008",
+    "severity": "P1",
+    "reason": "原稿承认BD时点波动却将未拆分的总利润作为唯一正式持续经营PE锚，缺正常化桥是可确认的模型链缺陷；不认定所有授权收入都应剔除或实际高估多少。",
+    "evidence": "draft-valuation.md:69–85、175–182；evidence.md内年报L114、288明确首付款及履约确认，L1063里程碑条件；未列2026E持续授权利润拆分。"
+  },
+  {
+    "id": "C018",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D004",
+    "severity": "P1",
+    "reason": "同样的低派息、回购非注销被两维重复直接扣分，未提供独立经济机制，且文字认可研发再投资。仅成立重复扣分依据缺失，不代表应全加回7分。",
+    "evidence": "draft-management.md:257扣派息2及非注销2；259再扣派息1及非注销2；evidence.md内2025年报L1273现金分红率17.20%；rules要求区分重复事实的经济机制。"
+  },
+  {
+    "id": "C019",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D001",
+    "severity": "P2",
+    "reason": "章节标题未同步，子项与总分正确；不据此改动总分。",
+    "evidence": "draft-company.md:251、306标题10/15、15/20；298–302合计11，389–395合计16。"
+  }
+]

@@ -1,0 +1,5268 @@
+{
+  "company": "万华化学",
+  "cutoff": "2026-09-06",
+  "scope": "仅材料准备；未复核、未纠错；删除历史审核轨迹，保留当期事实和原有判断",
+  "draft_sources": [
+    {
+      "draft": "data/reviews/batch1-2026-09-08/600309/draft-company.md",
+      "source": "深度分析/万华化学 深度分析 70 2026-09-06.md",
+      "source_sha256": "fe68292d620f9aa113375aad2cfe3b61fcfeec2e5677935f4400a56a886b63e3",
+      "prepared_sha256": "0c1ecf8b2f0757bf26f725c5c862ea23c28a09e5bf1bdd3c49b2510f7acee743",
+      "line_mapping": [
+        {
+          "draft_line": 1,
+          "source_line": 1
+        },
+        {
+          "draft_line": 2,
+          "source_line": 2
+        },
+        {
+          "draft_line": 3,
+          "source_line": 3
+        },
+        {
+          "draft_line": 4,
+          "source_line": 4
+        },
+        {
+          "draft_line": 5,
+          "source_line": 5
+        },
+        {
+          "draft_line": 6,
+          "source_line": 6
+        },
+        {
+          "draft_line": 7,
+          "source_line": 7
+        },
+        {
+          "draft_line": 8,
+          "source_line": 8
+        },
+        {
+          "draft_line": 9,
+          "source_line": 9
+        },
+        {
+          "draft_line": 10,
+          "source_line": 10
+        },
+        {
+          "draft_line": 11,
+          "source_line": 11
+        },
+        {
+          "draft_line": 12,
+          "source_line": 12
+        },
+        {
+          "draft_line": 13,
+          "source_line": 13
+        },
+        {
+          "draft_line": 14,
+          "source_line": 14
+        },
+        {
+          "draft_line": 15,
+          "source_line": 15
+        },
+        {
+          "draft_line": 16,
+          "source_line": 16
+        },
+        {
+          "draft_line": 17,
+          "source_line": 17
+        },
+        {
+          "draft_line": 18,
+          "source_line": 18
+        },
+        {
+          "draft_line": 19,
+          "source_line": 19
+        },
+        {
+          "draft_line": 20,
+          "source_line": 20
+        },
+        {
+          "draft_line": 21,
+          "source_line": 21
+        },
+        {
+          "draft_line": 22,
+          "source_line": 22
+        },
+        {
+          "draft_line": 23,
+          "source_line": 23
+        },
+        {
+          "draft_line": 24,
+          "source_line": 24
+        },
+        {
+          "draft_line": 25,
+          "source_line": 25
+        },
+        {
+          "draft_line": 26,
+          "source_line": 26
+        },
+        {
+          "draft_line": 27,
+          "source_line": 27
+        },
+        {
+          "draft_line": 28,
+          "source_line": 28
+        },
+        {
+          "draft_line": 29,
+          "source_line": 29
+        },
+        {
+          "draft_line": 30,
+          "source_line": 30
+        },
+        {
+          "draft_line": 31,
+          "source_line": 31
+        },
+        {
+          "draft_line": 32,
+          "source_line": 32
+        },
+        {
+          "draft_line": 33,
+          "source_line": 33
+        },
+        {
+          "draft_line": 34,
+          "source_line": 34
+        },
+        {
+          "draft_line": 35,
+          "source_line": 35
+        },
+        {
+          "draft_line": 36,
+          "source_line": 36
+        },
+        {
+          "draft_line": 37,
+          "source_line": 37
+        },
+        {
+          "draft_line": 38,
+          "source_line": 38
+        },
+        {
+          "draft_line": 39,
+          "source_line": 39
+        },
+        {
+          "draft_line": 40,
+          "source_line": 40
+        },
+        {
+          "draft_line": 41,
+          "source_line": 41
+        },
+        {
+          "draft_line": 42,
+          "source_line": 42
+        },
+        {
+          "draft_line": 43,
+          "source_line": 43
+        },
+        {
+          "draft_line": 44,
+          "source_line": 44
+        },
+        {
+          "draft_line": 45,
+          "source_line": 45
+        },
+        {
+          "draft_line": 46,
+          "source_line": 46
+        },
+        {
+          "draft_line": 47,
+          "source_line": 47
+        },
+        {
+          "draft_line": 48,
+          "source_line": 48
+        },
+        {
+          "draft_line": 49,
+          "source_line": 49
+        },
+        {
+          "draft_line": 50,
+          "source_line": 50
+        },
+        {
+          "draft_line": 51,
+          "source_line": 51
+        },
+        {
+          "draft_line": 52,
+          "source_line": 52
+        },
+        {
+          "draft_line": 53,
+          "source_line": 53
+        },
+        {
+          "draft_line": 54,
+          "source_line": 54
+        },
+        {
+          "draft_line": 55,
+          "source_line": 55
+        },
+        {
+          "draft_line": 56,
+          "source_line": 56
+        },
+        {
+          "draft_line": 57,
+          "source_line": 57
+        },
+        {
+          "draft_line": 58,
+          "source_line": 58
+        },
+        {
+          "draft_line": 59,
+          "source_line": 59
+        },
+        {
+          "draft_line": 60,
+          "source_line": 60
+        },
+        {
+          "draft_line": 61,
+          "source_line": 61
+        },
+        {
+          "draft_line": 62,
+          "source_line": 62
+        },
+        {
+          "draft_line": 63,
+          "source_line": 63
+        },
+        {
+          "draft_line": 64,
+          "source_line": 64
+        },
+        {
+          "draft_line": 65,
+          "source_line": 65
+        },
+        {
+          "draft_line": 66,
+          "source_line": 66
+        },
+        {
+          "draft_line": 67,
+          "source_line": 67
+        },
+        {
+          "draft_line": 68,
+          "source_line": 68
+        },
+        {
+          "draft_line": 69,
+          "source_line": 69
+        },
+        {
+          "draft_line": 70,
+          "source_line": 70
+        },
+        {
+          "draft_line": 71,
+          "source_line": 71
+        },
+        {
+          "draft_line": 72,
+          "source_line": 72
+        },
+        {
+          "draft_line": 73,
+          "source_line": 73
+        },
+        {
+          "draft_line": 74,
+          "source_line": 74
+        },
+        {
+          "draft_line": 75,
+          "source_line": 75
+        },
+        {
+          "draft_line": 76,
+          "source_line": 76
+        },
+        {
+          "draft_line": 77,
+          "source_line": 77
+        },
+        {
+          "draft_line": 78,
+          "source_line": 78
+        },
+        {
+          "draft_line": 79,
+          "source_line": 79
+        },
+        {
+          "draft_line": 80,
+          "source_line": 80
+        },
+        {
+          "draft_line": 81,
+          "source_line": 81
+        },
+        {
+          "draft_line": 82,
+          "source_line": 82
+        },
+        {
+          "draft_line": 83,
+          "source_line": 83
+        },
+        {
+          "draft_line": 84,
+          "source_line": 84
+        },
+        {
+          "draft_line": 85,
+          "source_line": 85
+        },
+        {
+          "draft_line": 86,
+          "source_line": 86
+        },
+        {
+          "draft_line": 87,
+          "source_line": 87
+        },
+        {
+          "draft_line": 88,
+          "source_line": 88
+        },
+        {
+          "draft_line": 89,
+          "source_line": 89
+        },
+        {
+          "draft_line": 90,
+          "source_line": 90
+        },
+        {
+          "draft_line": 91,
+          "source_line": 91
+        },
+        {
+          "draft_line": 92,
+          "source_line": 92
+        },
+        {
+          "draft_line": 93,
+          "source_line": 93
+        },
+        {
+          "draft_line": 94,
+          "source_line": 94
+        },
+        {
+          "draft_line": 95,
+          "source_line": 95
+        },
+        {
+          "draft_line": 96,
+          "source_line": 96
+        },
+        {
+          "draft_line": 97,
+          "source_line": 97
+        },
+        {
+          "draft_line": 98,
+          "source_line": 98
+        },
+        {
+          "draft_line": 99,
+          "source_line": 99
+        },
+        {
+          "draft_line": 100,
+          "source_line": 100
+        },
+        {
+          "draft_line": 101,
+          "source_line": 101
+        },
+        {
+          "draft_line": 102,
+          "source_line": 102
+        },
+        {
+          "draft_line": 103,
+          "source_line": 103
+        },
+        {
+          "draft_line": 104,
+          "source_line": 104
+        },
+        {
+          "draft_line": 105,
+          "source_line": 105
+        },
+        {
+          "draft_line": 106,
+          "source_line": 106
+        },
+        {
+          "draft_line": 107,
+          "source_line": 107
+        },
+        {
+          "draft_line": 108,
+          "source_line": 108
+        },
+        {
+          "draft_line": 109,
+          "source_line": 109
+        },
+        {
+          "draft_line": 110,
+          "source_line": 110
+        },
+        {
+          "draft_line": 111,
+          "source_line": 111
+        },
+        {
+          "draft_line": 112,
+          "source_line": 112
+        },
+        {
+          "draft_line": 113,
+          "source_line": 113
+        },
+        {
+          "draft_line": 114,
+          "source_line": 114
+        },
+        {
+          "draft_line": 115,
+          "source_line": 115
+        },
+        {
+          "draft_line": 116,
+          "source_line": 116
+        },
+        {
+          "draft_line": 117,
+          "source_line": 117
+        },
+        {
+          "draft_line": 118,
+          "source_line": 118
+        },
+        {
+          "draft_line": 119,
+          "source_line": 119
+        },
+        {
+          "draft_line": 120,
+          "source_line": 120
+        },
+        {
+          "draft_line": 121,
+          "source_line": 121
+        },
+        {
+          "draft_line": 122,
+          "source_line": 122
+        },
+        {
+          "draft_line": 123,
+          "source_line": 123
+        },
+        {
+          "draft_line": 124,
+          "source_line": 124
+        },
+        {
+          "draft_line": 125,
+          "source_line": 125
+        },
+        {
+          "draft_line": 126,
+          "source_line": 126
+        },
+        {
+          "draft_line": 127,
+          "source_line": 128
+        },
+        {
+          "draft_line": 128,
+          "source_line": 129
+        },
+        {
+          "draft_line": 129,
+          "source_line": 130
+        },
+        {
+          "draft_line": 130,
+          "source_line": 131
+        },
+        {
+          "draft_line": 131,
+          "source_line": 132
+        },
+        {
+          "draft_line": 132,
+          "source_line": 133
+        },
+        {
+          "draft_line": 133,
+          "source_line": 134
+        },
+        {
+          "draft_line": 134,
+          "source_line": 135
+        },
+        {
+          "draft_line": 135,
+          "source_line": 136
+        },
+        {
+          "draft_line": 136,
+          "source_line": 137
+        },
+        {
+          "draft_line": 137,
+          "source_line": 138
+        },
+        {
+          "draft_line": 138,
+          "source_line": 139
+        },
+        {
+          "draft_line": 139,
+          "source_line": 140
+        },
+        {
+          "draft_line": 140,
+          "source_line": 141
+        },
+        {
+          "draft_line": 141,
+          "source_line": 142
+        },
+        {
+          "draft_line": 142,
+          "source_line": 143
+        },
+        {
+          "draft_line": 143,
+          "source_line": 144
+        },
+        {
+          "draft_line": 144,
+          "source_line": 145
+        },
+        {
+          "draft_line": 145,
+          "source_line": 146
+        },
+        {
+          "draft_line": 146,
+          "source_line": 147
+        },
+        {
+          "draft_line": 147,
+          "source_line": 148
+        },
+        {
+          "draft_line": 148,
+          "source_line": 149
+        },
+        {
+          "draft_line": 149,
+          "source_line": 150
+        },
+        {
+          "draft_line": 150,
+          "source_line": 151
+        },
+        {
+          "draft_line": 151,
+          "source_line": 152
+        },
+        {
+          "draft_line": 152,
+          "source_line": 153
+        },
+        {
+          "draft_line": 153,
+          "source_line": 154
+        },
+        {
+          "draft_line": 154,
+          "source_line": 155
+        },
+        {
+          "draft_line": 155,
+          "source_line": 156
+        },
+        {
+          "draft_line": 156,
+          "source_line": 157
+        },
+        {
+          "draft_line": 157,
+          "source_line": 158
+        },
+        {
+          "draft_line": 158,
+          "source_line": 159
+        },
+        {
+          "draft_line": 159,
+          "source_line": 160
+        },
+        {
+          "draft_line": 160,
+          "source_line": 161
+        },
+        {
+          "draft_line": 161,
+          "source_line": 162
+        },
+        {
+          "draft_line": 162,
+          "source_line": 163
+        },
+        {
+          "draft_line": 163,
+          "source_line": 164
+        },
+        {
+          "draft_line": 164,
+          "source_line": 165
+        },
+        {
+          "draft_line": 165,
+          "source_line": 166
+        },
+        {
+          "draft_line": 166,
+          "source_line": 167
+        },
+        {
+          "draft_line": 167,
+          "source_line": 168
+        },
+        {
+          "draft_line": 168,
+          "source_line": 169
+        },
+        {
+          "draft_line": 169,
+          "source_line": 170
+        },
+        {
+          "draft_line": 170,
+          "source_line": 171
+        },
+        {
+          "draft_line": 171,
+          "source_line": 172
+        },
+        {
+          "draft_line": 172,
+          "source_line": 173
+        },
+        {
+          "draft_line": 173,
+          "source_line": 174
+        },
+        {
+          "draft_line": 174,
+          "source_line": 175
+        },
+        {
+          "draft_line": 175,
+          "source_line": 176
+        },
+        {
+          "draft_line": 176,
+          "source_line": 177
+        },
+        {
+          "draft_line": 177,
+          "source_line": 178
+        },
+        {
+          "draft_line": 178,
+          "source_line": 179
+        },
+        {
+          "draft_line": 179,
+          "source_line": 180
+        },
+        {
+          "draft_line": 180,
+          "source_line": 181
+        },
+        {
+          "draft_line": 181,
+          "source_line": 182
+        },
+        {
+          "draft_line": 182,
+          "source_line": 183
+        },
+        {
+          "draft_line": 183,
+          "source_line": 184
+        },
+        {
+          "draft_line": 184,
+          "source_line": 185
+        },
+        {
+          "draft_line": 185,
+          "source_line": 186
+        },
+        {
+          "draft_line": 186,
+          "source_line": 187
+        },
+        {
+          "draft_line": 187,
+          "source_line": 188
+        },
+        {
+          "draft_line": 188,
+          "source_line": 189
+        },
+        {
+          "draft_line": 189,
+          "source_line": 190
+        },
+        {
+          "draft_line": 190,
+          "source_line": 191
+        },
+        {
+          "draft_line": 191,
+          "source_line": 192
+        },
+        {
+          "draft_line": 192,
+          "source_line": 193
+        },
+        {
+          "draft_line": 193,
+          "source_line": 194
+        },
+        {
+          "draft_line": 194,
+          "source_line": 195
+        },
+        {
+          "draft_line": 195,
+          "source_line": 196
+        },
+        {
+          "draft_line": 196,
+          "source_line": 197
+        },
+        {
+          "draft_line": 197,
+          "source_line": 198
+        },
+        {
+          "draft_line": 198,
+          "source_line": 199
+        },
+        {
+          "draft_line": 199,
+          "source_line": 200
+        },
+        {
+          "draft_line": 200,
+          "source_line": 201
+        },
+        {
+          "draft_line": 201,
+          "source_line": 202
+        },
+        {
+          "draft_line": 202,
+          "source_line": 203
+        },
+        {
+          "draft_line": 203,
+          "source_line": 204
+        },
+        {
+          "draft_line": 204,
+          "source_line": 205
+        },
+        {
+          "draft_line": 205,
+          "source_line": 206
+        },
+        {
+          "draft_line": 206,
+          "source_line": 207
+        },
+        {
+          "draft_line": 207,
+          "source_line": 208
+        },
+        {
+          "draft_line": 208,
+          "source_line": 209
+        },
+        {
+          "draft_line": 209,
+          "source_line": 210
+        },
+        {
+          "draft_line": 210,
+          "source_line": 211
+        },
+        {
+          "draft_line": 211,
+          "source_line": 212
+        },
+        {
+          "draft_line": 212,
+          "source_line": 213
+        },
+        {
+          "draft_line": 213,
+          "source_line": 214
+        },
+        {
+          "draft_line": 214,
+          "source_line": 215
+        },
+        {
+          "draft_line": 215,
+          "source_line": 216
+        },
+        {
+          "draft_line": 216,
+          "source_line": 217
+        },
+        {
+          "draft_line": 217,
+          "source_line": 218
+        },
+        {
+          "draft_line": 218,
+          "source_line": 219
+        },
+        {
+          "draft_line": 219,
+          "source_line": 220
+        },
+        {
+          "draft_line": 220,
+          "source_line": 221
+        },
+        {
+          "draft_line": 221,
+          "source_line": 222
+        },
+        {
+          "draft_line": 222,
+          "source_line": 223
+        },
+        {
+          "draft_line": 223,
+          "source_line": 224
+        },
+        {
+          "draft_line": 224,
+          "source_line": 225
+        },
+        {
+          "draft_line": 225,
+          "source_line": 226
+        },
+        {
+          "draft_line": 226,
+          "source_line": 227
+        },
+        {
+          "draft_line": 227,
+          "source_line": 228
+        },
+        {
+          "draft_line": 228,
+          "source_line": 229
+        },
+        {
+          "draft_line": 229,
+          "source_line": 230
+        },
+        {
+          "draft_line": 230,
+          "source_line": 231
+        },
+        {
+          "draft_line": 231,
+          "source_line": 232
+        },
+        {
+          "draft_line": 232,
+          "source_line": 233
+        },
+        {
+          "draft_line": 233,
+          "source_line": 234
+        },
+        {
+          "draft_line": 234,
+          "source_line": 235
+        },
+        {
+          "draft_line": 235,
+          "source_line": 236
+        },
+        {
+          "draft_line": 236,
+          "source_line": 237
+        },
+        {
+          "draft_line": 237,
+          "source_line": 238
+        },
+        {
+          "draft_line": 238,
+          "source_line": 239
+        },
+        {
+          "draft_line": 239,
+          "source_line": 240
+        },
+        {
+          "draft_line": 240,
+          "source_line": 241
+        },
+        {
+          "draft_line": 241,
+          "source_line": 242
+        },
+        {
+          "draft_line": 242,
+          "source_line": 243
+        },
+        {
+          "draft_line": 243,
+          "source_line": 244
+        },
+        {
+          "draft_line": 244,
+          "source_line": 245
+        },
+        {
+          "draft_line": 245,
+          "source_line": 246
+        },
+        {
+          "draft_line": 246,
+          "source_line": 247
+        },
+        {
+          "draft_line": 247,
+          "source_line": 248
+        },
+        {
+          "draft_line": 248,
+          "source_line": 249
+        },
+        {
+          "draft_line": 249,
+          "source_line": 250
+        },
+        {
+          "draft_line": 250,
+          "source_line": 251
+        },
+        {
+          "draft_line": 251,
+          "source_line": 252
+        },
+        {
+          "draft_line": 252,
+          "source_line": 253
+        },
+        {
+          "draft_line": 253,
+          "source_line": 254
+        },
+        {
+          "draft_line": 254,
+          "source_line": 255
+        },
+        {
+          "draft_line": 255,
+          "source_line": 256
+        },
+        {
+          "draft_line": 256,
+          "source_line": 257
+        },
+        {
+          "draft_line": 257,
+          "source_line": 258
+        },
+        {
+          "draft_line": 258,
+          "source_line": 259
+        },
+        {
+          "draft_line": 259,
+          "source_line": 260
+        },
+        {
+          "draft_line": 260,
+          "source_line": 261
+        },
+        {
+          "draft_line": 261,
+          "source_line": 262
+        },
+        {
+          "draft_line": 262,
+          "source_line": 263
+        },
+        {
+          "draft_line": 263,
+          "source_line": 264
+        },
+        {
+          "draft_line": 264,
+          "source_line": 265
+        },
+        {
+          "draft_line": 265,
+          "source_line": 266
+        },
+        {
+          "draft_line": 266,
+          "source_line": 267
+        },
+        {
+          "draft_line": 267,
+          "source_line": 268
+        },
+        {
+          "draft_line": 268,
+          "source_line": 269
+        },
+        {
+          "draft_line": 269,
+          "source_line": 270
+        },
+        {
+          "draft_line": 270,
+          "source_line": 271
+        },
+        {
+          "draft_line": 271,
+          "source_line": 272
+        },
+        {
+          "draft_line": 272,
+          "source_line": 273
+        },
+        {
+          "draft_line": 273,
+          "source_line": 274
+        },
+        {
+          "draft_line": 274,
+          "source_line": 275
+        },
+        {
+          "draft_line": 275,
+          "source_line": 276
+        },
+        {
+          "draft_line": 276,
+          "source_line": 277
+        },
+        {
+          "draft_line": 277,
+          "source_line": 278
+        },
+        {
+          "draft_line": 278,
+          "source_line": 279
+        },
+        {
+          "draft_line": 279,
+          "source_line": 280
+        },
+        {
+          "draft_line": 280,
+          "source_line": 281
+        },
+        {
+          "draft_line": 281,
+          "source_line": 282
+        },
+        {
+          "draft_line": 282,
+          "source_line": 283
+        },
+        {
+          "draft_line": 283,
+          "source_line": 284
+        },
+        {
+          "draft_line": 284,
+          "source_line": 285
+        },
+        {
+          "draft_line": 285,
+          "source_line": 286
+        },
+        {
+          "draft_line": 286,
+          "source_line": 287
+        },
+        {
+          "draft_line": 287,
+          "source_line": 288
+        },
+        {
+          "draft_line": 288,
+          "source_line": 289
+        },
+        {
+          "draft_line": 289,
+          "source_line": 290
+        },
+        {
+          "draft_line": 290,
+          "source_line": 291
+        },
+        {
+          "draft_line": 291,
+          "source_line": 292
+        },
+        {
+          "draft_line": 292,
+          "source_line": 293
+        },
+        {
+          "draft_line": 293,
+          "source_line": 294
+        },
+        {
+          "draft_line": 294,
+          "source_line": 295
+        },
+        {
+          "draft_line": 295,
+          "source_line": 296
+        },
+        {
+          "draft_line": 296,
+          "source_line": 297
+        },
+        {
+          "draft_line": 297,
+          "source_line": 298
+        },
+        {
+          "draft_line": 298,
+          "source_line": 299
+        },
+        {
+          "draft_line": 299,
+          "source_line": 300
+        },
+        {
+          "draft_line": 300,
+          "source_line": 301
+        },
+        {
+          "draft_line": 301,
+          "source_line": 302
+        },
+        {
+          "draft_line": 302,
+          "source_line": 303
+        },
+        {
+          "draft_line": 303,
+          "source_line": 304
+        },
+        {
+          "draft_line": 304,
+          "source_line": 305
+        },
+        {
+          "draft_line": 305,
+          "source_line": 306
+        },
+        {
+          "draft_line": 306,
+          "source_line": 307
+        },
+        {
+          "draft_line": 307,
+          "source_line": 308
+        },
+        {
+          "draft_line": 308,
+          "source_line": 309
+        },
+        {
+          "draft_line": 309,
+          "source_line": 310
+        },
+        {
+          "draft_line": 310,
+          "source_line": 311
+        },
+        {
+          "draft_line": 311,
+          "source_line": 312
+        },
+        {
+          "draft_line": 312,
+          "source_line": 313
+        },
+        {
+          "draft_line": 313,
+          "source_line": 314
+        },
+        {
+          "draft_line": 314,
+          "source_line": 315
+        },
+        {
+          "draft_line": 315,
+          "source_line": 316
+        },
+        {
+          "draft_line": 316,
+          "source_line": 317
+        },
+        {
+          "draft_line": 317,
+          "source_line": 318
+        },
+        {
+          "draft_line": 318,
+          "source_line": 319
+        },
+        {
+          "draft_line": 319,
+          "source_line": 320
+        },
+        {
+          "draft_line": 320,
+          "source_line": 321
+        },
+        {
+          "draft_line": 321,
+          "source_line": 322
+        },
+        {
+          "draft_line": 322,
+          "source_line": 323
+        },
+        {
+          "draft_line": 323,
+          "source_line": 324
+        },
+        {
+          "draft_line": 324,
+          "source_line": 325
+        },
+        {
+          "draft_line": 325,
+          "source_line": 326
+        },
+        {
+          "draft_line": 326,
+          "source_line": 327
+        },
+        {
+          "draft_line": 327,
+          "source_line": 328
+        },
+        {
+          "draft_line": 328,
+          "source_line": 329
+        },
+        {
+          "draft_line": 329,
+          "source_line": 330
+        },
+        {
+          "draft_line": 330,
+          "source_line": 331
+        },
+        {
+          "draft_line": 331,
+          "source_line": 332
+        },
+        {
+          "draft_line": 332,
+          "source_line": 333
+        },
+        {
+          "draft_line": 333,
+          "source_line": 334
+        },
+        {
+          "draft_line": 334,
+          "source_line": 335
+        },
+        {
+          "draft_line": 335,
+          "source_line": 336
+        },
+        {
+          "draft_line": 336,
+          "source_line": 337
+        },
+        {
+          "draft_line": 337,
+          "source_line": 338
+        },
+        {
+          "draft_line": 338,
+          "source_line": 339
+        },
+        {
+          "draft_line": 339,
+          "source_line": 340
+        },
+        {
+          "draft_line": 340,
+          "source_line": 341
+        },
+        {
+          "draft_line": 341,
+          "source_line": 342
+        },
+        {
+          "draft_line": 342,
+          "source_line": 343
+        },
+        {
+          "draft_line": 343,
+          "source_line": 344
+        },
+        {
+          "draft_line": 344,
+          "source_line": 345
+        },
+        {
+          "draft_line": 345,
+          "source_line": 346
+        },
+        {
+          "draft_line": 346,
+          "source_line": 347
+        },
+        {
+          "draft_line": 347,
+          "source_line": 348
+        },
+        {
+          "draft_line": 348,
+          "source_line": 349
+        },
+        {
+          "draft_line": 349,
+          "source_line": 350
+        },
+        {
+          "draft_line": 350,
+          "source_line": 351
+        },
+        {
+          "draft_line": 351,
+          "source_line": 352
+        },
+        {
+          "draft_line": 352,
+          "source_line": 353
+        },
+        {
+          "draft_line": 353,
+          "source_line": 354
+        },
+        {
+          "draft_line": 354,
+          "source_line": 355
+        },
+        {
+          "draft_line": 355,
+          "source_line": 356
+        },
+        {
+          "draft_line": 356,
+          "source_line": 357
+        },
+        {
+          "draft_line": 357,
+          "source_line": 358
+        },
+        {
+          "draft_line": 358,
+          "source_line": 359
+        },
+        {
+          "draft_line": 359,
+          "source_line": 360
+        },
+        {
+          "draft_line": 360,
+          "source_line": 361
+        },
+        {
+          "draft_line": 361,
+          "source_line": 362
+        },
+        {
+          "draft_line": 362,
+          "source_line": 363
+        },
+        {
+          "draft_line": 363,
+          "source_line": 364
+        },
+        {
+          "draft_line": 364,
+          "source_line": 365
+        },
+        {
+          "draft_line": 365,
+          "source_line": 366
+        },
+        {
+          "draft_line": 366,
+          "source_line": 367
+        },
+        {
+          "draft_line": 367,
+          "source_line": 368
+        },
+        {
+          "draft_line": 368,
+          "source_line": 369
+        },
+        {
+          "draft_line": 369,
+          "source_line": 370
+        },
+        {
+          "draft_line": 370,
+          "source_line": 371
+        },
+        {
+          "draft_line": 371,
+          "source_line": 372
+        },
+        {
+          "draft_line": 372,
+          "source_line": 373
+        },
+        {
+          "draft_line": 373,
+          "source_line": 374
+        },
+        {
+          "draft_line": 374,
+          "source_line": 375
+        },
+        {
+          "draft_line": 375,
+          "source_line": 376
+        },
+        {
+          "draft_line": 376,
+          "source_line": 377
+        },
+        {
+          "draft_line": 377,
+          "source_line": 378
+        },
+        {
+          "draft_line": 378,
+          "source_line": 379
+        },
+        {
+          "draft_line": 379,
+          "source_line": 380
+        },
+        {
+          "draft_line": 380,
+          "source_line": 381
+        },
+        {
+          "draft_line": 381,
+          "source_line": 382
+        },
+        {
+          "draft_line": 382,
+          "source_line": 383
+        },
+        {
+          "draft_line": 383,
+          "source_line": 384
+        },
+        {
+          "draft_line": 384,
+          "source_line": 385
+        },
+        {
+          "draft_line": 385,
+          "source_line": 386
+        },
+        {
+          "draft_line": 386,
+          "source_line": 387
+        },
+        {
+          "draft_line": 387,
+          "source_line": 388
+        },
+        {
+          "draft_line": 388,
+          "source_line": 389
+        },
+        {
+          "draft_line": 389,
+          "source_line": 390
+        },
+        {
+          "draft_line": 390,
+          "source_line": 391
+        },
+        {
+          "draft_line": 391,
+          "source_line": 392
+        },
+        {
+          "draft_line": 392,
+          "source_line": 393
+        },
+        {
+          "draft_line": 393,
+          "source_line": 394
+        },
+        {
+          "draft_line": 394,
+          "source_line": 395
+        },
+        {
+          "draft_line": 395,
+          "source_line": 396
+        },
+        {
+          "draft_line": 396,
+          "source_line": 397
+        },
+        {
+          "draft_line": 397,
+          "source_line": 398
+        },
+        {
+          "draft_line": 398,
+          "source_line": 399
+        },
+        {
+          "draft_line": 399,
+          "source_line": 400
+        },
+        {
+          "draft_line": 400,
+          "source_line": 401
+        },
+        {
+          "draft_line": 401,
+          "source_line": 402
+        },
+        {
+          "draft_line": 402,
+          "source_line": 403
+        },
+        {
+          "draft_line": 403,
+          "source_line": 404
+        },
+        {
+          "draft_line": 404,
+          "source_line": 405
+        },
+        {
+          "draft_line": 405,
+          "source_line": 406
+        },
+        {
+          "draft_line": 406,
+          "source_line": 407
+        },
+        {
+          "draft_line": 407,
+          "source_line": 408
+        },
+        {
+          "draft_line": 408,
+          "source_line": 409
+        },
+        {
+          "draft_line": 409,
+          "source_line": 410
+        },
+        {
+          "draft_line": 410,
+          "source_line": 411
+        },
+        {
+          "draft_line": 411,
+          "source_line": 412
+        },
+        {
+          "draft_line": 412,
+          "source_line": 413
+        },
+        {
+          "draft_line": 413,
+          "source_line": 414
+        },
+        {
+          "draft_line": 414,
+          "source_line": 415
+        },
+        {
+          "draft_line": 415,
+          "source_line": 416
+        },
+        {
+          "draft_line": 416,
+          "source_line": 417
+        },
+        {
+          "draft_line": 417,
+          "source_line": 418
+        },
+        {
+          "draft_line": 418,
+          "source_line": 419
+        },
+        {
+          "draft_line": 419,
+          "source_line": 420
+        },
+        {
+          "draft_line": 420,
+          "source_line": 421
+        },
+        {
+          "draft_line": 421,
+          "source_line": 422
+        },
+        {
+          "draft_line": 422,
+          "source_line": 423
+        },
+        {
+          "draft_line": 423,
+          "source_line": 424
+        },
+        {
+          "draft_line": 424,
+          "source_line": 425
+        },
+        {
+          "draft_line": 425,
+          "source_line": 426
+        },
+        {
+          "draft_line": 426,
+          "source_line": 427
+        },
+        {
+          "draft_line": 427,
+          "source_line": 428
+        },
+        {
+          "draft_line": 428,
+          "source_line": 429
+        },
+        {
+          "draft_line": 429,
+          "source_line": 430
+        },
+        {
+          "draft_line": 430,
+          "source_line": 431
+        },
+        {
+          "draft_line": 431,
+          "source_line": 432
+        },
+        {
+          "draft_line": 432,
+          "source_line": 433
+        },
+        {
+          "draft_line": 433,
+          "source_line": 434
+        },
+        {
+          "draft_line": 434,
+          "source_line": 435
+        },
+        {
+          "draft_line": 435,
+          "source_line": 436
+        },
+        {
+          "draft_line": 436,
+          "source_line": 437
+        },
+        {
+          "draft_line": 437,
+          "source_line": 438
+        },
+        {
+          "draft_line": 438,
+          "source_line": 439
+        },
+        {
+          "draft_line": 439,
+          "source_line": 440
+        },
+        {
+          "draft_line": 440,
+          "source_line": 441
+        },
+        {
+          "draft_line": 441,
+          "source_line": 442
+        },
+        {
+          "draft_line": 442,
+          "source_line": 443
+        },
+        {
+          "draft_line": 443,
+          "source_line": 444
+        },
+        {
+          "draft_line": 444,
+          "source_line": 445
+        },
+        {
+          "draft_line": 445,
+          "source_line": 446
+        },
+        {
+          "draft_line": 446,
+          "source_line": 447
+        },
+        {
+          "draft_line": 447,
+          "source_line": 448
+        },
+        {
+          "draft_line": 448,
+          "source_line": 449
+        },
+        {
+          "draft_line": 449,
+          "source_line": 450
+        },
+        {
+          "draft_line": 450,
+          "source_line": 451
+        },
+        {
+          "draft_line": 451,
+          "source_line": 452
+        },
+        {
+          "draft_line": 452,
+          "source_line": 453
+        },
+        {
+          "draft_line": 453,
+          "source_line": 454
+        },
+        {
+          "draft_line": 454,
+          "source_line": 455
+        },
+        {
+          "draft_line": 455,
+          "source_line": 456
+        },
+        {
+          "draft_line": 456,
+          "source_line": 457
+        },
+        {
+          "draft_line": 457,
+          "source_line": 458
+        },
+        {
+          "draft_line": 458,
+          "source_line": 459
+        },
+        {
+          "draft_line": 459,
+          "source_line": 460
+        },
+        {
+          "draft_line": 460,
+          "source_line": 461
+        },
+        {
+          "draft_line": 461,
+          "source_line": 462
+        },
+        {
+          "draft_line": 462,
+          "source_line": 463
+        },
+        {
+          "draft_line": 463,
+          "source_line": 464
+        },
+        {
+          "draft_line": 464,
+          "source_line": 465
+        },
+        {
+          "draft_line": 465,
+          "source_line": 466
+        },
+        {
+          "draft_line": 466,
+          "source_line": 467
+        },
+        {
+          "draft_line": 467,
+          "source_line": 468
+        },
+        {
+          "draft_line": 468,
+          "source_line": 469
+        },
+        {
+          "draft_line": 469,
+          "source_line": 470
+        },
+        {
+          "draft_line": 470,
+          "source_line": 471
+        },
+        {
+          "draft_line": 471,
+          "source_line": 472
+        },
+        {
+          "draft_line": 472,
+          "source_line": 473
+        },
+        {
+          "draft_line": 473,
+          "source_line": 474
+        },
+        {
+          "draft_line": 474,
+          "source_line": 475
+        },
+        {
+          "draft_line": 475,
+          "source_line": 476
+        },
+        {
+          "draft_line": 476,
+          "source_line": 477
+        },
+        {
+          "draft_line": 477,
+          "source_line": 478
+        },
+        {
+          "draft_line": 478,
+          "source_line": 479
+        },
+        {
+          "draft_line": 479,
+          "source_line": 480
+        },
+        {
+          "draft_line": 480,
+          "source_line": 481
+        },
+        {
+          "draft_line": 481,
+          "source_line": 482
+        },
+        {
+          "draft_line": 482,
+          "source_line": 483
+        },
+        {
+          "draft_line": 483,
+          "source_line": 484
+        },
+        {
+          "draft_line": 484,
+          "source_line": 485
+        },
+        {
+          "draft_line": 485,
+          "source_line": 486
+        },
+        {
+          "draft_line": 486,
+          "source_line": 487
+        },
+        {
+          "draft_line": 487,
+          "source_line": 488
+        },
+        {
+          "draft_line": 488,
+          "source_line": 489
+        },
+        {
+          "draft_line": 489,
+          "source_line": 490
+        },
+        {
+          "draft_line": 490,
+          "source_line": 491
+        },
+        {
+          "draft_line": 491,
+          "source_line": 492
+        },
+        {
+          "draft_line": 492,
+          "source_line": 493
+        },
+        {
+          "draft_line": 493,
+          "source_line": 494
+        },
+        {
+          "draft_line": 494,
+          "source_line": 495
+        },
+        {
+          "draft_line": 495,
+          "source_line": 496
+        },
+        {
+          "draft_line": 496,
+          "source_line": 497
+        },
+        {
+          "draft_line": 497,
+          "source_line": 498
+        },
+        {
+          "draft_line": 498,
+          "source_line": 499
+        },
+        {
+          "draft_line": 499,
+          "source_line": 500
+        },
+        {
+          "draft_line": 500,
+          "source_line": 501
+        },
+        {
+          "draft_line": 501,
+          "source_line": 502
+        },
+        {
+          "draft_line": 502,
+          "source_line": 503
+        },
+        {
+          "draft_line": 503,
+          "source_line": 504
+        },
+        {
+          "draft_line": 504,
+          "source_line": 505
+        },
+        {
+          "draft_line": 505,
+          "source_line": 506
+        },
+        {
+          "draft_line": 506,
+          "source_line": 507
+        },
+        {
+          "draft_line": 507,
+          "source_line": 508
+        },
+        {
+          "draft_line": 508,
+          "source_line": 509
+        },
+        {
+          "draft_line": 509,
+          "source_line": 510
+        },
+        {
+          "draft_line": 510,
+          "source_line": 511
+        },
+        {
+          "draft_line": 511,
+          "source_line": 512
+        },
+        {
+          "draft_line": 512,
+          "source_line": 513
+        },
+        {
+          "draft_line": 513,
+          "source_line": 514
+        },
+        {
+          "draft_line": 514,
+          "source_line": 515
+        },
+        {
+          "draft_line": 515,
+          "source_line": 516
+        },
+        {
+          "draft_line": 516,
+          "source_line": 517
+        },
+        {
+          "draft_line": 517,
+          "source_line": 518
+        },
+        {
+          "draft_line": 518,
+          "source_line": 519
+        },
+        {
+          "draft_line": 519,
+          "source_line": 520
+        },
+        {
+          "draft_line": 520,
+          "source_line": 521
+        },
+        {
+          "draft_line": 521,
+          "source_line": 522
+        },
+        {
+          "draft_line": 522,
+          "source_line": 523
+        },
+        {
+          "draft_line": 523,
+          "source_line": 524
+        },
+        {
+          "draft_line": 524,
+          "source_line": 525
+        },
+        {
+          "draft_line": 525,
+          "source_line": 526
+        },
+        {
+          "draft_line": 526,
+          "source_line": 527
+        },
+        {
+          "draft_line": 527,
+          "source_line": 528
+        },
+        {
+          "draft_line": 528,
+          "source_line": 529
+        },
+        {
+          "draft_line": 529,
+          "source_line": 530
+        },
+        {
+          "draft_line": 530,
+          "source_line": 531
+        },
+        {
+          "draft_line": 531,
+          "source_line": 532
+        },
+        {
+          "draft_line": 532,
+          "source_line": 533
+        },
+        {
+          "draft_line": 533,
+          "source_line": 534
+        },
+        {
+          "draft_line": 534,
+          "source_line": 535
+        },
+        {
+          "draft_line": 535,
+          "source_line": 536
+        },
+        {
+          "draft_line": 536,
+          "source_line": 537
+        },
+        {
+          "draft_line": 537,
+          "source_line": 538
+        },
+        {
+          "draft_line": 538,
+          "source_line": 539
+        },
+        {
+          "draft_line": 539,
+          "source_line": 540
+        },
+        {
+          "draft_line": 540,
+          "source_line": 541
+        },
+        {
+          "draft_line": 541,
+          "source_line": 542
+        },
+        {
+          "draft_line": 542,
+          "source_line": 543
+        },
+        {
+          "draft_line": 543,
+          "source_line": 544
+        },
+        {
+          "draft_line": 544,
+          "source_line": 545
+        },
+        {
+          "draft_line": 545,
+          "source_line": 546
+        },
+        {
+          "draft_line": 546,
+          "source_line": 547
+        },
+        {
+          "draft_line": 547,
+          "source_line": 548
+        },
+        {
+          "draft_line": 548,
+          "source_line": 549
+        },
+        {
+          "draft_line": 549,
+          "source_line": 550
+        },
+        {
+          "draft_line": 550,
+          "source_line": 551
+        },
+        {
+          "draft_line": 551,
+          "source_line": 552
+        },
+        {
+          "draft_line": 552,
+          "source_line": 553
+        },
+        {
+          "draft_line": 553,
+          "source_line": 554
+        },
+        {
+          "draft_line": 554,
+          "source_line": 555
+        },
+        {
+          "draft_line": 555,
+          "source_line": 556
+        },
+        {
+          "draft_line": 556,
+          "source_line": 557
+        },
+        {
+          "draft_line": 557,
+          "source_line": 558
+        },
+        {
+          "draft_line": 558,
+          "source_line": 559
+        },
+        {
+          "draft_line": 559,
+          "source_line": 560
+        },
+        {
+          "draft_line": 560,
+          "source_line": 561
+        },
+        {
+          "draft_line": 561,
+          "source_line": 562
+        },
+        {
+          "draft_line": 562,
+          "source_line": 563
+        },
+        {
+          "draft_line": 563,
+          "source_line": 564
+        },
+        {
+          "draft_line": 564,
+          "source_line": 565
+        },
+        {
+          "draft_line": 565,
+          "source_line": 566
+        },
+        {
+          "draft_line": 566,
+          "source_line": 567
+        },
+        {
+          "draft_line": 567,
+          "source_line": 568
+        },
+        {
+          "draft_line": 568,
+          "source_line": 569
+        },
+        {
+          "draft_line": 569,
+          "source_line": 570
+        },
+        {
+          "draft_line": 570,
+          "source_line": 571
+        },
+        {
+          "draft_line": 571,
+          "source_line": 572
+        },
+        {
+          "draft_line": 572,
+          "source_line": 573
+        },
+        {
+          "draft_line": 573,
+          "source_line": 574
+        },
+        {
+          "draft_line": 574,
+          "source_line": 575
+        },
+        {
+          "draft_line": 575,
+          "source_line": 576
+        },
+        {
+          "draft_line": 576,
+          "source_line": 577
+        },
+        {
+          "draft_line": 577,
+          "source_line": 578
+        },
+        {
+          "draft_line": 578,
+          "source_line": 579
+        },
+        {
+          "draft_line": 579,
+          "source_line": 580
+        },
+        {
+          "draft_line": 580,
+          "source_line": 581
+        },
+        {
+          "draft_line": 581,
+          "source_line": 582
+        },
+        {
+          "draft_line": 582,
+          "source_line": 583
+        },
+        {
+          "draft_line": 583,
+          "source_line": 584
+        },
+        {
+          "draft_line": 584,
+          "source_line": 585
+        },
+        {
+          "draft_line": 585,
+          "source_line": 586
+        },
+        {
+          "draft_line": 586,
+          "source_line": 587
+        },
+        {
+          "draft_line": 587,
+          "source_line": 588
+        },
+        {
+          "draft_line": 588,
+          "source_line": 589
+        },
+        {
+          "draft_line": 589,
+          "source_line": 590
+        },
+        {
+          "draft_line": 590,
+          "source_line": 591
+        },
+        {
+          "draft_line": 591,
+          "source_line": 592
+        },
+        {
+          "draft_line": 592,
+          "source_line": 593
+        },
+        {
+          "draft_line": 593,
+          "source_line": 594
+        },
+        {
+          "draft_line": 594,
+          "source_line": 595
+        },
+        {
+          "draft_line": 595,
+          "source_line": 596
+        },
+        {
+          "draft_line": 596,
+          "source_line": 597
+        },
+        {
+          "draft_line": 597,
+          "source_line": 598
+        },
+        {
+          "draft_line": 598,
+          "source_line": 599
+        },
+        {
+          "draft_line": 599,
+          "source_line": 600
+        },
+        {
+          "draft_line": 600,
+          "source_line": 601
+        },
+        {
+          "draft_line": 601,
+          "source_line": 602
+        },
+        {
+          "draft_line": 602,
+          "source_line": 603
+        },
+        {
+          "draft_line": 603,
+          "source_line": 604
+        },
+        {
+          "draft_line": 604,
+          "source_line": 605
+        },
+        {
+          "draft_line": 605,
+          "source_line": 606
+        },
+        {
+          "draft_line": 606,
+          "source_line": 607
+        },
+        {
+          "draft_line": 607,
+          "source_line": 608
+        },
+        {
+          "draft_line": 608,
+          "source_line": 609
+        },
+        {
+          "draft_line": 609,
+          "source_line": 610
+        },
+        {
+          "draft_line": 610,
+          "source_line": 611
+        },
+        {
+          "draft_line": 611,
+          "source_line": 612
+        },
+        {
+          "draft_line": 612,
+          "source_line": 613
+        },
+        {
+          "draft_line": 613,
+          "source_line": 614
+        },
+        {
+          "draft_line": 614,
+          "source_line": 615
+        },
+        {
+          "draft_line": 615,
+          "source_line": 617
+        },
+        {
+          "draft_line": 616,
+          "source_line": 618
+        },
+        {
+          "draft_line": 617,
+          "source_line": 619
+        },
+        {
+          "draft_line": 618,
+          "source_line": 620
+        },
+        {
+          "draft_line": 619,
+          "source_line": 621
+        },
+        {
+          "draft_line": 620,
+          "source_line": 622
+        }
+      ]
+    },
+    {
+      "draft": "data/reviews/batch1-2026-09-08/600309/draft-management.md",
+      "source": "管理层档案/万华化学 管理层档案 80 2026-09-06.md",
+      "source_sha256": "3a3f6e3d419baf464a7d33cb681ad3aa0c663df5a78a6833ba0a930c2830303b",
+      "prepared_sha256": "8788a35b018988744bed1309db263b929b37b253f72726c277a1b91caa91bbd9",
+      "line_mapping": [
+        {
+          "draft_line": 1,
+          "source_line": 1
+        },
+        {
+          "draft_line": 2,
+          "source_line": 2
+        },
+        {
+          "draft_line": 3,
+          "source_line": 3
+        },
+        {
+          "draft_line": 4,
+          "source_line": 4
+        },
+        {
+          "draft_line": 5,
+          "source_line": 5
+        },
+        {
+          "draft_line": 6,
+          "source_line": 6
+        },
+        {
+          "draft_line": 7,
+          "source_line": 7
+        },
+        {
+          "draft_line": 8,
+          "source_line": 8
+        },
+        {
+          "draft_line": 9,
+          "source_line": 9
+        },
+        {
+          "draft_line": 10,
+          "source_line": 10
+        },
+        {
+          "draft_line": 11,
+          "source_line": 11
+        },
+        {
+          "draft_line": 12,
+          "source_line": 12
+        },
+        {
+          "draft_line": 13,
+          "source_line": 13
+        },
+        {
+          "draft_line": 14,
+          "source_line": 14
+        },
+        {
+          "draft_line": 15,
+          "source_line": 15
+        },
+        {
+          "draft_line": 16,
+          "source_line": 16
+        },
+        {
+          "draft_line": 17,
+          "source_line": 17
+        },
+        {
+          "draft_line": 18,
+          "source_line": 18
+        },
+        {
+          "draft_line": 19,
+          "source_line": 19
+        },
+        {
+          "draft_line": 20,
+          "source_line": 20
+        },
+        {
+          "draft_line": 21,
+          "source_line": 21
+        },
+        {
+          "draft_line": 22,
+          "source_line": 22
+        },
+        {
+          "draft_line": 23,
+          "source_line": 23
+        },
+        {
+          "draft_line": 24,
+          "source_line": 24
+        },
+        {
+          "draft_line": 25,
+          "source_line": 25
+        },
+        {
+          "draft_line": 26,
+          "source_line": 26
+        },
+        {
+          "draft_line": 27,
+          "source_line": 27
+        },
+        {
+          "draft_line": 28,
+          "source_line": 28
+        },
+        {
+          "draft_line": 29,
+          "source_line": 29
+        },
+        {
+          "draft_line": 30,
+          "source_line": 30
+        },
+        {
+          "draft_line": 31,
+          "source_line": 31
+        },
+        {
+          "draft_line": 32,
+          "source_line": 32
+        },
+        {
+          "draft_line": 33,
+          "source_line": 33
+        },
+        {
+          "draft_line": 34,
+          "source_line": 34
+        },
+        {
+          "draft_line": 35,
+          "source_line": 35
+        },
+        {
+          "draft_line": 36,
+          "source_line": 36
+        },
+        {
+          "draft_line": 37,
+          "source_line": 37
+        },
+        {
+          "draft_line": 38,
+          "source_line": 38
+        },
+        {
+          "draft_line": 39,
+          "source_line": 39
+        },
+        {
+          "draft_line": 40,
+          "source_line": 40
+        },
+        {
+          "draft_line": 41,
+          "source_line": 41
+        },
+        {
+          "draft_line": 42,
+          "source_line": 42
+        },
+        {
+          "draft_line": 43,
+          "source_line": 43
+        },
+        {
+          "draft_line": 44,
+          "source_line": 44
+        },
+        {
+          "draft_line": 45,
+          "source_line": 45
+        },
+        {
+          "draft_line": 46,
+          "source_line": 46
+        },
+        {
+          "draft_line": 47,
+          "source_line": 47
+        },
+        {
+          "draft_line": 48,
+          "source_line": 48
+        },
+        {
+          "draft_line": 49,
+          "source_line": 49
+        },
+        {
+          "draft_line": 50,
+          "source_line": 50
+        },
+        {
+          "draft_line": 51,
+          "source_line": 51
+        },
+        {
+          "draft_line": 52,
+          "source_line": 52
+        },
+        {
+          "draft_line": 53,
+          "source_line": 53
+        },
+        {
+          "draft_line": 54,
+          "source_line": 54
+        },
+        {
+          "draft_line": 55,
+          "source_line": 55
+        },
+        {
+          "draft_line": 56,
+          "source_line": 56
+        },
+        {
+          "draft_line": 57,
+          "source_line": 57
+        },
+        {
+          "draft_line": 58,
+          "source_line": 58
+        },
+        {
+          "draft_line": 59,
+          "source_line": 59
+        },
+        {
+          "draft_line": 60,
+          "source_line": 60
+        },
+        {
+          "draft_line": 61,
+          "source_line": 61
+        },
+        {
+          "draft_line": 62,
+          "source_line": 62
+        },
+        {
+          "draft_line": 63,
+          "source_line": 63
+        },
+        {
+          "draft_line": 64,
+          "source_line": 64
+        },
+        {
+          "draft_line": 65,
+          "source_line": 65
+        },
+        {
+          "draft_line": 66,
+          "source_line": 66
+        },
+        {
+          "draft_line": 67,
+          "source_line": 67
+        },
+        {
+          "draft_line": 68,
+          "source_line": 68
+        },
+        {
+          "draft_line": 69,
+          "source_line": 69
+        },
+        {
+          "draft_line": 70,
+          "source_line": 70
+        },
+        {
+          "draft_line": 71,
+          "source_line": 71
+        },
+        {
+          "draft_line": 72,
+          "source_line": 72
+        },
+        {
+          "draft_line": 73,
+          "source_line": 73
+        },
+        {
+          "draft_line": 74,
+          "source_line": 74
+        },
+        {
+          "draft_line": 75,
+          "source_line": 75
+        },
+        {
+          "draft_line": 76,
+          "source_line": 76
+        },
+        {
+          "draft_line": 77,
+          "source_line": 77
+        },
+        {
+          "draft_line": 78,
+          "source_line": 78
+        },
+        {
+          "draft_line": 79,
+          "source_line": 79
+        },
+        {
+          "draft_line": 80,
+          "source_line": 80
+        },
+        {
+          "draft_line": 81,
+          "source_line": 81
+        },
+        {
+          "draft_line": 82,
+          "source_line": 82
+        },
+        {
+          "draft_line": 83,
+          "source_line": 83
+        },
+        {
+          "draft_line": 84,
+          "source_line": 84
+        },
+        {
+          "draft_line": 85,
+          "source_line": 85
+        },
+        {
+          "draft_line": 86,
+          "source_line": 86
+        },
+        {
+          "draft_line": 87,
+          "source_line": 87
+        },
+        {
+          "draft_line": 88,
+          "source_line": 88
+        },
+        {
+          "draft_line": 89,
+          "source_line": 89
+        },
+        {
+          "draft_line": 90,
+          "source_line": 90
+        },
+        {
+          "draft_line": 91,
+          "source_line": 91
+        },
+        {
+          "draft_line": 92,
+          "source_line": 92
+        },
+        {
+          "draft_line": 93,
+          "source_line": 93
+        },
+        {
+          "draft_line": 94,
+          "source_line": 94
+        },
+        {
+          "draft_line": 95,
+          "source_line": 95
+        },
+        {
+          "draft_line": 96,
+          "source_line": 96
+        },
+        {
+          "draft_line": 97,
+          "source_line": 97
+        },
+        {
+          "draft_line": 98,
+          "source_line": 98
+        },
+        {
+          "draft_line": 99,
+          "source_line": 99
+        },
+        {
+          "draft_line": 100,
+          "source_line": 100
+        },
+        {
+          "draft_line": 101,
+          "source_line": 101
+        },
+        {
+          "draft_line": 102,
+          "source_line": 102
+        },
+        {
+          "draft_line": 103,
+          "source_line": 103
+        },
+        {
+          "draft_line": 104,
+          "source_line": 104
+        },
+        {
+          "draft_line": 105,
+          "source_line": 105
+        },
+        {
+          "draft_line": 106,
+          "source_line": 106
+        },
+        {
+          "draft_line": 107,
+          "source_line": 107
+        },
+        {
+          "draft_line": 108,
+          "source_line": 108
+        },
+        {
+          "draft_line": 109,
+          "source_line": 109
+        },
+        {
+          "draft_line": 110,
+          "source_line": 110
+        },
+        {
+          "draft_line": 111,
+          "source_line": 111
+        },
+        {
+          "draft_line": 112,
+          "source_line": 112
+        },
+        {
+          "draft_line": 113,
+          "source_line": 113
+        },
+        {
+          "draft_line": 114,
+          "source_line": 114
+        },
+        {
+          "draft_line": 115,
+          "source_line": 115
+        },
+        {
+          "draft_line": 116,
+          "source_line": 116
+        },
+        {
+          "draft_line": 117,
+          "source_line": 117
+        },
+        {
+          "draft_line": 118,
+          "source_line": 118
+        },
+        {
+          "draft_line": 119,
+          "source_line": 119
+        },
+        {
+          "draft_line": 120,
+          "source_line": 120
+        },
+        {
+          "draft_line": 121,
+          "source_line": 121
+        },
+        {
+          "draft_line": 122,
+          "source_line": 122
+        },
+        {
+          "draft_line": 123,
+          "source_line": 123
+        },
+        {
+          "draft_line": 124,
+          "source_line": 124
+        },
+        {
+          "draft_line": 125,
+          "source_line": 125
+        },
+        {
+          "draft_line": 126,
+          "source_line": 126
+        },
+        {
+          "draft_line": 127,
+          "source_line": 127
+        },
+        {
+          "draft_line": 128,
+          "source_line": 128
+        },
+        {
+          "draft_line": 129,
+          "source_line": 129
+        },
+        {
+          "draft_line": 130,
+          "source_line": 130
+        },
+        {
+          "draft_line": 131,
+          "source_line": 131
+        },
+        {
+          "draft_line": 132,
+          "source_line": 132
+        },
+        {
+          "draft_line": 133,
+          "source_line": 133
+        },
+        {
+          "draft_line": 134,
+          "source_line": 134
+        },
+        {
+          "draft_line": 135,
+          "source_line": 135
+        },
+        {
+          "draft_line": 136,
+          "source_line": 136
+        },
+        {
+          "draft_line": 137,
+          "source_line": 137
+        },
+        {
+          "draft_line": 138,
+          "source_line": 138
+        },
+        {
+          "draft_line": 139,
+          "source_line": 139
+        },
+        {
+          "draft_line": 140,
+          "source_line": 140
+        },
+        {
+          "draft_line": 141,
+          "source_line": 141
+        },
+        {
+          "draft_line": 142,
+          "source_line": 142
+        },
+        {
+          "draft_line": 143,
+          "source_line": 143
+        },
+        {
+          "draft_line": 144,
+          "source_line": 144
+        },
+        {
+          "draft_line": 145,
+          "source_line": 145
+        },
+        {
+          "draft_line": 146,
+          "source_line": 146
+        },
+        {
+          "draft_line": 147,
+          "source_line": 147
+        },
+        {
+          "draft_line": 148,
+          "source_line": 148
+        },
+        {
+          "draft_line": 149,
+          "source_line": 149
+        },
+        {
+          "draft_line": 150,
+          "source_line": 150
+        },
+        {
+          "draft_line": 151,
+          "source_line": 151
+        },
+        {
+          "draft_line": 152,
+          "source_line": 152
+        },
+        {
+          "draft_line": 153,
+          "source_line": 153
+        },
+        {
+          "draft_line": 154,
+          "source_line": 154
+        },
+        {
+          "draft_line": 155,
+          "source_line": 155
+        },
+        {
+          "draft_line": 156,
+          "source_line": 156
+        },
+        {
+          "draft_line": 157,
+          "source_line": 157
+        },
+        {
+          "draft_line": 158,
+          "source_line": 158
+        },
+        {
+          "draft_line": 159,
+          "source_line": 159
+        },
+        {
+          "draft_line": 160,
+          "source_line": 160
+        },
+        {
+          "draft_line": 161,
+          "source_line": 161
+        },
+        {
+          "draft_line": 162,
+          "source_line": 162
+        },
+        {
+          "draft_line": 163,
+          "source_line": 163
+        },
+        {
+          "draft_line": 164,
+          "source_line": 164
+        },
+        {
+          "draft_line": 165,
+          "source_line": 165
+        },
+        {
+          "draft_line": 166,
+          "source_line": 166
+        },
+        {
+          "draft_line": 167,
+          "source_line": 167
+        },
+        {
+          "draft_line": 168,
+          "source_line": 168
+        },
+        {
+          "draft_line": 169,
+          "source_line": 169
+        },
+        {
+          "draft_line": 170,
+          "source_line": 170
+        },
+        {
+          "draft_line": 171,
+          "source_line": 171
+        },
+        {
+          "draft_line": 172,
+          "source_line": 172
+        },
+        {
+          "draft_line": 173,
+          "source_line": 173
+        },
+        {
+          "draft_line": 174,
+          "source_line": 174
+        },
+        {
+          "draft_line": 175,
+          "source_line": 175
+        },
+        {
+          "draft_line": 176,
+          "source_line": 176
+        },
+        {
+          "draft_line": 177,
+          "source_line": 177
+        },
+        {
+          "draft_line": 178,
+          "source_line": 178
+        },
+        {
+          "draft_line": 179,
+          "source_line": 179
+        },
+        {
+          "draft_line": 180,
+          "source_line": 180
+        },
+        {
+          "draft_line": 181,
+          "source_line": 181
+        },
+        {
+          "draft_line": 182,
+          "source_line": 182
+        },
+        {
+          "draft_line": 183,
+          "source_line": 183
+        },
+        {
+          "draft_line": 184,
+          "source_line": 184
+        },
+        {
+          "draft_line": 185,
+          "source_line": 185
+        },
+        {
+          "draft_line": 186,
+          "source_line": 186
+        },
+        {
+          "draft_line": 187,
+          "source_line": 187
+        },
+        {
+          "draft_line": 188,
+          "source_line": 188
+        },
+        {
+          "draft_line": 189,
+          "source_line": 189
+        },
+        {
+          "draft_line": 190,
+          "source_line": 190
+        },
+        {
+          "draft_line": 191,
+          "source_line": 191
+        },
+        {
+          "draft_line": 192,
+          "source_line": 192
+        },
+        {
+          "draft_line": 193,
+          "source_line": 193
+        },
+        {
+          "draft_line": 194,
+          "source_line": 194
+        },
+        {
+          "draft_line": 195,
+          "source_line": 195
+        },
+        {
+          "draft_line": 196,
+          "source_line": 196
+        },
+        {
+          "draft_line": 197,
+          "source_line": 197
+        },
+        {
+          "draft_line": 198,
+          "source_line": 198
+        },
+        {
+          "draft_line": 199,
+          "source_line": 199
+        },
+        {
+          "draft_line": 200,
+          "source_line": 200
+        },
+        {
+          "draft_line": 201,
+          "source_line": 201
+        },
+        {
+          "draft_line": 202,
+          "source_line": 202
+        },
+        {
+          "draft_line": 203,
+          "source_line": 203
+        },
+        {
+          "draft_line": 204,
+          "source_line": 204
+        },
+        {
+          "draft_line": 205,
+          "source_line": 205
+        },
+        {
+          "draft_line": 206,
+          "source_line": 206
+        },
+        {
+          "draft_line": 207,
+          "source_line": 207
+        },
+        {
+          "draft_line": 208,
+          "source_line": 208
+        },
+        {
+          "draft_line": 209,
+          "source_line": 209
+        },
+        {
+          "draft_line": 210,
+          "source_line": 210
+        },
+        {
+          "draft_line": 211,
+          "source_line": 211
+        },
+        {
+          "draft_line": 212,
+          "source_line": 212
+        },
+        {
+          "draft_line": 213,
+          "source_line": 213
+        },
+        {
+          "draft_line": 214,
+          "source_line": 214
+        },
+        {
+          "draft_line": 215,
+          "source_line": 215
+        },
+        {
+          "draft_line": 216,
+          "source_line": 216
+        },
+        {
+          "draft_line": 217,
+          "source_line": 217
+        },
+        {
+          "draft_line": 218,
+          "source_line": 218
+        },
+        {
+          "draft_line": 219,
+          "source_line": 219
+        },
+        {
+          "draft_line": 220,
+          "source_line": 220
+        },
+        {
+          "draft_line": 221,
+          "source_line": 221
+        },
+        {
+          "draft_line": 222,
+          "source_line": 222
+        },
+        {
+          "draft_line": 223,
+          "source_line": 223
+        },
+        {
+          "draft_line": 224,
+          "source_line": 224
+        },
+        {
+          "draft_line": 225,
+          "source_line": 225
+        },
+        {
+          "draft_line": 226,
+          "source_line": 226
+        },
+        {
+          "draft_line": 227,
+          "source_line": 227
+        },
+        {
+          "draft_line": 228,
+          "source_line": 228
+        },
+        {
+          "draft_line": 229,
+          "source_line": 229
+        },
+        {
+          "draft_line": 230,
+          "source_line": 230
+        },
+        {
+          "draft_line": 231,
+          "source_line": 231
+        },
+        {
+          "draft_line": 232,
+          "source_line": 232
+        },
+        {
+          "draft_line": 233,
+          "source_line": 233
+        },
+        {
+          "draft_line": 234,
+          "source_line": 234
+        },
+        {
+          "draft_line": 235,
+          "source_line": 235
+        },
+        {
+          "draft_line": 236,
+          "source_line": 236
+        },
+        {
+          "draft_line": 237,
+          "source_line": 237
+        },
+        {
+          "draft_line": 238,
+          "source_line": 238
+        },
+        {
+          "draft_line": 239,
+          "source_line": 239
+        },
+        {
+          "draft_line": 240,
+          "source_line": 240
+        },
+        {
+          "draft_line": 241,
+          "source_line": 241
+        },
+        {
+          "draft_line": 242,
+          "source_line": 242
+        },
+        {
+          "draft_line": 243,
+          "source_line": 243
+        },
+        {
+          "draft_line": 244,
+          "source_line": 244
+        },
+        {
+          "draft_line": 245,
+          "source_line": 245
+        },
+        {
+          "draft_line": 246,
+          "source_line": 246
+        },
+        {
+          "draft_line": 247,
+          "source_line": 247
+        },
+        {
+          "draft_line": 248,
+          "source_line": 248
+        },
+        {
+          "draft_line": 249,
+          "source_line": 249
+        },
+        {
+          "draft_line": 250,
+          "source_line": 250
+        },
+        {
+          "draft_line": 251,
+          "source_line": 251
+        },
+        {
+          "draft_line": 252,
+          "source_line": 252
+        },
+        {
+          "draft_line": 253,
+          "source_line": 253
+        },
+        {
+          "draft_line": 254,
+          "source_line": 254
+        },
+        {
+          "draft_line": 255,
+          "source_line": 255
+        },
+        {
+          "draft_line": 256,
+          "source_line": 256
+        },
+        {
+          "draft_line": 257,
+          "source_line": 257
+        },
+        {
+          "draft_line": 258,
+          "source_line": 258
+        },
+        {
+          "draft_line": 259,
+          "source_line": 259
+        },
+        {
+          "draft_line": 260,
+          "source_line": 279
+        },
+        {
+          "draft_line": 261,
+          "source_line": 280
+        },
+        {
+          "draft_line": 262,
+          "source_line": 281
+        },
+        {
+          "draft_line": 263,
+          "source_line": 282
+        },
+        {
+          "draft_line": 264,
+          "source_line": 283
+        },
+        {
+          "draft_line": 265,
+          "source_line": 284
+        },
+        {
+          "draft_line": 266,
+          "source_line": 285
+        },
+        {
+          "draft_line": 267,
+          "source_line": 286
+        },
+        {
+          "draft_line": 268,
+          "source_line": 287
+        },
+        {
+          "draft_line": 269,
+          "source_line": 288
+        },
+        {
+          "draft_line": 270,
+          "source_line": 289
+        },
+        {
+          "draft_line": 271,
+          "source_line": 290
+        },
+        {
+          "draft_line": 272,
+          "source_line": 291
+        },
+        {
+          "draft_line": 273,
+          "source_line": 292
+        },
+        {
+          "draft_line": 274,
+          "source_line": 293
+        },
+        {
+          "draft_line": 275,
+          "source_line": 294
+        },
+        {
+          "draft_line": 276,
+          "source_line": 295
+        },
+        {
+          "draft_line": 277,
+          "source_line": 296
+        },
+        {
+          "draft_line": 278,
+          "source_line": 297
+        },
+        {
+          "draft_line": 279,
+          "source_line": 298
+        },
+        {
+          "draft_line": 280,
+          "source_line": 299
+        },
+        {
+          "draft_line": 281,
+          "source_line": 300
+        },
+        {
+          "draft_line": 282,
+          "source_line": 301
+        },
+        {
+          "draft_line": 283,
+          "source_line": 302
+        },
+        {
+          "draft_line": 284,
+          "source_line": 303
+        },
+        {
+          "draft_line": 285,
+          "source_line": 304
+        },
+        {
+          "draft_line": 286,
+          "source_line": 305
+        },
+        {
+          "draft_line": 287,
+          "source_line": 306
+        },
+        {
+          "draft_line": 288,
+          "source_line": 307
+        },
+        {
+          "draft_line": 289,
+          "source_line": 308
+        },
+        {
+          "draft_line": 290,
+          "source_line": 309
+        },
+        {
+          "draft_line": 291,
+          "source_line": 310
+        },
+        {
+          "draft_line": 292,
+          "source_line": 311
+        },
+        {
+          "draft_line": 293,
+          "source_line": 312
+        },
+        {
+          "draft_line": 294,
+          "source_line": 313
+        },
+        {
+          "draft_line": 295,
+          "source_line": 314
+        },
+        {
+          "draft_line": 296,
+          "source_line": 315
+        },
+        {
+          "draft_line": 297,
+          "source_line": 316
+        },
+        {
+          "draft_line": 298,
+          "source_line": 317
+        },
+        {
+          "draft_line": 299,
+          "source_line": 318
+        },
+        {
+          "draft_line": 300,
+          "source_line": 319
+        },
+        {
+          "draft_line": 301,
+          "source_line": 320
+        },
+        {
+          "draft_line": 302,
+          "source_line": 321
+        },
+        {
+          "draft_line": 303,
+          "source_line": 322
+        },
+        {
+          "draft_line": 304,
+          "source_line": 323
+        },
+        {
+          "draft_line": 305,
+          "source_line": 324
+        },
+        {
+          "draft_line": 306,
+          "source_line": 325
+        },
+        {
+          "draft_line": 307,
+          "source_line": 326
+        },
+        {
+          "draft_line": 308,
+          "source_line": 327
+        },
+        {
+          "draft_line": 309,
+          "source_line": 328
+        },
+        {
+          "draft_line": 310,
+          "source_line": 329
+        },
+        {
+          "draft_line": 311,
+          "source_line": 330
+        },
+        {
+          "draft_line": 312,
+          "source_line": 331
+        },
+        {
+          "draft_line": 313,
+          "source_line": 332
+        },
+        {
+          "draft_line": 314,
+          "source_line": 333
+        },
+        {
+          "draft_line": 315,
+          "source_line": 334
+        },
+        {
+          "draft_line": 316,
+          "source_line": 335
+        },
+        {
+          "draft_line": 317,
+          "source_line": 336
+        },
+        {
+          "draft_line": 318,
+          "source_line": 337
+        },
+        {
+          "draft_line": 319,
+          "source_line": 338
+        },
+        {
+          "draft_line": 320,
+          "source_line": 339
+        },
+        {
+          "draft_line": 321,
+          "source_line": 340
+        },
+        {
+          "draft_line": 322,
+          "source_line": 341
+        },
+        {
+          "draft_line": 323,
+          "source_line": 342
+        },
+        {
+          "draft_line": 324,
+          "source_line": 343
+        },
+        {
+          "draft_line": 325,
+          "source_line": 344
+        },
+        {
+          "draft_line": 326,
+          "source_line": 345
+        }
+      ]
+    },
+    {
+      "draft": "data/reviews/batch1-2026-09-08/600309/draft-valuation.md",
+      "source": "估值分析/万华化学 估值分析 2026-09-06.md",
+      "source_sha256": "086b733fc54c1e63e2fac921f42cdaf20400db6bb3e4e2d4cfb126dca70a22d8",
+      "prepared_sha256": "80ab90824125308708fb1d382784535efcc303a7f26821114d36b279b2a3df4a",
+      "line_mapping": [
+        {
+          "draft_line": 1,
+          "source_line": 1
+        },
+        {
+          "draft_line": 2,
+          "source_line": 2
+        },
+        {
+          "draft_line": 3,
+          "source_line": 3
+        },
+        {
+          "draft_line": 4,
+          "source_line": 4
+        },
+        {
+          "draft_line": 5,
+          "source_line": 5
+        },
+        {
+          "draft_line": 6,
+          "source_line": 6
+        },
+        {
+          "draft_line": 7,
+          "source_line": 7
+        },
+        {
+          "draft_line": 8,
+          "source_line": 8
+        },
+        {
+          "draft_line": 9,
+          "source_line": 9
+        },
+        {
+          "draft_line": 10,
+          "source_line": 10
+        },
+        {
+          "draft_line": 11,
+          "source_line": 11
+        },
+        {
+          "draft_line": 12,
+          "source_line": 12
+        },
+        {
+          "draft_line": 13,
+          "source_line": 13
+        },
+        {
+          "draft_line": 14,
+          "source_line": 14
+        },
+        {
+          "draft_line": 15,
+          "source_line": 15
+        },
+        {
+          "draft_line": 16,
+          "source_line": 16
+        },
+        {
+          "draft_line": 17,
+          "source_line": 17
+        },
+        {
+          "draft_line": 18,
+          "source_line": 18
+        },
+        {
+          "draft_line": 19,
+          "source_line": 19
+        },
+        {
+          "draft_line": 20,
+          "source_line": 20
+        },
+        {
+          "draft_line": 21,
+          "source_line": 21
+        },
+        {
+          "draft_line": 22,
+          "source_line": 22
+        },
+        {
+          "draft_line": 23,
+          "source_line": 23
+        },
+        {
+          "draft_line": 24,
+          "source_line": 24
+        },
+        {
+          "draft_line": 25,
+          "source_line": 25
+        },
+        {
+          "draft_line": 26,
+          "source_line": 27
+        },
+        {
+          "draft_line": 27,
+          "source_line": 28
+        },
+        {
+          "draft_line": 28,
+          "source_line": 29
+        },
+        {
+          "draft_line": 29,
+          "source_line": 30
+        },
+        {
+          "draft_line": 30,
+          "source_line": 31
+        },
+        {
+          "draft_line": 31,
+          "source_line": 32
+        },
+        {
+          "draft_line": 32,
+          "source_line": 33
+        },
+        {
+          "draft_line": 33,
+          "source_line": 34
+        },
+        {
+          "draft_line": 34,
+          "source_line": 35
+        },
+        {
+          "draft_line": 35,
+          "source_line": 36
+        },
+        {
+          "draft_line": 36,
+          "source_line": 37
+        },
+        {
+          "draft_line": 37,
+          "source_line": 38
+        },
+        {
+          "draft_line": 38,
+          "source_line": 39
+        },
+        {
+          "draft_line": 39,
+          "source_line": 40
+        },
+        {
+          "draft_line": 40,
+          "source_line": 41
+        },
+        {
+          "draft_line": 41,
+          "source_line": 42
+        },
+        {
+          "draft_line": 42,
+          "source_line": 43
+        },
+        {
+          "draft_line": 43,
+          "source_line": 44
+        },
+        {
+          "draft_line": 44,
+          "source_line": 45
+        },
+        {
+          "draft_line": 45,
+          "source_line": 46
+        },
+        {
+          "draft_line": 46,
+          "source_line": 47
+        },
+        {
+          "draft_line": 47,
+          "source_line": 48
+        },
+        {
+          "draft_line": 48,
+          "source_line": 49
+        },
+        {
+          "draft_line": 49,
+          "source_line": 50
+        },
+        {
+          "draft_line": 50,
+          "source_line": 51
+        },
+        {
+          "draft_line": 51,
+          "source_line": 52
+        },
+        {
+          "draft_line": 52,
+          "source_line": 53
+        },
+        {
+          "draft_line": 53,
+          "source_line": 54
+        },
+        {
+          "draft_line": 54,
+          "source_line": 55
+        },
+        {
+          "draft_line": 55,
+          "source_line": 56
+        },
+        {
+          "draft_line": 56,
+          "source_line": 57
+        },
+        {
+          "draft_line": 57,
+          "source_line": 58
+        },
+        {
+          "draft_line": 58,
+          "source_line": 59
+        },
+        {
+          "draft_line": 59,
+          "source_line": 60
+        },
+        {
+          "draft_line": 60,
+          "source_line": 61
+        },
+        {
+          "draft_line": 61,
+          "source_line": 62
+        },
+        {
+          "draft_line": 62,
+          "source_line": 63
+        },
+        {
+          "draft_line": 63,
+          "source_line": 64
+        },
+        {
+          "draft_line": 64,
+          "source_line": 65
+        },
+        {
+          "draft_line": 65,
+          "source_line": 66
+        },
+        {
+          "draft_line": 66,
+          "source_line": 67
+        },
+        {
+          "draft_line": 67,
+          "source_line": 68
+        },
+        {
+          "draft_line": 68,
+          "source_line": 69
+        },
+        {
+          "draft_line": 69,
+          "source_line": 70
+        },
+        {
+          "draft_line": 70,
+          "source_line": 71
+        },
+        {
+          "draft_line": 71,
+          "source_line": 72
+        },
+        {
+          "draft_line": 72,
+          "source_line": 73
+        },
+        {
+          "draft_line": 73,
+          "source_line": 74
+        },
+        {
+          "draft_line": 74,
+          "source_line": 75
+        },
+        {
+          "draft_line": 75,
+          "source_line": 76
+        },
+        {
+          "draft_line": 76,
+          "source_line": 77
+        },
+        {
+          "draft_line": 77,
+          "source_line": 78
+        },
+        {
+          "draft_line": 78,
+          "source_line": 79
+        },
+        {
+          "draft_line": 79,
+          "source_line": 80
+        },
+        {
+          "draft_line": 80,
+          "source_line": 81
+        },
+        {
+          "draft_line": 81,
+          "source_line": 82
+        },
+        {
+          "draft_line": 82,
+          "source_line": 83
+        },
+        {
+          "draft_line": 83,
+          "source_line": 84
+        },
+        {
+          "draft_line": 84,
+          "source_line": 85
+        },
+        {
+          "draft_line": 85,
+          "source_line": 86
+        },
+        {
+          "draft_line": 86,
+          "source_line": 87
+        },
+        {
+          "draft_line": 87,
+          "source_line": 88
+        },
+        {
+          "draft_line": 88,
+          "source_line": 89
+        },
+        {
+          "draft_line": 89,
+          "source_line": 90
+        },
+        {
+          "draft_line": 90,
+          "source_line": 91
+        },
+        {
+          "draft_line": 91,
+          "source_line": 92
+        },
+        {
+          "draft_line": 92,
+          "source_line": 93
+        },
+        {
+          "draft_line": 93,
+          "source_line": 94
+        },
+        {
+          "draft_line": 94,
+          "source_line": 95
+        },
+        {
+          "draft_line": 95,
+          "source_line": 96
+        },
+        {
+          "draft_line": 96,
+          "source_line": 97
+        },
+        {
+          "draft_line": 97,
+          "source_line": 98
+        },
+        {
+          "draft_line": 98,
+          "source_line": 99
+        },
+        {
+          "draft_line": 99,
+          "source_line": 100
+        },
+        {
+          "draft_line": 100,
+          "source_line": 101
+        },
+        {
+          "draft_line": 101,
+          "source_line": 102
+        },
+        {
+          "draft_line": 102,
+          "source_line": 103
+        },
+        {
+          "draft_line": 103,
+          "source_line": 104
+        },
+        {
+          "draft_line": 104,
+          "source_line": 105
+        },
+        {
+          "draft_line": 105,
+          "source_line": 116
+        },
+        {
+          "draft_line": 106,
+          "source_line": 117
+        },
+        {
+          "draft_line": 107,
+          "source_line": 118
+        },
+        {
+          "draft_line": 108,
+          "source_line": 119
+        },
+        {
+          "draft_line": 109,
+          "source_line": 120
+        },
+        {
+          "draft_line": 110,
+          "source_line": 121
+        },
+        {
+          "draft_line": 111,
+          "source_line": 122
+        },
+        {
+          "draft_line": 112,
+          "source_line": 123
+        },
+        {
+          "draft_line": 113,
+          "source_line": 124
+        },
+        {
+          "draft_line": 114,
+          "source_line": 125
+        },
+        {
+          "draft_line": 115,
+          "source_line": 126
+        },
+        {
+          "draft_line": 116,
+          "source_line": 127
+        },
+        {
+          "draft_line": 117,
+          "source_line": 128
+        },
+        {
+          "draft_line": 118,
+          "source_line": 129
+        },
+        {
+          "draft_line": 119,
+          "source_line": 130
+        },
+        {
+          "draft_line": 120,
+          "source_line": 131
+        },
+        {
+          "draft_line": 121,
+          "source_line": 132
+        },
+        {
+          "draft_line": 122,
+          "source_line": 133
+        },
+        {
+          "draft_line": 123,
+          "source_line": 134
+        },
+        {
+          "draft_line": 124,
+          "source_line": 135
+        },
+        {
+          "draft_line": 125,
+          "source_line": 136
+        },
+        {
+          "draft_line": 126,
+          "source_line": 137
+        },
+        {
+          "draft_line": 127,
+          "source_line": 138
+        },
+        {
+          "draft_line": 128,
+          "source_line": 139
+        },
+        {
+          "draft_line": 129,
+          "source_line": 140
+        },
+        {
+          "draft_line": 130,
+          "source_line": 141
+        },
+        {
+          "draft_line": 131,
+          "source_line": 142
+        },
+        {
+          "draft_line": 132,
+          "source_line": 143
+        },
+        {
+          "draft_line": 133,
+          "source_line": 144
+        },
+        {
+          "draft_line": 134,
+          "source_line": 145
+        },
+        {
+          "draft_line": 135,
+          "source_line": 146
+        },
+        {
+          "draft_line": 136,
+          "source_line": 147
+        },
+        {
+          "draft_line": 137,
+          "source_line": 148
+        },
+        {
+          "draft_line": 138,
+          "source_line": 149
+        },
+        {
+          "draft_line": 139,
+          "source_line": 150
+        },
+        {
+          "draft_line": 140,
+          "source_line": 151
+        },
+        {
+          "draft_line": 141,
+          "source_line": 152
+        },
+        {
+          "draft_line": 142,
+          "source_line": 153
+        },
+        {
+          "draft_line": 143,
+          "source_line": 154
+        },
+        {
+          "draft_line": 144,
+          "source_line": 155
+        },
+        {
+          "draft_line": 145,
+          "source_line": 156
+        },
+        {
+          "draft_line": 146,
+          "source_line": 157
+        },
+        {
+          "draft_line": 147,
+          "source_line": 158
+        },
+        {
+          "draft_line": 148,
+          "source_line": 159
+        },
+        {
+          "draft_line": 149,
+          "source_line": 160
+        },
+        {
+          "draft_line": 150,
+          "source_line": 161
+        },
+        {
+          "draft_line": 151,
+          "source_line": 162
+        },
+        {
+          "draft_line": 152,
+          "source_line": 163
+        },
+        {
+          "draft_line": 153,
+          "source_line": 164
+        },
+        {
+          "draft_line": 154,
+          "source_line": 165
+        },
+        {
+          "draft_line": 155,
+          "source_line": 166
+        },
+        {
+          "draft_line": 156,
+          "source_line": 167
+        },
+        {
+          "draft_line": 157,
+          "source_line": 168
+        },
+        {
+          "draft_line": 158,
+          "source_line": 169
+        },
+        {
+          "draft_line": 159,
+          "source_line": 170
+        },
+        {
+          "draft_line": 160,
+          "source_line": 171
+        },
+        {
+          "draft_line": 161,
+          "source_line": 172
+        },
+        {
+          "draft_line": 162,
+          "source_line": 173
+        },
+        {
+          "draft_line": 163,
+          "source_line": 174
+        },
+        {
+          "draft_line": 164,
+          "source_line": 175
+        },
+        {
+          "draft_line": 165,
+          "source_line": 176
+        },
+        {
+          "draft_line": 166,
+          "source_line": 177
+        },
+        {
+          "draft_line": 167,
+          "source_line": 178
+        },
+        {
+          "draft_line": 168,
+          "source_line": 179
+        },
+        {
+          "draft_line": 169,
+          "source_line": 180
+        },
+        {
+          "draft_line": 170,
+          "source_line": 181
+        },
+        {
+          "draft_line": 171,
+          "source_line": 182
+        },
+        {
+          "draft_line": 172,
+          "source_line": 183
+        },
+        {
+          "draft_line": 173,
+          "source_line": 184
+        },
+        {
+          "draft_line": 174,
+          "source_line": 185
+        },
+        {
+          "draft_line": 175,
+          "source_line": 186
+        },
+        {
+          "draft_line": 176,
+          "source_line": 187
+        },
+        {
+          "draft_line": 177,
+          "source_line": 188
+        },
+        {
+          "draft_line": 178,
+          "source_line": 189
+        },
+        {
+          "draft_line": 179,
+          "source_line": 190
+        },
+        {
+          "draft_line": 180,
+          "source_line": 191
+        },
+        {
+          "draft_line": 181,
+          "source_line": 192
+        },
+        {
+          "draft_line": 182,
+          "source_line": 193
+        },
+        {
+          "draft_line": 183,
+          "source_line": 194
+        },
+        {
+          "draft_line": 184,
+          "source_line": 195
+        }
+      ]
+    }
+  ],
+  "redactions": [
+    {
+      "draft": "company",
+      "source": "深度分析/万华化学 深度分析 70 2026-09-06.md",
+      "source_line": 21,
+      "original": "> ⚠️ **重评说明**：本报告为 2026-09-06 重评，锚定最新已发布财报 **2026H1 半年报（2026-08-24 发布）**。旧版（2026-05-25，58 分）锚定 2025 年报+2026Q1。核心差异：①纠正旧版 F 维度\"分红随利润剧烈波动\"的归因错误（派息率实为 5 年稳定 30%）；②财务质量已实现反转（2026H1 净利 +64.35%、加权 ROE 8.96%、石化毛利由负转正——其中乙烷改造属管理层 alpha，地缘推价属 beta）；③母公司美国反垄断案获管辖层面抗辩成功（减轻或有负债，非\"实体清白\"认定）。**总分 58→70（+12，终审结构调整后仍为 70）**。需特别说明：本次评分严格区分**结构性 alpha（乙烷改造、项目投产）**与**周期 beta（地缘推价）**——周期反转的已实现财务修复仅在 E 维度计入，未据此上调商业模式/护城河的结构性评分。",
+      "replacement": "> 本报告锚定最新已发布财报 **2026H1 半年报（2026-08-24 发布）**。",
+      "reason": "仅去除历史修订措辞，保留当前事实推导"
+    },
+    {
+      "draft": "company",
+      "source": "深度分析/万华化学 深度分析 70 2026-09-06.md",
+      "source_line": 69,
+      "original": "> ✅ **本次重评无维度触发 40% 警告**。旧版 F 维度 5/15 触发的 40% 警告已消除，主要因纠正\"分红不稳\"误判（详见 F2 分析）。",
+      "replacement": "> ✅ **无维度触发 40% 警告**。",
+      "reason": "仅去除历史修订措辞，保留当前事实推导"
+    },
+    {
+      "draft": "company",
+      "source": "深度分析/万华化学 深度分析 70 2026-09-06.md",
+      "source_line": 73,
+      "original": "> 万华化学 70 分，评级「⭐⭐⭐⭐ 优质」。核心优势是全球 MDI 寡头第一 + 极宽护城河 + 股东回报纪律（派息率 5 年稳定 30%），最大隐患是高杠杆扩张（负债率 64.3%）在周期下行期的脆弱性与石化/新能源低回报扩张稀释 ROE。本次评分严格区分**结构性 alpha（乙烷改造、项目投产）**与**周期 beta（地缘推价）**——周期反转的已实现财务修复部分计入 E，未据此上调 B/C 结构性评分；且现金流强度不等于股东自由现金流（高折旧+高再投资限制现金产出），E 现金流子项已相应下调。综合 70 分（终审结构调整：A 8→9、E 13→11、F 9→10，总分不变）。",
+      "replacement": "> 万华化学 70 分，评级「⭐⭐⭐⭐ 优质」。核心优势是全球 MDI 寡头第一 + 极宽护城河 + 股东回报纪律（派息率 5 年稳定 30%），最大隐患是高杠杆扩张（负债率 64.3%）在周期下行期的脆弱性与石化/新能源低回报扩张稀释 ROE。本次评分严格区分**结构性 alpha（乙烷改造、项目投产）**与**周期 beta（地缘推价）**——周期反转的已实现财务修复部分计入 E，未据此上调 B/C 结构性评分；且现金流强度不等于股东自由现金流（高折旧+高再投资限制现金产出），E 现金流子项已相应下调。综合 70 分。",
+      "reason": "仅去除历史修订措辞，保留当前事实推导"
+    },
+    {
+      "draft": "company",
+      "source": "深度分析/万华化学 深度分析 70 2026-09-06.md",
+      "source_line": 127,
+      "original": "> 终审修订：A3 从 2 上调至 3——正文清洁度评价已为\"3/4 分\"（融资用途清晰+有机增长），原表格 2 分与正文不一致；高负债扩张的杠杆风险归入 E 维度（财务资本结构）计分，不在 A3 重复扣。A 维度合计 8→9。",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "company",
+      "source": "深度分析/万华化学 深度分析 70 2026-09-06.md",
+      "source_line": 166,
+      "original": "> ⚠️ **结构洞察**：旧版（2026-05）判定\"石化是增收不增利的瘦狗、结构性拖累\"。2026H1 石化毛利率由 -0.37% 改善至 +6.80%，**部分证伪\"永久性结构性拖累\"**——转正含**结构性因子（2026-01 乙烯乙烷改造 alpha）**与**周期因子（化工品涨价 beta）**两部分。本文将该转正视为\"可改善的周期/成本问题\"（B1 定性微调），但即便 6.80% 仍远低于聚氨酯 27.05%，石化 ROIC 是否覆盖资本成本仍存疑——此为 B 维度不据此上调 B3/B4、E4 维持扣分的根本原因。结构改善需多季确认，不可由单半年周期数据下结论。",
+      "replacement": "> ⚠️ **结构洞察**：2026H1 石化毛利率由 -0.37% 改善至 +6.80%，**部分证伪\"永久性结构性拖累\"**——转正含**结构性因子（2026-01 乙烯乙烷改造 alpha）**与**周期因子（化工品涨价 beta）**两部分。本文将该转正视为\"可改善的周期/成本问题\"（B1 定性微调），但即便 6.80% 仍远低于聚氨酯 27.05%，石化 ROIC 是否覆盖资本成本仍存疑——此为 B 维度不据此上调 B3/B4、E4 维持扣分的根本原因。结构改善需多季确认，不可由单半年周期数据下结论。",
+      "reason": "仅去除历史修订措辞，保留当前事实推导"
+    },
+    {
+      "draft": "company",
+      "source": "深度分析/万华化学 深度分析 70 2026-09-06.md",
+      "source_line": 220,
+      "original": "> 旧版 B 为 11/20，本次上调 1 分：石化毛利率由负转正，且转正含**结构性因子（2026-01 乙烯乙烷进料改造 alpha）**，证伪\"永久性拖累\"定性，B1 上调。**B3 定价权维持 2 分不升**：2026H1 MDI 价差 +21% 属地缘推价的周期红利，非结构性定价权提升，不据此上调（护城河评分锚定成本曲线位置而非单季价差）。",
+      "replacement": "> 石化毛利率由负转正，且转正含**结构性因子（2026-01 乙烯乙烷进料改造 alpha）**。**B3 定价权 2 分**：2026H1 MDI 价差 +21% 属地缘推价的周期红利，非结构性定价权提升（护城河评分锚定成本曲线位置而非单季价差）。",
+      "reason": "仅去除历史修订措辞，保留当前事实推导"
+    },
+    {
+      "draft": "company",
+      "source": "深度分析/万华化学 深度分析 70 2026-09-06.md",
+      "source_line": 289,
+      "original": "> C 维度与旧版同分（17/20），但内部结构修正：①C1 市场地位不变（6/6）；②C2 从旧版 5 微降至 4（石化板块毛利率即便 2026H1 转正仍仅 6.8%，远低于聚氨酯 27%，产业链定性\"喝汤\"而非\"吃肉\"，C2 满 5 需全链主导）；③C3+C4 护城河从旧版 6 修正至 7（旧版 4 星给 6/9 偏低，按 SKILL 标准 4 星=7/9）。**本次不因周期反转上调护城河评级**——2026H1 MDI 价差 +21% 属周期红利，护城河应锚定成本曲线位置这一结构性事实；母公司反垄断胜诉归入 F/合规减负维度，不在此重复计分。",
+      "replacement": "> **不因周期反转上调护城河评级**——2026H1 MDI 价差 +21% 属周期红利，护城河应锚定成本曲线位置这一结构性事实；母公司反垄断胜诉归入 F/合规减负维度，不在此重复计分。",
+      "reason": "仅去除历史修订措辞，保留当前事实推导"
+    },
+    {
+      "draft": "company",
+      "source": "深度分析/万华化学 深度分析 70 2026-09-06.md",
+      "source_line": 374,
+      "original": "> 旧版 D 为 9/15，本次上调 2 分（D2 从 2→4）。**严格区分 alpha 与 beta**：D2 上调依据是可独立验证的项目按承诺投产（2019→2020 乙烯/福建/眉山，2026-01 乙烯乙烷改造一次开车成功——管理层主动作为的 alpha，直接使石化毛利由负转正）。**注**：万华未设量化营收目标，营收连续增长不作\"指引全部达标\"推断；**2026H1 净利 +64% 中属地缘推价（beta）的部分不重复计入 D2**（财务端已在 E 维度体现），避免对同一外部驱动的利润进行跨维度重复奖励。",
+      "replacement": "> **严格区分 alpha 与 beta**：D2 依据是可独立验证的项目按承诺投产（2019→2020 乙烯/福建/眉山，2026-01 乙烯乙烷改造一次开车成功——管理层主动作为的 alpha，直接使石化毛利由负转正）。**注**：万华未设量化营收目标，营收连续增长不作\"指引全部达标\"推断；**2026H1 净利 +64% 中属地缘推价（beta）的部分不重复计入 D2**（财务端已在 E 维度体现），避免对同一外部驱动的利润进行跨维度重复奖励。",
+      "reason": "仅去除历史修订措辞，保留当前事实推导"
+    },
+    {
+      "draft": "company",
+      "source": "深度分析/万华化学 深度分析 70 2026-09-06.md",
+      "source_line": 418,
+      "original": "**结论（修正）**：回款质量优秀（净现比长期 >100%），但**OCF 强主要由高折旧回笼驱动（2025 折旧摊销 ~166 亿），不等于股东自由现金流**。2025 年 OCF 331.05 亿 − 购建长期资产支付现金 307.11 亿 ≈ **24 亿**；2026H1 OCF 117.84 − 购建 107.40 ≈ 10 亿。这些差额尚未扣现金利息、租赁及少数股东口径，真正的归母可分配现金流远小于报表 OCF。故 E2 现金流子项由 5 下调至 3（回款质量好，但高再投资需求限制股东现金产出）。2026H1 OCF 增速（+11.9%）慢于利润增速（+64%）亦提示利润兑现先于现金。",
+      "replacement": "**结论**：回款质量优秀（净现比长期 >100%），但**OCF 强主要由高折旧回笼驱动（2025 折旧摊销 ~166 亿），不等于股东自由现金流**。2025 年 OCF 331.05 亿 − 购建长期资产支付现金 307.11 亿 ≈ **24 亿**；2026H1 OCF 117.84 − 购建 107.40 ≈ 10 亿。这些差额尚未扣现金利息、租赁及少数股东口径，真正的归母可分配现金流远小于报表 OCF。故 E2 现金流子项为 3（回款质量好，但高再投资需求限制股东现金产出）。2026H1 OCF 增速（+11.9%）慢于利润增速（+64%）亦提示利润兑现先于现金。",
+      "reason": "仅去除历史修订措辞，保留当前事实推导"
+    },
+    {
+      "draft": "company",
+      "source": "深度分析/万华化学 深度分析 70 2026-09-06.md",
+      "source_line": 479,
+      "original": "> 终审修订（E 13→11）：**E2 现金流 5→3**——原\"净现比长期>100%\"高估了股东可分配现金流：OCF 331 亿中含高额折旧回笼（2025 折旧摊销 ~166 亿），而**购建长期资产支付现金 307 亿（2025）**，OCF−购建后仅约 24 亿；且需继续处理现金利息、租赁及少数股东口径后才是归母可分配现金流。回款质量好是事实，但现金流强度 ≠ 股东自由现金流，故下调至 3。E4 表述修正：2026H1 财务费用由 5.98 亿增至 14.25 亿，**主因汇兑损益由收益转损失**，利息费用（资本化前）实际由 16.76 亿微降至 16.21 亿——债务规模与期限结构仍是风险，但\"利息负担翻倍\"表述不成立。其余子项维持。",
+      "replacement": "> 现金流说明：OCF 331 亿中含高额折旧回笼（2025 折旧摊销 ~166 亿），而**购建长期资产支付现金 307 亿（2025）**，OCF−购建后仅约 24 亿；且需继续处理现金利息、租赁及少数股东口径后才是归母可分配现金流。回款质量好是事实，但现金流强度 ≠ 股东自由现金流，故为 3。E4：2026H1 财务费用由 5.98 亿增至 14.25 亿，**主因汇兑损益由收益转损失**，利息费用（资本化前）实际由 16.76 亿微降至 16.21 亿——债务规模与期限结构仍是风险，但\"利息负担翻倍\"表述不成立。",
+      "reason": "仅去除历史修订措辞，保留当前事实推导"
+    },
+    {
+      "draft": "company",
+      "source": "深度分析/万华化学 深度分析 70 2026-09-06.md",
+      "source_line": 512,
+      "original": "> ⚠️ **纠正旧版重大误判**：旧版 F2 评 2/5，理由\"分红随利润剧烈波动\"（DPS 从 25 元降到 12.5 元）。**这是归因错误**——DPS 波动源于利润周期下滑，而**派息率 5 年稳定在 30.1–31.8%，从未跌破 30% 承诺**（2023 年《三年股东回报规划》明文承诺）。旧版把\"利润周期波动导致的 DPS 变化\"误当\"股东回报不稳\"，实为**利润周期下滑 + 派息率恒定**的正确归因。按此纠正，F2 股东回报应评为高分（4/5）。",
+      "replacement": "> **派息率 5 年稳定在 30.1–31.8%，从未跌破 30% 承诺**（2023 年《三年股东回报规划》明文承诺）。DPS 波动源于利润周期下滑。F2 股东回报评为高分（4/5）。",
+      "reason": "仅去除历史修订措辞，保留当前事实推导"
+    },
+    {
+      "draft": "company",
+      "source": "深度分析/万华化学 深度分析 70 2026-09-06.md",
+      "source_line": 570,
+      "original": "> 终审修订（F 9→10）：F3 内控 1→2——**不因\"2025 取消监事会改设审计委员会\"本身扣分**（该调整为响应新《公司法》的治理现代化，非治理缺陷）；F3 保留\"审计干净+关联交易小+质押在降\"的正面，仅因一致行动人仍有部分质押微扣。F 合计 9→10。注意：F1 记录 2016\"9.20\"事故（4 死 4 伤）属安全管理事件（在 E/危机相关记录，不重复计入 F 廉洁维度——F1 无高管贪腐记录判断不变）。",
+      "replacement": "> **不因\"2025 取消监事会改设审计委员会\"本身扣分**（该调整为响应新《公司法》的治理现代化，非治理缺陷）；F3 保留\"审计干净+关联交易小+质押在降\"的正面，仅因一致行动人仍有部分质押微扣。注意：F1 记录 2016\"9.20\"事故（4 死 4 伤）属安全管理事件（在 E/危机相关记录，不重复计入 F 廉洁维度——F1 无高管贪腐记录判断不变）。",
+      "reason": "仅去除历史修订措辞，保留当前事实推导"
+    },
+    {
+      "draft": "company",
+      "source": "深度分析/万华化学 深度分析 70 2026-09-06.md",
+      "source_line": 616,
+      "original": "> **评分结构（终审修订，总分 70 不变）**：A 8→9（A3 融资清晰有机增长支持 3 分，正文与表格统一）、E 13→11（E2 现金流 5→3，OCF 强≠股东 FCF，高折旧+高再投资限制现金产出）、F 9→10（不因改设审计委员会扣分）；B/C/D 维持。评级较旧版（58 分/良好）上调 12 分，严格区分 alpha（乙烷改造、项目投产）与 beta（地缘推价），周期反转仅在 E 以已实现数据体现。",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "company",
+      "source": "深度分析/万华化学 深度分析 70 2026-09-06.md",
+      "source_line": 617,
+      "original": "> **买入纪律说明**：本报告为基本面质量判断，不含买入授权——是否建仓仅按估值分析的统一公式（合理价 × 系数）判断，无\"分批建仓区/标准仓位候选\"等旁路规则。请参阅估值分析（终审合理价 69 元、机械买入线 51.27 元；现价 77.66 元未达买入线）。",
+      "replacement": "> **买入纪律说明**：本报告为基本面质量判断，不含买入授权——是否建仓仅按估值分析的统一公式（合理价 × 系数）判断，无\"分批建仓区/标准仓位候选\"等旁路规则。请参阅估值分析（合理价 69 元、机械买入线 51.27 元；现价 77.66 元未达买入线）。",
+      "reason": "仅去除历史修订措辞，保留当前事实推导"
+    },
+    {
+      "draft": "company",
+      "source": "深度分析/万华化学 深度分析 70 2026-09-06.md",
+      "source_line": 623,
+      "original": "## P1 修复记录（双 Agent 审核后评分联动）",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "company",
+      "source": "深度分析/万华化学 深度分析 70 2026-09-06.md",
+      "source_line": 624,
+      "original": "",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "company",
+      "source": "深度分析/万华化学 深度分析 70 2026-09-06.md",
+      "source_line": 625,
+      "original": "| 修复项 | 影响维度 | 修正前 | 修正后 | 评分联动决定 |",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "company",
+      "source": "深度分析/万华化学 深度分析 70 2026-09-06.md",
+      "source_line": 626,
+      "original": "|---|---|---|---|---|",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "company",
+      "source": "深度分析/万华化学 深度分析 70 2026-09-06.md",
+      "source_line": 627,
+      "original": "| 同一 H1 周期反转在 B/C/D 多维重复计分（\"MDI价差+21%\"同用于 B3 与 C2；净利+64% 同用于 D2/E1/E3） | B/C/D | B3 依价差上调、C2 依价差上调、D2 全额计入 +64% | 区分**结构 alpha（乙烷改造、营收6连增）**与**周期 beta（地缘推价）**：B3 不升（价差是周期红利）、C 不升（护城河锚成本曲线不随周期）、D2 只计 alpha | **B 13→12、C 18→17**（撤销周期重复加分）；D 11 维持（D2=4 但依据改为 alpha） |",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "company",
+      "source": "深度分析/万华化学 深度分析 70 2026-09-06.md",
+      "source_line": 628,
+      "original": "| E1 用卖方预测 ROE 前置计分 | E | \"若全年达预测则 ROE 16-17%\"作评分依据 | 评分只用已实现 H1 ROE 8.96%；预测降级为\"展望（不计入评分）\" | 不改分，标注分层 |",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "company",
+      "source": "深度分析/万华化学 深度分析 70 2026-09-06.md",
+      "source_line": 629,
+      "original": "| E4=0 过苛（非偿债危机） | E | 高负债+短债=0 | OCF 300亿+ 与短债 605亿 比率~2:1、扩张高峰已过、授信覆盖缺口 → \"需滚动但可覆盖\"=1 | **E 12→13**（E4 0→1） |",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "company",
+      "source": "深度分析/万华化学 深度分析 70 2026-09-06.md",
+      "source_line": 630,
+      "original": "| F 升级注释不闭合 | F | \"F1+1、F2+2\"共+3，实际+4 | 补 F2.5 新增+1（有机增长正面但高杠杆 1/2 分） | 不改分，注释闭合 |",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "company",
+      "source": "深度分析/万华化学 深度分析 70 2026-09-06.md",
+      "source_line": 631,
+      "original": "| F 维度 9/15 vs 管档 78% 差异未说明 | F | 无归因 | 补差异说明（口径不同/治理结构约束权重不同） | 不改分 |",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "company",
+      "source": "深度分析/万华化学 深度分析 70 2026-09-06.md",
+      "source_line": 632,
+      "original": "| 杜邦权益乘数估算偏高 | E1 表 | 2021 ~3.0、2024 ~3.1 | 修正为 ~2.7、~2.8（与资产负债率 62-65% 隐含乘数一致） | 不改分 |",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "company",
+      "source": "深度分析/万华化学 深度分析 70 2026-09-06.md",
+      "source_line": 633,
+      "original": "| 其他 P2 | 全文 | B1 占比>100%、OCF 表述、D2 表半年口径等 | 统一口径、加注说明 | 不改分 |",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "company",
+      "source": "深度分析/万华化学 深度分析 70 2026-09-06.md",
+      "source_line": 634,
+      "original": "",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "company",
+      "source": "深度分析/万华化学 深度分析 70 2026-09-06.md",
+      "source_line": 635,
+      "original": "**总分 71 → 70（双 Agent 修复）**：B 13→12（-1）、C 18→17（-1）、E 12→13（+1），A/D/F 不变；重算闭合 8+12+17+11+13+9 = **70**。",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "company",
+      "source": "深度分析/万华化学 深度分析 70 2026-09-06.md",
+      "source_line": 636,
+      "original": "",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "company",
+      "source": "深度分析/万华化学 深度分析 70 2026-09-06.md",
+      "source_line": 637,
+      "original": "**终审修订（2026-09-06，总分维持 70）**：",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "company",
+      "source": "深度分析/万华化学 深度分析 70 2026-09-06.md",
+      "source_line": 638,
+      "original": "| 维度 | 原 | 终审 | 理由 |",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "company",
+      "source": "深度分析/万华化学 深度分析 70 2026-09-06.md",
+      "source_line": 639,
+      "original": "|---|---|---|---|",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "company",
+      "source": "深度分析/万华化学 深度分析 70 2026-09-06.md",
+      "source_line": 640,
+      "original": "| A | 8 | 9 | A3 正文 3 分/表格 2 分不一致，按正文取 3（融资清晰+有机增长）；杠杆风险归 E |",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "company",
+      "source": "深度分析/万华化学 深度分析 70 2026-09-06.md",
+      "source_line": 641,
+      "original": "| B | 12 | 12 | 保留周期性与重资产约束 |",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "company",
+      "source": "深度分析/万华化学 深度分析 70 2026-09-06.md",
+      "source_line": 642,
+      "original": "| C | 17 | 17 | 护城河结构性稳固 |",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "company",
+      "source": "深度分析/万华化学 深度分析 70 2026-09-06.md",
+      "source_line": 643,
+      "original": "| D | 11 | 11 | 保留项目执行；撤销\"营收增长=兑现率\"表述 |",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "company",
+      "source": "深度分析/万华化学 深度分析 70 2026-09-06.md",
+      "source_line": 644,
+      "original": "| E | 13 | 11 | **E2 现金流 5→3**：OCF 强≠股东 FCF（高折旧+高再投资，OCF−购建 2025 仅 ~24 亿）|",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "company",
+      "source": "深度分析/万华化学 深度分析 70 2026-09-06.md",
+      "source_line": 645,
+      "original": "| F | 9 | 10 | F3 不因改设审计委员会扣分（响应新《公司法》治理现代化）|",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "company",
+      "source": "深度分析/万华化学 深度分析 70 2026-09-06.md",
+      "source_line": 646,
+      "original": "| **合计** | 70 | **70** | |",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "company",
+      "source": "深度分析/万华化学 深度分析 70 2026-09-06.md",
+      "source_line": 647,
+      "original": "",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "company",
+      "source": "深度分析/万华化学 深度分析 70 2026-09-06.md",
+      "source_line": 648,
+      "original": "另按终审修正：撤销\"40 年安全运营/安全历史干净\"表述（2016\"9.20\"事故 4 死 4 伤）；财务费用 +138% 改述为汇兑驱动（利息支出实际微降）；净债务更新至 2026H1（~894 亿）；美国反垄断案改为\"管辖层面抗辩成功\"（非实体认定）；删除\"标准仓位 2–5% 候选/分批建仓区\"等买入旁路规则。",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "company",
+      "source": "深度分析/万华化学 深度分析 70 2026-09-06.md",
+      "source_line": 649,
+      "original": "",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "company",
+      "source": "深度分析/万华化学 深度分析 70 2026-09-06.md",
+      "source_line": 650,
+      "original": "---",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "management",
+      "source": "管理层档案/万华化学 管理层档案 80 2026-09-06.md",
+      "source_line": 260,
+      "original": "### P1 修复记录（双 Agent 审核后评分联动）",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "management",
+      "source": "管理层档案/万华化学 管理层档案 80 2026-09-06.md",
+      "source_line": 261,
+      "original": "",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "management",
+      "source": "管理层档案/万华化学 管理层档案 80 2026-09-06.md",
+      "source_line": 262,
+      "original": "| 修复项 | 影响维度 → 子项 | 修正前 | 修正后事实 | 评分联动决定 |",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "management",
+      "source": "管理层档案/万华化学 管理层档案 80 2026-09-06.md",
+      "source_line": 263,
+      "original": "|---|---|---|---|---|",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "management",
+      "source": "管理层档案/万华化学 管理层档案 80 2026-09-06.md",
+      "source_line": 264,
+      "original": "| 净利\"连降三年(246→168→130→125)\"表述矛盾（2023 实为 +3.6% 回升） | 全文叙事（快速参考/§四.1/§十一.1） | 误作\"逐年连降三年\" | 正确序列 246→162→168→130→125，2022/2024/2025 三年下滑、2023 短暂回升，自峰值近乎腰斩 | 不改分（方向性事实不变），统一修正叙事 |",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "management",
+      "source": "管理层档案/万华化学 管理层档案 80 2026-09-06.md",
+      "source_line": 265,
+      "original": "| 战略措辞反复跨\"诚信+战略\"双维重复扣 4 分 | 诚信→透明度；战略→稳定性 | 诚信扣 2（措辞反复）+ 战略扣 2（措辞反复） | 措辞反复属战略沟通表述问题，归战略稳定性单处 | 诚信 16→17（移除重复扣 2，仅保留 2025 自我归功张力扣 1），战略 12 维持 |",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "management",
+      "source": "管理层档案/万华化学 管理层档案 80 2026-09-06.md",
+      "source_line": 266,
+      "original": "| 以\"无电话会逐字稿\"扣分（违反资料可得性纪律） | 诚信；表达清晰度 | 诚信扣分含\"无逐字稿核验\"、表达扣分含\"无逐字稿佐证\" | A 股国企无电话会公开源属客观形态，非披露瑕疵 | 删除可得性扣分理由（不改分），在扣分理由注明 |",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "management",
+      "source": "管理层档案/万华化学 管理层档案 80 2026-09-06.md",
+      "source_line": 267,
+      "original": "| 无股权激励在\"股东友好度(1)+组织人才(2)\"双扣 | 股东友好度；组织人才 | 股东友好扣 1（无激励）+ 组织人才扣 2（无激励） | 激励绑定属组织人才维度视角，归口单处 | 股东友好度 12→13（移除重复扣 1），组织人才 8 维持 |",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "management",
+      "source": "管理层档案/万华化学 管理层档案 80 2026-09-06.md",
+      "source_line": 268,
+      "original": "| 2024 安纳达小并购单独扣 2 偏重 | 资本配置 | 扣 2（安纳达跨界）+ 扣 2（新能源未验证） | 安纳达占总资产 ~0.2%，并入新能源未验证项合并扣 2 | 资本配置 17 维持（净额不变） |",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "management",
+      "source": "管理层档案/万华化学 管理层档案 80 2026-09-06.md",
+      "source_line": 269,
+      "original": "| ROE 口径混用（2021 摊薄 36% vs 2025 加权 12.4%） | §三/§十一 叙事 | 跨口径比较 36%→12.4% | 统一加权口径 42.5%→12.44% | 不改分，统一口径 |",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "management",
+      "source": "管理层档案/万华化学 管理层档案 80 2026-09-06.md",
+      "source_line": 270,
+      "original": "| 研发人员 22.7% 误标（实为技术占比） | 快速参考优点② | \"研发人员 22.7%\" | 技术人员 22.7%、研发人员 4,833 人=15.71% | 不改分，修正表述 |",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "management",
+      "source": "管理层档案/万华化学 管理层档案 80 2026-09-06.md",
+      "source_line": 271,
+      "original": "| 高层任期日期瑕疵（寇董事/华常务副总/陈高级副总） | 一、核心人物表 | 寇 2009-08/华 2019-03/陈 2015-03 | 寇董事 2008-03、华常务副总 2019-04、陈高级副总/安全总监 2021-03（据换届公告附件简历） | 不改分 |",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "management",
+      "source": "管理层档案/万华化学 管理层档案 80 2026-09-06.md",
+      "source_line": 272,
+      "original": "| 员工序列表述混乱 + 净现比口径 | §六/§三 | 29,053→30,772→又降 | 2023 29,053→2024 33,303→2025 30,772；净现比 235% 分母为含少数股东净利 140 亿 | 不改分 |",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "management",
+      "source": "管理层档案/万华化学 管理层档案 80 2026-09-06.md",
+      "source_line": 273,
+      "original": "| 卖方预期标注 + 产能来源 | 跟踪指标/§十一 | \"卖方一致预期 ~203 亿\"、450 万吨无来源 | 汇丰前海单家 ~203 亿（瑞银 ~192 亿）、450 万吨为券商公开数据 | 不改分 |",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "management",
+      "source": "管理层档案/万华化学 管理层档案 80 2026-09-06.md",
+      "source_line": 274,
+      "original": "",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "management",
+      "source": "管理层档案/万华化学 管理层档案 80 2026-09-06.md",
+      "source_line": 275,
+      "original": "**总分 76 → 80（双 Agent 修复 + 终审修订）**：",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "management",
+      "source": "管理层档案/万华化学 管理层档案 80 2026-09-06.md",
+      "source_line": 276,
+      "original": "- 双 Agent 修复：诚信 16→17、股东友好度 12→13 → 暂计 78",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "management",
+      "source": "管理层档案/万华化学 管理层档案 80 2026-09-06.md",
+      "source_line": 277,
+      "original": "- **终审修订（2026-09-06）**：诚信 17→19（**落实\"移除战略措辞重复扣分\"**——原修复记录写明移除却仍按 17 计，终审判定应上调至 19）；战略稳定性 12→13（措辞变化属演进非漂移，仅扣跨界待验证）；危机处理 7→6（撤销\"无安全型危机\"过度正面，新增 2016\"9.20\"事故 4 死 4 伤 + 总裁被罚）",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "management",
+      "source": "管理层档案/万华化学 管理层档案 80 2026-09-06.md",
+      "source_line": 278,
+      "original": "- 重算闭合 **19+17+13+13+6+8+4 = 80**",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "management",
+      "source": "管理层档案/万华化学 管理层档案 80 2026-09-06.md",
+      "source_line": 311,
+      "original": "1. **股东回报纪律是国企标杆**：派息率 5 年（2021–2025）稳定在 30.1–31.8%，在净利自 2021 年峰值 246 亿近乎腰斩至 2025 年 125 亿的大起大落中（2022/2024/2025 三年下滑、2023 短暂回升 +3.6%），派息率从未跌破 30% 书面承诺；2024 起引入中期分红，2026H1 董事长主动提议并将中期派息定在上半年净利的 25.2%——这是用\"规则+承诺\"锁定的股东回报，不是随管理层心情波动的随意分红。旧版深度分析将\"DPS 从 2.5 元降到 1.25 元\"误读为\"分红不稳\"，实为**利润周期下滑 + 派息率恒定**的正确归因。",
+      "replacement": "1. **股东回报纪律是国企标杆**：派息率 5 年（2021–2025）稳定在 30.1–31.8%，在净利自 2021 年峰值 246 亿近乎腰斩至 2025 年 125 亿的大起大落中（2022/2024/2025 三年下滑、2023 短暂回升 +3.6%），派息率从未跌破 30% 书面承诺；2024 起引入中期分红，2026H1 董事长主动提议并将中期派息定在上半年净利的 25.2%——这是用\"规则+承诺\"锁定的股东回报，不是随管理层心情波动的随意分红。",
+      "reason": "仅去除历史修订措辞，保留当前事实推导"
+    },
+    {
+      "draft": "valuation",
+      "source": "估值分析/万华化学 估值分析 2026-09-06.md",
+      "source_line": 21,
+      "original": "> 分析日期：2026-09-06（2026 半年报更新；**终审修订版**）",
+      "replacement": "> 分析日期：2026-09-06（2026 半年报更新）",
+      "reason": "仅去除历史修订措辞，保留当前事实推导"
+    },
+    {
+      "draft": "valuation",
+      "source": "估值分析/万华化学 估值分析 2026-09-06.md",
+      "source_line": 26,
+      "original": "> ⚠️ **终审修订说明**：原稿五法加权（73 元）存在现金流假设、债务桥接与模型一致性问题，终审判定暂不继续机械加权，改用**可复算的正常化 PE 主锚**。详见\"多方法估值\"后的修订说明。",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "valuation",
+      "source": "估值分析/万华化学 估值分析 2026-09-06.md",
+      "source_line": 85,
+      "original": "## 估值方法（终审修订：单主锚 + 敏感性）",
+      "replacement": "## 估值方法（单主锚 + 敏感性）",
+      "reason": "仅去除历史修订措辞，保留当前事实推导"
+    },
+    {
+      "draft": "valuation",
+      "source": "估值分析/万华化学 估值分析 2026-09-06.md",
+      "source_line": 89,
+      "original": "强周期股禁用 PE_TTM 分位（盈利低谷 PE 虚高）。终审采用**可复算的正常化 PE 主锚**：",
+      "replacement": "强周期股禁用 PE_TTM 分位（盈利低谷 PE 虚高）。采用**可复算的正常化 PE 主锚**：",
+      "reason": "仅去除历史修订措辞，保留当前事实推导"
+    },
+    {
+      "draft": "valuation",
+      "source": "估值分析/万华化学 估值分析 2026-09-06.md",
+      "source_line": 106,
+      "original": "### 原五法为何不再机械加权（终审问题说明）",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "valuation",
+      "source": "估值分析/万华化学 估值分析 2026-09-06.md",
+      "source_line": 107,
+      "original": "",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "valuation",
+      "source": "估值分析/万华化学 估值分析 2026-09-06.md",
+      "source_line": 108,
+      "original": "原稿曾用五法加权得 73 元，终审发现以下方法学问题，判定**暂不机械加权**，改用上述单主锚：",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "valuation",
+      "source": "估值分析/万华化学 估值分析 2026-09-06.md",
+      "source_line": 109,
+      "original": "",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "valuation",
+      "source": "估值分析/万华化学 估值分析 2026-09-06.md",
+      "source_line": 110,
+      "original": "| 原方法 | 原稿问题 | 处理 |",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "valuation",
+      "source": "估值分析/万华化学 估值分析 2026-09-06.md",
+      "source_line": 111,
+      "original": "|---|---|---|",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "valuation",
+      "source": "估值分析/万华化学 估值分析 2026-09-06.md",
+      "source_line": 112,
+      "original": "| 标准化 FCF Yield（原给 25% 权重，131 亿 FCF）| **\"131 亿标准化 FCF\"无充分依据**：原稿假设维护性 capex ~200 亿得出；实际 OCF 331.05 − 购建长期资产现金 307.11 = **仅 ~24 亿**（2025）；2026H1 OCF 117.84 − 购建 107.40 = ~10 亿。且即便 24 亿也非完整归母可分配现金流（需继续扣现金利息/租赁/少数股东）。\"维护+已有项目\"非严格的维护性 capex 定义 | 剔除该假设；保留\"现金资本开支 2026H1 同比 -36.9%\"为真实正面，但\"扩张高峰已过\"收敛为\"持续性待观察\" |",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "valuation",
+      "source": "估值分析/万华化学 估值分析 2026-09-06.md",
+      "source_line": 113,
+      "original": "| EV/EBITDA（原 25% 权重）| 净债务沿用 **2025 末旧数据 705.96 亿**（未剔除受限现金）；且集团 EBITDA→归母股权价值需处理少数股东权益与非经营性资产，不能简单减净债务全部归股东 | 净债务更新至 **2026H1：893.68 亿（不含租）/1009.31 亿（含租）**；EV/EBITDA 仅作参考，不赋正式权重 |",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "valuation",
+      "source": "估值分析/万华化学 估值分析 2026-09-06.md",
+      "source_line": 114,
+      "original": "| DDM（原 10%）与 P/B-ROE（原 10%）| **两者非独立一致的验证**：DDM 隐含派息率 30%，P/B-ROE 在稳定增长模型下留存率 = g/ROE = 5%/15% = 33.3% → 隐含派息率 66.7%，二者假设不一致。37 元 vs 81 元的差异首先来自假设冲突，不能解释为\"DDM 天然低估成长\" | 均剔除；P/B-ROE 隐含派息率与公司实际 30% 不符，不作估值锚 |",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "valuation",
+      "source": "估值分析/万华化学 估值分析 2026-09-06.md",
+      "source_line": 115,
+      "original": "| 逆向 DCF | 与 PE/DDM 同源，诊断为主 | 保留为诊断参考，不赋权重 |",
+      "replacement": "",
+      "reason": "历史评分变化、旧版链接或此前复核轨迹"
+    },
+    {
+      "draft": "valuation",
+      "source": "估值分析/万华化学 估值分析 2026-09-06.md",
+      "source_line": 123,
+      "original": "### 合理价中枢（终审）",
+      "replacement": "### 合理价中枢",
+      "reason": "仅去除历史修订措辞，保留当前事实推导"
+    },
+    {
+      "draft": "valuation",
+      "source": "估值分析/万华化学 估值分析 2026-09-06.md",
+      "source_line": 178,
+      "original": "**合理价中枢 69 元**（终审，正常化 EPS 5.30 × 13 倍 PE，可复算单主锚），现价 77.66 元**高于合理价 +12.6%，且远高于机械买入线 51.27 元——未达到建仓条件**。周期反转（2026H1 净利 +64%）已验证盈利修复，但现价已隐含对 MDI 景气持续的较强预期；估值确定性与债务消化仍有较大估计空间（certainty 0.45）。**是否买入只按统一公式（买入线 51.27 元）判断，无\"分批建仓区\"等旁路规则。**",
+      "replacement": "**合理价中枢 69 元**（正常化 EPS 5.30 × 13 倍 PE，可复算单主锚），现价 77.66 元**高于合理价 +12.6%，且远高于机械买入线 51.27 元——未达到建仓条件**。周期反转（2026H1 净利 +64%）已验证盈利修复，但现价已隐含对 MDI 景气持续的较强预期；估值确定性与债务消化仍有较大估计空间（certainty 0.45）。**是否买入只按统一公式（买入线 51.27 元）判断，无\"分批建仓区\"等旁路规则。**",
+      "reason": "仅去除历史修订措辞，保留当前事实推导"
+    },
+    {
+      "draft": "valuation",
+      "source": "估值分析/万华化学 估值分析 2026-09-06.md",
+      "source_line": 187,
+      "original": "- **操作（终审）**：cScore 70 + mScore 80 = **150**，两项均 ≥70 → 达 B_GROWTH 门槛，**写入 watchlist_growth.json**",
+      "replacement": "- **操作**：cScore 70 + mScore 80 = **150**，两项均 ≥70 → 达 B_GROWTH 门槛，**写入 watchlist_growth.json**",
+      "reason": "仅去除历史修订措辞，保留当前事实推导"
+    }
+  ],
+  "evidence_sources": [
+    {
+      "path": "财报/万华化学/万华化学2026半年度报告.md",
+      "sha256": "5e2a4fa0e556a747ae43990114f4f5a8b9a3dd01d9828ad1b2afa6c55a531296",
+      "ranges": [
+        [
+          1,
+          410
+        ],
+        [
+          587,
+          675
+        ],
+        [
+          779,
+          804
+        ],
+        [
+          817,
+          830
+        ],
+        [
+          845,
+          854
+        ],
+        [
+          3800,
+          3870
+        ]
+      ]
+    },
+    {
+      "path": "财报/万华化学/万华化学2025年度报告.md",
+      "sha256": "b27d7cd33e3217c3017fd5fd4d5fa4bd2ac2bf49592368274aa2d09478fe4a17",
+      "ranges": [
+        [
+          1,
+          150
+        ],
+        [
+          931,
+          1105
+        ],
+        [
+          1866,
+          1879
+        ],
+        [
+          1894,
+          1905
+        ],
+        [
+          1920,
+          1931
+        ]
+      ]
+    },
+    {
+      "path": "财报/万华化学/万华化学2024年度报告.md",
+      "sha256": "8879b0692f9cd112f0c1e5b79797cddb6fafaa8151ce3eacd495067e2586618b",
+      "ranges": [
+        [
+          1,
+          155
+        ]
+      ]
+    },
+    {
+      "path": "财报/万华化学/万华化学2023年度报告.md",
+      "sha256": "42e0433fadc4dc50b857679c49a122cf18896daa3848d34e20116e3549ca74ae",
+      "ranges": [
+        [
+          1,
+          155
+        ]
+      ]
+    }
+  ],
+  "gaps": [
+    "证据为本地归档财报原文节选；截止日行情、卖方预测、财报之外的公告及诉讼记录未取得独立原始文本，未用初稿填补。"
+  ],
+  "total_material_characters": 268777,
+  "evidence_sha256": "3dd97905b1687ba002d08d5c52b3fb092ab678bae3155f305773256745ac34e9"
+}

@@ -1,0 +1,29 @@
+{
+  "flash_runs": {
+    "000333": {
+      "directory": "data/reviews/batch1-000333/20260908T133553560710Z",
+      "status": "failed"
+    },
+    "600036": {
+      "directory": "data/reviews/batch1-600036/20260908T133633791097Z",
+      "status": "prepared"
+    },
+    "600276": {
+      "directory": "data/reviews/batch1-600276/20260908T133634010752Z",
+      "status": "awaiting_adjudication"
+    },
+    "600309": {
+      "directory": "data/reviews/batch1-600309/20260908T133634203874Z",
+      "status": "failed"
+    },
+    "600887": {
+      "directory": "data/reviews/batch1-600887/20260908T133543250226Z",
+      "status": "awaiting_adjudication"
+    },
+    "688111": {
+      "directory": "data/reviews/batch1-688111/20260908T133603985435Z",
+      "status": "failed"
+    }
+  },
+  "freeze_sha256": "5cc861f6cf16e53c049e780be97d659d70436bde7feac23a11fd9e491ccf2100"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "batch1-688111",
+  "company": "金山办公",
+  "cutoff": "2026-08-22",
+  "rules": [
+    "data/reviews/batch1-2026-09-08/rules.md"
+  ],
+  "evidence": [
+    "data/reviews/batch1-2026-09-08/688111/evidence.md"
+  ],
+  "drafts": [
+    "data/reviews/batch1-2026-09-08/688111/draft-company.md",
+    "data/reviews/batch1-2026-09-08/688111/draft-management.md",
+    "data/reviews/batch1-2026-09-08/688111/draft-valuation.md"
+  ]
+}

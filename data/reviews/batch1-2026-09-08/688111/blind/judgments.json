@@ -1,0 +1,252 @@
+[
+  {
+    "id": "C001",
+    "outcome": "partial",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D001",
+    "severity": "P1",
+    "reason": "确信度闭合错误成立；候选给出的0.45买价177.684有算术笔误，准确值为177.577；0.55对应180.923。应修因子或总数，不能直接断言必取0.45。",
+    "evidence": "draft-valuation.md:199、203–206；0.50+0.15-0.20=0.45；239*(0.68+0.14*0.45)=177.577。"
+  },
+  {
+    "id": "C002",
+    "outcome": "partial",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D002",
+    "severity": "P1",
+    "reason": "债权投资15.38亿错误成立，与C009合并。原稿已明确广义口径和不等价现金，不能再将未披露局限计错；长期存款必须折价95%及FCF Yield受现金直接影响均无依据。",
+    "evidence": "draft-valuation.md:143–157；evidence.md原L981债权投资空；原L555的15.3792亿为基金本期利润影响；原L3576非存款项0.3947亿。"
+  },
+  {
+    "id": "C003",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D003",
+    "severity": "P1",
+    "reason": "经调整盈利明确加回股份支付，却以固定股数充作内生经济利润和FCFE，缺少持续SBC成本或未来稀释桥，属于已进入正式估值的口径缺陷。",
+    "evidence": "draft-valuation.md:27、40、46–50、98、126–128；evidence.md原L136定义、L128-L96=153982386.37元披露调整影响，原L3951资本公积股份支付147833728.42元，两者不能无桥互换；原L819股本增加834142股。"
+  },
+  {
+    "id": "C004",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D004",
+    "severity": "P1",
+    "reason": "所列参数不能复算全部DCF情景；t0或首年时点未明确亦妨碍模型复核。",
+    "evidence": "draft-valuation.md:98–118；以22.5为t0，sum(t=1..10,22.5*(1+g)^t/1.09^t)+22*22.5*(1+g)^10/1.09^10，在g=11/15/19%约842.71/1151.61/1567.04亿元，除4.64约181.62/248.19/337.72元，非900/1160/1520。"
+  },
+  {
+    "id": "C005",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D001",
+    "severity": "P1",
+    "reason": "确信度闭合错误成立，候选重算买价177.577及180.923正确。应修因子或总数，不能为保留181倒配因子。",
+    "evidence": "draft-valuation.md:199、203–206；0.50+0.15-0.20=0.45；239*(0.68+0.14*0.45)=177.577。"
+  },
+  {
+    "id": "C006",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D005",
+    "severity": "P1",
+    "reason": "零关联交易绝对事实与本稿服务交易及证据关联基金矛盾；存在关联不等于有害关联，不据此机械扣治理分。",
+    "evidence": "draft-company.md:363、380；evidence.md原L555两项基金是否存在关联关系均为是。"
+  },
+  {
+    "id": "C007",
+    "outcome": "insufficient",
+    "kind": "scope_gap",
+    "is_correction": true,
+    "group": "",
+    "severity": "P2",
+    "reason": "冻结包不含2025审计报告，不能以半年报未经审计证明2025审计师或意见错误，仅需补证。",
+    "evidence": "evidence.md原L25半年报未经审计；draft-company.md:27引用另一年度审计。"
+  },
+  {
+    "id": "C008",
+    "outcome": "partial",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D006",
+    "severity": "P2",
+    "reason": "直接股东及同期比例应修为WPS香港51.38%；雷军系53%表述不准确。但原稿已列雷军5306万间接折算股，系控制集团不必等于个人权益，不能认定全文将其个人持有夸大为53%。",
+    "evidence": "draft-management.md:50、68、158；evidence.md原L863直接股东238387351股/464013435=51.3751%；原L907雷军53061383股/464013435=11.4353%。"
+  },
+  {
+    "id": "C009",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D002",
+    "severity": "P1",
+    "reason": "损益被误作资产余额，134亿组成不成立；净现金须由资产余额和负债重建。",
+    "evidence": "draft-company.md:315、draft-valuation.md:157；evidence.md原L981、555、3576；所列现金及存款不含错误15.38亿、非现金0.3947亿后约118.54亿，尚非最终净现金。"
+  },
+  {
+    "id": "C010",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D007",
+    "severity": "P2",
+    "reason": "展示公式股数放反且将H1简单年化称TTM；结果约51倍接近正确，不属于数量级实际结论错误。",
+    "evidence": "draft-valuation.md:60；240.5/4.64/(10.87*2)=2.3842；240.5*4.64/(10.87*2)=51.3303。evidence.md原L136、819。"
+  },
+  {
+    "id": "C011",
+    "outcome": "partial",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D006",
+    "severity": "P2",
+    "reason": "直接股东及同期比例应修为WPS香港51.38%；雷军系53%表述不准确。但原稿已列雷军5306万间接折算股，系控制集团不必等于个人权益，不能认定全文将其个人持有夸大为53%。",
+    "evidence": "draft-management.md:50、68、158；evidence.md原L863直接股东238387351股/464013435=51.3751%；原L907雷军53061383股/464013435=11.4353%。"
+  },
+  {
+    "id": "C012",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D008",
+    "severity": "P1",
+    "reason": "已承认错误且不可复算的EBITDA输入仍传入正式权重，属于局限披露未阻断正式结论，不是重复提出已披露局限。",
+    "evidence": "draft-valuation.md:155、179–186；剩余四法73.2+31.95+50+60.5=215.65，归一化215.65/0.9=239.6111元。"
+  },
+  {
+    "id": "C013",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D009",
+    "severity": "P2",
+    "reason": "评分小计和跨稿引用版本不一致成立，属轻微汇总/引用错误，未证明造成档位变化，不定P1。",
+    "evidence": "draft-company.md:386–390得5+4+1+3=13，汇总9+16+16+14+14+13=82；draft-management.md总分81；draft-valuation.md:13引用83/83。"
+  },
+  {
+    "id": "C014",
+    "outcome": "partial",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D010",
+    "severity": "P1",
+    "reason": "零商誉明确错误并传入资本清洁度评分；历史少数股权收购也不能称完全无资本运作。但不能仅据商誉余额确认上市以来新增并购，更不能无证据改成自上市以来零重大并购或无新增并购。",
+    "evidence": "draft-company.md:93、340、389；draft-management.md:124、144；evidence.md原L981商誉184668972.58元/归母权益15076742614.52=1.2249%，原商誉附注明数科网维；原L4299上期少数股权收购276443734.08元。"
+  },
+  {
+    "id": "C015",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D007",
+    "severity": "P2",
+    "reason": "展示公式股数放反且将H1简单年化称TTM；结果约51倍接近正确，不属于数量级实际结论错误。",
+    "evidence": "draft-valuation.md:60；240.5/4.64/(10.87*2)=2.3842；240.5*4.64/(10.87*2)=51.3303。evidence.md原L136、819。"
+  },
+  {
+    "id": "C016",
+    "outcome": "partial",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D010",
+    "severity": "P1",
+    "reason": "零商誉明确错误并传入资本清洁度评分；历史少数股权收购也不能称完全无资本运作。但不能仅据商誉余额确认上市以来新增并购，更不能无证据改成自上市以来零重大并购或无新增并购。",
+    "evidence": "draft-company.md:93、340、389；draft-management.md:124、144；evidence.md原L981商誉184668972.58元/归母权益15076742614.52=1.2249%，原商誉附注明数科网维；原L4299上期少数股权收购276443734.08元。"
+  },
+  {
+    "id": "C017",
+    "outcome": "partial",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D011",
+    "severity": "P2",
+    "reason": "总毛利约85%算术正确；分业务毛利在实际值表格、统一财报来源标签下呈现，但冻结证据只支撑整体毛利，不支持声称分项为披露实际值。属于事实/估计标签混用；不裁定各估值数字为假。",
+    "evidence": "draft-company.md:125–134标题2026H1实际及实际值来源，分部约80/91/95/92%；evidence.md营业收入3313262599.20、成本500458107.69，整体84.8953%。"
+  },
+  {
+    "id": "C018",
+    "outcome": "partial",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D008",
+    "severity": "P1",
+    "reason": "无效输入仍加权成立；剔除后约243及1.7%差异不成立，正确239.61，较239.25约0.15%；23.6是权重贡献，不是价值误差。",
+    "evidence": "draft-valuation.md:155、183；(244*.3+213*.15+250*.2+242*.25)/.9=239.6111。"
+  },
+  {
+    "id": "C019",
+    "outcome": "non_defect",
+    "kind": "improvement",
+    "is_correction": true,
+    "group": "",
+    "severity": "P2",
+    "reason": "比值算术正确且原稿已明确预缴税影响及季节性；补充现金流桥有帮助，但未证明指标不可用或原稿忽略该说明。不得猜剔税后数值。",
+    "evidence": "draft-company.md:294–302明确分母为经调整净利，并引用剔税后为正；6.43/10.87=59.15%；evidence.md原L232、462。"
+  },
+  {
+    "id": "C020",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D012",
+    "severity": "P1",
+    "reason": "业务收入分类被当成订阅收费属性；原稿自身承认个人业务含广告，不能将整项纳入已核实经常性收入率并支撑确信度。",
+    "evidence": "draft-company.md:129、136、148、173；draft-valuation.md:194；evidence.md原L438–440仅业务收入。25.11/33.13=75.7923%是业务合计占比。"
+  },
+  {
+    "id": "C021",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D009",
+    "severity": "P2",
+    "reason": "治理小计14错误，与评分一致性问题合并。",
+    "evidence": "draft-company.md:386–390分项13、汇总46行13，总分82。"
+  },
+  {
+    "id": "C022",
+    "outcome": "partial",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D010",
+    "severity": "P1",
+    "reason": "零商誉明确错误并传入资本清洁度评分；历史少数股权收购也不能称完全无资本运作。但不能仅据商誉余额确认上市以来新增并购，更不能无证据改成自上市以来零重大并购或无新增并购。",
+    "evidence": "draft-company.md:93、340、389；draft-management.md:124、144；evidence.md原L981商誉184668972.58元/归母权益15076742614.52=1.2249%，原商誉附注明数科网维；原L4299上期少数股权收购276443734.08元。"
+  },
+  {
+    "id": "C023",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D003",
+    "severity": "P1",
+    "reason": "经调整盈利明确加回股份支付，却以固定股数充作内生经济利润和FCFE，缺少持续SBC成本或未来稀释桥，属于已进入正式估值的口径缺陷。",
+    "evidence": "draft-valuation.md:27、40、46–50、98、126–128；evidence.md原L136定义、L128-L96=153982386.37元披露调整影响，原L3951资本公积股份支付147833728.42元，两者不能无桥互换；原L819股本增加834142股。"
+  },
+  {
+    "id": "C024",
+    "outcome": "partial",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D003",
+    "severity": "P1",
+    "reason": "缺少经调整利润至股东现金流桥成立，与C003/C023同一共用盈利口径缺陷合并。100%已明示是假设，不能仅凭H1断言偏高；保守必须小于100%、75–85%及下调8–15%均无充分支持；10.87*2实际21.74，不是21.5。",
+    "evidence": "draft-valuation.md:98、126–128；draft-company.md:300已披露税与季节性；evidence.md原L136、232、462；FCFE还需资本投入/营运资本及SBC处理。"
+  },
+  {
+    "id": "C025",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D008",
+    "severity": "P1",
+    "reason": "已承认错误且不可复算的EBITDA输入仍传入正式权重，属于局限披露未阻断正式结论，不是重复提出已披露局限。",
+    "evidence": "draft-valuation.md:155、179–186；剩余四法73.2+31.95+50+60.5=215.65，归一化215.65/0.9=239.6111元。"
+  }
+]

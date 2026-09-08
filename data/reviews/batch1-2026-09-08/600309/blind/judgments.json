@@ -1,0 +1,242 @@
+[
+  {
+    "id": "C001",
+    "outcome": "non_defect",
+    "kind": "improvement",
+    "is_correction": false,
+    "group": "",
+    "severity": "P2",
+    "reason": "候选自己确认没有重复扣分，只建议合并叙述。材料不含事故决定，不能独立证实同一调查链；原稿未引用注册资本，转录改字也不是原稿纠错。",
+    "evidence": "draft-company.md:539–540已在相邻两行叙述事故及处罚；draft-management.md:241安全事件一次扣2分；evidence.md:6说明外部公告缺原文。"
+  },
+  {
+    "id": "C002",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D001",
+    "severity": "P2",
+    "reason": "同表净利列为归母却用合并净利计算2025净现比，分母不一致。",
+    "evidence": "draft-valuation.md:77；evidence.md内2025年报L1926 OCF33,105,189,455.82元、L1900归母12,527,201,094.15及合并14,039,935,975.43元；比率264.27%/235.79%。"
+  },
+  {
+    "id": "C003",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D002",
+    "severity": "P1",
+    "reason": "剔除危机与表达后得分占比82.35%，不是67%；错误桥接被用于解释两套治理评分，需删除而非强行调整F得分。",
+    "evidence": "draft-company.md:486；draft-management.md:241、243–244危机6/10、表达4/5、总80；(80-6-4)/(100-10-5)=82.3529%。"
+  },
+  {
+    "id": "C004",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D003",
+    "severity": "P2",
+    "reason": "8000万股无误，一致行动三方分母下为6.11%，不是10%；仅质押两方为12.65%。",
+    "evidence": "draft-company.md:532、draft-management.md:166；evidence.md内半年报L619：677764654+330379594+301808357=1309952605；80000000/1309952605=6.1071%。"
+  },
+  {
+    "id": "C005",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D004",
+    "severity": "P1",
+    "reason": "以公司工龄证明五个现岗位均任职超过15年不成立，尤其财务负责人及安全总监任期直接反证。长期内部培养仍成立；不是关键人物身份错误P0。",
+    "evidence": "draft-management.md:76、242、293；evidence.md内2025年报L939、941：董事长2016-10，总裁2019-04，常务副总裁2019-04，财务负责人2019-04，陈毅峰安全总监2017-04、高级副总裁2021-03，截止2026-09均不能证明五岗超15年。"
+  },
+  {
+    "id": "C006",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D005",
+    "severity": "P2",
+    "reason": "净投资现金流含金融投资收付，单期收窄不能证明扩张高峰已过；同稿441已有审慎限定但521仍作确定结论。已证实的是局部论断过强，降P2，不证明实际扩张高峰未过。",
+    "evidence": "draft-company.md:441与521；evidence.md内半年报L851投资净流出118.6867亿，收回投资32.5232亿/上期1.0629亿；购建107.3989亿/170.2991亿，同比-36.93%。"
+  },
+  {
+    "id": "C007",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D006",
+    "severity": "P2",
+    "reason": "四档范围重叠属明确展示缺陷；机械买入线仍清楚且算对，未发现买入公式错误。",
+    "evidence": "draft-valuation.md:129–132分别>63、63–74、<63、≤51.27；69×(0.68+0.14×0.45)=51.267。"
+  },
+  {
+    "id": "C008",
+    "outcome": "insufficient",
+    "kind": "scope_gap",
+    "is_correction": false,
+    "group": "",
+    "severity": "P2",
+    "reason": "候选明确承认不推定捏造，实际要求补外部原文。冻结材料确实不足以核验事故人数、罚额和法条，不能计事实纠错。",
+    "evidence": "evidence.md:6公告及诉讼未取得独立原文；draft-company.md:539–540及draft-management.md:241使用事故事实；冻结证据只含财报节选。"
+  },
+  {
+    "id": "C009",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D004",
+    "severity": "P1",
+    "reason": "以公司工龄证明五个现岗位均任职超过15年不成立，尤其财务负责人及安全总监任期直接反证。长期内部培养仍成立；不是关键人物身份错误P0。",
+    "evidence": "draft-management.md:76、242、293；evidence.md内2025年报L939、941：董事长2016-10，总裁2019-04，常务副总裁2019-04，财务负责人2019-04，陈毅峰安全总监2017-04、高级副总裁2021-03，截止2026-09均不能证明五岗超15年。"
+  },
+  {
+    "id": "C010",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D001",
+    "severity": "P2",
+    "reason": "同表净利列为归母却用合并净利计算2025净现比，分母不一致。",
+    "evidence": "draft-valuation.md:77；evidence.md内2025年报L1926 OCF33,105,189,455.82元、L1900归母12,527,201,094.15及合并14,039,935,975.43元；比率264.27%/235.79%。"
+  },
+  {
+    "id": "C011",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D007",
+    "severity": "P2",
+    "reason": "认可持股解释差2000股，以及华卫琦副总裁任期写迟，两部分均获证据支持。主组按持股桥D007；本条附带独立履历日期错误，报告中单列说明，不与D004现岗位/工龄混同。",
+    "evidence": "draft-management.md:61写5000+8000解释15000，且副总裁2013-05起；evidence.md内半年报L645期初5000、增加10000、期末15000；年报L941明确副总裁2010-04至2019-04。"
+  },
+  {
+    "id": "C012",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D002",
+    "severity": "P1",
+    "reason": "剔除危机与表达后得分占比82.35%，不是67%；错误桥接被用于解释两套治理评分，需删除而非强行调整F得分。",
+    "evidence": "draft-company.md:486；draft-management.md:241、243–244危机6/10、表达4/5、总80；(80-6-4)/(100-10-5)=82.3529%。"
+  },
+  {
+    "id": "C013",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D005",
+    "severity": "P2",
+    "reason": "净投资现金流含金融投资收付，单期收窄不能证明扩张高峰已过；同稿441已有审慎限定但521仍作确定结论。已证实的是局部论断过强，降P2，不证明实际扩张高峰未过。",
+    "evidence": "draft-company.md:441与521；evidence.md内半年报L851投资净流出118.6867亿，收回投资32.5232亿/上期1.0629亿；购建107.3989亿/170.2991亿，同比-36.93%。"
+  },
+  {
+    "id": "C014",
+    "outcome": "non_defect",
+    "kind": "improvement",
+    "is_correction": false,
+    "group": "",
+    "severity": "P2",
+    "reason": "28+40+25=93无算术错误，前身/股份公司工龄口径统一是改进；冻结履历未给廖最初入职年，不能据此改出另一确定总年数。",
+    "evidence": "draft-management.md:293、draft-company.md:490–492；evidence.md内年报L941列廖前身经历未给最早年份，寇1986-07、华2001-01。"
+  },
+  {
+    "id": "C015",
+    "outcome": "insufficient",
+    "kind": "scope_gap",
+    "is_correction": false,
+    "group": "",
+    "severity": "P2",
+    "reason": "关键审计事项及内控意见原文未冻结，不能证实原稿错误；标准无保留可由重要提示支持，候选主要是补证请求。",
+    "evidence": "evidence.md中年报节选范围L1–150、931–1105、1866–1879、1894–1905、1920–1931，无KAM完整审计段；draft-company.md:456–465、529。"
+  },
+  {
+    "id": "C016",
+    "outcome": "partial",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D007",
+    "severity": "P2",
+    "reason": "成立的是61行把列举的13000股当15000股解释，缺2000股桥；159/175仅列两笔交易合计13000本身算术正确，不能证明那两笔交易错误。",
+    "evidence": "draft-management.md:61、159、175；evidence.md内半年报L645期初5000、新增10000、期末15000；8000股单笔的剩余2000股时点未冻结。"
+  },
+  {
+    "id": "C017",
+    "outcome": "non_defect",
+    "kind": "improvement",
+    "is_correction": false,
+    "group": "",
+    "severity": "P2",
+    "reason": "正常化均值是假设而非事实保证，原稿93及敏感性注已明确历史均值不等未来中周期盈利，并给7年保守情景。建议新增剔峰敏感性可取但非新缺陷。",
+    "evidence": "draft-valuation.md:52–53、93–103、143；5年均值26.52/5=5.304，7年均值32.95/7=4.7071；候选本身亦承认算术正确。"
+  },
+  {
+    "id": "C018",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D008",
+    "severity": "P1",
+    "reason": "ROE不是ROIC，初稿虽把新增投入回报列待核，却在资本配置扣分中直接认定低于资本成本。缺少NOPAT/投入资本/WACC闭合，正式扣分传导矛盾成立；不代表实际ROIC必然高于WACC。",
+    "evidence": "draft-management.md:148、238、299用ROE证明ROIC且扣2分；draft-company.md:609、draft-valuation.md:153承认待测算；evidence.md内半年报L96仅加权ROE8.96%，未含分部ROIC桥。"
+  },
+  {
+    "id": "C019",
+    "outcome": "insufficient",
+    "kind": "scope_gap",
+    "is_correction": true,
+    "group": "",
+    "severity": "P2",
+    "reason": "政策变更和研发资本化零的证据未在冻结节选内，候选亦未出示反例，不能推定原稿过度表述为确定错误；保留待核。",
+    "evidence": "draft-company.md:461、465；evidence.md所含年报节选没有相关完整政策/研发附注；L138–139非经常损益段不能证实或反驳政策变更。"
+  },
+  {
+    "id": "C020",
+    "outcome": "invalid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "",
+    "severity": "P2",
+    "reason": "候选把3,599,369,424.62元误换成3.60亿元，实际35.9937亿元；货币资金扣受限恰等于408.0626亿元，原稿标注和净债务正确。所谓差32.4亿元及额外保证金均不成立。",
+    "evidence": "evidence.md内半年报L795货币44,405,629,354.15元；L273受限3,599,369,424.62元；差40,806,259,929.53元=408.062599亿元，与L851现金等价物相同；1301.74-408.06=893.68。"
+  },
+  {
+    "id": "C021",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D009",
+    "severity": "P2",
+    "reason": "无量化指引却宣称全部达标/超额，缺承诺基准，是轻微正面归因越界；增长结果不等兑现率。",
+    "evidence": "draft-management.md:112同句称不适用且全部达标/超额；draft-company.md:302、316已说明经营结果不代表目标兑现率。"
+  },
+  {
+    "id": "C022",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D006",
+    "severity": "P2",
+    "reason": "四档范围重叠属明确展示缺陷；机械买入线仍清楚且算对，未发现买入公式错误。",
+    "evidence": "draft-valuation.md:129–132分别>63、63–74、<63、≤51.27；69×(0.68+0.14×0.45)=51.267。"
+  },
+  {
+    "id": "C023",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D008",
+    "severity": "P1",
+    "reason": "ROE不是ROIC，初稿虽把新增投入回报列待核，却在资本配置扣分中直接认定低于资本成本。缺少NOPAT/投入资本/WACC闭合，正式扣分传导矛盾成立；不代表实际ROIC必然高于WACC。",
+    "evidence": "draft-management.md:148、238、299用ROE证明ROIC且扣2分；draft-company.md:609、draft-valuation.md:153承认待测算；evidence.md内半年报L96仅加权ROE8.96%，未含分部ROIC桥。"
+  },
+  {
+    "id": "C024",
+    "outcome": "valid",
+    "kind": "error",
+    "is_correction": true,
+    "group": "D003",
+    "severity": "P2",
+    "reason": "8000万股无误，一致行动三方分母下为6.11%，不是10%；仅质押两方为12.65%。",
+    "evidence": "draft-company.md:532、draft-management.md:166；evidence.md内半年报L619：677764654+330379594+301808357=1309952605；80000000/1309952605=6.1071%。"
+  }
+]

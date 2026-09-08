@@ -1,0 +1,16 @@
+{
+  "id": "batch1-600309",
+  "company": "万华化学",
+  "cutoff": "2026-09-06",
+  "rules": [
+    "data/reviews/batch1-2026-09-08/rules.md"
+  ],
+  "evidence": [
+    "data/reviews/batch1-2026-09-08/600309/evidence.md"
+  ],
+  "drafts": [
+    "data/reviews/batch1-2026-09-08/600309/draft-company.md",
+    "data/reviews/batch1-2026-09-08/600309/draft-management.md",
+    "data/reviews/batch1-2026-09-08/600309/draft-valuation.md"
+  ]
+}

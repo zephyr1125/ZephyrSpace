@@ -1,0 +1,94 @@
+{
+  "C001": {
+    "reviewer": "flash",
+    "original_index": 2
+  },
+  "C002": {
+    "reviewer": "flash",
+    "original_index": 0
+  },
+  "C003": {
+    "reviewer": "flash",
+    "original_index": 5
+  },
+  "C004": {
+    "reviewer": "codex_b",
+    "original_index": 1
+  },
+  "C005": {
+    "reviewer": "codex_a",
+    "original_index": 6
+  },
+  "C006": {
+    "reviewer": "codex_b",
+    "original_index": 4
+  },
+  "C007": {
+    "reviewer": "codex_a",
+    "original_index": 3
+  },
+  "C008": {
+    "reviewer": "flash",
+    "original_index": 6
+  },
+  "C009": {
+    "reviewer": "codex_a",
+    "original_index": 1
+  },
+  "C010": {
+    "reviewer": "flash",
+    "original_index": 1
+  },
+  "C011": {
+    "reviewer": "codex_b",
+    "original_index": 3
+  },
+  "C012": {
+    "reviewer": "flash",
+    "original_index": 7
+  },
+  "C013": {
+    "reviewer": "codex_b",
+    "original_index": 5
+  },
+  "C014": {
+    "reviewer": "codex_a",
+    "original_index": 2
+  },
+  "C015": {
+    "reviewer": "codex_b",
+    "original_index": 0
+  },
+  "C016": {
+    "reviewer": "flash",
+    "original_index": 3
+  },
+  "C017": {
+    "reviewer": "codex_b",
+    "original_index": 2
+  },
+  "C018": {
+    "reviewer": "codex_a",
+    "original_index": 5
+  },
+  "C019": {
+    "reviewer": "flash",
+    "original_index": 4
+  },
+  "C020": {
+    "reviewer": "codex_a",
+    "original_index": 7
+  },
+  "C021": {
+    "reviewer": "codex_a",
+    "original_index": 0
+  },
+  "C022": {
+    "reviewer": "codex_a",
+    "original_index": 4
+  },
+  "C023": {
+    "reviewer": "codex_b",
+    "original_index": 6
+  }
+}

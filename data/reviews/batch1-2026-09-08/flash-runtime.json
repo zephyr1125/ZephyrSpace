@@ -1,0 +1,239 @@
+{
+  "responses": [
+    {
+      "company": "000333",
+      "run": "data/reviews/batch1-000333/20260908T133553560710Z",
+      "stage": "stage1-response",
+      "format": "fenced_json",
+      "usage": {
+        "prompt_tokens": 136850,
+        "completion_tokens": 3319,
+        "total_tokens": 140169,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 136850
+      },
+      "elapsed_seconds": 34.0
+    },
+    {
+      "company": "000333",
+      "run": "data/reviews/batch1-000333/20260908T133553560710Z",
+      "stage": "stage2-response",
+      "format": "plain_json",
+      "usage": {
+        "prompt_tokens": 157894,
+        "completion_tokens": 5397,
+        "total_tokens": 163291,
+        "prompt_tokens_details": {
+          "cached_tokens": 136832
+        },
+        "prompt_cache_hit_tokens": 136832,
+        "prompt_cache_miss_tokens": 21062
+      },
+      "elapsed_seconds": 47.64
+    },
+    {
+      "company": "600036",
+      "run": "data/reviews/batch1-600036/20260908T133633791097Z",
+      "stage": "stage1-response",
+      "format": "plain_json",
+      "usage": {
+        "prompt_tokens": 107131,
+        "completion_tokens": 615,
+        "total_tokens": 107746,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 107131
+      },
+      "elapsed_seconds": 12.55
+    },
+    {
+      "company": "600036",
+      "run": "data/reviews/batch1-600036/20260908T133633791097Z",
+      "stage": "stage2-response",
+      "format": "plain_json",
+      "usage": {
+        "prompt_tokens": 130636,
+        "completion_tokens": 3631,
+        "total_tokens": 134267,
+        "prompt_tokens_details": {
+          "cached_tokens": 107008
+        },
+        "prompt_cache_hit_tokens": 107008,
+        "prompt_cache_miss_tokens": 23628
+      },
+      "elapsed_seconds": 32.67
+    },
+    {
+      "company": "600276",
+      "run": "data/reviews/batch1-600276/20260908T133634010752Z",
+      "stage": "stage1-response",
+      "format": "plain_json",
+      "usage": {
+        "prompt_tokens": 124214,
+        "completion_tokens": 1047,
+        "total_tokens": 125261,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 124214
+      },
+      "elapsed_seconds": 11.5
+    },
+    {
+      "company": "600276",
+      "run": "data/reviews/batch1-600276/20260908T133634010752Z",
+      "stage": "stage2-response",
+      "format": "plain_json",
+      "usage": {
+        "prompt_tokens": 152047,
+        "completion_tokens": 2011,
+        "total_tokens": 154058,
+        "prompt_tokens_details": {
+          "cached_tokens": 124160
+        },
+        "prompt_cache_hit_tokens": 124160,
+        "prompt_cache_miss_tokens": 27887
+      },
+      "elapsed_seconds": 20.67
+    },
+    {
+      "company": "600309",
+      "run": "data/reviews/batch1-600309/20260908T133634203874Z",
+      "stage": "stage1-response",
+      "format": "fenced_json",
+      "usage": {
+        "prompt_tokens": 107401,
+        "completion_tokens": 3112,
+        "total_tokens": 110513,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 107401
+      },
+      "elapsed_seconds": 35.47
+    },
+    {
+      "company": "600309",
+      "run": "data/reviews/batch1-600309/20260908T133634203874Z",
+      "stage": "stage2-response",
+      "format": "plain_json",
+      "usage": {
+        "prompt_tokens": 144462,
+        "completion_tokens": 3659,
+        "total_tokens": 148121,
+        "prompt_tokens_details": {
+          "cached_tokens": 107392
+        },
+        "prompt_cache_hit_tokens": 107392,
+        "prompt_cache_miss_tokens": 37070
+      },
+      "elapsed_seconds": 37.11
+    },
+    {
+      "company": "600887",
+      "run": "data/reviews/batch1-600887/20260908T133543250226Z",
+      "stage": "stage1-response",
+      "format": "plain_json",
+      "usage": {
+        "prompt_tokens": 127478,
+        "completion_tokens": 3025,
+        "total_tokens": 130503,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 127478
+      },
+      "elapsed_seconds": 31.59
+    },
+    {
+      "company": "600887",
+      "run": "data/reviews/batch1-600887/20260908T133543250226Z",
+      "stage": "stage2-response",
+      "format": "plain_json",
+      "usage": {
+        "prompt_tokens": 160096,
+        "completion_tokens": 4581,
+        "total_tokens": 164677,
+        "prompt_tokens_details": {
+          "cached_tokens": 127360
+        },
+        "prompt_cache_hit_tokens": 127360,
+        "prompt_cache_miss_tokens": 32736
+      },
+      "elapsed_seconds": 42.41
+    },
+    {
+      "company": "688111",
+      "run": "data/reviews/batch1-688111/20260908T133603985435Z",
+      "stage": "stage1-response",
+      "format": "invalid",
+      "usage": {
+        "prompt_tokens": 122205,
+        "completion_tokens": 3366,
+        "total_tokens": 125571,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 122205
+      },
+      "elapsed_seconds": 30.58
+    },
+    {
+      "company": "688111",
+      "run": "data/reviews/batch1-688111/20260908T133928652927Z",
+      "stage": "stage1-response",
+      "format": "plain_json",
+      "usage": {
+        "prompt_tokens": 122205,
+        "completion_tokens": 3882,
+        "total_tokens": 126087,
+        "prompt_tokens_details": {
+          "cached_tokens": 122112
+        },
+        "prompt_cache_hit_tokens": 122112,
+        "prompt_cache_miss_tokens": 93
+      },
+      "elapsed_seconds": 29.45
+    },
+    {
+      "company": "688111",
+      "run": "data/reviews/batch1-688111/20260908T133928652927Z",
+      "stage": "stage2-response",
+      "format": "plain_json",
+      "usage": {
+        "prompt_tokens": 148334,
+        "completion_tokens": 3321,
+        "total_tokens": 151655,
+        "prompt_tokens_details": {
+          "cached_tokens": 122112
+        },
+        "prompt_cache_hit_tokens": 122112,
+        "prompt_cache_miss_tokens": 26222
+      },
+      "elapsed_seconds": 32.05
+    }
+  ],
+  "totals": {
+    "prompt_tokens": 1740953,
+    "completion_tokens": 40966,
+    "seconds": 397.69
+  },
+  "completed_companies": {
+    "000333": "data/reviews/batch1-000333/20260908T133553560710Z",
+    "600036": "data/reviews/batch1-600036/20260908T133633791097Z",
+    "600276": "data/reviews/batch1-600276/20260908T133634010752Z",
+    "600309": "data/reviews/batch1-600309/20260908T133634203874Z",
+    "600887": "data/reviews/batch1-600887/20260908T133543250226Z",
+    "688111": "data/reviews/batch1-688111/20260908T133928652927Z"
+  },
+  "note": "包括首次语法失败和人工重试；围栏响应第一阶段复用，不重复计量。"
+}

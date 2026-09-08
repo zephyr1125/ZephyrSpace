@@ -1,0 +1,37 @@
+{
+  "note": "最终运行索引；run-index.json保留执行中快照，不作完成状态依据。",
+  "flash_runs": {
+    "000333": {
+      "directory": "data/reviews/batch1-000333/20260908T133553560710Z",
+      "external_review_complete": true,
+      "adjudication": "已完成本地匿名裁决，见批次目录"
+    },
+    "600036": {
+      "directory": "data/reviews/batch1-600036/20260908T133633791097Z",
+      "external_review_complete": true,
+      "adjudication": "已完成本地匿名裁决，见批次目录"
+    },
+    "600276": {
+      "directory": "data/reviews/batch1-600276/20260908T133634010752Z",
+      "external_review_complete": true,
+      "adjudication": "已完成本地匿名裁决，见批次目录"
+    },
+    "600309": {
+      "directory": "data/reviews/batch1-600309/20260908T133634203874Z",
+      "external_review_complete": true,
+      "adjudication": "已完成本地匿名裁决，见批次目录"
+    },
+    "600887": {
+      "directory": "data/reviews/batch1-600887/20260908T133543250226Z",
+      "external_review_complete": true,
+      "adjudication": "已完成本地匿名裁决，见批次目录"
+    },
+    "688111": {
+      "directory": "data/reviews/batch1-688111/20260908T133928652927Z",
+      "external_review_complete": true,
+      "adjudication": "已完成本地匿名裁决，见批次目录"
+    }
+  },
+  "metrics": "aggregate.json",
+  "results": "../../../docs/deepseek-review-batch1-results.md"
+}

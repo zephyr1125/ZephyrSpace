@@ -1,0 +1,17 @@
+{
+  "status": "failed",
+  "external_review_complete": false,
+  "model": "deepseek-v4-flash",
+  "network_verification": false,
+  "created_at": "20260908T133553560710Z",
+  "parameters": {
+    "max_tokens": 12000,
+    "timeout": 300,
+    "max_chars": 400000,
+    "reasoning_effort": "high",
+    "response_format": "text",
+    "thinking": "disabled"
+  },
+  "script_sha256": "f8ff37f19fefd54248c977d920c49201c9ed3fde8989337d0c9b0e08cc17c411",
+  "error": "JSONDecodeError"
+}
