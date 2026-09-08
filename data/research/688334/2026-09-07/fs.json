@@ -1,0 +1,421 @@
+{
+  "code": 1,
+  "message": "success",
+  "data": [
+    {
+      "date": "2026-06-30T00:00:00+08:00",
+      "currency": "CNY",
+      "q": {
+        "bs": {
+          "ta": {
+            "t": 3891512013
+          },
+          "tl": {
+            "t": 719961629
+          }
+        }
+      },
+      "reportDate": "2026-08-20T00:00:00+08:00",
+      "reportType": "interim_report",
+      "standardDate": "2026-06-30T00:00:00+08:00",
+      "stockCode": "688334"
+    },
+    {
+      "date": "2026-03-31T00:00:00+08:00",
+      "currency": "CNY",
+      "q": {
+        "bs": {
+          "ta": {
+            "t": 3830844720
+          },
+          "tl": {
+            "t": 632914644
+          }
+        }
+      },
+      "reportDate": "2026-04-28T00:00:00+08:00",
+      "reportType": "first_quarterly_report",
+      "standardDate": "2026-03-31T00:00:00+08:00",
+      "stockCode": "688334"
+    },
+    {
+      "date": "2025-12-31T00:00:00+08:00",
+      "q": {
+        "bs": {
+          "ta": {
+            "t": 3770237016
+          },
+          "tl": {
+            "t": 649361694
+          }
+        }
+      },
+      "y": {
+        "ps": {
+          "toi": {
+            "t": 867966310
+          },
+          "npatoshopc": {
+            "t": 248721411
+          }
+        },
+        "cfs": {
+          "ncffoa": {
+            "t": 480400164
+          }
+        }
+      },
+      "accountant": "黄飞、解飞",
+      "accountingFirm": "立信会计师事务所(特殊普通合伙)",
+      "auditOpinionType": "unqualified_opinion",
+      "currency": "CNY",
+      "reportDate": "2026-04-11T00:00:00+08:00",
+      "reportType": "annual_report",
+      "standardDate": "2025-12-31T00:00:00+08:00",
+      "stockCode": "688334"
+    },
+    {
+      "date": "2025-09-30T00:00:00+08:00",
+      "currency": "CNY",
+      "q": {
+        "bs": {
+          "ta": {
+            "t": 3681423562
+          },
+          "tl": {
+            "t": 616300357
+          }
+        }
+      },
+      "reportDate": "2025-10-22T00:00:00+08:00",
+      "reportType": "third_quarterly_report",
+      "standardDate": "2025-09-30T00:00:00+08:00",
+      "stockCode": "688334"
+    },
+    {
+      "date": "2025-06-30T00:00:00+08:00",
+      "currency": "CNY",
+      "q": {
+        "bs": {
+          "ta": {
+            "t": 3698995027
+          },
+          "tl": {
+            "t": 634017692
+          }
+        }
+      },
+      "reportDate": "2025-08-21T00:00:00+08:00",
+      "reportType": "interim_report",
+      "standardDate": "2025-06-30T00:00:00+08:00",
+      "stockCode": "688334"
+    },
+    {
+      "date": "2025-03-31T00:00:00+08:00",
+      "currency": "CNY",
+      "q": {
+        "bs": {
+          "ta": {
+            "t": 3667335081
+          },
+          "tl": {
+            "t": 666184322
+          }
+        }
+      },
+      "reportDate": "2025-04-11T00:00:00+08:00",
+      "reportType": "first_quarterly_report",
+      "standardDate": "2025-03-31T00:00:00+08:00",
+      "stockCode": "688334"
+    },
+    {
+      "date": "2024-12-31T00:00:00+08:00",
+      "currency": "CNY",
+      "q": {
+        "bs": {
+          "ta": {
+            "t": 3548077152
+          },
+          "tl": {
+            "t": 619236129
+          }
+        }
+      },
+      "reportDate": "2025-04-11T00:00:00+08:00",
+      "reportType": "annual_report",
+      "standardDate": "2024-12-31T00:00:00+08:00",
+      "y": {
+        "ps": {
+          "toi": {
+            "t": 798360090
+          },
+          "npatoshopc": {
+            "t": 228674536
+          }
+        },
+        "cfs": {
+          "ncffoa": {
+            "t": 482483068
+          }
+        }
+      },
+      "accountant": "谭学、赵文斌",
+      "accountingFirm": "天职国际会计师事务所(特殊普通合伙)",
+      "auditOpinionType": "unqualified_opinion",
+      "stockCode": "688334"
+    },
+    {
+      "date": "2024-09-30T00:00:00+08:00",
+      "currency": "CNY",
+      "q": {
+        "bs": {
+          "ta": {
+            "t": 3553674175
+          },
+          "tl": {
+            "t": 620383252
+          }
+        }
+      },
+      "reportDate": "2024-10-30T00:00:00+08:00",
+      "reportType": "third_quarterly_report",
+      "standardDate": "2024-09-30T00:00:00+08:00",
+      "stockCode": "688334"
+    },
+    {
+      "date": "2024-06-30T00:00:00+08:00",
+      "currency": "CNY",
+      "q": {
+        "bs": {
+          "ta": {
+            "t": 3492196018
+          },
+          "tl": {
+            "t": 460300765
+          }
+        }
+      },
+      "reportDate": "2024-08-30T00:00:00+08:00",
+      "reportType": "interim_report",
+      "standardDate": "2024-06-30T00:00:00+08:00",
+      "stockCode": "688334"
+    },
+    {
+      "date": "2024-03-31T00:00:00+08:00",
+      "currency": "CNY",
+      "q": {
+        "bs": {
+          "ta": {
+            "t": 3502791171
+          },
+          "tl": {
+            "t": 442613744
+          }
+        }
+      },
+      "reportDate": "2024-04-30T00:00:00+08:00",
+      "reportType": "first_quarterly_report",
+      "standardDate": "2024-03-31T00:00:00+08:00",
+      "stockCode": "688334"
+    },
+    {
+      "date": "2023-12-31T00:00:00+08:00",
+      "currency": "CNY",
+      "q": {
+        "bs": {
+          "ta": {
+            "t": 3436177361
+          },
+          "tl": {
+            "t": 422596387
+          }
+        }
+      },
+      "reportDate": "2024-04-11T00:00:00+08:00",
+      "reportType": "annual_report",
+      "standardDate": "2023-12-31T00:00:00+08:00",
+      "y": {
+        "ps": {
+          "toi": {
+            "t": 602066632
+          },
+          "npatoshopc": {
+            "t": 162367945
+          }
+        },
+        "cfs": {
+          "ncffoa": {
+            "t": 262623431
+          }
+        }
+      },
+      "accountant": "刘丹、程鲁",
+      "accountingFirm": "天职国际会计师事务所(特殊普通合伙)",
+      "auditOpinionType": "unqualified_opinion",
+      "stockCode": "688334"
+    },
+    {
+      "date": "2023-09-30T00:00:00+08:00",
+      "currency": "CNY",
+      "q": {
+        "bs": {
+          "ta": {
+            "t": 3392236536
+          },
+          "tl": {
+            "t": 417255484
+          }
+        }
+      },
+      "reportDate": "2023-10-28T00:00:00+08:00",
+      "reportType": "third_quarterly_report",
+      "standardDate": "2023-09-30T00:00:00+08:00",
+      "stockCode": "688334"
+    },
+    {
+      "date": "2023-06-30T00:00:00+08:00",
+      "currency": "CNY",
+      "q": {
+        "bs": {
+          "ta": {
+            "t": 3308870791
+          },
+          "tl": {
+            "t": 376880889
+          }
+        }
+      },
+      "reportDate": "2023-08-30T00:00:00+08:00",
+      "reportType": "interim_report",
+      "standardDate": "2023-06-30T00:00:00+08:00",
+      "accountant": null,
+      "accountingFirm": null,
+      "auditOpinionType": null,
+      "stockCode": "688334"
+    },
+    {
+      "date": "2023-03-31T00:00:00+08:00",
+      "currency": "CNY",
+      "q": {
+        "bs": {
+          "ta": {
+            "t": 2275957944
+          },
+          "tl": {
+            "t": 390458927
+          }
+        }
+      },
+      "reportDate": "2023-05-30T00:00:00+08:00",
+      "reportType": "first_quarterly_report",
+      "standardDate": "2023-03-31T00:00:00+08:00",
+      "stockCode": "688334"
+    },
+    {
+      "date": "2022-12-31T00:00:00+08:00",
+      "currency": "CNY",
+      "q": {
+        "bs": {
+          "ta": {
+            "t": 2254856519
+          },
+          "tl": {
+            "t": 404184550
+          }
+        }
+      },
+      "reportDate": "2023-05-30T00:00:00+08:00",
+      "reportType": "annual_report",
+      "standardDate": "2022-12-31T00:00:00+08:00",
+      "y": {
+        "ps": {
+          "toi": {
+            "t": 521120917
+          },
+          "npatoshopc": {
+            "t": 130357286
+          }
+        },
+        "cfs": {
+          "ncffoa": {
+            "t": 196632298
+          }
+        }
+      },
+      "stockCode": "688334"
+    },
+    {
+      "date": "2022-09-30T00:00:00+08:00",
+      "currency": "CNY",
+      "q": {
+        "bs": {}
+      },
+      "reportDate": "2023-10-28T00:00:00+08:00",
+      "reportType": "third_quarterly_report",
+      "standardDate": "2022-09-30T00:00:00+08:00",
+      "stockCode": "688334"
+    },
+    {
+      "date": "2022-06-30T00:00:00+08:00",
+      "currency": "CNY",
+      "q": {
+        "bs": {
+          "ta": {
+            "t": 2218777899
+          },
+          "tl": {
+            "t": 447697428
+          }
+        }
+      },
+      "reportDate": "2023-03-10T00:00:00+08:00",
+      "reportType": "interim_report",
+      "standardDate": "2022-06-30T00:00:00+08:00",
+      "stockCode": "688334"
+    },
+    {
+      "date": "2022-03-31T00:00:00+08:00",
+      "currency": "CNY",
+      "q": {
+        "bs": {}
+      },
+      "reportDate": "2023-05-30T00:00:00+08:00",
+      "reportType": "first_quarterly_report",
+      "standardDate": "2022-03-31T00:00:00+08:00",
+      "stockCode": "688334"
+    },
+    {
+      "date": "2021-12-31T00:00:00+08:00",
+      "currency": "CNY",
+      "q": {
+        "bs": {
+          "ta": {
+            "t": 2171721835
+          },
+          "tl": {
+            "t": 452337152
+          }
+        }
+      },
+      "reportDate": "2023-05-30T00:00:00+08:00",
+      "reportType": "annual_report",
+      "standardDate": "2021-12-31T00:00:00+08:00",
+      "y": {
+        "ps": {
+          "toi": {
+            "t": 447149196
+          },
+          "npatoshopc": {
+            "t": 81558518
+          }
+        },
+        "cfs": {
+          "ncffoa": {
+            "t": 153793942
+          }
+        }
+      },
+      "stockCode": "688334"
+    }
+  ]
+}

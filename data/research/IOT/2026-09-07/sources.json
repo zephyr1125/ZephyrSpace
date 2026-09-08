@@ -1,0 +1,52 @@
+{
+  "retrieved_date": "2026-09-07",
+  "ticker": "IOT.US",
+  "sources": [
+    {
+      "file": "annual.txt",
+      "url": "https://www.sec.gov/Archives/edgar/data/1642896/000162828026018167/iot-20260131.htm",
+      "sha256": "9d7df30128e2f6365f5e2a61eec62bb3573fd4189674346713b622fb7cf1927d"
+    },
+    {
+      "file": "proxy.txt",
+      "url": "https://www.sec.gov/Archives/edgar/data/1642896/000162828026039492/iot-20260601.htm",
+      "sha256": "e983831e220a830e1e822b62549688bd51ed26399b8cabb8c29151287785b48f"
+    },
+    {
+      "file": "q2.txt",
+      "url": "https://www.sec.gov/Archives/edgar/data/1642896/000162828026060438/samsaraepr-q22027.htm",
+      "sha256": "7e99a1a88e1910e3ff5d2c4055bb5ae39f67da83c5384a4985dbd3620c87a7ef"
+    },
+    {
+      "file": "letter.txt",
+      "url": "https://s29.q4cdn.com/853855404/files/content_files/Q2-FY27-Shareholder-Letter-4.pdf",
+      "sha256": "454526e7b2507ae4e0c29f2c21bd7521834ca7a9b718726840a579e2809609c2"
+    },
+    {
+      "file": "companyfacts.json",
+      "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001642896.json",
+      "sha256": "299c5d8539a4b7b59f23081044154cb3d9609906052b773ce8ccfab1b7c8043f"
+    },
+    {
+      "file": "submissions.json",
+      "url": "https://data.sec.gov/submissions/CIK0001642896.json",
+      "sha256": "2dcb66450f5c28e6f2347a50e6741df0224667baec4d54312f92d3d522fcbb6d"
+    },
+    {
+      "file": "prices.json",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/IOT?range=6mo&interval=1d",
+      "sha256": "9986aebffdf163a8df02a2c703ca7746c53b9046a1cbd84a3c3c3731a17f0bf4"
+    },
+    {
+      "file": "bicket-form4-submission.txt",
+      "url": "https://www.sec.gov/Archives/edgar/data/1642896/000189510626000018/0001895106-26-000018.txt",
+      "sha256": "ec8f15f905519161f4e17dd07cace2c4f60c79c351e00e876a405d7fea23e6dc"
+    }
+  ],
+  "notes": [
+    "HTML原文已提取文本，未使用MinerU。",
+    "股东信PDF位于财报/Samsara(IOT)/。",
+    "form4-access-failure.txt仅记录失败响应；有效证据为完整submission。",
+    "prices.json仅保留截止2026-09-04的实际日线。"
+  ]
+}

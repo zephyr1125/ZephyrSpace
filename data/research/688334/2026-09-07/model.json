@@ -1,0 +1,64 @@
+{
+  "shares": 3.16579466,
+  "scenarios": [
+    {
+      "name": "保守",
+      "eps": 0.68,
+      "pe": 18,
+      "fcf": 2.1,
+      "growth": 0.02,
+      "discount": 0.11,
+      "terminal": 0.02,
+      "dividend": 0.4,
+      "pe_value": 12.24,
+      "dcf_value": 7.517859670658485,
+      "ddm_value": 4.444444444444443,
+      "value": 8.792032757152285,
+      "terminal_weight": 0.42931091443483743
+    },
+    {
+      "name": "基准",
+      "eps": 0.76,
+      "pe": 22,
+      "fcf": 2.6,
+      "growth": 0.05,
+      "discount": 0.095,
+      "terminal": 0.025,
+      "dividend": 0.45,
+      "pe_value": 16.72,
+      "dcf_value": 14.47194978010202,
+      "ddm_value": 7.551959560489312,
+      "value": 13.98717182413867,
+      "terminal_weight": 0.5461867788796206
+    },
+    {
+      "name": "乐观",
+      "eps": 0.86,
+      "pe": 26,
+      "fcf": 3.1,
+      "growth": 0.08,
+      "discount": 0.085,
+      "terminal": 0.03,
+      "dividend": 0.5,
+      "pe_value": 22.36,
+      "dcf_value": 27.05768421882735,
+      "ddm_value": 12.792573508352731,
+      "value": 22.32558838920149,
+      "terminal_weight": 0.6471471395633968
+    }
+  ],
+  "scenario_weights": [
+    0.25,
+    0.5,
+    0.25
+  ],
+  "method_weights": [
+    0.4,
+    0.4,
+    0.2
+  ],
+  "target": 14.772991198657778,
+  "certainty": 0.65,
+  "buy": 11.389976214165147,
+  "reverse_growth": 0.08106843410665177
+}
