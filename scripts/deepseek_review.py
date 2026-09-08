@@ -18,6 +18,8 @@ SYSTEM = """你是独立研究复核员。使用简体中文，按证据判断�
 每条 findings 包含 severity（P0/P1/P2）、location、claim、evidence、impact、recommendation，均为字符串。
 evidence 必须引用材料文件名及行号；无法证实时列入 unknowns，不编造来源。
 assessment 应包含独立评分/估值判断及必要假设；不同意见本身不是错误证据。
+输出形状示例：{"assessment":"独立结论与假设","findings":[],"unknowns":["仍需核验的问题"]}。
+最终答复必须包含上述完整 JSON，不要只思考而留下空答复，不要使用 Markdown 代码围栏。
 """
 
 
@@ -73,23 +75,39 @@ def validate_result(value):
     return value
 
 
-def call_api(messages, key, model, max_tokens, timeout):
+def call_api(messages, key, model, max_tokens, timeout, diagnostic_path=None, thinking='enabled'):
     import requests
     started = time.monotonic()
     # 不自动重试，避免超时后重复计费；不记录响应错误正文或鉴权头。
     response = requests.post('https://api.deepseek.com/chat/completions',
                              headers={'Authorization': f'Bearer {key}'},
                              json={'model': model, 'messages': messages,
-                                   'thinking': {'type': 'enabled'}, 'reasoning_effort': 'high',
-                                   'response_format': {'type': 'json_object'}, 'max_tokens': max_tokens},
+                                   'thinking': {'type': thinking}, 'reasoning_effort': 'high',
+                                   'response_format': {'type': 'text'}, 'max_tokens': max_tokens},
                              timeout=(15, timeout))
     if response.status_code != 200:
         raise ValueError(f'DeepSeek HTTP {response.status_code}，本次未完成')
-    raw = response.json()
+    try:
+        raw = response.json()
+    except ValueError:
+        if diagnostic_path:
+            save(diagnostic_path, {'http_status': response.status_code,
+                                  'content_type': response.headers.get('Content-Type'),
+                                  'body_length': len(response.content),
+                                  'body_prefix': SECRET.sub('[REDACTED]', response.text[:500])})
+        raise ValueError('HTTP响应不是有效JSON，已记录脱敏诊断') from None
     choice = raw['choices'][0]
+    if diagnostic_path:
+        save(diagnostic_path, {'model': raw.get('model'), 'usage': raw.get('usage'),
+                              'request_id': raw.get('id'), 'finish_reason': choice.get('finish_reason'),
+                              'content': SECRET.sub('[REDACTED]', choice.get('message', {}).get('content') or ''),
+                              'elapsed_seconds': round(time.monotonic() - started, 2)})
     if choice.get('finish_reason') != 'stop':
         raise ValueError('输出未完整结束，不能视为复核通过')
-    result = validate_result(json.loads(choice['message']['content']))
+    content = choice['message'].get('content') or ''
+    if not content.strip():
+        raise ValueError('模型返回空的最终答复，不能视为复核完成')
+    result = validate_result(json.loads(content))
     return {'result': result, 'model': raw.get('model', model), 'usage': raw.get('usage'),
             'request_id': raw.get('id'), 'elapsed_seconds': round(time.monotonic() - started, 2)}
 
@@ -102,9 +120,11 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--manifest', required=True, type=Path)
     parser.add_argument('--execute', action='store_true', help='实际发送材料并产生 API 用量；默认只生成证据包')
-    parser.add_argument('--model', default='deepseek-v4-pro')
+    parser.add_argument('--model', default='deepseek-v4-flash')
     parser.add_argument('--max-tokens', type=int, default=12000)
     parser.add_argument('--timeout', type=int, default=300)
+    parser.add_argument('--thinking', choices=['enabled', 'disabled'], default='disabled',
+                        help='默认关闭思考模式；另测时显式启用，并在试验记录中区分')
     parser.add_argument('--max-chars', type=int, default=400000)
     args = parser.parse_args()
     config = json.loads(args.manifest.read_text(encoding='utf-8-sig'))
@@ -120,7 +140,11 @@ def main():
     save(out / 'input.json', {'config': config, 'bundle': bundle})
     save(out / 'stage1-request.json', messages)
     status = {'status': 'prepared', 'external_review_complete': False, 'model': args.model,
-              'network_verification': False, 'created_at': stamp}
+              'network_verification': False, 'created_at': stamp,
+              'parameters': {'max_tokens': args.max_tokens, 'timeout': args.timeout,
+                             'max_chars': args.max_chars, 'reasoning_effort': 'high',
+                             'response_format': 'text', 'thinking': args.thinking},
+              'script_sha256': hashlib.sha256(Path(__file__).read_bytes()).hexdigest()}
     save(out / 'status.json', status)
     print(f'复核目录：{out}', flush=True)
     if not args.execute:
@@ -133,7 +157,7 @@ def main():
         if not key:
             raise ValueError('缺少 DEEPSEEK_API_KEY，请在本地 .env 中配置')
         print('正在执行第一阶段：独立判断。', flush=True)
-        first = call_api(messages, key, args.model, args.max_tokens, args.timeout)
+        first = call_api(messages, key, args.model, args.max_tokens, args.timeout, out / 'stage1-response.json', args.thinking)
         save(out / 'stage1-result.json', first)
         messages += [{'role': 'assistant', 'content': json.dumps(first['result'], ensure_ascii=False)},
                      {'role': 'user', 'content': '现在对照初稿，列出证据支持的分歧与修正，保留合理异议。\n' +
@@ -142,7 +166,7 @@ def main():
             raise ValueError('第二阶段超过字符预算，已保留第一阶段，不会截断')
         save(out / 'stage2-request.json', messages)
         print('正在执行第二阶段：初稿对照。', flush=True)
-        second = call_api(messages, key, args.model, args.max_tokens, args.timeout)
+        second = call_api(messages, key, args.model, args.max_tokens, args.timeout, out / 'stage2-response.json', args.thinking)
         save(out / 'stage2-result.json', second)
         status.update(status='awaiting_adjudication', external_review_complete=True)
     except Exception as exc:

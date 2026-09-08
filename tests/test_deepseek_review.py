@@ -46,6 +46,24 @@ class ReviewTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             review.validate_result({'assessment': '正常', 'findings': [{'severity': 'P1'}], 'unknowns': []})
 
+    def test_empty_final_keeps_usage_and_fails(self):
+        response = Mock(status_code=200)
+        response.json.return_value = {'model': 'deepseek-v4-flash', 'usage': {'total_tokens': 123},
+                                      'choices': [{'finish_reason': 'stop', 'message': {'content': ''}}]}
+        with tempfile.TemporaryDirectory() as directory, patch('requests.post', return_value=response):
+            diagnostic = Path(directory) / 'response.json'
+            with self.assertRaisesRegex(ValueError, '空的最终答复'):
+                review.call_api([], 'test', 'deepseek-v4-flash', 100, 1, diagnostic)
+            self.assertEqual(json.loads(diagnostic.read_text(encoding='utf-8'))['usage']['total_tokens'], 123)
+
+    def test_text_json_success(self):
+        response = Mock(status_code=200)
+        response.json.return_value = {'choices': [{'finish_reason': 'stop', 'message': {
+            'content': json.dumps({'assessment': '测试', 'findings': [], 'unknowns': []})}}]}
+        with patch('requests.post', return_value=response) as post:
+            self.assertEqual(review.call_api([], 'test', 'deepseek-v4-flash', 100, 1)['result']['assessment'], '测试')
+            self.assertEqual(post.call_args.kwargs['json']['response_format']['type'], 'text')
+
     def run_pipeline(self, fail_second):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
