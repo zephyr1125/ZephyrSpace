@@ -1,0 +1,24 @@
+{
+  "run_id": "management-archive-09987.HK-53904201",
+  "analysis_type": "management-archive",
+  "target": "09987.HK",
+  "company_name": "百胜中国",
+  "started_at": "2026-09-06T10:14:53+08:00",
+  "finished_at": "2026-09-06T10:14:53+08:00",
+  "metadata": {},
+  "api_summary": {
+    "wisburg": {
+      "total_calls": 1,
+      "total_success": 1,
+      "total_failure": 0,
+      "total_duration_ms": 237.9,
+      "essential_calls": 1,
+      "endpoints": {
+        "earningscalls": {
+          "count": 1,
+          "success": 1
+        }
+      }
+    }
+  }
+}

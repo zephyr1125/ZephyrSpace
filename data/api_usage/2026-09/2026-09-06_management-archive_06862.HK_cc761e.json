@@ -1,0 +1,24 @@
+{
+  "run_id": "management-archive-06862.HK-4960ff86",
+  "analysis_type": "management-archive",
+  "target": "06862.HK",
+  "company_name": "海底捞",
+  "started_at": "2026-09-06T10:14:59+08:00",
+  "finished_at": "2026-09-06T10:15:02+08:00",
+  "metadata": {},
+  "api_summary": {
+    "tavily": {
+      "total_calls": 1,
+      "total_success": 1,
+      "total_failure": 0,
+      "total_duration_ms": 2405.6,
+      "essential_calls": 1,
+      "endpoints": {
+        "search": {
+          "count": 1,
+          "success": 1
+        }
+      }
+    }
+  }
+}
