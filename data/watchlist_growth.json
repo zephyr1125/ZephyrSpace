@@ -1,7 +1,7 @@
 {
-  "version": 28,
+  "version": 29,
   "watchlistLevel": "B_GROWTH",
-  "updated_at": "2026-09-08",
+  "updated_at": "2026-09-09",
   "entries": [
     {
       "name": "海底捞",
@@ -662,26 +662,6 @@
       "strategicCoreType": null,
       "lastFundamentalReviewDate": "2026-08-13",
       "lastRedFlagReviewDate": "2026-07-17"
-    },
-    {
-      "name": "华明装备",
-      "code": "002270.SZ",
-      "board": "深",
-      "cScore": 77,
-      "mScore": 80,
-      "target_price": 18.0,
-      "valuation_certainty": 0.55,
-      "dv_ttm": 3.21,
-      "next_earnings_date": null,
-      "next_earnings_type": "三季报",
-      "lastEarningsIncorporated": "2026H1",
-      "cycle_is_cyclical": true,
-      "cycle_position": null,
-      "watchlistLevel": "B_GROWTH",
-      "trackingStatus": "WATCHING",
-      "strategicCoreType": null,
-      "lastFundamentalReviewDate": "2026-08-28",
-      "lastRedFlagReviewDate": "2026-08-28"
     },
     {
       "name": "Sabesp",
