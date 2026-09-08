@@ -1,0 +1,139 @@
+{
+  "stage": "华明修订稿定向复验",
+  "status": "complete_locked",
+  "pass": false,
+  "company": "华明装备 002270.SZ",
+  "as_of": "2026-09-08",
+  "role": "triplet_review_sol",
+  "model_request": {
+    "requested_model": "gpt-5.6-sol",
+    "requested_effort": "high",
+    "actual_model": null,
+    "note": "运行时没有提供实际模型证据，不宣称模型已验证。"
+  },
+  "review_scope": "沿用已锁定sol-huaming-stage2.json，按huaming-decision.json与huaming-preflight-decision.json定向检查唯一冻结8文件、受影响全文关联处、治理补检与计算；未读取另一review、source-map或作者其他版本。作者77/79、14.7/0.43/10.88作为建议参数审查，pending状态本身不构成缺陷。",
+  "manifest": "data/reviews/consun-huaming-repairs-2026-09-08/revised-frozen/huaming/manifest.json",
+  "manifest_hash_check": {
+    "all_8_matched": true,
+    "files": [
+      {"file": "reports/深度分析/华明装备 深度分析 77 2026-09-08.md", "sha256": "bb1ff048ae696374af45c7e27f1f7a2621e86145a35d35180a7fdd5c51f31a90"},
+      {"file": "reports/管理层档案/华明装备 管理层档案 79 2026-09-08.md", "sha256": "7a21f0e78a0383fdf6feb48c0788fa3fa47cd95391f72d48134afc0efceeee59"},
+      {"file": "reports/估值分析/华明装备 估值分析 2026-09-08.md", "sha256": "5e41efea5965e470a03ab0fdfc64a4224dda995d95f6254226a55ba06a35591c"},
+      {"file": "company-pages/华明装备.md", "sha256": "fa1a4f2af7313ac9981428e505bcbde90dd1b7879070d51c4a58408394bfa343"},
+      {"file": "huaming-revision-inputs.json", "sha256": "3be048dc085e40c5e22ab45658625d57329f7de48aa8e09b440116f3e241e68f"},
+      {"file": "huaming-recalculate.py", "sha256": "d2e21d77356aa6331609f53cb61978db7ce2869105b1110c0f5e511f7aebd918"},
+      {"file": "huaming-revision-calculations.json", "sha256": "4c228da2d879596c777df81175911eabc466990cb48f1e7ff109b0e4e8106879"},
+      {"file": "huaming-revision-response.json", "sha256": "540dd62666531cefcb2ef7c5343e6e1dd6a115f666a813b345d8352925afd34c"}
+    ]
+  },
+  "primary_hash_check": {
+    "all_huaming_primary_hashes_matched": true,
+    "files": [
+      {"file": "财报/华明装备/华明装备2025年度报告.pdf", "sha256": "9cc125a5dd3ddae732ca2086a03b992a23f176bede735ca29c8fa42c22cbb286"},
+      {"file": "财报/华明装备/华明装备2026半年度报告.pdf", "sha256": "7059088c37d19f02d77bb505f941a6e0f6b06d3a9900ff2007332343e389477b"}
+    ]
+  },
+  "script_execution": {
+    "executed": true,
+    "write_intercepted_in_memory": true,
+    "frozen_files_unchanged": true,
+    "generated_equals_frozen_calculations": true,
+    "stdout_equals_generated": true,
+    "outputs": {
+      "reported_ttm_attributable_proxy": 731088477.55,
+      "reported_ttm_eps_proxy": 0.8157417233008644,
+      "ttm_recurring_attributable_proxy": 676451410.95,
+      "ttm_recurring_eps_proxy": 0.7547781925750777,
+      "h1_effective_tax_rate": 0.1404178258059067,
+      "fy2025_effective_tax_rate": 0.15159568793283432,
+      "ttm_ocf": 745151437.77,
+      "ttm_cash_long_term_asset_purchases": 98768872.79999998,
+      "ttm_simplified_fcf": 646382564.97,
+      "fcf_formal_weight": 0,
+      "other_financing_payments_total": 459367140.40999997,
+      "lease_related_total": 436768263.44,
+      "pe_value": 16.314834466017288,
+      "ddm_value": 7.001618104409987,
+      "pe_weight": 0.8235294117647058,
+      "ddm_weight": 0.17647058823529413,
+      "weight_sum": 1.0,
+      "raw_target": 14.671325696321881,
+      "target_price": 14.7,
+      "valuation_certainty": 0.43,
+      "buy_price": 10.88,
+      "deep_discount_boundary": 9.25,
+      "base_scenario_matches_main": true,
+      "scenario_values": {"bear": 11.065882352941175, "base": 14.671325696321881, "bull": 18.868095635771617},
+      "cScore": 77,
+      "mScore": 79,
+      "combined": 156
+    }
+  },
+  "repair_acceptance": {
+    "HP01": {"pass": true, "note": "D1为0.50元，第一年直接使用，第二年起增长；DDM 7.001618复算一致。"},
+    "HP02": {"pass": true, "note": "E1-E5固定上限6/5/4/3/2，得分5/4/3/2/1，无越界。"},
+    "HP03": {"pass": true, "note": "集团简化FCF仅诊断且正式权重0；PE/DDM按14/17和3/17归一。"},
+    "HP04": {"pass": true, "note": "撤回缺原始序列的历史PE分位断言，20倍明确为回报要求判断并列反证。"},
+    "HP05": {"pass": true, "note": "基准情景读取正式参数且脚本断言与主估值相等，悲观与乐观输入集中在JSON。"},
+    "HP06": {"pass": true, "note": "使用报告TTM盈利代理名称，法定归母、扣非、税率和股份支付经济成本边界完整。"},
+    "C008_C030_ADH02": {"pass": true, "note": "法定归母389,837,789.61元；调整后集团与归母口径已消歧，SBC未直接全额加回。"},
+    "C009_C027": {"pass": true, "note": "恢复2021-2025收入、归母、ROE、OCF及2023-2025现金长期资产购建和分红证据。"},
+    "C010_C025": {"pass": true, "note": "43.53%控制链、肖日明/肖毅/肖申及杨建琴、雷纯立、夏海晶、朱强均已恢复并同步。"},
+    "C011_C029": {"pass": true, "note": "H股已递表未发行、发行费用、当前股本及发行现金与新增股数双变量敏感性处理正确。"},
+    "C012_C024_ADH01": {"pass": false, "note": "管理层现行七维量表闭合；深度F虽按6/6/3求和，但F1/F2名称与标准schema对调，且管理层旧80至修复76未给逐维桥，见P2问题。"},
+    "C013_C033": {"pass": true, "note": "其他筹资付款四项及租赁两项精确金额与现金流分类闭合，未重复扣经营FCF。"},
+    "C014_C032": {"pass": true, "note": "三项应收下降5.83%、含合同资产下降5.32%，并结合长账龄与未知回款风险，无预设信用恶化。"},
+    "C015_C031": {"pass": false, "note": "三份报告主体已正确列两种海外口径及EO类别覆盖触发器；公司页仍将EO标为中性并以未指定作为门槛，见P1问题。"},
+    "C026": {"pass": false, "note": "B0-B4及E1-E5闭合；F为6/6/3但标签未按标准F1管理层稳定与激励、F2股东利益对齐、F3关联交易与内控归位。"},
+    "C028": {"pass": true, "note": "TTM盈利、D1与20倍的可算要求完整，FCF诊断保留且权重0；作者参数明确待最终裁决。"},
+    "H8_H9_company_sync": {"pass": false, "note": "行情19.81与日高19.85、77/79、14.7/0.43/10.88、主营和财务均同步；仅EO政策行仍冲突。"}
+  },
+  "finding_summary": {"P0": 0, "P1": 1, "P2": 2},
+  "findings": [
+    {
+      "id": "HUAMING-FINAL-001",
+      "priority": "P1",
+      "location": "company-pages/华明装备.md/## 已核实的关键事实/关联与政策；## 政策顺逆风评估；并与PreBuy结论、深度分析/EO 14420适用边界和估值/反证条件联动",
+      "claim": "公司页已与裁决统一把EO 14420写为尚未确认实际影响、但需按国家/主体/设备/交易类别覆盖持续跟踪的条件性下行风险。",
+      "evidence": "公司页仍写‘EO 14420限制取决于相关机构指定及设备范围’，政策表又将其标为‘中性’，并写‘未指定前只作为条件性风险’。这仍把公司或机构是否被指定当作主要门槛。裁决C015明确触发器不能写成公司是否被单独点名，需跟踪国家、主体、设备或交易类别措施是否实际覆盖公司产品或客户用途。深度分析和估值报告已经采用后一口径，因此公司页内部及跨文件不一致。",
+      "impact": "公司页是Watchlist与后续操作的入口；中性标签会弱化已识别的条件性下行风险，并遗漏不依赖公司被单独点名的类别覆盖路径，C015/C031和公司页同步尚未闭环。",
+      "suggestion": "将政策表方向改为‘风险’或‘条件性下行’，把说明改为‘现未证实实际限制；若国家、主体、设备或交易类别措施覆盖公司产品或客户用途则触发’，并同步删除以‘未指定’作为前提的简化表述。"
+    },
+    {
+      "id": "HUAMING-FINAL-002",
+      "priority": "P2",
+      "location": "reports/深度分析/华明装备 深度分析 77 2026-09-08.md/## F.治理结构与管理层及huaming-revision-inputs.json/scores/company/F",
+      "claim": "深度分析F1-F3已按标准固定子项闭合。",
+      "evidence": "标准子项为F1管理层稳定性与激励机制6、F2股东利益对齐6、F3关联交易与内控3。冻结稿列成F1股东利益对齐5、F2激励与治理机制4、F3透明度与内控2，输入JSON也只保存[5,4,2]。虽然6/6/3上限和11分合计不变，但F1/F2标签对调，关联租赁又落在F2说明而非标准F3，不能称标准子项已恢复。",
+      "impact": "当前F总分11和公司77的算术不受影响，但评分含义、跨公司可比性及后续治理事件应落入哪个子项不清晰。",
+      "suggestion": "按标准名称归位为F1管理层稳定与激励、F2股东利益对齐、F3关联交易与内控；重新分配现有证据并明确是否维持11分，同时同步inputs和响应表述。"
+    },
+    {
+      "id": "HUAMING-FINAL-003",
+      "priority": "P2",
+      "location": "reports/管理层档案/华明装备 管理层档案 79 2026-09-08.md/## 旧版到本版的评分桥",
+      "claim": "已按C012给出旧80分到修复初稿76分的逐维变化及证据桥。",
+      "evidence": "现表只列旧版80、修复初稿76和本次79三个总分及概括性说明，没有列旧版和修复初稿七个维度的分数、变化与证据归因。当前79的17/19/13/12/7/8/3量表与算术本身闭合，但裁决要求的历史逐维桥仍缺失。",
+      "impact": "不改变当前79分算术，也不构成公司负面；但读者无法审计80→76→79究竟哪些维度因事实纠错或证据恢复发生变化。",
+      "suggestion": "补一张七维旧80、初稿76、当前79的逐项对照；若旧版本维度不可映射，应明确列‘不可映射’及原因，而不是只给总分。"
+    }
+  ],
+  "verified_without_finding": [
+    "管理层固定20/25/15/15/10/10/5量表及当前17/19/13/12/7/8/3=79闭合。",
+    "真实人物、43.53%表决权控制链、员工持股、H股、关联租赁和分红程序事实已恢复。",
+    "至少三年要求已由2021-2025经营、ROE与OCF序列满足，TTM利润与现金流桥可复算。",
+    "基准EPS保留股份支付经济成本，调整集团净利和调整归母口径未混用。",
+    "D1 0.50第一年直接使用，PE/DDM权重为14/17与3/17，FCF正式权重0，三情景由同一函数生成。",
+    "19.81元为腾讯第三方时点快照，19.85元正确标为当日日内高点；行情不反推合理价。",
+    "治理补检支持截至2026-09-08未见半年报后新增重大减持、处罚或诉讼红线；报告未把第三方历史聚合结果夸大为当前一票否决。",
+    "作者77/79、14.7/0.43/10.88属于可复算且有边界的建议参数；最终裁决选择不同合理参数不代表本稿事实错误。"
+  ],
+  "remaining_unknowns": [
+    "H股发行规模、定价、完成时间、净募集资金用途与增量回报。",
+    "美国直接收入、终端用途及经变压器客户形成的间接美国暴露。",
+    "关联租赁相对独立市场价格的量化比较。",
+    "集团简化FCF归属于母公司股东的完整经济桥，以及营运资金释放的长期可持续性。",
+    "服务收入及利润的独立规模、H股费用总额与会计归属。"
+  ],
+  "conclusion": "修订稿的财务、人物、股权、估值和计算实质修复大体通过，但公司页EO口径仍有1项P1冲突，故当前冻结版不应标为最终通过；另有2项不改变当前总分的P2评分可审计性问题。"
+}

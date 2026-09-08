@@ -1,0 +1,63 @@
+{
+  "as_of": "2026-09-08",
+  "stage": "published_after_final_dual_validation",
+  "schema_version": 27,
+  "companies": [
+    {
+      "name": "康臣药业",
+      "code": "01681.HK",
+      "cScore": 81,
+      "mScore": 79,
+      "target_price": 14.8,
+      "valuation_certainty": 0.6,
+      "buy_price": 11.31,
+      "tier": "A_CORE",
+      "report_paths": {
+        "company": "data/reviews/consun-huaming-repairs-2026-09-08/writer/reports/深度分析/康臣药业 深度分析 81 2026-09-08.md",
+        "management": "data/reviews/consun-huaming-repairs-2026-09-08/writer/reports/管理层档案/康臣药业 管理层档案 79 2026-09-08.md",
+        "valuation": "data/reviews/consun-huaming-repairs-2026-09-08/writer/reports/估值分析/康臣药业 估值分析 2026-09-08.md"
+      },
+      "company_page_source": "data/reviews/consun-huaming-repairs-2026-09-08/writer/company-pages/康臣药业(01681.HK).md",
+      "company_page_target": "01-公司/康臣药业(01681.HK).md",
+      "calculation_script": "data/reviews/consun-huaming-repairs-2026-09-08/writer/consun-recalculate.py",
+      "limitations": [
+        "肾科产品线收入可核，尿毒清单品收入未单独披露",
+        "华茂签约已披露，后续会计确认与回报仍待未来财报验证；不因未知扣诚信",
+        "2023 OCF尚未从本轮归档比较报表取得",
+        "现金SOTP缺子公司归属与最低经营现金桥、owner earnings未闭合，二者正式权重均为0",
+        "2026-09-08价格为第三方时点快照",
+        "须双复核受影响段落和主Agent完整性检查后方可落库"
+      ]
+    },
+    {
+      "name": "华明装备",
+      "code": "002270.SZ",
+      "cScore": 81,
+      "mScore": 80,
+      "target_price": 13.7,
+      "valuation_certainty": 0.58,
+      "buy_price": 10.43,
+      "tier": "A_CORE",
+      "report_paths": {
+        "company": "data/reviews/consun-huaming-repairs-2026-09-08/writer/reports/深度分析/华明装备 深度分析 81 2026-09-08.md",
+        "management": "data/reviews/consun-huaming-repairs-2026-09-08/writer/reports/管理层档案/华明装备 管理层档案 80 2026-09-08.md",
+        "valuation": "data/reviews/consun-huaming-repairs-2026-09-08/writer/reports/估值分析/华明装备 估值分析 2026-09-08.md"
+      },
+      "company_page_source": "data/reviews/consun-huaming-repairs-2026-09-08/writer/company-pages/华明装备.md",
+      "company_page_target": "01-公司/华明装备.md",
+      "calculation_script": "data/reviews/consun-huaming-repairs-2026-09-08/writer/huaming-recalculate.py",
+      "limitations": [
+        "美国直接及间接终端暴露、服务收入与毛利未知",
+        "H股已递表未发行，实际规模、定价、用途与净募集现金未知",
+        "集团应收一年以上原值小幅上升，工程组合坏账、逾期及回款需跟踪",
+        "集团简化FCF未闭合归母、租赁及可持续营运资金，正式权重0",
+        "2026-09-08价格为第三方时点快照",
+        "须双路受影响段落验收及主Agent完整性检查后落库"
+      ]
+    }
+  ],
+  "main_agent_acceptance": {
+    "consun": "consun-final-v3",
+    "huaming": "huaming-final-v4"
+  }
+}

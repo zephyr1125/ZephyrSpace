@@ -1,0 +1,311 @@
+{
+  "reviewer_role": "triplet_review_astra",
+  "company": "康臣药业",
+  "ticker": "01681.HK",
+  "as_of": "2026-09-08",
+  "review_date": "2026-09-09",
+  "model_record": {
+    "requested_model": "gpt-6-astra",
+    "requested_reasoning_effort": "high",
+    "actual_model": null,
+    "actual_reasoning_effort": null,
+    "runtime_verified": false,
+    "note": "沿用本任务原请求记录，当前配置 medium 不追溯覆盖；工具未提供实际模型独立证据。"
+  },
+  "scope": "仅对修订冻结版及自己的 stage1、stage2 记录定向复验。读取原件及固定评分技能相关条款，未读取另一审核员意见、来源映射或 writer 当前稿。未修改报告、公司页、Watchlist 或冻结文件。",
+  "pass": false,
+  "verdict": "主要事实与模型修复通过，4 项 P2 同步及解释问题尚未完全关闭；没有未解决 P0/P1。",
+  "new_p0_p1": [],
+  "original_findings": [
+    {
+      "id": "AC-01",
+      "status": "closed",
+      "reason": "现任安猛兼主席与 CEO、杨玉川执行董事，黎倩退出日期、2016 年一致行动协议终止及监管视同口径已分清；与中期公告董事名单及年报治理章节一致。"
+    },
+    {
+      "id": "AC-02",
+      "status": "closed_with_new_p2_boundary",
+      "reason": "FY2025-H1 2025+H1 2026 归母、税前、所得税、NCI 桥及 FVPL 剔除、稀释股本与汇率均可复算。主 PE 不再依赖无桥的 EPS 1.60。剩余税率解释见 ACF-04，不推定应强制采用 15%。"
+    },
+    {
+      "id": "AC-03",
+      "status": "closed",
+      "reason": "补齐 FY2021-2025 收入、毛利、税前、归母、权益及 FY2022-2025 平均权益 ROE；原件年报五年摘要可核。"
+    },
+    {
+      "id": "AC-04",
+      "status": "partially_closed",
+      "reason": "固定量表总维度已纠正，81 与 79 加总正确，但深度 D 标题 11/15 和管理层 IR 7/10 仍为旧数/旧量表残留。"
+    },
+    {
+      "id": "AC-05",
+      "status": "partially_closed",
+      "reason": "正式结论已明确华茂完成状态只跟踪、不当失信扣分；正文仍将收购状态不清列入扣分及股东负面信号，解释不一致。"
+    },
+    {
+      "id": "AC-06",
+      "status": "closed",
+      "reason": "DDM 悲观/基准/乐观参数完整，敏感性与复算一致。"
+    },
+    {
+      "id": "AC-07",
+      "status": "closed",
+      "reason": "集团现金代理明确 NCI 归属、最低运营现金及交易付款未知，正式权重为 0；归母 PE 不重复扣除全部少数权益。"
+    }
+  ],
+  "unresolved_findings": [
+    {
+      "id": "ACF-01",
+      "priority": "P2",
+      "location": "深度分析第 187、213 行；管理层档案第 238、248-259 行",
+      "claim": "深度 D 标题为 11/15，但小表及最终总表为 12/15；管理正文保留 IR 与透明度 7/10，与本轮固定七维量表不对应。",
+      "evidence": "冻结稿内可直接比对；输入与脚本 C=9+16+14+12+18+12=81，M=16+20+12+13+7+7+4=79。",
+      "impact": "最终总分算术不受影响，但正文存在两套评分口径，妨碍未来独立复核。",
+      "suggestion": "D 标题同步为 12/15；删除旧 IR 独立分，或明确转为固定量表中的相应定性依据。无需因该笔误自行改变总分。"
+    },
+    {
+      "id": "ACF-02",
+      "priority": "P2",
+      "location": "管理层档案第 178-179、190-195、252-258 行",
+      "claim": "一处写收购状态不清是资本配置扣分因素，下一行又说只跟踪；股东负面信号仍列交易完成状态需跨公告核对。",
+      "evidence": "冻结稿第 116 行及修订结论明确未证实披露违规、延迟交割或利益输送，完成状态未知不扣诚信/股东友好；第 178 和 195 行仍有相反表述。",
+      "impact": "无法确认最终 79 分是否仍含已决定移出的重复未知扣分；不据缺证要求补分。",
+      "suggestion": "统一说明该未知的处理：只作为交易进度跟踪或模型不加值限制；若确要扣分，须单列已核实事实及独立因果，消除正文冲突。"
+    },
+    {
+      "id": "ACF-03",
+      "priority": "P2",
+      "location": "估值分析第 282 行",
+      "claim": "来源仍链接 writer/calculations.json，未指向本轮 consun-revision-inputs.json、consun-recalculate.py 和 consun-revision-calculations.json。",
+      "evidence": "本轮 manifest 的计算文件名与该来源项不同；本轮计算复现 15.1827102915/15.2/11.23，旧文件并非本轮冻结计算对象。未读取 writer 当前文件。",
+      "impact": "读者沿引用无法可靠复现本版参数，存在错版本引用。",
+      "suggestion": "改为本轮可长期访问的冻结或正式归档输入、脚本和结果路径，并同步归档链接。"
+    },
+    {
+      "id": "ACF-04",
+      "priority": "P2",
+      "location": "估值分析第 58-68 行",
+      "claim": "TTM 税率已包含部分上移，不等于向前正常化税率必然重复调整；第 67 行将进一步使用 15% 概括为重复削减，解释过强。",
+      "evidence": "TTM ETR=1.75096/13.59523=12.8787%，H1 2026 ETR=14.3476%，TTM 仍含 H2 2025 税率阶段。把未来持续税率与 TTM 实际税率比较是增量情景，不是再次扣除全部税。",
+      "impact": "基准 TTM 计算没有算术错误，但正常化盈利的持续性边界被弱化。固定税前利润及其他参数，按 14.3476%/15% 作情景时，增量税约 1,996/2,883 万元，75% PE 对目标价影响约 -0.21/-0.31 港元；这不是已证实真实未来税率。",
+      "suggestion": "明确基准采用仅剔已辨 FVPL 的 TTM 盈利代理，撤回必然重复调整说法；补持续税率边界或敏感性。没有证据强制改为 15%，无需自动调低主目标。"
+    }
+  ],
+  "calculation_verification": {
+    "method": "先阅读脚本，再实际执行 main；仅拦截其目标结果文件 write_text 至内存，未产生或覆盖报告/冻结文件；对结构和数值逐项比较。",
+    "all_eight_hashes_match": true,
+    "results_match_with_tolerance": true,
+    "relative_tolerance": 1e-12,
+    "absolute_tolerance": 1e-09,
+    "float_tail_differences": [
+      {
+        "path": "/ddm/base/pv_stage1",
+        "executed": 3.2634179920935704,
+        "frozen": 3.26341799209357,
+        "absolute_difference": 4.440892098500626e-16
+      },
+      {
+        "path": "/ddm/base/value",
+        "executed": 10.643884053112394,
+        "frozen": 10.643884053112393,
+        "absolute_difference": 1.7763568394002505e-15
+      },
+      {
+        "path": "/ddm/bull/pv_stage1",
+        "executed": 3.8594229639809763,
+        "frozen": 3.8594229639809767,
+        "absolute_difference": 4.440892098500626e-16
+      },
+      {
+        "path": "/scenarios/base/ddm_value",
+        "executed": 10.643884053112394,
+        "frozen": 10.643884053112393,
+        "absolute_difference": 1.7763568394002505e-15
+      }
+    ],
+    "result": {
+      "as_of": "2026-09-08",
+      "company": "康臣药业",
+      "earnings_bridge": {
+        "ttm_attributable_profit_rmb": 1175077000,
+        "after_tax_fvpl_removed_rmb": 6419968.597,
+        "normalized_profit_rmb": 1168657031.403,
+        "eps_cny_diluted": 1.3798059810749352,
+        "fx_sensitivity_eps_hkd": {
+          "1.05": 1.448796280128682,
+          "1.1": 1.517786579182429,
+          "1.15": 1.5867768782361753
+        },
+        "normalized_eps_hkd": 1.517786579182429
+      },
+      "pe_value": 16.69565237100672,
+      "ddm": {
+        "base": {
+          "dividends": [
+            0.8112,
+            0.8436480000000001,
+            0.87739392,
+            0.9124896768000001,
+            0.9489892638720001
+          ],
+          "pv_stage1": 3.2634179920935704,
+          "terminal_value": 12.158924943360002,
+          "pv_terminal": 7.380466061018823,
+          "value": 10.643884053112394
+        },
+        "bear": {
+          "dividends": [
+            0.6565000000000001,
+            0.663065,
+            0.6696956500000001,
+            0.6763926065,
+            0.6831565325650001
+          ],
+          "pv_stage1": 2.408929301187739,
+          "terminal_value": 6.272619071733183,
+          "pv_terminal": 3.559252516994078,
+          "value": 5.968181818181817
+        },
+        "bull": {
+          "dividends": [
+            0.901,
+            0.9550600000000001,
+            1.0123636,
+            1.0731054160000002,
+            1.1374917409600003
+          ],
+          "pv_stage1": 3.8594229639809763,
+          "terminal_value": 18.024869125981542,
+          "pv_terminal": 11.449895531908362,
+          "value": 15.30931849588934
+        }
+      },
+      "scenarios": {
+        "bear": {
+          "pe_value": 12.6,
+          "ddm_value": 5.968181818181817,
+          "weighted_value": 10.942045454545454
+        },
+        "base": {
+          "pe_value": 16.69565237100672,
+          "ddm_value": 10.643884053112394,
+          "weighted_value": 15.18271029153314
+        },
+        "bull": {
+          "pe_value": 21.45,
+          "ddm_value": 15.30931849588934,
+          "weighted_value": 19.914829623972334
+        }
+      },
+      "formal_weight_sum": 1.0,
+      "target_price_raw": 15.18271029153314,
+      "target_price": 15.2,
+      "valuation_certainty": 0.42,
+      "buy_price": 11.23,
+      "cash_diagnostic": {
+        "cash_classified_rmb": 4815325000,
+        "partial_group_financial_asset_proxy_rmb": 3798393000,
+        "proxy_per_share_hkd": 4.979723171412788,
+        "nci_attribution": "unknown",
+        "formal_weight": 0
+      },
+      "reported_cash_flow": {
+        "fy2024_simplified_fcf": 977985000,
+        "fy2025_simplified_fcf": 1143316000,
+        "h1_2026_cash_capex": "unknown",
+        "formal_weight": 0
+      },
+      "cScore": 81,
+      "mScore": 79
+    },
+    "independent_checks": {
+      "ttm_profit": 1175077000,
+      "buy_formula": 11.23,
+      "revenue_2021_2025_cagr": 0.13701776134728916,
+      "profit_2021_2025_cagr": 0.16256377879992656,
+      "ddm_sensitivity_verified": "9 格显示值与同公式一致；基准 DDM 10.6438840531。"
+    }
+  },
+  "score_and_linkage_judgment": {
+    "cScore": 81,
+    "mScore": 79,
+    "fixed_dimension_caps_correct": true,
+    "arithmetic_correct": true,
+    "judgment": "现任治理修正、五年经营及回购注销事实为分数变动提供了可核依据。评分属于有证据的判断，不因新分更高或估值更低自动认定准确；正文残留先统一，不凭未知强行加减分。",
+    "target_price": 15.2,
+    "certainty": 0.42,
+    "buy_price": 11.23,
+    "linkage": "输入、计算、三报告和公司页的最终主分数与主价位一致。管理层第 204 行估值按时点股本宜限定为市值/现金代理；估值第 69 行已明确 EPS 用稀释股本。",
+    "tier_boundary": "81+79=160 可满足相应分数条件，A_CORE 的其余硬门槛及主 Agent 红旗核证仍独立适用，本意见不等于授权跳过。"
+  },
+  "model_boundaries_and_counterevidence": [
+    "PE 75% 与 DDM 25% 的权重及 11 倍 PE、FX 1.10、certainty 0.42 是估值判断，不是原件事实；DDM 较低不是机械取最低价理由。",
+    "集团现金分类 48.15325 亿元、部分净额代理 37.98393 亿元；现金及 FCF 方法 0 权重避免与含利息归母利润重复加值。",
+    "FY2024/FY2025 简化 FCF 为 9.77985/11.43316 亿元。H1 2026 PPE 会计新增不等于现金资本开支，现金 capex 保持未知。",
+    "客户集中、肾科集中、集采与续约、研发第二曲线未兑现、C.2.1 主席兼 CEO、期权稀释均仍应保留。",
+    "OCF/净利持续低于 0.8、主业增速/现金回收弱化、分红下降伴低回报外投等关键反证仍在；0.42 不用于掩盖已证实事实错误。"
+  ],
+  "stage1_judgment_changes": [
+    "并未改变金融资产不全属现金、现金归属桥未知和现金不宜直接全额加值的原判断；本轮作者改为零正式权重后风险得到隔离。",
+    "治理名单和历史控制安排以官方年报及中期董事名单闭合，原报告错误已修复；没有把华茂状态未知升级为已证实失信。",
+    "由原先缺少盈利桥转为可复核 TTM 代理，接受其作为明确假设的估值输入，但保留税率持续性未知。"
+  ],
+  "unknowns": [
+    "华茂交易截至截止日最终交割、支付与权益法初始确认仍缺闭环。",
+    "集团金融资产的母公司/NCI归属、最低营运现金、税后可汇出额仍未知。",
+    "H1 2026 实际现金资本开支和维护/增长分类仍未知。",
+    "持续有效税率、利息与其他非经营收益的完整 TTM 正常化拆分仍未闭合。",
+    "客户身份、半年报后客户集中度趋势及重要期权最终行权规模未知。",
+    "本意见限于定向复验；主 Agent 截止日红旗检索和最终硬门槛审核不由本意见替代。"
+  ],
+  "frozen_files": [
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun\\reports\\深度分析\\康臣药业 深度分析 81 2026-09-08.md",
+      "expected_sha256": "51c35b25ab2a4fb5119ce6f795a6901dabafc01af6b5d76e8e223835db698748",
+      "actual_sha256": "51c35b25ab2a4fb5119ce6f795a6901dabafc01af6b5d76e8e223835db698748",
+      "match": true
+    },
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun\\reports\\管理层档案\\康臣药业 管理层档案 79 2026-09-08.md",
+      "expected_sha256": "c2e524e9bb0ef625498f2d7b62a26173309d59973d1f9ad3d0f1c6db6e0238ae",
+      "actual_sha256": "c2e524e9bb0ef625498f2d7b62a26173309d59973d1f9ad3d0f1c6db6e0238ae",
+      "match": true
+    },
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun\\reports\\估值分析\\康臣药业 估值分析 2026-09-08.md",
+      "expected_sha256": "712ab41bb8609c6bf03d5f7431397a238dc0a653807213d0e1535e37a847ccd3",
+      "actual_sha256": "712ab41bb8609c6bf03d5f7431397a238dc0a653807213d0e1535e37a847ccd3",
+      "match": true
+    },
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun\\company-pages\\康臣药业(01681.HK).md",
+      "expected_sha256": "a60d28af570137c66e52905a2de690c468217026f06d0b838b56fec29f101f7e",
+      "actual_sha256": "a60d28af570137c66e52905a2de690c468217026f06d0b838b56fec29f101f7e",
+      "match": true
+    },
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun\\consun-revision-inputs.json",
+      "expected_sha256": "bbdff5743e08704de3ad4b5de11ef88dccf44d7ed15b984cac9f5f8efd7870da",
+      "actual_sha256": "bbdff5743e08704de3ad4b5de11ef88dccf44d7ed15b984cac9f5f8efd7870da",
+      "match": true
+    },
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun\\consun-recalculate.py",
+      "expected_sha256": "e3322fbd5e4279426ac9dc8ddbc1604aca393f27bea41a05633cdda1e4c0e58f",
+      "actual_sha256": "e3322fbd5e4279426ac9dc8ddbc1604aca393f27bea41a05633cdda1e4c0e58f",
+      "match": true
+    },
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun\\consun-revision-calculations.json",
+      "expected_sha256": "6efd5806612fbb94f37d215b8c759901fb0a5d038d79d5384feb0c20a35aa93c",
+      "actual_sha256": "6efd5806612fbb94f37d215b8c759901fb0a5d038d79d5384feb0c20a35aa93c",
+      "match": true
+    },
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun\\consun-revision-response.json",
+      "expected_sha256": "13c52a64e809ed7cce71f801335f9eb87eb3fcdeb16c96dafca9dba1e9dc1928",
+      "actual_sha256": "13c52a64e809ed7cce71f801335f9eb87eb3fcdeb16c96dafca9dba1e9dc1928",
+      "match": true
+    }
+  ]
+}

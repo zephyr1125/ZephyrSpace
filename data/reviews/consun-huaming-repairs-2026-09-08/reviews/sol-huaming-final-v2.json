@@ -1,0 +1,210 @@
+{
+  "status": "complete_locked",
+  "company": "华明装备",
+  "code": "002270.SZ",
+  "as_of": "2026-09-08",
+  "review_date": "2026-09-09",
+  "review_scope": "仅对revised-frozen/huaming-final冻结包按HF01-HF13及上轮残留做定向增量验收；未读取早先revised-frozen/huaming、另一审核意见、source-map或作者正在修改的writer当前文件。",
+  "routing": {
+    "requested_model": "gpt-5.6-sol",
+    "requested_reasoning_effort": "high",
+    "actual_model_verified": null
+  },
+  "frozen_version": {
+    "manifest": "data/reviews/consun-huaming-repairs-2026-09-08/revised-frozen/huaming-final/manifest.json",
+    "manifest_sha256": "989546a8229ceee9ce0dae0143ae86c4844dc48c87253f8c0998288e819b58d1",
+    "files": [
+      {
+        "path": "data/reviews/consun-huaming-repairs-2026-09-08/revised-frozen/huaming-final/reports/深度分析/华明装备 深度分析 81 2026-09-08.md",
+        "sha256": "8e73ab72347be7ed80261b3e9c0befd1326b4430431c5b3b93ddcc2c3db988d4",
+        "manifest_match": true,
+        "bytes": 23697,
+        "lines": 521
+      },
+      {
+        "path": "data/reviews/consun-huaming-repairs-2026-09-08/revised-frozen/huaming-final/reports/管理层档案/华明装备 管理层档案 80 2026-09-08.md",
+        "sha256": "97abf36fbb7a13777e5e68652714ee54c97e830c0de9a06cee54ec0208190b58",
+        "manifest_match": true,
+        "bytes": 16094,
+        "lines": 407
+      },
+      {
+        "path": "data/reviews/consun-huaming-repairs-2026-09-08/revised-frozen/huaming-final/reports/估值分析/华明装备 估值分析 2026-09-08.md",
+        "sha256": "b0179ba419a5a296f94c1dc77a35f1e0da03237961214c013dd89801e456b04c",
+        "manifest_match": true,
+        "bytes": 12210,
+        "lines": 314
+      },
+      {
+        "path": "data/reviews/consun-huaming-repairs-2026-09-08/revised-frozen/huaming-final/company-pages/华明装备.md",
+        "sha256": "ceb92c101300062adee194a16f9731c1bd5d0aff740c5a12c3e8317e444ed86e",
+        "manifest_match": true,
+        "bytes": 11055,
+        "lines": 245
+      },
+      {
+        "path": "data/reviews/consun-huaming-repairs-2026-09-08/revised-frozen/huaming-final/huaming-revision-inputs.json",
+        "sha256": "1993c682fa7bbbefe6039d2532a60f34dd231f2c508e8d0b302291dd6c7b7315",
+        "manifest_match": true,
+        "bytes": 6920,
+        "lines": 232
+      },
+      {
+        "path": "data/reviews/consun-huaming-repairs-2026-09-08/revised-frozen/huaming-final/huaming-recalculate.py",
+        "sha256": "d077fb05f7dfcda0af77e907cc0910e11fc054382c347316c3f7f5ed6c626dff",
+        "manifest_match": true,
+        "bytes": 6219,
+        "lines": 57
+      },
+      {
+        "path": "data/reviews/consun-huaming-repairs-2026-09-08/revised-frozen/huaming-final/huaming-revision-calculations.json",
+        "sha256": "17de8f416d88cd41e165a839083adab46930872729204465ec1da471415defc6",
+        "manifest_match": true,
+        "bytes": 7473,
+        "lines": 262
+      },
+      {
+        "path": "data/reviews/consun-huaming-repairs-2026-09-08/revised-frozen/huaming-final/huaming-revision-response.json",
+        "sha256": "9c5e5e132277577f38a7e6567e15104aeaadcbe9bdbc41b31d8d8ff0e66bdfd3",
+        "manifest_match": true,
+        "bytes": 10925,
+        "lines": 228
+      }
+    ],
+    "all_8_hashes_match": true,
+    "all_8_hashes_unchanged_after_recalculation": true
+  },
+  "primary_evidence_hashes": [
+    {
+      "path": "财报/华明装备/华明装备2025年度报告.pdf",
+      "expected_sha256": "9cc125a5dd3ddae732ca2086a03b992a23f176bede735ca29c8fa42c22cbb286",
+      "actual_sha256": "9cc125a5dd3ddae732ca2086a03b992a23f176bede735ca29c8fa42c22cbb286",
+      "match": true
+    },
+    {
+      "path": "财报/华明装备/华明装备2026半年度报告.pdf",
+      "expected_sha256": "7059088c37d19f02d77bb505f941a6e0f6b06d3a9900ff2007332343e389477b",
+      "actual_sha256": "7059088c37d19f02d77bb505f941a6e0f6b06d3a9900ff2007332343e389477b",
+      "match": true
+    }
+  ],
+  "recalculation": {
+    "method": "以runpy执行冻结脚本，将Path.write_text对冻结calculations文件的写入拦截到内存，并阻断任何其他写入；执行前后复核8个文件哈希。",
+    "write_intercepted_in_memory": true,
+    "unexpected_write": false,
+    "generated_equals_frozen_calculations": true,
+    "stdout_json_parseable": true,
+    "results": {
+      "company_score": 81,
+      "management_score": 80,
+      "formal_recurring_ttm_parent": 676451410.95,
+      "formal_eps": 0.7547781925750777,
+      "pe_value": 15.095563851501554,
+      "ddm_value": 7.001618104409987,
+      "pe_weight": 0.8235294117647058,
+      "ddm_weight": 0.17647058823529413,
+      "fcf_weight": 0,
+      "raw_target": 13.667220484367748,
+      "target_price": 13.7,
+      "certainty": 0.58,
+      "buy_price": 10.43,
+      "deep_discount": 8.87,
+      "weights_sum": 1.0,
+      "base_matches_main": true,
+      "aging_net_bridge": true
+    }
+  },
+  "primary_fact_checks": {
+    "group_trade_receivable_aging": {
+      "status": "pass",
+      "source": "2026半年度报告PDF物理105-106页",
+      "under_one_year": 952515413.11,
+      "one_to_two_years": 84126719.27,
+      "two_to_three_years": 23005449.01,
+      "above_three_years": 49768026.99,
+      "gross": 1109415608.38,
+      "allowance": 70080678.99,
+      "net": 1039334929.39,
+      "above_one_year": 156900195.27,
+      "prior_above_one_year": 153441541.14,
+      "change": 0.022540533054502765,
+      "current_ratio": 0.14142598507254653,
+      "prior_ratio": 0.2516962949857476,
+      "assessment": "报告正确写成长账龄绝对额小幅上升、占比下降，并明确母公司其他应收款账龄不能替代集团应收账款账龄。"
+    },
+    "management_terms_and_2025_transition": {
+      "status": "pass",
+      "source": "2025年度报告PDF物理37-39页",
+      "assessment": "肖毅、杨建琴、陆维力、雷纯立、夏海晶、朱强任期，2025年董事及独董换届、取消监事会、杨建琴内部培养路径及陆维力国际经历均与原件一致。"
+    },
+    "earnings_and_sbc": {
+      "status": "pass",
+      "source": "2025年度报告与2026半年度报告原件",
+      "assessment": "正式PE使用官方扣非TTM归母676451410.95元与EPS0.7547781926，保留股份支付经济成本；报告TTM EPS0.8157417只作敏感性，未二次扣税或少数股东。"
+    }
+  },
+  "hf_checks": {
+    "HF01": "pass",
+    "HF02": "pass",
+    "HF03": "pass",
+    "HF04": "fail：旧80、返修79、最终80逐维桥正确，但最初76非标准稿未列原始维度及各自上限。",
+    "HF05": "pass_with_input_metadata_residue：正式报告和计算正确，base.eps_source标签错误见 finding HMFV2-001。",
+    "HF06": "pass",
+    "HF07": "fail：报告、公司页、输入主要参数和计算已统一，但回应文件仍保留未标失效的旧E=15及管理79回应。",
+    "HF08": "pass",
+    "HF09": "pass_with_input_metadata_residue：计算与表格正确，基准情景输入来源标签错误见 finding HMFV2-001。",
+    "HF10": "pass",
+    "HF11": "pass",
+    "HF12": "pass",
+    "HF13": "pass"
+  },
+  "findings": [
+    {
+      "id": "HMFV2-001",
+      "priority": "P1",
+      "location": "revised-frozen/huaming-final/huaming-revision-inputs.json:95",
+      "claim": "基准情景的eps_source仍写为reported_ttm_proxy，与最终正式扣非TTM口径不一致。",
+      "evidence": "冻结脚本第35行实际把formal_eps写入base情景，冻结计算第142行亦为0.7547781925750777；估值报告第43-44、224行明确正式扣非TTM归母/EPS及基准情景，HF05、HF07、HF09要求输入与正式模型同步。",
+      "impact": "当前复算结果未错，因为脚本忽略该标签；但输入是模型审计源，错误来源标签会让人工复核或未来按标签取值的实现把0.8157417误当基准EPS，破坏正式盈利口径和基准情景可追溯性。",
+      "suggestion": "把base.eps_source改为明确指向formal_eps或formal_recurring_ttm_eps，并重新冻结及复算8文件。"
+    },
+    {
+      "id": "HMFV2-002",
+      "priority": "P1",
+      "location": "revised-frozen/huaming-final/huaming-revision-response.json:23,68,143-173",
+      "claim": "最终回应文件仍保留未标记为superseded的旧回应：HP02称E1-E5为[5,4,3,2,1]=15且提及保77，C012称管理层[17,19,13,12,7,8,3]=79；后续HF01/HF04/HF07又声明最终E16、管理80及唯一参数。",
+      "evidence": "HF07明确要求三报告、公司页、inputs、计算、回应同步唯一正式参数81/80；当前回应同一responses数组内的旧条目状态仍为revised_pending_targeted_revalidation，没有标记被最终裁决替代。",
+      "impact": "三份报告和计算虽正确，但交付回应自相矛盾，无法作为清晰的修复闭环记录，自动或人工消费该文件时可能取到旧79/旧E15。",
+      "suggestion": "将旧HP02/C012回应标记为superseded_by_HF01_HF04，或直接重写为最终E[5,5,3,2,1]=16及管理[17,20,13,12,7,8,3]=80；保留历史差异时须明确其仅是被否决版本。"
+    },
+    {
+      "id": "HMFV2-003",
+      "priority": "P1",
+      "location": "revised-frozen/huaming-final/reports/管理层档案/华明装备 管理层档案 80 2026-09-08.md:356-368",
+      "claim": "管理层评分桥完整列出旧80、返修79和最终80，但对最初76非标准稿只写总满分103及不可直接映射，没有按HF04验收条件列出该稿原始维度、原始得分与各自上限。",
+      "evidence": "HF04 acceptance要求最初76稿单列原始维度/上限并标不可直接映射，且不能只放总分；当前第368行只有概括句，回应文件HF04条目也只重复总满分103。",
+      "impact": "旧80→返修79→最终80主桥本身正确，但最初76为何不可比仍不可独立复核，HF04这一明确交付条件未闭合。该问题不改变公司或管理层最终分数。",
+      "suggestion": "在评分桥后增加独立非可比表，逐项照录最初76稿实际使用的维度名称、得分和上限，并注明总上限103、不得映射到固定七维；没有原始记录时应明确标为无法恢复，而不能补造。"
+    }
+  ],
+  "remaining_unknowns_not_report_errors": [
+    "美国直接与间接终端暴露仍未量化。",
+    "H股发行规模、定价、费用总额、净募资用途和增量回报仍未知。",
+    "集团简化FCF到归母股权可分配现金的NCI、租赁、付息税盾与持续营运资金桥仍未闭合，因此正式权重保持0。",
+    "服务收入和利润的独立规模、关联租赁相对第三方市场价格仍未知。"
+  ],
+  "pass": false,
+  "blocking_summary": "无P0。8文件哈希、原件哈希、主体事实、三报告、公司页及正式估值复算均通过；仍有3项P1交付闭环问题，须修复并重新冻结后再做差分验收。",
+  "recommended_final_parameters_after_closure": {
+    "cScore": 81,
+    "mScore": 80,
+    "target_price": 13.7,
+    "currency": "CNY",
+    "valuation_certainty": 0.58,
+    "buy_price": 10.43,
+    "deep_discount": 8.87,
+    "tier": "A_CORE",
+    "ready_for_watchlist": false,
+    "reason": "参数与模型本身验算通过，但HF04/HF07/HF09的交付闭环尚未全部满足；当前不得据此写Watchlist。"
+  }
+}

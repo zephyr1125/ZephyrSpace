@@ -1,0 +1,26 @@
+{
+  "consun_ddm": {
+    "dividend_pv": 3.5867890388834907,
+    "terminal_pv": 13.956918451399998,
+    "total": 17.543707490283488
+  },
+  "consun_exclude_cash_pe_keep_other_inputs": 19.36111111111111,
+  "huaming_ddm_report_formula": {
+    "0.035": 13.34,
+    "0.045": 17.317142857142855,
+    "0.055": 24.475999999999996
+  },
+  "huaming_ddm_if_058_is_next_year_dividend": 16.57142857142857,
+  "huaming_reverse_at_report_growth": {
+    "interim": 8.263001093538627,
+    "terminal": 11.536285853818859,
+    "total": 19.799286947357487
+  },
+  "huaming_reverse_full_eps_growth": 0.06758849460399186,
+  "huaming_reverse_60pct_payout_growth": 0.09072594188925065,
+  "huaming_weighted_report_values": 18.002000000000002,
+  "huaming_management_listed_capital_positive_sum": 19,
+  "huaming_management_listed_strategy_net": 11,
+  "huaming_management_listed_shareholder_net": 10,
+  "huaming_lease_cash_difference": 37462056.20000005
+}

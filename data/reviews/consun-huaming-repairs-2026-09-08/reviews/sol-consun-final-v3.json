@@ -1,0 +1,87 @@
+{
+  "stage": "康臣最终定向增量验收",
+  "status": "complete_locked",
+  "pass": true,
+  "company": "康臣药业 01681.HK",
+  "as_of": "2026-09-08",
+  "role": "triplet_review_sol",
+  "model_request": {
+    "requested_model": "gpt-5.6-sol",
+    "requested_effort": "high",
+    "actual_model": null,
+    "note": "原派发请求为high；后续配置调整不追溯改写请求记录。运行时没有提供实际模型证据，不宣称模型已验证。"
+  },
+  "review_scope": "基于已锁定的sol-consun-final.json，仅增量验收consun-final-v3中变化的管理层单文件，并核对全部8个冻结哈希；未读取另一review、source-map或作者其他版本。",
+  "manifest": "data/reviews/consun-huaming-repairs-2026-09-08/revised-frozen/consun-final-v3/manifest.json",
+  "manifest_hash_check": {
+    "all_8_matched": true,
+    "files": [
+      {"file": "reports/深度分析/康臣药业 深度分析 81 2026-09-08.md", "sha256": "7faa1f2f1465306436bdedfabbbc4ee25329f51b57ba035cecb58001df277b5b", "changed_from_prior_freeze": false},
+      {"file": "reports/管理层档案/康臣药业 管理层档案 79 2026-09-08.md", "sha256": "0c50077b542b6f73749be800201091ea02568dffe00fe49188e0f8acb4f4594f", "changed_from_prior_freeze": true},
+      {"file": "reports/估值分析/康臣药业 估值分析 2026-09-08.md", "sha256": "73007d3aa2895b9af88cac5a6e52adc2620a8b53cee4d0562709632bd2b002d3", "changed_from_prior_freeze": false},
+      {"file": "company-pages/康臣药业(01681.HK).md", "sha256": "2bd60ade4aa61aba2cd3d9d9421c06ec893b659a86441c44ea32ec88230cb828", "changed_from_prior_freeze": false},
+      {"file": "consun-revision-inputs.json", "sha256": "e36e800bea3fc7cdb04aac46099281f05884b8f6e2b7cc367c6c43baf445e266", "changed_from_prior_freeze": false},
+      {"file": "consun-recalculate.py", "sha256": "848158c9322f3843abe759f73bc752963d6a0b57cb64eed7ec12b0a875bae7c0", "changed_from_prior_freeze": false},
+      {"file": "consun-revision-calculations.json", "sha256": "01c1c8d77058ace9ae8a62d678ac83fa5a1aad73b6cd94d240df8827ae881cd6", "changed_from_prior_freeze": false},
+      {"file": "consun-revision-response.json", "sha256": "d0b4411f3a46da23875542d93598b633d687348ac3685475331b2e11ca3f0d4a", "changed_from_prior_freeze": false}
+    ]
+  },
+  "primary_hash_check": {
+    "inherited_from_locked_review": "reviews/sol-consun-final.json",
+    "all_consun_primary_hashes_matched": true,
+    "files": [
+      {"file": "财报/康臣药业/康臣药业2025年度报告.pdf", "sha256": "c16a0fb3c4a5501c4cb34c051fb03d0ce377fc5ea8fc36141d3fb288f50d0dcf"},
+      {"file": "财报/康臣药业/康臣药业2026中期业绩公告.pdf", "sha256": "f01f4d28f19b7123fa0375934a4dad7514e72889089dd18f0cdb19e3e2e018f4"}
+    ]
+  },
+  "incremental_diff_check": {
+    "changed_files": 1,
+    "unchanged_files": 7,
+    "changed_file": "reports/管理层档案/康臣药业 管理层档案 79 2026-09-08.md",
+    "substantive_changes": [
+      "资本配置扣分改为大额金融资产机会成本、资本承诺及已投入资本尚未证明持续回报；华茂会计确认未知明确只跟踪、不扣分。",
+      "华茂后续会计确认从股东友好度负面框架中移除，并明确该未知不列为负面。"
+    ],
+    "non_substantive_changes": ["文件末尾增加一个空行。"],
+    "cf04_closed": true
+  },
+  "calculation_verification": {
+    "rerun_for_v3": false,
+    "reason": "输入、脚本与计算文件三个哈希均与已锁定原验收完全相同。",
+    "inherited_execution": {
+      "source": "reviews/sol-consun-final.json",
+      "write_intercepted_in_memory": true,
+      "frozen_files_unchanged": true,
+      "generated_equals_frozen_calculations": true
+    },
+    "verified_outputs": {
+      "cScore": 81,
+      "mScore": 79,
+      "normalized_parent_profit_rmb": 1137032250.0,
+      "normalized_eps_hkd": 1.4767140767345321,
+      "pe_value": 16.243854844079852,
+      "ddm_base": 10.643884053112393,
+      "formal_weight_sum": 1.0,
+      "target_price_raw": 14.843862146337989,
+      "target_price": 14.8,
+      "valuation_certainty": 0.6,
+      "buy_price": 11.31,
+      "deep_discount_boundary": 9.61
+    }
+  },
+  "cf_acceptance": {
+    "CF01": true,
+    "CF02": true,
+    "CF03": true,
+    "CF04": true,
+    "CF05": true,
+    "CF06": true,
+    "CF07": true,
+    "CF08": true,
+    "CF09": true,
+    "CF10": true
+  },
+  "remaining_issues": [],
+  "new_p0_p1": [],
+  "conclusion": "consun-final-v3通过康臣最终定向验收。CF01-CF10全部闭环；81/79固定量表、税率与完整TTM FVPL盈利桥、情景敏感性与75/25权重、14.8/0.60/11.31/9.61参数、公司页联动及关键反证一致。"
+}

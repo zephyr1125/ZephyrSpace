@@ -1,0 +1,84 @@
+{
+  "as_of": "2026-09-08",
+  "company": "华明装备",
+  "code": "002270.SZ",
+  "currency": "CNY",
+  "price_snapshot": {
+    "value": 19.81,
+    "timestamp": "2026-09-08 16:14:21",
+    "source": "data/reviews/consun-huaming-repairs-2026-09-08/evidence/quote-supplement.json",
+    "use_in_fair_value": false
+  },
+  "shares": {
+    "current_total": 896225431,
+    "basis": "2026-06-30总股本；员工持股计划股份仍在总股本内，未扣减"
+  },
+  "earnings_bridge": {
+    "fy2025_attributable": 709737360.27,
+    "h1_2025_attributable": 368486672.33,
+    "h1_2026_attributable": 389837789.61,
+    "h1_2026_group_net_profit": 393753930.15,
+    "h1_2026_recurring_attributable": 367127245.40,
+    "h1_2026_group_net_profit_ex_share_payment": 428642604.51,
+    "h1_2026_attributable_ex_share_payment_rounded": 425000000.00,
+    "h1_2026_share_payment_pretax": 47489663.92,
+    "h1_2026_pbt": 458075960.59,
+    "h1_2026_tax": 64322030.44,
+    "policy": "基准EPS保留股份支付经济成本；剔除口径仅作经营趋势诊断"
+  },
+  "cash_flow_bridge": {
+    "fy2025_ocf": 604031442.90,
+    "h1_2025_ocf": 317755300.14,
+    "h1_2026_ocf": 458875295.01,
+    "fy2025_cash_capex": 112136511.96,
+    "h1_2025_cash_capex": 56566967.21,
+    "h1_2026_cash_capex": 43199328.05,
+    "h1_2026_other_financing_payments": {
+      "financing_lease_payment": 421905084.21,
+      "lease_principal_and_interest": 14863179.23,
+      "bank_acceptance_deposit": 5000000.00,
+      "h_share_issue_costs": 17598876.97
+    }
+  },
+  "dividends": {
+    "fy2025_interim_dps": 0.20,
+    "fy2025_q3_dps": 0.20,
+    "fy2025_final_dps": 0.21,
+    "fy2025_total_dps": 0.61,
+    "h1_2026_proposed_dps": 0.26,
+    "normalized_d1": 0.50,
+    "normalized_d1_basis": "约61.3%的TTM盈利派息率；低于2025年77.0%的高派息率，接近2026H1预案59.8%的归母派息率"
+  },
+  "valuation": {
+    "pe": {
+      "multiple": 20.0,
+      "weight": 0.70,
+      "basis": "近三年TTM PE中位约26.4倍、P10约22倍；以20倍对扣非放缓、H股未决和政策尾部风险作折价，不把历史TTM倍数与预测EPS混用"
+    },
+    "ddm": {
+      "d0": 0.50,
+      "stage1_growth": 0.04,
+      "years": 5,
+      "terminal_growth": 0.025,
+      "cost_of_equity": 0.10,
+      "weight": 0.15
+    },
+    "fcf_yield": {
+      "required_yield": 0.052,
+      "weight": 0.15,
+      "basis": "TTM报表简化FCF；不额外扣减融资租赁偿还、债务本金或H股费用"
+    },
+    "certainty": 0.46
+  },
+  "scores": {
+    "company": {
+      "A": [2, 2, 3],
+      "B": [2, 3, 2, 5, 4],
+      "C": 16,
+      "D": 12,
+      "E": [4, 4, 2, 2, 3],
+      "F": [5, 4, 2]
+    },
+    "management": [17, 19, 13, 12, 7, 8, 3]
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "earnings_bridge": {
+    "reported_ttm_attributable_proxy": 731088477.55,
+    "reported_ttm_eps_proxy": 0.8157417233008644,
+    "ttm_recurring_attributable_proxy": 676451410.95,
+    "ttm_recurring_eps_proxy": 0.7547781925750777,
+    "h1_effective_tax_rate": 0.1404178258059067,
+    "fy2025_effective_tax_rate": 0.15159568793283432,
+    "share_payment_policy": "基准EPS保留股份支付经济成本；剔除口径仅作经营趋势诊断",
+    "fy2025_payout_ratio": 0.7702814358004544,
+    "h1_2026_proposed_payout_ratio": 0.5977322318934641
+  },
+  "cash_flow_diagnostic": {
+    "ttm_ocf": 745151437.77,
+    "ttm_cash_long_term_asset_purchases": 98768872.79999998,
+    "ttm_simplified_fcf": 646382564.97,
+    "per_share": 0.7212276539048578,
+    "formal_weight": 0
+  },
+  "other_financing_payments": {
+    "financing_lease_payment": 421905084.21,
+    "lease_principal_and_interest": 14863179.23,
+    "bank_acceptance_deposit": 5000000.0,
+    "h_share_issue_costs": 17598876.97,
+    "total": 459367140.40999997,
+    "lease_related_total": 436768263.44
+  },
+  "valuation": {
+    "pe_value": 16.314834466017288,
+    "ddm_value": 7.001618104409987,
+    "weights": {
+      "pe": 0.8235294117647058,
+      "ddm": 0.17647058823529413,
+      "fcf": 0
+    },
+    "weight_sum": 1.0,
+    "raw_target": 14.671325696321881,
+    "target_price": 14.7,
+    "valuation_certainty": 0.43,
+    "buy_price": 10.88,
+    "deep_discount_boundary": 9.25,
+    "base_scenario_matches_main": true
+  },
+  "scenarios": {
+    "bear": {
+      "inputs": {
+        "eps": 0.74,
+        "pe_multiple": 17.0,
+        "d1": 0.42,
+        "stage1_growth": 0.01,
+        "years": 5,
+        "terminal_growth": 0.01,
+        "cost_of_equity": 0.115
+      },
+      "pe_value": 12.58,
+      "ddm_value": 4.0,
+      "weighted_value": 11.065882352941175
+    },
+    "base": {
+      "inputs": {
+        "eps": 0.8157417233008644,
+        "pe_multiple": 20.0,
+        "d1": 0.5,
+        "stage1_growth": 0.04,
+        "years": 5,
+        "terminal_growth": 0.025,
+        "cost_of_equity": 0.1
+      },
+      "pe_value": 16.314834466017288,
+      "ddm_value": 7.001618104409987,
+      "weighted_value": 14.671325696321881
+    },
+    "bull": {
+      "inputs": {
+        "eps": 0.9,
+        "pe_multiple": 23.0,
+        "d1": 0.56,
+        "stage1_growth": 0.06,
+        "years": 5,
+        "terminal_growth": 0.03,
+        "cost_of_equity": 0.09
+      },
+      "pe_value": 20.7,
+      "ddm_value": 10.319208602705821,
+      "weighted_value": 18.868095635771617
+    }
+  },
+  "h_share_sensitivity": {
+    "issue_5%_price_80%": 14.53159878492834,
+    "issue_5%_price_100%": 14.671325696321881,
+    "issue_5%_price_120%": 14.811052607715423,
+    "issue_10%_price_80%": 14.40457432002512,
+    "issue_10%_price_100%": 14.671325696321881,
+    "issue_10%_price_120%": 14.938077072618642,
+    "issue_15%_price_80%": 14.28859546076566,
+    "issue_15%_price_100%": 14.671325696321881,
+    "issue_15%_price_120%": 15.054055931878104
+  },
+  "scores": {
+    "company": 77,
+    "management": 79,
+    "combined": 156
+  }
+}

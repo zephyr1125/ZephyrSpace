@@ -1,0 +1,79 @@
+{
+  "as_of": "2026-09-08",
+  "companies": {
+    "康臣药业": {
+      "code": "01681.HK",
+      "current_price": 13.19,
+      "currency": "HKD",
+      "quote_time": "2026-09-08 16:08:38",
+      "shares_basic": 839049111,
+      "normalized_eps": 1.6,
+      "pe_multiple": 12.0,
+      "ddm": {
+        "d0": 0.78,
+        "stage1_growth": 0.04,
+        "terminal_growth": 0.025,
+        "discount_rate": 0.105,
+        "years": 5
+      },
+      "formal_weights": {
+        "normalized_pe": 0.75,
+        "ddm": 0.25
+      },
+      "valuation_certainty": 0.47,
+      "cash_bridge_rmb": {
+        "cash_and_equivalents": 1268932000,
+        "bank_time_deposits": 2803507000,
+        "restricted_cash": 23445000,
+        "wealth_management_products": 719441000,
+        "bank_loans": 216855000,
+        "lease_liabilities": 12621000,
+        "capital_commitments": 665025000,
+        "deferred_withholding_tax": 98986000,
+        "hkd_per_rmb": 1.1
+      },
+      "scores": {
+        "company_dimensions": [8, 15, 14, 11, 16, 12],
+        "management_dimensions": [16, 20, 12, 14, 6, 7, 3]
+      }
+    },
+    "华明装备": {
+      "code": "002270.SZ",
+      "current_price": 19.81,
+      "currency": "CNY",
+      "quote_time": "2026-09-08 16:14:21",
+      "shares": 896225431,
+      "normalized_eps": 0.88,
+      "pe_multiple": 19.0,
+      "ddm": {
+        "d1": 0.58,
+        "terminal_growth": 0.035,
+        "discount_rate": 0.095
+      },
+      "formal_weights": {
+        "normalized_pe": 0.8,
+        "ddm": 0.2
+      },
+      "valuation_certainty": 0.52,
+      "reverse_dcf": {
+        "years": 10,
+        "discount_rate": 0.095,
+        "terminal_pe": 15.0,
+        "payout_ratio": 0.6
+      },
+      "debt_bridge_rmb": {
+        "short_term_borrowings": 310030694.45,
+        "current_long_term_borrowings": 124050000.0,
+        "long_term_borrowings": 295438199.99,
+        "current_lease_liabilities": 25862775.97,
+        "noncurrent_lease_liabilities": 90994044.24,
+        "cash_and_equivalents": 998060671.4,
+        "monetary_funds": 1126444229.74
+      },
+      "scores": {
+        "company_dimensions": [7, 15, 16, 11, 15, 11],
+        "management_dimensions": [17, 19, 12, 11, 6, 8, 3]
+      }
+    }
+  }
+}

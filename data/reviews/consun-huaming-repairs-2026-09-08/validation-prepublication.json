@@ -1,0 +1,37 @@
+{
+  "errors": [],
+  "reports": [
+    {
+      "file": "data\\reviews\\consun-huaming-repairs-2026-09-08\\writer\\reports\\深度分析\\康臣药业 深度分析 81 2026-09-08.md",
+      "lines": 352,
+      "sha256": "7faa1f2f1465306436bdedfabbbc4ee25329f51b57ba035cecb58001df277b5b"
+    },
+    {
+      "file": "data\\reviews\\consun-huaming-repairs-2026-09-08\\writer\\reports\\管理层档案\\康臣药业 管理层档案 79 2026-09-08.md",
+      "lines": 364,
+      "sha256": "0c50077b542b6f73749be800201091ea02568dffe00fe49188e0f8acb4f4594f"
+    },
+    {
+      "file": "data\\reviews\\consun-huaming-repairs-2026-09-08\\writer\\reports\\估值分析\\康臣药业 估值分析 2026-09-08.md",
+      "lines": 274,
+      "sha256": "73007d3aa2895b9af88cac5a6e52adc2620a8b53cee4d0562709632bd2b002d3"
+    },
+    {
+      "file": "data\\reviews\\consun-huaming-repairs-2026-09-08\\writer\\reports\\深度分析\\华明装备 深度分析 77 2026-09-08.md",
+      "lines": 474,
+      "sha256": "bb1ff048ae696374af45c7e27f1f7a2621e86145a35d35180a7fdd5c51f31a90"
+    },
+    {
+      "file": "data\\reviews\\consun-huaming-repairs-2026-09-08\\writer\\reports\\管理层档案\\华明装备 管理层档案 79 2026-09-08.md",
+      "lines": 392,
+      "sha256": "7a21f0e78a0383fdf6feb48c0788fa3fa47cd95391f72d48134afc0efceeee59"
+    },
+    {
+      "file": "data\\reviews\\consun-huaming-repairs-2026-09-08\\writer\\reports\\估值分析\\华明装备 估值分析 2026-09-08.md",
+      "lines": 309,
+      "sha256": "5e41efea5965e470a03ab0fdfc64a4224dda995d95f6254226a55ba06a35591c"
+    }
+  ],
+  "report_count": 6,
+  "frozen_files_checked": 46
+}

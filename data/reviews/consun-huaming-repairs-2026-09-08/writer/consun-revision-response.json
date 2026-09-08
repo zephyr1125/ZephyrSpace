@@ -1,0 +1,39 @@
+{
+  "company": "康臣药业",
+  "status": "author_final_parameter_revision_ready_for_targeted_revalidation",
+  "as_of": "2026-09-08",
+  "parameters": {"cScore":81,"mScore":79,"target_price":14.8,"valuation_certainty":0.60,"buy_price":11.31,"tier":"A_CORE","ready_for_watchlist":false},
+  "paths": {
+    "company":"data/reviews/consun-huaming-repairs-2026-09-08/writer/reports/深度分析/康臣药业 深度分析 81 2026-09-08.md",
+    "management":"data/reviews/consun-huaming-repairs-2026-09-08/writer/reports/管理层档案/康臣药业 管理层档案 79 2026-09-08.md",
+    "valuation":"data/reviews/consun-huaming-repairs-2026-09-08/writer/reports/估值分析/康臣药业 估值分析 2026-09-08.md",
+    "company_page":"data/reviews/consun-huaming-repairs-2026-09-08/writer/company-pages/康臣药业(01681.HK).md",
+    "inputs":"data/reviews/consun-huaming-repairs-2026-09-08/writer/consun-revision-inputs.json",
+    "script":"data/reviews/consun-huaming-repairs-2026-09-08/writer/consun-recalculate.py",
+    "calculations":"data/reviews/consun-huaming-repairs-2026-09-08/writer/consun-revision-calculations.json"
+  },
+  "responses": [
+    {"id":"CF01","status":"revised_pending_targeted_revalidation","response":"以TTM税前13.59523亿元减TTM FVPL 0.10838亿元，乘85%再减NCI 0.09350亿元，规范化归母11.3703225亿元；846.972百万股稀释代理和1.10汇率得到EPS 1.476714港元。15%由H1剔往年超额拨备后的14.9844%锚定，明确为模型判断。"},
+    {"id":"CF02","status":"revised_pending_targeted_revalidation","response":"按2025FY-2025H1+2026H1补齐其他收入七分项：政府补助899.4万、租金80.1万、利息8292.7万、PPE处置损失-276.1万、汇兑损失-1562.8万、FVPL 1083.8万、其他-822.7万，合计7694.4万；仅FVPL剔除，其余保留并解释。"},
+    {"id":"CF03","status":"revised_pending_targeted_revalidation","response":"全文统一81/79、14.8港元、0.60、11.31港元、A_CORE；PE 16.243855、DDM 10.643884、75/25加权14.843862。管理层分项统一17/20/12/13/6/7/4。"},
+    {"id":"CF04","status":"revised_pending_targeted_revalidation","response":"D标题改12/15；清除独立IR分数与独董待补位残留；盈利用846.972百万稀释代理、现金用839.049111百万时点股本；华茂未知不扣诚信或股东友好。"},
+    {"id":"CF05","status":"revised_pending_targeted_revalidation","response":"明确旧82本来采用固定七维17/21/13/14/6/7/4；本版17/20/12/13/6/7/4，逐维变动0/-1/-1/-1/0/0/0。103满分错误不再归于旧82。"},
+    {"id":"CF06","status":"revised_pending_targeted_revalidation","response":"按年报39—43页恢复唐宁、方兰芬、方培城、黄雷声、杜颖、高海恩及加入时间、职责；方培城现任副总裁管投资BD，不写现任CFO。"},
+    {"id":"CF07","status":"revised_pending_targeted_revalidation","response":"B0补渠道、客户关系、关键伙伴，九要素闭合；E补杜邦平均资产/平均权益定义与证据限制。2023 OCF未从2025年报比较表取得，明确为缺口，不声称三年现金流均已核。"},
+    {"id":"CF08","status":"revised_pending_targeted_revalidation","response":"11倍改为透明判断：给出10.5%Ke、10年8.27%盈利增长、50%分配、第10年8倍终值的可算要求，以及等价稳定增长约5.70%的敏感性；均非公司预测或历史分位。"},
+    {"id":"CF09","status":"revised_pending_targeted_revalidation","response":"情景、汇率和12%/15%/18%税率敏感性均由最终脚本生成；价格区统一14.80、11.31、9.61，9.61仅为买线乘85%的展示规则，删除9.55。"},
+    {"id":"CF10","status":"revised_pending_targeted_revalidation","response":"三报告与建议公司页只保留一套正式参数，引用consun-revision-inputs/calculations/recalculate，不再链接writer/calculations.json；A_CORE仍须定向复验和主Agent完整性检查后落库。"},
+    {"id":"K1","status":"revised_pending_targeted_revalidation","response":"现金SOTP正式0权重，PE/DDM权重和为100%。"},
+    {"id":"K2","status":"revised_pending_targeted_revalidation","response":"PPE新增不当现金capex已纠正；仅用年报现金购建PPE，FCF正式0权重。"},
+    {"id":"K3","status":"revised_pending_targeted_revalidation","response":"74.8%仅称肾科产品线占比，不冒充尿毒清单品占比。"},
+    {"id":"K4","status":"revised_pending_targeted_revalidation","response":"仅确认零负债/净现金误用成立；保留48.15325亿元现金类正确口径，并与含Level 3的48.58082亿元桥接。"},
+    {"id":"K5","status":"revised_pending_targeted_revalidation","response":"固定六维公司评分闭合81，不以跨维重复处罚凑分。"},
+    {"id":"K6","status":"revised_pending_targeted_revalidation","response":"安猛54岁兼CEO、控股股东群体、陈玉君辞任边界及ROE口径保留。"},
+    {"id":"K7","status":"revised_pending_targeted_revalidation","response":"按统一公式重建互斥价格带并删除无组合依据的仓位口号。"}
+  ],
+  "old_content_retention_check": {
+    "status":"passed_pending_targeted_revalidation",
+    "retained":["2021—2025五年经营历史与平均权益ROE","安猛兼CEO及C.2.1、四独董已补位","唐宁等六名具名专业团队","2025回购注销、期权发行与分红","产品线、研发、集采、客户供应商集中度","现金、负债、6.65025亿元资本承诺、汇出税和华茂签约边界"],
+    "principle":"作者初稿删减或漏读不计作公司风险；已证实旧内容经原件复核后保留。"
+  }
+}

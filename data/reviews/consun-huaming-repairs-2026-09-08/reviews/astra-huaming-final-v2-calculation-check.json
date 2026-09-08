@@ -1,0 +1,350 @@
+{
+  "hashes": [
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming-final\\reports\\深度分析\\华明装备 深度分析 81 2026-09-08.md",
+      "expected_sha256": "8e73ab72347be7ed80261b3e9c0befd1326b4430431c5b3b93ddcc2c3db988d4",
+      "actual_sha256": "8e73ab72347be7ed80261b3e9c0befd1326b4430431c5b3b93ddcc2c3db988d4",
+      "match": true
+    },
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming-final\\reports\\管理层档案\\华明装备 管理层档案 80 2026-09-08.md",
+      "expected_sha256": "97abf36fbb7a13777e5e68652714ee54c97e830c0de9a06cee54ec0208190b58",
+      "actual_sha256": "97abf36fbb7a13777e5e68652714ee54c97e830c0de9a06cee54ec0208190b58",
+      "match": true
+    },
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming-final\\reports\\估值分析\\华明装备 估值分析 2026-09-08.md",
+      "expected_sha256": "b0179ba419a5a296f94c1dc77a35f1e0da03237961214c013dd89801e456b04c",
+      "actual_sha256": "b0179ba419a5a296f94c1dc77a35f1e0da03237961214c013dd89801e456b04c",
+      "match": true
+    },
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming-final\\company-pages\\华明装备.md",
+      "expected_sha256": "ceb92c101300062adee194a16f9731c1bd5d0aff740c5a12c3e8317e444ed86e",
+      "actual_sha256": "ceb92c101300062adee194a16f9731c1bd5d0aff740c5a12c3e8317e444ed86e",
+      "match": true
+    },
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming-final\\huaming-revision-inputs.json",
+      "expected_sha256": "1993c682fa7bbbefe6039d2532a60f34dd231f2c508e8d0b302291dd6c7b7315",
+      "actual_sha256": "1993c682fa7bbbefe6039d2532a60f34dd231f2c508e8d0b302291dd6c7b7315",
+      "match": true
+    },
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming-final\\huaming-recalculate.py",
+      "expected_sha256": "d077fb05f7dfcda0af77e907cc0910e11fc054382c347316c3f7f5ed6c626dff",
+      "actual_sha256": "d077fb05f7dfcda0af77e907cc0910e11fc054382c347316c3f7f5ed6c626dff",
+      "match": true
+    },
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming-final\\huaming-revision-calculations.json",
+      "expected_sha256": "17de8f416d88cd41e165a839083adab46930872729204465ec1da471415defc6",
+      "actual_sha256": "17de8f416d88cd41e165a839083adab46930872729204465ec1da471415defc6",
+      "match": true
+    },
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming-final\\huaming-revision-response.json",
+      "expected_sha256": "9c5e5e132277577f38a7e6567e15104aeaadcbe9bdbc41b31d8d8ff0e66bdfd3",
+      "actual_sha256": "9c5e5e132277577f38a7e6567e15104aeaadcbe9bdbc41b31d8d8ff0e66bdfd3",
+      "match": true
+    }
+  ],
+  "primary_hashes": [
+    {
+      "path": "财报\\华明装备\\华明装备2025年度报告.pdf",
+      "expected_sha256": "9cc125a5dd3ddae732ca2086a03b992a23f176bede735ca29c8fa42c22cbb286",
+      "actual_sha256": "9cc125a5dd3ddae732ca2086a03b992a23f176bede735ca29c8fa42c22cbb286",
+      "match": true
+    },
+    {
+      "path": "财报\\华明装备\\华明装备2026半年度报告.pdf",
+      "expected_sha256": "7059088c37d19f02d77bb505f941a6e0f6b06d3a9900ff2007332343e389477b",
+      "actual_sha256": "7059088c37d19f02d77bb505f941a6e0f6b06d3a9900ff2007332343e389477b",
+      "match": true
+    }
+  ],
+  "calculation_matches": true,
+  "tails": [],
+  "output": {
+    "as_of": "2026-09-08",
+    "earnings": {
+      "reported_ttm_parent": 731088477.55,
+      "reported_ttm_eps": 0.8157417233008644,
+      "formal_recurring_ttm_parent": 676451410.95,
+      "formal_eps": 0.7547781925750777,
+      "nonrecurring_ttm_parent": 54637066.599999905,
+      "nonrecurring_share": 0.07473386365368234,
+      "sbc_kept": true,
+      "tax_nci_adjusted_in_official_recurring_bridge": true
+    },
+    "valuation": {
+      "pe": 20.0,
+      "pe_value": 15.095563851501554,
+      "ddm": 7.001618104409987,
+      "d1": 0.5,
+      "stage1_growth": 0.04,
+      "years": 5,
+      "terminal_growth": 0.025,
+      "ke": 0.1,
+      "pe_weight": 0.8235294117647058,
+      "ddm_weight": 0.17647058823529413,
+      "fcf_weight": 0,
+      "raw_target": 13.667220484367748,
+      "target_price": 13.7,
+      "certainty": 0.58,
+      "certainty_components": {
+        "经营预测性": 0.75,
+        "方法收敛": 0.35,
+        "资产负债表韧性": 0.7,
+        "盈利与现金证据": 0.65,
+        "海外及融资尾部": 0.45,
+        "参数验证性": 0.6
+      },
+      "buy_price_raw": 10.42844,
+      "buy_price": 10.43,
+      "deep_discount": 8.87,
+      "d1_payout_formal_eps": 0.6624462721877925,
+      "h1_2026_proposed_dps_to_recurring_eps": 0.6347080337394104
+    },
+    "pe_return_bridge": {
+      "eps0": 1.0,
+      "payout": 0.6624462721877925,
+      "cost_of_equity": 0.1,
+      "years": 10,
+      "terminal_pe": 16,
+      "required_annual_growth": 0.08440314256113768,
+      "gordon_trailing_pe20_growth": 0.06473356107948317,
+      "computed_pe": 19.99999999999997
+    },
+    "cash_flow_diagnostic": {
+      "ttm_ocf": 745151437.77,
+      "ttm_cash_long_term_asset_purchases": 98768872.79999998,
+      "ttm_simplified_fcf": 646382564.97,
+      "formal_weight": 0
+    },
+    "other_financing_payments": {
+      "financing_lease_payment": 421905084.21,
+      "lease_principal_and_interest": 14863179.23,
+      "bank_acceptance_deposit": 5000000.0,
+      "h_share_issue_costs": 17598876.97,
+      "total": 459367140.40999997,
+      "lease_related_total": 436768263.44
+    },
+    "dupont_end_balance_proxy": [
+      {
+        "year": 2023,
+        "revenue": 1961135955.92,
+        "parent_profit": 542405245.44,
+        "assets_end": 4518148178.69,
+        "parent_equity_end": 3350005160.56,
+        "weighted_roe": 0.1605,
+        "ocf_to_profit": 1.1461537305851315,
+        "simplified_cash_flow": 558659795.55,
+        "parent_net_margin": 0.2765770745279866,
+        "asset_turnover_end_proxy": 0.4340574674309632,
+        "assets_to_parent_equity_end_proxy": 1.3486988712383738,
+        "roe_end_proxy": 0.16191176414466463
+      },
+      {
+        "year": 2024,
+        "revenue": 2322202947.07,
+        "parent_profit": 614298729.87,
+        "assets_end": 4457694231.04,
+        "parent_equity_end": 3165709972.69,
+        "weighted_roe": 0.1874,
+        "ocf_to_profit": 1.4477583105180902,
+        "simplified_cash_flow": 775576091.31,
+        "parent_net_margin": 0.26453274923498005,
+        "asset_turnover_end_proxy": 0.5209426278949195,
+        "assets_to_parent_equity_end_proxy": 1.4081183271669582,
+        "roe_end_proxy": 0.19404769709463043
+      },
+      {
+        "year": 2025,
+        "revenue": 2426794600.12,
+        "parent_profit": 709737360.27,
+        "assets_end": 5208442684.19,
+        "parent_equity_end": 3142189795.97,
+        "weighted_roe": 0.2204,
+        "ocf_to_profit": 0.8510633323152283,
+        "simplified_cash_flow": 491894930.94,
+        "parent_net_margin": 0.29245876854798714,
+        "asset_turnover_end_proxy": 0.4659347807524942,
+        "assets_to_parent_equity_end_proxy": 1.6575837305786119,
+        "roe_end_proxy": 0.22587348516638628
+      }
+    ],
+    "aging": {
+      "under_one_year": 952515413.11,
+      "one_to_two": 84126719.27,
+      "two_to_three": 23005449.01,
+      "above_three": 49768026.99,
+      "gross_total": 1109415608.38,
+      "allowance": 70080678.99,
+      "net_total": 1039334929.39,
+      "prior_under_one_year": 456188176.09,
+      "prior_gross_total": 609629717.23,
+      "prior_above_one_year": 153441541.14,
+      "above_one_year": 156900195.27,
+      "above_one_year_change": 0.022540533054502765,
+      "above_one_year_ratio": 0.14142598507254653,
+      "prior_above_one_year_ratio": 0.2516962949857476
+    },
+    "scenarios": {
+      "bear": {
+        "inputs": {
+          "eps": 0.74,
+          "pe_multiple": 17.0,
+          "d1": 0.42,
+          "stage1_growth": 0.01,
+          "years": 5,
+          "terminal_growth": 0.01,
+          "cost_of_equity": 0.115
+        },
+        "ddm": 4.0,
+        "weighted_value": 11.065882352941175
+      },
+      "base": {
+        "inputs": {
+          "eps": 0.7547781925750777,
+          "pe_multiple": 20.0,
+          "d1": 0.5,
+          "stage1_growth": 0.04,
+          "years": 5,
+          "terminal_growth": 0.025,
+          "cost_of_equity": 0.1
+        },
+        "ddm": 7.001618104409987,
+        "weighted_value": 13.667220484367748
+      },
+      "bull": {
+        "inputs": {
+          "eps": 0.9,
+          "pe_multiple": 23.0,
+          "d1": 0.56,
+          "stage1_growth": 0.06,
+          "years": 5,
+          "terminal_growth": 0.03,
+          "cost_of_equity": 0.09
+        },
+        "ddm": 10.319208602705821,
+        "weighted_value": 18.868095635771617
+      }
+    },
+    "ddm_sensitivity_fixed_g4_gt2_5_n5": {
+      "0.42": {
+        "0.09": 6.7934858544948025,
+        "0.1": 5.88135920770439,
+        "0.115": 4.893567511090253
+      },
+      "0.5": {
+        "0.09": 8.087483160112859,
+        "0.1": 7.001618104409987,
+        "0.115": 5.825675608440777
+      },
+      "0.56": {
+        "0.09": 9.057981139326404,
+        "0.1": 7.841812276939187,
+        "0.115": 6.524756681453672
+      }
+    },
+    "eps_pe_sensitivity": {
+      "0.74": {
+        "17": 11.595579665484115,
+        "20": 13.423814959601762,
+        "23": 15.252050253719409
+      },
+      "0.7547781925750777": {
+        "17": 11.802474361535204,
+        "20": 13.667220484367748,
+        "23": 15.531966607200294
+      },
+      "0.8157417233008644": {
+        "17": 12.655963791696216,
+        "20": 14.671325696321881,
+        "23": 16.686687600947543
+      },
+      "0.9": {
+        "17": 13.835579665484115,
+        "20": 16.05910907724882,
+        "23": 18.28263848901353
+      }
+    },
+    "h_share_sensitivity": {
+      "0.05": {
+        "0.8": 13.537056479754723,
+        "1.0": 13.667220484367746,
+        "1.2": 13.797384488980773
+      },
+      "0.1": {
+        "0.8": 13.418725566470151,
+        "1.0": 13.667220484367748,
+        "1.2": 13.915715402265342
+      },
+      "0.15": {
+        "0.8": 13.310684297819023,
+        "1.0": 13.667220484367748,
+        "1.2": 14.023756670916471
+      }
+    },
+    "scores": {
+      "company": 81,
+      "management": 80,
+      "combined": 161,
+      "company_dimensions": [
+        8,
+        16,
+        16,
+        12,
+        16,
+        13
+      ],
+      "management_dimensions": [
+        17,
+        20,
+        13,
+        12,
+        7,
+        8,
+        3
+      ]
+    },
+    "balance_sheet_checks": {
+      "total_assets": 5053499431.29,
+      "parent_equity": 3368279244.02,
+      "total_debt_including_leases": 846375714.65,
+      "cash_equivalents": 998060671.4,
+      "liability_ratio": 0.32709244645507973,
+      "current_interest_debt_including_current_leases": 459943470.42,
+      "goodwill_to_parent_equity": 0.029516235563457838,
+      "cash_to_debt": 1.1792170476119177,
+      "debt_to_parent_equity": 0.25127836896321604,
+      "current_debt_share": 0.5434270649060382
+    },
+    "checks": {
+      "weights_sum": 1.0,
+      "base_matches_main": true,
+      "aging_net_bridge": true
+    }
+  },
+  "independent": {
+    "formal_ttm_parent": 676451410.95,
+    "formal_eps": 0.7547781925750777,
+    "pe": 15.095563851501554,
+    "ddm": 7.001618104409987,
+    "raw_target": 13.667220484367748,
+    "buy": 10.43,
+    "deep": 8.87,
+    "certainty_raw_mean": 0.5833333333333334,
+    "end_roe_proxy": [
+      0.16191176414466463,
+      0.19404769709463046,
+      0.22587348516638625
+    ],
+    "two_point_average_roe_proxy": [
+      0.1885591120260015,
+      0.2250312738944395
+    ],
+    "pe_return_bridge_at_supplied_growth": 20.000000000000004
+  }
+}

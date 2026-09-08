@@ -1,0 +1,98 @@
+{
+  "scope": "康臣药业与华明装备三件套修复",
+  "roles": [
+    {
+      "role": "triplet_evidence",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "medium",
+      "agent_id": "/root/ch_evidence",
+      "dispatch_method": "collaboration.spawn_agent 显式参数",
+      "actual_model": null,
+      "actual_model_source": "运行时未提供，实际模型未独立确认",
+      "status": "complete",
+      "artifacts": [
+        "evidence/evidence-index.md",
+        "evidence/facts.json"
+      ]
+    },
+    {
+      "role": "triplet_writer",
+      "requested_model": "gpt-5.6-sol",
+      "requested_effort": "high",
+      "agent_id": "/root/ch_writer",
+      "dispatch_method": "collaboration.spawn_agent 显式参数",
+      "actual_model": null,
+      "actual_model_source": "运行时未提供，实际模型未独立确认",
+      "status": "complete",
+      "artifacts": [
+        "writer/delivery.json"
+      ]
+    },
+    {
+      "role": "triplet_review_sol",
+      "requested_model": "gpt-5.6-sol",
+      "requested_effort": "high",
+      "agent_id": "/root/ch_review_sol",
+      "dispatch_method": "collaboration.spawn_agent 显式参数",
+      "actual_model": null,
+      "actual_model_source": "运行时未提供，实际模型未独立确认",
+      "status": "complete",
+      "artifacts": [
+        "reviews/sol-stage1.json",
+        "reviews/sol-consun-stage2.json",
+        "reviews/sol-huaming-stage2.json",
+        "reviews/sol-consun-final-v3.json",
+        "reviews/sol-huaming-final-v4.json"
+      ]
+    },
+    {
+      "role": "triplet_review_astra",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "high",
+      "agent_id": "/root/ch_review_astra",
+      "dispatch_method": "collaboration.spawn_agent 显式参数",
+      "actual_model": null,
+      "actual_model_source": "运行时未提供，实际模型未独立确认",
+      "status": "complete",
+      "artifacts": [
+        "reviews/astra-stage1.json",
+        "reviews/astra-consun-stage2.json",
+        "reviews/astra-huaming-stage2.json",
+        "reviews/astra-consun-final-v3.json",
+        "reviews/astra-huaming-final-v4.json"
+      ]
+    },
+    {
+      "role": "triplet_adjudicator",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "high",
+      "agent_id": "/root/ch_adjudicator",
+      "dispatch_method": "collaboration.spawn_agent 显式参数",
+      "actual_model": null,
+      "actual_model_source": "运行时未提供，实际模型未独立确认",
+      "status": "complete",
+      "artifacts": [
+        "adjudication/candidates.json",
+        "adjudication/consun-decision.json",
+        "adjudication/huaming-interim-decision.json",
+        "adjudication/interim-instructions.json",
+        "adjudication/consun-final-decision.json",
+        "adjudication/consun-final-calculations.json",
+        "adjudication/huaming-decision.json",
+        "adjudication/huaming-preflight-decision.json",
+        "adjudication/huaming-final-decision.json",
+        "adjudication/final-hash-verification.json",
+        "adjudication/decision.json"
+      ]
+    }
+  ],
+  "configuration_note": "启动时已读取角色配置并按当时 high 参数派发作者、双审和裁决；任务进行中配置文档已改为 medium。本轮遵循已运行任务不自动切换规则，保留真实请求记录，不追溯改写。",
+  "main_task_model": "运行时未向主任务提供可独立验证的模型标识",
+  "review_metadata_correction": {
+    "file": "reviews/sol-huaming-stage2.json",
+    "field": "model_request.requested_effort",
+    "recorded_value": "medium",
+    "dispatch_record_value": "high",
+    "reason": "审核员读取了任务进行中新改的配置；真实请求以主任务派发记录为准。保留锁定发现文件，不追溯改写审核内容。"
+  }
+}

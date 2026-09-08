@@ -1,0 +1,185 @@
+{
+  "status": "complete_locked",
+  "company": "华明装备",
+  "code": "002270.SZ",
+  "as_of": "2026-09-08",
+  "review_date": "2026-09-09",
+  "review_scope": "仅比较revised-frozen/huaming-final-v3与上一轮huaming-final冻结差分，复验sol-huaming-final-v2锁定的3项及final-residual-decision R012-R017；未读取早先revised-frozen/huaming、另一审核意见、source-map或writer当前文件。",
+  "routing": {
+    "requested_model": "gpt-5.6-sol",
+    "requested_reasoning_effort": "high",
+    "actual_model_verified": null
+  },
+  "frozen_version": {
+    "manifest": "data/reviews/consun-huaming-repairs-2026-09-08/revised-frozen/huaming-final-v3/manifest.json",
+    "manifest_sha256": "ca885773bf86def9d1e9c1cae357f337032079dcf61482e1ef68bd3757298e12",
+    "files": [
+      {
+        "path": "data/reviews/consun-huaming-repairs-2026-09-08/revised-frozen/huaming-final-v3/reports/深度分析/华明装备 深度分析 81 2026-09-08.md",
+        "sha256": "4a7857078ecd842094d4bb85b1dcd03c8cdbaf86f0d484ab153da680491f0752",
+        "manifest_match": true,
+        "bytes": 23938,
+        "lines": 521
+      },
+      {
+        "path": "data/reviews/consun-huaming-repairs-2026-09-08/revised-frozen/huaming-final-v3/reports/管理层档案/华明装备 管理层档案 80 2026-09-08.md",
+        "sha256": "c932bd02f9b6ce5d631806b2762073390fe04e3df992750c1919d1d9dc16509d",
+        "manifest_match": true,
+        "bytes": 16733,
+        "lines": 420
+      },
+      {
+        "path": "data/reviews/consun-huaming-repairs-2026-09-08/revised-frozen/huaming-final-v3/reports/估值分析/华明装备 估值分析 2026-09-08.md",
+        "sha256": "fadf47fa1027b6ed3c23857402c1d57deb0c1f4d7b5cf89d9abffbd2c020f1f2",
+        "manifest_match": true,
+        "bytes": 12210,
+        "lines": 314
+      },
+      {
+        "path": "data/reviews/consun-huaming-repairs-2026-09-08/revised-frozen/huaming-final-v3/company-pages/华明装备.md",
+        "sha256": "9984b72d6347dddf70e994dc012a94e9b8f668de2c67203dd84583feab9dad46",
+        "manifest_match": true,
+        "bytes": 11066,
+        "lines": 245
+      },
+      {
+        "path": "data/reviews/consun-huaming-repairs-2026-09-08/revised-frozen/huaming-final-v3/huaming-revision-inputs.json",
+        "sha256": "373b35adea2d244a84e18f419ce5319882836bb39f33e1a874e45d4a82c1763e",
+        "manifest_match": true,
+        "bytes": 6911,
+        "lines": 232
+      },
+      {
+        "path": "data/reviews/consun-huaming-repairs-2026-09-08/revised-frozen/huaming-final-v3/huaming-recalculate.py",
+        "sha256": "d077fb05f7dfcda0af77e907cc0910e11fc054382c347316c3f7f5ed6c626dff",
+        "manifest_match": true,
+        "bytes": 6219,
+        "lines": 57
+      },
+      {
+        "path": "data/reviews/consun-huaming-repairs-2026-09-08/revised-frozen/huaming-final-v3/huaming-revision-calculations.json",
+        "sha256": "17de8f416d88cd41e165a839083adab46930872729204465ec1da471415defc6",
+        "manifest_match": true,
+        "bytes": 7473,
+        "lines": 262
+      },
+      {
+        "path": "data/reviews/consun-huaming-repairs-2026-09-08/revised-frozen/huaming-final-v3/huaming-revision-response.json",
+        "sha256": "b8c045a7d5d0f3e8f1ad7b9f2b2788775aabae2e4e746c864f202daa452ad7f9",
+        "manifest_match": true,
+        "bytes": 11211,
+        "lines": 228
+      }
+    ],
+    "all_8_hashes_match": true
+  },
+  "recalculation_inheritance": {
+    "inherited_from": "reviews/sol-huaming-final-v2.json",
+    "reason": "冻结脚本与冻结计算JSON的SHA256均与v2完全相同；inputs数值未变，唯一变化是base.eps_source从reported_ttm_proxy修正为formal_eps。",
+    "script_unchanged": true,
+    "calculations_unchanged": true,
+    "numeric_inputs_unchanged": true,
+    "formal_eps_source_label": "formal_eps",
+    "formal_eps": 0.7547781925750777,
+    "company_score": 81,
+    "management_score": 80,
+    "target_price": 13.7,
+    "certainty": 0.58,
+    "buy_price": 10.43,
+    "deep_discount": 8.87
+  },
+  "previous_findings_revalidation": [
+    {
+      "id": "HMFV2-001",
+      "status": "pass",
+      "evidence": "huaming-revision-inputs.json:95已改为formal_eps，指向676451410.95/896225431=0.7547781925750777。"
+    },
+    {
+      "id": "HMFV2-002",
+      "status": "pass",
+      "evidence": "huaming-revision-response.json:22-23与67-68已把旧E15和管理79明确标为superseded，并写入最终E16、管理80。"
+    },
+    {
+      "id": "HMFV2-003",
+      "status": "pass",
+      "evidence": "管理层档案:368-382已逐行列出最初76稿原始七维、得分、上限、76/103合计及不可直接映射说明。"
+    }
+  ],
+  "residual_decision_checks": {
+    "R012": "fail：多数未知直接扣分残留已清理，但管理层档案:240,248仍把未取得第三方租金比较直接连到资本配置折价。",
+    "R013": "fail：估值报告和公司页表格边界已正确，但公司页:194-195正文仍与互斥区间冲突。",
+    "R014": "pass",
+    "R015": "pass",
+    "R016": "pass",
+    "R017": "pass"
+  },
+  "specific_acceptance_checks": {
+    "group_aging_comparison_base": {
+      "status": "pass",
+      "evidence": "深度报告写较期初，回应文件明确写较2025年末期初+2.254%，未再写同比。"
+    },
+    "original_76_scale": {
+      "status": "pass",
+      "scores": [17, 19, 12, 11, 6, 8, 3],
+      "maxima": [20, 25, 15, 20, 8, 10, 5],
+      "score_sum": 76,
+      "max_sum": 103,
+      "noncomparable_label_present": true
+    },
+    "response_supersession": {
+      "status": "pass",
+      "old_e15_marked_superseded": true,
+      "old_management79_marked_superseded": true
+    },
+    "price_table_boundaries": {
+      "status": "pass",
+      "bands": [
+        "P>13.70偏高",
+        "10.43<P<=13.70观察",
+        "8.87<=P<=10.43买入",
+        "P<8.87深度折价"
+      ]
+    },
+    "price_prose_consistency": {
+      "status": "fail",
+      "reason": "公司页表格已正确，但后续操作文字没有沿用互斥端点。"
+    },
+    "unknowns_not_direct_score_deductions": {
+      "status": "fail",
+      "reason": "深度报告主要评分桥已修正；管理层关联交易段仍以缺少第三方租金比较作为资本配置折价的直接前提。"
+    }
+  },
+  "findings": [
+    {
+      "id": "HMFV3-001",
+      "priority": "P2",
+      "location": "revised-frozen/huaming-final-v3/company-pages/华明装备.md:194-195",
+      "claim": "价格表虽已修成四档互斥区间，正文仍称“价格回落至13.7元以下只代表进入观察区”和“精确价格10.43元及以下进入统一机械买入区”。",
+      "evidence": "同页148-151行规定10.43元及以下不属于观察区，且低于8.87元属于独立的深度折价区；R013要求文字与符号一致、四档互斥完整。",
+      "impact": "精确10.43元及其以下同时被正文归入观察或买入，低于8.87元又同时落入买入与深度折价，操作含义存在冲突。参数本身不变。",
+      "suggestion": "将正文改成“13.70元以下且高于10.43元进入观察区；8.87元至10.43元（含两端）进入买入区；低于8.87元进入深度折价区”，或直接引用上表区间。"
+    },
+    {
+      "id": "HMFV3-002",
+      "priority": "P2",
+      "location": "revised-frozen/huaming-final-v3/reports/管理层档案/华明装备 管理层档案 80 2026-09-08.md:240-248",
+      "claim": "关联交易段仍写“本轮未取得独立第三方价格比较”，随后以“因此”把该缺证直接连到资本配置维度的审慎折价。",
+      "evidence": "同报告330行明确最终资本配置5分缺口来自海外新增资本ROIC和历史关联融资少数股东收益实绩，并声明不因缺市场租金比较自动扣分；366行也认定返修79稿因缺市场租金比较降1分不当。当前240-248行与最终评分桥自相矛盾。",
+      "impact": "最终80分及参数未变，但评分依据仍包含研究未知直接扣公司分的残留，R012的证据归位未完全闭合。",
+      "suggestion": "删除“因此…资本配置维度保留审慎折价”的因果关系；改为关联租赁事实进入持续跟踪，资本配置5分缺口仅引用已发生的历史关联融资及新增资本ROIC实绩。"
+    }
+  ],
+  "pass": false,
+  "blocking_summary": "无P0/P1。8个冻结文件哈希全部匹配，上一轮3项问题及R014-R017已闭合，计算与参数无需改变；仍有2项P2文字联动残留，修复并重新冻结后只需复验公司页两句与管理层档案一段。",
+  "recommended_final_parameters_after_closure": {
+    "cScore": 81,
+    "mScore": 80,
+    "target_price": 13.7,
+    "currency": "CNY",
+    "valuation_certainty": 0.58,
+    "buy_price": 10.43,
+    "deep_discount": 8.87,
+    "tier": "A_CORE",
+    "ready_for_watchlist": false
+  }
+}

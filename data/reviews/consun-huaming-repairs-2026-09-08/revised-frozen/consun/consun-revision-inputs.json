@@ -1,0 +1,57 @@
+{
+  "as_of": "2026-09-08",
+  "company": "康臣药业",
+  "code": "01681.HK",
+  "current_price": 13.19,
+  "quote_time": "2026-09-08 16:08:38",
+  "earnings_bridge_rmb": {
+    "fy2025_attributable_profit": 1078067000,
+    "h1_2025_attributable_profit": 498299000,
+    "h1_2026_attributable_profit": 595309000,
+    "ttm_profit_before_tax": 1359523000,
+    "ttm_income_tax": 175096000,
+    "ttm_nci": 9350000,
+    "ttm_attributable_profit": 1175077000,
+    "remove_fvpl_gain_pre_tax": 7369000,
+    "normalization_tax_rate": 0.128787,
+    "diluted_shares": 846972000,
+    "basic_current_shares": 839049111,
+    "hkd_per_rmb_assumption": 1.1
+  },
+  "pe_multiple": 11.0,
+  "pe_rationale": "11倍对应9.09%盈利收益率；在10.5%股权成本、约4%中期增长及约50%派息下提供有限增长溢价，并保留产品线、客户集中及治理折价。该倍数是估值判断，不伪装为已验证历史分位。",
+  "ddm": {
+    "base": {"d0": 0.78, "stage1_growth": 0.04, "terminal_growth": 0.025, "discount_rate": 0.105, "years": 5},
+    "bear": {"d0": 0.65, "stage1_growth": 0.01, "terminal_growth": 0.01, "discount_rate": 0.12, "years": 5},
+    "bull": {"d0": 0.85, "stage1_growth": 0.06, "terminal_growth": 0.03, "discount_rate": 0.095, "years": 5}
+  },
+  "pe_scenarios": {
+    "bear": {"eps_hkd": 1.4, "multiple": 9.0},
+    "base": {"eps_hkd": null, "multiple": 11.0},
+    "bull": {"eps_hkd": 1.65, "multiple": 13.0}
+  },
+  "formal_weights": {"normalized_pe": 0.75, "ddm": 0.25},
+  "valuation_certainty": 0.42,
+  "scores": {
+    "company": {"A": [3, 3, 3], "B": [2, 3, 3, 4, 4], "C": 14, "D": 12, "E": [6, 5, 3, 3, 1], "F": [4, 6, 2]},
+    "management": {"诚信与透明度": 16, "资本配置能力": 20, "战略稳定性": 12, "对股东友好度": 13, "危机处理能力": 7, "组织与人才能力": 7, "表达清晰度与认知质量": 4}
+  },
+  "cash_bridge_rmb": {
+    "cash_and_equivalents": 1268932000,
+    "bank_time_deposits": 2803507000,
+    "restricted_cash": 23445000,
+    "wealth_management_products": 719441000,
+    "bank_loans": 216855000,
+    "lease_liabilities": 12621000,
+    "capital_commitments": 665025000,
+    "deferred_withholding_tax": 98986000
+  },
+  "reported_cash_flow_rmb": {
+    "fy2024_ocf": 1086987000,
+    "fy2024_cash_capex": 109002000,
+    "fy2025_ocf": 1211796000,
+    "fy2025_cash_capex": 68480000,
+    "h1_2026_ocf": 781438000,
+    "h1_2026_cash_capex": null
+  }
+}

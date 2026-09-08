@@ -1,0 +1,98 @@
+{
+  "basis": "裁决独立重算；不修改冻结稿",
+  "consun": {
+    "ttm_profit": 1175077000,
+    "ttm_eps_cny_current_ex_treasury_shares": 1.4004865562630935,
+    "ttm_eps_hkd_assumed_fx_1_10": 1.540535211889403,
+    "ddm_baseline": 10.643884053112393,
+    "ddm_sensitivity": {
+      "0.095": {
+        "0.02": 11.548642246102673,
+        "0.025": 12.177301804903934,
+        "0.03": 12.90267821890539
+      },
+      "0.105": {
+        "0.02": 10.175854498023394,
+        "0.025": 10.643884053112393,
+        "0.03": 11.174317548879925
+      },
+      "0.115": {
+        "0.02": 9.092517187959137,
+        "0.025": 9.451576107134317,
+        "0.03": 9.852877252094814
+      }
+    },
+    "frozen_target_raw": 17.0609710132781,
+    "cash_proxy_after_restricted": 3798393000,
+    "proxy_hkd_assumed_fx_1_10": 4.979723171412788
+  },
+  "huaming": {
+    "other_financing_payments": 459367140.40999997,
+    "lease_payments": 436768263.44,
+    "credit_current": 1183041478.97,
+    "credit_prior": 1256266576.14,
+    "credit_change_rate": -0.058287865458453325,
+    "credit_plus_contract_change_rate": -0.05320733712970227,
+    "frozen_ddm": 9.666666666666666,
+    "frozen_target_raw": 15.309333333333335
+  },
+  "frozen_manifest_checks": [
+    {
+      "file": "data\\reviews\\consun-huaming-repairs-2026-09-08\\frozen\\consun\\reports\\估值分析\\康臣药业 估值分析 2026-09-08.md",
+      "passed": true
+    },
+    {
+      "file": "data\\reviews\\consun-huaming-repairs-2026-09-08\\frozen\\consun\\reports\\深度分析\\康臣药业 深度分析 76 2026-09-08.md",
+      "passed": true
+    },
+    {
+      "file": "data\\reviews\\consun-huaming-repairs-2026-09-08\\frozen\\consun\\reports\\管理层档案\\康臣药业 管理层档案 78 2026-09-08.md",
+      "passed": true
+    },
+    {
+      "file": "data\\reviews\\consun-huaming-repairs-2026-09-08\\frozen\\consun\\company-pages\\康臣药业(01681.HK).md",
+      "passed": true
+    },
+    {
+      "file": "data\\reviews\\consun-huaming-repairs-2026-09-08\\frozen\\consun\\inputs.json",
+      "passed": true
+    },
+    {
+      "file": "data\\reviews\\consun-huaming-repairs-2026-09-08\\frozen\\consun\\calculations.json",
+      "passed": true
+    },
+    {
+      "file": "data\\reviews\\consun-huaming-repairs-2026-09-08\\frozen\\consun\\recalculate.py",
+      "passed": true
+    },
+    {
+      "file": "data\\reviews\\consun-huaming-repairs-2026-09-08\\frozen\\huaming\\reports\\估值分析\\华明装备 估值分析 2026-09-08.md",
+      "passed": true
+    },
+    {
+      "file": "data\\reviews\\consun-huaming-repairs-2026-09-08\\frozen\\huaming\\reports\\深度分析\\华明装备 深度分析 75 2026-09-08.md",
+      "passed": true
+    },
+    {
+      "file": "data\\reviews\\consun-huaming-repairs-2026-09-08\\frozen\\huaming\\reports\\管理层档案\\华明装备 管理层档案 76 2026-09-08.md",
+      "passed": true
+    },
+    {
+      "file": "data\\reviews\\consun-huaming-repairs-2026-09-08\\frozen\\huaming\\company-pages\\华明装备.md",
+      "passed": true
+    },
+    {
+      "file": "data\\reviews\\consun-huaming-repairs-2026-09-08\\frozen\\huaming\\inputs.json",
+      "passed": true
+    },
+    {
+      "file": "data\\reviews\\consun-huaming-repairs-2026-09-08\\frozen\\huaming\\calculations.json",
+      "passed": true
+    },
+    {
+      "file": "data\\reviews\\consun-huaming-repairs-2026-09-08\\frozen\\huaming\\recalculate.py",
+      "passed": true
+    }
+  ],
+  "scores_maximum_sum": 103
+}

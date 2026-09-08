@@ -1,0 +1,173 @@
+{
+  "role": "triplet_review_astra",
+  "stage": "final_incremental_review_v3",
+  "company": "华明装备",
+  "ticker": "002270.SZ",
+  "as_of": "2026-09-08",
+  "review_date": "2026-09-09",
+  "model_record": {
+    "requested_model": "gpt-6-astra",
+    "requested_reasoning_effort": "high",
+    "actual_model": null,
+    "actual_reasoning_effort": null,
+    "runtime_verified": false,
+    "note": "请求路由沿用任务启动时Astra high；当前配置不追溯覆盖，未取得独立运行时模型证据。"
+  },
+  "scope": "仅验revised-frozen/huaming-final-v3相对huaming-final的差分、本人v2三类残留及获准R012—R017；通过关键词及上下文检查当前三报告/公司页未知扣分与价格边界。未读另一review、source-map或writer当前稿，未重做未变研究。",
+  "pass": true,
+  "verdict": "三类残留与R012—R017全部闭合，8份冻结文件哈希通过，未发现本次差分引入可证明的新实质问题。",
+  "findings": [],
+  "remaining_findings": [],
+  "new_p0_p1": [],
+  "previous_findings_closure": [
+    {
+      "id": "AHFV2-01",
+      "status": "closed",
+      "reason": "深度A/F总表及A3正文改用实际历史重组、关联定增和制衡依据；管理核心制约与诚信段移除H股/地区/服务拆分未知直接扣分，明确未知进入跟踪。回应HP02及C012/C024/AD-H01均标superseded并列最终E16/管理80；HF02已改较2025年末期初。"
+    },
+    {
+      "id": "AHFV2-02",
+      "status": "closed",
+      "reason": "估值与公司页四区间统一；10.43和8.87均包含于买入区，观察区严格大于10.43。"
+    },
+    {
+      "id": "AHFV2-03",
+      "status": "closed",
+      "reason": "原始七维17/20、19/25、12/15、11/20、6/8、8/10、3/5已原样呈现，与原76冻结稿224—233行及hash一致；合计76/103，注明原总栏100错误、不可直接映射。"
+    }
+  ],
+  "residual_decisions_closure": {
+    "R012": "closed，见AHFV2-01；未知不再直接扣分，账龄较期初。",
+    "R013": "closed，见AHFV2-02；四档互斥完整，边界符合裁决。",
+    "R014": "closed，见AHFV2-03；真实非标准7行及总分/上限已恢复。",
+    "R015": "closed，base.eps_source改formal_eps；与v2输入相比仅此标签变化，正式EPS数值和脚本取值逻辑不变。",
+    "R016": "closed，与R012合并；旧回应明确superseded，当前E16/管理80。",
+    "R017": "closed，与R014合并，无重复改分。"
+  },
+  "frozen_files": [
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming-final-v3\\reports\\深度分析\\华明装备 深度分析 81 2026-09-08.md",
+      "expected_sha256": "4a7857078ecd842094d4bb85b1dcd03c8cdbaf86f0d484ab153da680491f0752",
+      "actual_sha256": "4a7857078ecd842094d4bb85b1dcd03c8cdbaf86f0d484ab153da680491f0752",
+      "match": true,
+      "changed_from_v2": true
+    },
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming-final-v3\\reports\\管理层档案\\华明装备 管理层档案 80 2026-09-08.md",
+      "expected_sha256": "c932bd02f9b6ce5d631806b2762073390fe04e3df992750c1919d1d9dc16509d",
+      "actual_sha256": "c932bd02f9b6ce5d631806b2762073390fe04e3df992750c1919d1d9dc16509d",
+      "match": true,
+      "changed_from_v2": true
+    },
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming-final-v3\\reports\\估值分析\\华明装备 估值分析 2026-09-08.md",
+      "expected_sha256": "fadf47fa1027b6ed3c23857402c1d57deb0c1f4d7b5cf89d9abffbd2c020f1f2",
+      "actual_sha256": "fadf47fa1027b6ed3c23857402c1d57deb0c1f4d7b5cf89d9abffbd2c020f1f2",
+      "match": true,
+      "changed_from_v2": true
+    },
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming-final-v3\\company-pages\\华明装备.md",
+      "expected_sha256": "9984b72d6347dddf70e994dc012a94e9b8f668de2c67203dd84583feab9dad46",
+      "actual_sha256": "9984b72d6347dddf70e994dc012a94e9b8f668de2c67203dd84583feab9dad46",
+      "match": true,
+      "changed_from_v2": true
+    },
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming-final-v3\\huaming-revision-inputs.json",
+      "expected_sha256": "373b35adea2d244a84e18f419ce5319882836bb39f33e1a874e45d4a82c1763e",
+      "actual_sha256": "373b35adea2d244a84e18f419ce5319882836bb39f33e1a874e45d4a82c1763e",
+      "match": true,
+      "changed_from_v2": true
+    },
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming-final-v3\\huaming-recalculate.py",
+      "expected_sha256": "d077fb05f7dfcda0af77e907cc0910e11fc054382c347316c3f7f5ed6c626dff",
+      "actual_sha256": "d077fb05f7dfcda0af77e907cc0910e11fc054382c347316c3f7f5ed6c626dff",
+      "match": true,
+      "changed_from_v2": false
+    },
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming-final-v3\\huaming-revision-calculations.json",
+      "expected_sha256": "17de8f416d88cd41e165a839083adab46930872729204465ec1da471415defc6",
+      "actual_sha256": "17de8f416d88cd41e165a839083adab46930872729204465ec1da471415defc6",
+      "match": true,
+      "changed_from_v2": false
+    },
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming-final-v3\\huaming-revision-response.json",
+      "expected_sha256": "b8c045a7d5d0f3e8f1ad7b9f2b2788775aabae2e4e746c864f202daa452ad7f9",
+      "actual_sha256": "b8c045a7d5d0f3e8f1ad7b9f2b2788775aabae2e4e746c864f202daa452ad7f9",
+      "match": true,
+      "changed_from_v2": true
+    }
+  ],
+  "all_eight_hashes_match": true,
+  "changed_file_count": 6,
+  "unchanged_file_count": 2,
+  "calculation_verification": {
+    "inherited_from": "reviews/astra-huaming-final-v2.json",
+    "full_check_artifact": "reviews/astra-huaming-final-v2-calculation-check.json",
+    "v2_actual_safe_execution_and_independent_calculation_passed": true,
+    "v3_recalculated": false,
+    "reason": "脚本与计算JSON逐字节hash未变；inputs解析后仅base.eps_source从reported_ttm_proxy变formal_eps，其余全部相同。遵照增量任务继承已锁独立复算，不重复执行。",
+    "script_sha256": "d077fb05f7dfcda0af77e907cc0910e11fc054382c347316c3f7f5ed6c626dff",
+    "calculation_sha256": "17de8f416d88cd41e165a839083adab46930872729204465ec1da471415defc6"
+  },
+  "accepted_parameters": {
+    "company_score": 81,
+    "management_score": 80,
+    "combined": 161,
+    "formal_ttm_recurring_parent": 676451410.95,
+    "formal_eps": 0.7547781925750777,
+    "pe_multiple": 20,
+    "pe_weight": 0.8235294117647058,
+    "ddm_weight": 0.17647058823529413,
+    "fcf_weight": 0,
+    "d1": 0.5,
+    "raw_target": 13.667220484367748,
+    "target_price": 13.7,
+    "currency": "CNY",
+    "valuation_certainty": 0.58,
+    "buy_price": 10.43,
+    "deep_discount": 8.87,
+    "tier_per_adjudication": "A_CORE"
+  },
+  "primary_verification": {
+    "inherited_financial_primary_hashes": [
+      {
+        "path": "财报\\华明装备\\华明装备2025年度报告.pdf",
+        "expected_sha256": "9cc125a5dd3ddae732ca2086a03b992a23f176bede735ca29c8fa42c22cbb286",
+        "actual_sha256": "9cc125a5dd3ddae732ca2086a03b992a23f176bede735ca29c8fa42c22cbb286",
+        "match": true
+      },
+      {
+        "path": "财报\\华明装备\\华明装备2026半年度报告.pdf",
+        "expected_sha256": "7059088c37d19f02d77bb505f941a6e0f6b06d3a9900ff2007332343e389477b",
+        "actual_sha256": "7059088c37d19f02d77bb505f941a6e0f6b06d3a9900ff2007332343e389477b",
+        "match": true
+      }
+    ],
+    "original_76_scale_hash_verified_this_round": {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\frozen\\huaming\\reports\\管理层档案\\华明装备 管理层档案 76 2026-09-08.md",
+      "sha256": "397a8f85f764daa6dda0d9135df78af74deb132313d02220029de73f39e8c8a4",
+      "match": true,
+      "lines": "224—233"
+    },
+    "scope_note": "财报原件核证与数值复算沿用本人v2已锁记录，本轮仅额外核最初76原始表。"
+  },
+  "stage1_judgment_changes": [
+    "本轮没有新增经营、财务或治理事实，沿用v2判断；仅修复现行文本、区间端点、原量表审计记录与EPS源标签。"
+  ],
+  "unknowns": [
+    "H股截至日实际发行条款、净募资用途及新增资本回报。",
+    "美国直接与客户间接终端暴露、主管部门措施的实际覆盖；未单独点名不是豁免证据。",
+    "集团简化FCF至归母可分配现金的NCI、租赁利息及营运资金可持续桥，故正式权重0。",
+    "未来股份支付费用、解锁数量和长期继任质量。",
+    "2021/22扩展历史及2023/24精确DPS未在本轮重新全量核证，沿用已核三年核心经营基础。",
+    "检索未命中不等于无治理事件；股东会未来投票及股息执行仍有时点条件。"
+  ],
+  "no_edits_to_reports_company_watchlist": true,
+  "previous_reviews_preserved": true,
+  "publication_note": "本独立审核通过；主Agent仍按整体双路验收及裁决串行应用，本文不执行发布或Watchlist写入。"
+}

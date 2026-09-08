@@ -1,0 +1,48 @@
+{
+  "as_of": "2026-09-08",
+  "康臣药业": {
+    "cScore": 76,
+    "mScore": 78,
+    "normalized_pe_value": 19.200000000000003,
+    "ddm": {
+      "dividends": [
+        0.8112,
+        0.8436480000000001,
+        0.87739392,
+        0.9124896768000001,
+        0.9489892638720001
+      ],
+      "pv_stage1": 3.26341799209357,
+      "terminal_value_at_year_n": 12.158924943360002,
+      "pv_terminal": 7.380466061018823,
+      "value": 10.643884053112393
+    },
+    "formal_weight_sum": 1.0,
+    "target_price_raw": 17.0609710132781,
+    "target_price": 17.1,
+    "valuation_certainty": 0.47,
+    "buy_price": 12.75,
+    "cash_like_rmb": 4815325000,
+    "pre_operating_buffer_distributable_proxy_rmb": 3821838000,
+    "proxy_per_share_hkd": 5.010459751264786,
+    "sotp_formal_weight": 0,
+    "fcf_formal_weight": 0
+  },
+  "华明装备": {
+    "cScore": 75,
+    "mScore": 76,
+    "normalized_pe_value": 16.72,
+    "ddm_value": 9.666666666666666,
+    "formal_weight_sum": 1.0,
+    "target_price_raw": 15.309333333333333,
+    "target_price": 15.3,
+    "valuation_certainty": 0.52,
+    "buy_price": 11.52,
+    "bank_debt_rmb": 729518894.44,
+    "lease_debt_rmb": 116856820.21,
+    "total_interest_and_lease_debt_rmb": 846375714.6500001,
+    "net_debt_using_cash_equivalents_rmb": -151684956.74999988,
+    "reverse_dcf_implied_growth_with_60pct_payout": 0.1037420474411529,
+    "fcf_formal_weight": 0
+  }
+}

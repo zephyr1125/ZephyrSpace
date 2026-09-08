@@ -1,0 +1,156 @@
+{
+  "role": "triplet_review_astra",
+  "stage": 2,
+  "company": "康臣药业",
+  "as_of": "2026-09-08",
+  "status": "需修复后复核",
+  "actual_model": null,
+  "runtime_note": "模型已请求，实际模型未独立确认",
+  "coverage": {
+    "three_reports_full_read": true,
+    "company_page_full_read": true,
+    "frozen_hashes_verified": true,
+    "writer_current_read": false,
+    "other_reviewer_read": false,
+    "calculations": "读完脚本，通过import调用纯函数；关闭pyc生成，不运行写calculations.json的main。另用独立公式重算敏感性/TTM/场景。"
+  },
+  "findings": [
+    {
+      "id": "AC-01",
+      "priority": "P1",
+      "location": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/consun/reports/管理层档案/康臣药业 管理层档案 78 2026-09-08.md:15",
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/consun/reports/管理层档案/康臣药业 管理层档案 78 2026-09-08.md:26",
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/consun/reports/管理层档案/康臣药业 管理层档案 78 2026-09-08.md:33",
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/consun/reports/管理层档案/康臣药业 管理层档案 78 2026-09-08.md:46",
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/consun/reports/管理层档案/康臣药业 管理层档案 78 2026-09-08.md:238"
+      ],
+      "claim": "管理层画像将黎倩列为现任执行董事兼总裁并称负责日常经营，同时漏掉安猛兼CEO及C.2.1偏离，控制权也未区分已终止协议与监管推定。",
+      "evidence": "2025年报PDF31页（印刷30页）明确安猛自2024-01-17任CEO并负责整体经营；PDF48页明确其主席/CEO两职合一，董事会为2执行+2非执行+4独董。2026H1 PDF28页再次确认兼任，30页列当前董事无黎倩。2025年报PDF47页载一致行动协议2016-12-16已终止，因未取得SFC不再一致行动确认，仍被视为一致行动；PDF77页载Double Grace持股已降至5%以下。",
+      "impact": "真实经营责任与治理制衡对象被写错，直接影响诚信、执行、继任及治理评分；并非仅履历措辞问题。当前78分在修正前不宜裁定通过。",
+      "suggestion": "按2026H1现任名单重建管理层表，补安猛兼CEO与独董制衡，黎倩只保留有依据的股东/历史身份；区分监管视同一致行动与现行协议，再说明分数是否变化。"
+    },
+    {
+      "id": "AC-02",
+      "priority": "P1",
+      "location": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/consun/reports/估值分析/康臣药业 估值分析 2026-09-08.md:19",
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/consun/reports/估值分析/康臣药业 估值分析 2026-09-08.md:49",
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/consun/reports/估值分析/康臣药业 估值分析 2026-09-08.md:55",
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/consun/reports/估值分析/康臣药业 估值分析 2026-09-08.md:171",
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/consun/inputs.json:10"
+      ],
+      "claim": "占正式权重75%的PE使用1.60港元正常化EPS，未展示任何利润规范化、税率、汇率与股本转换桥。",
+      "evidence": "稿件只有“跨周期锚”声明；inputs的1.10港元/人民币仅在现金桥字段。原件2025归母1,078,067千元、2025H1 498,299千元、2026H1 595,309千元得TTM归母1,175,077千元；按839049111股得1.4004866元人民币，假设1.10得1.5405352港元。1.60港元对应人民币归母1,220,435,070.55元，比TTM多4535.81万元；税率由6.1%升14.3%需要显式正常化。",
+      "impact": "公式算对但主估值输入不可复核，无法确认17.1与12.75的基本面来源。EPS每改变0.10港元，目标价机械改变0.90港元。不是已证明1.60错误，而是未证明它为何成立。",
+      "suggestion": "从可得TTM/多年利润出发列税率、非经营收益、季节性及增长调整，明确FX和期权/股本处理。若坚持1.60须给出量化假设；重算目标、敏感性、机械买线和公司页。"
+    },
+    {
+      "id": "AC-03",
+      "priority": "P1",
+      "location": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/consun/reports/深度分析/康臣药业 深度分析 76 2026-09-08.md:203",
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/consun/reports/深度分析/康臣药业 深度分析 76 2026-09-08.md:246",
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/consun/reports/深度分析/康臣药业 深度分析 76 2026-09-08.md:291"
+      ],
+      "claim": "深度稿只有2025FY与2026H1经营表，未满足至少三年或完整周期数据的强制完整性要求，却作完整评分与入池判断。",
+      "evidence": "用户AGENTS强制深度报告覆盖至少三年或可得完整周期。2025年报PDF245页已有2021—2025收入、毛利、归母、EPS、权益等，PDF117页有2024—2025现金流，故不是原件不可得。",
+      "impact": "“长期稳定”及ROE质量5/6缺少报告内可复核时间序列；会阻断完整三件套入库前置检查。305行满足篇幅不替代内容。",
+      "suggestion": "补至少2023—2025年度经营/利润/资产权益及可得现金流，计算ROE并标计算口径，解释税率和增长演变。缺2023现金流可明确缺口，不能省略已可得多年数据。"
+    },
+    {
+      "id": "AC-04",
+      "priority": "P2",
+      "location": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/consun/reports/管理层档案/康臣药业 管理层档案 78 2026-09-08.md:165",
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/consun/reports/管理层档案/康臣药业 管理层档案 78 2026-09-08.md:240",
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/consun/reports/管理层档案/康臣药业 管理层档案 78 2026-09-08.md:241",
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/consun/reports/管理层档案/康臣药业 管理层档案 78 2026-09-08.md:245"
+      ],
+      "claim": "资本配置在正文写14/20，评分总表却为12/15，14/20变成股东友好；存在两套不一致有效维度值。",
+      "evidence": "管理层165行“资本配置得分14/20”，240行资本配置12/15，241行股东友好14/20；脚本按[16,20,12,14,6,7,3]加总78。",
+      "impact": "总和78能算出，但读者不能判断资本配置究竟扣多少，且深度F引用78使联动依赖这个歧义。",
+      "suggestion": "固定统一评分体系并同步所有正文、汇总、输入；若正文改12/15需保留为何该分值的证据，不要求为修数字而改总分。"
+    },
+    {
+      "id": "AC-05",
+      "priority": "P2",
+      "location": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/consun/reports/管理层档案/康臣药业 管理层档案 78 2026-09-08.md:118",
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/consun/reports/管理层档案/康臣药业 管理层档案 78 2026-09-08.md:164",
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/consun/reports/管理层档案/康臣药业 管理层档案 78 2026-09-08.md:181",
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/consun/reports/管理层档案/康臣药业 管理层档案 78 2026-09-08.md:238",
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/consun/reports/管理层档案/康臣药业 管理层档案 78 2026-09-08.md:243"
+      ],
+      "claim": "把华茂交割未确认与研究者无法建完整现金桥多次当成公司诚信/透明度/资本配置/股东友好缺陷，未证明存在应披露未披露或负面交易。",
+      "evidence": "2026-06-08公告PDF1页是协议及完成后30%联营的条件描述，并披露交易对手独立；PDF3页说明相关比例低于5%。H1联营余额恰为期初减应占亏损，没有证据显示公告矛盾、交易已完成却未入账，或已经违反披露规则。报告238、240、243等重复使用同一个缺口；引言还称“提高关联交易扣分”但未列新的关联交易损害事实。",
+      "impact": "将unknown当负面事实可能导致主观降分，并形成重复扣分；但可将该未知纳入估值不确定性或跟踪条件。无法机械判定应加回几分。",
+      "suggestion": "列明实际负面事实与数据缺口，各风险主要归属一个评分维度；没有新增不当行为证据，不把未交割或无完成公告本身定性诚信下降。展示82至78的逐维评分变化及证据桥。"
+    },
+    {
+      "id": "AC-06",
+      "priority": "P2",
+      "location": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/consun/reports/估值分析/康臣药业 估值分析 2026-09-08.md:110",
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/consun/reports/估值分析/康臣药业 估值分析 2026-09-08.md:111",
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/consun/reports/估值分析/康臣药业 估值分析 2026-09-08.md:112",
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/consun/reports/估值分析/康臣药业 估值分析 2026-09-08.md:181",
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/consun/reports/估值分析/康臣药业 估值分析 2026-09-08.md:183"
+      ],
+      "claim": "DDM敏感性表并非同一公布公式的合理四舍五入，悲观/乐观DDM值又没有场景参数。",
+      "evidence": "按公开d0=.78、前5年g=.04、5年期，独立计算折现率9.5%对应永续2/2.5/3%=11.5486/12.1773/12.9027；10.5%=10.1759/10.6439/11.1743；11.5%=9.0925/9.4516/9.8529。稿写11.3/12.1/13.1、10.0/10.6/11.4、8.9/9.4/10.0。“近似”不能解释相反方向的两角误差。场景8.5与13.0未给d0/g/r组合。",
+      "impact": "基准DDM与目标价算术正确，但敏感性和完整三情景不可执行复现。",
+      "suggestion": "由同一函数生成敏感性表，并给悲观/乐观股息、增长和折现率参数，重算综合情景。"
+    },
+    {
+      "id": "AC-07",
+      "priority": "P2",
+      "location": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/consun/reports/估值分析/康臣药业 估值分析 2026-09-08.md:136",
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/consun/reports/估值分析/康臣药业 估值分析 2026-09-08.md:149",
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/consun/reports/管理层档案/康臣药业 管理层档案 78 2026-09-08.md:151"
+      ],
+      "claim": "现金预备桥列出经营、受限与潜在付款缺口，却遗漏集团现金归母经济归属及未扣少数权益的边界。",
+      "evidence": "2025年报PDF189页玉林NCI27.31%、少数权益302,837千元；H1 PDF5页NCI300,769千元。原件集团现金不能仅由低少数利润推出全归母；本稿桥使用集团现金余额并直接除母公司股数。",
+      "impact": "5.01港元/股虽仅诊断、正式权重0，不影响当前正式目标算式，但容易被当成归母现金保护，且“仍需扣”的清单不完整。",
+      "suggestion": "明确该值只是集团金融资产余额代理，未进行股权归属调整；补子公司现金权属或将NCI处理列unknown。禁止直接从归母PE再机械扣整项NCI账面值。"
+    }
+  ],
+  "verified_correct": [
+    "产品线74.8%不等于尿毒清单品占比，且新稿已作区分。",
+    "现金类48.15325亿元与广义48.58082亿元分类算术正确；非流动FVPL不能称现金。",
+    "银行贷款与租赁2.29476亿元合计正确；资本承诺6.65025亿元、递延预提税0.98986亿元来自原件。",
+    "华茂只记录已签约与待交割核验合理，不认定H1已并表或已支付。",
+    "PPE会计新增不当现金资本开支，新稿FCF正式权重0有合理理由。",
+    "基准PE19.2、DDM10.6438840531、权重和1、目标原值17.0609710133、取整17.1及机械买线12.75算术均正确。",
+    "公司总分76、管理层总表78和合计154按最新分数门槛只满足B_GROWTH，算术正确；前提是评分与完整性最终审查通过。"
+  ],
+  "stage1_changes": [
+    {
+      "topic": "价格未知",
+      "before": "阶段1初始证据未锁定价格",
+      "after": "共同报价补充已提供腾讯13.190港元时点快照",
+      "reason": "同源quote-supplement新增时间字段；没有将第三方快照升格官方终值。"
+    },
+    {
+      "topic": "现金和FCF方法适用",
+      "before": "需完整归属与现金桥才可正式使用",
+      "after": "冻结稿把两法正式权重置0，接受边界处理",
+      "reason": "作者选择不以不完整桥贡献目标价；这不是原件事实发生变化。"
+    },
+    {
+      "topic": "评分及目标值",
+      "before": "未评分、未给目标价",
+      "after": "仅验证作者76/78及17.1算术，不给替代分数或价值",
+      "reason": "现任人物错误与正常化桥缺失尚未闭合，无依据猜测修正值。"
+    }
+  ],
+  "unknowns": [
+    "1.60港元规范化EPS的完整量化桥与场景参数。",
+    "现任管理层职务纠正后各维评分，以及华茂未知去重后的分数变化。",
+    "集团现金归母权属、经营储备与承诺支付时点。",
+    "未独立开展全市场处罚/司法最新搜索，本轮不保证无红线；报告仅年报/公告范围的“未发现”应保留范围限定。",
+    "历史上一版82分及具体维度未开放核查；现稿应自行给出评分变化桥，不能凭旧分反推。"
+  ],
+  "uncovered": "华明第二阶段尚未开展；不评价作者当前未冻结修改。"
+}

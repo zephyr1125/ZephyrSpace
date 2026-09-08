@@ -1,0 +1,88 @@
+{
+  "ttm_attributable": 731088477.55,
+  "normalized_eps": 0.8157417233008644,
+  "h1_effective_tax_rate": 0.1404178258059067,
+  "fy2025_payout_ratio": 0.7702814358004544,
+  "h1_2026_proposed_payout_ratio": 0.5977322318934641,
+  "ttm_ocf": 745151437.77,
+  "ttm_cash_capex": 98768872.79999998,
+  "ttm_reported_fcf": 646382564.97,
+  "fcf_per_share": 0.7212276539048578,
+  "other_financing_payments_total": 459367140.40999997,
+  "lease_related_financing_payments": 436768263.44,
+  "valuation": {
+    "pe_value": 16.314834466017288,
+    "ddm_value": 7.281682828586386,
+    "fcf_value": 13.86976257509342,
+    "raw_target": 14.59310093676407,
+    "target_price": 14.6,
+    "valuation_certainty": 0.46,
+    "buy_price": 10.87
+  },
+  "scenarios": {
+    "bear": {
+      "inputs": {
+        "eps": 0.74,
+        "pe": 17.0,
+        "d0": 0.42,
+        "g": 0.01,
+        "gt": 0.01,
+        "ke": 0.115,
+        "fcf_ps": 0.62,
+        "yield": 0.06
+      },
+      "pe_value": 12.58,
+      "ddm_value": 4.039999999999999,
+      "fcf_value": 10.333333333333334,
+      "weighted_value": 10.962
+    },
+    "base": {
+      "inputs": {
+        "eps": 0.8157417233008644,
+        "pe": 20.0,
+        "d0": 0.5,
+        "g": 0.04,
+        "gt": 0.025,
+        "ke": 0.1,
+        "fcf_ps": 0.7212276539048578,
+        "yield": 0.052
+      },
+      "pe_value": 16.314834466017288,
+      "ddm_value": 7.281682828586386,
+      "fcf_value": 13.86976257509342,
+      "weighted_value": 14.59310093676407
+    },
+    "bull": {
+      "inputs": {
+        "eps": 0.9,
+        "pe": 23.0,
+        "d0": 0.56,
+        "g": 0.06,
+        "gt": 0.03,
+        "ke": 0.09,
+        "fcf_ps": 0.84,
+        "yield": 0.045
+      },
+      "pe_value": 20.7,
+      "ddm_value": 10.938361118868169,
+      "fcf_value": 18.666666666666668,
+      "weighted_value": 18.930754167830223
+    }
+  },
+  "h_share_sensitivity": {
+    "issue_5%_price_80%": 14.454119023080604,
+    "issue_5%_price_100%": 14.593100936764072,
+    "issue_5%_price_120%": 14.73208285044754,
+    "issue_10%_price_80%": 14.327771828822906,
+    "issue_10%_price_100%": 14.593100936764072,
+    "issue_10%_price_120%": 14.858430044705235,
+    "issue_15%_price_80%": 14.212411347109356,
+    "issue_15%_price_100%": 14.59310093676407,
+    "issue_15%_price_120%": 14.973790526418787
+  },
+  "scores": {
+    "company": 77,
+    "management": 79,
+    "combined": 156
+  }
+}

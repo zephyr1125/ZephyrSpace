@@ -1,0 +1,352 @@
+{
+  "status": "final_parameters_and_report_closure_approved",
+  "company": "consun",
+  "as_of": "2026-09-08",
+  "decision_date": "2026-09-09",
+  "scope": "已审全部15项匿名候选、三份完整修订稿、作者计算与原件；未读reviews或来源映射",
+  "final_parameters": {
+    "cScore": 81,
+    "mScore": 79,
+    "target_price": 14.8,
+    "currency": "HKD",
+    "valuation_certainty": 0.6,
+    "buy_price": 11.31,
+    "tier": "A_CORE",
+    "tier_condition": "最终报告修复与匿名双路验收全部闭合；当前固定双评分满足A级且无已证重大红线，主Agent可按最终冻结串行发布和入库。",
+    "ready_for_watchlist": true
+  },
+  "score_bridge": {
+    "company": {
+      "old_2026_08_26": 78,
+      "rejected_first_draft": 76,
+      "final": 81,
+      "dimensions": {
+        "A": {
+          "score": 9,
+          "max": 10,
+          "children": [
+            3,
+            3,
+            3
+          ],
+          "reason": "长期专注与控制稳定；未证交割不是失信，取消首稿以交割缺口扣A，保留外延回报约束。"
+        },
+        "B": {
+          "score": 16,
+          "max": 20,
+          "children": [
+            2,
+            3,
+            3,
+            4,
+            4
+          ],
+          "reason": "固定B0-B4重建，慢病复购真实；产品线集中及政策定价约束。"
+        },
+        "C": {
+          "score": 14,
+          "max": 20,
+          "children": [
+            5,
+            3,
+            6
+          ],
+          "reason": "品牌注册和科室渠道有壁垒，缺独占定价；集中风险不在各维全额重复扣。"
+        },
+        "D": {
+          "score": 12,
+          "max": 15,
+          "children": [
+            4,
+            4,
+            2,
+            2
+          ],
+          "reason": "肾科持续增长与研发投入是已兑现动作；新品利润曲线未验证。"
+        },
+        "E": {
+          "score": 18,
+          "max": 20,
+          "children": [
+            6,
+            5,
+            3,
+            3,
+            1
+          ],
+          "reason": "2022—2025平均归母权益ROE23%—25%，2024/25 OCF覆盖归母119.4%/112.4%，现金远大于债务；集中与回款反证主要归资产质量。满分现金项是当前周期记录判断，不能称供应商账期释放可永久持续。"
+        },
+        "F": {
+          "score": 12,
+          "max": 15,
+          "children": [
+            4,
+            6,
+            2
+          ],
+          "reason": "固定F1-F3；CEO合一主要归F1，回购分红支持F2，关联内控集中约束F3；不得把华茂未知另扣。"
+        }
+      }
+    },
+    "management": {
+      "old_2026_08_26": 82,
+      "old_fixed_dimension_scores": [
+        17,
+        21,
+        13,
+        14,
+        6,
+        7,
+        4
+      ],
+      "rejected_first_draft": 78,
+      "writer_revision_proposal": 79,
+      "writer_revision_dimension_scores": [
+        16,
+        20,
+        12,
+        13,
+        7,
+        7,
+        4
+      ],
+      "final": 79,
+      "final_fixed_dimension_scores": [
+        17,
+        20,
+        12,
+        13,
+        6,
+        7,
+        4
+      ],
+      "maxima": [
+        20,
+        25,
+        15,
+        15,
+        10,
+        10,
+        5
+      ],
+      "delta_from_old": [
+        0,
+        -1,
+        -1,
+        -1,
+        0,
+        0,
+        0
+      ],
+      "reasons": [
+        "诚信17：未发现已证实欺瞒，不因作者错误、缺交割凭证或已披露CEO合一降诚信。",
+        "资本配置20：真实回购注销与分红强；新投资及新品增量ROIC仍未验证，对旧稿港股顶级/并购成功绝对化重新评价。",
+        "战略12：多年肾科主线与研发动作较好，但不能把投入等同第二曲线兑现，较旧13收敛。",
+        "股东友好13：回购和派息正向，旧零再融资/总股本缩16%的加分须与2024/25期权发行共同核对，不能只看回购总量；CEO合一不再重复扣。",
+        "危机6：没有新增重大危机处理案例，拒绝修订稿无新增证据由6升7。",
+        "组织7：有可核唐宁、方兰芬、方培城、黄雷声、杜颖、高海恩等专业梯队，不能写研究未读等于未披露；保留关键人集中与继任检验限制。",
+        "表达4：保留明确财务与业务披露；不把华茂缺完成公告定性失信。"
+      ]
+    }
+  },
+  "valuation_rationale": {
+    "earnings": "近期持续税率15%与TTM FVPL完整剔除；现金利息收益保留，未另加净现金避免重复；稀释股数是H1代理，明确相对基本现股数的敏感性，不把它声称当前完全稀释总股数。",
+    "pe": "11倍是透明估值判断，须披露隐含增长与回报约束；不声称已取得历史分位。",
+    "certainty": {
+      "selected": 0.6,
+      "judgment_factors": {
+        "经营可预测性": 0.7,
+        "方法收敛程度": 0.5,
+        "资产负债表韧性": 0.8,
+        "资本支出与现金证据": 0.65,
+        "集采与集中尾部风险": 0.4,
+        "关键参数可验证性": 0.55
+      },
+      "explanation": "六项等权算术平均0.60是本案透明判断框架而非校准概率；有多年盈利、已报告现金capex和低债务，不能只因正式方法少或华茂状态unknown降到0.42。PE/DDM差距与集采尾部仍限制高确定性，现金SOTP不入权重。"
+    },
+    "cash": "受限现金已剔，集团代理3798393000/时点股数*1.10=4.979723，NCI归属unknown且正式0权重，因此不假装归母安全底。",
+    "fcf": "2024/25 OCF减现金PPE支持现金质量但非完整owner earnings；不要求硬凑正式FCF权重。应区分并购/债务本金与维持经营FCF，不机械扣所有投资筹资付款。"
+  },
+  "revision_candidate_closure": {
+    "closed_or_substantially_closed": [
+      "C001",
+      "C003",
+      "C006",
+      "C007",
+      "C016",
+      "C017",
+      "C019",
+      "C021",
+      "C022",
+      "C023"
+    ],
+    "requires_followup": [
+      "C002",
+      "C004",
+      "C005",
+      "C018",
+      "C020"
+    ],
+    "note": "已关闭候选仍受上述文本清理与组织数据补全约束；C002/C020须新盈利桥替换，不可标全关闭。"
+  },
+  "required_repairs": [
+    {
+      "id": "CF01",
+      "priority": "P1",
+      "action": "以TTM税前1359523000减TTM FVPL10838000，乘(1-15%)再减TTM NCI9350000；最终归母1137032250，除846972000并乘1.10=1.4767140767港元EPS。15%依据H1所得税100195000加往年超额拨备4447000再除698339000=14.9844%，为近期持续税负的近似；非公司法定整体税率。",
+      "why": "TTM仍含2025H2旧优惠，不能把前瞻正常化称重复扣税；FVPL需完整TTM。",
+      "closure_status": "closed_final_dual_pass"
+    },
+    {
+      "id": "CF02",
+      "priority": "P1",
+      "action": "其他收入按2025FY减2025H1加2026H1列完整桥：年报PDF163、中报PDF8。保留银行利息TTM82927000及净汇兑损失TTM15628000等经营/资金经济成本；不再声称其余没有足够分拆。政府补助TTM8994000和其他负项逐项说明保留或敏感性，不能选择性只删利得。",
+      "why": "原件已经给分项；本裁决选定仅剔FVPL是对公允价值波动的正常化判断，不是声称其余皆未知。",
+      "closure_status": "closed_final_dual_pass"
+    },
+    {
+      "id": "CF03",
+      "priority": "P1",
+      "action": "采用final_calculations中的唯一参数：c81/m79、target14.8港元、certainty0.60、buy11.31。管理层总分仍79但分项改17/20/12/13/6/7/4；规范化PE16.2438548441，DDM10.6438840531，75/25加权14.8438621463。",
+      "why": "独立选择而非接受较低初稿；数量不变不等于评分桥无需更新。",
+      "closure_status": "closed_final_dual_pass"
+    },
+    {
+      "id": "CF04",
+      "priority": "P2",
+      "action": "清除D标题11/15改12/15、管理层IR7/10残留、独董仍待补位、估值按839049111股的旧说法（盈利用846972000稀释代理，现金用时点股数）、交割缺证扣分/股东不友好语句。",
+      "why": "目前仍存在两套有效描述与未闭环扣分。",
+      "closure_status": "closed_final_dual_pass"
+    },
+    {
+      "id": "CF05",
+      "priority": "P2",
+      "action": "管理层旧82版本本来就是固定七维，不得写旧82因非固定量表无法映射；103满分错误属于本次首轮冻结78稿。使用本裁决明确旧→新七维差分。",
+      "why": "避免追溯性改写历史。",
+      "closure_status": "closed_final_dual_pass"
+    },
+    {
+      "id": "CF06",
+      "priority": "P2",
+      "action": "补回核心专业团队：唐宁/方兰芬（PDF39）、方培城现任副总裁管投资BD非现任CFO（40）、黄雷声院外营销（40—41）、杜颖研发负责人（41—42）、高海恩公司秘书（42—43）。名字、加入时间和职责以原件为准；保留合理历史叙事，未知仅是留任率或未来继任。",
+      "why": "旧有效组织证据不能用“梯队披露有限”替换；这也是组织7分的正向支持。",
+      "closure_status": "closed_final_dual_pass"
+    },
+    {
+      "id": "CF07",
+      "priority": "P2",
+      "action": "正文B0只有六项画布却写九要素已覆盖：补渠道、客户关系、关键伙伴三项可核/推断；E补平均资产/权益的杜邦说明及2023 OCF可得性，后者若尚未取到明确缺口，不能声称三年现金流均已核。",
+      "why": "不为行数而补空话，已有五年经营数据满足基础周期要求，但量化依据的覆盖范围必须准确。",
+      "closure_status": "closed_final_dual_pass"
+    },
+    {
+      "id": "CF08",
+      "priority": "P2",
+      "action": "PE11说明为判断值及其隐含要求，不能宣称与4%盈利增长、50%派息、10.5%Ke的Gordon模型一致：后者仅约8倍。11倍可解释为10年约8.27%盈利增长、50%分配、终值8倍、10.5%Ke的现值；或等价稳定增长5.70%的敏感性，均非公司预测。",
+      "why": "给盈利锚真正可算的回报桥，区分DDM股息4%假设。",
+      "closure_status": "closed_final_dual_pass"
+    },
+    {
+      "id": "CF09",
+      "priority": "P2",
+      "action": "保留悲/乐情景输入但基准EPS换新值，DDM统一函数；汇率、税率敏感性按最终计算更新。价格四档界限为target14.80、buy11.31、deep=round(buy*0.85,2)=9.61；15%额外折价仅为展示深度折价区的明示规则，不是另一正式买线。删除9.55及其倒推12.7%的解释。",
+      "why": "边界必须明确生成，不能为保留旧数倒找折扣。",
+      "closure_status": "closed_final_dual_pass"
+    },
+    {
+      "id": "CF10",
+      "priority": "P2",
+      "action": "引用本次consun-revision-calculations及最终脚本，不能继续链接writer/calculations.json旧17.1口径；全文包括公司页统一新参数，取消未批准A或买入的混杂结论后由主Agent串行落库。",
+      "why": "一份报告只留一套正式参数与对应可执行计算。",
+      "closure_status": "closed_final_dual_pass"
+    }
+  ],
+  "calculation_artifact": "adjudication/consun-final-calculations.json",
+  "dual_review_completion": true,
+  "return_requirement": "无需作者继续返修；主Agent按最终冻结发布、校验和同步。",
+  "revision_candidates": [
+    {
+      "candidate_id": "R001",
+      "verdict": "成立",
+      "resolution": "CF04；笔误不机械改总分，但管理层17/6替换16/7另有独立旧版与事实评分桥。",
+      "closure_status": "closed_final_dual_pass"
+    },
+    {
+      "candidate_id": "R002",
+      "verdict": "成立",
+      "resolution": "CF04及固定管理层评分桥；未知不当负面，17分诚信保留原已证实表现。",
+      "closure_status": "closed_final_dual_pass"
+    },
+    {
+      "candidate_id": "R003",
+      "verdict": "成立",
+      "resolution": "CF10；正式引用必须随新计算移交，不链接旧writer/calculations。",
+      "closure_status": "closed_final_dual_pass"
+    },
+    {
+      "candidate_id": "R004",
+      "verdict": "部分成立",
+      "resolution": "同意TTM原税率算术无误、进一步正常化并非必然重复、15%不是已确定未来真实税率，也不能因要求保守自动降低目标。裁决有新增原件依据：H1税项剔往年超额拨备后14.9844%，较TTM含旧优惠阶段更贴近向前持续税负，因此独立选择15%作为基准模型判断，另列12%/15%/18%敏感性，保留12.8787%的TTM事实列。此选择替换作者TTM代理作正式盈利锚，并非称15%为强制法律事实。",
+      "closure_status": "closed_final_dual_pass"
+    }
+  ],
+  "closure": {
+    "status": "final_report_closure_approved",
+    "attestation": "adjudication/dual-pass-attestation.json",
+    "attestation_sha256": "d8d5dc706f4cdfb36d012899b6f08d6e7222fdd5c5ace17264c839124d8c1c41",
+    "final_manifest": "revised-frozen/consun-final-v3/manifest.json",
+    "manifest_sha256": "c67a5ea402540c2248ef3e3fb2ae60f4ecf1a5306d96ef91505b007b5c23f9a0",
+    "anonymous_locked_review_sha256": [
+      "60be4e158ce5072715190c08b27bfcf8cabf6176b5be908619a1113ab0026106",
+      "fb6db938d054eefea7e83140c74aa2a090cd4ea832242b9e252dddde8e3144c3"
+    ],
+    "dual_independent_pass": true,
+    "frozen_files_verified": [
+      {
+        "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun-final-v3\\reports\\深度分析\\康臣药业 深度分析 81 2026-09-08.md",
+        "sha256": "7faa1f2f1465306436bdedfabbbc4ee25329f51b57ba035cecb58001df277b5b",
+        "verified": true
+      },
+      {
+        "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun-final-v3\\reports\\管理层档案\\康臣药业 管理层档案 79 2026-09-08.md",
+        "sha256": "0c50077b542b6f73749be800201091ea02568dffe00fe49188e0f8acb4f4594f",
+        "verified": true
+      },
+      {
+        "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun-final-v3\\reports\\估值分析\\康臣药业 估值分析 2026-09-08.md",
+        "sha256": "73007d3aa2895b9af88cac5a6e52adc2620a8b53cee4d0562709632bd2b002d3",
+        "verified": true
+      },
+      {
+        "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun-final-v3\\company-pages\\康臣药业(01681.HK).md",
+        "sha256": "2bd60ade4aa61aba2cd3d9d9421c06ec893b659a86441c44ea32ec88230cb828",
+        "verified": true
+      },
+      {
+        "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun-final-v3\\consun-revision-inputs.json",
+        "sha256": "e36e800bea3fc7cdb04aac46099281f05884b8f6e2b7cc367c6c43baf445e266",
+        "verified": true
+      },
+      {
+        "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun-final-v3\\consun-recalculate.py",
+        "sha256": "848158c9322f3843abe759f73bc752963d6a0b57cb64eed7ec12b0a875bae7c0",
+        "verified": true
+      },
+      {
+        "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun-final-v3\\consun-revision-calculations.json",
+        "sha256": "01c1c8d77058ace9ae8a62d678ac83fa5a1aad73b6cd94d240df8827ae881cd6",
+        "verified": true
+      },
+      {
+        "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun-final-v3\\consun-revision-response.json",
+        "sha256": "d0b4411f3a46da23875542d93598b633d687348ac3685475331b2e11ca3f0d4a",
+        "verified": true
+      }
+    ],
+    "pending_candidates": [],
+    "basis": "主Agent匿名双路通过见证；裁决者逐项验证最终manifest与见证一致、8份文件当前SHA256一致。未读取reviews或source-map。",
+    "authorization": "研究与报告闭环批准，允许主Agent按最终冻结串行发布、更新索引和Watchlist；本裁决不代替主Agent执行发布/校验/同步。"
+  },
+  "closure_status": "approved",
+  "pending_candidates": []
+}

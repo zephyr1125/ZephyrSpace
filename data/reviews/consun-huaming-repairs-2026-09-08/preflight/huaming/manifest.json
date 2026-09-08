@@ -1,0 +1,20 @@
+{
+  "status": "author_in_progress_calculation_preflight_only",
+  "files": [
+    {
+      "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\writer\\huaming-revision-inputs.json",
+      "frozen": "data\\reviews\\consun-huaming-repairs-2026-09-08\\preflight\\huaming\\huaming-revision-inputs.json",
+      "sha256": "9471306ee3c3c1e95e3e3d15d0fee362c4313837c4909f35a064b839bc64edb9"
+    },
+    {
+      "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\writer\\huaming-recalculate.py",
+      "frozen": "data\\reviews\\consun-huaming-repairs-2026-09-08\\preflight\\huaming\\huaming-recalculate.py",
+      "sha256": "3cf292c2259dc3e380297162615fb31c9a886a94558aac95050066076550ba90"
+    },
+    {
+      "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\writer\\huaming-revision-calculations.json",
+      "frozen": "data\\reviews\\consun-huaming-repairs-2026-09-08\\preflight\\huaming\\huaming-revision-calculations.json",
+      "sha256": "64a2339f61e4c9ead4019991b7b2beb6f9acabf4b0f7146c0ae7c7b09c359651"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\writer\\reports\\深度分析\\华明装备 深度分析 77 2026-09-08.md",
+    "frozen": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming\\reports\\深度分析\\华明装备 深度分析 77 2026-09-08.md",
+    "sha256": "bb1ff048ae696374af45c7e27f1f7a2621e86145a35d35180a7fdd5c51f31a90"
+  },
+  {
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\writer\\reports\\管理层档案\\华明装备 管理层档案 79 2026-09-08.md",
+    "frozen": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming\\reports\\管理层档案\\华明装备 管理层档案 79 2026-09-08.md",
+    "sha256": "7a21f0e78a0383fdf6feb48c0788fa3fa47cd95391f72d48134afc0efceeee59"
+  },
+  {
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\writer\\reports\\估值分析\\华明装备 估值分析 2026-09-08.md",
+    "frozen": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming\\reports\\估值分析\\华明装备 估值分析 2026-09-08.md",
+    "sha256": "5e41efea5965e470a03ab0fdfc64a4224dda995d95f6254226a55ba06a35591c"
+  },
+  {
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\writer\\company-pages\\华明装备.md",
+    "frozen": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming\\company-pages\\华明装备.md",
+    "sha256": "fa1a4f2af7313ac9981428e505bcbde90dd1b7879070d51c4a58408394bfa343"
+  },
+  {
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\writer\\huaming-revision-inputs.json",
+    "frozen": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming\\huaming-revision-inputs.json",
+    "sha256": "3be048dc085e40c5e22ab45658625d57329f7de48aa8e09b440116f3e241e68f"
+  },
+  {
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\writer\\huaming-recalculate.py",
+    "frozen": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming\\huaming-recalculate.py",
+    "sha256": "d2e21d77356aa6331609f53cb61978db7ce2869105b1110c0f5e511f7aebd918"
+  },
+  {
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\writer\\huaming-revision-calculations.json",
+    "frozen": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming\\huaming-revision-calculations.json",
+    "sha256": "4c228da2d879596c777df81175911eabc466990cb48f1e7ff109b0e4e8106879"
+  },
+  {
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\writer\\huaming-revision-response.json",
+    "frozen": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming\\huaming-revision-response.json",
+    "sha256": "540dd62666531cefcb2ef7c5343e6e1dd6a115f666a813b345d8352925afd34c"
+  }
+]

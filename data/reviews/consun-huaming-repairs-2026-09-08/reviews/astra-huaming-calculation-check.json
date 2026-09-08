@@ -1,0 +1,190 @@
+{
+  "hashes": [
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming\\reports\\深度分析\\华明装备 深度分析 77 2026-09-08.md",
+      "expected": "bb1ff048ae696374af45c7e27f1f7a2621e86145a35d35180a7fdd5c51f31a90",
+      "actual": "bb1ff048ae696374af45c7e27f1f7a2621e86145a35d35180a7fdd5c51f31a90",
+      "match": true
+    },
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming\\reports\\管理层档案\\华明装备 管理层档案 79 2026-09-08.md",
+      "expected": "7a21f0e78a0383fdf6feb48c0788fa3fa47cd95391f72d48134afc0efceeee59",
+      "actual": "7a21f0e78a0383fdf6feb48c0788fa3fa47cd95391f72d48134afc0efceeee59",
+      "match": true
+    },
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming\\reports\\估值分析\\华明装备 估值分析 2026-09-08.md",
+      "expected": "5e41efea5965e470a03ab0fdfc64a4224dda995d95f6254226a55ba06a35591c",
+      "actual": "5e41efea5965e470a03ab0fdfc64a4224dda995d95f6254226a55ba06a35591c",
+      "match": true
+    },
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming\\company-pages\\华明装备.md",
+      "expected": "fa1a4f2af7313ac9981428e505bcbde90dd1b7879070d51c4a58408394bfa343",
+      "actual": "fa1a4f2af7313ac9981428e505bcbde90dd1b7879070d51c4a58408394bfa343",
+      "match": true
+    },
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming\\huaming-revision-inputs.json",
+      "expected": "3be048dc085e40c5e22ab45658625d57329f7de48aa8e09b440116f3e241e68f",
+      "actual": "3be048dc085e40c5e22ab45658625d57329f7de48aa8e09b440116f3e241e68f",
+      "match": true
+    },
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming\\huaming-recalculate.py",
+      "expected": "d2e21d77356aa6331609f53cb61978db7ce2869105b1110c0f5e511f7aebd918",
+      "actual": "d2e21d77356aa6331609f53cb61978db7ce2869105b1110c0f5e511f7aebd918",
+      "match": true
+    },
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming\\huaming-revision-calculations.json",
+      "expected": "4c228da2d879596c777df81175911eabc466990cb48f1e7ff109b0e4e8106879",
+      "actual": "4c228da2d879596c777df81175911eabc466990cb48f1e7ff109b0e4e8106879",
+      "match": true
+    },
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming\\huaming-revision-response.json",
+      "expected": "540dd62666531cefcb2ef7c5343e6e1dd6a115f666a813b345d8352925afd34c",
+      "actual": "540dd62666531cefcb2ef7c5343e6e1dd6a115f666a813b345d8352925afd34c",
+      "match": true
+    }
+  ],
+  "primary_hashes": [
+    {
+      "path": "财报\\华明装备\\华明装备2025年度报告.pdf",
+      "expected": "9cc125a5dd3ddae732ca2086a03b992a23f176bede735ca29c8fa42c22cbb286",
+      "actual": "9cc125a5dd3ddae732ca2086a03b992a23f176bede735ca29c8fa42c22cbb286",
+      "match": true,
+      "bytes": 2503642
+    },
+    {
+      "path": "财报\\华明装备\\华明装备2026半年度报告.pdf",
+      "expected": "7059088c37d19f02d77bb505f941a6e0f6b06d3a9900ff2007332343e389477b",
+      "actual": "7059088c37d19f02d77bb505f941a6e0f6b06d3a9900ff2007332343e389477b",
+      "match": true,
+      "bytes": 3879884
+    }
+  ],
+  "execution": {
+    "matches_with_tolerance": true,
+    "relative_tolerance": 1e-12,
+    "absolute_tolerance": 1e-08,
+    "tails": [],
+    "result": {
+      "earnings_bridge": {
+        "reported_ttm_attributable_proxy": 731088477.55,
+        "reported_ttm_eps_proxy": 0.8157417233008644,
+        "ttm_recurring_attributable_proxy": 676451410.95,
+        "ttm_recurring_eps_proxy": 0.7547781925750777,
+        "h1_effective_tax_rate": 0.1404178258059067,
+        "fy2025_effective_tax_rate": 0.15159568793283432,
+        "share_payment_policy": "基准EPS保留股份支付经济成本；剔除口径仅作经营趋势诊断",
+        "fy2025_payout_ratio": 0.7702814358004544,
+        "h1_2026_proposed_payout_ratio": 0.5977322318934641
+      },
+      "cash_flow_diagnostic": {
+        "ttm_ocf": 745151437.77,
+        "ttm_cash_long_term_asset_purchases": 98768872.79999998,
+        "ttm_simplified_fcf": 646382564.97,
+        "per_share": 0.7212276539048578,
+        "formal_weight": 0
+      },
+      "other_financing_payments": {
+        "financing_lease_payment": 421905084.21,
+        "lease_principal_and_interest": 14863179.23,
+        "bank_acceptance_deposit": 5000000.0,
+        "h_share_issue_costs": 17598876.97,
+        "total": 459367140.40999997,
+        "lease_related_total": 436768263.44
+      },
+      "valuation": {
+        "pe_value": 16.314834466017288,
+        "ddm_value": 7.001618104409987,
+        "weights": {
+          "pe": 0.8235294117647058,
+          "ddm": 0.17647058823529413,
+          "fcf": 0
+        },
+        "weight_sum": 1.0,
+        "raw_target": 14.671325696321881,
+        "target_price": 14.7,
+        "valuation_certainty": 0.43,
+        "buy_price": 10.88,
+        "deep_discount_boundary": 9.25,
+        "base_scenario_matches_main": true
+      },
+      "scenarios": {
+        "bear": {
+          "inputs": {
+            "eps": 0.74,
+            "pe_multiple": 17.0,
+            "d1": 0.42,
+            "stage1_growth": 0.01,
+            "years": 5,
+            "terminal_growth": 0.01,
+            "cost_of_equity": 0.115
+          },
+          "pe_value": 12.58,
+          "ddm_value": 4.0,
+          "weighted_value": 11.065882352941175
+        },
+        "base": {
+          "inputs": {
+            "eps": 0.8157417233008644,
+            "pe_multiple": 20.0,
+            "d1": 0.5,
+            "stage1_growth": 0.04,
+            "years": 5,
+            "terminal_growth": 0.025,
+            "cost_of_equity": 0.1
+          },
+          "pe_value": 16.314834466017288,
+          "ddm_value": 7.001618104409987,
+          "weighted_value": 14.671325696321881
+        },
+        "bull": {
+          "inputs": {
+            "eps": 0.9,
+            "pe_multiple": 23.0,
+            "d1": 0.56,
+            "stage1_growth": 0.06,
+            "years": 5,
+            "terminal_growth": 0.03,
+            "cost_of_equity": 0.09
+          },
+          "pe_value": 20.7,
+          "ddm_value": 10.319208602705821,
+          "weighted_value": 18.868095635771617
+        }
+      },
+      "h_share_sensitivity": {
+        "issue_5%_price_80%": 14.53159878492834,
+        "issue_5%_price_100%": 14.671325696321881,
+        "issue_5%_price_120%": 14.811052607715423,
+        "issue_10%_price_80%": 14.40457432002512,
+        "issue_10%_price_100%": 14.671325696321881,
+        "issue_10%_price_120%": 14.938077072618642,
+        "issue_15%_price_80%": 14.28859546076566,
+        "issue_15%_price_100%": 14.671325696321881,
+        "issue_15%_price_120%": 15.054055931878104
+      },
+      "scores": {
+        "company": 77,
+        "management": 79,
+        "combined": 156
+      }
+    }
+  },
+  "independent": {
+    "ar_over_one_year_now": 156900195.27,
+    "ar_over_one_year_old": 153441541.14,
+    "ar_over_one_year_change": 3458654.130000025,
+    "ar_over_one_year_growth": 0.022540533054502765,
+    "ar_over_one_year_share_now": 0.14142598507254653,
+    "ar_over_one_year_share_old": 0.2516962949857476,
+    "reported_ttm_profit": 731088477.55,
+    "recurring_ttm_profit": 676451410.95,
+    "ddm_base": 7.001618104409987,
+    "buy": 10.88
+  }
+}

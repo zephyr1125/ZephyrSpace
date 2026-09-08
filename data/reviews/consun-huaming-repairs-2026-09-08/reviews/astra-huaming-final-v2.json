@@ -1,0 +1,291 @@
+{
+  "role": "triplet_review_astra",
+  "stage": "final_incremental_review_v2",
+  "company": "华明装备",
+  "ticker": "002270.SZ",
+  "as_of": "2026-09-08",
+  "review_date": "2026-09-09",
+  "model_record": {
+    "requested_model": "gpt-6-astra",
+    "requested_reasoning_effort": "high",
+    "actual_model": null,
+    "actual_reasoning_effort": null,
+    "runtime_verified": false,
+    "note": "请求路由沿用任务启动时Astra high；当前配置不追溯覆盖，未取得独立运行时模型证据。"
+  },
+  "scope": "唯一待验版本revised-frozen/huaming-final/manifest.json；按本人stage1/stage2及上次final和HF01—HF13定向检查修改处、必要原件及参数联动。未读另一审核意见、source-map或作者当前修订工作稿。",
+  "pass": false,
+  "verdict": "8个冻结哈希、2个原件哈希和安全实际复算通过；原P1事实/固定槽位问题已修。剩余3类P2，无新增P0/P1，无需改变已核正式参数。",
+  "findings": [
+    {
+      "id": "AHFV2-01",
+      "priority": "P2",
+      "location": "深度分析81稿:68、83；管理层80稿:314、322；huaming-revision-response.json HP02、C012/C024/AD-H01及HF02回应",
+      "claim": "固定分值已正确，但部分正文仍把H股条款/资本用途等未知直接写成扣分理由，当前回应还留有旧有效分值及账龄比较基期误称。",
+      "evidence": [
+        "深度68行F13说明仍为家族控制、关联租赁与H股未决压低分数，83行称扣分来自交易条款、发行规模和资本回报尚未形成闭环。HF01/score_bridge明确H股未来条款未知本身不扣分。",
+        "管理322行称扣分来自关键地区、服务收入和资本用途量化仍不足，与314行未知进情景跟踪、不因研究无数据扣透明度及HF管理理由不一致。",
+        "当前回应HP02仍写E子项[5,4,3,2,1]=15，C012/C024/AD-H01仍写17/19/13/12/7/8/3=79；HF01和final_parameters则为81/80。HF02回应的一年以上余额同比+2.254%实际是较2025年末期初变化，报告正文已标对。"
+      ],
+      "impact": "最终81/80算术不受影响，但评分证据归属与当前版本记录冲突，容易恢复被裁决撤销的未知扣分，或使读者误认旧评分仍有效。",
+      "suggestion": "按已核实际历史重组/关联定增、融资纪律与定价制衡证据修正扣分句；地区及未来条款未知只列跟踪和情景。当前回应同步最终分值，或明确旧答复为已被最终裁决替代的历史过程；同比改较期初。不要求改最终分值。",
+      "covered_by": [
+        "HF01",
+        "HF02",
+        "HF07"
+      ]
+    },
+    {
+      "id": "AHFV2-02",
+      "priority": "P2",
+      "location": "估值稿:266—267；公司页:149—150（对照195）",
+      "claim": "精确10.43元在区间符号与文字说明中归属相反。",
+      "evidence": [
+        "估值观察区写10.43至13.70、买入区写8.87至低于10.43，但买入备注称精确10.43归买入。",
+        "公司页同样以10.43–13.70列观察、8.87–<10.43列买入；195行又明确10.43及以下进入买入。HF09要求精确买线归买入。"
+      ],
+      "impact": "恰在机械买线时产生两个操作分类；价格计算本身正确。",
+      "suggestion": "统一观察区10.43<P<=13.70、买入区8.87<=P<=10.43、深折价P<8.87，并同步两页，不改变13.7/.58/10.43/8.87。",
+      "covered_by": [
+        "HF09"
+      ]
+    },
+    {
+      "id": "AHFV2-03",
+      "priority": "P2",
+      "location": "管理层80稿:358—368",
+      "claim": "旧80/返修79/最终80七维桥已补齐，但初稿76仍只有非标准总上限说明，缺裁决要求单列的原始维度、得分及上限。",
+      "evidence": [
+        "358—362行给出可比七维17/20/13/12/7/8/3、17/19/13/12/7/8/3及最终80。",
+        "368行仅说明最初76稿满分103且不可直接映射，不列原始量表。HF04 acceptance明确要求单列原始维度/上限，不只放总分。"
+      ],
+      "impact": "对最终80没有算术异议；从原始76稿到修复量表的审计留痕仍不完整。",
+      "suggestion": "按锁定最初稿原样单列真实维度、得分及上限，标明非标准且不可直接映射到固定七维；不要猜值、强行换算或修改历史报告。",
+      "covered_by": [
+        "HF04"
+      ]
+    }
+  ],
+  "remaining_findings": [
+    {
+      "id": "AHFV2-01",
+      "priority": "P2",
+      "location": "深度分析81稿:68、83；管理层80稿:314、322；huaming-revision-response.json HP02、C012/C024/AD-H01及HF02回应",
+      "claim": "固定分值已正确，但部分正文仍把H股条款/资本用途等未知直接写成扣分理由，当前回应还留有旧有效分值及账龄比较基期误称。",
+      "evidence": [
+        "深度68行F13说明仍为家族控制、关联租赁与H股未决压低分数，83行称扣分来自交易条款、发行规模和资本回报尚未形成闭环。HF01/score_bridge明确H股未来条款未知本身不扣分。",
+        "管理322行称扣分来自关键地区、服务收入和资本用途量化仍不足，与314行未知进情景跟踪、不因研究无数据扣透明度及HF管理理由不一致。",
+        "当前回应HP02仍写E子项[5,4,3,2,1]=15，C012/C024/AD-H01仍写17/19/13/12/7/8/3=79；HF01和final_parameters则为81/80。HF02回应的一年以上余额同比+2.254%实际是较2025年末期初变化，报告正文已标对。"
+      ],
+      "impact": "最终81/80算术不受影响，但评分证据归属与当前版本记录冲突，容易恢复被裁决撤销的未知扣分，或使读者误认旧评分仍有效。",
+      "suggestion": "按已核实际历史重组/关联定增、融资纪律与定价制衡证据修正扣分句；地区及未来条款未知只列跟踪和情景。当前回应同步最终分值，或明确旧答复为已被最终裁决替代的历史过程；同比改较期初。不要求改最终分值。",
+      "covered_by": [
+        "HF01",
+        "HF02",
+        "HF07"
+      ]
+    },
+    {
+      "id": "AHFV2-02",
+      "priority": "P2",
+      "location": "估值稿:266—267；公司页:149—150（对照195）",
+      "claim": "精确10.43元在区间符号与文字说明中归属相反。",
+      "evidence": [
+        "估值观察区写10.43至13.70、买入区写8.87至低于10.43，但买入备注称精确10.43归买入。",
+        "公司页同样以10.43–13.70列观察、8.87–<10.43列买入；195行又明确10.43及以下进入买入。HF09要求精确买线归买入。"
+      ],
+      "impact": "恰在机械买线时产生两个操作分类；价格计算本身正确。",
+      "suggestion": "统一观察区10.43<P<=13.70、买入区8.87<=P<=10.43、深折价P<8.87，并同步两页，不改变13.7/.58/10.43/8.87。",
+      "covered_by": [
+        "HF09"
+      ]
+    },
+    {
+      "id": "AHFV2-03",
+      "priority": "P2",
+      "location": "管理层80稿:358—368",
+      "claim": "旧80/返修79/最终80七维桥已补齐，但初稿76仍只有非标准总上限说明，缺裁决要求单列的原始维度、得分及上限。",
+      "evidence": [
+        "358—362行给出可比七维17/20/13/12/7/8/3、17/19/13/12/7/8/3及最终80。",
+        "368行仅说明最初76稿满分103且不可直接映射，不列原始量表。HF04 acceptance明确要求单列原始维度/上限，不只放总分。"
+      ],
+      "impact": "对最终80没有算术异议；从原始76稿到修复量表的审计留痕仍不完整。",
+      "suggestion": "按锁定最初稿原样单列真实维度、得分及上限，标明非标准且不可直接映射到固定七维；不要猜值、强行换算或修改历史报告。",
+      "covered_by": [
+        "HF04"
+      ]
+    }
+  ],
+  "new_p0_p1": [],
+  "continuing_p1": [],
+  "hf_acceptance": {
+    "HF01": "固定A—F子项上限、名称和证据槽位已恢复，8+16+16+12+16+13=81，管理80；遗留说明见AHFV2-01。",
+    "HF02": "集团贸易应收账龄、毛额-准备=净额正确；一年以上余额较期初+2.254%、占比下降，三应收合计下降5.83%保留。仅回应比较标签见AHFV2-01。",
+    "HF03": "杜邦期末恒等式与两点平均代理/审计加权ROE区分，资产债务商誉原件桥正确；E2现金质量与FCF不可正式定价不再混同。",
+    "HF04": "可比旧80/返修79/最终80七维桥正确；初稿76原始非标准表缺项见AHFV2-03。",
+    "HF05": "正式扣非TTM及SBC经济成本保留正确；官方扣非已含税和少数股东影响，不二扣；原报告EPS只用于敏感性。",
+    "HF06": "十年PE反向回报桥独立复算20倍，g8.440314%是要求兑现的模型判断；与DDM股息g4%未冒称同情景，合理参数差异不列错误。",
+    "HF07": "正式分数、估值、公司页与inputs/计算均81/80、13.7/.58/10.43；回应旧值遗留见AHFV2-01。",
+    "HF08": "六因子均值.583333→.58正确，注明非统计概率及PE/DDM分歧，不因FCF模型限制重复惩罚公司。",
+    "HF09": "三情景、固定g4/gt2.5/n5完整DDM网格、EPS/PE综合敏感性、H股股份与现金双端敏感性均复算一致；精确买线边界见AHFV2-02。",
+    "HF10": "公司页政策表、主要红旗和正文已统一实际国家/主体/设备/交易类别及客户用途覆盖，条件性下行风险，不以未单独点名等于豁免。",
+    "HF11": "9/9检索截至9/8未发现新增重大处罚/减持的限定表述正确；9/3调研不再遗漏，9/29股东会仍未来，.26仍预案。价格与偿债事实分开。",
+    "HF12": "三稿完整主体与历史保留，当前8文件冻结哈希一致；仅审核，未更新公司页、索引或Watchlist。",
+    "HF13": "2025年报37—39页任期、2025总经理接续和换届、取消监事会及职业经历已恢复，不把H1未变动代替长期历史；无需重复加分。"
+  },
+  "previous_findings_closure": [
+    {
+      "id": "AHF-01",
+      "status": "closed",
+      "reason": "集团贸易应收账龄原件105—106页已替代母公司其他应收款190页。"
+    },
+    {
+      "id": "AHF-02",
+      "status": "closed_core_issue_with_P2_text_residual",
+      "reason": "固定F1/F2/F3与C/D子项补齐，分值复核正确；旧扣分理由见AHFV2-01。"
+    },
+    {
+      "id": "AHF-03",
+      "status": "closed",
+      "reason": "公司页EO实际覆盖触发全面同步。"
+    },
+    {
+      "id": "AHF-04",
+      "status": "closed",
+      "reason": "官方年报已披露任期和换届事实恢复。"
+    }
+  ],
+  "calculation_verification": {
+    "actual_main_execution": true,
+    "protection": "先读计算脚本，关闭pyc；main运行时将唯一结果文件Path.write_text拦截到内存并捕获stdout，未写冻结内容。",
+    "matches_frozen": true,
+    "relative_tolerance": 1e-12,
+    "absolute_tolerance": 1e-08,
+    "mismatches": [],
+    "independent": {
+      "formal_ttm_parent": 676451410.95,
+      "formal_eps": 0.7547781925750777,
+      "pe": 15.095563851501554,
+      "ddm": 7.001618104409987,
+      "raw_target": 13.667220484367748,
+      "buy": 10.43,
+      "deep": 8.87,
+      "certainty_raw_mean": 0.5833333333333334,
+      "end_roe_proxy": [
+        0.16191176414466463,
+        0.19404769709463046,
+        0.22587348516638625
+      ],
+      "two_point_average_roe_proxy": [
+        0.1885591120260015,
+        0.2250312738944395
+      ],
+      "pe_return_bridge_at_supplied_growth": 20.000000000000004
+    },
+    "full_check_artifact": "reviews/astra-huaming-final-v2-calculation-check.json"
+  },
+  "accepted_parameters": {
+    "company_score": 81,
+    "management_score": 80,
+    "combined": 161,
+    "formal_ttm_recurring_parent": 676451410.95,
+    "formal_eps": 0.7547781925750777,
+    "pe_multiple": 20,
+    "pe_weight": 0.8235294117647058,
+    "ddm_weight": 0.17647058823529413,
+    "fcf_weight": 0,
+    "d1": 0.5,
+    "raw_target": 13.667220484367748,
+    "target_price": 13.7,
+    "currency": "CNY",
+    "valuation_certainty": 0.58,
+    "buy_price": 10.43,
+    "deep_discount": 8.87,
+    "tier_per_adjudication": "A_CORE",
+    "publication_acceptance_pending": true
+  },
+  "frozen_files": [
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming-final\\reports\\深度分析\\华明装备 深度分析 81 2026-09-08.md",
+      "expected_sha256": "8e73ab72347be7ed80261b3e9c0befd1326b4430431c5b3b93ddcc2c3db988d4",
+      "actual_sha256": "8e73ab72347be7ed80261b3e9c0befd1326b4430431c5b3b93ddcc2c3db988d4",
+      "match": true
+    },
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming-final\\reports\\管理层档案\\华明装备 管理层档案 80 2026-09-08.md",
+      "expected_sha256": "97abf36fbb7a13777e5e68652714ee54c97e830c0de9a06cee54ec0208190b58",
+      "actual_sha256": "97abf36fbb7a13777e5e68652714ee54c97e830c0de9a06cee54ec0208190b58",
+      "match": true
+    },
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming-final\\reports\\估值分析\\华明装备 估值分析 2026-09-08.md",
+      "expected_sha256": "b0179ba419a5a296f94c1dc77a35f1e0da03237961214c013dd89801e456b04c",
+      "actual_sha256": "b0179ba419a5a296f94c1dc77a35f1e0da03237961214c013dd89801e456b04c",
+      "match": true
+    },
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming-final\\company-pages\\华明装备.md",
+      "expected_sha256": "ceb92c101300062adee194a16f9731c1bd5d0aff740c5a12c3e8317e444ed86e",
+      "actual_sha256": "ceb92c101300062adee194a16f9731c1bd5d0aff740c5a12c3e8317e444ed86e",
+      "match": true
+    },
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming-final\\huaming-revision-inputs.json",
+      "expected_sha256": "1993c682fa7bbbefe6039d2532a60f34dd231f2c508e8d0b302291dd6c7b7315",
+      "actual_sha256": "1993c682fa7bbbefe6039d2532a60f34dd231f2c508e8d0b302291dd6c7b7315",
+      "match": true
+    },
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming-final\\huaming-recalculate.py",
+      "expected_sha256": "d077fb05f7dfcda0af77e907cc0910e11fc054382c347316c3f7f5ed6c626dff",
+      "actual_sha256": "d077fb05f7dfcda0af77e907cc0910e11fc054382c347316c3f7f5ed6c626dff",
+      "match": true
+    },
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming-final\\huaming-revision-calculations.json",
+      "expected_sha256": "17de8f416d88cd41e165a839083adab46930872729204465ec1da471415defc6",
+      "actual_sha256": "17de8f416d88cd41e165a839083adab46930872729204465ec1da471415defc6",
+      "match": true
+    },
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming-final\\huaming-revision-response.json",
+      "expected_sha256": "9c5e5e132277577f38a7e6567e15104aeaadcbe9bdbc41b31d8d8ff0e66bdfd3",
+      "actual_sha256": "9c5e5e132277577f38a7e6567e15104aeaadcbe9bdbc41b31d8d8ff0e66bdfd3",
+      "match": true
+    }
+  ],
+  "all_eight_hashes_match": true,
+  "primary_hashes": [
+    {
+      "path": "财报\\华明装备\\华明装备2025年度报告.pdf",
+      "expected_sha256": "9cc125a5dd3ddae732ca2086a03b992a23f176bede735ca29c8fa42c22cbb286",
+      "actual_sha256": "9cc125a5dd3ddae732ca2086a03b992a23f176bede735ca29c8fa42c22cbb286",
+      "match": true
+    },
+    {
+      "path": "财报\\华明装备\\华明装备2026半年度报告.pdf",
+      "expected_sha256": "7059088c37d19f02d77bb505f941a6e0f6b06d3a9900ff2007332343e389477b",
+      "actual_sha256": "7059088c37d19f02d77bb505f941a6e0f6b06d3a9900ff2007332343e389477b",
+      "match": true
+    }
+  ],
+  "all_huaming_primary_hashes_match": true,
+  "stage1_judgment_changes": [
+    "现金/融资和股份支付经济成本边界保持；扣非TTM有官方三期桥后可作透明正常化代理，未视为完整跨周期盈利。",
+    "正确集团账龄显示长账龄绝对额微升、占比下降，修正上次错引母公司表的叙述后，不推定整体信用恶化。",
+    "人员任期和2025换届原件已补，原本因研究遗漏产生的未知缩小；未来继任质量仍未知。",
+    "旧80固定七维与本轮79—80桥已恢复，撤销上次旧七维未获完整对照的未知；初稿76量表留痕仍待AHFV2-03。",
+    "EO仍为实际适用待证的条件性风险；公司页已与报告统一，不声称已禁售。",
+    "接受81/80及13.7/.58基于固定槽位、原件与模型边界，不因估值降低自动认可。"
+  ],
+  "unknowns": [
+    "H股截至日实际发行条款、净募资用途及新增资本回报。",
+    "美国直接与客户间接终端暴露、主管部门措施的实际覆盖；未单独点名不是豁免证据。",
+    "集团简化FCF至归母可分配现金的NCI、租赁利息及营运资金可持续桥，故正式权重0。",
+    "未来股份支付费用、解锁数量和长期继任质量。",
+    "2021/22扩展历史及2023/24精确DPS未在本轮重新全量核证，沿用已核三年核心经营基础。",
+    "检索未命中不等于无治理事件；股东会未来投票及股息执行仍有时点条件。"
+  ],
+  "no_edits_to_reports_company_watchlist": true,
+  "previous_review_preserved": true
+}

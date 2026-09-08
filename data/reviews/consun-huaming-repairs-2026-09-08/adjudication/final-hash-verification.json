@@ -1,0 +1,120 @@
+{
+  "status": "passed",
+  "file_count": 16,
+  "companies": {
+    "consun": {
+      "status": "final_report_closure_approved",
+      "attestation": "adjudication/dual-pass-attestation.json",
+      "attestation_sha256": "d8d5dc706f4cdfb36d012899b6f08d6e7222fdd5c5ace17264c839124d8c1c41",
+      "final_manifest": "revised-frozen/consun-final-v3/manifest.json",
+      "manifest_sha256": "c67a5ea402540c2248ef3e3fb2ae60f4ecf1a5306d96ef91505b007b5c23f9a0",
+      "anonymous_locked_review_sha256": [
+        "60be4e158ce5072715190c08b27bfcf8cabf6176b5be908619a1113ab0026106",
+        "fb6db938d054eefea7e83140c74aa2a090cd4ea832242b9e252dddde8e3144c3"
+      ],
+      "dual_independent_pass": true,
+      "frozen_files_verified": [
+        {
+          "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun-final-v3\\reports\\深度分析\\康臣药业 深度分析 81 2026-09-08.md",
+          "sha256": "7faa1f2f1465306436bdedfabbbc4ee25329f51b57ba035cecb58001df277b5b",
+          "verified": true
+        },
+        {
+          "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun-final-v3\\reports\\管理层档案\\康臣药业 管理层档案 79 2026-09-08.md",
+          "sha256": "0c50077b542b6f73749be800201091ea02568dffe00fe49188e0f8acb4f4594f",
+          "verified": true
+        },
+        {
+          "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun-final-v3\\reports\\估值分析\\康臣药业 估值分析 2026-09-08.md",
+          "sha256": "73007d3aa2895b9af88cac5a6e52adc2620a8b53cee4d0562709632bd2b002d3",
+          "verified": true
+        },
+        {
+          "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun-final-v3\\company-pages\\康臣药业(01681.HK).md",
+          "sha256": "2bd60ade4aa61aba2cd3d9d9421c06ec893b659a86441c44ea32ec88230cb828",
+          "verified": true
+        },
+        {
+          "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun-final-v3\\consun-revision-inputs.json",
+          "sha256": "e36e800bea3fc7cdb04aac46099281f05884b8f6e2b7cc367c6c43baf445e266",
+          "verified": true
+        },
+        {
+          "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun-final-v3\\consun-recalculate.py",
+          "sha256": "848158c9322f3843abe759f73bc752963d6a0b57cb64eed7ec12b0a875bae7c0",
+          "verified": true
+        },
+        {
+          "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun-final-v3\\consun-revision-calculations.json",
+          "sha256": "01c1c8d77058ace9ae8a62d678ac83fa5a1aad73b6cd94d240df8827ae881cd6",
+          "verified": true
+        },
+        {
+          "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun-final-v3\\consun-revision-response.json",
+          "sha256": "d0b4411f3a46da23875542d93598b633d687348ac3685475331b2e11ca3f0d4a",
+          "verified": true
+        }
+      ],
+      "pending_candidates": [],
+      "basis": "主Agent匿名双路通过见证；裁决者逐项验证最终manifest与见证一致、8份文件当前SHA256一致。未读取reviews或source-map。",
+      "authorization": "研究与报告闭环批准，允许主Agent按最终冻结串行发布、更新索引和Watchlist；本裁决不代替主Agent执行发布/校验/同步。"
+    },
+    "huaming": {
+      "status": "final_report_closure_approved",
+      "attestation": "adjudication/dual-pass-attestation.json",
+      "attestation_sha256": "d8d5dc706f4cdfb36d012899b6f08d6e7222fdd5c5ace17264c839124d8c1c41",
+      "final_manifest": "revised-frozen/huaming-final-v4/manifest.json",
+      "manifest_sha256": "9b18dc34dc0e087e09d5449c895104c621d12285586c15d9158e5e2ede14947f",
+      "anonymous_locked_review_sha256": [
+        "182f4f98e27e48d62e8cf4d2b9045d855d94d43549ba7174a9a6781bdfebfa7e",
+        "e2c870359fe53adbd690954712ea1a506e38381aecb396e41c20307faa2d84ef"
+      ],
+      "dual_independent_pass": true,
+      "frozen_files_verified": [
+        {
+          "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming-final-v4\\reports\\深度分析\\华明装备 深度分析 81 2026-09-08.md",
+          "sha256": "4a7857078ecd842094d4bb85b1dcd03c8cdbaf86f0d484ab153da680491f0752",
+          "verified": true
+        },
+        {
+          "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming-final-v4\\reports\\管理层档案\\华明装备 管理层档案 80 2026-09-08.md",
+          "sha256": "aa90b1bbdcd7dc207ee18a5001b89abc15c63257fa551f49e4a6994326818bf2",
+          "verified": true
+        },
+        {
+          "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming-final-v4\\reports\\估值分析\\华明装备 估值分析 2026-09-08.md",
+          "sha256": "fadf47fa1027b6ed3c23857402c1d57deb0c1f4d7b5cf89d9abffbd2c020f1f2",
+          "verified": true
+        },
+        {
+          "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming-final-v4\\company-pages\\华明装备.md",
+          "sha256": "0754991f6993e5d79ace838d1a9d5c60d9f4bffa58c5699bd425d4aa0a6fa684",
+          "verified": true
+        },
+        {
+          "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming-final-v4\\huaming-revision-inputs.json",
+          "sha256": "373b35adea2d244a84e18f419ce5319882836bb39f33e1a874e45d4a82c1763e",
+          "verified": true
+        },
+        {
+          "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming-final-v4\\huaming-recalculate.py",
+          "sha256": "d077fb05f7dfcda0af77e907cc0910e11fc054382c347316c3f7f5ed6c626dff",
+          "verified": true
+        },
+        {
+          "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming-final-v4\\huaming-revision-calculations.json",
+          "sha256": "17de8f416d88cd41e165a839083adab46930872729204465ec1da471415defc6",
+          "verified": true
+        },
+        {
+          "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming-final-v4\\huaming-revision-response.json",
+          "sha256": "a21b203c4981bba3347231dcbeae1c9f988c62310e778089b87387257ed35e23",
+          "verified": true
+        }
+      ],
+      "pending_candidates": [],
+      "basis": "主Agent匿名双路通过见证；裁决者逐项验证最终manifest与见证一致、8份文件当前SHA256一致。未读取reviews或source-map。",
+      "authorization": "研究与报告闭环批准，允许主Agent按最终冻结串行发布、更新索引和Watchlist；本裁决不代替主Agent执行发布/校验/同步。"
+    }
+  }
+}

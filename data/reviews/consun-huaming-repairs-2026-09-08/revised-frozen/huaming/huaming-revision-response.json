@@ -1,0 +1,43 @@
+{
+  "company":"华明装备",
+  "status":"author_revision_ready_for_final_parameter_adjudication",
+  "as_of":"2026-09-08",
+  "proposed_parameters":{"cScore":77,"mScore":79,"target_price":14.7,"valuation_certainty":0.43,"buy_price":10.88,"tier":"B_GROWTH","final_parameters_pending":true},
+  "paths":{
+    "company":"data/reviews/consun-huaming-repairs-2026-09-08/writer/reports/深度分析/华明装备 深度分析 77 2026-09-08.md",
+    "management":"data/reviews/consun-huaming-repairs-2026-09-08/writer/reports/管理层档案/华明装备 管理层档案 79 2026-09-08.md",
+    "valuation":"data/reviews/consun-huaming-repairs-2026-09-08/writer/reports/估值分析/华明装备 估值分析 2026-09-08.md",
+    "company_page":"data/reviews/consun-huaming-repairs-2026-09-08/writer/company-pages/华明装备.md",
+    "inputs":"data/reviews/consun-huaming-repairs-2026-09-08/writer/huaming-revision-inputs.json",
+    "script":"data/reviews/consun-huaming-repairs-2026-09-08/writer/huaming-recalculate.py",
+    "calculations":"data/reviews/consun-huaming-repairs-2026-09-08/writer/huaming-revision-calculations.json"
+  },
+  "responses":[
+    {"id":"HP01","status":"revised_pending_final_adjudication","response":"D1明确为0.50元，第一年直接使用，第二年起增长4%；统一函数得DDM 7.0016181044。"},
+    {"id":"HP02","status":"revised_pending_final_adjudication","response":"E1—E5固定上限[6,5,4,3,2]，评分[5,4,3,2,1]=15，没有越界或为保77移分。"},
+    {"id":"HP03","status":"revised_pending_final_adjudication","response":"集团TTM简化FCF保留诊断、正式0权重；PE/DDM按14/17与3/17归一，不把租赁融资或债务本金当永久经营capex。"},
+    {"id":"HP04","status":"revised_pending_final_adjudication","response":"撤回三年PE中位26.4/P10约22的历史实证断言；20倍改为回报要求判断，披露5%盈利收益率及约6.94%稳定增长要求。"},
+    {"id":"HP05","status":"revised_pending_final_adjudication","response":"三情景集中到inputs；基准直接读取正式参数，脚本加入基准情景=主估值断言。"},
+    {"id":"HP06","status":"revised_pending_final_adjudication","response":"命名报告TTM盈利代理；列FY2025/H1 2025/H1 2026法定归母、扣非、税率和SBC桥；股份支付保留为经济成本。"},
+    {"id":"C008/C030/AD-H02","status":"revised_pending_final_adjudication","response":"法定归母389837789.61；调整集团净利428642604.51/+14.65%，调整归母约4.25亿/+15.26%，不同口径不冲突，不扣诚信。"},
+    {"id":"C009/C027","status":"revised_pending_final_adjudication","response":"恢复2021—2025收入、归母、ROE、OCF；补2023—2025现金长期资产购建、2025完整分红与2026H1预案。"},
+    {"id":"C010/C025","status":"revised_pending_final_adjudication","response":"恢复43.53%控制链、肖日明/肖毅/肖申及杨建琴、雷纯立、夏海晶、朱强职务与持股；未取得的完整任期不虚构。"},
+    {"id":"C011/C029","status":"revised_pending_final_adjudication","response":"H股3月6日已递表尚未发行；当前股本不扣员工持股，不计未发行H股；列发行现金和新增股份同时变化的静态敏感性及其限制。"},
+    {"id":"C012/C024/AD-H01","status":"revised_pending_final_adjudication","response":"管理层七维固定20/25/15/15/10/10/5，17/19/13/12/7/8/3=79；深度B0-B4、E1-E5、F1-F3均按固定上限闭合。"},
+    {"id":"C013/C033","status":"revised_pending_final_adjudication","response":"四项其他筹资付款精确合计459367140.41，租赁两项436768263.44；分类展示，不直接扣成经营FCF。"},
+    {"id":"C014/C032","status":"revised_pending_final_adjudication","response":"三项应收合计下降5.83%，含合同资产下降5.32%；同时披露单项迁移、账龄和未知回款风险，不预设信用恶化。"},
+    {"id":"C015/C031","status":"revised_pending_final_adjudication","response":"并列地区境外收入21.43%与业务直接间接出口4.49亿元/+44.59%/电力设备超40%，明确不可相加；EO触发改为国家、主体、设备或交易类别实际覆盖，直接/间接美国暴露未知。"},
+    {"id":"C026","status":"revised_pending_final_adjudication","response":"六维所有固定子项已恢复，F只按6/6/3计分。"},
+    {"id":"C028","status":"revised_pending_final_adjudication","response":"TTM盈利、D1与20倍回报要求全部可复算；FCF保留有效诊断但0正式权重，目标价明确为作者建议、待最终裁决。"},
+    {"id":"H1","status":"revised_pending_final_adjudication","response":"统一D1时点并由同一函数计算。"},
+    {"id":"H2","status":"revised_pending_final_adjudication","response":"正式权重PE14/17、DDM3/17，合计100%；旧算术可复现但旧标题/权重口径问题不混淆。"},
+    {"id":"H3","status":"revised_pending_final_adjudication","response":"撤销缺证逆向DCF正式叙述；不再用硬编码60%分配和终值倍数支撑结论。"},
+    {"id":"H4","status":"revised_pending_final_adjudication","response":"H1现金长期资产购建43199328.05元原件桥已纳入，FCF正式0权重。"},
+    {"id":"H5","status":"revised_pending_final_adjudication","response":"4.5936714041亿元定义为四项其他筹资付款总额；租赁两项4.3676826344亿元。"},
+    {"id":"H6","status":"revised_pending_final_adjudication","response":"公司77、管理层79由固定量表闭合，未锁旧75/76。"},
+    {"id":"H7","status":"revised_pending_final_adjudication","response":"EO 14420维持条件性下行风险，以类别实际覆盖为触发器，不写已禁售或无风险。"},
+    {"id":"H8","status":"revised_pending_final_adjudication","response":"全文当前机器结论统一77/79、14.7/0.43/10.88；撤回无样本历史PE断言，境外两口径分开。"},
+    {"id":"H9","status":"revised_pending_final_adjudication","response":"建议公司页全页以分接开关及生命周期服务重写，清除储油柜、散热器、套管、光电军品及旧行情/财务/分红污染；删除虚构主题链接。"}
+  ],
+  "old_content_retention_check":{"status":"passed_pending_final_adjudication","retained":["2021—2025 ROE与OCF","H股已递表事项","280人员工持股、回购成本和具名管理层","多年战略兑现与出口数据","2025完整分红及2026H1预案","分接开关主业与服务化历史"],"principle":"初稿漏读不计为公司未披露；旧稿有效内容经稳定原件复核后恢复。"}
+}

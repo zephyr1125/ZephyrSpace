@@ -1,0 +1,135 @@
+{
+  "reviewer_role": "triplet_review_astra",
+  "company": "康臣药业",
+  "ticker": "01681.HK",
+  "as_of": "2026-09-08",
+  "review_date": "2026-09-09",
+  "model_record": {
+    "requested_model": "gpt-6-astra",
+    "requested_reasoning_effort": "high",
+    "actual_model": null,
+    "actual_reasoning_effort": null,
+    "runtime_verified": false,
+    "note": "已运行任务沿用原 high 请求记录；后来 medium/low 配置不追溯覆盖。"
+  },
+  "scope": "只验 consun-final-v3 对 consun-final 的管理层单文件增量及全部8文件哈希；不重算未变模型、不全量重读；继承自己v2已通过内容。",
+  "pass": true,
+  "verdict": "本轮两处未知扣分文字已修复，CF04及此前唯一残留ACF2-01关闭；定向复验通过。",
+  "remaining_findings": [],
+  "new_p0_p1": [],
+  "incremental_verification": {
+    "changed_files": [
+      "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun-final-v3\\reports\\管理层档案\\康臣药业 管理层档案 79 2026-09-08.md"
+    ],
+    "unchanged_file_count": 7,
+    "substantive_changes": [
+      {
+        "line": 192,
+        "text": "- 扣分来自大额金融资产机会成本、资本承诺及已投入资本尚未证明持续回报；华茂后续会计确认未知只作跟踪，不构成扣分。",
+        "judgment": "明确华茂后续会计确认未知只跟踪且不扣分。资本回报尚未验证仍属独立配置评价，没有把未知变成已发生损失。"
+      },
+      {
+        "line": 209,
+        "text": "- 华茂后续会计确认需要跨期跟踪，但该未知不列为股东友好负面。",
+        "judgment": "明确排除该未知作为股东友好负面。虽仍置于负面信号段下，句义为排除说明，没有新反向扣分；不据段落位置重复制造纯风格问题。"
+      }
+    ],
+    "other_change": "仅文末新增空行。",
+    "introduces_conflicting_new_claim": false
+  },
+  "closure": {
+    "CF04": "closed",
+    "ACF-02": "closed",
+    "ACF2-01": "closed",
+    "other_CF_items": "继承reviews/astra-consun-final-v2.json的CF01–CF03、CF05–CF10通过判断。"
+  },
+  "inherited_verification": {
+    "source": "reviews/astra-consun-final-v2.json",
+    "calculation_run_this_pass": false,
+    "reason": "输入、计算脚本、计算结果及其余6文件中的相关内容哈希与v2相同；v2实际执行与独立计算通过。",
+    "primary_hash_check_inherited": true,
+    "parameters": {
+      "cScore": 81,
+      "mScore": 79,
+      "target_price": 14.8,
+      "valuation_certainty": 0.6,
+      "buy_price": 11.31,
+      "deep_discount_boundary": 9.61
+    }
+  },
+  "unknowns_inherited": [
+    "华茂截止日完成与支付、联营确认仍待闭合。",
+    "集团金融资产的归母/NCI归属和最低经营现金仍未知。",
+    "H1现金资本开支、2023 OCF和完整平均资产杜邦序列仍未闭合。",
+    "未来有效税率、分红与增长、客户集中和集采后续路径不确定。",
+    "主 Agent 完整性、红线和落库条件独立适用。"
+  ],
+  "all_eight_hashes_match": true,
+  "frozen_files": [
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun-final-v3\\reports\\深度分析\\康臣药业 深度分析 81 2026-09-08.md",
+      "expected_sha256": "7faa1f2f1465306436bdedfabbbc4ee25329f51b57ba035cecb58001df277b5b",
+      "actual_sha256": "7faa1f2f1465306436bdedfabbbc4ee25329f51b57ba035cecb58001df277b5b",
+      "match": true,
+      "previous_sha256": "7faa1f2f1465306436bdedfabbbc4ee25329f51b57ba035cecb58001df277b5b",
+      "unchanged_from_v2": true
+    },
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun-final-v3\\reports\\管理层档案\\康臣药业 管理层档案 79 2026-09-08.md",
+      "expected_sha256": "0c50077b542b6f73749be800201091ea02568dffe00fe49188e0f8acb4f4594f",
+      "actual_sha256": "0c50077b542b6f73749be800201091ea02568dffe00fe49188e0f8acb4f4594f",
+      "match": true,
+      "previous_sha256": "84ed21616ada05f0f3c134e3e1695ccfd88ec820f6a7967a408e6d3436b8f0ca",
+      "unchanged_from_v2": false
+    },
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun-final-v3\\reports\\估值分析\\康臣药业 估值分析 2026-09-08.md",
+      "expected_sha256": "73007d3aa2895b9af88cac5a6e52adc2620a8b53cee4d0562709632bd2b002d3",
+      "actual_sha256": "73007d3aa2895b9af88cac5a6e52adc2620a8b53cee4d0562709632bd2b002d3",
+      "match": true,
+      "previous_sha256": "73007d3aa2895b9af88cac5a6e52adc2620a8b53cee4d0562709632bd2b002d3",
+      "unchanged_from_v2": true
+    },
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun-final-v3\\company-pages\\康臣药业(01681.HK).md",
+      "expected_sha256": "2bd60ade4aa61aba2cd3d9d9421c06ec893b659a86441c44ea32ec88230cb828",
+      "actual_sha256": "2bd60ade4aa61aba2cd3d9d9421c06ec893b659a86441c44ea32ec88230cb828",
+      "match": true,
+      "previous_sha256": "2bd60ade4aa61aba2cd3d9d9421c06ec893b659a86441c44ea32ec88230cb828",
+      "unchanged_from_v2": true
+    },
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun-final-v3\\consun-revision-inputs.json",
+      "expected_sha256": "e36e800bea3fc7cdb04aac46099281f05884b8f6e2b7cc367c6c43baf445e266",
+      "actual_sha256": "e36e800bea3fc7cdb04aac46099281f05884b8f6e2b7cc367c6c43baf445e266",
+      "match": true,
+      "previous_sha256": "e36e800bea3fc7cdb04aac46099281f05884b8f6e2b7cc367c6c43baf445e266",
+      "unchanged_from_v2": true
+    },
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun-final-v3\\consun-recalculate.py",
+      "expected_sha256": "848158c9322f3843abe759f73bc752963d6a0b57cb64eed7ec12b0a875bae7c0",
+      "actual_sha256": "848158c9322f3843abe759f73bc752963d6a0b57cb64eed7ec12b0a875bae7c0",
+      "match": true,
+      "previous_sha256": "848158c9322f3843abe759f73bc752963d6a0b57cb64eed7ec12b0a875bae7c0",
+      "unchanged_from_v2": true
+    },
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun-final-v3\\consun-revision-calculations.json",
+      "expected_sha256": "01c1c8d77058ace9ae8a62d678ac83fa5a1aad73b6cd94d240df8827ae881cd6",
+      "actual_sha256": "01c1c8d77058ace9ae8a62d678ac83fa5a1aad73b6cd94d240df8827ae881cd6",
+      "match": true,
+      "previous_sha256": "01c1c8d77058ace9ae8a62d678ac83fa5a1aad73b6cd94d240df8827ae881cd6",
+      "unchanged_from_v2": true
+    },
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun-final-v3\\consun-revision-response.json",
+      "expected_sha256": "d0b4411f3a46da23875542d93598b633d687348ac3685475331b2e11ca3f0d4a",
+      "actual_sha256": "d0b4411f3a46da23875542d93598b633d687348ac3685475331b2e11ca3f0d4a",
+      "match": true,
+      "previous_sha256": "d0b4411f3a46da23875542d93598b633d687348ac3685475331b2e11ca3f0d4a",
+      "unchanged_from_v2": true
+    }
+  ],
+  "boundary": "通过限于研究报告定向复验；不替代主Agent最终完整性、红线及Watchlist串行写入检查。历史复验记录保留，未修改冻结稿、公司页、Watchlist。"
+}

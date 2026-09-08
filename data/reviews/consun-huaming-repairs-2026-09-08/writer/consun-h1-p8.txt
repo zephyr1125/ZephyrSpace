@@ -1,0 +1,56 @@
+          The measure used for reporting segment profit is gross profit. The Group’s senior executive management
+          is provided with segment information concerning segment revenue and gross profit.
+
+          Segment assets include all tangible, intangible assets and current assets with the exception of interests in
+          associates, financial asset measured at FVPL and deferred tax assets. Segment liabilities include trade and
+          other payables, lease liabilities and deferred income attributable to the manufacturing and sales activities
+          of the individual segments and bank loans managed directly by the segments with the exception of current
+          taxation and deferred tax liabilities.
+
+    (c)   Reconciliations of reportable segment profit
+
+                                                                                           For the six months
+                                                                                             ended 30 June
+                                                                                              2026            2025
+                                                                                          RMB ’000       RMB ’000
+
+          Reportable segment gross profit                                                  1,452,086       1,210,234
+          Elimination of inter-segment profits                                                   (18)         (1,553)
+
+          Reportable segment gross profit derived from
+            the Group’s external customers                                                 1,452,068       1,208,681
+          Other income                                                                        47,913          23,618
+          Distribution costs                                                                (555,808)       (515,650)
+          Administrative expenses                                                           (241,010)       (177,573)
+          Recognition of impairment loss on trade and other
+            receivables                                                                       (1,601)            (607)
+          Finance costs                                                                       (2,688)          (2,468)
+          Share of losses of associates                                                         (535)            (763)
+
+          Consolidated profit before taxation                                               698,339          535,238
+
+
+4   OTHER INCOME
+
+                                                                                           For the six months
+                                                                                             ended 30 June
+                                                                                              2026            2025
+                                                                                          RMB ’000       RMB ’000
+
+    Government grants
+      – Unconditional subsidies                                                                7,854            2,294
+      – Conditional subsidies                                                                    775            1,011
+    Rental income from investment property                                                       319              354
+    Interest income                                                                           40,712           43,067
+    Loss on disposal of property, plant and equipment                                         (1,181)            (351)
+    Net exchange losses                                                                       (1,636)         (19,033)
+    Net gain on financial assets at FVPL                                                       7,369                –
+    Others                                                                                    (6,299)          (3,724)
+
+                                                                                              47,913           23,618
+
+
+
+
+                                                        8
+

@@ -1,0 +1,228 @@
+{
+  "company": "华明装备",
+  "status": "author_final_parameter_revision_ready_for_targeted_revalidation",
+  "as_of": "2026-09-08",
+  "paths": {
+    "company": "data/reviews/consun-huaming-repairs-2026-09-08/writer/reports/深度分析/华明装备 深度分析 81 2026-09-08.md",
+    "management": "data/reviews/consun-huaming-repairs-2026-09-08/writer/reports/管理层档案/华明装备 管理层档案 80 2026-09-08.md",
+    "valuation": "data/reviews/consun-huaming-repairs-2026-09-08/writer/reports/估值分析/华明装备 估值分析 2026-09-08.md",
+    "company_page": "data/reviews/consun-huaming-repairs-2026-09-08/writer/company-pages/华明装备.md",
+    "inputs": "data/reviews/consun-huaming-repairs-2026-09-08/writer/huaming-revision-inputs.json",
+    "script": "data/reviews/consun-huaming-repairs-2026-09-08/writer/huaming-recalculate.py",
+    "calculations": "data/reviews/consun-huaming-repairs-2026-09-08/writer/huaming-revision-calculations.json"
+  },
+  "responses": [
+    {
+      "id": "HP01",
+      "status": "revised_pending_targeted_revalidation",
+      "response": "D1明确为0.50元，第一年直接使用，第二年起增长4%；统一函数得DDM 7.0016181044。"
+    },
+    {
+      "id": "HP02",
+      "status": "revised_pending_targeted_revalidation",
+      "response": "E1—E5固定上限[6,5,4,3,2]，评分[5,4,3,2,1]=15，没有越界或为保77移分。"
+    },
+    {
+      "id": "HP03",
+      "status": "revised_pending_targeted_revalidation",
+      "response": "集团TTM简化FCF保留诊断、正式0权重；PE/DDM按14/17与3/17归一，不把租赁融资或债务本金当永久经营capex。"
+    },
+    {
+      "id": "HP04",
+      "status": "revised_pending_targeted_revalidation",
+      "response": "撤回三年PE中位26.4/P10约22的历史实证断言；20倍改为回报要求判断，以分配66.2446%、Ke10%、十年终值16倍建立有限期桥，需盈利年增8.440314%；Gordon 6.473356%仅作尾部诊断。"
+    },
+    {
+      "id": "HP05",
+      "status": "revised_pending_targeted_revalidation",
+      "response": "三情景集中到inputs；基准直接读取正式参数，脚本加入基准情景=主估值断言。"
+    },
+    {
+      "id": "HP06",
+      "status": "revised_pending_targeted_revalidation",
+      "response": "命名报告TTM盈利代理；列FY2025/H1 2025/H1 2026法定归母、扣非、税率和SBC桥；股份支付保留为经济成本。"
+    },
+    {
+      "id": "C008/C030/AD-H02",
+      "status": "revised_pending_targeted_revalidation",
+      "response": "法定归母389837789.61；调整集团净利428642604.51/+14.65%，调整归母约4.25亿/+15.26%，不同口径不冲突，不扣诚信。"
+    },
+    {
+      "id": "C009/C027",
+      "status": "revised_pending_targeted_revalidation",
+      "response": "恢复2021—2025收入、归母、ROE、OCF；补2023—2025现金长期资产购建、2025完整分红与2026H1预案。"
+    },
+    {
+      "id": "C010/C025",
+      "status": "revised_pending_targeted_revalidation",
+      "response": "恢复43.53%控制链、肖日明/肖毅/肖申及杨建琴、雷纯立、夏海晶、朱强职务与持股；未取得的完整任期不虚构。"
+    },
+    {
+      "id": "C011/C029",
+      "status": "revised_pending_targeted_revalidation",
+      "response": "H股3月6日已递表尚未发行；当前股本不扣员工持股，不计未发行H股；列发行现金和新增股份同时变化的静态敏感性及其限制。"
+    },
+    {
+      "id": "C012/C024/AD-H01",
+      "status": "revised_pending_targeted_revalidation",
+      "response": "管理层七维固定20/25/15/15/10/10/5，17/19/13/12/7/8/3=79；深度B0-B4、E1-E5、F1-F3均按固定上限闭合。"
+    },
+    {
+      "id": "C013/C033",
+      "status": "revised_pending_targeted_revalidation",
+      "response": "四项其他筹资付款精确合计459367140.41，租赁两项436768263.44；分类展示，不直接扣成经营FCF。"
+    },
+    {
+      "id": "C014/C032",
+      "status": "revised_pending_targeted_revalidation",
+      "response": "三项应收合计下降5.83%，含合同资产下降5.32%；同时披露单项迁移、账龄和未知回款风险，不预设信用恶化。"
+    },
+    {
+      "id": "C015/C031",
+      "status": "revised_pending_targeted_revalidation",
+      "response": "并列地区境外收入21.43%与业务直接间接出口4.49亿元/+44.59%/电力设备超40%，明确不可相加；EO触发改为国家、主体、设备或交易类别实际覆盖，直接/间接美国暴露未知。"
+    },
+    {
+      "id": "C026",
+      "status": "revised_pending_targeted_revalidation",
+      "response": "六维所有固定子项已恢复，F只按6/6/3计分。"
+    },
+    {
+      "id": "C028",
+      "status": "revised_pending_targeted_revalidation",
+      "response": "TTM盈利、D1与20倍回报要求全部可复算；FCF保留有效诊断但0正式权重，正式目标价13.7元。"
+    },
+    {
+      "id": "H1",
+      "status": "revised_pending_targeted_revalidation",
+      "response": "统一D1时点并由同一函数计算。"
+    },
+    {
+      "id": "H2",
+      "status": "revised_pending_targeted_revalidation",
+      "response": "正式权重PE14/17、DDM3/17，合计100%；旧算术可复现但旧标题/权重口径问题不混淆。"
+    },
+    {
+      "id": "H3",
+      "status": "revised_pending_targeted_revalidation",
+      "response": "撤销缺证逆向DCF正式叙述；不再用硬编码60%分配和终值倍数支撑结论。"
+    },
+    {
+      "id": "H4",
+      "status": "revised_pending_targeted_revalidation",
+      "response": "H1现金长期资产购建43199328.05元原件桥已纳入，FCF正式0权重。"
+    },
+    {
+      "id": "H5",
+      "status": "revised_pending_targeted_revalidation",
+      "response": "4.5936714041亿元定义为四项其他筹资付款总额；租赁两项4.3676826344亿元。"
+    },
+    {
+      "id": "H6",
+      "status": "revised_pending_targeted_revalidation",
+      "response": "公司81、管理层80由固定量表闭合，未锁旧75/76。"
+    },
+    {
+      "id": "H7",
+      "status": "revised_pending_targeted_revalidation",
+      "response": "EO 14420维持条件性下行风险，以类别实际覆盖为触发器，不写已禁售或无风险。"
+    },
+    {
+      "id": "H8",
+      "status": "revised_pending_targeted_revalidation",
+      "response": "全文当前机器结论统一81/80、13.7/0.58/10.43；撤回无样本历史PE断言，境外两口径分开。"
+    },
+    {
+      "id": "H9",
+      "status": "revised_pending_targeted_revalidation",
+      "response": "建议公司页全页以分接开关及生命周期服务重写，清除储油柜、散热器、套管、光电军品及旧行情/财务/分红污染；删除虚构主题链接。"
+    },
+    {
+      "id": "HF01",
+      "status": "revised_pending_targeted_revalidation",
+      "response": "深度A/B/C/D/E/F固定子项3+2+3、2+3+2+5+4、6+3+7、4+4+2+2、5+5+3+2+1、6+5+2闭合81；管理17/20/13/12/7/8/3闭合80。"
+    },
+    {
+      "id": "HF02",
+      "status": "revised_pending_targeted_revalidation",
+      "response": "集团账龄改用PDF105—106页：一年以上原值1.569002亿元，同比+2.254%、占比降至14.143%；删除母公司其他应收款误用及与原值方向相反的旧判断。"
+    },
+    {
+      "id": "HF03",
+      "status": "revised_pending_targeted_revalidation",
+      "response": "补2023—2025期末杜邦恒等式及2024/25两点平均代理，明确不冒充集团或加权ROE；补H1资产、权益、债务、现金、商誉桥。"
+    },
+    {
+      "id": "HF04",
+      "status": "revised_pending_targeted_revalidation",
+      "response": "旧80固定七维与最终80逐项相同；返修79仅资本配置19。最初76为103满分非标准量表，明确不可直接映射。"
+    },
+    {
+      "id": "HF05",
+      "status": "revised_pending_targeted_revalidation",
+      "response": "正式PE采用官方扣非TTM归母676451410.95/EPS0.7547781926，已含税与NCI且保留SBC；报告EPS0.8157417仅敏感性。"
+    },
+    {
+      "id": "HF06",
+      "status": "revised_pending_targeted_revalidation",
+      "response": "20倍以分配66.2446%、Ke10%、十年终值16倍建立有限期桥，需盈利年增8.440314%；Gordon 6.473356%仅尾部诊断。"
+    },
+    {
+      "id": "HF07",
+      "status": "revised_pending_targeted_revalidation",
+      "response": "全文唯一参数81/80、13.7元、0.58、10.43元、A_CORE；PE/DDM仍14/17和3/17，FCF0。"
+    },
+    {
+      "id": "HF08",
+      "status": "revised_pending_targeted_revalidation",
+      "response": "确定性六项0.75/0.35/0.70/0.65/0.45/0.60等权均值0.5833，取0.58；不重复惩罚研究模型缺口。"
+    },
+    {
+      "id": "HF09",
+      "status": "revised_pending_targeted_revalidation",
+      "response": "主估值13.66722048与基准情景一致；重算固定DDM网格、EPS/PE综合敏感性、H股表和13.70/10.43/8.87价格区。"
+    },
+    {
+      "id": "HF10",
+      "status": "revised_pending_targeted_revalidation",
+      "response": "公司页EO统一为国家、主体、设备、交易类别或执行认定实际覆盖产品/终端用途的条件性下行风险；清除指定名单触发和中性措辞。"
+    },
+    {
+      "id": "HF11",
+      "status": "revised_pending_targeted_revalidation",
+      "response": "治理表述改为9月9日检索覆盖至9月8日未发现新增重大处罚/减持实质线索；保留9月3日调研和9月29日股东会未来状态。"
+    },
+    {
+      "id": "HF12",
+      "status": "revised_pending_targeted_revalidation",
+      "response": "保留三份完整报告结构并新建81/80文件名；历史报告不改。"
+    },
+    {
+      "id": "HF13",
+      "status": "revised_pending_targeted_revalidation",
+      "response": "补肖毅、杨建琴、陆维力、雷纯立、夏海晶、朱强等任期，2025董事/独董换届、取消监事会及杨建琴内部培养路径。"
+    }
+  ],
+  "old_content_retention_check": {
+    "status": "passed_pending_targeted_revalidation",
+    "retained": [
+      "2021—2025 ROE与OCF",
+      "H股已递表事项",
+      "280人员工持股、回购成本和具名管理层",
+      "多年战略兑现与出口数据",
+      "2025完整分红及2026H1预案",
+      "分接开关主业与服务化历史"
+    ],
+    "principle": "初稿漏读不计为公司未披露；旧稿有效内容经稳定原件复核后恢复。"
+  },
+  "final_parameters": {
+    "cScore": 81,
+    "mScore": 80,
+    "target_price": 13.7,
+    "valuation_certainty": 0.58,
+    "buy_price": 10.43,
+    "tier": "A_CORE",
+    "ready_for_watchlist": false
+  }
+}
+

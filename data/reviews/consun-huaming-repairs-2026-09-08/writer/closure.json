@@ -1,0 +1,530 @@
+{
+  "as_of": "2026-09-08",
+  "stage": "all_items_validated_closed_and_published",
+  "items": [
+    {
+      "id": "K1",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "现金SOTP正式0权重，正式方法权重合计100%。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/reports/估值分析/康臣药业 估值分析 2026-09-08.md#二、估值方法与权重"
+      ]
+    },
+    {
+      "id": "K2",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "PPE会计新增不作现金capex；FCF正式0权重。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/reports/估值分析/康臣药业 估值分析 2026-09-08.md#六、现金与FCF诊断"
+      ]
+    },
+    {
+      "id": "K3",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "74.8%只称肾科产品线占比，尿毒清单品未知。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/reports/深度分析/康臣药业 深度分析 81 2026-09-08.md#B1-业务全景"
+      ]
+    },
+    {
+      "id": "K4",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "仅零负债/可分配净现金误用成立；48.15325亿元现金类与含Level3的48.58082亿元均保留并闭合0.42757亿元差额。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/reports/估值分析/康臣药业 估值分析 2026-09-08.md#六、现金与FCF诊断"
+      ]
+    },
+    {
+      "id": "K5",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "公司固定六维评分闭合81。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/reports/深度分析/康臣药业 深度分析 81 2026-09-08.md#综合评分汇总"
+      ]
+    },
+    {
+      "id": "K6",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "年龄、控制结构、ROE及陈玉君职务边界按原件纠正。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/reports/管理层档案/康臣药业 管理层档案 79 2026-09-08.md#一、管理层画像"
+      ]
+    },
+    {
+      "id": "K7",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "统一14.80/11.31/9.61互斥价格区，删除无组合依据仓位口号。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/reports/估值分析/康臣药业 估值分析 2026-09-08.md#九、机械买入价与价格分区"
+      ]
+    },
+    {
+      "id": "CF01",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "按consun-final-decision CF01完成并经康臣v3双路定向复验通过。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/consun-revision-response.json"
+      ]
+    },
+    {
+      "id": "CF02",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "按consun-final-decision CF02完成并经康臣v3双路定向复验通过。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/consun-revision-response.json"
+      ]
+    },
+    {
+      "id": "CF03",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "按consun-final-decision CF03完成并经康臣v3双路定向复验通过。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/consun-revision-response.json"
+      ]
+    },
+    {
+      "id": "CF04",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "按consun-final-decision CF04完成并经康臣v3双路定向复验通过。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/consun-revision-response.json"
+      ]
+    },
+    {
+      "id": "CF05",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "按consun-final-decision CF05完成并经康臣v3双路定向复验通过。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/consun-revision-response.json"
+      ]
+    },
+    {
+      "id": "CF06",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "按consun-final-decision CF06完成并经康臣v3双路定向复验通过。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/consun-revision-response.json"
+      ]
+    },
+    {
+      "id": "CF07",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "按consun-final-decision CF07完成并经康臣v3双路定向复验通过。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/consun-revision-response.json"
+      ]
+    },
+    {
+      "id": "CF08",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "按consun-final-decision CF08完成并经康臣v3双路定向复验通过。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/consun-revision-response.json"
+      ]
+    },
+    {
+      "id": "CF09",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "按consun-final-decision CF09完成并经康臣v3双路定向复验通过。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/consun-revision-response.json"
+      ]
+    },
+    {
+      "id": "CF10",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "按consun-final-decision CF10完成并经康臣v3双路定向复验通过。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/consun-revision-response.json"
+      ]
+    },
+    {
+      "id": "H1",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "D1=.50时点修复，同一函数DDM=7.001618。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/reports/估值分析/华明装备 估值分析 2026-09-08.md#四、DDM"
+      ]
+    },
+    {
+      "id": "H2",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "PE/DDM按14/17与3/17归一，权重闭合100%。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/reports/估值分析/华明装备 估值分析 2026-09-08.md#一、估值结论"
+      ]
+    },
+    {
+      "id": "H3",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "撤回缺证逆向DCF正式叙述，不以硬编码增长要求支撑目标。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/reports/估值分析/华明装备 估值分析 2026-09-08.md#三、PE估值"
+      ]
+    },
+    {
+      "id": "H4",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "现金长期资产购建逐期桥接，集团简化FCF正式0权重。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/reports/估值分析/华明装备 估值分析 2026-09-08.md#五、集团简化FCF诊断"
+      ]
+    },
+    {
+      "id": "H5",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "四项其他筹资付款与两项租赁付款精确区分。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/reports/估值分析/华明装备 估值分析 2026-09-08.md#六、融资现金流与H股"
+      ]
+    },
+    {
+      "id": "H6",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "公司81、管理层80按固定量表闭合；最终参数已选定，待定向复验。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/huaming-revision-response.json"
+      ]
+    },
+    {
+      "id": "H7",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "EO14420保持类别覆盖触发的条件性风险，美国直接及间接暴露未知。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/reports/深度分析/华明装备 深度分析 81 2026-09-08.md#EO-14420适用边界"
+      ]
+    },
+    {
+      "id": "H8",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "全文统一81/80、13.7/0.58/10.43与A_CORE；待定向复验。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/delivery.json"
+      ]
+    },
+    {
+      "id": "H9",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "建议公司页全页恢复分接开关主营，清除业务、行情、分红及旧结论污染并删除虚构主题链接。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/company-pages/华明装备.md"
+      ]
+    },
+    {
+      "id": "HP01",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "已按huaming-preflight-decision HP01执行；待最终参数裁决与定向复验。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/huaming-revision-response.json"
+      ]
+    },
+    {
+      "id": "HP02",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "已按huaming-preflight-decision HP02执行；待最终参数裁决与定向复验。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/huaming-revision-response.json"
+      ]
+    },
+    {
+      "id": "HP03",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "已按huaming-preflight-decision HP03执行；待最终参数裁决与定向复验。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/huaming-revision-response.json"
+      ]
+    },
+    {
+      "id": "HP04",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "已按huaming-preflight-decision HP04执行；待最终参数裁决与定向复验。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/huaming-revision-response.json"
+      ]
+    },
+    {
+      "id": "HP05",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "已按huaming-preflight-decision HP05执行；待最终参数裁决与定向复验。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/huaming-revision-response.json"
+      ]
+    },
+    {
+      "id": "HP06",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "已按huaming-preflight-decision HP06执行；待最终参数裁决与定向复验。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/huaming-revision-response.json"
+      ]
+    },
+    {
+      "id": "C008",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "已按huaming-decision C008逐项返修；具体事实桥与边界见华明逐项回应。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/huaming-revision-response.json"
+      ]
+    },
+    {
+      "id": "C009",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "已按huaming-decision C009逐项返修；具体事实桥与边界见华明逐项回应。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/huaming-revision-response.json"
+      ]
+    },
+    {
+      "id": "C010",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "已按huaming-decision C010逐项返修；具体事实桥与边界见华明逐项回应。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/huaming-revision-response.json"
+      ]
+    },
+    {
+      "id": "C011",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "已按huaming-decision C011逐项返修；具体事实桥与边界见华明逐项回应。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/huaming-revision-response.json"
+      ]
+    },
+    {
+      "id": "C012",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "已按huaming-decision C012逐项返修；具体事实桥与边界见华明逐项回应。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/huaming-revision-response.json"
+      ]
+    },
+    {
+      "id": "C013",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "已按huaming-decision C013逐项返修；具体事实桥与边界见华明逐项回应。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/huaming-revision-response.json"
+      ]
+    },
+    {
+      "id": "C014",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "已按huaming-decision C014逐项返修；具体事实桥与边界见华明逐项回应。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/huaming-revision-response.json"
+      ]
+    },
+    {
+      "id": "C015",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "已按huaming-decision C015逐项返修；具体事实桥与边界见华明逐项回应。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/huaming-revision-response.json"
+      ]
+    },
+    {
+      "id": "C024",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "已按huaming-decision C024逐项返修；具体事实桥与边界见华明逐项回应。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/huaming-revision-response.json"
+      ]
+    },
+    {
+      "id": "C025",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "已按huaming-decision C025逐项返修；具体事实桥与边界见华明逐项回应。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/huaming-revision-response.json"
+      ]
+    },
+    {
+      "id": "C026",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "已按huaming-decision C026逐项返修；具体事实桥与边界见华明逐项回应。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/huaming-revision-response.json"
+      ]
+    },
+    {
+      "id": "C027",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "已按huaming-decision C027逐项返修；具体事实桥与边界见华明逐项回应。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/huaming-revision-response.json"
+      ]
+    },
+    {
+      "id": "C028",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "已按huaming-decision C028逐项返修；具体事实桥与边界见华明逐项回应。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/huaming-revision-response.json"
+      ]
+    },
+    {
+      "id": "C029",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "已按huaming-decision C029逐项返修；具体事实桥与边界见华明逐项回应。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/huaming-revision-response.json"
+      ]
+    },
+    {
+      "id": "C030",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "已按huaming-decision C030逐项返修；具体事实桥与边界见华明逐项回应。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/huaming-revision-response.json"
+      ]
+    },
+    {
+      "id": "C031",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "已按huaming-decision C031逐项返修；具体事实桥与边界见华明逐项回应。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/huaming-revision-response.json"
+      ]
+    },
+    {
+      "id": "C032",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "已按huaming-decision C032逐项返修；具体事实桥与边界见华明逐项回应。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/huaming-revision-response.json"
+      ]
+    },
+    {
+      "id": "C033",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "已按huaming-decision C033逐项返修；具体事实桥与边界见华明逐项回应。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/huaming-revision-response.json"
+      ]
+    },
+    {
+      "id": "AD-H01",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "已按huaming-decision AD-H01逐项返修；具体事实桥与边界见华明逐项回应。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/huaming-revision-response.json"
+      ]
+    },
+    {
+      "id": "AD-H02",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "已按huaming-decision AD-H02逐项返修；具体事实桥与边界见华明逐项回应。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/huaming-revision-response.json"
+      ]
+    },
+    {
+      "id": "HF01",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "深度A/B/C/D/E/F固定子项3+2+3、2+3+2+5+4、6+3+7、4+4+2+2、5+5+3+2+1、6+5+2闭合81；管理17/20/13/12/7/8/3闭合80。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/huaming-revision-response.json"
+      ]
+    },
+    {
+      "id": "HF02",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "集团账龄改用PDF105—106页：一年以上原值1.569002亿元，较2025年末期初+2.254%、占比降至14.143%；删除母公司其他应收款误用及与原值方向相反的旧判断。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/huaming-revision-response.json"
+      ]
+    },
+    {
+      "id": "HF03",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "补2023—2025期末杜邦恒等式及2024/25两点平均代理，明确不冒充集团或加权ROE；补H1资产、权益、债务、现金、商誉桥。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/huaming-revision-response.json"
+      ]
+    },
+    {
+      "id": "HF04",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "逐维列示旧80[17,20,13,12,7,8,3]、返修79[17,19,13,12,7,8,3]、最终80[17,20,13,12,7,8,3]及变化原因；另单列最初76稿原始七项17/20、19/25、12/15、11/20、6/8、8/10、3/5，实际上限合计103，并明确不可直接映射。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/huaming-revision-response.json"
+      ]
+    },
+    {
+      "id": "HF05",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "正式PE采用官方扣非TTM归母676451410.95/EPS0.7547781926，已含税与NCI且保留SBC；报告EPS0.8157417仅敏感性。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/huaming-revision-response.json"
+      ]
+    },
+    {
+      "id": "HF06",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "20倍以分配66.2446%、Ke10%、十年终值16倍建立有限期桥，需盈利年增8.440314%；Gordon 6.473356%仅尾部诊断。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/huaming-revision-response.json"
+      ]
+    },
+    {
+      "id": "HF07",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "全文唯一参数81/80、13.7元、0.58、10.43元、A_CORE；PE/DDM仍14/17和3/17，FCF0。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/huaming-revision-response.json"
+      ]
+    },
+    {
+      "id": "HF08",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "确定性六项0.75/0.35/0.70/0.65/0.45/0.60等权均值0.5833，取0.58；不重复惩罚研究模型缺口。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/huaming-revision-response.json"
+      ]
+    },
+    {
+      "id": "HF09",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "主估值13.66722048与基准情景一致；重算固定DDM网格、EPS/PE综合敏感性、H股表和13.70/10.43/8.87价格区。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/huaming-revision-response.json"
+      ]
+    },
+    {
+      "id": "HF10",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "公司页EO统一为国家、主体、设备、交易类别或执行认定实际覆盖产品/终端用途的条件性下行风险；清除指定名单触发和中性措辞。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/huaming-revision-response.json"
+      ]
+    },
+    {
+      "id": "HF11",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "治理表述改为9月9日检索覆盖至9月8日未发现新增重大处罚/减持实质线索；保留9月3日调研和9月29日股东会未来状态。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/huaming-revision-response.json"
+      ]
+    },
+    {
+      "id": "HF12",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "保留三份完整报告结构并新建81/80文件名；历史报告不改。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/huaming-revision-response.json"
+      ]
+    },
+    {
+      "id": "HF13",
+      "status": "validated_closed_after_dual_review",
+      "disposition": "补肖毅、杨建琴、陆维力、雷纯立、夏海晶、朱强等任期，2025董事/独董换届、取消监事会及杨建琴内部培养路径。",
+      "locations": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/writer/huaming-revision-response.json"
+      ]
+    }
+  ],
+  "final_acceptance": {
+    "consun": "reviews/sol-consun-final-v3.json + reviews/astra-consun-final-v3.json",
+    "huaming": "reviews/sol-huaming-final-v4.json + reviews/astra-huaming-final-v4.json"
+  }
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\writer\\reports\\深度分析\\康臣药业 深度分析 81 2026-09-08.md",
+    "frozen": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun\\reports\\深度分析\\康臣药业 深度分析 81 2026-09-08.md",
+    "sha256": "51c35b25ab2a4fb5119ce6f795a6901dabafc01af6b5d76e8e223835db698748"
+  },
+  {
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\writer\\reports\\管理层档案\\康臣药业 管理层档案 79 2026-09-08.md",
+    "frozen": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun\\reports\\管理层档案\\康臣药业 管理层档案 79 2026-09-08.md",
+    "sha256": "c2e524e9bb0ef625498f2d7b62a26173309d59973d1f9ad3d0f1c6db6e0238ae"
+  },
+  {
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\writer\\reports\\估值分析\\康臣药业 估值分析 2026-09-08.md",
+    "frozen": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun\\reports\\估值分析\\康臣药业 估值分析 2026-09-08.md",
+    "sha256": "712ab41bb8609c6bf03d5f7431397a238dc0a653807213d0e1535e37a847ccd3"
+  },
+  {
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\writer\\company-pages\\康臣药业(01681.HK).md",
+    "frozen": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun\\company-pages\\康臣药业(01681.HK).md",
+    "sha256": "a60d28af570137c66e52905a2de690c468217026f06d0b838b56fec29f101f7e"
+  },
+  {
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\writer\\consun-revision-inputs.json",
+    "frozen": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun\\consun-revision-inputs.json",
+    "sha256": "bbdff5743e08704de3ad4b5de11ef88dccf44d7ed15b984cac9f5f8efd7870da"
+  },
+  {
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\writer\\consun-recalculate.py",
+    "frozen": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun\\consun-recalculate.py",
+    "sha256": "e3322fbd5e4279426ac9dc8ddbc1604aca393f27bea41a05633cdda1e4c0e58f"
+  },
+  {
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\writer\\consun-revision-calculations.json",
+    "frozen": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun\\consun-revision-calculations.json",
+    "sha256": "6efd5806612fbb94f37d215b8c759901fb0a5d038d79d5384feb0c20a35aa93c"
+  },
+  {
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\writer\\consun-revision-response.json",
+    "frozen": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun\\consun-revision-response.json",
+    "sha256": "13c52a64e809ed7cce71f801335f9eb87eb3fcdeb16c96dafca9dba1e9dc1928"
+  }
+]

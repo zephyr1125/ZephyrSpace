@@ -1,0 +1,37 @@
+{
+  "company": "华明装备",
+  "status": "published_and_watchlist_applied_after_dual_pass",
+  "parameters": {
+    "cScore": 81,
+    "mScore": 80,
+    "target_price": 13.7,
+    "currency": "CNY",
+    "valuation_certainty": 0.58,
+    "buy_price": 10.43,
+    "tier": "A_CORE",
+    "ready_for_watchlist": true,
+    "tier_condition": "最终报告修复与匿名双路验收全部闭合；当前固定双评分满足A级且无已证重大红线，主Agent可按最终冻结串行发布和入库。"
+  },
+  "files": [
+    {
+      "reviewed_source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming-final-v4\\reports\\深度分析\\华明装备 深度分析 81 2026-09-08.md",
+      "published": "深度分析\\华明装备 深度分析 81 2026-09-08.md",
+      "sha256": "4a7857078ecd842094d4bb85b1dcd03c8cdbaf86f0d484ab153da680491f0752"
+    },
+    {
+      "reviewed_source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming-final-v4\\reports\\管理层档案\\华明装备 管理层档案 80 2026-09-08.md",
+      "published": "管理层档案\\华明装备 管理层档案 80 2026-09-08.md",
+      "sha256": "aa90b1bbdcd7dc207ee18a5001b89abc15c63257fa551f49e4a6994326818bf2"
+    },
+    {
+      "reviewed_source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming-final-v4\\reports\\估值分析\\华明装备 估值分析 2026-09-08.md",
+      "published": "估值分析\\华明装备 估值分析 2026-09-08.md",
+      "sha256": "fadf47fa1027b6ed3c23857402c1d57deb0c1f4d7b5cf89d9abffbd2c020f1f2"
+    },
+    {
+      "reviewed_source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming-final-v4\\company-pages\\华明装备.md",
+      "published": "01-公司\\华明装备.md",
+      "sha256": "0754991f6993e5d79ace838d1a9d5c60d9f4bffa58c5699bd425d4aa0a6fa684"
+    }
+  ]
+}

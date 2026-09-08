@@ -1,0 +1,136 @@
+{
+  "role": "triplet_review_astra",
+  "stage": "final_incremental_review_v4",
+  "company": "华明装备",
+  "ticker": "002270.SZ",
+  "as_of": "2026-09-08",
+  "review_date": "2026-09-09",
+  "model_record": {
+    "requested_model": "gpt-6-astra",
+    "requested_reasoning_effort": "high",
+    "actual_model": null,
+    "actual_reasoning_effort": null,
+    "runtime_verified": false,
+    "note": "请求路由沿用任务启动时Astra high；当前配置不追溯覆盖，未取得独立运行时模型证据。"
+  },
+  "scope": "仅验huaming-final-v4相对v3实际三文件差分、匿名R018/R019及8hash；未读另一review/source-map，未重跑全量研究或未变模型。",
+  "pass": true,
+  "verdict": "R018/R019两项正文残留均已按裁决关闭，8份冻结hash通过；本次三文件差分未发现新增实质问题。",
+  "findings": [],
+  "remaining_findings": [],
+  "new_p0_p1": [],
+  "residual_decisions_closure": [
+    {
+      "id": "R018",
+      "status": "closed",
+      "location": "company-pages/华明装备.md:193—195",
+      "evidence": "操作正文改为10.43<P<=13.70观察、8.87<=P<=10.43买入、P<8.87深度折价；与已核价格表一致，保留P>13.70偏高。两个无下界宽泛句已删除。",
+      "impact": "只修正文区间，无数值变化。"
+    },
+    {
+      "id": "R019",
+      "status": "closed",
+      "location": "reports/管理层档案/华明装备 管理层档案 80 2026-09-08.md:240、248",
+      "evidence": "未取得第三方租金比较改为研究未知仅跟踪，不直接扣分；取消因此资本配置折价的因果，5分差距引用最终桥对海外新增资本ROIC及历史关联融资少股收益实绩的判断。",
+      "impact": "管理80与资本配置20不变，无重复加减分。"
+    }
+  ],
+  "response_check": "新增R012-v4/R013-v4回应分别对应匿名R019/R018，语义与正文同步；作者pending状态只记录送验过程，不影响本独立验收结论。",
+  "frozen_files": [
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming-final-v4\\reports\\深度分析\\华明装备 深度分析 81 2026-09-08.md",
+      "expected_sha256": "4a7857078ecd842094d4bb85b1dcd03c8cdbaf86f0d484ab153da680491f0752",
+      "actual_sha256": "4a7857078ecd842094d4bb85b1dcd03c8cdbaf86f0d484ab153da680491f0752",
+      "match": true,
+      "changed_from_v3": false
+    },
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming-final-v4\\reports\\管理层档案\\华明装备 管理层档案 80 2026-09-08.md",
+      "expected_sha256": "aa90b1bbdcd7dc207ee18a5001b89abc15c63257fa551f49e4a6994326818bf2",
+      "actual_sha256": "aa90b1bbdcd7dc207ee18a5001b89abc15c63257fa551f49e4a6994326818bf2",
+      "match": true,
+      "changed_from_v3": true
+    },
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming-final-v4\\reports\\估值分析\\华明装备 估值分析 2026-09-08.md",
+      "expected_sha256": "fadf47fa1027b6ed3c23857402c1d57deb0c1f4d7b5cf89d9abffbd2c020f1f2",
+      "actual_sha256": "fadf47fa1027b6ed3c23857402c1d57deb0c1f4d7b5cf89d9abffbd2c020f1f2",
+      "match": true,
+      "changed_from_v3": false
+    },
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming-final-v4\\company-pages\\华明装备.md",
+      "expected_sha256": "0754991f6993e5d79ace838d1a9d5c60d9f4bffa58c5699bd425d4aa0a6fa684",
+      "actual_sha256": "0754991f6993e5d79ace838d1a9d5c60d9f4bffa58c5699bd425d4aa0a6fa684",
+      "match": true,
+      "changed_from_v3": true
+    },
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming-final-v4\\huaming-revision-inputs.json",
+      "expected_sha256": "373b35adea2d244a84e18f419ce5319882836bb39f33e1a874e45d4a82c1763e",
+      "actual_sha256": "373b35adea2d244a84e18f419ce5319882836bb39f33e1a874e45d4a82c1763e",
+      "match": true,
+      "changed_from_v3": false
+    },
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming-final-v4\\huaming-recalculate.py",
+      "expected_sha256": "d077fb05f7dfcda0af77e907cc0910e11fc054382c347316c3f7f5ed6c626dff",
+      "actual_sha256": "d077fb05f7dfcda0af77e907cc0910e11fc054382c347316c3f7f5ed6c626dff",
+      "match": true,
+      "changed_from_v3": false
+    },
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming-final-v4\\huaming-revision-calculations.json",
+      "expected_sha256": "17de8f416d88cd41e165a839083adab46930872729204465ec1da471415defc6",
+      "actual_sha256": "17de8f416d88cd41e165a839083adab46930872729204465ec1da471415defc6",
+      "match": true,
+      "changed_from_v3": false
+    },
+    {
+      "path": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\huaming-final-v4\\huaming-revision-response.json",
+      "expected_sha256": "a21b203c4981bba3347231dcbeae1c9f988c62310e778089b87387257ed35e23",
+      "actual_sha256": "a21b203c4981bba3347231dcbeae1c9f988c62310e778089b87387257ed35e23",
+      "match": true,
+      "changed_from_v3": true
+    }
+  ],
+  "all_eight_hashes_match": true,
+  "changed_file_count": 3,
+  "unchanged_file_count": 5,
+  "inherited_acceptance": {
+    "previous_review": "reviews/astra-huaming-final-v3.json",
+    "scope": "其余已通过的评分、原76表、源标签、原件、估值与参数联动继承；保留原v3结论为当时审查记录，R018/R019为后续新增匿名残留并在本轮闭合。",
+    "calculation": "inputs、脚本、计算JSON均与v3逐字节一致，继承v2已实际安全执行及独立复算，不再重跑。",
+    "calculation_artifact": "reviews/astra-huaming-final-v2-calculation-check.json"
+  },
+  "accepted_parameters": {
+    "company_score": 81,
+    "management_score": 80,
+    "combined": 161,
+    "formal_ttm_recurring_parent": 676451410.95,
+    "formal_eps": 0.7547781925750777,
+    "pe_multiple": 20,
+    "pe_weight": 0.8235294117647058,
+    "ddm_weight": 0.17647058823529413,
+    "fcf_weight": 0,
+    "d1": 0.5,
+    "raw_target": 13.667220484367748,
+    "target_price": 13.7,
+    "currency": "CNY",
+    "valuation_certainty": 0.58,
+    "buy_price": 10.43,
+    "deep_discount": 8.87,
+    "tier_per_adjudication": "A_CORE"
+  },
+  "unknowns": [
+    "H股截至日实际发行条款、净募资用途及新增资本回报。",
+    "美国直接与客户间接终端暴露、主管部门措施的实际覆盖；未单独点名不是豁免证据。",
+    "集团简化FCF至归母可分配现金的NCI、租赁利息及营运资金可持续桥，故正式权重0。",
+    "未来股份支付费用、解锁数量和长期继任质量。",
+    "2021/22扩展历史及2023/24精确DPS未在本轮重新全量核证，沿用已核三年核心经营基础。",
+    "检索未命中不等于无治理事件；股东会未来投票及股息执行仍有时点条件。"
+  ],
+  "no_edits_to_reports_company_watchlist": true,
+  "previous_reviews_preserved": true,
+  "publication_note": "本独立差分验收通过；主Agent完成整体双路见证后按既定流程串行应用，本文不执行发布或Watchlist写入。"
+}

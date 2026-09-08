@@ -1,0 +1,145 @@
+{
+  "as_of": "2026-09-08",
+  "company": "华明装备",
+  "code": "002270.SZ",
+  "currency": "CNY",
+  "price_snapshot": {
+    "value": 19.81,
+    "timestamp": "2026-09-08 16:14:21",
+    "source": "data/reviews/consun-huaming-repairs-2026-09-08/evidence/quote-supplement.json",
+    "use_in_fair_value": false
+  },
+  "shares": {
+    "current_total": 896225431,
+    "basis": "2026-06-30总股本；员工持股计划股份仍在总股本内，未扣减"
+  },
+  "earnings_bridge": {
+    "fy2025_attributable": 709737360.27,
+    "h1_2025_attributable": 368486672.33,
+    "h1_2026_attributable": 389837789.61,
+    "h1_2026_group_net_profit": 393753930.15,
+    "h1_2026_recurring_attributable": 367127245.4,
+    "h1_2026_group_net_profit_ex_share_payment": 428642604.51,
+    "h1_2026_attributable_ex_share_payment_rounded": 425000000.0,
+    "h1_2026_share_payment_pretax": 47489663.92,
+    "h1_2026_pbt": 458075960.59,
+    "h1_2026_tax": 64322030.44,
+    "policy": "基准EPS保留股份支付经济成本；剔除口径仅作经营趋势诊断",
+    "fy2025_recurring_attributable": 670645920.74,
+    "h1_2025_recurring_attributable": 361321755.19,
+    "fy2025_pbt": 848212227.56,
+    "fy2025_tax": 128585316.15
+  },
+  "cash_flow_bridge": {
+    "fy2025_ocf": 604031442.9,
+    "h1_2025_ocf": 317755300.14,
+    "h1_2026_ocf": 458875295.01,
+    "fy2025_cash_capex": 112136511.96,
+    "h1_2025_cash_capex": 56566967.21,
+    "h1_2026_cash_capex": 43199328.05,
+    "h1_2026_other_financing_payments": {
+      "financing_lease_payment": 421905084.21,
+      "lease_principal_and_interest": 14863179.23,
+      "bank_acceptance_deposit": 5000000.0,
+      "h_share_issue_costs": 17598876.97
+    }
+  },
+  "dividends": {
+    "fy2025_interim_dps": 0.2,
+    "fy2025_q3_dps": 0.2,
+    "fy2025_final_dps": 0.21,
+    "fy2025_total_dps": 0.61,
+    "h1_2026_proposed_dps": 0.26,
+    "normalized_d1": 0.5,
+    "normalized_d1_basis": "约61.3%的TTM盈利派息率；低于2025年77.0%的高派息率，接近2026H1预案59.8%的归母派息率"
+  },
+  "valuation": {
+    "pe": {
+      "multiple": 20.0,
+      "weight": 0.8235294117647058,
+      "basis": "20倍为回报要求判断，不作为历史分位：20倍对应5%盈利收益率；以约61.3%分配率及10%股权成本作简化永续反推，需要约6.94%稳定增长。该要求与2021—2025历史盈利增长交叉比较，但不是公司预测或可复算历史PE实证。"
+    },
+    "ddm": {
+      "d1": 0.5,
+      "stage1_growth": 0.04,
+      "years": 5,
+      "terminal_growth": 0.025,
+      "cost_of_equity": 0.1,
+      "weight": 0.17647058823529413
+    },
+    "fcf_yield": {
+      "required_yield": 0.052,
+      "weight": 0.0,
+      "basis": "只作现金诊断：合并OCF-capex到归母股权价值仍受NCI、租赁资本化、付息税盾、SBC稀释和可持续营运资金影响"
+    },
+    "certainty": 0.43,
+    "scenarios": {
+      "bear": {
+        "eps": 0.74,
+        "pe_multiple": 17.0,
+        "d1": 0.42,
+        "stage1_growth": 0.01,
+        "years": 5,
+        "terminal_growth": 0.01,
+        "cost_of_equity": 0.115
+      },
+      "base": {
+        "eps_source": "reported_ttm_proxy",
+        "pe_multiple_source": "formal",
+        "d1_source": "formal",
+        "stage1_growth_source": "formal",
+        "years_source": "formal",
+        "terminal_growth_source": "formal",
+        "cost_of_equity_source": "formal"
+      },
+      "bull": {
+        "eps": 0.9,
+        "pe_multiple": 23.0,
+        "d1": 0.56,
+        "stage1_growth": 0.06,
+        "years": 5,
+        "terminal_growth": 0.03,
+        "cost_of_equity": 0.09
+      }
+    }
+  },
+  "scores": {
+    "company": {
+      "A": [
+        2,
+        2,
+        3
+      ],
+      "B": [
+        2,
+        3,
+        2,
+        5,
+        4
+      ],
+      "C": 16,
+      "D": 12,
+      "E": [
+        5,
+        4,
+        3,
+        2,
+        1
+      ],
+      "F": [
+        5,
+        4,
+        2
+      ]
+    },
+    "management": [
+      17,
+      19,
+      13,
+      12,
+      7,
+      8,
+      3
+    ]
+  }
+}

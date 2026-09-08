@@ -1,0 +1,37 @@
+[
+  {
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\writer\\reports\\估值分析\\华明装备 估值分析 2026-09-08.md",
+    "frozen": "data\\reviews\\consun-huaming-repairs-2026-09-08\\frozen\\huaming\\reports\\估值分析\\华明装备 估值分析 2026-09-08.md",
+    "sha256": "e2b2e7b9f4d172e12d8baadda2d5fb09072a8a31c8e79e7cf0a20860136f2b8d"
+  },
+  {
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\writer\\reports\\深度分析\\华明装备 深度分析 75 2026-09-08.md",
+    "frozen": "data\\reviews\\consun-huaming-repairs-2026-09-08\\frozen\\huaming\\reports\\深度分析\\华明装备 深度分析 75 2026-09-08.md",
+    "sha256": "38fdad2624bd8b3297f247594e79ee3edb6212b4512ba67616c85f84c1dbd4e4"
+  },
+  {
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\writer\\reports\\管理层档案\\华明装备 管理层档案 76 2026-09-08.md",
+    "frozen": "data\\reviews\\consun-huaming-repairs-2026-09-08\\frozen\\huaming\\reports\\管理层档案\\华明装备 管理层档案 76 2026-09-08.md",
+    "sha256": "397a8f85f764daa6dda0d9135df78af74deb132313d02220029de73f39e8c8a4"
+  },
+  {
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\writer\\company-pages\\华明装备.md",
+    "frozen": "data\\reviews\\consun-huaming-repairs-2026-09-08\\frozen\\huaming\\company-pages\\华明装备.md",
+    "sha256": "8897f0b01a31d3de4b0e2f53febc22c943ce7670b7c1466aa04811d5ce699b5b"
+  },
+  {
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\writer\\inputs.json",
+    "frozen": "data\\reviews\\consun-huaming-repairs-2026-09-08\\frozen\\huaming\\inputs.json",
+    "sha256": "9ad6f1c5c4764132008e805d4bf85327f69c5c0f87786d95fcce4588fca606f5"
+  },
+  {
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\writer\\calculations.json",
+    "frozen": "data\\reviews\\consun-huaming-repairs-2026-09-08\\frozen\\huaming\\calculations.json",
+    "sha256": "3a3a5fe7edce7778c816f1bd2db81e652415f0ba977aadd95b39880fc9f2d451"
+  },
+  {
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\writer\\recalculate.py",
+    "frozen": "data\\reviews\\consun-huaming-repairs-2026-09-08\\frozen\\huaming\\recalculate.py",
+    "sha256": "2c68a9ad3b908a07ffcccd73fdad9e0da47becd63535a93703707bb1c07233ff"
+  }
+]

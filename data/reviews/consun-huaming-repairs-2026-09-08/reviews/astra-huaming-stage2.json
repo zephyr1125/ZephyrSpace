@@ -1,0 +1,175 @@
+{
+  "role": "triplet_review_astra",
+  "stage": 2,
+  "company": "华明装备",
+  "as_of": "2026-09-08",
+  "status": "需修复后复核",
+  "actual_model": null,
+  "runtime_note": "模型已请求，实际模型未独立确认",
+  "coverage": {
+    "three_reports_full_read": true,
+    "company_page_full_read": true,
+    "frozen_hashes_verified": true,
+    "writer_current_read": false,
+    "other_reviewer_read": false,
+    "calculations": "完整读脚本，禁pyc后import纯函数；未运行写文件的main。独立重算债务、估值、逆向折现及现金流桥。"
+  },
+  "findings": [
+    {
+      "id": "AH-01",
+      "priority": "P1",
+      "location": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/huaming/reports/估值分析/华明装备 估值分析 2026-09-08.md:19",
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/huaming/reports/估值分析/华明装备 估值分析 2026-09-08.md:49",
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/huaming/reports/估值分析/华明装备 估值分析 2026-09-08.md:55",
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/huaming/reports/估值分析/华明装备 估值分析 2026-09-08.md:78",
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/huaming/reports/估值分析/华明装备 估值分析 2026-09-08.md:188",
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/huaming/reports/估值分析/华明装备 估值分析 2026-09-08.md:190"
+      ],
+      "claim": "正式80% PE锚的0.88元EPS只被称为跨周期假设，未由多年利润、税、非经常项或股份支付/股本推导；DDM 0.58元及非基准场景同样缺少分红能力与参数桥。",
+      "evidence": "H1原件行85给归母389837789.61元、扣非367127245.40元；行4099股份支付47489663.92元。0.88×896225431=788678379.28元年利润，略高于H1归母简单翻倍779675579.22元、显著高于扣非翻倍734254490.8元。以上只作诊断，不能证明0.88错误或正确。D1 .58对应EPS .88的65.91%派息率，报告未解释此与历史分配及投资需要关系。悲观7.5/乐观12.0没有Ke/g/D1组合。",
+      "impact": "公式虽正确，15.3元的主输入不可复核；EPS每改变0.10元，目标价机械改变1.52元。逆向增长10.37%也依赖同一未证起点。",
+      "suggestion": "列多年/TTM到正常化盈利桥，明确股份支付按经济成本的处理和股本口径；用分红历史与可负担派息率推导D1，补各情景DDM参数及统一计算。"
+    },
+    {
+      "id": "AH-02",
+      "priority": "P1",
+      "location": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/huaming/reports/深度分析/华明装备 深度分析 75 2026-09-08.md:218",
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/huaming/reports/深度分析/华明装备 深度分析 75 2026-09-08.md:231",
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/huaming/reports/深度分析/华明装备 深度分析 75 2026-09-08.md:380"
+      ],
+      "claim": "深度稿只列2026H1财务数，没有至少三年经营数据却形成完整质量结论。",
+      "evidence": "用户AGENTS强制深度报告覆盖至少三年或可得完整周期。冻结稿E1只有H1四个金额；近期同比、ROE、多年利润和现金转化均未展示；自身231行也承认单期不能替代多年验证。",
+      "impact": "篇幅394行不等于完整周期研究，完整三件套入库前置条件未满足，75分的稳定性与周期判断无法独立复核。",
+      "suggestion": "补至少三年收入、归母/扣非、OCF、ROE/权益、资本投入与分红及行业周期背景，并保留H1同比对照。历史原件不可得时明确研究未完成，不能用空白行和框架描述替代。"
+    },
+    {
+      "id": "AH-03",
+      "priority": "P1",
+      "location": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/huaming/reports/管理层档案/华明装备 管理层档案 76 2026-09-08.md:22",
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/huaming/reports/管理层档案/华明装备 管理层档案 76 2026-09-08.md:32",
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/huaming/reports/管理层档案/华明装备 管理层档案 76 2026-09-08.md:179",
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/huaming/reports/管理层档案/华明装备 管理层档案 76 2026-09-08.md:226"
+      ],
+      "claim": "管理层档案全文未写核心管理层和实控人的姓名、职责、持股控制链、董事会/委员会机制，却评价家族治理、组织稳定及继任。",
+      "evidence": "H1原件行13载公司负责人肖毅、主管会计工作负责人雷纯立、会计机构负责人汤振辉；行3933明确肖日明、肖毅、肖申父子三人为最终控制方，行536等有控股股东及回避承诺，行3953关联租赁方同受实际控制人控制。这些基础事实并非未知。",
+      "impact": "无法知道76分究竟评价谁，以及关联租赁由谁批准/约束；不满足管理层档案必须覆盖控制结构、核心管理层和治理机制的内容要求。",
+      "suggestion": "从原件补人物/职务/任期与控制链、关联方关系、审批回避/独董机制和继任证据。区分事实未披露与作者未读取，重新审定相关评分。"
+    },
+    {
+      "id": "AH-04",
+      "priority": "P1",
+      "location": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/huaming/reports/管理层档案/华明装备 管理层档案 76 2026-09-08.md:97",
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/huaming/reports/管理层档案/华明装备 管理层档案 76 2026-09-08.md:144",
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/huaming/reports/管理层档案/华明装备 管理层档案 76 2026-09-08.md:177",
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/huaming/company-pages/华明装备.md:182",
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/huaming/reports/估值分析/华明装备 估值分析 2026-09-08.md:55"
+      ],
+      "claim": "三件套把股权融资仅列未来观察项，漏掉已发生H股递表、发行费用及员工持股/股份支付，影响资本配置、股东回报和规范化EPS。",
+      "evidence": "H1原件735行：2026-02-12董事会、03-02股东会审议H股事项，03-06递表；3426行H股发行费用17598876.97元。3150/4099行股份支付47489663.92元（相当于H1归母12.18%）；3160行5月246209股转至员工计划并确认回购义务，494行载7.05元/股。",
+      "impact": "遗漏资本与激励实质事件，不能用“主营增长没有依赖大规模股权融资”代替是否已有融资计划；股份支付对当期增长、经济稀释和管理层薪酬评价有实质影响。不能因IPO尚未完成而忽略递表。",
+      "suggestion": "三报告同步纳入H股当前状态（不预设发行完成）、用途/潜在稀释场景、费用及员工激励受益/定价/业绩条件；区分回购用于激励与注销式回报，并与EPS口径联动。"
+    },
+    {
+      "id": "AH-05",
+      "priority": "P2",
+      "location": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/huaming/reports/管理层档案/华明装备 管理层档案 76 2026-09-08.md:142",
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/huaming/reports/管理层档案/华明装备 管理层档案 76 2026-09-08.md:228",
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/huaming/reports/管理层档案/华明装备 管理层档案 76 2026-09-08.md:229",
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/huaming/reports/管理层档案/华明装备 管理层档案 76 2026-09-08.md:233"
+      ],
+      "claim": "正文资本配置11/20，但汇总资本配置12/15、股东友好11/20，存在两套有效维度口径。",
+      "evidence": "142行直接称资本配置得分11/20；总表228/229行把12/15给资本配置、11/20给股东友好；脚本按[17,19,12,11,6,8,3]得76。",
+      "impact": "加总闭合不等于评分一致，尤其当前双分151距B门槛仅1分；资本配置扣分不可独立还原。",
+      "suggestion": "统一正文与总表维度分值，给80至76的逐维变化/证据桥。另不得把需要股东会批准（155行）本身作为股东不友好事实，也应解释同一关联租赁风险的维度分配避免重复惩罚。"
+    },
+    {
+      "id": "AH-06",
+      "priority": "P2",
+      "location": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/huaming/reports/深度分析/华明装备 深度分析 75 2026-09-08.md:206",
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/huaming/reports/深度分析/华明装备 深度分析 75 2026-09-08.md:263",
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/huaming/reports/管理层档案/华明装备 管理层档案 76 2026-09-08.md:125",
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/huaming/company-pages/华明装备.md:97"
+      ],
+      "claim": "称旧稿4.5937亿元“不符合原件/不能作为原件数字”，把原件确有的筹资支付总额当成不存在。",
+      "evidence": "原件3426行：融资租赁421905084.21+租赁本息14863179.23+承兑保证金5000000+H股发行费用17598876.97=459367140.41元，恰是4.593671亿元“支付其他筹资活动现金”的原件合计。两项租赁合计为4.367683亿元。",
+      "impact": "正确修复应改变标签/构成，而非否认真实总额；当前说法还掩盖H股费用。",
+      "suggestion": "列完整四项桥，明确4.5937亿元是其他筹资付款总额而非全部租赁付款；对其进入FCF/偿债/融资分析分别处理。"
+    },
+    {
+      "id": "AH-07",
+      "priority": "P2",
+      "location": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/huaming/reports/深度分析/华明装备 深度分析 75 2026-09-08.md:8",
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/huaming/reports/深度分析/华明装备 深度分析 75 2026-09-08.md:249",
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/huaming/reports/深度分析/华明装备 深度分析 75 2026-09-08.md:278",
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/huaming/company-pages/华明装备.md:122"
+      ],
+      "claim": "报告声称收紧应收判断，却仅提示未来检查三项合计，未计算已经可得的当期应收组合变化。",
+      "evidence": "原件871行：期末应收票据22340098.90、应收账款1039334929.39、应收款项融资121366450.68，合计1183041478.97；期初141863675.57+536918296.38+577484604.19=1256266576.14，合计下降73225097.17元、约5.83%。",
+      "impact": "应收账款单项上升93.6%并不等于整体占用上升，期初/期末结构迁移是当前可验证事实。缺少算术及账龄分析，无法说明为何此项使公司分数下降；不代表信用风险完全消失。",
+      "suggestion": "补期初/期末三项合计及净变动、合同资产等扩展口径，再结合账龄和收款风险判断。无新增恶化证据时，不仅凭单项应收增长收紧评分。"
+    },
+    {
+      "id": "AH-08",
+      "priority": "P2",
+      "location": [
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/huaming/reports/深度分析/华明装备 深度分析 75 2026-09-08.md:196",
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/huaming/reports/深度分析/华明装备 深度分析 75 2026-09-08.md:308",
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/huaming/reports/管理层档案/华明装备 管理层档案 76 2026-09-08.md:216",
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/huaming/reports/管理层档案/华明装备 管理层档案 76 2026-09-08.md:293",
+        "data/reviews/consun-huaming-repairs-2026-09-08/frozen/huaming/company-pages/华明装备.md:172"
+      ],
+      "claim": "多处将政策约束监控窄化为公司被正式指定/列入名单，容易使“未指定前”被读成必须先点名公司才适用。",
+      "evidence": "EO14420第2(a)条件可涉及类别交易及由Covered Foreign Entity拥有、控制、管辖/指挥的供应方；第3(b)允许认定国家或人员类别；第5(e)定义也包括特定武器禁运/制裁辖区。第2(a)(i)明确设备相关关键部件/服务；并非必须出现华明公司名称的单独清单。",
+      "impact": "保留“无证据证明华明已禁售”是正确的，但只跟踪公司点名会漏掉国家、设备或交易类别措施以及经变压器客户间接暴露。",
+      "suggestion": "把触发器写为相关国家/主体/设备/交易类别措施实际覆盖公司产品或客户用途，持续跟踪DOE执行规则；明确美国收入未知及间接暴露，保持潜在风险而非既成禁售结论。"
+    }
+  ],
+  "verified_correct": [
+    "主营/产品/国际收入占比及H1收入、归母、扣非、OCF基础金额与原件一致。",
+    "银行债务729518894.44元、租赁116856820.21元，总846375714.65元；减现金等价物后净债务-151684956.75元正确，未重复扣受限现金。",
+    "拟分红0.26元和约2.33019亿元，半年报时点尚需批准，未写成已支付。",
+    "PE16.72、Gordon DDM9.6666667、权重和1、原目标15.3093333、取整15.3及买线11.52均算术正确。",
+    "逆向模型10.3742047441%用独立PV复算为19.81；它是60%派息+终值PE的股权分配诊断，不是已测实FCFF。",
+    "悲观10.716与乐观20.88综合算术正确；DDM敏感性表正确，但非基准D1/g/r尚未给出。",
+    "75+76=151按最新分数门槛可达B_GROWTH，仍以完整性及评分成立为前提。",
+    "未将海外收入21.43%等同美国收入或认定美国渠道已关闭；政策保持条件性方向正确。",
+    "把FCF正式权重置0可以接受，现金capex原件行902的43199328.05元已可得，但维持/增长拆分及租赁一致性仍需解释。"
+  ],
+  "stage1_changes": [
+    {
+      "topic": "美国政策",
+      "before": "不能从EO本身断言公司已禁售；需实质覆盖证据",
+      "after": "原则不变，第二阶段发现监控触发器过度依赖公司点名",
+      "reason": "全文具体表述与EO第2/3/5节相比范围偏窄，不是第一阶段事实反转。"
+    },
+    {
+      "topic": "应收质量",
+      "before": "应收账款与融资余额应合并观察",
+      "after": "补齐应收票据后确定三项总额下降5.83%",
+      "reason": "第二阶段直接读取原件行871第三项数值，得到完整算术；不代表账龄与信用质量一定改善。"
+    },
+    {
+      "topic": "分数和价值",
+      "before": "未给评分与目标",
+      "after": "验证作者分数和价格算术，但不提出替代分数或正式价值",
+      "reason": "管理层事实覆盖及主估值输入推导尚缺。"
+    }
+  ],
+  "unknowns": [
+    "三年经营、资本配置、分红和审计原件时间序列未进入冻结报告；本次未独立补做整套研究。",
+    "0.88元正常化EPS、0.58元前瞻分红与三种DDM情景的量化依据。",
+    "H股具体发行进展/股份数量/净融资，员工计划后续股数与条件。",
+    "融资租赁各合同清偿、本金利息明细及日常租赁分类。",
+    "美国直接/间接客户、最终用途、政策执行措施是否实际覆盖华明。",
+    "华明原PDF未提供，本轮财务复核依赖Vault转换稿；无确定页码时使用明确行号，不猜页码。",
+    "最新处罚/减持广泛搜索未独立全量进行；仅本轮给定原件范围未证重大红线，不保证无风险。"
+  ],
+  "uncovered": "未读作者当前稿、另一意见或任何裁决；康臣审核意见已锁定且未修改。"
+}

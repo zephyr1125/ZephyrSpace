@@ -1,0 +1,95 @@
+{
+  "as_of": "2026-09-08",
+  "company": "康臣药业",
+  "earnings_bridge": {
+    "ttm_attributable_profit_rmb": 1175077000,
+    "after_tax_fvpl_removed_rmb": 6419968.597,
+    "normalized_profit_rmb": 1168657031.403,
+    "eps_cny_diluted": 1.3798059810749352,
+    "fx_sensitivity_eps_hkd": {
+      "1.05": 1.448796280128682,
+      "1.1": 1.517786579182429,
+      "1.15": 1.5867768782361753
+    },
+    "normalized_eps_hkd": 1.517786579182429
+  },
+  "pe_value": 16.69565237100672,
+  "ddm": {
+    "base": {
+      "dividends": [
+        0.8112,
+        0.8436480000000001,
+        0.87739392,
+        0.9124896768000001,
+        0.9489892638720001
+      ],
+      "pv_stage1": 3.26341799209357,
+      "terminal_value": 12.158924943360002,
+      "pv_terminal": 7.380466061018823,
+      "value": 10.643884053112393
+    },
+    "bear": {
+      "dividends": [
+        0.6565000000000001,
+        0.663065,
+        0.6696956500000001,
+        0.6763926065,
+        0.6831565325650001
+      ],
+      "pv_stage1": 2.408929301187739,
+      "terminal_value": 6.272619071733183,
+      "pv_terminal": 3.559252516994078,
+      "value": 5.968181818181817
+    },
+    "bull": {
+      "dividends": [
+        0.901,
+        0.9550600000000001,
+        1.0123636,
+        1.0731054160000002,
+        1.1374917409600003
+      ],
+      "pv_stage1": 3.8594229639809767,
+      "terminal_value": 18.024869125981542,
+      "pv_terminal": 11.449895531908362,
+      "value": 15.30931849588934
+    }
+  },
+  "scenarios": {
+    "bear": {
+      "pe_value": 12.6,
+      "ddm_value": 5.968181818181817,
+      "weighted_value": 10.942045454545454
+    },
+    "base": {
+      "pe_value": 16.69565237100672,
+      "ddm_value": 10.643884053112393,
+      "weighted_value": 15.18271029153314
+    },
+    "bull": {
+      "pe_value": 21.45,
+      "ddm_value": 15.30931849588934,
+      "weighted_value": 19.914829623972334
+    }
+  },
+  "formal_weight_sum": 1.0,
+  "target_price_raw": 15.18271029153314,
+  "target_price": 15.2,
+  "valuation_certainty": 0.42,
+  "buy_price": 11.23,
+  "cash_diagnostic": {
+    "cash_classified_rmb": 4815325000,
+    "partial_group_financial_asset_proxy_rmb": 3798393000,
+    "proxy_per_share_hkd": 4.979723171412788,
+    "nci_attribution": "unknown",
+    "formal_weight": 0
+  },
+  "reported_cash_flow": {
+    "fy2024_simplified_fcf": 977985000,
+    "fy2025_simplified_fcf": 1143316000,
+    "h1_2026_cash_capex": "unknown",
+    "formal_weight": 0
+  },
+  "cScore": 81,
+  "mScore": 79
+}

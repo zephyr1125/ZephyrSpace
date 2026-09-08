@@ -1,0 +1,262 @@
+[
+  {
+    "candidate_id": "C001",
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\reviews\\astra-consun-stage2.json",
+    "source_id": "AC-01"
+  },
+  {
+    "candidate_id": "C002",
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\reviews\\astra-consun-stage2.json",
+    "source_id": "AC-02"
+  },
+  {
+    "candidate_id": "C003",
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\reviews\\astra-consun-stage2.json",
+    "source_id": "AC-03"
+  },
+  {
+    "candidate_id": "C004",
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\reviews\\astra-consun-stage2.json",
+    "source_id": "AC-04"
+  },
+  {
+    "candidate_id": "C005",
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\reviews\\astra-consun-stage2.json",
+    "source_id": "AC-05"
+  },
+  {
+    "candidate_id": "C006",
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\reviews\\astra-consun-stage2.json",
+    "source_id": "AC-06"
+  },
+  {
+    "candidate_id": "C007",
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\reviews\\astra-consun-stage2.json",
+    "source_id": "AC-07"
+  },
+  {
+    "candidate_id": "C008",
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\reviews\\astra-huaming-stage2.json",
+    "source_id": "AH-01"
+  },
+  {
+    "candidate_id": "C009",
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\reviews\\astra-huaming-stage2.json",
+    "source_id": "AH-02"
+  },
+  {
+    "candidate_id": "C010",
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\reviews\\astra-huaming-stage2.json",
+    "source_id": "AH-03"
+  },
+  {
+    "candidate_id": "C011",
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\reviews\\astra-huaming-stage2.json",
+    "source_id": "AH-04"
+  },
+  {
+    "candidate_id": "C012",
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\reviews\\astra-huaming-stage2.json",
+    "source_id": "AH-05"
+  },
+  {
+    "candidate_id": "C013",
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\reviews\\astra-huaming-stage2.json",
+    "source_id": "AH-06"
+  },
+  {
+    "candidate_id": "C014",
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\reviews\\astra-huaming-stage2.json",
+    "source_id": "AH-07"
+  },
+  {
+    "candidate_id": "C015",
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\reviews\\astra-huaming-stage2.json",
+    "source_id": "AH-08"
+  },
+  {
+    "candidate_id": "C016",
+    "source": "reviews/sol-consun-stage2.json",
+    "source_id": "CONSUN-S2-001"
+  },
+  {
+    "candidate_id": "C017",
+    "source": "reviews/sol-consun-stage2.json",
+    "source_id": "CONSUN-S2-002"
+  },
+  {
+    "candidate_id": "C018",
+    "source": "reviews/sol-consun-stage2.json",
+    "source_id": "CONSUN-S2-003"
+  },
+  {
+    "candidate_id": "C019",
+    "source": "reviews/sol-consun-stage2.json",
+    "source_id": "CONSUN-S2-004"
+  },
+  {
+    "candidate_id": "C020",
+    "source": "reviews/sol-consun-stage2.json",
+    "source_id": "CONSUN-S2-005"
+  },
+  {
+    "candidate_id": "C021",
+    "source": "reviews/sol-consun-stage2.json",
+    "source_id": "CONSUN-S2-006"
+  },
+  {
+    "candidate_id": "C022",
+    "source": "reviews/sol-consun-stage2.json",
+    "source_id": "CONSUN-S2-007"
+  },
+  {
+    "candidate_id": "C023",
+    "source": "reviews/sol-consun-stage2.json",
+    "source_id": "CONSUN-S2-008"
+  },
+  {
+    "candidate_id": "C024",
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\reviews\\sol-huaming-stage2.json",
+    "source_id": "HUAMING-S2-001"
+  },
+  {
+    "candidate_id": "C025",
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\reviews\\sol-huaming-stage2.json",
+    "source_id": "HUAMING-S2-002"
+  },
+  {
+    "candidate_id": "C026",
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\reviews\\sol-huaming-stage2.json",
+    "source_id": "HUAMING-S2-003"
+  },
+  {
+    "candidate_id": "C027",
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\reviews\\sol-huaming-stage2.json",
+    "source_id": "HUAMING-S2-004"
+  },
+  {
+    "candidate_id": "C028",
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\reviews\\sol-huaming-stage2.json",
+    "source_id": "HUAMING-S2-005"
+  },
+  {
+    "candidate_id": "C029",
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\reviews\\sol-huaming-stage2.json",
+    "source_id": "HUAMING-S2-006"
+  },
+  {
+    "candidate_id": "C030",
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\reviews\\sol-huaming-stage2.json",
+    "source_id": "HUAMING-S2-007"
+  },
+  {
+    "candidate_id": "C031",
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\reviews\\sol-huaming-stage2.json",
+    "source_id": "HUAMING-S2-008"
+  },
+  {
+    "candidate_id": "C032",
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\reviews\\sol-huaming-stage2.json",
+    "source_id": "HUAMING-S2-009"
+  },
+  {
+    "candidate_id": "C033",
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\reviews\\sol-huaming-stage2.json",
+    "source_id": "HUAMING-S2-010"
+  },
+  {
+    "candidate_id": "R001",
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\reviews\\astra-consun-final.json",
+    "source_id": "ACF-01"
+  },
+  {
+    "candidate_id": "R002",
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\reviews\\astra-consun-final.json",
+    "source_id": "ACF-02"
+  },
+  {
+    "candidate_id": "R003",
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\reviews\\astra-consun-final.json",
+    "source_id": "ACF-03"
+  },
+  {
+    "candidate_id": "R004",
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\reviews\\astra-consun-final.json",
+    "source_id": "ACF-04"
+  },
+  {
+    "candidate_id": "R005",
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\reviews\\astra-huaming-final.json",
+    "source_id": "AHF-01"
+  },
+  {
+    "candidate_id": "R006",
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\reviews\\astra-huaming-final.json",
+    "source_id": "AHF-02"
+  },
+  {
+    "candidate_id": "R007",
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\reviews\\astra-huaming-final.json",
+    "source_id": "AHF-03"
+  },
+  {
+    "candidate_id": "R008",
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\reviews\\astra-huaming-final.json",
+    "source_id": "AHF-04"
+  },
+  {
+    "candidate_id": "R009",
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\reviews\\sol-huaming-final.json",
+    "source_id": "HUAMING-FINAL-001"
+  },
+  {
+    "candidate_id": "R010",
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\reviews\\sol-huaming-final.json",
+    "source_id": "HUAMING-FINAL-002"
+  },
+  {
+    "candidate_id": "R011",
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\reviews\\sol-huaming-final.json",
+    "source_id": "HUAMING-FINAL-003"
+  },
+  {
+    "candidate_id": "R012",
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\reviews\\astra-huaming-final-v2.json",
+    "source_id": "AHFV2-01"
+  },
+  {
+    "candidate_id": "R013",
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\reviews\\astra-huaming-final-v2.json",
+    "source_id": "AHFV2-02"
+  },
+  {
+    "candidate_id": "R014",
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\reviews\\astra-huaming-final-v2.json",
+    "source_id": "AHFV2-03"
+  },
+  {
+    "candidate_id": "R015",
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\reviews\\sol-huaming-final-v2.json",
+    "source_id": "HMFV2-001"
+  },
+  {
+    "candidate_id": "R016",
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\reviews\\sol-huaming-final-v2.json",
+    "source_id": "HMFV2-002"
+  },
+  {
+    "candidate_id": "R017",
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\reviews\\sol-huaming-final-v2.json",
+    "source_id": "HMFV2-003"
+  },
+  {
+    "candidate_id": "R018",
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\reviews\\sol-huaming-final-v3.json",
+    "source_id": "HMFV3-001"
+  },
+  {
+    "candidate_id": "R019",
+    "source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\reviews\\sol-huaming-final-v3.json",
+    "source_id": "HMFV3-002"
+  }
+]

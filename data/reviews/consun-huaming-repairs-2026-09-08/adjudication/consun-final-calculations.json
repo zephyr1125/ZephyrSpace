@@ -1,0 +1,119 @@
+{
+  "original_revision_reproduced": {
+    "normalized_profit": 1168657031.403,
+    "eps_hkd": 1.517786579182429,
+    "target_raw": 15.182710291533137
+  },
+  "manifest_checks": [
+    {
+      "file": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun\\reports\\深度分析\\康臣药业 深度分析 81 2026-09-08.md",
+      "hash_pass": true
+    },
+    {
+      "file": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun\\reports\\管理层档案\\康臣药业 管理层档案 79 2026-09-08.md",
+      "hash_pass": true
+    },
+    {
+      "file": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun\\reports\\估值分析\\康臣药业 估值分析 2026-09-08.md",
+      "hash_pass": true
+    },
+    {
+      "file": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun\\company-pages\\康臣药业(01681.HK).md",
+      "hash_pass": true
+    },
+    {
+      "file": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun\\consun-revision-inputs.json",
+      "hash_pass": true
+    },
+    {
+      "file": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun\\consun-recalculate.py",
+      "hash_pass": true
+    },
+    {
+      "file": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun\\consun-revision-calculations.json",
+      "hash_pass": true
+    },
+    {
+      "file": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun\\consun-revision-response.json",
+      "hash_pass": true
+    }
+  ],
+  "normalized_earnings": {
+    "ttm_pbt": 1359523000,
+    "ttm_tax_actual": 175096000,
+    "ttm_nci": 9350000,
+    "ttm_fvpl_removed_pretax": 10838000,
+    "normalized_tax_rate": 0.15,
+    "tax_rate_anchor": 0.1498441301430967,
+    "normalized_parent_profit": 1137032250.0,
+    "diluted_share_proxy": 846972000,
+    "fx_assumption": 1.1,
+    "normalized_eps_cny": 1.3424673424859381,
+    "normalized_eps_hkd": 1.4767140767345321,
+    "fx_sensitivity": {
+      "1.05": 1.4095907096102351,
+      "1.1": 1.4767140767345321,
+      "1.15": 1.5438374438588287
+    },
+    "tax_sensitivity": {
+      "0.12": 1.5292619826865588,
+      "0.15": 1.4767140767345321,
+      "0.18": 1.4241661707825053
+    }
+  },
+  "valuation": {
+    "pe_multiple": 11,
+    "pe_value": 16.243854844079852,
+    "ddm_value": 10.643884053112393,
+    "weights": {
+      "pe": 0.75,
+      "ddm": 0.25
+    },
+    "target_raw": 14.843862146337989,
+    "target_price": 14.8,
+    "certainty": 0.6,
+    "buy_price": 11.31,
+    "deep_discount_boundary": 9.61
+  },
+  "scenarios": {
+    "bear": {
+      "eps": 1.4,
+      "pe_multiple": 9.0,
+      "ddm_parameters": {
+        "d0": 0.65,
+        "stage1_growth": 0.01,
+        "terminal_growth": 0.01,
+        "discount_rate": 0.12,
+        "years": 5
+      },
+      "ddm_value": 5.968181818181817,
+      "target_raw": 10.942045454545454
+    },
+    "base": {
+      "eps": 1.4767140767345321,
+      "pe_multiple": 11.0,
+      "ddm_parameters": {
+        "d0": 0.78,
+        "stage1_growth": 0.04,
+        "terminal_growth": 0.025,
+        "discount_rate": 0.105,
+        "years": 5
+      },
+      "ddm_value": 10.643884053112393,
+      "target_raw": 14.843862146337989
+    },
+    "bull": {
+      "eps": 1.65,
+      "pe_multiple": 13.0,
+      "ddm_parameters": {
+        "d0": 0.85,
+        "stage1_growth": 0.06,
+        "terminal_growth": 0.03,
+        "discount_rate": 0.095,
+        "years": 5
+      },
+      "ddm_value": 15.30931849588934,
+      "target_raw": 19.914829623972334
+    }
+  }
+}

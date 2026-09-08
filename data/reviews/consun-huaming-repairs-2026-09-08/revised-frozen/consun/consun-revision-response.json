@@ -1,0 +1,46 @@
+{
+  "company": "康臣药业",
+  "status": "author_revision_ready_for_readjudication",
+  "as_of": "2026-09-08",
+  "proposed_parameters": {
+    "cScore": 81,
+    "mScore": 79,
+    "target_price": 15.2,
+    "valuation_certainty": 0.42,
+    "buy_price": 11.23,
+    "tier": "A_CORE_threshold_pending_readjudication_and_red_flag_check"
+  },
+  "paths": {
+    "company": "data/reviews/consun-huaming-repairs-2026-09-08/writer/reports/深度分析/康臣药业 深度分析 81 2026-09-08.md",
+    "management": "data/reviews/consun-huaming-repairs-2026-09-08/writer/reports/管理层档案/康臣药业 管理层档案 79 2026-09-08.md",
+    "valuation": "data/reviews/consun-huaming-repairs-2026-09-08/writer/reports/估值分析/康臣药业 估值分析 2026-09-08.md",
+    "company_page": "data/reviews/consun-huaming-repairs-2026-09-08/writer/company-pages/康臣药业(01681.HK).md",
+    "inputs": "data/reviews/consun-huaming-repairs-2026-09-08/writer/consun-revision-inputs.json",
+    "script": "data/reviews/consun-huaming-repairs-2026-09-08/writer/consun-recalculate.py",
+    "calculations": "data/reviews/consun-huaming-repairs-2026-09-08/writer/consun-revision-calculations.json"
+  },
+  "responses": [
+    {"id":"C001/C017","status":"revised_pending_readjudication","response":"按2026H1重建现任结构：安猛主席兼CEO、杨玉川执行董事；黎倩只保留股东与历史董事身份；董事会2执行+2非执行+4独董，并披露C.2.1偏离；区分2016协议终止与监管仍视同一致行动。"},
+    {"id":"C002/C020","status":"revised_pending_readjudication","response":"从FY2025-H1 2025+H1 2026建立TTM税前、税、NCI及归母桥，剔除H1 FVPL收益税后641.997万元，采用846.972百万稀释股与1.10汇率假设，EPS为1.5178港元；补1.05/1.10/1.15敏感性。"},
+    {"id":"C003/C018","status":"revised_pending_readjudication","response":"恢复2021—2025收入、毛利、税前利润、归母利润、归母权益及2022—2025平均权益ROE；CAGR用四个年度间隔；补2024—2025报告OCF与现金PPE购建。"},
+    {"id":"C004/C016","status":"revised_pending_readjudication","response":"管理层改用固定20/25/15/15/10/10/5量表，建议79分；旧82分不直接换算。"},
+    {"id":"C005","status":"revised_pending_readjudication","response":"华茂未知不再作为诚信、透明度与股东友好重复负面；只在资本配置回报与估值确定性中保留跟踪。"},
+    {"id":"C006","status":"revised_pending_readjudication","response":"所有DDM敏感性和悲中乐情景由同一函数生成，列明D0、显性增长、永续增长、折现率和年数。"},
+    {"id":"C007/C023","status":"revised_pending_readjudication","response":"现金代理剔除受限现金，改名为扣部分负债后的集团金融资产代理37.98393亿元；明确NCI归属未知、正式权重0，不从归母PE机械扣NCI。"},
+    {"id":"C019","status":"revised_pending_readjudication","response":"深度B恢复2/4/3/6/5，F恢复6/6/3；A-F建议总分81。"},
+    {"id":"C021","status":"revised_pending_readjudication","response":"恢复2025回购1,358万股、1.83794亿港元、均价13.5342港元、两批注销，以及2025和2026H1期权行权发行，避免把回购总量当净缩股。"},
+    {"id":"C022","status":"revised_pending_readjudication","response":"补2025五大/最大客户59.7%/27.0%及供应商54.9%/24.5%，身份与H1趋势标未知，风险主归E5并在B/C作反证。"},
+    {"id":"K1-K7","status":"revised_pending_readjudication","response":"继续保留原审计正确修复：剔现金与FCF均0正式权重、肾科不等于尿毒清、零债务纠错、评分闭合和互斥价格带；合理价重算15.2，买线11.23。"}
+  ],
+  "old_content_retention_check": {
+    "status": "passed",
+    "retained": [
+      "五年经营历史与两年报告现金流",
+      "安猛兼CEO、董事会结构及C.2.1治理事项",
+      "2025回购、注销、期权发行和分红",
+      "产品线结构、研发、集采与客户供应商集中度",
+      "现金、负债、资本承诺、递延税和华茂签约边界"
+    ],
+    "principle": "初稿删减或作者漏读不被计作公司风险；已证实旧内容在原件复核后恢复。"
+  }
+}

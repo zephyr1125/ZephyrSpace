@@ -1,0 +1,82 @@
+{
+  "stage": "康臣最终定向验收",
+  "status": "complete_locked",
+  "pass": false,
+  "company": "康臣药业 01681.HK",
+  "as_of": "2026-09-08",
+  "role": "triplet_review_sol",
+  "model_request": {
+    "requested_model": "gpt-5.6-sol",
+    "requested_effort": "high",
+    "actual_model": null,
+    "note": "原派发请求为high；后续配置调整不追溯改写请求记录。运行时没有提供实际模型证据，不宣称模型已验证。"
+  },
+  "review_scope": "仅验收adjudication/consun-final-decision.json的CF01-CF10受影响段落与唯一冻结版本；未读取另一review、source-map或作者后续稿。",
+  "manifest": "data/reviews/consun-huaming-repairs-2026-09-08/revised-frozen/consun-final/manifest.json",
+  "manifest_hash_check": {
+    "all_8_matched": true,
+    "files": [
+      {"file": "reports/深度分析/康臣药业 深度分析 81 2026-09-08.md", "sha256": "7faa1f2f1465306436bdedfabbbc4ee25329f51b57ba035cecb58001df277b5b"},
+      {"file": "reports/管理层档案/康臣药业 管理层档案 79 2026-09-08.md", "sha256": "84ed21616ada05f0f3c134e3e1695ccfd88ec820f6a7967a408e6d3436b8f0ca"},
+      {"file": "reports/估值分析/康臣药业 估值分析 2026-09-08.md", "sha256": "73007d3aa2895b9af88cac5a6e52adc2620a8b53cee4d0562709632bd2b002d3"},
+      {"file": "company-pages/康臣药业(01681.HK).md", "sha256": "2bd60ade4aa61aba2cd3d9d9421c06ec893b659a86441c44ea32ec88230cb828"},
+      {"file": "consun-revision-inputs.json", "sha256": "e36e800bea3fc7cdb04aac46099281f05884b8f6e2b7cc367c6c43baf445e266"},
+      {"file": "consun-recalculate.py", "sha256": "848158c9322f3843abe759f73bc752963d6a0b57cb64eed7ec12b0a875bae7c0"},
+      {"file": "consun-revision-calculations.json", "sha256": "01c1c8d77058ace9ae8a62d678ac83fa5a1aad73b6cd94d240df8827ae881cd6"},
+      {"file": "consun-revision-response.json", "sha256": "d0b4411f3a46da23875542d93598b633d687348ac3685475331b2e11ca3f0d4a"}
+    ]
+  },
+  "primary_hash_check": {
+    "all_consun_primary_hashes_matched": true,
+    "files": [
+      {"file": "财报/康臣药业/康臣药业2025年度报告.pdf", "sha256": "c16a0fb3c4a5501c4cb34c051fb03d0ce377fc5ea8fc36141d3fb288f50d0dcf"},
+      {"file": "财报/康臣药业/康臣药业2026中期业绩公告.pdf", "sha256": "f01f4d28f19b7123fa0375934a4dad7514e72889089dd18f0cdb19e3e2e018f4"}
+    ]
+  },
+  "script_execution": {
+    "executed": true,
+    "write_intercepted_in_memory": true,
+    "frozen_files_unchanged": true,
+    "generated_equals_frozen_calculations": true,
+    "outputs": {
+      "cScore": 81,
+      "mScore": 79,
+      "normalized_parent_profit_rmb": 1137032250.0,
+      "normalized_eps_hkd": 1.4767140767345321,
+      "pe_value": 16.243854844079852,
+      "ddm_base": 10.643884053112393,
+      "formal_weight_sum": 1.0,
+      "target_price_raw": 14.843862146337989,
+      "target_price": 14.8,
+      "valuation_certainty": 0.6,
+      "buy_price": 11.31,
+      "deep_discount_boundary": 9.61,
+      "scenario_values": {"bear": 10.942045454545454, "base": 14.843862146337989, "bull": 19.914829623972334}
+    }
+  },
+  "cf_acceptance": {
+    "CF01": {"pass": true, "note": "TTM税前、完整TTM FVPL、15%模型税率、NCI、稀释代理与汇率桥闭合。"},
+    "CF02": {"pass": true, "note": "2025FY-2025H1+2026H1七项其他收入桥合计76,944,000元，逐项处理明确。"},
+    "CF03": {"pass": true, "note": "81/79、管理层17/20/12/13/6/7/4、14.8/0.60/11.31及75/25权重统一。"},
+    "CF04": {"pass": false, "note": "两处仍把华茂交割未知置于扣分或负面框架，见remaining_issues。其余D=12/15、IR残留、独董补位及股数用途已清理。"},
+    "CF05": {"pass": true, "note": "旧82正确保留为固定七维17/21/13/14/6/7/4，并列出新79的逐维变化。"},
+    "CF06": {"pass": true, "note": "唐宁、方兰芬、方培城、黄雷声、杜颖、高海恩的职责及加入时间已恢复。"},
+    "CF07": {"pass": true, "note": "B0九要素闭合；杜邦边界与2023 OCF未取得的缺口表述准确。"},
+    "CF08": {"pass": true, "note": "11倍明确为判断值；10年8.27%增长桥与稳定增长5.70%独立复算成立。"},
+    "CF09": {"pass": true, "note": "悲观/基准/乐观情景、汇率税率敏感性及14.80/11.31/9.61互斥价格带一致。"},
+    "CF10": {"pass": true, "note": "三报告、公司页、输入、脚本和计算仅保留一套正式参数；A_CORE仍标注复验及主Agent检查前不落库。"}
+  },
+  "remaining_issues": [
+    {
+      "id": "CONSUN-FINAL-001",
+      "priority": "P2",
+      "location": "管理层档案/## 三、资本配置记录/资本配置纪律评估；## 四、对股东友好度/负面信号",
+      "claim": "冻结稿称华茂交易完成状态未知不扣诚信或股东友好，并已清除相关负面残留。",
+      "evidence": "正文仍写‘扣分来自大额金融资产机会成本、资本承诺和收购状态不清’，将未知状态明确纳入资本配置扣分；又在股东友好度‘负面信号’中写‘交易完成状态需要投资者自行跨公告核对’，仍把研究/披露缺口放在负面框架。",
+      "impact": "与CF04的去除未知负面要求及同稿‘该未知不扣诚信和股东友好分’的表述冲突；虽未改变79分算术或最终估值，但修订关闭状态不完整。",
+      "suggestion": "资本配置扣分只保留已证实的大额金融资产机会成本、资本承诺及外延投资回报未验证；把交割状态改列中性跟踪项，并从股东友好度负面信号移出。"
+    }
+  ],
+  "new_p0_p1": [],
+  "conclusion": "原consun-final未完全通过，仅剩CF04两处P2文字残留；固定评分、TTM盈利桥、估值参数、公司页联动和关键反证均通过。"
+}

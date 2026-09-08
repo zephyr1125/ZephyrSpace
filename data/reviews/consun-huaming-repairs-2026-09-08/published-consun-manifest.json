@@ -1,0 +1,37 @@
+{
+  "company": "康臣药业",
+  "status": "published_and_watchlist_applied_after_dual_pass",
+  "parameters": {
+    "cScore": 81,
+    "mScore": 79,
+    "target_price": 14.8,
+    "currency": "HKD",
+    "valuation_certainty": 0.6,
+    "buy_price": 11.31,
+    "tier": "A_CORE",
+    "tier_condition": "最终报告修复与匿名双路验收全部闭合；当前固定双评分满足A级且无已证重大红线，主Agent可按最终冻结串行发布和入库。",
+    "ready_for_watchlist": true
+  },
+  "files": [
+    {
+      "reviewed_source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun-final-v3\\reports\\深度分析\\康臣药业 深度分析 81 2026-09-08.md",
+      "published": "深度分析\\康臣药业 深度分析 81 2026-09-08.md",
+      "sha256": "7faa1f2f1465306436bdedfabbbc4ee25329f51b57ba035cecb58001df277b5b"
+    },
+    {
+      "reviewed_source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun-final-v3\\reports\\管理层档案\\康臣药业 管理层档案 79 2026-09-08.md",
+      "published": "管理层档案\\康臣药业 管理层档案 79 2026-09-08.md",
+      "sha256": "0c50077b542b6f73749be800201091ea02568dffe00fe49188e0f8acb4f4594f"
+    },
+    {
+      "reviewed_source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun-final-v3\\reports\\估值分析\\康臣药业 估值分析 2026-09-08.md",
+      "published": "估值分析\\康臣药业 估值分析 2026-09-08.md",
+      "sha256": "73007d3aa2895b9af88cac5a6e52adc2620a8b53cee4d0562709632bd2b002d3"
+    },
+    {
+      "reviewed_source": "data\\reviews\\consun-huaming-repairs-2026-09-08\\revised-frozen\\consun-final-v3\\company-pages\\康臣药业(01681.HK).md",
+      "published": "01-公司\\康臣药业(01681.HK).md",
+      "sha256": "2bd60ade4aa61aba2cd3d9d9421c06ec893b659a86441c44ea32ec88230cb828"
+    }
+  ]
+}

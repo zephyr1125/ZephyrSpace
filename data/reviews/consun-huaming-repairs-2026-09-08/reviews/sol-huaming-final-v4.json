@@ -1,0 +1,129 @@
+{
+  "status": "complete_locked",
+  "company": "华明装备",
+  "code": "002270.SZ",
+  "as_of": "2026-09-08",
+  "review_date": "2026-09-09",
+  "review_scope": "仅核验revised-frozen/huaming-final-v4相对v3变化的管理层档案、公司页和回应文件，并复核8个manifest哈希；其余5文件、原件与数值模型继承已锁定的v2/v3验收。未读取另一审核意见，未修改冻结文件。",
+  "routing": {
+    "requested_model": "gpt-5.6-sol",
+    "requested_reasoning_effort": "high",
+    "actual_model_verified": null
+  },
+  "frozen_version": {
+    "manifest": "data/reviews/consun-huaming-repairs-2026-09-08/revised-frozen/huaming-final-v4/manifest.json",
+    "manifest_sha256": "9b18dc34dc0e087e09d5449c895104c621d12285586c15d9158e5e2ede14947f",
+    "files": [
+      {
+        "path": "data/reviews/consun-huaming-repairs-2026-09-08/revised-frozen/huaming-final-v4/reports/深度分析/华明装备 深度分析 81 2026-09-08.md",
+        "sha256": "4a7857078ecd842094d4bb85b1dcd03c8cdbaf86f0d484ab153da680491f0752",
+        "manifest_match": true,
+        "changed_vs_v3": false,
+        "bytes": 23938,
+        "lines": 521
+      },
+      {
+        "path": "data/reviews/consun-huaming-repairs-2026-09-08/revised-frozen/huaming-final-v4/reports/管理层档案/华明装备 管理层档案 80 2026-09-08.md",
+        "sha256": "aa90b1bbdcd7dc207ee18a5001b89abc15c63257fa551f49e4a6994326818bf2",
+        "manifest_match": true,
+        "changed_vs_v3": true,
+        "bytes": 16934,
+        "lines": 420
+      },
+      {
+        "path": "data/reviews/consun-huaming-repairs-2026-09-08/revised-frozen/huaming-final-v4/reports/估值分析/华明装备 估值分析 2026-09-08.md",
+        "sha256": "fadf47fa1027b6ed3c23857402c1d57deb0c1f4d7b5cf89d9abffbd2c020f1f2",
+        "manifest_match": true,
+        "changed_vs_v3": false,
+        "bytes": 12210,
+        "lines": 314
+      },
+      {
+        "path": "data/reviews/consun-huaming-repairs-2026-09-08/revised-frozen/huaming-final-v4/company-pages/华明装备.md",
+        "sha256": "0754991f6993e5d79ace838d1a9d5c60d9f4bffa58c5699bd425d4aa0a6fa684",
+        "manifest_match": true,
+        "changed_vs_v3": true,
+        "bytes": 11126,
+        "lines": 245
+      },
+      {
+        "path": "data/reviews/consun-huaming-repairs-2026-09-08/revised-frozen/huaming-final-v4/huaming-revision-inputs.json",
+        "sha256": "373b35adea2d244a84e18f419ce5319882836bb39f33e1a874e45d4a82c1763e",
+        "manifest_match": true,
+        "changed_vs_v3": false,
+        "bytes": 6911,
+        "lines": 232
+      },
+      {
+        "path": "data/reviews/consun-huaming-repairs-2026-09-08/revised-frozen/huaming-final-v4/huaming-recalculate.py",
+        "sha256": "d077fb05f7dfcda0af77e907cc0910e11fc054382c347316c3f7f5ed6c626dff",
+        "manifest_match": true,
+        "changed_vs_v3": false,
+        "bytes": 6219,
+        "lines": 57
+      },
+      {
+        "path": "data/reviews/consun-huaming-repairs-2026-09-08/revised-frozen/huaming-final-v4/huaming-revision-calculations.json",
+        "sha256": "17de8f416d88cd41e165a839083adab46930872729204465ec1da471415defc6",
+        "manifest_match": true,
+        "changed_vs_v3": false,
+        "bytes": 7473,
+        "lines": 262
+      },
+      {
+        "path": "data/reviews/consun-huaming-repairs-2026-09-08/revised-frozen/huaming-final-v4/huaming-revision-response.json",
+        "sha256": "a21b203c4981bba3347231dcbeae1c9f988c62310e778089b87387257ed35e23",
+        "manifest_match": true,
+        "changed_vs_v3": true,
+        "bytes": 11864,
+        "lines": 238
+      }
+    ],
+    "all_8_hashes_match": true,
+    "changed_files_exactly_3": true
+  },
+  "inherited_validation": {
+    "source": "sol-huaming-final-v2.json与sol-huaming-final-v3.json已锁定核验",
+    "unchanged_model_and_calculations": true,
+    "recalculation_not_repeated": true,
+    "reason": "输入、脚本和计算JSON与v3哈希完全相同；R018/R019不改变任何参数或数值。",
+    "company_score": 81,
+    "management_score": 80,
+    "target_price": 13.7,
+    "certainty": 0.58,
+    "buy_price": 10.43,
+    "deep_discount": 8.87
+  },
+  "delta_checks": {
+    "R018": {
+      "status": "pass",
+      "location": "company-pages/华明装备.md:194-195",
+      "evidence": "正文现明确10.43<P<=13.70为观察区、8.87<=P<=10.43为买入区、P<8.87为深度折价；与同页价格表一致，精确10.43和8.87均归买入区。"
+    },
+    "R019": {
+      "status": "pass",
+      "location": "reports/管理层档案/华明装备 管理层档案 80 2026-09-08.md:240-248",
+      "evidence": "第三方租金比较已明确只作跟踪且未知本身不直接扣分；资本配置5分差距改为海外新增资本ROIC及历史关联融资对少数股东收益的已发生实绩，未改最终80分。"
+    },
+    "response_sync": {
+      "status": "pass",
+      "location": "huaming-revision-response.json:R012-v4,R013-v4",
+      "evidence": "回应准确记录关联租赁未知不扣分及四档互斥价格区，没有重新引入旧分数或旧边界。"
+    }
+  },
+  "findings": [],
+  "remaining_issues": [],
+  "pass": true,
+  "pass_summary": "R018与R019均闭合；3个变化文件差分与裁决一致，8个manifest哈希全部匹配，未发现新增实质问题。",
+  "final_parameters_confirmed": {
+    "cScore": 81,
+    "mScore": 80,
+    "target_price": 13.7,
+    "currency": "CNY",
+    "valuation_certainty": 0.58,
+    "buy_price": 10.43,
+    "deep_discount": 8.87,
+    "tier": "A_CORE"
+  },
+  "watchlist_action": "本审核员不修改Watchlist；是否发布和串行入库由主Agent结合另一独立验收及完整性检查决定。"
+}
