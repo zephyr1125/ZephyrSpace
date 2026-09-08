@@ -10,7 +10,7 @@ description: >-
 
 ## 三件套跨模型复核（试点）
 
-当执行完整三件套或用户要求 DeepSeek second opinion 时，读取 Vault 内 `docs/deepseek-review.md`，使用 `scripts/deepseek_review.py`。
+默认完整三件套保留原有双 Codex 审核；用户指定 DeepSeek second opinion 或明确试点时，读取 Vault 内 `docs/deepseek-review.md`，使用 `scripts/deepseek_review.py`。模型按用户指定为 deepseek-v4-flash，不自行切回 Pro。
 复核分工为：Codex 子 Agent 核查最新原始事实和计算，DeepSeek API 先独立判断再对照初稿，主 Agent 按证据裁决。
 DeepSeek 未配置或失败时回退原有双 Codex 子 Agent，明确记录外部复核未完成，不得跳过审核。
 本节在试点范围内替代下文“双子 Agent”中的逻辑审核执行器，原有审核检查项、P0/P1 修复与评分联动要求继续有效。

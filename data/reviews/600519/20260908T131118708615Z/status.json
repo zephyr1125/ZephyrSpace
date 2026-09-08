@@ -1,0 +1,8 @@
+{
+  "status": "failed",
+  "external_review_complete": false,
+  "model": "deepseek-v4-flash",
+  "network_verification": false,
+  "created_at": "20260908T131118708615Z",
+  "error": "模型返回空的最终答复，不能视为复核完成"
+}

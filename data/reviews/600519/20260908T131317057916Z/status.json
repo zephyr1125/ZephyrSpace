@@ -1,0 +1,18 @@
+{
+  "status": "adjudicated",
+  "external_review_complete": true,
+  "model": "deepseek-v4-flash",
+  "network_verification": false,
+  "created_at": "20260908T131317057916Z",
+  "parameters": {
+    "max_tokens": 12000,
+    "timeout": 300,
+    "max_chars": 400000,
+    "reasoning_effort": "high",
+    "response_format": "text",
+    "thinking": "disabled"
+  },
+  "script_sha256": "5c1ffb2108ee446aeaecc64573ee957b6f861a82174e385cc5b514c669793765",
+  "research_revision_complete": false,
+  "adjudication": "adjudication.md"
+}

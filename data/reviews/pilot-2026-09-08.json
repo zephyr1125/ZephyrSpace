@@ -1,0 +1,192 @@
+{
+  "date": "2026-09-08",
+  "successful_trials": [
+    {
+      "company": "688334",
+      "run": "20260908T131449868271Z",
+      "model": "deepseek-v4-flash",
+      "thinking": "disabled",
+      "prompt_tokens": 212591,
+      "completion_tokens": 12489,
+      "api_seconds": 96.07,
+      "findings": 10
+    },
+    {
+      "company": "IOT",
+      "run": "20260908T131439482483Z",
+      "model": "deepseek-v4-flash",
+      "thinking": "disabled",
+      "prompt_tokens": 123090,
+      "completion_tokens": 4538,
+      "api_seconds": 42.06,
+      "findings": 10
+    },
+    {
+      "company": "600519",
+      "run": "20260908T131317057916Z",
+      "model": "deepseek-v4-flash",
+      "thinking": "disabled",
+      "prompt_tokens": 249868,
+      "completion_tokens": 4460,
+      "api_seconds": 41.4,
+      "findings": 6
+    }
+  ],
+  "recorded_responses": [
+    {
+      "path": "data/reviews/600519/20260908T131118708615Z/stage1-response.json",
+      "usage": {
+        "prompt_tokens": 111718,
+        "completion_tokens": 4314,
+        "total_tokens": 116032,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 4314
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 111718
+      },
+      "finish_reason": "stop"
+    },
+    {
+      "path": "data/reviews/600519/20260908T131317057916Z/stage1-response.json",
+      "usage": {
+        "prompt_tokens": 111639,
+        "completion_tokens": 2314,
+        "total_tokens": 113953,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 111639
+      },
+      "finish_reason": "stop"
+    },
+    {
+      "path": "data/reviews/600519/20260908T131317057916Z/stage2-response.json",
+      "usage": {
+        "prompt_tokens": 138229,
+        "completion_tokens": 2146,
+        "total_tokens": 140375,
+        "prompt_tokens_details": {
+          "cached_tokens": 111616
+        },
+        "prompt_cache_hit_tokens": 111616,
+        "prompt_cache_miss_tokens": 26613
+      },
+      "finish_reason": "stop"
+    },
+    {
+      "path": "data/reviews/688334/20260908T131136403628Z/stage1-response.json",
+      "usage": {
+        "prompt_tokens": 93267,
+        "completion_tokens": 23999,
+        "total_tokens": 117266,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 23999
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 93011
+      },
+      "finish_reason": "length"
+    },
+    {
+      "path": "data/reviews/688334/20260908T131449868271Z/stage1-response.json",
+      "usage": {
+        "prompt_tokens": 93188,
+        "completion_tokens": 8428,
+        "total_tokens": 101616,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 93188
+      },
+      "finish_reason": "stop"
+    },
+    {
+      "path": "data/reviews/688334/20260908T131449868271Z/stage2-response.json",
+      "usage": {
+        "prompt_tokens": 119403,
+        "completion_tokens": 4061,
+        "total_tokens": 123464,
+        "prompt_tokens_details": {
+          "cached_tokens": 93184
+        },
+        "prompt_cache_hit_tokens": 93184,
+        "prompt_cache_miss_tokens": 26219
+      },
+      "finish_reason": "stop"
+    },
+    {
+      "path": "data/reviews/IOT/20260908T130916764473Z/stage1-response.json",
+      "usage": {
+        "prompt_tokens": 53602,
+        "completion_tokens": 3652,
+        "total_tokens": 57254,
+        "prompt_tokens_details": {
+          "cached_tokens": 53504
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 3652
+        },
+        "prompt_cache_hit_tokens": 53504,
+        "prompt_cache_miss_tokens": 98
+      },
+      "finish_reason": "stop"
+    },
+    {
+      "path": "data/reviews/IOT/20260908T131051622809Z/stage1-response.json",
+      "usage": {
+        "prompt_tokens": 53635,
+        "completion_tokens": 23999,
+        "total_tokens": 77634,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 23327
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 53635
+      },
+      "finish_reason": "length"
+    },
+    {
+      "path": "data/reviews/IOT/20260908T131439482483Z/stage1-response.json",
+      "usage": {
+        "prompt_tokens": 53556,
+        "completion_tokens": 2012,
+        "total_tokens": 55568,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 53556
+      },
+      "finish_reason": "stop"
+    },
+    {
+      "path": "data/reviews/IOT/20260908T131439482483Z/stage2-response.json",
+      "usage": {
+        "prompt_tokens": 69534,
+        "completion_tokens": 2526,
+        "total_tokens": 72060,
+        "prompt_tokens_details": {
+          "cached_tokens": 53504
+        },
+        "prompt_cache_hit_tokens": 53504,
+        "prompt_cache_miss_tokens": 16030
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "recorded_total_tokens": 975222,
+  "billing_complete": false,
+  "billing_note": "早期未保留响应的失败、两个取消中的Pro调用及微型连通性测试未完全计入；不得把已记录用量当总账。"
+}

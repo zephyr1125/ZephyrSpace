@@ -1,0 +1,19 @@
+{
+  "checked": "2026-09-08",
+  "latest_10q": [
+    {
+      "form": "10-Q",
+      "filingDate": "2026-06-09",
+      "reportDate": "2026-05-02",
+      "accessionNumber": "0001628280-26-041893",
+      "primaryDocument": "iot-20260502.htm"
+    },
+    {
+      "form": "10-Q",
+      "filingDate": "2025-12-09",
+      "reportDate": "2025-11-01",
+      "accessionNumber": "0001628280-25-056069",
+      "primaryDocument": "iot-20251101.htm"
+    }
+  ]
+}

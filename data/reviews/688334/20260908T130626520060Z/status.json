@@ -1,0 +1,8 @@
+{
+  "status": "cancelled",
+  "external_review_complete": false,
+  "model": "deepseek-v4-pro",
+  "network_verification": false,
+  "created_at": "20260908T130626520060Z",
+  "error": "用户指定改用 Flash，已停止本地 Pro 请求；远端用量未知"
+}
