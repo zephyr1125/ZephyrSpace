@@ -1,7 +1,7 @@
 {
   "version": 29,
   "watchlistLevel": "B_GROWTH",
-  "updated_at": "2026-09-09",
+  "updated_at": "2026-09-11",
   "entries": [
     {
       "name": "海底捞",
@@ -302,26 +302,6 @@
       "strategicCoreType": null,
       "lastFundamentalReviewDate": "2026-08-23",
       "lastRedFlagReviewDate": null
-    },
-    {
-      "name": "Adobe",
-      "code": "ADBE.US",
-      "board": "纳",
-      "cScore": 81,
-      "mScore": 78,
-      "target_price": 272,
-      "valuation_certainty": 0.68,
-      "dv_ttm": null,
-      "next_earnings_date": null,
-      "next_earnings_type": "Q3 FY2026季报",
-      "lastEarningsIncorporated": "2026Q2",
-      "cycle_is_cyclical": false,
-      "cycle_position": null,
-      "watchlistLevel": "B_GROWTH",
-      "trackingStatus": "WATCHING",
-      "strategicCoreType": null,
-      "lastFundamentalReviewDate": "2026-07-17",
-      "lastRedFlagReviewDate": "2026-07-17"
     },
     {
       "name": "华润万象生活",
@@ -1662,6 +1642,26 @@
       "strategicCoreType": null,
       "lastFundamentalReviewDate": "2026-09-07",
       "lastRedFlagReviewDate": "2026-09-07"
+    },
+    {
+      "name": "中国神华",
+      "code": "601088.SH",
+      "board": "沪",
+      "cScore": 78,
+      "mScore": 75,
+      "target_price": 28.7,
+      "valuation_certainty": 0.4,
+      "dv_ttm": 4.25,
+      "next_earnings_date": null,
+      "next_earnings_type": null,
+      "lastEarningsIncorporated": "2026H1",
+      "cycle_is_cyclical": true,
+      "cycle_position": "复苏中期",
+      "watchlistLevel": "B_GROWTH",
+      "trackingStatus": "WATCHING",
+      "strategicCoreType": null,
+      "lastFundamentalReviewDate": "2026-09-11",
+      "lastRedFlagReviewDate": "2026-09-11"
     }
   ],
   "valuation_certainty_scale": "0.00-1.00; measures target-price reliability, not company quality",

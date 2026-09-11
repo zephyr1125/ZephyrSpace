@@ -1,0 +1,63 @@
+{
+  "run_id": "china_shenhua_2026-09-11",
+  "company": "中国神华",
+  "code": "601088.SH",
+  "data_cutoff": "2026-09-11",
+  "roles": [
+    {
+      "role": "triplet_evidence",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "low",
+      "agent_id": "/root/shenhua_evidence",
+      "dispatch_method": "collaboration.spawn_agent custom role",
+      "actual_model": null,
+      "actual_model_source": null,
+      "status": "completed",
+      "artifacts": ["data/reviews/china_shenhua_2026-09-11/evidence-index.md", "data/reviews/china_shenhua_2026-09-11/originals/"]
+    },
+    {
+      "role": "triplet_writer",
+      "requested_model": "gpt-5.6-sol",
+      "requested_effort": "low",
+      "agent_id": "/root/shenhua_writer",
+      "dispatch_method": "collaboration.spawn_agent custom role",
+      "actual_model": null,
+      "actual_model_source": null,
+      "status": "remediation_completed_research_incomplete",
+      "artifacts": ["深度分析/中国神华 深度分析 76 2026-09-11.md", "管理层档案/中国神华 管理层档案 70 2026-09-11.md", "估值分析/中国神华 估值分析 2026-09-11.md", "data/reviews/china_shenhua_2026-09-11/writer-selfcheck.md", "深度分析/中国神华 深度分析 78 2026-09-11.md", "管理层档案/中国神华 管理层档案 75 2026-09-11.md", "估值分析/中国神华 估值分析 待定 2026-09-11.md", "data/reviews/china_shenhua_2026-09-11/author-remediation.md", "data/reviews/china_shenhua_2026-09-11/author-p2-closure.md", "data/reviews/china_shenhua_2026-09-11/rebuild-valuation.ps1"]
+    },
+    {
+      "role": "triplet_review_sol",
+      "requested_model": "gpt-5.6-sol",
+      "requested_effort": "low",
+      "agent_id": "/root/shenhua_review_sol",
+      "dispatch_method": "collaboration.spawn_agent custom role",
+      "actual_model": null,
+      "actual_model_source": null,
+      "status": "remediation_rechecked",
+      "artifacts": ["data/reviews/china_shenhua_2026-09-11/review-sol-stage1.md", "data/reviews/china_shenhua_2026-09-11/review-sol-stage2.md", "data/reviews/china_shenhua_2026-09-11/review-sol-remediation.md"]
+    },
+    {
+      "role": "triplet_review_astra",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "low",
+      "agent_id": "/root/shenhua_review_astra",
+      "dispatch_method": "collaboration.spawn_agent custom role",
+      "actual_model": null,
+      "actual_model_source": null,
+      "status": "remediation_rechecked",
+      "artifacts": ["data/reviews/china_shenhua_2026-09-11/review-astra-stage1.md", "data/reviews/china_shenhua_2026-09-11/review-astra-stage2.md", "data/reviews/china_shenhua_2026-09-11/review-astra-remediation.md"]
+    },
+    {
+      "role": "triplet_adjudicator",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "low",
+      "agent_id": "/root/shenhua_adjudicator",
+      "dispatch_method": "collaboration.spawn_agent custom role",
+      "actual_model": null,
+      "actual_model_source": null,
+      "status": "adjudicated_research_incomplete",
+      "artifacts": ["data/reviews/china_shenhua_2026-09-11/adjudication.md"]
+    }
+  ]
+}
