@@ -100,10 +100,13 @@ evals/reports/**/.live/
 
 # 研究过程产物；证据、底稿和最终裁决保留，见 docs/git-artifact-policy.md
 /data/reviews/**/writer/**/*.md
+/data/reviews/**/writer/audit-*.py
 /data/reviews/**/sol/
 /data/reviews/**/astra/
 /data/reviews/**/anonymous/
 /data/reviews/**/anonymous-recheck/
+/data/reviews/**/review-facts/
+/data/reviews/**/review-reasoning/
 /data/reviews/**/frozen*/
 /data/reviews/**/revised-frozen/
 /data/reviews/**/originals/
@@ -147,3 +150,14 @@ evals/reports/**/.live/
 /data/reviews/**/revised-valuation.md
 /data/reviews/**/*-prior-input.json
 /data/reviews/**/usage-start.json
+/data/reviews/**/usage-audit*.json
+/data/reviews/**/final/author-v1-*
+/data/reviews/**/final/author-v2-*
+/data/reviews/**/final/author-v3-manifest.md
+/data/reviews/**/final/author-v3-tables.md
+
+# 装配输出可从source和底稿再生成，最终正式报告与final清单仍保留
+/data/reviews/**/build-v*/
+# 名称含final的构建副本也不等于发布依据；正式验收包只放final/release-*/。
+/data/reviews/**/build-final/
+/data/reviews/**/schema-replay/
