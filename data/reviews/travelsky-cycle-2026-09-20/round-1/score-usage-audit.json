@@ -1,0 +1,293 @@
+{
+  "root_thread_id": "01a0b99c-1c9b-7732-8dfe-cf7f4a687e21",
+  "since": "2026-09-20T12:49:23.926000+00:00",
+  "until": "2026-09-20T13:33:46.515436+00:00",
+  "wall_clock_seconds": 2662.589436,
+  "session_count": 6,
+  "sessions": [
+    {
+      "thread_id": "01a0b99c-1c9b-7732-8dfe-cf7f4a687e21",
+      "parent_thread_id": null,
+      "role": "root",
+      "log_path": "C:\\Users\\zephy\\.codex\\sessions\\2026\\09\\19\\rollout-2026-09-19T20-20-11-01a0b99c-1c9b-7732-8dfe-cf7f4a687e21.jsonl",
+      "usage": {
+        "input_tokens": 14303160,
+        "cached_input_tokens": 14111744,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 44533,
+        "reasoning_output_tokens": 17904,
+        "total_tokens": 14347693,
+        "uncached_input_tokens": 191416
+      },
+      "logged_turn_contexts": [],
+      "completed_turns": [],
+      "completed_duration_ms": 0,
+      "first_event": "2026-09-19T12:20:11.981000+00:00",
+      "last_observed_event": "2026-09-20T13:33:46.515436+00:00",
+      "counter_decreases": []
+    },
+    {
+      "thread_id": "01a0bedd-3756-73d1-a53a-15e4244744a0",
+      "parent_thread_id": "01a0b99c-1c9b-7732-8dfe-cf7f4a687e21",
+      "role": "triplet_evidence",
+      "log_path": "C:\\Users\\zephy\\.codex\\sessions\\2026\\09\\20\\rollout-2026-09-20T20-49-23-01a0bedd-3756-73d1-a53a-15e4244744a0.jsonl",
+      "usage": {
+        "input_tokens": 3251703,
+        "cached_input_tokens": 3107584,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 22909,
+        "reasoning_output_tokens": 1962,
+        "total_tokens": 3274612,
+        "uncached_input_tokens": 144119
+      },
+      "logged_turn_contexts": [
+        {
+          "model": "gpt-5.6-terra",
+          "effort": "low"
+        },
+        {
+          "model": "gpt-5.6-terra",
+          "effort": "low"
+        },
+        {
+          "model": "gpt-5.6-terra",
+          "effort": "low"
+        }
+      ],
+      "completed_turns": [
+        {
+          "timestamp": "2026-09-20T12:58:00.938Z",
+          "duration_ms": 516886,
+          "error": false
+        },
+        {
+          "timestamp": "2026-09-20T13:02:01.064Z",
+          "duration_ms": 187333,
+          "error": false
+        },
+        {
+          "timestamp": "2026-09-20T13:20:51.558Z",
+          "duration_ms": 258829,
+          "error": false
+        }
+      ],
+      "completed_duration_ms": 963048,
+      "first_event": "2026-09-20T12:49:24.226000+00:00",
+      "last_observed_event": "2026-09-20T13:20:51.558000+00:00",
+      "counter_decreases": []
+    },
+    {
+      "thread_id": "01a0bee1-9deb-7fc1-9724-ef3ec8346970",
+      "parent_thread_id": "01a0b99c-1c9b-7732-8dfe-cf7f4a687e21",
+      "role": "triplet_writer",
+      "log_path": "C:\\Users\\zephy\\.codex\\sessions\\2026\\09\\20\\rollout-2026-09-20T20-54-12-01a0bee1-9deb-7fc1-9724-ef3ec8346970.jsonl",
+      "usage": {
+        "input_tokens": 7568767,
+        "cached_input_tokens": 7389952,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 21592,
+        "reasoning_output_tokens": 1929,
+        "total_tokens": 7590359,
+        "uncached_input_tokens": 178815
+      },
+      "logged_turn_contexts": [
+        {
+          "model": "gpt-5.6-terra",
+          "effort": "low"
+        },
+        {
+          "model": "gpt-5.6-terra",
+          "effort": "low"
+        },
+        {
+          "model": "gpt-5.6-terra",
+          "effort": "low"
+        }
+      ],
+      "completed_turns": [
+        {
+          "timestamp": "2026-09-20T13:05:46.086Z",
+          "duration_ms": 693609,
+          "error": false
+        },
+        {
+          "timestamp": "2026-09-20T13:23:46.611Z",
+          "duration_ms": 423205,
+          "error": false
+        },
+        {
+          "timestamp": "2026-09-20T13:25:04.928Z",
+          "duration_ms": 55632,
+          "error": false
+        }
+      ],
+      "completed_duration_ms": 1172446,
+      "first_event": "2026-09-20T12:54:12.664000+00:00",
+      "last_observed_event": "2026-09-20T13:25:04.928000+00:00",
+      "counter_decreases": []
+    },
+    {
+      "thread_id": "01a0beea-30b2-7e31-a870-7bb2d6fa604d",
+      "parent_thread_id": "01a0b99c-1c9b-7732-8dfe-cf7f4a687e21",
+      "role": "triplet_review_facts",
+      "log_path": "C:\\Users\\zephy\\.codex\\sessions\\2026\\09\\20\\rollout-2026-09-20T21-03-34-01a0beea-30b2-7e31-a870-7bb2d6fa604d.jsonl",
+      "usage": {
+        "input_tokens": 3208157,
+        "cached_input_tokens": 3052800,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 15852,
+        "reasoning_output_tokens": 2431,
+        "total_tokens": 3224009,
+        "uncached_input_tokens": 155357
+      },
+      "logged_turn_contexts": [
+        {
+          "model": "gpt-5.6-terra",
+          "effort": "low"
+        },
+        {
+          "model": "gpt-5.6-terra",
+          "effort": "low"
+        },
+        {
+          "model": "gpt-5.6-terra",
+          "effort": "low"
+        }
+      ],
+      "completed_turns": [
+        {
+          "timestamp": "2026-09-20T13:10:24.841Z",
+          "duration_ms": 410511,
+          "error": false
+        },
+        {
+          "timestamp": "2026-09-20T13:29:21.621Z",
+          "duration_ms": 208578,
+          "error": false
+        },
+        {
+          "timestamp": "2026-09-20T13:32:02.052Z",
+          "duration_ms": 71958,
+          "error": false
+        }
+      ],
+      "completed_duration_ms": 691047,
+      "first_event": "2026-09-20T13:03:34.477000+00:00",
+      "last_observed_event": "2026-09-20T13:32:02.052000+00:00",
+      "counter_decreases": []
+    },
+    {
+      "thread_id": "01a0beea-6e2b-75b3-8d78-7260a081b125",
+      "parent_thread_id": "01a0b99c-1c9b-7732-8dfe-cf7f4a687e21",
+      "role": "triplet_review_reasoning",
+      "log_path": "C:\\Users\\zephy\\.codex\\sessions\\2026\\09\\20\\rollout-2026-09-20T21-03-49-01a0beea-6e2b-75b3-8d78-7260a081b125.jsonl",
+      "usage": {
+        "input_tokens": 3943197,
+        "cached_input_tokens": 3764224,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 17686,
+        "reasoning_output_tokens": 5394,
+        "total_tokens": 3960883,
+        "uncached_input_tokens": 178973
+      },
+      "logged_turn_contexts": [
+        {
+          "model": "gpt-5.6-sol",
+          "effort": "low"
+        },
+        {
+          "model": "gpt-5.6-sol",
+          "effort": "low"
+        }
+      ],
+      "completed_turns": [
+        {
+          "timestamp": "2026-09-20T13:09:49.346Z",
+          "duration_ms": 359269,
+          "error": false
+        },
+        {
+          "timestamp": "2026-09-20T13:28:21.161Z",
+          "duration_ms": 133765,
+          "error": false
+        }
+      ],
+      "completed_duration_ms": 493034,
+      "first_event": "2026-09-20T13:03:50.315000+00:00",
+      "last_observed_event": "2026-09-20T13:28:21.161000+00:00",
+      "counter_decreases": []
+    },
+    {
+      "thread_id": "01a0bef1-e003-7241-acf3-1b9b36ead059",
+      "parent_thread_id": "01a0b99c-1c9b-7732-8dfe-cf7f4a687e21",
+      "role": "triplet_adjudicator",
+      "log_path": "C:\\Users\\zephy\\.codex\\sessions\\2026\\09\\20\\rollout-2026-09-20T21-11-57-01a0bef1-e003-7241-acf3-1b9b36ead059.jsonl",
+      "usage": {
+        "input_tokens": 2108974,
+        "cached_input_tokens": 1986688,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 9911,
+        "reasoning_output_tokens": 508,
+        "total_tokens": 2118885,
+        "uncached_input_tokens": 122286
+      },
+      "logged_turn_contexts": [
+        {
+          "model": "gpt-6-astra",
+          "effort": "low"
+        },
+        {
+          "model": "gpt-6-astra",
+          "effort": "low"
+        },
+        {
+          "model": "gpt-6-astra",
+          "effort": "low"
+        },
+        {
+          "model": "gpt-6-astra",
+          "effort": "low"
+        }
+      ],
+      "completed_turns": [
+        {
+          "timestamp": "2026-09-20T13:15:48.860Z",
+          "duration_ms": 230929,
+          "error": false
+        },
+        {
+          "timestamp": "2026-09-20T13:23:47.881Z",
+          "duration_ms": 96270,
+          "error": false
+        },
+        {
+          "timestamp": "2026-09-20T13:29:48.330Z",
+          "duration_ms": 45576,
+          "error": false
+        }
+      ],
+      "completed_duration_ms": 372775,
+      "first_event": "2026-09-20T13:11:58.082000+00:00",
+      "last_observed_event": "2026-09-20T13:33:46.515436+00:00",
+      "counter_decreases": []
+    }
+  ],
+  "totals": {
+    "input_tokens": 34383958,
+    "cached_input_tokens": 33412992,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 132483,
+    "reasoning_output_tokens": 30128,
+    "total_tokens": 34516441,
+    "uncached_input_tokens": 970966
+  },
+  "source": "复用triplet_run_audit.summarize：时间窗累计末值减起点前末值；窗口后创建或前已结束的子任务不纳入",
+  "limitations": [
+    "输入含反复上下文，缓存输入是总输入子集；非缓存输入=总输入-缓存输入。",
+    "累计用量快照不相加，推理输出包含在输出中。",
+    "墙钟时间不等于并行子任务耗时之和；当前主任务最终回复尚未结算部分不在截止快照内。",
+    "须与调度记录核对子任务数量；模型仅为日志记录值，不是独立后端验证。",
+    "本次为已有证据上的修复，与上次完整启动范围不同，差额不代表完整三件套节省比例。",
+    "已排除同期启动的茅台子任务；主任务窗口内仍含茅台启动协调少量开销，未伪造分摊。"
+  ]
+}

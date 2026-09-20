@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "parent_decision": "data/reviews/triplet-score-cycle-2026-09-20/round-2/decision-v1.json",
+  "parent_sha256": "3063f5f20fe93069b4898a1a3f1596269aff981e363298063f6fe59201761e43",
+  "scope": "仅R01/B0联动与R05来源边界澄清；不新增研究轮次",
+  "clarifications": [
+    {
+      "id": "R01-B0",
+      "lane": "research",
+      "acceptance_id": "R01-A",
+      "condition": "IPO起源原件同时用于B0：回答早期是否重资产长回报低毛利、是否存在建设到运营质变及其节点（不适用须说明）、早期至今模式有无本质变化及驱动，并选原分类。三判断获充分事实支撑即2，不要求九要素逐格填满；仅实质部分判断可覆盖才1，不得单因本轮未取资料扣分。修订评分桥把B0纳入R01-A而非默认保留1。",
+      "source_refs": [
+        "deep-prebuy-skill/SKILL.md:175-204、274"
+      ]
+    },
+    {
+      "id": "R05-BOUNDARY",
+      "lane": "research",
+      "acceptance_id": "R05-A",
+      "condition": "高卫东上市身份已核2020年报1193，法院通报的证券时报转载已核一审2024-02-02。袁仁国人民网与纪委原网页本次工具打开失败；须保留来源等级，禁止写裁决已直接看法院原件。F1=2仅为可辩护条件值（周期性历史调查扣2及独立激励/稳定性限制1），最终须与一次修订的人事事实匹配；不要求未来结案。",
+      "source_refs": [
+        "https://www.stcn.com/article/detail/1113572.html",
+        "财报/贵州茅台/贵州茅台2020年度报告.md:1193"
+      ]
+    }
+  ],
+  "score_state": "pending",
+  "research_state": "pending",
+  "approved_parameters": null
+}

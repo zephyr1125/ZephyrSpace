@@ -1,0 +1,11 @@
+{
+  "stage": "score_evidence",
+  "frozen_at": "2026-09-20T13:51:18.068185+00:00",
+  "files": {
+    "data/reviews/triplet-score-cycle-2026-09-20/round-2/evidence/facts-v2.json": "de809812bf6235d27f3d25c1345e18d2b63e67f8f6d42272bea557a76da03b83",
+    "data/reviews/triplet-score-cycle-2026-09-20/round-2/evidence/sources-v2.json": "1562194068497324a0c55367a1f6d6a706233d7e7dc908f382bbb252d1070506",
+    "data/reviews/triplet-score-cycle-2026-09-20/round-2/evidence/facts-extra.json": "092bdd4b61808bc817c58e024e0a273f31857caf832809afc2b25f9b915ef192",
+    "data/reviews/triplet-score-cycle-2026-09-20/round-2/evidence/sources-extra.json": "8b3364c9c13f4d609f26f57e866be553c2106c73d4ef619db1a0f7b7ed28f982"
+  },
+  "human_check": "已纠正审计跨年错误、目标实际总收入口径、已指向的留置公告补原件；关联金融资金不可全算主营现金转化。有限历史与无独立精确排名保留边界，作者审核可定向回看原件，不因缺口自动扣分。"
+}

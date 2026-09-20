@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "evidence_version": "MTC2-v1-frozen-2026-09-20",
+  "evidence": ["data/reviews/triplet-score-cycle-2026-09-20/round-2/evidence/facts.json","data/reviews/triplet-score-cycle-2026-09-20/round-2/evidence/sources.json"],
+  "requirements": [
+    {"id":"MTC2-REQ-01","scope":"起源、控制主体承继、早期至当前商业模式","decisive":true},
+    {"id":"MTC2-REQ-02","scope":"核心相关市场地位及独立官方旁证","decisive":true},
+    {"id":"MTC2-REQ-03","scope":"五年财务、2026H1、ROE/现金流/非经常性/应收/审计附注","decisive":true},
+    {"id":"MTC2-REQ-04","scope":"三年当时经营目标与实际","decisive":true},
+    {"id":"MTC2-REQ-05","scope":"资本配置、股东回报、融资与稀释","decisive":true},
+    {"id":"MTC2-REQ-06","scope":"管理层、治理、关联交易与激励","decisive":true},
+    {"id":"MTC2-REQ-07","scope":"近十年公开廉洁事件、调查状态与可得危机措施","decisive":true}
+  ],
+  "answers": [
+    {"id":"MTC2-REQ-01","status":"bounded","coverage":"1999设立、上市、截至2026H1控制链与当前模式已核。","remaining":"上市前至2019的逐年商业模式和控制承继原件未取。","evidence_refs":["MTC2-ORG-001","MTC2-BIZ-001","MTC2-BIZ-002"],"search_scope":"2020-2026本地年报/中报。","assessment":"当前控制与现行经营模式已有法定披露；早期细节不应用当前数据替代。"},
+    {"id":"MTC2-REQ-02","status":"bounded","coverage":"公司年报有核心产品规模/地位陈述。","remaining":"未取得独立官方行业排名原件。","evidence_refs":["MTC2-MKT-001"],"search_scope":"2023-2025本地年度报告市场与经营章节。","assessment":"评分者须将该地位陈述视为公司自述，独立市场份额/排名不可作为已核事实。"},
+    {"id":"MTC2-REQ-03","status":"covered","coverage":"2020-2025年度序列、2026H1、利润质量、应收及审计意见已定位。","remaining":"财务报表完整附注由审核员按风险抽样回看。","evidence_refs":["MTC2-FIN-001","MTC2-FIN-002","MTC2-AUD-001"]},
+    {"id":"MTC2-REQ-04","status":"bounded","coverage":"2024及2025目标与实际已可对照。","remaining":"2023目标原件未在本包摘录，2026全年尚未结束。","evidence_refs":["MTC2-PLAN-001"],"search_scope":"2023-2025年度报告经营计划及经营讨论章节。","assessment":"不得把2026H1收入或利润变化当作全年计划兑现；已可判断2025收入目标与实际差异。"},
+    {"id":"MTC2-REQ-05","status":"covered","coverage":"历年现金分红、回购注销、最新股本变化均有原件定位。","remaining":"逐笔融资历史未建立全量清单。","evidence_refs":["MTC2-CAP-001"]},
+    {"id":"MTC2-REQ-06","status":"covered","coverage":"现任法定代表人、高管变动、关联交易披露和激励承诺状态已覆盖。","remaining":"全体董事任期与个人履历由评分/审核阶段按需回看。","evidence_refs":["MTC2-GOV-001","MTC2-GOV-002"]},
+    {"id":"MTC2-REQ-07","status":"bounded","coverage":"2026H1已披露的高管留置事项及其未明边界已记录。","remaining":"近十年全部廉洁事件、个人身份、调查后续及危机措施全链条未获原件。","evidence_refs":["MTC2-RISK-001","MTC2-RISK-002"],"search_scope":"2020-2026本地定期报告及2026H1所列2026-004、2026-005公告索引。","assessment":"该缺口不允许被解释为无红旗；评分者应把未核身份/状态保留为不确定性，并只依据已披露事实判断。"}
+  ]
+}

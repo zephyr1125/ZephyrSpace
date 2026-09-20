@@ -1,0 +1,164 @@
+{
+  "objective": "最多5轮改造/测试；目标60分钟内给出有证据依据且双路复核及裁决批准的最终公司分、管理层分和明确处置，估值与完整报告状态分开。",
+  "max_rounds": 5,
+  "current_round": 2,
+  "status": "target_met_in_two_rounds",
+  "previous_goal_turn": "第1轮评分44.38分钟批准；第2轮独立取证评分进行中",
+  "rounds": [
+    {
+      "round": 1,
+      "status": "score_target_passed_warm_case",
+      "scope": "TravelSky复用证据修复评分测试；不能外推首次完整新建耗时",
+      "started_at": "2026-09-20T12:49:23.926Z",
+      "start_precision": "session_meta精确创建时间；此前规则改造不计入案例评分耗时",
+      "changes": [
+        "评分先批准、长报告后展开",
+        "移除单独盲审风险卡",
+        "充分证据下的定性点值判断",
+        "补证逐ID交接检查",
+        "点值/区间defer的忠实装配"
+      ],
+      "validation": {
+        "triplet_tests": 53,
+        "entry_check": "pass",
+        "migration": "pass",
+        "all_tests": 65,
+        "old_failed_bundle_defer_replay": "assembled_for_review, publish_allowed=false",
+        "old_evidence_gap_replay": "3项决定性open全部拦截",
+        "evidence_handoff": "机器通过+人工检查，退回修正2处后冻结"
+      },
+      "success_requires": [
+        "两路独立复核全部评分分项及决定性原件",
+        "匿名裁决及必要修复关闭重大评分问题",
+        "最终点值与底稿一致并显示整数",
+        "60分钟内得到批准评分",
+        "如实记录估值与完整三件套未完成事项",
+        "记录真实用量，不宣称不存在的旧基线节省率"
+      ],
+      "sessions": [
+        {
+          "thread_id": "01a0bedd-3756-73d1-a53a-15e4244744a0",
+          "timestamp": "2026-09-20T12:49:23.926Z",
+          "spawn": {
+            "parent_thread_id": "01a0b99c-1c9b-7732-8dfe-cf7f4a687e21",
+            "depth": 1,
+            "agent_path": "/root/travelsky_cycle_evidence",
+            "agent_nickname": "Russell",
+            "agent_role": "triplet_evidence"
+          },
+          "path": "C:\\Users\\zephy\\.codex\\sessions\\2026\\09\\20\\rollout-2026-09-20T20-49-23-01a0bedd-3756-73d1-a53a-15e4244744a0.jsonl"
+        },
+        {
+          "thread_id": "01a0bee1-9deb-7fc1-9724-ef3ec8346970",
+          "timestamp": "2026-09-20T12:54:12.350Z",
+          "spawn": {
+            "parent_thread_id": "01a0b99c-1c9b-7732-8dfe-cf7f4a687e21",
+            "depth": 1,
+            "agent_path": "/root/travelsky_cycle_writer",
+            "agent_nickname": "Locke",
+            "agent_role": "triplet_writer"
+          },
+          "path": "C:\\Users\\zephy\\.codex\\sessions\\2026\\09\\20\\rollout-2026-09-20T20-54-12-01a0bee1-9deb-7fc1-9724-ef3ec8346970.jsonl"
+        }
+      ],
+      "evidence_frozen_at": "2026-09-20T13:02:46.083466+00:00",
+      "phase": "score_approved",
+      "score_manifest": "data/reviews/travelsky-cycle-2026-09-20/round-1/score-manifest-v1.json",
+      "first_review": {
+        "facts_P1": 2,
+        "reasoning_P1": 6,
+        "anonymous_candidates": 10,
+        "adjudicated_acceptance_ids": 8,
+        "score_state": "pending"
+      },
+      "last_progress_at": "2026-09-20T13:17:42.229041+00:00",
+      "approved_at": "2026-09-20T13:33:46.515436+00:00",
+      "elapsed_seconds": 2662.589436,
+      "scores": {
+        "company": 72,
+        "management": 74,
+        "combined": 146
+      },
+      "qualification": "NONE",
+      "full_triplet_complete": false,
+      "archive": "data/reviews/travelsky-cycle-2026-09-20/round-1/final/score-package.json",
+      "usage_audit": "data/reviews/travelsky-cycle-2026-09-20/round-1/score-usage-audit.json"
+    },
+    {
+      "round": 2,
+      "company": "贵州茅台",
+      "status": "score_target_passed_independent_source_case",
+      "scope": "从原始财报独立取证评分，不读取旧分析/评分",
+      "directory": "data/reviews/triplet-score-cycle-2026-09-20/round-2",
+      "started_at": "2026-09-20T13:33:07.000Z",
+      "phase": "score_approved",
+      "runtime_interruptions": [
+        {
+          "at": "2026-09-20T13:49:09Z",
+          "type": "usage_limit",
+          "roles": [
+            "evidence",
+            "writer",
+            "review_facts"
+          ],
+          "account_check": "ordinaryUsageAllowed=true，与角色报错不一致",
+          "action": "同模型同范围仅重试一次，等待恢复，不重置计时",
+          "result": "原模型一次重试后恢复，证据补充和事实原件核查已返回"
+        }
+      ],
+      "evidence_manifest": "data/reviews/triplet-score-cycle-2026-09-20/round-2/evidence-manifest.json",
+      "first_review": {
+        "facts_P1": 3,
+        "reasoning_P1": 8,
+        "anonymous_candidates": 12,
+        "score_state": "pending",
+        "candidate_scores": {
+          "company": 85,
+          "management": 73,
+          "combined": 158
+        }
+      },
+      "score_manifest": "data/reviews/triplet-score-cycle-2026-09-20/round-2/score-manifest-v2.json",
+      "repair_rounds": 1,
+      "exception_reason": "首轮修复未落实原验收条件：F2.5最高档证据自相矛盾，管理层缺资料扣分句残留，人才变动核验与跨来源引用未完成",
+      "checkpoint_45_min": "尚未批准评分，停止扩展背景，仅处理原未关闭项；计时不重置",
+      "candidate_scores": {
+        "company": 87,
+        "management": 76,
+        "combined": 163
+      },
+      "exception_count": 1,
+      "exception_decision": "data/reviews/triplet-score-cycle-2026-09-20/round-2/exception-repair-decision.json",
+      "exception_precheck": "双路已独立预核资本效率算术与Capex原规则，未读未冻v4",
+      "approved_at": "2026-09-20T14:29:55.188498+00:00",
+      "elapsed_seconds": 3408.188498,
+      "scores": {
+        "company_score": 86.5,
+        "management_score": 76,
+        "combined_score": 162.5,
+        "target_price": null,
+        "certainty": null,
+        "buy_price": null
+      },
+      "display_scores": {
+        "method": "integer_half_up",
+        "company": 87,
+        "management": 76,
+        "combined": 163,
+        "note": "合计先加原始分再舍入，门槛仅用原始分。"
+      },
+      "highest_score_gate": "A_CORE",
+      "full_triplet_complete": false,
+      "archive": "data/reviews/triplet-score-cycle-2026-09-20/round-2/final/score-package.json",
+      "usage_audit": "data/reviews/triplet-score-cycle-2026-09-20/round-2/score-usage-audit.json"
+    }
+  ],
+  "completed_rounds": 2,
+  "success_scope": "两个案例均在60分钟内取得独立双复核及裁决批准的最终评分；不表示完整三件套/估值60分钟完成或未来任意公司保证",
+  "final_validation": {
+    "all_tests": 66,
+    "entry_check": "pass",
+    "migration": "pass",
+    "git_diff_check": "pass"
+  }
+}

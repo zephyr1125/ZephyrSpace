@@ -1,0 +1,260 @@
+{
+  "schema_version": 1,
+  "stage": "final_score_approval",
+  "company": "中国民航信息网络股份有限公司",
+  "security": "00696.HK",
+  "cutoff_date": "2026-09-20",
+  "decision": "reject",
+  "score_state": "approved",
+  "research_state": "pending",
+  "research_status": "execution_incomplete",
+  "delivery_state": "score_package_verified_full_reports_pending",
+  "publish_allowed": false,
+  "watchlist_write_allowed": false,
+  "answer": "公司72分、管理层74分、合计146分已批准；合计低于B_GROWTH的150分硬门槛，资格结论reject/NONE。完整三件套与正式估值尚未完成。",
+  "basis": "可信已批准评分足以否决全部收录档位，估值未完成不把明确资格否决改为defer；不将评分批准冒充完整研究验收。",
+  "approved_parameters": {
+    "company_score": 72,
+    "management_score": 74,
+    "combined_score": 146,
+    "tier": "NONE",
+    "target_price": null,
+    "certainty": null,
+    "buy_price": null,
+    "max_position": null
+  },
+  "score_bounds": {
+    "company": [
+      72,
+      72
+    ],
+    "management": [
+      74,
+      74
+    ],
+    "combined": [
+      146,
+      146
+    ]
+  },
+  "approved_workpaper": "data/reviews/travelsky-cycle-2026-09-20/round-1/writer/workpaper-v4.json",
+  "approved_workpaper_sha256": "01c863df97447ef6829ab2cc1df03e9e97ff32deeabde87446430040ca337aa9",
+  "approved_rationale": "data/reviews/travelsky-cycle-2026-09-20/round-1/writer/score-rationale-v4.md",
+  "approved_rationale_sha256": "72651dc02564d78b469adc9b91a240185981e35df72bbf8fd8eb135e0877eef2",
+  "score_item_binding": "全部32分项、原始分值及依据以最终workpaper-v4哈希绑定，不在本文件重复转录。",
+  "score_bridge": {
+    "frozen_candidate": {
+      "company": 69,
+      "management": 74,
+      "combined": 143
+    },
+    "deltas": {
+      "A3": 1,
+      "D1": 1,
+      "F2": -1,
+      "C1": 2
+    },
+    "approved": {
+      "company": 72,
+      "management": 74,
+      "combined": 146
+    },
+    "company_dimensions": {
+      "A": 9,
+      "B": 15,
+      "C": 16,
+      "D": 11,
+      "E": 11,
+      "F": 10
+    },
+    "calculation": "69+1+1-1+2=72；17+17+11+12+7+7+3=74；72+74=146",
+    "display": "integer_half_up；资格按原始值"
+  },
+  "eligibility": {
+    "rule_ref": "data/WATCHLIST_RULES.md 三层分级定义",
+    "B_GROWTH": {
+      "combined_min": 150,
+      "each_min": 70,
+      "result": "fail",
+      "reason": "两项均过70，合计146<150，差4分"
+    },
+    "A_CORE": {
+      "combined_min": 160,
+      "each_min": 76,
+      "result": "fail"
+    },
+    "S_STRATEGIC": {
+      "combined_min": 170,
+      "each_min": 82,
+      "result": "fail"
+    },
+    "result": "NONE",
+    "caused_by_valuation_gap": false
+  },
+  "acceptance_results": [
+    {
+      "id": "R01-A1",
+      "lane": "research",
+      "status": "closed",
+      "verification_refs": [
+        "data/reviews/travelsky-cycle-2026-09-20/round-1/anonymous/recheck-a.json",
+        "data/reviews/travelsky-cycle-2026-09-20/round-1/anonymous/recheck-b.json",
+        "data/reviews/travelsky-cycle-2026-09-20/round-1/delivery-fix.json",
+        "data/reviews/travelsky-cycle-2026-09-20/round-1/anonymous/delivery-check-v4.json",
+        "data/reviews/travelsky-cycle-2026-09-20/round-1/delivery-patch-proof.json"
+      ],
+      "reason": "两路均认可A2=3判断；唯一已知来源漏列由D01限定修复并定向验收，消除原fail。"
+    },
+    {
+      "id": "R02-A1",
+      "lane": "research",
+      "status": "closed",
+      "verification_refs": [
+        "data/reviews/travelsky-cycle-2026-09-20/round-1/anonymous/recheck-a.json",
+        "data/reviews/travelsky-cycle-2026-09-20/round-1/anonymous/recheck-b.json"
+      ]
+    },
+    {
+      "id": "R03-A1",
+      "lane": "research",
+      "status": "closed",
+      "verification_refs": [
+        "data/reviews/travelsky-cycle-2026-09-20/round-1/anonymous/recheck-a.json",
+        "data/reviews/travelsky-cycle-2026-09-20/round-1/anonymous/recheck-b.json"
+      ]
+    },
+    {
+      "id": "R04-A1",
+      "lane": "research",
+      "status": "closed",
+      "verification_refs": [
+        "data/reviews/travelsky-cycle-2026-09-20/round-1/anonymous/recheck-a.json",
+        "data/reviews/travelsky-cycle-2026-09-20/round-1/anonymous/recheck-b.json"
+      ]
+    },
+    {
+      "id": "R05-A1",
+      "lane": "research",
+      "status": "closed",
+      "verification_refs": [
+        "data/reviews/travelsky-cycle-2026-09-20/round-1/anonymous/recheck-a.json",
+        "data/reviews/travelsky-cycle-2026-09-20/round-1/anonymous/recheck-b.json"
+      ]
+    },
+    {
+      "id": "R06-A1",
+      "lane": "research",
+      "status": "closed",
+      "verification_refs": [
+        "data/reviews/travelsky-cycle-2026-09-20/round-1/anonymous/recheck-a.json",
+        "data/reviews/travelsky-cycle-2026-09-20/round-1/anonymous/recheck-b.json"
+      ]
+    },
+    {
+      "id": "R07-A1",
+      "lane": "delivery",
+      "status": "closed",
+      "verification_refs": [
+        "data/reviews/travelsky-cycle-2026-09-20/round-1/anonymous/recheck-a.json",
+        "data/reviews/travelsky-cycle-2026-09-20/round-1/anonymous/recheck-b.json"
+      ],
+      "classified_by": "adjudicator",
+      "no_decision_impact": true,
+      "reason": "沿用原裁决delivery分类，期别修正已验收。"
+    },
+    {
+      "id": "R08-A1",
+      "lane": "research",
+      "status": "closed",
+      "verification_refs": [
+        "data/reviews/travelsky-cycle-2026-09-20/round-1/anonymous/recheck-a.json",
+        "data/reviews/travelsky-cycle-2026-09-20/round-1/anonymous/recheck-b.json"
+      ]
+    },
+    {
+      "id": "R09-A1",
+      "lane": "research",
+      "status": "closed",
+      "verification_refs": [
+        "data/reviews/travelsky-cycle-2026-09-20/round-1/anonymous/recheck-a.json",
+        "data/reviews/travelsky-cycle-2026-09-20/round-1/anonymous/recheck-b.json"
+      ]
+    },
+    {
+      "id": "D01-A1",
+      "lane": "delivery",
+      "status": "closed",
+      "classified_by": "adjudicator",
+      "no_decision_impact": true,
+      "verification_refs": [
+        "data/reviews/travelsky-cycle-2026-09-20/round-1/delivery-fix.json",
+        "data/reviews/travelsky-cycle-2026-09-20/round-1/delivery-patch-proof.json",
+        "data/reviews/travelsky-cycle-2026-09-20/round-1/anonymous/delivery-check-v4.json"
+      ],
+      "reason": "已核来源引用/确定性格式修正，限定差异与实际哈希均通过。"
+    },
+    {
+      "id": "D02-A1",
+      "lane": "delivery",
+      "status": "closed",
+      "classified_by": "adjudicator",
+      "no_decision_impact": true,
+      "verification_refs": [
+        "data/reviews/travelsky-cycle-2026-09-20/round-1/delivery-fix.json",
+        "data/reviews/travelsky-cycle-2026-09-20/round-1/delivery-patch-proof.json",
+        "data/reviews/travelsky-cycle-2026-09-20/round-1/anonymous/delivery-check-v4.json"
+      ],
+      "reason": "已核来源引用/确定性格式修正，限定差异与实际哈希均通过。"
+    }
+  ],
+  "review_refs": [
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/anonymous/review-a.json",
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/anonymous/review-b.json",
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/anonymous/recheck-a.json",
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/anonymous/recheck-b.json",
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/anonymous/delivery-check-v4.json"
+  ],
+  "artifact_sha256": {
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/anonymous/review-a.json": "cbc502c354b1e508b4a7bb2f291ff42a4a226f64ba96a3c0c9fe0788c6475260",
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/anonymous/review-b.json": "c532e39976036e8dcb721ab917ea93c61a79d6e211e1f96064ce752aced88fbb",
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/anonymous/recheck-a.json": "2d52b04fe829145489ae3f5e3cb465e9a8b8ab5e91550ff4cef1fb9d0d4bfdc6",
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/anonymous/recheck-b.json": "77136d45b0eec3ec8579614695bc734db0d7c227994991975415a972c1f1aae7",
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/anonymous/delivery-check-v4.json": "51c9d307277f68ffafc51068045533afbdbfb826c87c083db5baaa2e3aa6846f",
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/delivery-patch-proof.json": "4dcaa27cad7a5a0bf94e916bd31eab50240bc22feb0f70c13d524ad87b60beff",
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/decision-v1.json": "854dbed07782accc288d8de1b9a59c080304259506c7f442ba952cbcbeb965ad",
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/decision-clarification.json": "a445d96a7ac7d88c2e4bf24ec45181294678ff501c65749e5d74eaf6c4c22299",
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/delivery-fix.json": "ad88a34574259b0d310af3cbcecc9a613c6743a953d0e7f6736ba980492de4f8",
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/writer/workpaper-v4.json": "01c863df97447ef6829ab2cc1df03e9e97ff32deeabde87446430040ca337aa9",
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/writer/score-rationale-v4.md": "72651dc02564d78b469adc9b91a240185981e35df72bbf8fd8eb135e0877eef2"
+  },
+  "candidate_dispositions_ref": [
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/decision-v1.json",
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/decision-clarification.json"
+  ],
+  "remaining_score_p0": [],
+  "remaining_score_p1": [],
+  "verified_findings": [
+    "已完成评分阶段全分项独立双复核及锁定问题定向验收。",
+    "v3至v4的JSON语义仅A2追加TSKC1R-F002；论证仅授权换行和标题修正，评分不变。",
+    "v4论证中待批准措辞保留为审批前历史快照，现评分状态由本哈希绑定裁决授予，不追改冻结底稿。"
+  ],
+  "valuation": {
+    "status": "deferred",
+    "models": [],
+    "target_price": null,
+    "certainty": null,
+    "buy_price": null,
+    "approval_scope": "未批准正式估值、价格、仓位或估值全文；本文件仅完成评分及资格结论"
+  },
+  "blocking_items": [
+    {
+      "id": "FULL-REPORTS",
+      "category": "evidence_gap",
+      "impact": "完整三件套交付及发布",
+      "disposition": "open",
+      "source_ref": "docs/three-report-economy-routing.md 阶段6",
+      "reason": "三份长篇报告及首次双路全文覆盖未完成，不阻塞已核评分批准。"
+    }
+  ],
+  "next_trigger": "完整交付按既定范围继续；未来实质经营或治理证据变化时复评资格。不因估值缺口撤销当前评分否决。"
+}

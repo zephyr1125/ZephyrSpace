@@ -1,0 +1,10 @@
+{
+  "stage": "exception_targeted_recheck",
+  "frozen_at": "2026-09-20T14:25:37.568392+00:00",
+  "files": {
+    "data/reviews/triplet-score-cycle-2026-09-20/round-2/repair-writer/workpaper-v4.json": "54c5f3a9bf23297fa7ae90e8e8f0875160d169cafdd2b48a88a6795cdea7519d",
+    "data/reviews/triplet-score-cycle-2026-09-20/round-2/repair-writer/score-rationale-v4.md": "2fd1588764e0a29835851f4aea03f5182fa933d1f95ee951201de50c0b2baa39",
+    "data/reviews/triplet-score-cycle-2026-09-20/round-2/repair-writer/repair-facts-v4.json": "8af95728cc236a11d20614d8959334571a9cc5f4ee3afe6cff5f1d3d7e5dfc61",
+    "data/reviews/triplet-score-cycle-2026-09-20/round-2/repair-writer/acceptance-v4.json": "5c8c3acf4028102c4eef525dd1b2c95188c6ee3ba77c892bd6d144f945d472fe"
+  }
+}

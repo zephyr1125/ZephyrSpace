@@ -1,0 +1,744 @@
+{
+  "schema_version": 1,
+  "company": "中国民航信息网络股份有限公司",
+  "security": "00696.HK",
+  "cutoff_date": "2026-09-20",
+  "stage": "score_adjudication_round_1",
+  "decision": "defer",
+  "score_state": "pending",
+  "research_state": "pending",
+  "research_status": "execution_incomplete",
+  "delivery_state": "score_repair_pending",
+  "publish_allowed": false,
+  "basis": "评分候选尚有历史控制权依据及底稿修复未验收；不将研究未完成当作公司不合格。仅本轮评分裁决，未完成三稿全文双复核或正式估值。",
+  "review_refs": [
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/anonymous/review-a.json",
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/anonymous/review-b.json"
+  ],
+  "frozen_workpaper_sha256": "fa26e16a3fae66ad50ef64f657ed27faed9e5b2e42c1865a73ef4d7a4166e62d",
+  "approved_workpaper_sha256": null,
+  "candidate_dispositions": [
+    {
+      "candidate_id": "C001",
+      "disposition": "成立",
+      "issue_id": "R07",
+      "reason": "底稿已明确短期，事实和B4=3判断已核；论证省略期别为确定的表述修正。",
+      "source_refs": [
+        "TSK26-F003",
+        "TSK26-F004"
+      ],
+      "acceptance_ids": [
+        "R07-A1"
+      ]
+    },
+    {
+      "candidate_id": "C002",
+      "disposition": "成立",
+      "issue_id": "R02",
+      "reason": "当下平台画像不能代替历史判断；不接受把研究未完成直接罚为0的建议。",
+      "source_refs": [
+        "财报/中国民航信息网络/2022年度报告.pdf PDF第4—5页",
+        "TSK26-F004"
+      ],
+      "acceptance_ids": [
+        "R02-A1"
+      ]
+    },
+    {
+      "candidate_id": "C003",
+      "disposition": "部分成立",
+      "issue_id": "R05",
+      "reason": "冻结引用确实缺行动链；2022年报已存在具体行动与运行结果，不需因原引用缺项撤销7分专业判断。",
+      "source_refs": [
+        "财报/中国民航信息网络/2022年度报告.pdf PDF第8、15页"
+      ],
+      "acceptance_ids": [
+        "R05-A1"
+      ]
+    },
+    {
+      "candidate_id": "C004",
+      "disposition": "成立",
+      "issue_id": "R03",
+      "reason": "原规则显式档位禁止3/3/4插值。",
+      "source_refs": [
+        "deep-prebuy-skill/SKILL.md A/D/F评分表",
+        "TSKC1-F001",
+        "TSKC1-F003",
+        "财报/中国民航信息网络/2025年度报告.pdf PDF第15、19页"
+      ],
+      "acceptance_ids": [
+        "R03-A1"
+      ]
+    },
+    {
+      "candidate_id": "C005",
+      "disposition": "部分成立",
+      "issue_id": "R02",
+      "reason": "接受历史论证缺失，拒绝缺证直接扣0并定67/141；应先用已有年报补足。",
+      "source_refs": [
+        "财报/中国民航信息网络/2022年度报告.pdf PDF第4—5页",
+        "TSK26-F004"
+      ],
+      "acceptance_ids": [
+        "R02-A1"
+      ]
+    },
+    {
+      "candidate_id": "C006",
+      "disposition": "成立",
+      "issue_id": "R04",
+      "reason": "税项事实存在但引用断链，原论证未分离经营量价与一次性影响；属于研究归因而非纯拼写。",
+      "source_refs": [
+        "TSK26-V3-F004",
+        "TSK26-V3-F019",
+        "TSK26-V3-F018",
+        "财报/中国民航信息网络/2026中期报告.pdf PDF第150页",
+        "财报/中国民航信息网络/2025年度报告.pdf PDF第211—212页"
+      ],
+      "acceptance_ids": [
+        "R04-A1"
+      ]
+    },
+    {
+      "candidate_id": "C007",
+      "disposition": "成立",
+      "issue_id": "R01",
+      "reason": "当前持股快照不足以单独证明起源和IPO以来控制权。2022年报历史沿革已足以支持政策主导起源，A2仍须控制主体连续性证据。",
+      "source_refs": [
+        "财报/中国民航信息网络/2022年度报告.pdf PDF第2、4页（公司简介、打印页2沿革）",
+        "TSK26-F018"
+      ],
+      "acceptance_ids": [
+        "R01-A1"
+      ]
+    },
+    {
+      "candidate_id": "C008",
+      "disposition": "成立",
+      "issue_id": "R01",
+      "reason": "当前持股快照不足以单独证明起源和IPO以来控制权。2022年报历史沿革已足以支持政策主导起源，A2仍须控制主体连续性证据。",
+      "source_refs": [
+        "财报/中国民航信息网络/2022年度报告.pdf PDF第2、4页（公司简介、打印页2沿革）",
+        "TSK26-F018"
+      ],
+      "acceptance_ids": [
+        "R01-A1"
+      ]
+    },
+    {
+      "candidate_id": "C009",
+      "disposition": "成立",
+      "issue_id": "R08",
+      "reason": "具体替代渠道缺证，删除会改变反证的事实含义，按research处理；已核网络覆盖支持原7分。",
+      "source_refs": [
+        "TSKC1-F002",
+        "TSK26-V3-F018"
+      ],
+      "acceptance_ids": [
+        "R08-A1"
+      ]
+    },
+    {
+      "candidate_id": "C010",
+      "disposition": "部分成立",
+      "issue_id": "R06",
+      "reason": "48.28%仅为关联方组合占合并应收，不代表全部关联方应收；12.6另有已计提关联航司余额。接受纳入风险，拒绝自动认定计提不足或必须取得未公开回款。",
+      "source_refs": [
+        "财报/中国民航信息网络/2026中期报告.pdf 打印页58、104—107、184—185",
+        "TSK26-V3-F002",
+        "财报/中国民航信息网络/2026关联交易续签公告.pdf 第2—5页"
+      ],
+      "acceptance_ids": [
+        "R06-A1"
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "id": "R01",
+      "severity": "P1",
+      "lane": "research",
+      "status": "open",
+      "affected_items": [
+        "A1",
+        "A2"
+      ],
+      "reason": "当前持股快照不足以单独证明起源和IPO以来控制权。2022年报历史沿革已足以支持政策主导起源，A2仍须控制主体连续性证据。",
+      "acceptance": [
+        {
+          "id": "R01-A1",
+          "condition": "A1登记2022年报历史沿革并维持2；A2定向连接2000发起人/2001上市时控制主体、1996前身与现控股主体沿革及2022/2026现状，给出实际控制人而非第一大股东的判断。允许官方沿革/招股书/有控制关系陈述的历史报告构成连续性证据，不要求逐年穷尽。支持未变更则3；确有一次合理变更才2；缺证保持null，不以稳定窗口冒充从未变更。"
+        }
+      ],
+      "source_refs": [
+        "财报/中国民航信息网络/2022年度报告.pdf PDF第2、4页（公司简介、打印页2沿革）",
+        "TSK26-F018"
+      ]
+    },
+    {
+      "id": "R02",
+      "severity": "P1",
+      "lane": "research",
+      "status": "open",
+      "affected_items": [
+        "B0"
+      ],
+      "reason": "当下平台画像不能代替历史判断；不接受把研究未完成直接罚为0的建议。",
+      "acceptance": [
+        {
+          "id": "R02-A1",
+          "condition": "用2022年报打印页2—3沿革和当下业务完成三项判断及平台/网络型分类；九要素允许紧凑对照，早期毛利、亏损或质变节点未披露则明确未知，不虚构早期亏损换规模。解释系统建设投入到持续运营、主业延续及2008结算收购拓展。三项均有事实与有界推断则2；仅部分完成为1且说明实际覆盖，不能仅为结束任务选0。"
+        }
+      ],
+      "source_refs": [
+        "财报/中国民航信息网络/2022年度报告.pdf PDF第4—5页",
+        "TSK26-F004"
+      ]
+    },
+    {
+      "id": "R03",
+      "severity": "P1",
+      "lane": "research",
+      "status": "open",
+      "affected_items": [
+        "A3",
+        "D1",
+        "F2"
+      ],
+      "reason": "原规则显式档位禁止3/3/4插值。",
+      "acceptance": [
+        {
+          "id": "R03-A1",
+          "condition": "改A3=4、D1=4、F2=3；A3补登记2025年报打印页13、17的经营资金来源、用途与无重大收购处置，结合五年股本/资本序列及2008主业结算整合；不把未穷尽并购或2024借款明细缺项当已发生瑕疵。D1引用TSKC1-F001三年方向及已有历史主业沿革。F2普通回报档以近三年约33%—35%分红率、股本稳定为依据，不能把“未核无减持”说成不良减持；现证据不足以正面确认高分红+无不良减持+融资审慎三条件的最高档。"
+        }
+      ],
+      "source_refs": [
+        "deep-prebuy-skill/SKILL.md A/D/F评分表",
+        "TSKC1-F001",
+        "TSKC1-F003",
+        "财报/中国民航信息网络/2025年度报告.pdf PDF第15、19页"
+      ]
+    },
+    {
+      "id": "R04",
+      "severity": "P1",
+      "lane": "research",
+      "status": "open",
+      "affected_items": [
+        "E3"
+      ],
+      "reason": "税项事实存在但引用断链，原论证未分离经营量价与一次性影响；属于研究归因而非纯拼写。",
+      "acceptance": [
+        {
+          "id": "R04-A1",
+          "condition": "保留E3=2，登记并引用TSK26-V3-F004（以前年度税项调整-95.403454百万元），与V3-F019税前/税/NCI桥和V3-F018业务量、F004收入结构并列；核可得非经常性披露并说明是否存在完整扣非定义，未取得不得伪算85%或直接将税项全额作归母调整。2分采用“有一次性但可辨认”，不要求达到3分的扣非>85%且量价双驱动条件。"
+        }
+      ],
+      "source_refs": [
+        "TSK26-V3-F004",
+        "TSK26-V3-F019",
+        "TSK26-V3-F018",
+        "财报/中国民航信息网络/2026中期报告.pdf PDF第150页",
+        "财报/中国民航信息网络/2025年度报告.pdf PDF第211—212页"
+      ]
+    },
+    {
+      "id": "R05",
+      "severity": "P1",
+      "lane": "research",
+      "status": "open",
+      "affected_items": [
+        "危机处理能力"
+      ],
+      "reason": "恢复结果不是管理行动；但已有年报行动链足以支持有界点值，无需要求不存在的危机认责记录。",
+      "acceptance": [
+        {
+          "id": "R05-A1",
+          "condition": "保留7：登记2022年报打印页13，疫情压力→三路部署/双可用区/全链路监测及灾备→核心系统运行指标超过99.99%及重大活动保障；结合董事会打印页6对疫情风险披露。标注为公司披露、非独立因果识别；未证实沟通及时性/个人认责，不赋予此类褒奖，盈利恢复仅作行业背景。因有具体行动与运行结果高于中性，缺独立时效及因果验证不取8—10。"
+        }
+      ],
+      "source_refs": [
+        "财报/中国民航信息网络/2022年度报告.pdf PDF第8、15页"
+      ]
+    },
+    {
+      "id": "R06",
+      "severity": "P1",
+      "lane": "research",
+      "status": "open",
+      "affected_items": [
+        "E5.5",
+        "F3"
+      ],
+      "reason": "关联方组合集中与原则不计提需要纳入；候选把该组合简称全部关联应收不够精确。",
+      "acceptance": [
+        {
+          "id": "R06-A1",
+          "condition": "保留E5.5=2、F3=3，补入合并关联方组合2,671,164,666.19元/合并应收总额5,533,024,197.55元=48.276757%，明确不是全部关联方应收；附注12.6有国航、南航、东航、海航及其附属公司的单列计提，不能写关联方全部零计提。读取组合政策、合并账龄、12.6余额/计提及可得期后回款披露；未分别披露关联方账龄/期后回款则记未知，不新设必须取得非公开明细的条件。E5.5因低计提组合的可回收性敏感、已有长账龄/个别损失保持小瑕疵2而非稳健充分3；F3因程序/价格机制披露且未发现利益输送维持3，但不将其解释为信用风险低或已证明经济公允；若实际发现不公允或新增重大信用事实再按原规则提请定向复裁。"
+        }
+      ],
+      "source_refs": [
+        "财报/中国民航信息网络/2026中期报告.pdf 打印页58、104—107、184—185",
+        "TSK26-V3-F002",
+        "财报/中国民航信息网络/2026关联交易续签公告.pdf 第2—5页"
+      ]
+    },
+    {
+      "id": "R07",
+      "severity": "P2",
+      "lane": "delivery",
+      "status": "open",
+      "affected_items": [
+        "B4"
+      ],
+      "reason": "底稿已明确短期，事实和B4=3判断已核；论证省略期别为确定的表述修正。",
+      "acceptance": [
+        {
+          "id": "R07-A1",
+          "condition": "把核心平台下滑改为2026H1航空信息平台服务收入同比-1.7%，同期总收入+5.6%；B4=3不变，反证与全年度/全公司下滑区分。"
+        }
+      ],
+      "source_refs": [
+        "TSK26-F003",
+        "TSK26-F004"
+      ],
+      "classified_by": "adjudicator",
+      "no_decision_impact": true
+    },
+    {
+      "id": "R08",
+      "severity": "P2",
+      "lane": "research",
+      "status": "open",
+      "affected_items": [
+        "C3+C4"
+      ],
+      "reason": "具体替代渠道缺证，删除会改变反证的事实含义，按research处理；已核网络覆盖支持原7分。",
+      "acceptance": [
+        {
+          "id": "R08-A1",
+          "condition": "删除“自建、云服务和新分销接口仍可替代”的事实式断言，改为“未取得可比替代成本与当前同口径份额，不能排除替代”；维持7，不新增搜集具体竞争案例的前置条件。"
+        }
+      ],
+      "source_refs": [
+        "TSKC1-F002",
+        "TSK26-V3-F018"
+      ]
+    }
+  ],
+  "item_parameters": [
+    {
+      "group": "company",
+      "id": "A1",
+      "frozen_value": 2,
+      "allowed_value": 2,
+      "status": "conditional_on_acceptance",
+      "issue_ids": [
+        "R01"
+      ],
+      "basis": "见对应验收；没有新的决定性反证不得任意改动"
+    },
+    {
+      "group": "company",
+      "id": "A2",
+      "frozen_value": 3,
+      "allowed_value": null,
+      "status": "pending_evidence",
+      "issue_ids": [
+        "R01"
+      ],
+      "basis": "见对应验收；没有新的决定性反证不得任意改动"
+    },
+    {
+      "group": "company",
+      "id": "A3",
+      "frozen_value": 3,
+      "allowed_value": 4,
+      "status": "conditional_on_acceptance",
+      "issue_ids": [
+        "R03"
+      ],
+      "basis": "见对应验收；没有新的决定性反证不得任意改动"
+    },
+    {
+      "group": "company",
+      "id": "B0",
+      "frozen_value": 2,
+      "allowed_value": 2,
+      "status": "conditional_on_acceptance",
+      "issue_ids": [
+        "R02"
+      ],
+      "basis": "见对应验收；没有新的决定性反证不得任意改动"
+    },
+    {
+      "group": "company",
+      "id": "B1",
+      "frozen_value": 3,
+      "allowed_value": 3,
+      "status": "retained",
+      "issue_ids": [],
+      "basis": "匿名两路已覆盖，无已成立候选推翻；保留原事实—规则判断"
+    },
+    {
+      "group": "company",
+      "id": "B2",
+      "frozen_value": 3,
+      "allowed_value": 3,
+      "status": "retained",
+      "issue_ids": [],
+      "basis": "匿名两路已覆盖，无已成立候选推翻；保留原事实—规则判断"
+    },
+    {
+      "group": "company",
+      "id": "B3",
+      "frozen_value": 4,
+      "allowed_value": 4,
+      "status": "retained",
+      "issue_ids": [],
+      "basis": "匿名两路已覆盖，无已成立候选推翻；保留原事实—规则判断"
+    },
+    {
+      "group": "company",
+      "id": "B4",
+      "frozen_value": 3,
+      "allowed_value": 3,
+      "status": "conditional_on_acceptance",
+      "issue_ids": [
+        "R07"
+      ],
+      "basis": "见对应验收；没有新的决定性反证不得任意改动"
+    },
+    {
+      "group": "company",
+      "id": "C1",
+      "frozen_value": 4,
+      "allowed_value": 4,
+      "status": "retained",
+      "issue_ids": [],
+      "basis": "匿名两路已覆盖，无已成立候选推翻；保留原事实—规则判断"
+    },
+    {
+      "group": "company",
+      "id": "C2",
+      "frozen_value": 3,
+      "allowed_value": 3,
+      "status": "retained",
+      "issue_ids": [],
+      "basis": "匿名两路已覆盖，无已成立候选推翻；保留原事实—规则判断"
+    },
+    {
+      "group": "company",
+      "id": "C3+C4",
+      "frozen_value": 7,
+      "allowed_value": 7,
+      "status": "conditional_on_acceptance",
+      "issue_ids": [
+        "R08"
+      ],
+      "basis": "见对应验收；没有新的决定性反证不得任意改动"
+    },
+    {
+      "group": "company",
+      "id": "D1",
+      "frozen_value": 3,
+      "allowed_value": 4,
+      "status": "conditional_on_acceptance",
+      "issue_ids": [
+        "R03"
+      ],
+      "basis": "见对应验收；没有新的决定性反证不得任意改动"
+    },
+    {
+      "group": "company",
+      "id": "D2",
+      "frozen_value": 3,
+      "allowed_value": 3,
+      "status": "retained",
+      "issue_ids": [],
+      "basis": "匿名两路已覆盖，无已成立候选推翻；保留原事实—规则判断"
+    },
+    {
+      "group": "company",
+      "id": "D3",
+      "frozen_value": 2,
+      "allowed_value": 2,
+      "status": "retained",
+      "issue_ids": [],
+      "basis": "匿名两路已覆盖，无已成立候选推翻；保留原事实—规则判断"
+    },
+    {
+      "group": "company",
+      "id": "D5",
+      "frozen_value": 2,
+      "allowed_value": 2,
+      "status": "retained",
+      "issue_ids": [],
+      "basis": "匿名两路已覆盖，无已成立候选推翻；保留原事实—规则判断"
+    },
+    {
+      "group": "company",
+      "id": "E1",
+      "frozen_value": 1,
+      "allowed_value": 1,
+      "status": "retained",
+      "issue_ids": [],
+      "basis": "匿名两路已覆盖，无已成立候选推翻；保留原事实—规则判断"
+    },
+    {
+      "group": "company",
+      "id": "E2",
+      "frozen_value": 3,
+      "allowed_value": 3,
+      "status": "retained",
+      "issue_ids": [],
+      "basis": "匿名两路已覆盖，无已成立候选推翻；保留原事实—规则判断"
+    },
+    {
+      "group": "company",
+      "id": "E3",
+      "frozen_value": 2,
+      "allowed_value": 2,
+      "status": "conditional_on_acceptance",
+      "issue_ids": [
+        "R04"
+      ],
+      "basis": "见对应验收；没有新的决定性反证不得任意改动"
+    },
+    {
+      "group": "company",
+      "id": "E4",
+      "frozen_value": 2,
+      "allowed_value": 2,
+      "status": "retained",
+      "issue_ids": [],
+      "basis": "匿名两路已覆盖，无已成立候选推翻；保留原事实—规则判断"
+    },
+    {
+      "group": "company",
+      "id": "E5",
+      "frozen_value": 1,
+      "allowed_value": 1,
+      "status": "retained",
+      "issue_ids": [],
+      "basis": "匿名两路已覆盖，无已成立候选推翻；保留原事实—规则判断"
+    },
+    {
+      "group": "company",
+      "id": "E5.5",
+      "frozen_value": 2,
+      "allowed_value": 2,
+      "status": "conditional_on_acceptance",
+      "issue_ids": [
+        "R06"
+      ],
+      "basis": "见对应验收；没有新的决定性反证不得任意改动"
+    },
+    {
+      "group": "company",
+      "id": "F1",
+      "frozen_value": 3,
+      "allowed_value": 3,
+      "status": "retained",
+      "issue_ids": [],
+      "basis": "匿名两路已覆盖，无已成立候选推翻；保留原事实—规则判断"
+    },
+    {
+      "group": "company",
+      "id": "F2",
+      "frozen_value": 4,
+      "allowed_value": 3,
+      "status": "conditional_on_acceptance",
+      "issue_ids": [
+        "R03"
+      ],
+      "basis": "见对应验收；没有新的决定性反证不得任意改动"
+    },
+    {
+      "group": "company",
+      "id": "F2.5",
+      "frozen_value": 1,
+      "allowed_value": 1,
+      "status": "retained",
+      "issue_ids": [],
+      "basis": "匿名两路已覆盖，无已成立候选推翻；保留原事实—规则判断"
+    },
+    {
+      "group": "company",
+      "id": "F3",
+      "frozen_value": 3,
+      "allowed_value": 3,
+      "status": "conditional_on_acceptance",
+      "issue_ids": [
+        "R06"
+      ],
+      "basis": "见对应验收；没有新的决定性反证不得任意改动"
+    },
+    {
+      "group": "management",
+      "id": "诚信与透明度",
+      "frozen_value": 17,
+      "allowed_value": 17,
+      "status": "retained",
+      "issue_ids": [],
+      "basis": "匿名两路已覆盖，无已成立候选推翻；保留原事实—规则判断"
+    },
+    {
+      "group": "management",
+      "id": "资本配置能力",
+      "frozen_value": 17,
+      "allowed_value": 17,
+      "status": "retained",
+      "issue_ids": [],
+      "basis": "匿名两路已覆盖，无已成立候选推翻；保留原事实—规则判断"
+    },
+    {
+      "group": "management",
+      "id": "战略稳定性",
+      "frozen_value": 11,
+      "allowed_value": 11,
+      "status": "retained",
+      "issue_ids": [],
+      "basis": "匿名两路已覆盖，无已成立候选推翻；保留原事实—规则判断"
+    },
+    {
+      "group": "management",
+      "id": "对股东友好度",
+      "frozen_value": 12,
+      "allowed_value": 12,
+      "status": "retained",
+      "issue_ids": [],
+      "basis": "匿名两路已覆盖，无已成立候选推翻；保留原事实—规则判断"
+    },
+    {
+      "group": "management",
+      "id": "危机处理能力",
+      "frozen_value": 7,
+      "allowed_value": 7,
+      "status": "conditional_on_acceptance",
+      "issue_ids": [
+        "R05"
+      ],
+      "basis": "见对应验收；没有新的决定性反证不得任意改动"
+    },
+    {
+      "group": "management",
+      "id": "组织与人才能力",
+      "frozen_value": 7,
+      "allowed_value": 7,
+      "status": "retained",
+      "issue_ids": [],
+      "basis": "匿名两路已覆盖，无已成立候选推翻；保留原事实—规则判断"
+    },
+    {
+      "group": "management",
+      "id": "表达清晰度与认知质量",
+      "frozen_value": 3,
+      "allowed_value": 3,
+      "status": "retained",
+      "issue_ids": [],
+      "basis": "匿名两路已覆盖，无已成立候选推翻；保留原事实—规则判断"
+    }
+  ],
+  "accepted_findings": [
+    "原69/74/143加总无误但不获批准。",
+    "A3/D1/F2须依显式档位改4/4/3；没有实际瑕疵不能只因缺失研究扣至2。",
+    "D2=3的定性执行判断保留，不将里程碑当完成率。",
+    "2025股息已批准，公告付款日2026-09-24晚于截止日，不能写已支付。",
+    "2022年报有可用起源及疫情行动资料，最小补证优先复用。",
+    "关联方组合占48.276757%，与全部关联方及单项计提不可混同。"
+  ],
+  "score_bridge": {
+    "frozen": {
+      "company": 69,
+      "management": 74,
+      "combined": 143
+    },
+    "fixed_rule_changes": [
+      {
+        "id": "A3",
+        "from": 3,
+        "to": 4,
+        "delta": 1
+      },
+      {
+        "id": "D1",
+        "from": 3,
+        "to": 4,
+        "delta": 1
+      },
+      {
+        "id": "F2",
+        "from": 4,
+        "to": 3,
+        "delta": -1
+      }
+    ],
+    "conditional_formula": {
+      "company": "65 + A2 + B0",
+      "management": "67 + 危机处理能力",
+      "combined": "132 + A2 + B0 + 危机处理能力"
+    },
+    "conditional_example": {
+      "condition": "A2=3、B0=2、危机=7且全部验收通过",
+      "company": 70,
+      "management": 74,
+      "combined": 144,
+      "status": "非批准值，不得发布为最终评分"
+    },
+    "approved_totals": {
+      "company": null,
+      "management": null,
+      "combined": null
+    },
+    "rounding": "ROUND_HALF_UP仅用于最终显示；资格用原始分"
+  },
+  "approved_parameters": {
+    "company_score": null,
+    "management_score": null,
+    "combined_score": null,
+    "target_price": null,
+    "certainty": null,
+    "buy_price": null,
+    "max_position": null,
+    "tier": null
+  },
+  "valuation": {
+    "status": "deferred",
+    "models": [],
+    "target_price": null,
+    "certainty": null,
+    "buy_price": null,
+    "approval_scope": "本轮不批准任何估值模型、价格、仓位或质量停止定价",
+    "quality_stop_approved": false
+  },
+  "repair_scope": {
+    "rounds": "一次合并修复及双路定向复查",
+    "research_acceptance_ids": [
+      "R01-A1",
+      "R02-A1",
+      "R03-A1",
+      "R04-A1",
+      "R05-A1",
+      "R06-A1",
+      "R08-A1"
+    ],
+    "delivery_acceptance_ids": [
+      "R07-A1"
+    ],
+    "no_scope_expansion": "不得新增全历史穷尽、全部期后回款或定价条件；无新增决定性错误不重做已核分项。A2补证先交中性事实版本，作者据其修复，双路核原件与总分。",
+    "finalization": "通过后绑定新底稿哈希再申请评分批准；原P1未关闭不得自行切approved。评分批准仍不等于完整研究批准或Watchlist准入。"
+  },
+  "next_trigger": "提交新版历史控制权事实、修复底稿和逐验收ID定位，双路定向复查。",
+  "withdrawn_fields": [
+    "候选69/74/143的任何已批准表述",
+    "未证实的具体替代渠道事实断言"
+  ],
+  "original_checks": {
+    "2022_AR": "PDF第2、4—5、8—10、15页：公司简介、沿革、疫情与措施",
+    "2025_AR": "PDF第15、19、211—212页：资金来源、资本用途及非经常性项目",
+    "2026_interim": "PDF第59、105—108、150、185—186页：政策、应收、税项、关联方",
+    "2026_related_service": "PDF第3—5页：控制机制、交易历史、规则适用"
+  }
+}

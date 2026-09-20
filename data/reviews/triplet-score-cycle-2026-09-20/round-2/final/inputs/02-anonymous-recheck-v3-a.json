@@ -1,0 +1,134 @@
+{
+  "stage": "targeted_score_recheck",
+  "as_of": "2026-09-20",
+  "frozen_workpaper": "data/reviews/triplet-score-cycle-2026-09-20/round-2/writer/workpaper-v3.json",
+  "frozen_workpaper_sha256": "53cd362274650b818936a531bfadf101d1bbc04a8199bbaadad69171927657e2",
+  "hash_binding": {
+    "workpaper_v3": "matched",
+    "score_rationale_v3": "matched",
+    "acceptance_v3": "matched",
+    "repair_facts": "matched"
+  },
+  "acceptance_checks": [
+    {
+      "id": "R01-A",
+      "status": "pass",
+      "checked_items": [
+        "A1",
+        "A2",
+        "A3",
+        "B0"
+      ],
+      "evidence": "IPO回访和关键控制节点已登记；A3准确保留2003年已使用59.53%、余款专户及用途调整边界；B0三项判断和不适用的建设转运营节点已写明。"
+    },
+    {
+      "id": "R02-A",
+      "status": "pass",
+      "checked_items": [
+        "B1"
+      ],
+      "evidence": "2025年报主营酒类占营业收入99.96%、茅台酒占酒类86.80%，支持从4分修正为过度集中但逻辑清晰的3分。"
+    },
+    {
+      "id": "D01-A",
+      "status": "pass",
+      "checked_items": [
+        "B3",
+        "C2",
+        "C3+C4"
+      ],
+      "evidence": "2025年报的酒类91.23%毛利率、直销/批发渠道结构和质量/品牌/工艺披露已进入理由；不可复制微生物仍按公司自述边界表述。"
+    },
+    {
+      "id": "R03-A",
+      "status": "pass",
+      "checked_items": [
+        "D1",
+        "D5",
+        "管理层-战略稳定性"
+      ],
+      "evidence": "2023-2025员工、人均营业收入、研发投入序列支持D5混合信号；战略连续性按计划与2026H1经营披露说明，未把未取得离职率当作负面事实。"
+    },
+    {
+      "id": "D02-A",
+      "status": "pass",
+      "checked_items": [
+        "D3"
+      ],
+      "evidence": "2026H1原文明确白酒行业周期性和结构性调整、存量竞争；‘年报’期别称谓未用于事实或分数，评分依据为半年度报告。"
+    },
+    {
+      "id": "R04-A",
+      "status": "pass",
+      "checked_items": [
+        "E3",
+        "E4",
+        "E5.5"
+      ],
+      "evidence": "2025酒类收入-1.08%、销量+2.13%支持E3由3分修正为2分；合并负债率16.415%、无短长借及应付债券支持E4；KAM、会计政策/估计变更和差错更正披露支持E5.5。"
+    },
+    {
+      "id": "R05-A",
+      "status": "pass",
+      "checked_items": [
+        "F1",
+        "管理层-诚信与透明度",
+        "管理层-危机处理能力"
+      ],
+      "evidence": "修订已区分蒋焰留置时任身份、H1解任与终局未知；袁仁国和高卫东历史事项明确来源等级、上市公司/集团职务边界。未把解任写成案件终结，也未把未知当作无风险。"
+    },
+    {
+      "id": "R06-A",
+      "status": "pass",
+      "checked_items": [
+        "F3",
+        "管理层-组织与人才能力",
+        "管理层-表达清晰度与认知质量"
+      ],
+      "evidence": "关联交易KAM的授权、对账和可比定价审计应对已核；员工/技术人员/补位事实支持组织判断。未知监管清单未被降格为公司缺陷。"
+    },
+    {
+      "id": "R07-A",
+      "status": "fail",
+      "checked_items": [
+        "F2.5",
+        "管理层-资本配置能力"
+      ],
+      "evidence": "2025年报约2709行仅显示两只基金期末公允价值合计41.0514亿元、较期初增加约0.7616亿元；workpaper-v3对F2.5同时明载‘该收益不是现金退出也未证明超过资本成本’，却给出原规则要求‘审慎配置+逆周期布局+资金回报>成本=2’的2分。",
+      "impact": "F2.5的最高档条件未闭合。缺乏资本成本证明不等于资本配置失败，但不能把未证实条件计为已满足；公司分、合计和A_CORE候选门槛均须联动重算。",
+      "minimum_acceptance": "补充可复核的资金回报超过资本成本及逆周期配置证据，或按已核事实重审F2.5并更新公司总分、合计和资格判断。"
+    },
+    {
+      "id": "R08-A",
+      "status": "conditional_on_R07-A",
+      "checked_items": [
+        "qualification"
+      ],
+      "evidence": "87+76=163，算术正确；WATCHLIST_RULES第30-34行的A_CORE门槛为合计≥160且两项均≥76，底稿候选值满足。但R07-A未关闭，87/76/163不得批准为最终参数或入池依据。"
+    }
+  ],
+  "findings": [
+    {
+      "severity": "P1",
+      "location": "scores.company.F2.5；qualification",
+      "claim": "F2.5理由承认未证明资金回报超过资本成本，却给出须满足该条件的2分。",
+      "evidence": "财报/贵州茅台/贵州茅台2025年度报告.md:2709；writer/workpaper-v3.json中F2.5理由。",
+      "impact": "可能改变公司87、合计163及A_CORE候选资格。",
+      "recommendation": "按R07-A最小验收修复后重算。"
+    }
+  ],
+  "uncovered": [
+    "基金的现金退出、完整项目回报、资本成本和逆周期配置依据尚未取得；此为R07-A评分证据边界，不等同公司真实资本配置失败。",
+    "完整三份报告与估值仍未启动，本定向复查不构成完整报告复核或估值批准。"
+  ],
+  "conclusion": {
+    "candidate_scores": {
+      "company": 87,
+      "management": 76,
+      "combined": 163
+    },
+    "approved_scores": null,
+    "score_state": "repair_required",
+    "note": "除R07-A外，所列九项最小验收条件已通过；R07-A为P1，未关闭前不得批准评分。"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "workpaper": "data/reviews/travelsky-update-2026-09-20/writer/workpaper-v1.json",
+  "decision": "data/reviews/travelsky-update-2026-09-20/writer/decision-draft-v1.json",
+  "evidence": [
+    "data/reviews/travelsky-update-2026-09-20/evidence/facts-v2.json",
+    "data/reviews/travelsky-update-2026-09-20/evidence/sources-v2.json"
+  ],
+  "id_prefixes": [
+    "TSK26-"
+  ],
+  "facts": {
+    "market_snapshot": {
+      "text": "共同市场快照为2026-09-18收盘HK$8.75、总普通股2,926,209,589股；按HKD/CNY 0.86062换算市值约人民币220.36亿元。复权处理unknown，故不得将价格变化解释为除权或复权后回报。",
+      "refs": [
+        "TSK26-F015",
+        "TSK26-C002"
+      ]
+    },
+    "cash_boundary": {
+      "text": "客户备付金用于付款人日常结算，不作为公司自有自由现金；经营现金流中的大额Others及往来项目亦未按资金所有权拆分。",
+      "refs": [
+        "TSK26-F010",
+        "TSK26-F011"
+      ]
+    },
+    "governance_timeline": {
+      "text": "黄荣顺于2026-03-20不再任总经理、4月13日辞任执行董事；截至2026-09-04的中报名单未列继任总经理，官方任命公告未知。",
+      "refs": [
+        "TSK26-F017"
+      ]
+    }
+  },
+  "templates": {
+    "deep": "data/reviews/travelsky-update-2026-09-20/source-v1/deep.md",
+    "management": "data/reviews/travelsky-update-2026-09-20/source-v1/management.md",
+    "valuation": "data/reviews/travelsky-update-2026-09-20/source-v1/valuation.md"
+  },
+  "publication_ready": true
+}

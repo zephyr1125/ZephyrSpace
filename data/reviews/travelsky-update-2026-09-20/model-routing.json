@@ -1,0 +1,187 @@
+{
+  "root_thread_id": "01a0b99c-1c9b-7732-8dfe-cf7f4a687e21",
+  "run_id": "travelsky-update-2026-09-20",
+  "company": "中国民航信息网络",
+  "ticker": "00696.HK",
+  "information_cutoff": "2026-09-20",
+  "started_at": "2026-09-20T11:36:11.278Z",
+  "gate_status": "not_applicable",
+  "restart_authorization": "用户明确要求完整更新测试并验收，覆盖此前暂停决定；不继承未批准评分价格",
+  "baseline": "data/reviews/travelsky-2026-09-19",
+  "roles": [
+    {
+      "role": "triplet_evidence",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "low",
+      "agent_id": "/root/travelsky_evidence",
+      "dispatch_method": "custom_role_fresh_context",
+      "actual_model": "gpt-5.6-terra",
+      "actual_model_source": "本地session_meta及turn_context日志",
+      "status": "complete",
+      "artifacts": [
+        "data/reviews/travelsky-update-2026-09-20/evidence/facts-v2.json",
+        "data/reviews/travelsky-update-2026-09-20/evidence/sources-v2.json",
+        "data/reviews/travelsky-update-2026-09-20/evidence/market-snapshot-v2.json",
+        "data/reviews/travelsky-update-2026-09-20/evidence/evidence-index-v2.md"
+      ],
+      "thread_id": "01a0be9a-fe71-7df1-8bf6-b6953d215d24",
+      "actual_effort": "low"
+    },
+    {
+      "role": "triplet_writer",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "low",
+      "agent_id": "/root/travelsky_writer",
+      "dispatch_method": "custom_role_fresh_context",
+      "actual_model": "gpt-5.6-terra",
+      "actual_model_source": "本地session_meta及turn_context日志",
+      "status": "failed_preflight_replaced",
+      "artifacts": [],
+      "thread_id": "01a0bea9-a562-7fa2-b878-e8ccb1abc933",
+      "actual_effort": "low",
+      "ended_at": "2026-09-20T12:11:29.091546+00:00"
+    },
+    {
+      "role": "triplet_review_facts",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "low",
+      "agent_id": "/root/travelsky_facts",
+      "dispatch_method": "custom_role_fresh_context",
+      "actual_model": "gpt-5.6-terra",
+      "actual_model_source": "本地session_meta及turn_context日志",
+      "status": "full_review_complete",
+      "artifacts": [
+        "data/reviews/travelsky-update-2026-09-20/review-facts/blind-v1.json",
+        "data/reviews/travelsky-update-2026-09-20/review-facts/full-v1.json"
+      ],
+      "blind_sha256": "da2bb705c0136171d94162bae4b5f48c7d492f056b3a9e4904395cf2a6c99a4a",
+      "blind_completed_at": "2026-09-20T11:59:19.795729+00:00",
+      "thread_id": "01a0bea9-f862-7f12-9422-b684ec1483f7",
+      "actual_effort": "low",
+      "full_review_sha256": "9445dbc9f2ad36ad51ae9092145e727757176d4aec3dc7e9c84655d2e93b4073"
+    },
+    {
+      "role": "triplet_review_reasoning",
+      "requested_model": "gpt-5.6-sol",
+      "requested_effort": "low",
+      "agent_id": "/root/travelsky_reasoning",
+      "dispatch_method": "custom_role_fresh_context",
+      "actual_model": "gpt-5.6-sol",
+      "status": "full_review_complete",
+      "artifacts": [
+        "data/reviews/travelsky-update-2026-09-20/review-reasoning/blind-v1.json",
+        "data/reviews/travelsky-update-2026-09-20/review-reasoning/full-v1.json"
+      ],
+      "blind_sha256": "ce07afdbc1af4d52ab3a3430319a30cc7d8bff1d83e334b2501cdd0735276706",
+      "blind_completed_at": "2026-09-20T12:01:35.473122+00:00",
+      "thread_id": "01a0beac-d441-7193-8ddc-bb7a62d688de",
+      "actual_effort": "low",
+      "actual_model_source": "本地session_meta及turn_context日志",
+      "full_review_sha256": "9c8cf2f9fa9df335580922572ed9174e298799a152646416f161798ce00aa80a"
+    },
+    {
+      "role": "triplet_repair_writer",
+      "requested_model": "gpt-5.6-sol",
+      "requested_effort": "low",
+      "agent_id": "/root/travelsky_repair_writer",
+      "dispatch_method": "explicit_toml_fallback_fresh_context",
+      "actual_model": null,
+      "status": "frozen_v1",
+      "artifacts": [
+        "data/reviews/travelsky-update-2026-09-20/writer-repair/workpaper-v2.json",
+        "data/reviews/travelsky-update-2026-09-20/writer-repair/decision-draft-v2.json",
+        "data/reviews/travelsky-update-2026-09-20/bundle-v2.json",
+        "data/reviews/travelsky-update-2026-09-20/source-v2/deep.md",
+        "data/reviews/travelsky-update-2026-09-20/source-v2/management.md",
+        "data/reviews/travelsky-update-2026-09-20/source-v2/valuation.md"
+      ]
+    },
+    {
+      "role": "triplet_adjudicator",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "low",
+      "agent_id": "/root/travelsky_adjudicator",
+      "dispatch_method": "custom_role_fresh_context",
+      "actual_model": null,
+      "status": "first_adjudication_complete",
+      "artifacts": [
+        "data/reviews/travelsky-update-2026-09-20/decision-v1.json"
+      ]
+    }
+  ],
+  "repair_rounds": 1,
+  "stages": {
+    "evidence": {
+      "started_at": "2026-09-20T11:36:11.278Z",
+      "status": "complete",
+      "ended_at": "2026-09-20T11:55:52.989285+00:00"
+    },
+    "writing": {
+      "started_at": "2026-09-20T11:53:43.533337+00:00",
+      "status": "complete_with_exception",
+      "ended_at": "2026-09-20T12:17:32.989294+00:00"
+    },
+    "blind_review": {
+      "started_at": "2026-09-20T11:53:43.533337+00:00",
+      "status": "complete",
+      "all_dispatched_at": "2026-09-20T11:56:49.509116+00:00",
+      "ended_at": "2026-09-20T12:01:35.473122+00:00"
+    },
+    "exception_author": {
+      "started_at": "2026-09-20T12:11:29.091546+00:00",
+      "status": "complete",
+      "ended_at": "2026-09-20T12:17:32.989294+00:00"
+    },
+    "full_review": {
+      "started_at": "2026-09-20T12:17:32.989294+00:00",
+      "status": "complete_needs_repair",
+      "ended_at": "2026-09-20T12:23:38.877026+00:00"
+    },
+    "adjudication": {
+      "started_at": "2026-09-20T12:23:38.877026+00:00",
+      "status": "complete",
+      "ended_at": "2026-09-20T12:31:06.683048+00:00"
+    },
+    "research_repair": {
+      "started_at": "2026-09-20T12:31:06.683048+00:00",
+      "status": "running"
+    }
+  },
+  "status": "bounded_research_repair",
+  "evidence_version": "v2+addendum-v3",
+  "preflight_findings": [
+    {
+      "id": "AUTHOR-PRE01",
+      "issue": "source paths under ignored writer folder",
+      "status": "corrected_in_root_bundle"
+    },
+    {
+      "id": "AUTHOR-PRE02",
+      "issue": "valuation.reason missing",
+      "status": "returned_to_author"
+    },
+    {
+      "id": "AUTHOR-PRE03",
+      "issue": "decision basis duplicate scores stale",
+      "status": "returned_to_author"
+    },
+    {
+      "id": "AUTHOR-PRE04",
+      "issue": "stale fact ID F019 absent from selected evidence-v2",
+      "status": "returned_to_author"
+    },
+    {
+      "id": "AUTHOR-PRE05",
+      "issue": "same-form verification sentences used to pad all three reports",
+      "status": "rejected_by_report_integrity"
+    }
+  ],
+  "author_preflight_correction_batches": 2,
+  "exception_used": true,
+  "reopen_reason": "初稿反复以同质句补行，完整性拦截后两批交接前修复失败；启用配置中仅正文破坏/修复实质失败接手的Sol例外作者，不更改常规角色模型",
+  "exception_scope": "未冻结初稿的实质正文修复和一致性；首次独立全文双复核仍保留；不再增加第二次例外接手",
+  "frozen_manifest": "data/reviews/travelsky-update-2026-09-20/build-v1/manifest.json",
+  "stage": "bounded_closeout_execution_incomplete",
+  "test_result": "failed_end_to_end_acceptance",
+  "publish_allowed": false
+}

@@ -1,0 +1,9 @@
+{
+  "stage": "initial_score_review",
+  "frozen_at": "2026-09-20T13:58:13.988935+00:00",
+  "files": {
+    "data/reviews/triplet-score-cycle-2026-09-20/round-2/writer/workpaper-v2.json": "2cd0b218aaf9c525c18199486568f34a80dd61193c356eab94de0c8eebe0b845",
+    "data/reviews/triplet-score-cycle-2026-09-20/round-2/writer/score-rationale-v2.md": "e99a3a0195d488f5c89018d1db21f605130a35411d62dfd050f44f09adaeb140",
+    "data/reviews/triplet-score-cycle-2026-09-20/round-2/evidence-manifest.json": "7077a195a5d2f4a8e397006c2ae916d33275b801d1f44055ea0b2b7e691fac17"
+  }
+}

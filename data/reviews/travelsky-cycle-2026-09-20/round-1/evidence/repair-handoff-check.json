@@ -1,0 +1,12 @@
+{
+  "status": "coverage_ready_for_human_check",
+  "errors": [],
+  "inputs": {
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/evidence/repair-facts.json": "be52117f37d2976748c4b1f0fc717aecb9c0dc1fb6748d32362884295e08cdd6",
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/evidence/repair-sources.json": "6ca77de62da2d15087964eb4a85eecd7ec24fdc0c76030e5f402183c2365e62e",
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/evidence/facts-v2.json": "60de5db4003aa2f21546973f5441d28cded7a4d182b68eb0d111ab3ca3192613",
+    "data/reviews/travelsky-update-2026-09-20/evidence/facts-v2.json": "22a4fe721ed0e4770cf0ef4a0be1648a51055c70ff80cdfae27882a2f4d229da",
+    "data/reviews/travelsky-update-2026-09-20/evidence/addendum-v3.json": "365601a94f945c082302132fdb1a36ecea8c08670a87541f30413bcb592a1076"
+  },
+  "limitations": "仅检查逐项覆盖、引用及版本；主任务必须对照实际内容核范围，covered自述不是实质验收。"
+}

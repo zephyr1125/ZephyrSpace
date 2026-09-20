@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "score_display": "integer_half_up",
+  "score_rule_validation": "explicit_tiers_v1",
+  "issuer": {"name":"贵州茅台酒股份有限公司","ticker":"600519.SH","as_of":"2026-09-20","evidence_version":"MTC2-v2-plus-exception-v4"},
+  "repair_basis": {"decision":"data/reviews/triplet-score-cycle-2026-09-20/round-2/exception-repair-decision.json","frozen_base_sha256":"53cd362274650b818936a531bfadf101d1bbc04a8199bbaadad69171927657e2","scope":"唯一一次有界例外；仅修复裁决列明验收项"},
+  "scores": {
+    "company": {"items": [
+      {"id":"A1","score":3,"rule_ref":"A1：先发优势/技术驱动=3","reason":"上市早期已具品牌信誉、独特酿造工艺及生产经营基础，与当前核心竞争力相接，支持品牌/工艺长期积累的先发优势；不把国资发起等同政策红利。","evidence_refs":["MTC2-IPO-001","MTC2-IPO-003","MTC2-IPO-005"]},
+      {"id":"A2","score":3,"rule_ref":"A2：从未变更=3","reason":"发起设立、股本沿革及当前控股股东等关键节点支持集团控制持续；未宣称逐年穷尽核验。","evidence_refs":["MTC2-IPO-001","MTC2-ORG-101"]},
+      {"id":"A3","score":4,"rule_ref":"A3：融资用途清晰且无卖资产保利润=4","reason":"IPO约19.98亿元于2001年到位，2003回访时完成约59.53%募投、余款专户存放；用途调整履行审批。该时点不代表全部完成，也无已核挪用或卖资产保利润事实。","evidence_refs":["MTC2-IPO-002","MTC2-CAP-101"]},
+      {"id":"B0","score":2,"rule_ref":"B0：三个实质判断+分类结论=2","reason":"早期生产、贮存、销售存在资金沉淀和建设周期，但2002年已有盈利，不能称低毛利建设期；无证据支持建设到运营的毛利突变，该模板切换不适用；主业模式延续，分类为生产资产/工艺壁垒型。","evidence_refs":["MTC2-IPO-002","MTC2-IPO-005"]},
+      {"id":"B1","score":3,"rule_ref":"B1：过度集中但逻辑清晰=3","reason":"2025酒类主营占营业收入99.96%，茅台酒占酒类86.80%，高度集中；品牌、渠道及系列酒逻辑清晰，适用3分档。","evidence_refs":["MTC2-REP-001"]},
+      {"id":"B2","score":3,"rule_ref":"B2：高复购/刚性=3","reason":"产品为可持续消费品，生产—贮存—勾兑—包装及直销、批发代理渠道已核，长期品牌消费与重复购买支持高复购判断。","evidence_refs":["MTC2-BIZ-101","MTC2-MKT-101"]},
+      {"id":"B3","score":6,"rule_ref":"B3：强=6","reason":"2025年报披露原产地、传统工艺、长期基酒与品牌文化，并有91.23%酒类毛利率旁证；环境与微生物不可复制仅按公司自述。2026H1渠道优化另由半年度事实登记，不归入2025来源。","evidence_refs":["MTC2-REP-001","MTC2-MOAT-AR25","MTC2-MOAT-H126"]},
+      {"id":"B4","score":3,"rule_ref":"B4：成熟期但稳定=3","reason":"行业进入存量竞争和结构调整，2025营业总收入转负、2026H1净利同比下滑；六年高ROE及盈利规模仍支持成熟期稳定档。","evidence_refs":["MTC2-BIZ-101","MTC2-FIN-101","MTC2-FIN-102"]},
+      {"id":"C1","score":6,"rule_ref":"C1：绝对龙头/Top3=6","reason":"年报披露茅台酒为全球唯一千亿级酒类大单品；未把公司披露夸大为独立精确市占率，但规模足以支持绝对龙头档。","evidence_refs":["MTC2-MKT-101"]},
+      {"id":"C2","score":5,"rule_ref":"C2：吃肉主导=5","reason":"原产地、工艺、基酒、品牌和渠道共同支持价格体系主导能力；2026H1渠道优化由半年度事实独立登记，行业周期构成需求端限制。","evidence_refs":["MTC2-MOAT-AR25","MTC2-MOAT-H126","MTC2-REP-001"]},
+      {"id":"C3+C4","score":9,"rule_ref":"C3+C4：5星=9","reason":"2025年报所列原产地、长期基酒、传统工艺、品牌文化构成多层壁垒；公司自述的环境和微生物不可复制保留披露边界，2026H1渠道机制另行登记。","evidence_refs":["MTC2-MOAT-AR25","MTC2-MOAT-H126","MTC2-REP-001"]},
+      {"id":"D1","score":4,"rule_ref":"D1：长期一致且逻辑清晰=4","reason":"2023战略围绕质量、主业、产能和品牌；2025经营计划延续质量与市场化转型；2026H1继续渠道优化和质量机制，经营手段调整未构成战略漂移。","evidence_refs":["MTC2-STRAT-AR23","MTC2-STRAT-AR25","MTC2-STRAT-H126"]},
+      {"id":"D2","score":4,"rule_ref":"D2：缺管理层原话时上限4/5","reason":"2023、2024约15%收入目标实现，2025约9%目标未达；按三年达成记录可落较高档，但未取得电话会或业绩说明会原话，按规则上限4分。","evidence_refs":["MTC2-PLAN-101"],"original_statement_found":false,"strategy_drift":false},
+      {"id":"D3","score":1,"rule_ref":"D3：逆风=1","reason":"未经审计的2026年半年度报告明确行业处于周期性和结构性调整、存量竞争加剧；2025及2026H1经营趋势印证外部逆风。","evidence_refs":["MTC2-BIZ-H126","MTC2-FIN-101","MTC2-FIN-102"]},
+      {"id":"D5","score":2,"rule_ref":"D5：混合信号=2","reason":"2023—2025期末员工数33302、34750、34992，人均营业收入443.50、491.80、482.50万元，研发投入6.2151、6.9538、8.0313亿元，形成效率先升后降与研发持续增加的混合信号；期末人数只是代理。","evidence_refs":["MTC2-ORG-AR23","MTC2-ORG-AR24","MTC2-ORG-AR25"]},
+      {"id":"E1","score":5,"rule_ref":"E1：净利率/周转率驱动ROE>15%=5","reason":"2020—2025 ROE为29.90%—36.02%，归母净利占收入约49%，高ROE不呈现杠杆驱动证据；完整杜邦三因子仍属后续复核边界。","evidence_refs":["MTC2-FIN-101"]},
+      {"id":"E2","score":3,"rule_ref":"E2：基本达标=3","reason":"2020—2025经营现金流/归母净利约1.11、1.22、0.59、0.89、1.07、0.75，整体基本达标；2026H1现金流受财务公司存款项目影响，不能外推主营现金转化。","evidence_refs":["MTC2-FIN-101","MTC2-FIN-102","MTC2-REL-201"]},
+      {"id":"E3","score":2,"rule_ref":"E3：有一次性但可辨认=2","reason":"扣非占比高、非经常性损益可辨认；2025酒类收入-1.08%、销量+2.13%，隐含吨均收入约-3.14%，不满足量价双驱动。","evidence_refs":["MTC2-FIN-102","MTC2-REP-001"]},
+      {"id":"E4","score":1.5,"rule_ref":"E4：低杠杆基础2分；Capex同比变化>30%未可靠拆分扣0.5","reason":"2025合并负债率16.415%，无短借、长借及应付债券余额，偿债基础宽裕。购建长期资产现金支出由2024年46.78712亿元降至2025年31.27595亿元，下降33.1527%，触发拆分；固定资产、在建工程和无形资产附注不能可靠还原运营性与土地/楼宇/工程时间差的现金口径，明确未拆分并扣0.5，不能以转固额冒充现金支出。","evidence_refs":["MTC2-REP-003","MTC2-CAPEX-2025"]},
+      {"id":"E5","score":2,"rule_ref":"E5：标准审计+应收质量好=2","reason":"2020—2025标准无保留审计；2026H1应收账款仅57.09万元。财务公司增加合并口径复杂性，但未形成资产真实性重大疑点。","evidence_refs":["MTC2-AUD-101","MTC2-FIN-102"]},
+      {"id":"E5.5","score":3,"rule_ref":"E5.5：KAM无异常、无重大政策疑点=3","reason":"2025标准无保留意见；收入和关联交易KAM有控制、合同、对账及可比定价等审计应对，无政策/估计变更或重大差错更正。KAM本身不是异常意见。","evidence_refs":["MTC2-REP-003","MTC2-REP-004"]},
+      {"id":"F1","score":2,"rule_ref":"F1：5-2（近十年周期性历史高管调查）-1（独立激励/稳定性限制）=2","reason":"袁仁国、高卫东历史任职及公开司法处置支持近十年周期性核心高管廉洁风险扣2；已披露股权激励承诺未兑现构成独立稳定性限制扣1。蒋焰留置单列为当前未知，不重复扣分，解任不代表调查终结。","evidence_refs":["MTC2-GOVH-001","MTC2-GOVH-002","MTC2-GOVH-003","MTC2-GOV-101","MTC2-RISK-101"]},
+      {"id":"F2","score":5,"rule_ref":"F2：高分红+无不良减持+融资审慎=5","reason":"2020—2023年度分红预案连续增长，2025完成约60亿元注销回购；未见本轮已核不良减持或稀释融资。控股股东增持不归入上市公司资本配置。","evidence_refs":["MTC2-CAP-201","MTC2-CAP-101"]},
+      {"id":"F2.5","score":2,"rule_ref":"F2.5：审慎配置+逆周期布局+资金回报>成本=2","reason":"2025整体资本效率代理为26.9336%，对调整后利润再打七折约18.85%，仍高于8%—15%分析师资本成本压力范围；行业下行期仍执行分红与约60亿元注销回购且未靠有息借款扩张，支持逆周期配置。该代理不是精确ROIC；基金0.7616亿元浮盈不作超成本依据，控股股东增持不归上市公司配置。","evidence_refs":["MTC2-CAPITAL-RETURN-2025","MTC2-CAP-101","MTC2-REP-004"]},
+      {"id":"F3","score":3,"rule_ref":"F3：透明清洁+ESG低风险=3","reason":"2021—2025年报均披露近三年无证券监管处罚，定向证券/行业监管检索截至2026-09-20未发现2021年以来新的公司级重大处罚；正常关联资金及关联交易KAM不作为扣分。检索命中的2020年高卫东监管关注早于本窗口，2026年蒋焰留置已在F1及管理层维度单列。","evidence_refs":["MTC2-REG-AR21-25","MTC2-REG-SEARCH-20260920","MTC2-REP-004"]}
+    ],"total":86.5},
+    "management": {"items":[
+      {"id":"诚信与透明度","score":11,"rule_ref":"管理层七维评分：诚信与透明度20分","reason":"公司及时披露蒋焰留置、代行及补位；已核历史廉洁事件限制高档。未公开的蒋焰案情与终局仅列未知，不作为实质反证或额外扣分。","evidence_refs":["MTC2-GOVH-001","MTC2-GOVH-002","MTC2-RISK-101","MTC2-GOV-101"]},
+      {"id":"资本配置能力","score":20,"rule_ref":"管理层七维评分：资本配置能力25分","reason":"高回报主业、已执行大额分红及注销回购构成正证；2025整体资本效率代理在保守压力测试后仍高于资本成本压力上沿。2025盈利收缩、基金投放仍处早期且尚非成熟退出业务，限制卓越满分；基金浮盈不作超成本依据，控股股东增持不归公司配置。","evidence_refs":["MTC2-CAPITAL-RETURN-2025","MTC2-CAP-101","MTC2-CAP-201"]},
+      {"id":"战略稳定性","score":12,"rule_ref":"管理层七维评分：战略稳定性15分","reason":"2023、2025及2026H1原文连续指向主业、质量、产能、品牌和渠道优化；三年收入目标两年实现、一年未达，行业调整削弱短期执行但不足以证明战略漂移。","evidence_refs":["MTC2-STRAT-AR23","MTC2-STRAT-AR25","MTC2-STRAT-H126"]},
+      {"id":"对股东友好度","score":14,"rule_ref":"管理层七维评分：对股东友好度15分","reason":"连续增长的年度分红及注销回购直接支持股东回报；原定管理层和核心技术团队激励未按期落实，故不满分。","evidence_refs":["MTC2-CAP-101","MTC2-CAP-201","MTC2-GOV-101"]},
+      {"id":"危机处理能力","score":7,"rule_ref":"管理层七维评分：危机处理能力10分","reason":"留置后及时安排代行并完成财务总监、董事会秘书补位，经营持续；现有可核行动主要是人员替换，未见可验证的机制改革，故为7分。未公开案情与终局仅列未知，不作扣分理由。","evidence_refs":["MTC2-RISK-101","MTC2-GOV-101"]},
+      {"id":"组织与人才能力","score":8,"rule_ref":"管理层七维评分：组织与人才能力10分","reason":"2021—2025及2026H1核心岗位变动显示董事长与部分高管轮换，但均有选举、聘任、代行或补位安排；2026H1余思明接任财务总监兼董秘、涂华彬接任副总经理。未发现短期核心岗位集中空缺或全部依赖外部空降的模式；未兑现股权激励限制满分。","evidence_refs":["MTC2-PEOPLE-2021-2026H1","MTC2-REP-002","MTC2-GOV-101"]},
+      {"id":"表达清晰度与认知质量","score":4,"rule_ref":"管理层七维评分：表达清晰度与认知质量5分","reason":"2025经营计划明确收入与建设目标，2026H1披露市场化转型、渠道优化及质量机制；限制在于已核2025收入指引落空且风险讨论偏概括，不因缺电话会原话扣分。","evidence_refs":["MTC2-STRAT-AR25","MTC2-STRAT-H126","MTC2-PLAN-101"]}
+    ],"total":76}
+  },
+  "capital_return_bridge": {"unit":"亿元人民币","period":"2025FY；分母为2024/2025年末均值","inputs":{"consolidated_net_profit":853.1032483367,"finance_company_interest_revenue":32.1606937612,"interest_income_in_finance_expense":8.429882406,"fund_fair_value_gain":0.7616259766,"assets_2024":2989.445799187,"assets_2025":3038.3484402144},"formula":"(净利润-财务公司全部利息收入-财务费用项全部利息收入-基金浮盈)/平均总资产","result":0.26933601710781424,"capital_cost_stress_range":[0.08,0.15],"stress_result":0.18853521197546996,"boundary":"分析师资本成本压力范围；采用含金融资产总资产分母及不税后还原扣除，是保守整体资本效率代理，不是精确ROIC或严格数学下界。若资本成本长期超过代理边界则重评。"},
+  "qualification": {"score_total_raw":162.5,"score_total_display":163,"company_score_display":87,"management_score_display":76,"highest_score_gate":"A_CORE","gate_result":"score_gate_met_but_not_actionable","reason":"原始公司86.5、管理层76、合计162.5满足A_CORE分数门槛；整数显示87/76/163仅为ROUND_HALF_UP展示。评分仍待例外修复双路定向验收，完整三件套及估值未完成，不入Watchlist。"},
+  "valuation": {"status":"deferred","reason":"评分优先阶段，未建立两个独立主模型、三情景和敏感性。","currency":"CNY","models":[],"target_price":null,"certainty":null,"buy_price":null},
+  "bridges": [],
+  "bridges_not_applicable": "估值暂缓，未建立需要现金、负债、少数股东或股数桥接的正式每股估值模型。"
+}

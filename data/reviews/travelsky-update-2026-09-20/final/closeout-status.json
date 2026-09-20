@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "company": "中国民航信息网络",
+  "decision": "defer",
+  "research_status": "execution_incomplete",
+  "research_state": "pending",
+  "publish_allowed": false,
+  "test_result": "failed_end_to_end_acceptance",
+  "basis": "沿用decision-v1的R09退出规则，作者和双路收尾核验确认R04-A1/R05-A1/R08-A1仍有执行缺口。未重新裁决分数，未完成修复稿全文验收。",
+  "approved_parameters": {
+    "company_score": null,
+    "management_score": null,
+    "combined_score": null,
+    "watchlistLevel": null,
+    "target_price": null,
+    "buy_price": null
+  },
+  "quality_stop_approved": false,
+  "bounds_approved": false,
+  "archive_refs": [
+    {
+      "original": "data/reviews/travelsky-update-2026-09-20/decision-v1.json",
+      "archive": "data/reviews/travelsky-update-2026-09-20/final/decision-basis.json",
+      "sha256": "5a6bf37066aeaa49a1650e71558e30ae2df810a3c3c7efbd972a41251e5d79ac"
+    },
+    {
+      "original": "data/reviews/travelsky-update-2026-09-20/writer-repair/closeout-v3.json",
+      "archive": "data/reviews/travelsky-update-2026-09-20/final/author-closeout.json",
+      "sha256": "4dcd9d4e3633b4c5306a65fee944428cc55700b587fb024e029dd0f0fd6fe965"
+    },
+    {
+      "original": "data/reviews/travelsky-update-2026-09-20/review-facts/closeout-v3.json",
+      "archive": "data/reviews/travelsky-update-2026-09-20/final/facts-closeout.json",
+      "sha256": "c1cb90540a9cba2af126764006dfa6fd73b4078bc63803177db32b278ada8318"
+    },
+    {
+      "original": "data/reviews/travelsky-update-2026-09-20/review-reasoning/closeout-v3.json",
+      "archive": "data/reviews/travelsky-update-2026-09-20/final/reasoning-closeout.json",
+      "sha256": "e59d6efb2f8fd36542ec74406fde918fe233b5a448c0df68e62a24e67bc40c13"
+    }
+  ],
+  "report": "data/reviews/travelsky-update-2026-09-20/final/test-acceptance.md"
+}

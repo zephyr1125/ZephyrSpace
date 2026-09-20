@@ -1,0 +1,22 @@
+{
+  "decision": "defer",
+  "research_state": "pending",
+  "basis": "R01、R02、R03、R06、R07的已知事实错误已修正；但冻结v3仍未满足R04-A1的连续三个已完成年度目标分母、R05-A1的行业或竞争者官方交叉验证、R08-A1的2021至2025完整资本与股东回报轨迹。受影响分项只能给有据边界，公司60.5–77、管理层68–83、合计128.5–160，跨越B_GROWTH门槛，不能批准reject、quality stop或eligible。",
+  "review_refs": [],
+  "score_bounds": {
+    "company": [60.5, 77],
+    "management": [68, 83],
+    "combined": [128.5, 160]
+  },
+  "issues": [
+    {"id":"R01","lane":"research","status":"open","reason":"服务协议事实与F3联动已修，仍待双路定向验收。","acceptance":["R01-A1","R01-A2","R01-A3"]},
+    {"id":"R02","lane":"research","status":"open","reason":"KAM及审计边界已修，仍待双路定向验收。","acceptance":["R02-A1","R02-A2"]},
+    {"id":"R03","lane":"research","status":"open","reason":"归母ROE与杜邦已修，E1点值仍待双路核规则匹配。","acceptance":["R03-A1","R03-A2"]},
+    {"id":"R04","lane":"research","status":"open","reason":"冻结增量未形成连续三个已完成年度同口径目标—实际分母，只能保留D2边界。","acceptance":["R04-A1","R04-A2"]},
+    {"id":"R05","lane":"research","status":"open","reason":"公司自身处理量与覆盖已补，但缺行业或竞争者官方同口径材料，B3/C项不能收敛点值。","acceptance":["R05-A1","R05-A2"]},
+    {"id":"R06","lane":"research","status":"open","reason":"税前—税—NCI—归母桥和符号已修，正常化归因仍待定向验收。","acceptance":["R06-A1","R06-A2","R06-A3"]},
+    {"id":"R07","lane":"research","status":"open","reason":"审计师轮换及机柜协议已纳入，仍待双路核事实与评分联动。","acceptance":["R07-A1","R07-A2"]},
+    {"id":"R08","lane":"research","status":"open","reason":"冻结增量缺2021资本/分红融资以及完整五年回购稀释序列，管理层七维只能给边界。","acceptance":["R08-A1","R08-A2","R08-A3","R08-A4","R08-A5"]},
+    {"id":"R09","lane":"research","status":"open","reason":"评分边界跨越B_GROWTH，且schema不能表达区间defer，资格和估值分支尚未闭合。","acceptance":["R09-A1","R09-A2","R09-A3","R09-A4"]}
+  ]
+}

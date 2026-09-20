@@ -1,0 +1,5 @@
+{"schema_version":1,"evidence_version":"MTC2-governance-history-2026-09-20","scope":"2016-09-20至2026-09-20，限上市公司董事长/总经理/CFO/董秘相关的已知公开调查事件。","sources":[
+{"source_id":"MTC2-SRC-GOV-AR20","type":"上市公司年度报告（本地原始披露阅读版）","path":"财报/贵州茅台/贵州茅台2020年度报告.md","period":"2020FY","sha256":"9F41A0A29C9CFE45F6253B43BB780C18BADFB588340D215F79D1138F45ACE4B1"},
+{"source_id":"MTC2-SRC-GOV-YUAN-COURT","type":"法院判决官方信息的主流媒体转载","url":"http://fanfu.people.com.cn/n1/2021/0924/c64371-32235111.html","publisher":"人民网反腐倡廉频道","published":"2021-09-24","accessed":"2026-09-20"},
+{"source_id":"MTC2-SRC-GOV-GAO-COURT","type":"贵州高院公开宣判通报的媒体转载","url":"https://www.stcn.com/article/detail/1113572.html","publisher":"证券时报网","accessed":"2026-09-20"}
+]}

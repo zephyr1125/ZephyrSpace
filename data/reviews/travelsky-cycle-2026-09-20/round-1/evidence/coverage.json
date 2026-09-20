@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "company": "中国民航信息网络股份有限公司",
+  "security": "00696.HK",
+  "cutoff_date": "2026-09-20",
+  "evidence_version": "TSKC1-v1",
+  "retrieval_time": "2026-09-20 Asia/Hong_Kong；本轮仅补R04-A1/R05-A1/R08-A1，复用旧有效包且未重抓已有原件。",
+  "evidence": [
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/evidence/facts.json",
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/evidence/sources.json",
+    "data/reviews/travelsky-update-2026-09-20/evidence/facts-v2.json",
+    "data/reviews/travelsky-update-2026-09-20/evidence/addendum-v3.json",
+    "data/reviews/travelsky-update-2026-09-20/evidence/sources-v2.json",
+    "data/reviews/travelsky-update-2026-09-20/evidence/sources-addendum-v3.json"
+  ],
+  "requirements": [
+    {"id":"R04-A1","scope":"2023/2024/2025已完成年度逐年当时目标、随后实际与可核结果","decisive":true},
+    {"id":"R05-A1","scope":"至少一条独立官方行业或竞争者材料验证业务位置/替代方式","decisive":true},
+    {"id":"R08-A1","scope":"2021—2025资本配置、分红/融资/回购稀释关键动作与重要管理层变更","decisive":true}
+  ],
+  "answers": [
+    {"id":"R04-A1","status":"bounded","coverage":"TSKC1-F001将2022年报的2023计划与2023实际、2023年报的2024计划与2024实际、2024年报的2025计划与2025实际逐年分列；三份计划均为定性，不被表述为已完成。","remaining":"未披露可比较的量化目标，且年报定性里程碑不能证明每一工作子项均完成。","evidence_refs":["TSKC1-F001","TSKC1-S001","TSKC1-S002","TSKC1-S003","TSKC1-S004"],"search_scope":"定向读取2022—2025港交所年报的董事会陈述、业务回顾和财务摘要。","assessment":"已完成裁决允许的定性目标/可观察里程碑配对；剩余为未披露量化目标及不可完全验证的子项，不应伪造成执行率。"},
+    {"id":"R05-A1","status":"bounded","coverage":"TSKC1-F002登记两项民航局官方材料：2025统一清算体系新增飞行校验费覆盖，及2015年对中国航信四大系统/主导供应商的介绍；均非公司自述。","remaining":"无2023—2025市场总量、同口径竞争者处理量或市场份额。","evidence_refs":["TSKC1-F002","TSKC1-S005","TSKC1-S006"],"search_scope":"联网定向检索CAAC官网，关键词为中国航信、统一清算、结算、替代方式。","assessment":"满足至少一项独立官方材料的最低验收；外部材料只能验证业务位置和行业清算体系，不支持精确份额或排除替代。"},
+    {"id":"R08-A1","status":"bounded","coverage":"TSKC1-F003覆盖2021—2025资本开支、可得融资现金流、拟议末期股息、年末股份数及2025无回购；TSKC1-F004覆盖2022总经理交接、2024总会计师/副总经理、2025副总经理变更及截至截止日相关增量。","remaining":"2024完整借款收支、2021—2024逐年无回购、各拟议股息最终支付及多数个人离任动机/继任来源本轮未定向摘取。","evidence_refs":["TSKC1-F003","TSKC1-F004","TSKC1-S001","TSKC1-S002","TSKC1-S003","TSKC1-S004","TSK26-F017"],"search_scope":"定向读取2022—2025年报的MD&A资本/融资、现金流、分红、证券回购、股份结构及公司资料/高级管理层章节；复用旧有效TSK26-F017。","assessment":"五年关键资本与管理层序列已具实质覆盖；缺失项必须作为未知或后续核验范围，不能从单年无回购推导全期无稀释。"}
+  ]
+}

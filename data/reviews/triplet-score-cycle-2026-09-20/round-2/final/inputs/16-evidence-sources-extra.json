@@ -1,0 +1,7 @@
+{"schema_version":1,"evidence_version":"MTC2-extra-2026-09-20","purpose":"补回v2未列的资本回报、关联资金和早期关键节点；不替换v2。","sources":[
+{"source_id":"MTC2-SRC-AR20-EXTRA","type":"上市公司年度报告（本地原始披露阅读版）","path":"财报/贵州茅台/贵州茅台2020年度报告.md","period":"2020FY","sha256":"9F41A0A29C9CFE45F6253B43BB780C18BADFB588340D215F79D1138F45ACE4B1"},
+{"source_id":"MTC2-SRC-AR21-EXTRA","type":"上市公司年度报告（本地原始披露阅读版）","path":"财报/贵州茅台/贵州茅台2021年度报告.md","period":"2021FY","sha256":"B965A0413E5BC2C9C2E84B1A682EC4B4370D7B8AA672A1BB3D12F21871FCB6EF"},
+{"source_id":"MTC2-SRC-AR22-EXTRA","type":"上市公司年度报告（本地原始披露阅读版）","path":"财报/贵州茅台/贵州茅台2022年度报告.md","period":"2022FY","sha256":"8A51B448BA048BAE3D3A7EA0935BFBCC82FE6E1067B1F039C06CC9406DB32B73"},
+{"source_id":"MTC2-SRC-AR23-EXTRA","type":"上市公司年度报告（本地原始披露阅读版）","path":"财报/贵州茅台/贵州茅台2023年度报告.md","period":"2023FY","sha256":"CFD96C63C17FFD1625467E72ED1A799D484649E0EDFF9F1FEAB35F06B3FBF9A0"},
+{"source_id":"MTC2-SRC-H126-EXTRA","type":"上市公司半年度报告（本地原始披露阅读版）","path":"财报/贵州茅台/贵州茅台2026半年度报告.md","period":"2026H1","sha256":"1D82E9FA3BC862041BFFFA2A2FC8DD7C3726DECA4B1F8AE9A4E210528E44156F"}
+]}

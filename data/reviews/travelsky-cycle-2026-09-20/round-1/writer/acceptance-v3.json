@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "status": "pending_independent_review",
+  "acceptance": [
+    {
+      "location": "workpaper-v3.json:A1,A2",
+      "id": "R01-A1",
+      "facts": [
+        "TSKC1R-F001",
+        "TSK26-F018"
+      ]
+    },
+    {
+      "location": "workpaper-v3.json:B0",
+      "id": "R02-A1",
+      "facts": [
+        "TSKC1R-F002"
+      ]
+    },
+    {
+      "location": "workpaper-v3.json:A3,D1,F2",
+      "id": "R03-A1",
+      "facts": [
+        "TSKC1R-F002",
+        "TSKC1R-F003"
+      ]
+    },
+    {
+      "location": "workpaper-v3.json:E3",
+      "id": "R04-A1",
+      "facts": [
+        "TSK26-V3-F004",
+        "TSK26-V3-F019"
+      ]
+    },
+    {
+      "location": "workpaper-v3.json:management.危机处理能力",
+      "id": "R05-A1",
+      "facts": [
+        "TSKC1R-F004"
+      ]
+    },
+    {
+      "location": "workpaper-v3.json:E5.5,F3",
+      "id": "R06-A1",
+      "facts": [
+        "TSKC1R-F005"
+      ]
+    },
+    {
+      "location": "workpaper-v3.json:B4",
+      "id": "R07-A1",
+      "facts": [
+        "TSK26-F003",
+        "TSK26-F004"
+      ]
+    },
+    {
+      "location": "workpaper-v3.json:C3+C4",
+      "id": "R08-A1",
+      "facts": [
+        "TSKC1-F002",
+        "TSK26-V3-F018"
+      ]
+    },
+    {
+      "id": "R09-A1",
+      "location": "workpaper-v3.json:C1",
+      "facts": [
+        "TSKC1-F002",
+        "TSK26-V3-F018"
+      ]
+    }
+  ],
+  "not_approval": "作者修复，未获批准"
+}

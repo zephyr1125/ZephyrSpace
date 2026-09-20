@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "company": "中国民航信息网络",
+  "ticker": "00696.HK",
+  "as_of": "2026-09-20",
+  "decision": "defer",
+  "research_state": "pending",
+  "research_status": "execution_incomplete",
+  "delivery_state": "not_assembled",
+  "publish_allowed": false,
+  "answer": "一次合并研究修复已纠正可确定事实，但冻结v3证据仍未满足R04-A1、R05-A1、R08-A1的最小验收。评分只能形成跨越B_GROWTH门槛的未批准边界，不能忠实批准reject、eligible或质量停止定价。",
+  "corrected_findings": [
+    {"issue_id":"R01","result":"服务协议改为公告和年度审阅、豁免独立股东批准；服务费由关联方向上市公司支付。69.070百万元历史实际、40百万元完整年度最低费用、78百万元2026上限分期列示，1.72675比值不作负面归因。","evidence_refs":["TSK26-F018","TSK26-V3-F005"]},
+    {"issue_id":"R02","result":"登记应收减值和收入确认两项KAM、主要审计程序及非单独意见边界；KAM不再被写成异常或红旗。","evidence_refs":["TSK26-V3-F001","TSK26-V3-F002","TSK26-V3-F003"]},
+    {"issue_id":"R03","result":"ROE统一为归母利润除以平均归母权益：2023至2025为7.0475%、9.6983%、10.1172%，并补杜邦分解；不使用总权益口径9.85%。","evidence_refs":["TSK26-V3-F015","TSK26-V3-F016"]},
+    {"issue_id":"R06","result":"利润桥闭合利润总额、所得税、净利润、NCI与归母增量；以前年度税项调整-95.403百万元降低税费，费用符号修正为总经营成本减少10.026百万元。","evidence_refs":["TSK26-V3-F004","TSK26-V3-F019"]},
+    {"issue_id":"R07","result":"会计师变更区分提议、八年轮换原因、无分歧及股东批准；机柜协议区分101个机柜、租金价格、使用权资产上限、额外费用和不同豁免。","evidence_refs":["TSK26-V3-F006","TSK26-V3-F007","TSK26-V3-F008","TSK26-V3-F022"]},
+    {"issue_id":"R08-partial","result":"补入可得资本动作、股息、结构性存款条款、高管任期、监管检索和疫情恢复结果；删除由正常国企治理、合法豁免、未知动机或未披露人才保留率直接得出的负面判断。","evidence_refs":["TSK26-V3-F009","TSK26-V3-F010","TSK26-V3-F012","TSK26-V3-F014","TSK26-V3-F017","TSK26-V3-F020","TSK26-V3-F021"]}
+  ],
+  "blocking_items": [
+    {"id":"R04-A1","category":"evidence_gap","impact":"D2以及管理层战略稳定性和表达质量不能收敛点值。","disposition":"open","source_ref":"decision-v1.json#R04-A1","detail":"冻结v3只有2023年报对2024计划及2024/2025资金陈述，未形成2023、2024、2025三个已完成年度同口径目标—实际分母。"},
+    {"id":"R05-A1","category":"evidence_gap","impact":"B3、C1、C2、C3+C4不能在原规则档位内收敛。","disposition":"open","source_ref":"decision-v1.json#R05-A1","detail":"已取得公司自身处理量、覆盖和收费确认机制，但没有至少一项行业或竞争者官方材料作市场位置或替代方式交叉验证。"},
+    {"id":"R08-A1","category":"evidence_gap","impact":"A3、F2、F2.5及管理层资本配置、股东友好度不能收敛点值。","disposition":"open","source_ref":"decision-v1.json#R08-A1","detail":"冻结v3覆盖2022–2025部分资本和股息数据，仍缺2021以及2021–2025完整分红、融资、回购、稀释轨迹。"},
+    {"id":"SCHEMA-V3","category":"presentation","impact":"不能把跨门槛区间defer装配为通过的bundle。","disposition":"bounded","source_ref":"docs/three-report-delivery.md#区间与适配","detail":"当前装配schema只支持区间质量否决停止定价，不能忠实表达区间跨门槛的defer；未修改脚本绕过。"}
+  ],
+  "unapproved_score_bounds": {
+    "company": [60.5, 77],
+    "management": [68, 83],
+    "combined": [128.5, 160],
+    "method": "未受影响项保留v2候选依据；受R01–R08影响且无法收敛的分项按原评分相邻档与已取证边界相加。上下界仅说明资格敏感性，不是批准分数或可取中点。",
+    "qualification_effect": "下界否决全部档位，上界达到B_GROWTH的单项及合计门槛，故资格跨门槛。"
+  },
+  "approved_parameters": {
+    "company_score": null,
+    "management_score": null,
+    "combined_score": null,
+    "watchlistLevel": null,
+    "target_price": null,
+    "certainty": null,
+    "buy_price": null,
+    "currency": "HKD"
+  },
+  "withdrawn_fields": [
+    "v2候选公司分69.5",
+    "v2候选管理层分61",
+    "v2候选合计分130.5",
+    "reject/NONE资格判断",
+    "stopped_quality_gate_after_full_research状态",
+    "任何正式目标价、估值确定性和机械买入价"
+  ],
+  "retained_artifacts": [
+    "data/reviews/travelsky-update-2026-09-20/source-v3/deep.md",
+    "data/reviews/travelsky-update-2026-09-20/source-v3/management.md",
+    "data/reviews/travelsky-update-2026-09-20/source-v3/valuation.md",
+    "data/reviews/travelsky-update-2026-09-20/writer-repair/workpaper-v3.json",
+    "data/reviews/travelsky-update-2026-09-20/writer-repair/decision-draft-v3.json",
+    "data/reviews/travelsky-update-2026-09-20/writer-repair/change-locations-v3.md"
+  ],
+  "next_trigger": "仅在补入R04-A1、R05-A1、R08-A1所列决定性证据，或用户明确以新run重启时，重新收敛评分与R09估值分支；本轮不追加证据循环。"
+}

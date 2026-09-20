@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "scope": "仅三处确定性交付修正，不重开评分",
+  "score_state": "pending",
+  "research_state": "pending",
+  "publish_allowed": false,
+  "issues": [
+    {
+      "id": "D01",
+      "lane": "delivery",
+      "status": "open",
+      "classified_by": "adjudicator",
+      "no_decision_impact": true,
+      "reason": "A2的2008主业整合已在原裁决及澄清中回核2022年报打印页95，TSKC1R-F002为已核同一事实；现有理由和3分不变，缺项仅为已确认来源ID漏列，不是来源不确定。",
+      "acceptance": [
+        {
+          "id": "D01-A1",
+          "condition": "在新底稿A2.evidence_refs仅追加TSKC1R-F002，原引用保留；JSON语义diff除该引用数组外完全一致。"
+        }
+      ],
+      "source_refs": [
+        "decision-clarification.json CL-A2",
+        "evidence/repair-facts.json TSKC1R-F002",
+        "财报/中国民航信息网络/2022年度报告.pdf PDF第97页"
+      ]
+    },
+    {
+      "id": "D02",
+      "lane": "delivery",
+      "status": "open",
+      "classified_by": "adjudicator",
+      "no_decision_impact": true,
+      "reason": "论证的字面反引号n是换行转义误写；标题v2与实际v3文件不一致。内容、评分与待审状态均不变。",
+      "acceptance": [
+        {
+          "id": "D02-A1",
+          "condition": "在新论证副本将字面`n替换为实际换行，标题第1轮评分修复依据 v2改为v3；除此之外文本一致。"
+        }
+      ]
+    }
+  ],
+  "authorized_changes": {
+    "workpaper": "仅A2引用补TSKC1R-F002",
+    "rationale": "仅字面`n换行及标题v2改v3",
+    "versioning": "保存全新版本，不覆盖v3或历史裁决"
+  },
+  "input_sha256": {
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/writer/workpaper-v3.json": "3ffa597da5e3335b141e1c9b0bb0ab42b81de8ed8460a9dcd858f4f975636296",
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/writer/score-rationale-v3.md": "0365fd4190214479e259b5af48f567d8e36f67bf78a0c3921f8ae98b28ce2fa0"
+  },
+  "verification": "主任务核JSON语义diff、文本限定变更及新哈希；原事实审核员定向核D01-A1和D02-A1。无需双路重做研究。",
+  "approval_boundary": "本文件只批准修正范围，不关闭尚未执行的验收；最终评分批准等待两路定向覆盖、交付修复验收及新底稿哈希。公司72、管理层74、合计146仍非本文件批准值。",
+  "valuation": {
+    "status": "deferred",
+    "target_price": null,
+    "certainty": null,
+    "buy_price": null
+  }
+}

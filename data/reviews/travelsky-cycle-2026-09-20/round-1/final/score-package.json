@@ -1,0 +1,140 @@
+{
+  "scope": "评分阶段验收包；不是完整三件套发布包",
+  "score_state": "approved",
+  "scores": {
+    "company_score": 72,
+    "management_score": 74,
+    "combined_score": 146,
+    "tier": "NONE",
+    "target_price": null,
+    "certainty": null,
+    "buy_price": null,
+    "max_position": null
+  },
+  "decision": "reject",
+  "started_at": "2026-09-20T12:49:23.926000+00:00",
+  "approved_at": "2026-09-20T13:33:46.515436+00:00",
+  "elapsed_seconds": 2662.589436,
+  "files": {
+    "data/WATCHLIST_RULES.md": {
+      "archive": "inputs/00-WATCHLIST_RULES.md",
+      "sha256": "74a3b69f0d66815c7c1626adc69eeb6ff4e6d9af1d9dccc99116673a0ab0456a"
+    },
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/anonymous/delivery-check-v4.json": {
+      "archive": "inputs/01-delivery-check-v4.json",
+      "sha256": "51c9d307277f68ffafc51068045533afbdbfb826c87c083db5baaa2e3aa6846f"
+    },
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/anonymous/recheck-a.json": {
+      "archive": "inputs/02-recheck-a.json",
+      "sha256": "2d52b04fe829145489ae3f5e3cb465e9a8b8ab5e91550ff4cef1fb9d0d4bfdc6"
+    },
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/anonymous/recheck-b.json": {
+      "archive": "inputs/03-recheck-b.json",
+      "sha256": "77136d45b0eec3ec8579614695bc734db0d7c227994991975415a972c1f1aae7"
+    },
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/anonymous/review-a.json": {
+      "archive": "inputs/04-review-a.json",
+      "sha256": "cbc502c354b1e508b4a7bb2f291ff42a4a226f64ba96a3c0c9fe0788c6475260"
+    },
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/anonymous/review-b.json": {
+      "archive": "inputs/05-review-b.json",
+      "sha256": "c532e39976036e8dcb721ab917ea93c61a79d6e211e1f96064ce752aced88fbb"
+    },
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/decision-clarification.json": {
+      "archive": "inputs/06-decision-clarification.json",
+      "sha256": "a445d96a7ac7d88c2e4bf24ec45181294678ff501c65749e5d74eaf6c4c22299"
+    },
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/decision-v1.json": {
+      "archive": "inputs/07-decision-v1.json",
+      "sha256": "854dbed07782accc288d8de1b9a59c080304259506c7f442ba952cbcbeb965ad"
+    },
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/delivery-fix.json": {
+      "archive": "inputs/08-delivery-fix.json",
+      "sha256": "ad88a34574259b0d310af3cbcecc9a613c6743a953d0e7f6736ba980492de4f8"
+    },
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/delivery-patch-proof.json": {
+      "archive": "inputs/09-delivery-patch-proof.json",
+      "sha256": "4dcaa27cad7a5a0bf94e916bd31eab50240bc22feb0f70c13d524ad87b60beff"
+    },
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/evidence/coverage-v2.json": {
+      "archive": "inputs/10-coverage-v2.json",
+      "sha256": "15da1d5d931361cd5312b9592931ba4fbaebc278f2914f92ea8eebe719d91c8f"
+    },
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/evidence/facts-v2.json": {
+      "archive": "inputs/11-facts-v2.json",
+      "sha256": "60de5db4003aa2f21546973f5441d28cded7a4d182b68eb0d111ab3ca3192613"
+    },
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/evidence/repair-coverage.json": {
+      "archive": "inputs/12-repair-coverage.json",
+      "sha256": "d3618b1ea4103bc01bbdffc0b34daf4eeae1abf00eb78c5c6fe91585d88ee338"
+    },
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/evidence/repair-facts.json": {
+      "archive": "inputs/13-repair-facts.json",
+      "sha256": "be52117f37d2976748c4b1f0fc717aecb9c0dc1fb6748d32362884295e08cdd6"
+    },
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/evidence/repair-sources.json": {
+      "archive": "inputs/14-repair-sources.json",
+      "sha256": "6ca77de62da2d15087964eb4a85eecd7ec24fdc0c76030e5f402183c2365e62e"
+    },
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/evidence/sources.json": {
+      "archive": "inputs/15-sources.json",
+      "sha256": "92b5839096e80aaff5f78c82f2f027e7aa3d239603de2da4d8733c2e9cf60034"
+    },
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/final-score-decision.json": {
+      "archive": "inputs/16-final-score-decision.json",
+      "sha256": "6fbba1148027038a9b317912421f3fde3daecf1eb7b8cdc869609881dd79e20d"
+    },
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/writer/acceptance-v3.json": {
+      "archive": "inputs/17-acceptance-v3.json",
+      "sha256": "994ec7c5097a42a61f3c01abaf9a4a690146976a3ef001582096b0b95e7fb5eb"
+    },
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/writer/score-rationale-v3.md": {
+      "archive": "inputs/18-score-rationale-v3.md",
+      "sha256": "0365fd4190214479e259b5af48f567d8e36f67bf78a0c3921f8ae98b28ce2fa0"
+    },
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/writer/score-rationale-v4.md": {
+      "archive": "inputs/19-score-rationale-v4.md",
+      "sha256": "72651dc02564d78b469adc9b91a240185981e35df72bbf8fd8eb135e0877eef2"
+    },
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/writer/score-rationale.md": {
+      "archive": "inputs/20-score-rationale.md",
+      "sha256": "cbea188c7139fb631a30fc822e01ec573e8cefffa363e5444b0ef623242e5879"
+    },
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/writer/workpaper-v3.json": {
+      "archive": "inputs/21-workpaper-v3.json",
+      "sha256": "3ffa597da5e3335b141e1c9b0bb0ab42b81de8ed8460a9dcd858f4f975636296"
+    },
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/writer/workpaper-v4.json": {
+      "archive": "inputs/22-workpaper-v4.json",
+      "sha256": "01c863df97447ef6829ab2cc1df03e9e97ff32deeabde87446430040ca337aa9"
+    },
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/writer/workpaper.json": {
+      "archive": "inputs/23-workpaper.json",
+      "sha256": "fa26e16a3fae66ad50ef64f657ed27faed9e5b2e42c1865a73ef4d7a4166e62d"
+    },
+    "data/reviews/travelsky-update-2026-09-20/evidence/addendum-v3.json": {
+      "archive": "inputs/24-addendum-v3.json",
+      "sha256": "365601a94f945c082302132fdb1a36ecea8c08670a87541f30413bcb592a1076"
+    },
+    "data/reviews/travelsky-update-2026-09-20/evidence/facts-v2.json": {
+      "archive": "inputs/25-facts-v2.json",
+      "sha256": "22a4fe721ed0e4770cf0ef4a0be1648a51055c70ff80cdfae27882a2f4d229da"
+    },
+    "data/reviews/travelsky-update-2026-09-20/evidence/sources-addendum-v3.json": {
+      "archive": "inputs/26-sources-addendum-v3.json",
+      "sha256": "874483372889d8d639ab308153ad4764cd5926072248aa99802e7e3b1c7af29e"
+    },
+    "data/reviews/travelsky-update-2026-09-20/evidence/sources-v2.json": {
+      "archive": "inputs/27-sources-v2.json",
+      "sha256": "6cc6f756bb772ed4dffd5d8a2ec8d83520fdfd6de44c1f1f3b3b208f5faf2f79"
+    },
+    "deep-prebuy-skill/SKILL.md": {
+      "archive": "inputs/28-SKILL.md",
+      "sha256": "0c1314124a2a3d9c6e166824565117d6c5dde3404f943e410088ac919419829f"
+    },
+    "management-archive/SKILL.md": {
+      "archive": "inputs/29-SKILL.md",
+      "sha256": "eb1045e7868fb4741d6ad29a464fed223fe2465ada888a675c4218c69c3d78c0"
+    }
+  }
+}

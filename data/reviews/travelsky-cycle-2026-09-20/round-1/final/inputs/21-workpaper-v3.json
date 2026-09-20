@@ -1,0 +1,352 @@
+{
+  "schema_version": 1,
+  "score_display": "integer_half_up",
+  "company": "中国民航信息网络股份有限公司",
+  "security": "00696.HK",
+  "cutoff_date": "2026-09-20",
+  "evidence_version": "TSKC1R-v1 + TSKC1-v2 + TSK26 + decision-clarification",
+  "scores": {
+    "company": {
+      "total": 72,
+      "items": [
+        {
+          "id": "A1",
+          "score": 2,
+          "rule_ref": "深度核心/A1",
+          "reason": "1996前身、2000发起、2001上市的沿革支持政策主导起源，维持2分。",
+          "evidence_refs": [
+            "TSKC1R-F001"
+          ]
+        },
+        {
+          "id": "A2",
+          "score": 3,
+          "rule_ref": "深度核心/A2",
+          "reason": "公开沿革支持控制主体承继：1996前身、2000发起、2008主业整合、2022集团母公司与国务院国资委实控、2026现状。该判断未逐年穷尽股权文件，也不写已逐年验证从未变更。",
+          "evidence_refs": [
+            "TSKC1R-F001",
+            "TSK26-F018"
+          ]
+        },
+        {
+          "id": "A3",
+          "score": 4,
+          "rule_ref": "深度核心/A3",
+          "reason": "2025无重大收购或处置，资本开支用于既有系统升级维护并以现有现金及内部现金流支持；结合五年轨迹和2008结算整合，符合清洁档。",
+          "evidence_refs": [
+            "TSKC1R-F002",
+            "TSKC1R-F003",
+            "TSKC1-F003"
+          ]
+        },
+        {
+          "id": "B0",
+          "score": 2,
+          "rule_ref": "深度核心/B0",
+          "reason": "1991结算中心、2000—2001共同发起及2008—2009结算整合支持系统建设到持续运营的主业延续和平台/网络型分类；早期毛利与亏损未知。",
+          "evidence_refs": [
+            "TSKC1R-F002"
+          ]
+        },
+        {
+          "id": "B1",
+          "score": 3,
+          "rule_ref": "深度核心/B1",
+          "reason": "多板块覆盖但航空平台仍集中。",
+          "evidence_refs": [
+            "TSK26-F004"
+          ]
+        },
+        {
+          "id": "B2",
+          "score": 3,
+          "rule_ref": "深度核心/B2",
+          "reason": "高频流程嵌入，航空需求与项目收入限制稳定性。",
+          "evidence_refs": [
+            "TSK26-F004"
+          ]
+        },
+        {
+          "id": "B3",
+          "score": 4,
+          "rule_ref": "深度核心/B3",
+          "reason": "广覆盖、持续结算和按月服务支持中等定价权；无提价、同业毛利率和价格传导材料，不能评强。",
+          "evidence_refs": [
+            "TSKC1-F002",
+            "TSK26-V3-F003",
+            "TSK26-V3-F018"
+          ]
+        },
+        {
+          "id": "B4",
+          "score": 3,
+          "rule_ref": "深度核心/B4",
+          "reason": "2026H1航空信息平台服务收入同比-1.7%，同期总收入+5.6%；维持3分。",
+          "evidence_refs": [
+            "TSK26-F004",
+            "TSK26-F003"
+          ]
+        },
+        {
+          "id": "C1",
+          "score": 6,
+          "rule_ref": "深度核心/C1",
+          "reason": "在中国民航航空信息平台旅客处理、订座/离港/电子分销及紧密配套结算清算核心市场，民航局官方介绍的主导供应商定位，配合中报41家中国航司、400多家境外航司、3.719亿人次和结算6.512亿笔当前规模，支持第一梯队档。未主张全部业务垄断或量化份额。",
+          "evidence_refs": [
+            "TSKC1-F002",
+            "TSK26-V3-F018"
+          ]
+        },
+        {
+          "id": "C2",
+          "score": 3,
+          "rule_ref": "深度核心/C2",
+          "reason": "结算和广覆盖支持参与者话语权；大型航司、机场仍有采购议价。",
+          "evidence_refs": [
+            "TSKC1-F002",
+            "TSK26-F004"
+          ]
+        },
+        {
+          "id": "C3+C4",
+          "score": 7,
+          "rule_ref": "深度核心/C3+C4",
+          "reason": "跨主体连接、合规运行和迁移成本支持四星壁垒；未取得可比替代成本与当前同口径份额，不能排除替代。",
+          "evidence_refs": [
+            "TSKC1-F002",
+            "TSK26-V3-F003",
+            "TSK26-V3-F018"
+          ]
+        },
+        {
+          "id": "D1",
+          "score": 4,
+          "rule_ref": "深度核心/D1",
+          "reason": "历史沿革、三年方向和当前业务均延续航空旅游信息主业，未见战略漂移，符合长期一致档。",
+          "evidence_refs": [
+            "TSKC1R-F002",
+            "TSKC1-F001",
+            "TSK26-F004"
+          ]
+        },
+        {
+          "id": "D2",
+          "score": 3,
+          "rule_ref": "深度核心/D2",
+          "original_statement_found": false,
+          "strategy_drift": false,
+          "reason": "三年定性计划均有随后可观察的业务里程碑与结果，支持一般执行；计划无量化分母，不能证明≥2/3达标，且无管理层原话，低于4分上限。",
+          "evidence_refs": [
+            "TSKC1-F001"
+          ]
+        },
+        {
+          "id": "D3",
+          "score": 2,
+          "rule_ref": "深度核心/D3",
+          "reason": "数字化和机场建设有机会，景气、监管和交付带来不确定性。",
+          "evidence_refs": [
+            "TSK26-F004"
+          ]
+        },
+        {
+          "id": "D5",
+          "score": 2,
+          "rule_ref": "深度核心/D5",
+          "reason": "人均收入先升后回落，研发下降，是混合信号。",
+          "evidence_refs": [
+            "TSK26-V3-F017"
+          ]
+        },
+        {
+          "id": "E1",
+          "score": 1,
+          "rule_ref": "深度核心/E1",
+          "reason": "2023—2025归母ROE为7.0475%、9.6983%、10.1172%，仅2025刚过10%。",
+          "evidence_refs": [
+            "TSK26-V3-F016"
+          ]
+        },
+        {
+          "id": "E2",
+          "score": 3,
+          "rule_ref": "深度核心/E2",
+          "reason": "CFO覆盖利润且简单FCF为正，属基本达标；客户备付金和大额往来未拆分，不能评优秀。",
+          "evidence_refs": [
+            "TSK26-F010",
+            "TSK26-F011",
+            "TSK26-F012"
+          ]
+        },
+        {
+          "id": "E3",
+          "score": 2,
+          "rule_ref": "深度核心/E3",
+          "reason": "以前年度税项调整-95.403454百万元与税前/税/NCI桥、业务量和收入结构并列；无完整扣非定义，不伪算比例，维持有一次性但可辨认2分。",
+          "evidence_refs": [
+            "TSK26-V3-F004",
+            "TSK26-V3-F019",
+            "TSK26-V3-F018",
+            "TSK26-F004"
+          ]
+        },
+        {
+          "id": "E4",
+          "score": 2,
+          "rule_ref": "深度核心/E4",
+          "reason": "负债率约25.8%，未见高杠杆短债压力。",
+          "evidence_refs": [
+            "TSK26-F002"
+          ]
+        },
+        {
+          "id": "E5",
+          "score": 1,
+          "rule_ref": "深度核心/E5",
+          "reason": "无保留审计但长账龄应收与个别计提构成明确隐患。",
+          "evidence_refs": [
+            "TSK26-F006",
+            "TSK26-F007"
+          ]
+        },
+        {
+          "id": "E5.5",
+          "score": 2,
+          "rule_ref": "深度核心/E5.5",
+          "reason": "关联方组合应收占48.276757%，原则不计提但四家关联航司有单列计提；账龄和期后回款未知，维持小瑕疵2分。",
+          "evidence_refs": [
+            "TSKC1R-F005"
+          ]
+        },
+        {
+          "id": "F1",
+          "score": 3,
+          "rule_ref": "深度核心/F1",
+          "reason": "五年人事变更未见集体异常，副总经理团队仍在；总经理继任和激励未知，不能给高档。",
+          "evidence_refs": [
+            "TSKC1-F004",
+            "TSK26-F017"
+          ]
+        },
+        {
+          "id": "F2",
+          "score": 3,
+          "rule_ref": "深度核心/F2",
+          "reason": "近三年约33%—35%分红率、股本稳定，属普通回报档；未核无不良减持不能反向当负面，也未满足最高档三条件。",
+          "evidence_refs": [
+            "TSKC1-F003",
+            "TSK26-V3-F009",
+            "TSK26-V3-F010"
+          ]
+        },
+        {
+          "id": "F2.5",
+          "score": 1,
+          "rule_ref": "深度核心/F2.5",
+          "positive_precedent": false,
+          "reason": "开支、融资和存款条款可核，未见跨界配置；缺项目回报与投后先例。",
+          "evidence_refs": [
+            "TSKC1-F003",
+            "TSK26-V3-F014"
+          ]
+        },
+        {
+          "id": "F3",
+          "score": 3,
+          "rule_ref": "深度核心/F3",
+          "reason": "关联方组合集中及原则不计提纳入风险，但存在单列计提；程序与价格机制披露支持3分，不代表信用风险低或经济公允已证明。",
+          "evidence_refs": [
+            "TSKC1R-F005",
+            "TSK26-F018"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "total": 74,
+      "items": [
+        {
+          "id": "诚信与透明度",
+          "score": 17,
+          "rule_ref": "管理层核心/九",
+          "reason": "无保留审计、KAM、关联交易和审计师变更均有披露；非穷尽检索及继任未知限制最高档。",
+          "evidence_refs": [
+            "TSK26-F006",
+            "TSK26-V3-F001",
+            "TSK26-V3-F005",
+            "TSK26-V3-F006"
+          ]
+        },
+        {
+          "id": "资本配置能力",
+          "score": 17,
+          "rule_ref": "管理层核心/九",
+          "reason": "五年开支、主要融资、股息和股本可核，未见频繁稀释；缺ROIC和投后结果。",
+          "evidence_refs": [
+            "TSKC1-F003",
+            "TSK26-V3-F014"
+          ]
+        },
+        {
+          "id": "战略稳定性",
+          "score": 11,
+          "rule_ref": "管理层核心/九",
+          "reason": "三年方向一致且有可观察里程碑；定性计划不能证明全部兑现。",
+          "evidence_refs": [
+            "TSKC1-F001"
+          ]
+        },
+        {
+          "id": "对股东友好度",
+          "score": 12,
+          "rule_ref": "管理层核心/九",
+          "reason": "末期股息提高、股数稳定；回购、减持及全期支付覆盖不全。",
+          "evidence_refs": [
+            "TSKC1-F003"
+          ]
+        },
+        {
+          "id": "危机处理能力",
+          "score": 7,
+          "rule_ref": "管理层核心/九",
+          "reason": "2022疫情压力下三路部署、双可用区、全链路监测和灾备，核心系统运行超过99.99%；公司披露非独立因果，未证实个人认责或沟通时效，维持7分。",
+          "evidence_refs": [
+            "TSKC1R-F004"
+          ]
+        },
+        {
+          "id": "组织与人才能力",
+          "score": 7,
+          "rule_ref": "管理层核心/九",
+          "reason": "人事序列未见集体异常、执行层仍在；继任、保留率和激励未知，均非已发生缺陷。",
+          "evidence_refs": [
+            "TSKC1-F004",
+            "TSK26-F017"
+          ]
+        },
+        {
+          "id": "表达清晰度与认知质量",
+          "score": 3,
+          "rule_ref": "管理层核心/九",
+          "reason": "年报计划可定位但以定性表述为主，缺量化承诺和电话会原话。",
+          "evidence_refs": [
+            "TSKC1-F001"
+          ]
+        }
+      ]
+    }
+  },
+  "valuation": {
+    "currency": "HKD",
+    "status": "deferred",
+    "reason": "本轮只评分；正式估值模型、三情景、敏感性与机械买入价尚未开展，评分没有产生reject。",
+    "models": [],
+    "target_price": null,
+    "certainty": null,
+    "buy_price": null,
+    "certainty_reason": "估值未完成，不能从评分推导价格或确定性。"
+  },
+  "bridges": [],
+  "bridges_not_applicable": "评分阶段未做正式估值，且现金归属边界未支持权益价值桥。",
+  "score_rule_validation": "explicit_tiers_v1"
+}

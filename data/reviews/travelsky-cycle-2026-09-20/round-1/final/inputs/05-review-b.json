@@ -1,0 +1,261 @@
+{
+  "schema_version": 1,
+  "review_type": "round-1_score_facts",
+  "company": "中国民航信息网络股份有限公司",
+  "security": "00696.HK",
+  "cutoff_date": "2026-09-20",
+  "reviewed_evidence_version": "TSKC1-v2 + TSK26有效事实包",
+  "facts_v2_sha256": "60de5db4003aa2f21546973f5441d28cded7a4d182b68eb0d111ab3ca3192613",
+  "reviewed_workpaper_sha256": "fa26e16a3fae66ad50ef64f657ed27faed9e5b2e42c1865a73ef4d7a4166e62d",
+  "reviewed_rationale_sha256": "cbea188c7139fb631a30fc822e01ec573e8cefffa363e5444b0ef623242e5879",
+  "coverage": {
+    "company_items": [
+      {
+        "id": "A1",
+        "status": "verified"
+      },
+      {
+        "id": "A2",
+        "status": "issue"
+      },
+      {
+        "id": "A3",
+        "status": "verified"
+      },
+      {
+        "id": "B0",
+        "status": "issue"
+      },
+      {
+        "id": "B1",
+        "status": "verified"
+      },
+      {
+        "id": "B2",
+        "status": "verified"
+      },
+      {
+        "id": "B3",
+        "status": "verified"
+      },
+      {
+        "id": "B4",
+        "status": "verified"
+      },
+      {
+        "id": "C1",
+        "status": "verified"
+      },
+      {
+        "id": "C2",
+        "status": "verified"
+      },
+      {
+        "id": "C3+C4",
+        "status": "verified"
+      },
+      {
+        "id": "D1",
+        "status": "verified"
+      },
+      {
+        "id": "D2",
+        "status": "verified"
+      },
+      {
+        "id": "D3",
+        "status": "verified"
+      },
+      {
+        "id": "D5",
+        "status": "verified"
+      },
+      {
+        "id": "E1",
+        "status": "verified"
+      },
+      {
+        "id": "E2",
+        "status": "verified"
+      },
+      {
+        "id": "E3",
+        "status": "verified"
+      },
+      {
+        "id": "E4",
+        "status": "verified"
+      },
+      {
+        "id": "E5",
+        "status": "verified"
+      },
+      {
+        "id": "E5.5",
+        "status": "verified"
+      },
+      {
+        "id": "F1",
+        "status": "verified"
+      },
+      {
+        "id": "F2",
+        "status": "verified"
+      },
+      {
+        "id": "F2.5",
+        "status": "verified"
+      },
+      {
+        "id": "F3",
+        "status": "verified"
+      }
+    ],
+    "management_items": [
+      {
+        "id": "诚信与透明度",
+        "status": "verified"
+      },
+      {
+        "id": "资本配置能力",
+        "status": "verified"
+      },
+      {
+        "id": "战略稳定性",
+        "status": "verified"
+      },
+      {
+        "id": "对股东友好度",
+        "status": "verified"
+      },
+      {
+        "id": "危机处理能力",
+        "status": "verified"
+      },
+      {
+        "id": "组织与人才能力",
+        "status": "verified"
+      },
+      {
+        "id": "表达清晰度与认知质量",
+        "status": "verified"
+      }
+    ],
+    "decisive_requirements": [
+      {
+        "id": "R04-A1",
+        "status": "verified_bounded"
+      },
+      {
+        "id": "R05-A1",
+        "status": "verified_bounded"
+      },
+      {
+        "id": "R08-A1",
+        "status": "verified_bounded"
+      }
+    ],
+    "independent_original_checks": [
+      "2022—2025港交所年报",
+      "2026中期报告",
+      "2026末期股息更新",
+      "2026关联方机柜租赁第二补充协议",
+      "民航局统一清算及企业介绍材料"
+    ]
+  },
+  "findings": [
+    {
+      "severity": "P1",
+      "location": "scores.company.items[A2]",
+      "claim": "A2以当前约29.55%国有控股即给出3分，并称控制结构“稳定”。原规则的3分是“从未变更”，现有被引TSK26-F018仅为2026年持股快照，不能支持从上市以来从未变更的事实。",
+      "evidence": "TSK26-F018只记录2026-06-10控股股东约29.55%；独立回看2022年报仅能补证2022年末约29.29%，仍不构成从上市以来控制权未变更的完整证据。",
+      "impact": "A2满分档的规则归因不成立；公司69分和合计143分不能按当前冻结底稿批准。",
+      "recommendation": "在底稿中补入可核的上市以来控制权时间线后保留3分；若不补，应按已核稳定窗口和原规则重新选择相邻档位，并重算总分。"
+    },
+    {
+      "severity": "P1",
+      "location": "scores.company.items[B0]",
+      "claim": "B0给2分，但理由和唯一证据TSK26-F004只说明2026H1当下业务收入结构。原规则要求创立至上市期的九要素对照、三个关键判断及历史商业模式分类；当前底稿没有这些事实或判断。",
+      "evidence": "TSK26-F004的报告期为2026H1，未覆盖创立期/上市期。独立回看2022年报虽存在历史沿革材料，当前冻结底稿未将其定位为B0证据，也未完成规则要求的三个判断。",
+      "impact": "B0的2分不具备原规则所要求的前提；即使其他分项均维持，当前公司69分和合计143分也不能批准。",
+      "recommendation": "补入创立期至上市期原件定位并完成三项判断和分类；若不补，在当前冻结材料下将B0改为0分并重算公司总分为67、合计为141。"
+    }
+  ],
+  "independent_calculations": [
+    {
+      "name": "公司分项加总",
+      "formula": "8+15+14+10+11+11",
+      "result": 69,
+      "status": "matches_workpaper"
+    },
+    {
+      "name": "管理层分项加总",
+      "formula": "17+17+11+12+7+7+3",
+      "result": 74,
+      "status": "matches_workpaper"
+    },
+    {
+      "name": "2023归母ROE",
+      "formula": "1398.952 / ((19229.379+20471.132)/2)",
+      "result_pct": 7.0475,
+      "status": "matches_workpaper"
+    },
+    {
+      "name": "2024归母ROE",
+      "formula": "2074.273 / ((20471.132+22304.829)/2)",
+      "result_pct": 9.6983,
+      "status": "matches_workpaper"
+    },
+    {
+      "name": "2025归母ROE",
+      "formula": "2341.562 / ((22304.829+23983.764)/2)",
+      "result_pct": 10.1172,
+      "status": "matches_workpaper"
+    },
+    {
+      "name": "2025负债率",
+      "formula": "8565.368 / 33190.595",
+      "result_pct": 25.8066,
+      "status": "matches_workpaper"
+    },
+    {
+      "name": "2025末期股息总额",
+      "formula": "2926.209589百万股 × RMB0.276/股",
+      "result_rmb_m": 807.6338,
+      "disclosed_rmb_m": 807.6,
+      "status": "rounding_consistent"
+    },
+    {
+      "name": "2025简单FCF",
+      "formula": "CFO 2923.538 - capex 901.3",
+      "result_rmb_m": 2022.238,
+      "status": "arithmetic_matches_but_not_free_cash_conclusion",
+      "note": "客户备付金及大额其他经营往来未拆分，不能把该数直接当作可自由支配现金。"
+    }
+  ],
+  "verified_material_judgments": [
+    "D2的3分是有依据的专业点值：三年定性计划与随后里程碑足以支持一般执行，但无量化分母，不得宣称达到2/3或以上；缺管理层原话只适用4分上限，不应机械扣至更低分。",
+    "B4所称核心平台短期下滑与2026H1航空信息平台服务收入由23.933亿元降至23.522亿元、同比-1.7%一致；该描述限于短期，不应外推为长期平台衰退。",
+    "F2和管理层对股东友好度正确区分了2025股息的股东批准日2026-06-26与付款日2026-09-24；截止日2026-09-20前不得表述为已支付。",
+    "C1/C2/C3+C4的中档判断未把民航局2015年“主导供应商”材料误用为当期精确市场份额；2025统一清算旁证、年度覆盖和处理量可支持业务位置及壁垒的专业判断，但不支持绝对龙头结论。",
+    "索引外复查2026-08-31关联方机柜租赁第二补充协议：关联方关系、年度上限、董事回避、上市规则适用及租赁会计处理均可回原件；未发现与F3=3分相矛盾的已核重大内控事实。"
+  ],
+  "uncovered": [
+    "B0的创立至上市期商业模式九要素、三个关键判断及分类。",
+    "A2上市以来完整控制权变更时间线。",
+    "当前市场份额、竞争者同口径处理量和精确替代成本；这些不阻止已作的中档专业判断。",
+    "逐年回购、减持、所有股息实际付款、完整并购史、项目ROIC/投后回报、继任来源与人才保留率；不得把这些未知自动作为扣分事实。"
+  ],
+  "score_approval": {
+    "approved": false,
+    "proposed_company_score": 69,
+    "proposed_management_score": 74,
+    "proposed_combined_score": 143,
+    "reason": "两项P1均为公司分项规则归因缺口，且会影响公司总分及合计。管理层74分的算术、原件口径和点值基础已核，无独立事实异议；但本轮按同一评分底稿整体批准，须先闭合A2与B0。",
+    "minimum_acceptance": [
+      "逐项修复A2与B0的事实—规则—分数链",
+      "重算公司及合计分",
+      "按原验收ID定向复查A2、B0及联动总分"
+    ]
+  }
+}

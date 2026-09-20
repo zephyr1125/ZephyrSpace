@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "review_scope": "评分阶段全分项独立推理复核；未验收三份长篇报告或估值",
+  "frozen_inputs": {
+    "evidence_version": "TSKC1-v2 + TSK26有效事实包",
+    "evidence_facts_sha256": "60de5db4003aa2f21546973f5441d28cded7a4d182b68eb0d111ab3ca3192613",
+    "workpaper_sha256": "fa26e16a3fae66ad50ef64f657ed27faed9e5b2e42c1865a73ef4d7a4166e62d",
+    "score_rationale_sha256": "cbea188c7139fb631a30fc822e01ec573e8cefffa363e5444b0ef623242e5879"
+  },
+  "coverage": {
+    "company": {
+      "已核无阻塞问题": [
+        "B1",
+        "B2",
+        "B3",
+        "B4",
+        "C1",
+        "C2",
+        "D2",
+        "D3",
+        "D5",
+        "E1",
+        "E2",
+        "E4",
+        "E5",
+        "F1",
+        "F2.5"
+      ],
+      "已核有问题": [
+        "A1",
+        "A2",
+        "A3",
+        "B0",
+        "C3+C4",
+        "D1",
+        "E3",
+        "E5.5",
+        "F2",
+        "F3"
+      ]
+    },
+    "management": {
+      "已核无阻塞问题": [
+        "诚信与透明度",
+        "资本配置能力",
+        "战略稳定性",
+        "对股东友好度",
+        "组织与人才能力",
+        "表达清晰度与认知质量"
+      ],
+      "已核有问题": [
+        "危机处理能力"
+      ]
+    },
+    "cross_checks": [
+      "核对了业务/收费机制、定价权与护城河归因",
+      "核对了2021—2025资本动作、股息状态、资本纪律和管理层变更",
+      "核对了2023—2025计划与后续可观察里程碑，未把里程碑当完整完成率",
+      "独立回看2025年报与2026中报审计、应收、关联方、承诺及或有事项章节",
+      "独立重算公司、管理层、合计及关键财务比率"
+    ]
+  },
+  "findings": [
+    {
+      "severity": "P1",
+      "location": "workpaper.json scores.company.items[A1,A2]",
+      "claim": "A1=2与A2=3的理由分别依赖公司起源/先发基础和IPO以来控制权从未变更，但唯一引用TSK26-F018只证明当前国有控股约29.55%及一项关联交易。",
+      "evidence": "原规则A1要求公司起源和初始定位，A2满分明确要求从未变更实控人；TSK26-F018不含成立/上市期材料或历史控制权序列。当前点值不是因信息未知而自动扣分的问题，而是正面档位主张缺少对应事实链。",
+      "impact": "A维度8分及公司总分69不能按当前证据链批准。",
+      "recommendation": "定向补公司起源与上市以来控制权原件后重评A1/A2；若不补，不得保留需要历史事实才能成立的满档A2理由。"
+    },
+    {
+      "severity": "P1",
+      "location": "workpaper.json scores.company.items[B0]",
+      "claim": "B0给满分2，但理由和引用只描述当前航空信息、分销与结算平台，没有完成早期商业模式溯源。",
+      "evidence": "B0满分的显式条件是回答早期是否为辛苦钱生意、建设期到运营期变化、早期与当下本质变化三个问题并给出分类；TSK26-F004仅为2026H1当前分部收入。",
+      "impact": "B0点值不符合原档位，至少影响公司总分1—2分。",
+      "recommendation": "补上市/成立期原件并逐项完成B0判断；否则按已实际覆盖程度重评，不以当前平台画像替代早期溯源。"
+    },
+    {
+      "severity": "P1",
+      "location": "workpaper.json scores.company.items[A3,D1,F2]",
+      "claim": "A3=3、D1=3、F2=4使用了原评分表未给出的中间档。",
+      "evidence": "原表分别规定A3为4/2/0、D1为4/2/0、F2为5/3/0-1。充分证据原则允许在规则本身为范围或无唯一公式时作专业点值，但不改写显式档位。A3存在并购史和2024融资缺口，D1已有三年方向材料，F2有股息改善但回购/减持/支付覆盖不足，均应对照相邻明示档说明选择。",
+      "impact": "三个分项及公司总分的机械合计虽正确，但评分规则适用不合格。",
+      "recommendation": "分别选择最能辩护的原档位并写明为何不符合相邻档；不得以未知机械扣一分生成新档。"
+    },
+    {
+      "severity": "P1",
+      "location": "workpaper.json scores.company.items[E3]",
+      "claim": "E3=2的理由称2026H1存在以前年度税项调整，但引用未包含该事实，且未覆盖本项规则要求的扣非占比及量价来源。",
+      "evidence": "以前年度所得税调整记录在TSK26-V3-F004，而当前引用为TSK26-F001、TSK26-F005、TSK26-V3-F019；后两项明确是利润表桥且不能充当扣非或增长质量完整归因。",
+      "impact": "E3点值的事实链不闭合，可能改变E维度和总分。",
+      "recommendation": "补正确证据引用并基于可得扣非/非经常性损益及量价结构重评；税项调整只能作为边界，不得单独代替E3完整判断。"
+    },
+    {
+      "severity": "P1",
+      "location": "workpaper.json scores.management.items[危机处理能力]",
+      "claim": "危机处理能力给7/10，但引用只证明疫情后经营恢复和业务处理量，未证明管理层在危机中的沟通、责任承担、具体措施与措施后结果链。",
+      "evidence": "管理层核心对危机处理要求核及时透明沟通、承担责任、行动方式及事后机制；TSK26-F001与TSK26-V3-F018没有该行为链。未知不能自动扣分，也不能支持高于中性档的正面点值。",
+      "impact": "管理层74分及合计143不能按当前底稿批准。",
+      "recommendation": "定向补危机处置原件并重评；若公开材料不足，将该维度明确标为未知及说明对总分/门槛的边界，不用恢复结果替代处置能力。"
+    },
+    {
+      "severity": "P1",
+      "location": "workpaper.json scores.company.items[E5.5,F3]",
+      "claim": "索引外原件抽查发现关联方应收占比高且相关组合原则上不计提，当前E5.5与F3理由未评价这一集中度和计提边界。",
+      "evidence": "2026中报附注5.4披露关联方应收账款约2,671.165百万元，约占合并应收账款账面余额5,533.024百万元的48.27%，该组合未列坏账准备；同一原件会计政策称关联方组合原则上不计提，除非有确凿不可回收证据。附注12.6同时显示主要关联航司余额。该事实不自动证明计提不足或关联交易不公允，但属于决定E5.5计提稳健性及F3经济风险的重要边界。",
+      "impact": "可能维持E5.5=2和F3=3，也可能下调；在明确核对账龄、期后回款/对手信用和交易公允前，两个点值的风险论证不完整。",
+      "recommendation": "把该原件事实纳入底稿，核关联方账龄、期后回款和定价机制后明确评分联动；不得把程序披露充分直接等同经济风险低。"
+    },
+    {
+      "severity": "P2",
+      "location": "score-rationale.md 公司质量B段；workpaper.json scores.company.items[B4]",
+      "claim": "“核心平台下滑”未在简明论证中写明期别和范围。",
+      "evidence": "TSK26-F004支持的是2026H1航空信息平台服务收入同比-1.7%，同期公司总收入同比+5.6%、结算清算+11.4%、机场数字化+43.5%；该表述若脱离期别易被读成全年或公司整体下滑。",
+      "impact": "不必单独改变B4=3，但会夸大反证范围。",
+      "recommendation": "改为“2026H1航空信息平台服务收入同比下降1.7%，同期总收入增长5.6%”，保留其他板块差异。"
+    },
+    {
+      "severity": "P2",
+      "location": "workpaper.json scores.company.items[C3+C4]",
+      "claim": "“自建、云服务和新分销接口仍可替代”未由所列证据直接支持。",
+      "evidence": "TSKC1-F002明确只证明统一清算体系和历史主导供应商位置，不排除替代；TSK26-V3-F003为收入确认KAM，TSK26-V3-F018为处理量、覆盖和收费机制，均未列云服务或自建替代案例。",
+      "impact": "四星壁垒7分可由网络覆盖、流程嵌入和监管运行作专业判断，但当前具体反证措辞不可核。",
+      "recommendation": "删除未证实的具体替代渠道，或补独立竞争/替代原件；保留“未能排除替代”这一有边界的表述。"
+    }
+  ],
+  "independent_calculations": {
+    "score_arithmetic": {
+      "company_dimensions": {
+        "A": 8,
+        "B": 15,
+        "C": 14,
+        "D": 10,
+        "E": 11,
+        "F": 11
+      },
+      "company_total": 69,
+      "management_total": 74,
+      "combined_total": 143,
+      "result": "与冻结底稿一致；仅证明算术闭合，不证明点值批准"
+    },
+    "financial_checks": {
+      "2025_liability_ratio_pct": 25.81,
+      "2023_cfo_to_parent_np_pct": 9.82,
+      "2024_cfo_to_parent_np_pct": 121.77,
+      "2025_cfo_to_parent_np_pct": 124.85,
+      "three_year_simple_average_cfo_to_parent_np_pct": 85.48,
+      "2023_simple_fcf_rmb_m": -1090.37,
+      "2024_simple_fcf_rmb_m": 1980.34,
+      "2025_simple_fcf_rmb_m": 2022.24,
+      "receivables_over_one_year_pct_of_gross_2026H1": 29.21,
+      "receivables_allowance_pct_of_gross_2026H1": 19.04,
+      "related_party_receivables_pct_of_gross_2026H1": 48.28,
+      "2023_final_dividend_to_parent_np_pct": 33.47,
+      "2024_final_dividend_to_parent_np_pct": 33.72,
+      "2025_final_dividend_to_parent_np_pct": 34.49,
+      "assessment": "E2=3和E4=2可辩护；2023简单FCF为负，作者未把E2评为优秀是合理的。"
+    }
+  },
+  "uncovered": [
+    "未验收三份完整报告、估值模型、目标价、确定性或买入价",
+    "未取得公司成立/上市期商业模式及IPO以来完整控制权序列",
+    "未完成关联方应收的账龄、期后回款和对手信用独立闭环",
+    "未取得可验证的危机沟通—行动—结果责任链",
+    "未穷尽非决定性的每一项历史并购、回购和高管个人离任动机"
+  ],
+  "approval": {
+    "can_approve_scores": false,
+    "company_candidate": 69,
+    "management_candidate": 74,
+    "combined_candidate": 143,
+    "score_state": "pending_research_correction",
+    "reason": "算术闭合且多数分项可辩护，但A1/A2/B0的证据—档位断链、A3/D1/F2偏离显式档位、E3引用与规则基础不闭合、危机处理能力缺行为证据，以及索引外关联应收风险尚未完成评分联动。",
+    "minimum_acceptance": [
+      "按原评分表重评A3、D1、F2并重算公司总分",
+      "补齐或下调A1、A2、B0，使每个点值有对应历史原件",
+      "修正E3事实引用并完成增长质量依据",
+      "补危机处置行为链或将未知边界落实到管理层评分",
+      "评价关联方应收集中与零计提边界对E5.5/F3的影响，分数不变也须给理由"
+    ]
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "root_thread_id": "01a0b99c-1c9b-7732-8dfe-cf7f4a687e21",
+  "roles": [
+    {
+      "thread_id": "01a0bf05-3cb7-7700-b443-e83f752cf63f",
+      "started_at": "2026-09-20T13:33:07.000Z",
+      "role": "triplet_evidence",
+      "agent_path": "/root/maotai_cycle_evidence",
+      "actual_model_source": "turn_context",
+      "actual": [
+        {
+          "model": "gpt-5.6-terra",
+          "effort": "low"
+        }
+      ]
+    },
+    {
+      "thread_id": "01a0bf0a-bd68-77b2-a926-4ad57f4e2f49",
+      "started_at": "2026-09-20T13:39:07.413Z",
+      "role": "triplet_writer",
+      "agent_path": "/root/maotai_cycle_writer",
+      "actual_model_source": "turn_context",
+      "actual": [
+        {
+          "model": "gpt-5.6-terra",
+          "effort": "low"
+        }
+      ]
+    },
+    {
+      "thread_id": "01a0bf10-b252-7f22-884b-fec3d3d8abec",
+      "started_at": "2026-09-20T13:45:37.741Z",
+      "role": "triplet_review_facts",
+      "agent_path": "/root/maotai_cycle_facts",
+      "actual_model_source": "turn_context",
+      "actual": [
+        {
+          "model": "gpt-5.6-terra",
+          "effort": "low"
+        }
+      ]
+    },
+    {
+      "thread_id": "01a0bf16-5bd8-7083-92f5-825585f88b85",
+      "started_at": "2026-09-20T13:51:48.825Z",
+      "role": "triplet_review_reasoning",
+      "agent_path": "/root/maotai_cycle_reasoning",
+      "actual_model_source": "turn_context",
+      "actual": [
+        {
+          "model": "gpt-5.6-sol",
+          "effort": "low"
+        }
+      ]
+    },
+    {
+      "thread_id": "01a0bf21-011f-77d1-bbe1-9bacb8f6b623",
+      "started_at": "2026-09-20T14:03:26.487Z",
+      "role": "triplet_adjudicator",
+      "agent_path": "/root/maotai_cycle_adjudicator",
+      "actual_model_source": "turn_context",
+      "actual": [
+        {
+          "model": "gpt-6-astra",
+          "effort": "low"
+        }
+      ]
+    },
+    {
+      "thread_id": "01a0bf2f-6b24-7700-b329-ad810ea9b9fe",
+      "started_at": "2026-09-20T14:19:11.161Z",
+      "role": "default",
+      "agent_path": "/root/maotai_cycle_repair_writer",
+      "actual_model_source": "turn_context",
+      "actual": [
+        {
+          "model": "gpt-5.6-sol",
+          "effort": "low"
+        }
+      ]
+    }
+  ],
+  "exception": "triplet_repair_writer按既定SOP显式Sol/low一次接手，无常规模型修改"
+}

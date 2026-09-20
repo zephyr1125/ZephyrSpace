@@ -1,0 +1,12 @@
+{
+  "status": "deterministic_patch_verified",
+  "authorization": "delivery-fix.json",
+  "only_semantic_change": "A2.evidence_refs追加TSKC1R-F002",
+  "text_changes": "字面反引号n改换行，标题v2改v3",
+  "scores_unchanged": true,
+  "files": {
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/writer/workpaper-v4.json": "01c863df97447ef6829ab2cc1df03e9e97ff32deeabde87446430040ca337aa9",
+    "data/reviews/travelsky-cycle-2026-09-20/round-1/writer/score-rationale-v4.md": "72651dc02564d78b469adc9b91a240185981e35df72bbf8fd8eb135e0877eef2"
+  },
+  "check": "mechanical_checks_passed"
+}

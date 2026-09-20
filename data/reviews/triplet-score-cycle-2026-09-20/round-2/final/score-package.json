@@ -1,0 +1,218 @@
+{
+  "scope": "评分阶段验收包；非完整三件套release",
+  "score_state": "approved",
+  "scores_raw": {
+    "company_score": 86.5,
+    "management_score": 76,
+    "combined_score": 162.5,
+    "target_price": null,
+    "certainty": null,
+    "buy_price": null
+  },
+  "scores_display": {
+    "method": "integer_half_up",
+    "company": 87,
+    "management": 76,
+    "combined": 163,
+    "note": "合计先加原始分再舍入，门槛仅用原始分。"
+  },
+  "decision": "defer",
+  "highest_score_gate": "A_CORE",
+  "qualification_approved": false,
+  "full_triplet_complete": false,
+  "started_at": "2026-09-20T13:33:07+00:00",
+  "approved_at": "2026-09-20T14:29:55.188498+00:00",
+  "elapsed_seconds": 3408.188498,
+  "snapshots": [
+    {
+      "original": "data/WATCHLIST_RULES.md",
+      "snapshot": "data/reviews/triplet-score-cycle-2026-09-20/round-2/final/inputs/01-data-WATCHLIST_RULES.md",
+      "sha256": "74a3b69f0d66815c7c1626adc69eeb6ff4e6d9af1d9dccc99116673a0ab0456a"
+    },
+    {
+      "original": "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v3-a.json",
+      "snapshot": "data/reviews/triplet-score-cycle-2026-09-20/round-2/final/inputs/02-anonymous-recheck-v3-a.json",
+      "sha256": "4c43ce0f4a2c348a98c27d7d327a0befc149375ffa6b77bf4d4a8a9f6ac434de"
+    },
+    {
+      "original": "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v3-b.json",
+      "snapshot": "data/reviews/triplet-score-cycle-2026-09-20/round-2/final/inputs/03-anonymous-recheck-v3-b.json",
+      "sha256": "97db7245f6ad445cdaba4127d330d603572ad7eb029f4d7de53a78c61d4015f8"
+    },
+    {
+      "original": "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v4-a.json",
+      "snapshot": "data/reviews/triplet-score-cycle-2026-09-20/round-2/final/inputs/04-anonymous-recheck-v4-a.json",
+      "sha256": "50b05abeeb0788926cdcb87f411f83d833262cc6a524d673dd80aade38e81597"
+    },
+    {
+      "original": "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v4-b.json",
+      "snapshot": "data/reviews/triplet-score-cycle-2026-09-20/round-2/final/inputs/05-anonymous-recheck-v4-b.json",
+      "sha256": "c7d429a715b47b3c117ba8d27f7cbb7498d58a60cc05b6f0f466bb466135823d"
+    },
+    {
+      "original": "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/review-a.json",
+      "snapshot": "data/reviews/triplet-score-cycle-2026-09-20/round-2/final/inputs/06-anonymous-review-a.json",
+      "sha256": "df2e3c964572bad6ca2dfb0b717f103e006bbdeb8f5d81ec5c9491ea3c08c671"
+    },
+    {
+      "original": "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/review-b.json",
+      "snapshot": "data/reviews/triplet-score-cycle-2026-09-20/round-2/final/inputs/07-anonymous-review-b.json",
+      "sha256": "b91a148d24e9c1ec94f2e9f78143cc156514b07c7d61bfa91b986f599c374bdf"
+    },
+    {
+      "original": "data/reviews/triplet-score-cycle-2026-09-20/round-2/decision-clarification.json",
+      "snapshot": "data/reviews/triplet-score-cycle-2026-09-20/round-2/final/inputs/08-round-2-decision-clarification.json",
+      "sha256": "fc40436a2a204ef98a33d0fc950e237e698a73613bb9f456aa176c6b9d97ad17"
+    },
+    {
+      "original": "data/reviews/triplet-score-cycle-2026-09-20/round-2/decision-ipo-clarification.json",
+      "snapshot": "data/reviews/triplet-score-cycle-2026-09-20/round-2/final/inputs/09-round-2-decision-ipo-clarification.json",
+      "sha256": "8003b1fbd5ecf9e47d59553e82679bf07adb184d63627c2ca28147f8e1ab17db"
+    },
+    {
+      "original": "data/reviews/triplet-score-cycle-2026-09-20/round-2/decision-v1.json",
+      "snapshot": "data/reviews/triplet-score-cycle-2026-09-20/round-2/final/inputs/10-round-2-decision-v1.json",
+      "sha256": "3063f5f20fe93069b4898a1a3f1596269aff981e363298063f6fe59201761e43"
+    },
+    {
+      "original": "data/reviews/triplet-score-cycle-2026-09-20/round-2/evidence/coverage-frozen.json",
+      "snapshot": "data/reviews/triplet-score-cycle-2026-09-20/round-2/final/inputs/11-evidence-coverage-frozen.json",
+      "sha256": "0660f17ad89f4870bc1e09119f0e6a3a26e86fdcf1ff6928569c06e581bc0818"
+    },
+    {
+      "original": "data/reviews/triplet-score-cycle-2026-09-20/round-2/evidence/facts-extra.json",
+      "snapshot": "data/reviews/triplet-score-cycle-2026-09-20/round-2/final/inputs/12-evidence-facts-extra.json",
+      "sha256": "092bdd4b61808bc817c58e024e0a273f31857caf832809afc2b25f9b915ef192"
+    },
+    {
+      "original": "data/reviews/triplet-score-cycle-2026-09-20/round-2/evidence/facts-v2.json",
+      "snapshot": "data/reviews/triplet-score-cycle-2026-09-20/round-2/final/inputs/13-evidence-facts-v2.json",
+      "sha256": "de809812bf6235d27f3d25c1345e18d2b63e67f8f6d42272bea557a76da03b83"
+    },
+    {
+      "original": "data/reviews/triplet-score-cycle-2026-09-20/round-2/evidence/history-governance-facts.json",
+      "snapshot": "data/reviews/triplet-score-cycle-2026-09-20/round-2/final/inputs/14-evidence-history-governance-facts.json",
+      "sha256": "0ab43471fdfb9e2b91d2e96eb149c58f550913184aaaea4734e324d731209739"
+    },
+    {
+      "original": "data/reviews/triplet-score-cycle-2026-09-20/round-2/evidence/ipo-facts.json",
+      "snapshot": "data/reviews/triplet-score-cycle-2026-09-20/round-2/final/inputs/15-evidence-ipo-facts.json",
+      "sha256": "85666e8cb60730f9c828f629574409f532940d2b493802be7e27b5dc7a3e8bb6"
+    },
+    {
+      "original": "data/reviews/triplet-score-cycle-2026-09-20/round-2/evidence/sources-extra.json",
+      "snapshot": "data/reviews/triplet-score-cycle-2026-09-20/round-2/final/inputs/16-evidence-sources-extra.json",
+      "sha256": "8b3364c9c13f4d609f26f57e866be553c2106c73d4ef619db1a0f7b7ed28f982"
+    },
+    {
+      "original": "data/reviews/triplet-score-cycle-2026-09-20/round-2/evidence/sources-history-governance.json",
+      "snapshot": "data/reviews/triplet-score-cycle-2026-09-20/round-2/final/inputs/17-evidence-sources-history-governance.json",
+      "sha256": "d0cc052c9ddefa683086dfb283b03b50f2d4842c958a2878ec2d18006c1243ee"
+    },
+    {
+      "original": "data/reviews/triplet-score-cycle-2026-09-20/round-2/evidence/sources-ipo.json",
+      "snapshot": "data/reviews/triplet-score-cycle-2026-09-20/round-2/final/inputs/18-evidence-sources-ipo.json",
+      "sha256": "ab9a1b01151587ba50c6fe770367dc00621609aa77740f4280b09e68c4dfcb66"
+    },
+    {
+      "original": "data/reviews/triplet-score-cycle-2026-09-20/round-2/evidence/sources-v2.json",
+      "snapshot": "data/reviews/triplet-score-cycle-2026-09-20/round-2/final/inputs/19-evidence-sources-v2.json",
+      "sha256": "1562194068497324a0c55367a1f6d6a706233d7e7dc908f382bbb252d1070506"
+    },
+    {
+      "original": "data/reviews/triplet-score-cycle-2026-09-20/round-2/exception-repair-decision.json",
+      "snapshot": "data/reviews/triplet-score-cycle-2026-09-20/round-2/final/inputs/20-round-2-exception-repair-decision.json",
+      "sha256": "88d3538017d61cde178c66852bf5e917f7ee1bb88ab69b32e1c21b580bd28b8d"
+    },
+    {
+      "original": "data/reviews/triplet-score-cycle-2026-09-20/round-2/final-score-decision.json",
+      "snapshot": "data/reviews/triplet-score-cycle-2026-09-20/round-2/final/inputs/21-round-2-final-score-decision.json",
+      "sha256": "a5dd8a0816afb4b7c264299058d5c3f0f5570c6e3a71c1bddf7b009030007fe2"
+    },
+    {
+      "original": "data/reviews/triplet-score-cycle-2026-09-20/round-2/repair-writer/acceptance-v4.json",
+      "snapshot": "data/reviews/triplet-score-cycle-2026-09-20/round-2/final/inputs/22-repair-writer-acceptance-v4.json",
+      "sha256": "5c8c3acf4028102c4eef525dd1b2c95188c6ee3ba77c892bd6d144f945d472fe"
+    },
+    {
+      "original": "data/reviews/triplet-score-cycle-2026-09-20/round-2/repair-writer/repair-facts-v4.json",
+      "snapshot": "data/reviews/triplet-score-cycle-2026-09-20/round-2/final/inputs/23-repair-writer-repair-facts-v4.json",
+      "sha256": "8af95728cc236a11d20614d8959334571a9cc5f4ee3afe6cff5f1d3d7e5dfc61"
+    },
+    {
+      "original": "data/reviews/triplet-score-cycle-2026-09-20/round-2/repair-writer/score-rationale-v4.md",
+      "snapshot": "data/reviews/triplet-score-cycle-2026-09-20/round-2/final/inputs/24-repair-writer-score-rationale-v4.md",
+      "sha256": "2fd1588764e0a29835851f4aea03f5182fa933d1f95ee951201de50c0b2baa39"
+    },
+    {
+      "original": "data/reviews/triplet-score-cycle-2026-09-20/round-2/repair-writer/workpaper-v4.json",
+      "snapshot": "data/reviews/triplet-score-cycle-2026-09-20/round-2/final/inputs/25-repair-writer-workpaper-v4.json",
+      "sha256": "54c5f3a9bf23297fa7ae90e8e8f0875160d169cafdd2b48a88a6795cdea7519d"
+    },
+    {
+      "original": "data/reviews/triplet-score-cycle-2026-09-20/round-2/review-facts/recheck-v3.json",
+      "snapshot": "data/reviews/triplet-score-cycle-2026-09-20/round-2/final/inputs/26-review-facts-recheck-v3.json",
+      "sha256": "321fd718e81406fae03902ea12a157429d160799694e8b17a7c3b98d66fc79b6"
+    },
+    {
+      "original": "data/reviews/triplet-score-cycle-2026-09-20/round-2/review-facts/recheck-v4.json",
+      "snapshot": "data/reviews/triplet-score-cycle-2026-09-20/round-2/final/inputs/27-review-facts-recheck-v4.json",
+      "sha256": "b076bfc83e69860204883fbefee049f303ec981f2d7e254be264cf80c5e3d8b8"
+    },
+    {
+      "original": "data/reviews/triplet-score-cycle-2026-09-20/round-2/review-facts/review.json",
+      "snapshot": "data/reviews/triplet-score-cycle-2026-09-20/round-2/final/inputs/28-review-facts-review.json",
+      "sha256": "31226588711c43be426d2c4d9643ef226e008c3f2ef846244d29895a7557c48d"
+    },
+    {
+      "original": "data/reviews/triplet-score-cycle-2026-09-20/round-2/review-reasoning/recheck-v3.json",
+      "snapshot": "data/reviews/triplet-score-cycle-2026-09-20/round-2/final/inputs/29-review-reasoning-recheck-v3.json",
+      "sha256": "38a466e3a3237d3cbf79c0e04b0ebef3662ca22f484871ee23bc26a570c2b959"
+    },
+    {
+      "original": "data/reviews/triplet-score-cycle-2026-09-20/round-2/review-reasoning/recheck-v4.json",
+      "snapshot": "data/reviews/triplet-score-cycle-2026-09-20/round-2/final/inputs/30-review-reasoning-recheck-v4.json",
+      "sha256": "1356d79a78da53cc8f306a096b7683915b17ed0e04fbe64a32a607ff9372f5e8"
+    },
+    {
+      "original": "data/reviews/triplet-score-cycle-2026-09-20/round-2/review-reasoning/review.json",
+      "snapshot": "data/reviews/triplet-score-cycle-2026-09-20/round-2/final/inputs/31-review-reasoning-review.json",
+      "sha256": "b0b28b4b6ebc88ec18badad57a15b3481d47afd68c903ec261caeed24dbbb72d"
+    },
+    {
+      "original": "data/reviews/triplet-score-cycle-2026-09-20/round-2/score-manifest-v4.json",
+      "snapshot": "data/reviews/triplet-score-cycle-2026-09-20/round-2/final/inputs/32-round-2-score-manifest-v4.json",
+      "sha256": "5f3449fbaaaf58cf7a40b194a94f3daae52a2abd1332249cb06c25c72ad76a3c"
+    },
+    {
+      "original": "data/reviews/triplet-score-cycle-2026-09-20/round-2/writer/repair-facts.json",
+      "snapshot": "data/reviews/triplet-score-cycle-2026-09-20/round-2/final/inputs/33-writer-repair-facts.json",
+      "sha256": "0d3a3f47c03037a12ba9bac88c0e6c99f802f7b4e856929f190b4929ea7d91d7"
+    },
+    {
+      "original": "data/reviews/triplet-score-cycle-2026-09-20/round-2/writer/workpaper-v2.json",
+      "snapshot": "data/reviews/triplet-score-cycle-2026-09-20/round-2/final/inputs/34-writer-workpaper-v2.json",
+      "sha256": "2cd0b218aaf9c525c18199486568f34a80dd61193c356eab94de0c8eebe0b845"
+    },
+    {
+      "original": "data/reviews/triplet-score-cycle-2026-09-20/round-2/writer/workpaper-v3.json",
+      "snapshot": "data/reviews/triplet-score-cycle-2026-09-20/round-2/final/inputs/35-writer-workpaper-v3.json",
+      "sha256": "53cd362274650b818936a531bfadf101d1bbc04a8199bbaadad69171927657e2"
+    },
+    {
+      "original": "deep-prebuy-skill/SKILL.md",
+      "snapshot": "data/reviews/triplet-score-cycle-2026-09-20/round-2/final/inputs/36-deep-prebuy-skill-SKILL.md",
+      "sha256": "0c1314124a2a3d9c6e166824565117d6c5dde3404f943e410088ac919419829f"
+    },
+    {
+      "original": "docs/three-report-closeout.md",
+      "snapshot": "data/reviews/triplet-score-cycle-2026-09-20/round-2/final/inputs/37-docs-three-report-closeout.md",
+      "sha256": "830ef04de91b17289ab4fbd87daabe934b8662d433f1666a2355f9e807fc5f37"
+    },
+    {
+      "original": "management-archive/SKILL.md",
+      "snapshot": "data/reviews/triplet-score-cycle-2026-09-20/round-2/final/inputs/38-management-archive-SKILL.md",
+      "sha256": "eb1045e7868fb4741d6ad29a464fed223fe2465ada888a675c4218c69c3d78c0"
+    }
+  ]
+}

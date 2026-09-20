@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "review_type": "delivery_targeted_check_v4",
+  "scope": "仅D01-A1与D02-A1的确定性交付修正；不重开研究、不重做评分或全文验收。",
+  "bindings": {
+    "delivery_fix": "data/reviews/travelsky-cycle-2026-09-20/round-1/delivery-fix.json",
+    "patch_proof": "data/reviews/travelsky-cycle-2026-09-20/round-1/delivery-patch-proof.json",
+    "workpaper_v4": "data/reviews/travelsky-cycle-2026-09-20/round-1/writer/workpaper-v4.json",
+    "workpaper_v4_sha256": "01c863df97447ef6829ab2cc1df03e9e97ff32deeabde87446430040ca337aa9",
+    "rationale_v4": "data/reviews/travelsky-cycle-2026-09-20/round-1/writer/score-rationale-v4.md",
+    "rationale_v4_sha256": "72651dc02564d78b469adc9b91a240185981e35df72bbf8fd8eb135e0877eef2"
+  },
+  "acceptance": [
+    {
+      "id": "D01-A1",
+      "status": "pass",
+      "location": "workpaper-v4.json:scores.company.items[A2].evidence_refs",
+      "evidence": "原有TSKC1R-F001、TSK26-F018均保留，且仅追加已核TSKC1R-F002；A2理由与3分未变。"
+    },
+    {
+      "id": "D02-A1",
+      "status": "pass",
+      "location": "score-rationale-v4.md",
+      "evidence": "标题已由v2更正为v3；字面反引号n已改为实际换行。文本保持公司72、管理层74、合计146及未获批准状态。"
+    }
+  ],
+  "linked_checks": {
+    "scores": {
+      "company": 72,
+      "management": 74,
+      "combined": 146,
+      "status": "unchanged"
+    },
+    "valuation": {
+      "status": "deferred",
+      "target_price": null,
+      "certainty": null,
+      "buy_price": null
+    },
+    "semantic_change_boundary": "与v3相比，底稿仅A2.evidence_refs增加TSKC1R-F002；论证仅限授权的换行和标题版号修正。"
+  },
+  "remaining_p0": [],
+  "remaining_p1": [],
+  "approval": {
+    "delivery_patch_approved": true,
+    "research_reopened": false,
+    "score_reapproved": false,
+    "reason": "两项裁决确认的纯交付修正均满足原验收ID；本文件只确认修补位置及版本绑定。"
+  }
+}

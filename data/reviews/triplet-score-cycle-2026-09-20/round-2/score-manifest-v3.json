@@ -1,0 +1,14 @@
+{
+  "stage": "targeted_score_recheck",
+  "frozen_at": "2026-09-20T14:15:20.820552+00:00",
+  "files": {
+    "data/reviews/triplet-score-cycle-2026-09-20/round-2/writer/workpaper-v3.json": "53cd362274650b818936a531bfadf101d1bbc04a8199bbaadad69171927657e2",
+    "data/reviews/triplet-score-cycle-2026-09-20/round-2/writer/score-rationale-v3.md": "339cb2bd703b384cc087c97628effd71048f5f6e20906ae41c298be9cd5d84f0",
+    "data/reviews/triplet-score-cycle-2026-09-20/round-2/writer/acceptance-v3.json": "36ab16359b5e3cd1a5db0c6aa342f3a9837cdeddeb75fdf29f1d03d633cf0571",
+    "data/reviews/triplet-score-cycle-2026-09-20/round-2/writer/repair-facts.json": "0d3a3f47c03037a12ba9bac88c0e6c99f802f7b4e856929f190b4929ea7d91d7",
+    "data/reviews/triplet-score-cycle-2026-09-20/round-2/decision-clarification.json": "fc40436a2a204ef98a33d0fc950e237e698a73613bb9f456aa176c6b9d97ad17",
+    "data/reviews/triplet-score-cycle-2026-09-20/round-2/decision-ipo-clarification.json": "8003b1fbd5ecf9e47d59553e82679bf07adb184d63627c2ca28147f8e1ab17db",
+    "data/reviews/triplet-score-cycle-2026-09-20/round-2/decision-manifest.json": "18069a566f6af14004f5350043ecd9d12ce1456f0f64d6abdc76e6ba59521fce",
+    "data/reviews/triplet-score-cycle-2026-09-20/round-2/decision-v1.json": "3063f5f20fe93069b4898a1a3f1596269aff981e363298063f6fe59201761e43"
+  }
+}

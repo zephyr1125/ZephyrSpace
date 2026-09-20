@@ -1,0 +1,80 @@
+[
+  {
+    "fact_id": "TSKC1-F001",
+    "metric": "2023—2025年度的当时经营计划及随后年度可观察结果",
+    "raw_value": {
+      "2023_plan_from_2022_AR": "围绕安全、主业与新兴业务、智能民航、科技创新、改革和品牌五项工作推进；未披露收入、利润或份额的定量目标。",
+      "2023_actual_from_2023_AR": "年度收入69.83847亿元，归母净利润13.98952亿元；年报称恢复主营业务、将分销网络扩展至33个境外国家/地区、实现低成本航空旅客结算零突破，且‘民航中转旅客平台’获民航局正式许可。",
+      "2024_plan_from_2023_AR": "围绕安全、经营质量和新兴业务、战略新兴/未来产业、科技创新、深化改革、治理效能六方面推进；未披露量化目标。",
+      "2024_actual_from_2024_AR": "年度收入88.23023亿元，归母净利润20.74273亿元；年报称主要业务板块取得一定进展，并披露年末开放数据能力建设项目等数据资源约2,670万元。",
+      "2025_plan_from_2024_AR": "围绕安全与自主可控、科技创新和成果转化、巩固行业领先并提高智慧民航产品覆盖/发展新兴数字业务、改革收官与十五五布局四方面推进；未披露量化目标。",
+      "2025_actual_from_2025_AR": "年度收入87.658401亿元，归母净利润23.41562亿元；年报披露资本开支9.013亿元，主要用于日常运营和既有系统升级、维护等。"
+    },
+    "raw_unit": "计划原文摘要；财务金额RMB_million",
+    "normalized_value": null,
+    "currency": "CNY",
+    "reporting_period": "2022FY—2025FY",
+    "basis": "计划为董事会前瞻陈述；随后年度结果为年报实际披露。逐年并列，不将计划表述当作完成证明。",
+    "status": "实际及前瞻陈述分列；有效",
+    "source_ids": ["TSKC1-S001", "TSKC1-S002", "TSKC1-S003", "TSKC1-S004"],
+    "location": "2022年报PDF打印页6—7（2023计划）及2023年报PDF打印页3—6（2023结果、2024计划）；2024年报PDF打印页4—6（2024结果、2025计划）；2025年报PDF打印页2、15—16（2025结果及资本开支）。2023—2025收入/归母净利亦见旧有效TSK26-F001。",
+    "calculation": "金额由各年报Financial Highlights的RMB’000÷1,000；未据此计算计划完成率。",
+    "unknowns": "各年度计划均未见收入、利润、市场份额或项目进度的可比较定量目标；所列定性里程碑无法证明全部五/六/四方面工作均已完成。"
+  },
+  {
+    "fact_id": "TSKC1-F002",
+    "metric": "民航主管部门对行业清算体系及中国航信业务位置的独立材料",
+    "raw_value": "民航局2025年官方新闻称，民航局清算中心与中国民用航空飞行校验中心签署协议，将飞行校验费纳入民航统一清算体系；该体系覆盖民航发展基金、空管服务费、机场服务费、航司互为服务和飞行校验服务费等领域。民航局2015年企业介绍称，中国航信构建订座、离港、分销、结算四大商务信息系统，并称其为中国航空旅游业信息技术解决方案的主导供应商。",
+    "raw_unit": null,
+    "normalized_value": null,
+    "currency": null,
+    "reporting_period": "2015-08-28；2025-04-24",
+    "basis": "民航局官网发布的行业/企业材料；前者不是公司年报或公司自述。",
+    "status": "实际；不含市场份额",
+    "source_ids": ["TSKC1-S005", "TSKC1-S006"],
+    "location": "S005正文第1段（飞行校验费纳入统一清算体系）及第2段（覆盖领域）；S006正文第3—5段（公司形成、四大系统、主导供应商表述）。",
+    "calculation": null,
+    "unknowns": "材料未提供2023—2025可比市场总量、各竞争者同口径处理量或市场份额；不据此量化护城河或排除替代。"
+  },
+  {
+    "fact_id": "TSKC1-F003",
+    "metric": "2021—2025资本配置、分红、融资与股份变动的关键披露",
+    "raw_value": {
+      "2021": {"capex_rmb_m": 867.7, "cash_received_from_borrowings_rmb_m": 3.55, "cash_repaid_debt_rmb_m": 1.05, "cash_paid_dividends_interest_rmb_m": 73.526, "share_count_end": 2926209589},
+      "2022": {"capex_rmb_m": 713.6, "cash_received_from_borrowings_rmb_m": 200.0, "cash_repaid_debt_rmb_m": null, "proposed_final_dividend_rmb_per_share_tax_inclusive": 0.053, "proposed_final_dividend_rmb_m": 155.1, "share_count_end": 2926209589},
+      "2023": {"capex_rmb_m": 1227.8, "cash_received_from_borrowings_rmb_m": 3612.469, "cash_repaid_debt_rmb_m": 2860.879, "proposed_final_dividend_rmb_per_share_tax_inclusive": 0.16, "proposed_final_dividend_rmb_m": 468.2, "share_count_end": 2926209589},
+      "2024": {"capex_rmb_m": 545.6, "proposed_final_dividend_rmb_per_share_tax_inclusive": 0.239, "proposed_final_dividend_rmb_m": 699.4, "share_count_end": 2926209589},
+      "2025": {"capex_rmb_m": 901.3, "cash_received_from_borrowings_rmb_m": 3812.997, "cash_repaid_debt_rmb_m": 3456.623, "proposed_final_dividend_rmb_per_share_tax_inclusive": 0.276, "proposed_final_dividend_rmb_m": 807.6, "share_count_end": 2926209589, "repurchase_sale_redemption": "公司及附属公司均未购入、出售或赎回上市证券，年末无库存股。"}
+    },
+    "raw_unit": "RMB_million、RMB/share、shares",
+    "normalized_value": null,
+    "currency": "CNY",
+    "reporting_period": "2021FY—2025FY",
+    "basis": "合并现金流量表、MD&A、董事会拟议末期股息和年末已发行股份；拟议股息不等同已支付。",
+    "status": "实际/拟议已区分；有效",
+    "source_ids": ["TSKC1-S001", "TSKC1-S002", "TSKC1-S003", "TSKC1-S004"],
+    "location": "2022年报PDF打印页17、21、87、260—262（2021/22可比现金流、资本开支、股息、股份）；2023年报PDF打印页13—16、87、195及股份结构章节；2024年报PDF打印页15—20、22及股份结构章节；2025年报PDF打印页15—18、相关现金流量表及股份结构章节。",
+    "calculation": "现金流金额由原表RMB÷1,000,000；2021资本开支来自2022年报的可比列；不将借款现金流与期末借款余额混同。",
+    "unknowns": "本次不追溯各年拟议股息的最终支付公告（2025仅截至本轮资料日仍属拟议）；2024年度借款收支完整数未重新摘录；2021—2024各年‘无回购’未逐年摘取，不以2025无回购推及其他年度。"
+  },
+  {
+    "fact_id": "TSKC1-F004",
+    "metric": "2021—2025主要管理层变更与公开披露原因边界",
+    "raw_value": {
+      "2022": "肖殷洪于2022-04-29不再任总经理；黄荣顺同日获任总经理。年报称系按工作需要作出工作调整，并将董事长与总经理由同一人兼任称为过渡安排。",
+      "2024": "王金平于2024-01-31辞任副总经理；刘显清于2024-09-29获任总会计师。",
+      "2025": "杜晓明、于波于2025-06-04获任副总经理；袁雷峰于2025-01-20辞任副总经理。",
+      "2026_increment": "黄荣顺于2026-03-20不再任总经理、2026-04-13辞任执行董事；江波于2025-12-18任主席、执行董事。"
+    },
+    "raw_unit": null,
+    "normalized_value": null,
+    "currency": null,
+    "reporting_period": "2021—2025及截至2026-09-20已披露增量",
+    "basis": "年报公司资料/治理章节与旧有效治理事实；仅记录影响董事长、总经理、总会计师和副总经理的已披露变动。",
+    "status": "实际及公开原因边界；有效",
+    "source_ids": ["TSKC1-S001", "TSKC1-S003", "TSKC1-S004", "TSK26-S004"],
+    "location": "2022年报PDF打印页260—262（总经理交接、董事/高管名单及离任）；2024年报PDF公司资料‘Senior Management/Resigned’；2025年报PDF公司资料‘Senior Management/Resigned’；2026中报PDF打印页19—20、205—206及旧有效TSK26-F017。",
+    "calculation": null,
+    "unknowns": "2021未见本次范围内的重大管理层变更摘录；除2022总经理调整所列‘按工作需要’，各变动的个人离任动机、继任来源及内部任用过程未披露，保持unknown。"
+  }
+]

@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "review_type": "round-1_targeted_score_recheck_v3",
+  "scope": "仅验收裁决R01—R09、修复分项、未改分必要联动与总分；非三份长篇报告验收。",
+  "bindings": {
+    "decision": "data/reviews/travelsky-cycle-2026-09-20/round-1/decision-v1.json",
+    "decision_clarification": "data/reviews/travelsky-cycle-2026-09-20/round-1/decision-clarification.json",
+    "workpaper": "data/reviews/travelsky-cycle-2026-09-20/round-1/writer/workpaper-v3.json",
+    "workpaper_sha256": "3ffa597da5e3335b141e1c9b0bb0ab42b81de8ed8460a9dcd858f4f975636296",
+    "rationale": "data/reviews/travelsky-cycle-2026-09-20/round-1/writer/score-rationale-v3.md",
+    "rationale_sha256": "0365fd4190214479e259b5af48f567d8e36f67bf78a0c3921f8ae98b28ce2fa0",
+    "writer_acceptance": "data/reviews/travelsky-cycle-2026-09-20/round-1/writer/acceptance-v3.json",
+    "repair_facts": "data/reviews/travelsky-cycle-2026-09-20/round-1/evidence/repair-facts.json",
+    "repair_sources": "data/reviews/travelsky-cycle-2026-09-20/round-1/evidence/repair-sources.json"
+  },
+  "acceptance": [
+    {
+      "id": "R01-A1",
+      "status": "pass",
+      "items": [
+        "A1",
+        "A2"
+      ],
+      "evidence": "TSKC1R-F001将1996前身、2000—2001发起、2008主业整合、2022母公司及国务院国资委实控、2026现状串为主体承继链。A2=3明确为未见实质控制权转移的专业判断，未声称逐年穷尽验证。"
+    },
+    {
+      "id": "R02-A1",
+      "status": "pass",
+      "items": [
+        "B0"
+      ],
+      "evidence": "TSKC1R-F002提供1991结算中心、2000—2001共同发起和2008—2009结算整合；底稿说明系统建设到持续运营、主业延续及平台/网络型分类，且保留早期毛利和亏损未知。"
+    },
+    {
+      "id": "R03-A1",
+      "status": "pass",
+      "items": [
+        "A3",
+        "D1",
+        "F2"
+      ],
+      "evidence": "A3=4、D1=4、F2=3均已按原显式档位改写；TSKC1R-F003的2025资本开支、资金来源及无重大收购处置支持A3，历史沿革和三年方向支持D1，近三年分红率及股本稳定支持F2普通档，未把未知减持写成负面事实。"
+    },
+    {
+      "id": "R04-A1",
+      "status": "pass",
+      "items": [
+        "E3"
+      ],
+      "evidence": "E3=2已把以前年度税项调整-95.403454百万元与税前/税/NCI桥及业务量、收入结构并列；未伪算扣非比例或将税项机械全额调整为归母。"
+    },
+    {
+      "id": "R05-A1",
+      "status": "pass",
+      "items": [
+        "危机处理能力"
+      ],
+      "evidence": "TSKC1R-F004及2022年报支持疫情压力下三路部署、双可用区、全链路监测、灾备及核心系统利用率超过99.99%；底稿限定为公司披露，未外推为个人认责或独立因果。"
+    },
+    {
+      "id": "R06-A1",
+      "status": "pass",
+      "items": [
+        "E5.5",
+        "F3"
+      ],
+      "evidence": "TSKC1R-F005正确计算关联方组合应收占48.276757%，区分其与全部关联方应收，并登记四家关联航司单列计提。E5.5=2和F3=3均保留账龄、期后回款及经济公允的未知边界。"
+    },
+    {
+      "id": "R07-A1",
+      "status": "pass",
+      "items": [
+        "B4"
+      ],
+      "evidence": "B4已限定为2026H1：航空信息平台服务收入同比-1.7%、同期总收入+5.6%，没有误写为全年度或全公司下滑。"
+    },
+    {
+      "id": "R08-A1",
+      "status": "pass",
+      "items": [
+        "C3+C4"
+      ],
+      "evidence": "已删除自建、云服务和新分销接口属于既成替代渠道的断言，改为可比替代成本和当前同口径份额未取得，维持7分。"
+    },
+    {
+      "id": "R09-A1",
+      "status": "pass",
+      "items": [
+        "C1"
+      ],
+      "evidence": "C1=6只对应中国民航航空信息平台的旅客处理、订座/离港/电子分销及紧密配套结算清算核心市场。民航局网页标注2015-08-28但正文含后续年份，已仅作为集团历史定位与上市公司主业承接的官方材料；2026中报的41家中国航司、400多家境外航司、3.719亿人次及6.512亿笔处理量用于上市集团当前规模承接。底稿未把集团材料直接等同于上市公司，也未声称所有业务垄断、当期精确份额或全球排名。"
+    }
+  ],
+  "linked_unchanged_items": [
+    {
+      "id": "D2",
+      "status": "pass",
+      "reason": "D1提升后仍未改变D2的定性计划无量化分母、无管理层原话及3分依据。"
+    },
+    {
+      "id": "C2",
+      "status": "pass",
+      "reason": "C1第一梯队判断未替代产业链话语权判断，C2=3的客户采购议价限制仍保留。"
+    },
+    {
+      "id": "C3+C4",
+      "status": "pass",
+      "reason": "C1调整不重复改变壁垒评分；R08限定已落实。"
+    },
+    {
+      "id": "management_total",
+      "status": "pass",
+      "reason": "仅危机处理能力为修复联动项，7分维持；七项加总为74。"
+    }
+  ],
+  "independent_calculations": [
+    {
+      "name": "关联方组合应收占比",
+      "formula": "2,671,164,666.19 / 5,533,024,197.55 × 100",
+      "result_pct": 48.276757,
+      "status": "matches_repair_fact"
+    },
+    {
+      "name": "公司分数",
+      "formula": "A9 + B15 + C16 + D11 + E11 + F10",
+      "result": 72,
+      "status": "matches_workpaper"
+    },
+    {
+      "name": "管理层分数",
+      "formula": "17 + 17 + 11 + 12 + 7 + 7 + 3",
+      "result": 74,
+      "status": "matches_workpaper"
+    },
+    {
+      "name": "合计",
+      "formula": "72 + 74",
+      "result": 146,
+      "status": "matches_workpaper"
+    }
+  ],
+  "remaining_p0": [],
+  "remaining_p1": [],
+  "uncovered_boundary": [
+    "未取得逐年控制权文件、IPO逐一股权、精确当前市场份额、关联方组合账龄及全部期后回款；裁决已确认这些不构成当前点值的额外验收条件。",
+    "民航局集团介绍不能独自证明上市公司各细分业务的市场地位；本次C1仅依其历史定位，并以2026中报的上市集团业务与处理规模承接。"
+  ],
+  "score_approval": {
+    "approved": true,
+    "company_score": 72,
+    "management_score": 74,
+    "combined_score": 146,
+    "reason": "R01—R09均按原验收ID通过；全部改分、必要联动和总分已核，无剩余P0/P1。该批准仅覆盖评分底稿点值，不等同完整三件套、估值或三稿全文验收。"
+  }
+}

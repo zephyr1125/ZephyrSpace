@@ -1,0 +1,21 @@
+{
+  "schema_version":1,
+  "parent_decision":"data/reviews/triplet-score-cycle-2026-09-20/round-2/exception-repair-decision.json",
+  "stage":"bounded_exception_repair_pending_independent_recheck",
+  "conditions":[
+    {"id":"D01-A","status":"addressed_delivery_pending_fact_check","items":["B3","C2","C3+C4"],"result":"保留6/5/9；拆分2025与2026H1事实及来源。","evidence_refs":["MTC2-MOAT-AR25","MTC2-MOAT-H126"]},
+    {"id":"D02-A","status":"addressed_delivery_pending_fact_check","items":["D3"],"result":"保留1；改称未经审计的2026年半年度报告。","evidence_refs":["MTC2-BIZ-H126"]},
+    {"id":"R03-A","status":"addressed_delivery_pending_fact_check","items":["D1","战略稳定性","D5"],"result":"保留4/12/2；战略连续定位分开登记，三年组织数值逐年绑定来源。","evidence_refs":["MTC2-STRAT-AR23","MTC2-STRAT-AR25","MTC2-STRAT-H126","MTC2-ORG-AR23","MTC2-ORG-AR24","MTC2-ORG-AR25"]},
+    {"id":"R05-A","status":"addressed_pending_independent_recheck","items":["F1","诚信与透明度","危机处理能力"],"result":"F1=2明确为5-2-1且不重复个案；诚信11删除未知终局反证；危机7以人员替换而非机制改革限制档位。","evidence_refs":["MTC2-GOVH-001","MTC2-GOVH-002","MTC2-GOVH-003","MTC2-GOV-101","MTC2-RISK-101"]},
+    {"id":"R06-A","status":"addressed_pending_independent_recheck","items":["F3","组织与人才能力","表达清晰度与认知质量"],"result":"完成2021—2025及H1核心岗位/继任核验与证券、行业监管定向检索；未发现集中空缺或窗口内新的公司级重大处罚，组织8、F3=3成立；表达4改以2025指引落空及风险讨论偏概括为限制。","evidence_refs":["MTC2-PEOPLE-2021-2026H1","MTC2-REG-AR21-25","MTC2-REG-SEARCH-20260920","MTC2-STRAT-AR25","MTC2-STRAT-H126"]},
+    {"id":"R07-A","status":"addressed_pending_independent_recheck","items":["F2.5","资本配置能力"],"result":"固定2/20；落实整体资本效率代理、压力测试及逆周期回报边界，删除未取得ROIC即扣分和基金浮盈超成本归因。","evidence_refs":["MTC2-CAPITAL-RETURN-2025","MTC2-CAP-101","MTC2-CAP-201"]},
+    {"id":"R04-A-CAPEX","status":"addressed_pending_independent_recheck","items":["E4"],"result":"现金Capex同比下降33.1527%触发拆分；无可靠现金口径拆分，按原规则由2降至1.5。","evidence_refs":["MTC2-CAPEX-2025","MTC2-REP-003"]},
+    {"id":"R08-A","status":"addressed_pending_independent_recheck","items":["qualification","totals"],"result":"25项公司分86.5、7项管理层76、合计162.5；显示87/76/163。A_CORE仅评分门槛满足，未完成独立复核、完整三件套和估值，不入池。","evidence_refs":["workpaper-v4.json"]}
+  ],
+  "preserved":"R01-A、R02-A及裁决列明其余无关已核项保持v3点值；未重开历史研究。",
+  "scores":{"company_raw":86.5,"company_display":87,"management_raw":76,"management_display":76,"combined_raw":162.5,"combined_display":163},
+  "score_state":"pending_independent_recheck",
+  "research_state":"pending",
+  "valuation":{"status":"deferred","models":[],"target_price":null,"certainty":null,"buy_price":null},
+  "self_check_boundary":"本文件仅为作者自检和逐ID映射，不构成独立批准。"
+}

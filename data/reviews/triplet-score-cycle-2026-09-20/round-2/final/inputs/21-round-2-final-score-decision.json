@@ -1,0 +1,866 @@
+{
+  "schema_version": 1,
+  "issuer": {
+    "name": "贵州茅台",
+    "ticker": "600519.SH",
+    "as_of": "2026-09-20"
+  },
+  "stage": "final_score_adjudication",
+  "decision": "defer",
+  "score_state": "approved",
+  "research_state": "pending",
+  "research_status": "execution_incomplete",
+  "delivery_state": "score_stage_verified_full_reports_not_started",
+  "publish_allowed": false,
+  "watchlist_action": "none",
+  "basis": "25项公司评分与7项管理层评分经过初次独立全分项双复核、匿名裁决、一次合并修复及一次有界例外定向验收。评分重大问题已关闭；完整三报告、正式估值与首次完整报告双复核尚未完成，故defer仅针对完整研究/可行动资格，不撤回已批准评分。",
+  "approved_parameters": {
+    "company_score": 86.5,
+    "management_score": 76,
+    "combined_score": 162.5,
+    "target_price": null,
+    "certainty": null,
+    "buy_price": null
+  },
+  "score_display": {
+    "method": "integer_half_up",
+    "company": 87,
+    "management": 76,
+    "combined": 163,
+    "note": "合计先加原始分再舍入，门槛仅用原始分。"
+  },
+  "score_bounds": {
+    "company": [
+      86.5,
+      86.5
+    ],
+    "management": [
+      76,
+      76
+    ],
+    "combined": [
+      162.5,
+      162.5
+    ]
+  },
+  "approved_workpaper_sha256": "54c5f3a9bf23297fa7ae90e8e8f0875160d169cafdd2b48a88a6795cdea7519d",
+  "approved_score_artifacts": {
+    "data/reviews/triplet-score-cycle-2026-09-20/round-2/repair-writer/workpaper-v4.json": "54c5f3a9bf23297fa7ae90e8e8f0875160d169cafdd2b48a88a6795cdea7519d",
+    "data/reviews/triplet-score-cycle-2026-09-20/round-2/repair-writer/score-rationale-v4.md": "2fd1588764e0a29835851f4aea03f5182fa933d1f95ee951201de50c0b2baa39",
+    "data/reviews/triplet-score-cycle-2026-09-20/round-2/repair-writer/repair-facts-v4.json": "8af95728cc236a11d20614d8959334571a9cc5f4ee3afe6cff5f1d3d7e5dfc61",
+    "data/reviews/triplet-score-cycle-2026-09-20/round-2/repair-writer/acceptance-v4.json": "5c8c3acf4028102c4eef525dd1b2c95188c6ee3ba77c892bd6d144f945d472fe"
+  },
+  "review_refs": [
+    "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v4-a.json",
+    "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v4-b.json"
+  ],
+  "hash_bindings": {
+    "data/reviews/triplet-score-cycle-2026-09-20/round-2/repair-writer/workpaper-v4.json": "54c5f3a9bf23297fa7ae90e8e8f0875160d169cafdd2b48a88a6795cdea7519d",
+    "data/reviews/triplet-score-cycle-2026-09-20/round-2/repair-writer/score-rationale-v4.md": "2fd1588764e0a29835851f4aea03f5182fa933d1f95ee951201de50c0b2baa39",
+    "data/reviews/triplet-score-cycle-2026-09-20/round-2/repair-writer/repair-facts-v4.json": "8af95728cc236a11d20614d8959334571a9cc5f4ee3afe6cff5f1d3d7e5dfc61",
+    "data/reviews/triplet-score-cycle-2026-09-20/round-2/repair-writer/acceptance-v4.json": "5c8c3acf4028102c4eef525dd1b2c95188c6ee3ba77c892bd6d144f945d472fe",
+    "data/reviews/triplet-score-cycle-2026-09-20/round-2/score-manifest-v4.json": "5f3449fbaaaf58cf7a40b194a94f3daae52a2abd1332249cb06c25c72ad76a3c",
+    "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v4-a.json": "50b05abeeb0788926cdcb87f411f83d833262cc6a524d673dd80aade38e81597",
+    "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v4-b.json": "c7d429a715b47b3c117ba8d27f7cbb7498d58a60cc05b6f0f466bb466135823d",
+    "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/review-a.json": "df2e3c964572bad6ca2dfb0b717f103e006bbdeb8f5d81ec5c9491ea3c08c671",
+    "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/review-b.json": "b91a148d24e9c1ec94f2e9f78143cc156514b07c7d61bfa91b986f599c374bdf",
+    "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v3-a.json": "4c43ce0f4a2c348a98c27d7d327a0befc149375ffa6b77bf4d4a8a9f6ac434de",
+    "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v3-b.json": "97db7245f6ad445cdaba4127d330d603572ad7eb029f4d7de53a78c61d4015f8",
+    "data/reviews/triplet-score-cycle-2026-09-20/round-2/decision-v1.json": "3063f5f20fe93069b4898a1a3f1596269aff981e363298063f6fe59201761e43",
+    "data/reviews/triplet-score-cycle-2026-09-20/round-2/decision-clarification.json": "fc40436a2a204ef98a33d0fc950e237e698a73613bb9f456aa176c6b9d97ad17",
+    "data/reviews/triplet-score-cycle-2026-09-20/round-2/decision-ipo-clarification.json": "8003b1fbd5ecf9e47d59553e82679bf07adb184d63627c2ca28147f8e1ab17db",
+    "data/reviews/triplet-score-cycle-2026-09-20/round-2/exception-repair-decision.json": "88d3538017d61cde178c66852bf5e917f7ee1bb88ab69b32e1c21b580bd28b8d"
+  },
+  "candidate_dispositions": [
+    {
+      "candidate_id": "C001",
+      "disposition": "部分成立",
+      "reason": "部分成立：B1实际档位错用；护城河虽漏登记，但原件足够，分别研究/交付处理。",
+      "issue_ids": [
+        "R02",
+        "D01"
+      ],
+      "source_refs": [
+        "财报/贵州茅台/贵州茅台2025年度报告.md:228、1528",
+        "财报/贵州茅台/贵州茅台2025年度报告.md:228、651-659",
+        "财报/贵州茅台/贵州茅台2026半年度报告.md:128、140-142"
+      ],
+      "final_status": "closed",
+      "final_verification_refs": [
+        "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v4-a.json",
+        "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v4-b.json"
+      ]
+    },
+    {
+      "candidate_id": "C002",
+      "disposition": "成立",
+      "reason": "成立：原推理不充分；原件可支持E4保持2，E5.5补精确归因。",
+      "issue_ids": [
+        "R04"
+      ],
+      "source_refs": [
+        "财报/贵州茅台/贵州茅台2025年度报告.md:228、237、138、1518-1570、1638、1059-1067、2220-2226、2523、2619"
+      ],
+      "final_status": "closed",
+      "final_verification_refs": [
+        "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v4-a.json",
+        "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v4-b.json"
+      ]
+    },
+    {
+      "candidate_id": "C003",
+      "disposition": "部分成立",
+      "reason": "部分成立：D5引用缺口已由原件形成真实混合信号；D3仅补引用，战略需连续定位。",
+      "issue_ids": [
+        "R03",
+        "D02"
+      ],
+      "source_refs": [
+        "财报/贵州茅台/贵州茅台2023年度报告.md:289、824",
+        "财报/贵州茅台/贵州茅台2024年度报告.md:288、817",
+        "财报/贵州茅台/贵州茅台2025年度报告.md:315、849、661-693",
+        "财报/贵州茅台/贵州茅台2026半年度报告.md:140-142",
+        "财报/贵州茅台/贵州茅台2026半年度报告.md:128"
+      ],
+      "final_status": "closed",
+      "final_verification_refs": [
+        "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v4-a.json",
+        "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v4-b.json"
+      ]
+    },
+    {
+      "candidate_id": "C004",
+      "disposition": "成立",
+      "reason": "成立：时任与现任错配，解任不等于调查终结。",
+      "issue_ids": [
+        "R05"
+      ],
+      "source_refs": [
+        "财报/贵州茅台/贵州茅台2026半年度报告.md:330",
+        "MTC2-RISK-101",
+        "deep-prebuy-skill/SKILL.md:635-653、835",
+        "management-archive/SKILL.md:危机处理记录"
+      ],
+      "final_status": "closed",
+      "final_verification_refs": [
+        "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v4-a.json",
+        "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v4-b.json"
+      ]
+    },
+    {
+      "candidate_id": "C005",
+      "disposition": "成立",
+      "reason": "成立：未知不能低分；只补决定性组织/监管证据，不强制全量清单。",
+      "issue_ids": [
+        "R05",
+        "R06"
+      ],
+      "source_refs": [
+        "财报/贵州茅台/贵州茅台2026半年度报告.md:330",
+        "MTC2-RISK-101",
+        "deep-prebuy-skill/SKILL.md:635-653、835",
+        "management-archive/SKILL.md:危机处理记录",
+        "财报/贵州茅台/贵州茅台2025年度报告.md:849、855、1518-1570、3745起关联交易",
+        "财报/贵州茅台/贵州茅台2026半年度报告.md:330、142",
+        "management-archive/SKILL.md:组织与人才、监管与合规记录"
+      ],
+      "final_status": "closed",
+      "final_verification_refs": [
+        "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v4-a.json",
+        "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v4-b.json"
+      ]
+    },
+    {
+      "candidate_id": "C006",
+      "disposition": "成立",
+      "reason": "成立：须撤回未取得回报即有瑕疵的因果，已有基金净值资料可用。",
+      "issue_ids": [
+        "R07"
+      ],
+      "source_refs": [
+        "财报/贵州茅台/贵州茅台2025年度报告.md:599-609、1191、2709、3946-3952、3990-4006"
+      ],
+      "final_status": "closed",
+      "final_verification_refs": [
+        "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v4-a.json",
+        "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v4-b.json"
+      ]
+    },
+    {
+      "candidate_id": "C007",
+      "disposition": "成立",
+      "reason": "成立：与C004合并，分离个人调查、公司披露与危机行动。",
+      "issue_ids": [
+        "R05"
+      ],
+      "source_refs": [
+        "财报/贵州茅台/贵州茅台2026半年度报告.md:330",
+        "MTC2-RISK-101",
+        "deep-prebuy-skill/SKILL.md:635-653、835",
+        "management-archive/SKILL.md:危机处理记录"
+      ],
+      "final_status": "closed",
+      "final_verification_refs": [
+        "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v4-a.json",
+        "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v4-b.json"
+      ]
+    },
+    {
+      "candidate_id": "C008",
+      "disposition": "部分成立",
+      "reason": "部分成立：现有起源正面事实不足，但不要求逐年控制史；只补承继/融资关键节点。",
+      "issue_ids": [
+        "R01"
+      ],
+      "source_refs": [
+        "deep-prebuy-skill/SKILL.md:115-168",
+        "财报/贵州茅台/贵州茅台2025年度报告.md:1332-1458",
+        "财报/贵州茅台/贵州茅台2025年度报告.md:138、1638",
+        "MTC2-ORG-101",
+        "MTC2-ORG-201"
+      ],
+      "final_status": "closed",
+      "final_verification_refs": [
+        "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v4-a.json",
+        "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v4-b.json"
+      ]
+    },
+    {
+      "candidate_id": "C009",
+      "disposition": "成立",
+      "reason": "成立：E3存在实际量价反证，E4/E5.5归因需修正，与C002合并。",
+      "issue_ids": [
+        "R04"
+      ],
+      "source_refs": [
+        "财报/贵州茅台/贵州茅台2025年度报告.md:228、237、138、1518-1570、1638、1059-1067、2220-2226、2523、2619"
+      ],
+      "final_status": "closed",
+      "final_verification_refs": [
+        "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v4-a.json",
+        "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v4-b.json"
+      ]
+    },
+    {
+      "candidate_id": "C010",
+      "disposition": "成立",
+      "reason": "成立：门槛必须完整且当前仅候选资格。",
+      "issue_ids": [
+        "R08"
+      ],
+      "source_refs": [
+        "data/WATCHLIST_RULES.md:24-50",
+        "docs/three-report-closeout.md"
+      ],
+      "final_status": "closed",
+      "final_verification_refs": [
+        "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v4-a.json",
+        "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v4-b.json"
+      ]
+    },
+    {
+      "candidate_id": "C011",
+      "disposition": "成立",
+      "reason": "成立：与C008合并；近期分红不能代替IPO资金使用，不强求全历史逐笔表。",
+      "issue_ids": [
+        "R01"
+      ],
+      "source_refs": [
+        "deep-prebuy-skill/SKILL.md:115-168",
+        "财报/贵州茅台/贵州茅台2025年度报告.md:1332-1458",
+        "财报/贵州茅台/贵州茅台2025年度报告.md:138、1638",
+        "MTC2-ORG-101",
+        "MTC2-ORG-201"
+      ],
+      "final_status": "closed",
+      "final_verification_refs": [
+        "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v4-a.json",
+        "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v4-b.json"
+      ]
+    },
+    {
+      "candidate_id": "C012",
+      "disposition": "部分成立",
+      "reason": "部分成立：期别称谓是P2交付；未取得冒充公司缺陷的语义属既列研究问题。",
+      "issue_ids": [
+        "D02"
+      ],
+      "source_refs": [
+        "财报/贵州茅台/贵州茅台2026半年度报告.md:128"
+      ],
+      "final_status": "closed",
+      "final_verification_refs": [
+        "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v4-a.json",
+        "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v4-b.json"
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "id": "R01-A",
+      "status": "closed",
+      "lane": "research",
+      "verification_refs": [
+        "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v3-a.json",
+        "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v3-b.json"
+      ],
+      "reason": "原件裁决、修订实文及相应独立验收一致；保留项沿用已通过记录。"
+    },
+    {
+      "id": "R02-A",
+      "status": "closed",
+      "lane": "research",
+      "verification_refs": [
+        "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v3-a.json",
+        "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v3-b.json"
+      ],
+      "reason": "原件裁决、修订实文及相应独立验收一致；保留项沿用已通过记录。"
+    },
+    {
+      "id": "R03-A",
+      "status": "closed",
+      "lane": "delivery",
+      "verification_refs": [
+        "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v4-a.json",
+        "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v4-b.json"
+      ],
+      "reason": "原件与分值先前已核定；v4只落实按期别独立引用、完整ID及称谓，已由对应定向位置验收。",
+      "classified_by": "adjudicator",
+      "no_decision_impact": true
+    },
+    {
+      "id": "R04-A",
+      "status": "closed",
+      "lane": "research",
+      "verification_refs": [
+        "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v3-a.json",
+        "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v3-b.json",
+        "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v4-a.json",
+        "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v4-b.json"
+      ],
+      "reason": "原件裁决、修订实文及相应独立验收一致；保留项沿用已通过记录。"
+    },
+    {
+      "id": "R05-A",
+      "status": "closed",
+      "lane": "research",
+      "verification_refs": [
+        "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v4-a.json",
+        "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v4-b.json"
+      ],
+      "reason": "原件裁决、修订实文及相应独立验收一致；保留项沿用已通过记录。"
+    },
+    {
+      "id": "R06-A",
+      "status": "closed",
+      "lane": "research",
+      "verification_refs": [
+        "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v4-a.json",
+        "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v4-b.json"
+      ],
+      "reason": "原件裁决、修订实文及相应独立验收一致；保留项沿用已通过记录。"
+    },
+    {
+      "id": "R07-A",
+      "status": "closed",
+      "lane": "research",
+      "verification_refs": [
+        "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v4-a.json",
+        "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v4-b.json"
+      ],
+      "reason": "原件裁决、修订实文及相应独立验收一致；保留项沿用已通过记录。"
+    },
+    {
+      "id": "R08-A",
+      "status": "closed",
+      "lane": "research",
+      "verification_refs": [
+        "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v4-a.json",
+        "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v4-b.json"
+      ],
+      "reason": "原件裁决、修订实文及相应独立验收一致；保留项沿用已通过记录。"
+    },
+    {
+      "id": "D01-A",
+      "status": "closed",
+      "lane": "delivery",
+      "verification_refs": [
+        "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v4-a.json",
+        "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v4-b.json"
+      ],
+      "reason": "原件与分值先前已核定；v4只落实按期别独立引用、完整ID及称谓，已由对应定向位置验收。",
+      "classified_by": "adjudicator",
+      "no_decision_impact": true
+    },
+    {
+      "id": "D02-A",
+      "status": "closed",
+      "lane": "delivery",
+      "verification_refs": [
+        "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v4-a.json",
+        "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v4-b.json"
+      ],
+      "reason": "原件与分值先前已核定；v4只落实按期别独立引用、完整ID及称谓，已由对应定向位置验收。",
+      "classified_by": "adjudicator",
+      "no_decision_impact": true
+    },
+    {
+      "id": "R04-A-CAPEX",
+      "status": "closed",
+      "lane": "research",
+      "verification_refs": [
+        "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v4-a.json",
+        "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v4-b.json"
+      ],
+      "reason": "原件裁决、修订实文及相应独立验收一致；保留项沿用已通过记录。"
+    }
+  ],
+  "score_bridge": {
+    "from_frozen_v2": {
+      "company": 85,
+      "management": 73,
+      "combined": 158
+    },
+    "to_approved_v4": {
+      "company": 86.5,
+      "management": 76,
+      "combined": 162.5
+    },
+    "delta": {
+      "company": 1.5,
+      "management": 3,
+      "combined": 4.5
+    },
+    "items": [
+      {
+        "group": "company",
+        "id": "A1",
+        "before": 2,
+        "approved": 3,
+        "delta": 1,
+        "evidence_refs": [
+          "MTC2-IPO-001",
+          "MTC2-IPO-003",
+          "MTC2-IPO-005"
+        ]
+      },
+      {
+        "group": "company",
+        "id": "A2",
+        "before": 3,
+        "approved": 3,
+        "delta": 0,
+        "evidence_refs": [
+          "MTC2-IPO-001",
+          "MTC2-ORG-101"
+        ]
+      },
+      {
+        "group": "company",
+        "id": "A3",
+        "before": 4,
+        "approved": 4,
+        "delta": 0,
+        "evidence_refs": [
+          "MTC2-IPO-002",
+          "MTC2-CAP-101"
+        ]
+      },
+      {
+        "group": "company",
+        "id": "B0",
+        "before": 1,
+        "approved": 2,
+        "delta": 1,
+        "evidence_refs": [
+          "MTC2-IPO-002",
+          "MTC2-IPO-005"
+        ]
+      },
+      {
+        "group": "company",
+        "id": "B1",
+        "before": 4,
+        "approved": 3,
+        "delta": -1,
+        "evidence_refs": [
+          "MTC2-REP-001"
+        ]
+      },
+      {
+        "group": "company",
+        "id": "B2",
+        "before": 3,
+        "approved": 3,
+        "delta": 0,
+        "evidence_refs": [
+          "MTC2-BIZ-101",
+          "MTC2-MKT-101"
+        ]
+      },
+      {
+        "group": "company",
+        "id": "B3",
+        "before": 6,
+        "approved": 6,
+        "delta": 0,
+        "evidence_refs": [
+          "MTC2-REP-001",
+          "MTC2-MOAT-AR25",
+          "MTC2-MOAT-H126"
+        ]
+      },
+      {
+        "group": "company",
+        "id": "B4",
+        "before": 3,
+        "approved": 3,
+        "delta": 0,
+        "evidence_refs": [
+          "MTC2-BIZ-101",
+          "MTC2-FIN-101",
+          "MTC2-FIN-102"
+        ]
+      },
+      {
+        "group": "company",
+        "id": "C1",
+        "before": 6,
+        "approved": 6,
+        "delta": 0,
+        "evidence_refs": [
+          "MTC2-MKT-101"
+        ]
+      },
+      {
+        "group": "company",
+        "id": "C2",
+        "before": 5,
+        "approved": 5,
+        "delta": 0,
+        "evidence_refs": [
+          "MTC2-MOAT-AR25",
+          "MTC2-MOAT-H126",
+          "MTC2-REP-001"
+        ]
+      },
+      {
+        "group": "company",
+        "id": "C3+C4",
+        "before": 9,
+        "approved": 9,
+        "delta": 0,
+        "evidence_refs": [
+          "MTC2-MOAT-AR25",
+          "MTC2-MOAT-H126",
+          "MTC2-REP-001"
+        ]
+      },
+      {
+        "group": "company",
+        "id": "D1",
+        "before": 4,
+        "approved": 4,
+        "delta": 0,
+        "evidence_refs": [
+          "MTC2-STRAT-AR23",
+          "MTC2-STRAT-AR25",
+          "MTC2-STRAT-H126"
+        ]
+      },
+      {
+        "group": "company",
+        "id": "D2",
+        "before": 4,
+        "approved": 4,
+        "delta": 0,
+        "evidence_refs": [
+          "MTC2-PLAN-101"
+        ]
+      },
+      {
+        "group": "company",
+        "id": "D3",
+        "before": 1,
+        "approved": 1,
+        "delta": 0,
+        "evidence_refs": [
+          "MTC2-BIZ-H126",
+          "MTC2-FIN-101",
+          "MTC2-FIN-102"
+        ]
+      },
+      {
+        "group": "company",
+        "id": "D5",
+        "before": 2,
+        "approved": 2,
+        "delta": 0,
+        "evidence_refs": [
+          "MTC2-ORG-AR23",
+          "MTC2-ORG-AR24",
+          "MTC2-ORG-AR25"
+        ]
+      },
+      {
+        "group": "company",
+        "id": "E1",
+        "before": 5,
+        "approved": 5,
+        "delta": 0,
+        "evidence_refs": [
+          "MTC2-FIN-101"
+        ]
+      },
+      {
+        "group": "company",
+        "id": "E2",
+        "before": 3,
+        "approved": 3,
+        "delta": 0,
+        "evidence_refs": [
+          "MTC2-FIN-101",
+          "MTC2-FIN-102",
+          "MTC2-REL-201"
+        ]
+      },
+      {
+        "group": "company",
+        "id": "E3",
+        "before": 3,
+        "approved": 2,
+        "delta": -1,
+        "evidence_refs": [
+          "MTC2-FIN-102",
+          "MTC2-REP-001"
+        ]
+      },
+      {
+        "group": "company",
+        "id": "E4",
+        "before": 2,
+        "approved": 1.5,
+        "delta": -0.5,
+        "evidence_refs": [
+          "MTC2-REP-003",
+          "MTC2-CAPEX-2025"
+        ]
+      },
+      {
+        "group": "company",
+        "id": "E5",
+        "before": 2,
+        "approved": 2,
+        "delta": 0,
+        "evidence_refs": [
+          "MTC2-AUD-101",
+          "MTC2-FIN-102"
+        ]
+      },
+      {
+        "group": "company",
+        "id": "E5.5",
+        "before": 3,
+        "approved": 3,
+        "delta": 0,
+        "evidence_refs": [
+          "MTC2-REP-003",
+          "MTC2-REP-004"
+        ]
+      },
+      {
+        "group": "company",
+        "id": "F1",
+        "before": 2,
+        "approved": 2,
+        "delta": 0,
+        "evidence_refs": [
+          "MTC2-GOVH-001",
+          "MTC2-GOVH-002",
+          "MTC2-GOVH-003",
+          "MTC2-GOV-101",
+          "MTC2-RISK-101"
+        ]
+      },
+      {
+        "group": "company",
+        "id": "F2",
+        "before": 5,
+        "approved": 5,
+        "delta": 0,
+        "evidence_refs": [
+          "MTC2-CAP-201",
+          "MTC2-CAP-101"
+        ]
+      },
+      {
+        "group": "company",
+        "id": "F2.5",
+        "before": 1,
+        "approved": 2,
+        "delta": 1,
+        "evidence_refs": [
+          "MTC2-CAPITAL-RETURN-2025",
+          "MTC2-CAP-101",
+          "MTC2-REP-004"
+        ]
+      },
+      {
+        "group": "company",
+        "id": "F3",
+        "before": 2,
+        "approved": 3,
+        "delta": 1,
+        "evidence_refs": [
+          "MTC2-REG-AR21-25",
+          "MTC2-REG-SEARCH-20260920",
+          "MTC2-REP-004"
+        ]
+      },
+      {
+        "group": "management",
+        "id": "诚信与透明度",
+        "before": 10,
+        "approved": 11,
+        "delta": 1,
+        "evidence_refs": [
+          "MTC2-GOVH-001",
+          "MTC2-GOVH-002",
+          "MTC2-RISK-101",
+          "MTC2-GOV-101"
+        ]
+      },
+      {
+        "group": "management",
+        "id": "资本配置能力",
+        "before": 20,
+        "approved": 20,
+        "delta": 0,
+        "evidence_refs": [
+          "MTC2-CAPITAL-RETURN-2025",
+          "MTC2-CAP-101",
+          "MTC2-CAP-201"
+        ]
+      },
+      {
+        "group": "management",
+        "id": "战略稳定性",
+        "before": 12,
+        "approved": 12,
+        "delta": 0,
+        "evidence_refs": [
+          "MTC2-STRAT-AR23",
+          "MTC2-STRAT-AR25",
+          "MTC2-STRAT-H126"
+        ]
+      },
+      {
+        "group": "management",
+        "id": "对股东友好度",
+        "before": 14,
+        "approved": 14,
+        "delta": 0,
+        "evidence_refs": [
+          "MTC2-CAP-101",
+          "MTC2-CAP-201",
+          "MTC2-GOV-101"
+        ]
+      },
+      {
+        "group": "management",
+        "id": "危机处理能力",
+        "before": 6,
+        "approved": 7,
+        "delta": 1,
+        "evidence_refs": [
+          "MTC2-RISK-101",
+          "MTC2-GOV-101"
+        ]
+      },
+      {
+        "group": "management",
+        "id": "组织与人才能力",
+        "before": 7,
+        "approved": 8,
+        "delta": 1,
+        "evidence_refs": [
+          "MTC2-PEOPLE-2021-2026H1",
+          "MTC2-REP-002",
+          "MTC2-GOV-101"
+        ]
+      },
+      {
+        "group": "management",
+        "id": "表达清晰度与认知质量",
+        "before": 4,
+        "approved": 4,
+        "delta": 0,
+        "evidence_refs": [
+          "MTC2-STRAT-AR25",
+          "MTC2-STRAT-H126",
+          "MTC2-PLAN-101"
+        ]
+      }
+    ]
+  },
+  "coverage": {
+    "company_items": 25,
+    "management_items": 7,
+    "complete_score_coverage": true,
+    "chain": "初审两路32项全覆盖；R01/R02及保留项沿用v3已验收；v4双路研究定向验收关闭R05/R06/R07/Capex/R08，确定性交付由定向位置验收关闭D01/D02/R03。不是三份完整报告覆盖。",
+    "initial_review_refs": [
+      "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/review-a.json",
+      "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/review-b.json"
+    ],
+    "targeted_review_refs": [
+      "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v3-a.json",
+      "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v3-b.json",
+      "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v4-a.json",
+      "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v4-b.json"
+    ]
+  },
+  "qualification": {
+    "highest_score_gate": "A_CORE",
+    "score_gate_met": true,
+    "actionable": false,
+    "A_CORE": "162.5>=160；86.5>=76且76>=76",
+    "S_STRATEGIC": "合计未到170、管理层未到82；确定性和完整质量条件亦未完成",
+    "qualification_approved": false,
+    "reason": "A_CORE仅评分门槛通过，不等于完整资格或入池。"
+  },
+  "valuation": {
+    "status": "deferred",
+    "approved": false,
+    "models": [],
+    "target_price": null,
+    "certainty": null,
+    "buy_price": null
+  },
+  "material_boundaries": [
+    "整体资本效率代理26.9336%及七折18.8535%仅支持评分；不是精确ROIC、严格数学下界或基金收益率。8%—15%是分析假设。",
+    "现金Capex未可靠拆分，已按原规则E4扣0.5，不能在后续报告写成已完成拆分。",
+    "监管检索与历史节点是有界核验，不是绝对无处罚或穷尽全历史；留置终局未知不等同已结案或违法已定性。",
+    "评分论证和作者验收内pending措辞是冻结时的真实过程状态，由本裁决批准覆盖，不修改冻结稿、不冒称当时已通过。"
+  ],
+  "blocking_items": [
+    {
+      "id": "FULL-REPORTS",
+      "impact": "完整研究及发布",
+      "status": "open",
+      "reason": "三份长报告与首次完整全文双复核尚未执行。"
+    },
+    {
+      "id": "VALUATION",
+      "impact": "正式估值/买入价",
+      "status": "open",
+      "reason": "双主模型、情景、敏感性尚未建立。"
+    }
+  ],
+  "score_blocking_items": [],
+  "repair_rounds": {
+    "merged_repair": 1,
+    "bounded_exception": 1,
+    "further_research_repair_authorized": false
+  },
+  "next_trigger": "主任务可归档独立评分验收包；完整研究须按SOP另行完成估值、三报告与首次全文双复核，当前不入池。"
+}

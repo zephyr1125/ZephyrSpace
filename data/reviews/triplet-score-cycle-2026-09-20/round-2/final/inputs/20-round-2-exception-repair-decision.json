@@ -1,0 +1,241 @@
+{
+  "schema_version": 1,
+  "stage": "bounded_exception_repair",
+  "decision": "defer",
+  "score_state": "pending",
+  "research_state": "pending",
+  "research_status": "execution_incomplete",
+  "publish_allowed": false,
+  "frozen_workpaper_sha256": "53cd362274650b818936a531bfadf101d1bbc04a8199bbaadad69171927657e2",
+  "review_refs": [
+    "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v3-a.json",
+    "data/reviews/triplet-score-cycle-2026-09-20/round-2/anonymous/recheck-v3-b.json"
+  ],
+  "exception": {
+    "authorized": true,
+    "role": "triplet_repair_writer",
+    "count": 1,
+    "reason": "一次合并修复仍残留原P1归因错误、未完成原定人才/监管核验及跨期来源错配；同时R07原件复核发现E4现金资本开支变动超过30%的原规则触发。仅允许本范围修复，结束后不再换名增加轮次。",
+    "base": "writer/workpaper-v3.json",
+    "new_original_scope": "仅AR25 1638/1660/1680及固定资产/在建/无形附注；原已要求2021—2025核心人事表及有界监管检索。"
+  },
+  "review_disagreement_dispositions": [
+    {
+      "ids": [
+        "D01-A",
+        "D02-A",
+        "R03-A"
+      ],
+      "decision": "未通过登记/称谓验收；a路pass与冻结内容不符。判断原件已核，不重新评分；按delivery局部验证。"
+    },
+    {
+      "ids": [
+        "R05-A",
+        "R06-A"
+      ],
+      "decision": "b路未关闭判断成立。F1额外扣分已可由独立激励事实解释；组织模式与F3检索仍须兑现原范围；表达旧缺资料扣分须删。"
+    },
+    {
+      "ids": [
+        "R07-A"
+      ],
+      "decision": "两路均指出真实逻辑缺口；本次给独立整体资本效率桥支持2分，不用浮盈代替回报。"
+    },
+    {
+      "ids": [
+        "R04-A"
+      ],
+      "decision": "原E3=2/E5.5=3保留；仅新增已查到的Capex触发纳入例外。"
+    },
+    {
+      "ids": [
+        "R01-A",
+        "R02-A"
+      ],
+      "decision": "通过，保留A1/A2/A3/B0=3/3/4/2及B1=3；不重开历史研究。"
+    }
+  ],
+  "capital_return_bridge": {
+    "purpose": "选择F2.5原档的已实现整体资本效率证据，不是正式估值或精确ROIC",
+    "unit": "亿元人民币",
+    "period": "2025FY；分母2024/2025年末均值",
+    "actual_inputs": {
+      "consolidated_net_profit": 853.1032483367,
+      "finance_company_interest_revenue": 32.1606937612,
+      "interest_income_in_finance_expense": 8.429882406,
+      "fund_fair_value_gain": 0.7616259766,
+      "assets_2024": 2989.445799187,
+      "assets_2025": 3038.3484402144
+    },
+    "formula": "(净利润-财务公司全部利息收入-财务费用项全部利息收入-基金浮盈)/平均总资产",
+    "result": 0.26933601710781424,
+    "assumed_capital_cost_range": [
+      0.08,
+      0.15
+    ],
+    "assumption_label": "分析师资本成本压力范围，不是公司披露；采用含金融资产的总资产分母及不税后还原扣除以保守测试整体资本效率，不能称精确ROIC或严格数学下界。",
+    "stress": "即再对调整后利润打七折，收益代理约18.85%，仍高于15%压力成本。资本成本若长期超过该代理边界则重评。",
+    "reverse_cycle": "2025收入/利润下行中继续已执行股东现金回报和约60亿元注销回购、未靠有息借款扩张；代表逆周期配置行为，不证明回购价格低于尚未建立的内在估值。",
+    "limitations": "不把新基金已实缴40亿元的浮盈等同现金退出，不把集团增持等同公司投资，不将未来预测当实际收益。"
+  },
+  "issues": [
+    {
+      "id": "D01-A",
+      "lane": "delivery",
+      "status": "open",
+      "items": [
+        "B3",
+        "C2",
+        "C3+C4"
+      ],
+      "acceptance": "保留6/5/9。REP-005拆分2025与H1来源；H1 128、140—142注册独立事实及H126来源，不许AR25承载H1。",
+      "source_refs": [
+        "财报/贵州茅台/贵州茅台2025年度报告.md:651-659",
+        "财报/贵州茅台/贵州茅台2026半年度报告.md:128、140-142"
+      ],
+      "classified_by": "adjudicator",
+      "no_decision_impact": true,
+      "reason": "裁决已直接核原件及分值，剩余为确定的来源登记/称谓修正。"
+    },
+    {
+      "id": "D02-A",
+      "lane": "delivery",
+      "status": "open",
+      "items": [
+        "D3"
+      ],
+      "acceptance": "保留1；将2026H1年报改为2026年半年度报告、注明未经审计，引用新增H1 128事实。",
+      "source_refs": [
+        "财报/贵州茅台/贵州茅台2026半年度报告.md:128"
+      ],
+      "classified_by": "adjudicator",
+      "no_decision_impact": true,
+      "reason": "裁决已直接核原件及分值，剩余为确定的来源登记/称谓修正。"
+    },
+    {
+      "id": "R03-A",
+      "lane": "delivery",
+      "status": "open",
+      "items": [
+        "D1",
+        "战略稳定性",
+        "D5"
+      ],
+      "acceptance": "D1=4、战略稳定性=12、D5=2判断保留；补连续2023/2025/H1战略原文定位及相应独立来源，D1和战略稳定性均引用；REP-002的三年数值逐年绑定AR23/AR24/AR25，不再只给2025路径。",
+      "source_refs": [
+        "财报/贵州茅台/贵州茅台2023年度报告.md:战略/经营计划、289、824",
+        "财报/贵州茅台/贵州茅台2024年度报告.md:288、817",
+        "财报/贵州茅台/贵州茅台2025年度报告.md:315、849、661-693",
+        "财报/贵州茅台/贵州茅台2026半年度报告.md:140-142"
+      ],
+      "classified_by": "adjudicator",
+      "no_decision_impact": true,
+      "reason": "裁决已直接核原件及分值，剩余为确定的来源登记/称谓修正。"
+    },
+    {
+      "id": "R05-A",
+      "lane": "research",
+      "status": "open",
+      "items": [
+        "F1",
+        "诚信与透明度",
+        "危机处理能力"
+      ],
+      "acceptance": "F1=2：5-2（已核周期性历史高管调查）-1（已披露未兑现股权激励），不重复扣个别案件。诚信11保留，以已核历史廉洁问题限制高档、及时披露为正证，删未知终局作为实质反证。危机7保留，以代行和补位为正证、现有措施主要为人员替换而非可核机制改革为档位解释；未公开案情只列未知，不作再扣分理由。",
+      "source_refs": [
+        "MTC2-GOVH-001",
+        "MTC2-GOVH-002",
+        "MTC2-GOVH-003",
+        "MTC2-GOV-101",
+        "MTC2-RISK-101"
+      ]
+    },
+    {
+      "id": "R06-A",
+      "lane": "research",
+      "status": "open",
+      "items": [
+        "F3",
+        "组织与人才能力",
+        "表达清晰度与认知质量"
+      ],
+      "acceptance": "组织8为条件点值：只核2021—2025及H1核心岗位变动表及继任履历；若实证出现集中离任或空缺按原规则重判，不要求全员保留率。F3=3为条件点值：补原已要求证券/行业监管定向检索范围和结果，正常关联资金不扣分，未检索不得宣称低风险。表达4固定：引用2025战略与H1 142具体机制，限制为已核2025指引落空且风险讨论偏概括，不因缺电话会扣分。",
+      "source_refs": [
+        "management-archive/SKILL.md:组织与人才、监管与合规",
+        "财报/贵州茅台/贵州茅台2025年度报告.md:849、855、661-693",
+        "财报/贵州茅台/贵州茅台2026半年度报告.md:330、142"
+      ]
+    },
+    {
+      "id": "R07-A",
+      "lane": "research",
+      "status": "open",
+      "items": [
+        "F2.5",
+        "资本配置能力"
+      ],
+      "acceptance": "F2.5=2、资本配置20：落实下列capital_return_bridge和逆周期回报说明，基金公允价值不作超成本依据，控股股东增持不归上市公司配置。管理层20理由用高回报主业+已执行分红/注销回购为正证，2025盈利收缩和基金投放处早期（尚非成熟退出业务）限制卓越档；删未取得ROIC故扣分。",
+      "source_refs": [
+        "财报/贵州茅台/贵州茅台2025年度报告.md:1638、1660、1680、599-609、1191、3990-4006"
+      ]
+    },
+    {
+      "id": "R04-A-CAPEX",
+      "lane": "research",
+      "status": "open",
+      "items": [
+        "E4"
+      ],
+      "acceptance": "新增决定性原件仅限资本开支同比触发：2025购建长资产现金31.27595亿元、2024为46.78712亿元，下降33.1527%。按原E4规则完成运营性/土地楼宇/工程时间差拆分；若无可靠现金口径拆分，明示未拆分并E4从2改1.5。不可将固定资产转固额直接冒充现金支出。已核低杠杆基础2保留，扣0.5仅执行原规则。",
+      "source_refs": [
+        "deep-prebuy-skill/SKILL.md:548",
+        "财报/贵州茅台/贵州茅台2025年度报告.md:1680、2747、2787、2811"
+      ]
+    },
+    {
+      "id": "R08-A",
+      "lane": "research",
+      "status": "open",
+      "items": [
+        "qualification",
+        "totals"
+      ],
+      "acceptance": "重算25+7项及全部候选门槛，绑定新底稿哈希；如组织8/F3 3成立且E4未拆分，原始总分公司86.5、管理层76、合计162.5，显示87/76/163，A_CORE评分门槛通过但不入池；任何实际人事/监管新事实则先改受影响项再重算。",
+      "source_refs": [
+        "data/WATCHLIST_RULES.md:24-50"
+      ]
+    }
+  ],
+  "preserved_items": [
+    "A1",
+    "A2",
+    "A3",
+    "B0",
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "C1",
+    "C2",
+    "C3+C4",
+    "D1",
+    "D2",
+    "D3",
+    "D5",
+    "E1",
+    "E2",
+    "E3",
+    "E5",
+    "E5.5",
+    "F2",
+    "战略稳定性",
+    "对股东友好度"
+  ],
+  "verification": "新作者只交修订底稿/必要证据登记/逐ID验收；双路仅核research受影响事实和总分联动，原事实复核员核delivery位置。无完整报告或估值批准。",
+  "valuation_approval_scope": {
+    "approved": false,
+    "target_price": null,
+    "certainty": null,
+    "buy_price": null
+  }
+}

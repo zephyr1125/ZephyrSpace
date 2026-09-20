@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "stage": "exception_final_targeted_research_recheck",
+  "issuer": "贵州茅台 600519.SH",
+  "as_of": "2026-09-20",
+  "frozen_inputs": {
+    "manifest": "data/reviews/triplet-score-cycle-2026-09-20/round-2/score-manifest-v4.json",
+    "workpaper": {
+      "path": "data/reviews/triplet-score-cycle-2026-09-20/round-2/repair-writer/workpaper-v4.json",
+      "sha256": "54c5f3a9bf23297fa7ae90e8e8f0875160d169cafdd2b48a88a6795cdea7519d"
+    },
+    "rationale": {
+      "path": "data/reviews/triplet-score-cycle-2026-09-20/round-2/repair-writer/score-rationale-v4.md",
+      "sha256": "2fd1588764e0a29835851f4aea03f5182fa933d1f95ee951201de50c0b2baa39"
+    },
+    "repair_facts": {
+      "path": "data/reviews/triplet-score-cycle-2026-09-20/round-2/repair-writer/repair-facts-v4.json",
+      "sha256": "8af95728cc236a11d20614d8959334571a9cc5f4ee3afe6cff5f1d3d7e5dfc61"
+    },
+    "acceptance": {
+      "path": "data/reviews/triplet-score-cycle-2026-09-20/round-2/repair-writer/acceptance-v4.json",
+      "sha256": "5c8c3acf4028102c4eef525dd1b2c95188c6ee3ba77c892bd6d144f945d472fe"
+    },
+    "decision": "data/reviews/triplet-score-cycle-2026-09-20/round-2/exception-repair-decision.json"
+  },
+  "result": {
+    "status": "pass",
+    "score_review": "approved_by_reasoning_reviewer",
+    "recommended_score_state": "approved_after_other_independent_recheck_and_root_acceptance",
+    "company_score_raw": 86.5,
+    "management_score_raw": 76,
+    "combined_score_raw": 162.5,
+    "company_score_display": 87,
+    "management_score_display": 76,
+    "combined_score_display": 163,
+    "highest_score_gate": "A_CORE",
+    "research_state": "pending_full_reports",
+    "valuation_state": "deferred",
+    "watchlist_action": "none"
+  },
+  "independent_recalculation": {
+    "company_item_count": 25,
+    "management_item_count": 7,
+    "company_sum": 86.5,
+    "management_sum": 76,
+    "combined_sum": 162.5,
+    "round_half_up": {
+      "86.5": 87,
+      "76": 76,
+      "162.5": 163
+    },
+    "gate": "原始合计162.5>=160且公司86.5、管理层76均>=76，满足A_CORE评分门槛；未满足S_STRATEGIC合计170和单项82，且估值确定性未建立。"
+  },
+  "acceptance_results": [
+    {
+      "id": "R05-A",
+      "status": "pass",
+      "items": [
+        "F1",
+        "诚信与透明度",
+        "危机处理能力"
+      ],
+      "evidence": "F1明确按5-2-1得到2分：袁仁国、高卫东的近十年历史高管廉洁事件扣2，未兑现股权激励作为独立稳定性限制扣1，蒋焰未知终局不重复扣分。诚信11区分个人历史事件与公司及时披露；危机7以代行、补位和经营持续为正证，以尚未见机制改革限制高档，未知案情不作扣分。"
+    },
+    {
+      "id": "R06-A",
+      "status": "pass",
+      "items": [
+        "F3",
+        "组织与人才能力",
+        "表达清晰度与认知质量"
+      ],
+      "evidence": "MTC2-PEOPLE-2021-2026H1覆盖核心岗位轮换、代行与补位；多次董事长及高管轮换是限制因素，但未形成集中空缺或全数外部空降，组织8分可辩护。F3=3基于年报处罚披露、证券及行业监管定向检索和关联交易审计应对，保留检索不等于绝对不存在的边界。表达4已改用具体战略/经营机制为正证，以2025指引落空和风险讨论偏概括限制高档，不再因缺电话会扣分。"
+    },
+    {
+      "id": "R07-A",
+      "status": "pass",
+      "items": [
+        "F2.5",
+        "资本配置能力"
+      ],
+      "evidence": "资本效率桥复算为26.9336%，调整后利润再打七折为18.8535%，高于8%—15%分析师压力成本范围。底稿明确该值是采用含金融资产总资产分母并过度扣除金融收入的保守整体资本效率代理，不是精确ROIC或严格下界；基金浮盈未被当作超成本收益，集团增持未归为公司配置。结合下行期分红、约60亿元注销回购和无有息借款扩张，F2.5=2及资本配置20的原规则归因可辩护。"
+    },
+    {
+      "id": "R04-A-CAPEX",
+      "status": "pass",
+      "items": [
+        "E4"
+      ],
+      "evidence": "现金资本开支由2024年46.78712亿元降至2025年31.27595亿元，同比下降33.1527%，触发原规则。附注不能可靠拆成同口径运营性与非运营性现金支出，底稿明确未拆分、未用转固额冒充现金支出，并由低杠杆基础2分扣0.5至1.5。"
+    },
+    {
+      "id": "R08-A",
+      "status": "pass",
+      "items": [
+        "qualification",
+        "totals"
+      ],
+      "evidence": "25项公司分重算86.5，7项管理层分重算76，合计162.5；ROUND_HALF_UP显示87/76/163。门槛使用原始分，A_CORE仅为评分门槛满足；完整报告、估值和发布均保持pending，不入池。"
+    }
+  ],
+  "delivery_items_observed_not_researched": [
+    {
+      "id": "D01-A",
+      "status": "appears_addressed",
+      "note": "2025年报与2026H1护城河/渠道事实已拆分，不再由AR25承载H1。最终交付位置由事实复核员验收。"
+    },
+    {
+      "id": "D02-A",
+      "status": "appears_addressed",
+      "note": "D3已改称未经审计的2026年半年度报告并引用MTC2-BIZ-H126。最终交付位置由事实复核员验收。"
+    },
+    {
+      "id": "R03-A",
+      "status": "appears_addressed",
+      "note": "战略连续事实与三年组织数据已按期别拆分。该项已被例外裁决转为delivery，由事实复核员验收。"
+    }
+  ],
+  "residual_findings": [],
+  "boundaries": [
+    "资本效率指标只能称整体资本效率代理，不得在后续报告改写为精确ROIC、严格下界或基金回报率。",
+    "8%—15%是分析师压力假设范围，不是公司披露或精确WACC。",
+    "监管定向检索未发现重大处罚只在已记录窗口和查询范围内成立，不得写成绝对不存在监管事项。",
+    "本次批准建议仅覆盖评分；三份长报告、正式估值、完整研究发布和Watchlist入池均未完成。"
+  ],
+  "uncovered": [
+    "未读取另一复核意见。",
+    "未重新审核例外裁决明确保留且不受本轮联动的无关评分项。",
+    "未执行三份最终长报告全文复核或估值审核。"
+  ]
+}

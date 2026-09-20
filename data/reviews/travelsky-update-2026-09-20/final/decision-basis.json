@@ -1,0 +1,907 @@
+{
+  "schema_version": 1,
+  "company": "中国民航信息网络",
+  "ticker": "00696.HK",
+  "as_of": "2026-09-20",
+  "stage": "首次匿名争议裁决；普通合并研究修复前",
+  "decision": "defer",
+  "research_state": "pending",
+  "research_status": "execution_incomplete",
+  "delivery_state": "assembled_for_review_requires_repair",
+  "publish_allowed": false,
+  "basis": "冻结稿存在事实错误、可得原件遗漏和证据不足被转换为分数的问题。69.5/61/130.5仅为候选算术结果，不足以批准reject/NONE；同时匿名ROE意见混用总权益与归母利润，不能机械采纳其下调上限。当前未核出足以独立否决全部档位的红线。一次补证、评分联动和双路定向复查后按真实结果收尾。",
+  "review_refs": [
+    "data/reviews/travelsky-update-2026-09-20/anonymous/review-a.json",
+    "data/reviews/travelsky-update-2026-09-20/anonymous/review-b.json"
+  ],
+  "input_refs": [
+    "data/reviews/travelsky-update-2026-09-20/anonymous/candidates.json",
+    "data/reviews/travelsky-update-2026-09-20/build-v1/manifest.json",
+    "data/reviews/travelsky-update-2026-09-20/build-v1/deep.md",
+    "data/reviews/travelsky-update-2026-09-20/build-v1/management.md",
+    "data/reviews/travelsky-update-2026-09-20/build-v1/valuation.md",
+    "data/reviews/travelsky-update-2026-09-20/writer-repair/workpaper-v2.json",
+    "data/reviews/travelsky-update-2026-09-20/bundle-v2.json",
+    "data/reviews/travelsky-update-2026-09-20/evidence/facts-v2.json",
+    "data/reviews/travelsky-update-2026-09-20/evidence/sources-v2.json"
+  ],
+  "score_bounds": {
+    "company": null,
+    "management": null,
+    "combined": null
+  },
+  "bounds_approved": false,
+  "quality_stop_approved": false,
+  "approved_parameters": {
+    "company_score": null,
+    "management_score": null,
+    "combined_score": null,
+    "watchlistLevel": null,
+    "target_price": null,
+    "certainty": null,
+    "buy_price": null,
+    "currency": "HKD"
+  },
+  "parameter_status": "null总分表示尚无可信点值或有据总区间；null价格表示未批准正式定价，不是零价值，也不是批准质量停止。",
+  "withdrawn_fields": [
+    "候选69.5/61/130.5作为最终评分的效力",
+    "reject/NONE作为最终资格判断的效力",
+    "stopped_quality_gate_after_full_research作为已完成状态",
+    "独立股东批准的错误事实",
+    "未完成原件核验导致的自动中低分推论"
+  ],
+  "approved_manifest_sha256": null,
+  "approved_report_sha256": {},
+  "release_review_refs": [],
+  "issues": [
+    {
+      "id": "R01",
+      "severity": "P1",
+      "lane": "research",
+      "status": "open",
+      "candidate_ids": [
+        "C002",
+        "C007",
+        "C008",
+        "C009"
+      ],
+      "reason": "服务关联交易程序事实错误与无依据负面归因相连；C009金额措辞亦进入F3理由，故本次不是纯交付。",
+      "acceptance": [
+        {
+          "id": "R01-A1",
+          "condition": "以2026服务公告第1页及上市规则涵义段修正为公告、年度审阅及豁免独立股东批准，核对董事回避；明示服务费为关联方向上市公司支付。三稿、底稿统一。"
+        },
+        {
+          "id": "R01-A2",
+          "condition": "将69.070百万元2025实际、40百万元新协议完整年度最低费用、78百万元2026上限分别列期别。69.07/40=1.72675，不再用“接近最低费用”作风险结论，也不把跨年上限比较当已发生违规。"
+        },
+        {
+          "id": "R01-A3",
+          "condition": "按公告定价条款、内控及年报持续关联交易年度审阅重评F3、诚信与透明度、对股东友好度；普通关联关系、正常审批豁免和国有身份不自动扣分；存在、程序合规、经济公允分别判断。保留有据风险，不预定满分或上调幅度。"
+        }
+      ],
+      "source_refs": [
+        "财报/中国民航信息网络/2026关联交易续签公告.pdf，第1–4页、上市规则涵义段；TSK26-F018"
+      ]
+    },
+    {
+      "id": "R02",
+      "severity": "P1",
+      "lane": "research",
+      "status": "open",
+      "candidate_ids": [
+        "C003"
+      ],
+      "reason": "2025原件KAM已可访问，缺Markdown不能在统一证据规范下替代实质审计核验；KAM存在也不等于异常。",
+      "acceptance": [
+        {
+          "id": "R02-A1",
+          "condition": "登记2025年报打印页72–74（PDF74–76）的应收减值和收入确认KAM、主要审计应对及不单独发表意见边界；对照2026H1应收和收入确认。"
+        },
+        {
+          "id": "R02-A2",
+          "condition": "核2025及2026H1会计政策/估计变更附注和应收准备，不要求重做审计；按E5/E5.5原档重评，不能仅凭KAM名称降为重大问题，不能以未读取原件维持1.5分。"
+        }
+      ],
+      "source_refs": [
+        "财报/中国民航信息网络/2025年度报告.pdf，打印页72–74；2026中期报告.pdf，应收及会计政策附注"
+      ]
+    },
+    {
+      "id": "R03",
+      "severity": "P1",
+      "lane": "research",
+      "status": "open",
+      "candidate_ids": [
+        "C010"
+      ],
+      "reason": "E1原评分理由不合格；但候选所称三年均低于10%的重算不成立。F002为总权益，不是归母权益。",
+      "acceptance": [
+        {
+          "id": "R03-A1",
+          "condition": "统一归母利润/平均归母权益，补2023–2025 ROE与杜邦乘积；本裁决复算约7.0475%、9.6983%、10.1172%。2023利润暂用财务摘要千元精度，最终可用利润表精度。不得沿用6.86%、9.45%、9.85%冒充归母ROE。"
+        },
+        {
+          "id": "R03-A2",
+          "condition": "2023/2024低于10%与2025进入10%–15%区间分别解释；原规则没有给10%–15%非杠杆驱动的唯一点值，不自行新增硬门槛或强制0–1。作者按杜邦、恢复趋势和原档相邻标准给可辩护点值或有据范围，说明理由，双路核匹配。2026H1不机械乘二。"
+        }
+      ],
+      "source_refs": [
+        "财报/中国民航信息网络/2023年度报告.pdf，PDF75；2024年度报告.pdf，PDF78；2025年度报告.pdf，PDF83、98–99"
+      ]
+    },
+    {
+      "id": "R04",
+      "severity": "P1",
+      "lane": "research",
+      "status": "open",
+      "candidate_ids": [
+        "C006"
+      ],
+      "reason": "D2不能用利润恢复替代目标兑现；间接验证4分上限须先有执行记录。",
+      "acceptance": [
+        {
+          "id": "R04-A1",
+          "condition": "形成连续三个已完成年度（2023、2024、2025）目标/当时原文摘要/后续实际/可核结果表，必要时定向取2022年报仅为2023目标基期。官方IR原话可用；港股不强求CNINFO。定性目标只按可观察里程碑核验，不伪造量化指引或把2026未结束目标记未兑现。"
+        },
+        {
+          "id": "R04-A2",
+          "condition": "明确可评价分母与无法判断项目。没有电话会/IR原话但有年报执行记录时上限4；无战略漂移证据不降成3上限。仍无可比承诺时保留未知或有据界，不以缺原话自动给3。联动战略稳定性和表达维度。"
+        }
+      ],
+      "source_refs": [
+        "deep-prebuy-skill/SKILL.md，D2及D维度强制规则；2023–2025年报董事长致辞/业务回顾/展望"
+      ]
+    },
+    {
+      "id": "R05",
+      "severity": "P1",
+      "lane": "research",
+      "status": "open",
+      "candidate_ids": [
+        "C004"
+      ],
+      "reason": "收入分部不能单独证明中强定价权、市场排名和转换壁垒；不要求每项都有未披露的精确份额。",
+      "acceptance": [
+        {
+          "id": "R05-A1",
+          "condition": "从2023–2025年报及2026H1业务回顾提取处理旅客/交易量、服务航司/机场覆盖、收费机制与业务范围；辅以至少一项可追溯行业或竞争者官方材料验证市场位置/替代方式。计量范围不一致不得硬算市场份额。"
+        },
+        {
+          "id": "R05-A2",
+          "condition": "重评B3/C1/C2/C3+C4，分别给定价、位置、上下游议价、壁垒依据；无主动提价记录不等于无定价权，流程嵌入也不自动等于强定价。不能仅为凑门槛调分；不强求客户私有切换合同。"
+        }
+      ],
+      "source_refs": [
+        "TSK26-F004、TSK26-F018及对应年报业务回顾；deep-prebuy-skill/SKILL.md，B3/C维度"
+      ]
+    },
+    {
+      "id": "R06",
+      "severity": "P1",
+      "lane": "research",
+      "status": "open",
+      "candidate_ids": [
+        "C012"
+      ],
+      "reason": "税项遗漏影响持续经营归因；核原件同时发现费用“增加约10百万元”与附注按性质费用减少9.832百万元不一致，应在同一利润桥修正。",
+      "acceptance": [
+        {
+          "id": "R06-A1",
+          "condition": "2026中报打印页149以前年度所得税调整为-95,403,454.37元，降低税费；打印页8、100说明2025年15%与10%税率差额在2026H1体现。登记期别与性质，不将本期确认等同2026经营改善，也不把历史连续优惠自动称永不重复一次性。"
+        },
+        {
+          "id": "R06-A2",
+          "condition": "建立2025H1→2026H1利润总额→所得税→少数股东→归母的可复算披露桥，单列减值、投资收益、公允价值、税项、其他/残差。归母增量95,358,706.69元；2026H1所得税178,633,126.52元、利润总额1,739,318,151.37元。不得把税前减值改善与税后退款直接相加当归母正常化。"
+        },
+        {
+          "id": "R06-A3",
+          "condition": "正常化层说明税项和信用损失的可持续假设；无法精确归属税后归母的调整给清楚边界或撤回依赖结论，不能强造精确桥。修正D5/E3及管理层执行归因；D5补三年人均收入/研发趋势，不能只凭费用一项替代组织执行规则。2026税收续期作为情景。"
+        }
+      ],
+      "source_refs": [
+        "财报/中国民航信息网络/2026中期报告.pdf，PDF9、101、150–151及合并利润表；TSK26-F005"
+      ]
+    },
+    {
+      "id": "R07",
+      "severity": "P1",
+      "lane": "research",
+      "status": "open",
+      "candidate_ids": [
+        "C005"
+      ],
+      "reason": "会计师轮换和机柜租赁是可得遗漏，应按中性事实评估，不自动红旗。",
+      "acceptance": [
+        {
+          "id": "R07-A1",
+          "condition": "纳入2026-06-01拟换审计师公告及2026股东大会结果：区分提议与生效，原审计师连续八年、依轮换要求、新旧无分歧。核对最终聘任，不把轮换当审计质量恶化。"
+        },
+        {
+          "id": "R07-A2",
+          "condition": "纳入2026-08-31机柜补充协议：101个新增机柜、价格/实际启用计费、2026H1历史31,750,581元、新2026/2027/2028期租赁上限83/88/33百万元；上限为预期使用权资产计量，不冒充年度现金租金。核额外费用不同豁免、董事回避、关联依赖及资本配置影响。"
+        }
+      ],
+      "source_refs": [
+        "财报/中国民航信息网络/2026拟变更会计师事务所公告.pdf，第1–2页；2026股东大会结果及末期股息.pdf；2026机柜租赁第二补充协议公告.pdf，第1–5页"
+      ]
+    },
+    {
+      "id": "R08",
+      "severity": "P1",
+      "lane": "research",
+      "status": "open",
+      "candidate_ids": [
+        "C001",
+        "C013"
+      ],
+      "reason": "管理层七维点值混入研究遗漏与不可知，61分不能批准；必须补有限公开轨迹后作判断，而非要求所有私人信息。",
+      "acceptance": [
+        {
+          "id": "R08-A1",
+          "condition": "以2021–2025五个完整年度加2026截至截止日增量，完成重大资本动作、分红/融资/回购/稀释、主要非独立董事及高管任免/职责/公开原因/继任来源表；优先利用现有2023–2025年报的比较数字，缺2021–2022记录时仅补对应年报和决定性公告。拟议与实施分列，不泛查全部历史。"
+        },
+        {
+          "id": "R08-A2",
+          "condition": "定向核证券监管（港交所/证监及适用监管）与行业监管（民航、支付结算相关监管）2021年至截止日记录，命中回原件逐事件列机构、单位、状态；无命中只表述检索范围，不能要求取得证明绝对不存在的材料。"
+        },
+        {
+          "id": "R08-A3",
+          "condition": "利用三年致辞/展望中的准确摘要支持战略、行业、资本、风险、回报判断；与R04共用。疫情冲击期2021–2023具体措施与经营结果可作为危机样本，不将总经理继任未知当作已经发生经营危机。"
+        },
+        {
+          "id": "R08-A4",
+          "condition": "七维逐项给事实→原规则/国企职业经理人适配→分数或上下界；未披露动机、人才保留率、无法判定内部晋升来源保留未知，删除由未知直接得出的褒贬，不设任意中点。关键岗位名单未列任者不自动证明全部职责无人承担。"
+        },
+        {
+          "id": "R08-A5",
+          "condition": "资本判断核2025年报打印页14–15、2026中报打印页9–10及金融资产附注：60亿元结构性存款已披露银行、期限90–186天、收益率1.80%–1.95%、不可提前终止；只保留仍未解归属/客户往来边界。A3/F1/F2/F2.5、E2/E4与管理层资本/股东/组织维度作对应联动，不能把模型资料缺口当管理层已犯错。"
+        }
+      ],
+      "source_refs": [
+        "management-archive/SKILL.md及references/review-checks.md；财报/中国民航信息网络/2023年度报告.pdf、2024年度报告.pdf、2025年度报告.pdf、2026中期报告.pdf；TSK26-F010、TSK26-F017"
+      ]
+    },
+    {
+      "id": "R09",
+      "severity": "P1",
+      "lane": "research",
+      "status": "open",
+      "candidate_ids": [
+        "C011"
+      ],
+      "reason": "质量停止是合法条件分支，但当前可信评分前提尚不成立。",
+      "acceptance": [
+        {
+          "id": "R09-A1",
+          "condition": "先关闭R01–R08，逐项旧分/新分或null/理由/证据/影响ID桥接，独立加总。未受影响分项保留已有依据，不重复扣同一事件；补证导致不变也记录原因。以原始分测试全部档位。"
+        },
+        {
+          "id": "R09-A2",
+          "condition": "可信点值或真实有据界足以否决全部档位时，才申请reject/NONE及quality_stop批准；价格全null，仍保留完整适用方法、经营三情景、重评条件。不要求为已否决公司凑双模型。"
+        },
+        {
+          "id": "R09-A3",
+          "condition": "仍可能合格时，按经济本质建立两个有不同依据的适用主模型、三情景、双变量敏感性、零权重反向验证、币种/股数/资金归属桥及机械买入价。不限死FCFE；可用有据分红模型/盈利倍数等，不能因一个现金模型缺证否定公司，也不能以降低确定性替代第二模型。"
+        },
+        {
+          "id": "R09-A4",
+          "condition": "若资格仍跨门槛或无可信界，defer；撤回所有依赖无效分数或模型的结论后，按可得证据是否已尽区分closed_with_uncertainty与execution_incomplete。恢复条件不得额外强制总经理必须补任或公司必须披露未公开私有资料。"
+        }
+      ],
+      "source_refs": [
+        "docs/three-report-closeout.md；data/WATCHLIST_RULES.md；skills/valuation/SKILL.md"
+      ]
+    }
+  ],
+  "candidate_dispositions": [
+    {
+      "candidate_id": "C001",
+      "disposition": "成立",
+      "issue_ids": [
+        "R08"
+      ],
+      "reason": "公开覆盖不足成立；不要求未披露人才指标、动机或全历史穷尽。",
+      "source_refs": [
+        "management-archive/SKILL.md及references/review-checks.md；财报/中国民航信息网络/2023年度报告.pdf、2024年度报告.pdf、2025年度报告.pdf、2026中期报告.pdf；TSK26-F010、TSK26-F017"
+      ],
+      "original_acceptance_refs": [
+        "C001"
+      ]
+    },
+    {
+      "candidate_id": "C002",
+      "disposition": "成立",
+      "issue_ids": [
+        "R01"
+      ],
+      "reason": "普通关联交易不等于负面治理证据，原F3理由不成立。",
+      "source_refs": [
+        "财报/中国民航信息网络/2026关联交易续签公告.pdf，第1–4页、上市规则涵义段；TSK26-F018"
+      ],
+      "original_acceptance_refs": [
+        "C002"
+      ]
+    },
+    {
+      "candidate_id": "C003",
+      "disposition": "成立",
+      "issue_ids": [
+        "R02"
+      ],
+      "reason": "原件明确列两项KAM；可得遗漏不能换中性分。",
+      "source_refs": [
+        "财报/中国民航信息网络/2025年度报告.pdf，打印页72–74；2026中期报告.pdf，应收及会计政策附注"
+      ],
+      "original_acceptance_refs": [
+        "C003"
+      ]
+    },
+    {
+      "candidate_id": "C004",
+      "disposition": "成立",
+      "issue_ids": [
+        "R05"
+      ],
+      "reason": "当前引用不能支持具体分档；不预定下调，精确份额不可得时可用有据定性比较。",
+      "source_refs": [
+        "TSK26-F004、TSK26-F018及对应年报业务回顾；deep-prebuy-skill/SKILL.md，B3/C维度"
+      ],
+      "original_acceptance_refs": [
+        "C004"
+      ]
+    },
+    {
+      "candidate_id": "C005",
+      "disposition": "成立",
+      "issue_ids": [
+        "R07"
+      ],
+      "reason": "两项已归档事件确实遗漏；审计轮换无分歧，机柜上限与租金口径须区分。",
+      "source_refs": [
+        "财报/中国民航信息网络/2026拟变更会计师事务所公告.pdf，第1–2页；2026股东大会结果及末期股息.pdf；2026机柜租赁第二补充协议公告.pdf，第1–5页"
+      ],
+      "original_acceptance_refs": [
+        "C005"
+      ]
+    },
+    {
+      "candidate_id": "C006",
+      "disposition": "成立",
+      "issue_ids": [
+        "R04"
+      ],
+      "reason": "现有利润趋势不是兑现率，4分上限也不是默认得分。",
+      "source_refs": [
+        "deep-prebuy-skill/SKILL.md，D2及D维度强制规则；2023–2025年报董事长致辞/业务回顾/展望"
+      ],
+      "original_acceptance_refs": [
+        "C006"
+      ]
+    },
+    {
+      "candidate_id": "C007",
+      "disposition": "成立",
+      "issue_ids": [
+        "R01"
+      ],
+      "reason": "批准表述错误且影响负面归因与分数；与C002/C008合并但保留候选。",
+      "source_refs": [
+        "财报/中国民航信息网络/2026关联交易续签公告.pdf，第1–4页、上市规则涵义段；TSK26-F018"
+      ],
+      "original_acceptance_refs": [
+        "C007"
+      ]
+    },
+    {
+      "candidate_id": "C008",
+      "disposition": "成立",
+      "issue_ids": [
+        "R01"
+      ],
+      "reason": "官方服务公告第1页明确豁免独立股东批准。",
+      "source_refs": [
+        "财报/中国民航信息网络/2026关联交易续签公告.pdf，第1–4页、上市规则涵义段；TSK26-F018"
+      ],
+      "original_acceptance_refs": [
+        "C008"
+      ]
+    },
+    {
+      "candidate_id": "C009",
+      "disposition": "成立",
+      "issue_ids": [
+        "R01"
+      ],
+      "reason": "措辞失真且已进入F3依据，本次并入research，不能单独按排版放行。",
+      "source_refs": [
+        "财报/中国民航信息网络/2026关联交易续签公告.pdf，第1–4页、上市规则涵义段；TSK26-F018"
+      ],
+      "original_acceptance_refs": [
+        "C009"
+      ]
+    },
+    {
+      "candidate_id": "C010",
+      "disposition": "部分成立",
+      "issue_ids": [
+        "R03"
+      ],
+      "reason": "原E1证据不足成立；候选数值混用总权益，2025归母ROE10.1172%，否定“全部低于10%所以必须0–1”。",
+      "source_refs": [
+        "财报/中国民航信息网络/2023年度报告.pdf，PDF75；2024年度报告.pdf，PDF78；2025年度报告.pdf，PDF83、98–99"
+      ],
+      "original_acceptance_refs": [
+        "C010"
+      ]
+    },
+    {
+      "candidate_id": "C011",
+      "disposition": "成立",
+      "issue_ids": [
+        "R09"
+      ],
+      "reason": "前提未获批；修复后若可信评分确实否决仍可合法停止。候选内BRF-FULL-001/002为原验收追溯别名，不限于只修两项。",
+      "source_refs": [
+        "docs/three-report-closeout.md；data/WATCHLIST_RULES.md；skills/valuation/SKILL.md"
+      ],
+      "original_acceptance_refs": [
+        "BRF-FULL-001",
+        "BRF-FULL-002"
+      ]
+    },
+    {
+      "candidate_id": "C012",
+      "disposition": "成立",
+      "issue_ids": [
+        "R06"
+      ],
+      "reason": "税项遗漏成立；须比较两期税后归母，不能将所有退款当永久不可重复或全部经营改善。",
+      "source_refs": [
+        "财报/中国民航信息网络/2026中期报告.pdf，PDF9、101、150–151及合并利润表；TSK26-F005"
+      ],
+      "original_acceptance_refs": [
+        "C012"
+      ]
+    },
+    {
+      "candidate_id": "C013",
+      "disposition": "成立",
+      "issue_ids": [
+        "R08"
+      ],
+      "reason": "多项以缺证落中低分不成立，61无有效否决力；也不因此预设管理层高分。",
+      "source_refs": [
+        "management-archive/SKILL.md及references/review-checks.md；财报/中国民航信息网络/2023年度报告.pdf、2024年度报告.pdf、2025年度报告.pdf、2026中期报告.pdf；TSK26-F010、TSK26-F017"
+      ],
+      "original_acceptance_refs": [
+        "C013"
+      ]
+    }
+  ],
+  "score_bridge": {
+    "candidate_totals": {
+      "company": 69.5,
+      "management": 61,
+      "combined": 130.5
+    },
+    "arithmetic_verified": true,
+    "approved_totals": {
+      "company": null,
+      "management": null,
+      "combined": null
+    },
+    "items": [
+      {
+        "scope": "company",
+        "id": "A1",
+        "old": 2,
+        "new": null,
+        "delta": null,
+        "issue_ids": [],
+        "status": "retain_candidate_basis_no_independent_reopening",
+        "reason": "本轮无独立重大异议，保留候选依据及分值；总分批准前仅核新事实是否实质联动，不另起补证任务"
+      },
+      {
+        "scope": "company",
+        "id": "A2",
+        "old": 3,
+        "new": null,
+        "delta": null,
+        "issue_ids": [],
+        "status": "retain_candidate_basis_no_independent_reopening",
+        "reason": "本轮无独立重大异议，保留候选依据及分值；总分批准前仅核新事实是否实质联动，不另起补证任务"
+      },
+      {
+        "scope": "company",
+        "id": "A3",
+        "old": 3,
+        "new": null,
+        "delta": null,
+        "issue_ids": [
+          "R08"
+        ],
+        "status": "reassess",
+        "reason": "按所列问题重评；新值及变动尚未知"
+      },
+      {
+        "scope": "company",
+        "id": "B0",
+        "old": 2,
+        "new": null,
+        "delta": null,
+        "issue_ids": [],
+        "status": "retain_candidate_basis_no_independent_reopening",
+        "reason": "本轮无独立重大异议，保留候选依据及分值；总分批准前仅核新事实是否实质联动，不另起补证任务"
+      },
+      {
+        "scope": "company",
+        "id": "B1",
+        "old": 3,
+        "new": null,
+        "delta": null,
+        "issue_ids": [],
+        "status": "retain_candidate_basis_no_independent_reopening",
+        "reason": "本轮无独立重大异议，保留候选依据及分值；总分批准前仅核新事实是否实质联动，不另起补证任务"
+      },
+      {
+        "scope": "company",
+        "id": "B2",
+        "old": 3,
+        "new": null,
+        "delta": null,
+        "issue_ids": [],
+        "status": "retain_candidate_basis_no_independent_reopening",
+        "reason": "本轮无独立重大异议，保留候选依据及分值；总分批准前仅核新事实是否实质联动，不另起补证任务"
+      },
+      {
+        "scope": "company",
+        "id": "B3",
+        "old": 5,
+        "new": null,
+        "delta": null,
+        "issue_ids": [
+          "R05"
+        ],
+        "status": "reassess",
+        "reason": "按所列问题重评；新值及变动尚未知"
+      },
+      {
+        "scope": "company",
+        "id": "B4",
+        "old": 3,
+        "new": null,
+        "delta": null,
+        "issue_ids": [],
+        "status": "retain_candidate_basis_no_independent_reopening",
+        "reason": "本轮无独立重大异议，保留候选依据及分值；总分批准前仅核新事实是否实质联动，不另起补证任务"
+      },
+      {
+        "scope": "company",
+        "id": "C1",
+        "old": 5,
+        "new": null,
+        "delta": null,
+        "issue_ids": [
+          "R05"
+        ],
+        "status": "reassess",
+        "reason": "按所列问题重评；新值及变动尚未知"
+      },
+      {
+        "scope": "company",
+        "id": "C2",
+        "old": 4,
+        "new": null,
+        "delta": null,
+        "issue_ids": [
+          "R05"
+        ],
+        "status": "reassess",
+        "reason": "按所列问题重评；新值及变动尚未知"
+      },
+      {
+        "scope": "company",
+        "id": "C3+C4",
+        "old": 7,
+        "new": null,
+        "delta": null,
+        "issue_ids": [
+          "R05"
+        ],
+        "status": "reassess",
+        "reason": "按所列问题重评；新值及变动尚未知"
+      },
+      {
+        "scope": "company",
+        "id": "D1",
+        "old": 3,
+        "new": null,
+        "delta": null,
+        "issue_ids": [],
+        "status": "retain_candidate_basis_no_independent_reopening",
+        "reason": "本轮无独立重大异议，保留候选依据及分值；总分批准前仅核新事实是否实质联动，不另起补证任务"
+      },
+      {
+        "scope": "company",
+        "id": "D2",
+        "old": 3,
+        "new": null,
+        "delta": null,
+        "issue_ids": [
+          "R04"
+        ],
+        "status": "reassess",
+        "reason": "按所列问题重评；新值及变动尚未知"
+      },
+      {
+        "scope": "company",
+        "id": "D3",
+        "old": 2,
+        "new": null,
+        "delta": null,
+        "issue_ids": [],
+        "status": "retain_candidate_basis_no_independent_reopening",
+        "reason": "本轮无独立重大异议，保留候选依据及分值；总分批准前仅核新事实是否实质联动，不另起补证任务"
+      },
+      {
+        "scope": "company",
+        "id": "D5",
+        "old": 2,
+        "new": null,
+        "delta": null,
+        "issue_ids": [
+          "R06",
+          "R08"
+        ],
+        "status": "reassess",
+        "reason": "按所列问题重评；新值及变动尚未知"
+      },
+      {
+        "scope": "company",
+        "id": "E1",
+        "old": 3,
+        "new": null,
+        "delta": null,
+        "issue_ids": [
+          "R03"
+        ],
+        "status": "reassess",
+        "reason": "按所列问题重评；新值及变动尚未知"
+      },
+      {
+        "scope": "company",
+        "id": "E2",
+        "old": 2,
+        "new": null,
+        "delta": null,
+        "issue_ids": [
+          "R08"
+        ],
+        "status": "reassess",
+        "reason": "按所列问题重评；新值及变动尚未知"
+      },
+      {
+        "scope": "company",
+        "id": "E3",
+        "old": 2,
+        "new": null,
+        "delta": null,
+        "issue_ids": [
+          "R06"
+        ],
+        "status": "reassess",
+        "reason": "按所列问题重评；新值及变动尚未知"
+      },
+      {
+        "scope": "company",
+        "id": "E4",
+        "old": 1.5,
+        "new": null,
+        "delta": null,
+        "issue_ids": [
+          "R08"
+        ],
+        "status": "reassess",
+        "reason": "按所列问题重评；新值及变动尚未知"
+      },
+      {
+        "scope": "company",
+        "id": "E5",
+        "old": 1.5,
+        "new": null,
+        "delta": null,
+        "issue_ids": [
+          "R02"
+        ],
+        "status": "reassess",
+        "reason": "按所列问题重评；新值及变动尚未知"
+      },
+      {
+        "scope": "company",
+        "id": "E5.5",
+        "old": 1.5,
+        "new": null,
+        "delta": null,
+        "issue_ids": [
+          "R02"
+        ],
+        "status": "reassess",
+        "reason": "按所列问题重评；新值及变动尚未知"
+      },
+      {
+        "scope": "company",
+        "id": "F1",
+        "old": 2.5,
+        "new": null,
+        "delta": null,
+        "issue_ids": [
+          "R08"
+        ],
+        "status": "reassess",
+        "reason": "按所列问题重评；新值及变动尚未知"
+      },
+      {
+        "scope": "company",
+        "id": "F2",
+        "old": 3,
+        "new": null,
+        "delta": null,
+        "issue_ids": [
+          "R08"
+        ],
+        "status": "reassess",
+        "reason": "按所列问题重评；新值及变动尚未知"
+      },
+      {
+        "scope": "company",
+        "id": "F2.5",
+        "old": 1,
+        "new": null,
+        "delta": null,
+        "issue_ids": [
+          "R07",
+          "R08"
+        ],
+        "status": "reassess",
+        "reason": "按所列问题重评；新值及变动尚未知"
+      },
+      {
+        "scope": "company",
+        "id": "F3",
+        "old": 1.5,
+        "new": null,
+        "delta": null,
+        "issue_ids": [
+          "R01",
+          "R07"
+        ],
+        "status": "reassess",
+        "reason": "按所列问题重评；新值及变动尚未知"
+      },
+      {
+        "scope": "management",
+        "id": "诚信与透明度",
+        "old": 14,
+        "new": null,
+        "delta": null,
+        "issue_ids": [
+          "R08"
+        ],
+        "status": "reassess",
+        "reason": "按所列问题重评；新值及变动尚未知"
+      },
+      {
+        "scope": "management",
+        "id": "资本配置能力",
+        "old": 14,
+        "new": null,
+        "delta": null,
+        "issue_ids": [
+          "R08"
+        ],
+        "status": "reassess",
+        "reason": "按所列问题重评；新值及变动尚未知"
+      },
+      {
+        "scope": "management",
+        "id": "战略稳定性",
+        "old": 10,
+        "new": null,
+        "delta": null,
+        "issue_ids": [
+          "R08"
+        ],
+        "status": "reassess",
+        "reason": "按所列问题重评；新值及变动尚未知"
+      },
+      {
+        "scope": "management",
+        "id": "对股东友好度",
+        "old": 9,
+        "new": null,
+        "delta": null,
+        "issue_ids": [
+          "R08"
+        ],
+        "status": "reassess",
+        "reason": "按所列问题重评；新值及变动尚未知"
+      },
+      {
+        "scope": "management",
+        "id": "危机处理能力",
+        "old": 5,
+        "new": null,
+        "delta": null,
+        "issue_ids": [
+          "R08"
+        ],
+        "status": "reassess",
+        "reason": "按所列问题重评；新值及变动尚未知"
+      },
+      {
+        "scope": "management",
+        "id": "组织与人才能力",
+        "old": 6,
+        "new": null,
+        "delta": null,
+        "issue_ids": [
+          "R08"
+        ],
+        "status": "reassess",
+        "reason": "按所列问题重评；新值及变动尚未知"
+      },
+      {
+        "scope": "management",
+        "id": "表达清晰度与认知质量",
+        "old": 3,
+        "new": null,
+        "delta": null,
+        "issue_ids": [
+          "R08"
+        ],
+        "status": "reassess",
+        "reason": "按所列问题重评；新值及变动尚未知"
+      }
+    ],
+    "rule": "逐项判断后才汇总；未知不填0/中点，未变分项不无故重开。以下为修复范围而非预批分数。"
+  },
+  "decisive_evidence_scope": {
+    "locked_issue_ids": [
+      "R01",
+      "R02",
+      "R03",
+      "R04",
+      "R05",
+      "R06",
+      "R07",
+      "R08",
+      "R09"
+    ],
+    "minimum": "以R01–R08逐条验收列举为唯一一次合并补证清单；复用原件、新事实进入增量版本，不覆盖v2。",
+    "exclusions": [
+      "不要求IPO至今全部交易/人物历史",
+      "不要求未披露离任动机、私有合同、人才保留率",
+      "不要求未来税务资格成为已发生事实",
+      "不因MD缺失重复转换已有可读PDF",
+      "不因空搜索强造无处罚证明"
+    ],
+    "valuation_conditional": "仅当可信评分仍可能合格，R09中适用正式模型输入成为决定性补证；该条件分支属于本次锁定范围。"
+  },
+  "delivery_classification": {
+    "pure_delivery_issues": [],
+    "basis": "全部候选均影响事实、评分归因、资格或其前提；C009虽原标P2，但与F3理由相连，纳入R01定向研究核验。本轮没有可脱离研究而单独放行的纯交付问题。后续纯引用/状态装配错误仅在实际来源与判断已批准后局部验收。"
+  },
+  "terminal_path": {
+    "current": "defer / pending / execution_incomplete；不发布、不入池、不批准质量停止。",
+    "next": "按主任务已授权，同一例外接手作者执行尚未使用的一次普通合并研究修复；双路仅核R01–R09受影响结论和跨稿联动，首轮全文已完成不重读全套。",
+    "adjudication": "定向复查后将逐验收ID结果交原裁决；只裁剩余争议与决定性新原件，不自行新增一般研究条件。重大未关/新错按SOP和主任务记录的剩余额度处理，不因换作者或新run重置。",
+    "finish": "可信分/界否决全部档→reject，批准质量停止；合格且模型/研究完整→最高满足档eligible；关键未知仍影响资格→defer。无修复额度时撤回依赖错误结论并明确未知边界；已知错未改或验收未执行仍execution_incomplete。研究获批后交付未验收仍publish_allowed=false。"
+  },
+  "verification_notes": [
+    "裁决未读取身份映射或审核角色目录，候选按全部13项逐一处理。",
+    "已读取冻结三稿全文及指定底稿；决定性原件以本地归档PDF直接抽取核验。",
+    "审计意见定位原证据F006记打印69与原件不符：实际打印72/PDF74。此处真实来源已核，但与R02一并修正注册定位，不新增评分扣分。",
+    "review_refs引用主任务提供的两份真实匿名全文审核记录；此处不代表定向修复已通过。"
+  ]
+}

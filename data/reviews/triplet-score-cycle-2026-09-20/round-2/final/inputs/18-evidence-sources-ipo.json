@@ -1,0 +1,5 @@
+{"schema_version":1,"evidence_version":"MTC2-ipo-2026-09-20","sources":[
+{"source_id":"MTC2-SRC-IPO-AR20","type":"上市公司年度报告（本地原始披露阅读版）","path":"财报/贵州茅台/贵州茅台2020年度报告.md","period":"2020FY","sha256":"9F41A0A29C9CFE45F6253B43BB780C18BADFB588340D215F79D1138F45ACE4B1"},
+{"source_id":"MTC2-SRC-IPO-CNINFO2003","type":"首次公开发行A股第二次回访报告原件","url":"http://static.cninfo.com.cn/finalpage/2003-06-06/10725974.PDF","publisher":"南方证券股份有限公司","published":"2003-06-06","accessed":"2026-09-20"},
+{"source_id":"MTC2-SRC-IPO-IR","type":"公司官网公司简介","url":"https://www.moutaichina.com/mtgf/qygk/gsjj/index.html","publisher":"贵州茅台酒股份有限公司","accessed":"2026-09-20"}
+]}

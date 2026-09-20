@@ -1,0 +1,66 @@
+{
+  "root_thread_id": "01a0b99c-1c9b-7732-8dfe-cf7f4a687e21",
+  "roles": [
+    {
+      "role": "triplet_evidence",
+      "agent": "/root/travelsky_cycle_evidence",
+      "thread_id": "01a0bedd-3756-73d1-a53a-15e4244744a0",
+      "started_at": "2026-09-20T12:49:23.926Z",
+      "actual_contexts": [
+        {
+          "model": "gpt-5.6-terra",
+          "effort": "low"
+        }
+      ]
+    },
+    {
+      "role": "triplet_writer",
+      "agent": "/root/travelsky_cycle_writer",
+      "thread_id": "01a0bee1-9deb-7fc1-9724-ef3ec8346970",
+      "started_at": "2026-09-20T12:54:12.350Z",
+      "actual_contexts": [
+        {
+          "model": "gpt-5.6-terra",
+          "effort": "low"
+        }
+      ]
+    },
+    {
+      "role": "triplet_review_facts",
+      "agent": "/root/travelsky_cycle_facts",
+      "thread_id": "01a0beea-30b2-7e31-a870-7bb2d6fa604d",
+      "started_at": "2026-09-20T13:03:34.185Z",
+      "actual_contexts": [
+        {
+          "model": "gpt-5.6-terra",
+          "effort": "low"
+        }
+      ]
+    },
+    {
+      "role": "triplet_review_reasoning",
+      "agent": "/root/travelsky_cycle_reasoning",
+      "thread_id": "01a0beea-6e2b-75b3-8d78-7260a081b125",
+      "started_at": "2026-09-20T13:03:49.955Z",
+      "actual_contexts": [
+        {
+          "model": "gpt-5.6-sol",
+          "effort": "low"
+        }
+      ]
+    },
+    {
+      "role": "triplet_adjudicator",
+      "agent": "/root/travelsky_cycle_adjudicator",
+      "thread_id": "01a0bef1-e003-7241-acf3-1b9b36ead059",
+      "started_at": "2026-09-20T13:11:57.814Z",
+      "actual_contexts": [
+        {
+          "model": "gpt-6-astra",
+          "effort": "low"
+        }
+      ]
+    }
+  ],
+  "source": "本地session_meta/turn_context；未导出消息正文"
+}

@@ -1,0 +1,12 @@
+{
+  "stage": "score_review",
+  "frozen_at": "2026-09-20T13:07:41.311513+00:00",
+  "files": {
+    "data\\reviews\\travelsky-cycle-2026-09-20\\round-1\\writer\\workpaper.json": "fa26e16a3fae66ad50ef64f657ed27faed9e5b2e42c1865a73ef4d7a4166e62d",
+    "data\\reviews\\travelsky-cycle-2026-09-20\\round-1\\writer\\score-rationale.md": "cbea188c7139fb631a30fc822e01ec573e8cefffa363e5444b0ef623242e5879",
+    "data\\reviews\\travelsky-cycle-2026-09-20\\round-1\\writer\\score-changes.json": "1daaf55b61295d9c4750e27b4346fb21bd6f9ac8dbf830cb7607bdb891632f72",
+    "data\\reviews\\travelsky-cycle-2026-09-20\\round-1\\evidence\\coverage-v2.json": "15da1d5d931361cd5312b9592931ba4fbaebc278f2914f92ea8eebe719d91c8f"
+  },
+  "score_state": "pending",
+  "full_reports_reviewed": false
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version":1,
+  "purpose":"唯一例外裁决所需的必要证据登记；不替代冻结中性证据。",
+  "facts":[
+    {"fact_id":"MTC2-MOAT-AR25","period":"2025FY","value":"2025年报披露质量、品牌、独特工艺和环境等核心竞争力；公司自述的环境与微生物不可复制保留披露边界。","source_id":"MTC2-SRC-AR25-V2","location":{"path":"财报/贵州茅台/贵州茅台2025年度报告.md","line":651}},
+    {"fact_id":"MTC2-MOAT-H126","period":"2026H1","value":"未经审计半年度报告披露行业结构调整、市场化转型、渠道优化和质量机制；不由2025年报来源承载。","source_id":"MTC2-SRC-H126","location":{"path":"财报/贵州茅台/贵州茅台2026半年度报告.md","line":128}},
+    {"fact_id":"MTC2-BIZ-H126","period":"2026H1","value":"未经审计半年度报告明确白酒行业处于周期性和结构性调整、存量竞争加剧。","source_id":"MTC2-SRC-H126","location":{"path":"财报/贵州茅台/贵州茅台2026半年度报告.md","line":128}},
+    {"fact_id":"MTC2-STRAT-AR23","period":"2023FY","value":"战略与经营计划围绕质量、主业、产能和品牌。","source_id":"MTC2-SRC-AR23","location":{"path":"财报/贵州茅台/贵州茅台2023年度报告.md","line":289}},
+    {"fact_id":"MTC2-STRAT-AR25","period":"2025FY","value":"经营计划延续质量、市场化转型、渠道和产能建设。","source_id":"MTC2-SRC-AR25-V2","location":{"path":"财报/贵州茅台/贵州茅台2025年度报告.md","line":661}},
+    {"fact_id":"MTC2-STRAT-H126","period":"2026H1","value":"半年度报告继续披露质量观、市场化转型和渠道优化机制。","source_id":"MTC2-SRC-H126","location":{"path":"财报/贵州茅台/贵州茅台2026半年度报告.md","line":140}},
+    {"fact_id":"MTC2-ORG-AR23","period":"2023FY","value":"期末员工33302人、人均营业收入443.50万元、研发投入6.2151亿元。","source_id":"MTC2-SRC-AR23","location":{"path":"财报/贵州茅台/贵州茅台2023年度报告.md","line":824}},
+    {"fact_id":"MTC2-ORG-AR24","period":"2024FY","value":"期末员工34750人、人均营业收入491.80万元、研发投入6.9538亿元。","source_id":"MTC2-SRC-AR24","location":{"path":"财报/贵州茅台/贵州茅台2024年度报告.md","line":817}},
+    {"fact_id":"MTC2-ORG-AR25","period":"2025FY","value":"期末员工34992人、人均营业收入482.50万元、研发投入8.0313亿元。","source_id":"MTC2-SRC-AR25-V2","location":{"path":"财报/贵州茅台/贵州茅台2025年度报告.md","line":849}},
+    {"fact_id":"MTC2-CAPEX-2025","period":"2025FY vs 2024FY","value":"购建固定资产、无形资产和其他长期资产支付现金2025年31.27595亿元、2024年46.78712亿元，同比下降33.1527%。固定资产、在建工程、无形资产附注无法可靠拆出同口径运营性与土地/楼宇/工程时间差现金支出；未以转固额替代现金支出。","source_id":"MTC2-SRC-AR25-V2","location":{"path":"财报/贵州茅台/贵州茅台2025年度报告.md","line":1680},"supporting_lines":[2747,2787,2811]},
+    {"fact_id":"MTC2-CAPITAL-RETURN-2025","period":"2025FY","value":"整体资本效率代理=(853.1032483367-32.1606937612-8.429882406-0.7616259766)/((2989.445799187+3038.3484402144)/2)=26.9336%；调整后利润再打七折为18.8535%，高于8%—15%分析师资本成本压力范围。该指标不是精确ROIC或严格下界。","source_id":"MTC2-SRC-AR25-V2","location":{"path":"财报/贵州茅台/贵州茅台2025年度报告.md","line":1638},"supporting_lines":[1660,1680,599,1191,3990]},
+    {"fact_id":"MTC2-PEOPLE-2021-2026H1","period":"2021FY-2026H1","value":"2021丁雄军接任董事长、蒋焰接任财务总监/董秘；2023王莉代行总经理接替李静仁；2024张德芹接任董事长并聘任两名副总经理；2025陈华接任董事长、余思明代行董秘并任财务总监；2026H1余思明正式任董秘、涂华彬任副总经理、蒋焰解任。存在轮换但各关键岗位有选举、聘任、代行或补位，未见集中空缺模式。","source_ids":["MTC2-SRC-AR21","MTC2-SRC-AR22","MTC2-SRC-AR23","MTC2-SRC-AR24","MTC2-SRC-AR25-V2","MTC2-SRC-H126"],"locations":["财报/贵州茅台/贵州茅台2021年度报告.md:670","财报/贵州茅台/贵州茅台2022年度报告.md:695","财报/贵州茅台/贵州茅台2023年度报告.md:746","财报/贵州茅台/贵州茅台2024年度报告.md:741","财报/贵州茅台/贵州茅台2025年度报告.md:774","财报/贵州茅台/贵州茅台2026半年度报告.md:326"]},
+    {"fact_id":"MTC2-REG-AR21-25","period":"2021FY-2025FY","value":"各年年报的近三年证券监管处罚栏均为不适用；这是公司披露窗口事实，不等于外部检索穷尽。","source_ids":["MTC2-SRC-AR21","MTC2-SRC-AR22","MTC2-SRC-AR23","MTC2-SRC-AR24","MTC2-SRC-AR25-V2"],"locations":["财报/贵州茅台/贵州茅台2021年度报告.md:678","财报/贵州茅台/贵州茅台2022年度报告.md:703","财报/贵州茅台/贵州茅台2023年度报告.md:752","财报/贵州茅台/贵州茅台2024年度报告.md:749","财报/贵州茅台/贵州茅台2025年度报告.md:782"]},
+    {"fact_id":"MTC2-REG-SEARCH-20260920","period":"检索截至2026-09-20","value":"分别定向检索证券监管（证监会/上交所/监管措施/处罚）与行业监管（食品安全/环保/市场监管/行政处罚）。未发现2021年以来新的公司级重大处罚；命中主要为2020年时任董事长高卫东监管关注及2026年蒋焰留置，后者已在治理项处理。行业检索出现经销商、假酒销售者或历史子公司事件，不归为上市公司本体处罚。检索结果不能证明绝对不存在。","method":"scripts/tavily_search.py，advanced，双查询各5条","urls":["https://vip.stock.finance.sina.com.cn/corp/go.php/vGP_GetOutOfLine/stockid/600519.phtml","http://www.sse.com.cn/disclosure/listedinfo/summaries/indexDetail.shtml?SEQ=334602676"]}
+  ]
+}

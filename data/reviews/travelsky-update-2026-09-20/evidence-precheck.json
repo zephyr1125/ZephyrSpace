@@ -1,0 +1,27 @@
+{
+  "stage": "evidence_handoff_precheck",
+  "status": "v2_corrected",
+  "findings": [
+    {
+      "id": "PRE01",
+      "category": "arithmetic",
+      "location": "evidence/market-snapshot.json and facts.json TSK26-C001",
+      "observed": 22034402032.46,
+      "expected": 22035601844.245327,
+      "formula": "8.75*2926209589*0.86062",
+      "scope": "CNY换算市值；原始价格/股数/汇率不变"
+    },
+    {
+      "id": "PRE02",
+      "category": "presentation",
+      "location": "price_adjustment",
+      "issue": "未复权与unknown并列，要求按实际来源状态统一"
+    },
+    {
+      "id": "PRE03",
+      "category": "provenance",
+      "issue": "汇率原来源定位及同版中报不同索引日期需澄清"
+    }
+  ],
+  "active_version": "evidence-v2"
+}

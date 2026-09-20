@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "stage": "score_repair_targeted_recheck",
+  "scope": "仅复查decision-v1.json与decision-clarification.json锁定的R01-A1至R09-A1、改分及必要联动；非三稿全文或估值验收",
+  "frozen_inputs": {
+    "workpaper": "data/reviews/travelsky-cycle-2026-09-20/round-1/writer/workpaper-v3.json",
+    "workpaper_sha256": "3ffa597da5e3335b141e1c9b0bb0ab42b81de8ed8460a9dcd858f4f975636296",
+    "score_rationale": "data/reviews/travelsky-cycle-2026-09-20/round-1/writer/score-rationale-v3.md",
+    "score_rationale_sha256": "0365fd4190214479e259b5af48f567d8e36f67bf78a0c3921f8ae98b28ce2fa0"
+  },
+  "acceptance_results": [
+    {
+      "id": "R01-A1",
+      "status": "fail",
+      "location": "workpaper-v3.json scores.company.items[A1,A2]",
+      "evidence": "A1=2已由TSKC1R-F001闭合。A2理由写入1996前身、2000发起、2008主业整合、2022母公司/国务院国资委实控及2026现状，但evidence_refs只有TSKC1R-F001和TSK26-F018。TSKC1R-F001未登记2008整合，TSK26-F018只登记现状；裁决澄清指定的民航局页面主体承继材料或TSKC1R-F002未绑定到A2。",
+      "impact": "A2=3的专业判断本身与裁决一致，但评分底稿的完整证据链尚未达到R01-A1最小验收条件。",
+      "minimum_fix": "在A2的evidence_refs补入承载2008上市公司主业整合的TSKC1R-F002，并绑定/登记民航局页面主体承继材料；保留非逐年穷尽边界，无需新增逐年控制证明。"
+    },
+    {
+      "id": "R02-A1",
+      "status": "pass",
+      "location": "workpaper-v3.json scores.company.items[B0]",
+      "evidence": "TSKC1R-F002登记1991结算中心、2000—2001共同发起及2008—2009结算整合；理由明确系统建设到持续运营、主业延续和平台/网络型分类，并将早期毛利与亏损列为未知。",
+      "impact": "B0=2符合裁决允许值。",
+      "minimum_fix": "无"
+    },
+    {
+      "id": "R03-A1",
+      "status": "pass",
+      "location": "workpaper-v3.json scores.company.items[A3,D1,F2]",
+      "evidence": "A3已改4并引用2025资金用途、无重大收购处置和历史整合；D1已改4并引用沿革和三年方向；F2已改3并以约33%—35%分红率及股本稳定定位普通回报档，未把未知减持当负面。",
+      "impact": "三项均回到原显式档位。",
+      "minimum_fix": "无"
+    },
+    {
+      "id": "R04-A1",
+      "status": "pass",
+      "location": "workpaper-v3.json scores.company.items[E3]",
+      "evidence": "已引用TSK26-V3-F004、V3-F019、V3-F018与TSK26-F004，分列-95.403454百万元以前年度税项、税前/税/NCI桥、业务量和收入结构，并明确无完整扣非定义、不伪算比例。",
+      "impact": "E3=2按裁决闭合。",
+      "minimum_fix": "无"
+    },
+    {
+      "id": "R05-A1",
+      "status": "pass",
+      "location": "workpaper-v3.json scores.management.items[危机处理能力]",
+      "evidence": "TSKC1R-F004登记疫情压力、三路部署、双可用区、全链路监测、灾备与核心系统利用率超过99.99%；理由保留公司披露、非独立因果及个人认责/沟通时效未知边界。",
+      "impact": "危机处理能力7分符合裁决专业判断。",
+      "minimum_fix": "无"
+    },
+    {
+      "id": "R06-A1",
+      "status": "pass",
+      "location": "workpaper-v3.json scores.company.items[E5.5,F3]",
+      "evidence": "已准确写成关联方组合应收占48.276757%，而非全部关联方应收；同时登记四家关联航司单列计提、组合账龄和期后回款未知。E5.5保持小瑕疵2，F3保持3且未宣称信用风险低或经济公允已证明。",
+      "impact": "E5.5=2、F3=3按裁决闭合，不要求非公开回款资料。",
+      "minimum_fix": "无"
+    },
+    {
+      "id": "R07-A1",
+      "status": "pass",
+      "location": "workpaper-v3.json scores.company.items[B4]",
+      "evidence": "理由已限定为2026H1航空信息平台服务收入同比-1.7%，并并列同期总收入+5.6%，未再表述为全年或全公司下滑。",
+      "impact": "B4=3不变，表述联动闭合。",
+      "minimum_fix": "无"
+    },
+    {
+      "id": "R08-A1",
+      "status": "pass",
+      "location": "workpaper-v3.json scores.company.items[C3+C4]",
+      "evidence": "已删除自建、云服务和新分销接口可替代的事实式断言，改为未取得可比替代成本与当前同口径份额、不能排除替代。",
+      "impact": "C3+C4=7按裁决闭合。",
+      "minimum_fix": "无"
+    },
+    {
+      "id": "R09-A1",
+      "status": "pass",
+      "location": "workpaper-v3.json scores.company.items[C1]",
+      "evidence": "相关市场已限定为中国民航航空信息平台旅客处理、订座/离港/电子分销及紧密配套结算清算。民航局页面明确标注发布日期2015-08-28，但正文含2020年资质信息，故只作为可访问的官方历史介绍，不把全文事实归为2015时点。页面同时区分中国航信集团与上市公司，并称2008年以中国民航信息网络股份有限公司为主体完成主营业务和资产重组；2026中报当前上市集团的41家中国航司、400多家境外航司、3.719亿人次及6.512亿笔处理量完成当期承接。底稿未宣称所有业务垄断或精确份额。",
+      "impact": "C1由4改6符合澄清裁决及原第一梯队档。",
+      "minimum_fix": "无"
+    }
+  ],
+  "score_recalculation": {
+    "company_dimensions": {
+      "A": 9,
+      "B": 15,
+      "C": 16,
+      "D": 11,
+      "E": 11,
+      "F": 10
+    },
+    "company_total": 72,
+    "management_total": 74,
+    "combined_total": 146,
+    "bridge": "相对冻结候选69：A3 +1、D1 +1、F2 -1、C1 +2，净增3；管理层不变。",
+    "status": "arithmetic_pass"
+  },
+  "remaining_findings": [
+    {
+      "severity": "P1",
+      "id": "R01-A1",
+      "location": "workpaper-v3.json scores.company.items[A2].evidence_refs",
+      "claim": "A2理由中的2008主体承继事实未绑定到承载该事实的证据ID。",
+      "evidence": "TSKC1R-F002登记2008向集团发行股份收购结算主业并于2009完成；民航局官方页面进一步说明2008以上市公司为主体完成主营业务和资产重组。当前A2仅引用TSKC1R-F001、TSK26-F018。",
+      "impact": "证据链未满足裁决最小验收，当前工作底稿哈希不能批准。",
+      "recommendation": "仅补A2 evidence_refs与主体承继定位，维持A2=3和非穷尽边界；随后按R01-A1复核该位置和总分哈希。"
+    }
+  ],
+  "remaining_p0": [],
+  "remaining_p1": [
+    "R01-A1"
+  ],
+  "approval": {
+    "can_approve_scores": false,
+    "candidate_values": {
+      "company": 72,
+      "management": 74,
+      "combined": 146
+    },
+    "reason": "九项中八项通过，算术正确；R01-A1仍有决定性证据引用断链。修复只需绑定已存在的主体承继事实，不需新研究或逐年控制证明。",
+    "score_state": "pending_targeted_recheck"
+  }
+}

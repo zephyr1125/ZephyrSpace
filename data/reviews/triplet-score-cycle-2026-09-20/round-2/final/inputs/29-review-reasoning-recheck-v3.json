@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "review_role": "triplet_review_reasoning",
+  "stage": "targeted_score_recheck",
+  "issuer": "贵州茅台 600519.SH",
+  "as_of": "2026-09-20",
+  "frozen_inputs": {
+    "manifest": "data/reviews/triplet-score-cycle-2026-09-20/round-2/score-manifest-v3.json",
+    "workpaper": {
+      "path": "data/reviews/triplet-score-cycle-2026-09-20/round-2/writer/workpaper-v3.json",
+      "sha256": "53cd362274650b818936a531bfadf101d1bbc04a8199bbaadad69171927657e2"
+    },
+    "rationale": {
+      "path": "data/reviews/triplet-score-cycle-2026-09-20/round-2/writer/score-rationale-v3.md",
+      "sha256": "339cb2bd703b384cc087c97628effd71048f5f6e20906ae41c298be9cd5d84f0"
+    },
+    "acceptance": {
+      "path": "data/reviews/triplet-score-cycle-2026-09-20/round-2/writer/acceptance-v3.json",
+      "sha256": "36ab16359b5e3cd1a5db0c6aa342f3a9837cdeddeb75fdf29f1d03d633cf0571"
+    },
+    "repair_facts": {
+      "path": "data/reviews/triplet-score-cycle-2026-09-20/round-2/writer/repair-facts.json",
+      "sha256": "0d3a3f47c03037a12ba9bac88c0e6c99f802f7b4e856929f190b4929ea7d91d7"
+    },
+    "decisions": [
+      "data/reviews/triplet-score-cycle-2026-09-20/round-2/decision-v1.json",
+      "data/reviews/triplet-score-cycle-2026-09-20/round-2/decision-clarification.json",
+      "data/reviews/triplet-score-cycle-2026-09-20/round-2/decision-ipo-clarification.json"
+    ]
+  },
+  "result": {
+    "status": "targeted_recheck_failed",
+    "score_state": "not_approved",
+    "research_state": "pending",
+    "candidate_scores": {
+      "company": 87,
+      "management": 76,
+      "combined": 163
+    },
+    "candidate_gate": "A_CORE",
+    "approved_scores": null,
+    "reason": "R03-A、R05-A、R06-A、R07-A及交付验收D01-A/D02-A未全部满足；87/76/163仍是候选值。"
+  },
+  "mechanical_checks": {
+    "company_recalculated": 87,
+    "management_recalculated": 76,
+    "combined_recalculated": 163,
+    "item_counts": {
+      "company": 25,
+      "management": 7
+    },
+    "gate_recalculation": "87+76=163，且两项均不低于76，若分数最终获批则满足A_CORE评分门槛；未满足S_STRATEGIC合计170及单项82，估值确定性亦未建立。"
+  },
+  "acceptance_results": [
+    {
+      "id": "R01-A",
+      "status": "pass",
+      "items": ["A1", "A2", "A3", "B0"],
+      "evidence": "MTC2-IPO-001/002/003/005及IPO澄清已落实：A1=3、A2=3、A3=4、B0=2；2003年仅使用59.53%、余款专户及模式切换不适用边界均保留。"
+    },
+    {
+      "id": "R02-A",
+      "status": "pass",
+      "items": ["B1"],
+      "evidence": "已按2025酒类收入99.96%、茅台酒占酒类86.80%改为高度集中但逻辑清晰3分。"
+    },
+    {
+      "id": "D01-A",
+      "status": "fail_delivery",
+      "items": ["B3", "C2", "C3+C4"],
+      "evidence": "MTC2-REP-005把2025年报651行与2026H1陈述合并，但只登记MTC2-SRC-AR25-V2及2025年报路径；没有注册裁决要求的2026H1第128/140—142行来源。MTC2-REP-001/005足以支持主要判断，分数可不变，但证据注册未满足D01-A。",
+      "minimum_fix": "将2026H1第128、140—142行建立独立事实ID并绑定MTC2-SRC-H126-V2，或删去REP-005中未由AR25来源支持的H1内容；随后定向核引用。"
+    },
+    {
+      "id": "R03-A",
+      "status": "fail",
+      "items": ["D1", "D5", "战略稳定性"],
+      "evidence": "D5=2已由MTC2-REP-002的期末人数、人均收入及研发序列支持。D1引用MTC2-REP-005，但该事实对H1内容存在来源错配；管理层“战略稳定性”仍只引用MTC2-PLAN-101与MTC2-BIZ-101，没有绑定裁决要求的连续战略事实MTC2-REP-005。",
+      "minimum_fix": "修正REP-005跨来源登记，并让D1及管理层战略稳定性均引用完整的2023、2025、2026H1战略连续事实；点值4和12无需因纯引用修正自动改变。"
+    },
+    {
+      "id": "D02-A",
+      "status": "fail_delivery",
+      "items": ["D3"],
+      "evidence": "D3仍写“2026H1年报”，仍引用MTC2-BIZ-101及财务事实，未注册并引用H1第128行关于周期性、结构性调整和存量竞争的完整事实ID。",
+      "minimum_fix": "建立并引用H1第128行事实，称谓改为“2026年半年度报告”，注明未经审计；D3维持1。"
+    },
+    {
+      "id": "R04-A",
+      "status": "pass",
+      "items": ["E3", "E4", "E5.5"],
+      "evidence": "E3已按2025销量+2.13%、隐含吨均收入约-3.14%改2；E4由16.415%负债率及无实质借款支持2；E5.5由标准意见、KAM应对及无政策/估计变更支持3。"
+    },
+    {
+      "id": "R05-A",
+      "status": "fail",
+      "items": ["F1", "诚信与透明度", "危机处理能力"],
+      "evidence": "袁仁国、高卫东及蒋焰的身份、事件期与截止日状态已分离；诚信11和危机7的理由也已区分个人事件、公司披露和连续运营措施。但F1=2依赖裁决允许的5-2-1，其中额外1分必须与R06人才/激励事实一致；R06尚未满足，因此F1及联动总分不能关闭。",
+      "minimum_fix": "先关闭R06的人事模式与激励限制；再明确F1为5分基础、近十年周期性历史调查扣2、独立且不重复的激励/稳定性限制扣1，不因蒋焰未知终局再次扣分。"
+    },
+    {
+      "id": "R06-A",
+      "status": "fail",
+      "items": ["F3", "组织与人才能力", "表达清晰度与认知质量"],
+      "evidence": "F3=3已用关联交易KAM审计应对和正常财务公司资金边界替代“缺清单即瑕疵”，方向符合裁决。组织8分只引用员工总量、当前补位和留置事件，没有一次提取2021—2025及2026H1核心董监高变动与继任来源，无法支持“未见短期集中离任”。表达4分仍以“未取得电话会原话，保留一分”作为扣分理由，正是裁决要求撤回的研究缺口归因，也未引用2025战略/风险段和2026H1具体经营机制。",
+      "minimum_fix": "补最小核心高管变动/继任事实并据此判断组织分；表达4分改为用已核具体表达正证和已核目标落空/风险归因作为限制，不以未取得电话会扣分。F3保留监管检索边界。"
+    },
+    {
+      "id": "R07-A",
+      "status": "fail",
+      "items": ["F2.5", "资本配置能力"],
+      "evidence": "资本配置20分保留总认缴100亿元、已实缴40亿元、剩余60亿元及未成熟退出边界，基本符合裁决。F2.5却改为2分，同时明确基金0.7616亿元公允价值增加不是现金退出且未证明回报超过资本成本；这与2分规则“资金回报>成本”和裁决条件直接矛盾。注销回购本身也不证明逆周期配置和资金回报超过成本。",
+      "minimum_fix": "不得以当前证据确认F2.5=2。定向证明至少一个满足原规则的实际收益/资本效率先例，或按已有正反证选择其他可辩护点值/有据边界；未知不能自动给1，亦不能自动给2。随后重算公司分和总分。"
+    },
+    {
+      "id": "R08-A",
+      "status": "conditional_fail",
+      "items": ["qualification"],
+      "evidence": "底稿已完整列A_CORE合计160/单项76及S_STRATEGIC合计170/单项82、确定性和额外条件，且保持pending；门槛表达本身通过。但R05/R06/R07会改变公司分或其证据基础，因此87/76/163及A_CORE候选尚不能锁定。",
+      "minimum_fix": "受影响分项关闭后重新加总25+7项，绑定修订底稿哈希，再重算最高满足档位。"
+    }
+  ],
+  "new_material_findings": [
+    {
+      "severity": "P1",
+      "location": "writer/repair-facts.json MTC2-REP-005及相关D1/D01引用",
+      "claim": "一个事实记录混合两个原件期别，却只绑定2025年报来源和路径。",
+      "impact": "2026H1战略与渠道陈述的证据链不可解析，影响D01-A和R03-A验收。",
+      "recommendation": "按原件拆分事实ID和来源，不复用AR25来源承载H126内容。"
+    }
+  ],
+  "unchanged_items_not_reopened": [
+    "B2", "B4", "C1", "D2", "E1", "E2", "E5", "F2", "对股东友好度"
+  ],
+  "uncovered": [
+    "未重启三份长报告全文审核；长报告和估值仍未生成。",
+    "未复查裁决明确无需变化且不受本轮修复联动的评分项。",
+    "未修改公司页、索引、Watchlist、历史稿或冻结稿。"
+  ]
+}

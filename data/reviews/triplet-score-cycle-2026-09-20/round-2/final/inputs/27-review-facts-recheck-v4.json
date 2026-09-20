@@ -1,0 +1,26 @@
+{
+  "review_role": "triplet_review_facts",
+  "stage": "exception_targeted_recheck",
+  "as_of": "2026-09-20",
+  "frozen_inputs": {
+    "score_manifest": "data/reviews/triplet-score-cycle-2026-09-20/round-2/score-manifest-v4.json",
+    "workpaper": {"path":"data/reviews/triplet-score-cycle-2026-09-20/round-2/repair-writer/workpaper-v4.json","sha256":"54c5f3a9bf23297fa7ae90e8e8f0875160d169cafdd2b48a88a6795cdea7519d"},
+    "score_rationale": {"path":"data/reviews/triplet-score-cycle-2026-09-20/round-2/repair-writer/score-rationale-v4.md","sha256":"2fd1588764e0a29835851f4aea03f5182fa933d1f95ee951201de50c0b2baa39"},
+    "repair_facts": {"path":"data/reviews/triplet-score-cycle-2026-09-20/round-2/repair-writer/repair-facts-v4.json","sha256":"8af95728cc236a11d20614d8959334571a9cc5f4ee3afe6cff5f1d3d7e5dfc61"},
+    "acceptance": {"path":"data/reviews/triplet-score-cycle-2026-09-20/round-2/repair-writer/acceptance-v4.json","sha256":"5c8c3acf4028102c4eef525dd1b2c95188c6ee3ba77c892bd6d144f945d472fe"}
+  },
+  "acceptance_checks": [
+    {"id":"D01-A","status":"pass","evidence":"B3/C2/C3+C4分别登记MTC2-MOAT-AR25与MTC2-MOAT-H126；2025年年报不再承载H1渠道事实。"},
+    {"id":"D02-A","status":"pass","evidence":"D3实际文本已改为‘未经审计的2026年半年度报告’，引用MTC2-BIZ-H126；未残留‘2026H1年报’或将H1写成年度报告的错误。"},
+    {"id":"R03-A","status":"pass","evidence":"D1与管理层战略稳定性逐项引用MTC2-STRAT-AR23/AR25/H126；D5逐年绑定MTC2-ORG-AR23/AR24/AR25。"},
+    {"id":"R05-A","status":"pass","evidence":"F1明确5-2-1且未重复扣蒋焰个案；诚信11和危机7均把案情/终局作为未知边界，不再把未知作实质反证。"},
+    {"id":"R06-A","status":"pass","evidence":"MTC2-PEOPLE-2021-2026H1记录各期补位；MTC2-REG-AR21-25与MTC2-REG-SEARCH-20260920分列证券/行业监管范围，F3未将正常财务公司资金或KAM作为扣分。表达4已删除缺电话会扣分。"},
+    {"id":"R07-A","status":"pass","evidence":"MTC2-CAPITAL-RETURN-2025与workpaper桥一致：(853.1032483367-32.1606937612-8.429882406-0.7616259766)/((2989.445799187+3038.3484402144)/2)=26.9336%；七折压力值18.8535%。文本明确该值为保守整体资本效率代理、8%-15%为分析师压力范围，未把基金浮盈或控股股东增持当作上市公司超成本回报。"},
+    {"id":"R04-A-CAPEX","status":"pass","evidence":"MTC2-CAPEX-2025及E4实际文本确认现金Capex由46.78712亿元降至31.27595亿元、下降33.1527%，触发原规则；无可靠现金口径拆分，明确未拆分并由2降为1.5，未以转固额代替现金支出。"},
+    {"id":"R08-A","status":"pass","evidence":"25项公司分独立相加86.5，7项管理层分76，合计162.5；ROUND_HALF_UP显示87/76/163。A_CORE原始门槛（合计≥160且两项≥76）满足，但workpaper明确不入池。"}
+  ],
+  "calculation_checks": {"company_raw":86.5,"management_raw":76,"combined_raw":162.5,"company_display":87,"management_display":76,"combined_display":163,"capital_efficiency_proxy":0.26933601710781424,"capital_efficiency_stress":0.18853521197546996},
+  "findings": [],
+  "uncovered": ["完整三份报告、正式估值模型、三情景和敏感性均未完成；本复查不构成完整报告复核或估值批准。","A_CORE仅通过评分门槛；完整研究验收前不得写入Watchlist。"],
+  "conclusion": {"score_state":"approved_for_score_stage","approved_raw_scores":{"company":86.5,"management":76,"combined":162.5},"approved_display_scores":{"company":87,"management":76,"combined":163},"qualification":"A_CORE_score_gate_met_not_actionable","note":"例外裁决锁定的全部验收ID均通过，未发现残留重大错误；完整研究、估值和交付状态仍pending。"}
+}

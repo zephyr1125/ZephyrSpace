@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "scope": [
+    "A2控制沿革充分性",
+    "C011/C1相关市场与档位"
+  ],
+  "parent_decision": "data/reviews/travelsky-cycle-2026-09-20/round-1/decision-v1.json",
+  "changes_parent_file": false,
+  "score_state": "pending",
+  "research_state": "pending",
+  "decision": "defer",
+  "clarifications": [
+    {
+      "id": "CL-A2",
+      "original_issue": "R01",
+      "lane": "research",
+      "allowed_value": 3,
+      "ruling": "现有公开沿革连续性足以支持A2=3的专业判断，不要求逐年证明或继续获取IPO逐一股权。",
+      "basis": "2022年报发展沿革将1996改制前身、2000发起主体与现中国航信集团直接连接；公司附注打印页95说明2008向该集团发行股份收购主业资产、2009完成，打印页96明确集团为母公司及国务院国资委为实际控制人。民航局原页面进一步说明2002组建集团以前身计算机信息中心承接、2008以上市公司为主体整体上市。连同2022与2026持股现状，形成主体承继、主业整合及持续国资控制的正面链，而非仅凭当下第一大股东倒推历史。机构改制、监管机关名称/职责变化和集团内整合不能自动算实质控制权变更。",
+      "epistemic_boundary": "该3分是依据可得沿革判定未见实质控制权转移的最佳点值，不是对每一年股权文件穷尽核实的事实保证；不写“已逐年验证从未变更”。修复事实中的“不能声称全期间从未变更”限定证据证明强度，不强制null或降2。",
+      "change_trigger": "只有历史原件显示中途向无承继关系的另一控制主体转移、集团曾失去控制，或发起人前身与现母公司主体承继实际不成立，才改变判断；目前无此正面反证，不新增检索条件。",
+      "acceptance_id": "R01-A1",
+      "minimum_acceptance": "底稿引用TSKC1R-F001并补2022年报打印页95—96/民航局主体承继定位，清楚区分持股、母公司、实际控制人；原始值3，保留非穷尽核验边界。双路定向核这条链，不重复全评分。",
+      "sources": [
+        "TSKC1R-F001",
+        "TSKC1R-F002",
+        "财报/中国民航信息网络/2022年度报告.pdf PDF第4、97—98页",
+        "https://www.caac.gov.cn/GYMH/MHGK/BZQY/201508/t20150828_988.html"
+      ]
+    },
+    {
+      "id": "CL-C1",
+      "candidate_id": "C011",
+      "disposition": "成立",
+      "severity": "P1",
+      "lane": "research",
+      "status": "open",
+      "from": 4,
+      "allowed_value": 6,
+      "ruling": "撤回原“稳定第二梯队=4”的保留判断，C1改为6。缺少当前精确份额不能推出非主导者；原4无对应正面证据。",
+      "relevant_market": "中国民航航空信息平台的旅客处理、订座/离港/电子分销，以及紧密配套的航空结算清算基础服务；这是主营收入与基础网络所在市场。不是全球所有软件、全部旅游互联网或每一个机场数字化项目市场。",
+      "positive_evidence": "民航局官方企业介绍将中国航信定位为中国航空旅游业信息技术解决方案主导供应商，并描述上市公司为主业整合载体；2026中报打印页2确认上市集团为41家中国航司及400多家境外/地区航司提供ICS/CRS/APP等服务，半年处理3.719亿人次；打印页3披露全资ACCA在结算数据处理的领先地位及6.512亿笔处理量。历史独立地位与当前主营广度/规模、连续年度核心业务结合支持第一梯队，而非只靠收入高或缺竞争对手数据。",
+      "rule": "原C1：绝对龙头/Top3=6；稳定第二梯队=4。此处6是相关核心市场第一梯队的定性档位判断，不声称已量化份额，不把历史全球第三排名当作2026全球排名。",
+      "limitations": "民航局页面标2015但正文含后续年份，按读取到的官方介绍使用，不将该页面全部内容归为2015时点；其集团表述须由上市公司当前业务原件承接。机场数字化、云及智能产品各细分地位未确证，不据6分宣称所有业务垄断。客户议价、收入增长和替代威胁分别留在C2/B4/C3+C4，不重复在C1扣分。",
+      "acceptance_id": "R09-A1",
+      "minimum_acceptance": "仅改C1=6及相关市场/理由，引用TSKC1-F002、TSK26-V3-F018和中报打印页2—3，移除稳定第二梯队与因缺份额不能第一梯队的推断；同步公司维度C与总分、变化桥。双路核核心市场范围、集团/上市公司承接和原档位，不要求补齐所有同业市场份额。",
+      "sources": [
+        "TSKC1-F002",
+        "TSK26-V3-F018",
+        "财报/中国民航信息网络/2026中期报告.pdf PDF第3—4页",
+        "https://www.caac.gov.cn/GYMH/MHGK/BZQY/201508/t20150828_988.html"
+      ]
+    }
+  ],
+  "score_bridge_amendment": {
+    "additional_change": {
+      "id": "C1",
+      "from": 4,
+      "to": 6,
+      "delta": 2
+    },
+    "conditional_formula": {
+      "company": "67 + A2 + B0",
+      "management": "67 + 危机处理能力",
+      "combined": "134 + A2 + B0 + 危机处理能力"
+    },
+    "conditional_example": {
+      "company": 72,
+      "management": 74,
+      "combined": 146,
+      "condition": "A2=3、B0=2、危机7，且v1全部验收与R09-A1通过",
+      "status": "非批准值"
+    },
+    "approved_totals": {
+      "company": null,
+      "management": null,
+      "combined": null
+    }
+  },
+  "valuation": {
+    "status": "deferred",
+    "target_price": null,
+    "certainty": null,
+    "buy_price": null
+  },
+  "no_other_reopening": true,
+  "next_step": "将本澄清与v1一起交当前一次合并修复及双路定向复查；新底稿哈希绑定与评分总批准仍待验收。"
+}
