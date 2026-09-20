@@ -3,8 +3,8 @@ aliases: [American Eagle Outfitters, AEO]
 国家: 美国
 类别: 可选消费
 细分赛道: 青年服饰与女性生活方式零售
-状态: 隔离研究草稿
-最后更新日期: 2026-07-17
+状态: 已复核（未入Watchlist）
+最后更新日期: 2026-09-10
 ---
 
 # American Eagle Outfitters（AEO）
@@ -13,42 +13,40 @@ aliases: [American Eagle Outfitters, AEO]
 
 ## 三件套结论
 
-- 公司质量：**69/100**。
-- 管理层：**70/100**。
-- 合理价值：**19.0美元**。
-- 估值确定性：**0.62**。
-- 机械买入价：**14.57美元**。
-- 最大仓位：**1%**。
-- 当前参考价：17.60美元（2026-07-17）。
-- 建议档位：**Growth观察**，当前价格未进入机械买入区。
+- 公司质量：**68/100**。
+- 管理层：**71/100**。
+- 合理价值：**null**（正式估值暂停；条件模型不作为目标价）。
+- 估值确定性：**null**。
+- 机械买入价：**null**。
+- 最大新增仓位：**0%**。
+- 建议档位：**NONE（观察级，不入Watchlist）**。双评分未达到项目入库门槛；即使条件模型出现价格安全边际，也不自动构成建仓资格。
 
 ## 隔离研究档案
 
-- [[深度分析]]
-- [[管理层档案]]
-- [[估值分析]]
+- [[深度分析/American Eagle Outfitters 深度分析 68 2026-09-10]]
+- [[管理层档案/American Eagle Outfitters 管理层档案 71 2026-09-10]]
+- [[估值分析/American Eagle Outfitters 估值分析 2026-09-10]]
 
 ## 最新事实
 
-- FY2026 Q1 Aerie同店+25%，AE同店-2%。
-- FY2026经营利润指引3.90—4.10亿美元，7月1日重申。
-- FY2026 Q1库存成本+27%，单位+5%；关税和上年减记低基数影响大。
-- FY2025 FCF约1.95亿，回购加股息3.41亿，股东回报超过FCF。
-- FY2025末经营租赁负债约17.00亿，接近股东权益。
-- Mike Mathias仍为CFO；Ravi Thanawala将于2026-08-03接任。
+- FY2026 Q2 Aerie/OFFLINE同店+19%，AE同店-1%；集团同店+6%。
+- FY2026全年经营利润指引5.40—5.50亿美元含约1.61亿美元退款相关营业收益，不能作为常态经营利润直接估值。
+- Q2库存金额同比+13.9%、件数+9%；单季资本开支约0.66亿美元。累计现金流仍待Q2 10-Q确认。
+- Q2经营租赁负债约18.66亿美元；管理层关联租赁及服务安排已纳入治理复核，但公允性无法由现有披露确认。
+- Ravi Thanawala已于2026-08-03接任CFO；董事会披露了常规及应急继任评估机制。
 
 ## 监控
 
-1. AE女装同店和全价售罄。
+1. AE品牌同店、全价售罄与毛利恢复。
 2. Aerie增长与门店回收期。
 3. 单位库存、折扣和毛利率。
 4. 关税实际影响与提价接受度。
-5. FY2026经营利润和FCF。
+5. FY2026经营利润、退款会计桥与Q2累计FCF。
 6. CFO交接后的资本配置。
 7. Quiet Platforms是否仍有后续退出成本。
 
 ## 来源
 
-- FY2025 10-K：https://www.sec.gov/Archives/edgar/data/919012/000119312526132097/aeo-20260131.htm
-- FY2026 Q1 10-Q：https://www.sec.gov/Archives/edgar/data/919012/000119312526255712/aeo-20260502.htm
-- CFO交接公告：https://investors.ae.com/press-releases/news-details/2026/AEO-Inc--Announces-CFO-Transition/default.aspx
+- FY2025年报：https://www.sec.gov/Archives/edgar/data/919012/000119312526227191/d83289dars.pdf
+- FY2026 Q2业绩稿：https://investors.ae.com/press-releases/news-details/2026/AEO-Inc--Reports-Second-Quarter-Fiscal-2026-Results/default.aspx
+- 2026 Proxy：https://www.sec.gov/Archives/edgar/data/919012/000119312526227158/d70088ddef14a.htm
