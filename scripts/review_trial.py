@@ -45,7 +45,8 @@ def anonymize(sources, output, rng=None):
     rows = []
     for reviewer, path in sources.items():
         data = read(path)
-        result = data.get('result', data)
+        # 兼容旧工具的对象包装和当前审核员的字符串结论，不丢根级问题清单。
+        result = data['result'] if isinstance(data.get('result'), dict) else data
         for index, finding in enumerate(result['findings']):
             rows.append((reviewer, index, {k: finding[k] for k in
                          ('severity', 'location', 'claim', 'evidence', 'impact', 'recommendation')}))
