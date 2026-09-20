@@ -97,3 +97,53 @@ scripts/todo_data/
 # =========================
 evals/reports/**/live/**/claude_stream.jsonl
 evals/reports/**/.live/
+
+# 研究过程产物；证据、底稿和最终裁决保留，见 docs/git-artifact-policy.md
+/data/reviews/**/writer/**/*.md
+/data/reviews/**/sol/
+/data/reviews/**/astra/
+/data/reviews/**/anonymous/
+/data/reviews/**/anonymous-recheck/
+/data/reviews/**/frozen*/
+/data/reviews/**/revised-frozen/
+/data/reviews/**/originals/
+/data/reviews/**/company-pages-before/
+/data/reviews/**/drafts/
+/data/reviews/**/draft-*
+/data/reviews/**/*-draft.*
+/data/reviews/**/stage*-request.json
+/data/reviews/**/stage*-response.json
+/data/reviews/**/*-revision-response.json
+/data/reviews/**/input.json
+/data/reviews/**/status*.json
+/data/reviews/**/*-timing.json
+/data/reviews/process-audit-*/
+
+# 自动化运行快照；作为正式结论依据的必要快照归档到 data/research/
+/data/api_usage/
+/data/screens/
+/data/forecast_scan/
+/data/tmp_*/
+/scripts/_ai_bubble_scan/
+/scripts/_weekly_scan/
+/scripts/_batch*_staging/
+/scripts/_rewrite_staging/
+/scripts/_management_archive_cache/
+/scripts/broken_links_report.json
+/scripts/broken_links_report.txt
+/scripts/stock_link_report.txt
+
+# 编辑器临时文件与本地状态
+/.obsidian/workspace-mobile.json
+*.swp
+*.swo
+~$*
+
+# 历史任务散落的重复稿、冻结副本与启动流水
+/data/reviews/**/frozen-author-draft-*.md
+/data/reviews/**/repair-*-snapshot/
+/data/reviews/**/revised-deep.md
+/data/reviews/**/revised-management.md
+/data/reviews/**/revised-valuation.md
+/data/reviews/**/*-prior-input.json
+/data/reviews/**/usage-start.json
