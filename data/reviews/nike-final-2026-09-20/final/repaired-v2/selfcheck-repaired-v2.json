@@ -1,0 +1,29 @@
+{
+  "status": "mechanical_checks_passed",
+  "errors": [],
+  "scope": {
+    "scores": true,
+    "valuation_stop": true,
+    "withdrawn_price_scan": true,
+    "acceptance_ids": [
+      "N01-sbc",
+      "N01-withdraw",
+      "N02-anchor",
+      "N02-reverse",
+      "N03-preserve",
+      "N03-score",
+      "N03-status",
+      "N04-attribution",
+      "N04-bridge",
+      "N05-d2",
+      "N05-e4",
+      "N06-boundary"
+    ],
+    "report_lines": {
+      "deep": 428,
+      "management": 374,
+      "valuation": 266
+    }
+  },
+  "limitations": "复杂停止估值路径适配检查；不验证原件真实性、分析判断合理性或替代双路定向验收。"
+}

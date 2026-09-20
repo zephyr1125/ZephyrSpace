@@ -1,0 +1,79 @@
+[
+  {
+    "source_id": "S10_2025AR_EXACT",
+    "title": "东鹏饮料（集团）股份有限公司2025年年度报告",
+    "source_type": "官方披露原件",
+    "url": "https://static.cninfo.com.cn/finalpage/2026-03-31/1225063447.PDF",
+    "reporting_period": "2025-01-01/2025-12-31",
+    "disclosure_date": "2026-03-31",
+    "retrieved_date": "2026-09-16",
+    "location": "PDF P32-33，L1031-L1040；PDF P10，L286-L289",
+    "increment_from_v1": "补足FY2025精确营收、经营现金流；归母净利仍以原件披露约数记录。"
+  },
+  {
+    "source_id": "S11_2023AR_OCF",
+    "title": "东鹏饮料（集团）股份有限公司2023年年度报告",
+    "source_type": "官方披露原件",
+    "url": "https://static.cninfo.com.cn/finalpage/2024-04-15/1219612087.PDF",
+    "reporting_period": "2023-01-01/2023-12-31",
+    "disclosure_date": "2024-04-12",
+    "retrieved_date": "2026-09-16",
+    "location": "PDF P5，L160-L182；PDF P5-6，L201-L205",
+    "increment_from_v1": "补足FY2023经营现金流精确数。"
+  },
+  {
+    "source_id": "S12_HKEX_AUG_MONTHLY_RETURN",
+    "title": "Monthly Return for Equity Issuer on Movements in Securities for the month ended 31 August 2026",
+    "source_type": "HKEX官方披露原件",
+    "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0902/2026090201072.pdf",
+    "reporting_period": "截至2026-08-31",
+    "disclosure_date": "2026-09-02",
+    "retrieved_date": "2026-09-16",
+    "location": "PDF P1、P3，L8-L21、L26-L54",
+    "increment_from_v1": "补足截至8月末A/H已发行股数和A股库存股数。"
+  },
+  {
+    "source_id": "S13_HKEX_DIVIDEND_REVISED",
+    "title": "Interim Dividend for the Six Months Ended 30 June 2026 (Revised)",
+    "source_type": "HKEX官方披露原件",
+    "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0901/2026090102885.pdf",
+    "reporting_period": "2026H1",
+    "disclosure_date": "2026-09-01",
+    "retrieved_date": "2026-09-16",
+    "location": "PDF P1，L12-L35",
+    "increment_from_v1": "补足股东会批准、H股默认派付币种/金额、汇率、登记及派付日期。"
+  },
+  {
+    "source_id": "S14_HKEX_EGM_20260831",
+    "title": "2026年第二次临时股东会投票结果及中期利润分配方案",
+    "source_type": "HKEX官方披露原件",
+    "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083102241.pdf",
+    "reporting_period": "2026-08-31",
+    "disclosure_date": "2026-08-31",
+    "retrieved_date": "2026-09-16",
+    "location": "PDF P2-3，L31-L38、L67-L107",
+    "increment_from_v1": "补足A股回购证券账户的7,122,551股库存股、可表决股数及中期分红获批事实。"
+  },
+  {
+    "source_id": "S15_HK_PRICE_20260915",
+    "title": "东鹏饮料（09980）行情页面",
+    "source_type": "第三方行情补充",
+    "url": "https://www.futunn.com/stock/09980-HK",
+    "reporting_period": "2026-09-15收盘",
+    "disclosure_date": "2026-09-15",
+    "retrieved_date": "2026-09-16",
+    "location": "网页检索结果：09/15 16:01（北京）已收盘，100.500港元",
+    "increment_from_v1": "补足截止日前最近已完成交易日H股收盘价；非官方行情。"
+  },
+  {
+    "source_id": "S16_HKD_CNY_20260915",
+    "title": "国家外汇管理局人民币汇率中间价",
+    "source_type": "官方汇率来源",
+    "url": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do?COLLCC=546877760",
+    "reporting_period": "2026-09-15",
+    "disclosure_date": "2026-09-15",
+    "retrieved_date": "2026-09-16",
+    "location": "列表中港元中间价86.27（每100港元兑人民币）",
+    "increment_from_v1": "补足与9月15日收盘同日的官方中间价。"
+  }
+]

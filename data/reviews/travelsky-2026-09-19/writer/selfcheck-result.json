@@ -1,0 +1,112 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "check": "deep_line_count",
+      "passed": true,
+      "actual": 291,
+      "required": 150
+    },
+    {
+      "check": "deep_fact_prediction_unknown",
+      "passed": true
+    },
+    {
+      "check": "deep_cutoff",
+      "passed": true
+    },
+    {
+      "check": "management_line_count",
+      "passed": true,
+      "actual": 281,
+      "required": 150
+    },
+    {
+      "check": "management_fact_prediction_unknown",
+      "passed": true
+    },
+    {
+      "check": "management_cutoff",
+      "passed": true
+    },
+    {
+      "check": "valuation_line_count",
+      "passed": true,
+      "actual": 316,
+      "required": 100
+    },
+    {
+      "check": "valuation_fact_prediction_unknown",
+      "passed": true
+    },
+    {
+      "check": "valuation_cutoff",
+      "passed": true
+    },
+    {
+      "check": "company_score_sum",
+      "passed": true
+    },
+    {
+      "check": "management_score_sum",
+      "passed": true
+    },
+    {
+      "check": "two_main_models",
+      "passed": true
+    },
+    {
+      "check": "reverse_zero_weight",
+      "passed": true
+    },
+    {
+      "check": "three_scenarios",
+      "passed": true
+    },
+    {
+      "check": "sensitivity",
+      "passed": true
+    },
+    {
+      "check": "mechanical_buy_price",
+      "passed": true
+    },
+    {
+      "check": "weights_sum",
+      "passed": true
+    },
+    {
+      "check": "target_recalculation",
+      "passed": true
+    },
+    {
+      "check": "first_version_disclosure",
+      "passed": true
+    },
+    {
+      "check": "market_risk",
+      "passed": true
+    },
+    {
+      "check": "no_watchlist_write_claim",
+      "passed": true
+    }
+  ],
+  "frozen_draft": {
+    "deep": {
+      "path": "E:\\ObsidianVaults\\ZephyrSpace\\深度分析\\中国民航信息网络 深度分析 73 2026-09-19.md",
+      "sha256": "df17c971ec002657e35975c4ec635db5fee0cb2b724b16bf8204da1ed5067943",
+      "lines": 291
+    },
+    "management": {
+      "path": "E:\\ObsidianVaults\\ZephyrSpace\\管理层档案\\中国民航信息网络 管理层档案 68 2026-09-19.md",
+      "sha256": "ea75a2fb62bceeffa5f8fd1f3a22f89a188ad0acc739bb5af3330c3e3dce75d0",
+      "lines": 281
+    },
+    "valuation": {
+      "path": "E:\\ObsidianVaults\\ZephyrSpace\\估值分析\\中国民航信息网络 估值分析 2026-09-19.md",
+      "sha256": "6cd5efd78bf076890eaa09bee76537a6d718eeded65ea95abfdc35c8c1533170",
+      "lines": 316
+    }
+  }
+}

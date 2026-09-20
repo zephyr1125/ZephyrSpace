@@ -1,0 +1,25 @@
+{
+  "dual_targeted_review_passed": true,
+  "company_and_index_completed": true,
+  "unclosed_p0": 0,
+  "unclosed_p1": 0,
+  "report_lines": [
+    299,
+    350,
+    309
+  ],
+  "local_link_check": "passed",
+  "historical_reports": "sha256 unchanged",
+  "review_records": [
+    "review-a/exception-recheck.md",
+    "review-b/exception-recheck.md"
+  ],
+  "status": "complete",
+  "limits": [
+    "实际运行模型未获得独立运行时确认，仅记录已请求模型",
+    "阶段一中性包含少量旧稿信息，意见隔离而非完全内容盲审",
+    "PUMA交割、NCI法律归属等仍按报告假设和未知边界处理"
+  ],
+  "watchlist_validation": "all files passed; 0 errors and 0 warnings",
+  "external_sync": "sync_watchlist.ps1 completed; core/growth sha256 matched"
+}

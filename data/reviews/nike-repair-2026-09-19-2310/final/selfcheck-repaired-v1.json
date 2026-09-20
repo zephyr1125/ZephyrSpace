@@ -1,0 +1,23 @@
+{
+  "status": "pass",
+  "errors": [],
+  "coverage": {
+    "score_items": 32,
+    "score_range_sums": true,
+    "formal_price_null": true,
+    "repair_ids": [
+      "G02",
+      "G03",
+      "G05",
+      "G07",
+      "G08",
+      "G09A",
+      "G09B",
+      "G13"
+    ],
+    "line_count": true,
+    "active_stale_price_scan": true,
+    "fact_or_model_correctness": false,
+    "independent_review": false
+  }
+}

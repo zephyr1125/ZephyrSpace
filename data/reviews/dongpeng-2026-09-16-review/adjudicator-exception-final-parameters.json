@@ -1,0 +1,31 @@
+{
+  "company": "东鹏饮料",
+  "as_of": "2026-09-15",
+  "exception_round": 1,
+  "status": "最后一次修复待验收，研究尚未完成",
+  "cScore": 83,
+  "mScore": 77,
+  "conditional_tier": "A_CORE",
+  "target_price": null,
+  "certainty": null,
+  "buy_price": null,
+  "max_weight": null,
+  "open_P1": ["C03", "C04", "C06", "C07"],
+  "rules": {
+    "external_shares": 727076759,
+    "valuation_weights": {"fcff_dcf": 0.55, "reported_ttm_comparable_pe": 0.45, "reverse": 0},
+    "certainty_after_model_acceptance": 0.52,
+    "mechanical_buy_factor_after_acceptance": 0.7528,
+    "reported_ttm_eastroc_cny": 4907314220.69,
+    "reported_ttm_unipresident_cny": 2165877000,
+    "reported_ttm_tingyi_cny": null,
+    "tingyi_reason": "H126/H125实际归母待官方原件核验，不采用调整后H125替代",
+    "max_weight_reason": "最终估值尚未验收，组合风险预算与集中度资料不足"
+  },
+  "independent_fcff_bridge_cny": {
+    "h1_2026": 1473221619.264992,
+    "h2_bear": 819300874.501055,
+    "h2_base": 1264987955.560108,
+    "h2_bull": 1715403285.980277
+  }
+}

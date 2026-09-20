@@ -1,0 +1,80 @@
+[
+  {
+    "source_id": "S1_SEC_2026Q2_10Q",
+    "title": "Badger Meter, Inc. Form 10-Q for quarter ended June 30, 2026",
+    "issuer": "Badger Meter, Inc.",
+    "regulator": "U.S. Securities and Exchange Commission",
+    "url": "https://www.sec.gov/Archives/edgar/data/9092/000119312526313981/bmi-20260630.htm",
+    "filing_date": "2026-07-23",
+    "period_end": "2026-06-30",
+    "local_path": "data/reviews/bmi-2026-09-12/bmi-20260630-10q.htm",
+    "sha256": "D92DA8AFBAF731AD40BC21B9AA39E5A6206F2CCAB4469607EF110116AEFD4345",
+    "retrieved_date": "2026-09-12",
+    "version_identifier": "SEC accession 0001193125-26-313981"
+  },
+  {
+    "source_id": "S2_SEC_2025_10K",
+    "title": "Badger Meter, Inc. Form 10-K for year ended December 31, 2025",
+    "issuer": "Badger Meter, Inc.",
+    "regulator": "U.S. Securities and Exchange Commission",
+    "url": "https://www.sec.gov/Archives/edgar/data/9092/000119312526054739/bmi-20251231.htm",
+    "filing_date": "2026-02-17",
+    "period_end": "2025-12-31",
+    "local_path": "data/reviews/bmi-2026-09-12/bmi-20251231-10k.htm",
+    "sha256": "4F5BABEDC3A0E3C57B3CDA9A98A82017218B9C3B16045EFF1ADD6994CCC9C4A2",
+    "retrieved_date": "2026-09-12",
+    "version_identifier": "SEC accession 0001193125-26-054739"
+  },
+  {
+    "source_id": "S3_SEC_2025_ARS",
+    "title": "Badger Meter Annual Report 2025 (shareholder annual report)",
+    "issuer": "Badger Meter, Inc.",
+    "regulator": "U.S. Securities and Exchange Commission",
+    "url": "https://www.sec.gov/Archives/edgar/data/9092/000119312526096912/2025_annual_report.pdf",
+    "filing_date": "2026-03-18",
+    "period_end": "2025-12-31",
+    "local_path": "data/reviews/bmi-2026-09-12/bmi-2025-annual-report.pdf",
+    "sha256": "80E622A65E4826059A409E8EA0D6CC96F4E6D0C1600C77AF1B4C7ED5BE8C4DC9",
+    "retrieved_date": "2026-09-12",
+    "version_identifier": "SEC accession 0001193125-26-096912"
+  },
+  {
+    "source_id": "S4_SEC_2026_DEF14A",
+    "title": "Badger Meter, Inc. 2026 Definitive Proxy Statement",
+    "issuer": "Badger Meter, Inc.",
+    "regulator": "U.S. Securities and Exchange Commission",
+    "url": "https://www.sec.gov/Archives/edgar/data/9092/000119312526106185/bmi-20260311.htm",
+    "filing_date": "2026-03-13",
+    "period_end": "2026-03-11",
+    "local_path": "data/reviews/bmi-2026-09-12/bmi-20260311-def14a.htm",
+    "sha256": "D5EBF97A4012104C7365E538BA53B1416F6353B6DAF983E72ECDEA399ADA6B8D",
+    "retrieved_date": "2026-09-12",
+    "version_identifier": "SEC accession 0001193125-26-106185"
+  },
+  {
+    "source_id": "S5_SEC_2026_8K_CREDIT",
+    "title": "Badger Meter, Inc. Form 8-K: amended credit facility",
+    "issuer": "Badger Meter, Inc.",
+    "regulator": "U.S. Securities and Exchange Commission",
+    "url": "https://www.sec.gov/Archives/edgar/data/9092/000119312526267194/bmi-20260605.htm",
+    "filing_date": "2026-06-11",
+    "period_end": "2026-06-05",
+    "local_path": "data/reviews/bmi-2026-09-12/bmi-20260605-8k-credit.htm",
+    "sha256": "FD3E64D2BD5E27DF630C507E5AC44CE86D0CDB26448EA9A08EC649D5BFB66014",
+    "retrieved_date": "2026-09-12",
+    "version_identifier": "SEC accession 0001193125-26-267194"
+  },
+  {
+    "source_id": "S6_SEC_SUBMISSIONS",
+    "title": "SEC submissions feed for CIK 0000009092",
+    "issuer": "U.S. Securities and Exchange Commission",
+    "regulator": "U.S. Securities and Exchange Commission",
+    "url": "https://data.sec.gov/submissions/CIK0000009092.json",
+    "filing_date": null,
+    "period_end": null,
+    "local_path": "data/reviews/bmi-2026-09-12/sec-submissions-2026-09-12.json",
+    "sha256": "4850D85A22EEA1244779DCB4DD7864D1A1B3242885C74611CCC5C19F917A09B1",
+    "retrieved_date": "2026-09-12",
+    "version_identifier": "retrieved SEC submissions feed"
+  }
+]

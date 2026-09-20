@@ -1,0 +1,12 @@
+{
+  "run_id": "aeo-2026-09-10",
+  "cutoff_date": "2026-09-10",
+  "roles": [
+    {"role":"triplet_evidence","requested_model":"gpt-5.6-terra","requested_effort":"low","agent_id":"/root/aeo_evidence","dispatch_method":"spawn_agent custom role","actual_model":null,"actual_model_source":null,"status":"completed","artifacts":["evidence-index.md"]},
+    {"role":"triplet_writer","requested_model":"gpt-5.6-sol","requested_effort":"low","agent_id":"/root/aeo_writer","dispatch_method":"spawn_agent custom role; remediation follow-up","actual_model":null,"actual_model_source":null,"status":"completed","artifacts":["writer-self-check.md","writer-calculations.py","remediation-closure.md"]},
+    {"role":"triplet_review_sol","requested_model":"gpt-5.6-sol","requested_effort":"low","agent_id":"/root/aeo_review_sol_stage1,/root/aeo_review_sol_stage2","dispatch_method":"spawn_agent custom role; remediation review","actual_model":null,"actual_model_source":null,"status":"completed","artifacts":["review-sol-stage1.md","review-sol-stage2.md","review-sol-remediation.md"]},
+    {"role":"triplet_review_astra","requested_model":"gpt-6-astra","requested_effort":"low","agent_id":"/root/aeo_review_astra_stage1,/root/aeo_review_astra_stage2","dispatch_method":"spawn_agent custom role; remediation review","actual_model":null,"actual_model_source":null,"status":"completed","artifacts":["review-astra-stage1.md","review-astra-stage2.md","review-astra-remediation.md"]},
+    {"role":"triplet_adjudicator","requested_model":"gpt-6-astra","requested_effort":"low","agent_id":"/root/aeo_adjudication","dispatch_method":"spawn_agent custom role","actual_model":null,"actual_model_source":null,"status":"completed","artifacts":["adjudication-candidates-anonymous.md","adjudication.md"]}
+  ],
+  "model_verification_note": "调度使用项目固定自定义角色；运行时未提供实际模型或推理强度的独立验证，故actual_model保留null。"
+}

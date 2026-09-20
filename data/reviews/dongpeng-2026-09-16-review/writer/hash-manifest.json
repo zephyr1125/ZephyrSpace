@@ -1,0 +1,12 @@
+{
+  "frozen_at": "2026-09-16",
+  "evidence_version": "v1-frozen-2026-09-16+v2-increment-2026-09-16",
+  "artifacts": [
+    {"name":"valuation_model.py","lines":125,"bytes":4860,"sha256":"8073E5F9D5B198BA5D24CAA9422680438DBA38034AF2AD839877B7FC7F38B1AB"},
+    {"name":"valuation-input-v1.json","lines":45,"bytes":1863,"sha256":"41D678872D3FB777DF1A8F4A32D530DCE3D6F54EECB37DCE451E90A9BF863F5D"},
+    {"name":"valuation-output-v1.json","lines":133,"bytes":4181,"sha256":"6880A771D2FCBA97A955CECD602683D49872E80774CF3164E4F8859E3FB5D5DF"},
+    {"name":"东鹏饮料 估值分析 144 2026-09-16-draft.md","lines":292,"bytes":8142,"sha256":"91251913B4DEC7C1D3EAAF549CE4ED7B4EA61F6FE97FDF174CA95646B57555B3"},
+    {"name":"东鹏饮料 深度分析 80 2026-09-16-draft.md","lines":281,"bytes":9363,"sha256":"11B8453608D5AF14EA4AB658A7A1E36ADD9AB7D253925F152075FB47FB727BE2"},
+    {"name":"东鹏饮料 管理层档案 76 2026-09-16-draft.md","lines":350,"bytes":10211,"sha256":"58C182B06D26FF495D30FFBA6E057C6BC215CF96DB36ADF6D0D36DAE7F6BEC26"}
+  ]
+}

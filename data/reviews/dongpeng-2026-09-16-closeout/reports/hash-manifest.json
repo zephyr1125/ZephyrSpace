@@ -1,0 +1,97 @@
+{
+  "created_at": "2026-09-16T21:26:57.454086+08:00",
+  "scope": "dongpeng closeout reports awaiting directed acceptance; evidence v1.1 citation corrections",
+  "algorithm": "SHA256",
+  "files": [
+    {
+      "file": "evidence-index.md",
+      "sha256": "17F59B82AB429C90A15B797320AE3C50DF11C1583A86324B9FD6D30E5CF7D2E4",
+      "bytes": 6221,
+      "lines": 79
+    },
+    {
+      "file": "facts.json",
+      "sha256": "C0ADEC96C154ED922C0D6B56E82076421258251126C3EACEEBF610D15A8D03EF",
+      "bytes": 3375,
+      "lines": 88
+    },
+    {
+      "file": "sources.json",
+      "sha256": "AAD005A30B1B3AE2A2C30D7D4F369B449839B2BB959B53F24ED3404E77A7085B",
+      "bytes": 3395,
+      "lines": 71
+    },
+    {
+      "file": "page-location-corrections.md",
+      "sha256": "27F7A35B36BC919682CC36AC29A56CEE0C2A47E2FFC6D0BE03637BD39F6FCC48",
+      "bytes": 1828,
+      "lines": 17
+    },
+    {
+      "file": "evidence-v1/evidence-index.md",
+      "sha256": "F5C6BB39B15C0BEE12DFE94DA98BEEB119B006B686259D87DBCD60754D2B7FB2",
+      "bytes": 5830,
+      "lines": 75
+    },
+    {
+      "file": "evidence-v1/facts.json",
+      "sha256": "5C875BBBA0EE1A35961E836A60FA4E70651FA3AB416CCBD55FC6538D91A12DF6",
+      "bytes": 2990,
+      "lines": 68
+    },
+    {
+      "file": "evidence-v1/sources.json",
+      "sha256": "698E69EE0768B2EB2BAA2DD96B400582F4D1E29CD136AFA88327661B270F7952",
+      "bytes": 3154,
+      "lines": 70
+    },
+    {
+      "file": "reports/深度分析/东鹏饮料 深度分析 83 2026-09-16.md",
+      "sha256": "240D048364C3AE0EC0AEE819648DD0244205675BA0D7E9ABBBEE5F54D6D08DBF",
+      "bytes": 13012,
+      "lines": 342
+    },
+    {
+      "file": "reports/管理层档案/东鹏饮料 管理层档案 77 2026-09-16.md",
+      "sha256": "A6BD40962ED2C548BFB0F3E52E5827FF02234867A1719172647391FF2E4517BC",
+      "bytes": 18697,
+      "lines": 475
+    },
+    {
+      "file": "reports/估值分析/东鹏饮料 估值分析 2026-09-16.md",
+      "sha256": "C4CFD17B83B3AAAEB39763FAA27AC9D034A292DF7CB80DFE8808F6A4900606EF",
+      "bytes": 12830,
+      "lines": 322
+    },
+    {
+      "file": "reports/model/valuation-input.json",
+      "sha256": "FF55A3D0315826B0666160FBB3BCE3286168C5C364B045CEF8E5C5205CE83075",
+      "bytes": 4204,
+      "lines": 182
+    },
+    {
+      "file": "reports/model/valuation_model.py",
+      "sha256": "7F8D353C9D055F55C143AC01B1D66736F136AE80F6A7F9C366194C1459D6ED6F",
+      "bytes": 4956,
+      "lines": 63
+    },
+    {
+      "file": "reports/model/valuation-output.json",
+      "sha256": "624EF6D533EA063A12E9F6CCF0265F5C1686D23C1292B151D9B62B36FFEE1EB3",
+      "bytes": 11134,
+      "lines": 363
+    },
+    {
+      "file": "reports/change-list.md",
+      "sha256": "21621221D348D3E1A9DF4E3221D4C18F7DAAB5EFDFBBDBCC162FCEA4AACF9F48",
+      "bytes": 2221,
+      "lines": 35
+    },
+    {
+      "file": "reports/self-check.md",
+      "sha256": "ABB742F0BA6205DEE693B3A184EED076A457AAA1510C53896779985919DACC38",
+      "bytes": 870,
+      "lines": 15
+    }
+  ]
+}

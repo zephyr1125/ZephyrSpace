@@ -1,0 +1,82 @@
+[
+  {
+    "source_id": "SEC-SUBMISSIONS-20260912",
+    "title": "SEC EDGAR submissions JSON — UiPath, Inc. (CIK 0001734722)",
+    "publisher": "U.S. Securities and Exchange Commission",
+    "url": "https://data.sec.gov/submissions/CIK0001734722.json",
+    "local_path": "originals/sec-submissions-2026-09-12.json",
+    "retrieved_date": "2026-09-12",
+    "sha256": "1ED077F0DA3D0DB2FEA80451C2C18B6CEC165BB48428993B32965FD0C2AF4B0D",
+    "source_type": "regulator_api",
+    "notes": "用于核对截至资料截止日的申报序列和最新正式披露。"
+  },
+  {
+    "source_id": "SEC-FACTS-20260912",
+    "title": "SEC Company Facts JSON — UiPath, Inc.",
+    "publisher": "U.S. Securities and Exchange Commission",
+    "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001734722.json",
+    "local_path": "originals/sec-companyfacts-2026-09-12.json",
+    "retrieved_date": "2026-09-12",
+    "sha256": "46643C85F69E600A7FC474B819669859D04515314A69915EEDA8F73EC465C0CB",
+    "source_type": "regulator_api",
+    "notes": "结构化标签仅作交叉定位；决定性陈述回链至相应SEC申报原件。"
+  },
+  {
+    "source_id": "SEC-10K-FY2026",
+    "title": "UiPath, Inc. Form 10-K for fiscal year ended 2026-01-31",
+    "publisher": "UiPath, Inc. / U.S. Securities and Exchange Commission",
+    "url": "https://www.sec.gov/Archives/edgar/data/1734722/000173472226000012/path-20260131.htm",
+    "local_path": "originals/PATH-2026-10K-2026-03-25.htm",
+    "derived_excerpt_path": "excerpts/PATH-2026-10K-2026-03-25.txt",
+    "retrieved_date": "2026-09-12",
+    "filing_date": "2026-03-25",
+    "accession_number": "0001734722-26-000012",
+    "sha256": "9C7965B642A6BE436C0B486252193F1CF4D36F521011F5E34E1650204FE34E16",
+    "source_type": "SEC_filed_primary_document"
+  },
+  {
+    "source_id": "SEC-10Q-Q2FY2027",
+    "title": "UiPath, Inc. Form 10-Q for quarter ended 2026-07-31",
+    "publisher": "UiPath, Inc. / U.S. Securities and Exchange Commission",
+    "url": "https://www.sec.gov/Archives/edgar/data/1734722/000173472226000050/path-20260731.htm",
+    "local_path": "originals/PATH-2026-Q2-10Q-2026-09-08.htm",
+    "derived_excerpt_path": "excerpts/PATH-2026-Q2-10Q-2026-09-08.txt",
+    "retrieved_date": "2026-09-12",
+    "filing_date": "2026-09-08",
+    "accession_number": "0001734722-26-000050",
+    "sha256": "FFFC6052F377F9B44D94F728AD64B871EE02214D0FDABC7846C68DAED64862CE"
+  },
+  {
+    "source_id": "SEC-8K-20260903",
+    "title": "UiPath, Inc. Form 8-K dated 2026-09-03",
+    "publisher": "UiPath, Inc. / U.S. Securities and Exchange Commission",
+    "url": "https://www.sec.gov/Archives/edgar/data/1734722/000173472226000047/path-20260901.htm",
+    "local_path": "originals/PATH-8K-2026-09-03.htm",
+    "derived_excerpt_path": "excerpts/PATH-8K-2026-09-03.txt",
+    "retrieved_date": "2026-09-12",
+    "filing_date": "2026-09-03",
+    "accession_number": "0001734722-26-000047",
+    "sha256": "048621B47E86255AA3EF880639DD78E2A6FEF716FCC5C591A803770CF7DE3FFC",
+    "source_type": "SEC_filed_primary_document"
+  },
+  {
+    "source_id":"SEC-10K-FY2024","title":"UiPath Form 10-K FY2024","url":"https://www.sec.gov/Archives/edgar/data/1734722/000173472224000011/path-20240131.htm","local_path":"originals/PATH-2024-10K-2024-03-27.htm","derived_excerpt_path":"excerpts/PATH-2024-10K-2024-03-27.txt","retrieved_date":"2026-09-12","filing_date":"2024-03-27","accession_number":"0001734722-24-000011","sha256":"C6E1F5A75BC133D6F18B5D08CF545542EF9E813A6B03C7CF0A795D97BB7CDBA6","source_type":"SEC_filed_primary_document"
+  },
+  {
+    "source_id":"SEC-10K-FY2025","title":"UiPath Form 10-K FY2025","url":"https://www.sec.gov/Archives/edgar/data/1734722/000173472225000007/path-20250131.htm","local_path":"originals/PATH-2025-10K-2025-03-24.htm","derived_excerpt_path":"excerpts/PATH-2025-10K-2025-03-24.txt","retrieved_date":"2026-09-12","filing_date":"2025-03-24","accession_number":"0001734722-25-000007","sha256":"26AF0FC80573DF8FA55F048CBFDB0BCD7CCB2C6381F9F16B0D2B3AB1785B237D","source_type":"SEC_filed_primary_document"
+  },
+  {
+    "source_id":"SEC-10Q-Q1FY2027","title":"UiPath Form 10-Q quarter ended 2026-04-30","url":"https://www.sec.gov/Archives/edgar/data/1734722/000173472226000041/path-20260430.htm","local_path":"originals/PATH-2027-Q1-10Q-2026-06-04.htm","derived_excerpt_path":"excerpts/PATH-2027-Q1-10Q-2026-06-04.txt","retrieved_date":"2026-09-12","filing_date":"2026-06-04","accession_number":"0001734722-26-000041","sha256":"7490F488D0CEB1380225C3E618123BE8AF8B9ACD60F4CEEC8DB63F25ECEDCC8D","source_type":"SEC_filed_primary_document"
+  },
+  {
+    "source_id":"SEC-DEF14A-2026","title":"UiPath 2026 definitive proxy statement","url":"https://www.sec.gov/Archives/edgar/data/1734722/000173472226000027/path-20260512.htm","local_path":"originals/PATH-2026-DEF14A-2026-05-12.htm","derived_excerpt_path":"excerpts/PATH-2026-DEF14A-2026-05-12.txt","retrieved_date":"2026-09-12","filing_date":"2026-05-12","accession_number":"0001734722-26-000027","sha256":"E85F89B010ECC002ED410561E2D4682779FD7F2797771FD20D67D58BC0EC92B6","source_type":"SEC_filed_primary_document"
+  },
+  {
+    "source_id":"WEB-FINANCE-20260912","title":"行情工具PATH美股快照","url":null,"local_path":null,"retrieved_date":"2026-09-12","source_type":"market_data_tool","version_identifier":"latest trade time 2026-09-11 23:57:50 UTC","notes":"共同截止日行情快照；非监管原件。"
+  },
+  {
+    "source_id":"SEC-8K-99.1-Q2FY2027","title":"UiPath Q2 FY2027 earnings release, Exhibit 99.1","url":"https://www.sec.gov/Archives/edgar/data/1734722/000173472226000047/path-2026731xex991.htm","local_path":"originals/PATH-2026-Q2-earnings-release-99.1.htm","derived_excerpt_path":"excerpts/PATH-2026-Q2-earnings-release-99.1.txt","retrieved_date":"2026-09-12","filing_date":"2026-09-03","accession_number":"0001734722-26-000047","sha256":"91615C332C1A46A153803A71C14590F8E626435AE0799A5288C553770E47B72F","source_type":"SEC_furnished_exhibit"
+  },
+  {"source_id":"SEC-FACTS-COMPS-20260912","title":"SEC Company Facts responses: CRM, NOW, DDOG, ESTC, PEGA","url":"https://data.sec.gov/api/xbrl/companyfacts/","local_path":"originals/{CRM,NOW,DDOG,ESTC,PEGA}-sec-companyfacts-2026-09-12.json","retrieved_date":"2026-09-12","source_type":"regulator_api","notes":"各文件为独立SEC响应；用于comparables.md收入、现金、债务标签。行情不是SEC数据。"},
+  {"source_id":"WEB-FINANCE-COMPS-20260912","title":"市场工具同批返回：CRM/NOW/DDOG/ESTC/PEGA","url":null,"local_path":null,"retrieved_date":"2026-09-12","source_type":"market_data_tool","notes":"仅有最近成交/盘后时间戳，未获得可归档常规收盘原响应；不得作为正式市场锚。"}
+]

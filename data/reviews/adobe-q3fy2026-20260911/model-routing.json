@@ -1,0 +1,11 @@
+{
+  "run_id": "adobe-q3fy2026-20260911",
+  "roles": [
+    {"role":"triplet_evidence","requested_model":"gpt-5.6-terra","requested_effort":"low","agent_id":"/root/adobe_evidence","dispatch_method":"collaboration.spawn_agent","actual_model":null,"actual_model_source":null,"status":"completed","artifacts":["evidence-index.md","anonymous-review-candidates.md"]},
+    {"role":"triplet_writer","requested_model":"gpt-5.6-sol","requested_effort":"low","agent_id":"/root/adobe_writer","dispatch_method":"collaboration.spawn_agent","actual_model":null,"actual_model_source":null,"status":"completed","artifacts":["深度分析/Adobe 深度分析 81 2026-09-11.md","管理层档案/Adobe 管理层档案 79 2026-09-11.md","估值分析/Adobe 估值分析 2026-09-11.md","remediation-closure.md"]},
+    {"role":"triplet_review_sol","requested_model":"gpt-5.6-sol","requested_effort":"low","agent_id":"/root/adobe_review_sol","dispatch_method":"collaboration.spawn_agent","actual_model":null,"actual_model_source":null,"status":"completed","artifacts":["review-sol-stage1.md","review-sol-stage2.md","review-sol-remediation.md"]},
+    {"role":"triplet_review_astra","requested_model":"gpt-6-astra","requested_effort":"low","agent_id":"/root/adobe_review_astra","dispatch_method":"collaboration.spawn_agent","actual_model":null,"actual_model_source":null,"status":"completed","artifacts":["review-astra-stage1.md","review-astra-stage2.md","review-astra-remediation.md"]},
+    {"role":"triplet_adjudicator","requested_model":"gpt-6-astra","requested_effort":"low","agent_id":"/root/adobe_adjudicator","dispatch_method":"collaboration.spawn_agent","actual_model":null,"actual_model_source":null,"status":"completed","artifacts":["adjudication.md"]}
+  ],
+  "actual_model_note": "协作运行时未提供独立可验证的实际模型信息；actual_model 保持 null。"
+}

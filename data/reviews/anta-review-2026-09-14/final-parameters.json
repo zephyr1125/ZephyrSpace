@@ -1,0 +1,283 @@
+{
+  "name": "安踏体育",
+  "code": "02020.HK",
+  "run_id": "anta-review-2026-09-14",
+  "adjudication_round": 1,
+  "reopen_reason": null,
+  "status": "adjudicated_pending_single_repair_and_dual_targeted_checks",
+  "evidence_version": "v1.0 + v1.1 + 本裁决内新增定位",
+  "cScore": 78,
+  "mScore": 80,
+  "score_sum": 158,
+  "watchlistLevel": "B_GROWTH",
+  "target_price": 80.47,
+  "valuation_certainty": 0.6,
+  "buy_price": 61.48,
+  "buy_formula": "round(target_price * (0.68 + 0.14 * valuation_certainty), 2)",
+  "market_price": 72.45,
+  "market_date": "2026-09-11",
+  "market_triggered": false,
+  "shares_date": "2026-06-30",
+  "currency": "HKD",
+  "maxWeight": null,
+  "next_earnings_date": null,
+  "next_earnings_type": null,
+  "lastEarningsIncorporated": "2026H1",
+  "company_score_bridge": {
+    "A": [
+      2,
+      3,
+      4
+    ],
+    "B": [
+      2,
+      4,
+      3,
+      4,
+      3
+    ],
+    "C": [
+      5,
+      4,
+      5
+    ],
+    "D": [
+      4,
+      3,
+      2,
+      2
+    ],
+    "E": [
+      4,
+      5,
+      2,
+      1,
+      2,
+      2
+    ],
+    "F": [
+      4,
+      4,
+      2,
+      2
+    ]
+  },
+  "management_score_bridge": [
+    17,
+    21,
+    13,
+    12,
+    6,
+    7,
+    4
+  ],
+  "weights": {
+    "earnings_pe": 0.5,
+    "operating_cash_sotp": 0.5,
+    "reverse": 0,
+    "ddm": 0
+  },
+  "units": "金额输入均CNY billion；股数billion；每股结果HKD",
+  "formulas": {
+    "pe": "(earnings * pe + puma) / shares * fx",
+    "operating_cash": "(ocf - interest_received + tax*(interest_income - nonlease_finance_cost) - capex - lease_cash_payment - sbc)*(1-nci)",
+    "interest_income_assumption": "预测利息收入=预测收到利息；两者不是历史同值断言",
+    "net_cash": "(62.601-0.290)*(1-nci)-23.488-1.275",
+    "associates": "17.911 * associate_multiplier",
+    "puma": "12.277638425*(puma_multiplier-1)",
+    "cash_sotp": "(operating_cash/(asset_discount_rate-g)+net_cash+associates+puma)/shares*fx",
+    "reverse": "g=asset_discount_rate-operating_cash/(market_price/fx*shares-net_cash-associates-puma)",
+    "rounding": "各模型与加权保留未舍入数，最终目标价先四舍五入2位，机械买价使用该目标价"
+  },
+  "assumptions_not_facts": [
+    "2026全年盈利14/15/16；OCF23/24/25及所有预测现金项目",
+    "现金NCI比例18%/16.5%/15%是以已披露利润归属比例校准的估计，不是现金法律归属",
+    "现金模型折现率11%/10%/9%为租赁经营化后的资产要求回报率，不是将FCFF直接配Ke",
+    "PUMA按交割资产价值/对价0.7/1/1.1处理，基准净增值0，不确认交割或回报已实现",
+    "PE包含经常联营利润及金融收益，不另加净现金/联营账面；现金模型排除相关金融现金并单列净现金/联营",
+    "可转债基准按现金偿还债务；转换仅为替代情景，不同时扣债及加稀释股数"
+  ],
+  "calculation": {
+    "fx": 1.169165015220642,
+    "sh": 2.7966533,
+    "cost": 12.277638425,
+    "rows": [
+      {
+        "name": "保守",
+        "earnings": 14,
+        "pe": 11,
+        "ocf": 23,
+        "interest": 1.7,
+        "capex": 3.6,
+        "lease": 5.4,
+        "sbc": 0.4,
+        "nci": 0.18,
+        "asset_discount_rate": 0.11,
+        "g": 0.02,
+        "associate_multiplier": 0.75,
+        "puma_multiplier": 0.7,
+        "cash": 10.047295999999998,
+        "nc": 26.332020000000007,
+        "av": 13.433250000000001,
+        "puma": -3.6832915275,
+        "pe_price": 62.84119549218607,
+        "cash_price": 61.755034143709146,
+        "weighted": 62.29811481794761,
+        "tax": 0.294,
+        "nonlease_finance_cost": 0.5,
+        "tax_unlevering": 0.35279999999999995
+      },
+      {
+        "name": "基准",
+        "earnings": 15,
+        "pe": 13,
+        "ocf": 24,
+        "interest": 1.6,
+        "capex": 3.3,
+        "lease": 5.2,
+        "sbc": 0.35,
+        "nci": 0.165,
+        "asset_discount_rate": 0.1,
+        "g": 0.02,
+        "associate_multiplier": 1,
+        "puma_multiplier": 1,
+        "cash": 11.584288999999998,
+        "nc": 27.266685000000003,
+        "av": 17.911,
+        "puma": 0,
+        "pe_price": 81.5214306213878,
+        "cash_price": 79.42331878721785,
+        "weighted": 80.47237470430282,
+        "tax": 0.294,
+        "nonlease_finance_cost": 0.5,
+        "tax_unlevering": 0.3234
+      },
+      {
+        "name": "乐观",
+        "earnings": 16,
+        "pe": 15,
+        "ocf": 25,
+        "interest": 1.5,
+        "capex": 3.1,
+        "lease": 5,
+        "sbc": 0.3,
+        "nci": 0.15,
+        "asset_discount_rate": 0.09,
+        "g": 0.02,
+        "associate_multiplier": 1.25,
+        "puma_multiplier": 1.1,
+        "cash": 13.084899999999998,
+        "nc": 28.201349999999998,
+        "av": 22.38875,
+        "puma": 1.227763842500001,
+        "pe_price": 100.8473457130199,
+        "cash_price": 99.80940769162922,
+        "weighted": 100.32837670232456,
+        "tax": 0.294,
+        "nonlease_finance_cost": 0.5,
+        "tax_unlevering": 0.294
+      }
+    ],
+    "target": 80.47,
+    "buy": 61.48,
+    "gimp": 0.00958488740691893,
+    "market": 173.30105583664124,
+    "peerPE": 9.769622179622917,
+    "sensitivity_pe": {
+      "profits": [
+        14,
+        15,
+        16
+      ],
+      "multiples": [
+        11,
+        13,
+        15
+      ],
+      "prices": [
+        [
+          64.38,
+          68.98,
+          73.58
+        ],
+        [
+          76.09,
+          81.52,
+          86.96
+        ],
+        [
+          87.79,
+          94.06,
+          100.33
+        ]
+      ]
+    },
+    "sensitivity_cash": {
+      "cash": [
+        10.047296,
+        11.584289,
+        13.0849
+      ],
+      "capitalization_spread": [
+        0.07,
+        0.08,
+        0.09
+      ],
+      "prices": [
+        [
+          78.89,
+          88.07,
+          97.03
+        ],
+        [
+          71.39,
+          79.42,
+          87.27
+        ],
+        [
+          65.56,
+          72.7,
+          79.67
+        ]
+      ]
+    },
+    "reverse_sensitivity": [
+      {
+        "asset_discount_rate": 0.09,
+        "implied_g": -0.0004151125930810795
+      },
+      {
+        "asset_discount_rate": 0.1,
+        "implied_g": 0.00958488740691893
+      },
+      {
+        "asset_discount_rate": 0.11,
+        "implied_g": 0.019584887406918924
+      }
+    ],
+    "nci_sensitivity": [
+      {
+        "nci": 0.1,
+        "price": 85.82896030662913
+      },
+      {
+        "nci": 0.165,
+        "price": 79.42331878721785
+      },
+      {
+        "nci": 0.25,
+        "price": 71.04671064644927
+      }
+    ],
+    "diluted_sotp": 80.860549809514
+  },
+  "acceptance_gate": "M01及M02-M15的P1成立部分全部关闭，两路定向复查通过、三报告全文合规及公司页索引完成后方可回写；未通过不得声称研究完成",
+  "unknowns": [
+    "PUMA截至9/14完成及实际席位",
+    "Amer单独经常利润",
+    "每笔现金与NCI法律归属、利息税项精确分配",
+    "历史全部减持/监管事件、人事完整性、FILA事故原件",
+    "同业前瞻一致预期/PE历史序列",
+    "未来联营资产可实现价值及PUMA交割汇率"
+  ]
+}

@@ -1,0 +1,484 @@
+{
+  "schema_version": 2,
+  "cutoff": "2026-09-19",
+  "formal_scores": {
+    "management": null,
+    "company": null
+  },
+  "withdrawn_ranges": {
+    "combined": [
+      140.5,
+      144.5
+    ],
+    "management": [
+      68,
+      70
+    ],
+    "company": [
+      72.5,
+      74.5
+    ]
+  },
+  "known_point_subtotals": {
+    "management": 21,
+    "company": 39.5
+  },
+  "items": [
+    {
+      "group": "company",
+      "id": "A1",
+      "definition": "先发优势/技术驱动=3；政策红利=2；跟随=1；资源/壳=0",
+      "facts_and_reason": "创始人运动员背景与产品创新、品牌营销结合，形成全球先发品牌基因。",
+      "score": 3.0,
+      "rule_maximum": null,
+      "status": "旧裁决保留分项，本轮恢复理由",
+      "evidence_refs": [
+        "NKE-G-002；S001 FY2026 10-K Item 1 pp.3-5",
+        "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+        "财报/耐克/耐克FY2026_10-K.pdf"
+      ]
+    },
+    {
+      "group": "company",
+      "id": "A2",
+      "definition": "从未变更=3；一次合理变更=2；多次=0–1",
+      "facts_and_reason": "控制权长期稳定；双层股权保持Knight家族影响力，但降低B类股东董事选举权。",
+      "score": 3.0,
+      "rule_maximum": null,
+      "status": "旧裁决保留分项，本轮恢复理由",
+      "evidence_refs": [
+        "NKE-G-009；NKE-G-017",
+        "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+        "财报/耐克/耐克FY2026_10-K.pdf"
+      ]
+    },
+    {
+      "group": "company",
+      "id": "A3",
+      "definition": "融资用途清晰且无卖资产保利润=4；轻微瑕疵=2；异常=0",
+      "facts_and_reason": "主业聚焦、未见本期跨界并购/商誉堆积；更长历史融资用途未知不能形成3.5下界，点值null、规则上限4。",
+      "score": null,
+      "rule_maximum": 4.0,
+      "status": "争议点值撤回；仅列规则数学上限",
+      "evidence_refs": [
+        "repair-adjudication-v2.json",
+        "evidence/repair-evidence-correction-v3.md",
+        "财报/耐克/耐克FY2026_10-K.pdf"
+      ]
+    },
+    {
+      "group": "company",
+      "id": "B0",
+      "definition": "三个关键判断及分类完整=2；部分=1；缺失=0",
+      "facts_and_reason": "从跑鞋创新与专业运动员连接起步，演化为轻资产合同制造、品牌和渠道驱动模式。",
+      "score": 2.0,
+      "rule_maximum": null,
+      "status": "旧裁决保留分项，本轮恢复理由",
+      "evidence_refs": [
+        "NKE-G-002；S001 Item 1 HTML L217-260",
+        "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+        "财报/耐克/耐克FY2026_10-K.pdf"
+      ]
+    },
+    {
+      "group": "company",
+      "id": "B1",
+      "definition": "健康多元=4；集中但逻辑清晰=3；纯瘦狗=0–1",
+      "facts_and_reason": "FY2024–FY2026七分部收入/EBIT及合计已按Note 15恢复；点值待复查，规则上限4。",
+      "score": null,
+      "rule_maximum": 4.0,
+      "status": "争议点值撤回；仅列规则数学上限",
+      "evidence_refs": [
+        "repair-adjudication-v2.json",
+        "evidence/repair-evidence-correction-v3.md",
+        "财报/耐克/耐克FY2026_10-K.pdf"
+      ]
+    },
+    {
+      "group": "company",
+      "id": "B2",
+      "definition": "订阅/高复购/刚性=3；项目稳定=2；一次性/强周期=1",
+      "facts_and_reason": "品牌复购和规模效应较强，但运动鞋服属于可选消费，批发与直营流量均受需求波动。",
+      "score": 2.0,
+      "rule_maximum": null,
+      "status": "旧裁决保留分项，本轮恢复理由",
+      "evidence_refs": [
+        "NKE-G-002；S001 MD&A HTML L843-856",
+        "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+        "财报/耐克/耐克FY2026_10-K.pdf"
+      ]
+    },
+    {
+      "group": "company",
+      "id": "B3",
+      "definition": "强=6；中=4；弱=2；无=0",
+      "facts_and_reason": "五年毛利及量价事实已恢复；定价权综合点值待复查，规则上限6。",
+      "score": null,
+      "rule_maximum": 6.0,
+      "status": "争议点值撤回；仅列规则数学上限",
+      "evidence_refs": [
+        "repair-adjudication-v2.json",
+        "evidence/repair-evidence-correction-v3.md",
+        "财报/耐克/耐克FY2026_10-K.pdf"
+      ]
+    },
+    {
+      "group": "company",
+      "id": "B4",
+      "definition": "成长且内生=5；成熟稳定=3；衰退=0–1",
+      "facts_and_reason": "行业长期需求存在但成熟、竞争激烈；FY2024-FY2026收入由51.362降至46.398十亿美元，复苏仍需验证。",
+      "score": 2.5,
+      "rule_maximum": null,
+      "status": "旧裁决保留分项，本轮恢复理由",
+      "evidence_refs": [
+        "NKE-F-011",
+        "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+        "财报/耐克/耐克FY2026_10-K.pdf"
+      ]
+    },
+    {
+      "group": "company",
+      "id": "C1",
+      "definition": "绝对龙头/Top3=6；第二梯队=4；边缘=0–2",
+      "facts_and_reason": "公司在10-K中称其为全球最大运动鞋服销售商，仍属绝对第一梯队。",
+      "score": 6.0,
+      "rule_maximum": null,
+      "status": "旧裁决保留分项，本轮恢复理由",
+      "evidence_refs": [
+        "S001 MD&A HTML L843-847",
+        "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+        "财报/耐克/耐克FY2026_10-K.pdf"
+      ]
+    },
+    {
+      "group": "company",
+      "id": "C2",
+      "definition": "吃肉=5；喝汤=3；挨打=0–1",
+      "facts_and_reason": "合同制造与全球采购提供弹性，品牌对消费者有议价力；供应链集中、关税与批发渠道仍制约利润率。",
+      "score": 3.0,
+      "rule_maximum": null,
+      "status": "旧裁决保留分项，本轮恢复理由",
+      "evidence_refs": [
+        "NKE-G-002；S001 Risk Factors HTML L702-710",
+        "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+        "财报/耐克/耐克FY2026_10-K.pdf"
+      ]
+    },
+    {
+      "group": "company",
+      "id": "C3+C4",
+      "definition": "5星=9；4星=7；3星=5；2星=2；1星=0",
+      "facts_and_reason": "品牌、规模、运动员网络、研发与渠道构成四星级护城河；低切换成本与Adidas、On、Hoka等竞争限制满分。",
+      "score": 7.0,
+      "rule_maximum": null,
+      "status": "旧裁决保留分项，本轮恢复理由",
+      "evidence_refs": [
+        "NKE-G-002；S001 Competition and Products sections",
+        "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+        "财报/耐克/耐克FY2026_10-K.pdf"
+      ]
+    },
+    {
+      "group": "company",
+      "id": "D1",
+      "definition": "长期一致=4；可解释漂移=2；频繁变动=0",
+      "facts_and_reason": "长期围绕运动、创新和消费者连接，FY2026重新强调Win Now；DTC偏置后又修复批发，属可解释的渠道调整。",
+      "score": 3.0,
+      "rule_maximum": null,
+      "status": "旧裁决保留分项，本轮恢复理由",
+      "evidence_refs": [
+        "S001 MD&A HTML L843-847；NKE-F-011",
+        "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+        "财报/耐克/耐克FY2026_10-K.pdf"
+      ]
+    },
+    {
+      "group": "company",
+      "id": "D2",
+      "definition": "至少2/3达标=5；50%=3；持续落空=0，并受原话证据上限",
+      "facts_and_reason": "三条带发布日期、责任人和期限的承诺已恢复；进行中/部分兑现边界明确，点值null、规则上限5。",
+      "score": null,
+      "rule_maximum": 5.0,
+      "status": "争议点值撤回；仅列规则数学上限",
+      "evidence_refs": [
+        "repair-adjudication-v2.json",
+        "evidence/repair-evidence-correction-v3.md",
+        "财报/耐克/耐克FY2026_10-K.pdf"
+      ]
+    },
+    {
+      "group": "company",
+      "id": "D3",
+      "definition": "顺风=3；中性=2；逆风=1；强逆风=0",
+      "facts_and_reason": "可选消费疲弱、关税、汇率、中国市场和新品牌竞争构成明显外部逆风。",
+      "score": 1.0,
+      "rule_maximum": null,
+      "status": "旧裁决保留分项，本轮恢复理由",
+      "evidence_refs": [
+        "S001 Risk Factors；S001 MD&A",
+        "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+        "财报/耐克/耐克FY2026_10-K.pdf"
+      ]
+    },
+    {
+      "group": "company",
+      "id": "D5",
+      "definition": "人效上升且投入健康=3；混合=2；恶化=0",
+      "facts_and_reason": "FY2023–FY2026期末员工口径人效已恢复；非平均FTE且研发未单列，点值null、规则上限3。",
+      "score": null,
+      "rule_maximum": 3.0,
+      "status": "争议点值撤回；仅列规则数学上限",
+      "evidence_refs": [
+        "repair-adjudication-v2.json",
+        "evidence/repair-evidence-correction-v3.md",
+        "财报/耐克/耐克FY2026_10-K.pdf"
+      ]
+    },
+    {
+      "group": "company",
+      "id": "E1",
+      "definition": "经营驱动ROE>15%=5；杠杆驱动=2–3；ROE<10%=0–1",
+      "facts_and_reason": "三年杜邦已按FY2026总资产38410恢复；规则连接仍待复查，点值null、上限5。",
+      "score": null,
+      "rule_maximum": 5.0,
+      "status": "争议点值撤回；仅列规则数学上限",
+      "evidence_refs": [
+        "repair-adjudication-v2.json",
+        "evidence/repair-evidence-correction-v3.md",
+        "财报/耐克/耐克FY2026_10-K.pdf"
+      ]
+    },
+    {
+      "group": "company",
+      "id": "E2",
+      "definition": "OCF/净利>80%且FCF持续正=5；基本达标=3；持续负=0",
+      "facts_and_reason": "FY2024–FY2026 OCF/净利均高于80%，三年平均112.497%；简化FCF 6617/3268/2184百万美元均为正，满足原规则5档。",
+      "score": 5.0,
+      "rule_maximum": null,
+      "status": "v2裁决批准",
+      "evidence_refs": [
+        "NKE-F-010；NKE-F-011；NKE-F-020",
+        "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+        "财报/耐克/耐克FY2026_10-K.pdf"
+      ]
+    },
+    {
+      "group": "company",
+      "id": "E3",
+      "definition": "扣非>85%且量价驱动=3；一次性可辨=2；补贴依赖=0",
+      "facts_and_reason": "慢增长本身不满足原增长质量评分定义；一次性/量价桥不足，点值null、上限3。",
+      "score": null,
+      "rule_maximum": 3.0,
+      "status": "争议点值撤回；仅列规则数学上限",
+      "evidence_refs": [
+        "repair-adjudication-v2.json",
+        "evidence/repair-evidence-correction-v3.md",
+        "财报/耐克/耐克FY2026_10-K.pdf"
+      ]
+    },
+    {
+      "group": "company",
+      "id": "E4",
+      "definition": "负债适中且偿债宽裕=2；一般=1；高杠杆短债压力=0",
+      "facts_and_reason": "Capex同比59.0698%触发未拆分-0.5明文例外，但基准档仍待复查，点值null、上限2。",
+      "score": null,
+      "rule_maximum": 2.0,
+      "status": "争议点值撤回；仅列规则数学上限",
+      "evidence_refs": [
+        "repair-adjudication-v2.json",
+        "evidence/repair-evidence-correction-v3.md",
+        "财报/耐克/耐克FY2026_10-K.pdf"
+      ]
+    },
+    {
+      "group": "company",
+      "id": "E5",
+      "definition": "标准审计、低商誉、应收好=2；隐患=1；重大疑点=0",
+      "facts_and_reason": "库存、准备与商誉表已恢复；资产质量综合点值待复查，规则上限2。",
+      "score": null,
+      "rule_maximum": 2.0,
+      "status": "争议点值撤回；仅列规则数学上限",
+      "evidence_refs": [
+        "repair-adjudication-v2.json",
+        "evidence/repair-evidence-correction-v3.md",
+        "财报/耐克/耐克FY2026_10-K.pdf"
+      ]
+    },
+    {
+      "group": "company",
+      "id": "E5.5",
+      "definition": "KAM无异常、政策稳定、计提充分=3；小瑕疵=2；重大问题=0–1",
+      "facts_and_reason": "所得税CAM及准备表已恢复；会计稳健性综合点值待复查，规则上限3。",
+      "score": null,
+      "rule_maximum": 3.0,
+      "status": "争议点值撤回；仅列规则数学上限",
+      "evidence_refs": [
+        "repair-adjudication-v2.json",
+        "evidence/repair-evidence-correction-v3.md",
+        "财报/耐克/耐克FY2026_10-K.pdf"
+      ]
+    },
+    {
+      "group": "company",
+      "id": "F1",
+      "definition": "核心团队稳定、廉洁且激励绑定=5；个别问题扣分；现任调查触发降级",
+      "facts_and_reason": "CEO/CFO更替已核，其他任命不能充离任，未知原因不设下界；点值null、上限5。",
+      "score": null,
+      "rule_maximum": 5.0,
+      "status": "争议点值撤回；仅列规则数学上限",
+      "evidence_refs": [
+        "repair-adjudication-v2.json",
+        "evidence/repair-evidence-correction-v3.md",
+        "财报/耐克/耐克FY2026_10-K.pdf"
+      ]
+    },
+    {
+      "group": "company",
+      "id": "F2",
+      "definition": "高分红、无不良减持、融资审慎=5；一般=3；不对齐=0–1",
+      "facts_and_reason": "分红、回购、绩效约束及双层股权事实已核；综合点值待复查，上限5。",
+      "score": null,
+      "rule_maximum": 5.0,
+      "status": "争议点值撤回；仅列规则数学上限",
+      "evidence_refs": [
+        "repair-adjudication-v2.json",
+        "evidence/repair-evidence-correction-v3.md",
+        "财报/耐克/耐克FY2026_10-K.pdf"
+      ]
+    },
+    {
+      "group": "company",
+      "id": "F2.5",
+      "definition": "审慎配置且回报高于成本=2；瑕疵=1；缺失=0；正面先例可+0.5但不超上限",
+      "facts_and_reason": "ROIC/回购/Capex桥已恢复；不使用无成功先例支持的+0.5，点值null、上限2。",
+      "score": null,
+      "rule_maximum": 2.0,
+      "status": "争议点值撤回；仅列规则数学上限",
+      "evidence_refs": [
+        "repair-adjudication-v2.json",
+        "evidence/repair-evidence-correction-v3.md",
+        "财报/耐克/耐克FY2026_10-K.pdf"
+      ]
+    },
+    {
+      "group": "company",
+      "id": "F3",
+      "definition": "透明清洁且ESG低=3；小瑕疵/中风险=2；重大问题=0",
+      "facts_and_reason": "独立审查与披露为正面，一次Section 16迟报属小瑕疵；亲属身份和海关争议不自动等于利益输送或处罚，维持2。",
+      "score": 2.0,
+      "rule_maximum": null,
+      "status": "旧裁决保留分项，本轮恢复理由",
+      "evidence_refs": [
+        "NKE-G-017；NKE-G-018；V3-004",
+        "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+        "财报/耐克/耐克FY2026_10-K.pdf"
+      ]
+    },
+    {
+      "group": "management",
+      "id": "诚信与透明度",
+      "definition": "管理层七维表满分20；原文、披露、审计与言行兑现综合判断",
+      "facts_and_reason": "审计、ICFR、海关重大例外、CFO交接与迟报均已披露；原16为综合候选且未批准，点值null、上限20。",
+      "score": null,
+      "rule_maximum": 20.0,
+      "status": "争议点值撤回；仅列规则数学上限",
+      "evidence_refs": [
+        "repair-adjudication-v2.json",
+        "evidence/repair-evidence-correction-v3.md",
+        "SRC-8K-20260623",
+        "SRC-DEF14A-2026"
+      ]
+    },
+    {
+      "group": "management",
+      "id": "资本配置能力",
+      "definition": "管理层七维表满分25；分红、回购、并购、投入产出与融资综合判断",
+      "facts_and_reason": "ROIC、回购、Capex、SBC和补偿桥已恢复；原12未获批准，点值null、上限25。",
+      "score": null,
+      "rule_maximum": 25.0,
+      "status": "争议点值撤回；仅列规则数学上限",
+      "evidence_refs": [
+        "repair-adjudication-v2.json",
+        "evidence/repair-evidence-correction-v3.md",
+        "SRC-8K-20260623",
+        "SRC-DEF14A-2026"
+      ]
+    },
+    {
+      "group": "management",
+      "id": "战略稳定性",
+      "definition": "管理层七维表满分15；战略主线与执行路径一致性",
+      "facts_and_reason": "运动与创新主线稳定，DTC偏置后修复批发关系，执行路径调整但非使命漂移，维持10。",
+      "score": 10.0,
+      "rule_maximum": null,
+      "status": "旧裁决保留分项，本轮恢复理由",
+      "evidence_refs": [
+        "S001 MD&A HTML L843-856；NKE-F-011",
+        "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+        "SRC-8K-20260623",
+        "SRC-DEF14A-2026"
+      ]
+    },
+    {
+      "group": "management",
+      "id": "对股东友好度",
+      "definition": "管理层七维表满分15；分红、回购、投票权与交易对齐",
+      "facts_and_reason": "FY2026分红2.407十亿美元与绩效约束已核，双层股权削弱B类制衡；未知内部交易不扣分，维持11。",
+      "score": 11.0,
+      "rule_maximum": null,
+      "status": "旧裁决保留分项，本轮恢复理由",
+      "evidence_refs": [
+        "NKE-F-015；NKE-G-017",
+        "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+        "SRC-8K-20260623",
+        "SRC-DEF14A-2026"
+      ]
+    },
+    {
+      "group": "management",
+      "id": "危机处理能力",
+      "definition": "管理层七维表满分10；反应、承担、行动和结果",
+      "facts_and_reason": "纠偏动作与结果边界已恢复；原7为候选判断，点值null、上限10。",
+      "score": null,
+      "rule_maximum": 10.0,
+      "status": "争议点值撤回；仅列规则数学上限",
+      "evidence_refs": [
+        "repair-adjudication-v2.json",
+        "evidence/repair-evidence-correction-v3.md",
+        "SRC-8K-20260623",
+        "SRC-DEF14A-2026"
+      ]
+    },
+    {
+      "group": "management",
+      "id": "组织与人才能力",
+      "definition": "管理层七维表满分10；稳定性、人才保留和激励",
+      "facts_and_reason": "人效、内部人才与更替已核；未知离任不设下界，点值null、上限10。",
+      "score": null,
+      "rule_maximum": 10.0,
+      "status": "争议点值撤回；仅列规则数学上限",
+      "evidence_refs": [
+        "repair-adjudication-v2.json",
+        "evidence/repair-evidence-correction-v3.md",
+        "SRC-8K-20260623",
+        "SRC-DEF14A-2026"
+      ]
+    },
+    {
+      "group": "management",
+      "id": "表达清晰度与认知质量",
+      "definition": "管理层七维表满分5；原话、限定词、风险认知和可验证性",
+      "facts_and_reason": "三条原始承诺已恢复；原4为候选判断，点值null、上限5。",
+      "score": null,
+      "rule_maximum": 5.0,
+      "status": "争议点值撤回；仅列规则数学上限",
+      "evidence_refs": [
+        "repair-adjudication-v2.json",
+        "evidence/repair-evidence-correction-v3.md",
+        "SRC-8K-20260623",
+        "SRC-DEF14A-2026"
+      ]
+    }
+  ],
+  "qualification_note": "数学满分上限不等于可信评分上界；未知不能作为0或负面。当前不足以判断收录资格，建议defer。"
+}

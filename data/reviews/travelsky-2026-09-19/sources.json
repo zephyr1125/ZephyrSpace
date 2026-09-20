@@ -1,0 +1,93 @@
+[
+  {
+    "source_id": "S001",
+    "title": "Interim Report 2026",
+    "issuer": "TravelSky Technology Limited",
+    "source_type": "港交所正式披露",
+    "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0910/2026091000312.pdf",
+    "local_path": "财报/中国民航信息网络/2026中期报告.pdf",
+    "reporting_period": "截至2026-06-30止六个月",
+    "publication_date": "2026-09-10",
+    "retrieved_date": "2026-09-19",
+    "sha256": "1A35195CCF38C1679937188E7A05AC26A4376FBDDEA40B777A10E45EBF87B782",
+    "access_status": "已归档且可访问"
+  },
+  {
+    "source_id": "S002",
+    "title": "Announcement of Results for the Six Months Ended June 30, 2026",
+    "issuer": "TravelSky Technology Limited",
+    "source_type": "港交所正式披露",
+    "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0824/2026082400836.pdf",
+    "local_path": "财报/中国民航信息网络/2026中期业绩公告.pdf",
+    "reporting_period": "截至2026-06-30止六个月",
+    "publication_date": "2026-08-24",
+    "retrieved_date": "2026-09-19",
+    "sha256": "CE213CB3004B1E448024AFF6B41278C2F7D881676B3E2D4CC9C03DEE12D2867A",
+    "access_status": "已归档且可访问"
+  },
+  {
+    "source_id": "S003",
+    "title": "Monthly Return of Equity Issuer on Movements in Securities for the month ended 31 August 2026",
+    "issuer": "TravelSky Technology Limited",
+    "source_type": "港交所正式披露",
+    "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0831/2026083100576.pdf",
+    "local_path": "财报/中国民航信息网络/2026年8月股份变动月报.pdf",
+    "reporting_period": "截至2026-08-31",
+    "publication_date": "2026-08-31",
+    "retrieved_date": "2026-09-19",
+    "sha256": "4478B9DD8F4A8258794F05DFAFC618E7904A03DADBFE9AC37E38BA3DC60A6193",
+    "access_status": "已归档且可访问"
+  },
+  {
+    "source_id": "S004",
+    "title": "Announcement: Proposed Change of Auditor",
+    "issuer": "TravelSky Technology Limited",
+    "source_type": "港交所正式披露",
+    "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0601/2026060103065.pdf",
+    "local_path": "财报/中国民航信息网络/2026拟变更会计师事务所公告.pdf",
+    "reporting_period": null,
+    "publication_date": "2026-06-01",
+    "retrieved_date": "2026-09-19",
+    "sha256": "3A0723C65B948171DBA502A627EE2027A15B2239B5DCE187FFD305E78FF55BA3",
+    "access_status": "已归档且可访问"
+  },
+  {
+    "source_id": "S005",
+    "title": "Announcement: Resignation of the Executive Director and General Manager",
+    "issuer": "TravelSky Technology Limited",
+    "source_type": "港交所正式披露",
+    "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0413/2026041300358.pdf",
+    "local_path": "财报/中国民航信息网络/2026总经理辞任公告.pdf",
+    "reporting_period": null,
+    "publication_date": "2026-04-13",
+    "retrieved_date": "2026-09-19",
+    "sha256": "8741F12A0F82F64CB739563B7300158C789D3E36CD6E8F53E0B0E679B2FA36F1",
+    "access_status": "已归档且可访问"
+  },
+  {
+    "source_id": "S006",
+    "title": "Announcement: Continuing Connected Transactions Renewal of the Transactions under the Service Agreement with TravelSky Mobile Tech",
+    "issuer": "TravelSky Technology Limited",
+    "source_type": "港交所正式披露",
+    "url": "https://media-travelsky.todayir.com/20260610164001600512197443_en.pdf",
+    "local_path": "财报/中国民航信息网络/2026关联交易续签公告.pdf",
+    "reporting_period": null,
+    "publication_date": "2026-06-10",
+    "retrieved_date": "2026-09-19",
+    "sha256": "97838BBDE786BB8149847EEC8EEF6BA82F7E98F42860FD218C2187E336B2076D",
+    "access_status": "本地归档可访问；港交所精确直链待补录"
+  },
+  {
+    "source_id": "S007",
+    "title": "2025 Annual Report",
+    "issuer": "TravelSky Technology Limited",
+    "source_type": "港交所正式披露",
+    "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0422/2026042200654.pdf",
+    "local_path": null,
+    "reporting_period": "截至2025-12-31止年度",
+    "publication_date": "2026-04-22",
+    "retrieved_date": "2026-09-19",
+    "sha256": null,
+    "access_status": "官方URL已核实；尚未归档，待完整包阶段下载并定位审计意见"
+  }
+]

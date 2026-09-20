@@ -1,0 +1,506 @@
+{
+  "schema_version": 1,
+  "run_id": "nike-repair-2026-09-19-2310",
+  "role": "triplet_review_astra",
+  "stage": "final_exception_directed_recheck",
+  "cutoff": "2026-09-19",
+  "coverage": {
+    "full_affected_reports": [
+      {
+        "path": "data/reviews/nike-repair-2026-09-19-2310/drafts/repaired-v2/deep.md",
+        "lines": 391
+      },
+      {
+        "path": "data/reviews/nike-repair-2026-09-19-2310/drafts/repaired-v2/management.md",
+        "lines": 358
+      },
+      {
+        "path": "data/reviews/nike-repair-2026-09-19-2310/drafts/repaired-v2/valuation.md",
+        "lines": 146
+      }
+    ],
+    "input_scope": "repair-adjudication-v2与原13ID；复用前两阶段已核原件与规则，未读另一复核、未补新研究、未改报告。",
+    "frozen_manifest": "已独立计算全部列示文件SHA256，与manifest一致。",
+    "direct_original_recheck": "本轮重读FY2026 10-K印刷p.73–74（税务余额及性质）、p.63库存准备；复用本角色前次独立读p.46–47承诺、57–59财务、75/77股数税款、84准备、86–88分部/海关及SEC治理原页。",
+    "independent_calculation": "三年分部六列加总、三年杜邦四因子、四年人效、E2现金比/FCF、39.5/21已固定小计；未运行作者计算器作独立验证。",
+    "preservation": "与本角色v1记录及裁决九项恢复清单定向对照；不因P2重复旧全文审核。"
+  },
+  "acceptance_checks": [
+    {
+      "id": "G02-sbc",
+      "status": "withdrawn",
+      "evidence": "已撤回每股模型，保留历史股数、SBC及归属未知，无新增双扣模型。"
+    },
+    {
+      "id": "G02-equity",
+      "status": "withdrawn_and_bounded",
+      "evidence": "valuation四补2000+5942=7942、租赁3091及经营租金不重复扣边界，不恢复滚续预测/超额现金。"
+    },
+    {
+      "id": "G02-recalc",
+      "status": "withdrawn_with_P2_residual",
+      "evidence": "价格均null、模型空、有效价区撤回；十三明确三档FCFE为已撤回历史输入，但74行仍保留现在时，记P2。"
+    },
+    {
+      "id": "G03-eps",
+      "status": "withdrawn",
+      "evidence": "FY2027 EPS和依赖价格未恢复。"
+    },
+    {
+      "id": "G03-anchor",
+      "status": "withdrawn",
+      "evidence": "PE权重未恢复；35.51/2.10仅静态PE，非独立锚。"
+    },
+    {
+      "id": "G03-completion",
+      "status": "withdrawn",
+      "evidence": "无正式目标价、确信度、买入价；没有以区间上界宣告reject。"
+    },
+    {
+      "id": "G05-tax",
+      "status": "bounded_and_withdrawn",
+      "evidence": "1270/268/260/742历史现金税限定正确；新增准备表742错期不属于此现金税桥，归G13。"
+    },
+    {
+      "id": "G07-score",
+      "status": "corrected_with_P2_residual",
+      "evidence": "E2=5符合独立复算；底稿A3、E1/E3/E4/E5/E5.5/F2/F2.5及管理层争议值null，144.5撤回。deep:109仍残留A3 3.5–4，与明确null冲突，不用残留批准任何下界。"
+    },
+    {
+      "id": "G08-people",
+      "status": "bounded",
+      "evidence": "CEO更替日期给旧冻结定位并明确可降为未直接确认；CFO日期差异、其他任命不计离任、人事原因unknown保留。按原允许界定路径，不要求新补证。"
+    },
+    {
+      "id": "G08-score",
+      "status": "withdrawn_and_restored_with_P2_residual",
+      "evidence": "原话与人效表恢复，F1/组织/D2/D5点值在底稿撤回；management:202仍残留8–10、241残留表达3，已无总分/上界，列P2不另开轮。"
+    },
+    {
+      "id": "G09-segments",
+      "status": "corrected",
+      "evidence": "三年七分部+合计恢复；独立逐列加总正确，底稿/score-review均Note15；旧Note19仅作作废提示。"
+    },
+    {
+      "id": "G09-commitments",
+      "status": "corrected_and_bounded",
+      "evidence": "代言15.5/1.7、产品采购4.9/4.7、其他采购2.4/1.6分类与p.46–47相符；v3增量作废旧错行。费用/Capex分配unknown，模型继续撤回。重估条件尚有Capex类别旧词，列P2不否定正确数值表。"
+    },
+    {
+      "id": "G13-single-source",
+      "status": "open_known_error",
+      "evidence": "九项主要内容恢复且哈希相符，但税务准备表把FY2026影响税率部分742错列FY2025余额，原件为1026。属于已知错期而非固有未知，故仍不满足正确事实恢复。"
+    }
+  ],
+  "restoration_checks": [
+    {
+      "item": "分部表",
+      "status": "corrected",
+      "evidence": "deep B1七分部及合计，收入51362/46309/46398，EBIT6539/3778/3850，Note15。"
+    },
+    {
+      "item": "杜邦",
+      "status": "corrected",
+      "evidence": "deep三年表复算一致，FY2026资产38410、平均37494.5、权益14039；正确比率未变。"
+    },
+    {
+      "item": "准备与CAM",
+      "status": "failed_one_fact",
+      "evidence": "库存213/233、销售1589/1834、退货资产511/528、退货准备1099/1277、商誉240已恢复；税收利益953/742被错做两年余额，见F01。"
+    },
+    {
+      "item": "执行原话",
+      "status": "restored",
+      "evidence": "deep D2和management二恢复三条发布日期、责任人、期限和条件，不将未到期判失败；本轮不重搜原公告。"
+    },
+    {
+      "item": "员工人效",
+      "status": "restored",
+      "evidence": "management六四年表与独立除法一致，期末人数非平均FTE声明正确；deep D5为null未主张已证成。"
+    },
+    {
+      "item": "关联报酬",
+      "status": "restored",
+      "evidence": "deep F3恢复221/146/175/125千美元和独立审查，与前次直接读DEF14A相符，不按亲属扣分。"
+    },
+    {
+      "item": "资本配置/Capex",
+      "status": "restored_as_diagnostic",
+      "evidence": "management三恢复ROIC18.7/20.2、旧WACC仅示意、两类回购与23.6未知；Capex59.0698%与-0.5原规则恢复。未据此批准资本配置点值。"
+    },
+    {
+      "item": "债租边界",
+      "status": "corrected",
+      "evidence": "valuation四2000/5942/7942及3091，租金已经营扣除不双扣，不恢复未验证滚续。"
+    },
+    {
+      "item": "海关风险",
+      "status": "restored",
+      "evidence": "deep风险图/事实段、management八、valuation风险恢复重大例外、上诉担保、范围不可估及1.3bn非索赔额。deep前置仍泛称，但全文已有明确例外，不单独判漏风险P1。"
+    }
+  ],
+  "score_item_checks": [
+    {
+      "id": "company/A1",
+      "score": 3,
+      "rule_maximum": null,
+      "status": "retained_prior_adjudication",
+      "evidence": "原裁决保留及本次防回退；E2另有原件/独立算术。"
+    },
+    {
+      "id": "company/A2",
+      "score": 3,
+      "rule_maximum": null,
+      "status": "retained_prior_adjudication",
+      "evidence": "原裁决保留及本次防回退；E2另有原件/独立算术。"
+    },
+    {
+      "id": "company/A3",
+      "score": null,
+      "rule_maximum": 4,
+      "status": "withdrawn_not_irreducible_unknown",
+      "evidence": "按v2允许撤回路径；不强估、不当0、不形成可信下界；部分为规则判断尚未执行充分，不能一概称公司固有未知。"
+    },
+    {
+      "id": "company/B0",
+      "score": 2,
+      "rule_maximum": null,
+      "status": "retained_prior_adjudication",
+      "evidence": "原裁决保留及本次防回退；E2另有原件/独立算术。"
+    },
+    {
+      "id": "company/B1",
+      "score": null,
+      "rule_maximum": 4,
+      "status": "withdrawn_not_irreducible_unknown",
+      "evidence": "按v2允许撤回路径；不强估、不当0、不形成可信下界；部分为规则判断尚未执行充分，不能一概称公司固有未知。"
+    },
+    {
+      "id": "company/B2",
+      "score": 2,
+      "rule_maximum": null,
+      "status": "retained_prior_adjudication",
+      "evidence": "原裁决保留及本次防回退；E2另有原件/独立算术。"
+    },
+    {
+      "id": "company/B3",
+      "score": null,
+      "rule_maximum": 6,
+      "status": "withdrawn_not_irreducible_unknown",
+      "evidence": "按v2允许撤回路径；不强估、不当0、不形成可信下界；部分为规则判断尚未执行充分，不能一概称公司固有未知。"
+    },
+    {
+      "id": "company/B4",
+      "score": 2.5,
+      "rule_maximum": null,
+      "status": "retained_prior_adjudication",
+      "evidence": "原裁决保留及本次防回退；E2另有原件/独立算术。"
+    },
+    {
+      "id": "company/C1",
+      "score": 6,
+      "rule_maximum": null,
+      "status": "retained_prior_adjudication",
+      "evidence": "原裁决保留及本次防回退；E2另有原件/独立算术。"
+    },
+    {
+      "id": "company/C2",
+      "score": 3,
+      "rule_maximum": null,
+      "status": "retained_prior_adjudication",
+      "evidence": "原裁决保留及本次防回退；E2另有原件/独立算术。"
+    },
+    {
+      "id": "company/C3+C4",
+      "score": 7,
+      "rule_maximum": null,
+      "status": "retained_prior_adjudication",
+      "evidence": "原裁决保留及本次防回退；E2另有原件/独立算术。"
+    },
+    {
+      "id": "company/D1",
+      "score": 3,
+      "rule_maximum": null,
+      "status": "retained_prior_adjudication",
+      "evidence": "原裁决保留及本次防回退；E2另有原件/独立算术。"
+    },
+    {
+      "id": "company/D2",
+      "score": null,
+      "rule_maximum": 5,
+      "status": "withdrawn_not_irreducible_unknown",
+      "evidence": "按v2允许撤回路径；不强估、不当0、不形成可信下界；部分为规则判断尚未执行充分，不能一概称公司固有未知。"
+    },
+    {
+      "id": "company/D3",
+      "score": 1,
+      "rule_maximum": null,
+      "status": "retained_prior_adjudication",
+      "evidence": "原裁决保留及本次防回退；E2另有原件/独立算术。"
+    },
+    {
+      "id": "company/D5",
+      "score": null,
+      "rule_maximum": 3,
+      "status": "withdrawn_not_irreducible_unknown",
+      "evidence": "按v2允许撤回路径；不强估、不当0、不形成可信下界；部分为规则判断尚未执行充分，不能一概称公司固有未知。"
+    },
+    {
+      "id": "company/E1",
+      "score": null,
+      "rule_maximum": 5,
+      "status": "withdrawn_not_irreducible_unknown",
+      "evidence": "按v2允许撤回路径；不强估、不当0、不形成可信下界；部分为规则判断尚未执行充分，不能一概称公司固有未知。"
+    },
+    {
+      "id": "company/E2",
+      "score": 5,
+      "rule_maximum": null,
+      "status": "independently_verified_5",
+      "evidence": "原裁决保留及本次防回退；E2另有原件/独立算术。"
+    },
+    {
+      "id": "company/E3",
+      "score": null,
+      "rule_maximum": 3,
+      "status": "withdrawn_not_irreducible_unknown",
+      "evidence": "按v2允许撤回路径；不强估、不当0、不形成可信下界；部分为规则判断尚未执行充分，不能一概称公司固有未知。"
+    },
+    {
+      "id": "company/E4",
+      "score": null,
+      "rule_maximum": 2,
+      "status": "withdrawn_not_irreducible_unknown",
+      "evidence": "按v2允许撤回路径；不强估、不当0、不形成可信下界；部分为规则判断尚未执行充分，不能一概称公司固有未知。"
+    },
+    {
+      "id": "company/E5",
+      "score": null,
+      "rule_maximum": 2,
+      "status": "withdrawn_not_irreducible_unknown",
+      "evidence": "按v2允许撤回路径；不强估、不当0、不形成可信下界；部分为规则判断尚未执行充分，不能一概称公司固有未知。"
+    },
+    {
+      "id": "company/E5.5",
+      "score": null,
+      "rule_maximum": 3,
+      "status": "withdrawn_not_irreducible_unknown",
+      "evidence": "按v2允许撤回路径；不强估、不当0、不形成可信下界；部分为规则判断尚未执行充分，不能一概称公司固有未知。"
+    },
+    {
+      "id": "company/F1",
+      "score": null,
+      "rule_maximum": 5,
+      "status": "withdrawn_not_irreducible_unknown",
+      "evidence": "按v2允许撤回路径；不强估、不当0、不形成可信下界；部分为规则判断尚未执行充分，不能一概称公司固有未知。"
+    },
+    {
+      "id": "company/F2",
+      "score": null,
+      "rule_maximum": 5,
+      "status": "withdrawn_not_irreducible_unknown",
+      "evidence": "按v2允许撤回路径；不强估、不当0、不形成可信下界；部分为规则判断尚未执行充分，不能一概称公司固有未知。"
+    },
+    {
+      "id": "company/F2.5",
+      "score": null,
+      "rule_maximum": 2,
+      "status": "withdrawn_not_irreducible_unknown",
+      "evidence": "按v2允许撤回路径；不强估、不当0、不形成可信下界；部分为规则判断尚未执行充分，不能一概称公司固有未知。"
+    },
+    {
+      "id": "company/F3",
+      "score": 2,
+      "rule_maximum": null,
+      "status": "retained_prior_adjudication",
+      "evidence": "原裁决保留及本次防回退；E2另有原件/独立算术。"
+    },
+    {
+      "id": "management/诚信与透明度",
+      "score": null,
+      "rule_maximum": 20,
+      "status": "withdrawn_not_irreducible_unknown",
+      "evidence": "按v2允许撤回路径；不强估、不当0、不形成可信下界；部分为规则判断尚未执行充分，不能一概称公司固有未知。"
+    },
+    {
+      "id": "management/资本配置能力",
+      "score": null,
+      "rule_maximum": 25,
+      "status": "withdrawn_not_irreducible_unknown",
+      "evidence": "按v2允许撤回路径；不强估、不当0、不形成可信下界；部分为规则判断尚未执行充分，不能一概称公司固有未知。"
+    },
+    {
+      "id": "management/战略稳定性",
+      "score": 10,
+      "rule_maximum": null,
+      "status": "retained_prior_adjudication",
+      "evidence": "原裁决保留及本次防回退；E2另有原件/独立算术。"
+    },
+    {
+      "id": "management/对股东友好度",
+      "score": 11,
+      "rule_maximum": null,
+      "status": "retained_prior_adjudication",
+      "evidence": "原裁决保留及本次防回退；E2另有原件/独立算术。"
+    },
+    {
+      "id": "management/危机处理能力",
+      "score": null,
+      "rule_maximum": 10,
+      "status": "withdrawn_not_irreducible_unknown",
+      "evidence": "按v2允许撤回路径；不强估、不当0、不形成可信下界；部分为规则判断尚未执行充分，不能一概称公司固有未知。"
+    },
+    {
+      "id": "management/组织与人才能力",
+      "score": null,
+      "rule_maximum": 10,
+      "status": "withdrawn_not_irreducible_unknown",
+      "evidence": "按v2允许撤回路径；不强估、不当0、不形成可信下界；部分为规则判断尚未执行充分，不能一概称公司固有未知。"
+    },
+    {
+      "id": "management/表达清晰度与认知质量",
+      "score": null,
+      "rule_maximum": 5,
+      "status": "withdrawn_not_irreducible_unknown",
+      "evidence": "按v2允许撤回路径；不强估、不当0、不形成可信下界；部分为规则判断尚未执行充分，不能一概称公司固有未知。"
+    }
+  ],
+  "independent_calculations": {
+    "known_point_subtotals": {
+      "company": 39.5,
+      "management": 21
+    },
+    "formal_totals": null,
+    "withdrawn_bound": 144.5,
+    "segment_revenue_sums": [
+      51362,
+      46309,
+      46398
+    ],
+    "segment_ebit_sums": [
+      6539,
+      3778,
+      3850
+    ],
+    "dupont": [
+      {
+        "year": 2024,
+        "net_margin": 0.11097698687745804,
+        "turnover": 1.358046562049682,
+        "multiplier": 2.660230709713723,
+        "roe": 0.4009284659210804
+      },
+      {
+        "year": 2025,
+        "net_margin": 0.06951132609212032,
+        "turnover": 1.2400487354228868,
+        "multiplier": 2.7019136852005934,
+        "roe": 0.23289802119885686
+      },
+      {
+        "year": 2026,
+        "net_margin": 0.06698564593301436,
+        "turnover": 1.237461494352505,
+        "multiplier": 2.670738656599473,
+        "roe": 0.2213832894080775
+      }
+    ],
+    "revenue_per_year_end_employee": [
+      0.6119115890083632,
+      0.6468765743073048,
+      0.5952313624678663,
+      0.6355890410958904
+    ],
+    "cfo_ni_three_year_mean": 1.1249724108344799,
+    "fcf_millions": [
+      6617,
+      3268,
+      2184
+    ],
+    "capex_growth": 0.5906976744186045,
+    "static_pe": 16.909523809523808,
+    "tax_position_true_change": {
+      "absolute": -73,
+      "percent": -7.115009746588696
+    },
+    "tax_position_wrong_row_change": {
+      "absolute": 211,
+      "percent": 28.4366576819407
+    }
+  },
+  "findings": [
+    {
+      "id": "F01",
+      "original_ids": [
+        "G13-single-source"
+      ],
+      "severity": "P1",
+      "category": "fact_error",
+      "location": "drafts/repaired-v2/deep.md:288，会计估计与准备表；evidence/repair-evidence-correction-v3.md称该表已恢复；final/repair-closeout-v2.json G13",
+      "claim": "税务准备表将FY2026的742百万美元影响税率部分错误放入FY2025余额栏。",
+      "evidence": "独立读取本地FY2026 10-K印刷p.74/PDF78：未确认税收利益期末FY2026为953、FY2025为1026、FY2024为990百万美元；紧随段落说明953中742若未来确认会影响有效税率。953−1026=−73（−7.115%），新表953−742=+211（+28.437%）会反转趋势。原v2恢复条件953/742是总额与其中部分，不是两年度值。",
+      "impact": "影响税务风险余额趋势和E5/E5.5事实基础；虽点分及价格已撤回，不影响当前机械目标价，但该已知错误仍作为有效历史事实留在报告，故不能将本run记closed_with_uncertainty。不是仅漏百分比的展示项。",
+      "recommendation": "交原裁决员仅冻结证据终局处置，明确错误行及依赖的趋势判断无效，正式分数/价格保持null。不可自行开启第三轮作者修复；若终局选择保留冻结报告，应按execution_incomplete准确记录。"
+    },
+    {
+      "id": "F02",
+      "original_ids": [
+        "G07-score",
+        "G08-score",
+        "G02-recalc",
+        "G13-single-source"
+      ],
+      "severity": "P2",
+      "category": "presentation",
+      "location": "deep.md:109、C2正文；management.md:202、241；valuation.md:74、130",
+      "claim": "撤回已在底稿、表格及结论生效，但正文仍有旧区间/点分/模型措辞。",
+      "evidence": "deep109仍称A3支持3.5–4；management202仍称组织8–10，241仍称表达3/5；valuation74仍称设置1.9/2.3/2.7，124明确其历史撤回；130重估条件仍用Capex承诺而87已正确为其他采购。核心表/底稿均null、无144.5排除结论、无有效价格区。",
+      "impact": "唯一参数与阅读一致性欠佳，不能据残留批准评分或恢复模型；依原裁决P2处理，不独立阻塞或要求新轮。",
+      "recommendation": "终局以已撤回状态为准，记录这些旧句不具效力；不因展示清理再开全文或作者轮次。"
+    }
+  ],
+  "blind_risk_changes": [
+    {
+      "ids": [
+        "B06"
+      ],
+      "result": "FY2026资产和三年杜邦均恢复并复算正确，第一阶段资产冲突关闭。"
+    },
+    {
+      "ids": [
+        "B07",
+        "B08",
+        "B11",
+        "B13"
+      ],
+      "result": "撤回路径持续成立，承诺金额类别纠正并传播到v3增量；未要求未来假设变事实。"
+    },
+    {
+      "ids": [
+        "B09",
+        "B12"
+      ],
+      "result": "库存等准备与海关风险恢复；新增税务准备错期为确定事实错误，不能归入剩余不可知。"
+    }
+  ],
+  "uncovered": [
+    "不重新抓FY2020–23财报、历史原话、市场价、Form4/144或法院/EEOC状态；复用原已核材料并注明边界。",
+    "ROIC/WACC仅按裁决既有示意恢复，本轮不建立新WACC；规则数学上限不当可信评分界限。",
+    "所有null评分中，部分是待完成事实到规则的判断，并非公司未披露导致的固有未知；本复核不兼任作者补完，也不因null本身扣公司分。"
+  ],
+  "mechanical_check_assessment": "manifest匹配；原check三项null/模型空/快照失败是适配限制，不能证明事实错误清零；F01表头含义错误不被机器词项覆盖检测识别。",
+  "recommendation": {
+    "decision": "defer",
+    "research_status": "execution_incomplete",
+    "answer": "暂不入库；主要事实表已恢复，价格与资格上界已撤回，但税务余额错期仍未隔离，不能称只剩固有未知。",
+    "approved_parameters": {
+      "company_score": null,
+      "management_score": null,
+      "target_price": null,
+      "certainty": null,
+      "buy_price": null
+    },
+    "preserved": "已固定公司分项小计39.5、管理层小计21及E2=5可保留，小计不是总分或评级。",
+    "final_only": "本次是最后双路复查，交原裁决员一次终局处置；不补证、不建模、不派第三轮作者。"
+  }
+}

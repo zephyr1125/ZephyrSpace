@@ -1,0 +1,203 @@
+{
+  "run_id": "nike-repair-2026-09-19-2310",
+  "task_type": "repair",
+  "previous_run": "nike-2026-09-19",
+  "root_thread_id": "01a0b9c1-dd39-7a43-ad63-635504dc0fa3",
+  "started_at": "2026-09-19T15:10:01.258Z",
+  "information_cutoff": "2026-09-19",
+  "gate_status": "not_applicable_repair",
+  "repair_rounds": 2,
+  "status": "closed_defer_execution_incomplete",
+  "roles": [
+    {
+      "role": "triplet_evidence",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "low",
+      "agent_id": "/root/nike_fix_evidence",
+      "actual_model": "gpt-5.6-terra",
+      "status": "complete",
+      "dispatch_method": "collaboration自定义角色；显式模型、low、fork_turns=none",
+      "actual_model_source": "final/usage-audit-final.json 会话turn_context记录；非独立后端认证",
+      "session_id": "01a0ba38-860e-7912-a315-094551776e73",
+      "usage_ref": "final/usage-audit-final.json current.sessions/01a0ba38-860e-7912-a315-094551776e73",
+      "completed_turn_timings": [
+        {
+          "timestamp": "2026-09-19T15:14:53.514Z",
+          "duration_ms": 231626,
+          "error": false
+        }
+      ]
+    },
+    {
+      "role": "triplet_adjudicator",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "low",
+      "agent_id": "/root/nike_fix_adjudication",
+      "actual_model": "gpt-6-astra",
+      "status": "complete",
+      "dispatch_method": "collaboration自定义角色；显式模型、low、fork_turns=none",
+      "actual_model_source": "final/usage-audit-final.json 会话turn_context记录；非独立后端认证",
+      "session_id": "01a0ba3a-0071-7280-a8bb-c1eb72c8283f",
+      "usage_ref": "final/usage-audit-final.json current.sessions/01a0ba3a-0071-7280-a8bb-c1eb72c8283f",
+      "completed_turn_timings": [
+        {
+          "timestamp": "2026-09-19T15:17:36.92Z",
+          "duration_ms": 298165,
+          "error": false
+        },
+        {
+          "timestamp": "2026-09-19T15:41:12.179Z",
+          "duration_ms": 263023,
+          "error": false
+        },
+        {
+          "timestamp": "2026-09-19T15:58:49.517Z",
+          "duration_ms": 221535,
+          "error": false
+        }
+      ]
+    },
+    {
+      "role": "triplet_writer",
+      "requested_model": "gpt-5.6-sol",
+      "requested_effort": "low",
+      "agent_id": "/root/nike_fix_writer",
+      "actual_model": "gpt-5.6-sol",
+      "status": "complete",
+      "dispatch_method": "collaboration自定义角色；显式模型、low、fork_turns=none",
+      "actual_model_source": "final/usage-audit-final.json 会话turn_context记录；非独立后端认证",
+      "session_id": "01a0ba3d-61de-7ed3-a378-7a9f6e676af6",
+      "usage_ref": "final/usage-audit-final.json current.sessions/01a0ba3d-61de-7ed3-a378-7a9f6e676af6",
+      "completed_turn_timings": [
+        {
+          "timestamp": "2026-09-19T15:29:36.817Z",
+          "duration_ms": 796487,
+          "error": false
+        },
+        {
+          "timestamp": "2026-09-19T15:50:41.681Z",
+          "duration_ms": 553147,
+          "error": false
+        }
+      ]
+    },
+    {
+      "role": "triplet_review_sol",
+      "requested_model": "gpt-5.6-sol",
+      "requested_effort": "low",
+      "agent_id": "/root/nike_fix_review_sol",
+      "actual_model": "gpt-5.6-sol",
+      "status": "complete",
+      "dispatch_method": "collaboration自定义角色；显式模型、low、fork_turns=none",
+      "actual_model_source": "final/usage-audit-final.json 会话turn_context记录；非独立后端认证",
+      "session_id": "01a0ba3d-a067-7b42-a885-12fac660a63e",
+      "usage_ref": "final/usage-audit-final.json current.sessions/01a0ba3d-a067-7b42-a885-12fac660a63e",
+      "completed_turn_timings": [
+        {
+          "timestamp": "2026-09-19T15:19:35.756Z",
+          "duration_ms": 179434,
+          "error": false
+        },
+        {
+          "timestamp": "2026-09-19T15:35:39.055Z",
+          "duration_ms": 357638,
+          "error": false
+        },
+        {
+          "timestamp": "2026-09-19T15:54:00.987Z",
+          "duration_ms": 195750,
+          "error": false
+        }
+      ]
+    },
+    {
+      "role": "triplet_review_astra",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "low",
+      "agent_id": "/root/nike_fix_review_astra",
+      "actual_model": "gpt-6-astra",
+      "status": "complete",
+      "dispatch_method": "collaboration自定义角色；显式模型、low、fork_turns=none",
+      "actual_model_source": "final/usage-audit-final.json 会话turn_context记录；非独立后端认证",
+      "session_id": "01a0ba40-d26f-71d3-872a-59d86d5283b1",
+      "usage_ref": "final/usage-audit-final.json current.sessions/01a0ba40-d26f-71d3-872a-59d86d5283b1",
+      "completed_turn_timings": [
+        {
+          "timestamp": "2026-09-19T15:23:13.308Z",
+          "duration_ms": 187562,
+          "error": false
+        },
+        {
+          "timestamp": "2026-09-19T15:36:15.634Z",
+          "duration_ms": 379086,
+          "error": false
+        },
+        {
+          "timestamp": "2026-09-19T15:54:44.024Z",
+          "duration_ms": 227331,
+          "error": false
+        }
+      ]
+    }
+  ],
+  "stage_timings": [
+    {
+      "stage": "baseline_evidence",
+      "start": "2026-09-19T15:10:01.258Z",
+      "end": null,
+      "source": "调度时钟，包含排队等待"
+    },
+    {
+      "stage": "merged_repair",
+      "start": "2026-09-19T15:20:54.3481054Z",
+      "end": null,
+      "source": "调度记录时钟，修复已开始，包含等待"
+    },
+    {
+      "stage": "targeted_recheck",
+      "start": "2026-09-19T15:30:33.0772819Z",
+      "end": null,
+      "source": "调度记录时钟，包含等待"
+    },
+    {
+      "stage": "exception_adjudication",
+      "start": "2026-09-19T15:37:05.5378477Z",
+      "end": null,
+      "source": "调度记录时钟，包含等待"
+    },
+    {
+      "stage": "exception_repair",
+      "start": "2026-09-19T15:41:37.4001567Z",
+      "end": null,
+      "source": "调度记录时钟，包含等待"
+    },
+    {
+      "stage": "final_targeted_recheck",
+      "start": "2026-09-19T15:51:15.9073651Z",
+      "end": null,
+      "source": "调度记录时钟，包含等待"
+    },
+    {
+      "stage": "terminal_adjudication",
+      "start": "2026-09-19T15:55:23.6379478Z",
+      "end": null,
+      "source": "调度记录时钟，包含等待"
+    }
+  ],
+  "reopen_reason": "首次修复留下承诺类别事实错误及已核内容回退，评分上界未证成；按原ID进行唯一例外定向裁决",
+  "decision": "defer",
+  "research_status": "execution_incomplete",
+  "usage_audit": "final/usage-audit-final.json",
+  "root_model_source": "final/usage-audit-final.json current root turn_context",
+  "timing_limit": "阶段记录为调度侧观察时间，遗漏的结束时刻保留null；各角色真实已完成轮次时间见usage-audit，不回填估计值。",
+  "final_artifacts": [
+    "final/decision-closeout.json",
+    "final/terminal-adjudication.json",
+    "final/研究处置.md",
+    "final/用量对照.md",
+    "final/workpaper-repaired-v2.json",
+    "final/review-sol-repaired-v2.json",
+    "final/review-astra-repaired-v2.json"
+  ],
+  "ended_at": "2026-09-19T16:02:32.2720777Z"
+}

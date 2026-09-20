@@ -1,0 +1,36 @@
+{
+  "evidence_version": "v2-increment-2026-09-16",
+  "supersedes": "market-snapshot.json (v1-frozen-2026-09-16)",
+  "as_of_collection": "2026-09-16（香港市场尚未收盘时采集）",
+  "primary_security": {
+    "code": "09980.HK",
+    "market": "香港联合交易所",
+    "security_class": "H股普通股",
+    "currency": "HKD",
+    "close_price": 100.5,
+    "trading_date": "2026-09-15",
+    "price_source_id": "S15_HK_PRICE_20260915",
+    "adjustment": "网页未明确复权口径；按页面所示已收盘价格记录",
+    "reason_for_not_using_2026_09_16": "采集时香港市场尚未收盘，采用截止日前最近已完成交易日。"
+  },
+  "fx": {
+    "pair": "HKD/CNY",
+    "rate": 0.8627,
+    "rate_date": "2026-09-15",
+    "rate_type": "人民币汇率中间价，1港元兑人民币",
+    "source_id": "S16_HKD_CNY_20260915"
+  },
+  "derived_for_currency_alignment_only": {
+    "primary_close_price_cny_equivalent": 86.70135,
+    "formula": "100.5 HKD × 0.8627 CNY/HKD",
+    "warning": "仅为同日汇率换算；不是估值结论，也不作为跨市场套利或目标价输入。"
+  },
+  "share_count_as_of_2026_08_31": {
+    "total_ordinary_shares": 734199310,
+    "A_issued_excluding_treasury": 668894349,
+    "A_treasury": 7122551,
+    "H_issued_excluding_treasury": 58182410,
+    "H_treasury": 0,
+    "source_id": "S12_HKEX_AUG_MONTHLY_RETURN"
+  }
+}

@@ -1,0 +1,458 @@
+{
+  "schema_version": 1,
+  "run_id": "nike-repair-2026-09-19-2310",
+  "role": "triplet_review_astra",
+  "stage": "single_directed_recheck",
+  "cutoff": "2026-09-19",
+  "status": "failed_material_acceptance",
+  "independence": {
+    "other_review_read": false,
+    "agents_started": false,
+    "reports_modified": false,
+    "author_calculation_used_as_verification": false
+  },
+  "coverage": {
+    "full_reports": [
+      {
+        "path": "data/reviews/nike-repair-2026-09-19-2310/drafts/repaired-v1/deep.md",
+        "lines": 333
+      },
+      {
+        "path": "data/reviews/nike-repair-2026-09-19-2310/drafts/repaired-v1/management.md",
+        "lines": 328
+      },
+      {
+        "path": "data/reviews/nike-repair-2026-09-19-2310/drafts/repaired-v1/valuation.md",
+        "lines": 142
+      }
+    ],
+    "frozen_hashes": "已独立计算manifest全部文件SHA256，均相符",
+    "rules": "复用第一阶段已读三模块核心及review-checks；本阶段按唯一13验收ID，不新增偏好条件。",
+    "originals": "直接核FY2026 10-K印刷p.26、45–47、52–54、57–59、61、69–70、75、77、84–88；SEC CFO主文Item5.02；DEF14A选举、控制、支付率、人事、关联交易。",
+    "noncritical_sampling": "七年表已恢复，FY2024–26原件金额直接核；FY2020–23未重抓历史原件，只查保留及趋势算术。未重复全网治理检索。",
+    "baseline": "对baseline-v1底稿/管理层全文差异及旧最终修订稿已核分部/杜邦/人效/承诺/准备/资金桥定向比对。未读另一审核文件。",
+    "omission_check": "Note16比利时海关争议、p.84销售准备，从原件章节独立抽查，见F04/F02。"
+  },
+  "acceptance_checks": [
+    {
+      "id": "G02-sbc",
+      "status": "passed_by_withdrawal",
+      "evidence": "valuation四：每股FCFE、SBC/发行重叠与潜在稀释模型已撤回；p.59/75/77原件可核3+6百万股、715费用、1481加权股数；不把9百万股全当当期费用。残留旧三档仅另记P2文字矛盾。"
+    },
+    {
+      "id": "G02-equity",
+      "status": "partial",
+      "evidence": "无保留回购预测/超额现金加项，故资金双用已隔离；但原条件要求保留的2bn到期滚续、租金经营现金处理被整体删去，见G13防回退。无需恢复其正式估值效力。"
+    },
+    {
+      "id": "G02-recalc",
+      "status": "passed_by_withdrawal",
+      "evidence": "三份参数均null，底稿models=[]、weighted全null、正式价区删除；不要求撤回后重算失效模型。旧34.213160和相关机械价未再作为有效输出。"
+    },
+    {
+      "id": "G03-eps",
+      "status": "passed_by_withdrawal",
+      "evidence": "FY2027 EPS及依赖价格已撤回，未来收入桥列重评条件。"
+    },
+    {
+      "id": "G03-anchor",
+      "status": "passed_by_withdrawal",
+      "evidence": "PE权重及合理价撤回，独立样本缺口保留；35.51/2.10仅历史静态PE诊断，非第二主模型。"
+    },
+    {
+      "id": "G03-completion",
+      "status": "passed_by_withdrawal",
+      "evidence": "正式target/certainty/buy均null；无强凑第二模型。候选资格上界未通过，不能借此批准reject。"
+    },
+    {
+      "id": "G05-tax",
+      "status": "passed_by_withdrawal",
+      "evidence": "valuation四保留1270、268、260及历史剔除742并注明非预测；独立读10-K p.75相符。"
+    },
+    {
+      "id": "G07-score",
+      "status": "partial",
+      "evidence": "回购纪律已从A3移至F2.5，A3上界4可作数学上限；3.5下界仍仅因长历史覆盖不足而设，非规则证成点值。上界不受此下界问题影响；不要求未知作0分。"
+    },
+    {
+      "id": "G08-people",
+      "status": "passed_with_bounded_unknown",
+      "evidence": "CEO/CFO更替与其他在任职责分开，撤回异常集中离任/外聘即继任失败；8-K正确主文与DEF14A支持CFO日期差异和原因限定。其余未核事件整体unknown可界定，不新要求补全动机。"
+    },
+    {
+      "id": "G08-score",
+      "status": "partial",
+      "evidence": "F1/组织上界5/10符合原允许路径，unknown不作负面已修；但D2具体承诺、D5人效表回退，组织稳定性/人才保留/激励未分解8分下界；表达正文3与表4不一致。"
+    },
+    {
+      "id": "G09-segments",
+      "status": "failed_preservation",
+      "evidence": "不是未补同比：deep全文已无原先三年七分部+合计表；只余定性地区和合并收入。p.86–87表可核；G13要求保留失败。"
+    },
+    {
+      "id": "G09-commitments",
+      "status": "failed_fact_error",
+      "evidence": "valuation:87将代言1.7与产品采购4.7对调，1.6其他采购误列资本支出；p.46–47原文见finding F01。撤回价格不允许保留错误历史事实。"
+    },
+    {
+      "id": "G13-single-source",
+      "status": "failed",
+      "evidence": "32项理由形式恢复、七年表/控制78.8%及8/3/激励恢复；但正确分部、杜邦、人效、承诺原话、会计准备及关联金额未恢复；固定评分证据桥仍不足；关闭表称恢复并全部passed不成立。"
+    }
+  ],
+  "score_item_checks": [
+    {
+      "id": "company/A1",
+      "status": "retained",
+      "evidence": "3；沿原裁决保留，理由未改。新增笼统来源不是事实回退。"
+    },
+    {
+      "id": "company/A2",
+      "status": "verified",
+      "evidence": "3；DEF14A控制78.8%和8/3席直接核；稳定性与公众制衡分开。"
+    },
+    {
+      "id": "company/A3",
+      "status": "upper_bound_only",
+      "evidence": "4数学上限可用；3.5下界无独立清洁度瑕疵证据，未知不能变负分。"
+    },
+    {
+      "id": "company/B0",
+      "status": "retained",
+      "evidence": "2；品牌/设计/合同制造及创立至今模式叙述保留。"
+    },
+    {
+      "id": "company/B1",
+      "status": "not_accepted_as_fixed_bound",
+      "evidence": "3.5仍为候选；缺被明确要求保留的分部经营表，Note19错误引用仍在score-review。"
+    },
+    {
+      "id": "company/B2",
+      "status": "retained",
+      "evidence": "2；可选消费、复购但非合同刚需，归因合理。"
+    },
+    {
+      "id": "company/B3",
+      "status": "partial",
+      "evidence": "4中等定价权方向可接受；旧五年毛利/北美量价/关税收益抵消事实桥未保留，不能称完整恢复。"
+    },
+    {
+      "id": "company/B4",
+      "status": "retained",
+      "evidence": "2.5；原裁决保留，成熟行业和收入下台阶理由保留。"
+    },
+    {
+      "id": "company/C1",
+      "status": "retained",
+      "evidence": "6；全球第一梯队，沿原裁决，不重复新搜份额。"
+    },
+    {
+      "id": "company/C2",
+      "status": "retained_with_presentation_issue",
+      "evidence": "3；原裁决保留。但正文称吃肉品牌主导、规则吃肉=5，叙事应限定，未在本次另改已裁定分。"
+    },
+    {
+      "id": "company/C3+C4",
+      "status": "retained",
+      "evidence": "7；品牌、规模、渠道及低转换成本反证保留。"
+    },
+    {
+      "id": "company/D1",
+      "status": "retained",
+      "evidence": "3；原裁决保留，主线与渠道路径变化区分。"
+    },
+    {
+      "id": "company/D2",
+      "status": "partial",
+      "evidence": "3候选不因旧争议重开；但日期/责任人/期限承诺桥被方向性表替代，G08/G13保留条件未达。"
+    },
+    {
+      "id": "company/D3",
+      "status": "retained",
+      "evidence": "1；贸易、汇率和需求逆风保留。"
+    },
+    {
+      "id": "company/D5",
+      "status": "partial",
+      "evidence": "2混合信号可保留；FY2023–26员工数/人效表未带入，正文称可复算却无分母。"
+    },
+    {
+      "id": "company/E1",
+      "status": "partial",
+      "evidence": "3.5不是由错误资产重新推得；更正资产38410、比率独立算正确，但三年杜邦和净利率主导回落解释回退。"
+    },
+    {
+      "id": "company/E2",
+      "status": "not_accepted_as_fixed_bound",
+      "evidence": "3理由不足以构成上界：92.28%与三年112.50%均高于规则80%，三年FCF持续正；以低于净利及仅2.184不能证明排除5分档。"
+    },
+    {
+      "id": "company/E3",
+      "status": "partial",
+      "evidence": "1.5候选；恢复七年收入/利润，但增长速度理由尚未连接原表非经常性/量价定义；关税净影响桥遗漏。"
+    },
+    {
+      "id": "company/E4",
+      "status": "partial",
+      "evidence": "0.5可由旧扣前1减Capex未拆0.5解释，最新评分只列租赁/承诺，遗漏原扣分桥；不直接判应上调。"
+    },
+    {
+      "id": "company/E5",
+      "status": "partial",
+      "evidence": "2候选；原件审计、低商誉事实可核，但资产准备与应收质量分析被删。"
+    },
+    {
+      "id": "company/E5.5",
+      "status": "partial",
+      "evidence": "2.5候选；p.54税务CAM、p.47估计未重大改变及p.84准备已核，正文未恢复，不能由干净审计直接替代。"
+    },
+    {
+      "id": "company/F1",
+      "status": "upper_bound_only",
+      "evidence": "5规则上限可用；3.5下界未分解证据，不能当正式点值。"
+    },
+    {
+      "id": "company/F2",
+      "status": "acceptable_candidate",
+      "evidence": "4；分红/激励与B股制衡逻辑匹配，未知内部交易不作减持扣分。"
+    },
+    {
+      "id": "company/F2.5",
+      "status": "partial",
+      "evidence": "1.5候选；暂停回购正面与成本负面分开，但回购创造价值/ROIC依据未恢复；未验证正面历史先例加0.5。"
+    },
+    {
+      "id": "company/F3",
+      "status": "retained",
+      "evidence": "2；独立审查、迟报小瑕疵归因正确；关联金额遗漏另归G13。"
+    },
+    {
+      "id": "management/诚信与透明度",
+      "status": "acceptable_candidate",
+      "evidence": "16；已剔除研究缺证扣分，无保留审计及8-K原文可核。遗漏海关风险属报告错误，不直接给公司扣分。"
+    },
+    {
+      "id": "management/资本配置能力",
+      "status": "not_accepted_as_fixed_bound",
+      "evidence": "12；原裁决明示ROIC/WACC、回购和Capex效率桥待闭合，本稿仍仅定性成本/结果判断，未证明12可作资格上界固定项。"
+    },
+    {
+      "id": "management/战略稳定性",
+      "status": "retained",
+      "evidence": "10；原裁决保留，DTC/批发调整事实判断不重开。"
+    },
+    {
+      "id": "management/对股东友好度",
+      "status": "verified",
+      "evidence": "11；现金流分红2407及DEF14A治理/激励相符，不以内部交易unknown扣分。"
+    },
+    {
+      "id": "management/危机处理能力",
+      "status": "acceptable_candidate",
+      "evidence": "7；动作与结果区分，未宣布全面修复；原来北美/渠道量化支持未完整保留。"
+    },
+    {
+      "id": "management/组织与人才能力",
+      "status": "upper_bound_only",
+      "evidence": "10数学上限可用；8分下界无稳定性/保留/激励三部分分解，不能批准点值。"
+    },
+    {
+      "id": "management/表达清晰度与认知质量",
+      "status": "partial",
+      "evidence": "表4可作候选，正文216仍为3且旧资料缺失归因未同步，候选合计按4算。"
+    }
+  ],
+  "independent_calculations": {
+    "company_range": [
+      72.5,
+      74.5
+    ],
+    "management_range": [
+      68,
+      70
+    ],
+    "combined_range": [
+      140.5,
+      144.5
+    ],
+    "qualification_bound_approved": false,
+    "dupont_2026": {
+      "ending_assets": 38410,
+      "average_assets": 37494.5,
+      "average_equity": 14039,
+      "net_margin": 0.06698564593301436,
+      "turnover": 1.237461494352505,
+      "equity_multiplier": 2.670738656599473,
+      "roe": 0.2213832894080775,
+      "status": "事实更正文件与score-review输入正确；原包比率未需改动；报告完整杜邦表未保留"
+    },
+    "historical_bridges": {
+      "cash_plus_investment": 9027,
+      "financing_debt": 7942,
+      "net_cash": 1085,
+      "shares": 1483,
+      "sbc": 715,
+      "cash_tax_diagnostic": 742,
+      "fcf": [
+        6617,
+        3268,
+        2184
+      ],
+      "cash_conversion_2026": 0.9227799227799228,
+      "capex_growth": 0.5906976744186045,
+      "shareholder_diagnostic": 1838,
+      "static_pe": 16.909523809523808
+    },
+    "valuation": "正式模型已撤回，不重算失效模型；仅历史静态PE诊断，零权重不提供主模型有效性。"
+  },
+  "findings": [
+    {
+      "id": "F01",
+      "original_ids": [
+        "G09-commitments",
+        "G13-single-source"
+      ],
+      "severity": "P1",
+      "category": "fact_error",
+      "location": "drafts/repaired-v1/valuation.md:87；evidence/repair-evidence-map-v2.md末段；final/repair-closeout-v1.json G09B",
+      "claim": "保留的三类承诺发生金额错配与经济分类错误。",
+      "evidence": "独立读取FY2026 10-K印刷p.46–47（PDF50–51）：Endorsement总15.5bn/12月1.7bn；Product Purchase总4.9bn/12月4.7bn；Other Purchase总2.4bn/12月1.6bn，主要技术投资、外部服务、营销承诺。稿件写采购1.7、代言4.7、资本支出1.6，与原件不符；三者合计8.0虽相同，不代表分类正确。",
+      "impact": "G09-commitments已核事实与费用/营运资本/Capex映射错误；正式价格虽已撤回，但不能以closed_with_uncertainty将已知错误视作未知。",
+      "recommendation": "原裁决员终局处置时认定未满足原条件，保留错误清单并维持execution_incomplete；若授权修复，应按原类别更正，Other不强行全归Capex，不恢复价格。"
+    },
+    {
+      "id": "F02",
+      "original_ids": [
+        "G13-single-source",
+        "G09-segments",
+        "G08-score",
+        "G02-equity"
+      ],
+      "severity": "P1",
+      "category": "fact_error",
+      "location": "deep.md维度B/D/E/F；management.md一/二/六；valuation.md四；repair-closeout-v1.json G13",
+      "claim": "恢复v1全文却漏带后续已核修正，实质防回退未通过，不是少写同比的展示项。",
+      "evidence": "与旧最终修订稿定向对照：旧deep:73–87三年七分部收入/EBIT及合计、105–121杜邦、123–138税务CAM和准备、143 Capex扣分桥；旧management:76–104四年员工/人效及带日期原话承诺，均未进入新稿。新deep:279只留关联报酬不重大，未恢复G13明确要求的221/146/175/125千美元，DEF14A Transactions with Related Persons原页72可直接核。新valuation也无2bn到期债与原租金处理。本人重算FY2026分部收入合计46398、EBIT3850，原表可保留。",
+      "impact": "阻断G13/G09分部保留和D2/D5/E1/E5.5评分可复核性；32项形式理由及行数合格不能替代已核事实、反证和量化桥。",
+      "recommendation": "按原条件列未保留内容供终局判断，不把G13 corrected/passed作为真实验收。恢复须叠加正确后续片段，而非整篇退回任一旧稿；本复核不启动新轮。"
+    },
+    {
+      "id": "F03",
+      "original_ids": [
+        "G13-single-source",
+        "G07-score",
+        "G08-score"
+      ],
+      "severity": "P1",
+      "category": "evidence_gap",
+      "location": "final/score-review-v1.json E2、E3、E4、资本配置能力；deep.md:63–65；management.md评分表",
+      "claim": "72.5–74.5与68–70算术成立，但144.5尚不是已证成的资格上界。",
+      "evidence": "独立加总25+7分项得公司[72.5,74.5]、管理层[68,70]。E2规则为OCF/净利>80%且FCF持续正=5；p.58重算FY2026为2868/3108=92.27799%，三年比率均值112.49724%，FCF6617/3268/2184均正，稿仅以低于净利和FCF仅2184支持固定3，没有解释规则5档为何排除。管理层资本配置12仍缺原裁决点名ROIC/WACC和回购/Capex效率桥；E3用增长速度替代原非经常性/量价标准的连接亦未充分说明。A3/F1/组织规则满分上限允许，不代表其他固定点值自动是上限。",
+      "impact": "影响reject资格判断，而非要求强凑价格。仅将E2按规则潜在5替换，合计上界为146.5仍低150；但资本配置仍有13分未证成上界空间，因此不能据现稿证明全部收录档已被否决。并未建议资本配置应25。",
+      "recommendation": "撤回144.5作为已批准排除依据；原裁决员基于既有证据决定可否界定固定项上限，无法则defer。不要把研究缺口扣成公司低质量，也不要从旧总分倒填。"
+    },
+    {
+      "id": "F04",
+      "original_ids": [
+        "G13-single-source"
+      ],
+      "severity": "P1",
+      "category": "fact_error",
+      "location": "deep.md:35及综合风险地图；management.md:222及监管合规；FY2026 10-K印刷p.88",
+      "claim": "诉讼风险叙述漏掉明确的比利时海关争议例外，形成不完整的无重大未决事项印象。",
+      "evidence": "从原件Note16而非共享索引独立抽查：p.88管理层不认为未决事项重大影响的判断明确有下述例外；Belgian Customs Claim涉及FY2018起进口税、已上诉并有银行担保，无法估计损失且败诉可能重大。稿仅留泛称及证券诉讼/EEOC，未列此原件已披露风险。",
+      "impact": "影响重大风险覆盖与治理/现金边界，不能把无法估金额变为无风险；不直接当已处罚或自动降低公司分。",
+      "recommendation": "在终局处置中记录原件已披露风险未纳入，不能宣称风险覆盖完成；保持金额unknown和非已败诉边界。"
+    },
+    {
+      "id": "F05",
+      "original_ids": [
+        "G02-recalc",
+        "G13-single-source"
+      ],
+      "severity": "P2",
+      "category": "presentation",
+      "location": "valuation.md:74–76、:121；management.md:216与七维评分表；deep.md C2正文",
+      "claim": "撤回与评分联动残留矛盾，但未发现旧数值价格仍有效。",
+      "evidence": "valuation:74仍称DCF按每股FCFE1.9/2.3/2.7设置，后文称这些已撤回；management:216写表达3/5，表和底稿为4；C2正文吃肉与保留3档口径不齐。正式null、models空和无价格区已独立确认。",
+      "impact": "降低唯一参数/状态可读性；当前不改变已撤回价格、不单独阻塞或新开轮次；表达相差1分为候选呈现而非批准分。",
+      "recommendation": "原裁决员按展示不一致处置；需明确旧假设已失效、表达以候选表4或撤回为准，不借此恢复模型或重开已裁定C2。"
+    },
+    {
+      "id": "F06",
+      "original_ids": [
+        "G13-single-source"
+      ],
+      "severity": "P2",
+      "category": "presentation",
+      "location": "final/workpaper-repaired-v1.json repair.score_changes；mechanical-check-scope-v1.md；score-review-v1.json B1",
+      "claim": "A1机械防回退失败并非理由被删，但解释为纯schema差异不准确；来源与变更声明仍有缺漏。",
+      "evidence": "独立对比baseline A1与新A1：score3/3.0和reason完全相同，evidence_refs新加本run基线图与整份PDF，未列score_changes；共16项同类未声明引用/表示变更。B1正文改为Note15，但score-review仍留Note19旧引用。扩展scope未声明覆盖实际分项/章节差异。",
+      "impact": "A1本身不影响分数或决策，不机械升级P1；真实内容回退由F02单独承担。来源错误削弱底稿定位效率。",
+      "recommendation": "区分null/区间适配和实际引用变更；不可将扩展检查概括为防回退通过。终局保留此P2，不单独再审核。"
+    }
+  ],
+  "blind_risk_changes": [
+    {
+      "ids": [
+        "B06"
+      ],
+      "change": "第一阶段资产冲突已按原件修正：38410，比率保持正确；数值层面通过，但杜邦展示/归因桥保留仍失败。"
+    },
+    {
+      "ids": [
+        "B07",
+        "B08",
+        "B11",
+        "B13"
+      ],
+      "change": "价格撤回路径已隔离大部分模型归属未知，无需证明未来交易是事实；新增原件实核发现承诺分类错误，因此未知与具体事实错误必须分开。"
+    },
+    {
+      "ids": [
+        "B01",
+        "B04",
+        "B05",
+        "B09",
+        "B10",
+        "B12"
+      ],
+      "change": "恢复了部分治理、薪酬和七年数据；未恢复后续分部、人效、承诺和准备，且海关重大例外仍漏；不能把篇幅达标视为保留通过。"
+    }
+  ],
+  "unknowns": [
+    "未来SBC、年度加权股数、回购时点/资金、IRS结算、承诺预测覆盖量和独立PE锚仍未知，撤回价格可界定这些未知。",
+    "部分人事公开原因未知，不据此给公司扣分。"
+  ],
+  "uncovered": [
+    "FY2020–23财务原件、Form4/144逐笔交易、证券诉讼/EEOC最新原件未重新读取；不声称查无异常。",
+    "未新搜同行估值或构建新主模型，未独立估全套新点分；32项为原条件验收及固定上界适用性审查。",
+    "不对本run之外已冻结历史下结论或修改；此JSON仅是独立复核建议。"
+  ],
+  "source_corrections": [
+    {
+      "source_id": "SRC-8K-20260623",
+      "issue": "sources.json链接实际为Exhibit10.2离职计划，不是CFO主文；已在同accession读取正确主文核实，故事实不因错链自动作废。",
+      "verified_url": "https://www.sec.gov/Archives/edgar/data/320187/000032018726000070/nke-20260616.htm"
+    },
+    {
+      "source_id": "SRC-DEF14A-2026",
+      "verified_url": "https://www.sec.gov/Archives/edgar/data/320187/000032018726000089/nke-20260715.htm",
+      "locations": "L139–145、L789–791、L864–909、L2162、L2211–2215"
+    }
+  ],
+  "recommendation": {
+    "decision": "defer",
+    "research_status": "execution_incomplete",
+    "answer": "暂不入库：正式价格虽已撤回，承诺事实错配与已核内容回退尚未通过，候选评分上界也不足以批准reject。",
+    "approved_parameters": {
+      "company_score": null,
+      "management_score": null,
+      "target_price": null,
+      "certainty": null,
+      "buy_price": null
+    },
+    "preserved_verified": "审计/内控、FY2024–26现金流、融资债及现金、股数历史桥、控制选举与薪酬兑现事实；不因价格失败抹掉这些内容。",
+    "next_step": "只交原裁决员按原验收条件终局处置/决定是否适用有界例外；本人不新开修复或再次全文审核。"
+  }
+}

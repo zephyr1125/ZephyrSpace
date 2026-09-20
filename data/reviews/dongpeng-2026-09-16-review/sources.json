@@ -1,0 +1,103 @@
+[
+  {
+    "source_id": "S01_2026H1_CNINFO",
+    "title": "东鹏饮料（集团）股份有限公司2026年半年度报告",
+    "source_type": "官方披露原件",
+    "issuer": "东鹏饮料（集团）股份有限公司",
+    "url": "https://static.cninfo.com.cn/finalpage/2026-07-31/1225449594.PDF",
+    "local_path": "财报/东鹏饮料/东鹏饮料2026半年度报告.md",
+    "local_sha256": "E0919AF0C56AEE2F21AD5087562064C8D0F2E820557965D828C5E2851BF1AED4",
+    "reporting_period": "2026-01-01/2026-06-30",
+    "disclosure_date": "2026-07-31",
+    "retrieved_date": "2026-09-16",
+    "verification": "已以巨潮PDF逐项回查；本地MD为可复用转换稿，非唯一依据。"
+  },
+  {
+    "source_id": "S02_2025AR_CNINFO",
+    "title": "东鹏饮料（集团）股份有限公司2025年年度报告",
+    "source_type": "官方披露原件",
+    "url": "https://static.cninfo.com.cn/finalpage/2026-03-31/1225063447.PDF",
+    "local_path": null,
+    "reporting_period": "2025-01-01/2025-12-31",
+    "disclosure_date": "2026-03-31",
+    "retrieved_date": "2026-09-16",
+    "verification": "检索到官方原件；用于2025年度趋势与审计事实。"
+  },
+  {
+    "source_id": "S03_2024AR_CNINFO",
+    "title": "东鹏饮料（集团）股份有限公司2024年年度报告",
+    "source_type": "官方披露原件",
+    "url": "https://static.cninfo.com.cn/finalpage/2025-03-08/1222744419.PDF",
+    "local_path": null,
+    "reporting_period": "2024-01-01/2024-12-31",
+    "disclosure_date": "2025-03-08",
+    "retrieved_date": "2026-09-16",
+    "verification": "已回查营收、归母净利、经营现金流、审计意见和治理章节。"
+  },
+  {
+    "source_id": "S04_2023AR_CNINFO",
+    "title": "东鹏饮料（集团）股份有限公司2023年年度报告",
+    "source_type": "官方披露原件",
+    "url": "https://static.cninfo.com.cn/finalpage/2024-04-15/1219612087.PDF",
+    "local_path": null,
+    "reporting_period": "2023-01-01/2023-12-31",
+    "disclosure_date": "2024-04-15",
+    "retrieved_date": "2026-09-16",
+    "verification": "已回查营收和归母净利；经营现金流未在本次原件摘录中定位，记为null。"
+  },
+  {
+    "source_id": "S05_CAPITAL_CNINFO",
+    "title": "关于变更公司注册资本暨修改《公司章程》的公告（2026-071）",
+    "source_type": "官方披露原件",
+    "url": "https://static.cninfo.com.cn/finalpage/2026-07-31/1225449591.PDF",
+    "local_path": null,
+    "reporting_period": "截至2026-06-29",
+    "disclosure_date": "2026-07-31",
+    "retrieved_date": "2026-09-16",
+    "verification": "确认转增后普通股总数、A/H类别及比例。"
+  },
+  {
+    "source_id": "S06_HKEX_09980",
+    "title": "HKEX披露易：09980发行人公告索引",
+    "source_type": "交易所披露索引",
+    "url": "https://www1.hkexnews.hk/search/titlesearch.xhtml?category=0&lang=EN&market=SEHK&stockId=1000289422",
+    "local_path": null,
+    "reporting_period": "截至2026-09-16",
+    "disclosure_date": null,
+    "retrieved_date": "2026-09-16",
+    "verification": "索引显示2026中期报告（2026-08-05）、2026-08月月报（2026-09-02）、中期股息更正（2026-09-01）等。"
+  },
+  {
+    "source_id": "S07_CSRC_WARNING",
+    "title": "深圳证监局关于对瑞昌市鲲鹏创业投资合伙企业（有限合伙）采取出具警示函措施的决定",
+    "source_type": "监管机构原件",
+    "url": "https://www.csrc.gov.cn/shenzhen/c104320/c7610509/content.shtml",
+    "local_path": null,
+    "reporting_period": "事件发生于2025-05-06；决定日期2026-01-09",
+    "disclosure_date": "2026-01-09",
+    "retrieved_date": "2026-09-16",
+    "verification": "Tavily发现后回链中国证监会页面；主体为持有公司5%以上股份的瑞昌市鲲鹏创业投资合伙企业。"
+  },
+  {
+    "source_id": "S08_CONTROLLER_H_BUY",
+    "title": "关于控股股东增持公司H股股份计划的公告（2026-057）",
+    "source_type": "公司/上交所披露原件",
+    "url": "https://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-05-30/605499_20260530_BHIG.pdf",
+    "local_path": null,
+    "reporting_period": "2026-05-29事件",
+    "disclosure_date": "2026-05-30",
+    "retrieved_date": "2026-09-16",
+    "verification": "控股股东林木勤首笔增持49,800股H股，并披露12个月增持计划。"
+  },
+  {
+    "source_id": "S09_A_SHARE_PRICE",
+    "title": "东鹏饮料（605499）历史行情",
+    "source_type": "第三方行情补充",
+    "url": "https://cn.investing.com/equities/eastroc-beverage-group-historical-data",
+    "local_path": null,
+    "reporting_period": "2026-09-16",
+    "disclosure_date": "2026-09-16",
+    "retrieved_date": "2026-09-16",
+    "verification": "用于关联A股收盘价；不用于法定事实。"
+  }
+]

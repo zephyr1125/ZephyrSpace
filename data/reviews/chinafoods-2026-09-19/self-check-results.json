@@ -1,0 +1,49 @@
+{
+  "reports": {
+    "deep": {
+      "path": "E:\\ObsidianVaults\\ZephyrSpace\\深度分析\\中国食品 深度分析 69 2026-09-19.md",
+      "lines": 421,
+      "minimum": 150,
+      "line_pass": true,
+      "missing_sections": [],
+      "section_pass": true,
+      "reviewing_mark_present": true
+    },
+    "management": {
+      "path": "E:\\ObsidianVaults\\ZephyrSpace\\管理层档案\\中国食品 管理层档案 70 2026-09-19.md",
+      "lines": 380,
+      "minimum": 150,
+      "line_pass": true,
+      "missing_sections": [],
+      "section_pass": true,
+      "reviewing_mark_present": true
+    },
+    "valuation": {
+      "path": "E:\\ObsidianVaults\\ZephyrSpace\\估值分析\\中国食品 估值分析 2026-09-19.md",
+      "lines": 254,
+      "minimum": 100,
+      "line_pass": true,
+      "missing_sections": [],
+      "section_pass": true,
+      "reviewing_mark_present": true
+    }
+  },
+  "cross_report": {
+    "cscore_69": true,
+    "mscore_70": true,
+    "target_2_72": true,
+    "certainty_0_60": true,
+    "buy_2_08": true,
+    "fx_present": true,
+    "shares_present": true,
+    "cashflow_scope_warning": true,
+    "three_scenarios": true,
+    "weights_50_50": true,
+    "none_level": true,
+    "zero_weight_reverse": true,
+    "ddm_grid_3x3": true,
+    "ddm_grid_in_report": true,
+    "management_threshold_16": true
+  },
+  "pass": true
+}

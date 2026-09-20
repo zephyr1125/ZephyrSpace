@@ -1,0 +1,67 @@
+{
+  "created_at": "2026-09-16T16:30:00+08:00",
+  "scope": "repair-2 final exception submission",
+  "algorithm": "SHA256",
+  "files": [
+    {
+      "file": "东鹏饮料 深度分析 83 2026-09-16-repair-2.md",
+      "sha256": "1F50D593DBF1842A492438ABD580C524DC953F72D316069C6E9FC494E2EF32DE",
+      "bytes": 12801,
+      "lines": 335
+    },
+    {
+      "file": "东鹏饮料 管理层档案 77 2026-09-16-repair-2.md",
+      "sha256": "0BBFB334C3F7B1AB984F52B3A31466BB9290C91C0A6E9944D06B3F8A2CA5EBA2",
+      "bytes": 17783,
+      "lines": 463
+    },
+    {
+      "file": "东鹏饮料 估值分析 122 2026-09-16-repair-2.md",
+      "sha256": "7E6DBDAADA8FC4F50D5C96B0D000CCDFC8B2F2D225183EC172C94BB44D47DFEF",
+      "bytes": 11931,
+      "lines": 303
+    },
+    {
+      "file": "valuation-input.json",
+      "sha256": "FF55A3D0315826B0666160FBB3BCE3286168C5C364B045CEF8E5C5205CE83075",
+      "bytes": 4204,
+      "lines": 182
+    },
+    {
+      "file": "valuation_model.py",
+      "sha256": "7F8D353C9D055F55C143AC01B1D66736F136AE80F6A7F9C366194C1459D6ED6F",
+      "bytes": 4956,
+      "lines": 63
+    },
+    {
+      "file": "valuation-output.json",
+      "sha256": "624EF6D533EA063A12E9F6CCF0265F5C1686D23C1292B151D9B62B36FFEE1EB3",
+      "bytes": 11134,
+      "lines": 363
+    },
+    {
+      "file": "evidence-additions.md",
+      "sha256": "4B823062EB202AB173D38CD785B52CD51E65014C8CB1523679EDC4B8F9F47099",
+      "bytes": 2555,
+      "lines": 35
+    },
+    {
+      "file": "differences.md",
+      "sha256": "246263CA5C95524776FE2CADEEBCAD95FBAF9CFB1B74CBBFC1EC451C12980FF4",
+      "bytes": 849,
+      "lines": 16
+    },
+    {
+      "file": "final-closure.md",
+      "sha256": "1C6B347B498E8BD195BC13A1B811B7845B377161D5CE051EBAD109A00C0BAD96",
+      "bytes": 887,
+      "lines": 15
+    },
+    {
+      "file": "self-check.md",
+      "sha256": "4560205F7881C12A49399A1782BD87B49B1AA17A7CAAEDED8BCF80D48E73C707",
+      "bytes": 1271,
+      "lines": 22
+    }
+  ]
+}

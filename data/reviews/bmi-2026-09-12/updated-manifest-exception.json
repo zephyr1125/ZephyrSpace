@@ -1,0 +1,20 @@
+{
+  "run_id": "bmi-2026-09-12",
+  "status": "research_incomplete_after_exception_repair",
+  "exception_round": 1,
+  "additional_adjudications_remaining": 0,
+  "evidence_version": "v1-frozen+v2-targeted+adjudication-verified+exception-repair",
+  "reports": [
+    {"path":"深度分析/Badger Meter 深度分析 75 2026-09-12.md","lines":248,"sha256":"71EE1983CFD44DE12FD929B28F72F01D16037C72148507AF3BDD7AD4F9B6B72D"},
+    {"path":"管理层档案/Badger Meter 管理层档案 73 2026-09-12.md","lines":245,"sha256":"6753C7C9A70DF5375DAA3AB3C9C33697A73E41AB3EBC4A5121C48EA810E58D93"},
+    {"path":"估值分析/Badger Meter 估值分析 2026-09-12.md","lines":245,"sha256":"F55976AF5B47AA0693897929F9D34F419F1456346895F96F63DB2C0BDD02358E"}
+  ],
+  "frozen_draft_mapping": [
+    {"original_path":"深度分析/Badger Meter 深度分析 77 2026-09-12.md","frozen_path":"data/reviews/bmi-2026-09-12/frozen-author-draft-deep-77.md","original_sha256":"A6F063C52D708C9EED9DEB1191B34C031FD835901F00A50A6563AD35A02DF191","annotation_sha256":"408F3BE41AF31B240C9CC0FA6E7D3358E71221890DAD1EC2FF67EC82904049AB","restored_sha256":"A6F063C52D708C9EED9DEB1191B34C031FD835901F00A50A6563AD35A02DF191","restored_bytes":19817},
+    {"original_path":"管理层档案/Badger Meter 管理层档案 67 2026-09-12.md","frozen_path":"data/reviews/bmi-2026-09-12/frozen-author-draft-management-67.md","original_sha256":"41F70114C1A771827CE8AF7D88ED374C4C5C2C99DA7D3B467C7ADACFF24E712D","annotation_sha256":"7F7DF0715B3212D3FB08E6084C21D0D86A7206189CFB7862BC8809C05D192019","restored_sha256":"41F70114C1A771827CE8AF7D88ED374C4C5C2C99DA7D3B467C7ADACFF24E712D","restored_bytes":14380},
+    {"original_path":"估值分析/Badger Meter 估值分析 2026-09-12.md","frozen_path":"data/reviews/bmi-2026-09-12/frozen-author-draft-valuation.md","original_sha256":"AEF33DEF78097E9EC1625A7B4E54C74A02698FAC7D6252E9AC6B112959EBC585","annotation_sha256":"2E1E212304A5DA2499CC46012FF72B98D0DB48B677E7C92FC4AACF6CEE487A33","restored_sha256":"AEF33DEF78097E9EC1625A7B4E54C74A02698FAC7D6252E9AC6B112959EBC585","restored_bytes":10504}
+  ],
+  "parameters":{"company_quality_score":75,"management_score":73,"combined_score":148,"suggested_tier":"NONE","target_price_usd":null,"valuation_certainty":null,"mechanical_buy_price_usd":null,"reverse_validation_weight":0},
+  "issues":{"fixed_pending_rereview":["C06","C07","NEW-P1-01"],"open_p1":["C01","C02","C04"]},
+  "boundaries":{"company_page_modified":false,"index_modified":false,"watchlist_modified":false,"sync_run":false}
+}

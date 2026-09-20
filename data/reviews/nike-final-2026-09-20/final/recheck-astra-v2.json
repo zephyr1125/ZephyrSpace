@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "stage": "single_targeted_recheck",
+  "adjudication_ref": "data/reviews/nike-final-2026-09-20/final/adjudication-v1.json",
+  "inputs": "final/repaired-v2/frozen-manifest.json所列三报告、底稿及检查脚本；五项SHA256均一致",
+  "result": "pass",
+  "summary": "N01-N05实质验收通过，无剩余P0/P1。公司76.5、管理层68、组合144.5，NONE/reject有据；全部有效价格及模型已撤回，可按裁决在双路验收后以closed_with_uncertainty收尾，不称完成双模型定价三件套。P2记录不要求新增修复轮。",
+  "checks": [
+    {"id":"N01-sbc","status":"pass","evidence":"估值三明确715百万SBC加回与1.2百万年度稀释增量并非同一成本，81.8百万反稀释奖励不机械全加；(2184-715)/1481=0.991897仅标误差量级。与已直接核10-K p.58、75–77一致。旧未来SBC已处理声明已删除。"},
+    {"id":"N01-withdraw","status":"pass","evidence":"底稿valuation.models=[]，weighted三项、target_price、certainty、buy_price全null；三稿快照不再有有效价格，估值frontmatter三项null；不存在有效DCF三情景、矩阵或价格区。底稿withdrawn_fields出现旧数均明确撤回。"},
+    {"id":"N02-anchor","status":"pass","evidence":"估值五明确原PE无独立锚、两个模型未获批准且不再赋权；模型列表清空。按原裁决撤回路线验收，不要求补新PE锚。"},
+    {"id":"N02-reverse","status":"pass","evidence":"估值七及底稿reverse为零权重条件运算，明确未经校准及不能推断市场低估/未计入修复；独立计算35.51/15=2.367333333、/18=1.972777778、/21=1.690952381，表值正确。"},
+    {"id":"N03-score","status":"pass","evidence":"三稿快照和结论、底稿分项独立加总为76.5/68，合计144.5；深度旧75.5仅出现在明确上一冻结稿的评分桥。当前有效null分/defer已删除，管理层资本配置12与D2=3一致。深度/估值明确NONE/reject，管理层同样说明两门槛不满足。未受影响评分项、理由与来源保留。"},
+    {"id":"N03-status","status":"pass","evidence":"估值一、十一和深度最终段分开decision与research_status，保留送审待验收标签而未提前称通过。NONE质量门槛停止正式估值，价格撤回不是公司分未知；可按裁决在双路完成后closed_with_uncertainty。当前待验收标签属于发布前状态，不是新阻塞。"},
+    {"id":"N03-preserve","status":"pass","evidence":"行数428/374/266达到150/150/100；逐段差异显示深度与管理层只修改评分、状态及退款相关段落，未变评分理由/来源保留；估值受N01-N04整体停止定价影响并声明章节替换，事实/方法/风险/再评仍覆盖。底稿repair完整含全部11个P1验收ID并逐项给证据，N06可选ID亦在。少量无当前价格依赖的历史数字删减和重复段列为P2，不把它们机械升级为阻塞；详见nonblocking。"},
+    {"id":"N04-bridge","status":"pass","evidence":"三稿均列986、北美965/Converse21、期末302已收/684应收及年后绝大部分收回；估值四明确986=965+21=302+684、不重复加现金。与先前直接核10-K p.30、45一致，未写成全部收回。"},
+    {"id":"N04-attribution","status":"pass","evidence":"深度E新增段保留FY2026 OCF2868/FCF2184，解释部分现金流下降来自退款时点，禁止机械扣986或将684永久化；E2=5/E3=2/E5=2/D2=3有不变原因。管理层三、五明确资本配置12/危机7及D2不变，退款非持续经营成果；估值四与六同样限制归因。"},
+    {"id":"N05-d2","status":"pass","evidence":"深度D2正文及表、管理层二均保留3分，改为中等置信度间接执行判断，未到期不判失败；无伪50%达标理由。其他薪酬可实现比例50%为无关既有事实，不误删。"},
+    {"id":"N05-e4","status":"pass","evidence":"深度E4及表明确2-0.5=1.5，E维度16.5和公司76.5联动；估值四提供长债5942、融资债7942、流动资产24603、流动负债12547，结合现金短投9027可复算。独立结果长债占74.817426%、流动比1.960867、债务/资产20.676907%；与10-K p.57相符，p.46流动性原文重新核对。未拆Capex只扣一次；底稿关闭说明中的146.5仅为D2满分敏感性，不是正式分。"},
+    {"id":"N06-boundary","status":"pass","evidence":"重新直接核10-K p.46与p.89，估值四的代言15.5/12月1.7、产品4.9/4.7、其他2.4/1.6十亿美元与原件一致；供应商融资1.1已计应付，不重复扣债。2031税惠到期、有条件延长/提前终止及254百万收益提示已加，不机械扣值。原文未计其他美国间接税条款的限定可更明确，属P2展示，不影响撤回后处置。"}
+  ],
+  "blocking_items": [],
+  "nonblocking": [
+    {
+      "severity":"P2",
+      "category":"presentation",
+      "location":"repaired-v2/deep.md维度E两段同名IEEPA；management.md五两段同名IEEPA",
+      "finding":"退款段落各重复一次，金额和边界一致，未实际双计。",
+      "impact":"不改变任何分数、字段或处置。",
+      "recommendation":"作为排版清理记录；不启动新修复轮。"
+    },
+    {
+      "severity":"P2",
+      "category":"presentation",
+      "location":"repaired-v2/valuation.md二至四，相对冻结v1核心财务及税务段",
+      "finding":"停止估值改稿中没有保留原已核FY2024/25稀释股数1529.7/1487.6和FY2026现金税1270内含268/260的明细；原冻结v1与原件仍可追溯，当前各项现金税与价格依赖均已撤回。其他FY2024/25现金流、Capex、FCF、SBC仍在三件套其他报告保留。",
+      "impact":"资料展示较前版收缩，应记录防回退瑕疵；没有当前模型或reject决策依赖，不据此否决已完成撤回。",
+      "recommendation":"后续发布整理或再研究时恢复已核事实明细；本轮不为此追加定价/重审条件。"
+    }
+  ],
+  "verified_parameters": {"company_score":76.5,"management_score":68,"combined_score":144.5,"watchlistLevel":"NONE","decision":"reject","target_price":null,"certainty":null,"buy_price":null,"valuation_models":[]},
+  "coverage": "只复查原裁决N01-N06验收ID、两版差异、已读原件及新增承诺定位；独立重算分项总和、E4比例、退款桥、SBC示意及反向除法。未运行作者检查脚本代替事实判断，未读取另一路复查。",
+  "uncovered": "没有重开全文研究或刷新行情/法院/内部交易。未来授予、海关税务终局和税惠延续等未知沿原边界保留；不是本次撤回路线的新增验收条件。",
+  "disposition": "本路同意按原裁决完成实质关闭；由主任务汇合双路结果并发布状态。不得将此通过解释为旧模型已修好或已完成正式定价。"
+}

@@ -1,0 +1,16 @@
+{
+  "as_of_cutoff": "2026-09-14",
+  "market": "HKEX",
+  "ticker": "2020.HK",
+  "currency": "HKD",
+  "close_price_hkd": null,
+  "close_trade_date": null,
+  "reason_for_null": "资料截止日为2026-09-14；获取时Yahoo日线接口对该日期返回盘中空值，未将非收盘价冒充共同截止日收盘价。",
+  "last_completed_close_before_cutoff": {"trade_date": "2026-09-11", "close_price_hkd": 72.44999694824219, "adjusted": false, "source_id": "S-005"},
+  "shares_outstanding": 2796653300,
+  "shares_date": "2026-06-30",
+  "share_class": "ordinary shares",
+  "adr_or_share_conversion": "不适用；港交所普通股",
+  "market_cap": null,
+  "market_cap_reason": "共同截止日收盘价为null，未计算市值。"
+}

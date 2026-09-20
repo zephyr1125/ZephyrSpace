@@ -1,0 +1,16 @@
+{
+  "name": "东鹏饮料",
+  "code": "09980",
+  "cScore": 83,
+  "mScore": 77,
+  "targetPrice": null,
+  "buyPrice": null,
+  "maxWeight": null,
+  "valuation_certainty": null,
+  "status": "研究未完成，修订稿未通过整套验收",
+  "watchlist_updated": false,
+  "watchlist_synced": false,
+  "open_issues": ["C07：2023、2024年实际分红数据未落实到管理层资本回报时间线", "C04：复核B仍未完成康师傅中报归母利润及股数的原件定位核验；A已回看通过，数值未被证伪"],
+  "unpublished_calculation": {"targetPrice":121.583594,"valuation_certainty":0.52,"buyPrice":91.528129,"currency":"HKD"},
+  "calculation_is_formal_valuation": false
+}

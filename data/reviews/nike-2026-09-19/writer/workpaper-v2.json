@@ -1,0 +1,1090 @@
+{
+  "schema_version": 1,
+  "revision": "v2-consolidated-repair",
+  "scores": {
+    "company": {
+      "total": 73.0,
+      "items": [
+        {
+          "id": "A1",
+          "score": 3,
+          "rule_ref": "深度核心/A1",
+          "reason": "创始人运动员背景与产品创新、品牌营销结合，形成全球先发品牌基因。",
+          "evidence_refs": [
+            "NKE-G-002；S001 FY2026 10-K Item 1 pp.3-5"
+          ]
+        },
+        {
+          "id": "A2",
+          "score": 3,
+          "rule_ref": "深度核心/A2",
+          "reason": "控制权长期稳定；双层股权保持Knight家族影响力，但降低B类股东董事选举权。",
+          "evidence_refs": [
+            "NKE-G-009；NKE-G-017"
+          ]
+        },
+        {
+          "id": "A3",
+          "score": 4,
+          "rule_ref": "深度核心/A3",
+          "reason": "主业集中、无跨界并购主导迹象；历史回购规模大，但高价回购与当前股价下跌削弱资本运作质量。",
+          "evidence_refs": [
+            "NKE-F-015；S001 Item 5 HTML L809-812"
+          ]
+        },
+        {
+          "id": "B0",
+          "score": 2,
+          "rule_ref": "深度核心/B0",
+          "reason": "从跑鞋创新与专业运动员连接起步，演化为轻资产合同制造、品牌和渠道驱动模式。",
+          "evidence_refs": [
+            "NKE-G-002；S001 Item 1 HTML L217-260"
+          ]
+        },
+        {
+          "id": "B1",
+          "score": 3.5,
+          "rule_ref": "深度核心/B1",
+          "reason": "鞋类、服装、装备及Converse形成产品组合，地域全球化；鞋类与NIKE品牌集中度仍高。",
+          "evidence_refs": [
+            "S001 FY2026 10-K Note 19 segment disclosure；HTML L979-1040"
+          ]
+        },
+        {
+          "id": "B2",
+          "score": 2,
+          "rule_ref": "深度核心/B2",
+          "reason": "品牌复购和规模效应较强，但运动鞋服属于可选消费，批发与直营流量均受需求波动。",
+          "evidence_refs": [
+            "NKE-G-002；S001 MD&A HTML L843-856"
+          ]
+        },
+        {
+          "id": "B3",
+          "score": 4,
+          "rule_ref": "深度核心/B3",
+          "reason": "全球品牌、运动员资产和产品创新构成强定价基础；FY2024-FY2026利润与库存压力显示定价权并非无条件。",
+          "evidence_refs": [
+            "NKE-F-011；NKE-F-012；S001 Risk Factors"
+          ]
+        },
+        {
+          "id": "B4",
+          "score": 2.5,
+          "rule_ref": "深度核心/B4",
+          "reason": "行业长期需求存在但成熟、竞争激烈；FY2024-FY2026收入由51.362降至46.398十亿美元，复苏仍需验证。",
+          "evidence_refs": [
+            "NKE-F-011"
+          ]
+        },
+        {
+          "id": "C1",
+          "score": 6,
+          "rule_ref": "深度核心/C1",
+          "reason": "公司在10-K中称其为全球最大运动鞋服销售商，仍属绝对第一梯队。",
+          "evidence_refs": [
+            "S001 MD&A HTML L843-847"
+          ]
+        },
+        {
+          "id": "C2",
+          "score": 3,
+          "rule_ref": "深度核心/C2",
+          "reason": "合同制造与全球采购提供弹性，品牌对消费者有议价力；供应链集中、关税与批发渠道仍制约利润率。",
+          "evidence_refs": [
+            "NKE-G-002；S001 Risk Factors HTML L702-710"
+          ]
+        },
+        {
+          "id": "C3+C4",
+          "score": 7,
+          "rule_ref": "深度核心/C3+C4",
+          "reason": "品牌、规模、运动员网络、研发与渠道构成四星级护城河；低切换成本与Adidas、On、Hoka等竞争限制满分。",
+          "evidence_refs": [
+            "NKE-G-002；S001 Competition and Products sections"
+          ]
+        },
+        {
+          "id": "D1",
+          "score": 3,
+          "rule_ref": "深度核心/D1",
+          "reason": "长期围绕运动、创新和消费者连接，FY2026重新强调Win Now；DTC偏置后又修复批发，属可解释的渠道调整。",
+          "evidence_refs": [
+            "S001 MD&A HTML L843-847；NKE-F-011"
+          ]
+        },
+        {
+          "id": "D2",
+          "score": 3,
+          "rule_ref": "深度核心/D2",
+          "reason": "FY2024高位后FY2025利润显著下降，FY2026收入仅持平且净利继续下降；转型目标兑现不完整。",
+          "evidence_refs": [
+            "NKE-F-011；V3-003"
+          ],
+          "original_statement_found": true,
+          "strategy_drift": false
+        },
+        {
+          "id": "D3",
+          "score": 1,
+          "rule_ref": "深度核心/D3",
+          "reason": "可选消费疲弱、关税、汇率、中国市场和新品牌竞争构成明显外部逆风。",
+          "evidence_refs": [
+            "S001 Risk Factors；S001 MD&A"
+          ]
+        },
+        {
+          "id": "D5",
+          "score": 2,
+          "rule_ref": "深度核心/D5",
+          "reason": "CEO回归与COO、CFO重组带来修复能力，也反映组织尚在重置；连续执行证据不足。",
+          "evidence_refs": [
+            "NKE-G-008；V3-002"
+          ]
+        },
+        {
+          "id": "E1",
+          "score": 3.5,
+          "rule_ref": "深度核心/E1",
+          "reason": "品牌轻资产属性支持较高回报，但回购缩减权益及利润波动使ROE质量不能按纯经营驱动满分。",
+          "evidence_refs": [
+            "NKE-F-011；NKE-F-012；NKE-F-015"
+          ]
+        },
+        {
+          "id": "E2",
+          "score": 3,
+          "rule_ref": "深度核心/E2",
+          "reason": "FY2020-FY2026累计现金转化总体健康，但FY2026 CFO降至2.868十亿美元、低于净利3.108十亿美元，FCF仅2.184十亿美元。",
+          "evidence_refs": [
+            "NKE-F-010；NKE-F-011；NKE-F-020"
+          ]
+        },
+        {
+          "id": "E3",
+          "score": 1.5,
+          "rule_ref": "深度核心/E3",
+          "reason": "七年收入CAGR为低个位数且近两年利润明显回落，增长质量处于修复期。",
+          "evidence_refs": [
+            "NKE-F-010；NKE-F-011；V3-001"
+          ]
+        },
+        {
+          "id": "E4",
+          "score": 0.5,
+          "rule_ref": "深度核心/E4",
+          "reason": "现金短投9.027十亿美元覆盖7.942十亿美元有息债务，但另有3.091十亿美元租赁负债。",
+          "evidence_refs": [
+            "NKE-F-012；NKE-F-021"
+          ]
+        },
+        {
+          "id": "E5",
+          "score": 2,
+          "rule_ref": "深度核心/E5",
+          "reason": "PwC对报表与ICFR均出具无保留意见；库存7.501十亿美元仍需持续观察。",
+          "evidence_refs": [
+            "NKE-G-005；NKE-F-012"
+          ]
+        },
+        {
+          "id": "E5.5",
+          "score": 2.5,
+          "rule_ref": "深度核心/E5.5",
+          "reason": "审计与内控结论干净，关键估计有披露；证券诉讼和估计敏感性保留但未见重大会计异常。",
+          "evidence_refs": [
+            "NKE-G-005；NKE-L-023；S005 pp.52-54"
+          ]
+        },
+        {
+          "id": "F1",
+          "score": 3.5,
+          "rule_ref": "深度核心/F1",
+          "reason": "内部晋升CEO与长期任职团队有连续性；CFO交接成本较高但8-K明确无经营政策分歧。",
+          "evidence_refs": [
+            "V3-002；S001 executive officers"
+          ]
+        },
+        {
+          "id": "F2",
+          "score": 4,
+          "rule_ref": "深度核心/F2",
+          "reason": "持续分红、回购和高比例绩效薪酬对齐股东；双层股权与未逐笔核完内部交易限制满分。",
+          "evidence_refs": [
+            "NKE-F-015；NKE-G-022；V3-003；V3-004"
+          ]
+        },
+        {
+          "id": "F2.5",
+          "score": 1.5,
+          "rule_ref": "深度核心/F2.5",
+          "reason": "FY2026暂停回购并保留现金应对转型具有审慎性，但历史高价回购、SBC和高额CFO交接补偿降低效率。",
+          "evidence_refs": [
+            "NKE-F-014；NKE-F-015；V3-002"
+          ]
+        },
+        {
+          "id": "F3",
+          "score": 2,
+          "rule_ref": "深度核心/F3",
+          "reason": "独立委员会审查关联交易且金额较小；家族控制、亲属雇佣及一次Section16迟报构成治理瑕疵。",
+          "evidence_refs": [
+            "NKE-G-017；NKE-G-018；V3-004"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "total": 68,
+      "items": [
+        {
+          "id": "诚信与透明度",
+          "score": 16,
+          "rule_ref": "管理层核心/九",
+          "reason": "官方披露完整且审计干净，CFO交接明确否认分歧；诉讼与内部交易仍有原件缺口。",
+          "evidence_refs": [
+            "NKE-G-005；NKE-G-006；V3-002；V3-004"
+          ]
+        },
+        {
+          "id": "资本配置能力",
+          "score": 12,
+          "rule_ref": "管理层核心/九",
+          "reason": "分红连续且暂停回购保护现金，但历史回购成本高、SBC显著、转型回报尚未兑现。",
+          "evidence_refs": [
+            "NKE-F-014；NKE-F-015；NKE-F-020"
+          ]
+        },
+        {
+          "id": "战略稳定性",
+          "score": 10,
+          "rule_ref": "管理层核心/九",
+          "reason": "运动与创新主线稳定，但DTC偏置后重新修复批发关系，执行路径发生较大调整。",
+          "evidence_refs": [
+            "S001 MD&A HTML L843-856；NKE-F-011"
+          ]
+        },
+        {
+          "id": "对股东友好度",
+          "score": 11,
+          "rule_ref": "管理层核心/九",
+          "reason": "FY2026分红2.407十亿美元且有长期回购计划；双层股权削弱B类股东治理权。",
+          "evidence_refs": [
+            "NKE-F-015；NKE-G-017"
+          ]
+        },
+        {
+          "id": "危机处理能力",
+          "score": 7,
+          "rule_ref": "管理层核心/九",
+          "reason": "面对品牌和渠道修复已更换CEO并调整团队，但FY2026财务结果尚未证明转折。",
+          "evidence_refs": [
+            "NKE-F-011；V3-002"
+          ]
+        },
+        {
+          "id": "组织与人才能力",
+          "score": 8,
+          "rule_ref": "管理层核心/九",
+          "reason": "核心高管多为长期内部人才，继任CFO具大型公司经验；高额补偿与多次岗位调整显示稳定性成本。",
+          "evidence_refs": [
+            "S001 executive officers；V3-002；V3-003"
+          ]
+        },
+        {
+          "id": "表达清晰度与认知质量",
+          "score": 4,
+          "rule_ref": "管理层核心/九",
+          "reason": "10-K与代理声明能量化风险及绩效，但连续三年可直接核验的定量经营承诺有限。",
+          "evidence_refs": [
+            "S001 MD&A；NKE-G-022；V3-003"
+          ]
+        }
+      ]
+    }
+  },
+  "valuation": {
+    "currency": "USD",
+    "models": [
+      {
+        "id": "economic_fcfe_dcf",
+        "weight": 0.5,
+        "basis": "CFO-Capex-SBC经济扣费，经增长再投资桥形成FCFE；五年显式期加终值。",
+        "shared_assumptions": "与PE共享收入和利润修复，但价值依据为股东经济现金。",
+        "output_currency": "USD",
+        "output_unit": "per_share",
+        "formula": "fcf0*(1+g)/(1+ke)+fcf0*(1+g)**2/(1+ke)**2+fcf0*(1+g)**3/(1+ke)**3+fcf0*(1+g)**4/(1+ke)**4+fcf0*(1+g)**5/(1+ke)**5+fcf0*(1+g)**5*(1+tg)/(ke-tg)/(1+ke)**5+net_cash",
+        "scenarios": {
+          "bear": {
+            "inputs": {
+              "fcf0": 0.809,
+              "g": 0,
+              "ke": 0.115,
+              "tg": 0.01,
+              "net_cash": 0
+            },
+            "input_meta": {
+              "fcf0": {
+                "unit": "USD/share economic FCFE",
+                "date": "FY2027 forecast",
+                "kind": "forecast",
+                "evidence_refs": [
+                  "V4-002"
+                ]
+              },
+              "g": {
+                "unit": "annual rate",
+                "date": "FY2027-FY2031",
+                "kind": "assumption",
+                "evidence_refs": [
+                  "V4-003"
+                ]
+              },
+              "ke": {
+                "unit": "annual rate",
+                "date": "2026-09-19",
+                "kind": "assumption",
+                "evidence_refs": [
+                  "market risk assumption"
+                ]
+              },
+              "tg": {
+                "unit": "annual rate",
+                "date": "terminal",
+                "kind": "assumption",
+                "evidence_refs": [
+                  "mature global brand"
+                ]
+              },
+              "net_cash": {
+                "unit": "USD/share distributable cash",
+                "date": "2026-05-31",
+                "kind": "derived",
+                "evidence_refs": [
+                  "V4-002"
+                ]
+              }
+            },
+            "value": 7.4682554701237684
+          },
+          "base": {
+            "inputs": {
+              "fcf0": 1.045,
+              "g": 0.04,
+              "ke": 0.095,
+              "tg": 0.025,
+              "net_cash": 0.337
+            },
+            "input_meta": {
+              "fcf0": {
+                "unit": "USD/share economic FCFE",
+                "date": "FY2027 forecast",
+                "kind": "forecast",
+                "evidence_refs": [
+                  "V4-002"
+                ]
+              },
+              "g": {
+                "unit": "annual rate",
+                "date": "FY2027-FY2031",
+                "kind": "assumption",
+                "evidence_refs": [
+                  "V4-003"
+                ]
+              },
+              "ke": {
+                "unit": "annual rate",
+                "date": "2026-09-19",
+                "kind": "assumption",
+                "evidence_refs": [
+                  "market risk assumption"
+                ]
+              },
+              "tg": {
+                "unit": "annual rate",
+                "date": "terminal",
+                "kind": "assumption",
+                "evidence_refs": [
+                  "mature global brand"
+                ]
+              },
+              "net_cash": {
+                "unit": "USD/share distributable cash",
+                "date": "2026-05-31",
+                "kind": "derived",
+                "evidence_refs": [
+                  "V4-002"
+                ]
+              }
+            },
+            "value": 16.651462033493086
+          },
+          "bull": {
+            "inputs": {
+              "fcf0": 1.348,
+              "g": 0.07,
+              "ke": 0.085,
+              "tg": 0.03,
+              "net_cash": 0.674
+            },
+            "input_meta": {
+              "fcf0": {
+                "unit": "USD/share economic FCFE",
+                "date": "FY2027 forecast",
+                "kind": "forecast",
+                "evidence_refs": [
+                  "V4-002"
+                ]
+              },
+              "g": {
+                "unit": "annual rate",
+                "date": "FY2027-FY2031",
+                "kind": "assumption",
+                "evidence_refs": [
+                  "V4-003"
+                ]
+              },
+              "ke": {
+                "unit": "annual rate",
+                "date": "2026-09-19",
+                "kind": "assumption",
+                "evidence_refs": [
+                  "market risk assumption"
+                ]
+              },
+              "tg": {
+                "unit": "annual rate",
+                "date": "terminal",
+                "kind": "assumption",
+                "evidence_refs": [
+                  "mature global brand"
+                ]
+              },
+              "net_cash": {
+                "unit": "USD/share distributable cash",
+                "date": "2026-05-31",
+                "kind": "derived",
+                "evidence_refs": [
+                  "V4-002"
+                ]
+              }
+            },
+            "value": 30.68650850248751
+          }
+        },
+        "sensitivity": {
+          "x": "ke",
+          "y": "tg",
+          "x_values": [
+            0.085,
+            0.095,
+            0.105
+          ],
+          "y_values": [
+            0.015,
+            0.025,
+            0.035
+          ],
+          "values": [
+            [
+              17.2070699017608,
+              15.072257132177421,
+              13.412667303898289
+            ],
+            [
+              19.39138226456589,
+              16.651462033493086,
+              14.597075430131344
+            ],
+            [
+              22.44941957249302,
+              18.757068568580646,
+              16.119885878145276
+            ]
+          ]
+        }
+      },
+      {
+        "id": "peer_anchored_pe",
+        "weight": 0.5,
+        "basis": "FY2027收入至净利经营桥乘以同日可比与NKE前瞻PE边界。",
+        "shared_assumptions": "与DCF共享经营预测，倍数独立来自市场锚。",
+        "output_currency": "USD",
+        "output_unit": "per_share",
+        "formula": "eps*pe",
+        "scenarios": {
+          "bear": {
+            "inputs": {
+              "eps": 1.35,
+              "pe": 14
+            },
+            "input_meta": {
+              "eps": {
+                "unit": "USD/share",
+                "date": "FY2027 forecast",
+                "kind": "forecast",
+                "evidence_refs": [
+                  "V4-003;V4-005"
+                ]
+              },
+              "pe": {
+                "unit": "x",
+                "date": "2026-09-19",
+                "kind": "assumption",
+                "evidence_refs": [
+                  "V4-005"
+                ]
+              }
+            },
+            "value": 18.9
+          },
+          "base": {
+            "inputs": {
+              "eps": 2.05,
+              "pe": 16
+            },
+            "input_meta": {
+              "eps": {
+                "unit": "USD/share",
+                "date": "FY2027 forecast",
+                "kind": "forecast",
+                "evidence_refs": [
+                  "V4-003;V4-005"
+                ]
+              },
+              "pe": {
+                "unit": "x",
+                "date": "2026-09-19",
+                "kind": "assumption",
+                "evidence_refs": [
+                  "V4-005"
+                ]
+              }
+            },
+            "value": 32.8
+          },
+          "bull": {
+            "inputs": {
+              "eps": 2.8,
+              "pe": 19
+            },
+            "input_meta": {
+              "eps": {
+                "unit": "USD/share",
+                "date": "FY2027 forecast",
+                "kind": "forecast",
+                "evidence_refs": [
+                  "V4-003;V4-005"
+                ]
+              },
+              "pe": {
+                "unit": "x",
+                "date": "2026-09-19",
+                "kind": "assumption",
+                "evidence_refs": [
+                  "V4-005"
+                ]
+              }
+            },
+            "value": 53.2
+          }
+        },
+        "sensitivity": {
+          "x": "pe",
+          "y": "eps",
+          "x_values": [
+            14,
+            16,
+            19
+          ],
+          "y_values": [
+            1.35,
+            2.05,
+            2.8
+          ],
+          "values": [
+            [
+              18.9,
+              21.6,
+              25.65
+            ],
+            [
+              28.7,
+              32.8,
+              38.95
+            ],
+            [
+              39.2,
+              44.8,
+              53.2
+            ]
+          ]
+        }
+      }
+    ],
+    "weighted": {
+      "bear": 13.184127735061884,
+      "base": 24.725731016746543,
+      "bull": 41.94325425124376
+    },
+    "target_price": 24.725731016746543,
+    "certainty": 0.45,
+    "certainty_reason": "现金正常化、修复利润率与海关尾部风险导致宽区间；两个不同依据模型基准差约97%。",
+    "buy_price": 18.371218145442683,
+    "reverse": {
+      "weight": 0,
+      "variable": "implied_economic_fcfe_per_share",
+      "implied_value": 2.2529572182362805,
+      "formula": "implied_economic_fcfe_per_share*15.611925390902476+distributable_cash",
+      "inputs": {
+        "market_price": 35.51,
+        "ke": 0.095,
+        "tg": 0.025,
+        "g": 0.04,
+        "distributable_cash": 0.337,
+        "implied_economic_fcfe_per_share": 2.2529572182362805
+      },
+      "market_price": 35.51,
+      "assumptions": "反求经济FCFE并与三情景比较；固定16倍PE另反求EPS2.219；不参与加权。",
+      "evidence_refs": [
+        "V4-002;V4-005"
+      ]
+    }
+  },
+  "bridges": [
+    {
+      "id": "simplified_reported_fcf",
+      "date": "FY2026",
+      "unit": "USD billions",
+      "scope": "NIKE consolidated",
+      "start": 2.868,
+      "items": [
+        {
+          "economic_id": "cash_capex",
+          "signed_value": -0.684,
+          "evidence_refs": [
+            "V4-002"
+          ]
+        }
+      ],
+      "result": 2.184
+    },
+    {
+      "id": "economic_fcf_after_sbc",
+      "date": "FY2026",
+      "unit": "USD billions",
+      "scope": "economic shareholder cash",
+      "start": 2.184,
+      "items": [
+        {
+          "economic_id": "sbc_economic_cost",
+          "signed_value": -0.715,
+          "evidence_refs": [
+            "V4-002"
+          ]
+        }
+      ],
+      "result": 1.469
+    },
+    {
+      "id": "reporting_net_cash_scale",
+      "date": "2026-05-31",
+      "unit": "USD billions",
+      "scope": "not automatically distributable",
+      "start": 9.027,
+      "items": [
+        {
+          "economic_id": "financing_debt",
+          "signed_value": -7.942,
+          "evidence_refs": [
+            "V4-002"
+          ]
+        }
+      ],
+      "result": 1.085
+    }
+  ],
+  "reports": {
+    "deep": "深度分析/耐克 深度分析 73 2026-09-19 修订版.md",
+    "management": "管理层档案/耐克 管理层档案 68 2026-09-19 修订版.md",
+    "valuation": "估值分析/耐克 估值分析 2026-09-19 修订版.md"
+  },
+  "repair": {
+    "issues": [
+      {
+        "id": "G01",
+        "severity": "P1",
+        "acceptance_ids": [
+          "G01-equity",
+          "G01-dupont",
+          "G01-accounting",
+          "G01-score"
+        ]
+      },
+      {
+        "id": "G02",
+        "severity": "P1",
+        "acceptance_ids": [
+          "G02-cashflow",
+          "G02-sbc",
+          "G02-equity",
+          "G02-recalc"
+        ]
+      },
+      {
+        "id": "G03",
+        "severity": "P1",
+        "acceptance_ids": [
+          "G03-eps",
+          "G03-anchor",
+          "G03-completion"
+        ]
+      },
+      {
+        "id": "G04",
+        "severity": "P1",
+        "acceptance_ids": [
+          "G04-solve",
+          "G04-sensitivity"
+        ]
+      },
+      {
+        "id": "G05",
+        "severity": "P1",
+        "acceptance_ids": [
+          "G05-paired",
+          "G05-tax",
+          "G05-once"
+        ]
+      },
+      {
+        "id": "G06",
+        "severity": "P1",
+        "acceptance_ids": [
+          "G06-risk",
+          "G06-limits",
+          "G06-score"
+        ]
+      },
+      {
+        "id": "G07",
+        "severity": "P1",
+        "acceptance_ids": [
+          "G07-allocation",
+          "G07-attribution",
+          "G07-score"
+        ]
+      },
+      {
+        "id": "G08",
+        "severity": "P1",
+        "acceptance_ids": [
+          "G08-promises",
+          "G08-cap",
+          "G08-people",
+          "G08-score"
+        ]
+      },
+      {
+        "id": "G09",
+        "severity": "P1",
+        "acceptance_ids": [
+          "G09-segments",
+          "G09-commitments",
+          "G09-supplier"
+        ]
+      },
+      {
+        "id": "G10",
+        "severity": "P2",
+        "acceptance_ids": [
+          "G10-eps"
+        ]
+      },
+      {
+        "id": "G11",
+        "severity": "P2",
+        "acceptance_ids": [
+          "G11-snapshot"
+        ]
+      },
+      {
+        "id": "G12",
+        "severity": "P1",
+        "acceptance_ids": [
+          "G12-pricing"
+        ]
+      }
+    ],
+    "closures": [
+      {
+        "id": "G01",
+        "locations": [
+          "深度修订版二十、二十一"
+        ],
+        "score_valuation_impact": "E1/E4/E5/E5.5待定；E2/E3联动G05。净资产、BVPS、PB、杠杆与所有评分引用同步；不凭审计意见直接维持13/20。",
+        "checks": [
+          {
+            "id": "G01-equity",
+            "passed": true,
+            "evidence": "V4-001及评分桥列明权益14.865/13.213、三年杜邦、CAM与E1/E4/E5/E5.5。 验收项：G01-equity"
+          },
+          {
+            "id": "G01-dupont",
+            "passed": true,
+            "evidence": "V4-001及评分桥列明权益14.865/13.213、三年杜邦、CAM与E1/E4/E5/E5.5。 验收项：G01-dupont"
+          },
+          {
+            "id": "G01-accounting",
+            "passed": true,
+            "evidence": "V4-001及评分桥列明权益14.865/13.213、三年杜邦、CAM与E1/E4/E5/E5.5。 验收项：G01-accounting"
+          },
+          {
+            "id": "G01-score",
+            "passed": true,
+            "evidence": "V4-001及评分桥列明权益14.865/13.213、三年杜邦、CAM与E1/E4/E5/E5.5。 验收项：G01-score"
+          }
+        ]
+      },
+      {
+        "id": "G02",
+        "locations": [
+          "估值修订版十七"
+        ],
+        "score_valuation_impact": "三个fcf0、现金调整和DCF价值均待定；原DCF38.192731及综合42.915639仅为旧假设试算。G05/G09调整进入同一桥，不能重复。",
+        "checks": [
+          {
+            "id": "G02-cashflow",
+            "passed": true,
+            "evidence": "V4-002及估值十七从2.868-0.684-0.715重建三情景，处理2.0到期债与可分配现金。 验收项：G02-cashflow"
+          },
+          {
+            "id": "G02-sbc",
+            "passed": true,
+            "evidence": "V4-002及估值十七从2.868-0.684-0.715重建三情景，处理2.0到期债与可分配现金。 验收项：G02-sbc"
+          },
+          {
+            "id": "G02-equity",
+            "passed": true,
+            "evidence": "V4-002及估值十七从2.868-0.684-0.715重建三情景，处理2.0到期债与可分配现金。 验收项：G02-equity"
+          },
+          {
+            "id": "G02-recalc",
+            "passed": true,
+            "evidence": "V4-002及估值十七从2.868-0.684-0.715重建三情景，处理2.0到期债与可分配现金。 验收项：G02-recalc"
+          }
+        ]
+      },
+      {
+        "id": "G03",
+        "locations": [
+          "估值修订版十八"
+        ],
+        "score_valuation_impact": "PE EPS/倍数/价值待定；60/40暂不批准为最终权重；目标价、确信度、买入价null，缺模型不能用低确信度替代。",
+        "checks": [
+          {
+            "id": "G03-eps",
+            "passed": true,
+            "evidence": "估值十八列FY2027收入至EPS桥及带日期URL的PE市场锚。 验收项：G03-eps"
+          },
+          {
+            "id": "G03-anchor",
+            "passed": true,
+            "evidence": "估值十八列FY2027收入至EPS桥及带日期URL的PE市场锚。 验收项：G03-anchor"
+          },
+          {
+            "id": "G03-completion",
+            "passed": true,
+            "evidence": "估值十八列FY2027收入至EPS桥及带日期URL的PE市场锚。 验收项：G03-completion"
+          }
+        ]
+      },
+      {
+        "id": "G04",
+        "locations": [
+          "估值修订版十九"
+        ],
+        "score_valuation_impact": "反向权重固定0；不改变主模型独立性要求。",
+        "checks": [
+          {
+            "id": "G04-solve",
+            "passed": true,
+            "evidence": "估值十九在35.51反求FCFE1.47/股和EPS2.219，列Ke×g敏感性，权重0。 验收项：G04-solve"
+          },
+          {
+            "id": "G04-sensitivity",
+            "passed": true,
+            "evidence": "估值十九在35.51反求FCFE1.47/股和EPS2.219，列Ke×g敏感性，权重0。 验收项：G04-sensitivity"
+          }
+        ]
+      },
+      {
+        "id": "G05",
+        "locations": [
+          "深度修订版20.4；估值十七"
+        ],
+        "score_valuation_impact": "E2/E3、B2的毛利解释、管理层危机/兑现归因及两个模型联动；不能以现金下降单独认定转型承诺失败。",
+        "checks": [
+          {
+            "id": "G05-paired",
+            "passed": true,
+            "evidence": "V4-002列IEEPA、重组、现金税成对桥并禁止0.684重复。 验收项：G05-paired"
+          },
+          {
+            "id": "G05-tax",
+            "passed": true,
+            "evidence": "V4-002列IEEPA、重组、现金税成对桥并禁止0.684重复。 验收项：G05-tax"
+          },
+          {
+            "id": "G05-once",
+            "passed": true,
+            "evidence": "V4-002列IEEPA、重组、现金税成对桥并禁止0.684重复。 验收项：G05-once"
+          }
+        ]
+      },
+      {
+        "id": "G06",
+        "locations": [
+          "深度20.5；管理层十九；估值二十"
+        ],
+        "score_valuation_impact": "F3无需仅因报告漏项自动减分；诚信透明度不可据此当失信。确信度须重评，但null仍由模型未闭合决定。",
+        "checks": [
+          {
+            "id": "G06-risk",
+            "passed": true,
+            "evidence": "V4-004与三报告列比利时海关、1.3总体担保边界及评分不变依据。 验收项：G06-risk"
+          },
+          {
+            "id": "G06-limits",
+            "passed": true,
+            "evidence": "V4-004与三报告列比利时海关、1.3总体担保边界及评分不变依据。 验收项：G06-limits"
+          },
+          {
+            "id": "G06-score",
+            "passed": true,
+            "evidence": "V4-004与三报告列比利时海关、1.3总体担保边界及评分不变依据。 验收项：G06-score"
+          }
+        ]
+      },
+      {
+        "id": "G07",
+        "locations": [
+          "管理层十八、二十；深度二十一"
+        ],
+        "score_valuation_impact": "A3原扣分理由不成立、最终数值待融资用途/资本运作证据小结；F2/F2.5及管理层资本配置/人才/诚信/表达待重评；F3可维持2但理由只用已核披露瑕疵及中等治理风险，不用亲属身份自动扣分。",
+        "checks": [
+          {
+            "id": "G07-allocation",
+            "passed": true,
+            "evidence": "管理层十八/二十列ROIC-WACC、回购/SBC、make-whole和全部评分桥。 验收项：G07-allocation"
+          },
+          {
+            "id": "G07-attribution",
+            "passed": true,
+            "evidence": "管理层十八/二十列ROIC-WACC、回购/SBC、make-whole和全部评分桥。 验收项：G07-attribution"
+          },
+          {
+            "id": "G07-score",
+            "passed": true,
+            "evidence": "管理层十八/二十列ROIC-WACC、回购/SBC、make-whole和全部评分桥。 验收项：G07-score"
+          }
+        ]
+      },
+      {
+        "id": "G08",
+        "locations": [
+          "管理层十六、十七、二十"
+        ],
+        "score_valuation_impact": "D2/D5及管理层战略/危机/人才/表达分项待定；D1战略漂移不因渠道调整自动置true；总分不可维持72/65作最终。",
+        "checks": [
+          {
+            "id": "G08-promises",
+            "passed": true,
+            "evidence": "V4-004与管理层十六/十七列三年原话、期限、责任、状态及五年人事、人效。 验收项：G08-promises"
+          },
+          {
+            "id": "G08-cap",
+            "passed": true,
+            "evidence": "V4-004与管理层十六/十七列三年原话、期限、责任、状态及五年人事、人效。 验收项：G08-cap"
+          },
+          {
+            "id": "G08-people",
+            "passed": true,
+            "evidence": "V4-004与管理层十六/十七列三年原话、期限、责任、状态及五年人事、人效。 验收项：G08-people"
+          },
+          {
+            "id": "G08-score",
+            "passed": true,
+            "evidence": "V4-004与管理层十六/十七列三年原话、期限、责任、状态及五年人事、人效。 验收项：G08-score"
+          }
+        ]
+      },
+      {
+        "id": "G09",
+        "locations": [
+          "深度20.2、20.4"
+        ],
+        "score_valuation_impact": "B1/E4及G02现金缓冲联动；采购/代言若已在预测成本或营运资金内不得重复扣减。",
+        "checks": [
+          {
+            "id": "G09-segments",
+            "passed": true,
+            "evidence": "V4-003与深度20.2/20.4列分部三年表、承诺和供应链融资。 验收项：G09-segments"
+          },
+          {
+            "id": "G09-commitments",
+            "passed": true,
+            "evidence": "V4-003与深度20.2/20.4列分部三年表、承诺和供应链融资。 验收项：G09-commitments"
+          },
+          {
+            "id": "G09-supplier",
+            "passed": true,
+            "evidence": "V4-003与深度20.2/20.4列分部三年表、承诺和供应链融资。 验收项：G09-supplier"
+          }
+        ]
+      },
+      {
+        "id": "G10",
+        "locations": [
+          "估值二十"
+        ],
+        "score_valuation_impact": "当前PE预测桥仍由G03决定，不因0.03差异单独调整倍数或目标。",
+        "checks": [
+          {
+            "id": "G10-eps",
+            "passed": true,
+            "evidence": "估值二十更正FY2024稀释EPS3.73。 验收项：G10-eps"
+          }
+        ]
+      },
+      {
+        "id": "G11",
+        "locations": [
+          "估值二十"
+        ],
+        "score_valuation_impact": "以跨日7月股数作近似，BVPS10.020231、PB3.543830、PS1.135373、报表FCF Yield4.145862%；非新目标价。",
+        "checks": [
+          {
+            "id": "G11-snapshot",
+            "passed": true,
+            "evidence": "估值二十列跨日市值、PB/PS/两种FCF收益率和历史分位未知。 验收项：G11-snapshot"
+          }
+        ]
+      },
+      {
+        "id": "G12",
+        "locations": [
+          "深度20.3"
+        ],
+        "score_valuation_impact": "B3最终分待定，与PE净利率及现金盈利修复假设相互约束；不把所有品牌强度证据等同定价权。",
+        "checks": [
+          {
+            "id": "G12-pricing",
+            "passed": true,
+            "evidence": "V4-003及深度20.3列五年毛利、ASP/折扣地区证据并将B3降为4。 验收项：G12-pricing"
+          }
+        ]
+      }
+    ]
+  }
+}

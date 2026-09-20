@@ -1,0 +1,576 @@
+{
+  "schema_version": 1,
+  "cutoff": "2026-09-19",
+  "formal_scores": {
+    "company": null,
+    "management": null
+  },
+  "author_candidate_ranges": {
+    "company": [
+      72.5,
+      74.5
+    ],
+    "management": [
+      68,
+      70
+    ],
+    "combined": [
+      140.5,
+      144.5
+    ]
+  },
+  "items": [
+    {
+      "group": "company",
+      "id": "A1",
+      "definition": "先发优势/技术驱动=3；政策红利=2；跟随=1；资源/壳=0",
+      "facts_and_reason": "创始人运动员背景与产品创新、品牌营销结合，形成全球先发品牌基因。",
+      "score": 3.0,
+      "score_range": [
+        3.0,
+        3.0
+      ],
+      "status": "旧裁决保留分项，本轮恢复理由",
+      "evidence_refs": [
+        "NKE-G-002；S001 FY2026 10-K Item 1 pp.3-5",
+        "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+        "财报/耐克/耐克FY2026_10-K.pdf"
+      ]
+    },
+    {
+      "group": "company",
+      "id": "A2",
+      "definition": "从未变更=3；一次合理变更=2；多次=0–1",
+      "facts_and_reason": "控制权长期稳定；双层股权保持Knight家族影响力，但降低B类股东董事选举权。",
+      "score": 3.0,
+      "score_range": [
+        3.0,
+        3.0
+      ],
+      "status": "旧裁决保留分项，本轮恢复理由",
+      "evidence_refs": [
+        "NKE-G-009；NKE-G-017",
+        "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+        "财报/耐克/耐克FY2026_10-K.pdf"
+      ]
+    },
+    {
+      "group": "company",
+      "id": "A3",
+      "definition": "融资用途清晰且无卖资产保利润=4；轻微瑕疵=2；异常=0",
+      "facts_and_reason": "主业集中，FY2026原件未显示跨界并购、商誉堆积或靠非主营出售保利润；更长历史融资用途覆盖不足，故候选3.5–4。回购纪律只在F2.5评价。",
+      "score": null,
+      "score_range": [
+        3.5,
+        4.0
+      ],
+      "status": "作者修复候选，待独立验收",
+      "evidence_refs": [
+        "NKE-F-015；S001 Item 5 HTML L809-812",
+        "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+        "财报/耐克/耐克FY2026_10-K.pdf"
+      ]
+    },
+    {
+      "group": "company",
+      "id": "B0",
+      "definition": "三个关键判断及分类完整=2；部分=1；缺失=0",
+      "facts_and_reason": "从跑鞋创新与专业运动员连接起步，演化为轻资产合同制造、品牌和渠道驱动模式。",
+      "score": 2.0,
+      "score_range": [
+        2.0,
+        2.0
+      ],
+      "status": "旧裁决保留分项，本轮恢复理由",
+      "evidence_refs": [
+        "NKE-G-002；S001 Item 1 HTML L217-260",
+        "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+        "财报/耐克/耐克FY2026_10-K.pdf"
+      ]
+    },
+    {
+      "group": "company",
+      "id": "B1",
+      "definition": "健康多元=4；集中但逻辑清晰=3；纯瘦狗=0–1",
+      "facts_and_reason": "FY2026分部原件显示NIKE Brand全球地区分布并有Converse补充，但仍高度集中于NIKE Brand和鞋类，候选3.5。",
+      "score": null,
+      "score_range": [
+        3.5,
+        3.5
+      ],
+      "status": "作者修复候选，待独立验收",
+      "evidence_refs": [
+        "S001 FY2026 10-K Note 19 segment disclosure；HTML L979-1040",
+        "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+        "财报/耐克/耐克FY2026_10-K.pdf"
+      ]
+    },
+    {
+      "group": "company",
+      "id": "B2",
+      "definition": "订阅/高复购/刚性=3；项目稳定=2；一次性/强周期=1",
+      "facts_and_reason": "品牌复购和规模效应较强，但运动鞋服属于可选消费，批发与直营流量均受需求波动。",
+      "score": 2.0,
+      "score_range": [
+        2.0,
+        2.0
+      ],
+      "status": "旧裁决保留分项，本轮恢复理由",
+      "evidence_refs": [
+        "NKE-G-002；S001 MD&A HTML L843-856",
+        "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+        "财报/耐克/耐克FY2026_10-K.pdf"
+      ]
+    },
+    {
+      "group": "company",
+      "id": "B3",
+      "definition": "强=6；中=4；弱=2；无=0",
+      "facts_and_reason": "品牌、运动员资产与创新提供定价基础；五年毛利及折扣/地区表现显示转嫁并非无条件，候选4。",
+      "score": null,
+      "score_range": [
+        4.0,
+        4.0
+      ],
+      "status": "作者修复候选，待独立验收",
+      "evidence_refs": [
+        "NKE-F-011；NKE-F-012；S001 Risk Factors",
+        "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+        "财报/耐克/耐克FY2026_10-K.pdf"
+      ]
+    },
+    {
+      "group": "company",
+      "id": "B4",
+      "definition": "成长且内生=5；成熟稳定=3；衰退=0–1",
+      "facts_and_reason": "行业长期需求存在但成熟、竞争激烈；FY2024-FY2026收入由51.362降至46.398十亿美元，复苏仍需验证。",
+      "score": 2.5,
+      "score_range": [
+        2.5,
+        2.5
+      ],
+      "status": "旧裁决保留分项，本轮恢复理由",
+      "evidence_refs": [
+        "NKE-F-011",
+        "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+        "财报/耐克/耐克FY2026_10-K.pdf"
+      ]
+    },
+    {
+      "group": "company",
+      "id": "C1",
+      "definition": "绝对龙头/Top3=6；第二梯队=4；边缘=0–2",
+      "facts_and_reason": "公司在10-K中称其为全球最大运动鞋服销售商，仍属绝对第一梯队。",
+      "score": 6.0,
+      "score_range": [
+        6.0,
+        6.0
+      ],
+      "status": "旧裁决保留分项，本轮恢复理由",
+      "evidence_refs": [
+        "S001 MD&A HTML L843-847",
+        "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+        "财报/耐克/耐克FY2026_10-K.pdf"
+      ]
+    },
+    {
+      "group": "company",
+      "id": "C2",
+      "definition": "吃肉=5；喝汤=3；挨打=0–1",
+      "facts_and_reason": "合同制造与全球采购提供弹性，品牌对消费者有议价力；供应链集中、关税与批发渠道仍制约利润率。",
+      "score": 3.0,
+      "score_range": [
+        3.0,
+        3.0
+      ],
+      "status": "旧裁决保留分项，本轮恢复理由",
+      "evidence_refs": [
+        "NKE-G-002；S001 Risk Factors HTML L702-710",
+        "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+        "财报/耐克/耐克FY2026_10-K.pdf"
+      ]
+    },
+    {
+      "group": "company",
+      "id": "C3+C4",
+      "definition": "5星=9；4星=7；3星=5；2星=2；1星=0",
+      "facts_and_reason": "品牌、规模、运动员网络、研发与渠道构成四星级护城河；低切换成本与Adidas、On、Hoka等竞争限制满分。",
+      "score": 7.0,
+      "score_range": [
+        7.0,
+        7.0
+      ],
+      "status": "旧裁决保留分项，本轮恢复理由",
+      "evidence_refs": [
+        "NKE-G-002；S001 Competition and Products sections",
+        "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+        "财报/耐克/耐克FY2026_10-K.pdf"
+      ]
+    },
+    {
+      "group": "company",
+      "id": "D1",
+      "definition": "长期一致=4；可解释漂移=2；频繁变动=0",
+      "facts_and_reason": "长期围绕运动、创新和消费者连接，FY2026重新强调Win Now；DTC偏置后又修复批发，属可解释的渠道调整。",
+      "score": 3.0,
+      "score_range": [
+        3.0,
+        3.0
+      ],
+      "status": "旧裁决保留分项，本轮恢复理由",
+      "evidence_refs": [
+        "S001 MD&A HTML L843-847；NKE-F-011",
+        "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+        "财报/耐克/耐克FY2026_10-K.pdf"
+      ]
+    },
+    {
+      "group": "company",
+      "id": "D2",
+      "definition": "至少2/3达标=5；50%=3；持续落空=0，并受原话证据上限",
+      "facts_and_reason": "三年方向性目标只支持部分兑现/执行中；不以事后财务冒充原承诺，候选3。",
+      "score": null,
+      "score_range": [
+        3.0,
+        3.0
+      ],
+      "status": "作者修复候选，待独立验收",
+      "evidence_refs": [
+        "NKE-F-011；V3-003",
+        "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+        "财报/耐克/耐克FY2026_10-K.pdf"
+      ]
+    },
+    {
+      "group": "company",
+      "id": "D3",
+      "definition": "顺风=3；中性=2；逆风=1；强逆风=0",
+      "facts_and_reason": "可选消费疲弱、关税、汇率、中国市场和新品牌竞争构成明显外部逆风。",
+      "score": 1.0,
+      "score_range": [
+        1.0,
+        1.0
+      ],
+      "status": "旧裁决保留分项，本轮恢复理由",
+      "evidence_refs": [
+        "S001 Risk Factors；S001 MD&A",
+        "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+        "财报/耐克/耐克FY2026_10-K.pdf"
+      ]
+    },
+    {
+      "group": "company",
+      "id": "D5",
+      "definition": "人效上升且投入健康=3；混合=2；恶化=0",
+      "facts_and_reason": "CEO回归与职责重组提供修复动作，期末员工口径人效可复算但非平均FTE，结果待验，候选2。",
+      "score": null,
+      "score_range": [
+        2.0,
+        2.0
+      ],
+      "status": "作者修复候选，待独立验收",
+      "evidence_refs": [
+        "NKE-G-008；V3-002",
+        "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+        "财报/耐克/耐克FY2026_10-K.pdf"
+      ]
+    },
+    {
+      "group": "company",
+      "id": "E1",
+      "definition": "经营驱动ROE>15%=5；杠杆驱动=2–3；ROE<10%=0–1",
+      "facts_and_reason": "FY2024–FY2026杜邦显示净利率、周转与权益乘数共同驱动；FY2026期末权益14.865十亿美元，总资产38.410十亿美元，候选3.5。",
+      "score": null,
+      "score_range": [
+        3.5,
+        3.5
+      ],
+      "status": "作者修复候选，待独立验收",
+      "evidence_refs": [
+        "NKE-F-011；NKE-F-012；NKE-F-015",
+        "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+        "财报/耐克/耐克FY2026_10-K.pdf"
+      ]
+    },
+    {
+      "group": "company",
+      "id": "E2",
+      "definition": "OCF/净利>80%且FCF持续正=5；基本达标=3；持续负=0",
+      "facts_and_reason": "FY2020-FY2026累计现金转化总体健康，但FY2026 CFO降至2.868十亿美元、低于净利3.108十亿美元，FCF仅2.184十亿美元。",
+      "score": null,
+      "score_range": [
+        3.0,
+        3.0
+      ],
+      "status": "作者修复候选，待独立验收",
+      "evidence_refs": [
+        "NKE-F-010；NKE-F-011；NKE-F-020",
+        "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+        "财报/耐克/耐克FY2026_10-K.pdf"
+      ]
+    },
+    {
+      "group": "company",
+      "id": "E3",
+      "definition": "扣非>85%且量价驱动=3；一次性可辨=2；补贴依赖=0",
+      "facts_and_reason": "七年收入CAGR为低个位数且近两年利润明显回落，增长质量处于修复期。",
+      "score": null,
+      "score_range": [
+        1.5,
+        1.5
+      ],
+      "status": "作者修复候选，待独立验收",
+      "evidence_refs": [
+        "NKE-F-010；NKE-F-011；V3-001",
+        "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+        "财报/耐克/耐克FY2026_10-K.pdf"
+      ]
+    },
+    {
+      "group": "company",
+      "id": "E4",
+      "definition": "负债适中且偿债宽裕=2；一般=1；高杠杆短债压力=0",
+      "facts_and_reason": "现金短投9.027十亿美元覆盖融资债7.942十亿美元，但租赁负债3.091十亿美元及承诺限制可分配现金，候选0.5。",
+      "score": null,
+      "score_range": [
+        0.5,
+        0.5
+      ],
+      "status": "作者修复候选，待独立验收",
+      "evidence_refs": [
+        "NKE-F-012；NKE-F-021",
+        "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+        "财报/耐克/耐克FY2026_10-K.pdf"
+      ]
+    },
+    {
+      "group": "company",
+      "id": "E5",
+      "definition": "标准审计、低商誉、应收好=2；隐患=1；重大疑点=0",
+      "facts_and_reason": "PwC对报表与ICFR均出具无保留意见；库存7.501十亿美元仍需持续观察。",
+      "score": null,
+      "score_range": [
+        2.0,
+        2.0
+      ],
+      "status": "作者修复候选，待独立验收",
+      "evidence_refs": [
+        "NKE-G-005；NKE-F-012",
+        "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+        "财报/耐克/耐克FY2026_10-K.pdf"
+      ]
+    },
+    {
+      "group": "company",
+      "id": "E5.5",
+      "definition": "KAM无异常、政策稳定、计提充分=3；小瑕疵=2；重大问题=0–1",
+      "facts_and_reason": "审计与内控结论干净，关键估计有披露；证券诉讼和估计敏感性保留但未见重大会计异常。",
+      "score": null,
+      "score_range": [
+        2.5,
+        2.5
+      ],
+      "status": "作者修复候选，待独立验收",
+      "evidence_refs": [
+        "NKE-G-005；NKE-L-023；S005 pp.52-54",
+        "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+        "财报/耐克/耐克FY2026_10-K.pdf"
+      ]
+    },
+    {
+      "group": "company",
+      "id": "F1",
+      "definition": "核心团队稳定、廉洁且激励绑定=5；个别问题扣分；现任调查触发降级",
+      "facts_and_reason": "CEO/CFO更替已核；其他任命、调岗或新设职责不能充作离任，unknown原因不扣分，候选3.5–5。",
+      "score": null,
+      "score_range": [
+        3.5,
+        5.0
+      ],
+      "status": "作者修复候选，待独立验收",
+      "evidence_refs": [
+        "V3-002；S001 executive officers",
+        "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+        "财报/耐克/耐克FY2026_10-K.pdf"
+      ]
+    },
+    {
+      "group": "company",
+      "id": "F2",
+      "definition": "高分红、无不良减持、融资审慎=5；一般=3；不对齐=0–1",
+      "facts_and_reason": "分红、暂停回购与绩效约束支持对齐；双层股权削弱制衡，逐笔内部交易未知不作减持扣分，候选4。",
+      "score": null,
+      "score_range": [
+        4.0,
+        4.0
+      ],
+      "status": "作者修复候选，待独立验收",
+      "evidence_refs": [
+        "NKE-F-015；NKE-G-022；V3-003；V3-004",
+        "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+        "财报/耐克/耐克FY2026_10-K.pdf"
+      ]
+    },
+    {
+      "group": "company",
+      "id": "F2.5",
+      "definition": "审慎配置且回报高于成本=2；瑕疵=1；缺失=0；正面先例可+0.5但不超上限",
+      "facts_and_reason": "暂停回购保存现金是正面；历史回购效果、SBC与交接成本限制更高评价，候选1.5且不与A3重复。",
+      "score": null,
+      "score_range": [
+        1.5,
+        1.5
+      ],
+      "status": "作者修复候选，待独立验收",
+      "evidence_refs": [
+        "NKE-F-014；NKE-F-015；V3-002",
+        "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+        "财报/耐克/耐克FY2026_10-K.pdf"
+      ]
+    },
+    {
+      "group": "company",
+      "id": "F3",
+      "definition": "透明清洁且ESG低=3；小瑕疵/中风险=2；重大问题=0",
+      "facts_and_reason": "独立审查与披露为正面，一次Section 16迟报属小瑕疵；亲属身份和海关争议不自动等于利益输送或处罚，维持2。",
+      "score": 2.0,
+      "score_range": [
+        2.0,
+        2.0
+      ],
+      "status": "旧裁决保留分项，本轮恢复理由",
+      "evidence_refs": [
+        "NKE-G-017；NKE-G-018；V3-004",
+        "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+        "财报/耐克/耐克FY2026_10-K.pdf"
+      ]
+    },
+    {
+      "group": "management",
+      "id": "诚信与透明度",
+      "definition": "管理层七维表满分20；原文、披露、审计与言行兑现综合判断",
+      "facts_and_reason": "审计与ICFR干净，CFO交接原件明确否认经营政策分歧并披露一次迟报；未取到的诉讼/交易细节保持unknown，不作为失信扣分，候选16。",
+      "score": null,
+      "score_range": [
+        16,
+        16
+      ],
+      "status": "作者修复候选，待独立验收",
+      "evidence_refs": [
+        "NKE-G-005；NKE-G-006；V3-002；V3-004",
+        "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+        "SRC-8K-20260623",
+        "SRC-DEF14A-2026"
+      ]
+    },
+    {
+      "group": "management",
+      "id": "资本配置能力",
+      "definition": "管理层七维表满分25；分红、回购、并购、投入产出与融资综合判断",
+      "facts_and_reason": "分红连续、低谷暂停回购是正面；历史回购效果、SBC、交接成本和转型回报限制评分，候选12。",
+      "score": null,
+      "score_range": [
+        12,
+        12
+      ],
+      "status": "作者修复候选，待独立验收",
+      "evidence_refs": [
+        "NKE-F-014；NKE-F-015；NKE-F-020",
+        "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+        "SRC-8K-20260623",
+        "SRC-DEF14A-2026"
+      ]
+    },
+    {
+      "group": "management",
+      "id": "战略稳定性",
+      "definition": "管理层七维表满分15；战略主线与执行路径一致性",
+      "facts_and_reason": "运动与创新主线稳定，DTC偏置后修复批发关系，执行路径调整但非使命漂移，维持10。",
+      "score": null,
+      "score_range": [
+        10,
+        10
+      ],
+      "status": "旧裁决保留分项，本轮恢复理由",
+      "evidence_refs": [
+        "S001 MD&A HTML L843-856；NKE-F-011",
+        "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+        "SRC-8K-20260623",
+        "SRC-DEF14A-2026"
+      ]
+    },
+    {
+      "group": "management",
+      "id": "对股东友好度",
+      "definition": "管理层七维表满分15；分红、回购、投票权与交易对齐",
+      "facts_and_reason": "FY2026分红2.407十亿美元与绩效约束已核，双层股权削弱B类制衡；未知内部交易不扣分，维持11。",
+      "score": null,
+      "score_range": [
+        11,
+        11
+      ],
+      "status": "旧裁决保留分项，本轮恢复理由",
+      "evidence_refs": [
+        "NKE-F-015；NKE-G-017",
+        "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+        "SRC-8K-20260623",
+        "SRC-DEF14A-2026"
+      ]
+    },
+    {
+      "group": "management",
+      "id": "危机处理能力",
+      "definition": "管理层七维表满分10；反应、承担、行动和结果",
+      "facts_and_reason": "CEO更替、恢复运动品类/批发及暂停回购为已核动作；收入企稳但利润现金未转折，候选7。",
+      "score": null,
+      "score_range": [
+        7,
+        7
+      ],
+      "status": "作者修复候选，待独立验收",
+      "evidence_refs": [
+        "NKE-F-011；V3-002",
+        "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+        "SRC-8K-20260623",
+        "SRC-DEF14A-2026"
+      ]
+    },
+    {
+      "group": "management",
+      "id": "组织与人才能力",
+      "definition": "管理层七维表满分10；稳定性、人才保留和激励",
+      "facts_and_reason": "长期内部人才与外聘CFO经验可核；只有CEO/CFO更替已核，其他任命不能充离任，候选8–10。",
+      "score": null,
+      "score_range": [
+        8,
+        10
+      ],
+      "status": "作者修复候选，待独立验收",
+      "evidence_refs": [
+        "S001 executive officers；V3-002；V3-003",
+        "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+        "SRC-8K-20260623",
+        "SRC-DEF14A-2026"
+      ]
+    },
+    {
+      "group": "management",
+      "id": "表达清晰度与认知质量",
+      "definition": "管理层七维表满分5；原话、限定词、风险认知和可验证性",
+      "facts_and_reason": "10-K与代理声明量化风险、绩效和薪酬；方向性承诺难算达成率，但缺定量原话不等于表达差，候选4。",
+      "score": null,
+      "score_range": [
+        4,
+        4
+      ],
+      "status": "作者修复候选，待独立验收",
+      "evidence_refs": [
+        "S001 MD&A；NKE-G-022；V3-003",
+        "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+        "SRC-8K-20260623",
+        "SRC-DEF14A-2026"
+      ]
+    }
+  ],
+  "qualification_note": "即使候选上界144.5经复查成立，也低于B_GROWTH合计150；但在独立复查前不得把候选上界宣称为已批准reject依据。"
+}

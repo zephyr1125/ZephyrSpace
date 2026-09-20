@@ -1,0 +1,255 @@
+{
+  "units": "人民币百万元",
+  "raw_cash_bridge": {
+    "2023": {
+      "ocf": 137.427316,
+      "cash_capex": 527.896896,
+      "ocf_less_cash_capex": -390.46957999999995
+    },
+    "2024": {
+      "ocf": 2525.944923,
+      "cash_capex": 353.479429,
+      "ocf_less_cash_capex": 2172.465494
+    },
+    "2025": {
+      "ocf": 2923.537577,
+      "cash_capex": 842.793057,
+      "ocf_less_cash_capex": 2080.74452
+    },
+    "2026H1": {
+      "ocf": 2435.699116,
+      "cash_capex": 199.718525,
+      "ocf_less_cash_capex": 2235.9805909999995
+    }
+  },
+  "three_year_ocf_less_capex_diagnostic": 1287.5801446666667,
+  "corrected_2025_before_customer_and_reinvestment_split": 2077.6473465500003,
+  "receivables": {
+    "2025": {
+      "gross": 6179.475427,
+      "allowance": 1072.562012,
+      "net": 5106.913415
+    },
+    "2026H1": {
+      "gross": 5533.024198,
+      "allowance": 1053.369286,
+      "net": 4479.654911
+    }
+  },
+  "receivable_checks": {
+    "2025": true,
+    "2026H1": true
+  },
+  "company_subscores": {
+    "A": {
+      "A1": 3,
+      "A2": 3,
+      "A3": 2
+    },
+    "B": {
+      "B0": 1,
+      "B1": 4,
+      "B2": 2,
+      "B3": 5,
+      "B4": 4
+    },
+    "C": {
+      "C1": 5,
+      "C2": 4,
+      "C3_C4": 7
+    },
+    "D": {
+      "D1": 3,
+      "D2": 3,
+      "D3": 2,
+      "D5": 2
+    },
+    "E": {
+      "E1": 3,
+      "E2": 3,
+      "E3": 2,
+      "E4": 1,
+      "E5": 2,
+      "E5_5": 2
+    },
+    "F": {
+      "F1": 4,
+      "F2": 3,
+      "F2_5": 1,
+      "F3": 2
+    }
+  },
+  "candidate_cScore": 73,
+  "management_subscores": {
+    "诚信": 15,
+    "资本配置": 17,
+    "战略": 12,
+    "股东回报": 11,
+    "危机处理": 6,
+    "组织": 6,
+    "表达": 3
+  },
+  "candidate_mScore": 70,
+  "target_price": null,
+  "valuation_certainty": null,
+  "mechanical_buy_price": null,
+  "watchlistLevel": null,
+  "reverse_validation_weight": 0,
+  "blocking_reason": "FCFF客户结算/保理/自有营运资金经济分类残差与维护/扩张再投资仍未闭合；RI仅作为已完成的第二模型候选",
+  "explicit_ri": {
+    "保守": {
+      "equity_cny_m": 15688.719781317737,
+      "value_hkd_per_share": 6.229750340237717,
+      "rollforward": [
+        {
+          "year": 1,
+          "begin_bv": 25030.046025,
+          "roe": 0.085,
+          "payout": 0.35,
+          "earnings": 2127.553912125,
+          "residual_income": -750.9013807499999,
+          "end_bv": 26412.95606788125
+        },
+        {
+          "year": 2,
+          "begin_bv": 26412.95606788125,
+          "roe": 0.08375,
+          "payout": 0.4,
+          "earnings": 2212.0850706850547,
+          "residual_income": -825.404877121289,
+          "end_bv": 27740.207110292282
+        },
+        {
+          "year": 3,
+          "begin_bv": 27740.207110292282,
+          "roe": 0.0825,
+          "payout": 0.45,
+          "earnings": 2288.5670865991133,
+          "residual_income": -901.5567310844992,
+          "end_bv": 28998.919007921795
+        },
+        {
+          "year": 4,
+          "begin_bv": 28998.919007921795,
+          "roe": 0.08125,
+          "payout": 0.5,
+          "earnings": 2356.162169393646,
+          "residual_income": -978.7135165173606,
+          "end_bv": 30177.00009261862
+        },
+        {
+          "year": 5,
+          "begin_bv": 30177.00009261862,
+          "roe": 0.08,
+          "payout": 0.55,
+          "earnings": 2414.1600074094895,
+          "residual_income": -1056.1950032416516,
+          "end_bv": 31263.372095952887
+        }
+      ]
+    },
+    "基准": {
+      "equity_cny_m": 21861.682148725846,
+      "value_hkd_per_share": 8.680939152624376,
+      "rollforward": [
+        {
+          "year": 1,
+          "begin_bv": 25030.046025,
+          "roe": 0.1,
+          "payout": 0.35,
+          "earnings": 2503.0046025,
+          "residual_income": -125.15023012499977,
+          "end_bv": 26656.999016625
+        },
+        {
+          "year": 2,
+          "begin_bv": 26656.999016625,
+          "roe": 0.09875,
+          "payout": 0.38749999999999996,
+          "earnings": 2632.378652891719,
+          "residual_income": -166.60624385390602,
+          "end_bv": 28269.330941521177
+        },
+        {
+          "year": 3,
+          "begin_bv": 28269.330941521177,
+          "roe": 0.0975,
+          "payout": 0.425,
+          "earnings": 2756.259766798315,
+          "residual_income": -212.01998206140863,
+          "end_bv": 29854.180307430208
+        },
+        {
+          "year": 4,
+          "begin_bv": 29854.180307430208,
+          "roe": 0.09625,
+          "payout": 0.4625,
+          "earnings": 2873.4648545901578,
+          "residual_income": -261.22407769001416,
+          "end_bv": 31398.667666772417
+        },
+        {
+          "year": 5,
+          "begin_bv": 31398.667666772417,
+          "roe": 0.095,
+          "payout": 0.5,
+          "earnings": 2982.8734283433796,
+          "residual_income": -313.986676667724,
+          "end_bv": 32890.1043809441
+        }
+      ]
+    },
+    "乐观": {
+      "equity_cny_m": 28468.710061867067,
+      "value_hkd_per_share": 11.304488745170827,
+      "rollforward": [
+        {
+          "year": 1,
+          "begin_bv": 25030.046025,
+          "roe": 0.115,
+          "payout": 0.35,
+          "earnings": 2878.455292875,
+          "residual_income": 425.510782425,
+          "end_bv": 26901.04196536875
+        },
+        {
+          "year": 2,
+          "begin_bv": 26901.04196536875,
+          "roe": 0.1125,
+          "payout": 0.375,
+          "earnings": 3026.3672211039843,
+          "residual_income": 390.06510849784684,
+          "end_bv": 28792.52147855874
+        },
+        {
+          "year": 3,
+          "begin_bv": 28792.52147855874,
+          "roe": 0.11,
+          "payout": 0.4,
+          "earnings": 3167.1773626414615,
+          "residual_income": 345.5102577427048,
+          "end_bv": 30692.82789614362
+        },
+        {
+          "year": 4,
+          "begin_bv": 30692.82789614362,
+          "roe": 0.1075,
+          "payout": 0.425,
+          "earnings": 3299.478998835439,
+          "residual_income": 291.5818650133642,
+          "end_bv": 32590.028320473997
+        },
+        {
+          "year": 5,
+          "begin_bv": 32590.028320473997,
+          "roe": 0.105,
+          "payout": 0.45,
+          "earnings": 3421.95297364977,
+          "residual_income": 228.13019824331772,
+          "end_bv": 34472.102455981374
+        }
+      ]
+    }
+  },
+  "second_model_status": "candidate_valid_explicit_RI"
+}

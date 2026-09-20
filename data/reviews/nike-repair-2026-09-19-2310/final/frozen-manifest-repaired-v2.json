@@ -1,0 +1,67 @@
+{
+  "frozen_at": "2026-09-19T15:50:22.1489973Z",
+  "cutoff": "2026-09-19",
+  "status": "唯一例外作者修复冻结，待最后两路复查；无第三轮作者",
+  "files": [
+    {
+      "path": "data\\reviews\\nike-repair-2026-09-19-2310\\drafts\\repaired-v2\\deep.md",
+      "sha256": "8a2d14239844c29e99b25dd0fb6c2ab6753048376337d03c09ebc6696dd38b18",
+      "bytes": 23893,
+      "lines": 391
+    },
+    {
+      "path": "data\\reviews\\nike-repair-2026-09-19-2310\\drafts\\repaired-v2\\management.md",
+      "sha256": "7feb242d20c4422ca7c5b1d06d4c586cb7db73db71ae070227b79eee93d2f4eb",
+      "bytes": 17730,
+      "lines": 358
+    },
+    {
+      "path": "data\\reviews\\nike-repair-2026-09-19-2310\\drafts\\repaired-v2\\valuation.md",
+      "sha256": "5d5ac43dedf00e7f1ba8b6d0fe1fcca68ead5e689b67588d31e95ea17c2d1dd6",
+      "bytes": 8740,
+      "lines": 146
+    },
+    {
+      "path": "data\\reviews\\nike-repair-2026-09-19-2310\\final\\workpaper-repaired-v2.json",
+      "sha256": "2a6c0617edf7d68e3ab7f38ca01d7f94e75fa93db9b3f3c6d96de9673617ff63",
+      "bytes": 38620,
+      "lines": 1080
+    },
+    {
+      "path": "data\\reviews\\nike-repair-2026-09-19-2310\\final\\score-review-v2.json",
+      "sha256": "a6e11f0fb8191050dae672f0f7fb6b92f73e53ac93cdd61fb3922a730fe1ee8e",
+      "bytes": 19831,
+      "lines": 484
+    },
+    {
+      "path": "data\\reviews\\nike-repair-2026-09-19-2310\\final\\selfcheck-repaired-v2.json",
+      "sha256": "564f4d492123ef55d6d35aca11f9ab27f8a0461606e52cd33ee19c6e5caea817",
+      "bytes": 241,
+      "lines": 13
+    },
+    {
+      "path": "data\\reviews\\nike-repair-2026-09-19-2310\\final\\triplet-check-repaired-v2-freeze.json",
+      "sha256": "eb03f483ef26c1a16adfa2dd5f3e8cbc0e3a1f8bc5930019b002f6f46936577f",
+      "bytes": 465,
+      "lines": 15
+    },
+    {
+      "path": "data\\reviews\\nike-repair-2026-09-19-2310\\final\\repair-closeout-v2.json",
+      "sha256": "d41df3ece8550fb8241f78a092403766e21e51eafe747545151739de37cb05f0",
+      "bytes": 2361,
+      "lines": 86
+    },
+    {
+      "path": "data\\reviews\\nike-repair-2026-09-19-2310\\final\\mechanical-check-scope-v2.md",
+      "sha256": "4932bc0aa5e2883549cec54448b33953921e87da3e2cdaa4e5b1827752d66d8f",
+      "bytes": 803,
+      "lines": 9
+    },
+    {
+      "path": "data\\reviews\\nike-repair-2026-09-19-2310\\evidence\\repair-evidence-correction-v3.md",
+      "sha256": "bf2d041b70cb916c773cfea67d2cfb5537ddbbbb3466cf2e6aeb12b4259cf91c",
+      "bytes": 1859,
+      "lines": 31
+    }
+  ]
+}

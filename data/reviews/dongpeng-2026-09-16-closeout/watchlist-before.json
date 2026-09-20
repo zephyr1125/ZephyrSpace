@@ -1,0 +1,20 @@
+{
+  "name": "东鹏饮料",
+  "code": "09980.HK",
+  "board": "港",
+  "cScore": 82,
+  "mScore": 78,
+  "target_price": 145,
+  "valuation_certainty": 0.6,
+  "dv_ttm": null,
+  "next_earnings_date": null,
+  "next_earnings_type": "三季报（待公告）",
+  "lastEarningsIncorporated": "2026H1",
+  "cycle_is_cyclical": false,
+  "cycle_position": null,
+  "watchlistLevel": "A_CORE",
+  "trackingStatus": "WATCHING",
+  "strategicCoreType": null,
+  "lastFundamentalReviewDate": "2026-07-31",
+  "lastRedFlagReviewDate": null
+}

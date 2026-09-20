@@ -1,0 +1,30 @@
+{
+  "evidence_version": "v3-repair-2026-09-12",
+  "as_of_date": "2026-09-12",
+  "security": "UiPath, Inc. Class A common stock (NYSE: PATH)",
+  "market": "NYSE / USA",
+  "currency": "USD",
+  "price": null,
+  "price_type": "常规交易收盘价未获可归档原响应，故为null",
+  "trading_day": "2026-09-11",
+  "latest_trade_not_regular_close": {"price":13.75,"timestamp_utc":"2026-09-11T23:57:50Z","source_id":"WEB-FINANCE-20260912"},
+  "adjustment_basis": "unknown; provider adjustment methodology not independently verified",
+  "shares": {
+    "class_a": 456464703,
+    "class_b": 64690706,
+    "combined_issued_outstanding": 521155409,
+    "share_date": "2026-09-03",
+    "source": "SEC-10Q-Q2FY2027, excerpt lines 124-127",
+    "diluted_share_count": null,
+    "notes": "A类为上市交易类别；B类为非上市高投票权类别。该合计股数日期与行情日期不同，不能直接替代供应商市值分母。"
+  },
+  "provider_market_cap": 7191428750,
+  "provider_market_cap_date": "2026-09-11",
+  "source_id": "WEB-FINANCE-20260912",
+  "retrieved_date": "2026-09-12",
+  "adr_or_ordinary_share_conversion": "not_applicable; U.S. domestic Class A common stock",
+  "conflicts_or_limits": [
+    "行情来源非SEC/公司原件，且未取得可归档的供应商常规收盘原始响应文件；因此price字段明确置null。",
+    "供应商市值与截至2026-09-03的A+B官方股数按13.75美元相乘不一致；在未核对供应商股数时点与类别处理前，保留两个数值，不自行调和。"
+  ]
+}

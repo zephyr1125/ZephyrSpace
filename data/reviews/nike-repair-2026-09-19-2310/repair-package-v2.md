@@ -1,0 +1,705 @@
+# 唯一修复包
+
+由已锁定裁决台账生成；裁决台账是唯一判断来源，本文不构成修复完成。
+
+## G02 · P2 · partial
+
+候选：C004, C009
+
+裁决理由：正式模型为空、价格null、有效价格带已撤回，撤回实质成立。1.9/2.3/2.7残留句与撤回段冲突确实存在，但未保留当前模型输出/价格，不升级为P1；并入本次顺手清除。
+
+原件：本run/repair-adjudication-v1.json G02；本run/anonymous-recheck/candidates.json C004,C009；本run/drafts/repaired-v1/与final/冻结产物；财报/耐克/耐克FY2026_10-K.pdf 原页59、75-77；PDF63、79-81；旧writer/workpaper-v3.json；最新估值股数桥/经济FCFE桥；本run/evidence/facts.json：NKE-R-005、NKE-R-006、NKE-R-007
+
+动作：删除或将该句标成已撤回历史输入；不恢复DCF，不重建现金模型。
+
+联动：正式价格继续null；不影响公司分。
+
+- G02-sbc：用已披露RSU/期权余额与FY2026期权3、员工净发行6百万股说明既存奖励/未来授予的处理；明确采用经济费用或稀释路径，量化证明同一成本不双扣。未来授予可以假设并敏感性；无法分辨可撤回该每股模型。 【本轮状态：withdrawn；唯一例外动作】已满足撤回路径；保留历史股数/SBC事实，不重新建模。
+- G02-equity：若保留回购预测，给价格、现金、发生时点，列现金期初+经营/融资-分红-回购=期末及运营保留/超额分配，回购不既消耗被分配现金又无资金减少分母；允许明确零回购假设。保留已核2bn滚续与租金处理，不重查历史事实。 【本轮状态：withdrawn；唯一例外动作】撤回超额现金/每股模型成立；G13恢复2bn流动债和租金不得重复扣的事实边界，不要求再做未来回购模型。
+- G02-recalc：保留的模型须按最终输入重算三情景、敏感性、反向解与三份报告一致性；选择撤回路径则正式参数均null，明确原34.213160/.50/25.659870不批准，删除当前有效价格带。 【本轮状态：withdrawn_with_P2_cleanup；唯一例外动作】P2清理valuation第74行三档DCF“当前采用”措辞，删除或明确历史撤回；保持正式价格null、models空、不出现有效价格区。
+
+## G03 · P1 · valid
+
+候选：v1:C001, v1:C006, v1:C007, v1:C009, v1:C010
+
+裁决理由：原三个条件通过撤回路径处置，FY2027 EPS/独立PE锚未证成的事实继续开放；没有本轮新模型错误。
+
+原件：本run/repair-adjudication-v1.json G03；本run/anonymous-recheck/candidates.json ；本run/drafts/repaired-v1/与final/冻结产物；财报/耐克/耐克FY2026_10-K.pdf 原页36、86-87；旧adjudication-v2.json verified_facts_delta/market_source_disagreement；最新估值PE模型；本run/evidence/facts.json：NKE-R-003、NKE-R-007
+
+动作：保留已撤回状态及原条件，不要求新增模型或外部PE样本。
+
+联动：正式目标价/确信度/买入价继续null；不得称完成定价。
+
+- G03-eps：若保留预测，列FY2026已核分部或渠道→FY2027三情景增长假设→合计收入；沿用已核毛利至净利算式，股数使用G02时点加权并单列潜在稀释。每项预测注明经济理由，不要求未来公告验证。或撤回依赖该预测的价格。 【本轮状态：withdrawn；唯一例外动作】继续撤回预测EPS与权重；不为本轮强建地区预测。
+- G03-anchor：可用冻结包内日期、样本、实际/预测期、盈利口径可核的独立锚，解释到FY2027三档PE的风险/增长调整；不能以35.51/当期EPS反算现价倍数或供应商selected独自充第二合理价值。无可靠锚即撤回正式PE权重，未知保留。 【本轮状态：withdrawn；唯一例外动作】继续明确缺独立锚和PE撤回，不外查、不以市价倒算冒充独立锚。
+- G03-completion：仅两模型实质闭合才批准权重、确信度五项理由及target×(0.68+0.14×certainty)机械买入价；否则null，研究状态与决策分开。若可信评分上界已否决全部档位，可停止正式定价，不必强凑第二模型。 【本轮状态：withdrawn；唯一例外动作】目标价/确信度/买入价均null，模型未验收与研究decision独立表达。
+
+## G05 · P1 · valid
+
+候选：v1:C003
+
+裁决理由：268/260历史付款与742仅历史剔除尺度已正确隔离；未来税额未知不再参与价格，撤回路径成立。
+
+原件：本run/repair-adjudication-v1.json G05；本run/anonymous-recheck/candidates.json ；本run/drafts/repaired-v1/与final/冻结产物；财报/耐克/耐克FY2026_10-K.pdf 原页75/PDF79；最新估值FY2027现金桥；本run/evidence/facts.json：NKE-R-008
+
+动作：保留既有正确事实和未知，无新增税款正常化任务。
+
+联动：模型税额未知不作为E2扣分。
+
+- G05-tax：若保留模型，列三情景税前利润×22%=税费、税费与现金税差及其假设依据；268不重复、260结算未知不永久加回，敏感性覆盖可论证的时点差。不能声称已精确预测IRS结算；或撤回依赖价格并保留未知。 【本轮状态：bounded_and_withdrawn；唯一例外动作】保持1270/268/260与742历史限定；不得重新添加预测永久加回。
+
+## G07 · P1 · partial
+
+候选：C001, C011
+
+裁决理由：A3回购归因已纠正，但3.5下界仅因历史覆盖不足，违反未知不负面化。E2固定3与已核规则5档不符；E3/CFO补偿/资本配置等未证成点值不能被当确定上界。对管理层自由裁量要求逐分数学证明并非规则，未采纳这种无限精细化要求。
+
+原件：本run/repair-adjudication-v1.json G07；本run/anonymous-recheck/candidates.json C001,C011；本run/drafts/repaired-v1/与final/冻结产物；deep-prebuy-skill/SKILL.md A3/F2.5；财报/耐克/耐克FY2026_10-K.pdf 原页45-46、59；旧adjudication-v2.json G07；最新深度最终评分桥；本run/evidence/facts.json：NKE-R-007
+
+动作：撤回A3下界及未经证成资格上界；按下面评分处置表纠正受影响项。允许未知与规则满分数学上限，不为reject强凑分。
+
+联动：不批准144.5及72.5–74.5/68–70为可信区间；E2按现有规则修为5，其余争议可保留null。
+
+- G07-score：A3用事实→规则→分数或待定原因；若仅作资格上界可用满分4作为数学上限，不把资料未知当0分或瑕疵。其余G07已核分项恢复各自理由，不能复活外聘/亲属/未知自动负面归因。 【本轮状态：open；唯一例外动作】A3点值和3.5下界撤回，可只记规则上限4；E2按p58与原规则给5，E3不得仅因增长慢给1.5，需用已核一次性/量价事实对规则或撤回点值。管理层资本配置12未获批准：恢复已核ROIC/回购/Capex桥并给评价理由，或null+规则上限25。其余受争议点值见parameters.score_disposition；不要求无规定的逐一分差量化证明。
+
+## G08 · P1 · partial
+
+候选：C003, C011
+
+裁决理由：CEO/CFO分类改善成立，公开原因未知无需补齐；Donahoe/Hill日期来源泛称不足。组织8下界与F1 3.5下界仍不是有据界限；D2/D5已核原文和人效表被回退，须恢复。
+
+原件：本run/repair-adjudication-v1.json G08；本run/anonymous-recheck/candidates.json C003,C011；本run/drafts/repaired-v1/与final/冻结产物；management-archive/SKILL.md 六/九及references/pitfalls.md M8；旧adjudication-v2.json G08/员工事实；最新管理层五年核心人事/七维评分桥；本run/evidence/facts.json：NKE-R-009、NKE-R-010
+
+动作：只补已有冻结证据的具体日期/来源、恢复人效与承诺表；无法确认即准确界定，不发起新查人事。F1/组织可撤回点值，不强制编造下界。
+
+联动：已核激励与内部人才不因离任未知失效；未证成下界不能入总分。
+
+- G08-people：既有表每行给事件类别、已核日期/身份/接任来源，原件未确认离任者或原因明确未知；对12个月离任模式只据核实离任判断，任命数不能充离任数。Donahoe/Hill与Friend/Denton保留；未知可界定，不要求无公开资料的动机。 【本轮状态：partial；唯一例外动作】用旧冻结材料可得的2024-10-14 CEO更替及具体原件定位；若原件定位尚不能确证，日期标“旧稿载、未直接确认”并不支持模式判断。CFO日期差异保留；其余人事原因unknown即可，不增加外查。
+- G08-score：F1按核心稳定/激励证据重评，管理层组织按稳定性、人才保留、激励三部分说明，不把未知原因当扣分。可不给点值并用原规则满分上限5/10作资格上界；D2/D5与战略/危机/表达未受影响依据保留，复查不得自动把任命未知扩大扣分。 【本轮状态：open；唯一例外动作】撤回F1 3.5和组织8无据下界；可null并仅列规则上限5/10，不作[下界,上界]可信区间。恢复已核FY23-26人效和三条带发布日期/期限承诺；D2/D5如保留分数须援引对应表，不用方向性标签替代已有原话。组织如保留点分须说明稳定/人才/激励三部分，未知可保持未知。
+
+## G09A · P2 · partial
+
+候选：C007
+
+裁决理由：未列同比仍P2；实际删掉三年分部绝对额与错误Note19回流是G13内容回退P1，不能以该项P2掩盖。
+
+原件：本run/repair-adjudication-v1.json G09A；本run/anonymous-recheck/candidates.json C007；本run/drafts/repaired-v1/与final/冻结产物；财报/耐克/耐克FY2026_10-K.pdf 原页36、86-87；旧adjudication-v2.json verified_facts_delta/segments；本run/evidence/facts.json：NKE-R-003
+
+动作：复用已核三年七分部+合计表，统一Note15定位；同比建议项不新增阻塞。
+
+联动：B1须以实际分部结构判断，不能引用不存在的Note19分部表。
+
+- G09-segments：保留已核三年分部/合计与Note15定位，建议补同比；未补百分比本身不判P1，若发现方向或实际金额错误按实质另列。 【本轮状态：partial_under_G13；唯一例外动作】恢复FY24/25/26七分部及合计收入/EBIT，正文/底稿/score-review统一Note15 p86-87；同比未补不阻塞。实质回退关闭由G13验收。
+
+## G09B · P1 · valid
+
+候选：C002
+
+裁决理由：原件p46–47明确代言15.5/1.7、产品采购4.9/4.7、其他采购2.4/1.6bn。稿件和证据map对调1.7/4.7且将Other全称Capex是已知事实错误；合计8.0不改变分类错误。
+
+原件：本run/repair-adjudication-v1.json G09B；本run/anonymous-recheck/candidates.json C002；本run/drafts/repaired-v1/与final/冻结产物；财报/耐克/耐克FY2026_10-K.pdf 原页46、62/PDF50、66；最新估值现金归属与预测桥；本run/evidence/facts.json：原件p46与p62直接核验
+
+动作：精确更正报告及非忽略证据map的新版本、底稿与关闭证据；其他采购按技术投资/外部服务/营销描述，费用与Capex分配未知。保持价格撤回，不补未来覆盖模型。 evidence/repair-evidence-map-v2.md冻结不改，新建增量明确其末段错误行作废并给正确类别；最终报告引用纠正增量，不能留非忽略证据链错误。
+
+联动：归属错误影响现金边界，须实改而非标未知；其他采购内部结构未知可保留。
+
+- G09-commitments：分别映射1.7/4.7/1.6bn支付到费用、成本/存货/应付、Capex；给预测覆盖量或有据边界并解释未覆盖现金需求如何影响现金留存。不得全额在成本后再减承诺；若未知不可界定则撤回超额现金加项和依赖价格，不要求逐份合同不可得信息。 【本轮状态：open；唯一例外动作】正文与新版本证据定位明确：代言15.5/12月1.7，产品采购4.9/4.7，其他采购2.4/1.6（bn）；Other包含技术/服务/营销，不能全称Capex。保留未来覆盖未知并撤回超额现金价格，不需要新预测。
+
+## G13 · P1 · partial
+
+候选：C004, C005, C006, C007, C008, C010, C012
+
+裁决理由：恢复v1造成分部/杜邦/准备/承诺/人效/关联金额及比利时海关例外丢失属实质回退。A1来源补充未声明、表达3/4与C2措辞矛盾本身P2，不能将全部机械fail称schema问题，也不单凭这些要求新轮。
+
+原件：本run/repair-adjudication-v1.json G13；本run/anonymous-recheck/candidates.json C004,C005,C006,C007,C008,C010,C012；本run/drafts/repaired-v1/与final/冻结产物；旧writer/workpaper-v1/v2/v3.json；旧writer/frozen-deep-v1.md、frozen-management-v1.md、frozen-valuation-v1.md；最新三报告全文；docs/three-report-closeout.md；本run/evidence/facts.json：NKE-R-002、NKE-R-004、NKE-R-010、NKE-R-011
+
+动作：仅按恢复清单补已核片段，修来源Note15、评分规则及实质关闭记录；A1等真实引用变更补申报或回退无必要新增来源。不得全篇模板重写。
+
+联动：未验证固定项不能产生reject上界；事实恢复也不自动批准原子分，仍须规则判断或null。
+
+- G13-single-source：逐项恢复25+7理由和具体来源：旧裁决已批准项原理由保留，受纠错项替换错误事实/归因并注明旧→新分。恢复七年经营表、原控制权选举8/3及78.8%、激励兑现和关联交易具体金额等已核内容；源材料不支持则标未知而非编造。对本轮13验收ID分别列实际段落/表格/计算/撤回位置；其余原33关闭项做防回退映射而非重新研究。评分点值或上下界、三份快照与价格状态唯一一致。恢复全文150/150/100及内容要求，程序通过不等于实质通过。 【本轮状态：open；唯一例外动作】逐清单恢复已核后续修正而非整篇回退v1；风险叙述必须纳入p88海关例外，金额unknown且1.3bn总体担保不是该索赔额。所有候选点分/区间逐项映射规则或撤回，144.5不得作排除结论。关闭表逐ID指具体新增表/段落/撤回字段，不统一泛指全文；机械scope分开schema限制、真实未声明引用差异与未覆盖人工项。
+
+## 最终参数或待定原因
+
+```json
+{
+  "currency": "USD",
+  "company_score": null,
+  "management_score": null,
+  "target_price": null,
+  "certainty": null,
+  "buy_price": null,
+  "pending_reason": "原点值尚未实质验收；估值归属/锚缺口仍在，原34.213160/.50/25.659870不批准。",
+  "score_bridges": {
+    "company": [
+      {
+        "id": "A1",
+        "original_score": 3,
+        "prior_adjudicated_score": 3,
+        "latest_author_proposal": 3,
+        "approved_score": 3,
+        "status": "保留旧裁决分项，恢复原理由",
+        "original_reason": "创始人运动员背景与产品创新、品牌营销结合，形成全球先发品牌基因。",
+        "original_evidence_refs": [
+          "NKE-G-002；S001 FY2026 10-K Item 1 pp.3-5"
+        ],
+        "adjudication_reason": "运动产品创新及品牌先发基因未被本轮新证据推翻。"
+      },
+      {
+        "id": "A2",
+        "original_score": 3,
+        "prior_adjudicated_score": 3,
+        "latest_author_proposal": 3,
+        "approved_score": 3,
+        "status": "保留旧裁决分项，恢复原理由",
+        "original_reason": "控制权长期稳定；双层股权保持Knight家族影响力，但降低B类股东董事选举权。",
+        "original_evidence_refs": [
+          "NKE-G-009；NKE-G-017"
+        ],
+        "adjudication_reason": "控制权长期稳定；公众制衡问题归治理，不改变稳定性事实。"
+      },
+      {
+        "id": "A3",
+        "original_score": 3.5,
+        "prior_adjudicated_score": null,
+        "latest_author_proposal": 3.5,
+        "approved_score": null,
+        "status": "作者修正候选，须逐项恢复理由并定向验收，不视为旧裁决批准",
+        "original_reason": "主业集中、无跨界并购主导迹象；历史回购规模大，但高价回购与当前股价下跌削弱资本运作质量。",
+        "original_evidence_refs": [
+          "NKE-F-015；S001 Item 5 HTML L809-812"
+        ],
+        "adjudication_reason": "沿用v1待定；本次具体闭合要求见关联根因及G13。"
+      },
+      {
+        "id": "B0",
+        "original_score": 2,
+        "prior_adjudicated_score": 2,
+        "latest_author_proposal": 2,
+        "approved_score": 2,
+        "status": "保留旧裁决分项，恢复原理由",
+        "original_reason": "从跑鞋创新与专业运动员连接起步，演化为轻资产合同制造、品牌和渠道驱动模式。",
+        "original_evidence_refs": [
+          "NKE-G-002；S001 Item 1 HTML L217-260"
+        ],
+        "adjudication_reason": "设计/品牌/合同制造商业模式可核。"
+      },
+      {
+        "id": "B1",
+        "original_score": 3,
+        "prior_adjudicated_score": null,
+        "latest_author_proposal": 3.5,
+        "approved_score": null,
+        "status": "作者修正候选，须逐项恢复理由并定向验收，不视为旧裁决批准",
+        "original_reason": "鞋类、服装、装备及Converse形成产品组合，地域全球化；鞋类与NIKE品牌集中度仍高。",
+        "original_evidence_refs": [
+          "S001 FY2026 10-K Note 19 segment disclosure；HTML L979-1040"
+        ],
+        "adjudication_reason": "沿用v1待定；本次具体闭合要求见关联根因及G13。"
+      },
+      {
+        "id": "B2",
+        "original_score": 2,
+        "prior_adjudicated_score": 2,
+        "latest_author_proposal": 2,
+        "approved_score": 2,
+        "status": "保留旧裁决分项，恢复原理由",
+        "original_reason": "品牌复购和规模效应较强，但运动鞋服属于可选消费，批发与直营流量均受需求波动。",
+        "original_evidence_refs": [
+          "NKE-G-002；S001 MD&A HTML L843-856"
+        ],
+        "adjudication_reason": "可选消费且低转换成本的经济属性未变；关税桥改变盈利归因不改变该项基本模式判断。"
+      },
+      {
+        "id": "B3",
+        "original_score": 5,
+        "prior_adjudicated_score": null,
+        "latest_author_proposal": 4,
+        "approved_score": null,
+        "status": "作者修正候选，须逐项恢复理由并定向验收，不视为旧裁决批准",
+        "original_reason": "全球品牌、运动员资产和产品创新构成强定价基础；FY2024-FY2026利润与库存压力显示定价权并非无条件。",
+        "original_evidence_refs": [
+          "NKE-F-011；NKE-F-012；S001 Risk Factors"
+        ],
+        "adjudication_reason": "沿用v1待定；本次具体闭合要求见关联根因及G13。"
+      },
+      {
+        "id": "B4",
+        "original_score": 2.5,
+        "prior_adjudicated_score": 2.5,
+        "latest_author_proposal": 2.5,
+        "approved_score": 2.5,
+        "status": "保留旧裁决分项，恢复原理由",
+        "original_reason": "行业长期需求存在但成熟、竞争激烈；FY2024-FY2026收入由51.362降至46.398十亿美元，复苏仍需验证。",
+        "original_evidence_refs": [
+          "NKE-F-011"
+        ],
+        "adjudication_reason": "成熟市场与近两年收入疲弱仍支持原谨慎判断。"
+      },
+      {
+        "id": "C1",
+        "original_score": 6,
+        "prior_adjudicated_score": 6,
+        "latest_author_proposal": 6,
+        "approved_score": 6,
+        "status": "保留旧裁决分项，恢复原理由",
+        "original_reason": "公司在10-K中称其为全球最大运动鞋服销售商，仍属绝对第一梯队。",
+        "original_evidence_refs": [
+          "S001 MD&A HTML L843-847"
+        ],
+        "adjudication_reason": "全球规模第一梯队判断无决定性反证。"
+      },
+      {
+        "id": "C2",
+        "original_score": 3,
+        "prior_adjudicated_score": 3,
+        "latest_author_proposal": 3,
+        "approved_score": 3,
+        "status": "保留旧裁决分项，恢复原理由",
+        "original_reason": "合同制造与全球采购提供弹性，品牌对消费者有议价力；供应链集中、关税与批发渠道仍制约利润率。",
+        "original_evidence_refs": [
+          "NKE-G-002；S001 Risk Factors HTML L702-710"
+        ],
+        "adjudication_reason": "合同制造优势与供应地域集中、关税制约并存。"
+      },
+      {
+        "id": "C3+C4",
+        "original_score": 7,
+        "prior_adjudicated_score": 7,
+        "latest_author_proposal": 7,
+        "approved_score": 7,
+        "status": "保留旧裁决分项，恢复原理由",
+        "original_reason": "品牌、规模、运动员网络、研发与渠道构成四星级护城河；低切换成本与Adidas、On、Hoka等竞争限制满分。",
+        "original_evidence_refs": [
+          "NKE-G-002；S001 Competition and Products sections"
+        ],
+        "adjudication_reason": "品牌、研发、运动员和渠道壁垒同时有低切换成本限制；本轮没有支持机械改变7分的新事实。"
+      },
+      {
+        "id": "D1",
+        "original_score": 3,
+        "prior_adjudicated_score": 3,
+        "latest_author_proposal": 3,
+        "approved_score": 3,
+        "status": "保留旧裁决分项，恢复原理由",
+        "original_reason": "长期围绕运动、创新和消费者连接，FY2026重新强调Win Now；DTC偏置后又修复批发，属可解释的渠道调整。",
+        "original_evidence_refs": [
+          "S001 MD&A HTML L843-847；NKE-F-011"
+        ],
+        "adjudication_reason": "运动创新主线与可解释渠道修正并存；D2履约不可混作D1战略漂移。"
+      },
+      {
+        "id": "D2",
+        "original_score": 2.5,
+        "prior_adjudicated_score": null,
+        "latest_author_proposal": 3,
+        "approved_score": null,
+        "status": "作者修正候选，须逐项恢复理由并定向验收，不视为旧裁决批准",
+        "original_reason": "FY2024高位后FY2025利润显著下降，FY2026收入仅持平且净利继续下降；转型目标兑现不完整。",
+        "original_evidence_refs": [
+          "NKE-F-011；V3-003"
+        ],
+        "adjudication_reason": "沿用v1待定；本次具体闭合要求见关联根因及G13。"
+      },
+      {
+        "id": "D3",
+        "original_score": 1,
+        "prior_adjudicated_score": 1,
+        "latest_author_proposal": 1,
+        "approved_score": 1,
+        "status": "保留旧裁决分项，恢复原理由",
+        "original_reason": "可选消费疲弱、关税、汇率、中国市场和新品牌竞争构成明显外部逆风。",
+        "original_evidence_refs": [
+          "S001 Risk Factors；S001 MD&A"
+        ],
+        "adjudication_reason": "外部需求、贸易及竞争逆风仍在。"
+      },
+      {
+        "id": "D5",
+        "original_score": 1.5,
+        "prior_adjudicated_score": null,
+        "latest_author_proposal": 2,
+        "approved_score": null,
+        "status": "作者修正候选，须逐项恢复理由并定向验收，不视为旧裁决批准",
+        "original_reason": "CEO回归与COO、CFO重组带来修复能力，也反映组织尚在重置；连续执行证据不足。",
+        "original_evidence_refs": [
+          "NKE-G-008；V3-002"
+        ],
+        "adjudication_reason": "沿用v1待定；本次具体闭合要求见关联根因及G13。"
+      },
+      {
+        "id": "E1",
+        "original_score": 3,
+        "prior_adjudicated_score": null,
+        "latest_author_proposal": 3.5,
+        "approved_score": null,
+        "status": "作者修正候选，须逐项恢复理由并定向验收，不视为旧裁决批准",
+        "original_reason": "品牌轻资产属性支持较高回报，但回购缩减权益及利润波动使ROE质量不能按纯经营驱动满分。",
+        "original_evidence_refs": [
+          "NKE-F-011；NKE-F-012；NKE-F-015"
+        ],
+        "adjudication_reason": "沿用v1待定；本次具体闭合要求见关联根因及G13。"
+      },
+      {
+        "id": "E2",
+        "original_score": 3,
+        "prior_adjudicated_score": null,
+        "latest_author_proposal": 3,
+        "approved_score": null,
+        "status": "作者修正候选，须逐项恢复理由并定向验收，不视为旧裁决批准",
+        "original_reason": "FY2020-FY2026累计现金转化总体健康，但FY2026 CFO降至2.868十亿美元、低于净利3.108十亿美元，FCF仅2.184十亿美元。",
+        "original_evidence_refs": [
+          "NKE-F-010；NKE-F-011；NKE-F-020"
+        ],
+        "adjudication_reason": "沿用v1待定；本次具体闭合要求见关联根因及G13。"
+      },
+      {
+        "id": "E3",
+        "original_score": 1.5,
+        "prior_adjudicated_score": null,
+        "latest_author_proposal": 1.5,
+        "approved_score": null,
+        "status": "作者修正候选，须逐项恢复理由并定向验收，不视为旧裁决批准",
+        "original_reason": "七年收入CAGR为低个位数且近两年利润明显回落，增长质量处于修复期。",
+        "original_evidence_refs": [
+          "NKE-F-010；NKE-F-011；V3-001"
+        ],
+        "adjudication_reason": "沿用v1待定；本次具体闭合要求见关联根因及G13。"
+      },
+      {
+        "id": "E4",
+        "original_score": 1,
+        "prior_adjudicated_score": null,
+        "latest_author_proposal": 0.5,
+        "approved_score": null,
+        "status": "作者修正候选，须逐项恢复理由并定向验收，不视为旧裁决批准",
+        "original_reason": "现金短投9.027十亿美元覆盖7.942十亿美元有息债务，但另有3.091十亿美元租赁负债。",
+        "original_evidence_refs": [
+          "NKE-F-012；NKE-F-021"
+        ],
+        "adjudication_reason": "沿用v1待定；本次具体闭合要求见关联根因及G13。"
+      },
+      {
+        "id": "E5",
+        "original_score": 2,
+        "prior_adjudicated_score": null,
+        "latest_author_proposal": 2,
+        "approved_score": null,
+        "status": "作者修正候选，须逐项恢复理由并定向验收，不视为旧裁决批准",
+        "original_reason": "PwC对报表与ICFR均出具无保留意见；库存7.501十亿美元仍需持续观察。",
+        "original_evidence_refs": [
+          "NKE-G-005；NKE-F-012"
+        ],
+        "adjudication_reason": "沿用v1待定；本次具体闭合要求见关联根因及G13。"
+      },
+      {
+        "id": "E5.5",
+        "original_score": 2.5,
+        "prior_adjudicated_score": null,
+        "latest_author_proposal": 2.5,
+        "approved_score": null,
+        "status": "作者修正候选，须逐项恢复理由并定向验收，不视为旧裁决批准",
+        "original_reason": "审计与内控结论干净，关键估计有披露；证券诉讼和估计敏感性保留但未见重大会计异常。",
+        "original_evidence_refs": [
+          "NKE-G-005；NKE-L-023；S005 pp.52-54"
+        ],
+        "adjudication_reason": "沿用v1待定；本次具体闭合要求见关联根因及G13。"
+      },
+      {
+        "id": "F1",
+        "original_score": 4,
+        "prior_adjudicated_score": null,
+        "latest_author_proposal": 3.5,
+        "approved_score": null,
+        "status": "作者修正候选，须逐项恢复理由并定向验收，不视为旧裁决批准",
+        "original_reason": "内部晋升CEO与长期任职团队有连续性；CFO交接成本较高但8-K明确无经营政策分歧。",
+        "original_evidence_refs": [
+          "V3-002；S001 executive officers"
+        ],
+        "adjudication_reason": "沿用v1待定；本次具体闭合要求见关联根因及G13。"
+      },
+      {
+        "id": "F2",
+        "original_score": 4,
+        "prior_adjudicated_score": null,
+        "latest_author_proposal": 4,
+        "approved_score": null,
+        "status": "作者修正候选，须逐项恢复理由并定向验收，不视为旧裁决批准",
+        "original_reason": "持续分红、回购和高比例绩效薪酬对齐股东；双层股权与未逐笔核完内部交易限制满分。",
+        "original_evidence_refs": [
+          "NKE-F-015；NKE-G-022；V3-003；V3-004"
+        ],
+        "adjudication_reason": "沿用v1待定；本次具体闭合要求见关联根因及G13。"
+      },
+      {
+        "id": "F2.5",
+        "original_score": 1,
+        "prior_adjudicated_score": null,
+        "latest_author_proposal": 1.5,
+        "approved_score": null,
+        "status": "作者修正候选，须逐项恢复理由并定向验收，不视为旧裁决批准",
+        "original_reason": "FY2026暂停回购并保留现金应对转型具有审慎性，但历史高价回购、SBC和高额CFO交接补偿降低效率。",
+        "original_evidence_refs": [
+          "NKE-F-014；NKE-F-015；V3-002"
+        ],
+        "adjudication_reason": "沿用v1待定；本次具体闭合要求见关联根因及G13。"
+      },
+      {
+        "id": "F3",
+        "original_score": 2,
+        "prior_adjudicated_score": 2,
+        "latest_author_proposal": 2,
+        "approved_score": 2,
+        "status": "保留旧裁决分项，恢复原理由",
+        "original_reason": "独立委员会审查关联交易且金额较小；家族控制、亲属雇佣及一次Section16迟报构成治理瑕疵。",
+        "original_evidence_refs": [
+          "NKE-G-017；NKE-G-018；V3-004"
+        ],
+        "adjudication_reason": "维持2/3：独立审查及披露是正面，一次已核迟报属小瑕疵；海关争议保留风险而非既成处罚；不以亲属身份或作者漏项认定不公允/隐瞒。"
+      }
+    ],
+    "management": [
+      {
+        "id": "诚信与透明度",
+        "original_score": 15,
+        "prior_adjudicated_score": null,
+        "latest_author_proposal": 16,
+        "approved_score": null,
+        "status": "作者修正候选，须逐项恢复理由并定向验收，不视为旧裁决批准",
+        "original_reason": "官方披露完整且审计干净，CFO交接明确否认分歧；诉讼与内部交易仍有原件缺口。",
+        "original_evidence_refs": [
+          "NKE-G-005；NKE-G-006；V3-002；V3-004"
+        ],
+        "adjudication_reason": "删研究缺口与作者遗漏的诚信扣分，核实言行与已披露风险后重评；无原件证明其隐瞒。"
+      },
+      {
+        "id": "资本配置能力",
+        "original_score": 13,
+        "prior_adjudicated_score": null,
+        "latest_author_proposal": 12,
+        "approved_score": null,
+        "status": "作者修正候选，须逐项恢复理由并定向验收，不视为旧裁决批准",
+        "original_reason": "分红连续且暂停回购保护现金，但历史回购成本高、SBC显著、转型回报尚未兑现。",
+        "original_evidence_refs": [
+          "NKE-F-014；NKE-F-015；NKE-F-020"
+        ],
+        "adjudication_reason": "ROIC/WACC、回购及Capex效率桥未闭合。"
+      },
+      {
+        "id": "战略稳定性",
+        "original_score": 10,
+        "prior_adjudicated_score": 10,
+        "latest_author_proposal": 10,
+        "approved_score": 10,
+        "status": "保留旧裁决分项，恢复原理由",
+        "original_reason": "运动与创新主线稳定，但DTC偏置后重新修复批发关系，执行路径发生较大调整。",
+        "original_evidence_refs": [
+          "S001 MD&A HTML L843-856；NKE-F-011"
+        ],
+        "adjudication_reason": "长期运动创新主线稳定而渠道路线调整确实存在；保留10分只评价战略稳定性，不能引用未核FY2025承诺落空；如目标原文改变这一事实则按实质新证据处理。"
+      },
+      {
+        "id": "对股东友好度",
+        "original_score": 11,
+        "prior_adjudicated_score": 11,
+        "latest_author_proposal": 11,
+        "approved_score": 11,
+        "status": "保留旧裁决分项，恢复原理由",
+        "original_reason": "FY2026分红2.407十亿美元且有长期回购计划；双层股权削弱B类股东治理权。",
+        "original_evidence_refs": [
+          "NKE-F-015；NKE-G-017"
+        ],
+        "adjudication_reason": "分红与绩效约束已核、B类投票制衡弱；维持11分，不用未逐笔核交易作扣分或无减持保证。"
+      },
+      {
+        "id": "危机处理能力",
+        "original_score": 6,
+        "prior_adjudicated_score": null,
+        "latest_author_proposal": 7,
+        "approved_score": null,
+        "status": "作者修正候选，须逐项恢复理由并定向验收，不视为旧裁决批准",
+        "original_reason": "面对品牌和渠道修复已更换CEO并调整团队，但FY2026财务结果尚未证明转折。",
+        "original_evidence_refs": [
+          "NKE-F-011；V3-002"
+        ],
+        "adjudication_reason": "行动到结果桥、目标期限与关税现金效应待厘清。"
+      },
+      {
+        "id": "组织与人才能力",
+        "original_score": 7,
+        "prior_adjudicated_score": null,
+        "latest_author_proposal": 8,
+        "approved_score": null,
+        "status": "作者修正候选，须逐项恢复理由并定向验收，不视为旧裁决批准",
+        "original_reason": "核心高管多为长期内部人才，继任CFO具大型公司经验；高额补偿与多次岗位调整显示稳定性成本。",
+        "original_evidence_refs": [
+          "S001 executive officers；V3-002；V3-003"
+        ],
+        "adjudication_reason": "五年人事模式及人才效率缺口，外聘/补偿不是自动负面。"
+      },
+      {
+        "id": "表达清晰度与认知质量",
+        "original_score": 3,
+        "prior_adjudicated_score": null,
+        "latest_author_proposal": 4,
+        "approved_score": null,
+        "status": "作者修正候选，须逐项恢复理由并定向验收，不视为旧裁决批准",
+        "original_reason": "10-K与代理声明能量化风险及绩效，但连续三年可直接核验的定量经营承诺有限。",
+        "original_evidence_refs": [
+          "S001 MD&A；NKE-G-022；V3-003"
+        ],
+        "adjudication_reason": "研究未找到原话不能直接等于公司表达差；需原始上下文。"
+      }
+    ]
+  },
+  "qualification_upper_bound_candidate": {
+    "company": 74.5,
+    "management": 70,
+    "total": 144.5,
+    "formula": "72.5-3.5(A3)-3.5(F1)+4+5=74.5；68-8(组织)+10=70",
+    "approved": false,
+    "condition": "本轮证实E2等固定项不成立，144.5撤回；不用于reject。若没有另一个按原规则已证成的完整边界，defer。",
+    "rule": "B_GROWTH双分>=150且各>=70；A_CORE>=160且各>=76；S_STRATEGIC>=170且各>=82及其余硬门槛",
+    "if_verified": "最高合计144.5<150，reject；即便组织满分管理层70也不能使合计达门槛。若任何固定项证据不成立，重列有据上界；跨门槛则defer。",
+    "status": "withdrawn_not_a_verified_upper_bound"
+  },
+  "industry_model": "非金融品牌公司可用FCFE/Ke与独立正常化PE；未闭合时仅保留正确诊断，不强凑正式双模型",
+  "reverse_weight": 0,
+  "decision": "defer",
+  "research_status": "execution_incomplete",
+  "decision_reason": "承诺类别错误、海关重大风险与已核内容回退尚未实改；评分点值和上界不充分，不能推出reject；估值维持撤回。",
+  "closeout_rule": "已知错误未撤回=execution_incomplete；正确性隔离后仅不可知可closed_with_uncertainty，均不冒充完成定价三件套；verified_complete需全部实质验收。",
+  "independent_checks": {
+    "units": "USD millions；股数millions；每股USD",
+    "historical_shares": "1476+3+6-2=1483，只证明期末股数；不能证明FY2027加权1487/1485/1480",
+    "sbc": "278+58+379=715；期权行权现金155与员工净发行权益110不能直接当成9百万股全部现金筹资",
+    "cash_tax": "1270-268-260=742仅历史剔除尺度，不是FY2027现金税预测",
+    "eps_conditional": [
+      1.2694014794889037,
+      2.2438787878787876,
+      3.0356756756756758
+    ],
+    "fcfe_conditional": [
+      1117.6,
+      2962.16,
+      4422.8
+    ],
+    "buy_price_conditional": 25.65987,
+    "approved": false,
+    "cfo_ni_FY2026": 0.9227799227799228,
+    "cfo_ni_three_year_mean": 1.1249724108344799,
+    "FCF_millions": [
+      6617,
+      3268,
+      2184
+    ],
+    "FY2026_average_assets": 37494.5,
+    "FY2026_average_equity": 14039.0,
+    "FY2026_ROE": 0.2213832894080775,
+    "capex_yoy": 0.5906976744186045
+  },
+  "score_bridge_warning": "prior_adjudicated_score仅表示旧裁决保留的分项，不表示整套审核通过。所有original_reason为历史文本定位，含已知错误者必须按本次和旧裁决纠正；尤其B1 Note19、E1杠杆归因、A3回购归因、F2未知内部交易、F3亲属身份、D2事后财务代替承诺等不得恢复为有效理由。",
+  "restoration_checklist": [
+    {
+      "content": "分部表",
+      "destination": "deep B1；workpaper/score-review B1",
+      "frozen_source": "旧adjudication-v2.json verified_facts_delta.segments；旧最终修订深度“三年分部经营”；FY26 10-K p36、Note15 p86-87",
+      "minimum": "FY24-26收入/EBIT七项及合计，不恢复旧错数；Note19全部更正Note15"
+    },
+    {
+      "content": "杜邦",
+      "destination": "deep E1",
+      "frozen_source": "facts-correction-v2.md；旧adjudication-v2.json verified_facts_delta.dupont；10-K p57",
+      "minimum": "FY26资产38410，平均37494.5、权益14039、净利率6.698565%、周转1.237461、乘数2.670739、ROE22.138329%；补三年表，勿恢复37631"
+    },
+    {
+      "content": "准备与CAM",
+      "destination": "deep E5/E5.5",
+      "frozen_source": "旧最终修订深度“会计估计与准备”；旧adjudication-v2 G01；10-K税务/收入/存货附注",
+      "minimum": "所得税CAM、税收利益953/742、库存213/233、销售1589/1834、退货资产511/528、退货准备1099/1277、商誉240；单位百万，按既有原件定位引用，未知不编"
+    },
+    {
+      "content": "执行原话",
+      "destination": "deep D2/management二",
+      "frozen_source": "旧最终修订管理层“连续三年承诺”；旧adjudication-v2 G08-promises已核原话",
+      "minimum": "2023-12-21最高2bn节约机会与FY24重组400-450对443；2025-06-26方向；2026-07-15行动截止12月底尚未到期；保留责任人/上下文/实际对照"
+    },
+    {
+      "content": "员工人效",
+      "destination": "deep D5/management六",
+      "frozen_source": "evidence/facts.json NKE-R-009；旧最终修订管理层“人效”",
+      "minimum": "83700/79400/77800/73000与0.611912/0.646877/0.595231/0.635589，期末而非平均FTE"
+    },
+    {
+      "content": "关联报酬",
+      "destination": "deep F3或management控制治理并交叉引用",
+      "frozen_source": "evidence/facts.json NKE-R-011；DEF14A Transactions with Related Persons p72/HTML L2196-2217",
+      "minimum": "Philip Knight221k、Matthew Parker146k、Betsy Parker175k、Kenneth Smith125k；程序与金额并列，不凭亲属扣分"
+    },
+    {
+      "content": "资本配置/Capex",
+      "destination": "management三；deep E4/F2.5",
+      "frozen_source": "旧最终修订管理层“资本配置”；旧裁决G07-allocation；10-K p45、58-59",
+      "minimum": "ROIC18.7/20.2%，旧WACC8.62%明确仅既有假设示意、非新批准模型；回购124.4m/12.1bn/97.57与当年1.8m/122.4m/67.63、现金146m分开；Capex684/430-1=59.0698%，E4原规则拆分例外-0.5，不据未知再扣"
+    },
+    {
+      "content": "债租边界",
+      "destination": "valuation四",
+      "frozen_source": "10-K p57、p88；旧最终修订估值现金归属",
+      "minimum": "流动债2000+长期5942=7942；租赁3091，经营租金费用已扣时不再全额重扣；不恢复未验证滚续预测或超额现金"
+    },
+    {
+      "content": "海关风险",
+      "destination": "deep前置/风险图；management合规；valuation风险",
+      "frozen_source": "10-K Note16 p88/PDF92；旧最终修订深度“法律与治理风险”",
+      "minimum": "一般诉讼判断有明确例外；FY18起进口争议、上诉/担保、损失范围不可估、败诉可能重大；1.3bn为全部担保信用证，不是索赔金额"
+    }
+  ],
+  "score_disposition": {
+    "retained_old_adjudicated_items": "仅v1 score_bridges中prior_adjudicated_score非null项保留；其理由不复活已裁定错误，C2措辞顺手与3分一致，无新事实不重开。",
+    "E2": {
+      "approved_score": 5,
+      "reason": "三年CFO/净利均>80%，平均112.497241%；FCF6617/3268/2184均正，满足原规则5档。下降趋势保留风险描述，不能另造低于100%扣分门槛。",
+      "source": "10-K p58；deep核心E2"
+    },
+    "A3": {
+      "score": null,
+      "lower_bound": null,
+      "rule_maximum": 4
+    },
+    "F1": {
+      "score": null,
+      "lower_bound": null,
+      "rule_maximum": 5
+    },
+    "组织与人才能力": {
+      "score": null,
+      "lower_bound": null,
+      "rule_maximum": 10
+    },
+    "other_disputed": [
+      "E1=3.5必须由杜邦驱动连接原规则，否则null，不要求新研究",
+      "E3=1.5仅慢增长理由不批准；恢复一次性/量价桥或null，上限3",
+      "E4=0.5须恢复基准分理由与原明文-0.5桥；不能用未知承诺替代规则",
+      "资本配置12不批准为可信上界；可给基于已核桥的综合判断或null/上限25",
+      "诚信16、危机7、表达4为候选综合判断而非精确事实；有具体事实/规则理由可审，不能以一般满分定义自动认定固定上界；暂无依据则null",
+      "E5/E5.5随准备表恢复审视，不能无保留审计一句话代替资产质量/计提判断"
+    ],
+    "withdrawn_candidate_ranges": {
+      "company": [
+        72.5,
+        74.5
+      ],
+      "management": [
+        68,
+        70
+      ],
+      "combined": [
+        140.5,
+        144.5
+      ]
+    },
+    "limit": "满分只可标规则数学上限，不代表评分；缺证不能当0或编下界。未知加总不足以判排除则defer，不批准任何为了得到reject设置的上限。"
+  }
+}
+```

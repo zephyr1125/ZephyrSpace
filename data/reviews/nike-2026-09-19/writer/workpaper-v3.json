@@ -1,0 +1,1125 @@
+{
+  "schema_version": 1,
+  "revision": "v3-final-exception-repair-single-source",
+  "scores": {
+    "company": {
+      "total": 72.5,
+      "items": [
+        {
+          "id": "A1",
+          "score": 3,
+          "rule_ref": "深度核心/A1",
+          "reason": "见最终修订报告评分桥；事实、规则与限制按V5统一。",
+          "evidence_refs": [
+            "writer/evidence-supplement-v5.md；最终修订报告"
+          ]
+        },
+        {
+          "id": "A2",
+          "score": 3,
+          "rule_ref": "深度核心/A2",
+          "reason": "见最终修订报告评分桥；事实、规则与限制按V5统一。",
+          "evidence_refs": [
+            "writer/evidence-supplement-v5.md；最终修订报告"
+          ]
+        },
+        {
+          "id": "A3",
+          "score": 3.5,
+          "rule_ref": "深度核心/A3",
+          "reason": "见最终修订报告评分桥；事实、规则与限制按V5统一。",
+          "evidence_refs": [
+            "writer/evidence-supplement-v5.md；最终修订报告"
+          ]
+        },
+        {
+          "id": "B0",
+          "score": 2,
+          "rule_ref": "深度核心/B0",
+          "reason": "见最终修订报告评分桥；事实、规则与限制按V5统一。",
+          "evidence_refs": [
+            "writer/evidence-supplement-v5.md；最终修订报告"
+          ]
+        },
+        {
+          "id": "B1",
+          "score": 3.5,
+          "rule_ref": "深度核心/B1",
+          "reason": "见最终修订报告评分桥；事实、规则与限制按V5统一。",
+          "evidence_refs": [
+            "writer/evidence-supplement-v5.md；最终修订报告"
+          ]
+        },
+        {
+          "id": "B2",
+          "score": 2,
+          "rule_ref": "深度核心/B2",
+          "reason": "见最终修订报告评分桥；事实、规则与限制按V5统一。",
+          "evidence_refs": [
+            "writer/evidence-supplement-v5.md；最终修订报告"
+          ]
+        },
+        {
+          "id": "B3",
+          "score": 4,
+          "rule_ref": "深度核心/B3",
+          "reason": "见最终修订报告评分桥；事实、规则与限制按V5统一。",
+          "evidence_refs": [
+            "writer/evidence-supplement-v5.md；最终修订报告"
+          ]
+        },
+        {
+          "id": "B4",
+          "score": 2.5,
+          "rule_ref": "深度核心/B4",
+          "reason": "见最终修订报告评分桥；事实、规则与限制按V5统一。",
+          "evidence_refs": [
+            "writer/evidence-supplement-v5.md；最终修订报告"
+          ]
+        },
+        {
+          "id": "C1",
+          "score": 6,
+          "rule_ref": "深度核心/C1",
+          "reason": "见最终修订报告评分桥；事实、规则与限制按V5统一。",
+          "evidence_refs": [
+            "writer/evidence-supplement-v5.md；最终修订报告"
+          ]
+        },
+        {
+          "id": "C2",
+          "score": 3,
+          "rule_ref": "深度核心/C2",
+          "reason": "见最终修订报告评分桥；事实、规则与限制按V5统一。",
+          "evidence_refs": [
+            "writer/evidence-supplement-v5.md；最终修订报告"
+          ]
+        },
+        {
+          "id": "C3+C4",
+          "score": 7,
+          "rule_ref": "深度核心/C3+C4",
+          "reason": "见最终修订报告评分桥；事实、规则与限制按V5统一。",
+          "evidence_refs": [
+            "writer/evidence-supplement-v5.md；最终修订报告"
+          ]
+        },
+        {
+          "id": "D1",
+          "score": 3,
+          "rule_ref": "深度核心/D1",
+          "reason": "见最终修订报告评分桥；事实、规则与限制按V5统一。",
+          "evidence_refs": [
+            "writer/evidence-supplement-v5.md；最终修订报告"
+          ]
+        },
+        {
+          "id": "D2",
+          "score": 3,
+          "rule_ref": "深度核心/D2",
+          "reason": "见最终修订报告评分桥；事实、规则与限制按V5统一。",
+          "evidence_refs": [
+            "writer/evidence-supplement-v5.md；最终修订报告"
+          ],
+          "original_statement_found": true,
+          "strategy_drift": false
+        },
+        {
+          "id": "D3",
+          "score": 1,
+          "rule_ref": "深度核心/D3",
+          "reason": "见最终修订报告评分桥；事实、规则与限制按V5统一。",
+          "evidence_refs": [
+            "writer/evidence-supplement-v5.md；最终修订报告"
+          ]
+        },
+        {
+          "id": "D5",
+          "score": 2,
+          "rule_ref": "深度核心/D5",
+          "reason": "见最终修订报告评分桥；事实、规则与限制按V5统一。",
+          "evidence_refs": [
+            "writer/evidence-supplement-v5.md；最终修订报告"
+          ]
+        },
+        {
+          "id": "E1",
+          "score": 3.5,
+          "rule_ref": "深度核心/E1",
+          "reason": "见最终修订报告评分桥；事实、规则与限制按V5统一。",
+          "evidence_refs": [
+            "writer/evidence-supplement-v5.md；最终修订报告"
+          ]
+        },
+        {
+          "id": "E2",
+          "score": 3,
+          "rule_ref": "深度核心/E2",
+          "reason": "见最终修订报告评分桥；事实、规则与限制按V5统一。",
+          "evidence_refs": [
+            "writer/evidence-supplement-v5.md；最终修订报告"
+          ]
+        },
+        {
+          "id": "E3",
+          "score": 1.5,
+          "rule_ref": "深度核心/E3",
+          "reason": "见最终修订报告评分桥；事实、规则与限制按V5统一。",
+          "evidence_refs": [
+            "writer/evidence-supplement-v5.md；最终修订报告"
+          ]
+        },
+        {
+          "id": "E4",
+          "score": 0.5,
+          "rule_ref": "深度核心/E4",
+          "reason": "见最终修订报告评分桥；事实、规则与限制按V5统一。",
+          "evidence_refs": [
+            "writer/evidence-supplement-v5.md；最终修订报告"
+          ]
+        },
+        {
+          "id": "E5",
+          "score": 2,
+          "rule_ref": "深度核心/E5",
+          "reason": "见最终修订报告评分桥；事实、规则与限制按V5统一。",
+          "evidence_refs": [
+            "writer/evidence-supplement-v5.md；最终修订报告"
+          ]
+        },
+        {
+          "id": "E5.5",
+          "score": 2.5,
+          "rule_ref": "深度核心/E5.5",
+          "reason": "见最终修订报告评分桥；事实、规则与限制按V5统一。",
+          "evidence_refs": [
+            "writer/evidence-supplement-v5.md；最终修订报告"
+          ]
+        },
+        {
+          "id": "F1",
+          "score": 3.5,
+          "rule_ref": "深度核心/F1",
+          "reason": "见最终修订报告评分桥；事实、规则与限制按V5统一。",
+          "evidence_refs": [
+            "writer/evidence-supplement-v5.md；最终修订报告"
+          ]
+        },
+        {
+          "id": "F2",
+          "score": 4,
+          "rule_ref": "深度核心/F2",
+          "reason": "见最终修订报告评分桥；事实、规则与限制按V5统一。",
+          "evidence_refs": [
+            "writer/evidence-supplement-v5.md；最终修订报告"
+          ]
+        },
+        {
+          "id": "F2.5",
+          "score": 1.5,
+          "rule_ref": "深度核心/F2.5",
+          "reason": "见最终修订报告评分桥；事实、规则与限制按V5统一。",
+          "evidence_refs": [
+            "writer/evidence-supplement-v5.md；最终修订报告"
+          ]
+        },
+        {
+          "id": "F3",
+          "score": 2,
+          "rule_ref": "深度核心/F3",
+          "reason": "见最终修订报告评分桥；事实、规则与限制按V5统一。",
+          "evidence_refs": [
+            "writer/evidence-supplement-v5.md；最终修订报告"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "total": 68,
+      "items": [
+        {
+          "id": "诚信与透明度",
+          "score": 16,
+          "rule_ref": "管理层核心/九",
+          "reason": "见最终修订管理层报告七维桥。",
+          "evidence_refs": [
+            "writer/evidence-supplement-v5.md；最终修订管理层报告"
+          ]
+        },
+        {
+          "id": "资本配置能力",
+          "score": 12,
+          "rule_ref": "管理层核心/九",
+          "reason": "见最终修订管理层报告七维桥。",
+          "evidence_refs": [
+            "writer/evidence-supplement-v5.md；最终修订管理层报告"
+          ]
+        },
+        {
+          "id": "战略稳定性",
+          "score": 10,
+          "rule_ref": "管理层核心/九",
+          "reason": "见最终修订管理层报告七维桥。",
+          "evidence_refs": [
+            "writer/evidence-supplement-v5.md；最终修订管理层报告"
+          ]
+        },
+        {
+          "id": "对股东友好度",
+          "score": 11,
+          "rule_ref": "管理层核心/九",
+          "reason": "见最终修订管理层报告七维桥。",
+          "evidence_refs": [
+            "writer/evidence-supplement-v5.md；最终修订管理层报告"
+          ]
+        },
+        {
+          "id": "危机处理能力",
+          "score": 7,
+          "rule_ref": "管理层核心/九",
+          "reason": "见最终修订管理层报告七维桥。",
+          "evidence_refs": [
+            "writer/evidence-supplement-v5.md；最终修订管理层报告"
+          ]
+        },
+        {
+          "id": "组织与人才能力",
+          "score": 8,
+          "rule_ref": "管理层核心/九",
+          "reason": "见最终修订管理层报告七维桥。",
+          "evidence_refs": [
+            "writer/evidence-supplement-v5.md；最终修订管理层报告"
+          ]
+        },
+        {
+          "id": "表达清晰度与认知质量",
+          "score": 4,
+          "rule_ref": "管理层核心/九",
+          "reason": "见最终修订管理层报告七维桥。",
+          "evidence_refs": [
+            "writer/evidence-supplement-v5.md；最终修订管理层报告"
+          ]
+        }
+      ]
+    }
+  },
+  "valuation": {
+    "currency": "USD",
+    "models": [
+      {
+        "id": "unified_fcfe_dcf",
+        "weight": 0.5,
+        "basis": "FY2027统一利润桥推导经济FCFE，首期直接折现，不再多乘增长。",
+        "shared_assumptions": "与PE共享收入、利润、税率和股数；独立价值依据为现金。",
+        "output_currency": "USD",
+        "output_unit": "per_share",
+        "formula": "fcfe_y1/(1+ke)+fcfe_y1*(1+g)/(1+ke)**2+fcfe_y1*(1+g)**2/(1+ke)**3+fcfe_y1*(1+g)**3/(1+ke)**4+fcfe_y1*(1+g)**4/(1+ke)**5+fcfe_y1*(1+g)**4*(1+tg)/(ke-tg)/(1+ke)**5+excess_cash",
+        "scenarios": {
+          "bear": {
+            "inputs": {
+              "fcfe_y1": 0.7515803631472763,
+              "g": 0,
+              "ke": 0.115,
+              "tg": 0.01,
+              "excess_cash": 0
+            },
+            "input_meta": {
+              "fcfe_y1": {
+                "unit": "USD/share FY2027 economic FCFE",
+                "date": "FY2027 forecast",
+                "kind": "forecast",
+                "evidence_refs": [
+                  "V5 unified bridge"
+                ]
+              },
+              "g": {
+                "unit": "annual rate",
+                "date": "FY2028-FY2031",
+                "kind": "assumption",
+                "evidence_refs": [
+                  "V5 scenario"
+                ]
+              },
+              "ke": {
+                "unit": "annual rate",
+                "date": "2026-09-19",
+                "kind": "assumption",
+                "evidence_refs": [
+                  "V5 market risk"
+                ]
+              },
+              "tg": {
+                "unit": "annual rate",
+                "date": "terminal after FY2031",
+                "kind": "assumption",
+                "evidence_refs": [
+                  "mature brand"
+                ]
+              },
+              "excess_cash": {
+                "unit": "USD/share distributable cash",
+                "date": "2026-09-19 approximation",
+                "kind": "derived",
+                "evidence_refs": [
+                  "V5 cash ownership bridge"
+                ]
+              }
+            },
+            "value": 6.938188081968176
+          },
+          "base": {
+            "inputs": {
+              "fcfe_y1": 1.9947205387205384,
+              "g": 0.04,
+              "ke": 0.095,
+              "tg": 0.025,
+              "excess_cash": 0.33670033670033667
+            },
+            "input_meta": {
+              "fcfe_y1": {
+                "unit": "USD/share FY2027 economic FCFE",
+                "date": "FY2027 forecast",
+                "kind": "forecast",
+                "evidence_refs": [
+                  "V5 unified bridge"
+                ]
+              },
+              "g": {
+                "unit": "annual rate",
+                "date": "FY2028-FY2031",
+                "kind": "assumption",
+                "evidence_refs": [
+                  "V5 scenario"
+                ]
+              },
+              "ke": {
+                "unit": "annual rate",
+                "date": "2026-09-19",
+                "kind": "assumption",
+                "evidence_refs": [
+                  "V5 market risk"
+                ]
+              },
+              "tg": {
+                "unit": "annual rate",
+                "date": "terminal after FY2031",
+                "kind": "assumption",
+                "evidence_refs": [
+                  "mature brand"
+                ]
+              },
+              "excess_cash": {
+                "unit": "USD/share distributable cash",
+                "date": "2026-09-19 approximation",
+                "kind": "derived",
+                "evidence_refs": [
+                  "V5 cash ownership bridge"
+                ]
+              }
+            },
+            "value": 30.280381323436732
+          },
+          "bull": {
+            "inputs": {
+              "fcfe_y1": 2.988378378378378,
+              "g": 0.07,
+              "ke": 0.085,
+              "tg": 0.03,
+              "excess_cash": 0.6756756756756757
+            },
+            "input_meta": {
+              "fcfe_y1": {
+                "unit": "USD/share FY2027 economic FCFE",
+                "date": "FY2027 forecast",
+                "kind": "forecast",
+                "evidence_refs": [
+                  "V5 unified bridge"
+                ]
+              },
+              "g": {
+                "unit": "annual rate",
+                "date": "FY2028-FY2031",
+                "kind": "assumption",
+                "evidence_refs": [
+                  "V5 scenario"
+                ]
+              },
+              "ke": {
+                "unit": "annual rate",
+                "date": "2026-09-19",
+                "kind": "assumption",
+                "evidence_refs": [
+                  "V5 market risk"
+                ]
+              },
+              "tg": {
+                "unit": "annual rate",
+                "date": "terminal after FY2031",
+                "kind": "assumption",
+                "evidence_refs": [
+                  "mature brand"
+                ]
+              },
+              "excess_cash": {
+                "unit": "USD/share distributable cash",
+                "date": "2026-09-19 approximation",
+                "kind": "derived",
+                "evidence_refs": [
+                  "V5 cash ownership bridge"
+                ]
+              }
+            },
+            "value": 62.8576077104873
+          }
+        },
+        "sensitivity": {
+          "x": "ke",
+          "y": "tg",
+          "x_values": [
+            0.085,
+            0.095,
+            0.105
+          ],
+          "y_values": [
+            0.015,
+            0.025,
+            0.035
+          ],
+          "values": [
+            [
+              31.300148002042118,
+              27.381897286353084,
+              24.335874176010723
+            ],
+            [
+              35.30925062724318,
+              30.280381323436732,
+              26.509745371837543
+            ],
+            [
+              40.92199430252466,
+              34.14502670621493,
+              29.304722623614882
+            ]
+          ]
+        }
+      },
+      {
+        "id": "anchored_pe",
+        "weight": 0.5,
+        "basis": "FY2027统一净利润/加权股数EPS乘以当前、历史与供应商区间约束倍数。",
+        "shared_assumptions": "共享经营桥；倍数锚独立来自市场历史/当前样本，未把历史平均冒充前瞻。",
+        "output_currency": "USD",
+        "output_unit": "per_share",
+        "formula": "eps*pe",
+        "scenarios": {
+          "bear": {
+            "inputs": {
+              "eps": 1.2694014795,
+              "pe": 14
+            },
+            "input_meta": {
+              "eps": {
+                "unit": "USD/share diluted",
+                "date": "FY2027 forecast",
+                "kind": "forecast",
+                "evidence_refs": [
+                  "V5 unified bridge"
+                ]
+              },
+              "pe": {
+                "unit": "x",
+                "date": "2026-09-19",
+                "kind": "assumption",
+                "evidence_refs": [
+                  "V5 historical/current PE anchors"
+                ]
+              }
+            },
+            "value": 17.771620712999997
+          },
+          "base": {
+            "inputs": {
+              "eps": 2.2438787879,
+              "pe": 17
+            },
+            "input_meta": {
+              "eps": {
+                "unit": "USD/share diluted",
+                "date": "FY2027 forecast",
+                "kind": "forecast",
+                "evidence_refs": [
+                  "V5 unified bridge"
+                ]
+              },
+              "pe": {
+                "unit": "x",
+                "date": "2026-09-19",
+                "kind": "assumption",
+                "evidence_refs": [
+                  "V5 historical/current PE anchors"
+                ]
+              }
+            },
+            "value": 38.1459393943
+          },
+          "bull": {
+            "inputs": {
+              "eps": 3.0356756757,
+              "pe": 20
+            },
+            "input_meta": {
+              "eps": {
+                "unit": "USD/share diluted",
+                "date": "FY2027 forecast",
+                "kind": "forecast",
+                "evidence_refs": [
+                  "V5 unified bridge"
+                ]
+              },
+              "pe": {
+                "unit": "x",
+                "date": "2026-09-19",
+                "kind": "assumption",
+                "evidence_refs": [
+                  "V5 historical/current PE anchors"
+                ]
+              }
+            },
+            "value": 60.713513514
+          }
+        },
+        "sensitivity": {
+          "x": "pe",
+          "y": "eps",
+          "x_values": [
+            14,
+            17,
+            20
+          ],
+          "y_values": [
+            1.2694014795,
+            2.2438787879,
+            3.0356756757
+          ],
+          "values": [
+            [
+              17.771620712999997,
+              21.5798251515,
+              25.38802959
+            ],
+            [
+              31.4143030306,
+              38.1459393943,
+              44.877575758
+            ],
+            [
+              42.4994594598,
+              51.606486486899996,
+              60.713513514
+            ]
+          ]
+        }
+      }
+    ],
+    "weighted": {
+      "bear": 12.354904397484086,
+      "base": 34.213160358868365,
+      "bull": 61.78556061224365
+    },
+    "target_price": 34.213160358868365,
+    "certainty": 0.5,
+    "certainty_reason": "两模型共享经营桥但现金转换、利润率、PE锚和海关尾部风险仍使区间较宽；五项判断为中低确定性。",
+    "buy_price": 25.659870269151273,
+    "reverse": {
+      "weight": 0,
+      "variable": "implied_fcfe_y1",
+      "implied_value": 2.343095469258904,
+      "formula": "implied_fcfe_y1*15.011466722021614+excess_cash",
+      "inputs": {
+        "implied_fcfe_y1": 2.343095469258904,
+        "excess_cash": 0.33670033670033667
+      },
+      "market_price": 35.51,
+      "assumptions": "固定基准g4%、Ke9.5%、tg2.5%，反求FY2027经济FCFE；Ke敏感性另表，Ke须大于tg。",
+      "evidence_refs": [
+        "V5 unified bridge; adjudication-v2 conditional_calculations"
+      ]
+    }
+  },
+  "bridges": [
+    {
+      "id": "fy2027_base_economic_fcfe",
+      "date": "FY2027 forecast",
+      "unit": "USD millions",
+      "scope": "NIKE shareholders; same profit bridge as PE",
+      "start": 3332.16,
+      "items": [
+        {
+          "economic_id": "da_other_noncash_including_sbc",
+          "signed_value": 1300,
+          "evidence_refs": [
+            "V5 assumption"
+          ]
+        },
+        {
+          "economic_id": "working_capital",
+          "signed_value": -200,
+          "evidence_refs": [
+            "V5 assumption"
+          ]
+        },
+        {
+          "economic_id": "cash_tax_timing",
+          "signed_value": 0,
+          "evidence_refs": [
+            "V5 assumption"
+          ]
+        },
+        {
+          "economic_id": "cash_capex",
+          "signed_value": -750,
+          "evidence_refs": [
+            "V5 assumption"
+          ]
+        },
+        {
+          "economic_id": "sbc_economic_cost",
+          "signed_value": -720,
+          "evidence_refs": [
+            "V5 policy"
+          ]
+        },
+        {
+          "economic_id": "net_borrowing",
+          "signed_value": 0,
+          "evidence_refs": [
+            "V5 debt rollover"
+          ]
+        }
+      ],
+      "result": 2962.16
+    },
+    {
+      "id": "reporting_net_cash_scale",
+      "date": "2026-05-31",
+      "unit": "USD millions",
+      "scope": "not automatically distributable",
+      "start": 9027,
+      "items": [
+        {
+          "economic_id": "financing_debt",
+          "signed_value": -7942,
+          "evidence_refs": [
+            "FY2026 10-K"
+          ]
+        }
+      ],
+      "result": 1085
+    }
+  ],
+  "reports": {
+    "deep": "深度分析/耐克 深度分析 72.5 2026-09-19 最终修订版.md",
+    "management": "管理层档案/耐克 管理层档案 68 2026-09-19 最终修订版.md",
+    "valuation": "估值分析/耐克 估值分析 2026-09-19 最终修订版.md"
+  },
+  "repair": {
+    "issues": [
+      {
+        "id": "G01",
+        "severity": "P1",
+        "acceptance_ids": [
+          "G01-equity",
+          "G01-dupont",
+          "G01-accounting",
+          "G01-score"
+        ]
+      },
+      {
+        "id": "G02",
+        "severity": "P1",
+        "acceptance_ids": [
+          "G02-cashflow",
+          "G02-sbc",
+          "G02-equity",
+          "G02-recalc"
+        ]
+      },
+      {
+        "id": "G03",
+        "severity": "P1",
+        "acceptance_ids": [
+          "G03-eps",
+          "G03-anchor",
+          "G03-completion"
+        ]
+      },
+      {
+        "id": "G04",
+        "severity": "P1",
+        "acceptance_ids": [
+          "G04-solve",
+          "G04-sensitivity"
+        ]
+      },
+      {
+        "id": "G05",
+        "severity": "P1",
+        "acceptance_ids": [
+          "G05-paired",
+          "G05-tax",
+          "G05-once"
+        ]
+      },
+      {
+        "id": "G06",
+        "severity": "P1",
+        "acceptance_ids": [
+          "G06-risk",
+          "G06-limits",
+          "G06-score"
+        ]
+      },
+      {
+        "id": "G07",
+        "severity": "P1",
+        "acceptance_ids": [
+          "G07-allocation",
+          "G07-attribution",
+          "G07-score"
+        ]
+      },
+      {
+        "id": "G08",
+        "severity": "P1",
+        "acceptance_ids": [
+          "G08-promises",
+          "G08-cap",
+          "G08-people",
+          "G08-score"
+        ]
+      },
+      {
+        "id": "G09",
+        "severity": "P1",
+        "acceptance_ids": [
+          "G09-segments",
+          "G09-commitments",
+          "G09-supplier"
+        ]
+      },
+      {
+        "id": "G10",
+        "severity": "P2",
+        "acceptance_ids": [
+          "G10-eps"
+        ]
+      },
+      {
+        "id": "G11",
+        "severity": "P2",
+        "acceptance_ids": [
+          "G11-snapshot"
+        ]
+      },
+      {
+        "id": "G12",
+        "severity": "P1",
+        "acceptance_ids": [
+          "G12-pricing"
+        ]
+      },
+      {
+        "id": "G13",
+        "severity": "P1",
+        "acceptance_ids": [
+          "G13-single-source"
+        ]
+      }
+    ],
+    "closures": [
+      {
+        "id": "G01",
+        "locations": [
+          "深度最终版：财务质量与评分桥"
+        ],
+        "score_valuation_impact": "E1/E4/E5/E5.5待定；E2/E3联动G05。净资产、BVPS、PB、杠杆与所有评分引用同步；不凭审计意见直接维持13/20。",
+        "checks": [
+          {
+            "id": "G01-equity",
+            "passed": true,
+            "evidence": "深度最终版：财务质量与评分桥；V5或底稿相应事实/计算；已替换旧活跃内容。"
+          },
+          {
+            "id": "G01-dupont",
+            "passed": true,
+            "evidence": "深度最终版：财务质量与评分桥；V5或底稿相应事实/计算；已替换旧活跃内容。"
+          },
+          {
+            "id": "G01-accounting",
+            "passed": true,
+            "evidence": "深度最终版：财务质量与评分桥；V5或底稿相应事实/计算；已替换旧活跃内容。"
+          },
+          {
+            "id": "G01-score",
+            "passed": true,
+            "evidence": "深度最终版：财务质量与评分桥；V5或底稿相应事实/计算；已替换旧活跃内容。"
+          }
+        ]
+      },
+      {
+        "id": "G02",
+        "locations": [
+          "估值最终版：统一FY2027现金桥"
+        ],
+        "score_valuation_impact": "三个fcf0、现金调整和DCF价值均待定；原DCF38.192731及综合42.915639仅为旧假设试算。G05/G09调整进入同一桥，不能重复。",
+        "checks": [
+          {
+            "id": "G02-cashflow",
+            "passed": true,
+            "evidence": "估值最终版：统一FY2027现金桥；V5或底稿相应事实/计算；已替换旧活跃内容。"
+          },
+          {
+            "id": "G02-sbc",
+            "passed": true,
+            "evidence": "估值最终版：统一FY2027现金桥；V5或底稿相应事实/计算；已替换旧活跃内容。"
+          },
+          {
+            "id": "G02-equity",
+            "passed": true,
+            "evidence": "估值最终版：统一FY2027现金桥；V5或底稿相应事实/计算；已替换旧活跃内容。"
+          },
+          {
+            "id": "G02-recalc",
+            "passed": true,
+            "evidence": "估值最终版：统一FY2027现金桥；V5或底稿相应事实/计算；已替换旧活跃内容。"
+          }
+        ]
+      },
+      {
+        "id": "G03",
+        "locations": [
+          "估值最终版：统一EPS桥与PE锚"
+        ],
+        "score_valuation_impact": "PE EPS/倍数/价值待定；60/40暂不批准为最终权重；目标价、确信度、买入价null，缺模型不能用低确信度替代。",
+        "checks": [
+          {
+            "id": "G03-eps",
+            "passed": true,
+            "evidence": "估值最终版：统一EPS桥与PE锚；V5或底稿相应事实/计算；已替换旧活跃内容。"
+          },
+          {
+            "id": "G03-anchor",
+            "passed": true,
+            "evidence": "估值最终版：统一EPS桥与PE锚；V5或底稿相应事实/计算；已替换旧活跃内容。"
+          },
+          {
+            "id": "G03-completion",
+            "passed": true,
+            "evidence": "估值最终版：统一EPS桥与PE锚；V5或底稿相应事实/计算；已替换旧活跃内容。"
+          }
+        ]
+      },
+      {
+        "id": "G04",
+        "locations": [
+          "估值最终版：反向验证"
+        ],
+        "score_valuation_impact": "反向权重固定0；不改变主模型独立性要求。",
+        "checks": [
+          {
+            "id": "G04-solve",
+            "passed": true,
+            "evidence": "估值最终版：反向验证；V5或底稿相应事实/计算；已替换旧活跃内容。"
+          },
+          {
+            "id": "G04-sensitivity",
+            "passed": true,
+            "evidence": "估值最终版：反向验证；V5或底稿相应事实/计算；已替换旧活跃内容。"
+          }
+        ]
+      },
+      {
+        "id": "G05",
+        "locations": [
+          "估值最终版：税与一次项"
+        ],
+        "score_valuation_impact": "E2/E3、B2的毛利解释、管理层危机/兑现归因及两个模型联动；不能以现金下降单独认定转型承诺失败。",
+        "checks": [
+          {
+            "id": "G05-paired",
+            "passed": true,
+            "evidence": "估值最终版：税与一次项；V5或底稿相应事实/计算；已替换旧活跃内容。"
+          },
+          {
+            "id": "G05-tax",
+            "passed": true,
+            "evidence": "估值最终版：税与一次项；V5或底稿相应事实/计算；已替换旧活跃内容。"
+          },
+          {
+            "id": "G05-once",
+            "passed": true,
+            "evidence": "估值最终版：税与一次项；V5或底稿相应事实/计算；已替换旧活跃内容。"
+          }
+        ]
+      },
+      {
+        "id": "G06",
+        "locations": [
+          "三报告：海关风险"
+        ],
+        "score_valuation_impact": "F3无需仅因报告漏项自动减分；诚信透明度不可据此当失信。确信度须重评，但null仍由模型未闭合决定。",
+        "checks": [
+          {
+            "id": "G06-risk",
+            "passed": true,
+            "evidence": "三报告：海关风险；V5或底稿相应事实/计算；已替换旧活跃内容。"
+          },
+          {
+            "id": "G06-limits",
+            "passed": true,
+            "evidence": "三报告：海关风险；V5或底稿相应事实/计算；已替换旧活跃内容。"
+          },
+          {
+            "id": "G06-score",
+            "passed": true,
+            "evidence": "三报告：海关风险；V5或底稿相应事实/计算；已替换旧活跃内容。"
+          }
+        ]
+      },
+      {
+        "id": "G07",
+        "locations": [
+          "管理层最终版：资本配置与七维桥"
+        ],
+        "score_valuation_impact": "A3原扣分理由不成立、最终数值待融资用途/资本运作证据小结；F2/F2.5及管理层资本配置/人才/诚信/表达待重评；F3可维持2但理由只用已核披露瑕疵及中等治理风险，不用亲属身份自动扣分。",
+        "checks": [
+          {
+            "id": "G07-allocation",
+            "passed": true,
+            "evidence": "管理层最终版：资本配置与七维桥；V5或底稿相应事实/计算；已替换旧活跃内容。"
+          },
+          {
+            "id": "G07-attribution",
+            "passed": true,
+            "evidence": "管理层最终版：资本配置与七维桥；V5或底稿相应事实/计算；已替换旧活跃内容。"
+          },
+          {
+            "id": "G07-score",
+            "passed": true,
+            "evidence": "管理层最终版：资本配置与七维桥；V5或底稿相应事实/计算；已替换旧活跃内容。"
+          }
+        ]
+      },
+      {
+        "id": "G08",
+        "locations": [
+          "管理层最终版：承诺与五年人事"
+        ],
+        "score_valuation_impact": "D2/D5及管理层战略/危机/人才/表达分项待定；D1战略漂移不因渠道调整自动置true；总分不可维持72/65作最终。",
+        "checks": [
+          {
+            "id": "G08-promises",
+            "passed": true,
+            "evidence": "管理层最终版：承诺与五年人事；V5或底稿相应事实/计算；已替换旧活跃内容。"
+          },
+          {
+            "id": "G08-cap",
+            "passed": true,
+            "evidence": "管理层最终版：承诺与五年人事；V5或底稿相应事实/计算；已替换旧活跃内容。"
+          },
+          {
+            "id": "G08-people",
+            "passed": true,
+            "evidence": "管理层最终版：承诺与五年人事；V5或底稿相应事实/计算；已替换旧活跃内容。"
+          },
+          {
+            "id": "G08-score",
+            "passed": true,
+            "evidence": "管理层最终版：承诺与五年人事；V5或底稿相应事实/计算；已替换旧活跃内容。"
+          }
+        ]
+      },
+      {
+        "id": "G09",
+        "locations": [
+          "深度最终版：精确分部与承诺"
+        ],
+        "score_valuation_impact": "B1/E4及G02现金缓冲联动；采购/代言若已在预测成本或营运资金内不得重复扣减。",
+        "checks": [
+          {
+            "id": "G09-segments",
+            "passed": true,
+            "evidence": "深度最终版：精确分部与承诺；V5或底稿相应事实/计算；已替换旧活跃内容。"
+          },
+          {
+            "id": "G09-commitments",
+            "passed": true,
+            "evidence": "深度最终版：精确分部与承诺；V5或底稿相应事实/计算；已替换旧活跃内容。"
+          },
+          {
+            "id": "G09-supplier",
+            "passed": true,
+            "evidence": "深度最终版：精确分部与承诺；V5或底稿相应事实/计算；已替换旧活跃内容。"
+          }
+        ]
+      },
+      {
+        "id": "G10",
+        "locations": [
+          "深度/估值最终版：EPS口径"
+        ],
+        "score_valuation_impact": "当前PE预测桥仍由G03决定，不因0.03差异单独调整倍数或目标。",
+        "checks": [
+          {
+            "id": "G10-eps",
+            "passed": true,
+            "evidence": "深度/估值最终版：EPS口径；V5或底稿相应事实/计算；已替换旧活跃内容。"
+          }
+        ]
+      },
+      {
+        "id": "G11",
+        "locations": [
+          "估值最终版：市场快照"
+        ],
+        "score_valuation_impact": "以跨日7月股数作近似，BVPS10.020231、PB3.543830、PS1.135373、报表FCF Yield4.145862%；非新目标价。",
+        "checks": [
+          {
+            "id": "G11-snapshot",
+            "passed": true,
+            "evidence": "估值最终版：市场快照；V5或底稿相应事实/计算；已替换旧活跃内容。"
+          }
+        ]
+      },
+      {
+        "id": "G12",
+        "locations": [
+          "深度最终版：定价权"
+        ],
+        "score_valuation_impact": "B3最终分待定，与PE净利率及现金盈利修复假设相互约束；不把所有品牌强度证据等同定价权。",
+        "checks": [
+          {
+            "id": "G12-pricing",
+            "passed": true,
+            "evidence": "深度最终版：定价权；V5或底稿相应事实/计算；已替换旧活跃内容。"
+          }
+        ]
+      },
+      {
+        "id": "G13",
+        "locations": [
+          "三份最终版全文；workpaper-v3"
+        ],
+        "score_valuation_impact": "所有最终评分、价格及档位仍null；不因篇幅或程序通过解除。",
+        "checks": [
+          {
+            "id": "G13-single-source",
+            "passed": true,
+            "evidence": "三份最终版全文；workpaper-v3；V5或底稿相应事实/计算；已替换旧活跃内容。"
+          }
+        ]
+      }
+    ]
+  }
+}

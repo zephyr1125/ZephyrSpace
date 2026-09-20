@@ -1,0 +1,24 @@
+{
+  "as_of_date": "2026-09-12",
+  "last_trading_date": "2026-09-11",
+  "security": "Badger Meter, Inc. Common Stock",
+  "ticker": "BMI",
+  "market": "NYSE",
+  "currency": "USD",
+  "close_price": 125.13,
+  "price_basis": "unadjusted regular-session close",
+  "shares_outstanding": 28986847,
+  "shares_as_of_date": "2026-07-10",
+  "share_class": "Common Stock, par value USD 1 per share",
+  "market_capitalization": 3627364564.11,
+  "market_capitalization_currency": "USD",
+  "market_capitalization_calculation": "125.13 × 28,986,847; stock price and share-count dates differ and are retained separately.",
+  "adr_or_ordinary_share_conversion": "not applicable; U.S. common stock",
+  "source": {
+    "price_url": "https://www.historicalstockprice.com/bmi-historical-stock-prices/",
+    "price_retrieved_date": "2026-09-12",
+    "share_count_source_id": "S1_SEC_2026Q2_10Q",
+    "share_count_location": "10-Q cover page, HTML line 117"
+  },
+  "cross_check": "A second non-primary price-history page (Investing.com) displayed the same 2026-09-11 close of USD 125.13. Other third-party pages displayed small conflicting close values; no exchange-originated historical close was obtained in this evidence version."
+}

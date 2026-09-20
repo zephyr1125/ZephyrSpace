@@ -1,0 +1,2258 @@
+{
+  "schema_version": 1,
+  "run_id": "nike-2026-09-19",
+  "role": "triplet_adjudicator",
+  "as_of": "2026-09-19",
+  "status": "research_incomplete_pending_final_local_repair",
+  "round": {
+    "adjudication_round": 2,
+    "exception_round_used": true,
+    "exception_round_number": 1,
+    "repair_round_authorized": 2,
+    "reopen_reason": "原P1未关闭且修复新增分部/杜邦/人事/回购原始数值、DCF时点及PE字段重大错误。",
+    "scope": "覆盖匿名复查48候选、三份修订全文；沿用原32验收项，增加一个系统性替换验收项。只重整受影响段落和依赖，不重新研究全部公司。",
+    "additional_adjudication_rounds_authorized": 0,
+    "stop_rule": "本次唯一例外后仅一次合并修复及双路定向验收。仍有未关闭P0/P1则停止并明确研究未完成，不能开第三次裁决或无限补证；不进入Watchlist。"
+  },
+  "independence": {
+    "source_mapping_read": false,
+    "review_source_directories_enumerated": false,
+    "agents_started": false,
+    "author_or_initial_reviewer": false,
+    "basis": "按原件与项目规则，不按票数、来源身份或程序通过。"
+  },
+  "coverage": {
+    "candidate_namespace": "anonymous-recheck/candidates.json；C编号与初审不同",
+    "candidate_count": 48,
+    "full_reports_read": [
+      "深度分析/耐克 深度分析 73 2026-09-19 修订版.md",
+      "管理层档案/耐克 管理层档案 68 2026-09-19 修订版.md",
+      "估值分析/耐克 估值分析 2026-09-19 修订版.md"
+    ],
+    "workpapers_read": [
+      "writer/workpaper-v2.json",
+      "writer/repair-closeout-v1.md",
+      "writer/diff-v1-to-v2.md",
+      "writer/evidence-supplement-v4.md"
+    ],
+    "prior_ledger": "adjudication-v1.json",
+    "rules": [
+      "docs/three-report-economy-routing.md",
+      "docs/three-report-evidence-contract.md",
+      "docs/three-report-workpaper.md",
+      "deep-prebuy-skill/SKILL.md A3/B1/B3/D2/D5/E/F及相关pitfalls",
+      "management-archive/SKILL.md 二/三/六/八/九及M3/M6/M7/M8",
+      "skills/valuation/SKILL.md 通用模型、正常化、反向、确定性规则",
+      "data/WATCHLIST_RULES.md 当前三层门槛（不执行历史PreBuy旧决策树）"
+    ],
+    "originals": [
+      "FY2026 10-K原页36/37/59/63/67/75/84/86/87及原裁决已核页",
+      "SEC FY2024/FY2023 10-K员工和FY2023/24资产权益",
+      "官方2023-12-21/FY2025全年发布原话",
+      "ValueInvesting当前完整页面；FinanceCharts完整页面受Captcha限制，仅官方站点索引可见，不冒充全文核验"
+    ]
+  },
+  "parameters": {
+    "currency": "USD",
+    "company_score": null,
+    "management_score": null,
+    "target_price": null,
+    "certainty": null,
+    "buy_price": null,
+    "pending_reason": "73/68仅算术合计通过，依赖的事实和评分归因未闭合；FY2027现金/股数/时点和第二模型锚未闭合，24.725731/.45/18.371218及旧42.92/.55/32.49均不是批准参数。",
+    "company_score_bridge": {
+      "previous_total": 72,
+      "final_total": null,
+      "items": [
+        {
+          "id": "A1",
+          "previous": 3,
+          "final": 3,
+          "delta": 0,
+          "reason": "运动产品创新及品牌先发基因未被本轮新证据推翻。",
+          "issue_ids": [],
+          "status": "retained_for_this_adjudication"
+        },
+        {
+          "id": "A2",
+          "previous": 3,
+          "final": 3,
+          "delta": 0,
+          "reason": "控制权长期稳定；公众制衡问题归治理，不改变稳定性事实。",
+          "issue_ids": [],
+          "status": "retained_for_this_adjudication"
+        },
+        {
+          "id": "A3",
+          "previous": 3.5,
+          "final": null,
+          "delta": null,
+          "reason": "沿用v1待定；本次具体闭合要求见关联根因及G13。",
+          "issue_ids": [
+            "G07"
+          ],
+          "status": "pending_evidence"
+        },
+        {
+          "id": "B0",
+          "previous": 2,
+          "final": 2,
+          "delta": 0,
+          "reason": "设计/品牌/合同制造商业模式可核。",
+          "issue_ids": [],
+          "status": "retained_for_this_adjudication"
+        },
+        {
+          "id": "B1",
+          "previous": 3,
+          "final": null,
+          "delta": null,
+          "reason": "沿用v1待定；本次具体闭合要求见关联根因及G13。",
+          "issue_ids": [
+            "G09"
+          ],
+          "status": "pending_evidence"
+        },
+        {
+          "id": "B2",
+          "previous": 2,
+          "final": 2,
+          "delta": 0,
+          "reason": "可选消费且低转换成本的经济属性未变；关税桥改变盈利归因不改变该项基本模式判断。",
+          "issue_ids": [],
+          "status": "retained_for_this_adjudication"
+        },
+        {
+          "id": "B3",
+          "previous": 5,
+          "final": null,
+          "delta": null,
+          "reason": "沿用v1待定；本次具体闭合要求见关联根因及G13。",
+          "issue_ids": [
+            "G12"
+          ],
+          "status": "pending_evidence"
+        },
+        {
+          "id": "B4",
+          "previous": 2.5,
+          "final": 2.5,
+          "delta": 0,
+          "reason": "成熟市场与近两年收入疲弱仍支持原谨慎判断。",
+          "issue_ids": [],
+          "status": "retained_for_this_adjudication"
+        },
+        {
+          "id": "C1",
+          "previous": 6,
+          "final": 6,
+          "delta": 0,
+          "reason": "全球规模第一梯队判断无决定性反证。",
+          "issue_ids": [],
+          "status": "retained_for_this_adjudication"
+        },
+        {
+          "id": "C2",
+          "previous": 3,
+          "final": 3,
+          "delta": 0,
+          "reason": "合同制造优势与供应地域集中、关税制约并存。",
+          "issue_ids": [],
+          "status": "retained_for_this_adjudication"
+        },
+        {
+          "id": "C3+C4",
+          "previous": 7,
+          "final": 7,
+          "delta": 0,
+          "reason": "品牌、研发、运动员和渠道壁垒同时有低切换成本限制；本轮没有支持机械改变7分的新事实。",
+          "issue_ids": [],
+          "status": "retained_for_this_adjudication"
+        },
+        {
+          "id": "D1",
+          "previous": 3,
+          "final": 3,
+          "delta": 0,
+          "reason": "运动创新主线与可解释渠道修正并存；D2履约不可混作D1战略漂移。",
+          "issue_ids": [],
+          "status": "retained_for_this_adjudication"
+        },
+        {
+          "id": "D2",
+          "previous": 2.5,
+          "final": null,
+          "delta": null,
+          "reason": "沿用v1待定；本次具体闭合要求见关联根因及G13。",
+          "issue_ids": [
+            "G08"
+          ],
+          "status": "pending_evidence"
+        },
+        {
+          "id": "D3",
+          "previous": 1,
+          "final": 1,
+          "delta": 0,
+          "reason": "外部需求、贸易及竞争逆风仍在。",
+          "issue_ids": [],
+          "status": "retained_for_this_adjudication"
+        },
+        {
+          "id": "D5",
+          "previous": 1.5,
+          "final": null,
+          "delta": null,
+          "reason": "沿用v1待定；本次具体闭合要求见关联根因及G13。",
+          "issue_ids": [
+            "G08"
+          ],
+          "status": "pending_evidence"
+        },
+        {
+          "id": "E1",
+          "previous": 3,
+          "final": null,
+          "delta": null,
+          "reason": "沿用v1待定；本次具体闭合要求见关联根因及G13。",
+          "issue_ids": [
+            "G01"
+          ],
+          "status": "pending_evidence"
+        },
+        {
+          "id": "E2",
+          "previous": 3,
+          "final": null,
+          "delta": null,
+          "reason": "沿用v1待定；本次具体闭合要求见关联根因及G13。",
+          "issue_ids": [
+            "G05"
+          ],
+          "status": "pending_evidence"
+        },
+        {
+          "id": "E3",
+          "previous": 1.5,
+          "final": null,
+          "delta": null,
+          "reason": "沿用v1待定；本次具体闭合要求见关联根因及G13。",
+          "issue_ids": [
+            "G05"
+          ],
+          "status": "pending_evidence"
+        },
+        {
+          "id": "E4",
+          "previous": 1,
+          "final": null,
+          "delta": null,
+          "reason": "沿用v1待定；本次具体闭合要求见关联根因及G13。",
+          "issue_ids": [
+            "G01"
+          ],
+          "status": "pending_evidence"
+        },
+        {
+          "id": "E5",
+          "previous": 2,
+          "final": null,
+          "delta": null,
+          "reason": "沿用v1待定；本次具体闭合要求见关联根因及G13。",
+          "issue_ids": [
+            "G01"
+          ],
+          "status": "pending_evidence"
+        },
+        {
+          "id": "E5.5",
+          "previous": 2.5,
+          "final": null,
+          "delta": null,
+          "reason": "沿用v1待定；本次具体闭合要求见关联根因及G13。",
+          "issue_ids": [
+            "G01"
+          ],
+          "status": "pending_evidence"
+        },
+        {
+          "id": "F1",
+          "previous": 4,
+          "final": null,
+          "delta": null,
+          "reason": "沿用v1待定；本次具体闭合要求见关联根因及G13。",
+          "issue_ids": [
+            "G08"
+          ],
+          "status": "pending_evidence"
+        },
+        {
+          "id": "F2",
+          "previous": 4,
+          "final": null,
+          "delta": null,
+          "reason": "沿用v1待定；本次具体闭合要求见关联根因及G13。",
+          "issue_ids": [
+            "G07"
+          ],
+          "status": "pending_evidence"
+        },
+        {
+          "id": "F2.5",
+          "previous": 1,
+          "final": null,
+          "delta": null,
+          "reason": "沿用v1待定；本次具体闭合要求见关联根因及G13。",
+          "issue_ids": [
+            "G07"
+          ],
+          "status": "pending_evidence"
+        },
+        {
+          "id": "F3",
+          "previous": 2,
+          "final": 2,
+          "delta": 0,
+          "reason": "维持2/3：独立审查及披露是正面，一次已核迟报属小瑕疵；海关争议保留风险而非既成处罚；不以亲属身份或作者漏项认定不公允/隐瞒。",
+          "issue_ids": [
+            "G06",
+            "G07"
+          ],
+          "status": "retained_for_this_adjudication"
+        }
+      ],
+      "aggregation": "25项全部闭合后按原权重求和；C3+C4一个合并项；不得用已定部分求暂定总分或倒填未定分项。",
+      "proposed_total": 73
+    },
+    "management_score_bridge": {
+      "previous_total": 65,
+      "final_total": null,
+      "items": [
+        {
+          "id": "诚信与透明度",
+          "previous": 15,
+          "final": null,
+          "delta": null,
+          "issue_ids": [
+            "G06",
+            "G07",
+            "G08"
+          ],
+          "reason": "删研究缺口与作者遗漏的诚信扣分，核实言行与已披露风险后重评；无原件证明其隐瞒。"
+        },
+        {
+          "id": "资本配置能力",
+          "previous": 13,
+          "final": null,
+          "delta": null,
+          "issue_ids": [
+            "G07"
+          ],
+          "reason": "ROIC/WACC、回购及Capex效率桥未闭合。"
+        },
+        {
+          "id": "战略稳定性",
+          "previous": 10,
+          "final": 10,
+          "delta": 0,
+          "issue_ids": [
+            "G08"
+          ],
+          "reason": "长期运动创新主线稳定而渠道路线调整确实存在；保留10分只评价战略稳定性，不能引用未核FY2025承诺落空；如目标原文改变这一事实则按实质新证据处理。"
+        },
+        {
+          "id": "对股东友好度",
+          "previous": 11,
+          "final": 11,
+          "delta": 0,
+          "issue_ids": [
+            "G07"
+          ],
+          "reason": "分红与绩效约束已核、B类投票制衡弱；维持11分，不用未逐笔核交易作扣分或无减持保证。"
+        },
+        {
+          "id": "危机处理能力",
+          "previous": 6,
+          "final": null,
+          "delta": null,
+          "issue_ids": [
+            "G05",
+            "G08"
+          ],
+          "reason": "行动到结果桥、目标期限与关税现金效应待厘清。"
+        },
+        {
+          "id": "组织与人才能力",
+          "previous": 7,
+          "final": null,
+          "delta": null,
+          "issue_ids": [
+            "G07",
+            "G08"
+          ],
+          "reason": "五年人事模式及人才效率缺口，外聘/补偿不是自动负面。"
+        },
+        {
+          "id": "表达清晰度与认知质量",
+          "previous": 3,
+          "final": null,
+          "delta": null,
+          "issue_ids": [
+            "G07",
+            "G08"
+          ],
+          "reason": "研究未找到原话不能直接等于公司表达差；需原始上下文。"
+        }
+      ],
+      "aggregation": "七项依原满分20/25/15/15/10/10/5求和；诚信≤8或资本配置≤10触发原红旗。",
+      "proposed_total": 68
+    },
+    "valuation": {
+      "economic_model": "非金融品牌消费企业，适用可持续现金流估值与有独立市场证据的正常化PE；无需套用金融模型，也不因FCFE难建而把EPS当FCF。",
+      "primary_models": [
+        {
+          "id": "fcfe_dcf",
+          "status": "applicable_inputs_pending",
+          "weight": null,
+          "fcf0": {
+            "bear": null,
+            "base": null,
+            "bull": null
+          },
+          "g": null,
+          "ke": null,
+          "tg": null,
+          "cash_equity_adjustment": null,
+          "reason": "保留FCFE配Ke，按G02/G05/G09重建。现有增长与折现率可作为待论证假设，但不得视作已核实际，给定经济依据及期限，再由修复结果检验。"
+        },
+        {
+          "id": "pe_recovery",
+          "status": "independent_anchor_pending",
+          "weight": null,
+          "eps": {
+            "bear": null,
+            "base": null,
+            "bull": null
+          },
+          "pe": {
+            "bear": null,
+            "base": null,
+            "bull": null
+          },
+          "reason": "EPS经营桥与同期市场锚待G03，先统一预测期。"
+        }
+      ],
+      "reverse": {
+        "weight": 0,
+        "variable": "最终现金模型的隐含可持续FCFE或增长（或有证据PE下的EPS/利润率）",
+        "implied_value": null
+      },
+      "weighted": {
+        "bear": null,
+        "base": null,
+        "bull": null
+      },
+      "target_price": null,
+      "certainty": null,
+      "buy_price": null,
+      "buy_price_formula": "target_price * (0.68 + 0.14 * certainty)",
+      "certainty_rule": "待两有效模型、五项确定性依据及尾部风险闭合后判定；不能因公司质量、研究缺口或目标价想贴近市价而任定。",
+      "price_zones": null
+    },
+    "verified_numeric_inputs": {
+      "period_end_equity_usd_bn": 14.865,
+      "previous_equity_usd_bn": 13.213,
+      "five_quarter_average_equity_usd_bn": 13.944,
+      "cash_and_st_investments_usd_bn": 9.027,
+      "interest_bearing_debt_book_usd_bn": 7.942,
+      "operating_lease_liability_usd_bn": 3.091,
+      "debt_due_fy2027_usd_bn": 2,
+      "total_shares": 1483498703,
+      "shares_date": "2026-07-08（并非2026-05-31期末精确股数）",
+      "fy2026_cfo_usd_bn": 2.868,
+      "fy2026_cash_capex_usd_bn": 0.684,
+      "fy2026_simplified_fcf_usd_bn": 2.184,
+      "fy2026_sbc_usd_bn": 0.715,
+      "fy2024_diluted_eps": 3.73,
+      "ieepa_benefit_usd_bn": 0.986,
+      "ieepa_collected_by_year_end_usd_bn": 0.302,
+      "ieepa_receivable_usd_bn": 0.684,
+      "severance_expense_usd_bn": 0.385,
+      "severance_paid_usd_bn": 0.142,
+      "severance_accrued_usd_bn": 0.243,
+      "reference_market_price": 35.51,
+      "reference_market_date": "2026-09-18",
+      "market_limit": "复用V3-005第三方历史行情核验，非交易所原件；盘后时间戳不能证明收盘。"
+    },
+    "independent_calculations": {
+      "fy2026_margin": 0.06698564593301436,
+      "fy2026_asset_turnover": 1.237461494352505,
+      "fy2026_equity_multiplier": 2.670738656599473,
+      "fy2026_roe_simple_average": 0.2213832894080775,
+      "reference_market_cap_usd_bn": 52.67903894353,
+      "reference_bvps": 10.020231207441777,
+      "reference_pb": 3.5438304031974432,
+      "reference_ps": 1.1353730536559763,
+      "reported_fcf_yield": 0.041458615111433,
+      "reported_fcf_per_share": 1.4721954226069858,
+      "sbc_per_reference_share": 0.4819687395439536,
+      "old_base_fcfe_uplift_usd_bn": 1.2280470169,
+      "old_base_fcfe_uplift_percent": 56.22925901556775,
+      "conditional_reported_fcf_dcf": 24.70969086680943,
+      "conditional_sbc_subtracted_dcf": 30.342564410025474,
+      "conditional_market_implied_fcf0": 2.135291075198767,
+      "method": "直接独立标量计算，未以作者脚本代替。条件DCF均仅沿用旧g5%、Ke9.5%、tg2.5%、net_cash0.731以检验量级；这些不是修正价格。跨日股数倍数均为近似。"
+    },
+    "gate_and_level": {
+      "redline_conclusion": "未见已证实新增一票否决或任意两条不入出口；OCF/净利92.28%未触发20%线，海关索赔不能当已判违规；未完成不等于不入。",
+      "watchlist_level": null,
+      "max_position": null,
+      "reason": "最终评分与完整三件套验收待定，不能给档位或具体仓位；沿用当前S≥170且双方≥82并满足S附加条件，A≥160且双方≥76，B≥150且双方≥70。A/B不添加确定性硬门槛。",
+      "completion_condition": "所有P0/P1逐验收ID实质关闭、双路定向复查后由主Agent按现有规则处理；本裁决不修改公司页/索引/Watchlist。"
+    },
+    "adjudication_v2_verified_facts_delta": {
+      "units": "除特别注明外，分部/股数桥金额为USD millions；杜邦为比率",
+      "dupont": {
+        "FY2024": {
+          "net_margin": 0.110976986877,
+          "asset_turnover": 1.35804656205,
+          "equity_multiplier": 2.66023070971,
+          "roe": 0.400928465921
+        },
+        "FY2025": {
+          "net_margin": 0.0695113260921,
+          "asset_turnover": 1.24004873542,
+          "equity_multiplier": 2.7019136852,
+          "roe": 0.232898021199
+        },
+        "FY2026": {
+          "net_margin": 0.066985645933,
+          "asset_turnover": 1.23746149435,
+          "equity_multiplier": 2.6707386566,
+          "roe": 0.221383289408
+        },
+        "method": "净利润/收入×收入/期初期末平均资产×平均资产/平均权益；FY2023/24资产37531/38110、权益14004/14430，FY2025资产36579权益13213，FY2026沿原件。"
+      },
+      "segments": {
+        "years": [
+          2024,
+          2025,
+          2026
+        ],
+        "revenue": {
+          "NorthAmerica": [
+            21396,
+            19572,
+            20511
+          ],
+          "EMEA": [
+            13607,
+            12257,
+            12572
+          ],
+          "China": [
+            7545,
+            6586,
+            5847
+          ],
+          "APLA": [
+            6729,
+            6251,
+            6243
+          ],
+          "GlobalBrandDivisions": [
+            45,
+            48,
+            49
+          ],
+          "Converse": [
+            2082,
+            1692,
+            1174
+          ],
+          "Corporate": [
+            -42,
+            -97,
+            2
+          ],
+          "total": [
+            51362,
+            46309,
+            46398
+          ]
+        },
+        "EBIT": {
+          "NorthAmerica": [
+            5822,
+            4735,
+            5376
+          ],
+          "EMEA": [
+            3388,
+            2575,
+            2417
+          ],
+          "China": [
+            2309,
+            1602,
+            1278
+          ],
+          "APLA": [
+            1885,
+            1527,
+            1387
+          ],
+          "GlobalBrandDivisions": [
+            -4720,
+            -4699,
+            -4603
+          ],
+          "Converse": [
+            474,
+            240,
+            18
+          ],
+          "Corporate": [
+            -2619,
+            -2202,
+            -2023
+          ],
+          "total": [
+            6539,
+            3778,
+            3850
+          ]
+        },
+        "source": "FY2026 10-K p36及Note15 p86-87；两处口径一致"
+      },
+      "employees": {
+        "FY2023": 83700,
+        "FY2024": 79400,
+        "FY2025": 77800,
+        "FY2026": 73000,
+        "per_employee_revenue_usd_m": [
+          0.611911589008,
+          0.646876574307,
+          0.595231362468,
+          0.635589041096
+        ],
+        "conclusion": "FY2026高于FY2025但低于FY2024；人数含兼职且为期末，不等于平均全职生产率。"
+      },
+      "share_bridge_millions": {
+        "start_FY2023": 1532,
+        "FY2024": {
+          "options": 7,
+          "employee_plans": 5,
+          "repurchases": -41,
+          "end": 1503
+        },
+        "FY2025": {
+          "options": 6,
+          "employee_plans": 5,
+          "repurchases": -38,
+          "end": 1476
+        },
+        "FY2026": {
+          "options": 3,
+          "employee_plans": 6,
+          "repurchases": -2,
+          "end": 1483
+        },
+        "limits": "p59整数百万股为舍入桥；A转B净总股数零。与p45精确计划购买1.8m及7月8日精确1483498703股分别标时点/口径，不混推。"
+      },
+      "repurchase": {
+        "FY2026_plan_shares_m": 1.8,
+        "plan_cost_usd_m": 122.4,
+        "average_price": 67.63,
+        "cashflow_usd_m": 146,
+        "cashflow_minus_plan_usd_m": 23.6,
+        "difference_reason": null
+      },
+      "pricing": {
+        "NA_FY2026_footwear_units_growth": 0.06,
+        "NA_footwear_ASP_revenue_contribution": -0.01,
+        "NA_apparel_units_growth": 0.02,
+        "NA_apparel_ASP_revenue_contribution": 0.02,
+        "note": "鞋类ASP受渠道结构拉低，产品/战略提价部分抵销；服装ASP主要产品结构、渠道部分抵销。毛利段较高ASP不能扩展为所有产品均涨价。"
+      },
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/320187/000032018724000044/nke-20240531.htm",
+        "https://www.sec.gov/Archives/edgar/data/320187/000032018723000039/nke-20230531.htm",
+        "https://investors.nike.com/investors/news-events-and-reports/investor-news/investor-news-details/2023/NIKE-Inc.-Reports-Fiscal-2024-Second-Quarter-Results/default.aspx",
+        "https://investors.nike.com/investors/news-events-and-reports/investor-news/investor-news-details/2025/NIKE-Inc--Reports-Fiscal-2025-Fourth-Quarter-and-Full-Year-Results/",
+        "https://valueinvesting.io/NKE/valuation/pe-multiples",
+        "https://www.financecharts.com/stocks/NKE/value/pe-ratio-averages"
+      ],
+      "market_source_disagreement": {
+        "ValueInvesting": {
+          "observed_date": "2026-09-19",
+          "forward_range": [
+            14,
+            17.4
+          ],
+          "selected_forward": 15.6,
+          "trailing_range": [
+            14.8,
+            17.5
+          ],
+          "selected_trailing": 16,
+          "decision": "当前直接页面支持作者日期与区间；C004称实际为9月16日的反对不能作为当前错误定论，可能动态版本差。Selected为估值供应商输出，样本/预测期仍不足。"
+        },
+        "FinanceCharts": {
+          "direct_page": "Captcha受限",
+          "NKE_indexed_current": 16.99,
+          "NKE_indexed_12m_average": 29.26,
+          "NKE_indexed_forward": 23.98,
+          "DECK_14_30": "索引同行排列支持平均列而非forward，但完整列头未直接取得；删除未经核实的forward引用，不把索引当完整留档。"
+        }
+      }
+    },
+    "adjudication_v2_conditional_calculations": {
+      "not_final_parameters": true,
+      "reason": "仅定位算术和时点；不能作为已批准价格/现金假设。",
+      "cash_history_usd_bn": 1.469,
+      "eps_from_author_inputs": [
+        1.3482857142857143,
+        2.056888888888889,
+        2.808
+      ],
+      "DCF_existing_formula_results": [
+        7.46825547,
+        16.6514620335,
+        30.6865085025
+      ],
+      "DCF_first_FY2027_corrected_results": [
+        7.46825547,
+        16.0239827245,
+        28.7230733668
+      ],
+      "formula_if_FY2027_is_year1": "sum(FY2027_FCFE*(1+g)^(t-1)/(1+Ke)^t,t=1..5)+FY2027_FCFE*(1+g)^4*(1+tg)/(Ke-tg)/(1+Ke)^5+excess_cash_per_share",
+      "timing_limit": "上述用于隔离多长一年错误，仍假设年度期末折现。最终明确2026-09-19估值日到FY2027年末的首期长度/已发生现金；可采用明确年度近似但不能同时把FY2027当基期再长一年。",
+      "existing_formula_correct_grid": {
+        "rows_tg": [
+          0.015,
+          0.025,
+          0.035
+        ],
+        "columns_ke": [
+          0.085,
+          0.095,
+          0.105
+        ],
+        "values": [
+          [
+            17.2070699018,
+            15.0722571322,
+            13.4126673039
+          ],
+          [
+            19.3913822646,
+            16.6514620335,
+            14.5970754301
+          ],
+          [
+            22.4494195725,
+            18.7570685686,
+            16.1198858781
+          ]
+        ],
+        "note": "证明手工表8格错；修最终时点后此旧公式网格也须重算。"
+      },
+      "reverse_old_formula": 2.252957218,
+      "reverse_corrected_year1_example": {
+        "price": 35.51,
+        "cash": 0.337,
+        "g": 0.04,
+        "tg": 0.025,
+        "ke": [
+          0.085,
+          0.095,
+          0.105
+        ],
+        "implied_FY2027_FCFE": [
+          2.00615353829,
+          2.34307550697,
+          2.68063213181
+        ]
+      },
+      "reverse_weight": 0
+    },
+    "adjudication_v2_round": {
+      "adjudication_round": 2,
+      "exception_round_used": true,
+      "exception_round_number": 1,
+      "repair_round_authorized": 2,
+      "reopen_reason": "原P1未关闭且修复新增分部/杜邦/人事/回购原始数值、DCF时点及PE字段重大错误。",
+      "scope": "覆盖匿名复查48候选、三份修订全文；沿用原32验收项，增加一个系统性替换验收项。只重整受影响段落和依赖，不重新研究全部公司。",
+      "additional_adjudication_rounds_authorized": 0,
+      "stop_rule": "本次唯一例外后仅一次合并修复及双路定向验收。仍有未关闭P0/P1则停止并明确研究未完成，不能开第三次裁决或无限补证；不进入Watchlist。"
+    },
+    "adjudication_v2_candidate_dispositions": [
+      {
+        "id": "C009",
+        "root_id": "G01",
+        "decision": "valid",
+        "qualification": "按所属根因保留成立部分及验收限制。"
+      },
+      {
+        "id": "C017",
+        "root_id": "G01",
+        "decision": "valid",
+        "qualification": "按所属根因保留成立部分及验收限制。"
+      },
+      {
+        "id": "C031",
+        "root_id": "G01",
+        "decision": "valid",
+        "qualification": "按所属根因保留成立部分及验收限制。"
+      },
+      {
+        "id": "C034",
+        "root_id": "G01",
+        "decision": "partial",
+        "qualification": "按所属根因保留成立部分及验收限制。"
+      },
+      {
+        "id": "C036",
+        "root_id": "G01",
+        "decision": "valid",
+        "qualification": "按所属根因保留成立部分及验收限制。"
+      },
+      {
+        "id": "C001",
+        "root_id": "G02",
+        "decision": "valid",
+        "qualification": "按所属根因保留成立部分及验收限制。"
+      },
+      {
+        "id": "C013",
+        "root_id": "G02",
+        "decision": "valid",
+        "qualification": "按所属根因保留成立部分及验收限制。"
+      },
+      {
+        "id": "C014",
+        "root_id": "G02",
+        "decision": "valid",
+        "qualification": "按所属根因保留成立部分及验收限制。"
+      },
+      {
+        "id": "C015",
+        "root_id": "G02",
+        "decision": "valid",
+        "qualification": "按所属根因保留成立部分及验收限制。"
+      },
+      {
+        "id": "C019",
+        "root_id": "G02",
+        "decision": "partial",
+        "qualification": "按所属根因保留成立部分及验收限制。"
+      },
+      {
+        "id": "C026",
+        "root_id": "G02",
+        "decision": "partial",
+        "qualification": "按所属根因保留成立部分及验收限制。"
+      },
+      {
+        "id": "C032",
+        "root_id": "G02",
+        "decision": "valid",
+        "qualification": "按所属根因保留成立部分及验收限制。"
+      },
+      {
+        "id": "C044",
+        "root_id": "G02",
+        "decision": "valid",
+        "qualification": "按所属根因保留成立部分及验收限制。"
+      },
+      {
+        "id": "C002",
+        "root_id": "G03",
+        "decision": "valid",
+        "qualification": "按所属根因保留成立部分及验收限制。"
+      },
+      {
+        "id": "C004",
+        "root_id": "G03",
+        "decision": "partial",
+        "qualification": "日期/区间异议本轮不采纳；源口径与独立性缺证采纳。"
+      },
+      {
+        "id": "C007",
+        "root_id": "G03",
+        "decision": "valid",
+        "qualification": "按所属根因保留成立部分及验收限制。"
+      },
+      {
+        "id": "C008",
+        "root_id": "G03",
+        "decision": "partial",
+        "qualification": "采纳股数桥缺失，纠正候选自身基准EPS算术为2.056889。"
+      },
+      {
+        "id": "C024",
+        "root_id": "G03",
+        "decision": "valid",
+        "qualification": "按所属根因保留成立部分及验收限制。"
+      },
+      {
+        "id": "C029",
+        "root_id": "G03",
+        "decision": "valid",
+        "qualification": "按所属根因保留成立部分及验收限制。"
+      },
+      {
+        "id": "C033",
+        "root_id": "G03",
+        "decision": "partial",
+        "qualification": "按所属根因保留成立部分及验收限制。"
+      },
+      {
+        "id": "C047",
+        "root_id": "G03",
+        "decision": "valid",
+        "qualification": "按所属根因保留成立部分及验收限制。"
+      },
+      {
+        "id": "C003",
+        "root_id": "G04",
+        "decision": "partial",
+        "qualification": "新反解条件算术正确，未关闭原因是时点/全篇一致性。"
+      },
+      {
+        "id": "C041",
+        "root_id": "G04",
+        "decision": "valid",
+        "qualification": "按所属根因保留成立部分及验收限制。"
+      },
+      {
+        "id": "C046",
+        "root_id": "G04",
+        "decision": "valid",
+        "qualification": "按所属根因保留成立部分及验收限制。"
+      },
+      {
+        "id": "C016",
+        "root_id": "G05",
+        "decision": "valid",
+        "qualification": "按所属根因保留成立部分及验收限制。"
+      },
+      {
+        "id": "C020",
+        "root_id": "G07",
+        "decision": "valid",
+        "qualification": "按所属根因保留成立部分及验收限制。"
+      },
+      {
+        "id": "C023",
+        "root_id": "G07",
+        "decision": "valid",
+        "qualification": "按所属根因保留成立部分及验收限制。"
+      },
+      {
+        "id": "C028",
+        "root_id": "G07",
+        "decision": "partial",
+        "qualification": "采纳A3矛盾和旧理由；不由缺理由自动判应加满分。"
+      },
+      {
+        "id": "C035",
+        "root_id": "G07",
+        "decision": "valid",
+        "qualification": "按所属根因保留成立部分及验收限制。"
+      },
+      {
+        "id": "C042",
+        "root_id": "G07",
+        "decision": "partial",
+        "qualification": "按所属根因保留成立部分及验收限制。"
+      },
+      {
+        "id": "C045",
+        "root_id": "G07",
+        "decision": "valid",
+        "qualification": "按所属根因保留成立部分及验收限制。"
+      },
+      {
+        "id": "C010",
+        "root_id": "G08",
+        "decision": "valid",
+        "qualification": "按所属根因保留成立部分及验收限制。"
+      },
+      {
+        "id": "C012",
+        "root_id": "G08",
+        "decision": "valid",
+        "qualification": "按所属根因保留成立部分及验收限制。"
+      },
+      {
+        "id": "C018",
+        "root_id": "G08",
+        "decision": "valid",
+        "qualification": "按所属根因保留成立部分及验收限制。"
+      },
+      {
+        "id": "C021",
+        "root_id": "G08",
+        "decision": "valid",
+        "qualification": "按所属根因保留成立部分及验收限制。"
+      },
+      {
+        "id": "C027",
+        "root_id": "G08",
+        "decision": "partial",
+        "qualification": "按所属根因保留成立部分及验收限制。"
+      },
+      {
+        "id": "C039",
+        "root_id": "G08",
+        "decision": "partial",
+        "qualification": "布尔true并非当然错误，已找到原始公告；引用与上限逻辑仍错。"
+      },
+      {
+        "id": "C022",
+        "root_id": "G09",
+        "decision": "valid",
+        "qualification": "按所属根因保留成立部分及验收限制。"
+      },
+      {
+        "id": "C025",
+        "root_id": "G09",
+        "decision": "valid",
+        "qualification": "按所属根因保留成立部分及验收限制。"
+      },
+      {
+        "id": "C043",
+        "root_id": "G09",
+        "decision": "valid",
+        "qualification": "按所属根因保留成立部分及验收限制。"
+      },
+      {
+        "id": "C005",
+        "root_id": "G10",
+        "decision": "valid",
+        "qualification": "按所属根因保留成立部分及验收限制。"
+      },
+      {
+        "id": "C011",
+        "root_id": "G10",
+        "decision": "valid",
+        "qualification": "按所属根因保留成立部分及验收限制。"
+      },
+      {
+        "id": "C037",
+        "root_id": "G11",
+        "decision": "partial",
+        "qualification": "市值差异可由口径解释，本身不构成错误；快照与历史/预测性质须统一。"
+      },
+      {
+        "id": "C006",
+        "root_id": "G12",
+        "decision": "valid",
+        "qualification": "按所属根因保留成立部分及验收限制。"
+      },
+      {
+        "id": "C040",
+        "root_id": "G12",
+        "decision": "partial",
+        "qualification": "按所属根因保留成立部分及验收限制。"
+      },
+      {
+        "id": "C030",
+        "root_id": "G13",
+        "decision": "valid",
+        "qualification": "按所属根因保留成立部分及验收限制。"
+      },
+      {
+        "id": "C038",
+        "root_id": "G13",
+        "decision": "partial",
+        "qualification": "复合原数错误分别接G01/G07/G08/G09；不重复评分。"
+      },
+      {
+        "id": "C048",
+        "root_id": "G13",
+        "decision": "valid",
+        "qualification": "按所属根因保留成立部分及验收限制。"
+      }
+    ],
+    "adjudication_v2_acceptance_summary": {
+      "candidate_count": 48,
+      "root_count": 13,
+      "original_acceptance_count": 32,
+      "total_acceptance_count": 33,
+      "closed_acceptance_ids": [
+        "G01-accounting",
+        "G05-paired",
+        "G06-risk",
+        "G06-limits",
+        "G09-supplier"
+      ],
+      "open_or_partial_acceptance_ids": [
+        "G01-equity",
+        "G01-dupont",
+        "G01-score",
+        "G02-cashflow",
+        "G02-sbc",
+        "G02-equity",
+        "G02-recalc",
+        "G03-eps",
+        "G03-anchor",
+        "G03-completion",
+        "G04-solve",
+        "G04-sensitivity",
+        "G05-tax",
+        "G05-once",
+        "G06-score",
+        "G07-allocation",
+        "G07-attribution",
+        "G07-score",
+        "G08-promises",
+        "G08-cap",
+        "G08-people",
+        "G08-score",
+        "G09-segments",
+        "G09-commitments",
+        "G10-eps",
+        "G11-snapshot",
+        "G12-pricing",
+        "G13-single-source"
+      ],
+      "p0_count": 0,
+      "p1_root_count": 11,
+      "p2_root_count": 2,
+      "final_parameters_approved": false,
+      "policy": "关闭事实不等于相关模型已关闭；不重复研究已核原件，不按匿名意见票数裁决，逐ID验收。最后修复失败保留null并停止。"
+    }
+  },
+  "issues": [
+    {
+      "id": "G01",
+      "candidate_ids": [
+        "C009",
+        "C017",
+        "C031",
+        "C034",
+        "C036"
+      ],
+      "severity": "P1",
+      "decision": "valid",
+      "status": "open",
+      "substantive_disagreement": "新增杜邦FY2024/FY2025错误且旧权益误标未替换；会计政策补证已有实质进展，不能整体判全部未做。",
+      "evidence_refs": [
+        "财报/耐克/耐克FY2026_10-K.pdf 原页31、54、57（PDF35、58、61）、47-48；NKE-F-012与原件冲突",
+        "deep-prebuy-skill/SKILL.md E1/E4/E5/E5.5"
+      ],
+      "action": "仅执行本根因各验收项delta_requirement；以G13替换受影响旧段，保留未变内容。",
+      "score_valuation_impact": "E1/E4/E5/E5.5待定；E2/E3联动G05。净资产、BVPS、PB、杠杆与所有评分引用同步；不凭审计意见直接维持13/20。",
+      "acceptance": [
+        {
+          "id": "G01-equity",
+          "condition": "期末权益14.865bn、FY2025 13.213bn；13.944bn仅标五季度平均；查清所有引用且区分2026-07-08股数与2026-05-31余额。 【本次状态：partial】【本次最终修复要求，原文保留】部分完成：新增14.865/13.213正确；替换旧正文13.944期末权益误标，13.944仅为五季度平均，保留股数实际日期。",
+          "status": "partial",
+          "delta_requirement": "部分完成：新增14.865/13.213正确；替换旧正文13.944期末权益误标，13.944仅为五季度平均，保留股数实际日期。",
+          "original_condition": "期末权益14.865bn、FY2025 13.213bn；13.944bn仅标五季度平均；查清所有引用且区分2026-07-08股数与2026-05-31余额。"
+        },
+        {
+          "id": "G01-dupont",
+          "condition": "FY2024-FY2026逐年列净利率×平均资产周转×平均权益乘数=ROE，附期初期末原件；FY2026应复算6.698565%×1.237461×2.670739=22.138329%，解释经营与资本结构贡献。 【本次状态：open】【本次最终修复要求，原文保留】未关闭：按本台账精确三年杜邦重建表；不要把公司五季度ROIC分母当年度ROE分母。说明ROE下降主要来自利润率，而非凭错表给E1。",
+          "status": "open",
+          "delta_requirement": "未关闭：按本台账精确三年杜邦重建表；不要把公司五季度ROIC分母当年度ROE分母。说明ROE下降主要来自利润率，而非凭错表给E1。",
+          "original_condition": "FY2024-FY2026逐年列净利率×平均资产周转×平均权益乘数=ROE，附期初期末原件；FY2026应复算6.698565%×1.237461×2.670739=22.138329%，解释经营与资本结构贡献。"
+        },
+        {
+          "id": "G01-accounting",
+          "condition": "所得税CAM、未确认税收利益953m及742m潜在税率影响、估计方法无重大改变、销售/库存准备及坏账/商誉检查有原文和金额或明确未披露限制；不能把税务不确定余额全额当新增损失。 【本次状态：closed】【本次最终修复要求，原文保留】已关闭实质事实：已补税务CAM953m/742m、准备、收入退货与商誉；库存准备213/233m、销售相关准备1589/1834m、退货资产511/528m、退货准备1099/1277m。统一正确页码即可，不另开研究。",
+          "status": "closed",
+          "delta_requirement": "已关闭实质事实：已补税务CAM953m/742m、准备、收入退货与商誉；库存准备213/233m、销售相关准备1589/1834m、退货资产511/528m、退货准备1099/1277m。统一正确页码即可，不另开研究。",
+          "original_condition": "所得税CAM、未确认税收利益953m及742m潜在税率影响、估计方法无重大改变、销售/库存准备及坏账/商誉检查有原文和金额或明确未披露限制；不能把税务不确定余额全额当新增损失。"
+        },
+        {
+          "id": "G01-score",
+          "condition": "逐项给E1/E4/E5/E5.5前后分数与规则依据；Capex增长59.07%触发E4拆分规则，无法拆分则显式按原规则减0.5并列扣前基分，不能把未披露虚写成已存在非运营支出；最终总分待所有相关验收闭合。 【本次状态：partial】【本次最终修复要求，原文保留】部分完成：E4扣前1减0.5已落实；E1受错误杜邦影响，E5/E5.5理由须引用新增核实事实。73仅为作者分项算术和，不能倒推各分项。完成后替换全篇维度合计和警戒。",
+          "status": "partial",
+          "delta_requirement": "部分完成：E4扣前1减0.5已落实；E1受错误杜邦影响，E5/E5.5理由须引用新增核实事实。73仅为作者分项算术和，不能倒推各分项。完成后替换全篇维度合计和警戒。",
+          "original_condition": "逐项给E1/E4/E5/E5.5前后分数与规则依据；Capex增长59.07%触发E4拆分规则，无法拆分则显式按原规则减0.5并列扣前基分，不能把未披露虚写成已存在非运营支出；最终总分待所有相关验收闭合。"
+        }
+      ],
+      "reason": "新增杜邦FY2024/FY2025错误且旧权益误标未替换；会计政策补证已有实质进展，不能整体判全部未做。"
+    },
+    {
+      "id": "G02",
+      "candidate_ids": [
+        "C001",
+        "C013",
+        "C014",
+        "C015",
+        "C019",
+        "C026",
+        "C032",
+        "C044"
+      ],
+      "severity": "P1",
+      "decision": "partial",
+      "status": "open",
+      "substantive_disagreement": "历史现金减SBC算术正确；预测残差、现金归属和FY2027索引未闭合。新模型旧公式下的算术正确不证明经济参数正确。",
+      "evidence_refs": [
+        "财报/耐克/耐克FY2026_10-K.pdf 原页45、57-58、70、75-77、88-89；SBC费用表实际原页76/PDF80，候选写75不精确",
+        "skills/valuation/SKILL.md 方法矩阵、标准化FCF、综合加权；docs/three-report-workpaper.md bridges"
+      ],
+      "action": "仅执行本根因各验收项delta_requirement；以G13替换受影响旧段，保留未变内容。",
+      "score_valuation_impact": "三个fcf0、现金调整和DCF价值均待定；原DCF38.192731及综合42.915639仅为旧假设试算。G05/G09调整进入同一桥，不能重复。",
+      "acceptance": [
+        {
+          "id": "G02-cashflow",
+          "condition": "三情景逐项从2.868bn CFO、0.684bn现金Capex开始或从经营预测复建并对账，区分实际/预测/假设；解释增量及增长再投资；reported_fcfe_bridge改名简化报表FCF或补齐净借款定义。 【本次状态：open】【本次最终修复要求，原文保留】未关闭：1.469bn是FY2026 CFO-Capex-SBC历史尺度。把收入/毛利增量与营运资金残差拆为净利润、D&A及其他非现金、营运资金、现金税/税费差、Capex和净借款，三情景与PE净利逐项对账；可用明示保守假设，不得把凑足1.2/1.55/2.0的残差当证据。",
+          "status": "open",
+          "delta_requirement": "未关闭：1.469bn是FY2026 CFO-Capex-SBC历史尺度。把收入/毛利增量与营运资金残差拆为净利润、D&A及其他非现金、营运资金、现金税/税费差、Capex和净借款，三情景与PE净利逐项对账；可用明示保守假设，不得把凑足1.2/1.55/2.0的残差当证据。",
+          "original_condition": "三情景逐项从2.868bn CFO、0.684bn现金Capex开始或从经营预测复建并对账，区分实际/预测/假设；解释增量及增长再投资；reported_fcfe_bridge改名简化报表FCF或补齐净借款定义。"
+        },
+        {
+          "id": "G02-sbc",
+          "condition": "SBC0.715bn已在CFO加回；明确经济扣费或未来股数桥，现有81.8m反稀释奖励不机械全额新增股数；扣SBC时不得再重复扣相同稀释成本，PE EPS保留其已费用化属性。 【本次状态：partial】【本次最终修复要求，原文保留】部分完成：经济成本扣SBC、GAAP EPS不再扣一次的政策可用；说明RSU/期权及净股数如何处理，避免既全额扣经济成本又把同一授予全额稀释重复惩罚。现金模型现时股数与EPS年度加权股数允许不同，但须量化对账。",
+          "status": "partial",
+          "delta_requirement": "部分完成：经济成本扣SBC、GAAP EPS不再扣一次的政策可用；说明RSU/期权及净股数如何处理，避免既全额扣经济成本又把同一授予全额稀释重复惩罚。现金模型现时股数与EPS年度加权股数允许不同，但须量化对账。",
+          "original_condition": "SBC0.715bn已在CFO加回；明确经济扣费或未来股数桥，现有81.8m反稀释奖励不机械全额新增股数；扣SBC时不得再重复扣相同稀释成本，PE EPS保留其已费用化属性。"
+        },
+        {
+          "id": "G02-equity",
+          "condition": "逐年融资/还本与20亿美元FY2027到期债处理明确；现金只加可分配且未在经营现金价值内的部分，利息收入不重复；若使用FCFE不再机械减全部债务。维持租赁租金后现金与负债一致性。 【本次状态：open】【本次最终修复要求，原文保留】未关闭：列2bn到期债的偿还/滚续假设与利息、运营现金保留和超额现金0/.5/1bn的组成；预测现金利息与超额现金加项不能重复计价。承诺覆盖接G09。保留租金已扣后不再扣租赁负债的正确原则。",
+          "status": "open",
+          "delta_requirement": "未关闭：列2bn到期债的偿还/滚续假设与利息、运营现金保留和超额现金0/.5/1bn的组成；预测现金利息与超额现金加项不能重复计价。承诺覆盖接G09。保留租金已扣后不再扣租赁负债的正确原则。",
+          "original_condition": "逐年融资/还本与20亿美元FY2027到期债处理明确；现金只加可分配且未在经营现金价值内的部分，利息收入不重复；若使用FCFE不再机械减全部债务。维持租赁租金后现金与负债一致性。"
+        },
+        {
+          "id": "G02-recalc",
+          "condition": "用最终输入独立重算两模型三情景、同权重综合值、DCF和PE双变量矩阵、机械价及三报告快照/正文/价格分区；原0.731是舍入值，1.085/1.483498703=0.731379136仅为报表净现金尺度，非已批准估值加项。 【本次状态：open】【本次最终修复要求，原文保留】未关闭：先修FY2027首期索引及输入桥，再从唯一底稿生成DCF/PE、两矩阵、反向解、综合与机械价。删除8格错误手工矩阵及旧有效模型。若输入仍缺证，最终价格null，只列条件试算且不得形成有效价格区。",
+          "status": "open",
+          "delta_requirement": "未关闭：先修FY2027首期索引及输入桥，再从唯一底稿生成DCF/PE、两矩阵、反向解、综合与机械价。删除8格错误手工矩阵及旧有效模型。若输入仍缺证，最终价格null，只列条件试算且不得形成有效价格区。",
+          "original_condition": "用最终输入独立重算两模型三情景、同权重综合值、DCF和PE双变量矩阵、机械价及三报告快照/正文/价格分区；原0.731是舍入值，1.085/1.483498703=0.731379136仅为报表净现金尺度，非已批准估值加项。"
+        }
+      ],
+      "reason": "历史现金减SBC算术正确；预测残差、现金归属和FY2027索引未闭合。新模型旧公式下的算术正确不证明经济参数正确。"
+    },
+    {
+      "id": "G03",
+      "candidate_ids": [
+        "C002",
+        "C004",
+        "C007",
+        "C008",
+        "C024",
+        "C029",
+        "C033",
+        "C047"
+      ],
+      "severity": "P1",
+      "decision": "partial",
+      "status": "open",
+      "substantive_disagreement": "股数/EPS桥和市场字段错误成立；C004日期质疑本轮不成立。第二模型仍不具足够独立锚，低确信度不能替代。",
+      "evidence_refs": [
+        "writer/workpaper-v1.json valuation.models[pe_recovery]",
+        "估值分析/耐克 估值分析 2026-09-19.md 六至七章",
+        "skills/valuation/SKILL.md 第0步预测、第1步单模型试算、第2步"
+      ],
+      "action": "仅执行本根因各验收项delta_requirement；以G13替换受影响旧段，保留未变内容。",
+      "score_valuation_impact": "PE EPS/倍数/价值待定；60/40暂不批准为最终权重；目标价、确信度、买入价null，缺模型不能用低确信度替代。",
+      "acceptance": [
+        {
+          "id": "G03-eps",
+          "condition": "从地区/渠道收入至毛利、费用、利息、税率、稀释股数形成三情景EPS，标FY2027预测或统一另一期；与现金模型共享经营假设相互对账，正常化时点较远则明确折现。 【本次状态：open】【本次最终修复要求，原文保留】未关闭：当前输入精确EPS为1.348285714/2.056888889/2.808，不是2.0559；2.05也非基准常规四舍五入值。地区/渠道收入预测给简洁可核桥；1.40/1.62/1.60bn股数给发行/回购和资金假设，年度加权与时点股数明确；与FCFE对账后再定EPS。",
+          "status": "open",
+          "delta_requirement": "未关闭：当前输入精确EPS为1.348285714/2.056888889/2.808，不是2.0559；2.05也非基准常规四舍五入值。地区/渠道收入预测给简洁可核桥；1.40/1.62/1.60bn股数给发行/回购和资金假设，年度加权与时点股数明确；与FCFE对账后再定EPS。",
+          "original_condition": "从地区/渠道收入至毛利、费用、利息、税率、稀释股数形成三情景EPS，标FY2027预测或统一另一期；与现金模型共享经营假设相互对账，正常化时点较远则明确折现。"
+        },
+        {
+          "id": "G03-anchor",
+          "condition": "给可核日期、样本、TTM/前瞻口径、非经常项目及风险成长调整，解释三档PE；历史分位与前瞻EPS不混用。 【本次状态：open】【本次最终修复要求，原文保留】未关闭：删FinanceCharts 29.26/14.30为forward的误标。可用一个可读且日期/列名/预测期清楚的历史或同行样本局部替代，解释14/16/19的调整。ValueInvesting日期区间本轮核实，不能因另一读数判造假，但Selected是供应商估值选择，不等于市场直接交易倍数，未说明样本/预测期不能单独满足第二独立锚。",
+          "status": "open",
+          "delta_requirement": "未关闭：删FinanceCharts 29.26/14.30为forward的误标。可用一个可读且日期/列名/预测期清楚的历史或同行样本局部替代，解释14/16/19的调整。ValueInvesting日期区间本轮核实，不能因另一读数判造假，但Selected是供应商估值选择，不等于市场直接交易倍数，未说明样本/预测期不能单独满足第二独立锚。",
+          "original_condition": "给可核日期、样本、TTM/前瞻口径、非经常项目及风险成长调整，解释三档PE；历史分位与前瞻EPS不混用。"
+        },
+        {
+          "id": "G03-completion",
+          "condition": "两个有效且不同依据模型方可给最终权重与价格；补证失败明确估值未完成/单模型试算并保留null，不强造第二模型。 【本次状态：open】【本次最终修复要求，原文保留】未关闭：不批准24.725731、.45及等权为最终。两个模型闭合才确定权重、五项确信度和机械买入价；最后修复仍缺锚或经营桥则全部null、研究未完成，不新增循环。",
+          "status": "open",
+          "delta_requirement": "未关闭：不批准24.725731、.45及等权为最终。两个模型闭合才确定权重、五项确信度和机械买入价；最后修复仍缺锚或经营桥则全部null、研究未完成，不新增循环。",
+          "original_condition": "两个有效且不同依据模型方可给最终权重与价格；补证失败明确估值未完成/单模型试算并保留null，不强造第二模型。"
+        }
+      ],
+      "reason": "股数/EPS桥和市场字段错误成立；C004日期质疑本轮不成立。第二模型仍不具足够独立锚，低确信度不能替代。"
+    },
+    {
+      "id": "G04",
+      "candidate_ids": [
+        "C003",
+        "C041",
+        "C046"
+      ],
+      "severity": "P1",
+      "decision": "partial",
+      "status": "open",
+      "substantive_disagreement": "新反解是经济变量且条件算术正确，不能全判误算；旧时点与旧反向段以及缺反向敏感性使原验收未关闭。",
+      "evidence_refs": [
+        "估值分析/耐克 估值分析 2026-09-19.md 八章",
+        "skills/valuation/SKILL.md 反向验证参数"
+      ],
+      "action": "仅执行本根因各验收项delta_requirement；以G13替换受影响旧段，保留未变内容。",
+      "score_valuation_impact": "反向权重固定0；不改变主模型独立性要求。",
+      "acceptance": [
+        {
+          "id": "G04-solve",
+          "condition": "给市价35.51、日期、最终模型固定参数及隐含经济变量，代回误差可复核；在旧未批准参数下反推fcf0约2.135291仅可作条件示例。 【本次状态：partial】【本次最终修复要求，原文保留】部分完成：2.252957218在旧时点公式下代回35.51正确，静态PE旧段仍需替换；改完FY2027时点后重求经济变量，旧2.253不是最终答案；closeout的约1.47不能冒充该反解。",
+          "status": "partial",
+          "delta_requirement": "部分完成：2.252957218在旧时点公式下代回35.51正确，静态PE旧段仍需替换；改完FY2027时点后重求经济变量，旧2.253不是最终答案；closeout的约1.47不能冒充该反解。",
+          "original_condition": "给市价35.51、日期、最终模型固定参数及隐含经济变量，代回误差可复核；在旧未批准参数下反推fcf0约2.135291仅可作条件示例。"
+        },
+        {
+          "id": "G04-sensitivity",
+          "condition": "至少一项关键固定变量敏感性、与实际/三情景对照及解的边界；权重为0，不把市价再次加权。 【本次状态：open】【本次最终修复要求，原文保留】未关闭：增加反求FCFE随Ke或tg的数值表，关联实际历史和三情景；正向矩阵不能替代。固定权重0，列Ke>tg等边界。",
+          "status": "open",
+          "delta_requirement": "未关闭：增加反求FCFE随Ke或tg的数值表，关联实际历史和三情景；正向矩阵不能替代。固定权重0，列Ke>tg等边界。",
+          "original_condition": "至少一项关键固定变量敏感性、与实际/三情景对照及解的边界；权重为0，不把市价再次加权。"
+        }
+      ],
+      "reason": "新反解是经济变量且条件算术正确，不能全判误算；旧时点与旧反向段以及缺反向敏感性使原验收未关闭。"
+    },
+    {
+      "id": "G05",
+      "candidate_ids": [
+        "C016"
+      ],
+      "severity": "P1",
+      "decision": "valid",
+      "status": "open",
+      "substantive_disagreement": "一次性事实补全已核；未来现金税和退款时点映射仍不完整。",
+      "evidence_refs": [
+        "财报/耐克/耐克FY2026_10-K.pdf 原页30、45、58、75、89",
+        "deep-prebuy-skill/SKILL.md E2/E3；skills/valuation/SKILL.md 标准化现金桥"
+      ],
+      "action": "仅执行本根因各验收项delta_requirement；以G13替换受影响旧段，保留未变内容。",
+      "score_valuation_impact": "E2/E3、B2的毛利解释、管理层危机/兑现归因及两个模型联动；不能以现金下降单独认定转型承诺失败。",
+      "acceptance": [
+        {
+          "id": "G05-paired",
+          "condition": "展示986m收益及相关成本、302m已收/684m应收、385m费用/142m支付/243m后续支付，说明历史2024重组443m提示重复发生可能；未来节约须单列假设。 【本次状态：closed】【本次最终修复要求，原文保留】已关闭事实识别：986m收益/对应关税成本、302m已收/684m应收、385m费用/142m付款/243m应付及FY2024重组443m已覆盖。后续数值接模型，不再要求查同一事实。",
+          "status": "closed",
+          "delta_requirement": "已关闭事实识别：986m收益/对应关税成本、302m已收/684m应收、385m费用/142m付款/243m应付及FY2024重组443m已覆盖。后续数值接模型，不再要求查同一事实。",
+          "original_condition": "展示986m收益及相关成本、302m已收/684m应收、385m费用/142m支付/243m后续支付，说明历史2024重组443m提示重复发生可能；未来节约须单列假设。"
+        },
+        {
+          "id": "G05-tax",
+          "condition": "列现金税1270m及268m/260m特殊付款原文，明确可正常化金额与税率、未来支付关系；不可把税务余额或所有现金税当一次性加回。 【本次状态：open】【本次最终修复要求，原文保留】未关闭：1270m现金税含268m最终过渡税及260m预付已核；各项保留/正常化金额具体入FY2027现金桥，并与22%税费假设连接。不能全加528m而不解释未来结算。",
+          "status": "open",
+          "delta_requirement": "未关闭：1270m现金税含268m最终过渡税及260m预付已核；各项保留/正常化金额具体入FY2027现金桥，并与22%税费假设连接。不能全加528m而不解释未来结算。",
+          "original_condition": "列现金税1270m及268m/260m特殊付款原文，明确可正常化金额与税率、未来支付关系；不可把税务余额或所有现金税当一次性加回。"
+        },
+        {
+          "id": "G05-once",
+          "condition": "684m年后收回只进入一次现金时点桥，不同时加估值现金、显式期流入并提高永续基数；三报告经营归因及G02/G03预测一致。 【本次状态：partial】【本次最终修复要求，原文保留】部分完成：未发现把684m重复计价，但仅称不入永续不足以证明估值日现金归属；用一行列年后收回与2026-09-19估值现金/FY2027现金流归属，若保守不计给明确原因；禁止重复加。",
+          "status": "partial",
+          "delta_requirement": "部分完成：未发现把684m重复计价，但仅称不入永续不足以证明估值日现金归属；用一行列年后收回与2026-09-19估值现金/FY2027现金流归属，若保守不计给明确原因；禁止重复加。",
+          "original_condition": "684m年后收回只进入一次现金时点桥，不同时加估值现金、显式期流入并提高永续基数；三报告经营归因及G02/G03预测一致。"
+        }
+      ],
+      "reason": "一次性事实补全已核；未来现金税和退款时点映射仍不完整。"
+    },
+    {
+      "id": "G06",
+      "candidate_ids": [
+        "original:C004"
+      ],
+      "severity": "P1",
+      "decision": "partial",
+      "status": "partially_closed",
+      "substantive_disagreement": "实质法律风险披露已补，未有新原件证明损失或失信；评分清理依赖G07/G13。",
+      "evidence_refs": [
+        "财报/耐克/耐克FY2026_10-K.pdf 原页88 Note16（PDF92）；Item3原页25",
+        "deep-prebuy-skill/SKILL.md F3/F4；management-archive/SKILL.md 八/九"
+      ],
+      "action": "仅执行本根因各验收项delta_requirement；以G13替换受影响旧段，保留未变内容。",
+      "score_valuation_impact": "F3无需仅因报告漏项自动减分；诚信透明度不可据此当失信。确信度须重评，但null仍由模型未闭合决定。",
+      "acceptance": [
+        {
+          "id": "G06-risk",
+          "condition": "写清自FY2018进口、公司争议并上诉、银行担保、损失范围不可估计、若败诉可能重大影响；Item3与Note16例外并列。 【本次状态：closed】【本次最终修复要求，原文保留】事实已关闭：维持已披露、上诉、无法估计和可能重大不利；小修定位为Note16具体事项，Item3一般诉讼披露，不声称两处都有具体案情。",
+          "status": "closed",
+          "delta_requirement": "事实已关闭：维持已披露、上诉、无法估计和可能重大不利；小修定位为Note16具体事项，Item3一般诉讼披露，不声称两处都有具体案情。",
+          "original_condition": "写清自FY2018进口、公司争议并上诉、银行担保、损失范围不可估计、若败诉可能重大影响；Item3与Note16例外并列。"
+        },
+        {
+          "id": "G06-limits",
+          "condition": "13亿美元保函/信用证为总体，具体索赔担保、保证金和限制现金未披露则未知；不等同13亿美元损失；估值尾部风险、现金缓冲和触发重估条件可执行。 【本次状态：closed】【本次最终修复要求，原文保留】已关闭：1.3bn为总体担保/信用证，非特定索赔额或损失；未知继续保留，不能为了闭合虚构损失。",
+          "status": "closed",
+          "delta_requirement": "已关闭：1.3bn为总体担保/信用证，非特定索赔额或损失；未知继续保留，不能为了闭合虚构损失。",
+          "original_condition": "13亿美元保函/信用证为总体，具体索赔担保、保证金和限制现金未披露则未知；不等同13亿美元损失；估值尾部风险、现金缓冲和触发重估条件可执行。"
+        },
+        {
+          "id": "G06-score",
+          "condition": "逐项说明F3与诚信分数影响或不变依据，区分潜在合规风险、已核处罚和公司披露质量。 【本次状态：partial】【本次最终修复要求，原文保留】部分完成：新增正确区分披露与处罚，F3可沿用v1核定2；旧亲属雇佣/遗漏归因仍须在G07/G13统一清除。无依据新增诚信扣分不采纳。",
+          "status": "partial",
+          "delta_requirement": "部分完成：新增正确区分披露与处罚，F3可沿用v1核定2；旧亲属雇佣/遗漏归因仍须在G07/G13统一清除。无依据新增诚信扣分不采纳。",
+          "original_condition": "逐项说明F3与诚信分数影响或不变依据，区分潜在合规风险、已核处罚和公司披露质量。"
+        }
+      ],
+      "reason": "实质法律风险披露已补，未有新原件证明损失或失信；评分清理依赖G07/G13。 此根因仅承接原初审C004验收，不代表本次48候选新增同号意见。"
+    },
+    {
+      "id": "G07",
+      "candidate_ids": [
+        "C020",
+        "C023",
+        "C028",
+        "C035",
+        "C042",
+        "C045"
+      ],
+      "severity": "P1",
+      "decision": "partial",
+      "status": "open",
+      "substantive_disagreement": "新补偿上下文有效，旧错误归因仍存在；回购股数新错误及配置量化缺口阻塞评分。",
+      "evidence_refs": [
+        "财报/耐克/耐克FY2026_10-K.pdf 原页31、45、58、75-77",
+        "https://www.sec.gov/Archives/edgar/data/320187/000032018726000070/nke-20260616.htm Item5.02 L74-101",
+        "https://www.sec.gov/Archives/edgar/data/320187/000032018726000089/nke-20260715.htm L2196-2217",
+        "deep-prebuy-skill/SKILL.md A3、F2/F2.5/F3；management-archive/SKILL.md 三、六、九"
+      ],
+      "action": "仅执行本根因各验收项delta_requirement；以G13替换受影响旧段，保留未变内容。",
+      "score_valuation_impact": "A3原扣分理由不成立、最终数值待融资用途/资本运作证据小结；F2/F2.5及管理层资本配置/人才/诚信/表达待重评；F3可维持2但理由只用已核披露瑕疵及中等治理风险，不用亲属身份自动扣分。",
+      "acceptance": [
+        {
+          "id": "G07-allocation",
+          "condition": "ROIC18.7%/20.2%与口径匹配WACC比较，不能拿Ke直接当WACC；回购124.4m股/约12.1bn/97.57均价，FY2026计划执行122.4m/67.63与现金流146m分列并解释差异/未知；股数净变动及SBC抵消、融资和Capex效率有桥。 【本次状态：open】【本次最终修复要求，原文保留】未关闭：FY2026计划回购1.8m股/122.4m/67.63，现金流146m另列；差23.6m未有原件解释则未知，不猜结算原因。按本台账股数桥量化SBC抵消；WACC8%-9%须给权益/债务权重和税后债务成本，不能Ke替代；Capex给收入/利润/资产周转对照并承认未拆分限制。",
+          "status": "open",
+          "delta_requirement": "未关闭：FY2026计划回购1.8m股/122.4m/67.63，现金流146m另列；差23.6m未有原件解释则未知，不猜结算原因。按本台账股数桥量化SBC抵消；WACC8%-9%须给权益/债务权重和税后债务成本，不能Ke替代；Capex给收入/利润/资产周转对照并承认未拆分限制。",
+          "original_condition": "ROIC18.7%/20.2%与口径匹配WACC比较，不能拿Ke直接当WACC；回购124.4m股/约12.1bn/97.57均价，FY2026计划执行122.4m/67.63与现金流146m分列并解释差异/未知；股数净变动及SBC抵消、融资和Capex效率有桥。"
+        },
+        {
+          "id": "G07-attribution",
+          "condition": "CFO补偿写make-whole、服务/绩效/返还约束；删仅外聘推断继任不足、仅未核交易推断治理缺陷、仅亲属身份推断不公允。正常研究未知单列；E4明确规则例外照执行。 【本次状态：partial】【本次最终修复要求，原文保留】部分完成：新增make-whole及服务条件有效；实际替换旧高补偿自动扣分、单次外聘证明继任失败、未核交易证明治理差、亲属身份证明不公允的句子及底稿理由。",
+          "status": "partial",
+          "delta_requirement": "部分完成：新增make-whole及服务条件有效；实际替换旧高补偿自动扣分、单次外聘证明继任失败、未核交易证明治理差、亲属身份证明不公允的句子及底稿理由。",
+          "original_condition": "CFO补偿写make-whole、服务/绩效/返还约束；删仅外聘推断继任不足、仅未核交易推断治理缺陷、仅亲属身份推断不公允。正常研究未知单列；E4明确规则例外照执行。"
+        },
+        {
+          "id": "G07-score",
+          "condition": "列A3/F2/F2.5/F3及管理层相关七维的旧分→最终分→证据→规则；保留分数也重新说明，不因删错理由直接满分，不用事后股价差直接认定重大资本配置失败；正面先例加0.5须最终成功证据。 【本次状态：open】【本次最终修复要求，原文保留】未关闭：A3=4/4与仍不给满分自相矛盾；按资本清洁度证据定分，不由事后股价跌幅评价。F2/F2.5及管理层七维逐项更新事实→规则理由；F2.5=1.5本身不能证明用了成功先例加分，若确用了+.5须成功证据，否则明确普通分档依据。",
+          "status": "open",
+          "delta_requirement": "未关闭：A3=4/4与仍不给满分自相矛盾；按资本清洁度证据定分，不由事后股价跌幅评价。F2/F2.5及管理层七维逐项更新事实→规则理由；F2.5=1.5本身不能证明用了成功先例加分，若确用了+.5须成功证据，否则明确普通分档依据。",
+          "original_condition": "列A3/F2/F2.5/F3及管理层相关七维的旧分→最终分→证据→规则；保留分数也重新说明，不因删错理由直接满分，不用事后股价差直接认定重大资本配置失败；正面先例加0.5须最终成功证据。"
+        }
+      ],
+      "reason": "新补偿上下文有效，旧错误归因仍存在；回购股数新错误及配置量化缺口阻塞评分。"
+    },
+    {
+      "id": "G08",
+      "candidate_ids": [
+        "C010",
+        "C012",
+        "C018",
+        "C021",
+        "C027",
+        "C039"
+      ],
+      "severity": "P1",
+      "decision": "partial",
+      "status": "open",
+      "substantive_disagreement": "原始目标可核且不是完全没有原话；员工错数、人事离任覆盖和目标实际对照未完成，4分上限被误当3分保底。",
+      "evidence_refs": [
+        "财报/耐克/耐克FY2026_10-K.pdf 原页30；writer/workpaper-v1.json D2",
+        "deep-prebuy-skill/SKILL.md D2/D5上限条款",
+        "management-archive/SKILL.md 二、六；references/pitfalls.md M3/M7/M8"
+      ],
+      "action": "仅执行本根因各验收项delta_requirement；以G13替换受影响旧段，保留未变内容。",
+      "score_valuation_impact": "D2/D5及管理层战略/危机/人才/表达分项待定；D1战略漂移不因渠道调整自动置true；总分不可维持72/65作最终。",
+      "acceptance": [
+        {
+          "id": "G08-promises",
+          "condition": "连续三年每项保留当时原文上下文、发布日、目标期限、责任人、实际对照、已达/未达/进行中/未知；只对可核目标算达成率，不能用事后方向标签替代。 【本次状态：partial】【本次最终修复要求，原文保留】部分完成：三份原始公告/年报可用；补每项原话上下文、责任人/期限和实际对照。2023是识别最高2bn节约机会，非无条件保证；可核400-450m重组费用预期对FY2024实际443m，不能据此声称2bn节约完成。2025改善预期对FY2026地区差异，2026年12月未到期，不保留FY2025明显落空无原目标旧表。",
+          "status": "partial",
+          "delta_requirement": "部分完成：三份原始公告/年报可用；补每项原话上下文、责任人/期限和实际对照。2023是识别最高2bn节约机会，非无条件保证；可核400-450m重组费用预期对FY2024实际443m，不能据此声称2bn节约完成。2025改善预期对FY2026地区差异，2026年12月未到期，不保留FY2025明显落空无原目标旧表。",
+          "original_condition": "连续三年每项保留当时原文上下文、发布日、目标期限、责任人、实际对照、已达/未达/进行中/未知；只对可核目标算达成率，不能用事后方向标签替代。"
+        },
+        {
+          "id": "G08-cap",
+          "condition": "D2原话标记与证据一致；若无第1/2优先级而有年报间接执行表，应用4/5上限并标中等置信度；仅同时证实战略漂移才3/5。上限不是自动得分，执行表仍缺则null。 【本次状态：open】【本次最终修复要求，原文保留】未关闭：已找到原始公告，original_statement_found可为true，但引用须指这些原话，不指薪酬/事后净利；不要把布尔写为部分。逐条目标的可核程度可另字段表达。无合格一二优先级才适用4上限；无战略漂移不是3分下限，D2得分由实际兑现决定。",
+          "status": "open",
+          "delta_requirement": "未关闭：已找到原始公告，original_statement_found可为true，但引用须指这些原话，不指薪酬/事后净利；不要把布尔写为部分。逐条目标的可核程度可另字段表达。无合格一二优先级才适用4上限；无战略漂移不是3分下限，D2得分由实际兑现决定。",
+          "original_condition": "D2原话标记与证据一致；若无第1/2优先级而有年报间接执行表，应用4/5上限并标中等置信度；仅同时证实战略漂移才3/5。上限不是自动得分，执行表仍缺则null。"
+        },
+        {
+          "id": "G08-people",
+          "condition": "近五年核心任离职表、原因/接任来源与集中离任模式；D5至少近三年人均收入等适用效率指标，研发未单列则写限制；不凭单次外聘断继任链失败。 【本次状态：open】【本次最终修复要求，原文保留】未关闭：FY2023员工83700、FY2024 79400，更正人效；补既有任命表对应离任者、日期/原因（未披露即未知）、接任来源，明确近五年集中离任模式，至少Donahoe更替闭合。不要扩成无限高管检索。",
+          "status": "open",
+          "delta_requirement": "未关闭：FY2023员工83700、FY2024 79400，更正人效；补既有任命表对应离任者、日期/原因（未披露即未知）、接任来源，明确近五年集中离任模式，至少Donahoe更替闭合。不要扩成无限高管检索。",
+          "original_condition": "近五年核心任离职表、原因/接任来源与集中离任模式；D5至少近三年人均收入等适用效率指标，研发未单列则写限制；不凭单次外聘断继任链失败。"
+        },
+        {
+          "id": "G08-score",
+          "condition": "原始目标与现金归因G05连通，D2/D5/F1及管理层相关分项有评分桥；依项目≤40%维度警戒重算，不新增门槛。 【本次状态：open】【本次最终修复要求，原文保留】未关闭：按修正人效、地区与承诺重评D2/D5/F1及管理层危机/组织/表达等；维持分数也需新理由，旧65/72及子分须替换。公司和管理层分别依原维度≤40%警戒检查。",
+          "status": "open",
+          "delta_requirement": "未关闭：按修正人效、地区与承诺重评D2/D5/F1及管理层危机/组织/表达等；维持分数也需新理由，旧65/72及子分须替换。公司和管理层分别依原维度≤40%警戒检查。",
+          "original_condition": "原始目标与现金归因G05连通，D2/D5/F1及管理层相关分项有评分桥；依项目≤40%维度警戒重算，不新增门槛。"
+        }
+      ],
+      "reason": "原始目标可核且不是完全没有原话；员工错数、人事离任覆盖和目标实际对照未完成，4分上限被误当3分保底。"
+    },
+    {
+      "id": "G09",
+      "candidate_ids": [
+        "C022",
+        "C025",
+        "C043"
+      ],
+      "severity": "P1",
+      "decision": "partial",
+      "status": "open",
+      "substantive_disagreement": "分部新表多项错数是原表抄录问题，不是口径差；承诺事实与供应商融资完成，不代表预测覆盖完成。",
+      "evidence_refs": [
+        "财报/耐克/耐克FY2026_10-K.pdf 原页46、85-89（分部Note15；供应商融资Note19）",
+        "deep-prebuy-skill/SKILL.md B1/E4"
+      ],
+      "action": "仅执行本根因各验收项delta_requirement；以G13替换受影响旧段，保留未变内容。",
+      "score_valuation_impact": "B1/E4及G02现金缓冲联动；采购/代言若已在预测成本或营运资金内不得重复扣减。",
+      "acceptance": [
+        {
+          "id": "G09-segments",
+          "condition": "FY2024-FY2026分部收入与EBIT、增速并核合计；至少北美/EMEA/中国/APLA/Converse与Global Brand/Corporate桥，地区、品牌、渠道、产品不混加；Note15引用修正。 【本次状态：open】【本次最终修复要求，原文保留】未关闭：用本台账三年原表替换，含GBD/Corporate并核合计、同比。MD&A p36与Note15同为EBIT，不采纳不同管理口径解释；B1引用Note15，Note19为供应商融资。",
+          "status": "open",
+          "delta_requirement": "未关闭：用本台账三年原表替换，含GBD/Corporate并核合计、同比。MD&A p36与Note15同为EBIT，不采纳不同管理口径解释；B1引用Note15，Note19为供应商融资。",
+          "original_condition": "FY2024-FY2026分部收入与EBIT、增速并核合计；至少北美/EMEA/中国/APLA/Converse与Global Brand/Corporate桥，地区、品牌、渠道、产品不混加；Note15引用修正。"
+        },
+        {
+          "id": "G09-commitments",
+          "condition": "代言15.5bn/12个月1.7、产品采购4.9/4.7、其他采购2.4/1.6列时点及限定词；逐项说明经营预测覆盖与未覆盖现金缓冲，禁止全额扣债。 【本次状态：partial】【本次最终修复要求，原文保留】部分完成：金额正确；逐项把代言/采购映射至费用/成本/存货应付和支付期，说明预测已覆盖与未覆盖缓冲。不得用全部覆盖一句话代替，也不把承诺总额当债务扣。",
+          "status": "partial",
+          "delta_requirement": "部分完成：金额正确；逐项把代言/采购映射至费用/成本/存货应付和支付期，说明预测已覆盖与未覆盖缓冲。不得用全部覆盖一句话代替，也不把承诺总额当债务扣。",
+          "original_condition": "代言15.5bn/12个月1.7、产品采购4.9/4.7、其他采购2.4/1.6列时点及限定词；逐项说明经营预测覆盖与未覆盖现金缓冲，禁止全额扣债。"
+        },
+        {
+          "id": "G09-supplier",
+          "condition": "供应商融资1.1/1.1/0.8bn（FY2026/25/24），已在应付账款，无担保；评估变动对营运资金，无重复融资债务或臆定当年融资增量。 【本次状态：closed】【本次最终修复要求，原文保留】已关闭：1.1/1.1/.8bn、应付账款内及无担保处理已覆盖，保留即可。",
+          "status": "closed",
+          "delta_requirement": "已关闭：1.1/1.1/.8bn、应付账款内及无担保处理已覆盖，保留即可。",
+          "original_condition": "供应商融资1.1/1.1/0.8bn（FY2026/25/24），已在应付账款，无担保；评估变动对营运资金，无重复融资债务或臆定当年融资增量。"
+        }
+      ],
+      "reason": "分部新表多项错数是原表抄录问题，不是口径差；承诺事实与供应商融资完成，不代表预测覆盖完成。"
+    },
+    {
+      "id": "G10",
+      "candidate_ids": [
+        "C005",
+        "C011"
+      ],
+      "severity": "P2",
+      "decision": "valid",
+      "status": "open",
+      "substantive_disagreement": "末段修正未消除前文基本/稀释混用。",
+      "evidence_refs": [
+        "财报/耐克/耐克FY2026_10-K.pdf 原页77 Note10"
+      ],
+      "action": "仅执行本根因各验收项delta_requirement；以G13替换受影响旧段，保留未变内容。",
+      "score_valuation_impact": "当前PE预测桥仍由G03决定，不因0.03差异单独调整倍数或目标。",
+      "acceptance": [
+        {
+          "id": "G10-eps",
+          "condition": "正文与底稿历史比较均用稀释3.73、实际FY2024标签；当前FY2026约2.10与FY2027预测分开。 【本次状态：open】【本次最终修复要求，原文保留】未关闭P2：全文历史稀释EPS统一3.73，基本3.76仅可在明确标基本口径时出现。",
+          "status": "open",
+          "delta_requirement": "未关闭P2：全文历史稀释EPS统一3.73，基本3.76仅可在明确标基本口径时出现。",
+          "original_condition": "正文与底稿历史比较均用稀释3.73、实际FY2024标签；当前FY2026约2.10与FY2027预测分开。"
+        }
+      ],
+      "reason": "末段修正未消除前文基本/稀释混用。"
+    },
+    {
+      "id": "G11",
+      "candidate_ids": [
+        "C037"
+      ],
+      "severity": "P2",
+      "decision": "partial",
+      "status": "open",
+      "substantive_disagreement": "新增快照有用，两个有明确口径的市值本身不矛盾；唯一有效参数及历史/正常化标签仍需整理。",
+      "evidence_refs": [
+        "财报/耐克/耐克FY2026_10-K.pdf 原页57、58；封面PDF2股数日期2026-07-08",
+        "skills/valuation/SKILL.md 输出模板"
+      ],
+      "action": "仅执行本根因各验收项delta_requirement；以G13替换受影响旧段，保留未变内容。",
+      "score_valuation_impact": "以跨日7月股数作近似，BVPS10.020231、PB3.543830、PS1.135373、报表FCF Yield4.145862%；非新目标价。",
+      "acceptance": [
+        {
+          "id": "G11-snapshot",
+          "condition": "明确35.51与2026-07-08 A+B股数推算市值52.679039bn是跨日近似；PB/PS/报表及正常化FCF Yield各日期、单位、性质齐全；缺历史分位标未覆盖，不能宣称已经验证低分位。 【本次状态：partial】【本次最终修复要求，原文保留】部分完成P2：工具市值52.612和跨日股数计算52.679可并存但须标不同来源/分母；统一主快照。1.469bn及2.788%是历史扣SBC尺度，不能标成已证实正常化预测。",
+          "status": "partial",
+          "delta_requirement": "部分完成P2：工具市值52.612和跨日股数计算52.679可并存但须标不同来源/分母；统一主快照。1.469bn及2.788%是历史扣SBC尺度，不能标成已证实正常化预测。",
+          "original_condition": "明确35.51与2026-07-08 A+B股数推算市值52.679039bn是跨日近似；PB/PS/报表及正常化FCF Yield各日期、单位、性质齐全；缺历史分位标未覆盖，不能宣称已经验证低分位。"
+        }
+      ],
+      "reason": "新增快照有用，两个有明确口径的市值本身不矛盾；唯一有效参数及历史/正常化标签仍需整理。"
+    },
+    {
+      "id": "G12",
+      "candidate_ids": [
+        "C006",
+        "C040"
+      ],
+      "severity": "P1",
+      "decision": "partial",
+      "status": "open",
+      "substantive_disagreement": "五年毛利已有，ASP叙述需细化，同行比较仍缺；不能仅凭降分宣布闭合。",
+      "evidence_refs": [
+        "财报/耐克/耐克FY2026_10-K.pdf 原页30、86-87；deep-prebuy-skill/SKILL.md B3"
+      ],
+      "action": "仅执行本根因各验收项delta_requirement；以G13替换受影响旧段，保留未变内容。",
+      "score_valuation_impact": "B3最终分待定，与PE净利率及现金盈利修复假设相互约束；不把所有品牌强度证据等同定价权。",
+      "acceptance": [
+        {
+          "id": "G12-pricing",
+          "condition": "五年毛利趋势、主动提价/折扣/ASP证据和同行可比性说明；IEEPA成对影响剔除/保留一致；对5/6重新给规则和证据，不足则留待定而非仅调置信度后保留分数。 【本次状态：open】【本次最终修复要求，原文保留】未关闭：保留已补五年毛利，补至少可得同行可比口径或明确可比限制；北美鞋ASP贡献-1pp、服装+2pp，与毛利分析较高ASP陈述分开。根据提价/折扣/结构及同行解释B3分档，不用降至4代替证据。",
+          "status": "open",
+          "delta_requirement": "未关闭：保留已补五年毛利，补至少可得同行可比口径或明确可比限制；北美鞋ASP贡献-1pp、服装+2pp，与毛利分析较高ASP陈述分开。根据提价/折扣/结构及同行解释B3分档，不用降至4代替证据。",
+          "original_condition": "五年毛利趋势、主动提价/折扣/ASP证据和同行可比性说明；IEEPA成对影响剔除/保留一致；对5/6重新给规则和证据，不足则留待定而非仅调置信度后保留分数。"
+        }
+      ],
+      "reason": "五年毛利已有，ASP叙述需细化，同行比较仍缺；不能仅凭降分宣布闭合。"
+    },
+    {
+      "id": "G13",
+      "candidate_ids": [
+        "C030",
+        "C038",
+        "C048"
+      ],
+      "severity": "P1",
+      "decision": "valid",
+      "status": "open",
+      "substantive_disagreement": "页首旧值作废声明不能修复整篇仍以当前结论呈现的旧模型/旧评分。C038复合事实均采纳，具体事实分别归G01/G07/G08/G09，不重复扣分。",
+      "evidence_refs": [
+        "三份修订版全文",
+        "writer/workpaper-v2.json",
+        "writer/evidence-supplement-v4.md",
+        "writer/repair-closeout-v1.md"
+      ],
+      "action": "授权重整受系统性错误影响的正文、表格及结论，替换而非继续追加。旧历史版本保留；修订版只保留一套当前评分/模型/参数。",
+      "score_valuation_impact": "所有最终评分、价格及档位仍null；不因篇幅或程序通过解除。",
+      "acceptance": [
+        {
+          "id": "G13-single-source",
+          "status": "open",
+          "condition": "从最后底稿生成并替换三报告受影响表格、评分维度/总分、估值全文模型/敏感性/价格区和结论；旧数字只可在明确日期与版本的历史对比小节出现。逐项验收记录真实位置，closeout不得声称未做到的条件已关；全文内容验证与计算核验均通过。 【本次状态：open】",
+          "original_condition": "从最后底稿生成并替换三报告受影响表格、评分维度/总分、估值全文模型/敏感性/价格区和结论；旧数字只可在明确日期与版本的历史对比小节出现。逐项验收记录真实位置，closeout不得声称未做到的条件已关；全文内容验证与计算核验均通过。"
+        }
+      ],
+      "reason": "页首旧值作废声明不能修复整篇仍以当前结论呈现的旧模型/旧评分。C038复合事实均采纳，具体事实分别归G01/G07/G08/G09，不重复扣分。"
+    }
+  ],
+  "verified_facts_delta": {
+    "units": "除特别注明外，分部/股数桥金额为USD millions；杜邦为比率",
+    "dupont": {
+      "FY2024": {
+        "net_margin": 0.110976986877,
+        "asset_turnover": 1.35804656205,
+        "equity_multiplier": 2.66023070971,
+        "roe": 0.400928465921
+      },
+      "FY2025": {
+        "net_margin": 0.0695113260921,
+        "asset_turnover": 1.24004873542,
+        "equity_multiplier": 2.7019136852,
+        "roe": 0.232898021199
+      },
+      "FY2026": {
+        "net_margin": 0.066985645933,
+        "asset_turnover": 1.23746149435,
+        "equity_multiplier": 2.6707386566,
+        "roe": 0.221383289408
+      },
+      "method": "净利润/收入×收入/期初期末平均资产×平均资产/平均权益；FY2023/24资产37531/38110、权益14004/14430，FY2025资产36579权益13213，FY2026沿原件。"
+    },
+    "segments": {
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "revenue": {
+        "NorthAmerica": [
+          21396,
+          19572,
+          20511
+        ],
+        "EMEA": [
+          13607,
+          12257,
+          12572
+        ],
+        "China": [
+          7545,
+          6586,
+          5847
+        ],
+        "APLA": [
+          6729,
+          6251,
+          6243
+        ],
+        "GlobalBrandDivisions": [
+          45,
+          48,
+          49
+        ],
+        "Converse": [
+          2082,
+          1692,
+          1174
+        ],
+        "Corporate": [
+          -42,
+          -97,
+          2
+        ],
+        "total": [
+          51362,
+          46309,
+          46398
+        ]
+      },
+      "EBIT": {
+        "NorthAmerica": [
+          5822,
+          4735,
+          5376
+        ],
+        "EMEA": [
+          3388,
+          2575,
+          2417
+        ],
+        "China": [
+          2309,
+          1602,
+          1278
+        ],
+        "APLA": [
+          1885,
+          1527,
+          1387
+        ],
+        "GlobalBrandDivisions": [
+          -4720,
+          -4699,
+          -4603
+        ],
+        "Converse": [
+          474,
+          240,
+          18
+        ],
+        "Corporate": [
+          -2619,
+          -2202,
+          -2023
+        ],
+        "total": [
+          6539,
+          3778,
+          3850
+        ]
+      },
+      "source": "FY2026 10-K p36及Note15 p86-87；两处口径一致"
+    },
+    "employees": {
+      "FY2023": 83700,
+      "FY2024": 79400,
+      "FY2025": 77800,
+      "FY2026": 73000,
+      "per_employee_revenue_usd_m": [
+        0.611911589008,
+        0.646876574307,
+        0.595231362468,
+        0.635589041096
+      ],
+      "conclusion": "FY2026高于FY2025但低于FY2024；人数含兼职且为期末，不等于平均全职生产率。"
+    },
+    "share_bridge_millions": {
+      "start_FY2023": 1532,
+      "FY2024": {
+        "options": 7,
+        "employee_plans": 5,
+        "repurchases": -41,
+        "end": 1503
+      },
+      "FY2025": {
+        "options": 6,
+        "employee_plans": 5,
+        "repurchases": -38,
+        "end": 1476
+      },
+      "FY2026": {
+        "options": 3,
+        "employee_plans": 6,
+        "repurchases": -2,
+        "end": 1483
+      },
+      "limits": "p59整数百万股为舍入桥；A转B净总股数零。与p45精确计划购买1.8m及7月8日精确1483498703股分别标时点/口径，不混推。"
+    },
+    "repurchase": {
+      "FY2026_plan_shares_m": 1.8,
+      "plan_cost_usd_m": 122.4,
+      "average_price": 67.63,
+      "cashflow_usd_m": 146,
+      "cashflow_minus_plan_usd_m": 23.6,
+      "difference_reason": null
+    },
+    "pricing": {
+      "NA_FY2026_footwear_units_growth": 0.06,
+      "NA_footwear_ASP_revenue_contribution": -0.01,
+      "NA_apparel_units_growth": 0.02,
+      "NA_apparel_ASP_revenue_contribution": 0.02,
+      "note": "鞋类ASP受渠道结构拉低，产品/战略提价部分抵销；服装ASP主要产品结构、渠道部分抵销。毛利段较高ASP不能扩展为所有产品均涨价。"
+    },
+    "source_urls": [
+      "https://www.sec.gov/Archives/edgar/data/320187/000032018724000044/nke-20240531.htm",
+      "https://www.sec.gov/Archives/edgar/data/320187/000032018723000039/nke-20230531.htm",
+      "https://investors.nike.com/investors/news-events-and-reports/investor-news/investor-news-details/2023/NIKE-Inc.-Reports-Fiscal-2024-Second-Quarter-Results/default.aspx",
+      "https://investors.nike.com/investors/news-events-and-reports/investor-news/investor-news-details/2025/NIKE-Inc--Reports-Fiscal-2025-Fourth-Quarter-and-Full-Year-Results/",
+      "https://valueinvesting.io/NKE/valuation/pe-multiples",
+      "https://www.financecharts.com/stocks/NKE/value/pe-ratio-averages"
+    ],
+    "market_source_disagreement": {
+      "ValueInvesting": {
+        "observed_date": "2026-09-19",
+        "forward_range": [
+          14,
+          17.4
+        ],
+        "selected_forward": 15.6,
+        "trailing_range": [
+          14.8,
+          17.5
+        ],
+        "selected_trailing": 16,
+        "decision": "当前直接页面支持作者日期与区间；C004称实际为9月16日的反对不能作为当前错误定论，可能动态版本差。Selected为估值供应商输出，样本/预测期仍不足。"
+      },
+      "FinanceCharts": {
+        "direct_page": "Captcha受限",
+        "NKE_indexed_current": 16.99,
+        "NKE_indexed_12m_average": 29.26,
+        "NKE_indexed_forward": 23.98,
+        "DECK_14_30": "索引同行排列支持平均列而非forward，但完整列头未直接取得；删除未经核实的forward引用，不把索引当完整留档。"
+      }
+    }
+  },
+  "conditional_calculations": {
+    "not_final_parameters": true,
+    "reason": "仅定位算术和时点；不能作为已批准价格/现金假设。",
+    "cash_history_usd_bn": 1.469,
+    "eps_from_author_inputs": [
+      1.3482857142857143,
+      2.056888888888889,
+      2.808
+    ],
+    "DCF_existing_formula_results": [
+      7.46825547,
+      16.6514620335,
+      30.6865085025
+    ],
+    "DCF_first_FY2027_corrected_results": [
+      7.46825547,
+      16.0239827245,
+      28.7230733668
+    ],
+    "formula_if_FY2027_is_year1": "sum(FY2027_FCFE*(1+g)^(t-1)/(1+Ke)^t,t=1..5)+FY2027_FCFE*(1+g)^4*(1+tg)/(Ke-tg)/(1+Ke)^5+excess_cash_per_share",
+    "timing_limit": "上述用于隔离多长一年错误，仍假设年度期末折现。最终明确2026-09-19估值日到FY2027年末的首期长度/已发生现金；可采用明确年度近似但不能同时把FY2027当基期再长一年。",
+    "existing_formula_correct_grid": {
+      "rows_tg": [
+        0.015,
+        0.025,
+        0.035
+      ],
+      "columns_ke": [
+        0.085,
+        0.095,
+        0.105
+      ],
+      "values": [
+        [
+          17.2070699018,
+          15.0722571322,
+          13.4126673039
+        ],
+        [
+          19.3913822646,
+          16.6514620335,
+          14.5970754301
+        ],
+        [
+          22.4494195725,
+          18.7570685686,
+          16.1198858781
+        ]
+      ],
+      "note": "证明手工表8格错；修最终时点后此旧公式网格也须重算。"
+    },
+    "reverse_old_formula": 2.252957218,
+    "reverse_corrected_year1_example": {
+      "price": 35.51,
+      "cash": 0.337,
+      "g": 0.04,
+      "tg": 0.025,
+      "ke": [
+        0.085,
+        0.095,
+        0.105
+      ],
+      "implied_FY2027_FCFE": [
+        2.00615353829,
+        2.34307550697,
+        2.68063213181
+      ]
+    },
+    "reverse_weight": 0
+  },
+  "candidate_dispositions": [
+    {
+      "id": "C009",
+      "root_id": "G01",
+      "decision": "valid",
+      "qualification": "按所属根因保留成立部分及验收限制。"
+    },
+    {
+      "id": "C017",
+      "root_id": "G01",
+      "decision": "valid",
+      "qualification": "按所属根因保留成立部分及验收限制。"
+    },
+    {
+      "id": "C031",
+      "root_id": "G01",
+      "decision": "valid",
+      "qualification": "按所属根因保留成立部分及验收限制。"
+    },
+    {
+      "id": "C034",
+      "root_id": "G01",
+      "decision": "partial",
+      "qualification": "按所属根因保留成立部分及验收限制。"
+    },
+    {
+      "id": "C036",
+      "root_id": "G01",
+      "decision": "valid",
+      "qualification": "按所属根因保留成立部分及验收限制。"
+    },
+    {
+      "id": "C001",
+      "root_id": "G02",
+      "decision": "valid",
+      "qualification": "按所属根因保留成立部分及验收限制。"
+    },
+    {
+      "id": "C013",
+      "root_id": "G02",
+      "decision": "valid",
+      "qualification": "按所属根因保留成立部分及验收限制。"
+    },
+    {
+      "id": "C014",
+      "root_id": "G02",
+      "decision": "valid",
+      "qualification": "按所属根因保留成立部分及验收限制。"
+    },
+    {
+      "id": "C015",
+      "root_id": "G02",
+      "decision": "valid",
+      "qualification": "按所属根因保留成立部分及验收限制。"
+    },
+    {
+      "id": "C019",
+      "root_id": "G02",
+      "decision": "partial",
+      "qualification": "按所属根因保留成立部分及验收限制。"
+    },
+    {
+      "id": "C026",
+      "root_id": "G02",
+      "decision": "partial",
+      "qualification": "按所属根因保留成立部分及验收限制。"
+    },
+    {
+      "id": "C032",
+      "root_id": "G02",
+      "decision": "valid",
+      "qualification": "按所属根因保留成立部分及验收限制。"
+    },
+    {
+      "id": "C044",
+      "root_id": "G02",
+      "decision": "valid",
+      "qualification": "按所属根因保留成立部分及验收限制。"
+    },
+    {
+      "id": "C002",
+      "root_id": "G03",
+      "decision": "valid",
+      "qualification": "按所属根因保留成立部分及验收限制。"
+    },
+    {
+      "id": "C004",
+      "root_id": "G03",
+      "decision": "partial",
+      "qualification": "日期/区间异议本轮不采纳；源口径与独立性缺证采纳。"
+    },
+    {
+      "id": "C007",
+      "root_id": "G03",
+      "decision": "valid",
+      "qualification": "按所属根因保留成立部分及验收限制。"
+    },
+    {
+      "id": "C008",
+      "root_id": "G03",
+      "decision": "partial",
+      "qualification": "采纳股数桥缺失，纠正候选自身基准EPS算术为2.056889。"
+    },
+    {
+      "id": "C024",
+      "root_id": "G03",
+      "decision": "valid",
+      "qualification": "按所属根因保留成立部分及验收限制。"
+    },
+    {
+      "id": "C029",
+      "root_id": "G03",
+      "decision": "valid",
+      "qualification": "按所属根因保留成立部分及验收限制。"
+    },
+    {
+      "id": "C033",
+      "root_id": "G03",
+      "decision": "partial",
+      "qualification": "按所属根因保留成立部分及验收限制。"
+    },
+    {
+      "id": "C047",
+      "root_id": "G03",
+      "decision": "valid",
+      "qualification": "按所属根因保留成立部分及验收限制。"
+    },
+    {
+      "id": "C003",
+      "root_id": "G04",
+      "decision": "partial",
+      "qualification": "新反解条件算术正确，未关闭原因是时点/全篇一致性。"
+    },
+    {
+      "id": "C041",
+      "root_id": "G04",
+      "decision": "valid",
+      "qualification": "按所属根因保留成立部分及验收限制。"
+    },
+    {
+      "id": "C046",
+      "root_id": "G04",
+      "decision": "valid",
+      "qualification": "按所属根因保留成立部分及验收限制。"
+    },
+    {
+      "id": "C016",
+      "root_id": "G05",
+      "decision": "valid",
+      "qualification": "按所属根因保留成立部分及验收限制。"
+    },
+    {
+      "id": "C020",
+      "root_id": "G07",
+      "decision": "valid",
+      "qualification": "按所属根因保留成立部分及验收限制。"
+    },
+    {
+      "id": "C023",
+      "root_id": "G07",
+      "decision": "valid",
+      "qualification": "按所属根因保留成立部分及验收限制。"
+    },
+    {
+      "id": "C028",
+      "root_id": "G07",
+      "decision": "partial",
+      "qualification": "采纳A3矛盾和旧理由；不由缺理由自动判应加满分。"
+    },
+    {
+      "id": "C035",
+      "root_id": "G07",
+      "decision": "valid",
+      "qualification": "按所属根因保留成立部分及验收限制。"
+    },
+    {
+      "id": "C042",
+      "root_id": "G07",
+      "decision": "partial",
+      "qualification": "按所属根因保留成立部分及验收限制。"
+    },
+    {
+      "id": "C045",
+      "root_id": "G07",
+      "decision": "valid",
+      "qualification": "按所属根因保留成立部分及验收限制。"
+    },
+    {
+      "id": "C010",
+      "root_id": "G08",
+      "decision": "valid",
+      "qualification": "按所属根因保留成立部分及验收限制。"
+    },
+    {
+      "id": "C012",
+      "root_id": "G08",
+      "decision": "valid",
+      "qualification": "按所属根因保留成立部分及验收限制。"
+    },
+    {
+      "id": "C018",
+      "root_id": "G08",
+      "decision": "valid",
+      "qualification": "按所属根因保留成立部分及验收限制。"
+    },
+    {
+      "id": "C021",
+      "root_id": "G08",
+      "decision": "valid",
+      "qualification": "按所属根因保留成立部分及验收限制。"
+    },
+    {
+      "id": "C027",
+      "root_id": "G08",
+      "decision": "partial",
+      "qualification": "按所属根因保留成立部分及验收限制。"
+    },
+    {
+      "id": "C039",
+      "root_id": "G08",
+      "decision": "partial",
+      "qualification": "布尔true并非当然错误，已找到原始公告；引用与上限逻辑仍错。"
+    },
+    {
+      "id": "C022",
+      "root_id": "G09",
+      "decision": "valid",
+      "qualification": "按所属根因保留成立部分及验收限制。"
+    },
+    {
+      "id": "C025",
+      "root_id": "G09",
+      "decision": "valid",
+      "qualification": "按所属根因保留成立部分及验收限制。"
+    },
+    {
+      "id": "C043",
+      "root_id": "G09",
+      "decision": "valid",
+      "qualification": "按所属根因保留成立部分及验收限制。"
+    },
+    {
+      "id": "C005",
+      "root_id": "G10",
+      "decision": "valid",
+      "qualification": "按所属根因保留成立部分及验收限制。"
+    },
+    {
+      "id": "C011",
+      "root_id": "G10",
+      "decision": "valid",
+      "qualification": "按所属根因保留成立部分及验收限制。"
+    },
+    {
+      "id": "C037",
+      "root_id": "G11",
+      "decision": "partial",
+      "qualification": "市值差异可由口径解释，本身不构成错误；快照与历史/预测性质须统一。"
+    },
+    {
+      "id": "C006",
+      "root_id": "G12",
+      "decision": "valid",
+      "qualification": "按所属根因保留成立部分及验收限制。"
+    },
+    {
+      "id": "C040",
+      "root_id": "G12",
+      "decision": "partial",
+      "qualification": "按所属根因保留成立部分及验收限制。"
+    },
+    {
+      "id": "C030",
+      "root_id": "G13",
+      "decision": "valid",
+      "qualification": "按所属根因保留成立部分及验收限制。"
+    },
+    {
+      "id": "C038",
+      "root_id": "G13",
+      "decision": "partial",
+      "qualification": "复合原数错误分别接G01/G07/G08/G09；不重复评分。"
+    },
+    {
+      "id": "C048",
+      "root_id": "G13",
+      "decision": "valid",
+      "qualification": "按所属根因保留成立部分及验收限制。"
+    }
+  ],
+  "acceptance_summary": {
+    "candidate_count": 48,
+    "root_count": 13,
+    "original_acceptance_count": 32,
+    "total_acceptance_count": 33,
+    "closed_acceptance_ids": [
+      "G01-accounting",
+      "G05-paired",
+      "G06-risk",
+      "G06-limits",
+      "G09-supplier"
+    ],
+    "open_or_partial_acceptance_ids": [
+      "G01-equity",
+      "G01-dupont",
+      "G01-score",
+      "G02-cashflow",
+      "G02-sbc",
+      "G02-equity",
+      "G02-recalc",
+      "G03-eps",
+      "G03-anchor",
+      "G03-completion",
+      "G04-solve",
+      "G04-sensitivity",
+      "G05-tax",
+      "G05-once",
+      "G06-score",
+      "G07-allocation",
+      "G07-attribution",
+      "G07-score",
+      "G08-promises",
+      "G08-cap",
+      "G08-people",
+      "G08-score",
+      "G09-segments",
+      "G09-commitments",
+      "G10-eps",
+      "G11-snapshot",
+      "G12-pricing",
+      "G13-single-source"
+    ],
+    "p0_count": 0,
+    "p1_root_count": 11,
+    "p2_root_count": 2,
+    "final_parameters_approved": false,
+    "policy": "关闭事实不等于相关模型已关闭；不重复研究已核原件，不按匿名意见票数裁决，逐ID验收。最后修复失败保留null并停止。"
+  },
+  "format_compatibility": {
+    "change_type": "仅格式兼容，不改变裁决",
+    "snapshot": "data/reviews/nike-2026-09-19/adjudication-v2.pre-format-fix.json",
+    "notes": "reason复制实质分歧；G06原候选显式命名空间；delta逐字并入condition；精确事实、条件计算与轮次边界复制进程序会完整输出的parameters。"
+  }
+}

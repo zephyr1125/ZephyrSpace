@@ -1,0 +1,70 @@
+{
+  "schema_version": "three-report-source-register-v1",
+  "as_of_date": "2026-09-16",
+  "sources": [
+    {
+      "id": "S01-2023AR",
+      "issuer": "东鹏饮料（集团）股份有限公司",
+      "document": "2023年年度报告",
+      "report_period": "2023年度",
+      "source_type": "官方披露原件（CNINFO）",
+      "url": "https://static.cninfo.com.cn/finalpage/2024-04-15/1219612087.PDF",
+      "accessed_date": "2026-09-16",
+      "location": "印刷页2／PDF 0基页码1，年度分配预案",
+      "local_path": null,
+      "sha256": null,
+      "cache_status": "本机直接下载返回HTTP 403；未保存错误响应"
+    },
+    {
+      "id": "S02-2024AR",
+      "issuer": "东鹏饮料（集团）股份有限公司",
+      "document": "2024年年度报告",
+      "report_period": "2024年度",
+      "source_type": "官方披露原件（CNINFO）",
+      "url": "https://static.cninfo.com.cn/finalpage/2025-03-08/1222744419.PDF",
+      "accessed_date": "2026-09-16",
+      "location": "印刷页71／PDF 0基页码70；印刷页216／PDF 0基页码215",
+      "local_path": null,
+      "sha256": null,
+      "cache_status": "本机直接下载返回HTTP 403；未保存错误响应"
+    },
+    {
+      "id": "S03-2025H1",
+      "issuer": "东鹏饮料（集团）股份有限公司",
+      "document": "2025年半年度报告",
+      "report_period": "截至2025-06-30止六个月",
+      "source_type": "官方披露原件（上交所）",
+      "url": "https://big5.sse.com.cn/site/cht/www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2025-07-26/605499_20250726_LUMT.pdf",
+      "accessed_date": "2026-09-16",
+      "location": "印刷页140／PDF 0基页码139，未分配利润附注",
+      "local_path": null,
+      "sha256": null,
+      "cache_status": "本次未下载；官方网页解析器已读取原件"
+    },
+    {
+      "id": "S04-2026H1-MD",
+      "issuer": "东鹏饮料（集团）股份有限公司",
+      "document": "2026年半年度报告本地转换稿",
+      "report_period": "截至2026-06-30止六个月",
+      "source_type": "本地财报转换稿；本轮用于已给定原件位置的复核",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-07-31/1225449594.PDF",
+      "accessed_date": "2026-09-16",
+      "location": "MD L2376、L3868-L3872",
+      "local_path": "财报/东鹏饮料/东鹏饮料2026半年度报告.md",
+      "sha256": "E0919AF0C56AEE2F21AD5087562064C8D0F2E820557965D828C5E2851BF1AED4"
+    },
+    {
+      "id": "S05-TINGYI-2026H1",
+      "issuer": "康师傅控股有限公司",
+      "document": "2026 Interim Report",
+      "report_period": "截至2026-06-30止六个月",
+      "source_type": "官方披露原件（HKEX）",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0825/2026082500422.pdf",
+      "disclosure_date": "2026-08-25",
+      "accessed_date": "2026-09-16",
+      "location": "印刷页2／PDF 0基页码1；印刷页14／PDF 0基页码13",
+      "local_path": "财报/康师傅/康师傅控股2026中期报告.pdf",
+      "sha256": "59D1DFB9584B607AB19B3735DB2B7C1D63AD310616D36F4F66EB75B3E2130E55"
+    }
+  ]
+}

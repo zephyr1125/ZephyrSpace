@@ -1,0 +1,282 @@
+{
+  "run_id": "travelsky-2026-09-19",
+  "company": "中国民航信息网络",
+  "cutoff": "2026-09-19",
+  "started_at": "2026-09-19T12:28:31+08:00",
+  "status": "research_incomplete_stopped_after_exception",
+  "gate_status": "proceed",
+  "evidence_version": "repair-v1+targeted-supplement-v2",
+  "draft_version": "draft-v1-20260919",
+  "repair_rounds": 2,
+  "reopen_reason": "原P1验收未满足；显式RI终值新增公式错误；补证未联动",
+  "main_model": "未提供可独立核实的运行时模型",
+  "roles": [
+    {
+      "role": "triplet_evidence",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "low",
+      "agent_id": "/root/evidence",
+      "dispatch_method": "custom_role_explicit_parameters",
+      "actual_model": null,
+      "actual_model_source": null,
+      "status": "complete",
+      "artifacts": [
+        "evidence-index-v1.md",
+        "facts-v1.json",
+        "sources-v1.json",
+        "market-snapshot-v1.json",
+        "source-excerpts-gate-v0.1.md"
+      ],
+      "input_tokens": null,
+      "cached_input_tokens": null,
+      "output_tokens": null,
+      "elapsed_seconds": null,
+      "retrieval_count": null,
+      "metering_source": null
+    },
+    {
+      "role": "triplet_writer",
+      "requested_model": "gpt-5.6-sol",
+      "requested_effort": "low",
+      "agent_id": "/root/writer",
+      "dispatch_method": "custom_role_explicit_parameters",
+      "actual_model": null,
+      "actual_model_source": null,
+      "status": "final_repair_frozen",
+      "artifacts": [
+        "gate.md",
+        "writer/writer-evidence-addendum.md",
+        "writer/calculate.py",
+        "writer/calculation-output.json",
+        "writer/selfcheck-result.json"
+      ],
+      "input_tokens": null,
+      "cached_input_tokens": null,
+      "output_tokens": null,
+      "elapsed_seconds": null,
+      "retrieval_count": null,
+      "metering_source": null
+    },
+    {
+      "role": "triplet_review_sol",
+      "requested_model": "gpt-5.6-sol",
+      "requested_effort": "low",
+      "agent_id": "/root/review_sol",
+      "dispatch_method": "custom_role_explicit_parameters",
+      "actual_model": null,
+      "actual_model_source": null,
+      "status": "final_recheck_not_passed",
+      "artifacts": [
+        "review-sol-blind.md",
+        "review-sol-full.md",
+        "review-sol-recheck-v1.md",
+        "review-sol-recheck-v2.md"
+      ],
+      "input_tokens": null,
+      "cached_input_tokens": null,
+      "output_tokens": null,
+      "elapsed_seconds": null,
+      "retrieval_count": null,
+      "metering_source": null
+    },
+    {
+      "role": "triplet_review_astra",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "low",
+      "agent_id": "/root/review_astra",
+      "dispatch_method": "custom_role_explicit_parameters",
+      "actual_model": null,
+      "actual_model_source": null,
+      "status": "final_recheck_not_passed",
+      "artifacts": [
+        "review-astra-blind.md",
+        "review-astra-full.md",
+        "review-astra-recheck-v1.md",
+        "review-astra-recheck-v2.md"
+      ],
+      "input_tokens": null,
+      "cached_input_tokens": null,
+      "output_tokens": null,
+      "elapsed_seconds": null,
+      "retrieval_count": null,
+      "metering_source": null
+    },
+    {
+      "role": "triplet_adjudicator",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "low",
+      "agent_id": "/root/adjudicator",
+      "dispatch_method": "custom_role_explicit_parameters",
+      "actual_model": null,
+      "actual_model_source": null,
+      "status": "exception_complete",
+      "artifacts": [
+        "adjudication.md",
+        "repair-package.md",
+        "adjudication-exception.md",
+        "repair-package-exception.md"
+      ],
+      "input_tokens": null,
+      "cached_input_tokens": null,
+      "output_tokens": null,
+      "elapsed_seconds": null,
+      "retrieval_count": null,
+      "metering_source": null
+    }
+  ],
+  "stage_timings": [
+    {
+      "stage": "evidence_preparation",
+      "role": "triplet_evidence",
+      "start": "2026-09-19T12:29:08.5227037+08:00",
+      "end": "2026-09-19T12:47:14.6783993+08:00",
+      "time_source": "调度侧系统时钟，包含排队和等待",
+      "blocking_reason": "v1已取得财报原件，但关联交易、控制结构及现金流附注尚未完成拆解，集中补证中"
+    },
+    {
+      "stage": "gate_review",
+      "role": "triplet_writer",
+      "start": "2026-09-19T12:38:40.1297579+08:00",
+      "end": "2026-09-19T12:40:07.321243+08:00",
+      "time_source": "调度侧系统时钟，包含排队和等待",
+      "blocking_reason": null
+    },
+    {
+      "stage": "blind_review",
+      "role": "triplet_review_sol",
+      "start": "2026-09-19T12:47:14.6783993+08:00",
+      "end": "2026-09-19T12:50:57.4684791+08:00",
+      "time_source": "调度侧系统时钟，包含排队和等待",
+      "blocking_reason": null
+    },
+    {
+      "stage": "blind_review",
+      "role": "triplet_review_astra",
+      "start": "2026-09-19T12:47:14.6783993+08:00",
+      "end": "2026-09-19T12:48:52.1747526+08:00",
+      "time_source": "调度侧系统时钟，包含排队和等待",
+      "blocking_reason": null
+    },
+    {
+      "stage": "drafting",
+      "role": "triplet_writer",
+      "start": "2026-09-19T12:47:14.6783993+08:00",
+      "end": "2026-09-19T12:55:42.0256008+08:00",
+      "time_source": "调度侧系统时钟，包含排队和等待",
+      "blocking_reason": null
+    },
+    {
+      "stage": "full_review",
+      "role": "triplet_review_sol",
+      "start": "2026-09-19T12:55:42.0256008+08:00",
+      "end": "2026-09-19T13:00:34.8528119+08:00",
+      "time_source": "调度侧系统时钟，包含排队和等待",
+      "blocking_reason": null
+    },
+    {
+      "stage": "full_review",
+      "role": "triplet_review_astra",
+      "start": "2026-09-19T12:55:42.0256008+08:00",
+      "end": "2026-09-19T13:03:58.7117134+08:00",
+      "time_source": "调度侧系统时钟，包含排队和等待",
+      "blocking_reason": null
+    },
+    {
+      "stage": "adjudication",
+      "role": "triplet_adjudicator",
+      "start": "2026-09-19T13:03:58.7117134+08:00",
+      "end": "2026-09-19T20:18:43.4600617+08:00",
+      "time_source": "调度侧系统时钟，包含排队和等待",
+      "blocking_reason": null
+    },
+    {
+      "stage": "repair",
+      "role": "triplet_writer",
+      "start": "2026-09-19T20:18:43.4600617+08:00",
+      "end": "2026-09-19T20:32:18.1027051+08:00",
+      "time_source": "调度侧系统时钟，包含排队和等待",
+      "blocking_reason": "首次修订C04/C05/C06/C07未闭合；尚未交双审，要求同轮实际集中补证后冻结"
+    },
+    {
+      "stage": "targeted_recheck",
+      "role": "triplet_review_sol",
+      "round": 1,
+      "start": "2026-09-19T20:32:18.1027051+08:00",
+      "end": "2026-09-19T20:37:06.0890374+08:00",
+      "time_source": "调度侧系统时钟，包含排队和等待",
+      "blocking_reason": null
+    },
+    {
+      "stage": "targeted_recheck",
+      "role": "triplet_review_astra",
+      "round": 1,
+      "start": "2026-09-19T20:32:18.1027051+08:00",
+      "end": "2026-09-19T20:37:06.0890374+08:00",
+      "time_source": "调度侧系统时钟，包含排队和等待",
+      "blocking_reason": null
+    },
+    {
+      "stage": "adjudication",
+      "role": "triplet_adjudicator",
+      "round": 2,
+      "start": "2026-09-19T20:37:06.0890374+08:00",
+      "end": "2026-09-19T20:42:17.8863996+08:00",
+      "time_source": "调度侧系统时钟，包含排队和等待",
+      "blocking_reason": null
+    },
+    {
+      "stage": "repair",
+      "role": "triplet_writer",
+      "round": 2,
+      "start": "2026-09-19T20:42:17.8863996+08:00",
+      "end": "2026-09-19T20:50:45.7004657+08:00",
+      "time_source": "调度侧系统时钟，包含排队和等待",
+      "blocking_reason": null
+    },
+    {
+      "stage": "targeted_recheck",
+      "role": "triplet_review_sol",
+      "round": 2,
+      "start": "2026-09-19T20:50:45.7004657+08:00",
+      "end": "2026-09-19T20:57:29.7179078+08:00",
+      "time_source": "调度侧系统时钟，包含排队和等待",
+      "blocking_reason": null
+    },
+    {
+      "stage": "targeted_recheck",
+      "role": "triplet_review_astra",
+      "round": 2,
+      "start": "2026-09-19T20:50:45.7004657+08:00",
+      "end": "2026-09-19T20:57:29.7179078+08:00",
+      "time_source": "调度侧系统时钟，包含排队和等待",
+      "blocking_reason": null
+    }
+  ],
+  "ended_at": "2026-09-19T20:57:29.7179078+08:00",
+  "final_parameters": {
+    "cScore": null,
+    "mScore": null,
+    "target_price": null,
+    "valuation_certainty": null,
+    "mechanical_buy_price": null,
+    "watchlistLevel": null
+  },
+  "final_status_artifact": "final-status.md",
+  "watchlist_written": false,
+  "unresolved": [
+    "C01/C02验收分歧",
+    "C03",
+    "C04",
+    "C05",
+    "C06",
+    "C07治理事实回退",
+    "C08验收分歧"
+  ],
+  "user_disposition": {
+    "date": "2026-09-19",
+    "action": "registered_user_requested_defer",
+    "registry": "00-首页/低分公司登记.md",
+    "formal_scores_confirmed": false,
+    "resume_requires_explicit_user_instruction": true
+  }
+}

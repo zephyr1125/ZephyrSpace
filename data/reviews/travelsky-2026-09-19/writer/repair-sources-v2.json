@@ -1,0 +1,52 @@
+[
+  {
+    "source_id": "WR-S001",
+    "title": "2023 Annual Report",
+    "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2024/0422/2024042200579.pdf",
+    "local_path": "财报/中国民航信息网络/2023年度报告.pdf",
+    "retrieved_date": "2026-09-19",
+    "sha256": "C788FBC18F73AD7C7673AF902C8BCCA58930A1FD344063B781EB5B2AECF599A8",
+    "result": "success"
+  },
+  {
+    "source_id": "WR-S002",
+    "title": "2025 AGM Poll Results and Final Dividend",
+    "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0626/2026062601449.pdf",
+    "local_path": "财报/中国民航信息网络/2026股东大会结果及末期股息.pdf",
+    "retrieved_date": "2026-09-19",
+    "sha256": "A375BD2E5950735A6F4C3B271DC520D0F45AD2BABA9555CE206182E5305FAE4C",
+    "result": "success"
+  },
+  {
+    "source_id": "WR-S003",
+    "title": "Final Dividend for 2025 Update",
+    "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0626/2026062601871.pdf",
+    "local_path": "财报/中国民航信息网络/2026末期股息更新.pdf",
+    "retrieved_date": "2026-09-19",
+    "sha256": "A6989E9320415416A3D1669169A2AFE735307176C2C7BDD8ABC4EC3EE4D0C885",
+    "result": "success"
+  },
+  {
+    "source_id": "WR-S004",
+    "title": "Second Supplemental Agreement to Data Center Racks Tenancy Contract",
+    "url": "https://media-travelsky.todayir.com/2026083117400111312308414_en.pdf",
+    "local_path": "财报/中国民航信息网络/2026机柜租赁第二补充协议公告.pdf",
+    "retrieved_date": "2026-09-19",
+    "sha256": "2B01C8C8A9FFA5566A1942C70C8B5B6F25AA6D050E5719273E1F8DB69D4425B5",
+    "result": "success_after_targeted_retry"
+  },
+  {
+    "source_id": "WR-S005",
+    "title": "Amadeus IT Group 2025 Consolidated Annual Accounts",
+    "url": "https://amadeus.com/content/dam/amadeus/corporate/documents/en/investors/2026/cnmv/q1/consolidated-annual-accounts-en-cnmv.pdf",
+    "retrieved_date": "2026-09-19",
+    "result": "reviewed_for_comparability_rejected_as_formal_pe_peer"
+  },
+  {
+    "source_id": "WR-S006",
+    "title": "Sabre Corporation 2025 Form 10-K",
+    "url": "https://www.sec.gov/Archives/edgar/data/1597033/000162828026008800/sabr-20251231.htm",
+    "retrieved_date": "2026-09-19",
+    "result": "reviewed_for_comparability_rejected_as_formal_pe_peer"
+  }
+]

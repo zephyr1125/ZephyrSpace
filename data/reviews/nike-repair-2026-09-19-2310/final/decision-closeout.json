@@ -1,0 +1,293 @@
+{
+  "schema_version": 1,
+  "run_id": "nike-repair-2026-09-19-2310",
+  "as_of": "2026-09-19",
+  "decision": "defer",
+  "research_status": "execution_incomplete",
+  "answer": "暂不入库：评分资格尚未证成，正式估值已撤回；冻结报告仍含一处已确认税务余额错期，因此本轮研究执行未完成，不能记为完整三件套或仅固有不确定性收口。",
+  "primary_reason": "既有冻结报告含已知税务余额错期，评分资格仍未证成；执行缺口不能包装固有未知。",
+  "approved_parameters": {
+    "company_score": null,
+    "management_score": null,
+    "target_price": null,
+    "certainty": null,
+    "buy_price": null,
+    "currency": "USD",
+    "company_score_items": {
+      "A1": 3.0,
+      "A2": 3.0,
+      "B0": 2.0,
+      "B2": 2.0,
+      "B4": 2.5,
+      "C1": 6.0,
+      "C2": 3.0,
+      "C3+C4": 7.0,
+      "D1": 3.0,
+      "D3": 1.0,
+      "E2": 5.0,
+      "F3": 2.0
+    },
+    "management_score_items": {
+      "战略稳定性": 10.0,
+      "对股东友好度": 11.0
+    },
+    "company_retained_subtotal": 39.5,
+    "management_retained_subtotal": 21,
+    "subtotal_limit": "仅已批准分项的小计，不是总分、下界或完整评分；未知不按0计。",
+    "reverse_weight": 0
+  },
+  "withdrawn_fields": [
+    {
+      "field": "A3候选区间3.5–4及3.5下界",
+      "location": "data/reviews/nike-repair-2026-09-19-2310/drafts/repaired-v2/deep.md:109",
+      "reason": "无据下界此前已撤回；本行末句不具效力。A3=null，不由历史覆盖不足扣分。"
+    },
+    {
+      "field": "组织与人才8–10及8下界",
+      "location": "data/reviews/nike-repair-2026-09-19-2310/drafts/repaired-v2/management.md:202",
+      "reason": "整段中评分与下界推断撤回；保留已核人事事实，不由未知原因定负面。"
+    },
+    {
+      "field": "表达清晰度3/5与旧4分候选",
+      "location": "data/reviews/nike-repair-2026-09-19-2310/drafts/repaired-v2/management.md:241",
+      "reason": "点值全部撤回，以null为准，不能将旧段落恢复成当前评分。"
+    },
+    {
+      "field": "正常化FCFE 1.9/2.3/2.7美元三档及采用该三档的论证",
+      "location": "data/reviews/nike-repair-2026-09-19-2310/drafts/repaired-v2/valuation.md:74",
+      "reason": "第74行及第72–76行依赖正常化模型的当前定价论证无效；不作为当前诊断或价格输入。历史FCF事实仍有效。"
+    },
+    {
+      "field": "重估条件中将其他采购统称Capex承诺",
+      "location": "data/reviews/nike-repair-2026-09-19-2310/drafts/repaired-v2/valuation.md:130",
+      "reason": "仅该类别旧词撤回，应按第87行其他采购包含技术/服务/营销理解，不恢复为Capex金额。"
+    },
+    {
+      "field": "FY2025未确认税收利益742百万美元及其衍生增长判断",
+      "location": "data/reviews/nike-repair-2026-09-19-2310/drafts/repaired-v2/deep.md:288",
+      "reason": "该单元格与用953/742作同比的任何结论无效；原件FY2025为1026，742是FY2026余额内影响税率部分。冻结稿未改。"
+    },
+    {
+      "field": "全部历史及本run候选总分、144.5资格上界",
+      "location": "final/score-review-v2.json withdrawn_ranges；历史稿参数表",
+      "reason": "从未形成可信完整边界，不可用作reject。"
+    },
+    {
+      "field": "全部旧DCF/PE价格、权重、目标价、确信度、机械买入价与有效价格区",
+      "location": "final/workpaper-repaired-v2.json valuation.withdrawn_models；旧版本全部价格",
+      "reason": "股数/SBC/现金归属与独立锚未完成，继续null；不得恢复旧34.213160/.50/25.659870或42.915639/.55/32.487138。"
+    }
+  ],
+  "verified_findings": [
+    {
+      "id": "TF01",
+      "claim": "未确认税收利益正确事实",
+      "values": {
+        "unit": "USD millions",
+        "FY2026_ending": 953,
+        "FY2025_ending": 1026,
+        "FY2024_ending": 990,
+        "FY2026_subset_affecting_effective_tax_rate_if_recognized": 742,
+        "FY2026_year_on_year_change": -73
+      },
+      "source_ref": "财报/耐克/耐克FY2026_10-K.pdf 印刷p74/PDF78",
+      "limit": "不含相关利息罚款；余额不是新增现金损失。742与现金税1270-268-260=742巧合同额，经济概念完全不同。正确事实在终局记录生效，未修改冻结正文。"
+    },
+    {
+      "id": "TF02",
+      "claim": "FY2024–FY2026分部与财务历史恢复可用",
+      "source_ref": "data/reviews/nike-repair-2026-09-19-2310/drafts/repaired-v2/deep.md:139；10-K p36、55、58、86–87",
+      "values": {
+        "revenue_millions": [
+          51362,
+          46309,
+          46398
+        ],
+        "net_income_millions": [
+          5700,
+          3219,
+          3108
+        ],
+        "cfo_millions": [
+          7429,
+          3698,
+          2868
+        ],
+        "segment_EBIT_total_millions": [
+          6539,
+          3778,
+          3850
+        ]
+      },
+      "limit": "分部Note15；不由事实表自动批准B1点值。"
+    },
+    {
+      "id": "TF03",
+      "claim": "E2现金质量5/5成立，FY2026杜邦计算可用",
+      "source_ref": "data/reviews/nike-repair-2026-09-19-2310/drafts/repaired-v2/deep.md:272；data/reviews/nike-repair-2026-09-19-2310/drafts/repaired-v2/deep.md:274；10-K p57–58",
+      "values": {
+        "cfo_net_income_three_year_mean": 1.1249724108344799,
+        "FCF_millions": [
+          6617,
+          3268,
+          2184
+        ],
+        "FY2026_assets_millions": 38410,
+        "FY2026_average_assets_millions": 37494.5,
+        "FY2026_average_equity_millions": 14039,
+        "FY2026_ROE": 0.2213832894080775
+      },
+      "limit": "E2按原规则，不增加低于100%扣分门槛；E1综合评分仍null。"
+    },
+    {
+      "id": "TF04",
+      "claim": "承诺类别、债租与股数边界已纠正",
+      "source_ref": "data/reviews/nike-repair-2026-09-19-2310/drafts/repaired-v2/valuation.md:84；10-K p46–47、57–59、88",
+      "values": {
+        "next_12m_endorsement_bn": 1.7,
+        "next_12m_product_purchase_bn": 4.7,
+        "next_12m_other_purchase_bn": 1.6,
+        "financing_debt_millions": 7942,
+        "operating_lease_liabilities_millions": 3091,
+        "FY2026_ending_shares_millions": 1483,
+        "FY2026_SBC_millions": 715
+      },
+      "limit": "Other不能全归Capex；期末股数不是预测年度加权；未来支付覆盖、回购资金与SBC归属未建成可批准模型。"
+    },
+    {
+      "id": "TF05",
+      "claim": "治理事实与重大海关风险可保留",
+      "source_ref": "data/reviews/nike-repair-2026-09-19-2310/drafts/repaired-v2/management.md:33；data/reviews/nike-repair-2026-09-19-2310/drafts/repaired-v2/management.md:94；data/reviews/nike-repair-2026-09-19-2310/drafts/repaired-v2/management.md:222；data/reviews/nike-repair-2026-09-19-2310/drafts/repaired-v2/management.md:257；data/reviews/nike-repair-2026-09-19-2310/drafts/repaired-v2/deep.md:333",
+      "values": {
+        "A_B_director_seats": [
+          8,
+          3
+        ],
+        "employee_counts_FY2023_2026": [
+          83700,
+          79400,
+          77800,
+          73000
+        ],
+        "related_compensation_thousand_USD": [
+          221,
+          146,
+          175,
+          125
+        ]
+      },
+      "limit": "公开原因未知不判异常离职；具体CEO生效日期仅旧冻结稿记载，未直接确认不升为已核。比利时海关败诉可能重大、损失不可估；1.3bn是总体担保信用证，非该索赔额。"
+    }
+  ],
+  "blocking_items": [
+    {
+      "id": "G13-tax-period",
+      "category": "fact_error",
+      "severity": "P1",
+      "impact": "冻结报告将FY2026部分金额错当FY2025总额，反转税务余额趋势并损害E5/E5.5事实基础；不改变已撤回价格，但阻止完整研究验收。",
+      "disposition": "withdrawn",
+      "source_ref": "data/reviews/nike-repair-2026-09-19-2310/drafts/repaired-v2/deep.md:288；10-K p74/PDF78",
+      "record_state": "终局确定正确事实953/1026与其中742，并撤回错行；冻结报告尚有错误，修复执行未完成。"
+    },
+    {
+      "id": "G07-score-bound",
+      "category": "evidence_gap",
+      "severity": "P1",
+      "impact": "争议分项未形成足以判断B/A/S档的可信总分或边界，不能eligible也不能reject。",
+      "disposition": "open",
+      "source_ref": "final/score-review-v2.json；repair-adjudication-v2.json parameters.score_disposition",
+      "record_state": "部分已有公开事实尚未完成规则化评估，是执行/评估缺口，不统称固有未知。"
+    },
+    {
+      "id": "G02-G03-model",
+      "category": "model_error",
+      "severity": "P1",
+      "impact": "FY2027股数、SBC、回购/现金归属及经营桥未闭合，独立PE锚未验证，不能正式定价。",
+      "disposition": "withdrawn",
+      "source_ref": "final/workpaper-repaired-v2.json valuation；data/reviews/nike-repair-2026-09-19-2310/drafts/repaired-v2/valuation.md:30",
+      "record_state": "错误使用已隔离；模型验证未完成。未来假设本可合理预测，不要求证成事实，不把未建模型称企业不可估。"
+    },
+    {
+      "id": "G08-public-record",
+      "category": "evidence_gap",
+      "severity": "P2",
+      "impact": "CEO具体生效日和若干已公开任离职事件未在本run直接定位，不能支持完整五年离任模式或评分下界。",
+      "disposition": "bounded",
+      "source_ref": "data/reviews/nike-repair-2026-09-19-2310/drafts/repaired-v2/management.md:69；data/reviews/nike-repair-2026-09-19-2310/drafts/repaired-v2/management.md:74",
+      "record_state": "更替已发生与CFO日期差异保留；未经核实的事件定位属于执行缺口，未披露真实动机才属于不可知。"
+    },
+    {
+      "id": "risk-irreducible",
+      "category": "irreducible_uncertainty",
+      "severity": "P1",
+      "impact": "海关诉讼结果/损失及部分未来税务结算、公开离任真实动机不能可靠确定，限制现金/治理判断。",
+      "disposition": "bounded",
+      "source_ref": "10-K p74、88；data/reviews/nike-repair-2026-09-19-2310/drafts/repaired-v2/management.md:257",
+      "record_state": "不凭空定损、不因未知扣分；不要求无限补证。"
+    },
+    {
+      "id": "residual-prose",
+      "category": "presentation",
+      "severity": "P2",
+      "impact": "旧A3、组织、表达、FCFE和Capex类别词残留会误导单独阅读；终局指定全部无效，不能恢复分数/价格。",
+      "disposition": "withdrawn",
+      "source_ref": "data/reviews/nike-repair-2026-09-19-2310/drafts/repaired-v2/deep.md:109; data/reviews/nike-repair-2026-09-19-2310/drafts/repaired-v2/management.md:202; data/reviews/nike-repair-2026-09-19-2310/drafts/repaired-v2/management.md:241; data/reviews/nike-repair-2026-09-19-2310/drafts/repaired-v2/valuation.md:74; data/reviews/nike-repair-2026-09-19-2310/drafts/repaired-v2/valuation.md:130",
+      "record_state": "冻结正文未清除；本身不再触发额外轮次。"
+    }
+  ],
+  "review_refs": [
+    "anonymous-recheck-final/candidates.json",
+    "anonymous-recheck-final/coverage.json",
+    "final/frozen-manifest-repaired-v2.json",
+    "final/workpaper-repaired-v2.json",
+    "final/score-review-v2.json",
+    "final/repair-closeout-v2.json",
+    "repair-adjudication-v1.json",
+    "repair-adjudication-v2.json",
+    "final/terminal-adjudication.json"
+  ],
+  "next_trigger": {
+    "automatic_restart": false,
+    "allowed_trigger": "用户明确重启关联新run，或出现实质新原证据；本run终局后不再作者修复。",
+    "minimum_resume_scope": [
+      "先纠正税务表FY2025 1026与FY2026其中742的归属，清除本终局列出的已撤回旧句，逐项复核传播处。",
+      "对现有事实尚未完成的评分项补足原规则评估；无法定点则保持null，仅在有据边界能确定资格时判reject，不能沿用144.5。",
+      "若仍需正式定价，建立可复核的自主预测、年度加权股数/SBC/回购资金桥和现金税/承诺覆盖；取得一个不同依据的独立估值锚，保持反向权重0。合理预测不要求成为已发生事实。"
+    ],
+    "not_required": [
+      "不要求查明未公开离任真实动机",
+      "不要求预测海关诉讼精确损失或IRS精确结算日",
+      "不因单纯文字偏好重启",
+      "若可信资格边界已否决收录，不强凑正式价格，但保留完整研究事实与限制"
+    ]
+  },
+  "qualification": {
+    "eligible": false,
+    "reject_proven": false,
+    "rule_ref": "data/WATCHLIST_RULES.md 当前S/A/B门槛",
+    "reason": "已批准分项小计与规则满分不等于可信总分；无已证红线或足以否决全部档位的可信边界。不能由执行失败/缺证判企业不合格。",
+    "watchlist_write_authorized": false,
+    "price_publication_authorized": false
+  },
+  "round": {
+    "kind": "terminal_disposition_check",
+    "count": 1,
+    "adjudication_rounds_used": 2,
+    "author_repair_rounds_used": 2,
+    "additional_research_or_author_rounds_authorized": 0,
+    "external_search_performed": false,
+    "new_model_built": false,
+    "reports_modified": false,
+    "scope": "仅原13验收、5匿名候选及冻结材料；新发现错期在现有原件裁定，无新研究。"
+  },
+  "company_quality_status": "全球品牌/轻资产模式及列明经营事实可用，旧明确批准分项和E2=5保留；总分null。",
+  "management_quality_status": "战略稳定性10、对股东友好度11保留；控制、激励、相关报酬、人效与已核更替事实可用，其余点值和总分null。",
+  "valuation_status": "正式两个模型未验收，目标价/确信度/买入价全null；35.51/2.10静态PE约16.91仅历史零权重诊断。",
+  "publication_limit": "冻结三稿仅作为未完成研究快照；须与本终局无效字段清单一同阅读。终局给正确事实不代表正文已改或P1修复验收通过。",
+  "remaining_p0_count": 0,
+  "remaining_execution_p1": [
+    "G13-single-source 税务错期",
+    "G07/G08评分评估与资格边界未完成"
+  ],
+  "no_more_author_rounds": true
+}

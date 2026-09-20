@@ -1,0 +1,27 @@
+{
+  "as_of_date": "2026-09-18",
+  "market": "HKEX",
+  "security": "00506.HK",
+  "security_name": "China Foods Limited",
+  "close_price": 3.79,
+  "price_currency": "HKD",
+  "adjustment_basis": "未复权；Yahoo Finance chart API返回的当日close与adjclose均为3.79",
+  "trading_day": "2026-09-18",
+  "day_high": 3.79,
+  "day_low": 3.675,
+  "volume_shares": 7732000,
+  "shares_outstanding": 2797223396,
+  "shares_as_of_date": "2026-08-31",
+  "share_class": "普通股；不包括库存股",
+  "market_cap_hkd": 10601476770.84,
+  "market_cap_calculation": "3.79 HKD/share × 2,797,223,396 shares",
+  "fx_hkd_per_rmb": null,
+  "fx_rmb_per_hkd": 0.854854,
+  "fx_as_of_date": "2026-09-18",
+  "fx_usage_limit": "Yahoo Finance货币行情快照，仅用于同日换算辅助；正式估值前应以指定估值日的独立汇率源复核。",
+  "sources": [
+    {"source_id":"S007","url":"https://query1.finance.yahoo.com/v8/finance/chart/0506.HK?period1=1789756800&period2=1789843200&interval=1d&events=history","accessed_date":"2026-09-19"},
+    {"source_id":"S008","url":"https://query1.finance.yahoo.com/v8/finance/chart/HKDCNY=X?period1=1789756800&period2=1789843200&interval=1d&events=history","accessed_date":"2026-09-19"},
+    {"source_id":"S006","url":"https://www.hkexnews.hk/listedco/listconews/sehk/2026/0903/2026090300887_c.pdf","accessed_date":"2026-09-19"}
+  ]
+}

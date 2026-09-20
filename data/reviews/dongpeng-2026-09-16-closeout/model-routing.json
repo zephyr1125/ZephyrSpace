@@ -1,0 +1,120 @@
+{
+  "run_id": "dongpeng-2026-09-16-closeout",
+  "parent_run": "dongpeng-2026-09-16-review",
+  "authorization": "用户明确要求：可以补齐验收缺口吗？",
+  "scope": "C04康师傅官方中报归母利润及股数原件定位；C07东鹏2023/2024分红时间线；附带回购期间P2修正；延续已验收全套研究",
+  "cutoff": "2026-09-16",
+  "gate_status": "not_applicable",
+  "prior_blind_and_full_review": "复用parent_run双路盲审及全文复核，不重新启动完整研究",
+  "reopen_reason": "用户明确重启未关闭验收缺口，按调度SOP关联新run",
+  "evidence_version": "closeout-v1.1",
+  "frozen_draft": "reports/hash-manifest.json",
+  "repair_rounds": 1,
+  "status": "completed",
+  "roles": [
+    {
+      "role": "triplet_evidence",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "low",
+      "agent_id": "/root/dongpeng_evidence",
+      "dispatch_method": "reuse_existing_fixed_role",
+      "actual_model": null,
+      "actual_model_source": "未独立确认",
+      "status": "completed",
+      "artifacts": [
+        "evidence-index.md",
+        "facts.json",
+        "sources.json"
+      ],
+      "input_tokens": null,
+      "cached_input_tokens": null,
+      "output_tokens": null,
+      "elapsed_seconds": null,
+      "retrieval_count": null,
+      "measurement_source": null
+    },
+    {
+      "role": "triplet_writer",
+      "requested_model": "gpt-5.6-sol",
+      "requested_effort": "low",
+      "agent_id": "/root/dongpeng_writer",
+      "dispatch_method": "reuse_existing_fixed_role",
+      "actual_model": null,
+      "actual_model_source": "未独立确认",
+      "status": "completed",
+      "artifacts": [
+        "reports/hash-manifest.json",
+        "reports/change-list.md",
+        "reports/self-check.md"
+      ],
+      "input_tokens": null,
+      "cached_input_tokens": null,
+      "output_tokens": null,
+      "elapsed_seconds": null,
+      "retrieval_count": null,
+      "measurement_source": null
+    },
+    {
+      "role": "triplet_review_sol",
+      "requested_model": "gpt-5.6-sol",
+      "requested_effort": "low",
+      "agent_id": "/root/dongpeng_review_a",
+      "dispatch_method": "reuse_existing_fixed_role",
+      "actual_model": null,
+      "actual_model_source": "未独立确认",
+      "status": "completed",
+      "artifacts": [
+        "recheck-a.md"
+      ],
+      "input_tokens": null,
+      "cached_input_tokens": null,
+      "output_tokens": null,
+      "elapsed_seconds": null,
+      "retrieval_count": null,
+      "measurement_source": null
+    },
+    {
+      "role": "triplet_review_astra",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "low",
+      "agent_id": "/root/dongpeng_review_b",
+      "dispatch_method": "reuse_existing_fixed_role",
+      "actual_model": null,
+      "actual_model_source": "未独立确认",
+      "status": "completed",
+      "artifacts": [
+        "recheck-b.md"
+      ],
+      "input_tokens": null,
+      "cached_input_tokens": null,
+      "output_tokens": null,
+      "elapsed_seconds": null,
+      "retrieval_count": null,
+      "measurement_source": null
+    },
+    {
+      "role": "triplet_adjudicator",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "low",
+      "agent_id": "/root/dongpeng_adjudicator",
+      "dispatch_method": "reuse_existing_fixed_role",
+      "actual_model": null,
+      "actual_model_source": "未独立确认",
+      "status": "completed",
+      "artifacts": [
+        "adjudication.md",
+        "final-parameters.json"
+      ],
+      "input_tokens": null,
+      "cached_input_tokens": null,
+      "output_tokens": null,
+      "elapsed_seconds": null,
+      "retrieval_count": null,
+      "measurement_source": null
+    }
+  ],
+  "frozen_manifest_sha256": "571AAC59FFE0FB60AC85DAC3B1EB7E59FAF8819E26334B90A15288A0E837D89D",
+  "citation_errata": "v1.1，仅页码、引文差异说明和历史参数标签勘误，不改模型",
+  "closed_at": "2026-09-16T21:35:10.238757+08:00",
+  "final_result": "final-result.json"
+}

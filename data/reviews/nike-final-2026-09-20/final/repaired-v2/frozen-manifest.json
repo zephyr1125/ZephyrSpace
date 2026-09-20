@@ -1,0 +1,24 @@
+{
+  "files": [
+    {
+      "path": "data\\reviews\\nike-final-2026-09-20\\final\\repaired-v2\\deep.md",
+      "sha256": "2c6419c2d0e08d30e2ad60383b34be78f7997c774b43cf67bda4097a451864fa"
+    },
+    {
+      "path": "data\\reviews\\nike-final-2026-09-20\\final\\repaired-v2\\management.md",
+      "sha256": "64924c7c9cf48f883ad973c0582956f384030551ab0576ef8bc4af13fef80a05"
+    },
+    {
+      "path": "data\\reviews\\nike-final-2026-09-20\\final\\repaired-v2\\valuation.md",
+      "sha256": "05ec93d245accf3cc564abefc4f3b035a14f4ba922fe358c763c5ca9c6549712"
+    },
+    {
+      "path": "data\\reviews\\nike-final-2026-09-20\\final\\repaired-v2\\workpaper-repaired-v2.json",
+      "sha256": "4976490250548551fc51603667e3759e4275bf940725814c6728980e1e46b44a"
+    },
+    {
+      "path": "data\\reviews\\nike-final-2026-09-20\\final\\repaired-v2\\check_repaired_v2.py",
+      "sha256": "a486357b01bf582bff85694da348851277717b0cb0b44ccff94e858e862ab259"
+    }
+  ]
+}

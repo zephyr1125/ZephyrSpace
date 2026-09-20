@@ -1,0 +1,88 @@
+{
+  "schema_version": "three-report-evidence-closeout-v1.1",
+  "as_of_date": "2026-09-16",
+  "scope": "仅补C07东鹏饮料年度分红及回购时间线、C04康师傅控股2026H1归母利润和股数",
+  "facts": [
+    {
+      "id": "C07-EASTROC-FY2023-DIVIDEND",
+      "issuer": "东鹏饮料（集团）股份有限公司",
+      "ticker": "605499.SH",
+      "fact_type": "年度利润分配实施",
+      "profit_period": "2023-01-01至2023-12-31",
+      "resolution_date": "2024-05-17",
+      "payment_year": 2024,
+      "per_share": {
+        "raw": "每10股人民币25.00元（含税）",
+        "normalized_rmb_per_share": 2.5
+      },
+      "cash_dividend_rmb": 1000025000.0,
+      "actual_payment_status": "截至2024-12-31已发放",
+      "source_ids": [
+        "S01-2023AR",
+        "S02-2024AR"
+      ]
+    },
+    {
+      "id": "C07-EASTROC-FY2024-DIVIDEND",
+      "issuer": "东鹏饮料（集团）股份有限公司",
+      "ticker": "605499.SH",
+      "fact_type": "年度利润分配实施",
+      "profit_period": "2024-01-01至2024-12-31",
+      "resolution_date": "2025-04-12",
+      "payment_year": 2025,
+      "per_share": {
+        "raw": "每10股人民币25.00元（含税）",
+        "normalized_rmb_per_share": 2.5
+      },
+      "cash_dividend_rmb": 1300032500.0,
+      "issued_shares_used": 520013000,
+      "actual_payment_status": "截至2025-06-30已发放",
+      "source_ids": [
+        "S02-2024AR",
+        "S03-2025H1"
+      ]
+    },
+    {
+      "id": "C07-EASTROC-REPURCHASE-TIMELINE",
+      "issuer": "东鹏饮料（集团）股份有限公司",
+      "ticker": "605499.SH",
+      "fact_type": "A股回购实施时间线",
+      "fiscal_year_2025_repurchase_account_rmb": 0.0,
+      "authorization_date": "2026-04-29",
+      "authorization_meeting": "2025年年度股东会",
+      "as_of_date": "2026-06-30",
+      "shares_repurchased": 7122551,
+      "shares_repurchased_share_of_total": 0.009701,
+      "repurchase_transaction_amount_rmb_excluding_fees": 1038719867.57,
+      "total_cash_paid_rmb_including_fees": 1039041919.33,
+      "source_ids": [
+        "S04-2026H1-MD"
+      ]
+    },
+    {
+      "id": "C04-TINGYI-2026H1-PROFIT-AND-SHARES",
+      "issuer": "康师傅控股有限公司（Tingyi (Cayman Islands) Holding Corp.）",
+      "ticker": "00322.HK",
+      "fact_type": "中期归母利润及期末已发行股数",
+      "reporting_period": "截至2026-06-30止六个月",
+      "currency": "RMB",
+      "unit": "千元（利润）；股（已发行股数）",
+      "profit_attributable_to_owners_rmb_thousand": {
+        "2026H1": 2433042,
+        "2025H1_comparative": 2271116
+      },
+      "issued_and_fully_paid_shares_at_2026_06_30": 5637386360,
+      "source_ids": [
+        "S05-TINGYI-2026H1"
+      ]
+    }
+  ],
+  "unknown_or_limited": [
+    {
+      "item": "东鹏饮料2023、2024年度报告PDF本地缓存",
+      "status": "未缓存",
+      "detail": "CNINFO官方直链在本机网络环境两种文件名大小写入口均返回HTTP 403；已停止重复下载。网页解析器已读取官方PDF，页码、URL和摘录载入evidence-index.md。"
+    }
+  ],
+  "revision_note": "v1.1仅修正引用页码定位并记录FY2024年报P71金额文字差异；事实数值不变，v1快照见evidence-v1/"
+}

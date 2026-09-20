@@ -1,0 +1,69 @@
+{
+  "artifact_checks_passed": true,
+  "research_complete": false,
+  "remaining_p1": [
+    "C04",
+    "C05"
+  ],
+  "checks": [
+    {
+      "id": "deep_lines",
+      "passed": true,
+      "actual": 338,
+      "required": 150
+    },
+    {
+      "id": "management_lines",
+      "passed": true,
+      "actual": 349,
+      "required": 150
+    },
+    {
+      "id": "valuation_lines",
+      "passed": true,
+      "actual": 235,
+      "required": 100
+    },
+    {
+      "id": "receivables_reconcile",
+      "passed": true
+    },
+    {
+      "id": "company_score",
+      "passed": true
+    },
+    {
+      "id": "management_score",
+      "passed": true
+    },
+    {
+      "id": "important_parameters_null",
+      "passed": true
+    },
+    {
+      "id": "reverse_weight_zero",
+      "passed": true
+    },
+    {
+      "id": "draft_archive",
+      "passed": true
+    }
+  ],
+  "revision_hashes": {
+    "deep": {
+      "path": "E:\\ObsidianVaults\\ZephyrSpace\\深度分析\\中国民航信息网络 深度分析 73 2026-09-19 修订版.md",
+      "lines": 338,
+      "sha256": "cf666087cf45ccf979811aa6ea8bdf4b8c16bb1d875bb4797a47921ecc8498f2"
+    },
+    "management": {
+      "path": "E:\\ObsidianVaults\\ZephyrSpace\\管理层档案\\中国民航信息网络 管理层档案 70 2026-09-19 修订版.md",
+      "lines": 349,
+      "sha256": "0f22335e133d0242d6abeea6e9d955dd87ec21ce309dc5127bb2d013e3aef5c0"
+    },
+    "valuation": {
+      "path": "E:\\ObsidianVaults\\ZephyrSpace\\估值分析\\中国民航信息网络 估值分析 未完成 2026-09-19 修订版.md",
+      "lines": 235,
+      "sha256": "beee8120de1d1d7f32c323bb7812fc96540c53e93f20daae7e76907e55436742"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "status": "pass",
+  "errors": [],
+  "known_point_subtotals": {
+    "company": 39.5,
+    "management": 21.0
+  },
+  "limitations": [
+    "不验证事实真实性",
+    "不批准争议评分",
+    "不等同独立复查"
+  ]
+}

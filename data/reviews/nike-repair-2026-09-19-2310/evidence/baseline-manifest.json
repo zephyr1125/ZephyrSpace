@@ -1,0 +1,27 @@
+{
+  "comparison_baseline": "v1冻结全文+原评分理由，已知错误按裁决替换；v2/v3只按已核改动选取，不整体继承",
+  "files": [
+    {
+      "type": "deep",
+      "source": "data\\reviews\\nike-2026-09-19\\writer\\frozen-deep-v1.md",
+      "copy": "data\\reviews\\nike-repair-2026-09-19-2310\\drafts\\baseline-v1\\deep.md",
+      "sha256": "d0a2f6b322de5d628e3f1a4466cefe4a46e39388d4d3be6080f4dcda35bee18d",
+      "trust": "仅保留文本与逐项理由的比较基线，非已核整套结论"
+    },
+    {
+      "type": "management",
+      "source": "data\\reviews\\nike-2026-09-19\\writer\\frozen-management-v1.md",
+      "copy": "data\\reviews\\nike-repair-2026-09-19-2310\\drafts\\baseline-v1\\management.md",
+      "sha256": "d403cffe056cf550eedca352fe8aae08e77c2a3778a45e2a3457c6082915a6fc",
+      "trust": "仅保留文本与逐项理由的比较基线，非已核整套结论"
+    },
+    {
+      "type": "valuation",
+      "source": "data\\reviews\\nike-2026-09-19\\writer\\frozen-valuation-v1.md",
+      "copy": "data\\reviews\\nike-repair-2026-09-19-2310\\drafts\\baseline-v1\\valuation.md",
+      "sha256": "72a39221e86b72ceba86b7be92e0ad90aed8c20e642518c2b5bbcb205171878d",
+      "trust": "仅保留文本与逐项理由的比较基线，非已核整套结论"
+    }
+  ],
+  "formal_parameters_inherited": false
+}

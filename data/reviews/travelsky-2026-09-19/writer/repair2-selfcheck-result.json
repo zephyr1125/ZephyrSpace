@@ -1,0 +1,99 @@
+{
+  "artifact_checks_passed": true,
+  "research_complete": false,
+  "repair_round": 2,
+  "exception_round": 1,
+  "remaining_p1": [
+    "C04",
+    "C05"
+  ],
+  "checks": [
+    {
+      "id": "deep_lines",
+      "passed": true,
+      "actual": 203,
+      "required": 150
+    },
+    {
+      "id": "deep_status",
+      "passed": true
+    },
+    {
+      "id": "deep_no_forbidden_current",
+      "passed": true
+    },
+    {
+      "id": "management_lines",
+      "passed": true,
+      "actual": 201,
+      "required": 150
+    },
+    {
+      "id": "management_status",
+      "passed": true
+    },
+    {
+      "id": "management_no_forbidden_current",
+      "passed": true
+    },
+    {
+      "id": "valuation_lines",
+      "passed": true,
+      "actual": 188,
+      "required": 100
+    },
+    {
+      "id": "valuation_status",
+      "passed": true
+    },
+    {
+      "id": "valuation_no_forbidden_current",
+      "passed": true
+    },
+    {
+      "id": "formal_parameters_null",
+      "passed": true
+    },
+    {
+      "id": "reverse_weight_zero",
+      "passed": true
+    },
+    {
+      "id": "remaining_p1",
+      "passed": true
+    },
+    {
+      "id": "dupont_identity",
+      "passed": true
+    },
+    {
+      "id": "candidate_company_arithmetic",
+      "passed": true
+    },
+    {
+      "id": "candidate_management_arithmetic",
+      "passed": true
+    },
+    {
+      "id": "repair_v1_snapshot",
+      "passed": true
+    }
+  ],
+  "hashes": {
+    "deep": {
+      "path": "E:\\ObsidianVaults\\ZephyrSpace\\深度分析\\中国民航信息网络 深度分析 未完成 2026-09-19 最终修订.md",
+      "lines": 203,
+      "sha256": "6cdad6e02dbbda9cb12334af1185636a51496b22bd08dab71f10362bb540a1e3"
+    },
+    "management": {
+      "path": "E:\\ObsidianVaults\\ZephyrSpace\\管理层档案\\中国民航信息网络 管理层档案 未完成 2026-09-19 最终修订.md",
+      "lines": 201,
+      "sha256": "12e9adbb9679b69391454c568df339e68331d5726e0d9f65d579b03117c54ba8"
+    },
+    "valuation": {
+      "path": "E:\\ObsidianVaults\\ZephyrSpace\\估值分析\\中国民航信息网络 估值分析 未完成 2026-09-19 最终修订.md",
+      "lines": 188,
+      "sha256": "76c69a8e4cc53c2d72e02f80f18f294e541ff730fa7b8730fcc825c073348ba5"
+    }
+  }
+}

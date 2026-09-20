@@ -1,0 +1,23 @@
+{
+  "core_entry": {
+    "name": "安踏体育",
+    "code": "02020.HK",
+    "board": "港",
+    "cScore": 85,
+    "mScore": 86,
+    "target_price": 102,
+    "valuation_certainty": 0.7,
+    "dv_ttm": 3.3,
+    "next_earnings_date": null,
+    "next_earnings_type": null,
+    "lastEarningsIncorporated": "2026H1",
+    "cycle_is_cyclical": false,
+    "cycle_position": null,
+    "watchlistLevel": "A_CORE",
+    "trackingStatus": "WATCHING",
+    "strategicCoreType": null,
+    "lastFundamentalReviewDate": "2026-08-26",
+    "lastRedFlagReviewDate": "2026-08-26"
+  },
+  "growth_entry": null
+}

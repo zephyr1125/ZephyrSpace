@@ -1,0 +1,52 @@
+{
+  "name": "东鹏饮料",
+  "code": "09980",
+  "cScore": null,
+  "mScore": 77,
+  "targetPrice": null,
+  "buyPrice": null,
+  "maxWeight": null,
+  "valuation_certainty": null,
+  "currency": "HKD",
+  "status": "研究未完成，常规裁决已完成，待一次合并修复及双路定向验收",
+  "company_score_repair_target": 83,
+  "company_score_pending": "C05 E5.5：FY25会计政策/估计变更及计提原文定位验收",
+  "company_components_repair_target": {
+    "A": 7,
+    "B": 17,
+    "C": 16,
+    "D": 13,
+    "E": 18,
+    "F": 12
+  },
+  "management_components": {
+    "integrity": 15,
+    "capital_allocation": 19,
+    "strategy": 14,
+    "shareholder_friendliness": 11,
+    "crisis_response": 6,
+    "organization": 8,
+    "communication": 4
+  },
+  "conditional_watchlist_level": "A_CORE，仅在83/77及全部研究验收完成后",
+  "outstanding_shares": 727076759,
+  "reverse_weight": 0,
+  "model_weights_when_valid": {
+    "fcff_dcf": 0.55,
+    "comparable_pe": 0.45
+  },
+  "adjudication_round": 1,
+  "exception_reopen_count": 0,
+  "reopen_reason": null,
+  "open_blocking_ids": [
+    "C01",
+    "C02",
+    "C03",
+    "C04",
+    "C05",
+    "C06",
+    "C07",
+    "C08"
+  ],
+  "write_watchlist_authorized_by_this_artifact": false
+}

@@ -1,0 +1,178 @@
+{
+  "schema_version": 1,
+  "status": "author_repair_frozen_pending_independent_review",
+  "formal_parameters": {
+    "company_score": null,
+    "management_score": null,
+    "target_price": null,
+    "certainty": null,
+    "buy_price": null
+  },
+  "author_candidate_ranges": {
+    "company": [
+      72.5,
+      74.5
+    ],
+    "management": [
+      68,
+      70
+    ],
+    "combined": [
+      140.5,
+      144.5
+    ]
+  },
+  "issues": [
+    {
+      "id": "G02",
+      "disposition": "withdrawn",
+      "fixed": [
+        "期末股数与年度加权股数分离",
+        "SBC/发行现金事实分列"
+      ],
+      "withdrawn": [
+        "正式FCFE/每股价值",
+        "超额现金加项",
+        "目标价/确定性/买入价/价格区"
+      ],
+      "open": [
+        "FY2027加权股数、稀释、回购时点价格"
+      ]
+    },
+    {
+      "id": "G03",
+      "disposition": "withdrawn",
+      "fixed": [
+        "PE锚不足被明确"
+      ],
+      "withdrawn": [
+        "PE正式权重",
+        "正式加权定价"
+      ],
+      "open": [
+        "独立PE样本与FY2027经营桥"
+      ]
+    },
+    {
+      "id": "G05",
+      "disposition": "bounded",
+      "fixed": [
+        "268与260百万美元保留为历史特殊付款",
+        "742仅为历史剔除尺度"
+      ],
+      "withdrawn": [
+        "旧现金税正常化点值及依赖价格"
+      ],
+      "open": [
+        "FY2027现金税与IRS结算时点"
+      ]
+    },
+    {
+      "id": "G07",
+      "disposition": "corrected",
+      "fixed": [
+        "A3移除回购纪律错误归因",
+        "A3改3.5–4候选区间",
+        "回购纪律只归F2.5"
+      ],
+      "withdrawn": [],
+      "open": [
+        "更长历史融资用途覆盖，待复查区间"
+      ]
+    },
+    {
+      "id": "G08",
+      "disposition": "bounded",
+      "fixed": [
+        "任命/调岗/离任分类",
+        "CEO/CFO更替与日期边界",
+        "F1 3.5–5、组织8–10候选区间"
+      ],
+      "withdrawn": [
+        "异常集中离任/继任失败的无证据判断"
+      ],
+      "open": [
+        "其他人员公开离任原因unknown"
+      ]
+    },
+    {
+      "id": "G09A",
+      "disposition": "corrected",
+      "fixed": [
+        "保留正确三年绝对额和方向"
+      ],
+      "withdrawn": [],
+      "open": [
+        "P2同比展示未作为阻塞"
+      ]
+    },
+    {
+      "id": "G09B",
+      "disposition": "bounded",
+      "fixed": [
+        "1.7/4.7/1.6十亿美元按经济路径分列"
+      ],
+      "withdrawn": [
+        "超额现金及依赖正式价格"
+      ],
+      "open": [
+        "未来12月实际覆盖量"
+      ]
+    },
+    {
+      "id": "G13",
+      "disposition": "corrected",
+      "fixed": [
+        "恢复32项独立理由/来源",
+        "恢复多年度事实及治理具体信息",
+        "正式参数唯一为null"
+      ],
+      "withdrawn": [
+        "v3循环见最终报告式理由"
+      ],
+      "open": [
+        "所有候选分/区间待两路独立验收"
+      ]
+    }
+  ],
+  "actual_report_changes": {
+    "management": [
+      "__preamble__",
+      "一/二/三/六/九/十一",
+      "数据来源"
+    ],
+    "deep": [
+      "__preamble__",
+      "综合评分汇总",
+      "维度A/B/D/E/F",
+      "事实推断未知",
+      "来源",
+      "最终结论"
+    ],
+    "valuation": [
+      "__preamble__",
+      "一",
+      "四至十一旧有效模型移除",
+      "十三至十六"
+    ]
+  },
+  "actual_score_changes": [
+    "company/A3",
+    "company/B1",
+    "company/B3",
+    "company/D2",
+    "company/D5",
+    "company/E1",
+    "company/E4",
+    "company/F1",
+    "company/F2",
+    "company/F2.5",
+    "company/F3",
+    "management/诚信与透明度",
+    "management/资本配置能力",
+    "management/危机处理能力",
+    "management/组织与人才能力",
+    "management/表达清晰度与认知质量"
+  ],
+  "review_required": true
+}

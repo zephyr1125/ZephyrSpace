@@ -1,0 +1,76 @@
+{
+  "run_id": "uthr-2026-09-12",
+  "company": "United Therapeutics Corporation",
+  "ticker": "UTHR.US",
+  "market": "NASDAQ",
+  "cutoff_date": "2026-09-12",
+  "gate_status": "proceed",
+  "evidence_version": "v1.2",
+  "frozen_draft": "frozen-draft.md",
+  "repair_rounds": 2,
+  "reopen_reason": "第一次修复未关闭原P1：历史评分变化桥错误、撤销估值输入跨报告残留、v1.2治理补证未整合回正文；按targeted-readjudication.md T1-T3执行唯一例外修复",
+  "final_status": "research_incomplete_decisive_valuation_gaps",
+  "roles": [
+    {
+      "role": "triplet_evidence",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "low",
+      "agent_id": "/root/uthr_evidence",
+      "dispatch_method": "collaboration.spawn_agent custom role",
+      "actual_model": null,
+      "actual_model_source": null,
+      "status": "completed",
+      "artifacts": ["evidence-index.md", "facts.json", "sources.json", "market-snapshot.json"],
+      "input_tokens": null,
+      "cached_input_tokens": null,
+      "output_tokens": null,
+      "duration_seconds": null,
+      "retrieval_count": null,
+      "metering_source": null
+    },
+    {
+      "role": "triplet_writer",
+      "requested_model": "gpt-5.6-sol",
+      "requested_effort": "low",
+      "agent_id": "/root/uthr_writer",
+      "dispatch_method": "collaboration.spawn_agent custom role",
+      "actual_model": null,
+      "actual_model_source": null,
+      "status": "exception_repair_round_2_completed",
+      "artifacts": ["gate.md", "author-self-check.md", "scoring-bridge-final.md", "valuation_calc.py", "frozen-draft.md", "repair-diff.md", "exception-repair-diff.md", "issue-closure.md", "深度分析/United Therapeutics 深度分析 74 2026-09-12.md", "管理层档案/United Therapeutics 管理层档案 72 2026-09-12.md", "估值分析/United Therapeutics 估值分析 未完成 2026-09-12.md"]
+    },
+    {
+      "role": "triplet_review_sol",
+      "requested_model": "gpt-5.6-sol",
+      "requested_effort": "low",
+      "agent_id": "/root/uthr_review_sol",
+      "dispatch_method": "collaboration.spawn_agent custom role",
+      "actual_model": null,
+      "actual_model_source": null,
+      "status": "final_targeted_review_completed",
+      "artifacts": ["blind-risk-sol.md", "review-sol.md", "targeted-review-sol.md", "final-targeted-review-sol.md"]
+    },
+    {
+      "role": "triplet_review_astra",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "low",
+      "agent_id": "/root/uthr_review_astra",
+      "dispatch_method": "collaboration.spawn_agent custom role",
+      "actual_model": null,
+      "actual_model_source": null,
+      "status": "final_targeted_review_completed",
+      "artifacts": ["blind-risk-astra.md", "review-astra.md", "targeted-review-astra.md", "final-targeted-review-astra.md"]
+    },
+    {
+      "role": "triplet_adjudicator",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "low",
+      "agent_id": "/root/uthr_adjudicator",
+      "dispatch_method": "collaboration.spawn_agent custom role",
+      "actual_model": null,
+      "actual_model_source": null,
+      "status": "targeted_readjudication_completed",
+      "artifacts": ["adjudication.md", "evidence-increment-v1.2.md", "targeted-readjudication.md"]
+    }
+  ]
+}

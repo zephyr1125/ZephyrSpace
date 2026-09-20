@@ -1,0 +1,272 @@
+{
+  "run_id": "chinafoods-2026-09-19",
+  "company": "中国食品",
+  "ticker": "00506.HK",
+  "cutoff": "2026-09-19",
+  "started_at": "2026-09-19T10:33:42+08:00",
+  "gate_status": "proceed",
+  "evidence_version": "v1.0-frozen + v1.1-fx + v1.2-adjudication",
+  "draft_version": "draft-v1/manifest.md",
+  "repair_rounds": 2,
+  "reopen_reason": "C03修复遗漏DDM的Ke×g双变量敏感性矩阵，首次定向复查确认P1未关闭；另有P2旧资本配置分数文字残留",
+  "status": "complete_not_admitted",
+  "roles": [
+    {
+      "role": "triplet_evidence",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "low",
+      "agent_id": "/root/chinafoods_evidence",
+      "dispatch_method": "custom_role_explicit_parameters",
+      "actual_model": null,
+      "actual_model_source": "运行时未提供，已请求但未独立确认",
+      "status": "complete",
+      "artifacts": [
+        "evidence-index.md",
+        "facts.json",
+        "sources.json"
+      ],
+      "input_tokens": null,
+      "cached_input_tokens": null,
+      "output_tokens": null,
+      "search_count": null
+    },
+    {
+      "role": "triplet_writer",
+      "requested_model": "gpt-5.6-sol",
+      "requested_effort": "low",
+      "agent_id": "/root/chinafoods_writer",
+      "dispatch_method": "custom_role_explicit_parameters",
+      "actual_model": null,
+      "actual_model_source": "运行时未提供，已请求但未独立确认",
+      "status": "complete",
+      "artifacts": [
+        "gate.md",
+        "draft-v1/manifest.md",
+        "calculation.py",
+        "calculation-inputs.json",
+        "calculation-results.json",
+        "self-check-results.json",
+        "repair-closure.md",
+        "evidence-increment-v1.2.md",
+        "historical-pe-rebuild.py",
+        "historical-pe-sample.json",
+        "exception-repair-closure.md"
+      ],
+      "input_tokens": null,
+      "cached_input_tokens": null,
+      "output_tokens": null,
+      "search_count": null
+    },
+    {
+      "role": "triplet_review_sol",
+      "requested_model": "gpt-5.6-sol",
+      "requested_effort": "low",
+      "agent_id": "/root/chinafoods_review_sol",
+      "dispatch_method": "custom_role_explicit_parameters",
+      "actual_model": null,
+      "actual_model_source": "运行时未提供，已请求但未独立确认",
+      "status": "complete",
+      "artifacts": [
+        "blind-sol.md",
+        "review-sol.md",
+        "recheck-sol.md",
+        "exception-recheck-sol.md"
+      ],
+      "input_tokens": null,
+      "cached_input_tokens": null,
+      "output_tokens": null,
+      "search_count": null
+    },
+    {
+      "role": "triplet_review_astra",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "low",
+      "agent_id": "/root/chinafoods_review_astra",
+      "dispatch_method": "custom_role_explicit_parameters",
+      "actual_model": null,
+      "actual_model_source": "运行时未提供，已请求但未独立确认",
+      "status": "complete",
+      "artifacts": [
+        "blind-astra.md",
+        "review-astra.md",
+        "recheck-astra.md",
+        "exception-recheck-astra.md"
+      ],
+      "input_tokens": null,
+      "cached_input_tokens": null,
+      "output_tokens": null,
+      "search_count": null
+    },
+    {
+      "role": "triplet_adjudicator",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "low",
+      "agent_id": "/root/chinafoods_adjudicator",
+      "dispatch_method": "custom_role_explicit_parameters",
+      "actual_model": null,
+      "actual_model_source": "运行时未提供，已请求但未独立确认",
+      "status": "complete",
+      "artifacts": [
+        "adjudication.md",
+        "repair-package.md",
+        "exception-adjudication.md"
+      ],
+      "input_tokens": null,
+      "cached_input_tokens": null,
+      "output_tokens": null,
+      "search_count": null
+    }
+  ],
+  "stage_timings": [
+    {
+      "stage": "evidence_gate",
+      "role": "triplet_evidence",
+      "started_at": "2026-09-19T10:34:26.3282258+08:00",
+      "ended_at": "2026-09-19T10:40:30.9067013+08:00",
+      "time_source": "调度侧时钟，含排队等待",
+      "blocking_reason": null
+    },
+    {
+      "stage": "gate_review",
+      "role": "triplet_writer",
+      "started_at": "2026-09-19T10:40:30.9074084+08:00",
+      "ended_at": "2026-09-19T10:42:06.0526382+08:00",
+      "time_source": "调度侧时钟，含排队等待",
+      "blocking_reason": null
+    },
+    {
+      "stage": "full_evidence",
+      "role": "triplet_evidence",
+      "started_at": "2026-09-19T10:42:06.0533437+08:00",
+      "ended_at": "2026-09-19T10:45:28.0419782+08:00",
+      "time_source": "调度侧时钟，含排队等待",
+      "blocking_reason": null
+    },
+    {
+      "stage": "blind_review",
+      "role": "triplet_review_sol",
+      "started_at": "2026-09-19T10:45:28.0453953+08:00",
+      "ended_at": "2026-09-19T10:48:20.570275+08:00",
+      "time_source": "调度侧时钟，含排队等待",
+      "blocking_reason": null
+    },
+    {
+      "stage": "blind_review",
+      "role": "triplet_review_astra",
+      "started_at": "2026-09-19T10:45:28.0459771+08:00",
+      "ended_at": "2026-09-19T10:47:55.3504843+08:00",
+      "time_source": "调度侧时钟，含排队等待",
+      "blocking_reason": null
+    },
+    {
+      "stage": "writing",
+      "role": "triplet_writer",
+      "started_at": "2026-09-19T10:45:28.0460435+08:00",
+      "ended_at": "2026-09-19T10:54:13.1642664+08:00",
+      "time_source": "调度侧时钟，含排队等待",
+      "blocking_reason": null
+    },
+    {
+      "stage": "full_review",
+      "role": "triplet_review_sol",
+      "started_at": "2026-09-19T10:54:13.1658943+08:00",
+      "ended_at": "2026-09-19T10:58:41.1094377+08:00",
+      "time_source": "调度侧时钟，含排队等待",
+      "blocking_reason": null
+    },
+    {
+      "stage": "full_review",
+      "role": "triplet_review_astra",
+      "started_at": "2026-09-19T10:54:13.1686941+08:00",
+      "ended_at": "2026-09-19T11:00:24.638779+08:00",
+      "time_source": "调度侧时钟，含排队等待",
+      "blocking_reason": null
+    },
+    {
+      "stage": "adjudication",
+      "role": "triplet_adjudicator",
+      "started_at": "2026-09-19T11:00:58.7312172+08:00",
+      "ended_at": "2026-09-19T11:14:59.3027742+08:00",
+      "time_source": "调度侧时钟，含排队等待",
+      "blocking_reason": null
+    },
+    {
+      "stage": "repair",
+      "role": "triplet_writer",
+      "started_at": "2026-09-19T11:14:59.3033415+08:00",
+      "ended_at": "2026-09-19T11:22:04.3904365+08:00",
+      "time_source": "调度侧时钟，含排队等待",
+      "blocking_reason": null
+    },
+    {
+      "stage": "targeted_recheck",
+      "role": "triplet_review_sol",
+      "started_at": "2026-09-19T11:22:04.3920404+08:00",
+      "ended_at": "2026-09-19T11:25:42.1185645+08:00",
+      "time_source": "调度侧时钟，含排队等待",
+      "blocking_reason": null
+    },
+    {
+      "stage": "targeted_recheck",
+      "role": "triplet_review_astra",
+      "started_at": "2026-09-19T11:22:04.3950485+08:00",
+      "ended_at": "2026-09-19T11:25:42.1193347+08:00",
+      "time_source": "调度侧时钟，含排队等待",
+      "blocking_reason": null
+    },
+    {
+      "stage": "exception_adjudication",
+      "role": "triplet_adjudicator",
+      "started_at": "2026-09-19T11:25:42.1215604+08:00",
+      "ended_at": "2026-09-19T11:27:01.9194075+08:00",
+      "time_source": "调度侧时钟，含排队等待",
+      "blocking_reason": "C03修复遗漏DDM的Ke×g双变量敏感性矩阵，首次定向复查确认P1未关闭；另有P2旧资本配置分数文字残留"
+    },
+    {
+      "stage": "exception_repair",
+      "role": "triplet_writer",
+      "started_at": "2026-09-19T11:27:01.9199974+08:00",
+      "ended_at": "2026-09-19T11:28:34.8906692+08:00",
+      "time_source": "调度侧时钟，含排队等待",
+      "blocking_reason": "C03双变量矩阵和P2残留文字"
+    },
+    {
+      "stage": "exception_recheck",
+      "role": "triplet_review_sol",
+      "started_at": "2026-09-19T11:28:34.8921366+08:00",
+      "ended_at": "2026-09-19T11:31:27.6330022+08:00",
+      "time_source": "调度侧时钟，含排队等待",
+      "blocking_reason": "最后限定核9格矩阵和参数一致性"
+    },
+    {
+      "stage": "exception_recheck",
+      "role": "triplet_review_astra",
+      "started_at": "2026-09-19T11:28:34.8949855+08:00",
+      "ended_at": "2026-09-19T11:31:27.633821+08:00",
+      "time_source": "调度侧时钟，含排队等待",
+      "blocking_reason": "最后限定核9格矩阵和参数一致性"
+    },
+    {
+      "stage": "closeout",
+      "role": "root",
+      "started_at": null,
+      "ended_at": "2026-09-19T11:31:27.719455+08:00",
+      "time_source": "调度侧时钟，起始时间未单独记录",
+      "blocking_reason": null
+    }
+  ],
+  "ended_at": "2026-09-19T11:31:27.6356157+08:00",
+  "final_parameters": {
+    "cScore": 69,
+    "mScore": 70,
+    "watchlistLevel": "NONE",
+    "target_price": 2.720600357723633,
+    "valuation_certainty": 0.6,
+    "mechanical_buy_price": 2.0785386733008555,
+    "watchlist_written": false,
+    "sync_run": false,
+    "reason": "未满足任一入池档位，遵循用户约定不写入Watchlist"
+  },
+  "elapsed_seconds": 3465.0,
+  "metrics_boundary": "各角色实际模型、token、检索次数未获得独立运行时计量，均保留null；阶段为调度侧时间含等待，不能加总重叠阶段。"
+}

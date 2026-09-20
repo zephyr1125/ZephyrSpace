@@ -1,0 +1,194 @@
+{
+  "evidence_version": "v2.0-frozen + evidence-v3/supplement.md",
+  "roles": [
+    {
+      "input_tokens": null,
+      "role": "triplet_evidence",
+      "dispatch_method": "custom_role_explicit_model",
+      "requested_model": "gpt-5.6-terra",
+      "status": "complete",
+      "output_tokens": null,
+      "actual_model": null,
+      "agent_id": "/root/nike_evidence",
+      "actual_model_source": "运行时未独立确认",
+      "artifacts": [
+        "evidence-v2/evidence-index.md",
+        "evidence-v2/facts.json",
+        "evidence-v2/sources.json",
+        "evidence-v2/market-snapshot.json"
+      ],
+      "requested_effort": "low"
+    },
+    {
+      "role": "triplet_writer",
+      "requested_model": "gpt-5.6-sol",
+      "requested_effort": "low",
+      "agent_id": "/root/nike_writer",
+      "dispatch_method": "custom_role_explicit_model",
+      "actual_model": null,
+      "actual_model_source": "运行时未独立确认",
+      "status": "final_repair_delivered",
+      "artifacts": [
+        "writer/gate.md",
+        "writer/workpaper-v1.json",
+        "writer/selfcheck-v1.json",
+        "writer/initial-freeze-v1.md",
+        "writer/workpaper-v2.json",
+        "writer/selfcheck-v2.json",
+        "writer/repair-closeout-v1.md",
+        "writer/diff-v1-to-v2.md",
+        "writer/workpaper-v3.json",
+        "writer/check-v3.json",
+        "writer/repair-closeout-v2.md"
+      ],
+      "input_tokens": null,
+      "output_tokens": null
+    },
+    {
+      "role": "triplet_review_sol",
+      "requested_model": "gpt-5.6-sol",
+      "requested_effort": "low",
+      "agent_id": "/root/nike_review_sol",
+      "dispatch_method": "custom_role_explicit_model",
+      "actual_model": null,
+      "actual_model_source": "运行时未独立确认",
+      "status": "final_recheck_failed",
+      "artifacts": [
+        "sol/blind-risks.md",
+        "sol/review-sol.json",
+        "sol/recheck-v1.json",
+        "sol/recheck-v2.json"
+      ],
+      "input_tokens": null,
+      "output_tokens": null
+    },
+    {
+      "role": "triplet_review_astra",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "low",
+      "agent_id": "/root/nike_review_astra",
+      "dispatch_method": "custom_role_explicit_model",
+      "actual_model": null,
+      "actual_model_source": "运行时未独立确认",
+      "status": "final_recheck_failed",
+      "artifacts": [
+        "astra/blind-risks.md",
+        "astra/review-astra.json",
+        "astra/recheck-v1.json",
+        "astra/recheck-v2.json"
+      ],
+      "input_tokens": null,
+      "output_tokens": null
+    },
+    {
+      "role": "triplet_adjudicator",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "low",
+      "agent_id": "/root/nike_adjudication",
+      "dispatch_method": "custom_role_explicit_model",
+      "actual_model": null,
+      "actual_model_source": "运行时未独立确认",
+      "status": "exception_adjudication_delivered",
+      "artifacts": [
+        "adjudication-v1.json",
+        "adjudication-v2.json"
+      ],
+      "input_tokens": null,
+      "output_tokens": null
+    }
+  ],
+  "ticker": "NKE.US",
+  "run_id": "nike-2026-09-19",
+  "status": "incomplete_final_p1_open_stopped",
+  "started_at": "2026-09-19T21:01:53.1415576+08:00",
+  "reopen_reason": "两路定向复查原P1未关闭，新增旧值残留/分部与杜邦错误/股数桥/DCF年度时点/PE来源口径错误；唯一有界例外",
+  "stage_timings": [
+    {
+      "time_source": "首次留存调度时钟；包含随后派发与等待，不是模型执行耗时",
+      "stage": "evidence",
+      "round": 1,
+      "started_at": "2026-09-19T21:01:53.1415576+08:00",
+      "ended_at": "2026-09-19T21:19:39.5859558+08:00"
+    },
+    {
+      "stage": "writing",
+      "started_at": "2026-09-19T21:19:39.5859558+08:00",
+      "ended_at": "2026-09-19T21:30:16.5259009+08:00",
+      "time_source": "调度侧时钟，包含排队等待",
+      "round": 1
+    },
+    {
+      "stage": "blind_review",
+      "started_at": "2026-09-19T21:19:39.5859558+08:00",
+      "ended_at": "2026-09-19T21:22:55.5809548+08:00",
+      "time_source": "调度侧时钟，包含排队等待",
+      "round": 1
+    },
+    {
+      "stage": "full_review",
+      "started_at": "2026-09-19T21:30:16.5259009+08:00",
+      "ended_at": "2026-09-19T21:35:02.6085163+08:00",
+      "time_source": "调度侧时钟，包含等待",
+      "round": 1
+    },
+    {
+      "stage": "adjudication",
+      "started_at": "2026-09-19T21:35:02.6085163+08:00",
+      "ended_at": "2026-09-19T21:44:01.4759089+08:00",
+      "time_source": "调度侧时钟，包含等待",
+      "round": 1
+    },
+    {
+      "stage": "repair",
+      "started_at": "2026-09-19T21:44:01.4759089+08:00",
+      "ended_at": "2026-09-19T21:57:09.1142928+08:00",
+      "time_source": "调度侧时钟，包含等待",
+      "round": 1
+    },
+    {
+      "stage": "targeted_recheck",
+      "started_at": "2026-09-19T21:57:09.1142928+08:00",
+      "ended_at": "2026-09-19T22:05:23.6235693+08:00",
+      "time_source": "调度侧时钟，包含等待",
+      "round": 1
+    },
+    {
+      "stage": "adjudication",
+      "started_at": "2026-09-19T22:05:23.6235693+08:00",
+      "ended_at": "2026-09-19T22:17:01.2283307+08:00",
+      "time_source": "调度侧时钟，包含等待",
+      "round": 2
+    },
+    {
+      "stage": "repair",
+      "started_at": "2026-09-19T22:17:01.2283307+08:00",
+      "ended_at": "2026-09-19T22:24:00.2338799+08:00",
+      "time_source": "调度侧时钟，包含等待",
+      "round": 2
+    },
+    {
+      "stage": "targeted_recheck",
+      "started_at": "2026-09-19T22:24:00.2338799+08:00",
+      "ended_at": "2026-09-19T22:29:08.8213577+08:00",
+      "time_source": "调度侧时钟，包含等待",
+      "round": 2
+    },
+    {
+      "stage": "closeout",
+      "started_at": "2026-09-19T22:29:08.8213577+08:00",
+      "ended_at": "2026-09-19T22:29:08.8213577+08:00",
+      "time_source": "调度侧状态归档时点",
+      "round": 2,
+      "blocked_reason": "13个未关闭验收条件并集；不入库"
+    }
+  ],
+  "cutoff": "2026-09-19",
+  "company": "耐克",
+  "repair_rounds": 2,
+  "gate_status": "proceed",
+  "frozen_draft": "writer/initial-freeze-v1.md",
+  "ended_at": "2026-09-19T22:29:08.8213577+08:00",
+  "watchlist_action": "not_written_not_synced_final_p1_open",
+  "final_status_path": "final-status.json",
+  "token_usage": null
+}

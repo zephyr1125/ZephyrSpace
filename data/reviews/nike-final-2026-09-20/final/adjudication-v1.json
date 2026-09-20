@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "run_id": "nike-final-2026-09-20",
+  "role": "triplet_adjudicator",
+  "round": 1,
+  "reopen_reason": null,
+  "scope": "本run首裁决；三份冻结全文、底稿与C001-C011全覆盖；按冻结原件裁定，未读取来源映射或原审核目录。仅本JSON为判断真源，由程序生成修复包。",
+  "evidence_cutoff": "2026-09-19",
+  "inputs": {
+    "candidates": "data/reviews/nike-final-2026-09-20/anonymous-v1/candidates.json",
+    "reports": ["data/reviews/nike-final-2026-09-20/final/deep.md", "data/reviews/nike-final-2026-09-20/final/management.md", "data/reviews/nike-final-2026-09-20/final/valuation.md"],
+    "workpaper": "data/reviews/nike-final-2026-09-20/final/workpaper-v1.json",
+    "evidence_index": "data/reviews/nike-final-2026-09-20/evidence/evidence-index.md"
+  },
+  "evidence_refs": {
+    "K": "财报/耐克/耐克FY2026_10-K.pdf；SEC accession 0000320187-26-000088；本文页码均为印刷页，PDF物理页=印刷页+4",
+    "P": "https://www.sec.gov/Archives/edgar/data/320187/000032018726000089/nke-20260715.htm；2026代理声明；直接核Class A/B董事选举、Swoosh持股、PSP、PSU及Section 16迟报。索引中的大PDF访问失败后改读同accession HTML，不使用失败作为缺证结论",
+    "G": "https://www.sec.gov/Archives/edgar/data/320187/000032018726000070/nke-20260616.htm；Item 5.02，直接核CFO过渡及报酬条款",
+    "rules": ["docs/three-report-economy-routing.md", "docs/three-report-evidence-contract.md", "docs/three-report-workpaper.md", "docs/three-report-closeout.md", "deep-prebuy-skill/SKILL.md：A至F评分表及D2/E4", "management-archive/SKILL.md：九、评分", "skills/valuation/SKILL.md：行业方法及模型独立性", "data/WATCHLIST_RULES.md：分层门槛、NONE及估值字段"]
+  },
+  "coverage": {
+    "deep": "全文已读；保留商业模式、完整周期、分部、财务与治理判断，定向纠正E4、D2理由、退款归因及末段旧状态。",
+    "management": "全文已读；核原件资本配置、人事及激励；七项主观评价均可用现有事实作判断，不因未来结果或人事动机未知撤成null。",
+    "valuation": "全文及全部公式输入已读；独立复算DCF三情景、SBC量级、退款比例与资本结构。DCF适用于非金融品牌企业，但现稿输入不完整；PE缺独立锚；撤回价格路线获准。",
+    "candidate_ids": ["C001", "C002", "C003", "C004", "C005", "C006", "C007", "C008", "C009", "C010", "C011"]
+  },
+  "issues": [
+    {
+      "id": "N01",
+      "candidate_ids": ["C001", "C003"],
+      "severity": "P1",
+      "decision": "valid",
+      "reason": "两个候选是同一SBC经济成本遗漏。K p.58的CFO已加回715百万SBC，p.77当年稀释增量仅1.2百万股，不能代表未来持续授予、归属及回购成本。三情景仅改变FCFE0和增长率，没有量化未来稀释，所谓已处理不成立。独立重算原DCF熊/基/牛为15.30/27.109694/42.406565，算术对而所有权口径错；(2184-715)/1481=0.991897美元/股，保持原基准假设得到18.168942，仅证明误差量级，不是批准的新估值。C003采用1483的示例亦不是必须采用的年度分母。",
+      "evidence_refs": ["K pp.58、75-77", "workpaper-v1.json valuation.models[fcfe_dcf]"],
+      "substantive_disagreement": "没有要求必须全扣当年SBC或把81.8百万反稀释奖励全部加分母；采纳遗漏结论，不把审核示例升级为最终模型。",
+      "action": "本轮选撤回路径：新底稿的有效models移除fcfe_dcf，撤回其全部三情景、敏感性及所有加权价格；正文五节保留方法适用性、原口径错误和未来正确建模要求，不保留其为有效诊断价格。原冻结v1继续留档即可，无需在新正文逐格复制作废表。删除三/四/五/九节中SBC已由稀释股数或情景消化、再次扣必然双扣的错误断言。无需本轮新增模型或预测未来股数。",
+      "score_valuation_impact": "公司和管理层不因作者模型错扣分；target_price、certainty、buy_price及weighted三情景撤为null，取消正式价格分区。",
+      "actual_impact": "60%权重主模型漏掉持续所有权成本，33.905817及25.666703美元均不可发布，即使改称诊断也不成立。",
+      "minimum_sufficient_evidence": "新底稿与三份新正文明确撤回DCF和全部依赖价格，并保留2184、715、1481及其口径说明；不要求补未来不可知授予事实。",
+      "acceptable_disposition": "withdrawn；公司质量门槛已否决，按NONE停止定价，不以撤回声称模型修好了。",
+      "acceptance": [
+        {"id": "N01-sbc", "condition": "解释CFO加回715与当年1.2百万稀释增量的差别，删除已处理未来SBC的错误声明，不将81.8直接全额加股数。"},
+        {"id": "N01-withdraw", "condition": "新底稿无有效DCF价格/矩阵；三报告无可用DCF三情景、加权目标价、买入价或价格区。旧数如为溯源出现，必须逐处明确已撤回、不可使用；快照和frontmatter必须null。"}
+      ]
+    },
+    {
+      "id": "N02",
+      "candidate_ids": ["C005", "C006"],
+      "severity": "P1",
+      "decision": "valid",
+      "reason": "15/18/21倍只是情景假设，当前35.51/2.10=16.9095倍本股静态PE不能证明独立市场锚。无同口径历史、可比或经营回报倍数推导。44.10美元算术正确不能解决依据缺口；反向复用18倍也不能补锚。",
+      "evidence_refs": ["valuation.md：六、八、九", "workpaper-v1.json valuation.models[pe_recovery]及reverse", "本run证据索引：可比样本unknown", "skills/valuation/SKILL.md：不同估值依据"],
+      "substantive_disagreement": "自主EPS预测本身并非错误；缺的是倍数独立依据。选择撤回而非继续补证，不能用调低确信度替代。",
+      "action": "有效models移除pe_recovery，删除两主模型已完成和成熟品牌独立市场锚已建立的声明；新估值报告保留正常化盈利倍数适用条件及冻结证据不足原因。可保留35.51除以15/18/21的条件反向表，明确这些倍数未经校准，不能据此断言市场未计入修复；weight固定0。",
+      "score_valuation_impact": "PE及综合价格撤回；公司/管理层评分不变；certainty=null，不能沿用0.55。",
+      "actual_impact": "40%权重缺依据，当前不存在两个获批有效模型。",
+      "minimum_sufficient_evidence": "有效模型列表清空、综合字段null、反向表为纯条件运算并取消修复已被低估的推断。无需另寻可比或新定价。",
+      "acceptable_disposition": "withdrawn；正文充分解释NONE停止估值，保留研究价值但不冒充双模型完成。",
+      "acceptance": [
+        {"id": "N02-anchor", "condition": "无独立市场锚已建立或双模型已完成声明；PE不再赋权，不能作为有效目标价输出。"},
+        {"id": "N02-reverse", "condition": "如保留反向验证，35.51/15=2.367333、/18=1.972778、/21=1.690952，标未经校准假设、权重0；不得从该表推断市场已低估或尚未计入修复。"}
+      ]
+    },
+    {
+      "id": "N03",
+      "candidate_ids": ["C004", "C007"],
+      "severity": "P1",
+      "decision": "valid",
+      "reason": "同稿正式点分与旧null/defer互斥。现有原件支持可判断的经营和管理层评分；不能因估值执行错或离任动机未知将18项全部撤回。批准公司分经N05上调至76.5、管理层68、合计144.5；最低B档需两项均70且合计150，实际双重不达标，A/S亦不满足。因此decision=reject，而非以研究失败推导不入。",
+      "evidence_refs": ["deep.md：评分表及最终结论", "management.md：二、三、九、十一", "K pp.30、45、53、57-58、74-77", "P：治理/薪酬/迟报", "G：Item5.02", "data/WATCHLIST_RULES.md：S/A/B/NONE", "docs/three-report-closeout.md"],
+      "substantive_disagreement": "采纳冲突存在；不采纳以保留旧null作为默认解决方式。评分是有据分析判断，无需公司原文直接宣告得分。",
+      "action": "三份新报告及底稿统一76.5/68/144.5、NONE/reject；删去本轮仍撤回D2/资本配置12/全部正式分的旧状态，历史状态仅放明确历史差异说明。估值报告至少100行且保留事实、方法、停止理由、退款/现金边界和再评条件；不以旧有效价格凑完整性。修复后仍须一次双路定向验收，不在作者稿中预称全部通过。",
+      "score_valuation_impact": "评分桥和门槛见parameters；正式价格三字段均null；不改公司页/索引/Watchlist，由主Agent按验收及其权限处理。",
+      "actual_impact": "旧段落会将可靠reject误读为defer，或错误将待修状态宣传完成。",
+      "minimum_sufficient_evidence": "新底稿、三报告所有参数快照、评分表、总结及frontmatter一致；逐ID关闭表和双路验收，不必重写未变事实章节。",
+      "acceptable_disposition": "corrected；通过撤回错误价格与完成局部修复，可收尾为reject/closed_with_uncertainty，明确未完成定价三件套，不能冒称verified_complete的双模型定价。",
+      "acceptance": [
+        {"id": "N03-score", "condition": "公司76.5、管理层68、组合144.5及NONE/reject在底稿、全文、表格、frontmatter一致；删除作为当前有效判断的旧null/defer和75.5/143.5。保留未受影响分项理由与原件引用。"},
+        {"id": "N03-status", "condition": "目标价、确信度、机械买入价均null；清楚说明质量门槛导致停止正式估值。最终decision与research_status分开；验收未完成时不宣称已通过，完成后可reject/closed_with_uncertainty，不因无价格保持execution_incomplete。"},
+        {"id": "N03-preserve", "condition": "新版本保持150/150/100行及原事实覆盖，只改裁决影响章节；repair关闭表完整保留本裁决全部P1验收ID，差异与上一冻结稿逐项声明，不重写无关评分或内容。"}
+      ]
+    },
+    {
+      "id": "N04",
+      "candidate_ids": ["C009"],
+      "severity": "P1",
+      "decision": "valid",
+      "reason": "直接核K p.30：确认成本收益986百万，北美965、Converse21，主要抵销FY2026已确认IEEPA关税；期末已收302、应收684，年后已收回绝大部分。K p.45明确应收增加由该退款、批发和收款时点共同驱动。684/2184=31.3187%，遗漏实质影响现金流弱化与恢复归因。不能把986全额当额外经营增长，也不能机械从全年利润扣986而不恢复对应关税成本。",
+      "evidence_refs": ["K p.30 Other Matters", "K p.45 Operations", "K p.58 CFO"],
+      "substantive_disagreement": "退款回收确定性已明显降低应收风险，但年后绝大部分不等于精确684已全部到账；不把一次性回款永久年金化。",
+      "action": "深度E2/E3及渠道经营段、管理层执行/危机段、估值正常化段补同一短桥：986=302+684、965+21=986；明确利润补偿与回款时点分离。历史FY2026 CFO/FCF保持2.868/2.184十亿美元，不将年后回款回写当年；不发布正常化FCFE点值。",
+      "score_valuation_impact": "E2=5不变（已报三年现金质量满足原档）；E3=2不变（一次性可辨且非量价双驱动最优档）；E5=2不变（年后收回绝大部分强化应收可收回性）；D2=3、管理层危机7及资本配置12不变：真实渠道修复未等于全面恢复，退款也不代表管理层创造持续收益。不将退款遗漏的作者错误转成公司扣分。",
+      "actual_impact": "防止错误把现金流下滑全归经营失败，也防止把退款计入永续增长；不改变NONE结论。",
+      "minimum_sufficient_evidence": "三报告出现准确桥、期别与非年金边界并明确评分不变原因；不用预测未来关税政策或补齐全部单项关税费用。",
+      "acceptable_disposition": "corrected且bounded；未披露精确年后到账金额保留未知，撤回正常化价格已隔离其估值影响。",
+      "acceptance": [
+        {"id": "N04-bridge", "condition": "列986确认、965/21归属、302已收、684期末应收及年后绝大部分回收；三报告口径一致，不写全部回收，不重复加现金。"},
+        {"id": "N04-attribution", "condition": "不机械扣986净利、不把684永久年金化；历史CFO/FCF不重写；E2/E3/E5、D2和管理层危机/资本配置分项给上述不变依据，修正纯经营归因。"}
+      ]
+    },
+    {
+      "id": "N05",
+      "candidate_ids": ["C008", "C010"],
+      "severity": "P1",
+      "decision": "partial",
+      "reason": "采纳D2伪50%和E4档位不匹配；不采纳必然撤分或必须保留E4=0.5。D2按三年MD&A执行记录为混合且部分兑现，3分可保留为审慎分析判断，不能把两项未到期承诺当分母。E4直接核K p.57：现金短投9027、融资债7942，其中长债5942；长债占74.8174%，流动资产24603/流动负债12547=1.96087，融资债/资产20.6769%；K p.46信用及流动性支持偿债宽裕。没有证据仅因常规经营承诺便降一般档。按原规则基准2，Capex同比59.0698%且未拆分扣0.5，最终1.5。因本裁决变更有效评分需跨报告验收，合并根因升P1；D2文字子项本身仍是P2。",
+      "evidence_refs": ["deep-prebuy-skill/SKILL.md：D2、E4评分及Capex例外", "K pp.30、45-46、57-58", "deep.md：D2承诺表和E4"],
+      "substantive_disagreement": "E4不选为维持旧总分而补写一般档的路径；未拆Capex只扣一次。D2的3分是有限证据下的判断，不宣称已证明50%。",
+      "action": "D2评分理由和正文删除约一半达标，改为连续三年方向与已观察结果的中等置信度判断，未到期承诺不判失败。E4 0.5→1.5，公司75.5→76.5，E维度15.5→16.5，组合143.5→144.5；重新生成对应评分表并联动正文。",
+      "score_valuation_impact": "公司净增1分，管理层不变；仍不满足70/150门槛。即使D2再给满5，公司78.5+68=146.5，仍不合格；这只是门槛敏感性，不是另一个正式分数。",
+      "actual_impact": "E4错误压低公司分1分，但不改变资格结论；不能以结论不变放任错误评分桥。",
+      "minimum_sufficient_evidence": "E4四个原始余额及长债比/流动比计算、2-0.5评分桥；D2定性理由及未到期边界。无需追索未公开Capex拆解，沿用规则明确扣分。",
+      "acceptable_disposition": "corrected；D2点分保留而撤伪精确达成率，E4按原档重评。",
+      "acceptance": [
+        {"id": "N05-d2", "condition": "D2=3保留；不再出现由一部分兑现两未到期算50%的理由；标中等置信度、间接执行验证和未到期不判失败。"},
+        {"id": "N05-e4", "condition": "E4明确2-0.5=1.5，原余额与比例可复算，未拆分只扣一次；E维度16.5、公司76.5、组合144.5全部联动且门槛敏感性与正式分分开。"}
+      ]
+    },
+    {
+      "id": "N06",
+      "candidate_ids": ["C002", "C011"],
+      "severity": "P2",
+      "decision": "suggestion",
+      "reason": "两项披露遗漏均核实，但不独立证明估值或评分额外错误：经营承诺是现金边界补充，税收优惠是远期未知提示。本轮相关估值撤回，不能要求为了终值继续建模。将它们并为停止估值后的风险边界补充，不列无限补证条件。",
+      "evidence_refs": ["K p.46经营承诺", "K p.89 Note19供应商融资", "K p.74税收优惠"],
+      "substantive_disagreement": "认可量化披露建议，不把承诺全额当债务扣减；不机械扣254百万税收利益，也不要求证明2031政策。",
+      "action": "估值现金边界或深度风险段简列代言15.5/12月内1.7、产品采购4.9/4.7、其他采购2.4/1.6十亿美元；供应商融资确认义务1.1已在应付账款内，不重复扣债。列税收假期2031到期、有条件延长或提前终止，FY2026利益254百万且未考虑其他美国间接税规定；未来若重新DCF须重新评估。",
+      "score_valuation_impact": "不变；常规承诺没有推翻长债与偿债事实，不为维持E4旧分附会。",
+      "acceptance": [
+        {"id": "N06-boundary", "condition": "可选：补量级与去重边界、税惠到期条件；未补作为P2跟踪，不阻塞P1关闭，不扩成新轮。"}
+      ]
+    }
+  ],
+  "parameters": {
+    "status": "本裁决批准评分判断与撤回路线；报告实施和双路验收待完成，不提前宣称已验收",
+    "company_score": 76.5,
+    "management_score": 68,
+    "combined_score": 144.5,
+    "company_items": {"A1":3,"A2":3,"A3":3.5,"B0":2,"B1":3.5,"B2":2,"B3":4,"B4":2.5,"C1":6,"C2":3,"C3+C4":7,"D1":3,"D2":3,"D3":1,"D5":2,"E1":3.5,"E2":5,"E3":2,"E4":1.5,"E5":2,"E5.5":2.5,"F1":4,"F2":4,"F2.5":1.5,"F3":2},
+    "management_items": {"诚信与透明度":16,"资本配置能力":12,"战略稳定性":10,"对股东友好度":11,"危机处理能力":7,"组织与人才能力":8,"表达清晰度与认知质量":4},
+    "score_bridges": {
+      "company": "A9.5+B14+C16+D9+E16.5+F11.5=76.5；上一冻结75.5仅E4增加1。原39.5保留分项+本轮恢复36+E4纠正1=76.5；恢复项是有据分析判断，非模型错误补偿。",
+      "management": "16+12+10+11+7+8+4=68；七项均保留原候选点分。资本配置12/25体现高额历史回购效果、持续SBC与转型回报尚未兑现，同时承认暂停回购、持续分红的正面纪律；未知人事动机不扣分。诚信16与配置12均未触发各自40%红旗线8/10。",
+      "qualification": "B要求公司≥70、管理层≥70、合计≥150；76.5满足公司单项，68和144.5不满足其余两项。A要求均≥76且合计≥160，S要求均≥82且合计≥170等，均不满足。结论NONE来自公司研究判断，不来自缺模型。"
+    },
+    "score_judgment_basis": "保留品牌规模与多元结构、成熟可选消费压力、战略渠道纠偏、现金转化、审计与治理各项不同证据；边界项允许依原评分维度作审慎判断，但不得声称点分为公司已披露事实。估值模型错误不改变经营评分。退款没有把整体经营证据从部分兑现变成成功，故管理层与D2不联动上调。",
+    "watchlistLevel": "NONE",
+    "currency": "USD",
+    "valuation_status": "stopped_quality_gate_after_full_research",
+    "suitable_model": "成熟非金融品牌公司适合经SBC与营运资金正常化的FCFE/Ke或FCFF/WACC，及有独立历史/可比依据的盈利倍数；本次不批准具体模型价格，不用金融或资源模板。",
+    "target_price": null,
+    "certainty": null,
+    "valuation_certainty": null,
+    "buy_price": null,
+    "weighted": {"bear":null,"base":null,"bull":null},
+    "models": [],
+    "reverse_weight": 0,
+    "null_reason": "公司/管理层评分已经充分否决所有收录档，data/WATCHLIST_RULES.md明确允许NONE停止正式估值。原DCF漏持续SBC、PE无独立锚，撤回全部依赖价格；不以null代表公司分未知或研究必然执行失败，不计算机械买入价或正式价格分区。",
+    "withdrawn_fields": ["DCF及其三情景/敏感性有效估值", "PE独立市场锚及40%权重", "综合21.48/33.905817/49.383939", "certainty=0.55", "buy_price=25.666703", "基于上述数值的全部价格区和高低估判断"],
+    "approved_facts": {"fy2026_cfo_usd_million":2868,"fy2026_capex_usd_million":684,"simple_fcf_usd_million":2184,"sbc_usd_million":715,"diluted_weighted_shares_million":1481,"ending_shares_million":1483,"tariff_benefit_usd_million":986,"tariff_received_by_year_end_usd_million":302,"tariff_receivable_year_end_usd_million":684,"tariff_post_year_end_receipt":"绝大部分，精确金额未披露"},
+    "unknowns_retained": ["CFO生效日两原件相差一天，不影响已发生更替", "未核全部人事动机和逐笔内部交易，不据此判失信或异常集中离任", "比利时海关争议与税务事项终局金额未知，13亿美元总担保不等于索赔额", "未来SBC/回购/股数和2031税惠政策未知", "独立PE锚未建立；不强凑第二模型"],
+    "counterevidence_and_next_trigger": "FY2027及后续已披露结果若显示全价销售、毛利率、库存与可持续现金流修复，并且资本配置/执行有实质改善，可重评七项管理层及公司分；达到现有门槛后再以完整SBC和正常化桥、独立估值锚启动定价。股价下跌本身不解除质量门槛；重大监管/税务/海关新原件另触发风险重评。"
+  },
+  "disposition": {
+    "decision": "reject",
+    "research_status_at_adjudication": "execution_incomplete",
+    "research_status_after_required_acceptance": "closed_with_uncertainty",
+    "answer": "耐克仍有较强品牌与经营基础，公司质量76.5、管理层68、合计144.5，不满足现行收录门槛，结论为NONE；本轮停止正式估值并撤回错误价格。完成本包定向修复和双路验收后，结论可明确收尾，保留不可知事实，但不称已完成双模型定价三件套。",
+    "status_condition": "当前已知错误尚待作者修复，所以当前执行状态未完成；N01-N05验收后，错误价格已撤回、可得事实已评估，允许closed_with_uncertainty，不因没有价格要求继续研究。若仍有已知错误未撤回或验收未执行，保持execution_incomplete并列具体ID。",
+    "repair_rounds_authorized": 1,
+    "exception": "仅SOP规定未关闭P0/P1、新增重大错误或实质新原证据允许一次有界复裁；最后分歧仅基于冻结材料作一次终局处置核对，不补证、不建模、不派第三轮修复。",
+    "write_boundary": "裁决员仅写本JSON；主Agent程序生成唯一修复包，作者只改映射的新版本报告与底稿；不修改冻结v1，不由裁决员改公司页、索引、Watchlist，不提交或推送。"
+  }
+}

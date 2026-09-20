@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "scores": {
+    "company": {
+      "total": 72,
+      "items": [
+        {"id":"A1","score":3,"rule_ref":"深度核心/A1","reason":"创始人运动员背景与产品创新、品牌营销结合，形成全球先发品牌基因。","evidence_refs":["NKE-G-002；S001 FY2026 10-K Item 1 pp.3-5"]},
+        {"id":"A2","score":3,"rule_ref":"深度核心/A2","reason":"控制权长期稳定；双层股权保持Knight家族影响力，但降低B类股东董事选举权。","evidence_refs":["NKE-G-009；NKE-G-017"]},
+        {"id":"A3","score":3.5,"rule_ref":"深度核心/A3","reason":"主业集中、无跨界并购主导迹象；历史回购规模大，但高价回购与当前股价下跌削弱资本运作质量。","evidence_refs":["NKE-F-015；S001 Item 5 HTML L809-812"]},
+        {"id":"B0","score":2,"rule_ref":"深度核心/B0","reason":"从跑鞋创新与专业运动员连接起步，演化为轻资产合同制造、品牌和渠道驱动模式。","evidence_refs":["NKE-G-002；S001 Item 1 HTML L217-260"]},
+        {"id":"B1","score":3,"rule_ref":"深度核心/B1","reason":"鞋类、服装、装备及Converse形成产品组合，地域全球化；鞋类与NIKE品牌集中度仍高。","evidence_refs":["S001 FY2026 10-K Note 19 segment disclosure；HTML L979-1040"]},
+        {"id":"B2","score":2,"rule_ref":"深度核心/B2","reason":"品牌复购和规模效应较强，但运动鞋服属于可选消费，批发与直营流量均受需求波动。","evidence_refs":["NKE-G-002；S001 MD&A HTML L843-856"]},
+        {"id":"B3","score":5,"rule_ref":"深度核心/B3","reason":"全球品牌、运动员资产和产品创新构成强定价基础；FY2024-FY2026利润与库存压力显示定价权并非无条件。","evidence_refs":["NKE-F-011；NKE-F-012；S001 Risk Factors"]},
+        {"id":"B4","score":2.5,"rule_ref":"深度核心/B4","reason":"行业长期需求存在但成熟、竞争激烈；FY2024-FY2026收入由51.362降至46.398十亿美元，复苏仍需验证。","evidence_refs":["NKE-F-011"]},
+        {"id":"C1","score":6,"rule_ref":"深度核心/C1","reason":"公司在10-K中称其为全球最大运动鞋服销售商，仍属绝对第一梯队。","evidence_refs":["S001 MD&A HTML L843-847"]},
+        {"id":"C2","score":3,"rule_ref":"深度核心/C2","reason":"合同制造与全球采购提供弹性，品牌对消费者有议价力；供应链集中、关税与批发渠道仍制约利润率。","evidence_refs":["NKE-G-002；S001 Risk Factors HTML L702-710"]},
+        {"id":"C3+C4","score":7,"rule_ref":"深度核心/C3+C4","reason":"品牌、规模、运动员网络、研发与渠道构成四星级护城河；低切换成本与Adidas、On、Hoka等竞争限制满分。","evidence_refs":["NKE-G-002；S001 Competition and Products sections"]},
+        {"id":"D1","score":3,"rule_ref":"深度核心/D1","reason":"长期围绕运动、创新和消费者连接，FY2026重新强调Win Now；DTC偏置后又修复批发，属可解释的渠道调整。","evidence_refs":["S001 MD&A HTML L843-847；NKE-F-011"]},
+        {"id":"D2","score":2.5,"rule_ref":"深度核心/D2","reason":"FY2024高位后FY2025利润显著下降，FY2026收入仅持平且净利继续下降；转型目标兑现不完整。","evidence_refs":["NKE-F-011；V3-003"],"original_statement_found":true,"strategy_drift":false},
+        {"id":"D3","score":1,"rule_ref":"深度核心/D3","reason":"可选消费疲弱、关税、汇率、中国市场和新品牌竞争构成明显外部逆风。","evidence_refs":["S001 Risk Factors；S001 MD&A"]},
+        {"id":"D5","score":1.5,"rule_ref":"深度核心/D5","reason":"CEO回归与COO、CFO重组带来修复能力，也反映组织尚在重置；连续执行证据不足。","evidence_refs":["NKE-G-008；V3-002"]},
+        {"id":"E1","score":3,"rule_ref":"深度核心/E1","reason":"品牌轻资产属性支持较高回报，但回购缩减权益及利润波动使ROE质量不能按纯经营驱动满分。","evidence_refs":["NKE-F-011；NKE-F-012；NKE-F-015"]},
+        {"id":"E2","score":3,"rule_ref":"深度核心/E2","reason":"FY2020-FY2026累计现金转化总体健康，但FY2026 CFO降至2.868十亿美元、低于净利3.108十亿美元，FCF仅2.184十亿美元。","evidence_refs":["NKE-F-010；NKE-F-011；NKE-F-020"]},
+        {"id":"E3","score":1.5,"rule_ref":"深度核心/E3","reason":"七年收入CAGR为低个位数且近两年利润明显回落，增长质量处于修复期。","evidence_refs":["NKE-F-010；NKE-F-011；V3-001"]},
+        {"id":"E4","score":1,"rule_ref":"深度核心/E4","reason":"现金短投9.027十亿美元覆盖7.942十亿美元有息债务，但另有3.091十亿美元租赁负债。","evidence_refs":["NKE-F-012；NKE-F-021"]},
+        {"id":"E5","score":2,"rule_ref":"深度核心/E5","reason":"PwC对报表与ICFR均出具无保留意见；库存7.501十亿美元仍需持续观察。","evidence_refs":["NKE-G-005；NKE-F-012"]},
+        {"id":"E5.5","score":2.5,"rule_ref":"深度核心/E5.5","reason":"审计与内控结论干净，关键估计有披露；证券诉讼和估计敏感性保留但未见重大会计异常。","evidence_refs":["NKE-G-005；NKE-L-023；S005 pp.52-54"]},
+        {"id":"F1","score":4,"rule_ref":"深度核心/F1","reason":"内部晋升CEO与长期任职团队有连续性；CFO交接成本较高但8-K明确无经营政策分歧。","evidence_refs":["V3-002；S001 executive officers"]},
+        {"id":"F2","score":4,"rule_ref":"深度核心/F2","reason":"持续分红、回购和高比例绩效薪酬对齐股东；双层股权与未逐笔核完内部交易限制满分。","evidence_refs":["NKE-F-015；NKE-G-022；V3-003；V3-004"]},
+        {"id":"F2.5","score":1,"rule_ref":"深度核心/F2.5","reason":"FY2026暂停回购并保留现金应对转型具有审慎性，但历史高价回购、SBC和高额CFO交接补偿降低效率。","evidence_refs":["NKE-F-014；NKE-F-015；V3-002"]},
+        {"id":"F3","score":2,"rule_ref":"深度核心/F3","reason":"独立委员会审查关联交易且金额较小；家族控制、亲属雇佣及一次Section16迟报构成治理瑕疵。","evidence_refs":["NKE-G-017；NKE-G-018；V3-004"]}
+      ]
+    },
+    "management": {
+      "total": 65,
+      "items": [
+        {"id":"诚信与透明度","score":15,"rule_ref":"管理层核心/九","reason":"官方披露完整且审计干净，CFO交接明确否认分歧；诉讼与内部交易仍有原件缺口。","evidence_refs":["NKE-G-005；NKE-G-006；V3-002；V3-004"]},
+        {"id":"资本配置能力","score":13,"rule_ref":"管理层核心/九","reason":"分红连续且暂停回购保护现金，但历史回购成本高、SBC显著、转型回报尚未兑现。","evidence_refs":["NKE-F-014；NKE-F-015；NKE-F-020"]},
+        {"id":"战略稳定性","score":10,"rule_ref":"管理层核心/九","reason":"运动与创新主线稳定，但DTC偏置后重新修复批发关系，执行路径发生较大调整。","evidence_refs":["S001 MD&A HTML L843-856；NKE-F-011"]},
+        {"id":"对股东友好度","score":11,"rule_ref":"管理层核心/九","reason":"FY2026分红2.407十亿美元且有长期回购计划；双层股权削弱B类股东治理权。","evidence_refs":["NKE-F-015；NKE-G-017"]},
+        {"id":"危机处理能力","score":6,"rule_ref":"管理层核心/九","reason":"面对品牌和渠道修复已更换CEO并调整团队，但FY2026财务结果尚未证明转折。","evidence_refs":["NKE-F-011；V3-002"]},
+        {"id":"组织与人才能力","score":7,"rule_ref":"管理层核心/九","reason":"核心高管多为长期内部人才，继任CFO具大型公司经验；高额补偿与多次岗位调整显示稳定性成本。","evidence_refs":["S001 executive officers；V3-002；V3-003"]},
+        {"id":"表达清晰度与认知质量","score":3,"rule_ref":"管理层核心/九","reason":"10-K与代理声明能量化风险及绩效，但连续三年可直接核验的定量经营承诺有限。","evidence_refs":["S001 MD&A；NKE-G-022；V3-003"]}
+      ]
+    }
+  },
+  "valuation": {
+    "currency":"USD",
+    "models":[
+      {
+        "id":"fcfe_dcf","weight":0.6,"basis":"以标准化股东自由现金流为核心，显式预测五年并用永续增长终值；净现金单列。","shared_assumptions":"与PE模型共享品牌复苏与利润正常化方向，但DCF独立依赖现金转化、资本开支和折现率。","output_currency":"USD","output_unit":"per_share",
+        "formula":"fcf0*(1+g)/(1+ke)+fcf0*(1+g)**2/(1+ke)**2+fcf0*(1+g)**3/(1+ke)**3+fcf0*(1+g)**4/(1+ke)**4+fcf0*(1+g)**5/(1+ke)**5+fcf0*(1+g)**5*(1+tg)/(ke-tg)/(1+ke)**5+net_cash",
+        "scenarios":{
+          "bear":{"inputs":{"fcf0":1.9,"g":0.01,"ke":0.115,"tg":0.01,"net_cash":0.731},"input_meta":{"fcf0":{"unit":"USD/share normalized FCFE","date":"FY2026 base","kind":"derived","evidence_refs":["NKE-F-011;NKE-F-020"]},"g":{"unit":"annual rate","date":"FY2027-FY2031","kind":"assumption","evidence_refs":["NKE-F-010;NKE-F-011"]},"ke":{"unit":"annual rate","date":"2026-09-19","kind":"assumption","evidence_refs":["NKE risk/market inputs"]},"tg":{"unit":"annual rate","date":"terminal after FY2031","kind":"assumption","evidence_refs":["mature global brand assumption"]},"net_cash":{"unit":"USD/share","date":"2026-05-31","kind":"derived","evidence_refs":["NKE-F-012;NKE-F-021"]}},"value":19.00719047619048},
+          "base":{"inputs":{"fcf0":2.3,"g":0.05,"ke":0.095,"tg":0.025,"net_cash":0.731},"input_meta":{"fcf0":{"unit":"USD/share normalized FCFE","date":"FY2026 base","kind":"derived","evidence_refs":["NKE-F-011;NKE-F-020"]},"g":{"unit":"annual rate","date":"FY2027-FY2031","kind":"assumption","evidence_refs":["NKE-F-010;NKE-F-011"]},"ke":{"unit":"annual rate","date":"2026-09-19","kind":"assumption","evidence_refs":["NKE risk/market inputs"]},"tg":{"unit":"annual rate","date":"terminal after FY2031","kind":"assumption","evidence_refs":["mature global brand assumption"]},"net_cash":{"unit":"USD/share","date":"2026-05-31","kind":"derived","evidence_refs":["NKE-F-012;NKE-F-021"]}},"value":38.19273106285},
+          "bull":{"inputs":{"fcf0":2.7,"g":0.08,"ke":0.085,"tg":0.03,"net_cash":0.731},"input_meta":{"fcf0":{"unit":"USD/share normalized FCFE","date":"FY2026 base","kind":"derived","evidence_refs":["NKE-F-011;NKE-F-020"]},"g":{"unit":"annual rate","date":"FY2027-FY2031","kind":"assumption","evidence_refs":["NKE-F-010;NKE-F-011"]},"ke":{"unit":"annual rate","date":"2026-09-19","kind":"assumption","evidence_refs":["NKE risk/market inputs"]},"tg":{"unit":"annual rate","date":"terminal after FY2031","kind":"assumption","evidence_refs":["mature global brand assumption"]},"net_cash":{"unit":"USD/share","date":"2026-05-31","kind":"derived","evidence_refs":["NKE-F-012;NKE-F-021"]}},"value":63.45477099931384}
+        },
+        "sensitivity":{"x":"ke","y":"tg","x_values":[0.085,0.095,0.105],"y_values":[0.015,0.025,0.035],"values":[[39.471807193339,34.546620551991,30.718525741133],[44.51500599445,38.19273106285,33.453118899125],[51.575484316004,43.054211743995,36.969024387971]]}
+      },
+      {
+        "id":"pe_recovery","weight":0.4,"basis":"以FY2027-FY2028正常化EPS与成熟全球消费品牌估值倍数为市场锚。","shared_assumptions":"与DCF共享盈利复苏方向，但倍数由资本市场对成熟品牌的风险与成长定价提供不同依据。","output_currency":"USD","output_unit":"per_share","formula":"eps*pe",
+        "scenarios":{
+          "bear":{"inputs":{"eps":2.0,"pe":17},"input_meta":{"eps":{"unit":"USD/share","date":"FY2027 normalized","kind":"forecast","evidence_refs":["NKE-F-011;NKE-F-013"]},"pe":{"unit":"x","date":"2026-09-19 valuation","kind":"assumption","evidence_refs":["mature discretionary brand range"]}},"value":34},
+          "base":{"inputs":{"eps":2.5,"pe":20},"input_meta":{"eps":{"unit":"USD/share","date":"FY2027 normalized","kind":"forecast","evidence_refs":["NKE-F-011;NKE-F-013"]},"pe":{"unit":"x","date":"2026-09-19 valuation","kind":"assumption","evidence_refs":["mature discretionary brand range"]}},"value":50},
+          "bull":{"inputs":{"eps":3.0,"pe":24},"input_meta":{"eps":{"unit":"USD/share","date":"FY2027 normalized","kind":"forecast","evidence_refs":["NKE-F-011;NKE-F-013"]},"pe":{"unit":"x","date":"2026-09-19 valuation","kind":"assumption","evidence_refs":["mature discretionary brand range"]}},"value":72}
+        },
+        "sensitivity":{"x":"pe","y":"eps","x_values":[18,20,22],"y_values":[2.2,2.5,2.8],"values":[[39.6,44,48.4],[45,50,55],[50.4,56,61.6]]}
+      }
+    ],
+    "weighted":{"bear":25.004314285714287,"base":42.91563863771,"bull":66.8728625995883},
+    "target_price":42.91563863771,
+    "certainty":0.55,
+    "certainty_reason":"品牌与资产负债表可核，但收入修复、利润率、关税、中国需求和管理层重置仍造成宽估值区间；两模型基准差约31%。",
+    "buy_price":32.48713844874648,
+    "reverse":{"weight":0,"variable":"implied_pe","implied_value":16.909523809523808,"formula":"eps*implied_pe","inputs":{"eps":2.1,"implied_pe":16.909523809523808},"market_price":35.51,"assumptions":"以FY2026稀释EPS约2.10美元代回，求当前正式收盘价隐含的静态PE；仅作反向验证，不参与合理价。","evidence_refs":["NKE-G-004;NKE-F-013;V3-005"]}
+  },
+  "bridges":[
+    {"id":"net_cash_bridge","date":"2026-05-31","unit":"USD billions","scope":"NIKE consolidated; excludes operating leases from financing debt bridge","start":7.563,"items":[{"economic_id":"short_term_investments","signed_value":1.464,"evidence_refs":["NKE-F-012"]},{"economic_id":"interest_bearing_debt","signed_value":-7.942,"evidence_refs":["NKE-F-021"]}],"result":1.085},
+    {"id":"reported_fcfe_bridge","date":"FY2026","unit":"USD billions","scope":"NIKE consolidated cash flow; simplified CFO minus cash PP&E additions","start":2.868,"items":[{"economic_id":"cash_ppe_additions","signed_value":-0.684,"evidence_refs":["NKE-F-020"]}],"result":2.184},
+    {"id":"shareholder_distribution_after_sbc","date":"FY2026","unit":"USD billions","scope":"dividends plus buybacks less SBC economic cost; analytical bridge, not GAAP cash flow","start":0,"items":[{"economic_id":"dividends","signed_value":2.407,"evidence_refs":["NKE-F-015"]},{"economic_id":"repurchases","signed_value":0.146,"evidence_refs":["NKE-F-015"]},{"economic_id":"stock_compensation","signed_value":-0.715,"evidence_refs":["NKE-F-014"]}],"result":1.838}
+  ],
+  "reports":{"deep":"深度分析/耐克 深度分析 72 2026-09-19.md","management":"管理层档案/耐克 管理层档案 65 2026-09-19.md","valuation":"估值分析/耐克 估值分析 2026-09-19.md"}
+}

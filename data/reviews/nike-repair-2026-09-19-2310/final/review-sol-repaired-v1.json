@@ -1,0 +1,195 @@
+{
+  "schema_version": 1,
+  "role": "triplet_review_sol",
+  "review_type": "single_repair_targeted_recheck",
+  "cutoff": "2026-09-19",
+  "reviewed_freeze": "data/reviews/nike-repair-2026-09-19-2310/final/frozen-manifest-repaired-v1.json",
+  "decision_recommendation": "defer",
+  "research_status_recommendation": "execution_incomplete",
+  "recommendation_reason": "正式价格已正确撤回为null，但G07、G08、G09A、G13及G02-recalc仍有实质验收失败；当前候选评分上界未被规则与证据充分证成，不能据此作reject，也不能宣称完整研究通过。",
+  "coverage": {
+    "reports": {
+      "deep": "全文333行已覆盖，含32项公司评分、七年经营表、治理、反证和来源。",
+      "management": "全文328行已覆盖，含人物时间线、七维评分、资本配置、激励及合规。",
+      "valuation": "全文142行已覆盖，重点核正式参数撤回、股数/SBC/现金税/承诺边界及残留模型表述。"
+    },
+    "acceptance_basis": [
+      "repair-adjudication-v1.json",
+      "repair-package-v1.md"
+    ],
+    "supporting_materials": [
+      "final/workpaper-repaired-v1.json",
+      "final/score-review-v1.json",
+      "final/repair-closeout-v1.json",
+      "final/mechanical-check-scope-v1.md",
+      "final/triplet-check-repaired-v1.json",
+      "evidence/facts-correction-v2.md",
+      "evidence/repair-evidence-map-v2.md",
+      "财报/耐克/耐克FY2026_10-K.pdf"
+    ],
+    "independent_recalculations": {
+      "company_candidate_sum": "逐项加总=72.5至74.5；只确认算术，不批准分项或上界。",
+      "management_candidate_sum": "逐项加总=68至70；只确认算术，不批准分项或上界。",
+      "fy2026_dupont": "平均资产=(38,410+36,579)/2=37,494.5；平均权益=(14,865+13,213)/2=14,039；净利率=3,108/46,398=6.698565%；资产周转率=46,398/37,494.5=1.237461；权益乘数=37,494.5/14,039=2.670739；ROE=22.138329%，与3,108/14,039一致。",
+      "fy2026_sbc": "278+58+379=715百万美元；历史费用成立，但不能推出FY2027授予或加权股数。",
+      "fy2026_fcf": "2.868-0.684=2.184十亿美元。",
+      "static_pe": "35.51/2.10=16.91倍，仅为静态快照，不是独立合理价值锚。",
+      "dividend_yield": "0.41×4/35.51=4.62%，属于维持季度股息的年化示意。"
+    },
+    "decisive_original_checks": [
+      "10-K印刷p.57/PDF61确认FY2026总资产38,410、股东权益14,865百万美元；facts.json中的37,631为展示输入错误，已列比率实际按38,410计算。",
+      "10-K印刷pp.55、58确认FY2024至FY2026收入、净利和OCF；印刷pp.75至77确认SBC及稀释股数。",
+      "10-K印刷p.45、pp.58至59确认回购1.8百万股/122.4百万美元与现金流146百万美元口径不同。",
+      "10-K Note 16印刷p.88确认1.3十亿美元担保/信用证及比利时海关索赔损失区间无法估计。"
+    ],
+    "previous_version_preservation": "已对baseline-v1与repaired-v1三稿及底稿差异做定向比较；估值大段删除符合撤回路径，但公司A1底稿来源字段发生未声明变化，且三年分部表与完整杜邦表未在正文保留。",
+    "blind_review_changes": [
+      "BR-SOL-02/03/04/05/06对应的股数、SBC、回购、现金债务和税款风险已通过撤回正式价格大体隔离。",
+      "BR-SOL-07评分未知风险仍未关闭：A3、F1及组织人才区间缺少规则化边界，其他管理层候选点值也不足以构成已批准上界。",
+      "BR-SOL-08人物边界有改善，但Donahoe/Hill行仍缺验收条件要求的具体日期和精确原件定位。",
+      "BR-SOL-09诉讼与或有事项已进入风险披露且未被升级为确定损失。",
+      "BR-SOL-10防回退仍有缺口：Note 19错误定位残留在结构化产物，分部与杜邦正文覆盖不足，A1变更未声明。"
+    ],
+    "uncovered": [
+      "未重做无关全文研究，未新查截止日后资料。",
+      "未核Form 4/144逐笔交易、法院案卷、EEOC原件或独立同行PE样本；报告已将其保持unknown或撤回依赖价格。",
+      "未读取另一复核员文件或意见。"
+    ]
+  },
+  "acceptance_checks": [
+    {
+      "id": "G02-sbc",
+      "status": "pass",
+      "evidence": "valuation.md第82至83行分列期末股数、715百万美元SBC、155百万美元期权行权现金和110百万美元员工净发行权益；第34至38行撤回正式模型，第119行声明未来SBC与正常化FCFE不再有效。",
+      "impact": "采用允许的撤回路径后，不再需要用未披露FY2027授予强行证明无双扣；正式每股模型保持null。"
+    },
+    {
+      "id": "G02-equity",
+      "status": "pass",
+      "evidence": "valuation.md第84至91行分列现金短投、融资债、租赁负债、承诺与回购未知，并撤回超额现金加项及每股现金流模型。",
+      "impact": "回购资金、运营现金与分母之间的未闭合关系未继续进入正式价格。"
+    },
+    {
+      "id": "G02-recalc",
+      "status": "fail",
+      "evidence": "valuation.md第34至38行和第119行称DCF及正常化FCFE已撤回，但第74行仍以现在时写明DCF采用1.9/2.3/2.7美元正常化FCFE三档；同一冻结稿对该输入的有效状态自相矛盾。",
+      "impact": "旧模型输入仍可被读作当前有效诊断，撤回边界未完全清除；见finding SOL-R1。"
+    },
+    {
+      "id": "G03-eps",
+      "status": "pass",
+      "evidence": "valuation.md第34至38、119至129行撤回FY2027 EPS及依赖价格，并把地区/渠道经营桥和正确加权股数列为重评条件。",
+      "impact": "未用未闭合FY2027预测继续给正式价格。"
+    },
+    {
+      "id": "G03-anchor",
+      "status": "pass",
+      "evidence": "valuation.md第36至38、125至129行明确独立PE锚不可得并撤回PE正式权重；16.91倍只列静态快照。",
+      "impact": "当前价反算倍数未充作第二合理价值。"
+    },
+    {
+      "id": "G03-completion",
+      "status": "pass",
+      "evidence": "三稿frontmatter及参数表均将target_price、certainty、buy_price置null；workpaper正式主模型为空，旧价格明确不批准。",
+      "impact": "未以单模型或机械折扣冒充完整定价；decision与research_status仍需分开。"
+    },
+    {
+      "id": "G05-tax",
+      "status": "pass",
+      "evidence": "valuation.md第88至91、117至121行将268和260百万美元保留为历史特殊付款，742百万美元只作历史剔除尺度，FY2027现金税保持unknown并撤回现金流模型。",
+      "impact": "特殊税款未被永久加回或伪装成精确预测。"
+    },
+    {
+      "id": "G07-score",
+      "status": "fail",
+      "evidence": "deep.md第49、85及workpaper A3将A3设为3.5至4，理由只是更长历史融资用途覆盖不足；核心规则仅给清洁=4、轻微瑕疵=2、明显异常=0，现有材料没有支持3.5下界的已核瑕疵或边界计算。裁决允许在待定时仅用4作资格数学上限。",
+      "impact": "3.5下界把证据未知机械折算成0.5分，A3区间不成立；见finding SOL-R2。"
+    },
+    {
+      "id": "G08-people",
+      "status": "fail",
+      "evidence": "management.md第65至73行虽正确区分任命/在任/离任并保留unknown，但Donahoe/Hill行只写“2024年；公司披露/10-K”，未给具体验收日期和可回看的原件定位；其余未知人员也没有形成完整五年核验覆盖。",
+      "impact": "人物边界方向正确，但尚未满足每行日期、身份、接任来源的原条件；不能据此批准完整五年离任模式。"
+    },
+    {
+      "id": "G08-score",
+      "status": "fail",
+      "evidence": "deep.md第68行F1给3.5至5，management.md第244行组织人才给8至10；两者均未把已核事实按规则拆成可验证的下界。组织人才也未分别给稳定性、人才保留、激励三部分的分值或边界。",
+      "impact": "未知未被当负面事实是正确的，但任意区间不能替代规则化评分；管理层70与公司74.5的所谓上界尚未整体证成，见finding SOL-R2。"
+    },
+    {
+      "id": "G09-segments",
+      "status": "fail",
+      "evidence": "deep.md第127至137行仅写FY2026公司总收入、批发/直营及定性地区结构；正文没有保留NKE-R-003已核FY2024至FY2026各地区、Converse、GBD、Corporate与合计绝对额。结构化底稿和score-review的B1来源又残留错误Note 19定位。",
+      "impact": "正确方向虽未发现反转，但原条件要求的三年分部/合计防回退未完成；见finding SOL-R3。"
+    },
+    {
+      "id": "G09-commitments",
+      "status": "pass",
+      "evidence": "valuation.md第87行把1.7/4.7/1.6十亿美元分别映射到采购的存货/应付及成本、代言期间费用、Capex，并说明不能在经营预测后全额重复扣除；第91、125至129行撤回超额现金和依赖价格。",
+      "impact": "未来覆盖量保持unknown，未重复扣现金。"
+    },
+    {
+      "id": "G13-single-source",
+      "status": "fail",
+      "evidence": "一是workpaper第77行和score-review第103行仍把B1指向已知错误的Note 19；二是deep正文缺三年分部表及核心模块强制的完整杜邦表，资产更正和正确比率只在证据增量/结构化产物；三是原生check明确报company/A1来源变化未映射，scope却笼统归为schema差异；四是多项候选区间缺评分规则边界。",
+      "impact": "单一来源、内容防回退、变更声明和32项事实到规则到点值均未全部成立；见findings SOL-R2至SOL-R5。"
+    }
+  ],
+  "findings": [
+    {
+      "severity": "P1",
+      "location": "G02-recalc；drafts/repaired-v1/valuation.md第74行、第119行",
+      "claim": "估值撤回后仍残留相互矛盾的当前DCF输入表述。",
+      "evidence": "第74行写“因此DCF按每股正常化FCFE设置1.9/2.3/2.7美元三档”，第119行又明确“正常化FCFE不再是当前有效假设”。正式参数虽为null，但同一输入同时被写成采用和撤回。",
+      "impact": "旧模型未被完全隔离，读者仍可能把1.9/2.3/2.7视为当前可用估值假设；G02-recalc不能关闭。",
+      "recommendation": "沿原撤回路径删除或明确标成“已撤回的历史示例，不参与任何当前诊断”，并确认三稿及结构化底稿不存在其他当前有效引用。"
+    },
+    {
+      "severity": "P1",
+      "location": "G07-score/G08-score/G13-single-source；deep.md第49、68、85行；management.md第244、248行；final/score-review-v1.json",
+      "claim": "候选评分区间与所谓资格上界没有逐项满足规则化边界，不能用于reject。",
+      "evidence": "A3的3.5下界只来自历史覆盖不足，而规则档位是4/2/0；F1的3.5至5和组织人才8至10没有按已核事实建立下界，组织人才也未拆稳定性、人才保留、激励三部分。管理层其余16、12、7、4等候选点值仅给一般性满分定义，未说明为何是该点值而非相邻点值。机械加总72.5至74.5、68至70正确，但算术不证明分项成立。",
+      "impact": "候选上界144.5不是经独立验收的可信上界，无法据此证明公司必然低于B_GROWTH门槛；G07、G08、G13仍未关闭。",
+      "recommendation": "A3、F1、组织人才按裁决允许路径保留unknown并只用规则满分作数学上限，或给出有据下界；其余受争议候选逐项补齐规则档位到事实的差额解释。若真实上界跨门槛，decision保持defer。"
+    },
+    {
+      "severity": "P1",
+      "location": "G09-segments/G13-single-source；deep.md第127至137行；workpaper-repaired-v1.json第77行；score-review-v1.json第103行",
+      "claim": "三年分部绝对额未在报告中保留，且结构化评分来源恢复了已知错误的Note 19定位。",
+      "evidence": "NKE-R-003已核FY2024至FY2026各地区、GBD、Converse、Corporate与合计，原条件要求保留；当前B1正文只列FY2026总收入和渠道额。deep评分表使用正确Note 15，但workpaper和score-review仍写“Note 19 segment disclosure”。",
+      "impact": "前版可核内容发生回退，单一评分来源不一致；G09A虽为P2展示问题，但其与G13的明确防回退条件共同构成未关闭的P1验收缺口。",
+      "recommendation": "恢复三年分部/合计绝对额及Note 15 pp.86至87定位；同步修正workpaper和score-review，避免报告与结构化真源分叉。"
+    },
+    {
+      "severity": "P1",
+      "location": "G13-single-source；deep.md第227至255行；facts-correction-v2.md；workpaper/score-review E1",
+      "claim": "FY2026资产更正已在证据与结构化产物中完成，但深度报告没有展示完整杜邦输入和正确比率，E1点值无法从正文独立复核。",
+      "evidence": "独立复算确认平均资产37,494.5、平均权益14,039、净利率6.698565%、周转率1.237461、权益乘数2.670739、ROE22.138329%均正确。deep正文仅在评分理由提14.865权益，并在E1-E3章节给收入/净利/OCF表；没有总资产38.410及杜邦三因子表。核心模块将ROE杜邦列为E1必做。",
+      "impact": "资产错误本身已纠正且ROE不变，但报告仍不能支持未来独立复算，G13的完整内容与E1事实到评分桥未关闭。",
+      "recommendation": "在deep E1恢复FY2024至FY2026杜邦表，至少明确FY2026上述六个输入/结果及38.410更正，不再次改动正确比率；随后再说明3.5候选与评分档位的关系。"
+    },
+    {
+      "severity": "P1",
+      "location": "G13-single-source；triplet-check-repaired-v1.json第7行；workpaper-repaired-v1.json A1及score_changes；repair-closeout-v1.json actual_score_changes",
+      "claim": "company/A1的来源字段实际变化未申报，机械检查失败不能全部解释为null/区间schema适配。",
+      "evidence": "A1分数与理由未变，但修复底稿新增baseline-evidence-map及10-K PDF两个来源，score_changes和repair-closeout actual_score_changes均未列A1；原生check因此单独报防回退错误。mechanical-check-scope只概括为schema差异，没有承认来源字段变更。",
+      "impact": "这是变更声明与审计轨迹不完整，不是公司事实错误；但G13明确要求来源变化和防回退映射，当前不能把扩展脚本pass当作实质关闭。",
+      "recommendation": "将A1来源补充映射到G13并说明理由，或恢复原来源字段；同时在mechanical-check-scope准确区分schema限制与真实未声明差异。"
+    },
+    {
+      "severity": "P1",
+      "location": "G08-people；management.md第65至73行",
+      "claim": "人物事件分类改善但Donahoe/Hill更替未达到逐行日期与原件定位条件。",
+      "evidence": "该行仅写“2024年；公司披露/10-K”，没有具体生效/离任日期及可回看的申报或公告位置；CFO行则已较完整保留8月16/17日差异与9月4日离职。",
+      "impact": "不能据当前表宣称完整五年核心离任模式已核清，也不能据此批准F1或组织人才的下界。",
+      "recommendation": "沿原条件只补Donahoe/Hill的具体日期、身份与官方来源；不可得部分继续写unknown，不据缺证扣分。"
+    }
+  ],
+  "confirmed_without_new_finding": [
+    "FY2026总资产应为38,410百万美元，37,631为共享facts展示输入错误；已列周转率、权益乘数和ROE按正确资产计算，数值无需再次改动。",
+    "正式target_price、certainty、buy_price和价格区均为null；旧42.915639、34.213160、32.487138、25.659870未作为批准价格继续使用。",
+    "股数、SBC、回购现金、现金税和三类承诺均已区分事实、预测与unknown；选择撤回价格后不要求强凑模型。",
+    "诉讼、比利时海关索赔、EEOC与内部交易缺口被保留为未知或风险，没有被伪造为确定损失或企业扣分事实。"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "reports": [
+    {
+      "path": "深度分析/安踏体育 深度分析 85 2026-08-26.md",
+      "sha256": "96D1DAC054CE5AF60955D0916D1226009829D8E88C4EEE72BA8EE8E3CE7CF0C3",
+      "lines": 263
+    },
+    {
+      "path": "管理层档案/安踏体育 管理层档案 86 2026-08-26.md",
+      "sha256": "7EA0441DD1BFB89878D2270E25F3169DD3FB44F8CE9AFEF4FEBBF4D995390CCF",
+      "lines": 264
+    },
+    {
+      "path": "估值分析/安踏体育 估值分析 2026-08-26.md",
+      "sha256": "C3268698E8CB935A0767F5B5D2D83B23DDBDBF4F82DF0A05AC3210C0B2A31390",
+      "lines": 206
+    }
+  ],
+  "baseline": {
+    "mScore": 86,
+    "lastEarningsIncorporated": "2026H1",
+    "valuation_certainty": 0.7,
+    "watchlistLevel": "A_CORE",
+    "target_price": 102,
+    "cScore": 85,
+    "buy_price": 79.36
+  }
+}

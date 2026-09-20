@@ -1,0 +1,22 @@
+{
+  "C001": {
+    "reviewer": "route_a",
+    "original_index": 1
+  },
+  "C002": {
+    "reviewer": "route_a",
+    "original_index": 0
+  },
+  "C003": {
+    "reviewer": "route_b",
+    "original_index": 1
+  },
+  "C004": {
+    "reviewer": "route_b",
+    "original_index": 0
+  },
+  "C005": {
+    "reviewer": "route_a",
+    "original_index": 2
+  }
+}

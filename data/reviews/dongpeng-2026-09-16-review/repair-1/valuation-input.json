@@ -1,0 +1,35 @@
+{
+  "as_of": "2026-09-15",
+  "currency": "CNY",
+  "shares": {"issued": 734199310, "treasury": 7122551, "external": 727076759},
+  "fx": {"date": "2026-09-11", "hkd_to_cny": 0.8554},
+  "market": {"eastroc_hkd_2026_09_15": 100.50, "tingyi_hkd_2026_09_11": 12.07, "unipresident_hkd_2026_09_11": 7.45},
+  "cash_bridge_2026_06_30": {
+    "selected_assets": 23160675155.86,
+    "debt_and_leases": 6059043393.62,
+    "operating_buffer": 2000000000.0,
+    "nci": 45784389.89,
+    "debt_in_other_noncurrent_financial_assets": 122645315.07,
+    "private_fund_book_value": 653432936.30,
+    "interim_dividend": 2181230277.0,
+    "dividend_ex_date": "2026-09-08",
+    "price_is_ex_dividend": true
+  },
+  "history": {
+    "fy2025": {"revenue": 20875273117.52, "operating_ebit": 5105797408.95, "tax_rate": 0.2096, "da": 495893108.41, "capex": 2269157969.98, "ocf_less_capex": 3905081897.77},
+    "h1_2025": {"revenue": 10736627858.45, "operating_ebit": 2893598601.60, "tax_rate": 0.2089, "da": 231786410.0, "capex": null, "delta_nwc": 477217916.93, "ocf": 1740460562.79},
+    "h1_2026": {"revenue": 12443036555.29, "operating_ebit": 3329539870.32, "tax_rate": 0.2094, "da": 308005872.53, "capex": 1135160762.65, "delta_nwc": 331957712.09, "ocf": 2492600974.20}
+  },
+  "scenarios": {
+    "bear": {"revenue_growth": [0.16,0.10,0.08,0.06,0.05], "ebit_margin": [0.225,0.220,0.218,0.216,0.215], "tax_rate": 0.22, "da_pct_revenue": 0.024, "capex_pct_revenue": [0.10,0.085,0.070,0.055,0.045], "nwc_pct_incremental_revenue": 0.035, "wacc": 0.105, "g": 0.025, "terminal_roic": 0.12, "fund_haircut": 1.0},
+    "base": {"revenue_growth": [0.20,0.14,0.11,0.09,0.07], "ebit_margin": [0.235,0.233,0.232,0.231,0.230], "tax_rate": 0.215, "da_pct_revenue": 0.024, "capex_pct_revenue": [0.095,0.080,0.065,0.050,0.040], "nwc_pct_incremental_revenue": 0.025, "wacc": 0.095, "g": 0.030, "terminal_roic": 0.15, "fund_haircut": 0.0},
+    "bull": {"revenue_growth": [0.23,0.18,0.15,0.12,0.09], "ebit_margin": [0.245,0.245,0.243,0.242,0.240], "tax_rate": 0.21, "da_pct_revenue": 0.024, "capex_pct_revenue": [0.090,0.075,0.060,0.047,0.038], "nwc_pct_incremental_revenue": 0.018, "wacc": 0.090, "g": 0.035, "terminal_roic": 0.18, "fund_haircut": 0.0}
+  },
+  "comparables": {
+    "tingyi": {"shares": 5637386360, "price_hkd": 12.07, "normalized_ttm_profit_cny": 4566594000.0},
+    "unipresident": {"shares": 4319334000, "price_hkd": 7.45, "fy25_profit": 2050234000.0, "fy25_other_gains": 39857000.0, "fy25_tax_rate": 0.25472, "h1_26_profit": 1402353000.0, "h1_26_other_gains": 131267000.0, "h1_26_tax_rate": 0.27691, "h1_25_profit": 1286710000.0, "h1_25_other_gains": 19998000.0, "h1_25_tax_rate": 0.27661},
+    "eastroc_normalized_ttm_profit": 4511301526.63
+  },
+  "weights": {"fcff_dcf": 0.55, "comparable_pe": 0.45, "reverse": 0.0},
+  "certainty": 0.52
+}

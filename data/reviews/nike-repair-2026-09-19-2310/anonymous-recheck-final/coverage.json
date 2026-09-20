@@ -1,0 +1,228 @@
+[
+  {
+    "route": "route_a",
+    "acceptance_checks": [
+      {
+        "id": "G02-sbc",
+        "status": "pass",
+        "disposition": "withdrawn",
+        "evidence": "valuation.md四与十三分列历史SBC、发行现金、期末股数及FY2027 unknown；正式每股模型为null。"
+      },
+      {
+        "id": "G02-equity",
+        "status": "pass",
+        "disposition": "withdrawn",
+        "evidence": "valuation.md四分列融资债、租赁负债、回购未知和运营现金边界；超额现金加项继续撤回。"
+      },
+      {
+        "id": "G02-recalc",
+        "status": "fail",
+        "disposition": "withdrawal_incomplete_in_prose",
+        "evidence": "valuation.md第74行仍写“因此DCF按每股正常化FCFE设置1.9/2.3/2.7美元三档”，第124行才称该三档为已撤回历史输入；同稿语义冲突。",
+        "impact": "正式价格虽为null，但旧模型输入未在正文唯一化；见SOL-V2-01。"
+      },
+      {
+        "id": "G03-eps",
+        "status": "pass",
+        "disposition": "withdrawn",
+        "evidence": "FY2027 EPS、经营桥及加权股数未闭合，依赖价格继续撤回。"
+      },
+      {
+        "id": "G03-anchor",
+        "status": "pass",
+        "disposition": "withdrawn",
+        "evidence": "独立PE锚仍不可得，正式PE权重为零；静态16.91倍明确不参与合理价值。"
+      },
+      {
+        "id": "G03-completion",
+        "status": "pass",
+        "disposition": "withdrawn",
+        "evidence": "target_price、certainty、buy_price及三情景均为null，models为空，旧价格不再有效。"
+      },
+      {
+        "id": "G05-tax",
+        "status": "pass",
+        "disposition": "bounded_and_withdrawn",
+        "evidence": "268/260百万美元仅作历史特殊付款，742仅作历史剔除尺度；FY2027现金税和IRS时点保持unknown，现金流模型撤回。"
+      },
+      {
+        "id": "G07-score",
+        "status": "fail",
+        "disposition": "mostly_withdrawn_but_stale_claim_remains",
+        "evidence": "评分表已将A3等争议项置null并撤回144.5上界，E2=5正确；但deep.md第109行仍写“现有证据支持3.5–4分候选区间”，与同稿第48、85行的无据下界撤回冲突。",
+        "impact": "A3撤回状态不唯一；见SOL-V2-02。"
+      },
+      {
+        "id": "G08-people",
+        "status": "pass",
+        "disposition": "bounded",
+        "evidence": "CEO/CFO更替、8月16/17日差异、Friend 9月4日离职、Donahoe/Hill旧冻结日期及其他人员unknown边界均已记录；任命未充作离任。"
+      },
+      {
+        "id": "G08-score",
+        "status": "fail",
+        "disposition": "mostly_withdrawn_but_stale_claims_remain",
+        "evidence": "正式表已将F1、组织人才、表达等置null；但management.md第202行仍称组织人才给8–10候选区间，第241行仍称表达清晰度3/5，分别与第231、271至279行撤回状态冲突。",
+        "impact": "人物未知未被负面化，但评分撤回状态不唯一；见SOL-V2-03。"
+      },
+      {
+        "id": "G09-segments",
+        "status": "pass",
+        "disposition": "corrected",
+        "evidence": "deep B1恢复七分部三年收入/EBIT及合计，独立加总一致；报告、workpaper和score-review均使用Note 15。"
+      },
+      {
+        "id": "G09-commitments",
+        "status": "pass",
+        "disposition": "corrected_and_bounded",
+        "evidence": "valuation.md第87行正确列未来12个月代言1.7、产品采购4.7、其他采购1.6十亿美元；其他采购费用/Capex分配保持unknown，未全额重复扣减，正式价格撤回。"
+      },
+      {
+        "id": "G13-single-source",
+        "status": "fail",
+        "disposition": "nine_restorations_complete_but_state_not_unique",
+        "evidence": "九项事实表与定位已恢复，原生防回退差异声明通过；但valuation第74行、deep第109行、management第202及241行仍保留已撤回模型/评分主张，导致三份报告与结构化null状态不唯一。",
+        "impact": "已核事实防回退通过，但单一有效状态仍未完全满足；见SOL-V2-01至03。"
+      }
+    ],
+    "coverage": {
+      "reports": {
+        "deep": "全文391行及所有v2受影响章节已复查。",
+        "management": "全文358行及人物、承诺、资本配置、人效、合规、评分章节已复查。",
+        "valuation": "全文146行及估值撤回、承诺、债租、海关风险章节已复查。"
+      },
+      "acceptance_basis": [
+        "repair-adjudication-v2.json",
+        "repair-package-v2.md"
+      ],
+      "mechanical_outputs": [
+        "final/workpaper-repaired-v2.json",
+        "final/score-review-v2.json",
+        "final/triplet-check-repaired-v2-freeze.json",
+        "final/mechanical-check-scope-v2.md",
+        "final/repair-closeout-v2.json"
+      ],
+      "independent_recalculations": {
+        "segments": "FY2024收入/EBIT合计51,362/6,539；FY2025为46,309/3,778；FY2026为46,398/3,850，均与恢复表一致。",
+        "dupont_fy2026": "平均资产37,494.5、平均权益14,039百万美元；净利率6.698565%、周转率1.237461、权益乘数2.670739、ROE22.138329%，与3,108/14,039一致。",
+        "e2": "FY2024至FY2026 OCF/净利为130.3333%、114.8804%、92.2780%，三年均值112.497241%；简化FCF为6,617/3,268/2,184百万美元，均为正，按原规则E2=5成立。",
+        "capex_yoy": "684/430-1=59.069767%。",
+        "debt": "流动债2,000+长期债5,942=融资债7,942百万美元；租赁负债3,091百万美元单列。",
+        "shareholder_bridge": "2,407+146-715=1,838百万美元，仅为非GAAP经济观察桥。",
+        "static_pe": "35.51/2.10=16.9095倍，仅为历史静态诊断。"
+      },
+      "restoration_checks": {
+        "segments_note15": "pass：七分部FY2024至FY2026收入/EBIT及合计恢复，Note 19已改Note 15。",
+        "dupont": "pass：38,410资产更正、三年比率和FY2026计算桥恢复。",
+        "allowances_cam": "pass：所得税CAM、953/742税收利益、库存/销售/退货准备及商誉恢复，坏账准备保持unknown。",
+        "execution_promises": "pass：三条承诺、责任人、期限、实际对照及未到期边界恢复。",
+        "employee_productivity": "pass：83,700/79,400/77,800/73,000及对应期末口径人效恢复。",
+        "related_compensation": "pass：221/146/175/125千美元及独立审查程序恢复，未凭亲属身份扣分。",
+        "capital_allocation": "pass：ROIC、旧WACC示意、回购计划/当年/现金流口径和Capex增幅恢复。",
+        "debt_lease": "pass：2,000+5,942与3,091边界恢复，未恢复未验证滚续或超额现金。",
+        "belgian_customs": "pass：重大例外、上诉/担保、损失不可估及1.3十亿美元非索赔额均传播至三稿。"
+      },
+      "preservation": "v1已核财务、SBC、股数、回购、人事、控制权、激励和关联交易内容均保留；v2差异声明通过原生防回退检查，剩余原生失败仅为null/模型为空/cScore schema限制。",
+      "uncovered": [
+        "未读取另一复核意见。",
+        "未新查Form 4/144、法院案卷、EEOC、FY2027数据或独立PE样本；对应依赖结论均保持unknown或撤回。",
+        "未重做与13个验收ID无关的全文研究。"
+      ]
+    },
+    "decision": "defer",
+    "research_status": "execution_incomplete"
+  },
+  {
+    "route": "route_b",
+    "acceptance_checks": [
+      {
+        "id": "G02-sbc",
+        "status": "withdrawn",
+        "evidence": "已撤回每股模型，保留历史股数、SBC及归属未知，无新增双扣模型。"
+      },
+      {
+        "id": "G02-equity",
+        "status": "withdrawn_and_bounded",
+        "evidence": "valuation四补2000+5942=7942、租赁3091及经营租金不重复扣边界，不恢复滚续预测/超额现金。"
+      },
+      {
+        "id": "G02-recalc",
+        "status": "withdrawn_with_P2_residual",
+        "evidence": "价格均null、模型空、有效价区撤回；十三明确三档FCFE为已撤回历史输入，但74行仍保留现在时，记P2。"
+      },
+      {
+        "id": "G03-eps",
+        "status": "withdrawn",
+        "evidence": "FY2027 EPS和依赖价格未恢复。"
+      },
+      {
+        "id": "G03-anchor",
+        "status": "withdrawn",
+        "evidence": "PE权重未恢复；35.51/2.10仅静态PE，非独立锚。"
+      },
+      {
+        "id": "G03-completion",
+        "status": "withdrawn",
+        "evidence": "无正式目标价、确信度、买入价；没有以区间上界宣告reject。"
+      },
+      {
+        "id": "G05-tax",
+        "status": "bounded_and_withdrawn",
+        "evidence": "1270/268/260/742历史现金税限定正确；新增准备表742错期不属于此现金税桥，归G13。"
+      },
+      {
+        "id": "G07-score",
+        "status": "corrected_with_P2_residual",
+        "evidence": "E2=5符合独立复算；底稿A3、E1/E3/E4/E5/E5.5/F2/F2.5及管理层争议值null，144.5撤回。deep:109仍残留A3 3.5–4，与明确null冲突，不用残留批准任何下界。"
+      },
+      {
+        "id": "G08-people",
+        "status": "bounded",
+        "evidence": "CEO更替日期给旧冻结定位并明确可降为未直接确认；CFO日期差异、其他任命不计离任、人事原因unknown保留。按原允许界定路径，不要求新补证。"
+      },
+      {
+        "id": "G08-score",
+        "status": "withdrawn_and_restored_with_P2_residual",
+        "evidence": "原话与人效表恢复，F1/组织/D2/D5点值在底稿撤回；management:202仍残留8–10、241残留表达3，已无总分/上界，列P2不另开轮。"
+      },
+      {
+        "id": "G09-segments",
+        "status": "corrected",
+        "evidence": "三年七分部+合计恢复；独立逐列加总正确，底稿/score-review均Note15；旧Note19仅作作废提示。"
+      },
+      {
+        "id": "G09-commitments",
+        "status": "corrected_and_bounded",
+        "evidence": "代言15.5/1.7、产品采购4.9/4.7、其他采购2.4/1.6分类与p.46–47相符；v3增量作废旧错行。费用/Capex分配unknown，模型继续撤回。重估条件尚有Capex类别旧词，列P2不否定正确数值表。"
+      },
+      {
+        "id": "G13-single-source",
+        "status": "open_known_error",
+        "evidence": "九项主要内容恢复且哈希相符，但税务准备表把FY2026影响税率部分742错列FY2025余额，原件为1026。属于已知错期而非固有未知，故仍不满足正确事实恢复。"
+      }
+    ],
+    "coverage": {
+      "full_affected_reports": [
+        {
+          "path": "data/reviews/nike-repair-2026-09-19-2310/drafts/repaired-v2/deep.md",
+          "lines": 391
+        },
+        {
+          "path": "data/reviews/nike-repair-2026-09-19-2310/drafts/repaired-v2/management.md",
+          "lines": 358
+        },
+        {
+          "path": "data/reviews/nike-repair-2026-09-19-2310/drafts/repaired-v2/valuation.md",
+          "lines": 146
+        }
+      ],
+      "input_scope": "repair-adjudication-v2与原13ID；复用前两阶段已核原件与规则，未读另一复核、未补新研究、未改报告。",
+      "frozen_manifest": "已独立计算全部列示文件SHA256，与manifest一致。",
+      "direct_original_recheck": "本轮重读FY2026 10-K印刷p.73–74（税务余额及性质）、p.63库存准备；复用本角色前次独立读p.46–47承诺、57–59财务、75/77股数税款、84准备、86–88分部/海关及SEC治理原页。",
+      "independent_calculation": "三年分部六列加总、三年杜邦四因子、四年人效、E2现金比/FCF、39.5/21已固定小计；未运行作者计算器作独立验证。",
+      "preservation": "与本角色v1记录及裁决九项恢复清单定向对照；不因P2重复旧全文审核。"
+    },
+    "decision": null,
+    "research_status": null
+  }
+]

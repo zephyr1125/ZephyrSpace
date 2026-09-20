@@ -1,0 +1,386 @@
+Hong Kong Exchanges and Clearing Limited and The Stock Exchange of Hong Kong Limited take no responsibility
+for the contents of this announcement, make no representation as to its accuracy or completeness and expressly
+disclaim any liability whatsoever for any loss howsoever arising from or in reliance upon the whole or any part of the
+contents of this announcement.
+
+
+
+
+         (A joint stock limited company incorporated in the People ’s Republic of China with limited liability)
+                                               (Stock Code: 00696)
+
+             CONTINUING CONNECTED TRANSACTIONS
+     ENTERING INTO THE SECOND SUPPLEMENTAL AGREEMENT TO
+      THE PREVIOUS DATA CENTER RACKS TENANCY CONTRACT
+
+ Reference is made to the announcement of the Company dated 29 April 2025 in relation to,
+ among other things, the entering into of the Previous Data Center Racks Tenancy Contract
+ between the Company and CTCD, pursuant to which CTCD agreed to lease the racks in the
+ server rooms 2FM1, 2FM3, 2FM4, 3FM3 and 4FM3 of Jiaxing Data Center to the Company for
+ a term of three years commencing from 1 May 2025 and ending on 30 April 2028. Reference
+ is also made to the announcement of the Company dated 29 August 2025 in relation to, among
+ other things, the entering into of the First Supplemental Agreement to the Previous Data Center
+ Racks Tenancy Contract between the Company and CTCD, pursuant to which CTCD agreed to
+ lease additional racks in the server room 4FM1 of Jiaxing Data Center to the Company for a
+ period from 1 September 2025 to 30 April 2028.
+
+ In view of the relevant business needs, on 31 August 2026, the Company entered into the Second
+ Supplemental Agreement to the Previous Data Center Racks Tenancy Contract with CTCD,
+ pursuant to which CTCD agreed to lease additional racks in the server room 3FM2 of Intelligent
+ Computing Module of Jiaxing Data Center to the Company for a period from 1 September 2026
+ to 30 April 2028.
+
+ CTHCL is a promoter and a substantial Shareholder of the Company, which holds approximately
+ 29.55% of the issued share capital of the Company as at the date of this announcement. CTCD
+ is a wholly-owned subsidiary of CTHCL and thus a connected person of the Company. As such,
+ the transactions contemplated under the Second Supplemental Agreement constitute continuing
+ connected transactions of the Company under the Listing Rules.
+
+ Since the highest applicable percentage ratio calculated with reference to the annual caps of rack
+ rental under the New Data Center Racks Tenancy Contract exceeds 0.1% but is less than 5%,
+ such transactions are subject to the reporting, annual review and announcement requirements
+ but exempt from the independent shareholders’ approval requirement under Chapter 14A of the
+ Listing Rules.
+
+ Since the highest applicable percentage ratio calculated with reference to the annual caps of the
+ additional charges under the New Data Center Racks Tenancy Contract is less than 0.1%, such
+ transactions are fully exempt from the reporting, announcement, annual review and independent
+ shareholders’ approval requirements under Chapter 14A of the Listing Rules.
+
+
+
+
+                                                           1
+1.   INTRODUCTION
+
+     Reference is made to the announcement of the Company dated 29 April 2025 in relation to,
+     among other things, the entering into of the Previous Data Center Racks Tenancy Contract
+     between the Company and CTCD, pursuant to which CTCD agreed to lease the racks in
+     the server rooms 2FM1, 2FM3, 2FM4, 3FM3 and 4FM3 of Jiaxing Data Center to the
+     Company for a term of three years commencing from 1 May 2025 and ending on 30 April
+     2028. Reference is also made to the announcement of the Company dated 29 August 2025 in
+     relation to, among other things, the entering into of the First Supplemental Agreement to the
+     Previous Data Center Racks Tenancy Contract between the Company and CTCD, pursuant
+     to which CTCD agreed to lease additional racks in the server room 4FM1 of Jiaxing Data
+     Center to the Company for a period from 1 September 2025 to 30 April 2028.
+
+     In view of the relevant business needs, on 31 August 2026, the Company entered into the
+     Second Supplemental Agreement to the Previous Data Center Racks Tenancy Contract with
+     CTCD, pursuant to which CTCD agreed to lease additional racks in the server room 3FM2
+     of Intelligent Computing Module of Jiaxing Data Center to the Company for a period from 1
+     September 2026 to 30 April 2028.
+
+2.   PRINCIPAL TERMS OF THE NEW SUPPLEMENTAL AGREEMENT
+
+     Date:               31 August 2026
+
+     Parties:            (1)     CTCD, as lessor; and
+
+                         (2)     the Company, as tenant
+
+     Rented areas:       101 racks in the server room 3FM2 of Intelligent Computing Module of
+                         Jiaxing Data Center.
+
+     Term:               From 1 September 2026 to 30 April 2028.
+
+                         The Company has the right to renew the term by negotiating with CTCD
+                         one month prior to expiry of the term.
+
+     Rack rental fees:   The categories and prices (tax inclusive, and the tax rate is 6%) of
+                         the specific racks for renting in the server room 3FM2 of Intelligent
+                         Computing Module of Jiaxing Data Center are as follows:
+
+                         (i)     3KW racks, RMB3,975 per rack per month;
+
+                         (ii)    5KW racks, RMB5,425 per rack per month;
+
+                         (iii)   6KW racks, RMB7,050 per rack per month;
+
+                         (iv)    10KW racks, RMB11,750 per rack per month;
+
+                         (v)     11KW racks, RMB12,925 per rack per month.
+
+                         From the commencement date of the lease term, CTCD will charge the
+                         rack rental fees according to the actual number of racks powered on and
+                         used by the Company on a monthly basis.
+                                                 2
+                        Rental fees for each batch of racks for the first month = (monthly rental
+                        fees)* (actual number of days of use of the racks/number of days during
+                        the month), which shall be rounded to the nearest whole number. The fees
+                        will be charged normally on a monthly basis from the next month.
+
+     Additional         The monthly average power of a single rack shall not in principle exceed
+       charges:         the power limit of that rack; if exceeded, additional fees for the excess
+                        thereof shall be charged at a price of RMB219/A/month (tax inclusive,
+                        and tax rate is 6%).
+
+     Payment term:      The rack rental fees shall be settled on a calendar quarter basis. The
+                        Company shall pay the fees of the preceding quarter to CTCD within 30
+                        calendar days upon receipt of invoice specifically used for value-added
+                        tax from CTCD. Any additional charges incurred shall be settled together.
+
+                        If, without valid reasons, the Company fails to pay the rack rental fees and
+                        additional charges (if any) within one week of the due date, the Company
+                        shall pay CTCD a penalty of 0.01% of the amount payable for each day of
+                        delay.
+
+     Conditions         The Second Supplemental Agreement shall become effective on the date
+       precedent:       when it is signed and sealed by both parties.
+
+3.   HISTORICAL TRANSACTION AMOUNTS
+
+     Set out below are the historical transaction amounts and annual caps for rack rental and
+     additional charges for the two years ended 31 December 2025 and the six months ended 30
+     June 2026:
+
+                                                                                           For the
+                                                                        For the               year
+                                                                    six months           ending 31
+                           For the year ended     For the year ended ended 30            December
+                            31 December 2024       31 December 2025 June 2026                 2026
+                        Historical             Historical            Historical
+                       transaction            transaction           transaction
+                          amount Annual cap      amount Annual cap      amount Annual cap
+                           (RMB)       (RMB)      (RMB)       (RMB)      (RMB)    (RMB)
+
+     Rack rental        39,616,000 40,000,000 47,237,000 70,000,000 31,750,581 80,000,000
+     Additional charges          0 1,000,000           0 1,062,000           0 1,186,000
+
+4.   ANNUAL CAPS AND BASIS OF DETERMINATION OF THE ANNUAL CAPS
+
+     (1)   Annual Caps Note
+
+           Annual caps of the continuing connected transactions under the Previous Data Center
+           Racks Tenancy Contract and the First Supplemental Agreement:
+
+
+
+
+                                                3
+                                 From 1        From 1        From 1                               From 1
+                                January       January       January                         January 2028
+                              2025 to 31    2026 to 31    2027 to 31                          to 30 April
+                          December 2025 December 2026 December 2027                                 2028
+                                 (RMB)         (RMB)         (RMB)                                (RMB)
+
+           Rack rental          70,000,000           80,000,000            80,000,000           30,000,000
+           Additional
+             charges             1,062,000             1,186,000            1,186,000               462,000
+           Annual caps of the continuing connected transactions under the New Data Center
+           Racks Tenancy Contract:
+
+                                 From 1        From 1        From 1                               From 1
+                                January       January       January                         January 2028
+                              2025 to 31    2026 to 31    2027 to 31                          to 30 April
+                          December 2025 December 2026 December 2027                                 2028
+                                 (RMB)         (RMB)         (RMB)                                (RMB)
+
+           Rack rental          70,000,000           83,000,000            88,000,000           33,000,000
+           Additional
+             charges             1,062,000             1,286,000            1,286,000               562,000
+
+           Notes:   (1)   Pursuant to CASBE, the racks leased under the New Data Center Racks Tenancy
+                          Contract will be recognized as right-of-use assets. Annual caps of the rack rental
+                          are set based on the total value of the right-of-use assets of racks expected to be
+                          leased by the Company in each year, which is calculated with reference to the
+                          total annual rentals of racks leased by the Company each year throughout the lease
+                          term, and discounted at the Company’s incremental borrowing rate.
+
+                    (2)   Pursuant to CASBE, the additional charges will be directly included in costs due
+                          to failing to meet the definition of lease payment, and its annual caps shall be the
+                          maximum amount of the additional charges to be paid by the Company to CTCD
+                          during the relevant period.
+
+(2)   Basis of Determination of the Annual Caps
+
+      The annual caps of rack rental are determined based on the following factors: Server
+      room 3FM2 of Intelligent Computing Module mainly supports intelligent computing
+      workloads. To optimize the Company ’ s intelligent computing resource layout and
+      enhance the specialized operational capabilities of AI infrastructure, we propose to
+      centrally deploy the intelligent computing servers and related supporting equipment
+      in the server room of Jiaxing Intelligent Computing Module. In order to satisfy the
+      needs of new production and operation and customer service, the Company will lease
+      additional racks in server room 3FM2 of Intelligent Computing Module of Jiaxing Data
+      Center in addition to the racks in server rooms 2FM1, 2FM3, 2FM4, 3FM3, 4FM3 and
+      4FM1 of Jiaxing Data Center, amounting to a total of 1,597 racks and the estimated
+      annual rental fees are calculated based on the unit price of the rack rental and the
+      planned rack installations for the next three years. Annual caps of the rack rental are
+      set based on the total value of the right-of-use assets of racks expected to be leased by
+      the Company in each year, which is calculated with reference to the total annual rentals
+      of racks leased by the Company each year throughout the lease term, and discounted at
+      the Company’s incremental borrowing rate. In addition, annual caps of the rack rental
+      will provide adequate buffer for the increase in rack utilization rate arising from the
+      expected business growth of the Company in the future.
+
+                                                4
+          The annual caps of additional charges are determined taking into consideration the
+          possible need for racks to operate in excess of their power limits during the lease term.
+
+5.   REASONS FOR AND BENEFITS OF THE TRANSACTIONS
+
+     Jiaxing Data Center has been used for remote system backups and customer services by
+     members of the Group, such as the Company’s departments, subsidiaries, etc. It is in the
+     interests of the Company to lease and use Jiaxing Data Center for satisfying the needs of the
+     Company’s production and operation given that its location and size can satisfy the needs of
+     the Company.
+
+     The Directors (including the independent non-executive Directors) are of the view that the
+     transactions under the Second Supplemental Agreement are conducted in the ordinary and
+     usual course of business of the Group and on normal commercial terms, and the terms thereof
+     are fair and reasonable and in the interests of the Company and the Shareholders as a whole.
+
+6.   IMPLICATIONS UNDER THE LISTING RULES
+
+     CTHCL is a promoter and a substantial Shareholder of the Company, which holds
+     approximately 29.55% of the issued share capital of the Company as at the date of this
+     announcement. CTCD is a wholly-owned subsidiary of CTHCL and thus a connected person
+     of the Company. As such, the transactions contemplated under the Second Supplemental
+     Agreement constitute continuing connected transactions of the Company under the Listing
+     Rules.
+
+     Since the highest applicable percentage ratio calculated with reference to the annual caps
+     of rack rental under the New Data Center Racks Tenancy Contract exceeds 0.1% but is less
+     than 5%, such transactions are subject to the reporting, annual review and announcement
+     requirements but exempt from the independent shareholders’ approval requirement under
+     Chapter 14A of the Listing Rules.
+
+     Since the highest applicable percentage ratio calculated with reference to the annual caps of
+     the additional charges under the New Data Center Racks Tenancy Contract is less than 0.1%,
+     such transactions are fully exempt from the reporting, announcement, annual review and
+     independent shareholders’ approval requirements under Chapter 14A of the Listing Rules.
+
+     Mr. Jiang Bo, the executive Director of the Company, and Mr. Sun Minghe, the employee
+     representative Director, both of whom hold positions in CTHCL, have abstained from
+     voting on the Board resolution to approve the transactions under the Second Supplemental
+     Agreement. Save as disclosed above, none of the Directors has a material interest in the
+     transactions contemplated under the Second Supplemental Agreement and none of them has
+     abstained from voting on the relevant Board resolution.
+
+
+
+
+                                                5
+7.   GENERAL INFORMATION
+
+     Information on the Group
+
+     The Group is principally engaged in the provision of aviation information technology services
+     in the PRC as well as the provision of settlement and clearing services and information
+     system development and support services to domestic and worldwide airline companies.
+
+     Information on CTCD
+
+     CTCD is principally engaged in real estate and data center development and management,
+     data processing and storage services. As at the date of this announcement, CTCD is a
+     wholly-owned subsidiary of CTHCL.
+
+     Information on CTHCL
+
+     CTHCL is a wholly PRC state-owned enterprise. As at the date of this announcement, it is a
+     substantial Shareholder of the Company and holds approximately 29.55% of the total issued
+     share capital of the Company. It is principally engaged in the management of the state-owned
+     assets and state-owned equity interests resulting from investments of the State in the group
+     companies and its invested entities.
+
+8.   DEFINITIONS
+
+     In this announcement, the following expressions shall have the meaning set out below unless
+     the context requires otherwise:
+
+     “A”                  Ampere, the base unit of electric current
+
+     “Board”              the board of Directors
+
+     “CASBE”              China Accounting Standards for Business Enterprises (中國企業會計準
+                          則)
+
+     “Company”            TravelSky Technology Limited, a company incorporated under the laws
+                          of the PRC whose H shares are listed on the Main Board of the Stock
+                          Exchange and whose American depositary shares are traded on the
+                          over-the-counter market in the United States of America
+
+     “connected person”   has the same meaning as ascribed to it under the Listing Rules
+
+     “CTCD”               China TravelSky Cloud Data Company Limited* (中航信雲數據有限
+                          公司), a company incorporated under the laws of the PRC with limited
+                          liability
+
+     “CTHCL”              China TravelSky Holding Company Limited* (中國民航信息集團有限
+                          公司), a substantial Shareholder of the Company as at the date of this
+                          announcement
+
+     “Director(s)”        the director(s) of the Company
+
+
+                                                6
+“First Supplemental the supplemental agreement to the IDC (Internet Data Center) Racks
+  Agreement”        Tenancy Contract of Jiaxing Data Center of TravelSky entered into
+                    between the Company and CTCD on 29 August 2025, pursuant to
+                    which CTCD agreed to additionally lease racks in the server room
+                    4FM1 of Jiaxing Data Center to the Company
+
+“Group”             the Company and its subsidiaries
+
+“Jiaxing Data       the data center of CTCD located at 1177 Yatai Road, Nanhu District,
+  Center”           Jiaxing, Zhejiang, the PRC
+
+“Listing Rules”     the Rules Governing the Listing of Securities on The Stock Exchange
+                    of Hong Kong Limited
+
+“New Data Center    the Previous Data Center Racks Tenancy Contract, as supplemented
+  Racks Tenancy     by the First Supplemental Agreement and the Second Supplemental
+  Contract”         Agreement, pursuant to which CTCD agreed to lease racks in the server
+                    rooms 2FM1, 2FM3, 2FM4, 3FM3, 4FM1, 4FM3 and 3FM2 of Jiaxing
+                    Data Center to the Company
+
+“PRC”               the People’s Republic of China
+
+“Previous Data      the IDC Racks Tenancy Contract of Jiaxing Data Center of TravelSky
+  Center Racks      entered into between the Company and CTCD on 29 April 2025,
+  Tenancy           pursuant to which CTCD agreed to lease racks in the server rooms
+  Contract”         2FM1, 2FM3, 2FM4, 3FM3 and 4FM3 of Jiaxing Data Center to the
+                    Company
+
+“RMB”               Renminbi, the lawful currency of the PRC
+
+“Second             the supplemental agreement to the IDC Racks Tenancy Contract of
+  Supplemental      Jiaxing Data Center of TravelSky entered into between the Company
+  Agreement”        and CTCD on 31 August 2026, pursuant to which CTCD agreed
+                    to additionally lease racks in the server room 3FM2 of Intelligent
+                    Computing Module of Jiaxing Data Center to the Company
+
+
+
+
+                                        7
+      “Shareholder(s)”         the shareholder(s) of the Company
+
+      “Stock Exchange”         The Stock Exchange of Hong Kong Limited
+
+      “%”                      per cent
+
+                                                                       By order of the Board
+                                                                   TravelSky Technology Limited
+                                                                             Jiang Bo
+                                                                             Chairman
+
+Beijing, the People’s Republic of China
+31 August 2026
+
+As at the date of this announcement, the Board comprises:
+
+Executive Director:                                Mr. Jiang Bo (Chairman);
+
+Employee Representative Director:                  Mr. Sun Minghe;
+
+Non-executive Directors:                           Mr. Zeng Yongchao and Ms. He Xiaoqun;
+
+Independent Non-executive Directors:               Mr. Liu Zehong, Mr. Chan Wing Tak Kevin and
+                                                     Mr. Xu Hongzhi.
+* For identification purposes only
+
+
+
+
+                                                   8
+

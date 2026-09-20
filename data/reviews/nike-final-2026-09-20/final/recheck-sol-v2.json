@@ -1,0 +1,170 @@
+{
+  "schema_version": 1,
+  "review_type": "修复后定向复查",
+  "scope": "仅验收adjudication-v1.json的N01-N06及其acceptance IDs、修改位置和跨报告联动；未重做无关全文研究。",
+  "inputs": {
+    "adjudication": "data/reviews/nike-final-2026-09-20/final/adjudication-v1.json",
+    "repair_package": "data/reviews/nike-final-2026-09-20/final/repair-package-v1.json",
+    "repaired_manifest": "data/reviews/nike-final-2026-09-20/final/repaired-v2/frozen-manifest.json",
+    "workpaper": "data/reviews/nike-final-2026-09-20/final/repaired-v2/workpaper-repaired-v2.json"
+  },
+  "integrity": {
+    "manifest_hashes_verified": true,
+    "mechanical_check": "passed",
+    "report_lines": {
+      "deep": 428,
+      "management": 374,
+      "valuation": 266
+    }
+  },
+  "verdict": {
+    "status": "pass",
+    "p0_blockers": 0,
+    "p1_blockers": 0,
+    "decision": "reject",
+    "research_status_after_both_directional_reviews": "closed_with_uncertainty",
+    "watchlist_level": "NONE",
+    "approved_parameters": {
+      "company_score": 76.5,
+      "management_score": 68,
+      "combined_score": 144.5,
+      "target_price": null,
+      "valuation_certainty": null,
+      "buy_price": null,
+      "models": []
+    },
+    "summary": "N01-N05全部P1验收条件通过，N06可选边界亦已落实。三份报告和底稿统一为76.5/68/144.5、NONE/reject；所有有效错误价格和模型权重已撤回。剩余仅两处重复段落的P2展示问题，不阻塞本轮收尾。"
+  },
+  "acceptance_results": [
+    {
+      "issue_id": "N01",
+      "severity": "P1",
+      "status": "pass",
+      "checks": [
+        {
+          "acceptance_id": "N01-sbc",
+          "status": "pass",
+          "evidence": "repaired-v2/valuation.md三、SBC与所有权口径：明确CFO加回715百万美元、FY2026稀释增量仅1.2百万股，两者不能互相替代；81.8百万反稀释奖励未直接全额加入分母；全扣715仅作误差量级示意。"
+        },
+        {
+          "acceptance_id": "N01-withdraw",
+          "status": "pass",
+          "evidence": "workpaper valuation.models=[]，weighted三情景、target_price、certainty、buy_price均为null；valuation.md已删除有效DCF三情景、敏感性、加权价、买入价和价格区。旧数仅在workpaper withdrawn_fields中作为明确撤回清单留痕。"
+        }
+      ],
+      "remaining_blocker": null
+    },
+    {
+      "issue_id": "N02",
+      "severity": "P1",
+      "status": "pass",
+      "checks": [
+        {
+          "acceptance_id": "N02-anchor",
+          "status": "pass",
+          "evidence": "repaired-v2/valuation.md五明确15/18/21倍无独立历史或可比样本支持，原PE未获批准；PE不再作为有效模型，models为空且无权重。按NONE停止估值，不要求补建新独立锚。"
+        },
+        {
+          "acceptance_id": "N02-reverse",
+          "status": "pass",
+          "evidence": "valuation.md七仅保留35.51/15=2.367333、/18=1.972778、/21=1.690952的条件除法，明确倍数未经校准、权重0，且不得推断市场低估或未计入修复。"
+        }
+      ],
+      "remaining_blocker": null
+    },
+    {
+      "issue_id": "N03",
+      "severity": "P1",
+      "status": "pass",
+      "checks": [
+        {
+          "acceptance_id": "N03-score",
+          "status": "pass",
+          "evidence": "deep.md frontmatter、评分表、维度汇总、评分桥和最终结论；management.md快照、评分表和总结；valuation.md快照及门槛处置；workpaper均统一公司76.5、管理层68、组合144.5、NONE/reject。未发现作为当前有效判断的75.5/143.5或正式分null/defer残留。"
+        },
+        {
+          "acceptance_id": "N03-status",
+          "status": "pass",
+          "evidence": "三报告快照与workpaper的target_price、certainty/valuation_certainty、buy_price均为null；valuation.md十一明确reject来自质量门槛，价格撤回后可按closed_with_uncertainty收尾。送审阶段的‘待双路验收/作者评分’标签符合发布边界，不构成旧状态残留。"
+        },
+        {
+          "acceptance_id": "N03-preserve",
+          "status": "pass",
+          "evidence": "三稿分别428/374/266行，完整覆盖保留；workpaper repair.issues完整包含N01-N06及全部12个acceptance IDs，closure与差异声明齐全；未受影响评分理由和原件引用仍在。"
+        }
+      ],
+      "remaining_blocker": null
+    },
+    {
+      "issue_id": "N04",
+      "severity": "P1",
+      "status": "pass",
+      "checks": [
+        {
+          "acceptance_id": "N04-bridge",
+          "status": "pass",
+          "evidence": "deep.md E段、management.md危机处理、valuation.md四均列986=965+21及986=302+684，并写明年后仅‘绝大部分’回收、精确金额未知；三报告口径一致。"
+        },
+        {
+          "acceptance_id": "N04-attribution",
+          "status": "pass",
+          "evidence": "三报告均说明退款主要抵销已确认关税成本，不机械从净利润扣986，不把684年金化，不回写FY2026 CFO/FCF或重复加现金；E2=5、E3=2、E5=2、D2=3、危机7及资本配置12的不变依据已联动。"
+        }
+      ],
+      "remaining_blocker": null
+    },
+    {
+      "issue_id": "N05",
+      "severity": "P1",
+      "status": "pass",
+      "checks": [
+        {
+          "acceptance_id": "N05-d2",
+          "status": "pass",
+          "evidence": "deep.md D2及management.md言行一致性均保留3/5，改为连续三年间接执行证据的中等置信度判断；明确未到期不判失败且不计算伪精确50%达成率。"
+        },
+        {
+          "acceptance_id": "N05-e4",
+          "status": "pass",
+          "evidence": "deep.md E4与workpaper列现金短投9,027、融资债7,942百万美元、长债占比74.8174%、流动比率1.96087；按偿债宽裕2分减Capex未拆分0.5分得1.5。E维度16.5、公司76.5、组合144.5全部联动。"
+        }
+      ],
+      "remaining_blocker": null
+    },
+    {
+      "issue_id": "N06",
+      "severity": "P2",
+      "status": "pass",
+      "checks": [
+        {
+          "acceptance_id": "N06-boundary",
+          "status": "pass",
+          "evidence": "valuation.md四列代言15.5/12个月1.7、产品采购4.9/4.7、其他采购2.4/1.6十亿美元；供应商融资1.1十亿美元已在应付账款内，不重复扣债。并列FY2026税惠254百万美元、2031到期及延长/提前终止边界，不机械扣减或永续化。"
+        }
+      ],
+      "remaining_blocker": null
+    }
+  ],
+  "cross_report_linkage": {
+    "score_and_decision": "pass：76.5/68/144.5与NONE/reject在三报告及底稿一致。",
+    "valuation_withdrawal": "pass：有效模型为空，所有正式价格字段为null，无有效错误价格残留。",
+    "sbc": "pass：估值报告解释所有权成本；深度与管理层报告保留SBC事实及资本配置含义，没有继续引用撤回价格。",
+    "tariff_refund": "pass：三报告均使用986、965/21、302/684及年后绝大部分回收的同一桥，评分不变理由一致。",
+    "d2_e4": "pass：D2维持3并撤伪达成率；E4升至1.5并联动公司与组合分。",
+    "commitments": "pass：估值报告补足量级及去重边界，未把经营承诺机械当融资债务。"
+  },
+  "non_blocking_items": [
+    {
+      "severity": "P2",
+      "category": "presentation",
+      "location": "repaired-v2/deep.md约314-340；repaired-v2/management.md约192-210",
+      "description": "IEEPA退款与归因段落在深度报告和管理层报告中各自连续重复一次。两份重复文本数值、归因和评分联动完全一致，没有产生新事实或结论冲突。",
+      "disposition": "不阻塞N04及本轮P1关闭；发布时可机械删除各自重复的一份，不能改变已冻结数字、理由或评分。"
+    }
+  ],
+  "uncovered": [
+    "未重做N01-N06之外的全文事实研究或重新评价未受影响评分项。",
+    "未读取另一审核员复查文件。",
+    "发布阶段标签和制作日期由主任务在双路通过后切换，本复查未将送审标签视为阻塞。"
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "status": "author_exception_repair_frozen_pending_final_two_route_review",
+  "recommended_decision": "defer",
+  "recommended_research_status": "closed_with_uncertainty",
+  "recommendation_condition": "仅当最后两路确认已知事实错误均已纠正、正式价格已隔离，剩余仅固有未知/争议点分；若仍发现已知错误则execution_incomplete。",
+  "formal_parameters": {
+    "target_price": null,
+    "buy_price": null,
+    "company_score": null,
+    "certainty": null,
+    "management_score": null
+  },
+  "withdrawn_qualification_upper_bound": 144.5,
+  "known_point_subtotals": {
+    "management": 21,
+    "company": 39.5
+  },
+  "issues": [
+    {
+      "id": "G02",
+      "disposition": "withdrawn",
+      "open": [
+        "FY2027加权股数/SBC/回购归属"
+      ],
+      "note": "旧1.9/2.3/2.7明确为撤回历史输入"
+    },
+    {
+      "id": "G03",
+      "disposition": "withdrawn",
+      "open": [
+        "独立PE锚与FY2027经营桥"
+      ],
+      "note": "正式价格继续null"
+    },
+    {
+      "id": "G05",
+      "disposition": "bounded_and_withdrawn",
+      "open": [
+        "未来现金税/IRS结算时点"
+      ],
+      "note": "不影响E2历史现金规则"
+    },
+    {
+      "id": "G07",
+      "disposition": "partial_open",
+      "open": [
+        "A3、E1/E3/E4/E5/E5.5、F2/F2.5及管理层争议点值"
+      ],
+      "note": "E2批准5；无据下界与144.5撤回"
+    },
+    {
+      "id": "G08",
+      "disposition": "partial_open",
+      "open": [
+        "未公开人事原因及F1/组织等点值"
+      ],
+      "note": "承诺、人效、CEO/CFO分类已恢复"
+    },
+    {
+      "id": "G09A",
+      "disposition": "corrected",
+      "open": [
+        "同比展示为P2"
+      ],
+      "note": "七分部三年表及Note15恢复"
+    },
+    {
+      "id": "G09B",
+      "disposition": "corrected_and_bounded",
+      "open": [
+        "未来承诺覆盖量"
+      ],
+      "note": "1.7/4.7/1.6类别已纠正，价格仍撤回"
+    },
+    {
+      "id": "G13",
+      "disposition": "corrected_pending_review",
+      "open": [
+        "九项恢复的最后独立验收"
+      ],
+      "note": "海关重大例外及表格恢复"
+    }
+  ],
+  "no_third_author_round": true
+}

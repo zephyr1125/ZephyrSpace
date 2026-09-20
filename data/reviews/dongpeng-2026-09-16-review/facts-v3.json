@@ -1,0 +1,110 @@
+[
+  {
+    "fact_id": "F031_v3",
+    "supersedes": "F031_v2",
+    "metric": "归属于上市公司股东的净利润",
+    "raw_value": 4415263147.79,
+    "raw_unit": "人民币元",
+    "normalized_value": 44.1526314779,
+    "normalized_unit": "人民币亿元",
+    "currency": "CNY",
+    "reporting_period": "FY2025",
+    "disclosure_date": "2026-03-31",
+    "scope": "合并",
+    "attribution": "归母",
+    "basis": "实际",
+    "source_id": "S10_2025AR_EXACT",
+    "location": "官方2025年年度报告PDF P115–116（主Agent提供原件定位；本角色本轮未重新打开该页）",
+    "verification_status": "定位待独立复核员回看原件；数值由主Agent指定原件页码提供。",
+    "calculation_bridge": "原值÷1亿"
+  },
+  {
+    "fact_id": "F085_v3",
+    "metric": "购建固定资产、无形资产和其他长期资产支付的现金",
+    "raw_value": 2269157969.98,
+    "raw_unit": "人民币元",
+    "normalized_value": 22.6915796998,
+    "normalized_unit": "人民币亿元",
+    "currency": "CNY",
+    "reporting_period": "FY2025",
+    "disclosure_date": "2026-03-31",
+    "scope": "合并",
+    "attribution": "不适用",
+    "basis": "实际",
+    "source_id": "S10_2025AR_EXACT",
+    "location": "官方2025年年度报告PDF P120（主Agent提供原件定位；本角色本轮未重新打开该页）",
+    "verification_status": "定位待独立复核员回看原件；数值由主Agent指定原件页码提供。",
+    "calculation_bridge": "原值÷1亿"
+  },
+  {
+    "fact_id": "F086_v3",
+    "metric": "购建固定资产、无形资产和其他长期资产支付的现金",
+    "raw_value": 1135160762.65,
+    "raw_unit": "人民币元",
+    "normalized_value": 11.3516076265,
+    "normalized_unit": "人民币亿元",
+    "currency": "CNY",
+    "reporting_period": "2026H1（累计）",
+    "disclosure_date": "2026-07-31",
+    "scope": "合并",
+    "attribution": "不适用",
+    "basis": "实际",
+    "source_id": "S01_2026H1_CNINFO",
+    "location": "官方2026H1报告PDF P72（主Agent提供原件定位；本角色本轮未重新打开该页）",
+    "verification_status": "定位待独立复核员回看原件；数值由主Agent指定原件页码提供。",
+    "calculation_bridge": "原值÷1亿；半年度累计数。"
+  },
+  {
+    "fact_id": "F087_v3",
+    "metric": "第三层次公允价值计量：私募股权基金期初、计入损益利得或损失及期末",
+    "raw_value": {
+      "opening_2026_01_01": 378524370.68,
+      "profit_or_loss_for_period": 274908565.62,
+      "closing_2026_06_30": 653432936.30
+    },
+    "raw_unit": "人民币元",
+    "normalized_value": {
+      "opening_yi": 3.7852437068,
+      "profit_or_loss_yi": 2.7490856562,
+      "closing_yi": 6.534329363
+    },
+    "normalized_unit": "人民币亿元",
+    "currency": "CNY",
+    "reporting_period": "2026H1",
+    "disclosure_date": "2026-07-31",
+    "scope": "合并",
+    "attribution": "不适用",
+    "basis": "实际",
+    "source_id": "S01_2026H1_CNINFO",
+    "location": "财报/东鹏饮料/东鹏饮料2026半年度报告.md L4638-L4646；本地归档转换稿，v1已与巨潮PDF同源核验",
+    "verification_status": "本地归档可读；本轮未新增下载或另行抽取官方PDF页码。",
+    "calculation_bridge": "期初378,524,370.68 + 当期计入损益274,908,565.62 = 期末653,432,936.30。"
+  },
+  {
+    "fact_id": "F088_v3",
+    "metric": "顺宝泉物业关联租赁付款及租赁负债",
+    "raw_value": {
+      "cash_rent_paid_2026H1": 1157625.00,
+      "lease_interest_2026H1": 925715.99,
+      "lease_liability_2026_06_30": 52860567.64,
+      "lease_liability_2025_12_31": 49295273.26
+    },
+    "raw_unit": "人民币元",
+    "normalized_value": {
+      "cash_rent_paid_yi": 0.01157625,
+      "lease_interest_yi": 0.0092571599,
+      "lease_liability_yi": 0.5286056764
+    },
+    "normalized_unit": "人民币亿元",
+    "currency": "CNY",
+    "reporting_period": "2026H1/2026-06-30",
+    "disclosure_date": "2026-07-31",
+    "scope": "合并",
+    "attribution": "关联方顺宝泉物业",
+    "basis": "实际",
+    "source_id": "S01_2026H1_CNINFO",
+    "location": "财报/东鹏饮料/东鹏饮料2026半年度报告.md L4744-L4753、L4803-L4809；本地归档转换稿，v1已与巨潮PDF同源核验",
+    "verification_status": "本地归档可读；本轮未新增下载或另行抽取官方PDF页码。",
+    "calculation_bridge": "租赁付款、利息支出和期末租赁负债为不同表项，未相互抵销。"
+  }
+]

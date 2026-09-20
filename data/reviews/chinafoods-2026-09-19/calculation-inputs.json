@@ -1,0 +1,9 @@
+{
+  "as_of_date":"2026-09-18","close_hkd":3.79,"shares":2797223396,"rmb_per_hkd":0.86062,
+  "fy2025_owner_profit_rmb_m":861.968,"fy2025_dps_rmb":0.154,
+  "static_pe_multiples":{"conservative":8.46,"base":9.17,"optimistic":11.54},
+  "ddm_scenarios":{"conservative":{"ke":0.12,"g":0.01},"base":{"ke":0.11,"g":0.025},"optimistic":{"ke":0.105,"g":0.04}},
+  "weights":{"pe":0.50,"ddm":0.50},"valuation_certainty":0.60,
+  "cscore_components":{"A":7,"B":14,"C":14,"D":10,"E":14,"F":10},
+  "mscore_components":{"integrity":15,"capital_allocation":16,"strategy":12,"shareholder_friendly":11,"crisis":5,"organization":7,"communication":4}
+}

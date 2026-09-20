@@ -1,0 +1,6 @@
+[
+  {"source_id":"V2-S001","title":"Evidence v1 source manifest","url":null,"local_path":"data/reviews/travelsky-2026-09-19/sources-v1.json","retrieved_date":"2026-09-19","source_type":"索引；继承V1-S001至V1-S008"},
+  {"source_id":"V2-S002","title":"Continuing Connected Transactions: Renewal under Service Agreement with TravelSky Mobile Tech","url":"https://media-travelsky.todayir.com/20260610164001600512197443_en.pdf","local_path":"财报/中国民航信息网络/2026关联交易续签公告.pdf","publication_date":"2026-06-10","retrieved_date":"2026-09-19","sha256":"97838BBDE786BB8149847EEC8EEF6BA82F7E98F42860FD218C2187E336B2076D","source_type":"公司IR原件；港交所精确URL待补录"},
+  {"source_id":"V2-S003","title":"Resignation of Executive Director and General Manager","url":"https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0413/2026041300358.pdf","local_path":"财报/中国民航信息网络/2026总经理辞任公告.pdf","publication_date":"2026-04-13","retrieved_date":"2026-09-19","sha256":"8741F12A0F82F64CB739563B7300158C789D3E36CD6E8F53E0B0E679B2FA36F1","source_type":"港交所正式披露"},
+  {"source_id":"V2-S004","title":"HKEX title-search universe for stock 00696","url":"https://www1.hkexnews.hk/search/titlesearch.xhtml?category=0&lang=EN&market=SEHK&stockId=1625","local_path":null,"publication_date":null,"retrieved_date":"2026-09-19","sha256":null,"source_type":"港交所正式披露索引；本次人工查阅最近100条及定向关键标题"}
+]

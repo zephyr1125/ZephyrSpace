@@ -1,0 +1,1123 @@
+{
+  "schema_version": 1,
+  "scores": {
+    "company": {
+      "total": null,
+      "items": [
+        {
+          "id": "A1",
+          "score": 3.0,
+          "rule_ref": "深度核心/A1",
+          "reason": "创始人运动员背景与产品创新、品牌营销结合，形成全球先发品牌基因。",
+          "evidence_refs": [
+            "NKE-G-002；S001 FY2026 10-K Item 1 pp.3-5",
+            "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+            "财报/耐克/耐克FY2026_10-K.pdf"
+          ],
+          "score_range": [
+            3.0,
+            3.0
+          ],
+          "status": "旧裁决保留分项，本轮恢复理由"
+        },
+        {
+          "id": "A2",
+          "score": 3.0,
+          "rule_ref": "深度核心/A2",
+          "reason": "控制权长期稳定；双层股权保持Knight家族影响力，但降低B类股东董事选举权。",
+          "evidence_refs": [
+            "NKE-G-009；NKE-G-017",
+            "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+            "财报/耐克/耐克FY2026_10-K.pdf"
+          ],
+          "score_range": [
+            3.0,
+            3.0
+          ],
+          "status": "旧裁决保留分项，本轮恢复理由"
+        },
+        {
+          "id": "A3",
+          "score": null,
+          "rule_ref": "深度核心/A3",
+          "reason": "主业集中，FY2026原件未显示跨界并购、商誉堆积或靠非主营出售保利润；更长历史融资用途覆盖不足，故候选3.5–4。回购纪律只在F2.5评价。",
+          "evidence_refs": [
+            "NKE-F-015；S001 Item 5 HTML L809-812",
+            "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+            "财报/耐克/耐克FY2026_10-K.pdf"
+          ],
+          "score_range": [
+            3.5,
+            4.0
+          ],
+          "status": "作者修复候选，待独立验收"
+        },
+        {
+          "id": "B0",
+          "score": 2.0,
+          "rule_ref": "深度核心/B0",
+          "reason": "从跑鞋创新与专业运动员连接起步，演化为轻资产合同制造、品牌和渠道驱动模式。",
+          "evidence_refs": [
+            "NKE-G-002；S001 Item 1 HTML L217-260",
+            "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+            "财报/耐克/耐克FY2026_10-K.pdf"
+          ],
+          "score_range": [
+            2.0,
+            2.0
+          ],
+          "status": "旧裁决保留分项，本轮恢复理由"
+        },
+        {
+          "id": "B1",
+          "score": null,
+          "rule_ref": "深度核心/B1",
+          "reason": "FY2026分部原件显示NIKE Brand全球地区分布并有Converse补充，但仍高度集中于NIKE Brand和鞋类，候选3.5。",
+          "evidence_refs": [
+            "S001 FY2026 10-K Note 19 segment disclosure；HTML L979-1040",
+            "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+            "财报/耐克/耐克FY2026_10-K.pdf"
+          ],
+          "score_range": [
+            3.5,
+            3.5
+          ],
+          "status": "作者修复候选，待独立验收"
+        },
+        {
+          "id": "B2",
+          "score": 2.0,
+          "rule_ref": "深度核心/B2",
+          "reason": "品牌复购和规模效应较强，但运动鞋服属于可选消费，批发与直营流量均受需求波动。",
+          "evidence_refs": [
+            "NKE-G-002；S001 MD&A HTML L843-856",
+            "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+            "财报/耐克/耐克FY2026_10-K.pdf"
+          ],
+          "score_range": [
+            2.0,
+            2.0
+          ],
+          "status": "旧裁决保留分项，本轮恢复理由"
+        },
+        {
+          "id": "B3",
+          "score": null,
+          "rule_ref": "深度核心/B3",
+          "reason": "品牌、运动员资产与创新提供定价基础；五年毛利及折扣/地区表现显示转嫁并非无条件，候选4。",
+          "evidence_refs": [
+            "NKE-F-011；NKE-F-012；S001 Risk Factors",
+            "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+            "财报/耐克/耐克FY2026_10-K.pdf"
+          ],
+          "score_range": [
+            4.0,
+            4.0
+          ],
+          "status": "作者修复候选，待独立验收"
+        },
+        {
+          "id": "B4",
+          "score": 2.5,
+          "rule_ref": "深度核心/B4",
+          "reason": "行业长期需求存在但成熟、竞争激烈；FY2024-FY2026收入由51.362降至46.398十亿美元，复苏仍需验证。",
+          "evidence_refs": [
+            "NKE-F-011",
+            "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+            "财报/耐克/耐克FY2026_10-K.pdf"
+          ],
+          "score_range": [
+            2.5,
+            2.5
+          ],
+          "status": "旧裁决保留分项，本轮恢复理由"
+        },
+        {
+          "id": "C1",
+          "score": 6.0,
+          "rule_ref": "深度核心/C1",
+          "reason": "公司在10-K中称其为全球最大运动鞋服销售商，仍属绝对第一梯队。",
+          "evidence_refs": [
+            "S001 MD&A HTML L843-847",
+            "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+            "财报/耐克/耐克FY2026_10-K.pdf"
+          ],
+          "score_range": [
+            6.0,
+            6.0
+          ],
+          "status": "旧裁决保留分项，本轮恢复理由"
+        },
+        {
+          "id": "C2",
+          "score": 3.0,
+          "rule_ref": "深度核心/C2",
+          "reason": "合同制造与全球采购提供弹性，品牌对消费者有议价力；供应链集中、关税与批发渠道仍制约利润率。",
+          "evidence_refs": [
+            "NKE-G-002；S001 Risk Factors HTML L702-710",
+            "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+            "财报/耐克/耐克FY2026_10-K.pdf"
+          ],
+          "score_range": [
+            3.0,
+            3.0
+          ],
+          "status": "旧裁决保留分项，本轮恢复理由"
+        },
+        {
+          "id": "C3+C4",
+          "score": 7.0,
+          "rule_ref": "深度核心/C3+C4",
+          "reason": "品牌、规模、运动员网络、研发与渠道构成四星级护城河；低切换成本与Adidas、On、Hoka等竞争限制满分。",
+          "evidence_refs": [
+            "NKE-G-002；S001 Competition and Products sections",
+            "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+            "财报/耐克/耐克FY2026_10-K.pdf"
+          ],
+          "score_range": [
+            7.0,
+            7.0
+          ],
+          "status": "旧裁决保留分项，本轮恢复理由"
+        },
+        {
+          "id": "D1",
+          "score": 3.0,
+          "rule_ref": "深度核心/D1",
+          "reason": "长期围绕运动、创新和消费者连接，FY2026重新强调Win Now；DTC偏置后又修复批发，属可解释的渠道调整。",
+          "evidence_refs": [
+            "S001 MD&A HTML L843-847；NKE-F-011",
+            "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+            "财报/耐克/耐克FY2026_10-K.pdf"
+          ],
+          "score_range": [
+            3.0,
+            3.0
+          ],
+          "status": "旧裁决保留分项，本轮恢复理由"
+        },
+        {
+          "id": "D2",
+          "score": null,
+          "rule_ref": "深度核心/D2",
+          "reason": "三年方向性目标只支持部分兑现/执行中；不以事后财务冒充原承诺，候选3。",
+          "evidence_refs": [
+            "NKE-F-011；V3-003",
+            "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+            "财报/耐克/耐克FY2026_10-K.pdf"
+          ],
+          "original_statement_found": true,
+          "strategy_drift": false,
+          "score_range": [
+            3.0,
+            3.0
+          ],
+          "status": "作者修复候选，待独立验收"
+        },
+        {
+          "id": "D3",
+          "score": 1.0,
+          "rule_ref": "深度核心/D3",
+          "reason": "可选消费疲弱、关税、汇率、中国市场和新品牌竞争构成明显外部逆风。",
+          "evidence_refs": [
+            "S001 Risk Factors；S001 MD&A",
+            "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+            "财报/耐克/耐克FY2026_10-K.pdf"
+          ],
+          "score_range": [
+            1.0,
+            1.0
+          ],
+          "status": "旧裁决保留分项，本轮恢复理由"
+        },
+        {
+          "id": "D5",
+          "score": null,
+          "rule_ref": "深度核心/D5",
+          "reason": "CEO回归与职责重组提供修复动作，期末员工口径人效可复算但非平均FTE，结果待验，候选2。",
+          "evidence_refs": [
+            "NKE-G-008；V3-002",
+            "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+            "财报/耐克/耐克FY2026_10-K.pdf"
+          ],
+          "score_range": [
+            2.0,
+            2.0
+          ],
+          "status": "作者修复候选，待独立验收"
+        },
+        {
+          "id": "E1",
+          "score": null,
+          "rule_ref": "深度核心/E1",
+          "reason": "FY2024–FY2026杜邦显示净利率、周转与权益乘数共同驱动；FY2026期末权益14.865十亿美元，总资产38.410十亿美元，候选3.5。",
+          "evidence_refs": [
+            "NKE-F-011；NKE-F-012；NKE-F-015",
+            "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+            "财报/耐克/耐克FY2026_10-K.pdf"
+          ],
+          "score_range": [
+            3.5,
+            3.5
+          ],
+          "status": "作者修复候选，待独立验收"
+        },
+        {
+          "id": "E2",
+          "score": null,
+          "rule_ref": "深度核心/E2",
+          "reason": "FY2020-FY2026累计现金转化总体健康，但FY2026 CFO降至2.868十亿美元、低于净利3.108十亿美元，FCF仅2.184十亿美元。",
+          "evidence_refs": [
+            "NKE-F-010；NKE-F-011；NKE-F-020",
+            "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+            "财报/耐克/耐克FY2026_10-K.pdf"
+          ],
+          "score_range": [
+            3.0,
+            3.0
+          ],
+          "status": "作者修复候选，待独立验收"
+        },
+        {
+          "id": "E3",
+          "score": null,
+          "rule_ref": "深度核心/E3",
+          "reason": "七年收入CAGR为低个位数且近两年利润明显回落，增长质量处于修复期。",
+          "evidence_refs": [
+            "NKE-F-010；NKE-F-011；V3-001",
+            "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+            "财报/耐克/耐克FY2026_10-K.pdf"
+          ],
+          "score_range": [
+            1.5,
+            1.5
+          ],
+          "status": "作者修复候选，待独立验收"
+        },
+        {
+          "id": "E4",
+          "score": null,
+          "rule_ref": "深度核心/E4",
+          "reason": "现金短投9.027十亿美元覆盖融资债7.942十亿美元，但租赁负债3.091十亿美元及承诺限制可分配现金，候选0.5。",
+          "evidence_refs": [
+            "NKE-F-012；NKE-F-021",
+            "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+            "财报/耐克/耐克FY2026_10-K.pdf"
+          ],
+          "score_range": [
+            0.5,
+            0.5
+          ],
+          "status": "作者修复候选，待独立验收"
+        },
+        {
+          "id": "E5",
+          "score": null,
+          "rule_ref": "深度核心/E5",
+          "reason": "PwC对报表与ICFR均出具无保留意见；库存7.501十亿美元仍需持续观察。",
+          "evidence_refs": [
+            "NKE-G-005；NKE-F-012",
+            "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+            "财报/耐克/耐克FY2026_10-K.pdf"
+          ],
+          "score_range": [
+            2.0,
+            2.0
+          ],
+          "status": "作者修复候选，待独立验收"
+        },
+        {
+          "id": "E5.5",
+          "score": null,
+          "rule_ref": "深度核心/E5.5",
+          "reason": "审计与内控结论干净，关键估计有披露；证券诉讼和估计敏感性保留但未见重大会计异常。",
+          "evidence_refs": [
+            "NKE-G-005；NKE-L-023；S005 pp.52-54",
+            "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+            "财报/耐克/耐克FY2026_10-K.pdf"
+          ],
+          "score_range": [
+            2.5,
+            2.5
+          ],
+          "status": "作者修复候选，待独立验收"
+        },
+        {
+          "id": "F1",
+          "score": null,
+          "rule_ref": "深度核心/F1",
+          "reason": "CEO/CFO更替已核；其他任命、调岗或新设职责不能充作离任，unknown原因不扣分，候选3.5–5。",
+          "evidence_refs": [
+            "V3-002；S001 executive officers",
+            "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+            "财报/耐克/耐克FY2026_10-K.pdf"
+          ],
+          "score_range": [
+            3.5,
+            5.0
+          ],
+          "status": "作者修复候选，待独立验收"
+        },
+        {
+          "id": "F2",
+          "score": null,
+          "rule_ref": "深度核心/F2",
+          "reason": "分红、暂停回购与绩效约束支持对齐；双层股权削弱制衡，逐笔内部交易未知不作减持扣分，候选4。",
+          "evidence_refs": [
+            "NKE-F-015；NKE-G-022；V3-003；V3-004",
+            "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+            "财报/耐克/耐克FY2026_10-K.pdf"
+          ],
+          "score_range": [
+            4.0,
+            4.0
+          ],
+          "status": "作者修复候选，待独立验收"
+        },
+        {
+          "id": "F2.5",
+          "score": null,
+          "rule_ref": "深度核心/F2.5",
+          "reason": "暂停回购保存现金是正面；历史回购效果、SBC与交接成本限制更高评价，候选1.5且不与A3重复。",
+          "evidence_refs": [
+            "NKE-F-014；NKE-F-015；V3-002",
+            "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+            "财报/耐克/耐克FY2026_10-K.pdf"
+          ],
+          "score_range": [
+            1.5,
+            1.5
+          ],
+          "status": "作者修复候选，待独立验收"
+        },
+        {
+          "id": "F3",
+          "score": 2.0,
+          "rule_ref": "深度核心/F3",
+          "reason": "独立审查与披露为正面，一次Section 16迟报属小瑕疵；亲属身份和海关争议不自动等于利益输送或处罚，维持2。",
+          "evidence_refs": [
+            "NKE-G-017；NKE-G-018；V3-004",
+            "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+            "财报/耐克/耐克FY2026_10-K.pdf"
+          ],
+          "score_range": [
+            2.0,
+            2.0
+          ],
+          "status": "旧裁决保留分项，本轮恢复理由"
+        }
+      ],
+      "candidate_range": [
+        72.5,
+        74.5
+      ]
+    },
+    "management": {
+      "total": null,
+      "items": [
+        {
+          "id": "诚信与透明度",
+          "score": null,
+          "rule_ref": "管理层核心/九",
+          "reason": "审计与ICFR干净，CFO交接原件明确否认经营政策分歧并披露一次迟报；未取到的诉讼/交易细节保持unknown，不作为失信扣分，候选16。",
+          "evidence_refs": [
+            "NKE-G-005；NKE-G-006；V3-002；V3-004",
+            "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+            "SRC-8K-20260623",
+            "SRC-DEF14A-2026"
+          ],
+          "score_range": [
+            16,
+            16
+          ],
+          "status": "作者修复候选，待独立验收"
+        },
+        {
+          "id": "资本配置能力",
+          "score": null,
+          "rule_ref": "管理层核心/九",
+          "reason": "分红连续、低谷暂停回购是正面；历史回购效果、SBC、交接成本和转型回报限制评分，候选12。",
+          "evidence_refs": [
+            "NKE-F-014；NKE-F-015；NKE-F-020",
+            "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+            "SRC-8K-20260623",
+            "SRC-DEF14A-2026"
+          ],
+          "score_range": [
+            12,
+            12
+          ],
+          "status": "作者修复候选，待独立验收"
+        },
+        {
+          "id": "战略稳定性",
+          "score": null,
+          "rule_ref": "管理层核心/九",
+          "reason": "运动与创新主线稳定，DTC偏置后修复批发关系，执行路径调整但非使命漂移，维持10。",
+          "evidence_refs": [
+            "S001 MD&A HTML L843-856；NKE-F-011",
+            "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+            "SRC-8K-20260623",
+            "SRC-DEF14A-2026"
+          ],
+          "score_range": [
+            10,
+            10
+          ],
+          "status": "旧裁决保留分项，本轮恢复理由"
+        },
+        {
+          "id": "对股东友好度",
+          "score": null,
+          "rule_ref": "管理层核心/九",
+          "reason": "FY2026分红2.407十亿美元与绩效约束已核，双层股权削弱B类制衡；未知内部交易不扣分，维持11。",
+          "evidence_refs": [
+            "NKE-F-015；NKE-G-017",
+            "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+            "SRC-8K-20260623",
+            "SRC-DEF14A-2026"
+          ],
+          "score_range": [
+            11,
+            11
+          ],
+          "status": "旧裁决保留分项，本轮恢复理由"
+        },
+        {
+          "id": "危机处理能力",
+          "score": null,
+          "rule_ref": "管理层核心/九",
+          "reason": "CEO更替、恢复运动品类/批发及暂停回购为已核动作；收入企稳但利润现金未转折，候选7。",
+          "evidence_refs": [
+            "NKE-F-011；V3-002",
+            "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+            "SRC-8K-20260623",
+            "SRC-DEF14A-2026"
+          ],
+          "score_range": [
+            7,
+            7
+          ],
+          "status": "作者修复候选，待独立验收"
+        },
+        {
+          "id": "组织与人才能力",
+          "score": null,
+          "rule_ref": "管理层核心/九",
+          "reason": "长期内部人才与外聘CFO经验可核；只有CEO/CFO更替已核，其他任命不能充离任，候选8–10。",
+          "evidence_refs": [
+            "S001 executive officers；V3-002；V3-003",
+            "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+            "SRC-8K-20260623",
+            "SRC-DEF14A-2026"
+          ],
+          "score_range": [
+            8,
+            10
+          ],
+          "status": "作者修复候选，待独立验收"
+        },
+        {
+          "id": "表达清晰度与认知质量",
+          "score": null,
+          "rule_ref": "管理层核心/九",
+          "reason": "10-K与代理声明量化风险、绩效和薪酬；方向性承诺难算达成率，但缺定量原话不等于表达差，候选4。",
+          "evidence_refs": [
+            "S001 MD&A；NKE-G-022；V3-003",
+            "data/reviews/nike-repair-2026-09-19-2310/evidence/baseline-evidence-map.md",
+            "SRC-8K-20260623",
+            "SRC-DEF14A-2026"
+          ],
+          "score_range": [
+            4,
+            4
+          ],
+          "status": "作者修复候选，待独立验收"
+        }
+      ],
+      "candidate_range": [
+        68,
+        70
+      ]
+    }
+  },
+  "valuation": {
+    "currency": "USD",
+    "models": [],
+    "weighted": {
+      "bear": null,
+      "base": null,
+      "bull": null
+    },
+    "target_price": null,
+    "certainty": null,
+    "certainty_reason": "正式定价撤回：股数/SBC/回购现金归属、现金税与承诺覆盖、独立PE锚未闭合。",
+    "buy_price": null,
+    "reverse": {
+      "weight": 0,
+      "status": "diagnostic_only",
+      "variable": "FY2026静态PE",
+      "implied_value": 16.9095238,
+      "formula": "market_price / diluted_eps",
+      "inputs": {
+        "market_price": 35.51,
+        "diluted_eps": 2.1
+      },
+      "market_price": 35.51,
+      "assumptions": [
+        "FY2026稀释EPS约2.10美元，仅为历史实际口径",
+        "不参与合理价值"
+      ],
+      "evidence_refs": [
+        "SRC-10K-2026 FY2026 diluted EPS",
+        "2026-09-18 market snapshot"
+      ]
+    },
+    "withdrawn_models": [
+      {
+        "id": "fcfe_dcf",
+        "reason": "股数、SBC、回购现金、超额现金、现金税及承诺覆盖未闭合；旧公式不再有效"
+      },
+      {
+        "id": "pe_recovery",
+        "reason": "FY2027加权股数与独立市场PE锚未闭合；供应商selected不能单独充作锚"
+      }
+    ]
+  },
+  "bridges": [],
+  "reports": {
+    "deep": "data/reviews/nike-repair-2026-09-19-2310/drafts/repaired-v1/deep.md",
+    "management": "data/reviews/nike-repair-2026-09-19-2310/drafts/repaired-v1/management.md",
+    "valuation": "data/reviews/nike-repair-2026-09-19-2310/drafts/repaired-v1/valuation.md"
+  },
+  "bridges_not_applicable": "正式估值桥撤回；已核历史桥与缺口见三报告及evidence，不以未闭合桥生成价格。",
+  "repair": {
+    "issues": [
+      {
+        "id": "G02",
+        "severity": "P1",
+        "acceptance_ids": [
+          "G02-sbc",
+          "G02-equity",
+          "G02-recalc"
+        ]
+      },
+      {
+        "id": "G03",
+        "severity": "P1",
+        "acceptance_ids": [
+          "G03-eps",
+          "G03-anchor",
+          "G03-completion"
+        ]
+      },
+      {
+        "id": "G05",
+        "severity": "P1",
+        "acceptance_ids": [
+          "G05-tax"
+        ]
+      },
+      {
+        "id": "G07",
+        "severity": "P1",
+        "acceptance_ids": [
+          "G07-score"
+        ]
+      },
+      {
+        "id": "G08",
+        "severity": "P1",
+        "acceptance_ids": [
+          "G08-people",
+          "G08-score"
+        ]
+      },
+      {
+        "id": "G09A",
+        "severity": "P2",
+        "acceptance_ids": [
+          "G09-segments"
+        ]
+      },
+      {
+        "id": "G09B",
+        "severity": "P1",
+        "acceptance_ids": [
+          "G09-commitments"
+        ]
+      },
+      {
+        "id": "G13",
+        "severity": "P1",
+        "acceptance_ids": [
+          "G13-single-source"
+        ]
+      }
+    ],
+    "score_changes": [
+      {
+        "key": "company/A3",
+        "issue_id": "G07",
+        "reason": "从冻结基线恢复并按裁决纠正事实、归因或改为区间；正式总分不据此发布。",
+        "evidence_refs": [
+          "repair-adjudication-v1.json",
+          "evidence/baseline-evidence-map.md",
+          "财报/耐克/耐克FY2026_10-K.pdf"
+        ]
+      },
+      {
+        "key": "company/B1",
+        "issue_id": "G13",
+        "reason": "从冻结基线恢复并按裁决纠正事实、归因或改为区间；正式总分不据此发布。",
+        "evidence_refs": [
+          "repair-adjudication-v1.json",
+          "evidence/baseline-evidence-map.md",
+          "财报/耐克/耐克FY2026_10-K.pdf"
+        ]
+      },
+      {
+        "key": "company/B3",
+        "issue_id": "G13",
+        "reason": "从冻结基线恢复并按裁决纠正事实、归因或改为区间；正式总分不据此发布。",
+        "evidence_refs": [
+          "repair-adjudication-v1.json",
+          "evidence/baseline-evidence-map.md",
+          "财报/耐克/耐克FY2026_10-K.pdf"
+        ]
+      },
+      {
+        "key": "company/D2",
+        "issue_id": "G08",
+        "reason": "从冻结基线恢复并按裁决纠正事实、归因或改为区间；正式总分不据此发布。",
+        "evidence_refs": [
+          "repair-adjudication-v1.json",
+          "evidence/baseline-evidence-map.md",
+          "财报/耐克/耐克FY2026_10-K.pdf"
+        ]
+      },
+      {
+        "key": "company/D5",
+        "issue_id": "G08",
+        "reason": "从冻结基线恢复并按裁决纠正事实、归因或改为区间；正式总分不据此发布。",
+        "evidence_refs": [
+          "repair-adjudication-v1.json",
+          "evidence/baseline-evidence-map.md",
+          "财报/耐克/耐克FY2026_10-K.pdf"
+        ]
+      },
+      {
+        "key": "company/E1",
+        "issue_id": "G13",
+        "reason": "从冻结基线恢复并按裁决纠正事实、归因或改为区间；正式总分不据此发布。",
+        "evidence_refs": [
+          "repair-adjudication-v1.json",
+          "evidence/baseline-evidence-map.md",
+          "财报/耐克/耐克FY2026_10-K.pdf"
+        ]
+      },
+      {
+        "key": "company/E4",
+        "issue_id": "G13",
+        "reason": "从冻结基线恢复并按裁决纠正事实、归因或改为区间；正式总分不据此发布。",
+        "evidence_refs": [
+          "repair-adjudication-v1.json",
+          "evidence/baseline-evidence-map.md",
+          "财报/耐克/耐克FY2026_10-K.pdf"
+        ]
+      },
+      {
+        "key": "company/F1",
+        "issue_id": "G08",
+        "reason": "从冻结基线恢复并按裁决纠正事实、归因或改为区间；正式总分不据此发布。",
+        "evidence_refs": [
+          "repair-adjudication-v1.json",
+          "evidence/baseline-evidence-map.md",
+          "财报/耐克/耐克FY2026_10-K.pdf"
+        ]
+      },
+      {
+        "key": "company/F2",
+        "issue_id": "G13",
+        "reason": "从冻结基线恢复并按裁决纠正事实、归因或改为区间；正式总分不据此发布。",
+        "evidence_refs": [
+          "repair-adjudication-v1.json",
+          "evidence/baseline-evidence-map.md",
+          "财报/耐克/耐克FY2026_10-K.pdf"
+        ]
+      },
+      {
+        "key": "company/F2.5",
+        "issue_id": "G07",
+        "reason": "从冻结基线恢复并按裁决纠正事实、归因或改为区间；正式总分不据此发布。",
+        "evidence_refs": [
+          "repair-adjudication-v1.json",
+          "evidence/baseline-evidence-map.md",
+          "财报/耐克/耐克FY2026_10-K.pdf"
+        ]
+      },
+      {
+        "key": "company/F3",
+        "issue_id": "G13",
+        "reason": "从冻结基线恢复并按裁决纠正事实、归因或改为区间；正式总分不据此发布。",
+        "evidence_refs": [
+          "repair-adjudication-v1.json",
+          "evidence/baseline-evidence-map.md",
+          "财报/耐克/耐克FY2026_10-K.pdf"
+        ]
+      },
+      {
+        "key": "management/诚信与透明度",
+        "issue_id": "G13",
+        "reason": "从冻结基线恢复并按裁决纠正事实、归因或改为区间；正式总分不据此发布。",
+        "evidence_refs": [
+          "repair-adjudication-v1.json",
+          "evidence/baseline-evidence-map.md",
+          "财报/耐克/耐克FY2026_10-K.pdf"
+        ]
+      },
+      {
+        "key": "management/资本配置能力",
+        "issue_id": "G13",
+        "reason": "从冻结基线恢复并按裁决纠正事实、归因或改为区间；正式总分不据此发布。",
+        "evidence_refs": [
+          "repair-adjudication-v1.json",
+          "evidence/baseline-evidence-map.md",
+          "财报/耐克/耐克FY2026_10-K.pdf"
+        ]
+      },
+      {
+        "key": "management/危机处理能力",
+        "issue_id": "G08",
+        "reason": "从冻结基线恢复并按裁决纠正事实、归因或改为区间；正式总分不据此发布。",
+        "evidence_refs": [
+          "repair-adjudication-v1.json",
+          "evidence/baseline-evidence-map.md",
+          "财报/耐克/耐克FY2026_10-K.pdf"
+        ]
+      },
+      {
+        "key": "management/组织与人才能力",
+        "issue_id": "G08",
+        "reason": "从冻结基线恢复并按裁决纠正事实、归因或改为区间；正式总分不据此发布。",
+        "evidence_refs": [
+          "repair-adjudication-v1.json",
+          "evidence/baseline-evidence-map.md",
+          "财报/耐克/耐克FY2026_10-K.pdf"
+        ]
+      },
+      {
+        "key": "management/表达清晰度与认知质量",
+        "issue_id": "G08",
+        "reason": "从冻结基线恢复并按裁决纠正事实、归因或改为区间；正式总分不据此发布。",
+        "evidence_refs": [
+          "repair-adjudication-v1.json",
+          "evidence/baseline-evidence-map.md",
+          "财报/耐克/耐克FY2026_10-K.pdf"
+        ]
+      }
+    ],
+    "report_changes": [
+      {
+        "report": "valuation",
+        "section": "__preamble__",
+        "issue_id": "G02",
+        "reason": "按合并裁决定向修复，未改章节保持冻结基线。"
+      },
+      {
+        "report": "valuation",
+        "section": "一、估值结论",
+        "issue_id": "G02",
+        "reason": "按合并裁决定向修复，未改章节保持冻结基线。"
+      },
+      {
+        "report": "valuation",
+        "section": "四、现金、债务与股数桥",
+        "issue_id": "G02",
+        "reason": "按合并裁决定向修复，未改章节保持冻结基线。"
+      },
+      {
+        "report": "valuation",
+        "section": "十二、风险与催化剂",
+        "issue_id": "G02",
+        "reason": "按合并裁决定向修复，未改章节保持冻结基线。"
+      },
+      {
+        "report": "valuation",
+        "section": "十三、事实、预测与未知",
+        "issue_id": "G02",
+        "reason": "按合并裁决定向修复，未改章节保持冻结基线。"
+      },
+      {
+        "report": "valuation",
+        "section": "十四、反证与重估条件",
+        "issue_id": "G02",
+        "reason": "按合并裁决定向修复，未改章节保持冻结基线。"
+      },
+      {
+        "report": "valuation",
+        "section": "十五、来源",
+        "issue_id": "G02",
+        "reason": "按合并裁决定向修复，未改章节保持冻结基线。"
+      },
+      {
+        "report": "valuation",
+        "section": "十六、一句话结论",
+        "issue_id": "G02",
+        "reason": "按合并裁决定向修复，未改章节保持冻结基线。"
+      },
+      {
+        "report": "deep",
+        "section": "__preamble__",
+        "issue_id": "G13",
+        "reason": "按合并裁决定向修复，未改章节保持冻结基线。"
+      },
+      {
+        "report": "deep",
+        "section": "综合评分汇总",
+        "issue_id": "G13",
+        "reason": "按合并裁决定向修复，未改章节保持冻结基线。"
+      },
+      {
+        "report": "deep",
+        "section": "维度 A：历史基因与公司 DNA",
+        "issue_id": "G13",
+        "reason": "按合并裁决定向修复，未改章节保持冻结基线。"
+      },
+      {
+        "report": "deep",
+        "section": "维度 B：商业模式质量",
+        "issue_id": "G13",
+        "reason": "按合并裁决定向修复，未改章节保持冻结基线。"
+      },
+      {
+        "report": "deep",
+        "section": "维度 D：战略清晰度与执行力",
+        "issue_id": "G13",
+        "reason": "按合并裁决定向修复，未改章节保持冻结基线。"
+      },
+      {
+        "report": "deep",
+        "section": "维度 E：财务质量（非估值）",
+        "issue_id": "G13",
+        "reason": "按合并裁决定向修复，未改章节保持冻结基线。"
+      },
+      {
+        "report": "deep",
+        "section": "维度 F：治理结构与管理层",
+        "issue_id": "G13",
+        "reason": "按合并裁决定向修复，未改章节保持冻结基线。"
+      },
+      {
+        "report": "deep",
+        "section": "事实、推断与未知",
+        "issue_id": "G13",
+        "reason": "按合并裁决定向修复，未改章节保持冻结基线。"
+      },
+      {
+        "report": "deep",
+        "section": "来源",
+        "issue_id": "G13",
+        "reason": "按合并裁决定向修复，未改章节保持冻结基线。"
+      },
+      {
+        "report": "deep",
+        "section": "最终结论",
+        "issue_id": "G13",
+        "reason": "按合并裁决定向修复，未改章节保持冻结基线。"
+      },
+      {
+        "report": "management",
+        "section": "__preamble__",
+        "issue_id": "G08",
+        "reason": "按合并裁决定向修复，未改章节保持冻结基线。"
+      },
+      {
+        "report": "management",
+        "section": "一、管理层画像",
+        "issue_id": "G08",
+        "reason": "按合并裁决定向修复，未改章节保持冻结基线。"
+      },
+      {
+        "report": "management",
+        "section": "二、言行一致性追踪",
+        "issue_id": "G08",
+        "reason": "按合并裁决定向修复，未改章节保持冻结基线。"
+      },
+      {
+        "report": "management",
+        "section": "三、资本配置记录",
+        "issue_id": "G08",
+        "reason": "按合并裁决定向修复，未改章节保持冻结基线。"
+      },
+      {
+        "report": "management",
+        "section": "六、组织与人才",
+        "issue_id": "G08",
+        "reason": "按合并裁决定向修复，未改章节保持冻结基线。"
+      },
+      {
+        "report": "management",
+        "section": "九、管理层100分制评分",
+        "issue_id": "G08",
+        "reason": "按合并裁决定向修复，未改章节保持冻结基线。"
+      },
+      {
+        "report": "management",
+        "section": "十一、综合结论",
+        "issue_id": "G08",
+        "reason": "按合并裁决定向修复，未改章节保持冻结基线。"
+      },
+      {
+        "report": "management",
+        "section": "数据来源",
+        "issue_id": "G08",
+        "reason": "按合并裁决定向修复，未改章节保持冻结基线。"
+      }
+    ],
+    "closures": [
+      {
+        "id": "G02",
+        "locations": [
+          "valuation.md：四、现金债务与股数桥",
+          "valuation.md：一、估值结论"
+        ],
+        "score_valuation_impact": "正式价格/确信度/买入价/价格区撤回为null；经营评分不因模型缺口调整。",
+        "checks": [
+          {
+            "id": "G02-sbc",
+            "passed": true,
+            "evidence": "valuation.md：四、现金债务与股数桥；valuation.md：一、估值结论；对应原件/撤回边界见repair-adjudication-v1.json与本run evidence。"
+          },
+          {
+            "id": "G02-equity",
+            "passed": true,
+            "evidence": "valuation.md：四、现金债务与股数桥；valuation.md：一、估值结论；对应原件/撤回边界见repair-adjudication-v1.json与本run evidence。"
+          },
+          {
+            "id": "G02-recalc",
+            "passed": true,
+            "evidence": "valuation.md：四、现金债务与股数桥；valuation.md：一、估值结论；对应原件/撤回边界见repair-adjudication-v1.json与本run evidence。"
+          }
+        ]
+      },
+      {
+        "id": "G03",
+        "locations": [
+          "valuation.md：一、估值结论",
+          "valuation.md：十四、反证与重估条件"
+        ],
+        "score_valuation_impact": "PE正式权重撤回；缺两个有效主模型，正式价格均null。",
+        "checks": [
+          {
+            "id": "G03-eps",
+            "passed": true,
+            "evidence": "valuation.md：一、估值结论；valuation.md：十四、反证与重估条件；对应原件/撤回边界见repair-adjudication-v1.json与本run evidence。"
+          },
+          {
+            "id": "G03-anchor",
+            "passed": true,
+            "evidence": "valuation.md：一、估值结论；valuation.md：十四、反证与重估条件；对应原件/撤回边界见repair-adjudication-v1.json与本run evidence。"
+          },
+          {
+            "id": "G03-completion",
+            "passed": true,
+            "evidence": "valuation.md：一、估值结论；valuation.md：十四、反证与重估条件；对应原件/撤回边界见repair-adjudication-v1.json与本run evidence。"
+          }
+        ]
+      },
+      {
+        "id": "G05",
+        "locations": [
+          "valuation.md：四、现金债务与股数桥"
+        ],
+        "score_valuation_impact": "两笔特殊付款保留为历史事实；未来现金税未知，现金流模型撤回；E2不因预测未知扣分。",
+        "checks": [
+          {
+            "id": "G05-tax",
+            "passed": true,
+            "evidence": "valuation.md：四、现金债务与股数桥；对应原件/撤回边界见repair-adjudication-v1.json与本run evidence。"
+          }
+        ]
+      },
+      {
+        "id": "G07",
+        "locations": [
+          "deep.md：综合评分汇总",
+          "deep.md：维度A"
+        ],
+        "score_valuation_impact": "A3改为3.5–4候选区间，只按融资/并购/非主营出售清洁度；F2.5承接回购纪律。",
+        "checks": [
+          {
+            "id": "G07-score",
+            "passed": true,
+            "evidence": "deep.md：综合评分汇总；deep.md：维度A；对应原件/撤回边界见repair-adjudication-v1.json与本run evidence。"
+          }
+        ]
+      },
+      {
+        "id": "G08",
+        "locations": [
+          "management.md：一、二、六、九",
+          "deep.md：综合评分汇总"
+        ],
+        "score_valuation_impact": "F1改为3.5–5、组织人才8–10；D2=3、D5=2候选理由保留，未知离任原因不扣分。",
+        "checks": [
+          {
+            "id": "G08-people",
+            "passed": true,
+            "evidence": "management.md：一、二、六、九；deep.md：综合评分汇总；对应原件/撤回边界见repair-adjudication-v1.json与本run evidence。"
+          },
+          {
+            "id": "G08-score",
+            "passed": true,
+            "evidence": "management.md：一、二、六、九；deep.md：综合评分汇总；对应原件/撤回边界见repair-adjudication-v1.json与本run evidence。"
+          }
+        ]
+      },
+      {
+        "id": "G09A",
+        "locations": [
+          "deep.md：维度B；保留正确绝对额，P2同比不阻塞"
+        ],
+        "score_valuation_impact": "正确绝对额保留；未补全部同比不改变评分。",
+        "checks": [
+          {
+            "id": "G09-segments",
+            "passed": true,
+            "evidence": "deep.md：维度B；保留正确绝对额，P2同比不阻塞；对应原件/撤回边界见repair-adjudication-v1.json与本run evidence。"
+          }
+        ]
+      },
+      {
+        "id": "G09B",
+        "locations": [
+          "valuation.md：四、现金债务与股数桥"
+        ],
+        "score_valuation_impact": "三类承诺分列但覆盖量未知，超额现金与依赖价格撤回；B1/E4不自动再扣。",
+        "checks": [
+          {
+            "id": "G09-commitments",
+            "passed": true,
+            "evidence": "valuation.md：四、现金债务与股数桥；对应原件/撤回边界见repair-adjudication-v1.json与本run evidence。"
+          }
+        ]
+      },
+      {
+        "id": "G13",
+        "locations": [
+          "三份repaired-v1全文",
+          "final/workpaper-repaired-v1.json"
+        ],
+        "score_valuation_impact": "恢复32项独立理由与来源；正式总分仍null，作者候选公司72.5–74.5、管理层68–70待验收。",
+        "checks": [
+          {
+            "id": "G13-single-source",
+            "passed": true,
+            "evidence": "三份repaired-v1全文；final/workpaper-repaired-v1.json；对应原件/撤回边界见repair-adjudication-v1.json与本run evidence。"
+          }
+        ]
+      }
+    ]
+  }
+}

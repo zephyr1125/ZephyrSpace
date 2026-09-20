@@ -1,0 +1,18 @@
+{
+  "as_of_date":"2026-09-18",
+  "cutoff":"2026-09-19",
+  "reason_for_as_of_date":"截止日为周六，采用此前最近香港交易日收盘。",
+  "security":"00696.HK",
+  "market":"HKEX Main Board",
+  "close_price":8.75,
+  "price_currency":"HKD",
+  "price_adjustment":"未复权；来源未披露复权处理，记为unknown",
+  "shares_outstanding":2926209589,
+  "shares_date":"2026-08-31",
+  "share_classes":{"H_shares":932562000,"domestic_shares":1993647589},
+  "market_cap_hkd":25604333903.75,
+  "fx":{"pair":"HKD/CNY","value":0.86062,"quote_convention":"1 HKD = CNY","date":"2026-09-18","type":"人民币汇率中间价"},
+  "market_cap_cny":22034402032.46,
+  "sources":["V1-S005","V1-S007","V1-S008"],
+  "limitations":"收盘价为第三方历史行情；汇率为中间价；市值按总普通股而非仅H股计算，未扣除税费、交易成本或ADR换算。"
+}

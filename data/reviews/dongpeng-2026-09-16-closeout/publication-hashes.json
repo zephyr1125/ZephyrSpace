@@ -1,0 +1,36 @@
+{
+  "publication": [
+    {
+      "source": "data\\reviews\\dongpeng-2026-09-16-closeout\\reports\\深度分析\\东鹏饮料 深度分析 83 2026-09-16.md",
+      "published": "深度分析\\东鹏饮料 深度分析 83 2026-09-16.md",
+      "source_sha256": "240d048364c3ae0ec0aee819648dd0244205675ba0d7e9abbbee5f54d6d08dbf",
+      "published_sha256": "7701b3152e6c8719e237ca5e27fe9f526d9057711e40b56e45310c8b535e30f5",
+      "lines": 346
+    },
+    {
+      "source": "data\\reviews\\dongpeng-2026-09-16-closeout\\reports\\管理层档案\\东鹏饮料 管理层档案 77 2026-09-16.md",
+      "published": "管理层档案\\东鹏饮料 管理层档案 77 2026-09-16.md",
+      "source_sha256": "a6bd40962ed2c548bfb0f3e52e5827ff02234867a1719172647391ff2e4517bc",
+      "published_sha256": "8dcbceafcd432b17e6bf896dfbe40cf949264ac14e92e5a0fbbc82676ba6bbaf",
+      "lines": 474
+    },
+    {
+      "source": "data\\reviews\\dongpeng-2026-09-16-closeout\\reports\\估值分析\\东鹏饮料 估值分析 2026-09-16.md",
+      "published": "估值分析\\东鹏饮料 估值分析 2026-09-16.md",
+      "source_sha256": "c4cfd17b83b3aaaeb39763faa27ac9d034a292df7cb80dfe8808f6a4900606ef",
+      "published_sha256": "3bd8d9c676ae8b4167824c0ae9d45b8873590b34470e51a60c8406eea595929b",
+      "lines": 320
+    },
+    {
+      "source": "data\\reviews\\dongpeng-2026-09-16-closeout\\company-page-draft.md",
+      "published": "01-公司\\东鹏饮料.md",
+      "source_sha256": "40d1d324c1e014f3e93258f9baa36470352c6b497ceca2d8f5bc87e33254612a",
+      "published_sha256": "a48097cec7ca24661364a0d90996264e403e573b2032cbe78234a177d560b53a"
+    }
+  ],
+  "preserved_historical_hashes": {
+    "深度分析\\东鹏饮料 深度分析 82 2026-07-31.md": "1940bbe2259a66b203adf8c6aedb53a9ffbba6c07287170a4d7d4f26948e6337",
+    "管理层档案\\东鹏饮料 管理层档案 78 2026-07-31.md": "64e00e13dca8c065f540a1d9a74a223966f4ad386969d562ed239e4b62989367",
+    "估值分析\\东鹏饮料 估值分析 2026-07-31.md": "818cc13f194aa0d908b314f5a3f1f322552feda96332395467b5b85d2378fb1a"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "status": "failed",
+  "errors": [
+    "评分：需要有限数值，实际为 None",
+    "估值：缺两个主模型，不能用确定性折扣补足",
+    "报告：'cScore'",
+    "防回退：valuation/十六、一句话结论发生未声明重写或删除，须保留无关已核内容"
+  ],
+  "warnings": [],
+  "computed": {},
+  "scope": {
+    "reports": true,
+    "repair": true
+  },
+  "limitations": "不验证证据真实性、行业适用性、假设合理性、正文全部数值或人工关闭判断；不代表双复核通过或允许入库。"
+}

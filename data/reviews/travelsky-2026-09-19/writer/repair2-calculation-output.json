@@ -1,0 +1,335 @@
+{
+  "status": "research_incomplete_pending_final_recheck",
+  "repair_round": 2,
+  "exception_round": 1,
+  "dupont": {
+    "2023": {
+      "net_margin": 0.2073178292447097,
+      "asset_turnover": 0.26485189383304897,
+      "equity_multiplier": 1.2938343165486548,
+      "roe_identity": 0.07104252705980624,
+      "roe_direct": 0.07104252705980625,
+      "avg_assets": 26368.876431,
+      "avg_equity": 20380.412
+    },
+    "2024": {
+      "net_margin": 0.24125104066468098,
+      "asset_turnover": 0.3085255012966635,
+      "equity_multiplier": 1.3023800536099948,
+      "roe_identity": 0.09693888012139798,
+      "roe_direct": 0.096938880121398,
+      "avg_assets": 28597.387522,
+      "avg_equity": 21957.78985
+    },
+    "2025": {
+      "net_margin": 0.2744635648152373,
+      "asset_turnover": 0.27878846873793733,
+      "equity_multiplier": 1.323280977789496,
+      "roe_identity": 0.10125385707235406,
+      "roe_direct": 0.10125385707235407,
+      "avg_assets": 31442.62042,
+      "avg_equity": 23761.106634
+    }
+  },
+  "customer_capital_bridge": {
+    "2023": {
+      "reserve": 1189.599,
+      "settlement_ar": 962.165,
+      "factoring_ar": 848.46,
+      "epay_ap": 1165.956,
+      "settlement_ap": 343.393,
+      "client_net_liability_proxy": 1736.783
+    },
+    "2024": {
+      "reserve": 1449.124,
+      "settlement_ar": 1118.645,
+      "factoring_ar": 839.886,
+      "epay_ap": 1436.509,
+      "settlement_ap": 379.995,
+      "client_net_liability_proxy": 2146.9829999999997
+    },
+    "2025": {
+      "reserve": 1528.546,
+      "settlement_ar": 1413.903,
+      "factoring_ar": 1323.74,
+      "epay_ap": 1519.907,
+      "settlement_ap": 516.939,
+      "client_net_liability_proxy": 2151.4889999999996
+    },
+    "2026": {
+      "reserve": 1979.88,
+      "settlement_ar": 1642.021,
+      "factoring_ar": 1518.042,
+      "epay_ap": 1975.473,
+      "settlement_ap": 700.112,
+      "client_net_liability_proxy": 3013.4440000000004
+    }
+  },
+  "fcff_diagnostic": {
+    "2024": {
+      "ocf_less_cash_capex": 2172.465494,
+      "client_net_liability_change": 410.1999999999998,
+      "after_visible_client_proxy": 1762.2654940000002,
+      "factoring_ar_change": -8.57400000000007
+    },
+    "2025": {
+      "ocf_less_cash_capex": 2080.74452,
+      "client_net_liability_change": 4.505999999999858,
+      "after_visible_client_proxy": 2076.2385200000003,
+      "factoring_ar_change": 483.85400000000004
+    }
+  },
+  "maintenance_capex_range_cny_m": [
+    800,
+    1200
+  ],
+  "normalized_fcff_range_cny_m": [
+    1400,
+    1900
+  ],
+  "normalized_fcff_range_status": "bounded_diagnostic_not_formal_dcf_input",
+  "ri_scenarios": {
+    "conservative": {
+      "value_cny_m": 15749.189817430866,
+      "value_hkd_0630": 5.8665028525404255,
+      "value_hkd_0918_stub": 6.008151856333909,
+      "terminal_payout": 0.875,
+      "ri6": -1094.218023358351,
+      "rows": [
+        {
+          "year": 1,
+          "begin_bv": 25030.046025,
+          "roe": 0.085,
+          "payout": 0.35,
+          "earnings": 2127.553912125,
+          "ri": -750.9013807499999,
+          "end_bv": 26412.95606788125
+        },
+        {
+          "year": 2,
+          "begin_bv": 26412.95606788125,
+          "roe": 0.08375,
+          "payout": 0.4,
+          "earnings": 2212.0850706850547,
+          "ri": -825.404877121289,
+          "end_bv": 27740.207110292282
+        },
+        {
+          "year": 3,
+          "begin_bv": 27740.207110292282,
+          "roe": 0.0825,
+          "payout": 0.45,
+          "earnings": 2288.5670865991133,
+          "ri": -901.5567310844992,
+          "end_bv": 28998.919007921795
+        },
+        {
+          "year": 4,
+          "begin_bv": 28998.919007921795,
+          "roe": 0.08125,
+          "payout": 0.5,
+          "earnings": 2356.162169393646,
+          "ri": -978.7135165173606,
+          "end_bv": 30177.00009261862
+        },
+        {
+          "year": 5,
+          "begin_bv": 30177.00009261862,
+          "roe": 0.08,
+          "payout": 0.55,
+          "earnings": 2414.1600074094895,
+          "ri": -1056.1950032416516,
+          "end_bv": 31263.372095952887
+        }
+      ]
+    },
+    "base": {
+      "value_cny_m": 21908.656947849115,
+      "value_hkd_0630": 8.16087684317801,
+      "value_hkd_0918_stub": 8.34143720705666,
+      "terminal_payout": 0.7894736842105263,
+      "ri6": -328.90104380944086,
+      "rows": [
+        {
+          "year": 1,
+          "begin_bv": 25030.046025,
+          "roe": 0.1,
+          "payout": 0.35,
+          "earnings": 2503.0046025,
+          "ri": -125.15023012499977,
+          "end_bv": 26656.999016625
+        },
+        {
+          "year": 2,
+          "begin_bv": 26656.999016625,
+          "roe": 0.09875,
+          "payout": 0.38749999999999996,
+          "earnings": 2632.378652891719,
+          "ri": -166.60624385390602,
+          "end_bv": 28269.330941521177
+        },
+        {
+          "year": 3,
+          "begin_bv": 28269.330941521177,
+          "roe": 0.0975,
+          "payout": 0.425,
+          "earnings": 2756.259766798315,
+          "ri": -212.01998206140863,
+          "end_bv": 29854.180307430208
+        },
+        {
+          "year": 4,
+          "begin_bv": 29854.180307430208,
+          "roe": 0.09625,
+          "payout": 0.4625,
+          "earnings": 2873.4648545901578,
+          "ri": -261.22407769001416,
+          "end_bv": 31398.667666772417
+        },
+        {
+          "year": 5,
+          "begin_bv": 31398.667666772417,
+          "roe": 0.095,
+          "payout": 0.5,
+          "earnings": 2982.8734283433796,
+          "ri": -313.986676667724,
+          "end_bv": 32890.1043809441
+        }
+      ]
+    },
+    "optimistic": {
+      "value_cny_m": 28416.92896331812,
+      "value_hkd_0630": 10.585179095323085,
+      "value_hkd_0918_stub": 10.804317883668734,
+      "terminal_payout": 0.7619047619047619,
+      "ri6": 241.30471719186934,
+      "rows": [
+        {
+          "year": 1,
+          "begin_bv": 25030.046025,
+          "roe": 0.115,
+          "payout": 0.35,
+          "earnings": 2878.455292875,
+          "ri": 425.510782425,
+          "end_bv": 26901.04196536875
+        },
+        {
+          "year": 2,
+          "begin_bv": 26901.04196536875,
+          "roe": 0.1125,
+          "payout": 0.375,
+          "earnings": 3026.3672211039843,
+          "ri": 390.06510849784684,
+          "end_bv": 28792.52147855874
+        },
+        {
+          "year": 3,
+          "begin_bv": 28792.52147855874,
+          "roe": 0.11,
+          "payout": 0.4,
+          "earnings": 3167.1773626414615,
+          "ri": 345.5102577427048,
+          "end_bv": 30692.82789614362
+        },
+        {
+          "year": 4,
+          "begin_bv": 30692.82789614362,
+          "roe": 0.1075,
+          "payout": 0.425,
+          "earnings": 3299.478998835439,
+          "ri": 291.5818650133642,
+          "end_bv": 32590.028320473997
+        },
+        {
+          "year": 5,
+          "begin_bv": 32590.028320473997,
+          "roe": 0.105,
+          "payout": 0.45,
+          "earnings": 3421.95297364977,
+          "ri": 228.13019824331772,
+          "end_bv": 34472.102455981374
+        }
+      ]
+    }
+  },
+  "ri_sensitivity": {
+    "roe_0.085": {
+      "ke_0.095": 8.180836853531247,
+      "ke_0.105": 7.179938901152105,
+      "ke_0.115": 6.391119068191214
+    },
+    "roe_0.095": {
+      "ke_0.095": 9.510895896637123,
+      "ke_0.105": 8.342684635847938,
+      "ke_0.115": 7.42212265693344
+    },
+    "roe_0.105": {
+      "ke_0.095": 10.869202442583811,
+      "ke_0.105": 9.529865646455033,
+      "ke_0.115": 8.47456628959701
+    }
+  },
+  "company_subscores": {
+    "A": {
+      "A1": 3,
+      "A2": 3,
+      "A3": 2
+    },
+    "B": {
+      "B0": 1,
+      "B1": 4,
+      "B2": 2,
+      "B3": 5,
+      "B4": 4
+    },
+    "C": {
+      "C1": 5,
+      "C2": 4,
+      "C3_C4": 7
+    },
+    "D": {
+      "D1": 3,
+      "D2": 3,
+      "D3": 2,
+      "D5": 2
+    },
+    "E": {
+      "E1": 2,
+      "E2": 3,
+      "E3": 2,
+      "E4": 1.5,
+      "E5": 1,
+      "E5_5": 2
+    },
+    "F": {
+      "F1": 4,
+      "F2": 3,
+      "F2_5": 1,
+      "F3": 2
+    }
+  },
+  "dimension_totals": {
+    "A": 8,
+    "B": 16,
+    "C": 16,
+    "D": 10,
+    "E": 11.5,
+    "F": 10
+  },
+  "candidate_company_score_raw": 71.5,
+  "candidate_company_score_rounded": 72,
+  "candidate_management_score": 70,
+  "formal_parameters": {
+    "cScore": null,
+    "mScore": null,
+    "target_price": null,
+    "valuation_certainty": null,
+    "mechanical_buy_price": null,
+    "watchlistLevel": null
+  },
+  "reverse_validation_weight": 0,
+  "remaining_p1_author_view": [
+    "C04",
+    "C05"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "units": "CNY unless noted",
+  "outstanding_shares": 727076759,
+  "issued_shares": 734199310,
+  "treasury_shares": 7122551,
+  "share_uplift": 0.009796147259329535,
+  "selected_assets_before_haircuts": 23160675155.86,
+  "debt_and_leases": 6059043393.62,
+  "original_bridge_exdiv_after_commit_buffer": 12351974002.720001,
+  "original_bridge_cny_bn": 12.35197400272,
+  "cash_interest_reconciliation": 158878609.69000053,
+  "interest_receivable": 150410597.44,
+  "restricted_cash": 8468012.25,
+  "buffer_months_of_h1_outflow": 1.0931480082991818,
+  "commitment_not_double_deducted_exdiv_before_nci": 12920401485.240002,
+  "book_nci": 45784389.89,
+  "exdiv_adjustment_after_full_book_nci": 12874617095.350002,
+  "cumdiv_adjustment_after_full_book_nci": 15055847372.350002,
+  "h1_ocf_less_capex": 1357440211.5499997,
+  "fy25_ocf_less_capex": 3905081897.77,
+  "fy25_dupont": {
+    "net_margin": 0.21150684462587463,
+    "turnover_avg_assets": 0.8452035555386712,
+    "equity_multiplier": 2.8872358980393464,
+    "simple_roe": 0.5161405858319495
+  },
+  "pe_typo_original_denominator": [
+    127.25101987463898,
+    151.7223698505311
+  ],
+  "reverse_old_fixed_pe_correct_denominator": 4067002358.6403003,
+  "status": "independent_checks_not_final_valuation"
+}
