@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "run_id": "nike-directed-repair-2026-09-20",
+  "as_of": "2026-09-19",
+  "previous": {
+    "reports": "data/reviews/nike-regression-2026-09-20/drafts/frozen-author-v1/{deep,management,valuation}.md",
+    "workpaper": "data/reviews/nike-regression-2026-09-20/final/author-v1-workpaper.json",
+    "difference_statement": "只从v1冻结三份独立全文定向修复；未以v2/v3正文为底稿，未继承历史76.5分或正式结论。"
+  },
+  "decision": "reject",
+  "research_status": "execution_incomplete",
+  "company_disposition": "按本轮合法25项与管理层七维逐项判断，公司65、管理层64、合计129，均低于B_GROWTH最低原始门槛，故为NONE；该处置来自公司质量判断，不来自旧run执行失败。",
+  "valuation_status": "stopped_quality_gate_after_full_research",
+  "approved_parameters": {
+    "company_score": 65,
+    "management_score": 64,
+    "combined_score": 129,
+    "watchlistLevel": "NONE",
+    "target_price": null,
+    "certainty": null,
+    "buy_price": null,
+    "currency": "USD"
+  },
+  "acceptance_scope": {
+    "issues": ["NKE-A01", "NKE-A02", "NKE-A03", "NKE-A04", "NKE-A05", "NKE-A06", "NKE-A09", "NKE-A10"],
+    "acceptance_ids_count": 27,
+    "author_status": "all_author_claimed_closed_pending_independent_targeted_recheck",
+    "closure_basis": "现有材料可闭合者直接纠正；未知依锁定裁决允许的保守档位或替代路径评分，并在正文明确边界。完整逐ID位置、联动与作者声明见workpaper-v1.json repair.closures。"
+  },
+  "key_closures": {
+    "NKE-A01": "删除非法F4，C3+C4恢复为唯一合并项，25项合计65；生成器快照和评分表已嵌入三稿。",
+    "NKE-A02": "事实ID迁移为v2唯一ID；税务742明确为953子集；SBC保留F006。",
+    "NKE-A03": "三期杜邦、OCF/净利、正确FCF、E5.5中性值及IEEPA压力诊断已展开。",
+    "NKE-A04": "A3按轻微瑕疵2分、B0按部分覆盖1分、D5按弱混合信号1分；未知边界未冒充完整清单。",
+    "NKE-A05": "七维事实到评分闭合为64；补Proxy激励/支付、关联方政策、资本配置边界和公开高管节点。",
+    "NKE-A06": "可信分数否决全部档位，按规则停止正式定价；三价格字段null且未虚构价格。",
+    "NKE-A09": "期末/平均权益、现金Capex、FCF和Capex未拆分扣分已跨三稿联动。",
+    "NKE-A10": "S010-v2通用计划与S012-v2 8-K主文分离；实际支付未知且非竞业/遣散不重复相加。"
+  },
+  "mechanical_check": {
+    "status": "mechanical_checks_passed",
+    "source": "writer/selfcheck.json",
+    "warning": "公司D维度触发原规则重大警告；须人工处理，程序不判入库。",
+    "meaning": "仅代表repair普通机械检查通过，不代表独立复核或准予入库。"
+  },
+  "next_trigger": "主任务运行handoff --stage repair并交原两路定向复查；只有独立验收通过后才能把research_status改为verified_complete。"
+}

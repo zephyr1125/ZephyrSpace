@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "run_id": "nike-delivery-migration-2026-09-20",
+  "stage": "build_v5_release_fact_consistency",
+  "role": "triplet_review_facts",
+  "baseline": "data/reviews/nike-delivery-migration-2026-09-20/build-v4",
+  "candidate": "data/reviews/nike-delivery-migration-2026-09-20/build-v5",
+  "decision": "fail",
+  "scope": "独立比较三份完整生成稿、manifest与已批准delivery-closeout-v2；不重做研究或取证。",
+  "hashes": {
+    "manifest.json": "3cb73e13f4d55b8f7e16d55980defc24aea1cffe9336bb59fbe29edf30a2e320",
+    "deep.md": "4bceadc28ed6ec460a04f24b0fa215d01c5bbc969ccd29194de23ed282d1f333",
+    "management.md": "bac6fb5c8259ef701b9d08d2e4af9f279b07e5dbb1523e9e2f5b022093381996",
+    "valuation.md": "86f24cd3c3a08ead61a2566f02ed870bd109d150dd629c931ba39f7e0606c2b2"
+  },
+  "approved_invariants": {
+    "score_bounds": {"company": [66, 72], "management": [56, 66], "combined": [122, 138]},
+    "decision": "reject",
+    "level": "NONE",
+    "pricing": {"target_price": null, "certainty": null, "buy_price": null},
+    "evidence_workpaper_decision_hashes_unchanged": true,
+    "real_unknowns_preserved": true
+  },
+  "allowed_text_boundary_review": {
+    "status": "pass",
+    "basis": "相对build-v4，三稿新增/删改仅涉及草稿与例外修复标签、待handoff/待复查/待验收文字、标记引用核验占位、机械校验端点展示，以及对已批准交付状态的同步措辞；未发现来源、事实、评分区间、reject/NONE或三价格null的改动。"
+  },
+  "findings": [
+    {
+      "id": "NKE-REL-V5-F01",
+      "severity": "P1",
+      "location": ["build-v5/manifest.json:3", "build-v5/manifest.json:6-7", "build-v5/manifest.json:243"],
+      "claim": "manifest仍为assembled_for_review、delivery_state=mechanically_checked、publish_allowed=false，并称发表仍须独立全文验收和裁决；同时frozen_bundle.publication_ready=true。",
+      "conflict": "delivery-closeout-v2已批准delivery_state=approved、publish_allowed=true，且NKE-DEL-001/002及四项验收均closed；三稿首部也称两项delivery问题均完成定向验收。",
+      "impact": "发布状态自相矛盾，不能作为v5发布验收manifest。",
+      "required_fix": "以裁决已批准的交付状态重新装配/归档，并复核新的manifest与三稿哈希；不改研究判断。"
+    },
+    {
+      "id": "NKE-REL-V5-F02",
+      "severity": "P1",
+      "location": ["build-v5/deep.md:39,101", "build-v5/deep.md:57,244", "build-v5/management.md:185", "workpaper.json:231,342"],
+      "claim": "B0生成表为[1,2]，但deep:101称B0为1分；deep:244称机械表使用66/56/122下端点闭合；F1和组织与人才表理由称机械校验采用下端点0。",
+      "conflict": "已批准区间规则要求区间项score=null、端点不是实际评价，且报告自身deep:64、management:161/191已作相反说明。",
+      "impact": "将区间端点误表述为实际评分/算术输入，破坏区间与未知边界的一致性；评分区间、资格和价格字段本身未变。",
+      "required_fix": "仅版本化更正受影响workpaper理由和对应源稿/生成表措辞，保留B0[1,2]、F1[0,5]、组织与人才[0,10]及所有批准边界、引用和决定字段；重新装配并定向复查。"
+    }
+  ],
+  "residual_scan": {
+    "draft_handoff_pending_language_in_reports": "none_found",
+    "status_conflicts": "found_in_manifest",
+    "endpoint_as_actual_score_conflicts": "found_in_deep_and_generated_tables",
+    "null_price_fields": "preserved",
+    "return_to_research": false
+  },
+  "conclusion": "v5清除了预期的草稿和待验收正文，但manifest发布状态未同步，且保留三处把区间下端点当机械评分的表述及B0点值冲突。均属确定性交付修正；在定向修正、重新装配和复验前，v5不得作为发布版本。"
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "run_id": "nike-delivery-migration-2026-09-20",
+  "stage": "build_v4_final_release_acceptance",
+  "role": "triplet_review_facts",
+  "scope": "核manifest/verify、三处状态同步、DEL-001/002无回退、事实/区间/真实未知和decision-approved一致，并全文扫描当前交付open/待验收冲突。",
+  "manifest_hashes": {
+    "build-v4/deep.md":"606572cb5f13b9e4140379baa6a55edf8e85d9f9a6cf7c5dcced7c3195390d3c",
+    "build-v4/management.md":"fb961a1b194b3734d83f66d86a72daf399a83c31ba2c2b5b8709250a62582414",
+    "build-v4/valuation.md":"146a7d2308cca5944ebb12cf229a5cc2fbcbb2d1948f41ef8ac35cc4f5cabe46",
+    "result":"all_match_manifest"
+  },
+  "acceptance_results": [
+    {"id":"release-status-sync","status":"pass","basis":"deep.md:70、249和management.md:204均已替换为本次两项交付问题完成事实验收、历史旧run记录保留的状态，与三稿统一结论一致。"},
+    {"id":"NKE-DEL-001","status":"pass_no_regression","basis":"全文未见不存在ID、旧CAL-BND、CAP/ORG压缩引用或错误004；实际ID及句义映射保持通过。"},
+    {"id":"NKE-DEL-002","status":"pass_no_regression","basis":"三稿继续使用授权范围的高管时间线共用事实；个人动机、未披露人才保留率、Friend最终支付和无集中离任阈值均保留为未知。"},
+    {"id":"decision-invariance","status":"pass","basis":"公司66–72、管理层56–66、合计122–138；reject/NONE、质量停止与三价格null均与decision-approved一致。"}
+  ],
+  "verification": {
+    "fulltext_current_delivery_open_conflicts": "none_found",
+    "authorization_scope_expanded": false,
+    "real_unknowns_preserved": true,
+    "score_or_qualification_changed": false,
+    "manifest_verified": true
+  },
+  "findings": [],
+  "new_p0": [],
+  "new_p1": [],
+  "return_to_research": false,
+  "publish_pass": true,
+  "independent_conclusion":"build-v4 完成发布前一致性核验。三处状态文本已同步，DEL-001/002未回退，事实、授权范围、真实未知、评分区间、reject/NONE和质量停止均保持已批准状态；manifest与报告哈希一致。"
+}

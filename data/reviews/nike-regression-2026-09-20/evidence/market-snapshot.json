@@ -1,0 +1,17 @@
+{
+  "as_of_cutoff":"2026-09-19",
+  "security":"NIKE, Inc. Class B Common Stock",
+  "ticker":"NKE",
+  "market":"NYSE",
+  "currency":"USD",
+  "latest_trade_timestamp_utc":"2026-09-18T23:59:54Z",
+  "latest_trade_price":35.51,
+  "price_type":"截至截止日可用市场数据的latest trade；时间戳在美东常规交易收盘后，非已独立核验的交易所正式收盘价。",
+  "adjustment_status":"unknown",
+  "market_cap":52611616000,
+  "market_cap_currency":"USD",
+  "shares_reference":{"diluted_weighted_average_shares_fy2026":1481000000,"period_end_common_shares_2026_07_08":1483498703,"share_classes":"Class A 281,387,752; Class B 1,202,110,951","source_fact_ids":["NKE-F-004","NKE-M-001"]},
+  "source_id":"S009",
+  "retrieved_at":"2026-09-19",
+  "limitations":["市场工具返回市值，未按某一股数口径重算。","价格复权状态未知。","本快照为NKE Class B；未作ADR或普通股换算。","不得将盘后latest trade表述为交易所正式收盘价。"]
+}

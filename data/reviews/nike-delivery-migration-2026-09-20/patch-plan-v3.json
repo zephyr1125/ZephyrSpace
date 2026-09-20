@@ -1,0 +1,28 @@
+{
+  "edits": [
+    {
+      "path": "data/reviews/nike-delivery-migration-2026-09-20/source/deep.md",
+      "before_sha256": "a5962a9a97c3b47e83a91e9be6129ed412dd586e6e521491c05c09a7bde75e98",
+      "old": "- 当前锁定区间为公司{{score:company}}、管理层{{score:management}}、合计{{score:combined}}；管理层上界低于70且合计上界低于150，稳定否决B_GROWTH及更高档位，处置为 `reject/NONE`。研究判断已获批准；两个交付问题保持open，待定向验收。",
+      "new": "- 当前锁定区间为公司{{score:company}}、管理层{{score:management}}、合计{{score:combined}}；管理层上界低于70且合计上界低于150，稳定否决B_GROWTH及更高档位，处置为 `reject/NONE`。既有区间研究判断已获批准，本次两项交付问题已完成事实验收；历史旧run未验收记录仍保留，本次通过不追改历史状态。",
+      "count": 1,
+      "issue_id": "NKE-DEL-002"
+    },
+    {
+      "path": "data/reviews/nike-delivery-migration-2026-09-20/source/deep.md",
+      "before_sha256": "a5962a9a97c3b47e83a91e9be6129ed412dd586e6e521491c05c09a7bde75e98",
+      "old": "- 研究判断已获批准；两个交付问题保持open，待定向验收，这不改变基于当前证据的公司质量处置来源。",
+      "new": "- 既有区间研究判断已获批准，本次两项交付问题已完成事实验收；历史旧run未验收记录仍保留，本次通过不追改历史状态，这不改变基于当前证据的公司质量处置来源。",
+      "count": 1,
+      "issue_id": "NKE-DEL-002"
+    },
+    {
+      "path": "data/reviews/nike-delivery-migration-2026-09-20/source-patch-v2/source-0.md",
+      "before_sha256": "66438799aa249cf38ee28eb1576be083c41f818668878e53bd393e68532245a8",
+      "old": "- 正式评分区间为公司{{score:company}}、管理层{{score:management}}、合计{{score:combined}}；管理层上界66低于70且合计上界138低于150，故处置为reject/NONE。研究判断已获批准；两个交付问题保持open，待定向验收。",
+      "new": "- 正式评分区间为公司{{score:company}}、管理层{{score:management}}、合计{{score:combined}}；管理层上界66低于70且合计上界138低于150，故处置为reject/NONE。既有区间研究判断已获批准，本次两项交付问题已完成事实验收；历史旧run未验收记录仍保留，本次通过不追改历史状态。",
+      "count": 1,
+      "issue_id": "NKE-DEL-002"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "run_id": "nike-delivery-migration-2026-09-20",
+  "stage": "build_v6_targeted_delivery_facts",
+  "role": "triplet_review_facts",
+  "baseline": "data/reviews/nike-delivery-migration-2026-09-20/build-v5",
+  "candidate": "data/reviews/nike-delivery-migration-2026-09-20/build-v6",
+  "classification": "data/reviews/nike-delivery-migration-2026-09-20/final/release-repair-classification.json",
+  "decision": "pass",
+  "scope": "按NKE-REL-D01-01、NKE-REL-D02-01、NKE-REL-D03-01定向复核新底稿、新源稿和三份生成稿；不重启研究。",
+  "hashes": {
+    "manifest.json": "6ba9fb87e89cab25570bad70093fb186e31c7cec3f4c4ce50faa5443ab81cf6a",
+    "deep.md": "fb781c1b9f2dcc0b28c587d4a2a0d2d89d62049f612d3feaa2cdb02b19311d84",
+    "management.md": "75bcf92795c7b2b44044f478f00f38b4931a5d79e72165e962e5d353ef5c4424",
+    "valuation.md": "86f24cd3c3a08ead61a2566f02ed870bd109d150dd629c931ba39f7e0606c2b2",
+    "workpaper-release-v6.json": "19b45359412eb136f2ea128126b1aed4043fcb8eba852e541ccdecaca7bb6e48"
+  },
+  "acceptance_results": [
+    {
+      "id": "NKE-REL-D01-01",
+      "status": "pass",
+      "locations": ["build-v6/deep.md:39", "build-v6/deep.md:101"],
+      "basis": "B0评分表和正文均为已批准[1,2]区间并明确不发布实际点值；后续既有证据不足说明未改。"
+    },
+    {
+      "id": "NKE-REL-D02-01",
+      "status": "pass",
+      "locations": ["build-v6/deep.md:244"],
+      "basis": "已删除66/56/122下端点闭合表述，改为按分项上下界分别汇总且不采用端点或中点作为实际总分；66–72、56–66、122–138及reject/NONE均保留。"
+    },
+    {
+      "id": "NKE-REL-D03-01",
+      "status": "pass",
+      "locations": ["workpaper-release-v6.json#/scores/company/items/F1/reason", "workpaper-release-v6.json#/scores/management/items/组织与人才能力/reason", "build-v6/deep.md:57", "build-v6/management.md:185"],
+      "basis": "两项reason仅将旧机械下端点0流程说明改为采用既有批准区间且不作实际点值评价；时间线、12个月窗口、无集中离任阈值、个人动机/保留率未知和外包络语义均保留。"
+    },
+    {
+      "id": "NKE-REL-D04-01",
+      "status": "pass",
+      "basis": "workpaper相对基线仅两处reason首句变化；新深度源稿仅B0和总分端点两处文字变化；管理层与估值源稿无差异。score、bounds、bounds_reason、rule_ref、evidence_refs、证据、事实及实际评分归因未变。"
+    },
+    {
+      "id": "NKE-REL-D04-02",
+      "status": "pass",
+      "basis": "已记录实际build-v6 manifest与三稿哈希及定向差异；无需重启双路全文研究。"
+    }
+  ],
+  "invariants": {
+    "decision": "reject",
+    "research_state": "approved",
+    "score_bounds": {"company": [66, 72], "management": [56, 66], "combined": [122, 138]},
+    "variable_items": {"B0": {"score": null, "bounds": [1, 2]}, "F1": {"score": null, "bounds": [0, 5]}, "组织与人才能力": {"score": null, "bounds": [0, 10]}},
+    "pricing": {"target_price": null, "certainty": null, "buy_price": null},
+    "evidence_refs_unchanged": true,
+    "real_unknowns_preserved": true
+  },
+  "manifest_status_review": {
+    "status": "expected_for_assembly",
+    "values": {"status": "assembled_for_review", "delivery_state": "mechanically_checked", "publish_allowed": false, "publication_ready": true},
+    "basis": "交付规范规定装配成功一律为assembled_for_review且publish_allowed=false；publication_ready只启用后续检查。实际哈希须由外部终裁另行绑定，因此不将此状态记为本轮缺陷。"
+  },
+  "residual_scan": {
+    "obsolete_endpoint_phrases": "none_found",
+    "B0_actual_point_phrase": "none_found",
+    "draft_handoff_pending_language_in_reports": "none_found",
+    "score_source_unknowns_or_null_price_regression": "none_found"
+  },
+  "findings": [],
+  "return_to_research": false,
+  "publication_authorization": "本复核仅完成定向事实验收；不自行授权发布，等待外部终裁以本JSON记录的实际哈希绑定。",
+  "conclusion": "三项已分类交付修正均已准确实施，受影响文字与生成位置同步，研究判断、评分区间、来源、真实未知、reject/NONE和三价格null均未改变。"
+}

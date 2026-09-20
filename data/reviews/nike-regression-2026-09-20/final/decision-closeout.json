@@ -1,0 +1,376 @@
+{
+  "schema_version": 1,
+  "run_id": "nike-regression-2026-09-20",
+  "as_of": "2026-09-19",
+  "stage": "terminal_disposition_after_bounded_exception",
+  "decision": "defer",
+  "decision_label": "暂缓",
+  "research_status": "execution_incomplete",
+  "answer": "暂缓收录。本轮完整三件套未通过验收；65/64/129仅为算术闭合的条件性候选值，不能正式采用。没有已获批准的正式估值，三价格字段为null。不发布为正式已验收报告，不写入或同步Watchlist。",
+  "research_acceptance": {
+    "passed": false,
+    "company": "未完整验收：关键评分依据缺失且深度正文被同文摘要替代。",
+    "management": "未完整验收：七维治理档案实质缺失，部分新分值尚无充分依据。",
+    "valuation": "未完整验收且未完成正式定价；质量停止定价路径亦未批准。",
+    "why_not_closed_with_uncertainty": "仍有已知P0内容错误和P1执行遗漏；本JSON撤回批准资格不等于修复冻结正文，因此不能改记closed_with_uncertainty。",
+    "why_not_reject": "原始评分并非已可信闭合，亦无当前冻结材料已核红线或有据上下界足以确定否决全部档位；不得将执行失败转写为企业不合格。"
+  },
+  "approved_parameters": {
+    "company_score": null,
+    "management_score": null,
+    "combined_score": null,
+    "watchlistLevel": null,
+    "target_price": null,
+    "valuation_certainty": null,
+    "buy_price": null,
+    "currency": "USD",
+    "price_null_meaning": "未完成/未批准正式定价，不是价值为零，也不是已获批准的质量停止定价结果。",
+    "retained_company_items": {
+      "E2": 5,
+      "E3": 2,
+      "E5.5": 1.5,
+      "E4": 1.5
+    },
+    "retained_management_items": {
+      "战略稳定性": 8,
+      "危机处理能力": 5,
+      "表达清晰度与认知质量": 4
+    },
+    "retained_items_scope": "沿用已核事实/规则的局部分项；E5.5为现有无MD流程中性值，E4为基础2因Capex未拆分扣0.5。局部保留不代表三份报告通过，不据其反推未经批准总分。"
+  },
+  "candidate_parameters": {
+    "company_score": 65,
+    "management_score": 64,
+    "combined_score": 129,
+    "arithmetic_verified": true,
+    "substantively_approved": false,
+    "confidence_status": "仅条件性候选；算术可信，整体评分的证据归因尚未可信。",
+    "formal_adoption_allowed": false,
+    "conditional_gate": "只有其逐项证据和规则成立时，65<70、64<70且129<150才能支持reject/NONE；该条件目前未满足。",
+    "upper_lower_bound": "未构造或批准有据评分上下界；不把未知自动填0或中档，也不以数字远低门槛替代证据。"
+  },
+  "withdrawn_fields": [
+    "65/64/129作为本轮正式已验收评分",
+    "reject/NONE作为最终企业质量处置",
+    "stopped_quality_gate_after_full_research作为已验收估值状态",
+    "质量门槛已可信否决全部档位的正文断言",
+    "完整三件套已完成或可发布/可入库的任何推论"
+  ],
+  "withdrawal_scope": "撤回上述字段的正式效力；冻结历史稿和审核材料原样留存，仅作未通过过程证据。本裁决不修改这些文件，也不把撤回冒充已更正正文。",
+  "verified_findings": [
+    {
+      "finding": "公司25项已删除非法F4；C3+C4合并；65与64独立相加为129。",
+      "source_ref": "data/reviews/nike-regression-2026-09-20/final/author-v3-workpaper.json"
+    },
+    {
+      "finding": "期末权益14865/13213/14430/14004与五季度平均13944/13926的边界已纠正；现金Capex812/430/684、简化FCF6617/3268/2184为百万美元。",
+      "source_ref": "data/reviews/nike-regression-2026-09-20/final/adjudication-v1.json NKE-A09；v3两路复查"
+    },
+    {
+      "finding": "FY2026杜邦四个数6.698565%、1.237461、2.670739、22.138329%仍可信；不据单期数据认可三期已分析。",
+      "source_ref": "data/reviews/nike-regression-2026-09-20/final/adjudication-v1.json NKE-A03"
+    },
+    {
+      "finding": "IEEPA收益986/已收302/应收684分拆可信，2322.233846仅税率假设下压力诊断；税务742为953子集，与SBC事实ID分离。",
+      "source_ref": "data/reviews/nike-regression-2026-09-20/final/adjudication-v1.json NKE-A02/A03"
+    },
+    {
+      "finding": "官方披露存在CFO继任安排；通用遣散计划不证明个人已实际获付。精确任职日期未列为本终局批准参数。",
+      "source_ref": "data/reviews/nike-regression-2026-09-20/final/adjudication-v1.json NKE-A10；frozen-author-v3人事摘要"
+    },
+    {
+      "finding": "品牌和渠道经营基础仍在，收入/利润/现金流修复尚需验证；没有由本次材料核实足以直接判排除的重大治理红线。",
+      "source_ref": "data/reviews/nike-regression-2026-09-20/final/adjudication-v1.json；既有冻结v1研究依据"
+    },
+    {
+      "finding": "v3形式机械检查通过，但repair=false且不能检测错贴同文、重复占位或评分依据充分性。",
+      "source_ref": "data/reviews/nike-regression-2026-09-20/final/author-v3-selfcheck.json"
+    }
+  ],
+  "blocking_items": [
+    {
+      "id": "NKE-TR-V3-01",
+      "severity": "P0",
+      "category": "fact_error",
+      "impact": "三份不同报告错贴为同文修复摘要；各212行中115行为重复占位，去掉类型行后三稿逐字相同。公司/管理层/估值正文均实质丢失，是内容身份与完整性P0，不是普通排版问题。",
+      "disposition": "open",
+      "source_ref": "data/reviews/nike-regression-2026-09-20/drafts/frozen-author-v3/{deep,management,valuation}.md"
+    },
+    {
+      "id": "NKE-A03-02",
+      "severity": "P1",
+      "category": "evidence_gap",
+      "impact": "三期同口径杜邦与E1规则驱动归因未完成；FY2026数值正确不等于E1=5完成验收。",
+      "disposition": "open",
+      "source_ref": "data/reviews/nike-regression-2026-09-20/final/author-v3-workpaper.json scores.company/E1"
+    },
+    {
+      "id": "NKE-A04-01/03",
+      "severity": "P1",
+      "category": "evidence_gap",
+      "impact": "资本史和三期人效/研发未补齐，A3=2、D5=1仍依缺资料折中计分。",
+      "disposition": "open",
+      "source_ref": "data/reviews/nike-regression-2026-09-20/final/author-v3-workpaper.json scores.company/A3,D5"
+    },
+    {
+      "id": "NKE-A05-01/02/03/04",
+      "severity": "P1",
+      "category": "evidence_gap",
+      "impact": "管理层七维论证、Proxy激励调整/支付/关联交易、回购净效果和高管时间线未实质关闭，资本配置13及组织9等不足以正式采用。",
+      "disposition": "open",
+      "source_ref": "data/reviews/nike-regression-2026-09-20/review-reasoning/targeted-recheck-v3.json"
+    },
+    {
+      "id": "NKE-A06-01",
+      "severity": "P1",
+      "category": "model_error",
+      "impact": "质量停止定价的前提未获可信评分支持；估值报告方法、情景、风险与重评内容丢失。不能用模型缺失判公司不合格，也不能批准停止路径。",
+      "disposition": "open",
+      "source_ref": "data/reviews/nike-regression-2026-09-20/drafts/frozen-author-v3/valuation.md"
+    },
+    {
+      "id": "NKE-A09-04/NKE-A10-02",
+      "severity": "P1",
+      "category": "evidence_gap",
+      "impact": "跨报告影响链及个人遣散/非竞业适用与抵扣尚未闭合。",
+      "disposition": "open",
+      "source_ref": "data/reviews/nike-regression-2026-09-20/review-reasoning/targeted-recheck-v3.json"
+    }
+  ],
+  "acceptance_dispositions": [
+    {
+      "id": "NKE-A01-01",
+      "severity": "P0",
+      "terminal_status": "verified_limited",
+      "disposition": "仅认可该局部纠正；不扩张为整份报告、全部评分或研究验收通过。"
+    },
+    {
+      "id": "NKE-A01-02",
+      "severity": "P0",
+      "terminal_status": "verified_limited",
+      "disposition": "仅认可该局部纠正；不扩张为整份报告、全部评分或研究验收通过。"
+    },
+    {
+      "id": "NKE-A01-03",
+      "severity": "P0",
+      "terminal_status": "verified_limited",
+      "disposition": "仅确认形式检查真实通过；scope.repair=false且repair对象为空，不证明逐条件修复、报告内容或发布通过。"
+    },
+    {
+      "id": "NKE-A02-01",
+      "severity": "P1",
+      "terminal_status": "verified_limited",
+      "disposition": "仅认可该局部纠正；不扩张为整份报告、全部评分或研究验收通过。"
+    },
+    {
+      "id": "NKE-A02-02",
+      "severity": "P1",
+      "terminal_status": "verified_limited",
+      "disposition": "仅认可该局部纠正；不扩张为整份报告、全部评分或研究验收通过。"
+    },
+    {
+      "id": "NKE-A02-03",
+      "severity": "P1",
+      "terminal_status": "verified_limited",
+      "disposition": "仅认可该局部纠正；不扩张为整份报告、全部评分或研究验收通过。"
+    },
+    {
+      "id": "NKE-A03-01",
+      "severity": "P1",
+      "terminal_status": "verified_limited",
+      "disposition": "仅认可该局部纠正；不扩张为整份报告、全部评分或研究验收通过。"
+    },
+    {
+      "id": "NKE-A03-02",
+      "severity": "P1",
+      "terminal_status": "open",
+      "disposition": "只存在FY2026杜邦，底稿声称三期无据，E1=5不予最终批准。"
+    },
+    {
+      "id": "NKE-A03-03",
+      "severity": "P1",
+      "terminal_status": "verified_limited",
+      "disposition": "仅认可该局部纠正；不扩张为整份报告、全部评分或研究验收通过。"
+    },
+    {
+      "id": "NKE-A03-04",
+      "severity": "P1",
+      "terminal_status": "verified_limited",
+      "disposition": "仅认可该局部纠正；不扩张为整份报告、全部评分或研究验收通过。"
+    },
+    {
+      "id": "NKE-A04-01",
+      "severity": "P1",
+      "terminal_status": "open",
+      "disposition": "A3=2仍由缺完整资本史推为中档，缺证不是已核轻微瑕疵。"
+    },
+    {
+      "id": "NKE-A04-02",
+      "severity": "P1",
+      "terminal_status": "open",
+      "disposition": "B0部分覆盖1分可作为既有条件性判断；完整性要求和正文落点未关闭。不能把完整九要素未补齐自动解释为B0应为0。"
+    },
+    {
+      "id": "NKE-A04-03",
+      "severity": "P1",
+      "terminal_status": "open",
+      "disposition": "三期人效/研发分析仍缺；以缺资料折中给D5=1没有完成原规则证据归因。"
+    },
+    {
+      "id": "NKE-A05-01",
+      "severity": "P1",
+      "terminal_status": "open",
+      "disposition": "表格不替代七维事实到评分的正文；保留先前已认可三项判断，不批准新七维总分。"
+    },
+    {
+      "id": "NKE-A05-02",
+      "severity": "P1",
+      "terminal_status": "open",
+      "disposition": "公开Proxy内容未在正确管理层正文实质展开；不是不可知事项。"
+    },
+    {
+      "id": "NKE-A05-03",
+      "severity": "P1",
+      "terminal_status": "open",
+      "disposition": "资本配置13仍缺回购价格/净股数/SBC及近五年记录核验。"
+    },
+    {
+      "id": "NKE-A05-04",
+      "severity": "P1",
+      "terminal_status": "open",
+      "disposition": "仅有公开交接节点不足以批准组织9分；人才、稳定性、激励子域及集中离任检查未闭合。"
+    },
+    {
+      "id": "NKE-A05-05",
+      "severity": "P1",
+      "terminal_status": "verified_limited",
+      "disposition": "按初裁明确的替代路径：撤回三年已验证表述、承认仅一年并重判D2，口径纠正通过；不将此认定为完成三期研究或单独批准D2=2。不得因本条件的复核分歧补开一轮。"
+    },
+    {
+      "id": "NKE-A06-01",
+      "severity": "P1",
+      "terminal_status": "open",
+      "disposition": "停止估值既缺可信全部评分前提，又缺完整停止定价报告，不能正式批准。"
+    },
+    {
+      "id": "NKE-A06-02",
+      "severity": "P1",
+      "terminal_status": "verified_limited",
+      "disposition": "只通过不伪造模型、可能合格须双模型的边界；不采纳任何把当前候选评分当已可信而称双模型永不触发的意见。"
+    },
+    {
+      "id": "NKE-A06-03",
+      "severity": "P1",
+      "terminal_status": "verified_limited",
+      "disposition": "仅认可该局部纠正；不扩张为整份报告、全部评分或研究验收通过。"
+    },
+    {
+      "id": "NKE-A07-01",
+      "severity": "P2",
+      "terminal_status": "nonblocking_open",
+      "disposition": "建议性观察期记录不足，P2非阻塞；不成为本轮暂缓的决定性理由。"
+    },
+    {
+      "id": "NKE-A08-01",
+      "severity": "P2",
+      "terminal_status": "nonblocking_open",
+      "disposition": "来源定位/集中来源表仍缺，P2非阻塞；不另开修复轮次。"
+    },
+    {
+      "id": "NKE-A09-01",
+      "severity": "P1",
+      "terminal_status": "verified_limited",
+      "disposition": "仅认可该局部纠正；不扩张为整份报告、全部评分或研究验收通过。"
+    },
+    {
+      "id": "NKE-A09-02",
+      "severity": "P1",
+      "terminal_status": "verified_limited",
+      "disposition": "仅认可该局部纠正；不扩张为整份报告、全部评分或研究验收通过。"
+    },
+    {
+      "id": "NKE-A09-03",
+      "severity": "P1",
+      "terminal_status": "verified_limited",
+      "disposition": "仅认可该局部纠正；不扩张为整份报告、全部评分或研究验收通过。"
+    },
+    {
+      "id": "NKE-A09-04",
+      "severity": "P1",
+      "terminal_status": "open",
+      "disposition": "没有完整影响表；同一摘要复制三份不构成跨报告关闭。"
+    },
+    {
+      "id": "NKE-A10-01",
+      "severity": "P1",
+      "terminal_status": "verified_limited",
+      "disposition": "只保留已有公开继任安排及来源类型已纠正的结论；冻结v3写8月16日，而初裁已核Proxy写8月17日，精确生效日不在本终局批准范围，不补证，亦不批准三稿整段人事日期。"
+    },
+    {
+      "id": "NKE-A10-02",
+      "severity": "P1",
+      "terminal_status": "open",
+      "disposition": "只声明通用计划非实际支付，未完成个人安排、适用条件及抵扣展开。"
+    }
+  ],
+  "disputed_review_dispositions": [
+    {
+      "subject": "错贴同文等级",
+      "decision": "采纳P0 NKE-TR-V3-01；实测三稿除类型行完全一致及115行填充，属核心研究内容丢失，不依审核票数。"
+    },
+    {
+      "subject": "B0条件性1分与完整性",
+      "decision": "部分覆盖的1分不因未满九要素变成0；但正文缺失及A04-02未完整关闭仍保留。"
+    },
+    {
+      "subject": "D2三期要求",
+      "decision": "初裁允许仅一年资料时撤回三年已验证说法并据实重判；v3口径声明已满足该替代路径，不新加绝对三期硬门槛。D2精确2分并不因此自动获批。"
+    },
+    {
+      "subject": "估值停止路径",
+      "decision": "审核所述65/64可否决仅是条件判断。当前评分依据和完整报告未验收，不能最终批准停止路径。"
+    },
+    {
+      "subject": "P2与轮次",
+      "decision": "A07/A08保持非阻塞，不使其触发第三轮或决定暂缓；终局由P0及实质P1决定。"
+    }
+  ],
+  "formal_valuation": {
+    "allowed": false,
+    "status": "not_completed_not_approved",
+    "new_model_work_in_this_run": false,
+    "future_rule": "将来可信分数否决所有档位，可完成完整停止定价报告并保留null；若可能合格，须完成两个不同依据主模型、情景/敏感性/权益桥/零权重反向验证，不用低确定性代替。"
+  },
+  "publication": {
+    "publish_as_verified_reports": false,
+    "write_watchlist": false,
+    "sync_watchlist": false,
+    "promote_company_page_or_index_to_completed": false,
+    "allowed": "保留原始证据、冻结稿和本终局记录；主任务可如实记录本轮研究未完成，不把未验收稿晋升正式已完成三件套。",
+    "historical_parameters": "不追溯修改历史评分/报告，不用旧76.5/68/NONE替代本轮结论。"
+  },
+  "next_trigger": {
+    "this_run": "终止本轮研究循环；不补证、不建模、不派第三轮作者或复核，不再次修改冻结稿。",
+    "restart_precondition": "新run仅限实质新增决定性证据或用户明确要求重启；用户暂停的研究仅由用户恢复，不能更名绕过上限。",
+    "required_recovery": [
+      "恢复三份各自独立的完整正文并清除同文错贴/重复占位，保留未受影响的已核研究。",
+      "闭合三期杜邦、人效/研发、资本运作及回购净效果，按事实与唯一规则评分；未知不强行点值。",
+      "展开Proxy、管理层七维、高管时间线和个人遣散/非竞业边界，形成逐验收ID与跨报告关闭链。",
+      "按可信原始评分选择质量停止定价或正式双模型路径，并通过实质验收后再发布。"
+    ],
+    "business_reassessment": "若截止日后新的正式财报或治理披露实质改变全价渠道/折扣、毛利、库存、正常化现金流、Greater China/Converse或治理边界，可作为新研究触发；不在本终局引入这些未来事实，也不人为设新资格阈值。"
+  },
+  "review_refs": [
+    "data/reviews/nike-regression-2026-09-20/final/adjudication-v1.json",
+    "data/reviews/nike-regression-2026-09-20/final/author-v3-workpaper.json",
+    "data/reviews/nike-regression-2026-09-20/final/author-v3-selfcheck.json",
+    "data/reviews/nike-regression-2026-09-20/drafts/frozen-author-v3/deep.md",
+    "data/reviews/nike-regression-2026-09-20/drafts/frozen-author-v3/management.md",
+    "data/reviews/nike-regression-2026-09-20/drafts/frozen-author-v3/valuation.md",
+    "data/reviews/nike-regression-2026-09-20/review-facts/targeted-recheck-v2.json",
+    "data/reviews/nike-regression-2026-09-20/review-facts/targeted-recheck-v3.json",
+    "data/reviews/nike-regression-2026-09-20/review-reasoning/targeted-recheck-v2.json",
+    "data/reviews/nike-regression-2026-09-20/review-reasoning/targeted-recheck-v3.json"
+  ],
+  "terminal_authority": "依调度SOP有界例外后的最终处置，仅依据已冻结材料，不作新研究；不是新增一轮复裁或通过声明。"
+}

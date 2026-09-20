@@ -1,0 +1,22 @@
+{
+  "stage":"bounded_exception_recheck_v3",
+  "coverage":"仅复查v2失败项、NKE-TR-V2-01、29个验收ID、三份冻结稿内容独立性与正式机械检查。",
+  "mechanical_check":{"status":"pass","evidence":"author-v3-workpaper.json运行triplet_workpaper.py check返回mechanical_checks_passed；仅有D维度40%警告。"},
+  "acceptance_results":[
+    {"id":"NKE-A01-01","status":"pass"},{"id":"NKE-A01-02","status":"pass"},{"id":"NKE-A01-03","status":"pass"},
+    {"id":"NKE-A02-01","status":"pass"},{"id":"NKE-A02-02","status":"pass"},{"id":"NKE-A02-03","status":"pass"},
+    {"id":"NKE-A03-01","status":"pass"},{"id":"NKE-A03-02","status":"fail","note":"冻结深度稿仅列FY2026杜邦，未提供要求的三期同口径拆解。"},{"id":"NKE-A03-03","status":"pass"},{"id":"NKE-A03-04","status":"pass"},
+    {"id":"NKE-A04-01","status":"fail","note":"仍无近五年融资/并购/处置记录及4/2/0论证。"},{"id":"NKE-A04-02","status":"pass"},{"id":"NKE-A04-03","status":"fail","note":"未补三期人均创收、员工口径与研发披露方式。"},
+    {"id":"NKE-A05-01","status":"fail","note":"管理层冻结稿没有七维各自事实—分析—分值正文。"},{"id":"NKE-A05-02","status":"fail","note":"仅有概括断言，未保留Proxy激励、调整权、支付结果和关联交易审查的可复核展开。"},{"id":"NKE-A05-03","status":"fail","note":"近五年资本配置与近三年回购核查未展示。"},{"id":"NKE-A05-04","status":"fail","note":"没有近五年高管离任/继任时间线及12个月集中离任判断。"},{"id":"NKE-A05-05","status":"fail","note":"没有至少三期战略目标与执行结果的对应表。"},
+    {"id":"NKE-A06-01","status":"fail","note":"估值冻结稿不是完整估值报告，缺少适用方法、三种情景、停止理由和重评条件的实质展开。"},{"id":"NKE-A06-02","status":"pass"},{"id":"NKE-A06-03","status":"pass"},
+    {"id":"NKE-A07-01","status":"pass"},{"id":"NKE-A08-01","status":"fail","note":"未见供应链页码与集中来源表的修正位置。"},
+    {"id":"NKE-A09-01","status":"pass"},{"id":"NKE-A09-02","status":"pass"},{"id":"NKE-A09-03","status":"pass"},{"id":"NKE-A09-04","status":"fail","note":"未给事实→分项→三稿影响表及未变依据。"},
+    {"id":"NKE-A10-01","status":"pass"},{"id":"NKE-A10-02","status":"pass"}
+  ],
+  "new_findings":[
+    {"id":"NKE-TR-V2-01","severity":"P1","claim":"frozen-author-v3三份报告均为212行、相同的通用修复清单与大量重复“修复核对记录”填充；除文档类型标签外未见各自应有的深度分析、管理层档案和估值分析正文。","evidence":"deep.md、management.md和valuation.md均以相同“修复后的唯一结论/事实与口径/停止估值/验收边界”结构出现，并连续重复“本段不引入新事实；以v2增量、底稿和上述唯一结论为准”。","impact":"机械行数通过不能证明三份150/150/100报告完整；跨报告同文错贴使管理层、估值与公司分析无法独立复核，并导致多个A03/A04/A05/A06/A08/A09验收条件缺少正文落点。","recommendation":"从有效v2内容分别重建三份独立报告：深度稿保留公司评分、三期杜邦/资本与风险；管理层稿保留七维证据、Proxy、资本配置和人事时间线；估值稿保留停止定价的适用方法、三情景、边界和重评条件。删除重复填充行并重新冻结、检查。"}
+  ],
+  "cross_report_consistency":"底稿65/64/129、null估值与多数关键口径一致，但三稿本身未承载对应的独立事实和推理，故不能据底稿一致性视为报告验收通过。",
+  "final_pass":false,
+  "decision":"不通过；维持execution_incomplete。"
+}

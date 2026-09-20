@@ -1,0 +1,893 @@
+{
+  "schema_version": 1,
+  "run_id": "nike-delivery-migration-2026-09-20",
+  "basis": "仅汇集终局采用的有效事实、计算和来源声明；ID保持原样，不声明别名。",
+  "records": [
+    {
+      "fact_id": "NKE-F-004",
+      "version": "v2",
+      "metric_or_event": "ROIC五季度平均口径",
+      "raw_value": "ROIC denominator: total debt $11,113m/$11,814m; shareholders' equity $13,944m/$13,926m; less cash and equivalents and short-term investments $8,631m/$10,236m for trailing five quarters ended May 31, 2026/2025.",
+      "raw_unit": "USD millions",
+      "normalized_value": {
+        "fy2026_average_equity_usd_bn": 13.944,
+        "fy2025_average_equity_usd_bn": 13.926,
+        "fy2026_average_total_debt_usd_bn": 11.113,
+        "fy2025_average_total_debt_usd_bn": 11.814,
+        "fy2026_average_cash_short_term_investments_usd_bn": 8.631,
+        "fy2025_average_cash_short_term_investments_usd_bn": 10.236
+      },
+      "normalized_unit": "USD billions",
+      "currency": "USD",
+      "reporting_period": "trailing five quarters ended 2026-05-31 and 2025-05-31",
+      "period_basis": "average, not point-in-time",
+      "actual_forecast_or_derived": "actual",
+      "source_id": "S005",
+      "source_location": "FY2026 Form 10-K ROIC reconciliation, original p.31; PDF physical p.35.",
+      "calculation_bridge": "13,944/13,926 only describe the ROIC trailing-five-quarter averages; they are not year-end equity."
+    },
+    {
+      "fact_id": "NKE-F-005",
+      "version": "v2",
+      "metric_or_event": "股数和EPS分母",
+      "raw_value": "At July 8, 2026: Class A 281,387,752; Class B 1,202,110,951; total 1,483,498,703. FY2026 basic weighted average 1,479.8m, diluted 1,481.0m, assumed conversion 1.2m, anti-dilutive awards 81.8m.",
+      "raw_unit": "shares; shares in millions",
+      "normalized_value": {
+        "total_common_shares": 1483498703,
+        "basic_weighted_average_shares": 1479800000,
+        "diluted_weighted_average_shares": 1481000000,
+        "anti_dilutive_awards": 81800000
+      },
+      "normalized_unit": "shares",
+      "currency": null,
+      "reporting_period": "2026-07-08; FY2026",
+      "period_basis": "point-in-time; annual weighted average",
+      "actual_forecast_or_derived": "actual",
+      "source_id": "S005",
+      "source_location": "FY2026 Form 10-K cover original p.2; Note 10 original p.77.",
+      "calculation_bridge": "不同用途的期末股数和加权平均股数不可互换。"
+    },
+    {
+      "fact_id": "NKE-F-006",
+      "version": "v2",
+      "metric_or_event": "股票薪酬",
+      "raw_value": "FY2026 total SBC expense $715m: options $278m, ESPP $58m, restricted stock/RSUs $379m. Unrecognized option compensation cost was $336m, net of estimated forfeitures, over weighted-average 2.4 years.",
+      "raw_unit": "USD millions",
+      "normalized_value": {
+        "total_sbc_usd_bn": 0.715,
+        "options_usd_bn": 0.278,
+        "espp_usd_bn": 0.058,
+        "rsu_usd_bn": 0.379,
+        "unrecognized_option_cost_usd_bn": 0.336,
+        "remaining_years": 2.4
+      },
+      "normalized_unit": "USD billions; years",
+      "currency": "USD",
+      "reporting_period": "FY2026; 2026-05-31",
+      "period_basis": "annual expense; point-in-time remaining cost",
+      "actual_forecast_or_derived": "actual",
+      "source_id": "S005",
+      "source_location": "FY2026 Form 10-K Note 9 original pp.75-76.",
+      "calculation_bridge": "715=278+58+379 (USD millions)."
+    },
+    {
+      "fact_id": "NKE-F-007",
+      "version": "v2",
+      "metric_or_event": "未确认税收利益",
+      "raw_value": "End-of-period gross unrecognized tax benefits: $953m FY2026, $1,026m FY2025, $990m FY2024, excluding related interest and penalties. Of FY2026 $953m, $742m would affect the effective tax rate if recognized in future periods.",
+      "raw_unit": "USD millions",
+      "normalized_value": {
+        "fy2026_total_usd_bn": 0.953,
+        "fy2025_total_usd_bn": 1.026,
+        "fy2024_total_usd_bn": 0.99,
+        "fy2026_effective_tax_rate_subset_usd_bn": 0.742
+      },
+      "normalized_unit": "USD billions",
+      "currency": "USD",
+      "reporting_period": "2026-05-31; comparative FY2025/FY2024",
+      "period_basis": "point-in-time tax-note rollforward",
+      "actual_forecast_or_derived": "actual",
+      "source_id": "S005",
+      "source_location": "FY2026 Form 10-K Note 7 Income Taxes original p.74; PDF physical p.78.",
+      "calculation_bridge": "742 is a subset of 953. Do not add it, treat it as cash, or treat it as an independent debt balance."
+    },
+    {
+      "fact_id": "NKE-F-008",
+      "version": "v2",
+      "metric_or_event": "IEEPA关税回收",
+      "raw_value": "FY2026 Q4 recognized $986m Cost of sales benefit for recovery of IEEPA tariffs: $965m North America and $21m Converse. At May 31, 2026, received $302m and recorded $684m receivable; subsequent to May 31, received substantially all remaining receivable.",
+      "raw_unit": "USD millions",
+      "normalized_value": {
+        "cost_of_sales_benefit_usd_bn": 0.986,
+        "north_america_usd_bn": 0.965,
+        "converse_usd_bn": 0.021,
+        "received_at_period_end_usd_bn": 0.302,
+        "receivable_at_period_end_usd_bn": 0.684
+      },
+      "normalized_unit": "USD billions",
+      "currency": "USD",
+      "reporting_period": "FY2026; 2026-05-31",
+      "period_basis": "annual income-statement benefit; point-in-time receipts/receivable",
+      "actual_forecast_or_derived": "actual",
+      "source_id": "S005",
+      "source_location": "FY2026 Form 10-K Other Matters original p.30; Note 1 original p.61.",
+      "calculation_bridge": "986=965+21=302+684. Later receipt has no exact disclosed date/amount."
+    },
+    {
+      "fact_id": "NKE-F-009",
+      "version": "v2",
+      "metric_or_event": "期末权益、现金Capex、OCF-Capex及股东回报",
+      "raw_value": "Year-end equity: FY2026 $14,865m, FY2025 $13,213m, FY2024 $14,430m, FY2023 $14,004m. Cash PP&E additions: FY2024 $812m, FY2025 $430m, FY2026 $684m. OCF less cash Capex: $6,617m, $3,268m, $2,184m. FY2026 dividends $2,407m; repurchase cash outflow $146m; June 2022 $18bn authorization had about $5.9bn remaining at May 31, 2026.",
+      "raw_unit": "USD millions",
+      "normalized_value": {
+        "year_end_equity_usd_bn": {
+          "FY2026": 14.865,
+          "FY2025": 13.213,
+          "FY2024": 14.43,
+          "FY2023": 14.004
+        },
+        "cash_capex_usd_bn": {
+          "FY2024": 0.812,
+          "FY2025": 0.43,
+          "FY2026": 0.684
+        },
+        "ocf_less_cash_capex_usd_bn": {
+          "FY2024": 6.617,
+          "FY2025": 3.268,
+          "FY2026": 2.184
+        },
+        "fy2026_dividends_usd_bn": 2.407,
+        "fy2026_repurchase_cash_outflow_usd_bn": 0.146,
+        "repurchase_authorization_remaining_usd_bn": 5.9
+      },
+      "normalized_unit": "USD billions",
+      "currency": "USD",
+      "reporting_period": "FY2023-FY2026; 2026-05-31",
+      "period_basis": "annual and point-in-time",
+      "actual_forecast_or_derived": "actual",
+      "source_id": "S005;S013;S014",
+      "source_location": "S005 FY2026 balance sheet original p.57 and cash flows p.58; S013 FY2025 Form 10-K consolidated balance sheets; S014 FY2024 Form 10-K consolidated balance sheets.",
+      "calculation_bridge": "FY2024 7,429−812=6,617; FY2025 3,698−430=3,268; FY2026 2,868−684=2,184 (USD millions). 13,944/13,926 are excluded because they are averages in F004."
+    },
+    {
+      "fact_id": "NKE-R-001",
+      "version": "v2",
+      "metric_or_event": "法律程序和或有事项",
+      "raw_value": "Outstanding bank guarantees and letters of credit approximately $1.3bn. Belgian Customs claims alleged underpaid duties on imports beginning FY2018; NIKE disputes and is in appeal, issued guarantees, cannot estimate loss range, and states an adverse outcome could materially affect results, financial position and cash flows.",
+      "raw_unit": "USD millions; qualitative",
+      "normalized_value": {
+        "bank_guarantees_letters_of_credit_usd_bn": 1.3,
+        "belgian_customs_claim_amount": null,
+        "loss_range": null
+      },
+      "normalized_unit": "USD billions; null where undisclosed",
+      "currency": "USD",
+      "reporting_period": "2026-05-31",
+      "period_basis": "point-in-time commitments and legal contingency",
+      "actual_forecast_or_derived": "actual",
+      "source_id": "S005",
+      "source_location": "FY2026 Form 10-K Note 16 original p.88; Item 3 original p.25.",
+      "calculation_bridge": "No amount or loss range was disclosed for Belgian Customs; preserve null."
+    },
+    {
+      "fact_id": "NKE-G-005",
+      "version": "v2",
+      "metric_or_event": "CFO任命、过渡及遣散原件类型",
+      "raw_value": "8-K Item 5.02: David Denton appointed EVP/CFO effective August 16, 2026. Matthew Friend ceased EVP/CFO and became CEO advisor effective August 17, 2026, remaining full-time non-executive employee until separation September 4, 2026. Denton's offer letter and Friend's letter agreement contain individual arrangements. Executive Severance Pay Plan is a general plan; it requires qualifying termination and release, has offsets, and does not show actual payment.",
+      "raw_unit": null,
+      "normalized_value": {
+        "denton_effective_date": "2026-08-16",
+        "friend_cfo_end_date": "2026-08-17",
+        "friend_advisor_start_date": "2026-08-17",
+        "friend_separation_date": "2026-09-04",
+        "actual_payment_amount": null
+      },
+      "normalized_unit": null,
+      "currency": "USD where compensation terms apply",
+      "reporting_period": "2026-06-16 to 2026-09-04",
+      "period_basis": "event; contractual terms",
+      "actual_forecast_or_derived": "actual",
+      "source_id": "S010-v2;S012-v2",
+      "source_location": "S012-v2 Form 8-K Item 5.02 lines 66-119; S010-v2 Exhibit 10.2 lines 30-61, 170-175.",
+      "calculation_bridge": "General plan, individual arrangements and actual paid amounts are separate categories; non-compete and plan benefits are subject to non-duplication terms."
+    },
+    {
+      "fact_id": "NKE-G-006",
+      "version": "v2",
+      "metric_or_event": "代理声明：激励、调整权、关联交易及公开任职节点",
+      "raw_value": "FY2026 annual LTI: 50% PSUs, 25% options, 25% RSUs; PSU payout 0%-200% over three years. FY2026 PSP payout CEO 74%, non-CEO NEOs 78% after committee negative discretion; FY2024-2026 PSUs paid 0%. Related-person disclosure identifies specified Knight/Parker/Williams-family relationships and compensation; governance committee reviews reportable Item 404(a) transactions. Public dated executive nodes: Hill CEO FY2025; Alagirisamy COO 2025-12-08; Denton CFO 2026-08-16; Friend advisor 2026-08-17 and separation 2026-09-04.",
+      "raw_unit": "percent; qualitative",
+      "normalized_value": {
+        "lti_mix": {
+          "PSU_percent": 50,
+          "options_percent": 25,
+          "RSU_percent": 25
+        },
+        "psp_payout": {
+          "CEO_percent": 74,
+          "non_CEO_NEO_percent": 78
+        },
+        "fy2024_2026_psu_payout_percent": 0,
+        "complete_five_year_executive_timeline": null
+      },
+      "normalized_unit": "percent; null where not fully collected",
+      "currency": null,
+      "reporting_period": "FY2026 and stated dates",
+      "period_basis": "annual proxy; events",
+      "actual_forecast_or_derived": "actual",
+      "source_id": "S008;S012-v2",
+      "source_location": "FY2026 DEF 14A original pp.24-25, 28, 34, 57-58, 70-72; SEC HTML lines 701-715, 739-740, 823-826, 1000-1007, 2196-2218; S012-v2 lines 66-73.",
+      "calculation_bridge": "Proxy adjustment authority applies to incentive metrics and does not itself support financial-statement normalization."
+    },
+    {
+      "fact_id": "NKE-F-001",
+      "metric_or_event": "FY2024-FY2026合并收入、净利润与经营现金流",
+      "raw_value": "FY2024: revenue $51,362m, net income $5,700m, CFO $7,429m; FY2025: $46,309m, $3,219m, $3,698m; FY2026: $46,398m, $3,108m, $2,868m.",
+      "raw_unit": "USD millions",
+      "normalized_value": {
+        "revenue_usd_bn": [
+          51.362,
+          46.309,
+          46.398
+        ],
+        "net_income_usd_bn": [
+          5.7,
+          3.219,
+          3.108
+        ],
+        "operating_cash_flow_usd_bn": [
+          7.429,
+          3.698,
+          2.868
+        ]
+      },
+      "normalized_unit": "USD billions",
+      "currency": "USD",
+      "reporting_period": "FY2024-FY2026, years ended May 31",
+      "disclosure_date": "2026-07-15",
+      "consolidation_scope": "NIKE, Inc. consolidated",
+      "attributable_to": "NIKE, Inc. net income",
+      "period_basis": "annual",
+      "actual_forecast_or_derived": "actual",
+      "source_id": "S001;S005",
+      "source_location": "FY2026 10-K, Consolidated Statements of Income original p.55; Consolidated Statements of Cash Flows original p.58; local PDF physical pp.59,62.",
+      "calculation_bridge": "原始USD millions / 1000 = USD billions。"
+    },
+    {
+      "fact_id": "NKE-F-002",
+      "metric_or_event": "FY2020-FY2023合并收入、净利润与经营现金流",
+      "raw_value": "FY2020: $37,403m, $2,539m, $2,485m; FY2021: $44,538m, $5,727m, $6,657m; FY2022: $46,710m, $6,046m, $5,188m; FY2023: $51,217m, $5,070m, $5,841m.",
+      "raw_unit": "USD millions",
+      "normalized_value": {
+        "revenue_usd_bn": [
+          37.403,
+          44.538,
+          46.71,
+          51.217
+        ],
+        "net_income_usd_bn": [
+          2.539,
+          5.727,
+          6.046,
+          5.07
+        ],
+        "operating_cash_flow_usd_bn": [
+          2.485,
+          6.657,
+          5.188,
+          5.841
+        ]
+      },
+      "normalized_unit": "USD billions",
+      "currency": "USD",
+      "reporting_period": "FY2020-FY2023, years ended May 31",
+      "disclosure_date": "2021-07-20; 2023-07-20",
+      "consolidation_scope": "NIKE, Inc. consolidated",
+      "attributable_to": "NIKE, Inc. net income",
+      "period_basis": "annual",
+      "actual_forecast_or_derived": "actual",
+      "source_id": "S006;S007",
+      "source_location": "S007 FY2021 10-K cash flows original p.58, SEC HTML L1744-1760; S006 FY2023 10-K cash flows original p.58, SEC HTML L1724-1740; income cross-check in respective income/MD&A tables.",
+      "calculation_bridge": "原始USD millions / 1000 = USD billions；FY2020收入在作者用于计算前仍应回看原始收入表。"
+    },
+    {
+      "fact_id": "NKE-F-003",
+      "metric_or_event": "FY2026期末现金、短投、库存、权益、债务及租赁负债",
+      "raw_value": "Cash and equivalents $7,563m; short-term investments $1,464m; inventories $7,501m; shareholders' equity $13,944m. Current long-term debt $2,000m; long-term debt $5,942m; current operating lease liabilities $478m; non-current operating lease liabilities $2,613m.",
+      "raw_unit": "USD millions",
+      "normalized_value": {
+        "cash_usd_bn": 7.563,
+        "short_term_investments_usd_bn": 1.464,
+        "inventory_usd_bn": 7.501,
+        "equity_usd_bn": 13.944,
+        "interest_bearing_debt_usd_bn": 7.942,
+        "operating_lease_liabilities_usd_bn": 3.091
+      },
+      "normalized_unit": "USD billions",
+      "currency": "USD",
+      "reporting_period": "2026-05-31",
+      "disclosure_date": "2026-07-15",
+      "consolidation_scope": "NIKE, Inc. consolidated",
+      "attributable_to": null,
+      "period_basis": "point-in-time",
+      "actual_forecast_or_derived": "actual",
+      "source_id": "S001;S005",
+      "source_location": "FY2026 10-K balance sheet original p.57 (PDF physical p.61); long-term debt note original p.70 (physical p.74); leases note original p.88 (physical p.92).",
+      "calculation_bridge": "现金+短投=9,027；有息债务=2,000+5,942=7,942；租赁负债=478+2,613=3,091（USD millions）。"
+    },
+    {
+      "fact_id": "NKE-G-001",
+      "metric_or_event": "审计意见、ICFR意见与法律程序披露",
+      "raw_value": "PwC concluded FY2026/2025 consolidated financial statements present fairly in all material respects in conformity with U.S. GAAP and FY2026 ICFR was effective in all material respects. Item 3 states NIKE does not believe there are material pending legal proceedings other than ordinary routine litigation incidental to business.",
+      "raw_unit": null,
+      "normalized_value": "无保留财务报表及ICFR意见；Item 3为管理层重大未决程序披露。",
+      "normalized_unit": null,
+      "currency": null,
+      "reporting_period": "FY2026; filing date status",
+      "disclosure_date": "2026-07-15",
+      "consolidation_scope": "NIKE, Inc. and subsidiaries",
+      "attributable_to": null,
+      "period_basis": "annual audit; filing-date disclosure",
+      "actual_forecast_or_derived": "actual",
+      "source_id": "S001;S005",
+      "source_location": "FY2026 10-K independent auditor report original pp.52-53; Item 3 original p.25.",
+      "calculation_bridge": null
+    },
+    {
+      "fact_id": "NKE-G-002",
+      "metric_or_event": "证券类别、双层股权与控制权集中披露",
+      "raw_value": "Class B is listed on NYSE under NKE; Class A is not publicly traded and convertible one-for-one into Class B. As of June 30, 2026, Swoosh, LLC beneficially owned about 79% of Class A; conversion of all such shares would correspond to about 16% of Class B.",
+      "raw_unit": "percent",
+      "normalized_value": {
+        "swoosh_class_a_percent": 79,
+        "conversion_equivalent_class_b_percent": 16
+      },
+      "normalized_unit": "percent",
+      "currency": null,
+      "reporting_period": "2026-06-30; 2026-07-08 holder statistics",
+      "disclosure_date": "2026-07-15",
+      "consolidation_scope": "NIKE, Inc.",
+      "attributable_to": null,
+      "period_basis": "point-in-time",
+      "actual_forecast_or_derived": "actual",
+      "source_id": "S001;S005",
+      "source_location": "FY2026 10-K Item 1A original p.22; Item 5 original p.26; common-stock note original p.70.",
+      "calculation_bridge": null
+    },
+    {
+      "fact_id": "NKE-G-003",
+      "metric_or_event": "董事会、薪酬委员会与关联关系披露",
+      "raw_value": "FY2026 Compensation Committee members: Timothy Cook, Mónica Gil and Michelle Peluso; all independent non-employee directors. Proxy says no committee member had relationships requiring disclosure under SEC related-party transaction rules. Proxy also identifies NEOs Elliott Hill, Matthew Friend, Venkatesh Alagirisamy, Treasure Heinle and Robert Leinwand.",
+      "raw_unit": null,
+      "normalized_value": "已核薪酬委员会成员及该委员会关联关系披露；并非全量关联交易逐笔摘录。",
+      "normalized_unit": null,
+      "currency": null,
+      "reporting_period": "FY2026",
+      "disclosure_date": "2026-07-15",
+      "consolidation_scope": "NIKE, Inc.",
+      "attributable_to": null,
+      "period_basis": "annual governance disclosure",
+      "actual_forecast_or_derived": "actual",
+      "source_id": "S008",
+      "source_location": "FY2026 DEF 14A Board original pp.4-15; Compensation Committee Interlocks and Insider Participation original p.72, SEC HTML L2217-2219; CD&A pp.24-41.",
+      "calculation_bridge": null
+    },
+    {
+      "fact_id": "NKE-G-004",
+      "metric_or_event": "CFO交接与截至截止日的下一财报边界",
+      "raw_value": "Matthew Friend ceased serving as EVP and CFO effective August 17, 2026, served as advisor to CEO until separation September 4, 2026. Form 10-K references June 23, 2026 Form 8-K for details. Investor Relations listed FY2027 Q1 earnings call on October 1, 2026.",
+      "raw_unit": null,
+      "normalized_value": "CFO交接发生于截止日前；FY2027 Q1正式业绩安排在截止日后。",
+      "normalized_unit": null,
+      "currency": null,
+      "reporting_period": "2026-06 to 2026-10 events",
+      "disclosure_date": "2026-07-15; 2026-08-28 event announcement",
+      "consolidation_scope": "NIKE, Inc.",
+      "attributable_to": null,
+      "period_basis": "event",
+      "actual_forecast_or_derived": "actual",
+      "source_id": "S001;S002;S010",
+      "source_location": "FY2026 10-K executive officers original p.8; S010 filing header; NIKE IR investors page retrieved 2026-09-19.",
+      "calculation_bridge": "CFO 8-K正文条款未摘录，见缺口。"
+    },
+    {
+      "fact_id": "NKE-M-001",
+      "metric_or_event": "截止日前同一市场快照",
+      "raw_value": "NKE latest trade $35.51 at 2026-09-18T23:59:54Z; tool-returned market cap $52,611,616,000.",
+      "raw_unit": "USD; USD market cap",
+      "normalized_value": {
+        "latest_trade_usd": 35.51,
+        "market_cap_usd": 52611616000
+      },
+      "normalized_unit": "USD",
+      "currency": "USD",
+      "reporting_period": "2026-09-18 latest available trade before 2026-09-19 cutoff",
+      "disclosure_date": "2026-09-19 retrieval",
+      "consolidation_scope": "NYSE-listed Class B Common Stock",
+      "attributable_to": null,
+      "period_basis": "market snapshot",
+      "actual_forecast_or_derived": "actual",
+      "source_id": "S009",
+      "source_location": "market-snapshot.json; source response timestamp 2026-09-18T23:59:54Z.",
+      "calculation_bridge": "不按工具市值或加权平均股数反推；该成交在美东收盘后，非正式收盘口径。"
+    },
+    {
+      "source_id": "S005",
+      "relation": "reused",
+      "title": "NIKE FY2026 Form 10-K official PDF",
+      "url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0000320187/f694c8c1-fadb-4f96-b5c2-fb165e1d30f6.pdf",
+      "filing_accession": "0000320187-26-000088",
+      "filing_date": "2026-07-15",
+      "period_end": "2026-05-31",
+      "local_original_path": "财报/耐克/耐克FY2026_10-K.pdf",
+      "hash": "SHA256:3F9E48ED8F6F86491A7E470BC22196B186874795D2E50A84F2F5576D8D1CBA12",
+      "page_convention": "印刷页；PDF物理页=印刷页+4。"
+    },
+    {
+      "source_id": "S010-v2",
+      "relation": "source_type_correction",
+      "title": "NIKE Executive Severance Pay Plan, Exhibit 10.2 to 2026-06-23 Form 8-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/320187/000032018726000070/nike-2026nikeincexecutives.htm",
+      "filing_accession": "0000320187-26-000070",
+      "filing_date": "2026-06-23",
+      "source_type": "general severance-plan exhibit",
+      "access_status": "官方SEC HTML已读取；不是8-K主文或个人实际付款证明。"
+    },
+    {
+      "source_id": "S012-v2",
+      "relation": "new_primary_governance_source",
+      "title": "NIKE Form 8-K main document, Item 5.02",
+      "url": "https://www.sec.gov/Archives/edgar/data/320187/000032018726000070/nke-20260616.htm",
+      "filing_accession": "0000320187-26-000070",
+      "filing_date": "2026-06-23",
+      "event_date": "2026-06-16",
+      "source_type": "SEC official 8-K main document",
+      "access_status": "官方SEC HTML已读取；CFO过渡与个人安排的主文来源。"
+    },
+    {
+      "source_id": "S008",
+      "relation": "reused_and_expanded",
+      "title": "NIKE FY2026 definitive proxy statement",
+      "url": "https://www.sec.gov/Archives/edgar/data/320187/000032018726000089/nke-20260715.htm",
+      "filing_accession": "0000320187-26-000089",
+      "filing_date": "2026-07-15",
+      "source_type": "SEC official DEF 14A",
+      "access_status": "官方SEC HTML已定向读取激励、关联交易、持股及Section 16章节。"
+    },
+    {
+      "source_id": "S013",
+      "relation": "new_historical_balance_sheet_source",
+      "title": "NIKE FY2025 Form 10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/320187/000032018725000047/nke-20250531.htm",
+      "filing_accession": "0000320187-25-000047",
+      "filing_date": "2025-07-17",
+      "period_end": "2025-05-31",
+      "source_type": "SEC official filing",
+      "access_status": "官方HTML可访问；用于FY2025/FY2024期末权益比较。"
+    },
+    {
+      "source_id": "S014",
+      "relation": "new_historical_balance_sheet_source",
+      "title": "NIKE FY2024 Form 10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/320187/000032018724000044/nke-20240531.htm",
+      "filing_accession": "0000320187-24-000044",
+      "filing_date": "2024-07-25",
+      "period_end": "2024-05-31",
+      "source_type": "SEC official filing",
+      "access_status": "官方HTML可访问；用于FY2024/FY2023期末权益比较。"
+    },
+    {
+      "fact_id": "NKE-SUP-R01-REUSE",
+      "metric_or_event": "E2现金转换与E5.5原件可得性复用界限",
+      "raw_value": "Reused NKE-F-009: OCF/net income FY2024/25/26 130.3333%/114.8804%/92.2780%; cash-capex FCF $6,617m/$3,268m/$2,184m. FY2026 10-K official PDF is archived; no locally archived Markdown conversion is available in the designated evidence set.",
+      "raw_unit": "percent; USD millions",
+      "reporting_period": "FY2024-FY2026",
+      "period_basis": "annual",
+      "actual_forecast_or_derived": "actual and derived",
+      "source_id": "S005;NKE-F-009",
+      "source_location": "S005 FY2026 10-K pp.57-58; previous evidence v2 NKE-F-009",
+      "calculation_bridge": "FCF is OCF less cash PP&E additions: 7,429-812; 3,698-430; 2,868-684. Absence of a local Markdown version is a workflow/source-format fact, not a company disclosure defect.",
+      "issue_ids": [
+        "NKE-DR-R01"
+      ],
+      "acceptance_ids": [
+        "NKE-A03-01",
+        "NKE-A03-03"
+      ]
+    },
+    {
+      "fact_id": "NKE-SUP-F006-MAP",
+      "metric_or_event": "F006股票薪酬来源映射",
+      "raw_value": "FY2026/25/24 total stock-based compensation expense: $715m/$709m/$804m",
+      "raw_unit": "USD millions",
+      "reporting_period": "FY2024-FY2026",
+      "period_basis": "annual",
+      "actual_forecast_or_derived": "actual",
+      "source_id": "S005",
+      "source_location": "FY2026 10-K p.75, Note 9; PDF text lines 3888-3895",
+      "calculation_bridge": null,
+      "issue_ids": [
+        "NKE-DR-F02"
+      ],
+      "acceptance_ids": [
+        "NKE-A02-02"
+      ]
+    },
+    {
+      "fact_id": "NKE-SUP-F007-MAP",
+      "metric_or_event": "F007所得税未确认税务利益来源映射",
+      "raw_value": "Ending unrecognized tax benefits $953m/$1,026m/$990m for FY2026/25/24; $742m of FY2026 $953m would affect effective tax rate if recognized",
+      "raw_unit": "USD millions",
+      "reporting_period": "FY2024-FY2026",
+      "period_basis": "annual point-in-time",
+      "actual_forecast_or_derived": "actual",
+      "source_id": "S005",
+      "source_location": "FY2026 10-K p.74, Note 7; PDF text lines 3783-3800",
+      "calculation_bridge": "742 is a subset of 953, not additive",
+      "issue_ids": [
+        "NKE-DR-F02"
+      ],
+      "acceptance_ids": [
+        "NKE-A02-02"
+      ]
+    },
+    {
+      "fact_id": "NKE-SUP-CAP-001",
+      "metric_or_event": "近五年回购现金、股票发行与净股数桥",
+      "raw_value": "Cash repurchase FY2021-26: $608m/$4,014m/$5,480m/$4,250m/$2,985m/$146m. FY2024-26 employee net shares issued: 5m/5m/6m; Class B repurchased: 41m/38m/2m.",
+      "raw_unit": "USD millions; shares millions",
+      "reporting_period": "FY2021-FY2026",
+      "period_basis": "annual",
+      "actual_forecast_or_derived": "actual",
+      "source_id": "S005;S-OLD-10K-2023",
+      "source_location": "S005 FY2026 10-K pp.58-59; S-OLD-10K-2023 FY2023 10-K p.58",
+      "calculation_bridge": "See NKE-CAL-SUP-002; equity-table shares are not diluted weighted-average shares.",
+      "issue_ids": [
+        "NKE-DR-CAPITAL"
+      ],
+      "acceptance_ids": [
+        "NKE-A04-01",
+        "NKE-A05-03"
+      ]
+    },
+    {
+      "fact_id": "NKE-SUP-CAP-002",
+      "metric_or_event": "回购计划累计价格与融资安排",
+      "raw_value": "June 2022 $18bn program: at FY2023 43.5m shares/$4.8bn/$110.38 avg; at FY2025 122.6m/$12.0bn/$98.00 avg; at FY2026 124.4m/$12.1bn/$97.57 avg. FY2026 364-day committed credit facility $1bn, expandable to $1.5bn; 2025 shelf permits unlimited debt issuance.",
+      "raw_unit": "USD; shares",
+      "reporting_period": "FY2023-FY2026",
+      "period_basis": "event and point-in-time",
+      "actual_forecast_or_derived": "actual",
+      "source_id": "S005;S-OLD-10K-2023",
+      "source_location": "S005 pp.26,45; S-OLD-10K-2023 Item 5",
+      "calculation_bridge": null,
+      "issue_ids": [
+        "NKE-DR-CAPITAL"
+      ],
+      "acceptance_ids": [
+        "NKE-A04-01",
+        "NKE-A05-03"
+      ]
+    },
+    {
+      "fact_id": "NKE-SUP-CAP-003",
+      "metric_or_event": "并购/处置披露可得性边界",
+      "raw_value": null,
+      "raw_unit": null,
+      "reporting_period": "FY2021-FY2026",
+      "period_basis": "disclosure search",
+      "actual_forecast_or_derived": "not_disclosed_in_reviewed_sections",
+      "source_id": "S005;S013;S-OLD-10K-2023",
+      "source_location": "Reviewed cash-flow, financing, Item 5 and notes sections of FY2026/FY2025/FY2023 10-Ks",
+      "calculation_bridge": "No Business Combinations note or acquisition/disposition cash-flow line found in reviewed records; this is not evidence that no immaterial, non-cash or otherwise unlisted transaction occurred.",
+      "issue_ids": [
+        "NKE-DR-CAPITAL"
+      ],
+      "acceptance_ids": [
+        "NKE-A04-01",
+        "NKE-A05-03"
+      ]
+    },
+    {
+      "fact_id": "NKE-SUP-ORG-001",
+      "metric_or_event": "三期员工数、收入与收入/员工",
+      "raw_value": "FY2024 $51,362m and approximately 83,700 employees; FY2025 $46,309m and approximately 77,800; FY2026 $46,398m and approximately 73,000.",
+      "raw_unit": "USD millions; employees",
+      "reporting_period": "FY2024-FY2026",
+      "period_basis": "annual",
+      "actual_forecast_or_derived": "actual and derived",
+      "source_id": "S005;S013;S014",
+      "source_location": "S005 pp.5,29; S013/S014 Human Capital Resources",
+      "calculation_bridge": "See NKE-CAL-SUP-001.",
+      "issue_ids": [
+        "NKE-DR-ORG"
+      ],
+      "acceptance_ids": [
+        "NKE-A04-03"
+      ]
+    },
+    {
+      "fact_id": "NKE-SUP-ORG-002",
+      "metric_or_event": "研发披露方式与缺口",
+      "raw_value": "10-K describes research, design and development personnel and activities, but does not separately disclose R&D expense, R&D headcount, retention rate, or stated motives for individual departures in the reviewed materials.",
+      "raw_unit": null,
+      "reporting_period": "FY2024-FY2026",
+      "period_basis": "annual disclosure",
+      "actual_forecast_or_derived": "not_disclosed_in_reviewed_sections",
+      "source_id": "S005;S013;S-OLD-10K-2023",
+      "source_location": "S005 p.3 Product Research, Design and Development; financial statements and notes",
+      "calculation_bridge": "Demand creation and operating overhead are not treated as R&D expense.",
+      "issue_ids": [
+        "NKE-DR-ORG"
+      ],
+      "acceptance_ids": [
+        "NKE-A04-03"
+      ]
+    },
+    {
+      "fact_id": "NKE-SUP-ORG-003",
+      "metric_or_event": "高管时间线与12个月边界",
+      "raw_value": "Parker Executive Chairman since 2020; Friend CFO since 2020; Hill CEO since 2024; Heinle Chief People Officer since 2025. Denton CFO effective 2026-08-16; Friend became advisor then separated 2026-09-04.",
+      "raw_unit": null,
+      "reporting_period": "2020-09-19 to 2026-09-19",
+      "period_basis": "event",
+      "actual_forecast_or_derived": "actual",
+      "source_id": "S005;S012-v2",
+      "source_location": "S005 p.8; S012-v2 Item 5.02",
+      "calculation_bridge": "The package does not have a complete official all-officer departure index for the 12-month lookback; it cannot infer absence of concentrated departures.",
+      "issue_ids": [
+        "NKE-DR-ORG",
+        "NKE-DR-R02"
+      ],
+      "acceptance_ids": [
+        "NKE-A05-04",
+        "NKE-A10-01"
+      ]
+    },
+    {
+      "fact_id": "NKE-SUP-SEV-001",
+      "metric_or_event": "Friend个人安排与一般遣散计划条件",
+      "raw_value": "Friend transition agreement preserves salary/bonus/benefits to separation; noncompete remains effective, up to 12 months salary. General plan requires involuntary qualifying termination and effective non-revoked release; plan benefits reduce for other termination/restrictive-covenant benefits and may be offset/recouped.",
+      "raw_unit": null,
+      "reporting_period": "2026-06-17 to 2026-09-04",
+      "period_basis": "contractual terms",
+      "actual_forecast_or_derived": "actual contractual terms",
+      "source_id": "S012-v2;S010-v2",
+      "source_location": "S012-v2 Item 5.02; S010-v2 Ex.10.2 §§1.12,2.1,3.1-3.4,8",
+      "calculation_bridge": "Potential contractual benefits and actual paid amounts are distinct; actual final payment amount is not established in the reviewed material.",
+      "issue_ids": [
+        "NKE-DR-SEVERANCE",
+        "NKE-DR-R02"
+      ],
+      "acceptance_ids": [
+        "NKE-A10-02",
+        "NKE-A10-01"
+      ]
+    },
+    {
+      "calculation_id": "NKE-CAL-SUP-001",
+      "name": "三期收入/员工",
+      "formula": "reported_revenue_usd_million * 1000000 / reported_employee_count",
+      "inputs": {
+        "FY2024": [
+          51362,
+          83700
+        ],
+        "FY2025": [
+          46309,
+          77800
+        ],
+        "FY2026": [
+          46398,
+          73000
+        ]
+      },
+      "outputs_usd_per_employee": {
+        "FY2024": 613644,
+        "FY2025": 595231,
+        "FY2026": 635589
+      },
+      "rounding": "四舍五入至最接近美元；员工数为公司披露的 approximately，结果为近似值。",
+      "source_ids": [
+        "S005",
+        "S013",
+        "S014"
+      ],
+      "issue_ids": [
+        "NKE-DR-ORG"
+      ],
+      "acceptance_ids": [
+        "NKE-A04-03"
+      ]
+    },
+    {
+      "calculation_id": "NKE-CAL-SUP-002",
+      "name": "FY2024-FY2026净普通股变动（权益表口径）",
+      "formula": "Class B repurchased shares + employee net shares issued; Class A-to-B conversion excluded because it does not change total common shares",
+      "inputs_million_shares": {
+        "FY2024": {
+          "repurchased": -41,
+          "employee_net_issued": 5
+        },
+        "FY2025": {
+          "repurchased": -38,
+          "employee_net_issued": 5
+        },
+        "FY2026": {
+          "repurchased": -2,
+          "employee_net_issued": 6
+        }
+      },
+      "outputs_million_shares": {
+        "FY2024": -36,
+        "FY2025": -33,
+        "FY2026": 4
+      },
+      "boundary": "这是权益表的 Class B 净股数桥，不能等同稀释后加权平均股数，也不能将 SBC 费用金额换算为实际稀释股数。",
+      "source_ids": [
+        "S005"
+      ],
+      "issue_ids": [
+        "NKE-DR-CAPITAL"
+      ],
+      "acceptance_ids": [
+        "NKE-A05-03"
+      ]
+    },
+    {
+      "calculation_id": "NKE-CAL-SUP-003",
+      "name": "未确认税务利益子集关系",
+      "formula": "742 / 953",
+      "inputs_usd_million": {
+        "FY2026_unrecognized_tax_benefits": 953,
+        "subset_affecting_effective_tax_rate_if_recognized": 742
+      },
+      "output_percent": 77.86,
+      "boundary": "742 是 953 的子集，不能与953相加，不是现金或独立债务。",
+      "source_ids": [
+        "S005"
+      ],
+      "issue_ids": [
+        "NKE-DR-F02"
+      ],
+      "acceptance_ids": [
+        "NKE-A02-02"
+      ]
+    },
+    {
+      "source_id": "S-OLD-10K-2023",
+      "relation": "new_targeted_historical",
+      "title": "NIKE FY2023 Form 10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/320187/000032018723000039/nke-20230531.htm",
+      "filing_accession": "0000320187-23-000039",
+      "filing_date": "2023-07-20",
+      "period_end": "2023-05-31",
+      "access_status": "官方 SEC HTML 定向读取；用于 FY2021-FY2023 资本活动"
+    },
+    {
+      "fact_id": "NKE-BND-CAP-001",
+      "kind": "official_direct",
+      "metric_or_event": "FY2024-FY2026 Class A+B annual share movements",
+      "raw_value": "FY2024 start A305+B1227; option exercise +7B; A-to-B conversion -7A/+7B; Class B repurchase -41B; employee net issuance +5B; end A298+B1205. FY2025: +6B, -8A/+8B, -38B, +5B; end A290+B1186. FY2026: +3B, -9A/+9B, -2B, +6B; end A281+B1202.",
+      "raw_unit": "millions of shares",
+      "reporting_period": "FY2024-FY2026",
+      "source_id": "S005",
+      "source_location": "FY2026 Form 10-K p.59, Consolidated Statements of Shareholders' Equity",
+      "acceptance_id": "NKE-A05-03"
+    },
+    {
+      "fact_id": "NKE-BND-CAP-002",
+      "kind": "official_direct",
+      "metric_or_event": "回购现金、实际计划回购与总股票薪酬费用",
+      "raw_value": "Cash-flow repurchase: FY2024/25/26 $4,250m/$2,985m/$146m. Total stock-based compensation expense: $804m/$709m/$715m. FY2025 disclosed actual plan purchases: 37.6m shares, approximately $3.0bn, $78.50 average. FY2026: 1.8m shares, $122.4m, $67.63 average.",
+      "raw_unit": "USD millions; shares millions; USD per share",
+      "reporting_period": "FY2024-FY2026",
+      "source_id": "S005;S013",
+      "source_location": "S005 FY2026 10-K pp.26,45,58,75; S013 FY2025 10-K MD&A financing activities",
+      "acceptance_id": "NKE-A05-03"
+    },
+    {
+      "fact_id": "NKE-BND-CAP-003",
+      "kind": "not_disclosed",
+      "metric_or_event": "SBC shares-to-expense attribution",
+      "raw_value": null,
+      "reporting_period": "FY2024-FY2026",
+      "source_id": "S005",
+      "source_location": "FY2026 10-K pp.59,75",
+      "boundary": "Equity statement reports employee net issuance after shares withheld for employee taxes, while Note 9 reports aggregate SBC expense. No reviewed disclosure allocates all share movements to each compensation category or converts total expense to issued shares.",
+      "status": "open_for_non-disclosed_attribution",
+      "acceptance_id": "NKE-A05-03"
+    },
+    {
+      "fact_id": "NKE-BND-ORG-001",
+      "kind": "official_direct",
+      "metric_or_event": "五年主要高管任免/离任事件",
+      "raw_value": "Donahoe CEO transition to Hill effective 2024-10-14; O'Neill role ended 2025-05-02 and separation 2025-09-05; Williams role ended 2025-12-05 and separation 2026-04-06; Alagirisamy COO effective 2025-12-08; Denton CFO effective 2026-08-16; Friend ceased CFO 2026-08-17 and separated 2026-09-04.",
+      "reporting_period": "2021-09-19 to 2026-09-19",
+      "source_id": "S2024-CEO;S2025-ONEILL;S2025-WILLIAMS;S012-v2;S005",
+      "source_location": "SEC Item 5.02 filings and FY2026 10-K p.8",
+      "acceptance_id": "NKE-A05-04"
+    },
+    {
+      "fact_id": "NKE-BND-ORG-002",
+      "kind": "official_direct",
+      "metric_or_event": "12-month window official event count",
+      "raw_value": "Within 2025-09-19 to 2026-09-19: two completed senior-officer role exits/separations (Williams and Friend), plus two appointments (Alagirisamy and Denton).",
+      "reporting_period": "2025-09-19 to 2026-09-19",
+      "source_id": "S2025-WILLIAMS;S012-v2",
+      "source_location": "SEC 8-K Item 5.02, 2025-12-02 and 2026-06-23",
+      "acceptance_id": "NKE-A05-04"
+    },
+    {
+      "fact_id": "NKE-BND-ORG-003",
+      "kind": "not_inferred",
+      "metric_or_event": "集中离任结论与个人动机",
+      "raw_value": null,
+      "reporting_period": "2025-09-19 to 2026-09-19",
+      "source_id": "S2025-WILLIAMS;S012-v2",
+      "boundary": "No numerical/proportional definition of concentrated departures is supplied by the locked acceptance condition. The package reports official events but does not infer concentration, individual motives, or retention rates.",
+      "status": "open_for_rule_interpretation",
+      "acceptance_id": "NKE-A05-04"
+    },
+    {
+      "calculation_id": "NKE-BND-CAL-001",
+      "name": "FY2024-FY2026总普通股桥",
+      "formula": "ending_total = beginning_A + beginning_B + option_exercises + conversion_A_to_B_net_zero + repurchases + employee_net_issuance + other_share_changes",
+      "unit": "millions of shares",
+      "rows": {
+        "FY2024": {
+          "beginning_total": 1532,
+          "option_exercises": 7,
+          "conversion_net": 0,
+          "repurchases": -41,
+          "employee_net_issuance": 5,
+          "other": 0,
+          "ending_total": 1503
+        },
+        "FY2025": {
+          "beginning_total": 1503,
+          "option_exercises": 6,
+          "conversion_net": 0,
+          "repurchases": -38,
+          "employee_net_issuance": 5,
+          "other": 0,
+          "ending_total": 1476
+        },
+        "FY2026": {
+          "beginning_total": 1476,
+          "option_exercises": 3,
+          "conversion_net": 0,
+          "repurchases": -2,
+          "employee_net_issuance": 6,
+          "other": 0,
+          "ending_total": 1483
+        }
+      },
+      "source_id": "S005",
+      "acceptance_id": "NKE-A05-03",
+      "boundary": "Class A-to-B conversion is zero in combined shares; these totals are point-in-time outstanding shares, not weighted-average diluted EPS shares."
+    },
+    {
+      "calculation_id": "NKE-BND-CAL-002",
+      "name": "12-month主要高管官方事件计数",
+      "formula": "count distinct completed role exit/separation events and appointments with effective dates inside [2025-09-19, 2026-09-19]",
+      "outputs": {
+        "completed_role_exits_or_separations": 2,
+        "appointments": 2
+      },
+      "events": {
+        "exits_or_separations": [
+          "Williams",
+          "Friend"
+        ],
+        "appointments": [
+          "Alagirisamy",
+          "Denton"
+        ]
+      },
+      "source_id": "S2025-WILLIAMS;S012-v2",
+      "acceptance_id": "NKE-A05-04",
+      "boundary": "Event count is not a rule-defined concentration measure and cannot itself establish a stability or organization score."
+    }
+  ]
+}

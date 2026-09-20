@@ -1,0 +1,145 @@
+{
+  "run_id": "nike-directed-repair-2026-09-20",
+  "task_type": "authorized_targeted_repair_regression",
+  "root_thread_id": "01a0b9c1-dd39-7a43-ad63-635504dc0fa3",
+  "started_at": "2026-09-20T05:38:42.4599968Z",
+  "information_cutoff": "2026-09-19",
+  "source_run": "nike-regression-2026-09-20",
+  "selected_frozen_version": "frozen-author-v1",
+  "selection_reason": "最早仍保留三份独立完整正文；v2含追加式冲突，v3为同文摘要",
+  "previous_workpaper": "data/reviews/nike-regression-2026-09-20/final/author-v1-workpaper.json",
+  "locked_adjudication": "data/reviews/nike-regression-2026-09-20/final/adjudication-v1.json",
+  "terminal_context": "data/reviews/nike-regression-2026-09-20/final/decision-closeout.json",
+  "evidence_version": "v1+correction-v2",
+  "repair_rounds": 1,
+  "status": "defer_research_not_accepted",
+  "hashes": {
+    "previous_workpaper": "9387892ac736ebd99bad6558c12adbafccc51bce47d9df409ef5e9d8c7a648f3",
+    "adjudication": "f7d28a3932dbc3e715d3f87654611f2719b759e15c8777113a53b05a2e21ac9f",
+    "deep": "d75d7a02516adee7fa8d0b6c831b49692eaeb62bedd8310dcd108d0b386de863",
+    "management": "131adb2cbf6c78558bab2cff44faa7ae44c62ee6916b76170a999605e1943fff",
+    "valuation": "fc5af061000ed9bdb4116432fecee63c242b4ec9a3057fdc1387c383caac7a86"
+  },
+  "roles": [
+    {
+      "role": "triplet_repair_writer",
+      "requested_model": "gpt-5.6-sol",
+      "requested_effort": "low",
+      "agent_id": "01a0bd53-4bfa-7f50-85a7-5008d8298871",
+      "dispatch_method": "explicit_config_fallback_runtime_role_unregistered",
+      "actual_model": "gpt-5.6-sol",
+      "actual_effort": "low",
+      "actual_model_source": "local turn_context",
+      "status": "completed",
+      "artifacts": "writer/*"
+    },
+    {
+      "role": "triplet_review_facts",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "low",
+      "agent_id": "01a0bca6-cd58-70b0-8e01-21b0e6c679af",
+      "dispatch_method": "existing_original_reviewer",
+      "actual_model": "gpt-5.6-terra",
+      "actual_effort": "low",
+      "actual_model_source": "local turn_context",
+      "status": "completed",
+      "artifacts": "review-facts/targeted-review.json"
+    },
+    {
+      "role": "triplet_review_reasoning",
+      "requested_model": "gpt-5.6-sol",
+      "requested_effort": "low",
+      "agent_id": "01a0bca6-f002-7a43-bc53-1a322e20508b",
+      "dispatch_method": "existing_original_reviewer",
+      "actual_model": "gpt-5.6-sol",
+      "actual_effort": "low",
+      "actual_model_source": "local turn_context",
+      "status": "completed",
+      "artifacts": "review-reasoning/targeted-review.json"
+    },
+    {
+      "role": "triplet_adjudicator",
+      "requested_model": "gpt-6-astra",
+      "requested_effort": "low",
+      "agent_id": "01a0bcb2-9a6f-7c41-965c-56c01121c66d",
+      "dispatch_method": "existing_adjudicator",
+      "actual_model": "gpt-6-astra",
+      "actual_effort": "low",
+      "actual_model_source": "local turn_context",
+      "status": "completed",
+      "artifacts": "final/decision-closeout.json"
+    }
+  ],
+  "stage_timings": [
+    {
+      "stage": "startup",
+      "start": "2026-09-20T05:38:42.4599968Z",
+      "end": "2026-09-20T05:38:42.4699964Z"
+    },
+    {
+      "stage": "repair_writer",
+      "start": "2026-09-20T05:39:08Z",
+      "end": "2026-09-20T05:58:22Z"
+    },
+    {
+      "stage": "handoff_repair",
+      "start": "2026-09-20T05:58:30Z",
+      "end": "2026-09-20T05:58:31Z",
+      "status": "ready_for_independent_review"
+    },
+    {
+      "stage": "independent_targeted_review",
+      "start": "2026-09-20T05:59:00Z",
+      "end": "2026-09-20T06:05:00Z",
+      "result": "both_failed_no_new_p0"
+    },
+    {
+      "stage": "terminal_adjudication",
+      "start": "2026-09-20T06:05:00Z",
+      "end": "2026-09-20T06:14:00Z",
+      "result": "defer_open_p1"
+    }
+  ],
+  "research_status": "execution_incomplete",
+  "terminal_decision": "暂缓",
+  "usage": {
+    "wall_clock_seconds": 1834.60101,
+    "input_tokens": 28648375,
+    "cached_input_tokens": 27720192,
+    "uncached_input_tokens": 928183,
+    "output_tokens": 76277,
+    "source": "local session window audit; final response excluded",
+    "by_role": {
+      "root": {
+        "input": 12159320,
+        "cached": 12089728,
+        "uncached": 69592,
+        "output": 10675
+      },
+      "triplet_repair_writer": {
+        "input": 12806247,
+        "cached": 12629120,
+        "uncached": 177127,
+        "output": 46078
+      },
+      "triplet_review_facts": {
+        "input": 868578,
+        "cached": 600832,
+        "uncached": 267746,
+        "output": 6222
+      },
+      "triplet_review_reasoning": {
+        "input": 1537639,
+        "cached": 1323776,
+        "uncached": 213863,
+        "output": 8315
+      },
+      "triplet_adjudicator": {
+        "input": 1276591,
+        "cached": 1076736,
+        "uncached": 199855,
+        "output": 4987
+      }
+    }
+  }
+}

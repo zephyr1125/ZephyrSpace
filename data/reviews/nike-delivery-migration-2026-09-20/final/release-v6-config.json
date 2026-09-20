@@ -1,0 +1,9 @@
+{
+  "manifest": "data/reviews/nike-delivery-migration-2026-09-20/build-v6/manifest.json",
+  "authorization": "data/reviews/nike-delivery-migration-2026-09-20/final/release-v6-authorization.json",
+  "reports": {
+    "deep.md": "深度分析/耐克 深度分析 66-72 2026-09-20 交付校正版.md",
+    "management.md": "管理层档案/耐克 管理层档案 56-66 2026-09-20 交付校正版.md",
+    "valuation.md": "估值分析/耐克 估值分析 2026-09-20 交付校正版.md"
+  }
+}

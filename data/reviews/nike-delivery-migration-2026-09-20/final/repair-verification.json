@@ -1,0 +1,19 @@
+{
+  "rounds": 3,
+  "fix_rounds": 2,
+  "acceptance_rounds": 1,
+  "max_rounds": 5,
+  "portable_verification": {
+    "status": "release_verified",
+    "reports": 3,
+    "archived_inputs": 20
+  },
+  "temporary_build_and_review_absent": true,
+  "report_mutation_rejected": true,
+  "unit_tests": {
+    "passed": 60
+  },
+  "skill_entry_check": "pass",
+  "git_diff_check": "pass",
+  "scope": "交付一致性、版本归档与忽略规范；沿用已批准研究判断，不声称新公司完整估值已测试"
+}

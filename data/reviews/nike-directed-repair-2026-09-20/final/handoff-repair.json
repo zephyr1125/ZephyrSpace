@@ -1,0 +1,33 @@
+{
+  "status": "ready_for_independent_review",
+  "errors": [],
+  "warnings": [
+    "公司D维度触发原规则重大警告；须人工处理，程序不判入库"
+  ],
+  "computed": {
+    "cScore": 65.0,
+    "mScore": 64,
+    "target_price": null,
+    "certainty": null,
+    "buy_price": null,
+    "currency": "USD",
+    "weighted": {},
+    "models": {}
+  },
+  "scope": {
+    "reports": true,
+    "repair": true,
+    "handoff_stage": "repair"
+  },
+  "limitations": "不验证证据真实性、行业适用性、假设合理性、正文全部数值或人工关闭判断；不代表双复核通过或允许入库。",
+  "report_sha256": {
+    "deep": "43c67fc7be1293c4791fbf0dbb15e20a1b6cc62303a2fed25847a3ddddc67bdd",
+    "management": "b1b713cdd2a7040f3052a98eef96afb9096ec9e0950d85cd5071a9659265d88b",
+    "valuation": "2ba96522c51d6620e48318572936bf49f8cf88e4190559a96a428a138703069d"
+  },
+  "input_sha256": {
+    "workpaper": "19e48a425d426caa83e8b9a270e5d72392de854ef462de793ed5c2ac288bc97f",
+    "previous": "9387892ac736ebd99bad6558c12adbafccc51bce47d9df409ef5e9d8c7a648f3",
+    "adjudication": "f7d28a3932dbc3e715d3f87654611f2719b759e15c8777113a53b05a2e21ac9f"
+  }
+}

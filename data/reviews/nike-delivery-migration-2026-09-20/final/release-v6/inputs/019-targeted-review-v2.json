@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "role": "triplet_review_reasoning",
+  "model_route": "gpt-5.6-sol/low",
+  "run_id": "nike-evidence-repair-2026-09-20",
+  "stage": "终局有界修复独立推理复验",
+  "information_cutoff": "2026-09-19",
+  "scope": {
+    "reviewed_acceptance_ids": ["NKE-A05-03", "NKE-A05-04", "NKE-A04-03"],
+    "checks": ["原验收实质完成", "未知边界", "跨报告一致性", "锁定评分区间", "停止正式定价", "既有通过项回退"],
+    "other_review_read": false
+  },
+  "hash_verification": {
+    "handoff_match": true,
+    "files": [
+      {"path":"writer/deep-v2.md","sha256":"2259fc1c505f9c120b326af5ccf1860bdc117989c7896c0e70c8a7dc6e7bfd2f","matched_handoff":true},
+      {"path":"writer/management-v2.md","sha256":"7a9bf1aaf9493cc40e15704c4cc883733511416796b72168dda84f0d8e7d58e7","matched_handoff":true},
+      {"path":"writer/valuation-v2.md","sha256":"730f38c329a09a58f433da24e8a510e3f16a388923743a5192c1056f9997863f","matched_handoff":true},
+      {"path":"writer/workpaper-v3.json","sha256":"b4e490ad8e992bd34366bfc1ec153f10ce8e711198012c69dc0c88d0fe669060","matched_handoff":true},
+      {"path":"preparation/preparation-v4.json","sha256":"701b7c45c40946391e89bcdb7814506dfc70dc0fa7c5521f38623e59f38d6871","matched_handoff":true},
+      {"path":"final/review-adjudication.json","sha256":"ac44c16ca9f549bc8b1d0c25d1f79a20c5522bf6c17dde7e010505427456a296"},
+      {"path":"evidence/bounded-supplement.md","sha256":"817fd9fed0b6c7bb4b9cd85b6bdc0fabe7d0df1d3e0ab92c9e65f6ced35c97a2"},
+      {"path":"evidence/facts-bounded.json","sha256":"be61905ed93cc608686c13ace06f798366b9b5f83177e936c031c92a6ef46e82"},
+      {"path":"evidence/calculations-bounded.json","sha256":"7b4a918a0825989ebfe3f3f575450396f85c3899c14e8ba3524d6b48310ee234"}
+    ]
+  },
+  "acceptance_results": [
+    {
+      "acceptance_id": "NKE-A05-03",
+      "status": "fail",
+      "substance": "FY2024-26 Class A+B总普通股桥可复算闭合为1532→1503→1476→1483；A转B合计抵消，回购现金、实际购买股数/均价、权益表股数与SBC费用已分列；无法把员工净发行全部量化归属SBC的边界处理正确。",
+      "failure": "正文、底稿和preparation-v4反复引用不存在的NKE-BND-CAP-004及NKE-CAL-BND-001。实际facts-bounded仅有NKE-BND-CAP-001/002/003，实际计算ID为NKE-BND-CAL-001。证据内容虽存在，但原验收要求的证据定位与closure未形成可解析闭环。",
+      "score_effect": "不改变F2=3、F2.5=1、资本配置13、股东友好10，也不改变联合评分区间。"
+    },
+    {
+      "acceptance_id": "NKE-A05-04",
+      "status": "fail",
+      "substance": "2021-09-19至2026-09-19主要高管时间线及2025-09-19至2026-09-19窗口已列出；窗口内两项离任/角色取消和两项继任可核。裁决未定义集中离任阈值，因此不自行定性，个人动机和保留率继续未知，边界正确。",
+      "failure": "一是引用不存在的NKE-BND-ORG-004及NKE-CAL-BND-002，实际facts-bounded仅有ORG-001/002/003，计算ID为NKE-BND-CAL-002。二是deep-v2:200仍称完整五年高管离任和12个月索引未知，management-v2:190仍把完整高管时间线列为限制，valuation-v2:132、146仍称完整主要高管时间线/离任索引尚未取得，与新增证据、management-v2:155及workpaper-v3直接冲突。",
+      "score_effect": "F1[0,5]及组织人才[0,10]的保守外包络仍覆盖剩余规则不确定性；不改变联合评分区间。"
+    },
+    {
+      "acceptance_id": "NKE-A04-03",
+      "status": "pass",
+      "substance": "deep-v2:220已将三期人效列为已核，并只保留研发投入健康度等真实未知；D5=2继续由三期收入/员工先降后升与研发披露边界支持，未把营销费用当研发，也未凭缺失值给0。",
+      "unknown_boundary": "研发费用、研发人数及投入健康度未披露，继续保持未知；该未知不支持上调D5至3。"
+    }
+  ],
+  "unknown_boundary_review": {
+    "passed": true,
+    "conclusion": "SBC费用无法归属到具体股数、集中离任无规则阈值、个人动机/保留率及研发投入健康度均保持未知；未把未知取中档、零分或伪精确结论。机械0端点仍明确不是正式评价。"
+  },
+  "score_and_valuation_review": {
+    "company_bounds": [66,72],
+    "management_bounds": [56,66],
+    "combined_bounds": [122,138],
+    "mechanical_lower_endpoints": {"company":66,"management":56,"combined":122},
+    "bounds_still_valid": true,
+    "reason": "新增总股本桥和高管时间线未产生裁决要求的决定性分值变化；F1、组织人才与B0继续使用锁定外包络。即使取联合上界，管理层66<70且合计138<150，稳定否决全部档位。",
+    "pricing_stop_still_valid": true,
+    "pricing": {"target_price":null,"certainty":null,"buy_price":null},
+    "pricing_conclusion": "reject/NONE及停止正式双模型仍成立；null未被解释为价值为零。"
+  },
+  "regression_review": {
+    "previously_passed_items_regressed": false,
+    "conclusion": "A02-02、A03-01、A03-03、A04-01、A10-01、A10-02、A06-01的事实、分值和停止定价结论未见本轮修改破坏。valuation-v2关于高管索引的旧句属于A05-04本轮同步失败，不改变A10-01已核CFO日期。"
+  },
+  "findings": [
+    {
+      "id":"NKE-BR-R01",
+      "severity":"P1",
+      "acceptance_ids":["NKE-A05-03","NKE-A05-04"],
+      "location":["preparation/preparation-v4.json","writer/workpaper-v3.json","writer/deep-v2.md:195-201","writer/management-v2.md:105-155"],
+      "claim":"新增有界证据的引用ID与实际JSON记录不一致。",
+      "evidence":"实际事实ID止于NKE-BND-CAP-003和NKE-BND-ORG-003，实际计算ID为NKE-BND-CAL-001/002；稿件却引用CAP-004、ORG-004和NKE-CAL-BND-001/002。",
+      "impact":"读者无法按引用直接定位部分关键事实和计算，closure的证据链不可机械解析。",
+      "recommendation":"仅统一引用ID到实际记录，或在证据JSON中按现有引用补建等价ID；不得改变事实、计算或分值。"
+    },
+    {
+      "id":"NKE-BR-R02",
+      "severity":"P1",
+      "acceptance_ids":["NKE-A05-04"],
+      "location":["writer/deep-v2.md:200","writer/management-v2.md:190","writer/valuation-v2.md:132","writer/valuation-v2.md:146"],
+      "claim":"三稿对主要高管时间线完成状态仍互相冲突。",
+      "evidence":"management-v2:155与底稿称授权时间线和12个月窗口已完成，但上述四处仍称完整时间线或索引未知/尚未取得。",
+      "impact":"A05-04无法在跨报告层面实质关闭，并会把已补证事项错误保留为重评前置条件。",
+      "recommendation":"将旧句限定为仍未知的个人动机、保留率及无规则阈值下的组织评价，不再称官方主要高管时间线或12个月索引缺失。"
+    }
+  ],
+  "p0": [],
+  "p1": ["NKE-BR-R01", "NKE-BR-R02"],
+  "final_verdict": {
+    "passed": false,
+    "acceptance_summary": {"total":3,"pass":1,"fail":2},
+    "decision": "reject",
+    "level": "NONE",
+    "research_status": "execution_incomplete",
+    "quality_stop_approved": true,
+    "formal_pricing_allowed": false,
+    "required_closeout": "终局有界轮次的实质数据足以支持评分区间与停止定价，但A05-03/A05-04因证据ID断链及A05-04跨报告旧状态未关闭而不通过。按裁决after_round，应维持reject与execution_incomplete，禁止正式发布和写入Watchlist，不再无限追加修复轮次。"
+  }
+}

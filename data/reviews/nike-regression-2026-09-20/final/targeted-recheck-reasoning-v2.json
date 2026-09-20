@@ -1,0 +1,258 @@
+{
+  "schema_version": 1,
+  "role": "triplet_review_reasoning",
+  "stage": "targeted_recheck_v2",
+  "as_of": "2026-09-19",
+  "scope": "仅复查冻结author-v2三稿、author-v2-workpaper、repair-closeout-v1、adjudication-v1、repair-package-v1及evidence v2；未重做全量研究，未读取另一复核意见。",
+  "summary": {
+    "acceptance_total": 29,
+    "passed": 5,
+    "failed": 24,
+    "new_p0_p1_count": 1,
+    "final_pass": false,
+    "reason": "v2底稿的新参数算术闭合，但三份冻结稿没有把裁决修复整合进唯一有效正文，而是保留v1错误并在文末追加替代说明。旧评分、事实ID、权益、FCF、CFO缺口及非法F4仍以当前正文形式存在，形成系统性跨报告冲突；多数验收条件未实质关闭。"
+  },
+  "score_and_gate_check": {
+    "workpaper_company_raw": 65,
+    "workpaper_company_display": 65,
+    "workpaper_management_raw": 64,
+    "workpaper_management_display": 64,
+    "workpaper_combined_raw": 129,
+    "workpaper_combined_display": 129,
+    "independent_arithmetic": "公司25项合计65；管理层七项合计64；组合65+64=129。整数值无需进一步舍入，门槛应使用原始65/64/129。",
+    "gate_result_if_parameters_were_cleanly_published": "公司65与管理层64均低于B_GROWTH单项70，组合129低于150，因此可否决B_GROWTH及更高档位并采用reject/NONE停止正式定价。",
+    "publication_consistency": "失败。deep正文仍显示67.5/68、F维11.5和F4；management快速参考与七维表仍显示60；valuation正文仍显示67.5/60/127.5，仅文末另写65/64/129。",
+    "stopped_valuation_logic": "原则成立，但当前冻结正文未形成同一套唯一有效参数，故不能认定停止路径已通过验收。"
+  },
+  "acceptance_results": [
+    {
+      "id": "NKE-A01-01",
+      "status": "fail",
+      "reason": "底稿已改为25项且C3+C4合并，但deep正文仍保留F4=2.5、A/B/D/E/F旧分项和旧六维汇总；唯一有效正文未一一对应25项。",
+      "evidence": "deep《综合评分汇总》《维度F》仍写F=11.5及F4=2.5；文末才追加A=8、B=12、C=14、D=6、E=17、F=8。"
+    },
+    {
+      "id": "NKE-A01-02",
+      "status": "fail",
+      "reason": "67.5/60/127.5及68/60/128仍大量残留为正文当前结论，违反不得残留为本轮已验收结论的条件。",
+      "evidence": "deep评分汇总、评分解释、最终结论；management快速参考、七维表和一致性；valuation第一节均保留旧参数。"
+    },
+    {
+      "id": "NKE-A01-03",
+      "status": "fail",
+      "reason": "未提供author-v2正式机械检查结果；workpaper的repair.issues/score_changes/report_changes/closures均为空，repair-closeout仅声明已处理，不能替代正式检查。",
+      "evidence": "author-v2-workpaper.json repair对象为空；指定材料中不存在v2 selfcheck或机械检查范围产物。"
+    },
+    {
+      "id": "NKE-A02-01",
+      "status": "pass",
+      "reason": "evidence-correction-v2与facts-v2已明确F004至F009及R001的唯一映射，并声明旧歧义废止。",
+      "evidence": "evidence/evidence-correction-v2.md《事实ID迁移》及facts-v2.json。"
+    },
+    {
+      "id": "NKE-A02-02",
+      "status": "fail",
+      "reason": "底稿已按v2映射，但三稿正文仍以F006指税务；F006在v2唯一含义是SBC，税务应为F007。",
+      "evidence": "deep维度E及风险地图、valuation资产负债表与风险章节仍写未确认税收利益[NKE-F-006]。"
+    },
+    {
+      "id": "NKE-A02-03",
+      "status": "pass",
+      "reason": "v2增量同时纳入A09权益/Capex纠正和A10治理来源类型纠正，保留版本差异且未覆盖v1。",
+      "evidence": "evidence-correction-v2.md、facts-v2.json、sources-v2.json。"
+    },
+    {
+      "id": "NKE-A03-01",
+      "status": "fail",
+      "reason": "文末与底稿给出正确比率、FCF及E2=5/E3=2，但deep正文仍写错误FCF 6804/3400/2184及E2=3/E3=1，未形成唯一有效结论。",
+      "evidence": "deep《维度E》与《v2裁决修复》互相冲突。"
+    },
+    {
+      "id": "NKE-A03-02",
+      "status": "fail",
+      "reason": "只披露FY2026一组杜邦数，未列三年同口径净利率、周转率、权益乘数和ROE；正文仍保留E1=2，文末/底稿改E1=5。",
+      "evidence": "deep《维度E》无三期杜邦表；v2修复段仅列FY2026 6.698565%/1.237461/2.670739/22.138329%。"
+    },
+    {
+      "id": "NKE-A03-03",
+      "status": "fail",
+      "reason": "底稿和文末将E5.5改为1.5并说明程序化中性值，但正文仍给3分并声称未发现重大会计红旗。",
+      "evidence": "deep《维度E》E5.5=3与《v2裁决修复》E5.5=1.5冲突。"
+    },
+    {
+      "id": "NKE-A03-04",
+      "status": "pass",
+      "reason": "报告利润、986收益、302已收、684应收已分列；税后2322.233846被明确标为按实际有效税率的压力诊断，并说明成本匹配不确定及684不重复计现金。",
+      "evidence": "deep《v2裁决修复》与valuation《十三、v2裁决修复》。"
+    },
+    {
+      "id": "NKE-A04-01",
+      "status": "fail",
+      "reason": "A3由3改2，但未提供可得近五年融资、并购、处置、用途和利润依赖的逐项核验；仍以完整清单缺失维持点值。",
+      "evidence": "workpaper A3理由仅称未见频繁融资或处置依赖；deep正文仍保留A3=3，文末仅总分变化。"
+    },
+    {
+      "id": "NKE-A04-02",
+      "status": "fail",
+      "reason": "底稿将B0降为部分覆盖1分，但正文仍写B0=2且未补九要素、三个关键判断和四选一分类。",
+      "evidence": "deep《维度B》与《v2裁决修复》冲突。"
+    },
+    {
+      "id": "NKE-A04-03",
+      "status": "fail",
+      "reason": "未补三期人均创收、员工口径和研发披露方式；仅列FY2026员工约73000及未单列研发，正文仍保留D5=2，文末改1。",
+      "evidence": "deep《维度D》《v2裁决修复》及workpaper D5。"
+    },
+    {
+      "id": "NKE-A05-01",
+      "status": "fail",
+      "reason": "战略8、危机5、表达4保留理由有写明，但修订后的七维并未逐项整合成事实→分析→分值的唯一正文；快速参考和主体评分仍是旧60分体系。",
+      "evidence": "management正文表仍为14/13/8/9/5/7/4=60，文末追加15/13/8/10/5/9/4=64。"
+    },
+    {
+      "id": "NKE-A05-02",
+      "status": "fail",
+      "reason": "文末补了LTI构成、PSU/PSP结果和关联方政策，也区分绩效支付与实际现金，但未把委员会调整权、关联关系及其对诚信/友好/组织三维的具体归因整合进正文；正文仍称未取得门槛且只核委员会无关联关系。",
+      "evidence": "management《董事会与委员会》《组织与人才》与《v2裁决修复》冲突。"
+    },
+    {
+      "id": "NKE-A05-03",
+      "status": "fail",
+      "reason": "未核近五年并购/融资，也未补近三年回购价格、净股数变化和SBC抵消；作者明确保留这些为未知，资本配置13仍无完整验收链。",
+      "evidence": "management《资本配置记录》与v2修复段；workpaper资本配置理由。"
+    },
+    {
+      "id": "NKE-A05-04",
+      "status": "fail",
+      "reason": "Denton继任已在文末纠正，但主体仍称继任者未知；近五年主要高管时间线仍未补齐，组织9也未按稳定性/人才/激励三个子域分别论证。",
+      "evidence": "management《核心人物》《高管时间线》仍写继任未知，仅文末列Denton。"
+    },
+    {
+      "id": "NKE-A05-05",
+      "status": "fail",
+      "reason": "底稿把D2改为2并承认仅一年资料，但deep主体仍写D2=3；三期目标与结果未补，旧执行点值未从正文撤回。",
+      "evidence": "deep《维度D》与《v2裁决修复》冲突。"
+    },
+    {
+      "id": "NKE-A06-01",
+      "status": "fail",
+      "reason": "若65/64/129成为唯一有效参数，reject/NONE及价格三字段null可成立；但冻结三稿仍并列两套参数，可信评分尚未完成定向验收。",
+      "evidence": "valuation第一节用67.5/60/127.5，十三节用65/64/129；deep与management同样冲突。"
+    },
+    {
+      "id": "NKE-A06-02",
+      "status": "pass",
+      "reason": "估值稿明确若重启须有两个不同依据模型、完整每股权益桥，且不以低确定性或缺模型直接reject；当前未伪造模型、敏感性或反向验证。",
+      "evidence": "valuation第五至八节及第十三节。"
+    },
+    {
+      "id": "NKE-A06-03",
+      "status": "pass",
+      "reason": "三稿与repair-closeout均保持execution_incomplete或待定向复查状态，未提前宣称verified_complete或closed_with_uncertainty。",
+      "evidence": "deep frontmatter、management文末、repair-closeout-v1.json。"
+    },
+    {
+      "id": "NKE-A07-01",
+      "status": "fail",
+      "reason": "未记录明确采纳或不采纳P2观察期建议；重评条件仍是方向性改善，没有指定观察期或说明拒绝量化的理由。",
+      "evidence": "deep风险地图/最终结论、valuation第十二节。"
+    },
+    {
+      "id": "NKE-A08-01",
+      "status": "fail",
+      "reason": "没有集中来源表，三稿仍把制造集中引用为S005原始页10，未统一为v2约定的印刷页5-6/PDF物理页+4口径。",
+      "evidence": "deep维度B/C、valuation风险与反证；sources-v2规定页面口径。"
+    },
+    {
+      "id": "NKE-A09-01",
+      "status": "fail",
+      "reason": "v2证据和文末列出正确期末权益，但deep主体仍把139.44亿美元写成FY2026期末权益，明确违反不得残留误标。",
+      "evidence": "deep维度A与维度E；evidence-correction-v2明确13944仅为五季度平均。"
+    },
+    {
+      "id": "NKE-A09-02",
+      "status": "fail",
+      "reason": "文末改为6617/3268/2184，但deep主体仍保留6804/3400/2184，错误数值未撤回。",
+      "evidence": "deep维度E与v2修复段。"
+    },
+    {
+      "id": "NKE-A09-03",
+      "status": "fail",
+      "reason": "底稿和文末正确因Capex同比59.1%且无法拆分而把E4从2扣至1.5，主体却仍写E4=2。",
+      "evidence": "deep维度E与v2修复段。"
+    },
+    {
+      "id": "NKE-A09-04",
+      "status": "fail",
+      "reason": "未给事实→分项→三稿影响表；期末/平均、FCF及评分旧口径仍残留，说明跨报告复查未完成。",
+      "evidence": "deep和valuation主体与文末修复并存；workpaper repair.report_changes为空。"
+    },
+    {
+      "id": "NKE-A10-01",
+      "status": "fail",
+      "reason": "evidence v2已正确区分S010通用计划和S012主文，deep/management文末写Denton，但三稿主体仍称继任或完整安排未知；valuation仍要求未来取得CFO 8-K且未写Denton。",
+      "evidence": "management核心人物/时间线、valuation风险与重评条件、deep维度F。"
+    },
+    {
+      "id": "NKE-A10-02",
+      "status": "fail",
+      "reason": "报告只补充通用计划不是实际付款证明，未完整写出合格离职条件、潜在支付、个人约定、抵扣与非重复相加；主体仍以未读主文限制组织判断。",
+      "evidence": "management v2修复段与evidence-correction-v2《CFO过渡与遣散来源类型纠正》。"
+    }
+  ],
+  "new_major_findings": [
+    {
+      "id": "NKE-TR-V2-01",
+      "severity": "P0",
+      "category": "content_regression",
+      "location": "frozen-author-v2/deep.md、management.md、valuation.md",
+      "claim": "v2采用文末追加覆盖而未修正主体，导致同一冻结稿同时存在两套互斥的事实、评分和决策参数。",
+      "evidence": "deep同时有67.5与65、F4存在与删除、期末权益13944与14865、FCF 6804/3400与6617/3268；management同时有60与64、继任未知与Denton已任；valuation同时有127.5与129、税务F006与v2 F007、CFO 8-K未取得与v2已取得。",
+      "impact": "读者无法识别唯一有效结论，旧P0/P1仍会传播到正式报告、公司页和索引；不满足收尾规范的正文一致性及修复不得残留旧有效结论要求。",
+      "required_action": "从冻结v1复制后定向替换受影响正文和表格，删除或明确移出所有旧有效参数；正文、frontmatter、快速参考、评分表、风险、估值结论及重评条件必须只保留裁决后的同一套值。重新生成带repair issues/changes/closures的底稿和真实机械检查，再进行有界定向复查。"
+    }
+  ],
+  "cross_report_check": {
+    "facts": "fail：期末权益、事实ID及CFO来源在正文与附录冲突",
+    "scores": "fail：deep 67.5/65、management 60/64、combined 127.5/129并存",
+    "display_and_thresholds": "底稿算术pass，冻结稿一致性fail",
+    "valuation_stop": "逻辑条件pass，实际发布参数一致性fail",
+    "business_scenarios": "pass：三种非估值经营情景保留且未伪装成价格模型",
+    "reassessment_conditions": "fail：保留方向性条件，但未完成A07采纳记录，且CFO条件已被v2事实部分满足却仍写为未来缺口",
+    "content_regression": "fail：系统性append-only回退"
+  },
+  "final_verdict": {
+    "passed": false,
+    "decision": "不得验收",
+    "research_status": "execution_incomplete",
+    "blocking_acceptance_ids": [
+      "NKE-A01-01",
+      "NKE-A01-02",
+      "NKE-A01-03",
+      "NKE-A02-02",
+      "NKE-A03-01",
+      "NKE-A03-02",
+      "NKE-A03-03",
+      "NKE-A04-01",
+      "NKE-A04-02",
+      "NKE-A04-03",
+      "NKE-A05-01",
+      "NKE-A05-02",
+      "NKE-A05-03",
+      "NKE-A05-04",
+      "NKE-A05-05",
+      "NKE-A06-01",
+      "NKE-A09-01",
+      "NKE-A09-02",
+      "NKE-A09-03",
+      "NKE-A09-04",
+      "NKE-A10-01",
+      "NKE-A10-02"
+    ],
+    "nonblocking_failed_p2": [
+      "NKE-A07-01",
+      "NKE-A08-01"
+    ],
+    "note": "当前停止正式估值不是主要错误；主要错误是触发该路径的裁决参数没有在三稿中形成唯一、无回退的有效版本。"
+  }
+}

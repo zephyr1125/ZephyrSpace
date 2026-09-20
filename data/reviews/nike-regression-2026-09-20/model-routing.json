@@ -1,0 +1,108 @@
+{
+  "run_id": "nike-regression-2026-09-20",
+  "task_type": "full_update_regression",
+  "previous_run": "nike-final-2026-09-20",
+  "root_thread_id": "01a0b9c1-dd39-7a43-ad63-635504dc0fa3",
+  "started_at": "2026-09-20T02:23:45.069Z",
+  "information_cutoff": "2026-09-19",
+  "gate_status": "not_applicable_user_requires_full_reports",
+  "repair_rounds": 2,
+  "status": "defer_research_not_accepted",
+  "startup_role_check": {
+    "source": ".codex/agents/*.toml and docs/three-report-economy-routing.md",
+    "checked_at": "2026-09-20",
+    "expected": [
+      {
+        "role": "triplet_evidence",
+        "model": "gpt-5.6-terra",
+        "effort": "low"
+      },
+      {
+        "role": "triplet_writer",
+        "model": "gpt-5.6-terra",
+        "effort": "low"
+      },
+      {
+        "role": "triplet_review_facts",
+        "model": "gpt-5.6-terra",
+        "effort": "low"
+      },
+      {
+        "role": "triplet_review_reasoning",
+        "model": "gpt-5.6-sol",
+        "effort": "low"
+      },
+      {
+        "role": "triplet_adjudicator",
+        "model": "gpt-6-astra",
+        "effort": "low"
+      }
+    ],
+    "actual_runtime": "五个会话均由turn_context核验模型与low；两复核角色因运行时不识别自定义role名称，按TOML职责显式回退启动"
+  },
+  "roles": [
+    {
+      "role": "triplet_evidence",
+      "load": "native",
+      "effort": "low",
+      "task": "/root/nike_regression_evidence",
+      "model": "gpt-5.6-terra",
+      "session_id": "01a0bca1-f334-7db3-8f33-cb88264d17cd"
+    },
+    {
+      "role": "triplet_writer",
+      "load": "native",
+      "effort": "low",
+      "task": "/root/nike_regression_writer",
+      "model": "gpt-5.6-terra",
+      "session_id": "01a0bca6-8148-7d73-a294-62483060bc30"
+    },
+    {
+      "role": "triplet_review_facts",
+      "load": "explicit_config_fallback",
+      "effort": "low",
+      "task": "/root/nike_regression_review_facts",
+      "model": "gpt-5.6-terra",
+      "session_id": "01a0bca6-cd58-70b0-8e01-21b0e6c679af"
+    },
+    {
+      "role": "triplet_review_reasoning",
+      "load": "explicit_config_fallback",
+      "effort": "low",
+      "task": "/root/nike_regression_review_reasoning",
+      "model": "gpt-5.6-sol",
+      "session_id": "01a0bca6-f002-7a43-bc53-1a322e20508b"
+    },
+    {
+      "role": "triplet_adjudicator",
+      "load": "native",
+      "effort": "low",
+      "task": "/root/nike_regression_adjudicator",
+      "model": "gpt-6-astra",
+      "session_id": "01a0bcb2-9a6f-7c41-965c-56c01121c66d"
+    }
+  ],
+  "stage_timings": [
+    {
+      "stage": "full_run",
+      "start": "2026-09-20T02:23:45.069Z",
+      "source": "usage audit window",
+      "end": "2026-09-20T03:09:44.303Z"
+    },
+    {
+      "stage": "repair",
+      "rounds": 2,
+      "reason": "初次合并修复后同稿互斥；有界例外后错贴同文"
+    }
+  ],
+  "terminal_decision": "暂缓",
+  "research_accepted": false,
+  "usage_summary": {
+    "input_tokens": 43115985,
+    "cached_input_tokens": 41701632,
+    "uncached_input_tokens": 1414353,
+    "output_tokens": 159830,
+    "wall_clock_seconds": 2759.233765,
+    "source": "local session window audit; final response excluded"
+  }
+}

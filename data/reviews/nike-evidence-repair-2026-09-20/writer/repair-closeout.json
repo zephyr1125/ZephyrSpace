@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "run_id": "nike-evidence-repair-2026-09-20",
+  "as_of": "2026-09-19",
+  "previous": {
+    "workpaper": "data/reviews/nike-directed-repair-2026-09-20/writer/workpaper-v1.json",
+    "reports": "data/reviews/nike-directed-repair-2026-09-20/writer/{deep,management,valuation}.md",
+    "difference_statement": "从上一run三份独立全文与底稿复制后定向修复；未覆盖上一run。"
+  },
+  "decision": "reject",
+  "research_status": "execution_incomplete",
+  "watchlistLevel": "NONE",
+  "score_status": "bounded",
+  "score_bounds": {
+    "company": [66, 72],
+    "management": [56, 66],
+    "combined": [122, 138]
+  },
+  "mechanical_endpoints": {
+    "company": 66,
+    "management": 56,
+    "combined": 122,
+    "meaning": "仅供25项、七维及生成表算术闭合，不是正式点分。"
+  },
+  "valuation": {
+    "status": "stopped_quality_gate_after_full_research",
+    "target_price": null,
+    "certainty": null,
+    "buy_price": null,
+    "currency": "USD",
+    "reason": "管理层上界66低于B_GROWTH单项门槛70，合计上界138低于150，稳定否决全部档位。"
+  },
+  "acceptance_scope": {
+    "issues": ["NKE-DR-F02", "NKE-DR-R01", "NKE-DR-CAPITAL", "NKE-DR-ORG", "NKE-DR-R02", "NKE-DR-SEVERANCE", "NKE-DR-BOUND"],
+    "acceptance_ids": ["NKE-A02-02", "NKE-A03-01", "NKE-A03-03", "NKE-A04-01", "NKE-A05-03", "NKE-A04-03", "NKE-A05-04", "NKE-A10-01", "NKE-A10-02", "NKE-A06-01"],
+    "author_status": "all_author_claimed_closed_pending_independent_targeted_recheck"
+  },
+  "key_results": {
+    "mapping": "税务使用F007，SBC使用F006；742是953子集。",
+    "financial": "E2=5、E3=2、E5.5=1.5，理由和来源已闭合。",
+    "company": "A3=4、D5=2、F2=3、F2.5=1、F3=2；B0[1,2]、F1[0,5]。",
+    "management": "诚信16、资本13、股东10；组织与人才[0,10]。",
+    "shares": "NKE-CAL-SUP-002仅称回购与员工净发行两项流量小计，不称总净股数。",
+    "people": "CFO主文、过渡日期和遣散条件链已展开；最终支付及完整时间线保持未知。"
+  },
+  "next_step": "主任务以preparation-v3运行正式handoff并交原两路定向复查；本作者自检不等于独立验收。"
+}

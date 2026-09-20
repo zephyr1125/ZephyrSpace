@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "stage": "release_repair_classification_only",
+  "classified_by": "adjudicator",
+  "decision": "reject",
+  "level": "NONE",
+  "research_state": "approved",
+  "research_approval_scope": "沿用既有区间、资格否决和质量停止定价；本文件只裁定分流，不重新开展研究。",
+  "delivery_state": "pending_targeted_verification",
+  "publish_allowed": false,
+  "approved_manifest_sha256": null,
+  "approved_report_sha256": null,
+  "basis": "按既有终裁和当前底稿逐项核对；三项为确定的显示同步，不涉及来源断链，不以资格不变掩盖事实错误。新版本未建且未验收，不预先批准。",
+  "baseline_refs": [
+    "data/reviews/nike-delivery-migration-2026-09-20/adjudication/delivery-closeout-v2.json",
+    "data/reviews/nike-delivery-migration-2026-09-20/build-v5/manifest.json",
+    "data/reviews/nike-delivery-migration-2026-09-20/workpaper.json"
+  ],
+  "baseline_workpaper_sha256": "1c944461275a98682eecd96da860de33188a71ac2163e492cbd87521011c5c25",
+  "issues": [
+    {
+      "id": "NKE-REL-D01",
+      "severity": "P1",
+      "lane": "delivery",
+      "status": "open",
+      "classified_by": "adjudicator",
+      "no_decision_impact": true,
+      "locations": [
+        "build-v5/deep.md:101"
+      ],
+      "reason": "B0在底稿已为score=null、bounds=[1,2]；正文1分是遗留端点显示，不是本次重新评分。",
+      "acceptance": [
+        {
+          "id": "NKE-REL-D01-01",
+          "status": "open",
+          "condition": "在新源稿把B0为1分改为已批准[1,2]区间并明确无实际点值；保留其后既有证据不足说明，不新增对九要素的判断；重新装配后正文与评分表一致。"
+        }
+      ]
+    },
+    {
+      "id": "NKE-REL-D02",
+      "severity": "P1",
+      "lane": "delivery",
+      "status": "open",
+      "classified_by": "adjudicator",
+      "no_decision_impact": true,
+      "locations": [
+        "build-v5/deep.md:244"
+      ],
+      "reason": "已批准总分是完整区间，底稿total为null，机械表采用下端点的文字已不对应当前区间装配；删除该流程说明不改变求和或资格。",
+      "acceptance": [
+        {
+          "id": "NKE-REL-D02-01",
+          "status": "open",
+          "condition": "移除机械表使用下端点66/56/122的说法，保留公司[66,72]、管理层[56,66]、合计[122,138]及非点估边界；不得改为任何实际端点或中点总分。"
+        }
+      ]
+    },
+    {
+      "id": "NKE-REL-D03",
+      "severity": "P1",
+      "lane": "delivery",
+      "status": "open",
+      "classified_by": "adjudicator",
+      "no_decision_impact": true,
+      "locations": [
+        "workpaper.json#/scores/company/items/F1/reason",
+        "workpaper.json#/scores/management/items/组织与人才能力/reason",
+        "生成的公司及管理层评分表"
+      ],
+      "reason": "两项score均为null，bounds分别[0,5]与[0,10]；reason首句的机械校验采用下端点0是旧流程残留，其余事实及归因未因本次修改改变。",
+      "acceptance": [
+        {
+          "id": "NKE-REL-D03-01",
+          "status": "open",
+          "condition": "仅删除或替换两项reason内机械校验采用下端点0的流程说明，明确采用既有批准区间；保留后续主要高管时间线、12个月窗口、无集中离任阈值、个人动机/保留率未知及外包络不变的全部实质语义；score/bounds/bounds_reason/rule_ref/evidence_refs保持。"
+        }
+      ]
+    }
+  ],
+  "score_bridge": {
+    "company": {
+      "fixed_sum": 65,
+      "variable_items": {
+        "B0": [
+          1,
+          2
+        ],
+        "F1": [
+          0,
+          5
+        ]
+      },
+      "bounds": [
+        66,
+        72
+      ]
+    },
+    "management": {
+      "fixed_sum": 56,
+      "variable_items": {
+        "组织与人才能力": [
+          0,
+          10
+        ]
+      },
+      "bounds": [
+        56,
+        66
+      ]
+    },
+    "combined_bounds": [
+      122,
+      138
+    ],
+    "point_totals": null,
+    "qualification": "沿用批准门槛比较：管理层上界66<70且合计上界138<150，reject/NONE不变。"
+  },
+  "valuation_approval_scope": {
+    "quality_stop_approved": true,
+    "target_price": null,
+    "certainty": null,
+    "buy_price": null,
+    "formal_pricing_completed": false,
+    "new_valuation_approval": false
+  },
+  "global_acceptance": [
+    {
+      "id": "NKE-REL-D04-01",
+      "condition": "以新版本保存源稿及必要底稿；差异仅在已分类文字与已授权发布状态清理，所有数值、score、bounds、证据及实际评分归因不变，保留历史冻结稿。",
+      "status": "open"
+    },
+    {
+      "id": "NKE-REL-D04-02",
+      "condition": "原事实审核员定向核对上述每个验收ID及生成位置，记录实际新manifest和三稿哈希、差异与结论；无需重启双路全文研究。裁决收到校正版和审核记录后再作字节绑定终裁。",
+      "status": "open"
+    },
+    {
+      "id": "NKE-REL-D04-03",
+      "condition": "主任务在最终授权后按交付规范归档并验证release，必要复核引用及直接输入可携带且未被Git忽略；本分类文件不认定归档或Git修复已通过。",
+      "status": "open"
+    }
+  ],
+  "return_to_research": false,
+  "research_reentry_boundary": "若发现真实数值、来源、评分归因或上下界需改变，停止按本delivery分类修正，交主任务依SOP定向处理；不自行补开研究。",
+  "historical_boundary": "旧终裁仅绑定其原版本，不能继承为build-v5或待建版本的发布授权；旧run历史状态保持。"
+}

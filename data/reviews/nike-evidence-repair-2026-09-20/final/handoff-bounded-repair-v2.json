@@ -1,0 +1,36 @@
+{
+  "status": "failed",
+  "errors": [
+    "送审：deep旧文未清除或新文未落实：F2为2分：连续分红和薪酬负向裁量支持对齐，但逐笔内部交易、净股数变化与SBC抵消未完整，低于“一般”3分。"
+  ],
+  "warnings": [
+    "公司F维度触发原规则重大警告；须人工处理，程序不判入库"
+  ],
+  "computed": {
+    "cScore": 66.0,
+    "mScore": 56,
+    "target_price": null,
+    "certainty": null,
+    "buy_price": null,
+    "currency": "USD",
+    "weighted": {},
+    "models": {}
+  },
+  "scope": {
+    "reports": true,
+    "repair": true,
+    "handoff_stage": "repair"
+  },
+  "limitations": "不验证证据真实性、行业适用性、假设合理性、正文全部数值或人工关闭判断；不代表双复核通过或允许入库。",
+  "report_sha256": {
+    "deep": "2259fc1c505f9c120b326af5ccf1860bdc117989c7896c0e70c8a7dc6e7bfd2f",
+    "management": "7a9bf1aaf9493cc40e15704c4cc883733511416796b72168dda84f0d8e7d58e7",
+    "valuation": "730f38c329a09a58f433da24e8a510e3f16a388923743a5192c1056f9997863f"
+  },
+  "input_sha256": {
+    "workpaper": "b4e490ad8e992bd34366bfc1ec153f10ce8e711198012c69dc0c88d0fe669060",
+    "previous": "f5d936c1db6348b0e9a0e0df2d311f942e5e3a603e30e64e2da1756e7b8381fc",
+    "adjudication": "e97084f70a2ed3ecb5d31454fb41e9bf085fa5fad1529a3a30287f30d18d128e",
+    "preparation": "5e1ef05d7f510d00bebe3224a037c570937cd5a9754694cd110c787203377b9d"
+  }
+}

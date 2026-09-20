@@ -1,0 +1,10 @@
+{
+  "status": "patched_pending_delivery_verification",
+  "mapping": {
+    "data/reviews/nike-delivery-migration-2026-09-20/source/deep.md": "data/reviews/nike-delivery-migration-2026-09-20/source-patch-v3/source-0.md",
+    "data/reviews/nike-delivery-migration-2026-09-20/source-patch-v2/source-0.md": "data/reviews/nike-delivery-migration-2026-09-20/source-patch-v3/source-1.md"
+  },
+  "plan_sha256": "04639e3b0ed25ae9dd8a4445ee81cba075e3f41e9d7bf23ee2480b2297d60941",
+  "decision_sha256": "af7f0f346897e5f4eb45b45cf40931b3dda6938e77d00192d010db3538952d66",
+  "publish_allowed": false
+}

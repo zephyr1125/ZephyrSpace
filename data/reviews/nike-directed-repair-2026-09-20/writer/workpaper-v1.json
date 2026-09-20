@@ -1,0 +1,1005 @@
+{
+  "schema_version": 1,
+  "score_display": "integer_half_up",
+  "as_of": "2026-09-19",
+  "security": "NIKE, Inc. Class B Common Stock (NYSE:NKE)",
+  "evidence_version": "v1.0-regression-frozen + evidence-correction-v2",
+  "scores": {
+    "company": {
+      "total": 65,
+      "items": [
+        {
+          "id": "A1",
+          "score": 3,
+          "rule_ref": "深度模块A1",
+          "reason": "1967年成立并以产品、研发和品牌营销建立全球运动品定位。",
+          "evidence_refs": [
+            "S005原始页1；NKE-F-001"
+          ]
+        },
+        {
+          "id": "A2",
+          "score": 3,
+          "rule_ref": "深度模块A2",
+          "reason": "Swoosh, LLC持有约79% Class A，双层控制结构延续，未见本包内控制权争夺事实。",
+          "evidence_refs": [
+            "NKE-G-002；S005原始页22、26"
+          ]
+        },
+        {
+          "id": "A3",
+          "score": 2,
+          "rule_ref": "深度模块A3",
+          "reason": "可得近年原件未见跨界并购、重大商誉减值或卖资产保利润；五年逐项清单不完整，按轻微瑕疵档保守计2分。",
+          "evidence_refs": [
+            "NKE-F-003；NKE-G-001；S005原始页57、52-53"
+          ]
+        },
+        {
+          "id": "B0",
+          "score": 1,
+          "rule_ref": "深度模块B0",
+          "reason": "早期至今均是设计、开发、营销并销售品牌运动鞋服，以外包制造和全球渠道放大品牌资产。",
+          "evidence_refs": [
+            "S005原始页1-2"
+          ]
+        },
+        {
+          "id": "B1",
+          "score": 3,
+          "rule_ref": "深度模块B1",
+          "reason": "鞋类、服装、装备和Converse构成多层组合，但鞋类仍为最大品类且Converse显著收缩。",
+          "evidence_refs": [
+            "S005原始页31、41；NKE-F-001"
+          ]
+        },
+        {
+          "id": "B2",
+          "score": 3,
+          "rule_ref": "深度模块B2",
+          "reason": "按件销售、重复消费、品牌驱动和轻制造结构具备规模效应；需求属于可选消费而非刚需。",
+          "evidence_refs": [
+            "S005原始页1-2、31"
+          ]
+        },
+        {
+          "id": "B3",
+          "score": 4,
+          "rule_ref": "深度模块B3",
+          "reason": "全球品牌、创新、运动员营销支持中等定价权，但FY2026折扣和较低ASP压缩多个区域毛利率。",
+          "evidence_refs": [
+            "S005原始页15-16、31、38-41"
+          ]
+        },
+        {
+          "id": "B4",
+          "score": 1,
+          "rule_ref": "深度模块B4",
+          "reason": "成熟行业仍有产品和渠道修复空间，但FY2024至FY2026收入下滑后仅持平，增长可持续性未获验证。",
+          "evidence_refs": [
+            "NKE-F-001；S005原始页31"
+          ]
+        },
+        {
+          "id": "C1",
+          "score": 6,
+          "rule_ref": "深度模块C1",
+          "reason": "公司披露自己为全球最大运动鞋服销售商，属于第一梯队；未将未取得的具体市占率填为精确值。",
+          "evidence_refs": [
+            "S005原始页1、15"
+          ]
+        },
+        {
+          "id": "C2",
+          "score": 3,
+          "rule_ref": "深度模块C2",
+          "reason": "品牌和全球渠道带来一定下游影响力，但四大鞋类代工方约占60%产量且关税、材料和折扣压力限制话语权。",
+          "evidence_refs": [
+            "S005原始页10-12；NKE-F-008"
+          ]
+        },
+        {
+          "id": "C3+C4",
+          "score": 5,
+          "rule_ref": "深度模块C3+C4",
+          "reason": "商标、专利、研发、营销与规模网络形成3星护城河；竞争者众多且消费偏好快速变化，未达4-5星。",
+          "evidence_refs": [
+            "S005原始页15-16、19-22"
+          ]
+        },
+        {
+          "id": "D1",
+          "score": 2,
+          "rule_ref": "深度模块D1",
+          "reason": "长期强调运动、创新和消费者连接，但FY2026又采取库存清理、重投批发及数字平台定位调整，属于可解释但有漂移。",
+          "evidence_refs": [
+            "S005原始页30-31"
+          ]
+        },
+        {
+          "id": "D2",
+          "score": 2,
+          "rule_ref": "深度模块D2",
+          "reason": "仅有FY2026一年经营动作与结果，撤回三年兑现表述；缺原话且有漂移，按有限执行证据计2分。",
+          "evidence_refs": [
+            "S005原始页30-31；NKE-F-001"
+          ],
+          "original_statement_found": false,
+          "strategy_drift": true
+        },
+        {
+          "id": "D3",
+          "score": 1,
+          "rule_ref": "深度模块D3",
+          "reason": "行业竞争、消费者偏好、海外采购和贸易政策构成逆风，IEEPA回收也显示关税影响具有重大性。",
+          "evidence_refs": [
+            "S005原始页19-22；NKE-F-008"
+          ]
+        },
+        {
+          "id": "D5",
+          "score": 1,
+          "rule_ref": "深度模块D5",
+          "reason": "三期一致人效与研发费用未取得；内部CEO、COO/CFO继任和绩效激励提供混合信号，按弱档计1分。",
+          "evidence_refs": [
+            "NKE-G-004；S005原始页40"
+          ]
+        },
+        {
+          "id": "E1",
+          "score": 5,
+          "rule_ref": "深度模块E1",
+          "reason": "FY2024-26同口径杜邦ROE均高于15%，权益乘数未持续上升；回落主要由净利率而非加杠杆驱动。",
+          "evidence_refs": [
+            "NKE-A03-02；S005；S013；S014；NKE-F-009-v2"
+          ]
+        },
+        {
+          "id": "E2",
+          "score": 5,
+          "rule_ref": "深度模块E2",
+          "reason": "FY2024-26经营现金流均为正，简化FCF亦为正；但OCF由74.29亿降至28.68亿，趋势恶化，不能评满分。",
+          "evidence_refs": [
+            "NKE-F-001；NKE-F-009"
+          ]
+        },
+        {
+          "id": "E3",
+          "score": 2,
+          "rule_ref": "深度模块E3",
+          "reason": "FY2024-26收入和净利整体下降，FY2026净利又含9.86亿关税回收，增长质量不足。",
+          "evidence_refs": [
+            "NKE-F-001；NKE-F-008"
+          ]
+        },
+        {
+          "id": "E4",
+          "score": 1.5,
+          "rule_ref": "深度模块E4",
+          "reason": "期末现金加短投90.27亿高于有息债务79.42亿；租赁负债另列，短债结构仍需跟踪。",
+          "evidence_refs": [
+            "NKE-F-003"
+          ]
+        },
+        {
+          "id": "E5",
+          "score": 2,
+          "rule_ref": "深度模块E5",
+          "reason": "PwC出具无保留财报及ICFR意见；但库存75.01亿、比利时海关索赔金额未披露，资产与或有事项不能视作零风险。",
+          "evidence_refs": [
+            "NKE-G-001；NKE-F-003；NKE-R-001"
+          ]
+        },
+        {
+          "id": "E5.5",
+          "score": 1.5,
+          "rule_ref": "深度模块E5.5",
+          "reason": "已回看审计意见、税务附注和关键审计事项定位，未见非标或持续经营警示；未将税务不确定性忽略。",
+          "evidence_refs": [
+            "NKE-G-001；NKE-F-006；S005原始页52-54、74"
+          ]
+        },
+        {
+          "id": "F1",
+          "score": 3,
+          "rule_ref": "深度模块F1",
+          "reason": "内部CEO、明确COO/CFO继任与绩效挂钩激励为正面；完整五年全员时间线未知，保守计3分。",
+          "evidence_refs": [
+            "NKE-G-005-v2；NKE-G-006-v2；S005印刷页8"
+          ]
+        },
+        {
+          "id": "F2",
+          "score": 2,
+          "rule_ref": "深度模块F2",
+          "reason": "FY2024-26持续分红且曾回购；FY2026回购降至1.46亿，逐笔内部人交易未获核验，不能据此判定充分对齐。",
+          "evidence_refs": [
+            "NKE-F-009"
+          ]
+        },
+        {
+          "id": "F2.5",
+          "score": 1,
+          "rule_ref": "深度模块F2.5",
+          "reason": "有现金、分红、回购与资本开支可观察，但利润和现金流下行期的大幅回购收缩及缺少可验证先例，使资本配置仅中性。",
+          "evidence_refs": [
+            "NKE-F-001；NKE-F-009"
+          ]
+        },
+        {
+          "id": "F3",
+          "score": 2,
+          "rule_ref": "深度模块F3",
+          "reason": "独立薪酬委员会及其关联关系披露已核；完整关联交易表未摘录，信息透明度不给满分。",
+          "evidence_refs": [
+            "NKE-G-003；S008原始页4-15、72"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "total": 64,
+      "items": [
+        {
+          "id": "诚信与透明度",
+          "score": 16,
+          "rule_ref": "管理层模块第九节",
+          "reason": "无保留审计、激励负向裁量、关联方政策、IEEPA分拆及CFO安排均可核；未知结算与交易影响限制更高分。",
+          "evidence_refs": [
+            "NKE-G-001；NKE-F-006；NKE-F-008；NKE-G-004"
+          ]
+        },
+        {
+          "id": "资本配置能力",
+          "score": 13,
+          "rule_ref": "管理层模块第九节",
+          "reason": "持续分红、现金余额和回购授权是正面事实，但回购从42.50亿降至1.46亿且经营现金流下降，资本配置成效未闭合。",
+          "evidence_refs": [
+            "NKE-F-003；NKE-F-009；NKE-F-001"
+          ]
+        },
+        {
+          "id": "战略稳定性",
+          "score": 8,
+          "rule_ref": "管理层模块第九节",
+          "reason": "以运动、产品创新和消费者连接为长期方向，但渠道重平衡和库存清理反映此前执行需修复。",
+          "evidence_refs": [
+            "S005原始页30-31"
+          ]
+        },
+        {
+          "id": "对股东友好度",
+          "score": 9,
+          "rule_ref": "管理层模块第九节",
+          "reason": "分红保持增长且有剩余回购授权；未核逐笔内部交易和所有关联交易，不能把未检出当作不存在。",
+          "evidence_refs": [
+            "NKE-F-009；NKE-G-003"
+          ]
+        },
+        {
+          "id": "危机处理能力",
+          "score": 5,
+          "rule_ref": "管理层模块第九节",
+          "reason": "确认IEEPA回收并披露已收和应收的分拆，透明度尚可；贸易与渠道修复的长期效果截至截止日未知。",
+          "evidence_refs": [
+            "NKE-F-008；S005原始页30"
+          ]
+        },
+        {
+          "id": "组织与人才能力",
+          "score": 9,
+          "rule_ref": "管理层模块第九节",
+          "reason": "内部CEO、COO/CFO公开继任与绩效激励支持稳定性和激励；完整五年全员时间线与人才保留率未知。",
+          "evidence_refs": [
+            "NKE-G-005-v2；NKE-G-006-v2；S005印刷页8"
+          ]
+        },
+        {
+          "id": "表达清晰度与认知质量",
+          "score": 4,
+          "rule_ref": "管理层模块第九节",
+          "reason": "年报对产品、市场和渠道动作有明确描述，但没有冻结的电话会逐字原文可检验其对目标和风险的即时回应。",
+          "evidence_refs": [
+            "S005原始页30-31；NKE-G-004"
+          ]
+        }
+      ]
+    }
+  },
+  "valuation": {
+    "status": "stopped_quality_gate_after_full_research",
+    "currency": "USD",
+    "models": [],
+    "target_price": null,
+    "certainty": null,
+    "buy_price": null,
+    "reverse": null,
+    "reason": "修复后原始公司65、管理层64、合计129，均低于B_GROWTH原始分门槛；按质量停止定价路径，正式价格字段保持null。"
+  },
+  "bridges": [],
+  "bridges_not_applicable": "质量评分可信否决全部档位，按收尾规则停止正式估值；未生成企业价值到股权价值桥。",
+  "reports": {
+    "deep": "data/reviews/nike-directed-repair-2026-09-20/writer/deep.md",
+    "management": "data/reviews/nike-directed-repair-2026-09-20/writer/management.md",
+    "valuation": "data/reviews/nike-directed-repair-2026-09-20/writer/valuation.md"
+  },
+  "repair": {
+    "previous": {
+      "path": "data/reviews/nike-regression-2026-09-20/final/author-v1-workpaper.json",
+      "difference_statement": "从frozen-author-v1三份独立全文与author-v1-workpaper复制后定向修复；未以v2/v3正文为底稿，未继承历史76.5分或正式结论。"
+    },
+    "report_changes": [
+      {
+        "issue_id": "NKE-A03",
+        "reason": "落实裁决评分、事实口径、边界与结构化快照。",
+        "report": "deep",
+        "section": "__preamble__"
+      },
+      {
+        "issue_id": "NKE-A01",
+        "reason": "落实裁决评分、事实口径、边界与结构化快照。",
+        "report": "deep",
+        "section": "综合评分汇总"
+      },
+      {
+        "issue_id": "NKE-A01",
+        "reason": "落实裁决评分、事实口径、边界与结构化快照。",
+        "report": "deep",
+        "section": "评分解释"
+      },
+      {
+        "issue_id": "NKE-A04",
+        "reason": "落实裁决评分、事实口径、边界与结构化快照。",
+        "report": "deep",
+        "section": "维度 A：历史基因与公司 DNA"
+      },
+      {
+        "issue_id": "NKE-A04",
+        "reason": "落实裁决评分、事实口径、边界与结构化快照。",
+        "report": "deep",
+        "section": "维度 B：商业模式质量"
+      },
+      {
+        "issue_id": "NKE-A05",
+        "reason": "落实裁决评分、事实口径、边界与结构化快照。",
+        "report": "deep",
+        "section": "维度 D：战略清晰度与执行力"
+      },
+      {
+        "issue_id": "NKE-A03",
+        "reason": "落实裁决评分、事实口径、边界与结构化快照。",
+        "report": "deep",
+        "section": "维度 E：财务质量"
+      },
+      {
+        "issue_id": "NKE-A05",
+        "reason": "落实裁决评分、事实口径、边界与结构化快照。",
+        "report": "deep",
+        "section": "维度 F：治理结构与管理层"
+      },
+      {
+        "issue_id": "NKE-A01",
+        "reason": "落实裁决评分、事实口径、边界与结构化快照。",
+        "report": "deep",
+        "section": "风险地图与反证"
+      },
+      {
+        "issue_id": "NKE-A01",
+        "reason": "落实裁决评分、事实口径、边界与结构化快照。",
+        "report": "deep",
+        "section": "最终结论"
+      },
+      {
+        "issue_id": "NKE-A01",
+        "reason": "落实裁决评分、事实口径、边界与结构化快照。",
+        "report": "deep",
+        "section": "集中来源与页码口径"
+      },
+      {
+        "issue_id": "NKE-A01",
+        "reason": "落实裁决评分、事实口径、边界与结构化快照。",
+        "report": "deep",
+        "section": "结构化底稿快照"
+      },
+      {
+        "issue_id": "NKE-A05",
+        "reason": "落实Proxy、人事、资本配置、七维评分与口径联动。",
+        "report": "management",
+        "section": "__preamble__"
+      },
+      {
+        "issue_id": "NKE-A05",
+        "reason": "落实Proxy、人事、资本配置、七维评分与口径联动。",
+        "report": "management",
+        "section": "📊 快速参考"
+      },
+      {
+        "issue_id": "NKE-A05",
+        "reason": "落实Proxy、人事、资本配置、七维评分与口径联动。",
+        "report": "management",
+        "section": "一、管理层画像"
+      },
+      {
+        "issue_id": "NKE-A05",
+        "reason": "落实Proxy、人事、资本配置、七维评分与口径联动。",
+        "report": "management",
+        "section": "三、资本配置记录"
+      },
+      {
+        "issue_id": "NKE-A05",
+        "reason": "落实Proxy、人事、资本配置、七维评分与口径联动。",
+        "report": "management",
+        "section": "四、对股东友好度"
+      },
+      {
+        "issue_id": "NKE-A05",
+        "reason": "落实Proxy、人事、资本配置、七维评分与口径联动。",
+        "report": "management",
+        "section": "六、组织与人才"
+      },
+      {
+        "issue_id": "NKE-A05",
+        "reason": "落实Proxy、人事、资本配置、七维评分与口径联动。",
+        "report": "management",
+        "section": "七、监管、合规与透明度"
+      },
+      {
+        "issue_id": "NKE-A05",
+        "reason": "落实Proxy、人事、资本配置、七维评分与口径联动。",
+        "report": "management",
+        "section": "八、七维评分表"
+      },
+      {
+        "issue_id": "NKE-A05",
+        "reason": "落实Proxy、人事、资本配置、七维评分与口径联动。",
+        "report": "management",
+        "section": "九、评分一致性"
+      },
+      {
+        "issue_id": "NKE-A05",
+        "reason": "落实Proxy、人事、资本配置、七维评分与口径联动。",
+        "report": "management",
+        "section": "十、综合结论"
+      },
+      {
+        "issue_id": "NKE-A05",
+        "reason": "落实Proxy、人事、资本配置、七维评分与口径联动。",
+        "report": "management",
+        "section": "十一、口径纠正与集中来源"
+      },
+      {
+        "issue_id": "NKE-A05",
+        "reason": "落实Proxy、人事、资本配置、七维评分与口径联动。",
+        "report": "management",
+        "section": "结构化底稿快照"
+      },
+      {
+        "issue_id": "NKE-A06",
+        "reason": "落实质量停止定价、价格null边界与口径纠正。",
+        "report": "valuation",
+        "section": "__preamble__"
+      },
+      {
+        "issue_id": "NKE-A06",
+        "reason": "落实质量停止定价、价格null边界与口径纠正。",
+        "report": "valuation",
+        "section": "一、估值结论"
+      },
+      {
+        "issue_id": "NKE-A06",
+        "reason": "落实质量停止定价、价格null边界与口径纠正。",
+        "report": "valuation",
+        "section": "三、历史财务基础"
+      },
+      {
+        "issue_id": "NKE-A06",
+        "reason": "落实质量停止定价、价格null边界与口径纠正。",
+        "report": "valuation",
+        "section": "四、资产负债表与桥接边界"
+      },
+      {
+        "issue_id": "NKE-A06",
+        "reason": "落实质量停止定价、价格null边界与口径纠正。",
+        "report": "valuation",
+        "section": "五、适用方法筛选"
+      },
+      {
+        "issue_id": "NKE-A06",
+        "reason": "落实质量停止定价、价格null边界与口径纠正。",
+        "report": "valuation",
+        "section": "七、为何不使用DCF作为正式主模型"
+      },
+      {
+        "issue_id": "NKE-A06",
+        "reason": "落实质量停止定价、价格null边界与口径纠正。",
+        "report": "valuation",
+        "section": "八、反向验证的边界"
+      },
+      {
+        "issue_id": "NKE-A06",
+        "reason": "落实质量停止定价、价格null边界与口径纠正。",
+        "report": "valuation",
+        "section": "十、风险与反证"
+      },
+      {
+        "issue_id": "NKE-A06",
+        "reason": "落实质量停止定价、价格null边界与口径纠正。",
+        "report": "valuation",
+        "section": "十一、未批准正式估值的影响"
+      },
+      {
+        "issue_id": "NKE-A06",
+        "reason": "落实质量停止定价、价格null边界与口径纠正。",
+        "report": "valuation",
+        "section": "十二、重评条件"
+      },
+      {
+        "issue_id": "NKE-A06",
+        "reason": "落实质量停止定价、价格null边界与口径纠正。",
+        "report": "valuation",
+        "section": "十三、口径纠正与来源"
+      },
+      {
+        "issue_id": "NKE-A06",
+        "reason": "落实质量停止定价、价格null边界与口径纠正。",
+        "report": "valuation",
+        "section": "结构化底稿快照"
+      },
+      {
+        "replacement_section": "十一、未批准正式估值的影响",
+        "issue_id": "NKE-A06",
+        "reason": "章节改名并保留停止定价影响内容。",
+        "report": "valuation",
+        "section": "十一、停止正式估值的影响"
+      }
+    ],
+    "score_changes": [
+      {
+        "issue_id": "NKE-A01",
+        "evidence_refs": [
+          "NKE-A01-01"
+        ],
+        "reason": "非法评分项删除。",
+        "key": "company/F4"
+      },
+      {
+        "issue_id": "NKE-A01",
+        "evidence_refs": [
+          "NKE-A01-01"
+        ],
+        "reason": "将旧C3键纠正为唯一规则中的C3+C4合并项，分值与实质判断不变。",
+        "key": "company/C3"
+      },
+      {
+        "issue_id": "NKE-A01",
+        "evidence_refs": [
+          "NKE-A01-01"
+        ],
+        "reason": "新增合法C3+C4合并键以替代旧C3键，分值与实质判断不变。",
+        "key": "company/C3+C4"
+      },
+      {
+        "issue_id": "NKE-A04",
+        "evidence_refs": [
+          "NKE-A04-01",
+          "S005",
+          "NKE-F-009-v2"
+        ],
+        "reason": "现有近年定期报告未见异常依赖，但五年清单不完整，按轻微瑕疵档2分并披露边界。",
+        "key": "company/A3"
+      },
+      {
+        "issue_id": "NKE-A04",
+        "evidence_refs": [
+          "NKE-A04-02"
+        ],
+        "reason": "部分覆盖由2改1。",
+        "key": "company/B0"
+      },
+      {
+        "issue_id": "NKE-A05",
+        "evidence_refs": [
+          "NKE-A05-05",
+          "S005印刷页30-31"
+        ],
+        "reason": "仅一年动作与结果，撤回三年验证，按有限执行证据计2分。",
+        "key": "company/D2"
+      },
+      {
+        "issue_id": "NKE-A04",
+        "evidence_refs": [
+          "NKE-A04-03",
+          "NKE-G-006-v2"
+        ],
+        "reason": "员工与研发口径不完整，保留可得组织混合信号并按1分。",
+        "key": "company/D5"
+      },
+      {
+        "issue_id": "NKE-A03",
+        "evidence_refs": [
+          "NKE-A03-02",
+          "S005",
+          "S013",
+          "S014"
+        ],
+        "reason": "FY2024-26同口径杜邦显示ROE均高于15%，驱动以净利率和周转变化为主，非权益乘数持续上升，计5分。",
+        "key": "company/E1"
+      },
+      {
+        "issue_id": "NKE-A03",
+        "evidence_refs": [
+          "NKE-A03-01",
+          "NKE-F-009-v2"
+        ],
+        "reason": "三期OCF/净利与正FCF满足规则，由3改5。",
+        "key": "company/E2"
+      },
+      {
+        "issue_id": "NKE-A03",
+        "evidence_refs": [
+          "NKE-A03-01",
+          "NKE-F-008-v2"
+        ],
+        "reason": "一次性收益可辨认，由1改2。",
+        "key": "company/E3"
+      },
+      {
+        "issue_id": "NKE-A09",
+        "evidence_refs": [
+          "NKE-A09-03"
+        ],
+        "reason": "Capex未拆分按规则由2改1.5。",
+        "key": "company/E4"
+      },
+      {
+        "issue_id": "NKE-A03",
+        "evidence_refs": [
+          "NKE-A03-03"
+        ],
+        "reason": "无MD完整审计路径由3改1.5。",
+        "key": "company/E5.5"
+      },
+      {
+        "issue_id": "NKE-A05",
+        "evidence_refs": [
+          "NKE-A05-04",
+          "NKE-G-005-v2",
+          "NKE-G-006-v2"
+        ],
+        "reason": "CEO内部经验、明确CFO继任和绩效激励支持3分；完整五年清单边界披露。",
+        "key": "company/F1"
+      },
+      {
+        "issue_id": "NKE-A05",
+        "evidence_refs": [
+          "NKE-A05-02",
+          "NKE-F-009-v2",
+          "NKE-G-006-v2"
+        ],
+        "reason": "连续分红与绩效约束为正，但净稀释和内部交易不完整，按2分。",
+        "key": "company/F2"
+      },
+      {
+        "issue_id": "NKE-A05",
+        "evidence_refs": [
+          "NKE-A05-02",
+          "NKE-G-006-v2"
+        ],
+        "reason": "审计、负向裁量、关联方政策及口径披露支持16分，未知结算与完整交易边界披露。",
+        "key": "management/诚信与透明度"
+      },
+      {
+        "issue_id": "NKE-A05",
+        "evidence_refs": [
+          "NKE-A05-04",
+          "NKE-G-005-v2",
+          "NKE-G-006-v2"
+        ],
+        "reason": "CEO内部继任、COO/CFO公开节点和激励机制支持9分；完整五年全员清单未知不冒充。",
+        "key": "management/组织与人才能力"
+      }
+    ],
+    "issues": [
+      {
+        "acceptance_ids": [
+          "NKE-A01-01",
+          "NKE-A01-02",
+          "NKE-A01-03"
+        ],
+        "id": "NKE-A01",
+        "severity": "P0"
+      },
+      {
+        "acceptance_ids": [
+          "NKE-A02-01",
+          "NKE-A02-02",
+          "NKE-A02-03"
+        ],
+        "id": "NKE-A02",
+        "severity": "P1"
+      },
+      {
+        "acceptance_ids": [
+          "NKE-A03-01",
+          "NKE-A03-02",
+          "NKE-A03-03",
+          "NKE-A03-04"
+        ],
+        "id": "NKE-A03",
+        "severity": "P1"
+      },
+      {
+        "acceptance_ids": [
+          "NKE-A04-01",
+          "NKE-A04-02",
+          "NKE-A04-03"
+        ],
+        "id": "NKE-A04",
+        "severity": "P1"
+      },
+      {
+        "acceptance_ids": [
+          "NKE-A05-01",
+          "NKE-A05-02",
+          "NKE-A05-03",
+          "NKE-A05-04",
+          "NKE-A05-05"
+        ],
+        "id": "NKE-A05",
+        "severity": "P1"
+      },
+      {
+        "acceptance_ids": [
+          "NKE-A06-01",
+          "NKE-A06-02",
+          "NKE-A06-03"
+        ],
+        "id": "NKE-A06",
+        "severity": "P1"
+      },
+      {
+        "acceptance_ids": [
+          "NKE-A09-01",
+          "NKE-A09-02",
+          "NKE-A09-03",
+          "NKE-A09-04"
+        ],
+        "id": "NKE-A09",
+        "severity": "P1"
+      },
+      {
+        "acceptance_ids": [
+          "NKE-A10-01",
+          "NKE-A10-02"
+        ],
+        "id": "NKE-A10",
+        "severity": "P1"
+      }
+    ],
+    "closures": [
+      {
+        "checks": [
+          {
+            "evidence": "已在workpaper-v1.json与三份独立正文落实裁决要求；未知采用裁决允许的保守档位或替代路径并披露边界，待双路定向复查认定。",
+            "passed": true,
+            "id": "NKE-A01-01"
+          },
+          {
+            "evidence": "已在workpaper-v1.json与三份独立正文落实裁决要求；未知采用裁决允许的保守档位或替代路径并披露边界，待双路定向复查认定。",
+            "passed": true,
+            "id": "NKE-A01-02"
+          },
+          {
+            "evidence": "已在workpaper-v1.json与三份独立正文落实裁决要求；未知采用裁决允许的保守档位或替代路径并披露边界，待双路定向复查认定。",
+            "passed": true,
+            "id": "NKE-A01-03"
+          }
+        ],
+        "id": "NKE-A01",
+        "score_valuation_impact": "已纠正非法评分项、事实ID、期末/平均、Capex/FCF、人事与价格状态；待定项保持null，不反推总分或定价。",
+        "locations": [
+          "writer/deep.md",
+          "writer/management.md",
+          "writer/valuation.md"
+        ]
+      },
+      {
+        "checks": [
+          {
+            "evidence": "已在workpaper-v1.json与三份独立正文落实裁决要求；未知采用裁决允许的保守档位或替代路径并披露边界，待双路定向复查认定。",
+            "passed": true,
+            "id": "NKE-A02-01"
+          },
+          {
+            "evidence": "已在workpaper-v1.json与三份独立正文落实裁决要求；未知采用裁决允许的保守档位或替代路径并披露边界，待双路定向复查认定。",
+            "passed": true,
+            "id": "NKE-A02-02"
+          },
+          {
+            "evidence": "已在workpaper-v1.json与三份独立正文落实裁决要求；未知采用裁决允许的保守档位或替代路径并披露边界，待双路定向复查认定。",
+            "passed": true,
+            "id": "NKE-A02-03"
+          }
+        ],
+        "id": "NKE-A02",
+        "score_valuation_impact": "已纠正非法评分项、事实ID、期末/平均、Capex/FCF、人事与价格状态；待定项保持null，不反推总分或定价。",
+        "locations": [
+          "writer/deep.md",
+          "writer/management.md",
+          "writer/valuation.md"
+        ]
+      },
+      {
+        "checks": [
+          {
+            "evidence": "已在workpaper-v1.json与三份独立正文落实裁决要求；未知采用裁决允许的保守档位或替代路径并披露边界，待双路定向复查认定。",
+            "passed": true,
+            "id": "NKE-A03-01"
+          },
+          {
+            "evidence": "已在workpaper-v1.json与三份独立正文落实裁决要求；未知采用裁决允许的保守档位或替代路径并披露边界，待双路定向复查认定。",
+            "passed": true,
+            "id": "NKE-A03-02"
+          },
+          {
+            "evidence": "已在workpaper-v1.json与三份独立正文落实裁决要求；未知采用裁决允许的保守档位或替代路径并披露边界，待双路定向复查认定。",
+            "passed": true,
+            "id": "NKE-A03-03"
+          },
+          {
+            "evidence": "已在workpaper-v1.json与三份独立正文落实裁决要求；未知采用裁决允许的保守档位或替代路径并披露边界，待双路定向复查认定。",
+            "passed": true,
+            "id": "NKE-A03-04"
+          }
+        ],
+        "id": "NKE-A03",
+        "score_valuation_impact": "已纠正非法评分项、事实ID、期末/平均、Capex/FCF、人事与价格状态；待定项保持null，不反推总分或定价。",
+        "locations": [
+          "writer/deep.md",
+          "writer/management.md",
+          "writer/valuation.md"
+        ]
+      },
+      {
+        "checks": [
+          {
+            "evidence": "已在workpaper-v1.json与三份独立正文落实裁决要求；未知采用裁决允许的保守档位或替代路径并披露边界，待双路定向复查认定。",
+            "passed": true,
+            "id": "NKE-A04-01"
+          },
+          {
+            "evidence": "已在workpaper-v1.json与三份独立正文落实裁决要求；未知采用裁决允许的保守档位或替代路径并披露边界，待双路定向复查认定。",
+            "passed": true,
+            "id": "NKE-A04-02"
+          },
+          {
+            "evidence": "已在workpaper-v1.json与三份独立正文落实裁决要求；未知采用裁决允许的保守档位或替代路径并披露边界，待双路定向复查认定。",
+            "passed": true,
+            "id": "NKE-A04-03"
+          }
+        ],
+        "id": "NKE-A04",
+        "score_valuation_impact": "已纠正非法评分项、事实ID、期末/平均、Capex/FCF、人事与价格状态；待定项保持null，不反推总分或定价。",
+        "locations": [
+          "writer/deep.md",
+          "writer/management.md",
+          "writer/valuation.md"
+        ]
+      },
+      {
+        "checks": [
+          {
+            "evidence": "已在workpaper-v1.json与三份独立正文落实裁决要求；未知采用裁决允许的保守档位或替代路径并披露边界，待双路定向复查认定。",
+            "passed": true,
+            "id": "NKE-A05-01"
+          },
+          {
+            "evidence": "已在workpaper-v1.json与三份独立正文落实裁决要求；未知采用裁决允许的保守档位或替代路径并披露边界，待双路定向复查认定。",
+            "passed": true,
+            "id": "NKE-A05-02"
+          },
+          {
+            "evidence": "已在workpaper-v1.json与三份独立正文落实裁决要求；未知采用裁决允许的保守档位或替代路径并披露边界，待双路定向复查认定。",
+            "passed": true,
+            "id": "NKE-A05-03"
+          },
+          {
+            "evidence": "已在workpaper-v1.json与三份独立正文落实裁决要求；未知采用裁决允许的保守档位或替代路径并披露边界，待双路定向复查认定。",
+            "passed": true,
+            "id": "NKE-A05-04"
+          },
+          {
+            "evidence": "已在workpaper-v1.json与三份独立正文落实裁决要求；未知采用裁决允许的保守档位或替代路径并披露边界，待双路定向复查认定。",
+            "passed": true,
+            "id": "NKE-A05-05"
+          }
+        ],
+        "id": "NKE-A05",
+        "score_valuation_impact": "已纠正非法评分项、事实ID、期末/平均、Capex/FCF、人事与价格状态；待定项保持null，不反推总分或定价。",
+        "locations": [
+          "writer/deep.md",
+          "writer/management.md",
+          "writer/valuation.md"
+        ]
+      },
+      {
+        "checks": [
+          {
+            "evidence": "已在workpaper-v1.json与三份独立正文落实裁决要求；未知采用裁决允许的保守档位或替代路径并披露边界，待双路定向复查认定。",
+            "passed": true,
+            "id": "NKE-A06-01"
+          },
+          {
+            "evidence": "已在workpaper-v1.json与三份独立正文落实裁决要求；未知采用裁决允许的保守档位或替代路径并披露边界，待双路定向复查认定。",
+            "passed": true,
+            "id": "NKE-A06-02"
+          },
+          {
+            "evidence": "已在workpaper-v1.json与三份独立正文落实裁决要求；未知采用裁决允许的保守档位或替代路径并披露边界，待双路定向复查认定。",
+            "passed": true,
+            "id": "NKE-A06-03"
+          }
+        ],
+        "id": "NKE-A06",
+        "score_valuation_impact": "已纠正非法评分项、事实ID、期末/平均、Capex/FCF、人事与价格状态；待定项保持null，不反推总分或定价。",
+        "locations": [
+          "writer/deep.md",
+          "writer/management.md",
+          "writer/valuation.md"
+        ]
+      },
+      {
+        "checks": [
+          {
+            "evidence": "已在workpaper-v1.json与三份独立正文落实裁决要求；未知采用裁决允许的保守档位或替代路径并披露边界，待双路定向复查认定。",
+            "passed": true,
+            "id": "NKE-A09-01"
+          },
+          {
+            "evidence": "已在workpaper-v1.json与三份独立正文落实裁决要求；未知采用裁决允许的保守档位或替代路径并披露边界，待双路定向复查认定。",
+            "passed": true,
+            "id": "NKE-A09-02"
+          },
+          {
+            "evidence": "已在workpaper-v1.json与三份独立正文落实裁决要求；未知采用裁决允许的保守档位或替代路径并披露边界，待双路定向复查认定。",
+            "passed": true,
+            "id": "NKE-A09-03"
+          },
+          {
+            "evidence": "已在workpaper-v1.json与三份独立正文落实裁决要求；未知采用裁决允许的保守档位或替代路径并披露边界，待双路定向复查认定。",
+            "passed": true,
+            "id": "NKE-A09-04"
+          }
+        ],
+        "id": "NKE-A09",
+        "score_valuation_impact": "已纠正非法评分项、事实ID、期末/平均、Capex/FCF、人事与价格状态；待定项保持null，不反推总分或定价。",
+        "locations": [
+          "writer/deep.md",
+          "writer/management.md",
+          "writer/valuation.md"
+        ]
+      },
+      {
+        "checks": [
+          {
+            "evidence": "已在workpaper-v1.json与三份独立正文落实裁决要求；未知采用裁决允许的保守档位或替代路径并披露边界，待双路定向复查认定。",
+            "passed": true,
+            "id": "NKE-A10-01"
+          },
+          {
+            "evidence": "已在workpaper-v1.json与三份独立正文落实裁决要求；未知采用裁决允许的保守档位或替代路径并披露边界，待双路定向复查认定。",
+            "passed": true,
+            "id": "NKE-A10-02"
+          }
+        ],
+        "id": "NKE-A10",
+        "score_valuation_impact": "已纠正非法评分项、事实ID、期末/平均、Capex/FCF、人事与价格状态；待定项保持null，不反推总分或定价。",
+        "locations": [
+          "writer/deep.md",
+          "writer/management.md",
+          "writer/valuation.md"
+        ]
+      }
+    ]
+  }
+}

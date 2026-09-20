@@ -1,0 +1,41 @@
+{
+  "stage":"targeted_recheck_v2",
+  "coverage":"核对29个裁决acceptance_id、v2底稿、三份冻结稿、repair-closeout、evidence v2；未重做全量研究。",
+  "acceptance_results":[
+    {"id":"NKE-A01-01","status":"pass","note":"v2底稿为25项，F4已删除，C3+C4合并。"},
+    {"id":"NKE-A01-02","status":"fail","note":"三份冻结稿仍保留67.5/60/127.5及旧显示分，虽文末追加65/64/129。"},
+    {"id":"NKE-A01-03","status":"fail","note":"独立check返回报告bear缺失；无真实通过结果。"},
+    {"id":"NKE-A02-01","status":"pass","note":"evidence-correction-v2提供F004-F009/R001映射。"},
+    {"id":"NKE-A02-02","status":"fail","note":"深度和估值旧正文仍把税务953/742引为F006。"},
+    {"id":"NKE-A02-03","status":"pass","note":"facts-v2、sources-v2及correction-v2均为增量留存。"},
+    {"id":"NKE-A03-01","status":"fail","note":"文末修正E2和FCF，但原正文仍保留6804/3400，与6617/3268冲突。"},
+    {"id":"NKE-A03-02","status":"fail","note":"仅列FY2026杜邦，未给三期同口径拆解。"},
+    {"id":"NKE-A03-03","status":"fail","note":"底稿为1.5，但旧正文仍含E5.5=3，冻结稿不可作为单一有效参数。"},
+    {"id":"NKE-A03-04","status":"pass","note":"v2明确986/302/684、20.307692%压力诊断及684不重复作现金。"},
+    {"id":"NKE-A04-01","status":"fail","note":"A3仍未给近五年融资/并购/处置记录及4/2/0的完整论证。"},
+    {"id":"NKE-A04-02","status":"pass","note":"B0按当前部分覆盖改为1，未伪称完整。"},
+    {"id":"NKE-A04-03","status":"fail","note":"仅有FY2026员工约73000和研发未知，未补三期人均创收/员工口径。"},
+    {"id":"NKE-A05-01","status":"pass","note":"七维v2分数与保留项在修复段明确。"},
+    {"id":"NKE-A05-02","status":"pass","note":"v2补PSU/期权/RSU、PSP及关联方审查，并区分授予/支付。"},
+    {"id":"NKE-A05-03","status":"fail","note":"仍明确近五年交易、回购价格和净股数未知，未完成所要求核查。"},
+    {"id":"NKE-A05-04","status":"pass","note":"已补Denton、Friend和COO公开节点并保留其他时间线未知。"},
+    {"id":"NKE-A05-05","status":"pass","note":"明确D2只有一年执行资料并重判为2，未伪称三年验证。"},
+    {"id":"NKE-A06-01","status":"fail","note":"v2评分支持NONE/null，但三稿仍留存相冲突旧评分与结论。"},
+    {"id":"NKE-A06-02","status":"pass","note":"可信v2分数低于所有档位，双模型路径不触发。"},
+    {"id":"NKE-A06-03","status":"pass","note":"research_status保持execution_incomplete。"},
+    {"id":"NKE-A07-01","status":"pass","note":"非阻塞P2，已有方向性反证保留。"},
+    {"id":"NKE-A08-01","status":"pass","note":"非阻塞P2，v2证据定位已补。"},
+    {"id":"NKE-A09-01","status":"fail","note":"文末权益更正正确，但旧正文仍把13944作为期末权益。"},
+    {"id":"NKE-A09-02","status":"fail","note":"旧FCF数据仍在冻结深度稿。"},
+    {"id":"NKE-A09-03","status":"pass","note":"E4已按Capex未拆分扣0.5为1.5。"},
+    {"id":"NKE-A09-04","status":"fail","note":"期末/平均、税务事实ID和旧现金流表述仍有残留，未形成完整影响表。"},
+    {"id":"NKE-A10-01","status":"fail","note":"evidence v2已补S012与Denton，但管理层/估值旧段仍称继任未知或未纳入。"},
+    {"id":"NKE-A10-02","status":"pass","note":"v2正确区分通用遣散计划、个人安排及实际支付未知。"}
+  ],
+  "new_findings":[
+    {"severity":"P1","claim":"v2冻结稿以在v1全文末尾追加修复段的方式保留相冲突的旧评分、税务ID、权益、FCF与CFO事实。","impact":"三份报告不再具有单一可复核参数；NONE/null路径及跨报告一致性不能验收。","recommendation":"从冻结v2复制出新修订稿，将受影响旧段落实际替换，保留v1作为历史快照；全文只保留65/64/129、唯一事实ID和v2口径。"},
+    {"severity":"P1","claim":"author-v2-workpaper运行正式check失败（报告bear缺失），与修复关闭声明不一致。","impact":"NKE-A01-03未关闭，机械检查不能作为验收依据。","recommendation":"按停止估值适配规则修正检查范围/快照并保留真实结果。"}
+  ],
+  "final_pass":false,
+  "decision":"不通过；维持execution_incomplete，不能将reject/NONE或null估值字段标记为已验收。"
+}

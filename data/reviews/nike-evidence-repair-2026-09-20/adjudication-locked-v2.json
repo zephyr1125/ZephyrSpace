@@ -1,0 +1,240 @@
+{
+  "schema_version": 1,
+  "run_id": "nike-evidence-repair-2026-09-20",
+  "source_decision": "data/reviews/nike-directed-repair-2026-09-20/final/decision-closeout.json",
+  "information_cutoff": "2026-09-19",
+  "issues": [
+    {
+      "id": "NKE-DR-F02",
+      "candidate_ids": [],
+      "severity": "P1",
+      "decision": "valid",
+      "reason": "deep风险地图仍用F006指税务，E5.5表同样误引。管理层诚信行F006若支撑SBC必须明确对应，不能替代税务/Proxy。税务金额与742子集本身正确，来源链未全部关闭。",
+      "evidence_refs": [
+        "data/reviews/nike-directed-repair-2026-09-20/final/decision-closeout.json#NKE-DR-F02 data/reviews/nike-regression-2026-09-20/final/adjudication-v1.json"
+      ],
+      "action": "依preparation/parameter-lock.json锁定分值/联合外包络及准备修正要求；原验收条件保留，报告修复完成后逐ID实质验收。",
+      "score_valuation_impact": "质量处置reject/NONE基于完整联合外包络；不填未知总分，不将参数锁定当repair-ready或研究验收。",
+      "acceptance": [
+        {
+          "id": "NKE-A02-02",
+          "condition": "三稿与底稿中953/1026/990/742的引用均指F007及p74；742为953子集，不相加、不充当现金或独立债务；SBC保留F006。"
+        }
+      ],
+      "parameter_lock_ruling": [
+        {
+          "acceptance_id": "NKE-A02-02",
+          "status": "prepared_substantively",
+          "ruling": "映射与子集关系准备正确；后续须真正替换三稿/底稿，非报告关闭。"
+        }
+      ]
+    },
+    {
+      "id": "NKE-DR-R01",
+      "candidate_ids": [],
+      "severity": "P1",
+      "decision": "partial",
+      "reason": "E2=5规则与数据成立，但底稿仍写不能评满分；E5.5=1.5无MD路径成立，表格未陈述未完成完整审计的评分依据。局部回看审计与未完成完整审计并非天然矛盾，但当前评分理由/错误来源未闭合；保留分值不等于验收该文本。",
+      "evidence_refs": [
+        "data/reviews/nike-directed-repair-2026-09-20/final/decision-closeout.json#NKE-DR-R01 data/reviews/nike-regression-2026-09-20/final/adjudication-v1.json"
+      ],
+      "action": "依preparation/parameter-lock.json锁定分值/联合外包络及准备修正要求；原验收条件保留，报告修复完成后逐ID实质验收。",
+      "score_valuation_impact": "质量处置reject/NONE基于完整联合外包络；不填未知总分，不将参数锁定当repair-ready或研究验收。",
+      "acceptance": [
+        {
+          "id": "NKE-A03-01",
+          "condition": "E2列正确三年OCF/净利130.3333%、114.8804%、92.2780%，FCF为6617/3268/2184百万美元并注明现金Capex口径；E2=5、E3=2。"
+        },
+        {
+          "id": "NKE-A03-03",
+          "condition": "E5.5在无MD且未完整执行该项审计的现路径计1.5，明确此为程序化中性值；不因无MD指控公司。若本轮主任务定向补可追溯MD并执行完整CAM/政策变化/计提核验，可依原评分表重新提交有据点值，不得仅转换文件即给3。"
+        }
+      ],
+      "parameter_lock_ruling": [
+        {
+          "acceptance_id": "NKE-A03-01",
+          "status": "prepared_substantively",
+          "ruling": "E2=5/E3=2及删除不能满分旧理由准备成立。"
+        },
+        {
+          "acceptance_id": "NKE-A03-03",
+          "status": "prepared_substantively",
+          "ruling": "E5.5=1.5及程序化边界准备成立。"
+        }
+      ]
+    },
+    {
+      "id": "NKE-DR-CAPITAL",
+      "candidate_ids": [],
+      "severity": "P1",
+      "decision": "valid",
+      "reason": "没有完整资本史不等于已核轻微瑕疵，A3=2不批准；分红/流动性事实不能替代回购价格、净股数与SBC抵消和并购用途核验，资本配置13不批准。不得因缺证自动零分或中档。",
+      "evidence_refs": [
+        "data/reviews/nike-directed-repair-2026-09-20/final/decision-closeout.json#NKE-DR-CAPITAL data/reviews/nike-regression-2026-09-20/final/adjudication-v1.json"
+      ],
+      "action": "依preparation/parameter-lock.json锁定分值/联合外包络及准备修正要求；原验收条件保留，报告修复完成后逐ID实质验收。",
+      "score_valuation_impact": "质量处置reject/NONE基于完整联合外包络；不填未知总分，不将参数锁定当repair-ready或研究验收。",
+      "acceptance": [
+        {
+          "id": "NKE-A04-01",
+          "condition": "A3核可得近五年融资/并购/处置记录、用途和利润依赖，判4/2/0并逐项论证；3分撤回，缺证不得作为轻微瑕疵事实。"
+        },
+        {
+          "id": "NKE-A05-03",
+          "condition": "资本配置核近五年并购/融资及近三年回购价格、股数净变化、SBC抵消和现金支出；p59回购权益变动不是p58现金回购，不用当期低价倒推全部历史回购必然失败；配置13不得仅凭回购减少维持。"
+        }
+      ],
+      "parameter_lock_ruling": [
+        {
+          "acceptance_id": "NKE-A04-01",
+          "status": "parameter_locked",
+          "ruling": "A3锁4；资本史重大事项检索足以作此判断，不声称完整穷尽小额交易。"
+        },
+        {
+          "acceptance_id": "NKE-A05-03",
+          "status": "parameter_locked_preparation_correction_required",
+          "ruling": "F2=3、F2.5=1、资本13、股东10锁定；净股数小计误标必须在准备材料纠正，原验收的完整净股数核验尚不能声称完成。"
+        }
+      ]
+    },
+    {
+      "id": "NKE-DR-ORG",
+      "candidate_ids": [],
+      "severity": "P1",
+      "decision": "valid",
+      "reason": "D5的规则对象是人效/研发，CEO/CFO继任不是三期人效替代品；所谓弱混合信号1分无充分归因。公开节点存在不等于五年时间线和12个月集中离任已核；人才子域未知不能仅扣1后给组织9。未披露动机和保留率可未知，但不能以未知支撑高分。",
+      "evidence_refs": [
+        "data/reviews/nike-directed-repair-2026-09-20/final/decision-closeout.json#NKE-DR-ORG data/reviews/nike-regression-2026-09-20/final/adjudication-v1.json"
+      ],
+      "action": "依preparation/parameter-lock.json锁定分值/联合外包络及准备修正要求；原验收条件保留，报告修复完成后逐ID实质验收。",
+      "score_valuation_impact": "质量处置reject/NONE基于完整联合外包络；不填未知总分，不将参数锁定当repair-ready或研究验收。",
+      "acceptance": [
+        {
+          "id": "NKE-A04-03",
+          "condition": "D5补三期人均创收与员工口径、研发披露方式和可得组织信号；未单列研发费用标未知，不把营销费当研发；有实质混合信号才2分，满足人效上升及研发健康才3分，不能凭缺失值给0。"
+        },
+        {
+          "id": "NKE-A05-04",
+          "condition": "补近五年主要高管离任/继任时间线，明确截止日12个月是否存在集中离任证据；个别人事动机和未披露保留率允许未知。CFO已公开继任人不得仍写未知；组织7须据稳定性/人才/激励三个子域论证。"
+        }
+      ],
+      "parameter_lock_ruling": [
+        {
+          "acceptance_id": "NKE-A04-03",
+          "status": "parameter_locked",
+          "ruling": "D5锁2；人效计算准备实质成立。"
+        },
+        {
+          "acceptance_id": "NKE-A05-04",
+          "status": "bounded_not_fully_resolved",
+          "ruling": "F1[0,5]及组织[0,10]覆盖未核稳定性/人才，不冒充完成五年及12个月核验。其未知已被完整纳入资格外包络。"
+        }
+      ]
+    },
+    {
+      "id": "NKE-DR-R02",
+      "candidate_ids": [],
+      "severity": "P1",
+      "decision": "valid",
+      "reason": "估值稿第十/十二节仍称安排未纳入且要求取得8-K正文；v2已包含S012-v2主文和公开任职安排，属于跨报告事实状态回退。剩余未知应限最终支付、动机及未完整时间线。",
+      "evidence_refs": [
+        "data/reviews/nike-directed-repair-2026-09-20/final/decision-closeout.json#NKE-DR-R02 data/reviews/nike-regression-2026-09-20/final/adjudication-v1.json"
+      ],
+      "action": "依preparation/parameter-lock.json锁定分值/联合外包络及准备修正要求；原验收条件保留，报告修复完成后逐ID实质验收。",
+      "score_valuation_impact": "质量处置reject/NONE基于完整联合外包络；不填未知总分，不将参数锁定当repair-ready或研究验收。",
+      "acceptance": [
+        {
+          "id": "NKE-A10-01",
+          "condition": "中性增量准确标S010为通用计划附件，补真正8-K主文ID和截至截止日任命/离任生效日期；三稿写明David Denton继任及Friend顾问/离职时间。"
+        }
+      ],
+      "parameter_lock_ruling": [
+        {
+          "acceptance_id": "NKE-A10-01",
+          "status": "prepared_with_date_qualification",
+          "ruling": "CFO主文已得、Denton任职和Friend离职9月4日准备成立；gap-evidence的“同日”与此前锁定任职链精确日口径不能靠省略解释。后续引用S012原定位并保留过渡生效日差异，不将其用于加扣分；本次不补查。"
+        }
+      ]
+    },
+    {
+      "id": "NKE-DR-SEVERANCE",
+      "candidate_ids": [],
+      "severity": "P1",
+      "decision": "valid",
+      "reason": "报告只区分通用计划/个人安排/实际支付，没有展示v2已有的合格离职、有效释放、抵扣与非竞业不重复相加条件。无需补新证据，但现锁定稿未落实，不能把作者泛化关闭声明当实质关闭。",
+      "evidence_refs": [
+        "data/reviews/nike-directed-repair-2026-09-20/final/decision-closeout.json#NKE-DR-SEVERANCE data/reviews/nike-regression-2026-09-20/final/adjudication-v1.json"
+      ],
+      "action": "依preparation/parameter-lock.json锁定分值/联合外包络及准备修正要求；原验收条件保留，报告修复完成后逐ID实质验收。",
+      "score_valuation_impact": "质量处置reject/NONE基于完整联合外包络；不填未知总分，不将参数锁定当repair-ready或研究验收。",
+      "acceptance": [
+        {
+          "id": "NKE-A10-02",
+          "condition": "分清计划适用条件、潜在支付、个人约定与已付金额；非竞业/遣散抵扣不重复相加；撤回因未读主文造成的组织负面推断，未知动机仍未知。"
+        }
+      ],
+      "parameter_lock_ruling": [
+        {
+          "acceptance_id": "NKE-A10-02",
+          "status": "prepared_substantively",
+          "ruling": "资格、release、抵扣/追偿与实际支付未知已展开，准备实质成立；不能把潜在福利相加当已付。"
+        }
+      ]
+    },
+    {
+      "id": "NKE-DR-BOUND",
+      "candidate_ids": [],
+      "severity": "P1",
+      "decision": "valid",
+      "reason": "原先单放宽A3的67无效；本次全部受影响分项或全域外包络已锁，联合上界138且管理层上界66稳定否决。原验收的完整报告要求仍有效。",
+      "evidence_refs": [
+        "data/reviews/nike-directed-repair-2026-09-20/final/decision-closeout.json#NKE-DR-BOUND data/reviews/nike-regression-2026-09-20/final/adjudication-v1.json"
+      ],
+      "action": "依preparation/parameter-lock.json锁定分值/联合外包络及准备修正要求；原验收条件保留，报告修复完成后逐ID实质验收。",
+      "score_valuation_impact": "质量处置reject/NONE基于完整联合外包络；不填未知总分，不将参数锁定当repair-ready或研究验收。",
+      "acceptance": [
+        {
+          "id": "NKE-A06-01",
+          "condition": "可信原始评分或有据上下界确定否决所有档位时，decision可reject、level NONE，目标价/确定性/买入价均null；完整估值报告保留适用方法、三种经营情景、停止理由和重评条件，明确未完成正式定价。"
+        }
+      ],
+      "parameter_lock_ruling": [
+        {
+          "acceptance_id": "NKE-A06-01",
+          "status": "joint_bound_locked",
+          "ruling": "公司66–72、管理层56–66、合计122–138；全包络管理层<70且合计<150，稳定否决全部档位。研究验收仍独立，尚非repair-ready通过。"
+        }
+      ]
+    }
+  ],
+  "parameters": {
+    "company_score": null,
+    "management_score": null,
+    "combined_score": null,
+    "company_score_bounds": [
+      66,
+      72
+    ],
+    "management_score_bounds": [
+      56,
+      66
+    ],
+    "combined_score_bounds": [
+      122,
+      138
+    ],
+    "display": "公司66–72、管理层56–66、合计122–138；不显示伪点值，后续仍按原始分门槛。",
+    "target_price": null,
+    "certainty": null,
+    "buy_price": null,
+    "currency": "USD",
+    "quality_stop_approved": true,
+    "formal_double_model_triggered": false,
+    "valuation_note": "稳定资格否决允许停止正式定价；后续仍须完整估值报告记录方法、经营三情景、停止理由及重评。null不是价值为零；若实质新证据改变已锁分项而允许资格门槛，再重开双模型。"
+  },
+  "source_parameter_lock": "data/reviews/nike-evidence-repair-2026-09-20/preparation/parameter-lock.json",
+  "version": 2,
+  "decision": "reject",
+  "research_status": "execution_incomplete",
+  "repair_ready_passed": false
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "run_id": "nike-delivery-migration-2026-09-20",
+  "stage": "delivery_build_v2_independent_fact_review",
+  "role": "triplet_review_facts",
+  "scope": "按delivery-classification-v2.json verification_scope，仅复验管理层精确补丁语义、授权范围、真实未知、DEL-002-01/02与DEL-001引用回退、manifest。",
+  "manifest_hashes": {
+    "build-v2/deep.md":"480cbcb8f2658187c8a519557cc125b1595eadec6c13d187c051d7803efab177",
+    "build-v2/management.md":"aede0659269d1aed0bc5069b28b21317041998df3c5bfdb3455f526f0d138e12",
+    "build-v2/valuation.md":"63b0aea58494e60fd37564b8ee15e31eef23eec901bd0faead1e155205ab1759",
+    "result":"all_match_manifest"
+  },
+  "acceptance_results": [
+    {"id":"NKE-DEL-001-01","status":"pass_no_regression","basis":"build-v2未出现NKE-CAL-BND-001/002、NKE-BND-CAP-004、NKE-BND-ORG-004或CAP/ORG压缩引用；引用继续解析到registry实际记录。"},
+    {"id":"NKE-DEL-001-02","status":"pass_no_regression","basis":"CAP-002金额、CAP-003不可归属边界、CAP-001/CAL-001桥及ORG-001/002/003/CAL-002时间线语义仍按已裁定实际ID使用。"},
+    {"id":"NKE-DEL-002-01","status":"pass","basis":"management.md:166已替换为精确补丁：仅确认授权范围内2021-09-19至2026-09-19主要高管时间线和2025-09-19至2026-09-19官方事件索引，不再称完整离任索引不全。其与同稿共用事实块、评分表、深度稿和估值稿状态一致。"},
+    {"id":"NKE-DEL-002-02","status":"pass","basis":"补丁明确不代表全部员工或范围外任免已核；集中离任阈值未定义、未披露保留率和个人动机仍未知。Friend最终支付继续在估值稿保留未知，F1/组织外包络与决定字段未变。"}
+  ],
+  "verification": {
+    "authorization_scope":"通过：未扩大到全部员工或范围外任免记录。",
+    "real_unknowns":"通过：个人动机、人才保留率、Friend最终支付及无规则集中离任阈值均保留。",
+    "decision_invariance":{"company_bounds":[66,72],"management_bounds":[56,66],"combined_bounds":[122,138],"decision":"reject","level":"NONE","quality_stop":true,"target_price":null,"certainty":null,"buy_price":null,"result":"unchanged"},
+    "generation":"通过：build-v2 manifest、输入与报告哈希一致。"
+  },
+  "findings": [],
+  "new_p0": [],
+  "new_p1": [],
+  "return_to_research": false,
+  "decision":"pass_delivery_review_v2",
+  "delivery_state_recommendation":"ready_for_next_closeout_gate",
+  "independent_conclusion":"v2精确补丁消除了管理层稿残留状态冲突，且没有扩大授权范围或删除真实未知。DEL-001无引用回退，评分区间、reject/NONE和停止正式定价结论未受影响；无需return_to_research。"
+}

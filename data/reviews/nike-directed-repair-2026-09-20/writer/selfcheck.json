@@ -1,0 +1,22 @@
+{
+  "status": "mechanical_checks_passed",
+  "errors": [],
+  "warnings": [
+    "公司D维度触发原规则重大警告；须人工处理，程序不判入库"
+  ],
+  "computed": {
+    "cScore": 65.0,
+    "mScore": 64,
+    "target_price": null,
+    "certainty": null,
+    "buy_price": null,
+    "currency": "USD",
+    "weighted": {},
+    "models": {}
+  },
+  "scope": {
+    "reports": true,
+    "repair": true
+  },
+  "limitations": "不验证证据真实性、行业适用性、假设合理性、正文全部数值或人工关闭判断；不代表双复核通过或允许入库。"
+}

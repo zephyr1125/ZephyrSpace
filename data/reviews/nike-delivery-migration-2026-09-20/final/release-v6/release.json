@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "manifest": "data/reviews/nike-delivery-migration-2026-09-20/build-v6/manifest.json",
+  "authorization": "data/reviews/nike-delivery-migration-2026-09-20/final/release-v6-authorization.json",
+  "files": {
+    "data/reviews/nike-delivery-migration-2026-09-20/adjudication/delivery-closeout-v2.json": {
+      "archive": "inputs/000-delivery-closeout-v2.json",
+      "sha256": "215631fb48f1e866bdb2da49e253a2cd5ae1644ea4e7abc3227b4b63bf20c1ad"
+    },
+    "data/reviews/nike-delivery-migration-2026-09-20/build-v5/manifest.json": {
+      "archive": "inputs/001-manifest.json",
+      "sha256": "3cb73e13f4d55b8f7e16d55980defc24aea1cffe9336bb59fbe29edf30a2e320"
+    },
+    "data/reviews/nike-delivery-migration-2026-09-20/build-v6/manifest.json": {
+      "archive": "inputs/002-manifest.json",
+      "sha256": "6ba9fb87e89cab25570bad70093fb186e31c7cec3f4c4ce50faa5443ab81cf6a"
+    },
+    "data/reviews/nike-delivery-migration-2026-09-20/bundle-v6.json": {
+      "archive": "inputs/003-bundle-v6.json",
+      "sha256": "4f6b7a41b49e98dc0bd9a781af72814b70c1d935cb8d04cc0fb72b8a4db83a0d"
+    },
+    "data/reviews/nike-delivery-migration-2026-09-20/decision-approved.json": {
+      "archive": "inputs/004-decision-approved.json",
+      "sha256": "af7f0f346897e5f4eb45b45cf40931b3dda6938e77d00192d010db3538952d66"
+    },
+    "data/reviews/nike-delivery-migration-2026-09-20/evidence/registry.json": {
+      "archive": "inputs/005-registry.json",
+      "sha256": "8cdd0eb5f31d5ac12c17efdbff2ee5abb8d0c16f48f78d8d1d40f782ce39638f"
+    },
+    "data/reviews/nike-delivery-migration-2026-09-20/final/release-repair-classification.json": {
+      "archive": "inputs/006-release-repair-classification.json",
+      "sha256": "6769a118bf14ec37d34ac94db1f97fd0869bb2581de057e9dbbe8dd6544c6a99"
+    },
+    "data/reviews/nike-delivery-migration-2026-09-20/final/release-v5-facts.json": {
+      "archive": "inputs/007-release-v5-facts.json",
+      "sha256": "c0e343fea121220f515e0a20247722fd9d39c034ab16bc9d1e189f42bd4bcf08"
+    },
+    "data/reviews/nike-delivery-migration-2026-09-20/final/release-v6-authorization.json": {
+      "archive": "inputs/008-release-v6-authorization.json",
+      "sha256": "591886207dc2d8333b53e6308b1a61a1bbc9f80f6d6b5904efa7d7126191af90"
+    },
+    "data/reviews/nike-delivery-migration-2026-09-20/final/release-v6-facts.json": {
+      "archive": "inputs/009-release-v6-facts.json",
+      "sha256": "0bf946182183569088e2089df0c11ad68b2b91c941cbe814748cdeea76326094"
+    },
+    "data/reviews/nike-delivery-migration-2026-09-20/review-facts/delivery-review-v1.json": {
+      "archive": "inputs/010-delivery-review-v1.json",
+      "sha256": "fa404d8d2080a96847df7d50d4c07cf399ac7ad66c344e043da9846ec7ca2df6"
+    },
+    "data/reviews/nike-delivery-migration-2026-09-20/review-facts/delivery-review-v2.json": {
+      "archive": "inputs/011-delivery-review-v2.json",
+      "sha256": "43f62d468ac4252dc3ad21a78b79e99b48c508d5dcc2d61ebdbeff50e3e90bdf"
+    },
+    "data/reviews/nike-delivery-migration-2026-09-20/review-facts/release-review-v2.json": {
+      "archive": "inputs/012-release-review-v2.json",
+      "sha256": "b914460eb258d54eba6662f11c66d452595238c59a6f93597066605711d80c21"
+    },
+    "data/reviews/nike-delivery-migration-2026-09-20/source-release-v6/deep.md": {
+      "archive": "inputs/013-deep.md",
+      "sha256": "6093efb2bc55528bd4ae60d6badc92cde390ef768b0b1d81ca26f49e416f9349"
+    },
+    "data/reviews/nike-delivery-migration-2026-09-20/source-release-v6/management.md": {
+      "archive": "inputs/014-management.md",
+      "sha256": "faef84048342c807c5fa3c0a5e27ceef004411f6b31fb924da90f6c28ec08508"
+    },
+    "data/reviews/nike-delivery-migration-2026-09-20/source-release-v6/valuation.md": {
+      "archive": "inputs/015-valuation.md",
+      "sha256": "7b61ce5602da879fdb6eedc469fa1568ac52f0c748c0f6c71bae095353959d59"
+    },
+    "data/reviews/nike-delivery-migration-2026-09-20/workpaper-release-v6.json": {
+      "archive": "inputs/016-workpaper-release-v6.json",
+      "sha256": "19b45359412eb136f2ea128126b1aed4043fcb8eba852e541ccdecaca7bb6e48"
+    },
+    "data/reviews/nike-delivery-migration-2026-09-20/workpaper.json": {
+      "archive": "inputs/017-workpaper.json",
+      "sha256": "1c944461275a98682eecd96da860de33188a71ac2163e492cbd87521011c5c25"
+    },
+    "data/reviews/nike-evidence-repair-2026-09-20/review-facts/targeted-review-v2.json": {
+      "archive": "inputs/018-targeted-review-v2.json",
+      "sha256": "585b8588d9d76b6eb5049dba5545a338a0a15cc674dcdccf1024934ae207b7ca"
+    },
+    "data/reviews/nike-evidence-repair-2026-09-20/review-reasoning/targeted-review-v2.json": {
+      "archive": "inputs/019-targeted-review-v2.json",
+      "sha256": "7b5d9143dfbd35ddea069e2aaf1128b7b8e1fe077590aa28b63704be34196a35"
+    }
+  },
+  "reports": {
+    "深度分析/耐克 深度分析 66-72 2026-09-20 交付校正版.md": "fb781c1b9f2dcc0b28c587d4a2a0d2d89d62049f612d3feaa2cdb02b19311d84",
+    "管理层档案/耐克 管理层档案 56-66 2026-09-20 交付校正版.md": "75bcf92795c7b2b44044f478f00f38b4931a5d79e72165e962e5d353ef5c4424",
+    "估值分析/耐克 估值分析 2026-09-20 交付校正版.md": "86f24cd3c3a08ead61a2566f02ed870bd109d150dd629c931ba39f7e0606c2b2"
+  },
+  "scope": "发布版本与验收证据归档；不授权Watchlist操作"
+}

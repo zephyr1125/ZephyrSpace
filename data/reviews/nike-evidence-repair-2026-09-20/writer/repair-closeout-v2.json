@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "run_id": "nike-evidence-repair-2026-09-20",
+  "stage": "final_bounded_repair_author_closeout",
+  "information_cutoff": "2026-09-19",
+  "authorization": "final/review-adjudication.json#bounded_repair",
+  "previous_frozen": {
+    "workpaper": "writer/workpaper-v2.json",
+    "reports": ["writer/deep.md", "writer/management.md", "writer/valuation.md"]
+  },
+  "decision": "reject",
+  "level": "NONE",
+  "research_status": "execution_incomplete",
+  "score_bounds": {
+    "company": [66, 72],
+    "management": [56, 66],
+    "combined": [122, 138]
+  },
+  "valuation": {
+    "status": "stopped_quality_gate_after_full_research",
+    "target_price": null,
+    "certainty": null,
+    "buy_price": null,
+    "currency": "USD"
+  },
+  "bounded_acceptance": [
+    {
+      "id": "NKE-A05-03",
+      "status": "author_claimed_passed_pending_targeted_review",
+      "resolution": "FY2024-FY2026 Class A+B总普通股桥逐年闭合；期权行权、A转B、回购、员工净发行和期末股数分列。实际回购股数/均价、权益表股数、现金回购及SBC费用分开；SBC具体股数归属保持受限。",
+      "evidence_refs": ["NKE-BND-CAP-001", "NKE-BND-CAP-002", "NKE-BND-CAP-003", "NKE-BND-CAP-004", "NKE-CAL-BND-001"]
+    },
+    {
+      "id": "NKE-A05-04",
+      "status": "author_claimed_passed_pending_targeted_review",
+      "resolution": "完成2021-09-19至2026-09-19官方主要高管时间线及2025-09-19至2026-09-19官方窗口核验；窗口内两项主要高管离任/角色取消与两项继任可核。裁决未定义集中离任阈值，故不自行定性集中或不集中。",
+      "evidence_refs": ["NKE-BND-ORG-001", "NKE-BND-ORG-002", "NKE-BND-ORG-003", "NKE-BND-ORG-004", "NKE-CAL-BND-002"]
+    },
+    {
+      "id": "NKE-A04-03",
+      "status": "author_claimed_passed_pending_targeted_review",
+      "resolution": "D5=2与三期人效事实维持；deep旧重评句已区分已核人效与仍未知研发投入健康度。",
+      "evidence_refs": ["NKE-SUP-ORG-001", "NKE-SUP-ORG-002", "NKE-CAL-SUP-001"]
+    }
+  ],
+  "score_effect": "新增事实补齐验收口径，但不改变A3=4、D5=2、F2=3、资本配置13、股东友好10及F1/组织外包络；资格上界与停止定价保持不变。",
+  "share_bridge_boundary": "NKE-CAL-SUP-002仅称回购与员工净发行两项流量小计；完整总普通股桥使用NKE-CAL-BND-001。SBC费用不得直接换算真实稀释股数。",
+  "review_boundary": "作者passed声明仅待最后定向复核，不等于独立验收、正式发布或允许写入Watchlist。"
+}

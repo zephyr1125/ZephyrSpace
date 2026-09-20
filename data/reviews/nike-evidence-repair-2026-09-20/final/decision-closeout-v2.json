@@ -1,0 +1,257 @@
+{
+  "schema_version": 1,
+  "run_id": "nike-evidence-repair-2026-09-20",
+  "stage": "有界修复后终局收尾",
+  "information_cutoff": "2026-09-19",
+  "terminal": true,
+  "further_repair_authorized": false,
+  "decision": "reject",
+  "decision_label": "不符合收录条件",
+  "level": "NONE",
+  "research_status": "execution_incomplete",
+  "research_fully_accepted": false,
+  "publish_formal_reports": false,
+  "write_watchlist": false,
+  "input_handoff": "final/handoff-bounded-repair-v3.json",
+  "hashes": {
+    "writer/deep-v2.md": "2259fc1c505f9c120b326af5ccf1860bdc117989c7896c0e70c8a7dc6e7bfd2f",
+    "writer/management-v2.md": "7a9bf1aaf9493cc40e15704c4cc883733511416796b72168dda84f0d8e7d58e7",
+    "writer/valuation-v2.md": "730f38c329a09a58f433da24e8a510e3f16a388923743a5192c1056f9997863f",
+    "writer/workpaper-v3.json": "b4e490ad8e992bd34366bfc1ec153f10ce8e711198012c69dc0c88d0fe669060",
+    "preparation/preparation-v4.json": "701b7c45c40946391e89bcdb7814506dfc70dc0fa7c5521f38623e59f38d6871",
+    "evidence/facts-bounded.json": "be61905ed93cc608686c13ace06f798366b9b5f83177e936c031c92a6ef46e82",
+    "evidence/calculations-bounded.json": "7b4a918a0825989ebfe3f3f575450396f85c3899c14e8ba3524d6b48310ee234"
+  },
+  "issues": [
+    {
+      "id": "NKE-DR-F02",
+      "severity": "P1",
+      "status": "closed",
+      "acceptance": [
+        {
+          "id": "NKE-A02-02",
+          "original_condition": "三稿与底稿中953/1026/990/742的引用均指F007及p74；742为953子集，不相加、不充当现金或独立债务；SBC保留F006。",
+          "status": "passed",
+          "ruling": "维持此前通过；本轮定向复核未发现本项事实、分值或边界回退。"
+        }
+      ]
+    },
+    {
+      "id": "NKE-DR-R01",
+      "severity": "P1",
+      "status": "closed",
+      "acceptance": [
+        {
+          "id": "NKE-A03-01",
+          "original_condition": "E2列正确三年OCF/净利130.3333%、114.8804%、92.2780%，FCF为6617/3268/2184百万美元并注明现金Capex口径；E2=5、E3=2。",
+          "status": "passed",
+          "ruling": "维持此前通过；本轮定向复核未发现本项事实、分值或边界回退。"
+        },
+        {
+          "id": "NKE-A03-03",
+          "original_condition": "E5.5在无MD且未完整执行该项审计的现路径计1.5，明确此为程序化中性值；不因无MD指控公司。若本轮主任务定向补可追溯MD并执行完整CAM/政策变化/计提核验，可依原评分表重新提交有据点值，不得仅转换文件即给3。",
+          "status": "passed",
+          "ruling": "维持此前通过；本轮定向复核未发现本项事实、分值或边界回退。"
+        }
+      ]
+    },
+    {
+      "id": "NKE-DR-CAPITAL",
+      "severity": "P1",
+      "status": "open",
+      "acceptance": [
+        {
+          "id": "NKE-A04-01",
+          "original_condition": "A3核可得近五年融资/并购/处置记录、用途和利润依赖，判4/2/0并逐项论证；3分撤回，缺证不得作为轻微瑕疵事实。",
+          "status": "passed",
+          "ruling": "维持此前通过；本轮定向复核未发现本项事实、分值或边界回退。"
+        },
+        {
+          "id": "NKE-A05-03",
+          "original_condition": "资本配置核近五年并购/融资及近三年回购价格、股数净变化、SBC抵消和现金支出；p59回购权益变动不是p58现金回购，不用当期低价倒推全部历史回购必然失败；配置13不得仅凭回购减少维持。",
+          "status": "open",
+          "ruling": "总普通股桥实质补齐且可复算，SBC不能归属到具体股数的边界合理；但正文、底稿及准备材料的事实/计算引用未形成可解析闭环，原验收仍未关闭。"
+        }
+      ]
+    },
+    {
+      "id": "NKE-DR-ORG",
+      "severity": "P1",
+      "status": "open",
+      "acceptance": [
+        {
+          "id": "NKE-A04-03",
+          "original_condition": "D5补三期人均创收与员工口径、研发披露方式和可得组织信号；未单列研发费用标未知，不把营销费当研发；有实质混合信号才2分，满足人效上升及研发健康才3分，不能凭缺失值给0。",
+          "status": "passed",
+          "ruling": "deep-v2:220与management-v2:192已纠正人效等已核项目状态，D5=2依据未回退，本项通过；高管旧句另归A05-04。"
+        },
+        {
+          "id": "NKE-A05-04",
+          "original_condition": "补近五年主要高管离任/继任时间线，明确截止日12个月是否存在集中离任证据；个别人事动机和未披露保留率允许未知。CFO已公开继任人不得仍写未知；组织7须据稳定性/人才/激励三个子域论证。",
+          "status": "open",
+          "ruling": "授权主要高管时间线及12个月官方事件窗口已补；不能自行发明集中离任阈值。证据ID断链和四处旧状态冲突仍存在，原验收未关闭。"
+        }
+      ]
+    },
+    {
+      "id": "NKE-DR-R02",
+      "severity": "P1",
+      "status": "closed",
+      "acceptance": [
+        {
+          "id": "NKE-A10-01",
+          "original_condition": "中性增量准确标S010为通用计划附件，补真正8-K主文ID和截至截止日任命/离任生效日期；三稿写明David Denton继任及Friend顾问/离职时间。",
+          "status": "passed",
+          "ruling": "维持此前通过；本轮定向复核未发现本项事实、分值或边界回退。"
+        }
+      ]
+    },
+    {
+      "id": "NKE-DR-SEVERANCE",
+      "severity": "P1",
+      "status": "closed",
+      "acceptance": [
+        {
+          "id": "NKE-A10-02",
+          "original_condition": "分清计划适用条件、潜在支付、个人约定与已付金额；非竞业/遣散抵扣不重复相加；撤回因未读主文造成的组织负面推断，未知动机仍未知。",
+          "status": "passed",
+          "ruling": "维持此前通过；本轮定向复核未发现本项事实、分值或边界回退。"
+        }
+      ]
+    },
+    {
+      "id": "NKE-DR-BOUND",
+      "severity": "P1",
+      "status": "closed",
+      "acceptance": [
+        {
+          "id": "NKE-A06-01",
+          "original_condition": "可信原始评分或有据上下界确定否决所有档位时，decision可reject、level NONE，目标价/确定性/买入价均null；完整估值报告保留适用方法、三种经营情景、停止理由和重评条件，明确未完成正式定价。",
+          "status": "passed",
+          "ruling": "维持此前通过；本轮定向复核未发现本项事实、分值或边界回退。"
+        }
+      ]
+    }
+  ],
+  "acceptance_summary": {
+    "total": 10,
+    "passed": 8,
+    "open": 2,
+    "open_ids": [
+      "NKE-A05-03",
+      "NKE-A05-04"
+    ]
+  },
+  "severity": {
+    "open_P0": [],
+    "open_P1": [
+      "NKE-DR-CAPITAL",
+      "NKE-DR-ORG"
+    ],
+    "finding_aliases": {
+      "NKE-BR-R01": [
+        "NKE-A05-03",
+        "NKE-A05-04"
+      ],
+      "NKE-BR-R02": [
+        "NKE-A05-04"
+      ]
+    },
+    "note": "沿用原问题和验收ID，不重复计数，不因无新P0认定通过。"
+  },
+  "independent_verification": {
+    "actual_evidence_ids": [
+      "NKE-BND-CAP-001",
+      "NKE-BND-CAP-002",
+      "NKE-BND-CAP-003",
+      "NKE-BND-ORG-001",
+      "NKE-BND-ORG-002",
+      "NKE-BND-ORG-003",
+      "NKE-BND-CAL-001",
+      "NKE-BND-CAL-002"
+    ],
+    "nonexistent_referenced_ids": [
+      "NKE-BND-CAP-004",
+      "NKE-BND-ORG-004",
+      "NKE-CAL-BND-001",
+      "NKE-CAL-BND-002"
+    ],
+    "id_ruling": "推理路断链意见成立。实际计算为NKE-BND-CAL-001/002；CAP/ORG事实均止于003。不存在的004没有已声明等价别名，不能因附近可猜出来源而认定引用闭合。",
+    "workpaper_bad_id_counts": {
+      "NKE-BND-CAP-004": 5,
+      "NKE-BND-ORG-004": 2,
+      "NKE-CAL-BND-001": 6,
+      "NKE-CAL-BND-002": 5
+    },
+    "share_bridge": "1532+7-41+5=1503；1503+6-38+5=1476；1476+3-2+6=1483（百万股）；A转B在合计中抵消，三期均复算通过。",
+    "state_conflicts": [
+      {
+        "location": "writer/deep-v2.md:200",
+        "finding": "仍称完整五年主要高管离任、12个月集中离任索引未知。"
+      },
+      {
+        "location": "writer/management-v2.md:190",
+        "finding": "仍将完整高管时间线列为限制因素，与155/192已完成表述冲突。"
+      },
+      {
+        "location": "writer/valuation-v2.md:132",
+        "finding": "仍称完整五年高管时间线未知。"
+      },
+      {
+        "location": "writer/valuation-v2.md:146",
+        "finding": "仍称完整主要高管离任索引尚未取得。"
+      }
+    ],
+    "judgment": "推理复核的两个P1成立；事实复核关于股数桥、高管事件内容补齐的判断可采，但其closure全部相符、旧句未残留的全称结论不成立。两路不是按票数决定。"
+  },
+  "scoring": {
+    "formal_score_type": "interval",
+    "company_raw": null,
+    "management_raw": null,
+    "combined_raw": null,
+    "company_bounds": [
+      66,
+      72
+    ],
+    "management_bounds": [
+      56,
+      66
+    ],
+    "combined_bounds": [
+      122,
+      138
+    ],
+    "display": "公司66–72；管理层56–66；合计122–138；不显示总分点值",
+    "bridge_company": "53+B0[1,2]+A3 4+D5 2+F1[0,5]+F2 3+F2.5 1+F3 2=[66,72]",
+    "bridge_management": "固定17+诚信16+资本配置13+股东友好10+组织[0,10]=[56,66]",
+    "validity": "可正式采用有据外包络用于资格判断；不是概率区间，也不等于完整研究已验收。新增桥和时间线未提供足以改变锁定分项的决定性评分依据，保守全域仍覆盖剩余不确定项。",
+    "point_score_warning": "66/56/122是机械下端点，不是实得分；65/64/129不恢复。F维机械0端点产生的程序警告不是新增公司红线。",
+    "gate": "最高管理层66<70、最高合计138<150，最低B档已不能满足，全部更高档同样不满足。门槛用原始区间端点，不作整数舍入迁就。"
+  },
+  "valuation": {
+    "quality_stop_approved": true,
+    "formal_pricing_completed": false,
+    "formal_pricing_allowed": false,
+    "formal_double_model_required_now": false,
+    "target_price": null,
+    "certainty": null,
+    "buy_price": null,
+    "reason": "稳定资格否决允许质量停止定价，不能把缺模型解释为公司不合格，也不能把停止定价解释为研究验收通过。null不是零价值。"
+  },
+  "decisive_remaining_gaps": [
+    "关键补证引用ID未对应实际记录，底稿及准备材料的passed声明过度。",
+    "高管证据完成状态在三稿间及同稿内矛盾，妨碍独立复核和发布。"
+  ],
+  "still_trustworthy": [
+    "三期Class A+B总普通股桥及SBC不可全部归属到具体股数的边界。",
+    "授权范围的主要高管时间线和12个月官方事件计数；不据计数伪造集中度阈值、个人动机或保留率。",
+    "其余8项验收、锁定评分区间、全部档位稳定否决和停止定价。"
+  ],
+  "closeout": "本有界轮次已结束，不再授权改稿、补证或追加复核。保留冻结产物与本终局记录；不发布为已验收正式报告，不回写Watchlist。公司资格否决与执行未完成分别记录。",
+  "reevaluation_conditions": [
+    "未来另行明确启动的研究或修复，首先实质解决证据ID定位及跨报告状态一致性，按届时授权核验；本条不授权当前继续修改。",
+    "若新决定性证据改变已锁分项，使任一档位可能满足全部硬门槛，重新评估资格并触发正式双模型；仅价格下跌或修正引用文字不能自动恢复入池。",
+    "组织动机/保留率等未披露事项继续标未知，不以未知给中档或零分；未来点值须具备事实→规则依据。"
+  ],
+  "write_scope": "本次仅写final/decision-closeout-v2.json，未修改报告或证据。"
+}

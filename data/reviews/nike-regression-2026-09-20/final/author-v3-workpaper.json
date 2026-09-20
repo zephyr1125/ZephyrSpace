@@ -1,0 +1,330 @@
+{
+  "schema_version": 1,
+  "score_display": "integer_half_up",
+  "as_of": "2026-09-19",
+  "evidence_version": "v1.0-regression-frozen+v2",
+  "scores": {
+    "company": {
+      "total": 65,
+      "items": [
+        {
+          "id": "A1",
+          "score": 3,
+          "rule_ref": "A1",
+          "reason": "品牌和产品起源",
+          "evidence_refs": [
+            "S005 p1"
+          ]
+        },
+        {
+          "id": "A2",
+          "score": 3,
+          "rule_ref": "A2",
+          "reason": "双层控制稳定",
+          "evidence_refs": [
+            "NKE-G-002"
+          ]
+        },
+        {
+          "id": "A3",
+          "score": 2,
+          "rule_ref": "A3",
+          "reason": "可得财务与权益资料未示频繁融资或处置依赖，但近五年完整交易清单未获，按中档。",
+          "evidence_refs": [
+            "NKE-F-009-v2；S005 p57-59"
+          ]
+        },
+        {
+          "id": "B0",
+          "score": 1,
+          "rule_ref": "B0",
+          "reason": "已覆盖设计、品牌、外包制造和渠道，未完整闭合九要素，按部分覆盖。",
+          "evidence_refs": [
+            "S005 p1-2,10"
+          ]
+        },
+        {
+          "id": "B1",
+          "score": 3,
+          "rule_ref": "B1",
+          "reason": "产品和渠道多元、Converse承压",
+          "evidence_refs": [
+            "S005 p31,41"
+          ]
+        },
+        {
+          "id": "B2",
+          "score": 3,
+          "rule_ref": "B2",
+          "reason": "复购品牌模式但属可选消费",
+          "evidence_refs": [
+            "S005 p1-2"
+          ]
+        },
+        {
+          "id": "B3",
+          "score": 4,
+          "rule_ref": "B3",
+          "reason": "品牌支持定价但折扣压ASP",
+          "evidence_refs": [
+            "S005 p38-41"
+          ]
+        },
+        {
+          "id": "B4",
+          "score": 1,
+          "rule_ref": "B4",
+          "reason": "收入修复未证实",
+          "evidence_refs": [
+            "NKE-F-001"
+          ]
+        },
+        {
+          "id": "C1",
+          "score": 6,
+          "rule_ref": "C1",
+          "reason": "全球最大运动鞋服销售商",
+          "evidence_refs": [
+            "S005 p1"
+          ]
+        },
+        {
+          "id": "C2",
+          "score": 3,
+          "rule_ref": "C2",
+          "reason": "供应商与贸易约束",
+          "evidence_refs": [
+            "S005 p10-12"
+          ]
+        },
+        {
+          "id": "C3+C4",
+          "score": 5,
+          "rule_ref": "C3+C4",
+          "reason": "品牌IP和规模为三星彩",
+          "evidence_refs": [
+            "S005 p15-16"
+          ]
+        },
+        {
+          "id": "D1",
+          "score": 2,
+          "rule_ref": "D1",
+          "reason": "渠道重平衡可解释但未兑现",
+          "evidence_refs": [
+            "S005 p30-31"
+          ]
+        },
+        {
+          "id": "D2",
+          "score": 2,
+          "rule_ref": "D2",
+          "reason": "仅有FY2026行动和结果，未证三期目标兑现；无原话且漂移，上限3。",
+          "evidence_refs": [
+            "S005 p30-31；NKE-F-001"
+          ],
+          "original_statement_found": false,
+          "strategy_drift": true
+        },
+        {
+          "id": "D3",
+          "score": 1,
+          "rule_ref": "D3",
+          "reason": "竞争、关税与偏好逆风",
+          "evidence_refs": [
+            "S005 p19-22"
+          ]
+        },
+        {
+          "id": "D5",
+          "score": 1,
+          "rule_ref": "D5",
+          "reason": "FY2026员工约73000；无三期可比人数及单列研发，不能给混合信号2或缺失给0。",
+          "evidence_refs": [
+            "S005 人力资本章节"
+          ]
+        },
+        {
+          "id": "E1",
+          "score": 5,
+          "rule_ref": "E1",
+          "reason": "三期杜邦显示FY2026 ROE22.138329%，由净利率和周转共同驱动而非高杠杆。",
+          "evidence_refs": [
+            "NKE-F-001；NKE-F-009-v2；S005 p55,57"
+          ]
+        },
+        {
+          "id": "E2",
+          "score": 5,
+          "rule_ref": "E2",
+          "reason": "OCF/净利为130.3333%、114.8804%、92.2780%，FCF均正。",
+          "evidence_refs": [
+            "NKE-F-001；NKE-F-009-v2"
+          ]
+        },
+        {
+          "id": "E3",
+          "score": 2,
+          "rule_ref": "E3",
+          "reason": "一次性关税收益可辨认但增长弱",
+          "evidence_refs": [
+            "NKE-F-001；NKE-F-008-v2"
+          ]
+        },
+        {
+          "id": "E4",
+          "score": 1.5,
+          "rule_ref": "E4",
+          "reason": "现金覆盖有息债务；Capex同比59.1%且未拆运营/非运营，按规则扣0.5。",
+          "evidence_refs": [
+            "NKE-F-003；NKE-F-009-v2"
+          ]
+        },
+        {
+          "id": "E5",
+          "score": 2,
+          "rule_ref": "E5",
+          "reason": "无保留审计，或有事项金额未知",
+          "evidence_refs": [
+            "NKE-G-001；NKE-R-001-v2"
+          ]
+        },
+        {
+          "id": "E5.5",
+          "score": 1.5,
+          "rule_ref": "E5.5",
+          "reason": "无可追溯MD且未完整执行CAM/政策/计提审计，程序化中性值，不评价公司会计质量。",
+          "evidence_refs": [
+            "S005 p52-54,74；evidence-correction-v2"
+          ]
+        },
+        {
+          "id": "F1",
+          "score": 2,
+          "rule_ref": "F1",
+          "reason": "Hill内部背景；Denton已任CFO，Friend交接不等于负面动机。",
+          "evidence_refs": [
+            "NKE-G-005-v2"
+          ]
+        },
+        {
+          "id": "F2",
+          "score": 3,
+          "rule_ref": "F2",
+          "reason": "连续分红和授权；逐笔交易未知",
+          "evidence_refs": [
+            "NKE-F-009-v2"
+          ]
+        },
+        {
+          "id": "F2.5",
+          "score": 1,
+          "rule_ref": "F2.5",
+          "reason": "回购、分红和Capex可见但历史价格、净股数及并购清单未全，不能据回购下降定性失败。",
+          "evidence_refs": [
+            "NKE-F-006-v2；NKE-F-009-v2"
+          ]
+        },
+        {
+          "id": "F3",
+          "score": 2,
+          "rule_ref": "F3",
+          "reason": "相关方审查政策及披露存在，未证完整零风险。",
+          "evidence_refs": [
+            "NKE-G-006-v2"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "total": 64,
+      "items": [
+        {
+          "id": "诚信与透明度",
+          "score": 15,
+          "rule_ref": "管理层第九节",
+          "reason": "无保留审计、关联方审查及激励披露；调整权和税务不确定性限制满分。",
+          "evidence_refs": [
+            "NKE-G-001；NKE-G-006-v2；NKE-F-007-v2"
+          ]
+        },
+        {
+          "id": "资本配置能力",
+          "score": 13,
+          "rule_ref": "管理层第九节",
+          "reason": "分红、授权、Capex和现金回购可核；近五年交易/回购价格资料不全，维持中性。",
+          "evidence_refs": [
+            "NKE-F-006-v2；NKE-F-009-v2"
+          ]
+        },
+        {
+          "id": "战略稳定性",
+          "score": 8,
+          "rule_ref": "管理层第九节",
+          "reason": "渠道调整可解释尚未兑现",
+          "evidence_refs": [
+            "S005 p30-31"
+          ]
+        },
+        {
+          "id": "对股东友好度",
+          "score": 10,
+          "rule_ref": "管理层第九节",
+          "reason": "分红、PSU为零及PSP负向自由裁量可见；内部交易未知。",
+          "evidence_refs": [
+            "NKE-F-009-v2；NKE-G-006-v2"
+          ]
+        },
+        {
+          "id": "危机处理能力",
+          "score": 5,
+          "rule_ref": "管理层第九节",
+          "reason": "IEEPA分拆披露不等于危机解决",
+          "evidence_refs": [
+            "NKE-F-008-v2"
+          ]
+        },
+        {
+          "id": "组织与人才能力",
+          "score": 9,
+          "rule_ref": "管理层第九节",
+          "reason": "内部CEO、已披露Denton继任、COO节点与激励机制支持；完整五年时间线仍未知。",
+          "evidence_refs": [
+            "NKE-G-005-v2；NKE-G-006-v2"
+          ]
+        },
+        {
+          "id": "表达清晰度与认知质量",
+          "score": 4,
+          "rule_ref": "管理层第九节",
+          "reason": "书面年报清晰但未核即时问答",
+          "evidence_refs": [
+            "S005 p30-31"
+          ]
+        }
+      ]
+    }
+  },
+  "valuation": {
+    "status": "stopped_quality_gate_after_full_research",
+    "currency": "USD",
+    "models": [],
+    "target_price": null,
+    "certainty": null,
+    "buy_price": null,
+    "reason": "公司65、管理层64、合计129，可信否决B_GROWTH及更高档位。"
+  },
+  "bridges": [],
+  "bridges_not_applicable": "质量门槛停止正式估值。",
+  "reports": {
+    "deep": "data/reviews/nike-regression-2026-09-20/drafts/author-v3/deep.md",
+    "management": "data/reviews/nike-regression-2026-09-20/drafts/author-v3/management.md",
+    "valuation": "data/reviews/nike-regression-2026-09-20/drafts/author-v3/valuation.md"
+  },
+  "repair": {
+    "issues": [],
+    "score_changes": [],
+    "report_changes": [],
+    "closures": []
+  }
+}

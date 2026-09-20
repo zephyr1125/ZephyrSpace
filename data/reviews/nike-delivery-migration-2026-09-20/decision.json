@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "decision": "reject",
+  "level": "NONE",
+  "research_state": "approved",
+  "basis": "双路研究复核与终局裁决批准公司66–72、管理层56–66、合计122–138；管理层和合计上界均未达到最低档门槛，稳定reject/NONE。交付问题不改变判断。",
+  "review_refs": [
+    "data/reviews/nike-evidence-repair-2026-09-20/review-facts/targeted-review-v2.json",
+    "data/reviews/nike-evidence-repair-2026-09-20/review-reasoning/targeted-review-v2.json"
+  ],
+  "score_bounds": {
+    "company": [
+      66,
+      72
+    ],
+    "management": [
+      56,
+      66
+    ],
+    "combined": [
+      122,
+      138
+    ]
+  },
+  "bounds_approved": true,
+  "quality_stop_approved": true,
+  "target_price": null,
+  "certainty": null,
+  "buy_price": null,
+  "publish_allowed": false,
+  "issues": [
+    {
+      "id": "NKE-DEL-001",
+      "lane": "delivery",
+      "status": "open",
+      "classified_by": "adjudicator",
+      "no_decision_impact": true,
+      "reason": "实际事实及计算内容已核定，剩余是不存在ID、缩写引用和错配引用的确定性定位修正；不补新事实，不制造别名。",
+      "acceptance": [
+        {
+          "id": "NKE-DEL-001-01",
+          "condition": "迁移后的底稿及三源稿全部使用下列已裁定实际ID；消除四种不存在ID及压缩写法；所有证据引用可解析到有效证据JSON声明。禁止新建空壳004或仅凭拼写猜别名。"
+        },
+        {
+          "id": "NKE-DEL-001-02",
+          "condition": "事实审核员逐内容确认SBC金额指CAP-002、不可归属边界指CAP-003、股数桥指CAP-001/CAL-001、高管事件/计数/未知边界各指ORG-001/002/003及CAL-002；评分理由、数字及区间未改变。"
+        }
+      ]
+    },
+    {
+      "id": "NKE-DEL-002",
+      "lane": "delivery",
+      "status": "open",
+      "classified_by": "adjudicator",
+      "no_decision_impact": true,
+      "reason": "四处完整高管时间线或索引仍未知的旧状态已被既有核定证据否定；只同步已核状态，同时保留真实未知。",
+      "acceptance": [
+        {
+          "id": "NKE-DEL-002-01",
+          "condition": "四处按精确文本补丁修正或替换为同一executive_timeline共用块；旧句在生成稿不再出现，三稿一致写授权五年时间线和12个月官方事件索引已核，不扩张为全部员工/全部历史完整覆盖。"
+        },
+        {
+          "id": "NKE-DEL-002-02",
+          "condition": "个人动机、未披露保留率、Friend最终支付及无规则集中离任阈值的边界保留；F1/组织外包络及所有决定字段保持；事实审核员定向验收后记录真实verification_refs。"
+        }
+      ]
+    }
+  ]
+}

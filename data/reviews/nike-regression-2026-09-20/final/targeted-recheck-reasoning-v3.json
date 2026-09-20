@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "role": "triplet_review_reasoning",
+  "stage": "final_bounded_targeted_recheck_v3",
+  "scope": "仅核v2失败项、NKE-TR-V2-01、29个验收ID、frozen-author-v3三稿内容身份与完整性、评分和停止定价、跨报告及正式机械检查。",
+  "summary": {
+    "acceptance_total": 29,
+    "passed": 16,
+    "failed": 13,
+    "new_p0": 1,
+    "new_p1": 0,
+    "final_pass": false,
+    "research_status": "execution_incomplete",
+    "reason": "v3已清除旧参数冲突并使底稿算术闭合，但三份报告被错误替换为几乎完全相同的修复摘要，并用115行重复占位文字满足行数。报告内容身份、完整性和行业研究要求发生系统性回退，停止定价所要求的完整三报告亦不成立。"
+  },
+  "document_identity_and_completeness": {
+    "status": "fail",
+    "facts": [
+      "deep.md、management.md、valuation.md均为212行，文件大小仅相差少数字节。",
+      "三稿逐行比较除“文档类型”一行外仅有2个差异记录，标题、章节、事实摘要、两张评分表和最终状态基本相同。",
+      "每稿包含115行完全重复的“修复核对记录N：本段不引入新事实”占位文字。",
+      "deep缺失商业模式、竞争、战略、五至七年财务、风险地图等完整正文；management缺失控制结构、人物、言行、资本配置、关联交易、组织与来源等完整档案；valuation缺失独立的历史财务、方法适用性、停止理由展开、风险和可执行重评框架。",
+      "机械检查的reports=true只证明快照、生成表和形式行数匹配；其limitations明确不验证正文全部内容，不能覆盖本次错贴同文和填充行问题。"
+    ]
+  },
+  "score_and_stop_check": {
+    "arithmetic": "pass：公司25项合计65，管理层七项合计64，组合129；显示值65/64/129，门槛用原始分。",
+    "rule_support": "fail：E1仍未提供三期杜邦；A3、B0、D5及多项管理层评分缺少裁决要求的展开证据。",
+    "stop_logic": "conditional：若65/64/129经完整报告和验收成立，则reject/NONE及目标价、确定性、买入价为null合理；当前完整报告已回退，因此不能最终批准停止路径。",
+    "scenarios": "fail：仅各用一句列保守/基准/乐观，缺完整估值报告中的风险链、指标和重评框架。"
+  },
+  "mechanical_check": {
+    "status": "formally_passed_but_not_substantively_sufficient",
+    "artifact": "final/author-v3-selfcheck.json",
+    "computed": "65/64/null/null/null与底稿一致",
+    "limitations": "scope.repair=false；author-v3-workpaper repair对象仍为空；检查未识别三稿错贴同文、重复占位和正文内容缺失。",
+    "prior_check": "author-v2-native-check-v3.json真实记录v2检查失败；这不修复v3内容身份问题。"
+  },
+  "acceptance_results": [
+    {"id":"NKE-A01-01","status":"pass","reason":"v3底稿及生成表为唯一25项，C3+C4合并且无F4独立分。"},
+    {"id":"NKE-A01-02","status":"pass","reason":"唯一当前参数为65/64/129，旧值仅在否定句中作为历史错误提及。"},
+    {"id":"NKE-A01-03","status":"pass","reason":"author-v3-selfcheck真实运行并通过形式检查，结果与限制均留存；实质内容失败另列新P0。"},
+    {"id":"NKE-A02-01","status":"pass","reason":"v2唯一事实ID映射继续有效。"},
+    {"id":"NKE-A02-02","status":"pass","reason":"三稿统一把税务指向F007、SBC指向F006，742明确为953子集。"},
+    {"id":"NKE-A02-03","status":"pass","reason":"v2增量仍包含A09/A10纠正且未覆盖冻结v1。"},
+    {"id":"NKE-A03-01","status":"pass","reason":"三稿、底稿均列正确OCF/净利、6617/3268/2184及E2=5、E3=2。"},
+    {"id":"NKE-A03-02","status":"fail","reason":"仍只列FY2026一组杜邦数，未提供FY2024-FY2026三期同口径净利率、周转率、权益乘数和ROE；底稿所称“三期杜邦”无正文支持。"},
+    {"id":"NKE-A03-03","status":"pass","reason":"E5.5统一为1.5并明确程序化中性值，不据缺MD指控公司。"},
+    {"id":"NKE-A03-04","status":"pass","reason":"986/302/684、20.307692%与2322.233846压力诊断及非官方扣非边界均保留。"},
+    {"id":"NKE-A04-01","status":"fail","reason":"未列近五年融资、并购、处置、用途和利润依赖的逐项核验，A3=2仍仅依据缺失清单。"},
+    {"id":"NKE-A04-02","status":"fail","reason":"仅声明B0=1，没有九要素对照、三个关键判断及分类；报告正文被摘要替换。"},
+    {"id":"NKE-A04-03","status":"fail","reason":"没有三期人均创收、员工口径及研发披露分析，仅复述D5=1。"},
+    {"id":"NKE-A05-01","status":"fail","reason":"三稿统一复制评分表，但management没有七维各自事实→分析→分值正文；保留三项的实质依据未展开。"},
+    {"id":"NKE-A05-02","status":"fail","reason":"management未展开Proxy激励指标、调整权、支付结果、关联交易审查及grant/realizable/现金支付区别。"},
+    {"id":"NKE-A05-03","status":"fail","reason":"未补近五年并购融资、近三年回购价格、净股数、SBC抵消和现金支出分析。"},
+    {"id":"NKE-A05-04","status":"fail","reason":"虽写Denton与Friend日期，但无近五年主要高管时间线，也未按稳定性、人才、激励三个子域论证组织9分。"},
+    {"id":"NKE-A05-05","status":"pass","reason":"D2统一为2，明确只有FY2026一年资料、无原话且有漂移，不再把上限3当自动得分。"},
+    {"id":"NKE-A06-01","status":"fail","reason":"参数层面支持reject/NONE和null价格，但条件要求保留完整估值报告；valuation被同一修复摘要替换且大量占位，不是完整估值报告。"},
+    {"id":"NKE-A06-02","status":"pass","reason":"明确重启需两个不同依据主模型且当前不伪造模型；质量分若可能合格仍须恢复正式估值的边界未被反转。"},
+    {"id":"NKE-A06-03","status":"pass","reason":"状态维持execution_incomplete，未提前宣称完成。"},
+    {"id":"NKE-A07-01","status":"fail","reason":"closeout声称已采纳观察期，但三稿只写“后续财报”，没有明确期间、指标阈值或不采纳理由。"},
+    {"id":"NKE-A08-01","status":"fail","reason":"三稿没有供应链来源表或印刷页/PDF物理页定位，不能据一句“v2增量”为已修复。"},
+    {"id":"NKE-A09-01","status":"pass","reason":"统一列期末权益14865/13213/14430/14004，并将13944/13926限定为五季度平均。"},
+    {"id":"NKE-A09-02","status":"pass","reason":"统一列Capex 812/430/684和OCF-Capex 6617/3268/2184，无旧错误值。"},
+    {"id":"NKE-A09-03","status":"pass","reason":"统一写Capex同比59.1%、无法拆分及E4基础2扣0.5为1.5。"},
+    {"id":"NKE-A09-04","status":"fail","reason":"没有事实→分项→三稿影响表及未变依据，只把相同事实摘要复制到三稿。"},
+    {"id":"NKE-A10-01","status":"pass","reason":"三稿均写Denton任职及Friend转顾问、离职日期，并区分通用计划来源。"},
+    {"id":"NKE-A10-02","status":"fail","reason":"只写通用计划不是实际付款，未展开合格离职条件、个人约定、潜在支付、抵扣及非竞业不重复相加。"}
+  ],
+  "new_findings": [
+    {
+      "id": "NKE-TR-V3-01",
+      "severity": "P0",
+      "category": "wrong_document_content_and_padding",
+      "location": "drafts/frozen-author-v3/deep.md、management.md、valuation.md",
+      "claim": "三份不同报告被错贴成同一修复摘要，并用重复占位行伪满足150/150/100行完整性要求。",
+      "evidence": "三稿各212行且逐行比较仅文档类型不同；每稿含115行重复“修复核对记录”；章节结构均相同，仅有修复结论、事实摘要、停止估值、验收边界、两张相同评分表和最终状态。",
+      "impact": "完整公司分析、管理层档案和估值报告均实质丢失，无法支持未来独立复核；形式机械通过不能替代内容验收，也不能发布或入库。",
+      "required_action": "恢复v2中未受裁决影响的完整三份正文，在各自正确报告中定向整合v3修复；删除全部重复占位。deep须保留公司六维研究，management须保留七维治理档案，valuation须保留方法适用性、停止理由、三情景、风险和重评条件。重新运行机械检查并核三稿非同文、有效内容行数与repair闭环。"
+    }
+  ],
+  "previous_systemic_issue": {
+    "id": "NKE-TR-V2-01",
+    "status": "partially_fixed_but_regressed_differently",
+    "assessment": "旧v1/v2数值冲突已清除，但修复方式删除了三份完整正文并复制同一摘要，形成新的更严重P0 NKE-TR-V3-01。"
+  },
+  "final_verdict": {
+    "passed": false,
+    "decision": "不得验收、不得发布、不得写入Watchlist",
+    "research_status": "execution_incomplete",
+    "blocking": [
+      "NKE-TR-V3-01",
+      "NKE-A03-02",
+      "NKE-A04-01",
+      "NKE-A04-02",
+      "NKE-A04-03",
+      "NKE-A05-01",
+      "NKE-A05-02",
+      "NKE-A05-03",
+      "NKE-A05-04",
+      "NKE-A06-01",
+      "NKE-A09-04",
+      "NKE-A10-02"
+    ],
+    "nonblocking_p2_failures": ["NKE-A07-01", "NKE-A08-01"],
+    "note": "65/64/129与reject/NONE只是尚未被完整报告承载的候选终局参数；不能因机械检查通过而视为实质验收。"
+  }
+}

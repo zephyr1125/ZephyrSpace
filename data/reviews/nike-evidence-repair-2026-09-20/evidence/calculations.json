@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "run_id": "nike-evidence-repair-2026-09-20",
+  "information_cutoff": "2026-09-19",
+  "calculations": [
+    {
+      "calculation_id": "NKE-CAL-SUP-001",
+      "name": "三期收入/员工",
+      "formula": "reported_revenue_usd_million * 1000000 / reported_employee_count",
+      "inputs": {"FY2024": [51362, 83700], "FY2025": [46309, 77800], "FY2026": [46398, 73000]},
+      "outputs_usd_per_employee": {"FY2024": 613644, "FY2025": 595231, "FY2026": 635589},
+      "rounding": "四舍五入至最接近美元；员工数为公司披露的 approximately，结果为近似值。",
+      "source_ids": ["S005", "S013", "S014"],
+      "issue_ids": ["NKE-DR-ORG"],
+      "acceptance_ids": ["NKE-A04-03"]
+    },
+    {
+      "calculation_id": "NKE-CAL-SUP-002",
+      "name": "FY2024-FY2026净普通股变动（权益表口径）",
+      "formula": "Class B repurchased shares + employee net shares issued; Class A-to-B conversion excluded because it does not change total common shares",
+      "inputs_million_shares": {"FY2024": {"repurchased": -41, "employee_net_issued": 5}, "FY2025": {"repurchased": -38, "employee_net_issued": 5}, "FY2026": {"repurchased": -2, "employee_net_issued": 6}},
+      "outputs_million_shares": {"FY2024": -36, "FY2025": -33, "FY2026": 4},
+      "boundary": "这是权益表的 Class B 净股数桥，不能等同稀释后加权平均股数，也不能将 SBC 费用金额换算为实际稀释股数。",
+      "source_ids": ["S005"],
+      "issue_ids": ["NKE-DR-CAPITAL"],
+      "acceptance_ids": ["NKE-A05-03"]
+    },
+    {
+      "calculation_id": "NKE-CAL-SUP-003",
+      "name": "未确认税务利益子集关系",
+      "formula": "742 / 953",
+      "inputs_usd_million": {"FY2026_unrecognized_tax_benefits": 953, "subset_affecting_effective_tax_rate_if_recognized": 742},
+      "output_percent": 77.86,
+      "boundary": "742 是 953 的子集，不能与953相加，不是现金或独立债务。",
+      "source_ids": ["S005"],
+      "issue_ids": ["NKE-DR-F02"],
+      "acceptance_ids": ["NKE-A02-02"]
+    }
+  ]
+}

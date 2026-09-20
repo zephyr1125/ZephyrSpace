@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "run_id": "nike-evidence-repair-2026-09-20",
+  "stage": "bounded_repair_v3_independent_fact_recheck",
+  "as_of": "2026-09-19",
+  "role": "triplet_review_facts",
+  "scope": "严格按 final/review-adjudication.json 的有界 review_scope，核 A05-03、A05-04、A04-03 两处旧句、closure 与此前通过项是否回退；未读取另一复核。",
+  "locked_hashes": {
+    "writer/deep-v2.md": "2259fc1c505f9c120b326af5ccf1860bdc117989c7896c0e70c8a7dc6e7bfd2f",
+    "writer/management-v2.md": "7a9bf1aaf9493cc40e15704c4cc883733511416796b72168dda84f0d8e7d58e7",
+    "writer/valuation-v2.md": "730f38c329a09a58f433da24e8a510e3f16a388923743a5192c1056f9997863f",
+    "writer/workpaper-v3.json": "b4e490ad8e992bd34366bfc1ec153f10ce8e711198012c69dc0c88d0fe669060",
+    "handoff_match": true
+  },
+  "coverage": {
+    "report_line_counts": {"deep_v2":281,"management_v2":237,"valuation_v2":175},
+    "bounded_evidence_reviewed": ["evidence/bounded-supplement.md","evidence/facts-bounded.json","evidence/calculations-bounded.json"],
+    "closure_reviewed": "workpaper-v3 repair.closures 的7个问题及10个验收项均与正文、底稿和终局裁决相符。",
+    "unchanged_passed_items": ["NKE-A02-02","NKE-A03-01","NKE-A03-03","NKE-A04-01","NKE-A10-01","NKE-A10-02","NKE-A06-01"]
+  },
+  "acceptance_results": [
+    {"id":"NKE-A05-03","status":"pass","evidence":"FY2024/25/26总普通股桥分别闭合为1532+7+0-41+5=1503、1503+6+0-38+5=1476、1476+3+0-2+6=1483百万股。A转B在合计中抵消，未混用加权平均股数；权益表回购、现金流回购、实际计划购买/均价与SBC费用分别列示。SBC费用不能归属到具体股数的边界明确保留。","locations":["bounded-supplement.md#A05-03","facts-bounded.json#NKE-BND-CAP-001/002/003","calculations-bounded.json#NKE-BND-CAL-001","deep-v2.md:195-201","management-v2.md:105-110","workpaper-v3.json#NKE-A05-03"]},
+    {"id":"NKE-A05-04","status":"pass","evidence":"时间线覆盖2021-09-19至2026-09-19，包含Donahoe/Hill、O’Neill、Williams/Alagirisamy、Denton/Friend；截止日前12个月窗口按官方Item 5.02核到Williams与Friend两项离任/角色取消、Alagirisamy与Denton两项继任。裁决未设集中离任数量或比例阈值，正文未自行定性；动机和保留率仍列未知。","locations":["bounded-supplement.md#A05-04","facts-bounded.json#NKE-BND-ORG-001/002/003","calculations-bounded.json#NKE-BND-CAL-002","management-v2.md:140-150","workpaper-v3.json#NKE-A05-04"]},
+    {"id":"NKE-A04-03","status":"pass","evidence":"deep-v2.md:220已明确三期杜邦、重大资本活动、三期人效及总普通股桥已核，只保留研发健康度、内部人交易、具体SBC工具归属及未来经营结果为未知；management-v2.md:192同样已修正。旧句未残留。","locations":["deep-v2.md:220","management-v2.md:192","workpaper-v3.json#NKE-A04-03"]},
+    {"id":"NKE-A02-02","status":"pass_no_regression","evidence":"税务953/1026/990与742子集仍指F007，SBC仍指F006。"},
+    {"id":"NKE-A03-01","status":"pass_no_regression","evidence":"E2仍为5、E3仍为2，OCF/净利130.3333%/114.8804%/92.2780%及FCF口径未回退。"},
+    {"id":"NKE-A03-03","status":"pass_no_regression","evidence":"E5.5仍为1.5程序化中性值，未因无MD归因公司。"},
+    {"id":"NKE-A04-01","status":"pass_no_regression","evidence":"A3仍为4，未受本轮股数补证影响。"},
+    {"id":"NKE-A10-01","status":"pass_no_regression","evidence":"S010通用附件与S012主文的区分、Denton/Friend精确日期保持。"},
+    {"id":"NKE-A10-02","status":"pass_no_regression","evidence":"遣散计划资格、release、抵扣/追偿以及个人潜在权利与实际支付的区分保持。"},
+    {"id":"NKE-A06-01","status":"pass_no_regression","evidence":"区间仍为公司66–72、管理层56–66、合计122–138；66/56/122仅机械下端点。管理层上界66<70且合计上界138<150，reject/NONE和价格null继续成立。"}
+  ],
+  "calculations": {
+    "share_bridge": "1532→1503→1476→1483（百万股），每期均按期初+期权行权+A转B净零+回购+员工净发行+其他=期末复算。",
+    "sbc_boundary": "804/709/715百万美元是总SBC费用；5/5/6百万员工净发行未按RSU、PSU、ESPP、期权或其他活动拆分，未非法换算为稀释股数。",
+    "management_window": "2025-09-19至2026-09-19官方事件计数为两项完成离任/角色取消、两项继任；计数不是规则定义的集中度指标。"
+  },
+  "findings": [],
+  "new_p0": [],
+  "new_p1": [],
+  "decision": "pass_bounded_targeted_review",
+  "research_status_recommendation": "execution_incomplete",
+  "independent_conclusion": "终局授权的三项有界修复均实质完成，且此前已通过项没有回退。Class A+B总普通股桥与SBC不可归属边界均按官方口径呈现；五年主要高管时间线与12个月窗口覆盖满足原验收，而不虚构集中离任阈值；两处旧重评句已清除。新增事实不改变锁定区间和稳定质量停止结论。研究总体状态依终局裁决仍为execution_incomplete，正式发布和Watchlist写入仍不应进行。"
+}

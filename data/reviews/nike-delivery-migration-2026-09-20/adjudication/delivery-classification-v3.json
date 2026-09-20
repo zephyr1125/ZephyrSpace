@@ -1,0 +1,301 @@
+{
+  "schema_version": 1,
+  "run_id": "nike-delivery-migration-2026-09-20",
+  "stage": "delivery_classification",
+  "classified_by": "adjudicator",
+  "basis": "docs/three-report-delivery.md；只读基线终局与指定冻结材料。新迁移授权仅用于交付装配，不追改历史终局，也不重启公司研究。",
+  "baseline": "data/reviews/nike-evidence-repair-2026-09-20/final/decision-closeout-v2.json",
+  "input_sha256": {
+    "data/reviews/nike-evidence-repair-2026-09-20/final/decision-closeout-v2.json": "ed1f7be40639df519c21ad620d053f049ad24d31d8f75ac6c134540aab6d8c59",
+    "data/reviews/nike-evidence-repair-2026-09-20/evidence/facts-bounded.json": "be61905ed93cc608686c13ace06f798366b9b5f83177e936c031c92a6ef46e82",
+    "data/reviews/nike-evidence-repair-2026-09-20/evidence/calculations-bounded.json": "7b4a918a0825989ebfe3f3f575450396f85c3899c14e8ba3524d6b48310ee234",
+    "data/reviews/nike-evidence-repair-2026-09-20/writer/workpaper-v3.json": "b4e490ad8e992bd34366bfc1ec153f10ce8e711198012c69dc0c88d0fe669060",
+    "data/reviews/nike-evidence-repair-2026-09-20/writer/deep-v2.md": "2259fc1c505f9c120b326af5ccf1860bdc117989c7896c0e70c8a7dc6e7bfd2f",
+    "data/reviews/nike-evidence-repair-2026-09-20/writer/management-v2.md": "7a9bf1aaf9493cc40e15704c4cc883733511416796b72168dda84f0d8e7d58e7",
+    "data/reviews/nike-evidence-repair-2026-09-20/writer/valuation-v2.md": "730f38c329a09a58f433da24e8a510e3f16a388923743a5192c1056f9997863f"
+  },
+  "decision": "reject",
+  "level": "NONE",
+  "research_state": "approved",
+  "research_approval_scope": "仅批准既有有据评分区间、资格否决及质量停止定价判断；不把旧完整研究/交付未验收改写为历史通过。",
+  "legacy_research_status": "execution_incomplete",
+  "delivery_state": "open",
+  "publish_allowed": false,
+  "write_watchlist": false,
+  "bounds_approved": true,
+  "quality_stop_approved": true,
+  "score_bounds": {
+    "company": [
+      66,
+      72
+    ],
+    "management": [
+      56,
+      66
+    ],
+    "combined": [
+      122,
+      138
+    ]
+  },
+  "point_scores": {
+    "company": null,
+    "management": null,
+    "combined": null
+  },
+  "target_price": null,
+  "certainty": null,
+  "buy_price": null,
+  "formal_double_model_required": false,
+  "no_decision_impact": true,
+  "decision_invariance_reason": "来源内容与计算在基线已核定；纠正引用和同步已完成状态不改事实、任何分项、外包络或门槛。管理层最高66<70且合计最高138<150，仍不满足全部档位。未知保留率/动机及集中离任规则缺失不变。",
+  "issues": [
+    {
+      "id": "NKE-DEL-001",
+      "original_issue_ids": [
+        "NKE-DR-CAPITAL",
+        "NKE-DR-ORG"
+      ],
+      "original_acceptance_ids": [
+        "NKE-A05-03",
+        "NKE-A05-04"
+      ],
+      "finding_alias": "NKE-BR-R01",
+      "lane": "delivery",
+      "status": "closed",
+      "classified_by": "adjudicator",
+      "no_decision_impact": true,
+      "reason": "实际事实及计算内容已核定，剩余是不存在ID、缩写引用和错配引用的确定性定位修正；不补新事实，不制造别名。",
+      "acceptance": [
+        {
+          "id": "NKE-DEL-001-01",
+          "condition": "迁移后的底稿及三源稿全部使用下列已裁定实际ID；消除四种不存在ID及压缩写法；所有证据引用可解析到有效证据JSON声明。禁止新建空壳004或仅凭拼写猜别名。"
+        },
+        {
+          "id": "NKE-DEL-001-02",
+          "condition": "事实审核员逐内容确认SBC金额指CAP-002、不可归属边界指CAP-003、股数桥指CAP-001/CAL-001、高管事件/计数/未知边界各指ORG-001/002/003及CAL-002；评分理由、数字及区间未改变。"
+        }
+      ],
+      "verification_refs": [
+        "data/reviews/nike-delivery-migration-2026-09-20/review-facts/delivery-review-v1.json#NKE-DEL-001-01",
+        "data/reviews/nike-delivery-migration-2026-09-20/review-facts/delivery-review-v1.json#NKE-DEL-001-02",
+        "data/reviews/nike-delivery-migration-2026-09-20/review-facts/release-review.json#NKE-DEL-001"
+      ]
+    },
+    {
+      "id": "NKE-DEL-002",
+      "original_issue_ids": [
+        "NKE-DR-ORG"
+      ],
+      "original_acceptance_ids": [
+        "NKE-A05-04"
+      ],
+      "finding_alias": "NKE-BR-R02",
+      "lane": "delivery",
+      "status": "open",
+      "classified_by": "adjudicator",
+      "no_decision_impact": true,
+      "reason": "仅三处交付open旧状态与已完成事实验收冲突；不是事实核验重新打开，也不改变区间/资格/停止定价。",
+      "acceptance": [
+        {
+          "id": "NKE-DEL-002-01",
+          "condition": "按三处精确补丁同步已完成交付事实验收状态；重新装配后全文不得仍称本次两交付问题open待验收；旧run未验收历史明确保留。原事实审核员定向复验发布状态一致性。"
+        },
+        {
+          "id": "NKE-DEL-002-02",
+          "condition": "区间66–72/56–66/122–138、reject/NONE、quality stop、价格null、真实未知及授权范围不变；重新build/verify且manifest输入输出哈希一致，不手改生成稿。",
+          "prior_verification_refs": [
+            "data/reviews/nike-delivery-migration-2026-09-20/review-facts/delivery-review-v1.json#NKE-DEL-002-02"
+          ]
+        }
+      ],
+      "additional_finding_alias": "NKE-REL-F01"
+    }
+  ],
+  "confirmed_id_operations": [
+    {
+      "old": "NKE-CAL-BND-001",
+      "actual": [
+        "NKE-BND-CAL-001"
+      ],
+      "basis": "实际calculations[0]明载FY2024–FY2026总普通股桥，期末1503/1476/1483。"
+    },
+    {
+      "old": "NKE-CAL-BND-002",
+      "actual": [
+        "NKE-BND-CAL-002"
+      ],
+      "basis": "实际calculations[1]明载12个月主要高管两项退出和两项任命计数。"
+    },
+    {
+      "old": "NKE-BND-CAP-004",
+      "actual": [
+        "NKE-BND-CAP-002",
+        "NKE-BND-CAP-003"
+      ],
+      "operation": "按所支持句义重建引用集合并去重；不是004与单个003自动等价。",
+      "basis": "CAP-002明载804/709/715费用及回购现金/价格；CAP-003明载SBC具体股数归属不可得。两者共同支持当前004承载的混合句。"
+    },
+    {
+      "old": "NKE-BND-ORG-004",
+      "actual": [],
+      "operation": "删除不存在的004；现有ORG-001/002/003分别覆盖时间线、窗口事件及未知边界，保留所需完整ID。不得声明004别名。",
+      "basis": "该事实文件只有ORG-001/002/003；没有第四项独立事实需补建。"
+    },
+    {
+      "old": "NKE-BND-CAP-002/003",
+      "actual": [
+        "NKE-BND-CAP-001",
+        "NKE-BND-CAP-002"
+      ],
+      "operation": "deep:199与management:107按句义用CAP-001支持权益表股数、CAP-002支持实际回购及现金口径；不是机械展开错误缩写。"
+    },
+    {
+      "old": "其余CAP-001/002/003/004或ORG-001/002/003/004压缩写法",
+      "operation": "展开为已确认实际完整ID集合，删除不存在004，按句义补实际计算ID；不得保留slash缩写。"
+    }
+  ],
+  "shared_fact": {
+    "key": "executive_timeline",
+    "text": "授权范围2021-09-19至2026-09-19主要高管时间线及2025-09-19至2026-09-19官方事件索引已核；窗口内两项离任/角色取消与两项继任。规则未定义集中离任阈值，不据计数定性；个人动机及未披露人才保留率仍未知。",
+    "refs": [
+      "NKE-BND-ORG-001",
+      "NKE-BND-ORG-002",
+      "NKE-BND-ORG-003",
+      "NKE-BND-CAL-002"
+    ]
+  },
+  "migration_constraints": [
+    "只在新run副本装配，不修改基线/冻结源稿。",
+    "区间迁移按交付规范改为score=null和bounds，禁止原机械0下端点冒充点值；此为表示适配，不重评或扩大本次裁决。",
+    "生成评分表及共用状态使用唯一底稿和decision；build成功仅assembled_for_review。",
+    "主任务核版本/哈希，原事实审核员定向核上述delivery验收；全部交付验收完成前不得发布。reject仍禁止Watchlist。",
+    "若执行发现新事实冲突、评分或资格可能改变，退出delivery分类并另行提交研究判断，不自动推断no_decision_impact。"
+  ],
+  "review_refs": [
+    "data/reviews/nike-evidence-repair-2026-09-20/review-facts/targeted-review-v2.json",
+    "data/reviews/nike-evidence-repair-2026-09-20/review-reasoning/targeted-review-v2.json"
+  ],
+  "review_refs_basis": "引用基线终局已采纳的真实双路记录，不声称本迁移重新完成双路研究审核。",
+  "version": 3,
+  "supersedes": "data/reviews/nike-delivery-migration-2026-09-20/adjudication/delivery-classification-v2.json",
+  "return_to_research": false,
+  "current_ruling": "NKE-REL-F01为NKE-DEL-002的发布状态同步遗留；delivery/no_decision_impact=true。事实验收已实际完成，但发布正文三处状态未同步，故当前发布暂缓。",
+  "reviewed_delivery_review": "data/reviews/nike-delivery-migration-2026-09-20/review-facts/delivery-review-v1.json",
+  "prior_exact_text_edits": [
+    {
+      "path": "data/reviews/nike-evidence-repair-2026-09-20/writer/deep-v2.md",
+      "before_sha256": "2259fc1c505f9c120b326af5ccf1860bdc117989c7896c0e70c8a7dc6e7bfd2f",
+      "line_hint": 200,
+      "old": "- F1不填点值，保留[0,5]完整规则外包络：公开继任与激励可核，但完整五年主要高管离任、12个月集中离任索引和人才保留率仍未知；端点不是实际评价。",
+      "new": "- F1不填点值，保留[0,5]完整规则外包络：授权范围的五年主要高管时间线及12个月官方事件索引已核；规则未定义集中离任阈值，个人动机和未披露人才保留率仍未知，端点不是实际评价。",
+      "count": 1,
+      "issue_id": "NKE-DEL-002"
+    },
+    {
+      "path": "data/reviews/nike-evidence-repair-2026-09-20/writer/management-v2.md",
+      "before_sha256": "7a9bf1aaf9493cc40e15704c4cc883733511416796b72168dda84f0d8e7d58e7",
+      "line_hint": 190,
+      "old": "- 渠道修复、现金流下降、资本配置净效果和完整高管时间线是限制因素。",
+      "new": "- 渠道修复、现金流下降和资本配置绩效仍是限制因素；授权范围的主要高管时间线及12个月官方事件索引已核，个人动机与未披露人才保留率仍未知。",
+      "count": 1,
+      "issue_id": "NKE-DEL-002"
+    },
+    {
+      "path": "data/reviews/nike-evidence-repair-2026-09-20/writer/valuation-v2.md",
+      "before_sha256": "730f38c329a09a58f433da24e8a510e3f16a388923743a5192c1056f9997863f",
+      "line_hint": 132,
+      "old": "- S012-v2已纳入CFO交接主文：David Denton于2026-08-16生效任EVP/CFO，Matthew Friend的CFO退出、顾问过渡及2026-09-04离职按主文精确字段分列；最终支付、动机和完整高管时间线仍未知。",
+      "new": "- S012-v2已纳入CFO交接主文：David Denton于2026-08-16生效任EVP/CFO，Matthew Friend的CFO退出、顾问过渡及2026-09-04离职按主文精确字段分列；授权范围的五年主要高管时间线及12个月官方事件索引已核，最终支付、个人动机和未披露人才保留率仍未知。",
+      "count": 1,
+      "issue_id": "NKE-DEL-002"
+    },
+    {
+      "path": "data/reviews/nike-evidence-repair-2026-09-20/writer/valuation-v2.md",
+      "before_sha256": "730f38c329a09a58f433da24e8a510e3f16a388923743a5192c1056f9997863f",
+      "line_hint": 146,
+      "old": "- 继续跟踪CFO交接后的履职、Friend最终支付及尚未取得的完整主要高管离任索引。",
+      "new": "- 继续跟踪CFO交接后的履职与Friend最终支付；授权范围的主要高管时间线及12个月官方事件索引已核，个人动机和未披露人才保留率继续保留未知。",
+      "count": 1,
+      "issue_id": "NKE-DEL-002"
+    }
+  ],
+  "exact_text_edits": [
+    {
+      "path": "data/reviews/nike-delivery-migration-2026-09-20/source/deep.md",
+      "before_sha256": "a5962a9a97c3b47e83a91e9be6129ed412dd586e6e521491c05c09a7bde75e98",
+      "old": "- 当前锁定区间为公司{{score:company}}、管理层{{score:management}}、合计{{score:combined}}；管理层上界低于70且合计上界低于150，稳定否决B_GROWTH及更高档位，处置为 `reject/NONE`。研究判断已获批准；两个交付问题保持open，待定向验收。",
+      "new": "- 当前锁定区间为公司{{score:company}}、管理层{{score:management}}、合计{{score:combined}}；管理层上界低于70且合计上界低于150，稳定否决B_GROWTH及更高档位，处置为 `reject/NONE`。既有区间研究判断已获批准，本次两项交付问题已完成事实验收；历史旧run未验收记录仍保留，本次通过不追改历史状态。",
+      "count": 1,
+      "issue_id": "NKE-DEL-002"
+    },
+    {
+      "path": "data/reviews/nike-delivery-migration-2026-09-20/source/deep.md",
+      "before_sha256": "a5962a9a97c3b47e83a91e9be6129ed412dd586e6e521491c05c09a7bde75e98",
+      "old": "- 研究判断已获批准；两个交付问题保持open，待定向验收，这不改变基于当前证据的公司质量处置来源。",
+      "new": "- 既有区间研究判断已获批准，本次两项交付问题已完成事实验收；历史旧run未验收记录仍保留，本次通过不追改历史状态，这不改变基于当前证据的公司质量处置来源。",
+      "count": 1,
+      "issue_id": "NKE-DEL-002"
+    },
+    {
+      "path": "data/reviews/nike-delivery-migration-2026-09-20/source-patch-v2/source-0.md",
+      "before_sha256": "66438799aa249cf38ee28eb1576be083c41f818668878e53bd393e68532245a8",
+      "old": "- 正式评分区间为公司{{score:company}}、管理层{{score:management}}、合计{{score:combined}}；管理层上界66低于70且合计上界138低于150，故处置为reject/NONE。研究判断已获批准；两个交付问题保持open，待定向验收。",
+      "new": "- 正式评分区间为公司{{score:company}}、管理层{{score:management}}、合计{{score:combined}}；管理层上界66低于70且合计上界138低于150，故处置为reject/NONE。既有区间研究判断已获批准，本次两项交付问题已完成事实验收；历史旧run未验收记录仍保留，本次通过不追改历史状态。",
+      "count": 1,
+      "issue_id": "NKE-DEL-002"
+    }
+  ],
+  "patch_plan": {
+    "edits": [
+      {
+        "path": "data/reviews/nike-delivery-migration-2026-09-20/source/deep.md",
+        "before_sha256": "a5962a9a97c3b47e83a91e9be6129ed412dd586e6e521491c05c09a7bde75e98",
+        "old": "- 当前锁定区间为公司{{score:company}}、管理层{{score:management}}、合计{{score:combined}}；管理层上界低于70且合计上界低于150，稳定否决B_GROWTH及更高档位，处置为 `reject/NONE`。研究判断已获批准；两个交付问题保持open，待定向验收。",
+        "new": "- 当前锁定区间为公司{{score:company}}、管理层{{score:management}}、合计{{score:combined}}；管理层上界低于70且合计上界低于150，稳定否决B_GROWTH及更高档位，处置为 `reject/NONE`。既有区间研究判断已获批准，本次两项交付问题已完成事实验收；历史旧run未验收记录仍保留，本次通过不追改历史状态。",
+        "count": 1,
+        "issue_id": "NKE-DEL-002"
+      },
+      {
+        "path": "data/reviews/nike-delivery-migration-2026-09-20/source/deep.md",
+        "before_sha256": "a5962a9a97c3b47e83a91e9be6129ed412dd586e6e521491c05c09a7bde75e98",
+        "old": "- 研究判断已获批准；两个交付问题保持open，待定向验收，这不改变基于当前证据的公司质量处置来源。",
+        "new": "- 既有区间研究判断已获批准，本次两项交付问题已完成事实验收；历史旧run未验收记录仍保留，本次通过不追改历史状态，这不改变基于当前证据的公司质量处置来源。",
+        "count": 1,
+        "issue_id": "NKE-DEL-002"
+      },
+      {
+        "path": "data/reviews/nike-delivery-migration-2026-09-20/source-patch-v2/source-0.md",
+        "before_sha256": "66438799aa249cf38ee28eb1576be083c41f818668878e53bd393e68532245a8",
+        "old": "- 正式评分区间为公司{{score:company}}、管理层{{score:management}}、合计{{score:combined}}；管理层上界66低于70且合计上界138低于150，故处置为reject/NONE。研究判断已获批准；两个交付问题保持open，待定向验收。",
+        "new": "- 正式评分区间为公司{{score:company}}、管理层{{score:management}}、合计{{score:combined}}；管理层上界66低于70且合计上界138低于150，故处置为reject/NONE。既有区间研究判断已获批准，本次两项交付问题已完成事实验收；历史旧run未验收记录仍保留，本次通过不追改历史状态。",
+        "count": 1,
+        "issue_id": "NKE-DEL-002"
+      }
+    ]
+  },
+  "verification_scope": "仅复验三处状态补丁和与统一决定块一致、旧run历史边界、其余内容未变化、manifest哈希；无需返回研究。当前分类不替代修复后的发布验收。",
+  "decision_impact_confirmation": {
+    "company_bounds": [
+      66,
+      72
+    ],
+    "management_bounds": [
+      56,
+      66
+    ],
+    "combined_bounds": [
+      122,
+      138
+    ],
+    "decision": "reject",
+    "level": "NONE",
+    "quality_stop_approved": true,
+    "target_price": null,
+    "certainty": null,
+    "buy_price": null,
+    "reason": "既有组织分项理由已使用时间线已核与剩余未知边界，本补丁把残留叙述同步到该已批准理由，未增加评分事实。"
+  },
+  "release_state": "hold_for_delivery_text_sync",
+  "reviewed_release_review": "data/reviews/nike-delivery-migration-2026-09-20/review-facts/release-review.json"
+}

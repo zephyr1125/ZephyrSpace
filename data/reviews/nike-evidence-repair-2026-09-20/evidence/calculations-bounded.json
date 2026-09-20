@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "run_id": "nike-evidence-repair-2026-09-20",
+  "information_cutoff": "2026-09-19",
+  "calculations": [
+    {"calculation_id":"NKE-BND-CAL-001","name":"FY2024-FY2026总普通股桥","formula":"ending_total = beginning_A + beginning_B + option_exercises + conversion_A_to_B_net_zero + repurchases + employee_net_issuance + other_share_changes","unit":"millions of shares","rows":{"FY2024":{"beginning_total":1532,"option_exercises":7,"conversion_net":0,"repurchases":-41,"employee_net_issuance":5,"other":0,"ending_total":1503},"FY2025":{"beginning_total":1503,"option_exercises":6,"conversion_net":0,"repurchases":-38,"employee_net_issuance":5,"other":0,"ending_total":1476},"FY2026":{"beginning_total":1476,"option_exercises":3,"conversion_net":0,"repurchases":-2,"employee_net_issuance":6,"other":0,"ending_total":1483}},"source_id":"S005","acceptance_id":"NKE-A05-03","boundary":"Class A-to-B conversion is zero in combined shares; these totals are point-in-time outstanding shares, not weighted-average diluted EPS shares."},
+    {"calculation_id":"NKE-BND-CAL-002","name":"12-month主要高管官方事件计数","formula":"count distinct completed role exit/separation events and appointments with effective dates inside [2025-09-19, 2026-09-19]","outputs":{"completed_role_exits_or_separations":2,"appointments":2},"events":{"exits_or_separations":["Williams","Friend"],"appointments":["Alagirisamy","Denton"]},"source_id":"S2025-WILLIAMS;S012-v2","acceptance_id":"NKE-A05-04","boundary":"Event count is not a rule-defined concentration measure and cannot itself establish a stability or organization score."}
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "status": "ready_for_independent_review",
+  "errors": [],
+  "warnings": [
+    "公司F维度触发原规则重大警告；须人工处理，程序不判入库"
+  ],
+  "computed": {
+    "cScore": 66.0,
+    "mScore": 56,
+    "target_price": null,
+    "certainty": null,
+    "buy_price": null,
+    "currency": "USD",
+    "weighted": {},
+    "models": {}
+  },
+  "scope": {
+    "reports": true,
+    "repair": true,
+    "handoff_stage": "repair"
+  },
+  "limitations": "不验证证据真实性、行业适用性、假设合理性、正文全部数值或人工关闭判断；不代表双复核通过或允许入库。",
+  "report_sha256": {
+    "deep": "ff3802b332447309a46f5f54e0c4f2f6ca34ee33feff5ace025148da4e6bfde1",
+    "management": "7d98ee15591f84326391be3727c1caa443dea15ac5f867f9691361b48a6e2577",
+    "valuation": "730f38c329a09a58f433da24e8a510e3f16a388923743a5192c1056f9997863f"
+  },
+  "input_sha256": {
+    "workpaper": "f5d936c1db6348b0e9a0e0df2d311f942e5e3a603e30e64e2da1756e7b8381fc",
+    "previous": "19e48a425d426caa83e8b9a270e5d72392de854ef462de793ed5c2ac288bc97f",
+    "adjudication": "e97084f70a2ed3ecb5d31454fb41e9bf085fa5fad1529a3a30287f30d18d128e",
+    "preparation": "5e1ef05d7f510d00bebe3224a037c570937cd5a9754694cd110c787203377b9d"
+  }
+}

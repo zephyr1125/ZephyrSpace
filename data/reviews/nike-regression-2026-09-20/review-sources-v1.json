@@ -1,0 +1,4 @@
+{
+  "route_a": "data/reviews/nike-regression-2026-09-20/review-facts/review-v1.json",
+  "route_b": "data/reviews/nike-regression-2026-09-20/review-reasoning/review-v1.json"
+}

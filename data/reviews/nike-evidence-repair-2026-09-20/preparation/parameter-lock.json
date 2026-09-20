@@ -1,0 +1,292 @@
+{
+  "schema_version": 1,
+  "run_id": "nike-evidence-repair-2026-09-20",
+  "as_of": "2026-09-19",
+  "stage": "repair_preparation_parameter_lock",
+  "repair_ready_passed": false,
+  "research_status": "execution_incomplete",
+  "decision": "reject",
+  "decision_scope": "只批准质量资格处置：锁定全包络已否决全部收录档；不等于准备或完整三件套验收通过。",
+  "watchlistLevel": "NONE",
+  "scoring_basis": "主观维度依已核行为及权重作分析判断，不要求公司公布分数；未能可靠点估的组织事项使用完整规则外包络，不取中点、不把未知计零。",
+  "score_items": [
+    {
+      "key": "company/A3",
+      "score": 4,
+      "bound": null,
+      "fact": "FY2021–26融资现金流与回购、借款偿还、滚动信贷额度和shelf用途已可核；已查相邻10-K重要附注与现金流，没有重大并购或卖资产保利润依赖的已核事实。",
+      "rule": "A3用途清晰且无卖资产保利润=4；轻微瑕疵=2须有实际瑕疵。",
+      "judgment": "按可得多年重大资本活动及经营利润来源锁4；不是证明历史上绝无任何未单列小额交易。4分不要求逻辑上证明所有潜在交易不存在；现有材料没有据以选2或0的瑕疵。此为本次独立评分判断，非以未知加分。",
+      "evidence_refs": [
+        "NKE-SUP-CAP-001",
+        "NKE-SUP-CAP-002",
+        "NKE-SUP-CAP-003",
+        "gap-evidence.md#2"
+      ]
+    },
+    {
+      "key": "company/D5",
+      "score": 2,
+      "bound": null,
+      "fact": "同口径收入/员工先从613644降至595231再升至635589美元；研发活动存在但投入健康度未量化。",
+      "rule": "混合信号=2；人效上升并研发健康=3；明显恶化=0。",
+      "judgment": "真实人效波动构成混合信号，锁2；不以CFO继任代替人效，也不把研发未知填成低投入。",
+      "evidence_refs": [
+        "NKE-SUP-ORG-001",
+        "NKE-SUP-ORG-002",
+        "NKE-CAL-SUP-001"
+      ]
+    },
+    {
+      "key": "company/F1",
+      "score": null,
+      "bound": [
+        0,
+        5
+      ],
+      "fact": "已有内部CEO及公开CFO继任；完整五年主要高管离任和12个月集中离任核验仍不全。",
+      "rule": "本项满分5；不得把未知稳定性点估为中档或满档。",
+      "judgment": "保留完整规则外包络0至5，不填点值。端点只表示尚未排除的规则极值，不表示实际有失序或可评满分。该宽界消除了此前固定F1的遗漏。",
+      "evidence_refs": [
+        "NKE-SUP-ORG-003"
+      ]
+    },
+    {
+      "key": "company/F2",
+      "score": 3,
+      "bound": null,
+      "fact": "持续现金分红、已执行回购与绩效支付约束可核，FY2026回购减少；未证明所有内部交易和净稀释完全对齐。",
+      "rule": "一般对齐档3；5需充分股东利益对齐，0/1须负面依据。",
+      "judgment": "锁一般3：依据已发生现金回报与激励约束，不依错误净股数小计，既不以缺证给2，也不把回购减少当失败。",
+      "evidence_refs": [
+        "NKE-SUP-CAP-001",
+        "NKE-SUP-CAP-002",
+        "上一run workpaper及终局保留的Proxy事实"
+      ]
+    },
+    {
+      "key": "company/F2.5",
+      "score": 1,
+      "bound": null,
+      "fact": "当前无完整MD资本配置审计路径，未有已验证成功先例。",
+      "rule": "原锁定程序化中性1，正面先例加分须证明。",
+      "judgment": "维持1，不加0.5；不因本次现金流补证自动改路径。",
+      "evidence_refs": [
+        "preparation/score-impact.json#locked_unchanged"
+      ]
+    },
+    {
+      "key": "company/F3",
+      "score": 2,
+      "bound": null,
+      "fact": "已有独立委员会、关联方政策及具体关系披露；相关事项影响与未决或有事项存在边界。",
+      "rule": "一般透明度2；满档3须完整且高质量治理披露支持。",
+      "judgment": "锁2是现有具体披露及审查机制对应的一般档，不以未知本身认定异常。",
+      "evidence_refs": [
+        "上一run workpaper/management诚信与透明度",
+        "上一run decision-closeout.json#verified_findings"
+      ]
+    },
+    {
+      "key": "company/B0",
+      "score": null,
+      "bound": [
+        1,
+        2
+      ],
+      "fact": "此前部分覆盖1分，补九要素后是否达到完整历史溯源仍有证明边界。",
+      "rule": "部分1、完整2。",
+      "judgment": "为不漏联合上界，保留1至2；不把先前1分永久锁死。",
+      "evidence_refs": [
+        "上一run decision-closeout.json#acceptance_dispositions"
+      ]
+    },
+    {
+      "key": "management/诚信与透明度",
+      "score": 16,
+      "bound": null,
+      "fact": "清洁审计、IEEPA现金/应收分拆、公开任职及条款、Proxy负向裁量与关联方审查均可核。",
+      "rule": "20分维度，按行为与披露质量评价；未披露个人动机不等于不诚信。",
+      "judgment": "维持16：多类关键事项披露清晰且绩效负向裁量有兑现，支持较高信任；未决税务/事项及披露边界不支持最高确信。F006/F007纠错是研究引用错误，不能扣公司诚信分。",
+      "evidence_refs": [
+        "NKE-SUP-F007-MAP",
+        "NKE-SUP-SEV-001",
+        "上一run workpaper/诚信与透明度"
+      ]
+    },
+    {
+      "key": "management/资本配置能力",
+      "score": 13,
+      "bound": null,
+      "fact": "FY2024/25/26现金分红加回购6419/5285/2553百万美元，约占现金Capex后FCF的97.01%/161.72%/116.90%；回购节奏明显收缩，循环额度和偿债可核；没有已核重大跨界并购或资产出售维持利润。",
+      "rule": "25分行为评价；区分已执行资本回报、流动性纪律、投入结果和回购价值，不以事后市场低价单独定罪。",
+      "judgment": "锁13为新证据下独立中等评价，不继承旧13的缺证理由：持续回报及收缩回购保护流动性是正面；连续两年回报超过当年FCF、经营现金流下降显示分配纪律与经济回报尚非优秀。计划累计价格仅描述成本，不用现价反推回购全失败。净股份小计不参与此分值，也不据此宣称完成净稀释审计。",
+      "evidence_refs": [
+        "NKE-SUP-CAP-001",
+        "NKE-SUP-CAP-002",
+        "上一run workpaper dividend/FCF依据",
+        "gap-evidence.md#2"
+      ]
+    },
+    {
+      "key": "management/对股东友好度",
+      "score": 10,
+      "bound": null,
+      "fact": "持续分红、历史回购执行及PSP负向裁量/PSU表现约束可核；本轮净股数完整桥未建立。",
+      "rule": "15分维度，评价股东回报和代理利益对齐，不把现金支出等同价值创造。",
+      "judgment": "锁10：现金回报和真实激励约束支持三分之二左右的正面评价；双层控制及内部交易/股权稀释尚不能证明充分对齐，不给优秀高档。相对旧9的上调来自新增回购执行周期及激励行为综合核验，不来自错误净缩股数。",
+      "evidence_refs": [
+        "NKE-SUP-CAP-001",
+        "NKE-SUP-CAP-002",
+        "NKE-SUP-F006-MAP",
+        "上一run workpaper及终局Proxy事实"
+      ]
+    },
+    {
+      "key": "management/组织与人才能力",
+      "score": null,
+      "bound": [
+        0,
+        10
+      ],
+      "fact": "存在公开任职及继任安排与激励机制；完整离任索引、人才保留率和动机不全。",
+      "rule": "10分包含稳定性、人才、激励；未知不能自动中档、0或限制在作者任意窄界。",
+      "judgment": "保留完整0至10外包络，不认组织9，也不认作者[3,8]上界：未披露保留率不能证明人才最多2分。零端点是规则边界不是公司得0；已核任职事实保持。",
+      "evidence_refs": [
+        "NKE-SUP-ORG-003",
+        "NKE-SUP-SEV-001"
+      ]
+    }
+  ],
+  "joint_bounds": {
+    "company": {
+      "min": 66,
+      "max": 72,
+      "fixed_unaffected": 53,
+      "formula": "53+B0[1,2]+A3(4)+D5(2)+F1[0,5]+F2(3)+F2.5(1)+F3(2)"
+    },
+    "management": {
+      "min": 56,
+      "max": 66,
+      "fixed_unaffected": 17,
+      "formula": "17+诚信16+资本13+股东10+组织[0,10]"
+    },
+    "combined": {
+      "min": 122,
+      "max": 138,
+      "formula": "[66,72]+[56,66]；采用矩形外包络，即使不同维度极值不能同时达到也不缩窄。"
+    },
+    "interpretation": "范围是允许保留未知的保守联合外包络，不是未来评分预测；F1/组织0为规则极值而非负面事实。全部端点已覆盖，禁止以区间中点发布点分。",
+    "stable_rejection": true,
+    "gate_proof": "最宽允许组织10时管理层仍66<70，且公司72+管理层66=138<150。B_GROWTH两项均70且合计150不可能；A_CORE/S_STRATEGIC门槛更高同样不可能。",
+    "author_bounds_rejected": "[2,4]的A3下界、组织[3,8]及其他建议区间未自动采纳；author-analysis开头72/70与后文76/72不一致，以本锁定参数重新生成。"
+  },
+  "parameters": {
+    "company_score": null,
+    "management_score": null,
+    "combined_score": null,
+    "company_score_bounds": [
+      66,
+      72
+    ],
+    "management_score_bounds": [
+      56,
+      66
+    ],
+    "combined_score_bounds": [
+      122,
+      138
+    ],
+    "display": "公司66–72、管理层56–66、合计122–138；不显示伪点值，后续仍按原始分门槛。",
+    "target_price": null,
+    "certainty": null,
+    "buy_price": null,
+    "currency": "USD",
+    "quality_stop_approved": true,
+    "formal_double_model_triggered": false,
+    "valuation_note": "稳定资格否决允许停止正式定价；后续仍须完整估值报告记录方法、经营三情景、停止理由及重评。null不是价值为零；若实质新证据改变已锁分项而允许资格门槛，再重开双模型。"
+  },
+  "acceptance_preparation": [
+    {
+      "id": "NKE-A02-02",
+      "status": "prepared_substantively",
+      "ruling": "映射与子集关系准备正确；后续须真正替换三稿/底稿，非报告关闭。"
+    },
+    {
+      "id": "NKE-A03-01",
+      "status": "prepared_substantively",
+      "ruling": "E2=5/E3=2及删除不能满分旧理由准备成立。"
+    },
+    {
+      "id": "NKE-A03-03",
+      "status": "prepared_substantively",
+      "ruling": "E5.5=1.5及程序化边界准备成立。"
+    },
+    {
+      "id": "NKE-A04-01",
+      "status": "parameter_locked",
+      "ruling": "A3锁4；资本史重大事项检索足以作此判断，不声称完整穷尽小额交易。"
+    },
+    {
+      "id": "NKE-A05-03",
+      "status": "parameter_locked_preparation_correction_required",
+      "ruling": "F2=3、F2.5=1、资本13、股东10锁定；净股数小计误标必须在准备材料纠正，原验收的完整净股数核验尚不能声称完成。"
+    },
+    {
+      "id": "NKE-A04-03",
+      "status": "parameter_locked",
+      "ruling": "D5锁2；人效计算准备实质成立。"
+    },
+    {
+      "id": "NKE-A05-04",
+      "status": "bounded_not_fully_resolved",
+      "ruling": "F1[0,5]及组织[0,10]覆盖未核稳定性/人才，不冒充完成五年及12个月核验。其未知已被完整纳入资格外包络。"
+    },
+    {
+      "id": "NKE-A10-01",
+      "status": "prepared_with_date_qualification",
+      "ruling": "CFO主文已得、Denton任职和Friend离职9月4日准备成立；gap-evidence的“同日”与此前锁定任职链精确日口径不能靠省略解释。后续引用S012原定位并保留过渡生效日差异，不将其用于加扣分；本次不补查。"
+    },
+    {
+      "id": "NKE-A10-02",
+      "status": "prepared_substantively",
+      "ruling": "资格、release、抵扣/追偿与实际支付未知已展开，准备实质成立；不能把潜在福利相加当已付。"
+    },
+    {
+      "id": "NKE-A06-01",
+      "status": "joint_bound_locked",
+      "ruling": "公司66–72、管理层56–66、合计122–138；全包络管理层<70且合计<150，稳定否决全部档位。研究验收仍独立，尚非repair-ready通过。"
+    }
+  ],
+  "calculation_adjudication": {
+    "NKE-CAL-SUP-001": "复算三期近似收入/员工为613643.9665/595231.3625/635589.0411美元，四舍五入正确；员工含零售兼职，不等同全职人均生产率。",
+    "NKE-CAL-SUP-002": "减法-41+5=-36、-38+5=-33、-2+6=4正确，但这是回购与员工净发行两项变动小计；缺期权行权及其他发行，不能称总普通股净变动，甚至不是含转换的完整Class B净变动。降格为特定两项桥；撤回两年实质净缩股及FY2026总股数净增4的依赖断言。不得将现金发行金额除任选价格补股数。",
+    "NKE-CAL-SUP-003": "742/953=77.85939%，77.86%正确，子集不相加。"
+  },
+  "preparation_required_updates": [
+    "保留原7问题ID/10验收ID，按本锁更新preparation与score-impact，区分参数已定/准备已具备/实际报告验收。",
+    "将NKE-CAL-SUP-002及其所有依赖文字降格为两项股份流量小计；资本与股东分值理由仅用本锁指定证据，不声称净稀释已完整核验。",
+    "保留A05-03完整净股数核验及A05-04完整时间线仍未完成的状态，不删除原验收条件以取得通过；主任务按边界与依赖撤回规则审核是否足够准备。",
+    "补齐后续报告和底稿明确引用F007的替代计划及E5.5完整程序边界；已有resolved只表示准备事实具备，不表示旧稿已改。",
+    "精确人事过渡日期只按来源明确字段落笔，不能把Denton任职日自动等同Friend退出日；实际支付仍未知。"
+  ],
+  "publication": {
+    "reports_verified": false,
+    "publish": false,
+    "write_watchlist": false,
+    "reason": "准备阶段，不存在双路修复验收；NONE且未知总分不写Watchlist机器点值。"
+  },
+  "inputs": [
+    "adjudication-locked.json",
+    "preparation/preparation-v2.json",
+    "preparation/author-analysis.md",
+    "preparation/score-impact.json",
+    "evidence/facts-supplement.json",
+    "evidence/calculations.json",
+    "evidence/gap-evidence.md",
+    "evidence/sources-supplement.json",
+    "data\\reviews\\nike-directed-repair-2026-09-20\\writer\\workpaper-v1.json",
+    "data\\reviews\\nike-directed-repair-2026-09-20\\final\\decision-closeout.json"
+  ],
+  "limits": "未补证、未读其他研究材料、未改报告或派Agent。已核现金分红及FCF沿用指定上一run底稿和终局所保留事实。"
+}

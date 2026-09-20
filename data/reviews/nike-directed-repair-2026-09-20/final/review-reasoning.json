@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "role": "triplet_review_reasoning",
+  "model_route": "gpt-5.6-sol low",
+  "stage": "directed_repair_targeted_review",
+  "as_of": "2026-09-19",
+  "scope": "仅读取handoff锁定哈希对应的writer三稿、workpaper-v1、repair-closeout，对照上一run adjudication-v1、evidence v2增量与frozen-author-v1；未读取另一审核意见。",
+  "hash_verification": {
+    "deep": "pass: 43c67fc7be1293c4791fbf0dbb15e20a1b6cc62303a2fed25847a3ddddc67bdd",
+    "management": "pass: b1b713cdd2a7040f3052a98eef96afb9096ec9e0950d85cd5071a9659265d88b",
+    "valuation": "pass: 2ba96522c51d6620e48318572936bf49f8cf88e4190559a96a428a138703069d",
+    "workpaper": "pass: 19e48a425d426caa83e8b9a270e5d72392de854ef462de793ed5c2ac288bc97f"
+  },
+  "summary": {
+    "acceptance_total": 27,
+    "passed": 19,
+    "failed": 8,
+    "new_p0": 0,
+    "new_p1": 2,
+    "final_pass": false,
+    "decision_independent_view": "reject/NONE的质量边界可成立，正式估值停止路径可保留；但报告仍有未关闭P1，research_status必须维持execution_incomplete。",
+    "reason": "新run恢复了三份独立完整正文，消除了错贴同文和占位回退；65/64/129算术正确。仍有评分证据、生成表理由、事实ID、资本配置/组织归因和CFO跨报告状态未闭合，不能宣称完整验收。"
+  },
+  "independent_recalculation": {
+    "company_items": 25,
+    "company_sum": 65,
+    "management_items": 7,
+    "management_sum": 64,
+    "combined_raw": 129,
+    "display": {
+      "company": 65,
+      "management": 64,
+      "combined": 129,
+      "rule": "ROUND_HALF_UP仅用于总分显示；门槛使用原始分"
+    },
+    "company_dimension_sums": {"A":8,"B":12,"C":14,"D":6,"E":17,"F":8},
+    "cash_flow_checks": {
+      "ocf_net_income_percent": [130.3333,114.8804,92.2780],
+      "ocf_less_cash_capex_usd_m": [6617,3268,2184],
+      "assessment": "支持E2=5；生成表中“趋势恶化，不能评满分”与5分冲突，属于理由残留而非算术错误。"
+    },
+    "dupont_check": {
+      "FY2024_roe_percent": 40.0935,
+      "FY2025_roe_percent": 23.2908,
+      "FY2026_roe_percent": 22.138329,
+      "assessment": "三期均高于15%，权益乘数未持续上升，E1=5具有规则依据。"
+    },
+    "quality_gate_bound": "A3因证据不足不能批准精确2分；即使按规则最大4分替代当前2分，公司总分上界为67，仍低于B_GROWTH公司70硬门槛。因此公司侧有据上界已否决全部收录档，reject/NONE与停止正式定价不依赖管理层争议或模型缺失。"
+  },
+  "report_integrity": {
+    "deep": "pass：270行，保留商业模式、竞争、战略、三期财务、杜邦、治理、风险和来源；无重复占位。",
+    "management": "pass：232行，保留控制、人物、言行、资本配置、回报、危机、组织、合规和七维评分；无错贴同文。",
+    "valuation": "pass_with_p1_content_issue：174行，方法、历史事实、停止理由、三情景、反证和重评条件完整；但CFO状态存在旧缺口表述。",
+    "cross_report": "大部分参数一致为65/64/129与三价格null；税务ID、E2/E5.5生成表理由及CFO状态仍有冲突。"
+  },
+  "acceptance_results": [
+    {"id":"NKE-A01-01","status":"pass","reason":"25个合法公司项、C3+C4合并、无F4，六维8/12/14/6/17/8合计65。"},
+    {"id":"NKE-A01-02","status":"pass","reason":"原始与显示值均为65/64/129，组合先加原始分；旧67.5/60/127.5仅明确撤回。"},
+    {"id":"NKE-A01-03","status":"pass","reason":"handoff-repair显示reports=true、repair=true且无错误，哈希锁定；正式机械检查结果真实留存。"},
+    {"id":"NKE-A02-01","status":"pass","reason":"F004至F009及R001统一采用v2映射，旧歧义已声明退出。"},
+    {"id":"NKE-A02-02","status":"fail","reason":"正文税务主体已用F007，但deep风险地图仍以NKE-F-006指税务，deep生成E5.5表也以NKE-F-006支撑税务/KAM；management生成诚信表继续引用F006。F006唯一含义为SBC。"},
+    {"id":"NKE-A02-03","status":"pass","reason":"v2增量包含权益/Capex和治理来源纠正，版本与差异可追溯。"},
+    {"id":"NKE-A03-01","status":"fail","reason":"数值及E2=5/E3=2正确，但deep生成公司评分表的E2理由仍写“趋势恶化，不能评满分”，与5分和正文规则判断直接冲突。"},
+    {"id":"NKE-A03-02","status":"pass","reason":"deep给出FY2024-FY2026同口径杜邦四要素，FY2026校验值与裁决一致，未使用ROIC五季度平均权益。"},
+    {"id":"NKE-A03-03","status":"fail","reason":"正文将E5.5设1.5并说明程序化中性值，但生成评分表仍写“已回看审计、税务与关键事项，未见重大红旗”，且引用错误F006；两套理由对同一1.5分不一致。"},
+    {"id":"NKE-A03-04","status":"pass","reason":"986收益、302已收、684应收和税后2322.233846压力诊断均正确分列，并说明成本匹配及非官方扣非边界。"},
+    {"id":"NKE-A04-01","status":"fail","reason":"A3由3撤至2，但作者仍以“完整五年清单未获”作为轻微瑕疵档依据；未按裁决核可得近五年融资/并购/处置、用途和利润依赖。缺证不能直接证明轻微瑕疵。"},
+    {"id":"NKE-A04-02","status":"pass","reason":"deep补九要素、三个关键判断、建设期不适用和轻资产品牌分类，并按裁决保留部分覆盖1分。"},
+    {"id":"NKE-A04-03","status":"pass","reason":"明确三期一致员工与研发数据缺失，不把营销冒充研发；内部CEO、COO/CFO继任及激励作为有限混合信号，D5保守1分且未因缺失直接计0。"},
+    {"id":"NKE-A05-01","status":"pass","reason":"管理层七维均有事实、边界、分析和分值；战略8、危机5、表达4按裁决保留并解释。"},
+    {"id":"NKE-A05-02","status":"pass","reason":"补LTI结构、PSP负向裁量、PSU零支付、调整权与关联方政策，并区分grant-date、可实现价值和实际现金支付。"},
+    {"id":"NKE-A05-03","status":"fail","reason":"报告承认没有近五年并购融资处置清单、近三年回购价格、净股数及SBC抵消桥，却仍给资本配置13；未完成裁决要求的定向核验，且closure使用泛化声明代替具体结果。"},
+    {"id":"NKE-A05-04","status":"fail","reason":"公开CEO/COO/CFO节点已补，但完整近五年主要高管离任/继任仍未知，人才保留率未知；在组织三子域中至少一个核心子域无数据，组织9/10缺少与满分比例相称的规则论证。"},
+    {"id":"NKE-A05-05","status":"pass","reason":"撤回三年兑现表述，明确仅FY2026一年动作与结果，D2=2而非把上限3当自动得分。"},
+    {"id":"NKE-A06-01","status":"pass","reason":"A3取规则最大4时公司上界仅67，仍低于公司70硬门槛；因此可信边界足以reject/NONE，三价格null。估值报告保留方法、情景、停止理由和重评条件。"},
+    {"id":"NKE-A06-02","status":"pass","reason":"明确若未来可能合格须完成两个不同依据主模型、三情景、双变量敏感性、统一每股桥及零权重反向验证，不以低确定性替代。"},
+    {"id":"NKE-A06-03","status":"pass","reason":"research_status维持execution_incomplete，未因机械通过或reject提前宣称完整研究验收。"},
+    {"id":"NKE-A09-01","status":"pass","reason":"期末权益14865/13213/14430/14004与ROIC平均13944/13926分离，三稿无误标。"},
+    {"id":"NKE-A09-02","status":"pass","reason":"Capex 812/430/684与OCF-Capex 6617/3268/2184已跨三稿一致。"},
+    {"id":"NKE-A09-03","status":"pass","reason":"FY2026 Capex同比59.1%、无法拆分及E4基础2扣0.5为1.5均明确，不把缺拆分解释为恶化。"},
+    {"id":"NKE-A09-04","status":"pass","reason":"期末/平均、Capex/FCF、回购口径及其对E1/E2/E4、资本配置和估值桥的变化/未变依据已分布落实，三稿参数一致。"},
+    {"id":"NKE-A10-01","status":"fail","reason":"deep和management已写Denton及Friend时间线，但valuation风险仍称“CFO交接全部安排尚未纳入中性包”，重评条件仍要求“取得CFO 8-K正文”；S012-v2主文已取得，跨报告状态回退。"},
+    {"id":"NKE-A10-02","status":"fail","reason":"三稿区分通用计划、个人安排和实际支付，但未完整写合格离职条件、计划与限制性契约/遣散抵扣及非竞业不重复相加，未达到裁决全部条件。"}
+  ],
+  "new_findings": [
+    {
+      "id": "NKE-DR-R01",
+      "severity": "P1",
+      "category": "generated_table_reason_regression",
+      "location": "writer/deep.md生成company评分表及writer/management.md生成management评分表",
+      "claim": "机器表虽与底稿数值一致，但多个理由和证据沿用旧文本，与修复正文和v2事实ID冲突。",
+      "evidence": "E2得5却写“不能评满分”；E5.5正文为未完整审计的中性1.5，表格却写已回看且未见红旗；E5.5和管理层诚信表仍把F006当税务相关证据。",
+      "impact": "正式发布会同时传播正确分数与错误理由/来源，破坏事实到评分的可追溯性；属于评分归因P1。",
+      "required_action": "仅修正底稿中E2、E5.5及管理层诚信相应reason/evidence_refs并重新生成三稿表格；不得改变已裁决数值，重新跑repair handoff。"
+    },
+    {
+      "id": "NKE-DR-R02",
+      "severity": "P1",
+      "category": "cross_report_governance_state_regression",
+      "location": "writer/valuation.md 风险与反证、重评条件",
+      "claim": "估值稿把已取得并进入v2证据的CFO 8-K及安排重新写成未取得缺口。",
+      "evidence": "valuation第十节称全部安排尚未纳入中性包，第十二节要求未来取得CFO 8-K；evidence v2及deep/management已确认S012-v2、Denton和Friend日期。",
+      "impact": "跨报告治理状态不一致，并把已公开事实误列为未来重评前提。",
+      "required_action": "将估值稿改为已核Denton/Friend时间线，剩余未知仅限最终支付、动机、完整高管时间线；删除“取得8-K正文”条件。"
+    }
+  ],
+  "final_verdict": {
+    "passed": false,
+    "decision": "reject/NONE边界可批准，但三件套修复验收不通过",
+    "research_status": "execution_incomplete",
+    "blocking_acceptance_ids": ["NKE-A02-02","NKE-A03-01","NKE-A03-03","NKE-A04-01","NKE-A05-03","NKE-A05-04","NKE-A10-01","NKE-A10-02"],
+    "new_blockers": ["NKE-DR-R01","NKE-DR-R02"],
+    "publication": "不得发布或写入Watchlist；需按同一锁定材料做定向文本/底稿修复并重新完成双路验收。"
+  }
+}

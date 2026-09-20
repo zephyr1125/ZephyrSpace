@@ -1,0 +1,404 @@
+{
+  "schema_version": 1,
+  "score_display": "integer_half_up",
+  "as_of": "2026-09-19",
+  "security": "NIKE, Inc. Class B Common Stock (NYSE:NKE)",
+  "evidence_version": "v1.0-regression-frozen + evidence-correction-v2",
+  "scores": {
+    "company": {
+      "total": null,
+      "items": [
+        {
+          "id": "A1",
+          "score": 3,
+          "rule_ref": "深度模块A1",
+          "reason": "1967年成立并以产品、研发和品牌营销建立全球运动品定位。",
+          "evidence_refs": [
+            "S005",
+            "NKE-F-001"
+          ]
+        },
+        {
+          "id": "A2",
+          "score": 3,
+          "rule_ref": "深度模块A2",
+          "reason": "Swoosh, LLC持有约79% Class A，双层控制结构延续，未见本包内控制权争夺事实。",
+          "evidence_refs": [
+            "NKE-G-002",
+            "S005"
+          ]
+        },
+        {
+          "id": "A3",
+          "score": 4,
+          "rule_ref": "深度模块A3",
+          "reason": "FY2021-26重大融资、回购、借款偿还、滚动额度及shelf用途已核，相邻10-K未见重大并购或卖资产保利润依赖，按规则锁4分；不声称不存在未单列小额交易。",
+          "evidence_refs": [
+            "NKE-SUP-CAP-001",
+            "NKE-SUP-CAP-002",
+            "NKE-SUP-CAP-003"
+          ]
+        },
+        {
+          "id": "B0",
+          "score": null,
+          "rule_ref": "深度模块B0",
+          "reason": "早期至今均是设计、开发、营销并销售品牌运动鞋服，以外包制造和全球渠道放大品牌资产。",
+          "evidence_refs": [
+            "S005"
+          ],
+          "bounds": [
+            1,
+            2
+          ],
+          "bounds_reason": "裁决批准的完整规则外包络；未知不得取中档或零分，端点不是实际评价。"
+        },
+        {
+          "id": "B1",
+          "score": 3,
+          "rule_ref": "深度模块B1",
+          "reason": "鞋类、服装、装备和Converse构成多层组合，但鞋类仍为最大品类且Converse显著收缩。",
+          "evidence_refs": [
+            "S005",
+            "NKE-F-001"
+          ]
+        },
+        {
+          "id": "B2",
+          "score": 3,
+          "rule_ref": "深度模块B2",
+          "reason": "按件销售、重复消费、品牌驱动和轻制造结构具备规模效应；需求属于可选消费而非刚需。",
+          "evidence_refs": [
+            "S005"
+          ]
+        },
+        {
+          "id": "B3",
+          "score": 4,
+          "rule_ref": "深度模块B3",
+          "reason": "全球品牌、创新、运动员营销支持中等定价权，但FY2026折扣和较低ASP压缩多个区域毛利率。",
+          "evidence_refs": [
+            "S005"
+          ]
+        },
+        {
+          "id": "B4",
+          "score": 1,
+          "rule_ref": "深度模块B4",
+          "reason": "成熟行业仍有产品和渠道修复空间，但FY2024至FY2026收入下滑后仅持平，增长可持续性未获验证。",
+          "evidence_refs": [
+            "NKE-F-001",
+            "S005"
+          ]
+        },
+        {
+          "id": "C1",
+          "score": 6,
+          "rule_ref": "深度模块C1",
+          "reason": "公司披露自己为全球最大运动鞋服销售商，属于第一梯队；未将未取得的具体市占率填为精确值。",
+          "evidence_refs": [
+            "S005"
+          ]
+        },
+        {
+          "id": "C2",
+          "score": 3,
+          "rule_ref": "深度模块C2",
+          "reason": "品牌和全球渠道带来一定下游影响力，但四大鞋类代工方约占60%产量且关税、材料和折扣压力限制话语权。",
+          "evidence_refs": [
+            "S005",
+            "NKE-F-008"
+          ]
+        },
+        {
+          "id": "C3+C4",
+          "score": 5,
+          "rule_ref": "深度模块C3+C4",
+          "reason": "商标、专利、研发、营销与规模网络形成3星护城河；竞争者众多且消费偏好快速变化，未达4-5星。",
+          "evidence_refs": [
+            "S005"
+          ]
+        },
+        {
+          "id": "D1",
+          "score": 2,
+          "rule_ref": "深度模块D1",
+          "reason": "长期强调运动、创新和消费者连接，但FY2026又采取库存清理、重投批发及数字平台定位调整，属于可解释但有漂移。",
+          "evidence_refs": [
+            "S005"
+          ]
+        },
+        {
+          "id": "D2",
+          "score": 2,
+          "rule_ref": "深度模块D2",
+          "reason": "仅有FY2026一年经营动作与结果，撤回三年兑现表述；缺原话且有漂移，按有限执行证据计2分。",
+          "evidence_refs": [
+            "S005",
+            "NKE-F-001"
+          ],
+          "original_statement_found": false,
+          "strategy_drift": true
+        },
+        {
+          "id": "D3",
+          "score": 1,
+          "rule_ref": "深度模块D3",
+          "reason": "行业竞争、消费者偏好、海外采购和贸易政策构成逆风，IEEPA回收也显示关税影响具有重大性。",
+          "evidence_refs": [
+            "S005",
+            "NKE-F-008"
+          ]
+        },
+        {
+          "id": "D5",
+          "score": 2,
+          "rule_ref": "深度模块D5",
+          "reason": "FY2024/25/26收入/员工约613644/595231/635589美元，先降后升构成混合信号；研发活动可核但投入健康度未知，按规则锁2分。",
+          "evidence_refs": [
+            "NKE-SUP-ORG-001",
+            "NKE-SUP-ORG-002",
+            "NKE-CAL-SUP-001"
+          ]
+        },
+        {
+          "id": "E1",
+          "score": 5,
+          "rule_ref": "深度模块E1",
+          "reason": "FY2024-26同口径杜邦ROE均高于15%，权益乘数未持续上升；回落主要由净利率而非加杠杆驱动。",
+          "evidence_refs": [
+            "S005",
+            "S013",
+            "S014",
+            "NKE-F-009"
+          ]
+        },
+        {
+          "id": "E2",
+          "score": 5,
+          "rule_ref": "深度模块E2",
+          "reason": "FY2024/25/26 OCF/净利为130.3333%/114.8804%/92.2780%，现金Capex口径FCF为66.17/32.68/21.84亿美元，满足5分规则；下降趋势另列风险。",
+          "evidence_refs": [
+            "NKE-SUP-R01-REUSE",
+            "S005"
+          ]
+        },
+        {
+          "id": "E3",
+          "score": 2,
+          "rule_ref": "深度模块E3",
+          "reason": "FY2024-26收入和净利整体下降，FY2026净利又含9.86亿关税回收，增长质量不足。",
+          "evidence_refs": [
+            "NKE-F-001",
+            "NKE-F-008"
+          ]
+        },
+        {
+          "id": "E4",
+          "score": 1.5,
+          "rule_ref": "深度模块E4",
+          "reason": "期末现金加短投90.27亿高于有息债务79.42亿；租赁负债另列，短债结构仍需跟踪。",
+          "evidence_refs": [
+            "NKE-F-003"
+          ]
+        },
+        {
+          "id": "E5",
+          "score": 2,
+          "rule_ref": "深度模块E5",
+          "reason": "PwC出具无保留财报及ICFR意见；但库存75.01亿、比利时海关索赔金额未披露，资产与或有事项不能视作零风险。",
+          "evidence_refs": [
+            "NKE-G-001",
+            "NKE-F-003",
+            "NKE-R-001"
+          ]
+        },
+        {
+          "id": "E5.5",
+          "score": 1.5,
+          "rule_ref": "深度模块E5.5",
+          "reason": "当前无可追溯MD且未完整执行CAM、政策变化和计提充分性核验，按程序化中性值计1.5；这是研究路径边界，不构成对公司会计质量的负面指控。",
+          "evidence_refs": [
+            "NKE-G-001",
+            "NKE-F-007",
+            "S005"
+          ]
+        },
+        {
+          "id": "F1",
+          "score": null,
+          "rule_ref": "深度模块F1",
+          "reason": "采用既有批准区间，不作实际点值评价：[0,5]。五年主要高管时间线及12个月窗口已核，但裁决无集中离任阈值且个人动机/保留率未知，新增事实不改变锁定外包络。",
+          "evidence_refs": [
+            "NKE-BND-ORG-001",
+            "NKE-BND-ORG-002",
+            "NKE-BND-ORG-003",
+            "NKE-BND-CAL-002"
+          ],
+          "bounds": [
+            0,
+            5
+          ],
+          "bounds_reason": "裁决批准的完整规则外包络；未知不得取中档或零分，端点不是实际评价。"
+        },
+        {
+          "id": "F2",
+          "score": 3,
+          "rule_ref": "深度模块F2",
+          "reason": "持续现金分红、已执行回购及绩效支付约束支持一般对齐；FY2024-26 Class A+B总普通股桥已闭合，但SBC费用不能量化归属到具体股数且内部人交易未核全，维持3分。",
+          "evidence_refs": [
+            "NKE-BND-CAP-001",
+            "NKE-BND-CAP-002",
+            "NKE-BND-CAP-003",
+            "NKE-BND-CAL-001"
+          ]
+        },
+        {
+          "id": "F2.5",
+          "score": 1,
+          "rule_ref": "深度模块F2.5",
+          "reason": "有现金、分红、回购与资本开支可观察，但利润和现金流下行期的大幅回购收缩及缺少可验证先例，使资本配置仅中性。",
+          "evidence_refs": [
+            "NKE-F-001",
+            "NKE-F-009"
+          ]
+        },
+        {
+          "id": "F3",
+          "score": 2,
+          "rule_ref": "深度模块F3",
+          "reason": "独立薪酬委员会及其关联关系披露已核；完整关联交易表未摘录，信息透明度不给满分。",
+          "evidence_refs": [
+            "NKE-G-003",
+            "S008"
+          ]
+        }
+      ],
+      "bounds": [
+        66,
+        72
+      ]
+    },
+    "management": {
+      "total": null,
+      "items": [
+        {
+          "id": "诚信与透明度",
+          "score": 16,
+          "rule_ref": "管理层模块第九节",
+          "reason": "无保留审计、激励负向裁量、关联方政策、IEEPA分拆及CFO安排均可核；未决税务、最终支付与交易影响边界限制最高确信。",
+          "evidence_refs": [
+            "NKE-G-001",
+            "NKE-F-007",
+            "NKE-F-008",
+            "S012-v2"
+          ]
+        },
+        {
+          "id": "资本配置能力",
+          "score": 13,
+          "rule_ref": "管理层模块第九节",
+          "reason": "FY2024-26 Class A+B总普通股桥、回购实际数/均价、现金支出与SBC归属边界已核；新增股数事实补齐口径但不改变现金配置链的中等评价，维持13分。",
+          "evidence_refs": [
+            "NKE-BND-CAP-001",
+            "NKE-BND-CAP-002",
+            "NKE-BND-CAP-003",
+            "NKE-BND-CAL-001"
+          ]
+        },
+        {
+          "id": "战略稳定性",
+          "score": 8,
+          "rule_ref": "管理层模块第九节",
+          "reason": "以运动、产品创新和消费者连接为长期方向，但渠道重平衡和库存清理反映此前执行需修复。",
+          "evidence_refs": [
+            "S005"
+          ]
+        },
+        {
+          "id": "对股东友好度",
+          "score": 10,
+          "rule_ref": "管理层模块第九节",
+          "reason": "持续分红、历史回购和真实绩效约束支持正面评价；总普通股桥已闭合但SBC具体股数归属与内部人交易仍有限，维持10分。",
+          "evidence_refs": [
+            "NKE-BND-CAP-001",
+            "NKE-BND-CAL-001"
+          ]
+        },
+        {
+          "id": "危机处理能力",
+          "score": 5,
+          "rule_ref": "管理层模块第九节",
+          "reason": "确认IEEPA回收并披露已收和应收的分拆，透明度尚可；贸易与渠道修复的长期效果截至截止日未知。",
+          "evidence_refs": [
+            "NKE-F-008",
+            "S005"
+          ]
+        },
+        {
+          "id": "组织与人才能力",
+          "score": null,
+          "rule_ref": "管理层模块第九节",
+          "reason": "采用既有批准区间，不作实际点值评价：[0,10]。官方五年主要高管时间线与12个月窗口已核，但裁决无集中离任阈值且人才保留率/个人动机未知，新增事实不改变锁定外包络。",
+          "evidence_refs": [
+            "NKE-BND-ORG-001",
+            "NKE-BND-ORG-002",
+            "NKE-BND-ORG-003",
+            "NKE-BND-CAL-002"
+          ],
+          "bounds": [
+            0,
+            10
+          ],
+          "bounds_reason": "裁决批准的完整规则外包络；未知不得取中档或零分，端点不是实际评价。"
+        },
+        {
+          "id": "表达清晰度与认知质量",
+          "score": 4,
+          "rule_ref": "管理层模块第九节",
+          "reason": "年报对产品、市场和渠道动作有明确描述，但没有冻结的电话会逐字原文可检验其对目标和风险的即时回应。",
+          "evidence_refs": [
+            "S005",
+            "NKE-G-004"
+          ]
+        }
+      ],
+      "bounds": [
+        56,
+        66
+      ]
+    }
+  },
+  "valuation": {
+    "status": "stopped_quality_gate_after_full_research",
+    "currency": "USD",
+    "models": [],
+    "target_price": null,
+    "certainty": null,
+    "buy_price": null,
+    "reverse": null,
+    "reason": "裁决批准区间为公司66–72、管理层56–66、合计122–138；管理层上界66低于70且合计上界138低于150，稳定否决全部档位。价格字段保持null。",
+    "score_bounds": {
+      "company": [
+        66,
+        72
+      ],
+      "management": [
+        56,
+        66
+      ],
+      "combined": [
+        122,
+        138
+      ]
+    },
+    "score_status": "bounded_quality_stop"
+  },
+  "bridges": [],
+  "bridges_not_applicable": "质量评分可信否决全部档位，按收尾规则停止正式估值；未生成企业价值到股权价值桥。",
+  "reports": {
+    "deep": "data/reviews/nike-delivery-migration-2026-09-20/source/deep.md",
+    "management": "data/reviews/nike-delivery-migration-2026-09-20/source/management.md",
+    "valuation": "data/reviews/nike-delivery-migration-2026-09-20/source/valuation.md"
+  }
+}

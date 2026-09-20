@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "workpaper": "data/reviews/nike-delivery-migration-2026-09-20/workpaper.json",
+  "decision": "data/reviews/nike-delivery-migration-2026-09-20/decision.json",
+  "evidence": [
+    "data/reviews/nike-delivery-migration-2026-09-20/evidence/registry.json"
+  ],
+  "id_prefixes": [
+    "NKE-"
+  ],
+  "facts": {
+    "executive_timeline": {
+      "text": "授权范围2021-09-19至2026-09-19主要高管时间线及2025-09-19至2026-09-19官方事件索引已核；窗口内两项离任/角色取消与两项继任。规则未定义集中离任阈值，不据计数定性；个人动机及未披露人才保留率仍未知。",
+      "refs": [
+        "NKE-BND-ORG-001",
+        "NKE-BND-ORG-002",
+        "NKE-BND-ORG-003",
+        "NKE-BND-CAL-002"
+      ],
+      "retired": [
+        "- F1不填点值，保留[0,5]完整规则外包络：公开继任与激励可核，但完整五年主要高管离任、12个月集中离任索引和人才保留率仍未知；端点不是实际评价。",
+        "- 渠道修复、现金流下降、资本配置净效果和完整高管时间线是限制因素。",
+        "- S012-v2已纳入CFO交接主文：David Denton于2026-08-16生效任EVP/CFO，Matthew Friend的CFO退出、顾问过渡及2026-09-04离职按主文精确字段分列；最终支付、动机和完整高管时间线仍未知。",
+        "- 继续跟踪CFO交接后的履职、Friend最终支付及尚未取得的完整主要高管离任索引。"
+      ]
+    }
+  },
+  "templates": {
+    "deep": "data/reviews/nike-delivery-migration-2026-09-20/source/deep.md",
+    "management": "data/reviews/nike-delivery-migration-2026-09-20/source-patch-v2/source-0.md",
+    "valuation": "data/reviews/nike-delivery-migration-2026-09-20/source/valuation.md"
+  }
+}

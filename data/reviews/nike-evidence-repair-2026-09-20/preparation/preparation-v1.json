@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "run_id": "nike-evidence-repair-2026-09-20",
+  "items": [
+    {
+      "id": "NKE-A02-02",
+      "issue_id": "NKE-DR-F02",
+      "kind": "evidence",
+      "status": "open",
+      "resolution": "待补证或分析判断",
+      "evidence_refs": []
+    },
+    {
+      "id": "NKE-A03-01",
+      "issue_id": "NKE-DR-R01",
+      "kind": "reasoning",
+      "status": "open",
+      "resolution": "待补证或分析判断",
+      "evidence_refs": []
+    },
+    {
+      "id": "NKE-A03-03",
+      "issue_id": "NKE-DR-R01",
+      "kind": "reasoning",
+      "status": "open",
+      "resolution": "待补证或分析判断",
+      "evidence_refs": []
+    },
+    {
+      "id": "NKE-A04-01",
+      "issue_id": "NKE-DR-CAPITAL",
+      "kind": "evidence",
+      "status": "open",
+      "resolution": "待补证或分析判断",
+      "evidence_refs": []
+    },
+    {
+      "id": "NKE-A05-03",
+      "issue_id": "NKE-DR-CAPITAL",
+      "kind": "evidence",
+      "status": "open",
+      "resolution": "待补证或分析判断",
+      "evidence_refs": []
+    },
+    {
+      "id": "NKE-A04-03",
+      "issue_id": "NKE-DR-ORG",
+      "kind": "evidence",
+      "status": "open",
+      "resolution": "待补证或分析判断",
+      "evidence_refs": []
+    },
+    {
+      "id": "NKE-A05-04",
+      "issue_id": "NKE-DR-ORG",
+      "kind": "evidence",
+      "status": "open",
+      "resolution": "待补证或分析判断",
+      "evidence_refs": []
+    },
+    {
+      "id": "NKE-A10-01",
+      "issue_id": "NKE-DR-R02",
+      "kind": "text",
+      "status": "open",
+      "resolution": "待补证或分析判断",
+      "evidence_refs": []
+    },
+    {
+      "id": "NKE-A10-02",
+      "issue_id": "NKE-DR-SEVERANCE",
+      "kind": "text",
+      "status": "open",
+      "resolution": "待补证或分析判断",
+      "evidence_refs": []
+    },
+    {
+      "id": "NKE-A06-01",
+      "issue_id": "NKE-DR-BOUND",
+      "kind": "reasoning",
+      "status": "open",
+      "resolution": "待构造覆盖全部不确定评分项的联合边界或取得直接评分证据",
+      "evidence_refs": []
+    }
+  ],
+  "replacements": []
+}

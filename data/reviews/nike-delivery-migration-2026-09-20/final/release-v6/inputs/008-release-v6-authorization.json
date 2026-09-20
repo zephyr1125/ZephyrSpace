@@ -1,0 +1,283 @@
+{
+  "schema_version": 1,
+  "run_id": "nike-delivery-migration-2026-09-20",
+  "decision": "reject",
+  "level": "NONE",
+  "research_state": "approved",
+  "research_approval_scope": "仅限既有有据区间、资格否决与质量停止定价判断；交付验收不追改旧run未验收历史，不批准总分点值。",
+  "write_watchlist": false,
+  "bounds_approved": true,
+  "quality_stop_approved": true,
+  "score_bounds": {
+    "company": [
+      66,
+      72
+    ],
+    "management": [
+      56,
+      66
+    ],
+    "combined": [
+      122,
+      138
+    ]
+  },
+  "company_score": null,
+  "management_score": null,
+  "combined_score": null,
+  "target_price": null,
+  "certainty": null,
+  "buy_price": null,
+  "formal_pricing_completed": false,
+  "formal_double_model_required": false,
+  "review_refs": [
+    "data/reviews/nike-evidence-repair-2026-09-20/review-facts/targeted-review-v2.json",
+    "data/reviews/nike-evidence-repair-2026-09-20/review-reasoning/targeted-review-v2.json"
+  ],
+  "unknowns_preserved": [
+    "个人动机与未披露人才保留率",
+    "规则未定义集中离任阈值",
+    "Friend最终支付",
+    "SBC费用无法完整归属具体股数"
+  ],
+  "historical_boundary": "旧run execution_incomplete记录保留。新run完成已裁定无决策影响的交付迁移，不能宣称历史稿曾验收通过。",
+  "stage": "build_v6_final_release_authorization",
+  "classified_by": "adjudicator",
+  "delivery_state": "approved",
+  "publish_allowed": true,
+  "publication_scope": "仅授权主任务按本文件哈希锁定的build-v6三报告字节发布为新版本并执行归档；公司页与索引回写仍须archive-release及verify-release成功。不授权其他版本或Watchlist。",
+  "basis": "独立核对manifest全部9项输入、三稿及事实审核记录哈希一致；底稿结构差异仅F1/组织与人才reason首句，深度源稿仅B0与总分区间文字两处变化，管理层与估值源稿正文不变。三个P1交付修复验收ID全部关闭；未改评分、证据、实际归因或真实未知。",
+  "issues": [
+    {
+      "id": "NKE-REL-D01",
+      "severity": "P1",
+      "lane": "delivery",
+      "status": "closed",
+      "classified_by": "adjudicator",
+      "no_decision_impact": true,
+      "locations": [
+        "build-v5/deep.md:101"
+      ],
+      "reason": "B0在底稿已为score=null、bounds=[1,2]；正文1分是遗留端点显示，不是本次重新评分。",
+      "acceptance": [
+        {
+          "id": "NKE-REL-D01-01",
+          "status": "closed",
+          "condition": "在新源稿把B0为1分改为已批准[1,2]区间并明确无实际点值；保留其后既有证据不足说明，不新增对九要素的判断；重新装配后正文与评分表一致。",
+          "verification_refs": [
+            "data/reviews/nike-delivery-migration-2026-09-20/final/release-v6-facts.json#NKE-REL-D01-01"
+          ],
+          "verified_locations": [
+            "build-v6/deep.md:39",
+            "build-v6/deep.md:101"
+          ],
+          "verification_basis": "B0评分表和正文均为已批准[1,2]区间并明确不发布实际点值；后续既有证据不足说明未改。"
+        }
+      ],
+      "verification_refs": [
+        "data/reviews/nike-delivery-migration-2026-09-20/final/release-v6-facts.json"
+      ]
+    },
+    {
+      "id": "NKE-REL-D02",
+      "severity": "P1",
+      "lane": "delivery",
+      "status": "closed",
+      "classified_by": "adjudicator",
+      "no_decision_impact": true,
+      "locations": [
+        "build-v5/deep.md:244"
+      ],
+      "reason": "已批准总分是完整区间，底稿total为null，机械表采用下端点的文字已不对应当前区间装配；删除该流程说明不改变求和或资格。",
+      "acceptance": [
+        {
+          "id": "NKE-REL-D02-01",
+          "status": "closed",
+          "condition": "移除机械表使用下端点66/56/122的说法，保留公司[66,72]、管理层[56,66]、合计[122,138]及非点估边界；不得改为任何实际端点或中点总分。",
+          "verification_refs": [
+            "data/reviews/nike-delivery-migration-2026-09-20/final/release-v6-facts.json#NKE-REL-D02-01"
+          ],
+          "verified_locations": [
+            "build-v6/deep.md:244"
+          ],
+          "verification_basis": "已删除66/56/122下端点闭合表述，改为按分项上下界分别汇总且不采用端点或中点作为实际总分；66–72、56–66、122–138及reject/NONE均保留。"
+        }
+      ],
+      "verification_refs": [
+        "data/reviews/nike-delivery-migration-2026-09-20/final/release-v6-facts.json"
+      ]
+    },
+    {
+      "id": "NKE-REL-D03",
+      "severity": "P1",
+      "lane": "delivery",
+      "status": "closed",
+      "classified_by": "adjudicator",
+      "no_decision_impact": true,
+      "locations": [
+        "workpaper.json#/scores/company/items/F1/reason",
+        "workpaper.json#/scores/management/items/组织与人才能力/reason",
+        "生成的公司及管理层评分表"
+      ],
+      "reason": "两项score均为null，bounds分别[0,5]与[0,10]；reason首句的机械校验采用下端点0是旧流程残留，其余事实及归因未因本次修改改变。",
+      "acceptance": [
+        {
+          "id": "NKE-REL-D03-01",
+          "status": "closed",
+          "condition": "仅删除或替换两项reason内机械校验采用下端点0的流程说明，明确采用既有批准区间；保留后续主要高管时间线、12个月窗口、无集中离任阈值、个人动机/保留率未知及外包络不变的全部实质语义；score/bounds/bounds_reason/rule_ref/evidence_refs保持。",
+          "verification_refs": [
+            "data/reviews/nike-delivery-migration-2026-09-20/final/release-v6-facts.json#NKE-REL-D03-01"
+          ],
+          "verified_locations": [
+            "workpaper-release-v6.json#/scores/company/items/F1/reason",
+            "workpaper-release-v6.json#/scores/management/items/组织与人才能力/reason",
+            "build-v6/deep.md:57",
+            "build-v6/management.md:185"
+          ],
+          "verification_basis": "两项reason仅将旧机械下端点0流程说明改为采用既有批准区间且不作实际点值评价；时间线、12个月窗口、无集中离任阈值、个人动机/保留率未知和外包络语义均保留。"
+        }
+      ],
+      "verification_refs": [
+        "data/reviews/nike-delivery-migration-2026-09-20/final/release-v6-facts.json"
+      ]
+    }
+  ],
+  "candidate_dispositions": [
+    {
+      "id": "NKE-REL-V5-F01",
+      "disposition": "rejected",
+      "severity_approved": null,
+      "reason": "规范规定装配成功固定为assembled_for_review及publish_allowed=false；publication_ready只启用发布检查。旧v4授权不覆盖v5，外部裁决绑定新字节；该机械状态不是P1，不修改manifest伪造批准。",
+      "source_ref": "data/reviews/nike-delivery-migration-2026-09-20/final/release-v5-facts.json#NKE-REL-V5-F01",
+      "rule_ref": "docs/three-report-delivery.md#判断与交付分开记录"
+    },
+    {
+      "id": "NKE-REL-V5-F02",
+      "disposition": "accepted_corrected",
+      "lane": "delivery",
+      "no_decision_impact": true,
+      "resolved_by": [
+        "NKE-REL-D01-01",
+        "NKE-REL-D02-01",
+        "NKE-REL-D03-01"
+      ],
+      "verification_refs": [
+        "data/reviews/nike-delivery-migration-2026-09-20/final/release-v6-facts.json"
+      ],
+      "source_ref": "data/reviews/nike-delivery-migration-2026-09-20/final/release-v5-facts.json#NKE-REL-V5-F02"
+    }
+  ],
+  "release_review_refs": [
+    "data/reviews/nike-delivery-migration-2026-09-20/final/release-v6-facts.json"
+  ],
+  "baseline_refs": [
+    "data/reviews/nike-delivery-migration-2026-09-20/adjudication/delivery-closeout-v2.json",
+    "data/reviews/nike-delivery-migration-2026-09-20/final/release-repair-classification.json",
+    "data/reviews/nike-delivery-migration-2026-09-20/final/release-v5-facts.json",
+    "data/reviews/nike-delivery-migration-2026-09-20/workpaper.json"
+  ],
+  "approved_manifest": "data/reviews/nike-delivery-migration-2026-09-20/build-v6/manifest.json",
+  "approved_manifest_sha256": "6ba9fb87e89cab25570bad70093fb186e31c7cec3f4c4ce50faa5443ab81cf6a",
+  "approved_report_sha256": {
+    "deep.md": "fb781c1b9f2dcc0b28c587d4a2a0d2d89d62049f612d3feaa2cdb02b19311d84",
+    "management.md": "75bcf92795c7b2b44044f478f00f38b4931a5d79e72165e962e5d353ef5c4424",
+    "valuation.md": "86f24cd3c3a08ead61a2566f02ed870bd109d150dd629c931ba39f7e0606c2b2"
+  },
+  "approved_workpaper": "data/reviews/nike-delivery-migration-2026-09-20/workpaper-release-v6.json",
+  "approved_workpaper_sha256": "19b45359412eb136f2ea128126b1aed4043fcb8eba852e541ccdecaca7bb6e48",
+  "hash_verification": {
+    "all_manifest_inputs_match": true,
+    "all_report_bytes_match": true,
+    "fact_review_hashes_match": true,
+    "input_count": 9
+  },
+  "score_bridge": {
+    "company": {
+      "fixed_sum": 65,
+      "variable_items": {
+        "B0": [
+          1,
+          2
+        ],
+        "F1": [
+          0,
+          5
+        ]
+      },
+      "bounds": [
+        66,
+        72
+      ]
+    },
+    "management": {
+      "fixed_sum": 56,
+      "variable_items": {
+        "组织与人才能力": [
+          0,
+          10
+        ]
+      },
+      "bounds": [
+        56,
+        66
+      ]
+    },
+    "combined_bounds": [
+      122,
+      138
+    ],
+    "point_totals": null,
+    "qualification": "沿用批准门槛比较：管理层上界66<70且合计上界138<150，reject/NONE不变。"
+  },
+  "valuation_approval_scope": {
+    "quality_stop_approved": true,
+    "target_price": null,
+    "certainty": null,
+    "buy_price": null,
+    "formal_pricing_completed": false,
+    "new_valuation_approval": false
+  },
+  "acceptance_summary": {
+    "P0_open": 0,
+    "P1_open": 0,
+    "classified_issue_acceptances_closed": 3,
+    "research_reopened": false
+  },
+  "global_acceptance": [
+    {
+      "id": "NKE-REL-D04-01",
+      "condition": "以新版本保存源稿及必要底稿；差异仅在已分类文字与已授权发布状态清理，所有数值、score、bounds、证据及实际评分归因不变，保留历史冻结稿。",
+      "status": "closed",
+      "verification_refs": [
+        "data/reviews/nike-delivery-migration-2026-09-20/final/release-v6-facts.json#NKE-REL-D04-01"
+      ]
+    },
+    {
+      "id": "NKE-REL-D04-02",
+      "condition": "原事实审核员定向核对上述每个验收ID及生成位置，记录实际新manifest和三稿哈希、差异与结论；无需重启双路全文研究。裁决收到校正版和审核记录后再作字节绑定终裁。",
+      "status": "closed",
+      "verification_refs": [
+        "data/reviews/nike-delivery-migration-2026-09-20/final/release-v6-facts.json#NKE-REL-D04-02"
+      ]
+    }
+  ],
+  "post_authorization_requirements": [
+    {
+      "id": "NKE-REL-D04-03",
+      "condition": "主任务在最终授权后按交付规范归档并验证release，必要复核引用及直接输入可携带且未被Git忽略；本分类文件不认定归档或Git修复已通过。",
+      "status": "pending_root_execution",
+      "owner": "主任务",
+      "note": "这是最终授权后的归档发布步骤，不冒称已执行；成功后才回写公司页及索引。"
+    }
+  ],
+  "archive_release_verified": false,
+  "return_to_research": false,
+  "no_decision_impact": true,
+  "manifest_state_note": "机械manifest保留原装配状态；本外部终裁对指定字节授权，不回改manifest。",
+  "report_line_counts": {
+    "deep.md": 290,
+    "management.md": 238,
+    "valuation.md": 189
+  },
+  "prior_issue_continuity": "NKE-DEL-001/002及原四项验收沿用旧终裁已关闭结果；本次引用与事实字段未改，无回退。旧授权与历史状态保持。"
+}

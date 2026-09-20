@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "run_id": "nike-evidence-repair-2026-09-20",
+  "items": [
+    {"id":"NKE-A02-02","issue_id":"NKE-DR-F02","kind":"evidence","status":"resolved","resolution":"F006锁定为SBC 715/709/804百万美元；F007锁定为未确认税务利益953/1026/990百万美元，742为953子集，不相加、不作现金或独立债务。","evidence_refs":["evidence/facts-supplement.json#NKE-SUP-F006-MAP","evidence/facts-supplement.json#NKE-SUP-F007-MAP","evidence/calculations.json#NKE-CAL-SUP-003","S005 p.74-75"]},
+    {"id":"NKE-A03-01","issue_id":"NKE-DR-R01","kind":"reasoning","status":"resolved","resolution":"FY2024/25/26 OCF/净利130.3333%/114.8804%/92.2780%，现金Capex口径FCF为6617/3268/2184百万美元；按规则E2=5、E3=2，趋势下降仅作风险说明。","evidence_refs":["evidence/facts-supplement.json#NKE-SUP-R01-REUSE","S005 pp.57-58","deep-prebuy-skill/SKILL.md#E维度评分"]},
+    {"id":"NKE-A03-03","issue_id":"NKE-DR-R01","kind":"reasoning","status":"resolved","resolution":"指定证据集无本地可追溯MD且未完整执行CAM/政策变化/计提核验，按裁决使用程序化中性值E5.5=1.5；此为流程边界，不归因于公司。","evidence_refs":["evidence/facts-supplement.json#NKE-SUP-R01-REUSE","adjudication-locked.json#NKE-DR-R01"]},
+    {"id":"NKE-A04-01","issue_id":"NKE-DR-CAPITAL","kind":"reasoning","status":"open","resolution":"近五年回购、借款、额度及检索范围已补；规则全域[0,4]、证据约束建议[2,4]。2分不得以缺证为瑕疵理由，4分需裁决确认已核范围足以满足用途清晰且无卖资产保利润；待原裁决角色锁定点值或边界。","evidence_refs":["evidence/facts-supplement.json#NKE-SUP-CAP-001","evidence/facts-supplement.json#NKE-SUP-CAP-002","evidence/facts-supplement.json#NKE-SUP-CAP-003","preparation/author-analysis.md#NKE-A04-01"]},
+    {"id":"NKE-A05-03","issue_id":"NKE-DR-CAPITAL","kind":"reasoning","status":"open","resolution":"已补回购现金、累计均价、净股数桥、SBC和融资；作者建议F2=3、F2.5=1，管理层资本配置边界[11,17]，但须由原裁决角色锁定，不能由作者自批资本配置13。","evidence_refs":["evidence/facts-supplement.json#NKE-SUP-CAP-001","evidence/facts-supplement.json#NKE-SUP-CAP-002","evidence/calculations.json#NKE-CAL-SUP-002","preparation/score-impact.json"]},
+    {"id":"NKE-A04-03","issue_id":"NKE-DR-ORG","kind":"reasoning","status":"open","resolution":"三期收入/员工约613644/595231/635589美元，先降后升；研发活动可核但费用及人数未知。作者判断满足实质混合信号D5=2、不满足3分，待原裁决角色锁定。","evidence_refs":["evidence/facts-supplement.json#NKE-SUP-ORG-001","evidence/facts-supplement.json#NKE-SUP-ORG-002","evidence/calculations.json#NKE-CAL-SUP-001","deep-prebuy-skill/SKILL.md#D维度评分"]},
+    {"id":"NKE-A05-04","issue_id":"NKE-DR-ORG","kind":"reasoning","status":"open","resolution":"已知主要任职与CFO交接，完整五年离任及12个月8-K索引、保留率和动机仍未知；组织人才9不可维持，作者按稳定性/保留/激励建议联合边界[3,8]，待原裁决角色锁定。","evidence_refs":["evidence/facts-supplement.json#NKE-SUP-ORG-003","S005 p.8","S012-v2 Item 5.02","preparation/score-impact.json"]},
+    {"id":"NKE-A10-01","issue_id":"NKE-DR-R02","kind":"text","status":"resolved","resolution":"S010-v2为通用计划附件，S012-v2为8-K主文；Denton 2026-08-16接任CFO，Friend转顾问并于2026-09-04离职。剩余未知限最终支付、动机及未完整时间线。","evidence_refs":["evidence/facts-supplement.json#NKE-SUP-ORG-003","evidence/facts-supplement.json#NKE-SUP-SEV-001","S012-v2 Item 5.02"]},
+    {"id":"NKE-A10-02","issue_id":"NKE-DR-SEVERANCE","kind":"text","status":"resolved","resolution":"一般计划资格、release、抵扣/追偿条件，Friend个人安排及实际支付三层分开；非竞业与遣散不重复相加，实际金额保持未知，不再由未读主文推导组织负面。","evidence_refs":["evidence/facts-supplement.json#NKE-SUP-SEV-001","S010-v2 Ex.10.2 §§1.12,2.1,3.1-3.4,8","S012-v2 Item 5.02"]},
+    {"id":"NKE-A06-01","issue_id":"NKE-DR-BOUND","kind":"reasoning","status":"open","resolution":"已覆盖A3、D5、F1、F2、F2.5、F3及管理层诚信/资本/股东/组织全部不确定项。公司规则上界76、证据约束上界72、较窄仍可辩护上界70；作者建议的管理层证据边界54-71、合计121-143尚非裁决锁。当前不足以由作者稳定否决，须原裁决角色锁定联合边界；若允许70/70/150同时成立则必须正式估值。","evidence_refs":["preparation/score-impact.json#joint_bounds","preparation/author-analysis.md#NKE-A06-01","data/WATCHLIST_RULES.md#B_GROWTH","data/watchlist_meta.json#tier_definitions"]}
+  ],
+  "replacements": [
+    {"report":"deep","old":"FY2024-26经营现金流均为正，简化FCF亦为正；但OCF由74.29亿降至28.68亿，趋势恶化，不能评满分。","new":"FY2024-26 OCF/净利为130.3333%、114.8804%、92.2780%，现金Capex口径FCF为66.17、32.68、21.84亿美元，满足E2=5；现金流下降趋势另列为风险。"},
+    {"report":"valuation","old":"CFO交接的全部安排尚未纳入中性包。","new":"S012-v2已纳入CFO交接主文：David Denton于2026-08-16接任CFO，Matthew Friend转任顾问并于2026-09-04离职；最终支付、个别人事动机及完整高管时间线仍未知。"},
+    {"report":"valuation","old":"取得CFO 8-K正文与后续继任披露，更新治理边界。","new":"继续跟踪CFO交接后的履职、Friend最终支付及尚未取得的完整主要高管离任索引。"}
+  ]
+}

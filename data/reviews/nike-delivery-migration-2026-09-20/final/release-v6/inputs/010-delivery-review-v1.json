@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "run_id": "nike-delivery-migration-2026-09-20",
+  "stage": "delivery_build_v1_independent_fact_review",
+  "role": "triplet_review_facts",
+  "scope": "只审 delivery-classification、registry、workpaper、decision、bundle、source、build-v1和必要基线终局原件；未读取另一复核。",
+  "manifest_hashes": {
+    "build-v1/deep.md": "480cbcb8f2658187c8a519557cc125b1595eadec6c13d187c051d7803efab177",
+    "build-v1/management.md": "21a4223e54c647ebb9e98634b66d95aded26cdb29d91447cd5d2c878a3ba1036",
+    "build-v1/valuation.md": "63b0aea58494e60fd37564b8ee15e31eef23eec901bd0faead1e155205ab1759",
+    "result": "all_build_hashes_match_manifest"
+  },
+  "coverage": {
+    "build_line_counts": {"deep":278,"management":232,"valuation":184},
+    "generation_integrity": "build 文件哈希及所有 manifest 输入哈希均匹配；build-v1 保留模板到生成稿的可追溯装配关系，未发现评分表或正文被手工改写的哈希证据。",
+    "reference_resolution": "扫描三稿与 workpaper 的 NKE 引用：全部可解析至 registry.records 的实际 fact_id 或 calculation_id。",
+    "nonexistent_or_compressed_forms": "NKE-CAL-BND-001/002、NKE-BND-CAP-004、NKE-BND-ORG-004、CAP/ORG slash 压缩写法均未出现在 build-v1；有效的 NKE-CAL-SUP-002 仅作为历史两流小计的明确说明保留。"
+  },
+  "acceptance_results": [
+    {"id":"NKE-DEL-001-01","status":"pass","conclusion":"迁移后的 workpaper 与三稿仅使用 registry 中存在的实际 ID；四种不存在ID及压缩ID均已消失，未创建空壳004。"},
+    {"id":"NKE-DEL-001-02","status":"pass","conclusion":"逐句对应正确：SBC金额及回购/现金/价格事实为CAP-002，不可归属边界为CAP-003，总普通股桥为CAP-001与CAL-001；高管时间线、窗口事件、规则未知边界和事件计数分别为ORG-001/002/003与CAL-002。分项、数字及区间未改变。"},
+    {"id":"NKE-DEL-002-01","status":"fail","conclusion":"三稿共同 executive_timeline 块正确替换四处指定旧句，但 management.md:166 仍称“完整离任索引…不全”。该句与同稿已核的授权范围五年主要高管时间线及12个月官方事件索引相冲突，未实现状态完全同步。"},
+    {"id":"NKE-DEL-002-02","status":"pass","conclusion":"个人动机、未披露人才保留率、Friend最终支付及无集中离任阈值的真实未知均保留；F1和组织人才仍是批准的外包络，评分区间、reject/NONE、quality stop及三价格null均不变。"}
+  ],
+  "findings": [
+    {"id":"NKE-DEL-F01","severity":"P1","location":"build-v1/management.md:166","claim":"“完整离任索引、人才保留率和动机不全”把已完成的授权范围主要高管离任/继任与12个月官方窗口索引再次表述为未完成。","evidence":"同稿:157-159及:203 已使用共用事实块明确该授权范围索引已核；registry 的ORG-001/002/003与CAL-002支持该状态。","impact":"NKE-DEL-002-01未通过；这是生成交付的状态同步问题，不改变F1/组织外包络、评分、资格或定价。","recommendation":"将该句限定为“授权范围外的全部员工/未披露保留率和个人动机未知”，不要再称授权范围主要高管离任索引不全。"}
+  ],
+  "unchanged_decision_check": {
+    "company_bounds":[66,72],
+    "management_bounds":[56,66],
+    "combined_bounds":[122,138],
+    "decision":"reject",
+    "level":"NONE",
+    "quality_stop":true,
+    "target_price":null,
+    "certainty":null,
+    "buy_price":null,
+    "result":"unchanged"
+  },
+  "new_p0": [],
+  "new_p1": ["NKE-DEL-F01"],
+  "return_to_research": false,
+  "decision":"fail_delivery_review",
+  "delivery_state_recommendation":"open",
+  "independent_conclusion":"NKE-DEL-001 的实际ID迁移、内容归属、引用解析、分项理由、区间及质量停止均正确，三稿也使用同一已核高管共用事实。唯一未完成项是管理层稿残留的“完整离任索引不全”状态句；它造成交付同步P1，但未改变评分、资格或定价，故应局部交付修复，不应return_to_research。"
+}

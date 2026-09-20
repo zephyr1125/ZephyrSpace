@@ -1,0 +1,244 @@
+{
+  "schema_version": 1,
+  "status": "assembled_for_review",
+  "decision": "reject",
+  "research_state": "approved",
+  "delivery_state": "mechanically_checked",
+  "publish_allowed": false,
+  "score_bounds": {
+    "company": [
+      66.0,
+      72.0
+    ],
+    "management": [
+      56,
+      66
+    ],
+    "combined": [
+      122.0,
+      138.0
+    ]
+  },
+  "inputs": {
+    "data/reviews/nike-delivery-migration-2026-09-20/workpaper.json": "1c944461275a98682eecd96da860de33188a71ac2163e492cbd87521011c5c25",
+    "data/reviews/nike-delivery-migration-2026-09-20/decision-approved.json": "af7f0f346897e5f4eb45b45cf40931b3dda6938e77d00192d010db3538952d66",
+    "data/reviews/nike-delivery-migration-2026-09-20/evidence/registry.json": "8cdd0eb5f31d5ac12c17efdbff2ee5abb8d0c16f48f78d8d1d40f782ce39638f",
+    "data/reviews/nike-delivery-migration-2026-09-20/source-release-v5/deep.md": "31b364dbc51d9b6d4f8deffa06635b952d9c9c8ac113df09a41afb6128398dfa",
+    "data/reviews/nike-delivery-migration-2026-09-20/source-release-v5/management.md": "a3c1e679e922b31b2a6848f9e7c03873c65f4c45e959f96c343d5f3eeeb9e6f8",
+    "data/reviews/nike-delivery-migration-2026-09-20/source-release-v5/valuation.md": "9cad9c0c087279a1e9e15997acf4eb102ebd201f96c8441c5f2b7ee23077d86c",
+    "data/reviews/nike-evidence-repair-2026-09-20/review-facts/targeted-review-v2.json": "585b8588d9d76b6eb5049dba5545a338a0a15cc674dcdccf1024934ae207b7ca",
+    "data/reviews/nike-evidence-repair-2026-09-20/review-reasoning/targeted-review-v2.json": "7b5d9143dfbd35ddea069e2aaf1128b7b8e1fe077590aa28b63704be34196a35",
+    "data/reviews/nike-delivery-migration-2026-09-20/bundle-v5.json": "956ed3008e445a2f5dca5ce9fd53fa8f75dc8f80e669eeec7369dfdd47e751ee"
+  },
+  "bundle_sha256": "f064eb6e67944947168afbb2457e9c06434f2527c5274e0f6a6e1a4e28627dcb",
+  "frozen_bundle": {
+    "schema_version": 1,
+    "workpaper": "data/reviews/nike-delivery-migration-2026-09-20/workpaper.json",
+    "decision": "data/reviews/nike-delivery-migration-2026-09-20/decision-approved.json",
+    "evidence": [
+      "data/reviews/nike-delivery-migration-2026-09-20/evidence/registry.json"
+    ],
+    "id_prefixes": [
+      "NKE-"
+    ],
+    "facts": {
+      "executive_timeline": {
+        "text": "授权范围2021-09-19至2026-09-19主要高管时间线及2025-09-19至2026-09-19官方事件索引已核；窗口内两项离任/角色取消与两项继任。规则未定义集中离任阈值，不据计数定性；个人动机及未披露人才保留率仍未知。",
+        "refs": [
+          "NKE-BND-ORG-001",
+          "NKE-BND-ORG-002",
+          "NKE-BND-ORG-003",
+          "NKE-BND-CAL-002"
+        ],
+        "retired": [
+          "- F1不填点值，保留[0,5]完整规则外包络：公开继任与激励可核，但完整五年主要高管离任、12个月集中离任索引和人才保留率仍未知；端点不是实际评价。",
+          "- 渠道修复、现金流下降、资本配置净效果和完整高管时间线是限制因素。",
+          "- S012-v2已纳入CFO交接主文：David Denton于2026-08-16生效任EVP/CFO，Matthew Friend的CFO退出、顾问过渡及2026-09-04离职按主文精确字段分列；最终支付、动机和完整高管时间线仍未知。",
+          "- 继续跟踪CFO交接后的履职、Friend最终支付及尚未取得的完整主要高管离任索引。"
+        ]
+      }
+    },
+    "templates": {
+      "deep": "data/reviews/nike-delivery-migration-2026-09-20/source-release-v5/deep.md",
+      "management": "data/reviews/nike-delivery-migration-2026-09-20/source-release-v5/management.md",
+      "valuation": "data/reviews/nike-delivery-migration-2026-09-20/source-release-v5/valuation.md"
+    },
+    "publication_ready": true
+  },
+  "reports": {
+    "deep.md": "4bceadc28ed6ec460a04f24b0fa215d01c5bbc969ccd29194de23ed282d1f333",
+    "management.md": "bac6fb5c8259ef701b9d08d2e4af9f279b07e5dbb1523e9e2f5b022093381996",
+    "valuation.md": "86f24cd3c3a08ead61a2566f02ed870bd109d150dd629c931ba39f7e0606c2b2"
+  },
+  "reference_uses": {
+    "NKE-BND-CAL-001": [
+      "deep",
+      "management",
+      "workpaper"
+    ],
+    "NKE-BND-CAL-002": [
+      "deep",
+      "management",
+      "valuation",
+      "workpaper"
+    ],
+    "NKE-BND-CAP-001": [
+      "deep",
+      "management",
+      "workpaper"
+    ],
+    "NKE-BND-CAP-002": [
+      "deep",
+      "management",
+      "workpaper"
+    ],
+    "NKE-BND-CAP-003": [
+      "deep",
+      "management",
+      "workpaper"
+    ],
+    "NKE-BND-ORG-001": [
+      "deep",
+      "management",
+      "valuation",
+      "workpaper"
+    ],
+    "NKE-BND-ORG-002": [
+      "deep",
+      "management",
+      "valuation",
+      "workpaper"
+    ],
+    "NKE-BND-ORG-003": [
+      "deep",
+      "management",
+      "valuation",
+      "workpaper"
+    ],
+    "NKE-CAL-SUP-001": [
+      "deep",
+      "workpaper"
+    ],
+    "NKE-CAL-SUP-002": [
+      "deep"
+    ],
+    "NKE-F-001": [
+      "deep",
+      "management",
+      "valuation",
+      "workpaper"
+    ],
+    "NKE-F-002": [
+      "deep"
+    ],
+    "NKE-F-003": [
+      "deep",
+      "management",
+      "valuation",
+      "workpaper"
+    ],
+    "NKE-F-004": [
+      "deep",
+      "management",
+      "valuation"
+    ],
+    "NKE-F-006": [
+      "deep",
+      "management",
+      "valuation"
+    ],
+    "NKE-F-007": [
+      "deep",
+      "management",
+      "valuation",
+      "workpaper"
+    ],
+    "NKE-F-008": [
+      "deep",
+      "management",
+      "valuation",
+      "workpaper"
+    ],
+    "NKE-F-009": [
+      "deep",
+      "management",
+      "valuation",
+      "workpaper"
+    ],
+    "NKE-G-001": [
+      "deep",
+      "management",
+      "workpaper"
+    ],
+    "NKE-G-002": [
+      "deep",
+      "management",
+      "valuation",
+      "workpaper"
+    ],
+    "NKE-G-003": [
+      "deep",
+      "management",
+      "workpaper"
+    ],
+    "NKE-G-005": [
+      "deep",
+      "management"
+    ],
+    "NKE-M-001": [
+      "deep",
+      "valuation"
+    ],
+    "NKE-R-001": [
+      "deep",
+      "management",
+      "valuation",
+      "workpaper"
+    ],
+    "NKE-SUP-CAP-001": [
+      "deep",
+      "workpaper"
+    ],
+    "NKE-SUP-CAP-002": [
+      "deep",
+      "workpaper"
+    ],
+    "NKE-SUP-CAP-003": [
+      "deep",
+      "workpaper"
+    ],
+    "NKE-SUP-ORG-001": [
+      "deep",
+      "workpaper"
+    ],
+    "NKE-SUP-ORG-002": [
+      "deep",
+      "workpaper"
+    ],
+    "NKE-SUP-R01-REUSE": [
+      "deep",
+      "workpaper"
+    ],
+    "NKE-G-004": [
+      "management",
+      "workpaper"
+    ],
+    "NKE-G-006": [
+      "management"
+    ],
+    "NKE-F-005": [
+      "valuation"
+    ],
+    "NKE-SUP-SEV-001": [
+      "valuation"
+    ]
+  },
+  "fact_uses": {
+    "executive_timeline": [
+      "deep",
+      "management",
+      "valuation"
+    ]
+  },
+  "limitations": "仅装配及机械验证；发表仍须独立全文验收和裁决。未知不得转为实际零分。"
+}

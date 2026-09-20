@@ -1,0 +1,32 @@
+{
+  "run_id": "nike-evidence-repair-2026-09-20",
+  "task_type": "evidence_first_targeted_repair",
+  "root_thread_id": "01a0b9c1-dd39-7a43-ad63-635504dc0fa3",
+  "started_at": "2026-09-20T07:33:52.6853839Z",
+  "ended_at": "2026-09-20T08:26:40.2221900Z",
+  "information_cutoff": "2026-09-19",
+  "source_run": "nike-directed-repair-2026-09-20",
+  "previous_workpaper": "data/reviews/nike-directed-repair-2026-09-20/writer/workpaper-v1.json",
+  "previous_reports": "data/reviews/nike-directed-repair-2026-09-20/writer/{deep,management,valuation}.md",
+  "locked_adjudication": "data/reviews/nike-evidence-repair-2026-09-20/adjudication-locked-v2.json",
+  "status": "execution_incomplete",
+  "decision": "reject",
+  "decision_label": "不符合收录条件",
+  "research_fully_accepted": false,
+  "publish_formal_reports": false,
+  "write_watchlist": false,
+  "repair_rounds": 2,
+  "dual_review_rounds": 2,
+  "roles": [
+    {"name": "nike_gap_evidence", "role": "triplet_evidence", "model": "gpt-5.6-terra", "effort": "low"},
+    {"name": "nike_preparation_writer", "role": "worker（承担triplet_repair_writer职责；运行时未注册该自定义角色）", "model": "gpt-5.6-sol", "effort": "low"},
+    {"name": "nike_regression_review_facts", "role": "独立事实复核", "model": "gpt-5.6-terra", "effort": "low"},
+    {"name": "nike_regression_review_reasoning", "role": "独立推理复核", "model": "gpt-5.6-sol", "effort": "low"},
+    {"name": "nike_regression_adjudicator", "role": "triplet_adjudicator", "model": "gpt-6-astra", "effort": "low"}
+  ],
+  "scoring": {"type": "interval", "company": [66, 72], "management": [56, 66], "combined": [122, 138], "point_score": null},
+  "pricing": {"formal_pricing_completed": false, "target_price": null, "certainty": null, "buy_price": null},
+  "usage": {"wall_clock_seconds": 3167.536806, "input_tokens": 39878814, "cached_input_tokens": 38859392, "uncached_input_tokens": 1019422, "output_tokens": 132402},
+  "previous_run_usage": {"wall_clock_seconds": 1834.60101, "input_tokens": 28648375, "cached_input_tokens": 27720192, "uncached_input_tokens": 928183, "output_tokens": 76277},
+  "usage_note": "本次为补证定向修复，上次亦为不同范围的定向修复；差额仅作运行对照，不能称为完整三件套节省比例。"
+}

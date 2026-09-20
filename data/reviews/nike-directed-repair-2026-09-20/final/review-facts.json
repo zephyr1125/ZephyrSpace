@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "run_id": "nike-directed-repair-2026-09-20",
+  "as_of": "2026-09-19",
+  "role": "triplet_review_facts",
+  "review_scope": "仅复核 handoff-repair.json 所锁定 writer 三稿、writer/workpaper-v1.json、writer/repair-closeout.json，并对照上一 run 的 adjudication-v1、证据 v2 与 frozen-author-v1；未读取另一审核意见。",
+  "coverage": {
+    "locked_hashes_verified": {
+      "writer/deep.md": "43c67fc7be1293c4791fbf0dbb15e20a1b6cc62303a2fed25847a3ddddc67bdd",
+      "writer/management.md": "b1b713cdd2a7040f3052a98eef96afb9096ec9e0950d85cd5071a9659265d88b",
+      "writer/valuation.md": "2ba96522c51d6620e48318572936bf49f8cf88e4190559a96a428a138703069d",
+      "writer/workpaper-v1.json": "19e48a425d426caa83e8b9a270e5d72392de854ef462de793ed5c2ac288bc97f"
+    },
+    "report_line_counts": {"deep": 270, "management": 232, "valuation": 174},
+    "report_independence": "通过：三稿为各自主题的完整正文，未出现 v3 式同文错贴或占位稿。",
+    "independent_fact_checks": ["NKE-F-007-v2 税务 953/1026/990、742 为 953 子集", "NKE-F-008-v2 IEEPA 986=302+684", "NKE-F-009-v2 权益、现金 Capex 与 FCF", "NKE-G-005-v2/NKE-G-006-v2 公开继任与 Proxy 激励事实"],
+    "acceptance_ids_reviewed": 27
+  },
+  "acceptance_results": [
+    {"id":"NKE-A01-01","status":"fail","basis":"评分项结构本身为 25 项且 F4 已删除，但 deep.md:194-195、265-266 写 F1=3/F2=2，而 workpaper-v1.json 的有效项为 F1=2/F2=3；同一分项的正文、表格和唯一底稿未一一对应。"},
+    {"id":"NKE-A01-02","status":"pass","basis":"锁定稿使用原始 65、64、129 与整数显示，未把 67.5/60/127.5 作为本轮结论。"},
+    {"id":"NKE-A01-03","status":"pass","basis":"handoff 已锁定三稿和底稿哈希；repair-closeout 正确限定机械检查含义，未以旧自检冒充独立验收。"},
+    {"id":"NKE-A02-01","status":"pass","basis":"v2 映射使用 F004 ROIC、F005 股数、F006 SBC、F007 税务、F008 IEEPA、F009 资本配置及 R001 或有事项。"},
+    {"id":"NKE-A02-02","status":"fail","basis":"deep.md:203 将税务与比利时海关重评条件标作 NKE-F-006；F006 是 SBC，税务应为 F007。其他税务数值段虽正确，三稿和底稿“均指 F007”的验收未满足。"},
+    {"id":"NKE-A02-03","status":"pass","basis":"v2 事实已进入三稿和底稿，冻结 v1 保留为上一轮来源。"},
+    {"id":"NKE-A03-01","status":"pass","basis":"deep.md:170 列 OCF/净利 130.3333%、114.8804%、92.2780% 及现金 Capex 口径 FCF 6617/3268/2184 百万美元，E2=5、E3=2。"},
+    {"id":"NKE-A03-02","status":"pass","basis":"deep.md:161-169 给出三期杜邦，并以 FY2026 6.698565%、1.237461、2.670739、22.138329% 校验；期末权益与 ROIC 五季度平均权益已分开。"},
+    {"id":"NKE-A03-03","status":"pass","basis":"E5.5=1.5 且明确无 MD 的程序化中性路径，没有将其写成公司会计质量指控。"},
+    {"id":"NKE-A03-04","status":"pass","basis":"986=302+684、792/3900=20.307692%、压力诊断税后净利 2322.233846 百万美元均正确标为分析假设，未把 684 重复计入现金。"},
+    {"id":"NKE-A04-01","status":"fail","basis":"deep.md:55、246 明示“没有逐项五年融资/并购/处置清单”；没有按验收要求核近五年记录、用途与利润依赖，故 2 分虽保守仍无所要求的逐项论证。"},
+    {"id":"NKE-A04-02","status":"pass","basis":"B0 维持部分覆盖 1 分，并给出创立至当下的业务定义、判断与分类边界，未倒填 2 分。"},
+    {"id":"NKE-A04-03","status":"fail","basis":"deep.md:140、258 明示未取得三期一致员工口径、人均创收及研发披露方式；CFO 继任和激励被用作替代信号，未完成要求的三期人效/研发核验。"},
+    {"id":"NKE-A05-01","status":"pass","basis":"management.md 七维均具事实、分析和分值；战略 8、危机 5、表达 4 被明确保留且边界符合裁决。"},
+    {"id":"NKE-A05-02","status":"pass","basis":"management.md 已核 Proxy 激励指标、调整权/支付边界和关联交易政策，并区分授予日、可实现值与实际现金支付的未知。"},
+    {"id":"NKE-A05-03","status":"fail","basis":"management.md:105-107 明示没有五年完整并购/融资/处置时间线及近三年回购均价、净股数、SBC 抵消桥；资本配置 13 分的验收性核验尚缺。"},
+    {"id":"NKE-A05-04","status":"fail","basis":"management.md:143-155 只列本包可证实节点，并明示没有近五年完整 C-suite 清单和 12 个月离任人数；不足以完成所要求的时间线与集中离任判断。"},
+    {"id":"NKE-A05-05","status":"fail","basis":"deep.md:256 明示仅有 FY2026 一年经营动作与结果；没有至少三期目标—执行对应，D2=2 的新判断未满足该验收项。"},
+    {"id":"NKE-A06-01","status":"pass","basis":"可信重算后的 65、64、129 分别低于 B_GROWTH 原始门槛 70、70、150；估值稿有方法、三情景、停止理由和重评条件，三价格字段均为 null。"},
+    {"id":"NKE-A06-02","status":"pass","basis":"质量门槛已由可重算原始分否决，未以缺模型或低确定性代替门槛判断。"},
+    {"id":"NKE-A06-03","status":"pass","basis":"research_status 仍为 execution_incomplete，未提前声称 verified_complete。"},
+    {"id":"NKE-A09-01","status":"pass","basis":"期末权益 14865/13213/14430/14004 与 ROIC 平均权益 13944/13926 已区分。"},
+    {"id":"NKE-A09-02","status":"pass","basis":"现金 Capex 812/430/684 与 FCF 6617/3268/2184 百万美元在深度及管理层稿一致。"},
+    {"id":"NKE-A09-03","status":"pass","basis":"E4 基础 2 分因无法拆分按规则扣 0.5，净分 1.5；没有把缺拆分写成资本消耗恶化事实。"},
+    {"id":"NKE-A09-04","status":"pass","basis":"期末/平均权益和现金回购/权益变动口径已在三稿集中说明，并保留未变项目的依据。"},
+    {"id":"NKE-A10-01","status":"pass","basis":"已区分 S010 通用计划附件与 CFO 主文，写明 David Denton 继任及 Friend 顾问/离任安排。"},
+    {"id":"NKE-A10-02","status":"pass","basis":"已区分计划条件、潜在支付、个人安排和已付金额；未将非竞业与遣散重复相加。"}
+  ],
+  "nonblocking_p2": [
+    {"id":"NKE-A07-01","status":"pass","basis":"三稿给出连续两期同口径全价销售、毛利、库存和现金的重评观察，未新增硬门槛。"},
+    {"id":"NKE-A08-01","status":"pass","basis":"供应链与来源表采用印刷页/物理页说明，税务与 Proxy 实质问题仍按 A02/A05 处理。"}
+  ],
+  "findings": [
+    {"id":"NKE-DR-F01","severity":"P1","location":"writer/deep.md:194-195,265-266；writer/workpaper-v1.json company F1/F2","claim":"F1/F2 分配在深度正文及嵌入评分表为 3/2，而唯一底稿为 2/3。两者总和同为 5，因而机械总分未捕获该冲突。","evidence":"锁定文件直接比对。","impact":"治理子项及其与管理层组织/股东友好度的证据归属不可复算，A01-01 未通过。","recommendation":"确定每项实际规则档位，使用相同事实理由同步 deep 正文、评分表和 workpaper 后重跑检查。"},
+    {"id":"NKE-DR-F02","severity":"P1","location":"writer/deep.md:203","claim":"税务风险引用 NKE-F-006，而 F006 为 SBC；税务应引用 NKE-F-007-v2。","evidence":"evidence v2 的事实映射及 deep.md:159 的正确税务段落。","impact":"A02-02 未通过，税务证据链仍有错位。","recommendation":"将该引用改为 NKE-F-007-v2，并全局复核三稿和底稿中的税务引用。"},
+    {"id":"NKE-DR-F03","severity":"P1","location":"writer/deep.md:55,140,256；writer/management.md:105-106,143-155","claim":"五年资本史、三期人效/研发、五年主要高管时间线、近三年回购价格/净股数/SBC 桥及三期战略执行对应仍明确缺失。","evidence":"作者正文自身的未知声明。","impact":"A04-01、A04-03、A05-03、A05-04、A05-05 未通过；相关分数可作当前保守暂定，但不能宣称已完成定向验收。","recommendation":"补齐每项要求的有限历史核验，或按主任务决定是否以已界定的不确定性重新裁决，而不是将未完成核验标为已关闭。"}
+  ],
+  "independent_recalculation": {
+    "company_items": "3+3+2+1+3+3+4+1+6+3+5+2+2+1+1+5+5+2+1.5+2+1.5+2+3+1+2=65",
+    "management_dimensions": "16+13+8+9+5+9+4=64",
+    "combined": "65+64=129",
+    "display": {"company":65,"management":64,"combined":129},
+    "threshold_test": "B_GROWTH 需公司>=70、管理层>=70、合计>=150；65/64/129 均不达标。",
+    "valuation_conclusion": "在上述可重算分数不变时，reject/NONE、质量门槛停止正式定价及三价格 null 的方向正确。"
+  },
+  "new_p0": [],
+  "new_p1": ["NKE-DR-F01","NKE-DR-F02","NKE-DR-F03"],
+  "decision": "fail_targeted_review",
+  "research_status_recommendation": "execution_incomplete",
+  "independent_conclusion": "锁定包已从前一轮的重复正文问题恢复为三份独立完整报告，核心财务口径和 65/64/129 算术可复算，且质量门槛结论在当前分数下成立。但 27 个 P0/P1 验收项中 7 项未通过，包含一项评分项跨文件冲突、税务引用错位及五项作者自认尚未完成的定向核验。不得把 repair-closeout 的作者声明作为独立验收通过；修正并补齐后才可进入下一步。"
+}
