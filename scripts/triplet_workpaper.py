@@ -6,11 +6,13 @@ import json
 import math
 import operator
 import re
+from collections import Counter
 from decimal import Decimal, ROUND_HALF_UP
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SCENARIOS = ("bear", "base", "bull")
+UNPRICED = ("stopped_quality_gate_after_full_research", "deferred")
 OPS = {ast.Add: operator.add, ast.Sub: operator.sub, ast.Mult: operator.mul,
        ast.Div: operator.truediv, ast.Pow: operator.pow}
 
@@ -46,6 +48,8 @@ def snapshot_values(data, result):
 
 
 def snapshot_text(data, key, value):
+    if value is None:
+        return "null"
     if data.get("score_display") == "integer_half_up" and key in ("cScore", "mScore", "combinedScore"):
         return score_display(value)
     return value if isinstance(value, str) else f"{value:.6f}"
@@ -112,6 +116,38 @@ def report_sections(text):
     return sections
 
 
+def narrative_lines(text):
+    """剔除允许跨报告共用的表格、快照、标题和元数据，仅比较分析正文。"""
+    text = re.sub(r"\A---\s*\n.*?\n---\s*\n", "", text, flags=re.S)
+    text = re.sub(r"<!-- triplet:table:[^>]+ -->.*?<!-- /triplet:table:[^>]+ -->", "", text, flags=re.S)
+    text = re.sub(r"<!--.*?-->", "", text, flags=re.S)
+    return [line.strip() for line in text.splitlines()
+            if line.strip() and not line.lstrip().startswith(("#", "|", ">", "```", "~~~"))]
+
+
+def report_integrity(texts):
+    """拦截已知退化形式，不把行数、去重或相似度当成研究质量认证。"""
+    errors, bodies = [], {}
+    for kind, text in texts.items():
+        lines = narrative_lines(text)
+        normalized = [re.sub(r"\d+(?:\.\d+)?|\s+", "", line) for line in lines]
+        counts = Counter(line for line in normalized if len(line) >= 16)
+        repeated = sum(count for count in counts.values() if count >= 10)
+        if repeated >= 10 and repeated >= len(lines) * 0.25:
+            errors.append(f"{kind}正文存在大量重复或编号占位，不能用于满足完整性要求")
+        body = {line for line in normalized if len(line) >= 16}
+        bodies[kind] = body
+        if not body:
+            errors.append(f"{kind}缺独立分析正文，生成表和空行不能代替报告")
+    kinds = list(bodies)
+    for i, left in enumerate(kinds):
+        for right in kinds[i + 1:]:
+            a, b = bodies[left], bodies[right]
+            if a and b and len(a & b) / len(a | b) >= 0.85:
+                errors.append(f"{left}/{right}分析正文高度同文，须恢复各自独立报告")
+    return errors
+
+
 def scoring_rules():
     # 满分从仓库唯一内容规则提取，避免另维护一套评分权重。
     text = (ROOT / "deep-prebuy-skill/SKILL.md").read_text(encoding="utf-8")
@@ -151,6 +187,23 @@ def score(sheet, limits, label):
     total = sum(row["score"] for row in rows)
     close(sheet["total"], total, label + "总分")
     return total
+
+
+def validate_explicit_tiers(items):
+    """只核封闭档位，取值仍从原评分表解析；不把定性开放区间伪装成公式。"""
+    text = (ROOT / "deep-prebuy-skill/SKILL.md").read_text(encoding="utf-8")
+    ranges = {}
+    for line in text.splitlines():
+        cells = [cell.strip() for cell in line.strip("|").split("|")]
+        key = cells[0].split()[0] if cells[0] else ""
+        if len(cells) == 4 and key in ("A3", "D1", "F2"):
+            ranges[key] = [(float(low), float(high or low))
+                           for low, high in re.findall(r"=(\d+(?:\.\d+)?)(?:-(\d+(?:\.\d+)?))?", cells[1])]
+    require(set(ranges) == {"A3", "D1", "F2"} and all(ranges.values()), "显式评分档位无法解析")
+    for row in items:
+        if row["id"] in ranges and row.get("score") is not None:
+            require(any(low <= number(row["score"]) <= high for low, high in ranges[row["id"]]),
+                    row["id"] + "违反原规则显式档位，不能自造中间分")
 
 
 def calculate_model(model):
@@ -195,6 +248,23 @@ def calculate_model(model):
     return values, matrix
 
 
+def validate_bridges(data):
+    require("bridges" in data, "缺桥接清单；不适用可用空数组并说明")
+    require(data["bridges"] or data.get("bridges_not_applicable"), "桥接不适用缺理由")
+    ids = set()
+    for bridge in data["bridges"]:
+        require(bridge["id"] not in ids, "桥接ID重复")
+        ids.add(bridge["id"])
+        parts = bridge["items"]
+        keys = [p["economic_id"] for p in parts]
+        require(len(keys) == len(set(keys)), "同一桥内经济项目重复，检查现金/资产重复计入")
+        require(bridge.get("unit") and bridge.get("date") and bridge.get("scope"), "桥缺单位、日期或归属")
+        for part in parts:
+            require(part.get("evidence_refs"), "桥接项目缺来源")
+            number(part["signed_value"])
+        close(bridge["result"], number(bridge["start"]) + sum(p["signed_value"] for p in parts), "桥接" + bridge["id"])
+
+
 def check(data, root=ROOT, reports=True, repair=False, previous=None):
     errors, warnings, result = [], [], {}
 
@@ -209,6 +279,9 @@ def check(data, root=ROOT, reports=True, repair=False, previous=None):
         result["cScore"] = score(data["scores"]["company"], company, "公司")
         result["mScore"] = score(data["scores"]["management"], management, "管理层")
         rows = {row["id"]: row for row in data["scores"]["company"]["items"]}
+        require(data.get("score_rule_validation") in (None, "explicit_tiers_v1"), "未知评分规则校验模式")
+        if data.get("score_rule_validation") == "explicit_tiers_v1":
+            validate_explicit_tiers(list(rows.values()))
         for group in "ABCDEF":
             obtained = sum(row["score"] for key, row in rows.items() if key.startswith(group))
             cap = sum(value for key, value in company.items() if key.startswith(group))
@@ -227,6 +300,14 @@ def check(data, root=ROOT, reports=True, repair=False, previous=None):
     def check_valuation():
         valuation = data["valuation"]
         require(bool(valuation["currency"]), "缺币种")
+        if valuation.get("status") in UNPRICED:
+            require(valuation.get("reason"), "停止正式估值缺理由")
+            require(valuation.get("models") == [], "停止正式估值时主模型必须为空")
+            require(all(key in valuation and valuation[key] is None for key in ("target_price", "certainty", "buy_price")),
+                    "停止正式估值时价格与确定性必须为null")
+            result.update(target_price=None, certainty=None, buy_price=None, currency=valuation["currency"],
+                          weighted={}, models={})
+            return
         models = valuation["models"]
         require(len(models) >= 2, "缺两个主模型，不能用确定性折扣补足")
         require(len({m["id"] for m in models}) == len(models), "模型ID重复")
@@ -257,26 +338,14 @@ def check(data, root=ROOT, reports=True, repair=False, previous=None):
                       weighted=weighted, models=calculated)
 
     def check_bridges():
-        require("bridges" in data, "缺桥接清单；不适用可用空数组并说明")
-        require(data["bridges"] or data.get("bridges_not_applicable"), "桥接不适用缺理由")
-        ids = set()
-        for bridge in data["bridges"]:
-            require(bridge["id"] not in ids, "桥接ID重复")
-            ids.add(bridge["id"])
-            parts = bridge["items"]
-            keys = [p["economic_id"] for p in parts]
-            require(len(keys) == len(set(keys)), "同一桥内经济项目重复，检查现金/资产重复计入")
-            require(bridge.get("unit") and bridge.get("date") and bridge.get("scope"), "桥缺单位、日期或归属")
-            for part in parts:
-                require(part.get("evidence_refs"), "桥接项目缺来源")
-                number(part["signed_value"])
-            close(bridge["result"], number(bridge["start"]) + sum(p["signed_value"] for p in parts), "桥接" + bridge["id"])
+        validate_bridges(data)
 
     def check_reports():
         snapshots = snapshot_values(data, result)
         generated = render(data)
-        table_keys = {"deep": ["company"], "management": ["management"],
-                      "valuation": ["model-" + m["id"] for m in data["valuation"]["models"]] + ["weighted"]}
+        valuation_tables = (["model-" + m["id"] for m in data["valuation"]["models"]] + ["weighted"]
+                            if data["valuation"].get("status") not in UNPRICED else [])
+        table_keys = {"deep": ["company"], "management": ["management"], "valuation": valuation_tables}
         for kind, minimum in (("deep", 150), ("management", 150), ("valuation", 100)):
             text = local(root, data["reports"][kind]).read_text(encoding="utf-8-sig")
             require(len(text.splitlines()) >= minimum, f"{kind}少于{minimum}行")
@@ -289,6 +358,11 @@ def check(data, root=ROOT, reports=True, repair=False, previous=None):
                 expected = re.search(pattern, generated, re.S).group(1).strip()
                 actual = re.findall(pattern, text, re.S)
                 require(actual and all(part.strip() == expected for part in actual), f"{kind}/{key}缺生成表或表格已漂移")
+
+    def check_report_integrity():
+        texts = {kind: local(root, data["reports"][kind]).read_text(encoding="utf-8-sig")
+                 for kind in ("deep", "management", "valuation")}
+        errors.extend("报告完整性：" + error for error in report_integrity(texts))
 
     def check_repairs():
         issues, closures = data["repair"]["issues"], data["repair"]["closures"]
@@ -318,10 +392,10 @@ def check(data, root=ROOT, reports=True, repair=False, previous=None):
         for kind in ("company", "management"):
             old = {row["id"]: row for row in previous["scores"][kind]["items"]}
             new = {row["id"]: row for row in data["scores"][kind]["items"]}
-            require(set(old) == set(new), "修复删除或增加了评分项")
-            for item_id in old:
+            # 新稿已按唯一评分规则校验；允许按裁决删除非法项或恢复遗漏项。
+            for item_id in old.keys() | new.keys():
                 key = kind + "/" + item_id
-                if old[item_id] == new[item_id]:
+                if old.get(item_id) == new.get(item_id):
                     continue
                 actual.add(key)
                 change = declared.get(key, {})
@@ -334,8 +408,16 @@ def check(data, root=ROOT, reports=True, repair=False, previous=None):
             require(len(declared_sections) == len(changes), "正文变更声明重复")
             actual_sections = set()
             for kind in ("deep", "management", "valuation"):
-                old = report_sections(local(root, previous["reports"][kind]).read_text(encoding="utf-8-sig"))
-                new = report_sections(local(root, data["reports"][kind]).read_text(encoding="utf-8-sig"))
+                old_path = local(root, previous["reports"][kind])
+                new_path = local(root, data["reports"][kind])
+                require(old_path != new_path, "修复新稿不得与冻结稿使用同一路径")
+                old_text, new_text = old_path.read_text(encoding="utf-8-sig"), new_path.read_text(encoding="utf-8-sig")
+                old = report_sections(old_text)
+                new = report_sections(new_text)
+                old_size = sum(map(len, narrative_lines(old_text)))
+                new_size = sum(map(len, narrative_lines(new_text)))
+                require(old_size < 1000 or new_size >= old_size * 0.6,
+                        f"{kind}修复后分析正文大面积丢失；不能以变更声明替代内容保留")
                 for section in old.keys() | new.keys():
                     if old.get(section) == new.get(section):
                         continue
@@ -354,6 +436,9 @@ def check(data, root=ROOT, reports=True, repair=False, previous=None):
     run("估值", check_valuation)
     run("桥接", check_bridges)
     if reports:
+        run("修复模式", lambda: require(not ("repair" in data or previous is not None) or repair,
+                                   "修复底稿不得跳过--repair --previous；普通check不能用于修复送审"))
+        run("报告完整性", check_report_integrity)
         run("报告", check_reports)
     if repair:
         run("修复", check_repairs)
@@ -390,9 +475,10 @@ def render(data):
                   "|---|" + "---:|" * len(grid["x_values"])]
         lines += [f"| {y} | " + " | ".join(f"{v:.6f}" for v in row) + " |" for y, row in zip(grid["y_values"], matrix)]
         lines.append(f"<!-- /triplet:table:model-{model['id']} -->")
-    lines += ["", "<!-- triplet:table:weighted -->", "### 综合情景", "", "| 情景 | 加权合理价 |", "|---|---:|"]
-    lines += [f"| {name} | {result['weighted'][name]:.6f} |" for name in SCENARIOS]
-    lines.append("<!-- /triplet:table:weighted -->")
+    if data["valuation"].get("status") not in UNPRICED:
+        lines += ["", "<!-- triplet:table:weighted -->", "### 综合情景", "", "| 情景 | 加权合理价 |", "|---|---:|"]
+        lines += [f"| {name} | {result['weighted'][name]:.6f} |" for name in SCENARIOS]
+        lines.append("<!-- /triplet:table:weighted -->")
     return "\n".join(lines) + "\n"
 
 
@@ -418,13 +504,14 @@ def repair_package(data):
     for row in issues:
         require(row["decision"] in ("valid", "partial", "invalid", "insufficient", "suggestion"), "未知裁决结论")
         require(row["severity"] in ("P0", "P1", "P2"), "未知问题级别")
-        require(row.get("candidate_ids") and row.get("reason") and row.get("evidence_refs"), "裁决缺候选映射或证据理由")
+        candidate_ids = row.get("candidate_ids")
+        require(isinstance(candidate_ids, list) and row.get("reason") and row.get("evidence_refs"), "裁决缺候选映射或证据理由")
         if row["decision"] == "invalid":
             continue
         conditions = row["acceptance"]
         require(conditions and len({c['id'] for c in conditions}) == len(conditions), "验收条件缺失或ID重复")
         lines += [f"## {row['id']} · {row['severity']} · {row['decision']}", "",
-                  f"候选：{', '.join(row['candidate_ids'])}", "",
+                  f"候选：{', '.join(candidate_ids) if candidate_ids else '裁决原件新增'}", "",
                   f"裁决理由：{row['reason']}", "", f"原件：{'；'.join(row['evidence_refs'])}", "",
                   f"动作：{row['action']}", "", f"联动：{row['score_valuation_impact']}", ""]
         lines += [f"- {condition['id']}：{condition['condition']}" for condition in conditions]
@@ -433,25 +520,121 @@ def repair_package(data):
     return "\n".join(lines)
 
 
+def repair_readiness(preparation, adjudication):
+    """补证和分析先于改稿；按裁决验收ID核覆盖，不替代原件及判断的独立审核。"""
+    errors = []
+    try:
+        required = [item["id"] for issue in adjudication["issues"]
+                    if issue["severity"] in ("P0", "P1") and issue["decision"] != "invalid"
+                    for item in issue["acceptance"]]
+        require(len(required) == len(set(required)), "裁决验收ID重复")
+        items = preparation["items"]
+        require(len(items) == len({item["id"] for item in items}), "修复准备验收ID重复")
+        require({item["id"] for item in items} == set(required), "修复准备未精确覆盖锁定裁决验收ID")
+        for item in items:
+            require(item["kind"] in ("evidence", "reasoning", "text"), "修复准备类型未知")
+            require(item["status"] == "resolved", f"{item['id']}仍未完成补证或分析，不能进入报告修复")
+            require(bool(item.get("resolution")) and bool(item.get("evidence_refs")),
+                    f"{item['id']}缺具体解决结果或证据定位，不能只声明已处理")
+        for replacement in preparation.get("replacements", []):
+            require(replacement["report"] in ("deep", "management", "valuation") and
+                    replacement.get("old") and replacement.get("new") and
+                    replacement["old"] != replacement["new"], "旧文替换检查缺报告或具体新旧片段")
+    except (ValueError, KeyError, TypeError) as exc:
+        errors.append(str(exc))
+    return {"status": "failed" if errors else "ready_for_repair_writing", "errors": errors,
+            "limitations": "仅检查准备材料完整及明确未解决项；resolved仍须由主任务核原件，不能证明分数已获独立批准。"}
+
+
+def handoff(data, root=ROOT, stage="initial", previous=None, adjudication=None, preparation=None):
+    """主任务送审入口：修复条件来自锁定裁决，不能仅信任作者删减后的关闭表。"""
+    require(stage in ("initial", "repair"), "未知送审阶段")
+    checked = check(data, root, repair=stage == "repair", previous=previous)
+    errors = checked["errors"]
+    try:
+        if stage == "initial":
+            require("repair" not in data and previous is None and adjudication is None,
+                    "修复材料不能按初稿送审")
+        else:
+            require(previous is not None and adjudication is not None,
+                    "修复送审必须提供--previous和--adjudication锁定裁决")
+            require(preparation is not None, "修复送审必须提供--preparation补证及分析结果")
+            readiness = repair_readiness(preparation, adjudication)
+            require(not readiness["errors"], "修复准备未通过：" + "；".join(readiness["errors"]))
+            for replacement in preparation.get("replacements", []):
+                text = local(root, data["reports"][replacement["report"]]).read_text(encoding="utf-8-sig")
+                require(replacement["old"] not in text and replacement["new"] in text,
+                        f"{replacement['report']}旧文未清除或新文未落实：{replacement['old']}")
+            expected, seen = {}, set()
+            for issue in adjudication["issues"]:
+                require(issue["id"] not in seen, "锁定裁决问题ID重复")
+                seen.add(issue["id"])
+                require(issue["severity"] in ("P0", "P1", "P2") and
+                        issue["decision"] in ("valid", "partial", "invalid", "insufficient", "suggestion"),
+                        "锁定裁决包含未知等级或结论")
+                if issue["severity"] in ("P0", "P1") and issue["decision"] != "invalid":
+                    ids = [item["id"] for item in issue["acceptance"]]
+                    require(ids and len(ids) == len(set(ids)), "锁定裁决验收ID为空或重复")
+                    expected[issue["id"]] = (issue["severity"], set(ids))
+            actual = {issue["id"]: (issue["severity"], set(issue["acceptance_ids"]))
+                      for issue in data["repair"]["issues"] if issue["severity"] in ("P0", "P1")}
+            require(actual == expected, "修复问题等级或验收ID与锁定裁决不一致，禁止漏项、降级或删条件")
+    except (ValueError, KeyError, TypeError) as exc:
+        errors.append("送审：" + str(exc))
+    checked["status"] = "failed" if errors else "ready_for_independent_review"
+    checked["scope"]["handoff_stage"] = stage
+    # 摘要仅证明送审所检查的版本，不能证明作者声明或事实真实。
+    checked["report_sha256"] = {}
+    for kind, relative in data.get("reports", {}).items():
+        try:
+            checked["report_sha256"][kind] = hashlib.sha256(local(root, relative).read_bytes()).hexdigest()
+        except (ValueError, OSError) as exc:
+            errors.append("送审文件：" + str(exc))
+            checked["status"] = "failed"
+    return checked
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest="command", required=True)
-    for name in ("check", "render", "verify-migration", "repair-package"):
+    for name in ("check", "render", "verify-migration", "repair-package", "handoff", "repair-ready"):
         command = sub.add_parser(name)
         command.add_argument("input")
         command.add_argument("--root", type=Path, default=ROOT)
         command.add_argument("--output")
         if name == "check":
+            command.add_argument("--no-reports", action="store_true", help="仅检查底稿计算，不检查报告；不代表研究获批")
             command.add_argument("--repair", action="store_true")
             command.add_argument("--previous", help="修复前冻结底稿；与--repair一起使用")
+        if name == "handoff":
+            command.add_argument("--stage", choices=("initial", "repair"), required=True)
+            command.add_argument("--previous")
+            command.add_argument("--adjudication")
+            command.add_argument("--preparation")
+        if name == "repair-ready":
+            command.add_argument("--adjudication", required=True)
     args = parser.parse_args()
     if args.command in ("render", "repair-package"):
         require(args.output, "必须指定新输出文件")
         save_new(args.output, (render if args.command == "render" else repair_package)(read(args.input)))
         print("已生成新文件；不代表独立复核通过或修复关闭。")
         return 0
-    result = verify_migration(args.input, args.root) if args.command == "verify-migration" else check(
-        read(args.input), args.root, repair=args.repair, previous=read(args.previous) if args.previous else None)
+    if args.command == "repair-ready":
+        result = repair_readiness(read(args.input), read(args.adjudication))
+    elif args.command == "handoff":
+        result = handoff(read(args.input), args.root, args.stage,
+                         read(args.previous) if args.previous else None,
+                         read(args.adjudication) if args.adjudication else None,
+                         read(args.preparation) if args.preparation else None)
+        result["input_sha256"] = {name: hashlib.sha256(Path(path).read_bytes()).hexdigest()
+                                  for name, path in (("workpaper", args.input), ("previous", args.previous),
+                                                     ("adjudication", args.adjudication),
+                                                     ("preparation", args.preparation)) if path}
+    elif args.command == "verify-migration":
+        result = verify_migration(args.input, args.root)
+    else:
+        result = check(read(args.input), args.root, reports=not args.no_reports, repair=args.repair,
+                       previous=read(args.previous) if args.previous else None)
     if args.output:
         save_new(args.output, json.dumps(result, ensure_ascii=False, indent=2) + "\n")
     print(json.dumps({k: v for k, v in result.items() if k != "computed"}, ensure_ascii=False, indent=2))

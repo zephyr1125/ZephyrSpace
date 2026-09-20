@@ -4,9 +4,9 @@
 
 ## 作者：先底稿后正文
 
-作者在自己的 run 子目录维护 `workpaper-v1.json`：事实、规则、假设及计算先闭合，再展开三份全文。底稿与作者初稿属于评价材料，第一阶段盲审不可读；冻结初稿后两路收到同一底稿。Terra 的中性事实包不放评分或目标价。
+作者在自己的 run 子目录维护 `workpaper-v1.json`：事实、规则、假设及计算先闭合，再展开三份全文。底稿属于评价材料；评分阶段两路收到同一冻结底稿并独立复核，互不读对方意见。Terra 的中性事实包不放评分或目标价。
 
-所有路径相对 Vault 根目录；JSON 使用 UTF-8。字段的 `evidence_refs` 是非空字符串数组，写事实 ID + 原件页码/章节/行号；不得只有模糊的“年报”。来源真实性、假设合理性及 ID 是否对应原件仍须人工独立核验。
+所有路径相对 Vault 根目录；JSON 使用 UTF-8。字段的 `evidence_refs` 是非空字符串数组；新任务写完整注册ID，原件页码/章节/行号保存在被引证据记录中。旧底稿的ID加定位自由文本仅兼容历史检查；不得只有模糊的“年报”。来源真实性、假设合理性及 ID 是否对应原件仍须人工独立核验。
 
 | 字段 | 结构与约束 |
 |---|---|
@@ -25,24 +25,13 @@
 | `valuation.reverse` | `{weight: 0, variable, implied_value, formula, inputs, market_price, assumptions, evidence_refs}`；把隐含变量代回正向式核对市价，正文另给反向敏感性及解的适用边界；不能把市价作为第二主模型 |
 | `bridges` | 桥数组：`{id, date, unit, scope, start, items, result}`；每项 `{economic_id, signed_value, evidence_refs}`，满足起点加带符号变动等于终点；同一桥内一个经济项目只计一次；跨桥复用可以，但须解释连接关系 |
 | 桥不适用 | `bridges: []` 并填写 `bridges_not_applicable` 理由；不能用“不适用”跳过实际存在的现金、少数股东、负债或正常化桥 |
-| `reports` | `{deep: "深度分析/本次新文件.md", management: "管理层档案/本次新文件.md", valuation: "估值分析/本次新文件.md"}` |
+| `reports`（旧检查） | 新装配用bundle.templates定位源稿，本字段仅用于旧check：`{deep: "深度分析/本次新文件.md", management: "管理层档案/本次新文件.md", valuation: "估值分析/本次新文件.md"}` |
 
 公司分项及管理层满分直接从仓库核心模块原表读取，不再维护一份可漂移的评分权重 JSON。规则数目/总分异常则检查失败。程序只识别明确的结构和上限；不能自动评价治理、会计质量或证据充分性，也不自动给出 Watchlist 档位。
 
-## 运行顺序
+## 计算与装配
 
-在 Vault 根目录运行，命令中的 `<run-id>` 换成本次目录：
-
-```powershell
-python -X utf8 scripts/triplet_workpaper.py render data/reviews/<run-id>/writer/workpaper-v1.json --output data/reviews/<run-id>/writer/tables-v1.md
-python -X utf8 scripts/triplet_workpaper.py check data/reviews/<run-id>/writer/workpaper-v1.json --output data/reviews/<run-id>/writer/selfcheck-v1.json
-```
-
-1. `render` 先检查底稿，再生成参数快照、评分表、两主模型情景与敏感性、综合情景。生成器只写指定**新文件**，不修改正文、历史或冻结材料；输出存在即拒绝覆盖。
-2. 作者将参数快照放进三份新报告，company评分表放深度报告，management评分表放管理层报告，两模型与综合情景表放估值报告，补足叙述、证据、模型限制及反证。快照用隐藏 HTML 注释包住唯一有效数值，例如 `<!-- triplet:cScore -->69<!-- /triplet:cScore -->`；表格也有 `triplet:table:...` 起止注释，复制时保留。字段与表格格式以生成器为准，不手改生成块；解释写在块外。不要把整份 tables 原样塞入三份报告，不用空行凑篇幅。
-3. `check` 检查底稿、150/150/100 行、三份报告的带标记快照及对应生成表内容；底稿有矩阵但估值正文漏贴/改错矩阵，同样失败。正文其他未标记数值、章节内容与旧数字残留仍由作者自检和双复核检查；不得声称程序已验证全文事实。
-4. 修改后使用 `workpaper-v2.json`、`tables-v2.md`、`selfcheck-v2.json` 等新版本，保留冻结底稿/正文。未冻结的工作底稿可原位编辑；正式输出不覆盖旧版。没有新变更或失败不重复运行。
-5. 返回码 `0` 仅代表本次机械检查通过，`1` 为检查失败，`2` 为输入/运行错误。输出状态永远不等于审核通过或准予入库。若有决定性缺证，保留 null 和“研究未完成”；不能为通过程序填假数。
+新任务不再先运行render后手工把表格复制到三稿；按[交付规范](three-report-delivery.md)直接build。装配器复用本脚本的评分、估值及桥接函数，检查失败不生成送审产物。原render/check命令及返回码保留给历史复现和计算调试，旧顺序见[历史闸门](archive/three-report-legacy-repair-gates-2026-09-20.md)。
 
 ### 模型适配边界
 
@@ -52,37 +41,18 @@ python -X utf8 scripts/triplet_workpaper.py check data/reviews/<run-id>/writer/w
 
 双审核员必须独立重算关键公式；运行作者的通用程序或扩展程序都不算独立计算。模板化计算不证明模型的经济合理性。
 
-## 修复：逐条件验收，不重写无关全文
+## 新任务交付与历史兼容
 
-修复底稿增加 `repair`，执行 `check ... --repair --previous <上一冻结底稿.json>`。不修改上一底稿指向的冻结报告；新报告使用新路径。正文按二级标题比较，代码块内标题不参与分段：
+新任务统一使用[交付装配规范](three-report-delivery.md)：证据注册、共用事实、分项底稿和独立叙述源稿分别维护，由程序生成三份送审报告。底稿的评分、公式、三情景和敏感性规则沿用本文件；普通`check`与`render`仍是计算函数，不等于交付或研究验收。
 
-```json
-{
-  "issues": [{"id": "C03", "severity": "P1", "acceptance_ids": ["C03-formula", "C03-grid"]}],
-  "score_changes": [{"key": "company/A3", "issue_id": "C03", "reason": "仅示意字段结构；实际变更须按裁决", "evidence_refs": ["原件与具体定位"]}],
-  "report_changes": [{"report": "valuation", "section": "DDM估值", "issue_id": "C03", "reason": "补双变量矩阵"}],
-  "closures": [{
-    "id": "C03",
-    "locations": ["估值新版本：DDM章节"],
-    "score_valuation_impact": "列受影响分项、模型和数值变化；不变也说明依据",
-    "checks": [
-      {"id": "C03-formula", "passed": true, "evidence": "公式和独立结果路径、定位"},
-      {"id": "C03-grid", "passed": true, "evidence": "双变量网格、计算结果及正文位置"}
-    ]
-  }]
-}
-```
-
-`issues`/`acceptance_ids` 必须从已锁定裁决原样提取，主 Agent 核对完整性；作者不得删条件以取得通过。程序拦截漏条件、重复 ID、缺关闭证据；`passed` 是作者声明，只有两路定向复查/裁决才能认定实质关闭。
-
-`score_changes`必须与实际发生改变的评分项（含理由、来源、条件标记）一一对应；无改动填空数组，不照抄示例。`report_changes`同样列每处改变的二级章节，report取deep/management/valuation，标题前内容为`__preamble__`；章节改名时旧标题另给`replacement_section`。未声明的重写/删除会失败；三项以上相同评分理由也会失败。声明不是准许全量重写的口子：主Agent核对范围和原件，禁止把25条不同依据改成“见最终报告”。验收失败不重复全篇生成，按[明确结论收尾](three-report-closeout.md)给真实处置。
-
-局部修复沿“事实 ID → 评分项/模型输入 → 计算表 → 正文引用 → 公司页字段”列影响清单。每个受影响处说明变更或不变依据；系统性错误可以扩大范围，按原 SOP 记录原因。公司页和 Watchlist 仍只由主 Agent 在验收后串行写入。
+旧`repair-ready`、`handoff`及`repair`变更声明保留用于已冻结run复现，字段见[历史闸门](archive/three-report-legacy-repair-gates-2026-09-20.md)。新任务不再维护preparation多版本、逐句replacement清单或在三份输出稿中手工同步评分表；不能同时执行新旧两套交接流程。
 
 ## 中间产物去重
 
-- 盲审仍为一张短表，不复述公司介绍或多年度数据。重大风险不能为控制长度而省略。
-- 第二阶段审核输出 `review-<role>.json`，其中 `findings` 数组每项必含 `severity/location/claim/evidence/impact/recommendation`（字符串，原文定位与关键推导写在 evidence）。可另含精简 `coverage`、盲审判断变化及 `uncovered`。通过项只记“已核/无问题”。零问题也须交覆盖记录，不重写一份长 Markdown 同义稿。
+评分前置阶段使用 `triplet_workpaper.py check <workpaper.json> --no-reports` 核分项、估值状态及桥接计算；新底稿声明 `score_rule_validation: "explicit_tiers_v1"`，额外从原规则检查A3/D1/F2封闭档位，不对开放的专业判断自动插值。输出scope明确reports=false，不要求为了脚本先生成三份长报告。该检查不批准评分；完整报告仍走装配及独立验收。历史底稿缺新字段保留原机械检查范围，不追改获批快照。
+
+- 不单设盲审风险卡；评分审核覆盖全部分项、反证和决定性原件，重大风险不能为控制长度而省略。
+- 评分或完整报告审核输出 `review-<role>.json`，其中 `findings` 数组每项必含 `severity/location/claim/evidence/impact/recommendation`（字符串，原文定位与关键推导写在 evidence）。可另含精简 `coverage`、评分或结论变化及 `uncovered`。通过项只记“已核/无问题”。零问题也须交覆盖记录，不重写一份长 Markdown 同义稿。
 - 两路意见锁定后，由主 Agent 复用现有匿名化程序：
 
 ```powershell
@@ -91,13 +61,6 @@ python -X utf8 scripts/review_trial.py anonymize data/reviews/<run-id>/review-so
 
 `review-sources.json` 为 `{ "facts": "本次triplet_review_facts审核JSON路径", "reasoning": "本次triplet_review_reasoning审核JSON路径" }`。只把生成的 `anonymous/candidates.json` 明确路径交裁决；`unblinding.json` 保持私有，不向裁决提供目录枚举或来源映射。自由文本也不能包含审核员/模型身份。该工具只剥除结构化身份字段，不保证清除正文中的身份泄漏；主 Agent 交接前检查。原问题通过 reviewer + original_index 追溯，候选冻结后不重新匿名化。
 - 主 Agent 按根因仅列候选 ID 组及实质分歧，不再次转述全部证据。匿名候选全文保留，不能因分组合并丢掉少数意见；裁决按原件判断。
-- 裁决员只维护 `adjudication-v1.json`：`issues` 每项含 `id/candidate_ids/severity/decision/reason/evidence_refs/action/score_valuation_impact/acceptance`；`decision` 为 `valid/partial/invalid/insufficient/suggestion`，`acceptance` 是 `{id, condition}` 数组。另含 `parameters`：最终评分桥/估值参数或 null 与待定原因。部分成立明确采纳与不采纳部分；缺证仍给补证及验收条件，不能当误报关闭。
-- 从同一台账生成修复包，不另写同义裁决长文：
-
-```powershell
-python -X utf8 scripts/triplet_workpaper.py repair-package data/reviews/<run-id>/adjudication-v1.json --output data/reviews/<run-id>/repair-package-v1.md
-```
-
-主 Agent 核对候选全覆盖、根因映射与验收条件后一次发作者；无修复项则按原 SOP 记不适用。机器转换不承担语义合并或裁决。
+- 新任务裁决只维护交付规范的decision.json：额外保留candidate_dispositions（全部候选ID、成立/部分成立/误报/缺证/建议、理由及原件），参数和逐问题验收；不另转录同义修复长文。主任务核候选全覆盖、评分桥及原验收条件后一次交作者。旧repair-package格式仅供历史run复现，见历史闸门。
 
 整套更新与计量沿用[调度SOP](three-report-economy-routing.md)，本文件只维护底稿与产物格式。

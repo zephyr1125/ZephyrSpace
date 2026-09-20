@@ -3,6 +3,8 @@ import copy
 import importlib.util
 import json
 import re
+import subprocess
+import sys
 import tempfile
 import unittest
 from pathlib import Path
@@ -43,7 +45,165 @@ def fixture():
                                       "inputs": {"eps": 0.3, "pe": 10}, "market_price": 3, "assumptions": "固定EPS", "evidence_refs": ["测试"]}}}
 
 
+def report_body(kind):
+    """结构测试的分离正文；不同条目避免依赖空行或重复占位通过检查。"""
+    topics = {"deep": ("业务", "渠道", "产品", "客户", "成本", "竞争"),
+              "management": ("治理", "董事", "任期", "激励", "配置", "回报"),
+              "valuation": ("假设", "折现", "情景", "敏感性", "现金流", "交叉验证")}[kind]
+    axes = ("历史", "当前", "预期", "反证", "约束")
+    evidence = ("年报", "公告", "计算", "访谈", "行业")
+    return "\n" + "\n".join("## " + topic + "\n" + "\n".join(
+        f"{kind}的{topic}在{axis}条件下，根据{source}定位核验该维度的依据及适用限制。"
+        for axis in axes for source in evidence) for topic in topics) + "\n"
+
+
 class WorkpaperTests(unittest.TestCase):
+    def test_unresolved_scoring_evidence_blocks_writing(self):
+        adjudication = {"issues": [{"id": "A01", "severity": "P1", "decision": "valid",
+                                    "acceptance": [{"id": "capital"}]}]}
+        preparation = {"items": [{"id": "capital", "kind": "evidence", "status": "open",
+                                  "resolution": "五年回购净效果未核实，暂给中档分", "evidence_refs": ["年报"]}]}
+        self.assertEqual(workpaper.repair_readiness(preparation, adjudication)["status"], "failed")
+        preparation["items"][0].update(status="resolved", resolution="已列原始回购额、均价、净股数和SBC抵消桥")
+        self.assertEqual(workpaper.repair_readiness(preparation, adjudication)["status"], "ready_for_repair_writing")
+        preparation["items"] = []
+        self.assertEqual(workpaper.repair_readiness(preparation, adjudication)["status"], "failed")
+
+    def test_stale_known_text_cannot_survive_handoff(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root, previous = Path(directory), fixture()
+            self.make_reports(root, previous, "-old")
+            data = copy.deepcopy(previous)
+            self.make_reports(root, data, "-new")
+            data["repair"] = {"issues": [], "closures": [], "score_changes": [], "report_changes": []}
+            preparation = {"items": [], "replacements": [{"report": "valuation", "old": "取得CFO 8-K正文",
+                                                          "new": "已核CFO 8-K正文"}]}
+            result = workpaper.handoff(data, root, "repair", previous, {"issues": []}, preparation)
+            self.assertTrue(any("新文未落实" in e for e in result["errors"]))
+            path = root / data["reports"]["valuation"]
+            original = path.read_text(encoding="utf-8")
+            data["repair"]["issues"] = [{"id": "text", "severity": "P2"}]
+            data["repair"]["report_changes"] = [{"report": "valuation", "section": "交接状态",
+                                                 "issue_id": "text", "reason": "修正已取得公告的状态"}]
+            path.write_text(original + "## 交接状态\n取得CFO 8-K正文\n已核CFO 8-K正文\n", encoding="utf-8")
+            self.assertTrue(any("旧文未清除" in e for e in workpaper.handoff(
+                data, root, "repair", previous, {"issues": []}, preparation)["errors"]))
+            path.write_text(original + "## 交接状态\n已核CFO 8-K正文\n", encoding="utf-8")
+            self.assertEqual(workpaper.handoff(data, root, "repair", previous, {"issues": []}, preparation)["errors"], [])
+
+    def make_reports(self, root, data, suffix=""):
+        data["reports"] = {kind: kind + suffix + ".md" for kind in ("deep", "management", "valuation")}
+        tables = workpaper.render(data)
+        for kind, name in data["reports"].items():
+            (root / name).write_text(tables + report_body(kind), encoding="utf-8")
+
+    def test_nike_v3_same_summary_and_numbered_padding_are_blocked(self):
+        # 保留真实失败机制，避免测试依赖本地被忽略的耐克草稿。
+        with tempfile.TemporaryDirectory() as directory:
+            root, data = Path(directory), fixture()
+            self.make_reports(root, data)
+            text = "# NIKE v3定向修复稿\n## 事实与口径\n品牌和渠道经营基础仍在，收入利润现金流修复尚需验证。\n"
+            text += "\n".join(f"- 修复核对记录{i}：本段不引入新事实；以v2增量、底稿和上述唯一结论为准。" for i in range(1, 116))
+            for kind, name in data["reports"].items():
+                (root / name).write_text(f"> 文档类型：{kind}。\n" + text + workpaper.render(data), encoding="utf-8")
+            result = workpaper.check(data, root)
+            self.assertEqual(result["status"], "failed")
+            self.assertTrue(any("编号占位" in e for e in result["errors"]))
+            self.assertTrue(any("同文" in e for e in result["errors"]))
+
+    def test_shared_tables_allowed_but_distinct_body_required(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root, data = Path(directory), fixture()
+            self.make_reports(root, data)
+            self.assertEqual(workpaper.check(data, root)["errors"], [])
+            for name in data["reports"].values():
+                (root / name).write_text(workpaper.render(data) + "\n" * 160, encoding="utf-8")
+            self.assertTrue(any("缺独立分析正文" in e for e in workpaper.check(data, root)["errors"]))
+
+    def test_repair_cannot_use_plain_check_or_initial_handoff(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root, data = Path(directory), fixture()
+            self.make_reports(root, data)
+            data["repair"] = {"issues": [], "closures": [], "score_changes": [], "report_changes": []}
+            self.assertTrue(any("不得跳过" in e for e in workpaper.check(data, root)["errors"]))
+            self.assertEqual(workpaper.handoff(data, root)["status"], "failed")
+            # 表格渲染仍可用，但不具备送审资格。
+            self.assertIn("triplet:cScore", workpaper.render(data))
+
+    def test_handoff_locks_acceptance_and_previous_and_report_hashes(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root, previous = Path(directory), fixture()
+            self.make_reports(root, previous, "-old")
+            data = copy.deepcopy(previous)
+            self.make_reports(root, data, "-new")
+            data["repair"] = {"issues": [], "closures": [], "score_changes": [], "report_changes": []}
+            adjudication = {"issues": []}
+            preparation = {"items": []}
+            result = workpaper.handoff(data, root, "repair", previous, adjudication, preparation)
+            self.assertEqual(result["status"], "ready_for_independent_review")
+            self.assertTrue(result["scope"]["repair"])
+            self.assertEqual(len(result["report_sha256"]), 3)
+            self.assertEqual(workpaper.handoff(data, root, "repair")["status"], "failed")
+            adjudication["issues"] = [{"id": "A01", "severity": "P1", "decision": "valid", "acceptance": [{"id": "A01-body"}]}]
+            preparation["items"] = [{"id": "A01-body", "kind": "text", "status": "resolved", "resolution": "正文已独立核对", "evidence_refs": ["原件位置"]}]
+            result = workpaper.handoff(data, root, "repair", previous, adjudication, preparation)
+            self.assertTrue(any("锁定裁决不一致" in e for e in result["errors"]))
+            data["repair"]["issues"] = [{"id": "A01", "severity": "P1", "acceptance_ids": ["A01-body"]}]
+            data["repair"]["closures"] = [{"id": "A01", "locations": ["三稿各自正文"],
+                                          "score_valuation_impact": "经核查不变", "checks": [
+                                              {"id": "A01-body", "passed": True, "evidence": "独立内容位置"}]}]
+            self.assertEqual(workpaper.handoff(data, root, "repair", previous, adjudication, preparation)["errors"], [])
+            data["repair"]["issues"][0]["severity"] = "P2"
+            self.assertTrue(any("锁定裁决不一致" in e for e in workpaper.handoff(data, root, "repair", previous, adjudication, preparation)["errors"]))
+
+    def test_declared_mass_deletion_cannot_pass_as_directed_repair(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root, previous = Path(directory), fixture()
+            self.make_reports(root, previous, "-old")
+            data = copy.deepcopy(previous)
+            self.make_reports(root, data, "-new")
+            data["repair"] = {"issues": [{"id": "A01", "severity": "P1", "acceptance_ids": ["body"]}],
+                              "closures": [{"id": "A01", "locations": ["deep"], "score_valuation_impact": "不变",
+                                            "checks": [{"id": "body", "passed": True, "evidence": "作者声明"}]}],
+                              "score_changes": [], "report_changes": []}
+            text = workpaper.render(data) + "\n## 摘要\n业务收入增长，渠道和竞争情况需要分别核对。\n" + "\n" * 160
+            (root / data["reports"]["deep"]).write_text(text, encoding="utf-8")
+            for section in workpaper.report_sections(report_body("deep")):
+                if section != "__preamble__":
+                    data["repair"]["report_changes"].append({"report": "deep", "section": section, "issue_id": "A01", "reason": "压缩", "replacement_section": "摘要"})
+            result = workpaper.check(data, root, repair=True, previous=previous)
+            self.assertTrue(any("大面积丢失" in e for e in result["errors"]))
+
+    def test_illegal_score_item_can_be_removed_only_with_declared_issue(self):
+        previous, data = fixture(), fixture()
+        previous["scores"]["company"]["items"].append({"id": "F4", "score": 2})
+        previous["scores"]["company"]["total"] += 2
+        data["repair"] = {"issues": [{"id": "A01", "severity": "P2"}], "closures": [],
+                          "score_changes": [{"key": "company/F4", "issue_id": "A01", "reason": "删除非法项", "evidence_refs": ["唯一评分规则"]}]}
+        self.assertEqual(workpaper.check(data, reports=False, repair=True, previous=previous)["errors"], [])
+        data["repair"]["score_changes"] = []
+        self.assertTrue(any("未映射" in e for e in workpaper.check(data, reports=False, repair=True, previous=previous)["errors"]))
+
+    def test_handoff_cli_exits_nonzero_without_repair_contract(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root, data = Path(directory), fixture()
+            self.make_reports(root, data)
+            path = root / "workpaper.json"
+            path.write_text(json.dumps(data), encoding="utf-8")
+            result = subprocess.run([sys.executable, "-X", "utf8", str(workpaper.ROOT / "scripts/triplet_workpaper.py"),
+                                     "handoff", str(path), "--root", str(root), "--stage", "repair"],
+                                    capture_output=True, text=True, encoding="utf-8")
+            self.assertEqual(result.returncode, 1)
+            self.assertIn("--adjudication", result.stdout)
+            result = subprocess.run([sys.executable, "-X", "utf8", str(workpaper.ROOT / "scripts/triplet_workpaper.py"),
+                                     "handoff", str(path), "--root", str(root), "--stage", "initial"],
+                                    capture_output=True, text=True, encoding="utf-8")
+            self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+            payload = json.loads(result.stdout)
+            self.assertEqual(payload["status"], "ready_for_independent_review")
+            self.assertEqual(len(payload["report_sha256"]), 3)
+            self.assertIn("workpaper", payload["input_sha256"])
+
     def test_integer_totals_use_half_up_without_changing_raw_gate_scores(self):
         data = fixture()
         data["score_display"] = "integer_half_up"
@@ -75,10 +235,10 @@ class WorkpaperTests(unittest.TestCase):
             data["reports"] = {}
             for kind in ("deep", "management", "valuation"):
                 data["reports"][kind] = kind + ".md"
-                Path(directory, kind + ".md").write_text(text, encoding="utf-8")
+                Path(directory, kind + ".md").write_text(text + report_body(kind), encoding="utf-8")
             self.assertEqual(workpaper.check(data, Path(directory))["errors"], [])
             Path(directory, "deep.md").write_text(text.replace(
-                "<!-- triplet:cScore -->60<!--", "<!-- triplet:cScore -->61<!--"), encoding="utf-8")
+                "<!-- triplet:cScore -->60<!--", "<!-- triplet:cScore -->61<!--") + report_body("deep"), encoding="utf-8")
             self.assertTrue(any("cScore" in e for e in workpaper.check(data, Path(directory))["errors"]))
         data["score_display"] = "unsupported"
         self.assertTrue(workpaper.check(data, reports=False)["errors"])
@@ -129,6 +289,18 @@ class WorkpaperTests(unittest.TestCase):
                 mutation(data["valuation"])
                 self.assertTrue(workpaper.check(data, reports=False)["errors"])
 
+    def test_quality_gate_stop_keeps_price_fields_null(self):
+        data = fixture()
+        data["valuation"] = {"status": "stopped_quality_gate_after_full_research", "currency": "USD",
+                             "models": [], "target_price": None, "certainty": None, "buy_price": None,
+                             "reason": "原始评分可信否决全部入池档位"}
+        result = workpaper.check(data, reports=False)
+        self.assertEqual(result["errors"], [])
+        self.assertIsNone(result["computed"]["target_price"])
+        self.assertIn("<!-- triplet:target_price -->null<!--", workpaper.render(data))
+        data["valuation"]["target_price"] = 1
+        self.assertTrue(workpaper.check(data, reports=False)["errors"])
+
     def test_duplicate_assets_and_unclosed_acceptance(self):
         data = fixture()
         data["bridges"] = [{"id": "equity", "start": 10, "result": 14, "unit": "HKD", "date": "2026-09-19",
@@ -148,10 +320,10 @@ class WorkpaperTests(unittest.TestCase):
             for kind in ("deep", "management", "valuation"):
                 filename = kind + ".md"
                 data["reports"][kind] = filename
-                Path(directory, filename).write_text(text, encoding="utf-8")
+                Path(directory, filename).write_text(text + report_body(kind), encoding="utf-8")
             self.assertEqual(workpaper.check(data, Path(directory))["errors"], [])
             path = Path(directory, "deep.md")
-            path.write_text(text.replace("<!-- triplet:cScore -->60.000000", "<!-- triplet:cScore -->61.000000"), encoding="utf-8")
+            path.write_text(text.replace("<!-- triplet:cScore -->60.000000", "<!-- triplet:cScore -->61.000000") + report_body("deep"), encoding="utf-8")
             self.assertTrue(workpaper.check(data, Path(directory))["errors"])
 
     def test_expressions_cannot_execute_code_or_accept_nan(self):
@@ -168,7 +340,7 @@ class WorkpaperTests(unittest.TestCase):
             for kind in ("deep", "management", "valuation"):
                 data["reports"][kind] = kind + ".md"
                 content = re.sub(r"<!-- triplet:table:model-DDM -->.*?<!-- /triplet:table:model-DDM -->", "", text, flags=re.S) if kind == "valuation" else text
-                Path(directory, kind + ".md").write_text(content, encoding="utf-8")
+                Path(directory, kind + ".md").write_text(content + report_body(kind), encoding="utf-8")
             self.assertTrue(any("model-DDM" in error for error in workpaper.check(data, Path(directory))["errors"]))
 
     def test_no_overwrite_or_outside_root(self):
@@ -190,6 +362,15 @@ class WorkpaperTests(unittest.TestCase):
         output = workpaper.repair_package(data)
         self.assertIn("matrix：核对9格", output)
         self.assertEqual(data, original)
+
+    def test_repair_package_accepts_adjudicator_original_finding(self):
+        data = {"issues": [{"id": "A09", "candidate_ids": [], "severity": "P1", "decision": "valid",
+                            "reason": "裁决回看原件发现口径错误", "evidence_refs": ["年报原件"], "action": "纠正口径",
+                            "score_valuation_impact": "重算受影响分项", "acceptance": [{"id": "A09-fact", "condition": "核对原值"}]}],
+                "parameters": {"target_price": None}}
+        output = workpaper.repair_package(data)
+        self.assertIn("候选：裁决原件新增", output)
+        self.assertIn("A09-fact：核对原值", output)
 
     def test_migration_reconstructs_current_original_rules(self):
         result = workpaper.verify_migration(workpaper.ROOT / "docs/three-report-rule-migration.json")
@@ -218,14 +399,14 @@ class WorkpaperTests(unittest.TestCase):
             content = workpaper.render(previous) + "\n## 已核实治理\n保留董事与任期证据。\n" + "\n" * 160
             for kind in ("deep", "management", "valuation"):
                 previous["reports"][kind] = kind + "-old.md"
-                (root / (kind + "-old.md")).write_text(content, encoding="utf-8")
+                (root / (kind + "-old.md")).write_text(content + report_body(kind), encoding="utf-8")
             data = copy.deepcopy(previous)
             data["repair"] = {"issues": [], "closures": [], "score_changes": [], "report_changes": []}
             for kind in data["reports"]:
                 data["reports"][kind] = kind + "-new.md"
-                (root / (kind + "-new.md")).write_text(content, encoding="utf-8")
+                (root / (kind + "-new.md")).write_text(content + report_body(kind), encoding="utf-8")
             self.assertEqual(workpaper.check(data, root, repair=True, previous=previous)["errors"], [])
-            (root / "management-new.md").write_text(content.replace("保留董事与任期证据。", "略。"), encoding="utf-8")
+            (root / "management-new.md").write_text(content.replace("保留董事与任期证据。", "略。") + report_body("management"), encoding="utf-8")
             self.assertTrue(any("未声明重写" in e for e in workpaper.check(data, root, repair=True, previous=previous)["errors"]))
 
 

@@ -12,6 +12,17 @@ spec.loader.exec_module(trial)
 
 
 class TrialTests(unittest.TestCase):
+    def test_status_object_does_not_hide_root_findings(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source = root / 'review.json'
+            finding = dict(severity='P1', location='评分', claim='来源错配',
+                           evidence='原件', impact='档位不成立', recommendation='核原件')
+            source.write_text(json.dumps({'result': {'status': 'changes_required'},
+                                          'findings': [finding]}), encoding='utf-8')
+            trial.anonymize({'reviewer': str(source)}, root / 'blind')
+            self.assertEqual(trial.read(root / 'blind/candidates.json')[0]['claim'], '来源错配')
+
     def test_text_result_does_not_hide_root_findings(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
