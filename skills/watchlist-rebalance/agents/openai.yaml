@@ -1,0 +1,4 @@
+interface:
+  display_name: "Watchlist 存量调仓"
+  short_description: "扫描三档自选股中的A股和港股，对照真实持仓计算存量资金调仓方案"
+  default_prompt: "检查当前调仓机会"

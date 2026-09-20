@@ -1,0 +1,17 @@
+{
+  "quality_weight": 0.5,
+  "price_weight": 0.5,
+  "company_share_of_quality": 0.5,
+  "management_share_of_quality": 0.5,
+  "weight_status": "用户于 2026-09-16 确认：质量50%、价格50%，质量内部公司/管理层各50%",
+  "price_score_status": "技能初始设计的可解释评分刻度，并非 Finance 已有评分或预测收益率",
+  "price_score_anchors": [
+    {"basis": "target", "multiple": 1.2, "score": 0},
+    {"basis": "target", "multiple": 1.1, "score": 10},
+    {"basis": "target", "multiple": 1.0, "score": 20},
+    {"basis": "buy", "multiple": 1.0, "score": 50},
+    {"basis": "buy", "multiple": 0.9, "score": 65},
+    {"basis": "buy", "multiple": 0.8, "score": 80},
+    {"basis": "buy", "multiple": 0.6, "score": 100}
+  ]
+}
