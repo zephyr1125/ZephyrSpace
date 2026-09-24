@@ -1,0 +1,183 @@
+{
+  "lane": "facts",
+  "run": "regn-2026-09-24",
+  "reviewed_at": "2026-09-24",
+  "method": "全部决定性数字回看 SEC/公司原件（FY2025 10-K 0000872589-26-000008、FY2020 10-K、FY2022 10-K、Q2 2026 10-Q 0000872589-26-000025、Q2 2026 8-K EX-99.1 0000872589-26-000023、Q4 2025/Q4 2024/Q4 2022 8-K EX-99.1、2026 DEF 14A、2025/2026 年会 8-K、Roche HY26 p.17、UHC Part B 阶梯治疗 PDF、Motley Fool Q2 2026 电话会、SEC EDGAR submissions/FTS、stockanalysis 实时页），并在本地独立重算全部桥、杜邦、比率、估值三情景与敏感性矩阵。",
+  "covered": [
+    "FY2025 损益表桥（BR-2025-opinc-to-ni）：3,577.9 + 1,696.6 - 43.8 - 725.8 = 4,504.9，与 10-K 审计后利润表逐行一致（收入 14,342.9/R&D 5,850.2/IPR&D 124.1/SG&A 2,700.0/COGS 1,140.8/COCM 959.9/其他经营净 -10.0/税前 5,230.7/税 725.8/稀释 EPS 41.48），闭合",
+    "FY2025 资产负债表：总负债 9,301.8、总资产 40,558.7（22.9%）、长期债务 1,985.9、融资租赁 720.0（无短债）、无商誉科目、无形资产净额 1,257.4（4.0%）、应收 5,741.1、存货 3,200.8、递延税资产 4,077.2、现金+有价证券 18,865.8、净资产 31,256.9",
+    "ROE 杜邦 FY2023/FY2024/FY2025：以平均净资产重算 16.26% / 15.95% / 14.87%，净利率×周转×权益乘数（31.41%×0.3663×1.2922）复现 14.87%，权益乘数 1.29 与「非杠杆驱动」结论一致；TTM 14.04% 为聚合口径，未独立复算",
+    "OCF/净利润 FY2022-FY2025：5,014.9/4,338.4=115.6%；4,594.0/3,953.6=116.2%；4,420.5/4,412.6=100.2%；4,978.9/4,504.9=110.5%（OCF 来自 FY2022 10-K 与 FY2025 10-K 现金流量表）",
+    "FCF 原始定义核验：公司自披露口径为 OCF−Capex（Q4 2022 EX-99.1 桥：FY2022 4,424.8；Q2 2026 EX-99.1 桥：1H26 1,421.1/H1'25 1,741.2）；按该口径 FY2023 3,875.4、FY2024 3,664.6、FY2025 4,080.5",
+    "FY2025 收入三分：净产品销售 6,309.1（-17.3%）+ 合作收入 7,331.2（Sanofi 5,884.0 + Bayer 1,422.4 + 其他 24.8）+ 其他收入 702.6 = 14,342.9",
+    "EYLEA 体系季度序列：美国 EYLEA 2mg Q1'25 736.0 → Q4'25 576.9 → Q1'26 473.1 → Q2'26 412.2；美国 EYLEA HD Q1'25 306.8 → Q4'25 506.3 → Q1'26 468.4 → Q2'26 596.3；FY2025 美国合计 4,384.7、全球 7,891.0；Q3'25 推算值应为 1,965.0（EYLEA 1,302.0 + HD 663.0）",
+    "Dupixent：FY2025 17,806.7 = 3,665.6+4,344.6+4,857.0+4,939.5；Q2'26 5,998.2 = 美国 4,561.1 + ROW 1,437.1；H1'26 10,878.3（+36%）；利润份额 Q2'26 2,032.6/6,204.1=33%、Q2'25 29%",
+    "Model-1（经营性 PE + 每股净现金）：bear 42.0×13+149.52=695.52、base 46.74×16+149.52=897.36、bull 50.0×18+149.52=1049.52，9 格敏感性全部复现",
+    "Model-2（FCFF 折现）：bear 604.6822、base 795.1203、bull 1006.3997 全部独立复现；敏感性矩阵（w×g）9 格复现（如 w=9%/g=2% = 795.12）",
+    "加权与目标价：0.5×695.52+0.5×604.6822=650.1011；base 846.2402；bull 1027.9599；target=846.2402；buy_price=846.2402×(0.68+0.14×0.55)=640.6038（按项目公式复算一致）",
+    "反解 DCF 隐含 g：以基准 FCF 路径、w=9%、净现金 149.52、市价 801.82 反解 g=2.0890%，与 workpaper 2.0889576735697822% 一致（weight=0 仅诊断）",
+    "两条 bridge 闭合核验：BR-1H26-netcash 18,865.8+1,891.9-470.8-1,967.7-199.8-296.5=17,822.9（等于 6/30 实际现金+有价证券）；「其他现金变动」为残差项且等于实际残差",
+    "E4 capex_check：FY2025 现金 capex 898.4 对 FY2024 755.9 = +18.85%，未达规则 30% 阈值，applicable=false 正确（10-K 现金流量表原值核验）",
+    "股数与净现金：17,822.9-2,706.6=15,116.3；149.52=15,116.3/101.1（算术自洽）；10-Q 封面 2026-07-23 为 Common 101,137,842 + Class A 1,817,146；6/30 资产负债表 138.0-36.4+1.8=103.4",
+    "审计报告：PwC LLP（PCAOB ID 238，Florham Park NJ），2026-02-04 签署，对合并报表与 ICFR 均无保留意见，唯一 CAM「Certain Reserves for Uncertain Tax Positions」$1,577.9M，「We have served as the Company's auditor since 1989」",
+    "FY2026 指引（Q2 2026 EX-99.1）：GAAP R&D 6.500-6.635、non-GAAP 5.950-6.050、GAAP SG&A 2.830-2.960、GAAP 毛利率 78-79%、capex 1.030-1.100（自 1.100-1.200 下调）、GAAP ETR 13-14%",
+    "2026 DEF 14A：Schleifer FY2025 总薪酬 7,280,549（薪金 1,979,922 + 现金激励 3,682,655 + 其他 1,617,972，股权授予为 0）、Yancopoulos 6,949,469、中位员工 174,138（≈42:1）、burn rate 2.00%、PSU 各归属 623,647 股/481,511,612、Class A 1,817,146（10 票）与 Common 103,021,886、Schleifer 持 Class A 95.0%",
+    "2025/2026 年会 8-K：2026 say-on-pay 96,469,374/6,898,268=93.3%；2025 say-on-pay 93.0%；Proposal 5(a) Class A For 0/Against 18,081,400、Common For 85,490,681/Against 2,279,384（未通过）；5(b) 85,490,182/20,360,243（未通过）；去分类 85,711,231/20,226,748（通过）",
+    "10-K 业绩图 TSR：2020-12-31 至 2025-12-31，REGN 159.77（+59.8%）、S&P 500 182.25（+82.3%）、NQ US Pharma TR 200.89（+100.9%），含股息再投资",
+    "FY2025 其他收益拆解：10-K MD&A 明确列出 证券损益净额 946.1 + 利息收入 716.8 + 其他 33.7 = 1,696.6（现金流量表同带 946.1）",
+    "诉讼与监管原件：10-K Note 16 与 Q2 2026 10-Q Note 12 逐条比对（DOJ/qui tam 各阶段、证券集体诉讼 2026-06-25 口头辩论、2026-07-16 新集体诉讼、Dupixent 产品责任 2026-06-04 移送 D.N.J.、Sanofi 案 2024-11-18 立案/2026-03-17 驳回 MTD、Amgen 两案并存）",
+    "UHC Part B 阶梯治疗 PDF：优选顺序为「Repackaged Avastin，然后 Eylea 或 Eylea HD 或 Pavblu」，Vabysmo/Lucentis/Beovu 等为非优选（与 facts C-007 一致）",
+    "Roche HY26 报告 p.17：Vabysmo 美国 H1'26 CHF 1,333M vs H1'25 CHF 1,450M（+1% CER），总销售 CHF 2,059M",
+    "Q2 2026 电话会逐字稿（Motley Fool）真实存在，含「favorable gross-to-net adjustment」「low to mid-teens」「$15.1 billion ... net of debt」「24% sequential increase in physician unit demand」「approximately 50 active clinical programs」；全文「35」仅出现 1 次且为行情条数字",
+    "创始人减持核验（抽样）：Schleifer（CIK 0001218629）2025-12-11 与 2026-01-05 Form 4 仅含 M/F 代码（无 S），其上一批 Form 4 为 2024-05/06；Yancopoulos（CIK 0001226690）Form 4 在 2024-06-12 后直到 2025-12-11 无申报",
+    "行情/一致预期交叉核验（2026-09-24 实时）：stockanalysis 99.85M 股、市值 $80.07B、PE(TTM) 19.83、Forward PE 13.22、EPS(TTM) 40.43、FCF $3.76B、FY2026 EPS $53.80（基于 FY2025 non-GAAP 44.31）、FY2027 $60.62、下一财报 2026-10-27（非官方）",
+    "评分与档位算术：25 项公司分合计 81.0、7 项管理层分合计 76，合计 157；对照 data/watchlist_meta.json（B_GROWTH 150/70、A_CORE 160/76）结论正确；六个公司维度均高于满分 40%"
+  ],
+  "findings": [
+    {
+      "severity": "P1",
+      "location": "writer/workpaper-v1.json → E2（reason 与 evidence_refs: REGN-E-005）；evidence/facts.json REGN-E-005；evidence/facts-financials.md §4.2",
+      "claim": "E2 断言「FCF（OCF−Capex）FY2022-FY2025 分别为 $33.98 亿、$36.68 亿、$35.39 亿、$40.81 亿」，并据此声称连续为正、规模可观",
+      "evidence": "按所标注公式复算（原件：FY2022 10-K 现金流量表 OCF 5,014.9、capex 590.1；FY2025 10-K OCF 4,978.9/4,420.5/4,594.0、capex 898.4/755.9/718.6）：FY2022 = 4,424.8（公司自披露 FCF 桥，Q4 2022 EX-99.1「Free cash flow $4,424.8」），FY2023 = 3,875.4，FY2024 = 3,664.6，FY2025 = 4,080.5。被引用的 3,398.0 / 3,667.6 / 3,538.9 实为「OCF − capex − 无形资产付款」（FY2022 10-K：「Payments for Libtayo intangible asset (1,026.8)」；FY2023 207.8；FY2024 125.7），而 FY2025 却未扣当年 315.3，即同一序列跨年口径不一致，FY2022 与公司披露口径相差 $1,026.8M（23%）",
+      "impact": "E2 的支撑数字错误（口径混用）。E2 得 4.5/5 不变（各年真值仍为正），也不影响档位；但引用规范要求 FCF 必须注明口径，此处标注与数值不符",
+      "recommendation": "统一采用公司口径 FCF = OCF − capex，写为 FY2022 4,424.8 / FY2023 3,875.4 / FY2024 3,664.6 / FY2025 4,080.5；若坚持扣除无形资产付款，须改标签为「OCF−capex−无形资产付款」并补 FY2025 = 3,765.2，同时更正 facts.json REGN-E-005"
+    },
+    {
+      "severity": "P1",
+      "location": "writer/workpaper-v1.json → D1（reason）与「资本配置能力」（reason）；evidence/facts.json REGN-D-001",
+      "claim": "D1：「研发投入从 FY2019 $30.4 亿单调递增至 FY2025 $58.5 亿」；资本配置能力：「R&D 由 FY2019 $30.37 亿增至 FY2025 $58.50 亿」",
+      "evidence": "FY2020 10-K 审计后利润表：「Research and development 2,735.0 2,450.0」（FY2020 / FY2019），即 FY2019 R&D = $2,450.0M，不是 $3,036.6M；Q4 2022 EX-99.1：「GAAP R&D ... FY2021 $2,860.1」（facts.json 的 $2,908.1 恰为 2,860.1 + 当年 IPR&D 48.0，口径混用）。FY2023-FY2025（4,439.0/5,132.0/5,850.2）与利润表一致，故序列非可比",
+      "impact": "D1 与资本配置能力的首要增长证据被夸大 $586.6M（24%）。D1（4/4）与资本配置（18/25）的结论方向不变（FY2019→FY2025 仍为单调上升，24.5→58.5 亿）",
+      "recommendation": "把起点改为 FY2019 $2,450.0M（FY2021 用 $2,860.1M），或干脆改以 FY2023-FY2025 为观察窗；同步更正 REGN-D-001 并把来源改为 FY2020/FY2022 10-K（S01 不含 FY2019-FY2021 数据）"
+    },
+    {
+      "severity": "P1",
+      "location": "writer/workpaper-v1.json → C1（reason 第 2 句，evidence_refs: REGN-C-001）",
+      "claim": "「EYLEA 体系已让出美国视网膜市场销售第一（Vabysmo 美国 Q4 2025 $8.16 亿 vs Eylea $5.77 亿）」",
+      "evidence": "① Regeneron Q4 2025 8-K EX-99.1 Table 5（原件）：美国 EYLEA 576.9 + 美国 EYLEA HD 506.3 = 体系合计 1,083.2，高于所引 Vabysmo 美国的 $816M —— 即 Q4 2025「体系」仍居第一；被引数字是把 Vabysmo 全产品美国销售与「原研 EYLEA 单品」相比，漏计 EYLEA HD。② Roche Half-Year Report 2026 p.17（原件）：Vabysmo 美国 H1'26 CHF 1,333M、H1'25 CHF 1,450M（+1% CER），而 EYLEA 体系美国 H1'26 = $1,950.0M，体系仍领先约 18%。③ 同一证据包 evidence/facts-market-pipeline.md §1.1 亦写明「Vabysmo US sales were ~flat-to-down YoY in H1 2026; it is not currently taking US share from the EYLEA franchise on a sales basis」。④ UHC 2026 阶梯治疗 PDF 把 Vabysmo 列为非优选而 Eylea/Eylea HD/Pavblu 优选，方向亦相反。事实登记 REGN-C-001 的 source_id（Roche HY26 报告）也不含 Q4 2025 数据，属错误引用",
+      "impact": "C1「稳定第二梯队（4）」三条理由中第 2 条不成立；剔除后另两条（三条线仅一条为龙头且其商业化与半数利润归 Sanofi）仍足以支撑 4 分，故预计分数不变，但该句必须更正——它同时是 C1 标题性论断与「护城河被侵蚀」叙事的依据",
+      "recommendation": "改为：「原研 EYLEA 美国销售已从 FY2024 $4,767.1M 降至 FY2025 $2,747.8M、Q2 2026 同比 -45%，Vabysmo 在 Q4 2025 美国单季销售（约 $816M）已接近整个 EYLEA 体系（$1,083.2M）并持续抢占新患者份额，但体系销售额仍居美国首位」；并修 REGN-C-001 的口径与来源"
+    },
+    {
+      "severity": "P1",
+      "location": "writer/workpaper-v1.json → D2（reason）、战略稳定性（reason）、表达清晰度与认知质量（reason）；evidence/facts.json REGN-D-003",
+      "claim": "三处均称「管理层对管线规模的表述不一致：财报约 50 个候选物 vs 电话会『35+ 个临床阶段项目』」，并各自作为扣分项",
+      "evidence": "被引来源 REGN-S10（Q2 2026 电话会逐字稿，Motley Fool，2026-07-30，已实测可访问）全文出现「approximately 50 active clinical programs」「50 active clinical programs」「approximately 50 product candidates」，而字符串「35」在全文仅出现 1 次且属行情条数字（\"-352.10\"），无任何「35+ programs」表述。电话会与财报口径一致（均为约 50），不存在所述不一致",
+      "impact": "D2（3.5/5）、战略稳定性（13/15）、表达（4/5）各有一项扣分依据不成立。按最宽松修复（D2→4、战略稳定性→14、表达→4.5）合计约 +0.5 公司分 +2 管理层分 = 159.5，仍低于 A_CORE 的 160，不翻档；但三项分数与说明均须修订",
+      "recommendation": "删除三处「35+」表述；若该数字确实来自其他场合（如 Q1 2026 电话会或卖方会），须补登对应来源并注明报告期，否则不得作为「表述不一致」的扣分证据；同步修 REGN-D-003"
+    },
+    {
+      "severity": "P1",
+      "location": "writer/workpaper-v1.json → E3（reason）与 evidence_gaps[0]（kind）；evidence/facts.json REGN-E-003",
+      "claim": "「其余约 $9.80 亿的来源未获公司完整拆解（证据缺口）」／缺口项「FY2025『其他收益（费用）净额』$1,696.6M 中除利息收入 $716.8M 之外的约 $979.8M 未获公司完整拆解」；certainty_reason 亦称「32.4% 税前利润来自未完全拆解的非经营性收益」",
+      "evidence": "FY2025 10-K MD&A「Other Income (Expense)」表（原件）逐项列示：Gains (losses) on marketable and other securities, net 946.1 + Interest income 716.8 + Other 33.7 = 1,696.6；现金流量表间接法首行同为「(Gains) losses on marketable and other securities, net (946.1)」。即 $979.8M 中 $946.1M 为证券损益、$33.7M 为其他，公司已完整拆解，不存在证据缺口",
+      "impact": "E3 = 2/3 的结论不变（增长仍由非经营性投资收益驱动），但「证据缺口」这一决定性判断不成立，且它同时支撑 certainty_reason 的保守叙事与估值「避免双重计价」的说明；证据完整性记录被错误标记为 open",
+      "recommendation": "把该条从 evidence_gaps 移除或改写为「已拆解：证券损益 946.1 + 其他 33.7；其中 946.1 为已实现+未实现合计、未再细分，故仍按非经常性处理」；E3 与 certainty_reason 的文字同步改为引用拆解数"
+    },
+    {
+      "severity": "P2",
+      "location": "writer/workpaper-v1.json → 战略稳定性（reason）；evidence/facts.json REGN-F-012",
+      "claim": "「该结构在 2025-11-18 已演变为 Regeneron 起诉 Sanofi 违反合作协定」",
+      "evidence": "FY2025 10-K Note 16 j 与 Q2 2026 10-Q Note 12 j（原件）：「On November 18, 2024, the Company filed a lawsuit (as amended on December 20, 2024) in the SDNY against Sanofi ... On March 17, 2026, the court denied Sanofi's motion to dismiss」——立案日为 2024-11-18；2025-11-18 是另一事项（qui tam 上诉的口头辩论日）",
+      "impact": "仅为日期错误，不影响 13/15 的评分逻辑（诉讼事实与 MTD 被驳均正确）",
+      "recommendation": "改为 2024-11-18（2024-12-20 修订），并更正 REGN-F-012"
+    },
+    {
+      "severity": "P2",
+      "location": "writer/workpaper-v1.json → 估值 models 全部 net_cash_ps=149.52 与 evidence_gaps[1]（股数）",
+      "claim": "「估值统一采用 101.1M（10-Q 净发行在外推算值）」，并据此计算每股净现金 149.52",
+      "evidence": "Q2 2026 10-Q 封面（原件，2026-07-23）：「Class A Stock, $.001 par value 1,817,146；Common Stock, $.001 par value 101,137,842」→ 合计 102,954,988 股；6/30 资产负债表：Class A 1.8 + Common 发行 138.0 − 库存 36.4 = 103.4。101.1M 仅为 Common 单一类别（且与 Markets Insider 101.14M 同源），并非「10-Q 净发行在外」总数。以 102.95M 计，每股净现金 = 15,116.3/102.95 = 146.83（-2.69）",
+      "impact": "两模型各降 $2.69 → 基准目标价 846.24 → 约 843.55（-0.32%），buy_price 约 638.6；三情景档位与 B_GROWTH 结论均不变。但股数分母与 eps_op 的分母口径未对外披露，估值链条的可复核性受影响",
+      "recommendation": "改用 102.95M（Common 101,137,842 + Class A 1,817,146，2026-07-23）或明确声明「仅用 Common 计数并说明 Class A 影响」，并同步披露 eps_op/FCF-per-share 所用的稀释股数口径（1H26 稀释加权 106.8M）"
+    },
+    {
+      "severity": "P2",
+      "location": "writer/workpaper-v1.json → B4（score 3.5）与 D2（score 3.5）的 rule_ref",
+      "claim": "rule_ref 引用「行业成长期+内生增长主导=5；成熟期但稳定=3」与「≥2/3达标=5；50%达标=3」，但给分 3.5",
+      "evidence": "deep-prebuy-skill/SKILL.md B 维度评分表（B4 5 分）与 D 维度评分表（D2 5 分）均只列离散档位；全文中允许 ±0.5 的仅三处：E4 capex 未拆分 -0.5、F2.5 正面先例 +0.5、E5.5 缺 MD 时的 1.5 中性处理。B4/D2 的 0.5 插值在规则中无依据",
+      "impact": "若按低档取整，公司分 81.0 → 80.0；若按高档，→ 82.0；两者均不改变 B_GROWTH（合计 ≥150 且两项 ≥70）",
+      "recommendation": "二选一：(a) 在 reason 中显式声明「规则未提供插值档，按两类事实折中取 3.5，属方法偏离并记录」；(b) 按规则取整（B4→3、D2→3 或 B4→5、D2→5）并相应调整总分"
+    },
+    {
+      "severity": "P2",
+      "location": "writer/workpaper-v1.json → F2（reason）与「对股东友好度」（reason）",
+      "claim": "「股息派息率仅 9.15%（FY2025 现金股利 $3.70 亿 / 净利润 $45.05 亿）」",
+      "evidence": "按括号内公式复算：370.3 / 4,504.9 = 8.22%，不等于 9.15%。9.15% 系聚合网站口径（facts.json REGN-F-008 标为聚合），两种口径被混写在同一句中",
+      "impact": "仅数字自洽性瑕疵；F2 由 5 分档降为 3 分档的主因（派息绝对水平低）不变",
+      "recommendation": "改为「派息率 8.2%（公司口径：FY2025 现金股利 370.3 / 归母净利 4,504.9；聚合口径 TTM 约 9.15%）」或删去分子分母、只留聚合数字并标源"
+    },
+    {
+      "severity": "P2",
+      "location": "writer/workpaper-v1.json → F2.5（reason ③）与「资本配置能力」（reason）",
+      "claim": "「2019-2026H1 累计约 $177 亿」回购",
+      "evidence": "回购计划口径（facts.json REGN-F-007）：2019 254.0 + 2020 5,880.9 + 2021 1,655.0 + 2022 2,099.8 + 2023 2,214.6 + 2024 2,613.9 + 2025 3,456.2 + 2026H1 1,967.7 = $20,142.1M（2019-2026H1）／$19,888.1M（2020-2026H1）／$17,920.4M（2020-2025）。现金流量表口径（FY2020 10-K/FY2025 10-K）2019-2025 = $18,127.8M。没有任何口径组合得到 $17.7B」",
+      "impact": "金额与期间不匹配；对 F2.5 的 2.5 分与资本配置 18/25 无实质影响",
+      "recommendation": "改为「2020-2025 约 $179 亿（回购计划口径）」或「2019-2026H1 约 $201 亿」，并注明口径"
+    },
+    {
+      "severity": "P2",
+      "location": "writer/workpaper-v1.json → B4（reason）与 valuation.certainty_reason",
+      "claim": "「Q4 2026 起有 6 家生物类似药集群上市」（certainty_reason 作「Q4 2026 有 6 家 aflibercept 生物类似药进入美国市场」）",
+      "evidence": "按 facts.json REGN-C-002 与 REGN-S20/market-pipeline §1.3：已上市 2 家（Amgen Pavblu 2024-10-30、Biocon Yesafili 2026-08-03）；Q4 2026 进入 4 家（Sandoz Enzeevu、Formycon Ahzantive、Celltrion Eydenzelt 2026-12-31、Alvotech/Teva AVT06）；Samsung Bioepis Opuviz 为 2027-01。即「Q4 2026 起新增」为 4-5 家、累计获批 7 家",
+      "impact": "计数量级无碍（B4 3.5、确定性 0.55 的尾部风险叙事方向不变）",
+      "recommendation": "改为「Q4 2026 起 4 家新上市 + 2027-01 三星 1 家（累计 7 家获批，已上市 2 家）」"
+    },
+    {
+      "severity": "P2",
+      "location": "writer/workpaper-v1.json → B1（evidence_refs）、D5（evidence_refs）、Libtayo/Pasatru/cemdisiran 相关句",
+      "claim": "多处 evidence_refs 与被支撑句不匹配（引用存在但语义不支持）",
+      "evidence": "① B1 称「培育中的引擎（Libtayo +30%、Lynozyfic、Pasatru、cemdisiran）」但只引 REGN-B-002/B-003/B-006/M-006，未引覆盖 Pasatru/cemdisiran 的 REGN-D-005；② F1 称「持股指引 CEO/CSO ≥6× 基本薪金、实际 >400×」「追回政策宽于 Nasdaq 标准」「2022-04 起禁止对冲与质押」，其引用（REGN-F-001/F-002/F-003/F-013/F-014）均不含这些内容，实际出处为治理包 §4.3/§2.3（REGN-F-006）；③ E4 的 capex_check 引 REGN-D-002（指引）支持 FY2025/FY2024 实际 capex，实际应以 REGN-S01（10-K 现金流量表）为主证",
+      "impact": "不影响任何分数，但违反「引用须支撑所附句子」的证据契约要求，削弱可追溯性",
+      "recommendation": "为上述句子补引 REGN-D-005、REGN-F-006 等正确 ID，或把对应内容登记为独立 fact_id"
+    },
+    {
+      "severity": "P2",
+      "location": "evidence/facts.json REGN-A-003、REGN-D-001、REGN-E-005 的 source_id；evidence/sources.json（缺 FY2020/FY2022/FY2024 10-K）",
+      "claim": "三条事实登记的来源 ID 不支持其所载数据",
+      "evidence": "① REGN-A-003（2020 年 9,806,805 股/$50 亿 Sanofi 买入、$1.5B 364 天过桥贷款）经 FY2020 10-K 原件逐项核实为真，但登记来源 REGN-S01（FY2025 10-K）全文无「9,806,805」「bridge loan」字样；② REGN-D-001 的 FY2019-FY2021 R&D 不在 S01 覆盖期（S01 利润表仅 FY2023-FY2025）；③ REGN-E-005 的 FY2022-FY2025 OCF/FCF 不在 REGN-S03（Q2 2026 8-K）覆盖内，该件只有 1H26/1H25 的 FCF 桥。FY2020 10-K（facts-governance §0 S9）未登记进 sources.json",
+      "impact": "数值本身可核（我已回原件逐项确认），但登记表 ID→来源映射错误，复核时无法按登记路径回到原件",
+      "recommendation": "补登 FY2020/FY2022/FY2024 10-K 到 sources.json，并把 A-003/D-001/E-005 的 source_id 改为实际出处，保留 FY2025 10-K 作为 FY2023-FY2025 数据源"
+    },
+    {
+      "severity": "P2",
+      "location": "evidence/facts.json REGN-F-011（workpaper F3 与「诚信与透明度」的引用）；evidence/facts-market-pipeline.md §4.4",
+      "claim": "F-011 逐条列出的监管/诉讼事项中缺少 2026 年新增的 qui tam",
+      "evidence": "Q2 2026 10-Q Note 12 d（原件）：「On January 20, 2026, a qui tam plaintiff filed a complaint under seal ... On May 22, 2026 and June 17, 2026 ... the United States and the applicable states notified the court of their decisions to decline to intervene ... On June 18, 2026, the [C.D. Cal.] unsealed the qui tam complaint. On July 20, 2026, the plaintiff filed an amended complaint.」——market-pipeline 已收录，facts.json 未收录",
+      "impact": "无分数变化（F3 已按三类诉讼记 2/3），但「逐条独立记录」的完整性不达标",
+      "recommendation": "在 REGN-F-011 增补该条（立案 2026-01-20、退场 2026-05-22/06-17、解封 2026-06-18、2026-07-20 修订）"
+    },
+    {
+      "severity": "P2",
+      "location": "evidence/facts-market-pipeline.md §1.1「Global（Regeneron + Bayer-recorded ex-US）」Q3 2025 推算行",
+      "claim": "Q3 2025 全球「EYLEA HD + EYLEA = 2,016.2（HD 662.6 + EYLEA 1,353.6 推算）」",
+      "evidence": "以 FY2025 8-K EX-99.1 Table 5 原件反推：FY2025 全球合计 7,891.0 −（Q1 1,900.6 + Q2 2,125.2 + Q4 1,900.2）= Q3 1,965.0；HD：2,569.6 − (453.2+634.9+818.5) = 663.0；EYLEA：5,321.4 − (1,447.4+1,490.3+1,081.7) = 1,302.0。facts-financials.md §5.2 的对应值为正确值",
+      "impact": "workpaper 未引用该行，故不影响评分与估值；但同一证据包内两文件对同一 Q3'25 派生值不一致（1,965.0 vs 2,016.2），后续复用会带错",
+      "recommendation": "以 facts-financials.md §5.2 口径更正 market-pipeline §1.1（1,965.0 / 663.0 / 1,302.0）"
+    },
+    {
+      "severity": "P2",
+      "location": "writer/workpaper-v1.json → valuation.certainty_reason（尾部风险 2）",
+      "claim": "「Dupixent 约 2031 年起的生物制剂专利悬崖」",
+      "evidence": "三份证据文件均无该年份：facts.json 无任何 2031/专利到期条目；market-pipeline §8 明确记为「FY2025 Form 10-K, Business — Patents section | not read」。该说法无登记来源",
+      "impact": "不影响 0.55 的数值判断（尾部风险另有 4 项有据），但以未证事实支撑下调确定性的叙事",
+      "recommendation": "补登专利到期来源（FY2025 10-K Business/Patents 章节或 10-Q 引用），或改为「Dupixent 生物制剂独占期到期时点未取得原件，列为未知」"
+    },
+    {
+      "severity": "P2",
+      "location": "writer/workpaper-v1.json → qualification（highest_score_gate = B_GROWTH）",
+      "claim": "「满足 B_GROWTH（合计≥150 且两项均≥70）」并注明资格须由主 Agent 按红线复核",
+      "evidence": "data/watchlist_meta.json 的 B_GROWTH 入池条件不只有分数：「基本面质量：净现比 > 80%，ROE > 15% 或处于上升趋势」。实际 FY2025 ROE 14.87%（FY2023 16.26% → FY2024 15.95% → FY2025 14.87%，逐年下滑），「ROE > 15% 或处于上升趋势」两条均不满足（净现比 110.5% 满足）。A_CORE 的「盈利质量：ROE > 15% 且过去 3 年持续稳定」同样不满足",
+      "impact": "分数门槛（157≥150、两项≥70）成立无误，但资格判定若只看分数会漏掉这条硬条件",
+      "recommendation": "在 qualification.reason 中显式写明 ROE 条件未达标这一事实及其对入池档位的含义，交由主 Agent 与用户按 WATCHLIST_RULES 裁决"
+    }
+  ],
+  "uncovered": [
+    "估值输入 eps_op（FY2027E $46.74 / bear 42.0 / bull 50.0）与 FCF/share 路径（fcf1-fcf5）无收入-经营利润-再投资的搭建过程，workpaper 只标为 assumption，无证据锚点，无法独立验证；仅能做合理性核对（TTM FCF $3,760M ≈ $37.1/股，剔除利息收入后约 $31/股，与 fcf1 $30.50 同量级；Street FY2026E 一致口径 FCF $5.93B 明显更高，说明模型显著保守）",
+    "聚合口径指标未独立复算：TTM ROE 14.04%、ROIC（FY2023 22.38%→FY2025 13.04%、TTM 13.50%）、EV/EBITDA 13.81、Beta 0.19、P/S 5.15、TTM FCF $3,760M、回购收益率 4.76%/股东回报率 5.23%；已交叉核验的同源聚合值另有 99.85M 股/市值 $80.07B/PE 19.83/Forward PE 13.22/EPS(TTM) 40.43/FY2026-27 一致预期 53.80-60.62（stockanalysis 2026-09-24 实时页面）",
+    "CMS IPAY 2026/2027/2028 选定药单：S15 与 CMS 表格返回 HTTP 403，无法直接核验「EYLEA（生物类似药豁免）与 Dupixent 均未被选中」；10-K/Q2 10-Q 仅有一般性风险提示与「首批 Part B 谈判价 2028 年生效」表述，未确认具体名单",
+    "内部人交易全量：242 件 Form 4 的年度卖出金额（2023 $81.6M / 2024 $291.2M / 2025 $5.1M / 2026 $7.8M）、创始人卖出价区间 $965-$1,025、董事会历次反对票的具体构成，仅做抽样（已确认 Schleifer/Yancopoulos 2024-06 后至 2025-12 之间无 Form 4 卖出记录、Schleifer 2025-12/2026-01 两份 Form 4 仅含 M/F 代码）",
+    "Dupixent 专利悬崖年份（2031）与 Regeneron Genetics Center「1,000 万志愿者/外显子测序独家权」的合同级细节：10-K 只确认 2025-01 与 Truveta 的测序协议（最多 1,000 万志愿者），「独家」字样未在原件中取得",
+    "FY2025 10-K Business/Patents 章节与公司官网/deck 类来源（investor.regeneron.com 静态文件超时）未逐页核对；因此 EYLEA/Dupixent 的专利到期表无法独立复核",
+    "Q1 2026 8-K（0000872589-26-000014）与 Q1 2026 10-Q 我只做了引用性核对，未逐条比对季度费用行；facts-financials §5.1 中 Q2'25-Q1'26「Income from operations」为聚合口径（Q2'25 列 1,090），而 Q2 2026 8-K 原件为 1,079.5，聚合值与原件存在约 $10.5M 差异（未被 workpaper 引用）"
+  ]
+}

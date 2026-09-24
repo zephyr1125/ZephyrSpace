@@ -1,0 +1,76 @@
+{
+  "root_thread_id": "regn-2026-09-24",
+  "run_id": "regn-2026-09-24",
+  "company": "Regeneron Pharmaceuticals, Inc.",
+  "code": "REGN.US",
+  "market": "美股/纳斯达克",
+  "data_cutoff": "2026-09-24",
+  "dispatch_note": "用户明确指令：本轮所有角色不做模型预设，统一使用主对话模型 deepseek-v4-flash。故 fixed-role 表中 gpt-5.6-terra / gpt-5.6-sol / gpt-6-astra 的配置在本轮不适用，全部角色以实际可用模型运行时为准。",
+  "roles": [
+    {
+      "role": "triplet_evidence",
+      "requested_model": "deepseek-v4-flash",
+      "requested_effort": "n/a",
+      "agent_id": "evidence-financials / evidence-governance / evidence-market-pipeline",
+      "dispatch_method": "Agent tool (subagent inherit model)",
+      "actual_model": "deepseek-v4-flash",
+      "actual_model_source": "user_directive",
+      "status": "running",
+      "artifacts": [
+        "data/reviews/regn-2026-09-24/evidence/facts-financials.md",
+        "data/reviews/regn-2026-09-24/evidence/facts-governance.md",
+        "data/reviews/regn-2026-09-24/evidence/facts-market-pipeline.md"
+      ]
+    },
+    {
+      "role": "triplet_writer",
+      "requested_model": "deepseek-v4-flash",
+      "requested_effort": "n/a",
+      "agent_id": "writer-main",
+      "dispatch_method": "Agent tool (subagent inherit model)",
+      "actual_model": "deepseek-v4-flash",
+      "actual_model_source": "user_directive",
+      "status": "pending",
+      "artifacts": []
+    },
+    {
+      "role": "triplet_review_facts",
+      "requested_model": "deepseek-v4-flash",
+      "requested_effort": "n/a",
+      "agent_id": null,
+      "dispatch_method": "Agent tool (subagent inherit model)",
+      "actual_model": "deepseek-v4-flash",
+      "actual_model_source": "user_directive",
+      "status": "pending",
+      "artifacts": []
+    },
+    {
+      "role": "triplet_review_reasoning",
+      "requested_model": "deepseek-v4-flash",
+      "requested_effort": "n/a",
+      "agent_id": null,
+      "dispatch_method": "Agent tool (subagent inherit model)",
+      "actual_model": "deepseek-v4-flash",
+      "actual_model_source": "user_directive",
+      "status": "pending",
+      "artifacts": []
+    },
+    {
+      "role": "triplet_adjudicator",
+      "requested_model": "deepseek-v4-flash",
+      "requested_effort": "n/a",
+      "agent_id": null,
+      "dispatch_method": "Agent tool (subagent inherit model)",
+      "actual_model": "deepseek-v4-flash",
+      "actual_model_source": "user_directive",
+      "status": "pending",
+      "artifacts": []
+    }
+  ],
+  "gate_status": "pending",
+  "evidence_version": "v1",
+  "frozen_workpaper": null,
+  "repair_rounds": 0,
+  "reopen_reason": null,
+  "final_state": "in_progress"
+}

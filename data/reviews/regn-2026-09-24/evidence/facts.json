@@ -1,0 +1,531 @@
+{
+  "run": "regn-2026-09-24",
+  "data_cutoff": "2026-09-24",
+  "note": "Neutral facts only. No scores, no target prices. Chinese labels: 实际=reported by company/SEC; 推算=derived by arithmetic; 聚合=aggregator-reported.",
+  "facts": [
+    {
+      "fact_id": "REGN-ID-001",
+      "item": "证券身份",
+      "value": "Regeneron Pharmaceuticals, Inc. / NASDAQ: REGN / CIK 0000872589 / SIC 2834 / 注册地 New York / 上市日期 1991-04-02",
+      "kind": "实际",
+      "period": "2026-09-24",
+      "source_id": "REGN-S18"
+    },
+    {
+      "fact_id": "REGN-ID-002",
+      "item": "股本结构（双重股权）",
+      "value": "Class A 1,817,146 股（10 票/股，1991 年 IPO 后未再发行，可 1:1 转普通股，Schleifer 持 95.0%）+ Common 103,021,886 股（1 票/股）；普通股合计约 85% 投票权",
+      "kind": "实际",
+      "period": "2026-04-14",
+      "source_id": "REGN-S06"
+    },
+    {
+      "fact_id": "REGN-ID-003",
+      "item": "创始人投票权（计算）",
+      "value": "Schleifer 约 18,440,318 票 ≈ 总投票权 15.2%；Yancopoulos 约 2,050,033 票 ≈ 1.7%；董事与高管 19 人合计 ≈ 17.7%",
+      "kind": "推算",
+      "period": "2026-04-14",
+      "source_id": "REGN-S06"
+    },
+    {
+      "fact_id": "REGN-ID-004",
+      "item": "交易市场风险承接",
+      "value": "已核 10-K/10-Q/DEF 14A/8-K、Form 4、SEC 全文检索、Tavily 红旗检索；SBC 与稀释股数、回购净效果、非 GAAP 与 GAAP 桥、诉讼与监管均已覆盖（见各分项）",
+      "kind": "实际",
+      "period": "2026-09-24",
+      "source_id": "REGN-S18"
+    },
+    {
+      "fact_id": "REGN-A-001",
+      "item": "公司起源",
+      "value": "1988 年由 Leonard S. Schleifer（M.D., Ph.D., 神经内科）创立；George D. Yancopoulos（M.D., Ph.D.）1989 年加入；二人共同管理公司 38 年，为公司自述「行业内任期最长的 CEO/CSO 组合」",
+      "kind": "实际",
+      "period": "2026-04-14",
+      "source_id": "REGN-S06"
+    },
+    {
+      "fact_id": "REGN-A-002",
+      "item": "控制权变更次数",
+      "value": "IPO（1991）至今实际控制人未发生变更；Schleifer 任 CEO 自 1988 年起",
+      "kind": "实际",
+      "period": "2026-09-24",
+      "source_id": "REGN-S06"
+    },
+    {
+      "fact_id": "REGN-A-003",
+      "item": "2020 年一次性大宗回购",
+      "value": "2020 年回购 11.6 百万股、权益表口径 $5,880.9M，其中 9,806,805 股、$50 亿直接购自 Sanofi（配合 Sanofi 2020-05 二次发行，交易后 Sanofi 出清）；资金来源含 $1.5B 364 天过桥贷款，后以 2030 年票据 $1.25B + 2050 年票据 $0.75B 偿还；剔除该笔后常规回购仅 $746.0M / 1,605,582 股",
+      "kind": "实际",
+      "period": "2020",
+      "source_id": "REGN-S01"
+    },
+    {
+      "fact_id": "REGN-A-004",
+      "item": "历史融资与合伙结构代价",
+      "value": "EYLEA 美国权益归 Regeneron、美国以外归 Bayer 并分享 50% 利润；Dupixent/Kevzara 由 Sanofi 记账全球销售，美国利润 50/50、美国以外按 65:35 至 55:45 滑动分成；两项最大资产均通过早期合伙融资换取，永久让渡相当部分经济利益",
+      "kind": "实际",
+      "period": "FY2025",
+      "source_id": "REGN-S02"
+    },
+    {
+      "fact_id": "REGN-A-005",
+      "item": "商誉与无形资产",
+      "value": "FY2025 资产负债表无商誉科目；无形资产净额 $1,257.4M（占净资产 4.0%）；FY2024-FY2026H1 未披露任何减值",
+      "kind": "实际",
+      "period": "2025-12-31",
+      "source_id": "REGN-S01"
+    },
+    {
+      "fact_id": "REGN-B-001",
+      "item": "FY2025 收入与结构",
+      "value": "总收入 $14,342.9M（+1.0%）：净产品销售 $6,309.1M（-17.3%）；合作收入 $7,331.2M（+21.0%），其中 Sanofi $5,884.0M、Bayer $1,422.4M；其他收入 $702.6M",
+      "kind": "实际",
+      "period": "FY2025",
+      "source_id": "REGN-S01"
+    },
+    {
+      "fact_id": "REGN-B-002",
+      "item": "Dupixent 全球销售",
+      "value": "FY2025 $17,806.7M（+26%）；Q2 2026 $5,998.2M（+38%）；H1 2026 $10,878.3M（+36%）；已获批 9 项 FDA 适应症；>1.5 百万在用患者",
+      "kind": "实际",
+      "period": "2026-06-30",
+      "source_id": "REGN-S03"
+    },
+    {
+      "fact_id": "REGN-B-003",
+      "item": "EYLEA 体系全球销售",
+      "value": "FY2025 EYLEA + EYLEA HD 合计 $7,891.0M（-17.3%）；H1 2026 $3,345.2M（-17%）；Q2 2026 $1,675.0M（-21%）",
+      "kind": "实际",
+      "period": "2026-06-30",
+      "source_id": "REGN-S03"
+    },
+    {
+      "fact_id": "REGN-B-004",
+      "item": "美国 EYLEA 与 EYLEA HD 季度",
+      "value": "美国 EYLEA 2mg：Q1'25 $736.0M → Q2'26 $412.2M；美国 EYLEA HD：Q1'25 $306.8M → Q2'26 $596.3M；Q2 2026 为 HD 首次超过原研的季度（美国合计 $1,008.5M，-12% YoY）",
+      "kind": "实际",
+      "period": "2026-06-30",
+      "source_id": "REGN-S03"
+    },
+    {
+      "fact_id": "REGN-B-005",
+      "item": "Libtayo",
+      "value": "FY2025 全球 $1,452.2M（+19%）；Q2 2026 $489.4M（+30%）；H1 2026 $927.6M（+40%）",
+      "kind": "实际",
+      "period": "2026-06-30",
+      "source_id": "REGN-S03"
+    },
+    {
+      "fact_id": "REGN-B-006",
+      "item": "单一分部",
+      "value": "公司仅报告一个经营分部（CODM = CEO，评估合并净利润）；无产品级地理分解表；收入按「记账方」而非地域披露",
+      "kind": "实际",
+      "period": "FY2025",
+      "source_id": "REGN-S01"
+    },
+    {
+      "fact_id": "REGN-B-007",
+      "item": "毛利率口径",
+      "value": "公司自身口径为「净产品销售毛利率」：FY2025 GAAP 约 79-80% / 非 GAAP 约 84%；Q2 2026 GAAP 78% / 非 GAAP 87%。聚合网站的 44.57%「gross margin」非公司口径（= 收入 - COGS - COCM - R&D），不得引用",
+      "kind": "实际",
+      "period": "2026-06-30",
+      "source_id": "REGN-S03"
+    },
+    {
+      "fact_id": "REGN-B-008",
+      "item": "有机增长占比",
+      "value": "2023-2026 年许可引进/收购现金对价合计约 $3.09 亿（Decibel ~$1.09 亿、Tessera $1.50 亿、Parabilis $1.25 亿等），相对同期收入极小；增长几乎全部为内生",
+      "kind": "实际",
+      "period": "2023-2026",
+      "source_id": "REGN-S02"
+    },
+    {
+      "fact_id": "REGN-C-001",
+      "item": "EYLEA 体系与美国眼科竞争地位",
+      "value": "EYLEA 体系（原研 2mg + EYLEA HD）美国净销售：Q4 2025 合计 $1,083.2M（原研 $576.9M + HD $506.3M），H1 2026 合计 $1,950.0M；Vabysmo（Roche）美国 H1 2026 CHF 1,333M、H1 2025 CHF 1,450M（CER +1%），Roche 自述「despite a competitive pricing environment」。EYLEA 体系美国销售额仍居首位，但原研单品已明显落后：美国 EYLEA 2mg 由 FY2024 $4,767.1M 降至 FY2025 $2,747.8M，Q2 2026 同比 -45%。（更正说明：原稿「EYLEA 体系已让出美国视网膜市场销售第一」不成立——该比较误将 Vabysmo 全产品美国销售与原研 EYLEA 单品对比，未计 EYLEA HD；Roche 报告与 Regeneron 8-K Table 5 均显示体系销售额仍领先。）",
+      "kind": "实际",
+      "period": "2026-06-30",
+      "source_id": "REGN-S03"
+    },
+    {
+      "fact_id": "REGN-C-002",
+      "item": "aflibercept 生物类似药上市时点",
+      "value": "已上市：Amgen Pavblu（2024-10-30 冒险上市，FY2025 销售 $700M，Q2 2026 美国 $280M，WAC 仅折价 16%）与 Biocon Yesafili（2026-08-03）。Q4 2026 集群：Sandoz Enzeevu、Formycon Ahzantive、Celltrion Eydenzelt（2026-12-31）、Alvotech/Teva AVT06；Samsung Bioepis Opuviz 自 2027-01 起。Amgen 是唯一未和解者，两案仍在诉",
+      "kind": "实际",
+      "period": "2026-09-24",
+      "source_id": "REGN-S20"
+    },
+    {
+      "fact_id": "REGN-C-003",
+      "item": "管理层的 EYLEA 下滑指引",
+      "value": "Q2 2026 电话会：预计 H2 2026 原研 EYLEA 需求「低至中双位数」环比下滑；EYLEA HD 环比需求「低至中双位数」增长",
+      "kind": "实际",
+      "period": "2026-07-30",
+      "source_id": "REGN-S10"
+    },
+    {
+      "fact_id": "REGN-C-004",
+      "item": "专利与知识产权争议结果",
+      "value": "美国：地区法院 2024-09-23 驳回初步禁令，联邦巡回法院 2025-03-14 维持；欧洲：EPO 异议部 2024-11-26 撤销 '306 专利（公司上诉，2026-10 口头听证）；英国 2025-10 认定 '306 无效；韩国 2025-10-30 宣告 '811 无效；德国/荷兰法院则维持 '691 有效并颁禁令",
+      "kind": "实际",
+      "period": "2026-09-24",
+      "source_id": "REGN-S01"
+    },
+    {
+      "fact_id": "REGN-C-005",
+      "item": "Dupixent 竞争强度",
+      "value": "Nemluvio（Galderma, IL-31R）在结节性痒疹 NBRx 份额约 42%、特应性皮炎约 9%（2026 年中）；Ebglyss（Lilly, IL-13）2025 年首个完整年度美国销售 $408M；Sanofi 自有 amlitelimab（OX40L）III 期三项阳性，Regeneron 不分享其收益",
+      "kind": "实际",
+      "period": "2026-09-24",
+      "source_id": "REGN-S11"
+    },
+    {
+      "fact_id": "REGN-C-006",
+      "item": "科研平台资产",
+      "value": "VelocImmune/VelociSuite 全人源抗体平台；Regeneron Genetics Center 完成 100 万例外显子测序（全球首个），2025 年获 Truveta Genome Project 全部研究测序独家权（目标最多 1,000 万志愿者）；Yancopoulos 为 13 个 FDA 批准药物的主要发明人/开发者",
+      "kind": "实际",
+      "period": "2026-09-24",
+      "source_id": "REGN-S02"
+    },
+    {
+      "fact_id": "REGN-C-007",
+      "item": "支付方限制",
+      "value": "UnitedHealthcare Medicare Advantage 2026 年 Part B 阶梯治疗清单将「Repackaged Avastin →（Eylea 或 Eylea HD 或 Pavblu）」列为优选，Vabysmo/Lucentis/Beovu 等列为非优选——即 HD 与原研、生物类似药被同等对待",
+      "kind": "实际",
+      "period": "2026-07-01",
+      "source_id": "REGN-S27"
+    },
+    {
+      "fact_id": "REGN-D-001",
+      "item": "研发投入轨迹",
+      "value": "R&D 费用（10-K 利润表口径）：FY2019 $2,450.0M → FY2020 $2,735.0M → FY2021 $2,860.1M → FY2022 $3,592.5M → FY2023 $4,439.0M → FY2024 $5,132.0M → FY2025 $5,850.2M；FY2025 占收入 40.8%。（更正说明：原稿引用的 FY2019 $3,036.6M 与 FY2021 $2,908.1M 系混入当年 acquired IPR&D 的口径，FY2020 10-K 审计后利润表与 Q4 2022 业绩发布原件分别为 $2,450.0M 与 $2,860.1M。）",
+      "kind": "实际",
+      "period": "FY2019-FY2025",
+      "source_id": "REGN-S01"
+    },
+    {
+      "fact_id": "REGN-D-002",
+      "item": "FY2026 指引",
+      "value": "GAAP R&D $6.500-6.635B；非 GAAP R&D $5.950-6.050B；GAAP SG&A $2.830-2.960B；GAAP 净产品销售毛利率 78-79%；非 GAAP 84-85%；资本开支 $1.030-1.100B（较原指引 $1.100-1.200B 下调）；GAAP ETR 13-14%",
+      "kind": "实际",
+      "period": "2026-07-30",
+      "source_id": "REGN-S03"
+    },
+    {
+      "fact_id": "REGN-D-003",
+      "item": "管线规模",
+      "value": "FY2025 年末约 45 个候选产品；Q2 2026 业绩发布约 50 个候选产品（clinical development）；Q2 2026 电话会逐字稿口径同样为「approximately 50 active clinical programs」。（更正说明：原稿并列的「电话会称 35+ 个临床阶段项目」经全文复核不存在——逐字稿中无 35+ programs 表述，仅出现一次数字 35 且属行情条。两处口径一致，不构成表述不一致。）",
+      "kind": "实际",
+      "period": "2026-06-30",
+      "source_id": "REGN-S03"
+    },
+    {
+      "fact_id": "REGN-D-004",
+      "item": "2026 年管线与监管挫折",
+      "value": "fianlimab + cemiplimab III 期一线转移性黑色素瘤未达主要 PFS 终点（2026-05-15，入组 1,546 人，高剂量组中位 PFS 数值改善 +5.1 个月）；itepekimab 在 COPD/CRSwNP/CRSsNP 终止；REGN7999（抗 TMPRSS6）终止；odronextamab 两次 CRL（2024-03、2025-08）至 2026-09-24 仍无美国批准；EYLEA HD 预充针 CRL 后仍未获批",
+      "kind": "实际",
+      "period": "2026-06-30",
+      "source_id": "REGN-S02"
+    },
+    {
+      "fact_id": "REGN-D-005",
+      "item": "2026 年监管与商业化成果",
+      "value": "garetosmab（Pasatru）2026-08-19 获 FDA 批准（FOP）；Otarmeni 2026-04-23 加速批准（遗传性耳聋，首个基因疗法）；cemdisiran NDA 获优先审评、目标行动日 2026-11；EYLEA HD 2026-04-02 获批给药间隔延长至最长 q20w；Dupixent 2026 年新增 BP（2025-06-20）与 AFRS（2026-02-24）适应症",
+      "kind": "实际",
+      "period": "2026-09-24",
+      "source_id": "REGN-S02"
+    },
+    {
+      "fact_id": "REGN-D-006",
+      "item": "政策环境（MFN）",
+      "value": "2026-04-23 Regeneron 签署 MFN 协议（首轮第 17 家、最后一家）：对美国完全自有产品在 Medicaid 按 MFN 定价、未来某些药物按 MFN 定价、Praluent 上线 TrumpRx.gov、Otarmeni 在美国免费提供；对价是产品至 2029-01 不受 Section 232 关税影响。美元影响未披露",
+      "kind": "实际",
+      "period": "2026-04-23",
+      "source_id": "REGN-S02"
+    },
+    {
+      "fact_id": "REGN-D-007",
+      "item": "政策环境（IRA）",
+      "value": "EYLEA 因生物类似药豁免条款未进入 IPAY 2026/2027/2028 任何一轮；Dupixent 亦未被选中；IPAY 2028 为首个含 Part B 的周期，EYLEA 仍不在名单；截至 2026-09-24 两者均无 MFP",
+      "kind": "实际",
+      "period": "2026-09-24",
+      "source_id": "REGN-S15"
+    },
+    {
+      "fact_id": "REGN-D-008",
+      "item": "人均创收",
+      "value": "员工 15,410 人（聚合）；TTM 收入 $15,535M → 约 $1.008M/人；其中 >1,800 人持 Ph.D. 和/或 M.D.",
+      "kind": "实际",
+      "period": "2026-06-30",
+      "source_id": "REGN-S06"
+    },
+    {
+      "fact_id": "REGN-E-001",
+      "item": "FY2025 损益表（官方）",
+      "value": "收入 $14,342.9M；R&D $5,850.2M；Acquired IPR&D $124.1M；SG&A $2,700.0M；COGS $1,140.8M；COCM $959.9M；其他经营(收益)费用净额 -$10.0M；经营利润 $3,577.9M；其他收益(费用)净额 +$1,696.6M；利息费用 -$43.8M；税前 $5,230.7M；所得税 $725.8M；净利润 $4,504.9M；稀释 EPS $41.48",
+      "kind": "实际",
+      "period": "FY2025",
+      "source_id": "REGN-S01"
+    },
+    {
+      "fact_id": "REGN-E-002",
+      "item": "经营利润 vs 净利润背离",
+      "value": "经营利润：FY2023 $4,047.1M → FY2024 $3,990.7M（-1.4%）→ FY2025 $3,577.9M（-10.3%）；同期净利润 FY2023 $3,953.6M → FY2024 $4,412.6M → FY2025 $4,504.9M（+2.1%）。其他收益(费用)净额 FY2023 $225.2M → FY2024 $844.4M → FY2025 $1,696.6M，占 FY2025 税前利润 32.4%",
+      "kind": "实际",
+      "period": "FY2023-FY2025",
+      "source_id": "REGN-S01"
+    },
+    {
+      "fact_id": "REGN-E-003",
+      "item": "其他收益构成（已完整拆解）",
+      "value": "FY2025 其他收益（费用）净额 $1,696.6M 的 10-K MD&A 拆解：证券及其他投资损益净额 $946.1M + 利息收入 $716.8M + 其他 $33.7M。对照年份：FY2024 $118.3M + $711.4M + $14.7M = $844.4M；FY2023 -$266.4M + $495.9M - $4.3M = $225.2M。现金流量表间接法首行同列示「(Gains) losses on marketable and other securities, net (946.1)」。（更正说明：原稿所称「除利息收入外约 $979.8M 未获公司拆解」不成立——公司已完整拆解，$946.1M 为证券损益、$33.7M 为其他；其中 $946.1M 为已实现与未实现合计，未再细分，故仍按非经常性处理。）",
+      "kind": "实际",
+      "period": "FY2025",
+      "source_id": "REGN-S01"
+    },
+    {
+      "fact_id": "REGN-E-004",
+      "item": "ROE 杜邦分解",
+      "value": "FY2025：净利率 31.41% × 资产周转率 0.366 × 权益乘数 1.29 = ROE 14.87%；FY2024 15.95%；FY2023 16.26%；TTM 14.04%。权益乘数 1.29 远低于 3，非杠杆驱动",
+      "kind": "推算",
+      "period": "FY2023-FY2025",
+      "source_id": "REGN-S01"
+    },
+    {
+      "fact_id": "REGN-E-005",
+      "item": "现金流质量",
+      "value": "OCF/归母净利润：FY2022 115.6%、FY2023 116.2%、FY2024 100.2%、FY2025 110.5%。公司口径自由现金流（OCF − 资本性支出）：FY2022 $4,424.8M、FY2023 $3,875.4M、FY2024 $3,664.6M、FY2025 $4,080.5M，连续为正。1H2026 OCF $1,891.9M（1H2025 $2,189.5M，-13.6%）、1H2026 公司口径 FCF $1,421.1M（1H2025 $1,741.2M，-18.4%）；TTM（截至 2026-06-30）FCF $3,760M。（更正说明：原稿引用的 FY2022 $3,398.0M / FY2023 $3,667.6M / FY2024 $3,538.9M 实为「OCF − capex − 无形资产付款」口径（含 FY2022 Libtayo 无形资产付款 $1,026.8M 等），与 FY2025 所用口径不一致；已统一为公司口径。）",
+      "kind": "实际",
+      "period": "2022-2026H1",
+      "source_id": "REGN-S03"
+    },
+    {
+      "fact_id": "REGN-E-006",
+      "item": "资本结构",
+      "value": "FY2025：总负债 $9,301.8M / 总资产 $40,558.7M = 22.9%；有息负债 $2,705.9M（长期债务 $1,985.9M + 融资租赁 $720.0M，无短债）；有息负债/净资产 8.7%；利息费用 $43.8M，EBIT 覆盖约 82x。2026-06-30 现金及有价证券 $17,822.9M、总债务 $2,706.6M → 净现金约 $15,116M（管理层电话会称「净债务后 151 亿美元」）",
+      "kind": "实际",
+      "period": "2025-12-31 / 2026-06-30",
+      "source_id": "REGN-S02"
+    },
+    {
+      "fact_id": "REGN-E-007",
+      "item": "审计意见与关键审计事项",
+      "value": "审计机构 PricewaterhouseCoopers LLP（PCAOB ID 238，Florham Park, NJ），签署日 2026-02-04，自 1989 年起担任审计师（37 年）。对合并财务报表与财务报告内部控制（ICFR）均出具无保留意见。唯一关键审计事项（CAM）：Certain Reserves for Uncertain Tax Positions，2025-12-31 不确定税务事项准备金 $1,577.9M",
+      "kind": "实际",
+      "period": "2025-12-31",
+      "source_id": "REGN-S01"
+    },
+    {
+      "fact_id": "REGN-E-008",
+      "item": "资产质量",
+      "value": "无商誉；无形资产净额 $1,257.4M（占净资产 4.0%）；应收账款净额 $5,741.1M（FY2025）；存货 $3,200.8M；递延税资产 $4,077.2M；FY2024-2026H1 无减值；诉讼或有损失「不重大」",
+      "kind": "实际",
+      "period": "2025-12-31",
+      "source_id": "REGN-S01"
+    },
+    {
+      "fact_id": "REGN-E-009",
+      "item": "非 GAAP 与 GAAP 桥",
+      "value": "FY2025 GAAP 净利 $4,504.9M / EPS $41.48；非 GAAP $4,887.7M / $44.31。Q2 2026 GAAP $12.23 vs 非 GAAP $14.29。非 GAAP 剔除项包括 Limerick 停产损失（1H 2026 COGS $161.3M）、acquired IPR&D、优先审评券、诉讼和解、投资损益",
+      "kind": "实际",
+      "period": "FY2025 / 2026H1",
+      "source_id": "REGN-S03"
+    },
+    {
+      "fact_id": "REGN-E-010",
+      "item": "2026 年一次性项目",
+      "value": "Limerick（爱尔兰）生产设施非计划中断：Q1 2026 GAAP COGS $91.9M + COCM $14.8M；Q2 2026 COGS $69.4M；H1 合计约 $161.3M，Q2 末已恢复正常且未影响产品供应。Acquired IPR&D：Q1 $101.9M、Q2 $127.0M（公司不对此给出指引）",
+      "kind": "实际",
+      "period": "2026H1",
+      "source_id": "REGN-S02"
+    },
+    {
+      "fact_id": "REGN-F-001",
+      "item": "FY2025 高管薪酬",
+      "value": "Schleifer $7,280,549（基本薪金 $1,979,922 + 现金激励 $3,682,655 + 其他 $1,617,972，其中安保 $1,278,835、专机 $253,237）；Yancopoulos $6,949,469；两人 FY2025 股权授予为零。CEO 薪酬比约 42:1（中位员工 $174,138）",
+      "kind": "实际",
+      "period": "FY2025",
+      "source_id": "REGN-S06"
+    },
+    {
+      "fact_id": "REGN-F-002",
+      "item": "2020 PSU 兑现",
+      "value": "2020 年 CEO/CSO 股权全部以 PSU 形式授予，5 年业绩期（2020-12 至 2025-12）按相对 TSR 归属，归属后再锁定 3 年（至 2028-12），合计 8 年不可变现。2025 年各自归属 623,647 股、实现价值 $481,511,612；期权行权 Schleifer 172,723 股/$25.2M、Yancopoulos 146,815 股/$21.4M",
+      "kind": "实际",
+      "period": "2025",
+      "source_id": "REGN-S06"
+    },
+    {
+      "fact_id": "REGN-F-003",
+      "item": "Say-on-Pay 历年结果",
+      "value": "FY2020 70.2% → FY2021 87.8% → FY2022 87.1% → FY2023 94.9% → FY2024 93.0% → FY2025 93.3%（2022 年起改为每年一次）",
+      "kind": "实际",
+      "period": "2021-2026 年会",
+      "source_id": "REGN-S06"
+    },
+    {
+      "fact_id": "REGN-F-004",
+      "item": "董事选举反对票",
+      "value": "2024 年会 Arthur F. Ryan 反对约 27.9%；2025 年会 Michael S. Brown 约 27.3%、Bonnie L. Bassler 约 17.6%；2026 年会 Joseph L. Goldstein 约 29.9%、Christine A. Poon 约 23.2%、Craig B. Thompson 约 20.7%。公司不设董事任期上限与强制退休年龄；13 名董事中 3 人年龄 ≥83",
+      "kind": "实际",
+      "period": "2024-2026 年会",
+      "source_id": "REGN-S06"
+    },
+    {
+      "fact_id": "REGN-F-005",
+      "item": "超级多数条款修正案被否",
+      "value": "2025 年会 Proposal 5(a)（Class A 转让强制转换条款）：Class A 股东投票 For 0 / Against 18,081,400（即全部 Class A 反对，Schleifer 持 95% Class A）；普通股 For 85,490,681 / Against 2,279,384。因需 Class A 多数 + 普通股 2/3 分别通过而未获通过。Proposal 5(b)（因故罢免董事）亦未达 80% 门槛",
+      "kind": "实际",
+      "period": "2025-06-13",
+      "source_id": "REGN-S09"
+    },
+    {
+      "fact_id": "REGN-F-006",
+      "item": "董事会去分类与治理改进",
+      "value": "2025 年年会股东批准取消分类董事会（赞成 85,711,231 / 反对 20,226,748），分三年分阶段，2028 年年会完成全部董事年度改选；多数决 + 董事辞任政策；股东可召集特别股东大会；年度 say-on-pay；2022-04 起禁止董监高对冲与质押；追回政策宽于 Nasdaq 标准；非雇员董事须持股 ≥3× 年度 retainer",
+      "kind": "实际",
+      "period": "2025-06-13",
+      "source_id": "REGN-S06"
+    },
+    {
+      "fact_id": "REGN-F-007",
+      "item": "回购授权与实际执行",
+      "value": "授权（无到期日）：2019-11 $1.0B、2021-01 $1.5B、2021-11 $3.0B、2023-01 $3.0B、2024-04 $3.0B、2025-02 $3.0B、2026-04 $3.0B（2026-06-30 剩余 $2.534B）。实际回购（回购计划口径）：2020 $5,880.9M、2021 $1,655.0M、2022 $2,099.8M、2023 $2,214.6M、2024 $2,613.9M、2025 $3,456.2M、2026H1 $1,967.7M。从未签署加速回购（ASR）协议。稀释加权平均股数 115.1M（2024）→ 108.6M（2025）→ 106.8M（2026H1）",
+      "kind": "实际",
+      "period": "2019-2026H1",
+      "source_id": "REGN-S01"
+    },
+    {
+      "fact_id": "REGN-F-008",
+      "item": "股息政策",
+      "value": "2025 年首次启动季度现金股息：2025 年每季 $0.88（全年 $3.52），现金股利支付 $370.3M；2026 年上调至每季 $0.94（+6.8%），Q1/Q2 各 $0.94，7 月再宣派 $0.94（2026-08-31 支付）。年化 $3.76，股息率 0.47%，派息率 9.15%。历史上无特别股息、无荷兰式拍卖",
+      "kind": "实际",
+      "period": "2025-2026",
+      "source_id": "REGN-S01"
+    },
+    {
+      "fact_id": "REGN-F-009",
+      "item": "内部人交易（2023-01 至 2026-09-24）",
+      "value": "242 件 Form 4 解析：公开市场卖出 2023 年 $81.6M、2024 年 $291.2M、2025 年 $5.1M、2026 年至今 $7.8M；两位创始人最后一次卖出均为 2024 年 5-6 月（价格区间约 $965-$1,025），2025 与 2026 年零卖出；10b5-1 标记已核。全样本内无任何公开市场买入（code P）",
+      "kind": "实际",
+      "period": "2023-2026",
+      "source_id": "REGN-S19"
+    },
+    {
+      "fact_id": "REGN-F-010",
+      "item": "股东总回报对照",
+      "value": "2020-12-31 至 2025-12-31（$100 起始，含股息再投资）：Regeneron 159.77（+59.8%）vs S&P 500 182.25（+82.3%）vs Nasdaq US Benchmark Pharmaceuticals TR 200.89（+100.9%）；2024 年为负回报年（-18.9%）",
+      "kind": "实际",
+      "period": "2020-2025",
+      "source_id": "REGN-S01"
+    },
+    {
+      "fact_id": "REGN-F-011",
+      "item": "监管与诉讼事项（逐条）",
+      "value": "SEC 调查：全文检索未发现（null，非证明不存在）。DOJ/FCA：2017-01 马萨诸塞州区检察官传票；2019-09 DOJ CID；2020-06-24 民事起诉；2021-06-03 qui tam 解封（政府拒绝介入）；2021-06 EYLEA ASP 相关 CID；2024-03-28 DOJ 部分介入并起诉（2025-04-29 法院驳回公司驳回动议）；2024-06-25 六州部分介入；2025-06-18 五州介入。反垄断：Regeneron 诉 Amgen（Praluent）2025-05-15 陪审团判给补偿性 $135.6M + 惩罚性 $271.2M；Amgen 反诉 Sherman Act §2 于 2026-07-07 大部分被驳回。证券集体诉讼两件：2025-01-07（EYLEA HD/DOJ 披露相关）、2025-07-16（fianlimab 项目陈述，集体期间 2025-08-01 至 2026-05-15）。产品责任：Dupixent 致 T 细胞淋巴瘤多区诉讼，2026-06-04 移送 D. New Jersey 集中预审，2026-07-17 马里兰新增拟制集体诉讼。FDA：Catalent Indiana（第三方灌装厂，Nonov Nordisk 旗下）2025 年 483 + OAI + 警告信，导致 EYLEA HD 预充针与 odronextamab CRL；针对公司自有场地的 483/警告信未检索到（null）",
+      "kind": "实际",
+      "period": "2017-2026",
+      "source_id": "REGN-S01"
+    },
+    {
+      "fact_id": "REGN-F-012",
+      "item": "关联交易与利益冲突",
+      "value": "无发现实控人资金占用、无关联交易掩盖利润的披露；Sanofi 与 Bayer 为商业合作对手方（定期披露合作条款与应收）；2025-11-18 Regeneron 起诉 Sanofi 违反抗体合作协定（未提供 Dupixent 商业化信息完整访问权、侵害审计权），2026-03-17 法院驳回 Sanofi 驳回动议",
+      "kind": "实际",
+      "period": "2025-2026",
+      "source_id": "REGN-S02"
+    },
+    {
+      "fact_id": "REGN-F-013",
+      "item": "高管任免时间线（近 5 年）",
+      "value": "2023-06 前董事会主席 P. Roy Vagelos 退休，Schleifer 与 Yancopoulos 当选 co-Chairs；2024-02 CFO Robert E. Landry 退休，Christopher Fenimore（2003 年入职）内部接任；~2024 前 EVP, Research and Development Neil Stahl 离任（公司未披露原因）；2026-01 Andrew J. Murphy 由 EVP, Research 升任 EVP, Co-Chief Scientific Officer（1999 年入职）；2026-01 Jason Pitofsky 由 VP, Controller 升任 SVP, Controller（2011 年入职）",
+      "kind": "实际",
+      "period": "2023-2026",
+      "source_id": "REGN-S06"
+    },
+    {
+      "fact_id": "REGN-F-014",
+      "item": "CEO 继任",
+      "value": "截至 2026-09-24 未发现任何已宣布的 CEO 继任人、时间表或过渡公告（检索范围：EDGAR 全部 8-K、四份 DEF 14A、FY2025 10-K、Web 检索）。Proxy 仅述董事会定期复核继任计划、Lead Independent Director 协调该流程，2025-2026 年继任规划工作持续进行；2026-01-12 JPMorgan 医疗大会上 Schleifer 与 Yancopoulos 仍以现任 CEO/CSO 身份共同出席",
+      "kind": "实际",
+      "period": "2026-09-24",
+      "source_id": "REGN-S06"
+    },
+    {
+      "fact_id": "REGN-M-001",
+      "item": "行情快照",
+      "value": "2026-09-23 收盘 $801.82（-0.26%）；市值 $80.07B；52 周区间 $541.00-$859.34；PE(TTM) 19.83；Forward PE 13.22（隐含远期 EPS $60.65，为 FY2027 一致预期口径，故 FY2026 口径 forward PE 约 14.90）；EV/EBITDA 13.81；P/S(TTM) 5.15；FCF Yield 4.70%；股息率 0.47%；回购收益率 4.76%；股东回报率 5.23%；Beta 0.19",
+      "kind": "实际",
+      "period": "2026-09-23",
+      "source_id": "REGN-S13"
+    },
+    {
+      "fact_id": "REGN-M-002",
+      "item": "股数口径（已选定基准）",
+      "value": "估值统一采用 102.95 百万股：2026-07-23 10-Q 封面普通股 101,137,842 股 + Class A 1,817,146 股 = 102,954,988 股，与 yfinance impliedSharesOutstanding 102,954,988 一致，亦与 Robinhood 市值 $82.53B ÷ $801.82 反推的约 102.9M 一致。另列多源分歧以供披露：stockanalysis 99.85M、Markets Insider 101.14M（2026-09-11）、10-Q 资产负债表净发行在外推算约 103.4M（发行 138.0M − 库存 36.4M，含 Class A）；稀释加权平均 1H2026 为 106.8M。每股价值口径误差约 ±2%。",
+      "kind": "实际",
+      "period": "2026-09-24",
+      "source_id": "REGN-S13"
+    },
+    {
+      "fact_id": "REGN-M-003",
+      "item": "卖方一致预期",
+      "value": "stockanalysis（2026-09-10 更新）：FY2026 EPS $53.80、收入 $16.93B；FY2027 EPS $60.62、收入 $18.48B。Simply Wall St（26/24/21 名分析师）：FY2026 GAAP 净利 $4,773M、FCF $5,926M；FY2027 净利 $5,445M。Barchart 另一口径 FY2026 稀释 EPS $37.25（GAAP 基础）。口径不一致且差异重大——本次自建模型并说明与一致预期的差距",
+      "kind": "推算",
+      "period": "2026-09-24",
+      "source_id": "REGN-S14"
+    },
+    {
+      "fact_id": "REGN-M-004",
+      "item": "卖方目标价",
+      "value": "stockanalysis：28 名分析师，低 $730 / 均值 $849.32 / 中位 $854 / 高 $1,030，评级 Buy（14 Strong Buy / 4 Buy / 9 Hold / 1 Sell）。近期动作：BMO Capital 2026-05-18 目标价由 $900 下调至 $730（维持 Outperform）；HSBC 2026-09-10 由 $800 上调至 $920（维持 Buy）",
+      "kind": "推算",
+      "period": "2026-09-10",
+      "source_id": "REGN-S14"
+    },
+    {
+      "fact_id": "REGN-M-005",
+      "item": "同业估值对比（2026-09-23 收盘）",
+      "value": "REGN PE(TTM) 19.83 / Forward PE 13.22 / EV-EBITDA 13.81；AMGN 25.23 / 17.31 / 15.22；VRTX 30.05 / 39.96 / 23.37；GILD n/a / 16.58 / 14.32；BIIB 40.35 / 17.16 / 12.11；ABBV 74.89 / 17.47 / 17.32；BMY 13.46 / 9.50 / 8.37；LLY 38.64 / 27.63 / 25.68；MRNA 均不适用",
+      "kind": "推算",
+      "period": "2026-09-23",
+      "source_id": "REGN-S13"
+    },
+    {
+      "fact_id": "REGN-M-006",
+      "item": "Sanofi 合作经济与开发余额清偿",
+      "value": "美国利润 50/50；美国以外滑动分成（起始 Sanofi 65%/Regeneron 35%，终止 55%/45%）。Sanofi 记账全球销售，Regeneron 以合作收入记账其利润份额。开发成本补偿余额约 $31 亿已于 2026-06-30 全部清偿，自 2026Q3 起不再扣减利润份额——该扣减在 FY2025 减少收入约 $930M、在 1H2026 约 $530M。Q2 2026 Regeneron 利润份额占 Dupixent+Kevzara 净销售 33%（Q2 2025 为 29%）",
+      "kind": "实际",
+      "period": "2026-06-30",
+      "source_id": "REGN-S02"
+    },
+    {
+      "fact_id": "REGN-M-007",
+      "item": "客户集中度",
+      "value": "Q2 2026 客户 A 占总产品收入 45%（Q2 2025 52%）、客户 B 占 32%（Q2 2025 24%）。客户 A 为 Sanofi（合作收入基础），客户 B 身份未披露",
+      "kind": "实际",
+      "period": "2026-06-30",
+      "source_id": "REGN-S02"
+    },
+    {
+      "fact_id": "REGN-M-008",
+      "item": "下一财报日期",
+      "value": "聚合网站列出 2026-10-27，但未检索到公司官方公告确认 → 按项目规则记为 null（未知）",
+      "kind": "实际",
+      "period": "2026-09-24",
+      "source_id": "REGN-S13"
+    }
+  ],
+  "_corrections": {
+    "applied": "2026-09-24",
+    "basis": "两路独立审核（facts lane / reasoning lane）后的裁决修复",
+    "items": [
+      "REGN-D-001",
+      "REGN-D-003",
+      "REGN-C-001",
+      "REGN-E-003",
+      "REGN-E-005",
+      "REGN-M-002"
+    ]
+  }
+}

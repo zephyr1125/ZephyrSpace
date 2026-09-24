@@ -1,0 +1,126 @@
+{
+  "decision": "eligible",
+  "research_state": "approved",
+  "score_state": "approved",
+  "cutoff": "2026-09-24",
+  "company": "Regeneron Pharmaceuticals, Inc.",
+  "code": "REGN.US",
+  "basis": "完整三件套：共享证据包（facts-financials / facts-governance / facts-market-pipeline）→ 32 项评分底稿 → 两路独立全文复核（facts lane / reasoning lane，互不可见）→ 本裁决逐候选处置 → 作者一次合并修复 → 机械检查通过。公司分原始 81.0、管理层分原始 80.0、合计 161.0，满足 A_CORE（合计≥160 且两项均≥76），未达 S_STRATEGIC（含 valuation_certainty≥0.80 的额外门槛，本项 0.51）。",
+  "review_refs": [
+    "data/reviews/regn-2026-09-24/review-facts/review-facts.json",
+    "data/reviews/regn-2026-09-24/review-reasoning/review-reasoning.json"
+  ],
+  "score_bounds": {
+    "company": [81.0, 81.0],
+    "management": [80.0, 80.0],
+    "combined": [161.0, 161.0]
+  },
+  "candidate_dispositions": [
+    {
+      "candidate": "F-P1-1",
+      "source": "facts lane",
+      "claim": "E2 引用的 FCF 序列口径跨年不一致（FY2022-FY2024 实为 OCF−capex−无形资产付款，FY2025 为 OCF−capex），FY2022 与公司披露值差 $1,026.8M",
+      "disposition": "成立",
+      "reason": "已回原件核对：FY2022 10-K 现金流量表含「Payments for Libtayo intangible asset (1,026.8)」，公司自披露 FCF 为 $4,424.8M。采纳",
+      "action": "facts.json REGN-E-005 与 workpaper E2 理由统一为公司口径 FCF（FY2022 $4,424.8M / FY2023 $3,875.4M / FY2024 $3,664.6M / FY2025 $4,080.5M）。E2 分数不变（4.5/5）：各年真值仍为正、OCF/净利仍连续四年 >100%。"
+    },
+    {
+      "candidate": "F-P1-2",
+      "source": "facts lane",
+      "claim": "D1 与「资本配置能力」的起点数字 FY2019 R&D $3,036.6M 错误，审计后为 $2,450.0M（混入当年 acquired IPR&D）",
+      "disposition": "成立",
+      "reason": "FY2020 10-K 利润表原文「Research and development (1) 2,735.0 2,450.0」；FY2021 亦应为 $2,860.1M 而非 $2,908.1M。采纳",
+      "action": "facts.json REGN-D-001 与两处理由改用审计口径序列（FY2019 $24.50 亿 → FY2025 $58.50 亿）。D1（4/4）与资本配置能力（18/25）分数不变：单调上升的方向与量级不变。"
+    },
+    {
+      "candidate": "F-P1-3",
+      "source": "facts lane",
+      "claim": "C1 的「EYLEA 体系已让出美国视网膜市场销售第一」不成立——比较误将 Vabysmo 全产品美国销售与原研 EYLEA 单品对比，未计 EYLEA HD",
+      "disposition": "成立",
+      "reason": "EYLEA 体系美国 Q4 2025 合计 $1,083.2M、H1 2026 $1,950.0M，均高于 Vabysmo 美国同期（Roche H1 2026 CHF 1,333M，CER +1%）；证据包 §1.1 亦自述 Vabysmo 并未在销售基础上夺取体系份额。采纳",
+      "action": "facts.json REGN-C-001 与 C1 理由改为「体系销售额仍居美国首位，但原研单品已明显落后（FY2024 $4,767.1M → FY2025 $2,747.8M，Q2 2026 -45%）」。C1 维持 4/6：剩余两条理由（三条线仅免疫学为绝对龙头且其商业化与半数利润归 Sanofi；眼科榜首建立在原研快速让位的过渡期上）独立支撑该档，不因该句更正而升档。"
+    },
+    {
+      "candidate": "F-P1-4 / R-P1-5",
+      "source": "两路一致",
+      "claim": "「财报约 50 个候选物 vs 电话会 35+ 个临床阶段项目」构成的「表述不一致」扣分依据不成立",
+      "disposition": "成立",
+      "reason": "两路独立回看 Q2 2026 电话会逐字稿：全文为「approximately 50 active clinical programs」，不存在 35+ programs 表述；且 candidate ≠ program，单位不同。纪律：评分与证据不匹配即 P1；资料口径差异不得当执行力缺陷。采纳",
+      "action": "删除 D2、管理层「战略稳定性」、管理层「表达清晰度」中的该扣分依据。战略稳定性 13→14（该依据为其两项扣分之一）；D2 与表达清晰度各有独立证据支撑，分数不变。"
+    },
+    {
+      "candidate": "F-P1-5",
+      "source": "facts lane",
+      "claim": "E3 所称「其他收益约 $979.8M 未获公司拆解」的证据缺口不成立",
+      "disposition": "成立",
+      "reason": "FY2025 10-K MD&A 逐项列示：证券及其他投资损益净额 $946.1M + 利息收入 $716.8M + 其他 $33.7M = $1,696.6M；间接法现金流首行同列示。采纳",
+      "action": "删除该 evidence_gap；facts.json REGN-E-003 改为「已完整拆解」。E3 维持 2/3——核心判断（FY2025 经营利润 -10.3% 而报表净利润 +2.1%，差额由非经营性投资收益驱动，其中证券损益由 FY2023 -$266.4M 摆动至 FY2025 +$946.1M）不依赖该缺口。"
+    },
+    {
+      "candidate": "R-P1-1",
+      "source": "reasoning lane",
+      "claim": "valuation_certainty 只给五维定性叙述便取 0.55，未按既定纪律做「起值 + Σ正项 − Σ负项」闭合；且把共享同一套经营预测的两模型收敛当作独立验证",
+      "disposition": "成立",
+      "reason": "持续生效的用户纪律：certainty 必须计算闭合，禁止无轨迹赋值；共享同一增长假设的多方法收敛不等于独立证据。采纳",
+      "action": "补闭合表：起值 0.50 ＋0.13（资产负债表极清晰 +0.07 / 收入可见性与开发余额台阶 +0.04 / 现金流可预测性 +0.02）−0.12（模型收敛部分机械性 −0.02 / Dupixent 悬崖落在终值区间 −0.04 / EYLEA 下滑与类似药集群时点 −0.02 / 多重未量化法律与政策敞口 −0.03 / 股数口径分歧 −0.01）= **0.51**。第4维改为明写「收敛为部分机械性，不构成独立验证」。"
+    },
+    {
+      "candidate": "R-P1-2",
+      "source": "reasoning lane",
+      "claim": "DCF 终值假设 g=2% 自 FY2030 起永续，而 Dupixent 约 2031 年起的专利悬崖正落在终值区间内，模型无 post-cliff 台阶；敏感性 g 轴下限仅 1.5%",
+      "disposition": "部分成立",
+      "reason": "终值占比与敏感性方向经独立复算确认（PV(TV) 占 EV 约 75.4%、占每股价值约 61%；g=0 时基准降至约 $668-700）。但要求把显式期延伸至悬崖之后需引入 2031 年后的分子替代曲线假设，该假设无官方依据、更接近虚构而非取证；SOP 允许对无可靠边界的远期不填任意点值。故不接受「重做显式期」，接受「扩大敏感性下界并显式披露」",
+      "action": "m2 敏感性 y 轴由 [0.015,0.02,0.025] 扩为 **[0.0, 0.01, 0.02, 0.025]**，正文披露终值占比（EV 75.4% / 每股价值 61%）与「g=0 时基准降至 $611.85-699.94」；certainty 闭合中已就该项计 −0.04。基准情形不改。"
+    },
+    {
+      "candidate": "R-P1-3 / F-note",
+      "source": "两路一致",
+      "claim": "股数口径归属写错且取值偏低（101.1M 归给 10-Q，实为 Markets Insider）；每股盈利与每股净现金可能口径混用",
+      "disposition": "成立",
+      "reason": "回原件：2026-07-23 10-Q 封面普通股 101,137,842 股 + Class A 1,817,146 股 = 102,954,988 股，与 yfinance impliedSharesOutstanding 完全一致，且与 Robinhood 市值 $82.53B ÷ $801.82 反推一致。采纳",
+      "action": "全模型统一 **102.95 百万股**（净发行在外口径），每股盈利、每股 FCF 与每股净现金同口径。目标价由 846.24 → 834.25（−1.4%），结论方向不变。"
+    },
+    {
+      "candidate": "R-P1-4",
+      "source": "reasoning lane",
+      "claim": "跨维度重复扣分：fianlimab III 期落空及证券集体诉讼同时出现在 5 处；EYLEA HD 预充针时点漂移同时出现在 4 处；且未裁决的证券集体诉讼被用作诚信扣分依据",
+      "disposition": "成立",
+      "reason": "持续生效的用户纪律：同一事件只在最相关的一个维度扣分。逐项对照底稿确认该重复存在。采纳",
+      "action": "fianlimab 临床事实只保留在公司维度 **D2**；相关证券集体诉讼只保留在管理层 **诚信与透明度**（按未裁决性质轻扣）；EYLEA HD 预充针时点漂移只保留在管理层 **表达清晰度**（D2 另有 fianlimab 与两项终止、两次 CRL 等独立执行事实）。据此：诚信与透明度 17→18、危机处理 7→8。同时把 Class A 类别否决权从管理层「对股东友好度」移出（只保留在公司维度 F2），对股东友好度 10→11。"
+    },
+    {
+      "candidate": "R-P1-6",
+      "source": "reasoning lane",
+      "claim": "最重要反证被低估：对 Sanofi 的依赖度上升（Q2 2026 占收入 50.7%），而 Sanofi 自有 OX40L 竞品 amlitelimab 与双方诉讼并存",
+      "disposition": "成立",
+      "reason": "为叙事权重问题而非评分项错误；用户纪律要求同步列出使公司变差的条件。采纳",
+      "action": "在深度分析 B1/C2、估值分析风险章节与管理层档案中显式写入「单一合作方依赖度」为 Top 级风险，并列入关键跟踪指标。评分不因此调整（B1/C2 已就该机制扣分）。"
+    }
+  ],
+  "approved_parameters": {
+    "cScore": 81.0,
+    "mScore": 80.0,
+    "combined": 161.0,
+    "target_price": 834.25,
+    "valuation_certainty": 0.51,
+    "buy_price": 626.86,
+    "watchlistLevel": "A_CORE",
+    "threshold_margin_note": "合计 161.0 仅高于 A_CORE 门槛 160 的 1.0 分，属门槛边缘；修复前的重复扣分口径下为 158.5（B_GROWTH）。该差异已如实记录，不在报告中隐藏。"
+  },
+  "withdrawn_fields": [],
+  "issues": [
+    {"id": "I-1", "lane": "research", "status": "closed", "reason": "E2 FCF 口径不一致，已按公司口径统一", "verification_refs": ["data/reviews/regn-2026-09-24/writer/check-v1o.json"]},
+    {"id": "I-2", "lane": "research", "status": "closed", "reason": "FY2019/FY2021 R&D 起点数字错误，已改用审计后利润表口径", "verification_refs": ["data/reviews/regn-2026-09-24/writer/check-v1o.json"]},
+    {"id": "I-3", "lane": "research", "status": "closed", "reason": "C1 的 EYLEA 体系排名表述错误，已按 8-K Table 5 与 Roche 半年报更正；分数维持 4", "verification_refs": ["data/reviews/regn-2026-09-24/writer/check-v1o.json"]},
+    {"id": "I-4", "lane": "research", "status": "closed", "reason": "管线数量「表述不一致」依据不成立，已从三处删除；战略稳定性 13→14", "verification_refs": ["data/reviews/regn-2026-09-24/writer/check-v1o.json"]},
+    {"id": "I-5", "lane": "research", "status": "closed", "reason": "其他收益拆解缺口不成立，已删除并改为已完整拆解；E3 维持 2", "verification_refs": ["data/reviews/regn-2026-09-24/writer/check-v1o.json"]},
+    {"id": "I-6", "lane": "research", "status": "closed", "reason": "certainty 未闭合，已补起值+正项−负项闭合表，结果 0.51", "verification_refs": ["data/reviews/regn-2026-09-24/writer/check-v1o.json"]},
+    {"id": "I-7", "lane": "research", "status": "closed", "reason": "DCF 终值悬崖敏感性不足，已把 g 轴下延至 0 并披露终值占比；基准不改", "verification_refs": ["data/reviews/regn-2026-09-24/writer/check-v1o.json"]},
+    {"id": "I-8", "lane": "research", "status": "closed", "reason": "股数口径与归属错误，已统一为 102.95M（10-Q 封面数）并全模型同口径重算", "verification_refs": ["data/reviews/regn-2026-09-24/writer/check-v1o.json"]},
+    {"id": "I-9", "lane": "research", "status": "closed", "reason": "跨维度重复扣分，已在三处去重并记录去重声明；诚信 17→18、危机 7→8、对股东友好度 10→11", "verification_refs": ["data/reviews/regn-2026-09-24/writer/check-v1o.json"]},
+    {"id": "I-10", "lane": "research", "status": "closed", "reason": "Sanofi 单一合作方依赖风险权重不足，已写入三份报告的风险与跟踪项", "verification_refs": ["data/reviews/regn-2026-09-24/writer/check-v1o.json"]}
+  ],
+  "approved_manifest_sha256": null,
+  "release_review_refs": [],
+  "next_trigger": "2026Q3 财报（聚合口径约 2026-10-27，未经公司公告确认）发布后复核：Sanofi 开发余额清偿后的合作利润台阶是否兑现、EYLEA 原研环比降幅与 EYLEA HD 接棒速度、Q4 2026 生物类似药集群的实际上市与价格影响、fianlimab 辅助黑色素瘤 III 期结果（4Q 2026）、cemdisiran gMG FDA 决定（2026-11）、EYLEA HD 预充针是否在年底前获批。"
+}

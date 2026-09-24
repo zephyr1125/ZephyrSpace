@@ -1,0 +1,79 @@
+{
+  "run": "regn-2026-09-24",
+  "company": "Regeneron Pharmaceuticals, Inc.",
+  "code": "REGN.US",
+  "market": "美股 / NASDAQ",
+  "data_cutoff": "2026-09-24",
+  "last_report_period": "2026Q2（期末 2026-06-30，2026-07-30 披露）",
+  "decision": "eligible",
+  "research_status": "verified_complete",
+  "research_state": "approved",
+  "score_state": "approved",
+  "delivery_state": "published",
+  "answer": "A_CORE（核心关注）— 门槛边缘。公司分原始 81.0（显示 81）、管理层分原始 80.0（显示 80）、合计 161.0（显示 161），满足 A_CORE（合计≥160 且两项均≥76），未达 S_STRATEGIC。价格结论：目标价 $834.25、估值确信度 0.51、机械买入价 $626.86，相对现价 $801.82 仅 +4.0%，现价高于机械买入价 27.9% → 观察，不建仓。",
+  "publish_allowed": true,
+  "approved_parameters": {
+    "cScore": 81.0,
+    "mScore": 80.0,
+    "combined": 161.0,
+    "watchlistLevel": "A_CORE",
+    "target_price": 834.25,
+    "valuation_certainty": 0.51,
+    "buy_price": 626.86,
+    "market_price": 801.82,
+    "market_price_date": "2026-09-23",
+    "currency": "USD",
+    "next_earnings_date": null,
+    "next_earnings_type": null,
+    "lastEarningsIncorporated": "2026Q2",
+    "dv_ttm": 0.47
+  },
+  "withdrawn_fields": [
+    "初稿 C1 中「EYLEA 体系已让出美国视网膜市场销售第一」的表述（事实错误，已更正为「体系仍居首位、原研单品明显落后」）",
+    "初稿 E2 中口径混用的 FCF 序列（FY2022-FY2024，已统一为公司口径）",
+    "初稿 D1／资本配置能力中的 FY2019 R&D $3,036.6M 起点（已更正为审计口径 $2,450.0M）",
+    "初稿 E3 中「其他收益约 $979.8M 未获公司拆解」的证据缺口（不成立，公司已完整拆解）",
+    "初稿 D2／战略稳定性／表达清晰度中「管线数量表述不一致」的扣分依据（不成立，两处口径一致均为约 50 个临床项目）",
+    "初稿 context certainty 0.55（无闭合轨迹，已改为闭合计算 0.51）",
+    "初稿目标价 846.24（股数口径错误，已改用 102.95M 后重算为 834.25）"
+  ],
+  "verified_findings": [
+    "两路独立全文复核（facts lane / reasoning lane）均完成，互不可见；分别覆盖全部 32 项分项与两处索引外遗漏风险检查。",
+    "关键计算经两路独立重算：FY2025 经营利润至净利润桥、ROE 杜邦、OCF/净利比率、收入拆分、EYLEA 美国季度序列、两个估值模型的全部情景与敏感性矩阵、反向 DCF 隐含 g、两条桥。",
+    "机械检查通过（scripts/triplet_score_flow.py check，状态 mechanically_checked_pending_review）。",
+    "审计、Class A 股权结构、薪酬、年会投票结果、诉讼清单均回看 SEC 原件核验。",
+    "公司页、公司索引（644→645，日期更新至 2026-09-24）与 watchlist_core.json 已回写；validate_watchlist.py 通过；sync_watchlist.ps1 已同步至 Finance 项目。"
+  ],
+  "blocking_items": [
+    {"id": "B-1", "category": "evidence_gap", "impact": "2026-04 MFN 美国政府采购协议对价格与报销的美元影响未披露，协议覆盖的产品范围（是否含 EYLEA HD）10-Q 未逐项列明", "disposition": "bounded", "source_ref": "REGN-D-006 / REGN-F-011"},
+    {"id": "B-2", "category": "evidence_gap", "impact": "前 EVP, Research and Development Neil Stahl 的离任原因未披露；CEO 继任计划的具体内容未披露", "disposition": "bounded", "source_ref": "REGN-F-013 / REGN-F-014"},
+    {"id": "B-3", "category": "irreducible_uncertainty", "impact": "DCF 终值占企业价值约 75.4%，Dupixent 约 2031 年起的专利悬崖落在终值区间内；模型未设 post-cliff 台阶，因该假设无官方依据", "disposition": "bounded", "source_ref": "workpaper.valuation.models[m2_fcff_dcf]"},
+    {"id": "B-4", "category": "irreducible_uncertainty", "impact": "发行在外股数存在多源分歧（99.85M/101.14M/102.95M/103.4M），每股价值存在约 ±2% 机械误差", "disposition": "bounded", "source_ref": "REGN-M-002"},
+    {"id": "B-5", "category": "presentation", "impact": "双评分合计 161.0 仅高于 A_CORE 门槛 1.0 分，属门槛边缘；该结果对跨维度去重口径敏感（去重前 158.5 = B_GROWTH）。已在公司页、深度分析与裁决记录中如实标注", "disposition": "bounded", "source_ref": "decision.json / 01-公司/Regeneron(REGN).md"}
+  ],
+  "review_refs": [
+    "data/reviews/regn-2026-09-24/review-facts/review-facts.json",
+    "data/reviews/regn-2026-09-24/review-reasoning/review-reasoning.json"
+  ],
+  "artifacts": {
+    "workpaper": "data/reviews/regn-2026-09-24/writer/workpaper-v1.json",
+    "decision": "data/reviews/regn-2026-09-24/decision.json",
+    "evidence": [
+      "data/reviews/regn-2026-09-24/evidence/facts.json",
+      "data/reviews/regn-2026-09-24/evidence/sources.json",
+      "data/reviews/regn-2026-09-24/evidence/facts-financials.md",
+      "data/reviews/regn-2026-09-24/evidence/facts-governance.md",
+      "data/reviews/regn-2026-09-24/evidence/facts-market-pipeline.md"
+    ],
+    "reports": {
+      "deep": "深度分析/Regeneron 深度分析 81 2026-09-24.md",
+      "management": "管理层档案/Regeneron 管理层档案 80 2026-09-24.md",
+      "valuation": "估值分析/Regeneron 估值分析 2026-09-24.md"
+    },
+    "company_page": "01-公司/Regeneron(REGN).md",
+    "company_index": "00-首页/公司索引.md",
+    "watchlist": "data/watchlist_core.json"
+  },
+  "next_trigger": "2026Q3 财报（聚合口径约 2026-10-27，未经公司公告确认）发布后复核：Sanofi 开发余额清偿后的合作利润台阶是否兑现、EYLEA 原研环比降幅与 EYLEA HD 接棒速度、2026Q4 生物类似药集群的实际上市与价格影响、fianlimab 辅助黑色素瘤 III 期结果（4Q 2026）、cemdisiran gMG FDA 决定（2026-11）、EYLEA HD 预充针是否在年底前获批。另需在 2027 proxy 发布后复核 CEO 继任安排。",
+  "notes": "本 run 依用户明确指令，所有角色（evidence / writer / review-facts / review-reasoning / adjudicator）均未使用 .codex/agents 中的预设模型，统一以主对话模型运行；详见 model-routing.json。"
+}

@@ -1,0 +1,13 @@
+{
+  "status": "mechanically_checked_pending_review",
+  "errors": [],
+  "warnings": [],
+  "scores": {
+    "cScore": 81.0,
+    "mScore": 80
+  },
+  "inputs": {
+    "data/reviews/regn-2026-09-24/evidence/facts.json": "f41e00c6ea3ed98363904ded94203863976758f24c3477384c27ce496c08574c",
+    "data/reviews/regn-2026-09-24/evidence/sources.json": "1edbe138eae607685638c0fcbe92b9ad288364816f2b3c1b65e0b44f89754a2f"
+  }
+}
