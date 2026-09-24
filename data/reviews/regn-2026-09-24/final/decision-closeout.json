@@ -10,16 +10,16 @@
   "research_state": "approved",
   "score_state": "approved",
   "delivery_state": "published",
-  "answer": "A_CORE（核心关注）— 门槛边缘。公司分原始 81.0（显示 81）、管理层分原始 80.0（显示 80）、合计 161.0（显示 161），满足 A_CORE（合计≥160 且两项均≥76），未达 S_STRATEGIC。价格结论：目标价 $834.25、估值确信度 0.51、机械买入价 $626.86，相对现价 $801.82 仅 +4.0%，现价高于机械买入价 27.9% → 观察，不建仓。",
+  "answer": "A_CORE（核心关注）。公司分原始 83.0（显示 83）、管理层分原始 84.0（显示 84）、合计 167.0（显示 167），满足 A_CORE（合计≥160 且两项均≥76），未达 S_STRATEGIC（需 ≥170 且确定性 ≥0.80，本项 0.45）。价格结论：暂定中枢 $785、估值确信度 0.45、机械买入价 $583.26；现价 $801.82 高于中枢约 2.1%、高于买入价 37.5% → 观察，不建仓。",
   "publish_allowed": true,
   "approved_parameters": {
-    "cScore": 81.0,
-    "mScore": 80.0,
-    "combined": 161.0,
+    "cScore": 83.0,
+    "mScore": 84.0,
+    "combined": 167.0,
     "watchlistLevel": "A_CORE",
-    "target_price": 834.25,
-    "valuation_certainty": 0.51,
-    "buy_price": 626.86,
+    "target_price": 785.0,
+    "valuation_certainty": 0.45,
+    "buy_price": 583.26,
     "market_price": 801.82,
     "market_price_date": "2026-09-23",
     "currency": "USD",
@@ -35,7 +35,11 @@
     "初稿 E3 中「其他收益约 $979.8M 未获公司拆解」的证据缺口（不成立，公司已完整拆解）",
     "初稿 D2／战略稳定性／表达清晰度中「管线数量表述不一致」的扣分依据（不成立，两处口径一致均为约 50 个临床项目）",
     "初稿 context certainty 0.55（无闭合轨迹，已改为闭合计算 0.51）",
-    "初稿目标价 846.24（股数口径错误，已改用 102.95M 后重算为 834.25）"
+    "初稿目标价 846.24（股数口径错误，已改用 102.95M 后重算为 834.25）",
+    "初稿目标价 846.24 与修复后目标价 834.25 均已作废，改用 785.00",
+    "初稿确定性 0.51；终审指定 0.45",
+    "初稿 C2=3（喝汤）论证（依据为对 33% 的误读）已撤回，改为 C2=5",
+    "初稿「全部债务为长期」「无摊薄工具」「继任真空」「2% 烧钱率」等表述已撤回"
   ],
   "verified_findings": [
     "两路独立全文复核（facts lane / reasoning lane）均完成，互不可见；分别覆盖全部 32 项分项与两处索引外遗漏风险检查。",
@@ -45,18 +49,62 @@
     "公司页、公司索引（644→645，日期更新至 2026-09-24）与 watchlist_core.json 已回写；validate_watchlist.py 通过；sync_watchlist.ps1 已同步至 Finance 项目。"
   ],
   "blocking_items": [
-    {"id": "B-1", "category": "evidence_gap", "impact": "2026-04 MFN 美国政府采购协议对价格与报销的美元影响未披露，协议覆盖的产品范围（是否含 EYLEA HD）10-Q 未逐项列明", "disposition": "bounded", "source_ref": "REGN-D-006 / REGN-F-011"},
-    {"id": "B-2", "category": "evidence_gap", "impact": "前 EVP, Research and Development Neil Stahl 的离任原因未披露；CEO 继任计划的具体内容未披露", "disposition": "bounded", "source_ref": "REGN-F-013 / REGN-F-014"},
-    {"id": "B-3", "category": "irreducible_uncertainty", "impact": "DCF 终值占企业价值约 75.4%，Dupixent 约 2031 年起的专利悬崖落在终值区间内；模型未设 post-cliff 台阶，因该假设无官方依据", "disposition": "bounded", "source_ref": "workpaper.valuation.models[m2_fcff_dcf]"},
-    {"id": "B-4", "category": "irreducible_uncertainty", "impact": "发行在外股数存在多源分歧（99.85M/101.14M/102.95M/103.4M），每股价值存在约 ±2% 机械误差", "disposition": "bounded", "source_ref": "REGN-M-002"},
-    {"id": "B-5", "category": "presentation", "impact": "双评分合计 161.0 仅高于 A_CORE 门槛 1.0 分，属门槛边缘；该结果对跨维度去重口径敏感（去重前 158.5 = B_GROWTH）。已在公司页、深度分析与裁决记录中如实标注", "disposition": "bounded", "source_ref": "decision.json / 01-公司/Regeneron(REGN).md"}
+    {
+      "id": "B-1",
+      "category": "evidence_gap",
+      "impact": "2026-04 MFN 美国政府采购协议对价格与报销的美元影响未披露，协议覆盖的产品范围（是否含 EYLEA HD）10-Q 未逐项列明",
+      "disposition": "bounded",
+      "source_ref": "REGN-D-006 / REGN-F-011"
+    },
+    {
+      "id": "B-2",
+      "category": "evidence_gap",
+      "impact": "前 EVP, Research and Development Neil Stahl 的离任原因未披露；CEO 继任计划的具体内容未披露",
+      "disposition": "bounded",
+      "source_ref": "REGN-F-013 / REGN-F-014"
+    },
+    {
+      "id": "B-3",
+      "category": "irreducible_uncertainty",
+      "impact": "Dupixent 专利族到期后的侵蚀路径无可核依据，原 DCF 因该缺陷已降为零权重诊断模型（见 B-6、B-7）",
+      "disposition": "bounded",
+      "source_ref": "data/reviews/regn-2026-09-24/final/mechanical-check-scope.md"
+    },
+    {
+      "id": "B-4",
+      "category": "irreducible_uncertainty",
+      "impact": "发行在外股数存在多源分歧（99.85M/101.14M/102.95M/103.4M），每股价值存在约 ±2% 机械误差",
+      "disposition": "bounded",
+      "source_ref": "REGN-M-002"
+    },
+    {
+      "id": "B-5",
+      "category": "presentation",
+      "impact": "终审后双评分合计 167.0，高于 A_CORE 门槛 7.0 分，门槛边缘问题已消除。遗留的偏差说明：终审建议的 C=15 与 F=13 在本框架封闭档位下不可实现（C2 与 F2 均只允许 5/3/0-1），已按实体理由落地为 C=16 / F=12，公司分终值 83.0 与终审目标一致。",
+      "disposition": "bounded",
+      "source_ref": "data/reviews/regn-2026-09-24/decision.json terminal_adjudication.disclosed_deviation"
+    },
+    {
+      "id": "B-6",
+      "category": "irreducible_uncertainty",
+      "impact": "Dupixent 专利族到期后（美国核心物质专利 2031-03-28；剂型延至 2032-10-17；治疗方法延至 2034-07-10 及更晚）的收入侵蚀路径无可核事实依据，导致诊断折现模型读数（$624 含侵蚀 / $727 不含侵蚀）显著低于主模型基准 $785；该缺口是确定性仅 0.45 的主因，且未闭合。",
+      "disposition": "bounded",
+      "source_ref": "workpaper-v2.json valuation.diagnostic_model"
+    },
+    {
+      "id": "B-7",
+      "category": "evidence_gap",
+      "impact": "本次仅有一个赋权主模型，缺少第二个有独立依据的定量模型；诊断折现模型因侵蚀路径假设不可核而权重为 0。",
+      "disposition": "bounded",
+      "source_ref": "data/reviews/regn-2026-09-24/final/mechanical-check-scope.md"
+    }
   ],
   "review_refs": [
     "data/reviews/regn-2026-09-24/review-facts/review-facts.json",
     "data/reviews/regn-2026-09-24/review-reasoning/review-reasoning.json"
   ],
   "artifacts": {
-    "workpaper": "data/reviews/regn-2026-09-24/writer/workpaper-v1.json",
+    "workpaper": "data/reviews/regn-2026-09-24/writer/workpaper-v2.json",
     "decision": "data/reviews/regn-2026-09-24/decision.json",
     "evidence": [
       "data/reviews/regn-2026-09-24/evidence/facts.json",
@@ -66,14 +114,18 @@
       "data/reviews/regn-2026-09-24/evidence/facts-market-pipeline.md"
     ],
     "reports": {
-      "deep": "深度分析/Regeneron 深度分析 81 2026-09-24.md",
-      "management": "管理层档案/Regeneron 管理层档案 80 2026-09-24.md",
+      "deep": "深度分析/Regeneron 深度分析 83 2026-09-24.md",
+      "management": "管理层档案/Regeneron 管理层档案 84 2026-09-24.md",
       "valuation": "估值分析/Regeneron 估值分析 2026-09-24.md"
     },
     "company_page": "01-公司/Regeneron(REGN).md",
     "company_index": "00-首页/公司索引.md",
-    "watchlist": "data/watchlist_core.json"
+    "watchlist": "data/watchlist_core.json",
+    "mechanical_check": [
+      "data/reviews/regn-2026-09-24/writer/calculate.py",
+      "data/reviews/regn-2026-09-24/final/mechanical-check-scope.md"
+    ]
   },
   "next_trigger": "2026Q3 财报（聚合口径约 2026-10-27，未经公司公告确认）发布后复核：Sanofi 开发余额清偿后的合作利润台阶是否兑现、EYLEA 原研环比降幅与 EYLEA HD 接棒速度、2026Q4 生物类似药集群的实际上市与价格影响、fianlimab 辅助黑色素瘤 III 期结果（4Q 2026）、cemdisiran gMG FDA 决定（2026-11）、EYLEA HD 预充针是否在年底前获批。另需在 2027 proxy 发布后复核 CEO 继任安排。",
-  "notes": "本 run 依用户明确指令，所有角色（evidence / writer / review-facts / review-reasoning / adjudicator）均未使用 .codex/agents 中的预设模型，统一以主对话模型运行；详见 model-routing.json。"
+  "notes": "本 run 依用户明确指令，所有角色（evidence / writer / review-facts / review-reasoning / adjudicator）均未使用 .codex/agents 中的预设模型，统一以主对话模型运行；详见 model-routing.json。 终审（用户裁决）已完成第二轮修订并落地，含一处机械档位偏差（终审建议 C=15/F=13 在封闭档位下不可实现，已按实体理由落地为 C=16/F=12，公司分终值 83.0 与终审目标一致）。"
 }

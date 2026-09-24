@@ -5,15 +5,24 @@
   "cutoff": "2026-09-24",
   "company": "Regeneron Pharmaceuticals, Inc.",
   "code": "REGN.US",
-  "basis": "完整三件套：共享证据包（facts-financials / facts-governance / facts-market-pipeline）→ 32 项评分底稿 → 两路独立全文复核（facts lane / reasoning lane，互不可见）→ 本裁决逐候选处置 → 作者一次合并修复 → 机械检查通过。公司分原始 81.0、管理层分原始 80.0、合计 161.0，满足 A_CORE（合计≥160 且两项均≥76），未达 S_STRATEGIC（含 valuation_certainty≥0.80 的额外门槛，本项 0.51）。",
+  "basis": "完整三件套 + 两轮复核 + 终审裁决。第一轮：共享证据包 → 32 项评分底稿 → 两路独立全文复核（facts / reasoning lane，互不可见） → 裁决逐候选处置 → 一次合并修复（公司 81.0 / 管理层 80.0，目标价 846.24）。第二轮（终审，用户裁决）：认定公司质量被部分误读压低、估值存在偏乐观与不可复算问题，逐条列出 P1/P2 后修订——公司 83.0 / 管理层 84.0、合计 167.0 → A_CORE；目标价 785.00、确定性 0.45、买入价 583.26。",
   "review_refs": [
     "data/reviews/regn-2026-09-24/review-facts/review-facts.json",
     "data/reviews/regn-2026-09-24/review-reasoning/review-reasoning.json"
   ],
   "score_bounds": {
-    "company": [81.0, 81.0],
-    "management": [80.0, 80.0],
-    "combined": [161.0, 161.0]
+    "company": [
+      83.0,
+      83.0
+    ],
+    "management": [
+      84.0,
+      84.0
+    ],
+    "combined": [
+      167.0,
+      167.0
+    ]
   },
   "candidate_dispositions": [
     {
@@ -98,29 +107,215 @@
     }
   ],
   "approved_parameters": {
-    "cScore": 81.0,
-    "mScore": 80.0,
-    "combined": 161.0,
-    "target_price": 834.25,
-    "valuation_certainty": 0.51,
-    "buy_price": 626.86,
+    "cScore": 83.0,
+    "mScore": 84.0,
+    "combined": 167.0,
+    "target_price": 785.0,
+    "valuation_certainty": 0.45,
+    "buy_price": 583.26,
     "watchlistLevel": "A_CORE",
-    "threshold_margin_note": "合计 161.0 仅高于 A_CORE 门槛 160 的 1.0 分，属门槛边缘；修复前的重复扣分口径下为 158.5（B_GROWTH）。该差异已如实记录，不在报告中隐藏。"
+    "threshold_margin_note": "合计 167.0，高于 A_CORE 门槛 160 的 7.0 分；未达 S_STRATEGIC（需 ≥170 且确定性 ≥0.80，本项 0.45）。"
   },
   "withdrawn_fields": [],
   "issues": [
-    {"id": "I-1", "lane": "research", "status": "closed", "reason": "E2 FCF 口径不一致，已按公司口径统一", "verification_refs": ["data/reviews/regn-2026-09-24/writer/check-v1o.json"]},
-    {"id": "I-2", "lane": "research", "status": "closed", "reason": "FY2019/FY2021 R&D 起点数字错误，已改用审计后利润表口径", "verification_refs": ["data/reviews/regn-2026-09-24/writer/check-v1o.json"]},
-    {"id": "I-3", "lane": "research", "status": "closed", "reason": "C1 的 EYLEA 体系排名表述错误，已按 8-K Table 5 与 Roche 半年报更正；分数维持 4", "verification_refs": ["data/reviews/regn-2026-09-24/writer/check-v1o.json"]},
-    {"id": "I-4", "lane": "research", "status": "closed", "reason": "管线数量「表述不一致」依据不成立，已从三处删除；战略稳定性 13→14", "verification_refs": ["data/reviews/regn-2026-09-24/writer/check-v1o.json"]},
-    {"id": "I-5", "lane": "research", "status": "closed", "reason": "其他收益拆解缺口不成立，已删除并改为已完整拆解；E3 维持 2", "verification_refs": ["data/reviews/regn-2026-09-24/writer/check-v1o.json"]},
-    {"id": "I-6", "lane": "research", "status": "closed", "reason": "certainty 未闭合，已补起值+正项−负项闭合表，结果 0.51", "verification_refs": ["data/reviews/regn-2026-09-24/writer/check-v1o.json"]},
-    {"id": "I-7", "lane": "research", "status": "closed", "reason": "DCF 终值悬崖敏感性不足，已把 g 轴下延至 0 并披露终值占比；基准不改", "verification_refs": ["data/reviews/regn-2026-09-24/writer/check-v1o.json"]},
-    {"id": "I-8", "lane": "research", "status": "closed", "reason": "股数口径与归属错误，已统一为 102.95M（10-Q 封面数）并全模型同口径重算", "verification_refs": ["data/reviews/regn-2026-09-24/writer/check-v1o.json"]},
-    {"id": "I-9", "lane": "research", "status": "closed", "reason": "跨维度重复扣分，已在三处去重并记录去重声明；诚信 17→18、危机 7→8、对股东友好度 10→11", "verification_refs": ["data/reviews/regn-2026-09-24/writer/check-v1o.json"]},
-    {"id": "I-10", "lane": "research", "status": "closed", "reason": "Sanofi 单一合作方依赖风险权重不足，已写入三份报告的风险与跟踪项", "verification_refs": ["data/reviews/regn-2026-09-24/writer/check-v1o.json"]}
+    {
+      "id": "I-1",
+      "lane": "research",
+      "status": "closed",
+      "reason": "E2 FCF 口径不一致，已按公司口径统一",
+      "verification_refs": [
+        "data/reviews/regn-2026-09-24/writer/check-v1o.json"
+      ]
+    },
+    {
+      "id": "I-2",
+      "lane": "research",
+      "status": "closed",
+      "reason": "FY2019/FY2021 R&D 起点数字错误，已改用审计后利润表口径",
+      "verification_refs": [
+        "data/reviews/regn-2026-09-24/writer/check-v1o.json"
+      ]
+    },
+    {
+      "id": "I-3",
+      "lane": "research",
+      "status": "closed",
+      "reason": "C1 的 EYLEA 体系排名表述错误，已按 8-K Table 5 与 Roche 半年报更正；分数维持 4",
+      "verification_refs": [
+        "data/reviews/regn-2026-09-24/writer/check-v1o.json"
+      ]
+    },
+    {
+      "id": "I-4",
+      "lane": "research",
+      "status": "closed",
+      "reason": "管线数量「表述不一致」依据不成立，已从三处删除；战略稳定性 13→14",
+      "verification_refs": [
+        "data/reviews/regn-2026-09-24/writer/check-v1o.json"
+      ]
+    },
+    {
+      "id": "I-5",
+      "lane": "research",
+      "status": "closed",
+      "reason": "其他收益拆解缺口不成立，已删除并改为已完整拆解；E3 维持 2",
+      "verification_refs": [
+        "data/reviews/regn-2026-09-24/writer/check-v1o.json"
+      ]
+    },
+    {
+      "id": "I-6",
+      "lane": "research",
+      "status": "closed",
+      "reason": "certainty 未闭合，已补起值+正项−负项闭合表，结果 0.51",
+      "verification_refs": [
+        "data/reviews/regn-2026-09-24/writer/check-v1o.json"
+      ]
+    },
+    {
+      "id": "I-7",
+      "lane": "research",
+      "status": "closed",
+      "reason": "DCF 终值悬崖敏感性不足，已把 g 轴下延至 0 并披露终值占比；基准不改",
+      "verification_refs": [
+        "data/reviews/regn-2026-09-24/writer/check-v1o.json"
+      ]
+    },
+    {
+      "id": "I-8",
+      "lane": "research",
+      "status": "closed",
+      "reason": "股数口径与归属错误，已统一为 102.95M（10-Q 封面数）并全模型同口径重算",
+      "verification_refs": [
+        "data/reviews/regn-2026-09-24/writer/check-v1o.json"
+      ]
+    },
+    {
+      "id": "I-9",
+      "lane": "research",
+      "status": "closed",
+      "reason": "跨维度重复扣分，已在三处去重并记录去重声明；诚信 17→18、危机 7→8、对股东友好度 10→11",
+      "verification_refs": [
+        "data/reviews/regn-2026-09-24/writer/check-v1o.json"
+      ]
+    },
+    {
+      "id": "I-10",
+      "lane": "research",
+      "status": "closed",
+      "reason": "Sanofi 单一合作方依赖风险权重不足，已写入三份报告的风险与跟踪项",
+      "verification_refs": [
+        "data/reviews/regn-2026-09-24/writer/check-v1o.json"
+      ]
+    },
+    {
+      "id": "I-11",
+      "lane": "research",
+      "status": "closed",
+      "reason": "终审 P1-1～P1-5 全部落地（Sanofi 分成、H1 经营利润反转与非 GAAP 口径、预充针申请状态、估值模型四项缺陷、股数与 SBC）",
+      "verification_refs": [
+        "data/reviews/regn-2026-09-24/writer/calculate.py",
+        "data/reviews/regn-2026-09-24/writer/check-final2.json"
+      ]
+    },
+    {
+      "id": "I-12",
+      "lane": "delivery",
+      "status": "closed",
+      "reason": "终审 P2 九项事实/算术/表述清理全部落地，并已按字节核对三份报告与公司页",
+      "verification_refs": [
+        "data/reviews/regn-2026-09-24/writer/calculate.py"
+      ]
+    }
   ],
   "approved_manifest_sha256": null,
   "release_review_refs": [],
-  "next_trigger": "2026Q3 财报（聚合口径约 2026-10-27，未经公司公告确认）发布后复核：Sanofi 开发余额清偿后的合作利润台阶是否兑现、EYLEA 原研环比降幅与 EYLEA HD 接棒速度、Q4 2026 生物类似药集群的实际上市与价格影响、fianlimab 辅助黑色素瘤 III 期结果（4Q 2026）、cemdisiran gMG FDA 决定（2026-11）、EYLEA HD 预充针是否在年底前获批。"
+  "next_trigger": "2026Q3 财报（聚合口径约 2026-10-27，未经公司公告确认）发布后复核：Sanofi 开发余额清偿后的合作利润台阶是否兑现、EYLEA 原研环比降幅与 EYLEA HD 接棒速度、Q4 2026 生物类似药集群的实际上市与价格影响、fianlimab 辅助黑色素瘤 III 期结果（4Q 2026）、cemdisiran gMG FDA 决定（2026-11）、EYLEA HD 预充针是否在年底前获批。",
+  "terminal_adjudication": {
+    "round": 2,
+    "source": "用户终审裁决（2026-09-24）",
+    "outcome": "接受并落地，含一处机械档位偏差说明",
+    "p1_items": [
+      {
+        "id": "P1-1",
+        "claim": "Sanofi 合作收益被解释错了：报告反复写「Regeneron 只取得约 33% 的利润份额」，但合同是美国 50/50、美国以外 35%–45%；33% 是扣减开发偿还款后占销售额的比例",
+        "disposition": "成立",
+        "action": "C2 由 3 升 5（C 维度 14→16）；B1、C2、公司页、管理层档案同步更正。另更正「客户 A 即 Sanofi」的错误认定——10-Q 的客户集中度披露是产品销售客户口径，不覆盖合作收入。"
+      },
+      {
+        "id": "P1-2",
+        "claim": "「主业仍在收缩」遗漏了最新半年报的反转（2026H1 经营利润 +15.9%）；且「证券投资收益未被非 GAAP 剔除」表述错误",
+        "disposition": "成立",
+        "action": "回原件核验：2026H1 经营利润 $1,936.4M vs 2025H1 $1,671.2M（+15.9%）；FY2025 非 GAAP 调整表已剔除证券投资净收益 $946.1M（但同时剔除 SBC）。E3 分数维持 2/3，理由与表述全面改写。"
+      },
+      {
+        "id": "P1-3",
+        "claim": "不能把「提交申请」与「获得批准」混为一谈再据此判定失信",
+        "disposition": "成立",
+        "action": "回原件：Q1 2026 业绩发布载明公司已重新提交 Catalent Indiana 的灌装申请，第二家合同生产商申请亦在审、FDA 未在 2026 年 4 月 PDUFA 目标日行动。D2 与表达清晰度相应改写；另删除「全年费用指引调整 = 全年预算已兑现」的提前勾选。"
+      },
+      {
+        "id": "P1-4",
+        "claim": "DCF 算术正确但经济假设不完整：无 FCFF 推导表、零增长不等于专利悬崖、估值时点不一致、普通同业 PE 不能套给经营税后利润",
+        "disposition": "成立",
+        "action": "全部落地：补齐 FCFF 推导表（含 SBC 处理声明）；显式期延长至 10 年并加入 2031 年起的侵蚀台阶；首期指数改为 0.27 年（自 2026-09-23 起算）；主模型改为 EV/经营税后利润（NOPAT）口径；原 DCF 降为零权重诊断模型。压力测试（终值现金流 −25%）与 g=0 敏感性均已披露。"
+      },
+      {
+        "id": "P1-5",
+        "claim": "股权激励并未消失，基本股数不能直接代表完全稀释股数；库存股回购具缩股效果不应扣分，但需衡量净缩股",
+        "disposition": "成立",
+        "action": "估值分母由 102.95M 改为 106.0M（GAAP 稀释加权）；删除「无摊薄工具」表述；披露 FY2026 指引 SBC 约 $9.7–10.3 亿（约占公司口径 FCF 的 24%）；库存股形式不再作为扣分依据。"
+      }
+    ],
+    "p2_items": [
+      "2%「烧钱率」→ 更正为股权授予使用率（equity grant burn rate），删除其用于论证经营效率的用法",
+      "「继任真空」→ 更正为「关键人风险，继任结果未公开」（董事会继任审查机制与 Lead Independent Director 职责均已覆盖该流程，且有 2024 年 CFO 内部接班先例）→ 组织与人才 7→8",
+      "FY2026 Sanofi 合作收入由 8,703 更正为 8,534.19；全年总收入由 16,934 更正为 16,765；删除「恰好与一致预期一致」的论据",
+      "四项交易「合计 3.09 亿」→ 更正为所列四项合计 4.64 亿，并区分许可费与股权投资",
+      "「全部债务为长期」→ 更正：2026-06-30 融资租赁负债 $7.20 亿已列为流动负债",
+      "fianlimab 证券集体诉讼立案日 2025-07-16 → 2026-07-16",
+      "Regeneron 起诉 Sanofi 2025-11-18 → 2024-11-18（2024-12-20 修订）",
+      "5(a) 议案内容更正为「降低修改相关条款所需的普通股表决门槛」",
+      "$801.82 区间归属纠正为中性区（$785–853）；删除「较好区推荐观察建仓」的旁路表述，明确 A_CORE 与买入触发相互独立"
+    ],
+    "score_moves": [
+      {
+        "target": "company/C2",
+        "from": 3,
+        "to": 5,
+        "basis": "终审认定「喝汤」论证不成立；C2 封闭档位仅允许 5/3/0-1，取可达的上档"
+      },
+      {
+        "target": "company/F2",
+        "from": 3,
+        "to": 3,
+        "basis": "终审同时要求「保留类别否决权约束」，即不取 5 档；净回购的认可改由管理层「对股东友好度」体现"
+      },
+      {
+        "target": "management/资本配置能力",
+        "from": 18,
+        "to": 19,
+        "basis": "股价总回报落后不等于资本配置能力差"
+      },
+      {
+        "target": "management/对股东友好度",
+        "from": 11,
+        "to": 13,
+        "basis": "撤销低派息率、库存股形式、无公开市场增持三项不充分扣分"
+      },
+      {
+        "target": "management/组织与人才能力",
+        "from": 7,
+        "to": 8,
+        "basis": "继任机制存在，改述为关键人风险而非继任真空"
+      }
+    ],
+    "disclosed_deviation": "终审建议 C 维度 15 分、F 维度 13 分，在本框架的封闭档位下不可实现（C2 与 F2 均只允许 5/3/0-1，故 C 只能取 14 或 16、F 只能取 12 或 14）。已按终审的实体理由落地：C2 升 5（C=16）、F2 维持 3（F=12），净回购加分由管理层项体现，最终公司分 83.0——与终审目标一致。",
+    "valuation": {
+      "target_price": 785.0,
+      "certainty": 0.45,
+      "buy_price": 583.26,
+      "note": "采用终审指定的经营价值模型（EV/NOPAT），原 DCF 降为零权重诊断模型；诊断读数 $624（含侵蚀）～$727（不含侵蚀）低于主模型，为确定性 0.45 的主要依据。"
+    }
+  }
 }
