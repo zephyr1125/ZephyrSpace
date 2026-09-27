@@ -11,7 +11,17 @@ except ImportError:
 
 def check(data, root):
     wp = delivery.wp
-    requirements = data["requirements"]
+    if "plan" in data:
+        try:
+            from scripts.triplet_score_flow import validate_plan
+        except ImportError:
+            from triplet_score_flow import validate_plan
+        plan_path = wp.local(root, data["plan"])
+        wp.require(delivery.digest(plan_path.read_bytes()) == data["plan_sha256"], "取证计划版本已变化")
+        wp.require("requirements" not in data, "引用计划时不得重复维护条件副本")
+        requirements = validate_plan(wp.read(plan_path))
+    else:
+        requirements = data["requirements"]
     answers = data["answers"]
     wanted = {row["id"]: row for row in requirements}
     supplied = {row["id"]: row for row in answers}
@@ -38,8 +48,20 @@ def check(data, root):
             errors.append(key + "须说明为何不妨碍评分，或具体影响哪些分项")
         if status == "bounded" and not answer.get("search_scope"):
             errors.append(key + "缺有界检索记录，不能将未完成伪装不可知")
+        if "plan" in data:
+            kind = answer.get("remaining_kind")
+            support = answer.get("supports_scoring")
+            if kind not in ("none", "public_not_checked", "unpublished", "no_applicable_event", "irreducible_conflict") or type(support) is not bool:
+                errors.append(key + "须区分公开未查/未披露/无适用事件/不可解冲突，并声明能否支持评分")
+            if status == "bounded" and kind not in ("unpublished", "no_applicable_event", "irreducible_conflict"):
+                errors.append(key + "公开未查不能标成有界未知")
+            if status == "covered" and (kind != "none" or support is not True):
+                errors.append(key + "已覆盖状态与剩余缺口或评分支持声明矛盾")
+            if requirement["decisive"] and (kind == "public_not_checked" or support is not True):
+                errors.append(key + "决定性条件尚不足以支持评分")
+    paths = data["evidence"] + ([data["plan"]] if "plan" in data else [])
     return {"status": "failed" if errors else "coverage_ready_for_human_check", "errors": errors,
-            "inputs": {p: delivery.digest(wp.local(root, p).read_bytes()) for p in data["evidence"]},
+            "inputs": {p: delivery.digest(wp.local(root, p).read_bytes()) for p in paths},
             "limitations": "仅检查逐项覆盖、引用及版本；主任务必须对照实际内容核范围，covered自述不是实质验收。"}
 
 

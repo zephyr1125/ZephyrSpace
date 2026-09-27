@@ -169,6 +169,16 @@ def scoring_rules():
     return company, management
 
 
+def f1_negative_tiers():
+    # 原表把廉洁情形列为独立负分档，不能被通用零下限抹掉，也不开放连续负分。
+    text = (ROOT / "deep-prebuy-skill/SKILL.md").read_text(encoding="utf-8")
+    for line in text.splitlines():
+        cells = [x.strip() for x in line.strip("|").split("|")]
+        if len(cells) == 4 and cells[0].split()[:1] == ["F1"]:
+            return {float(value) for value in re.findall(r"=\s*(-\d+(?:\.\d+)?)", cells[1])}
+    raise ValueError("F1原评分表无法定位")
+
+
 def score(sheet, limits, label):
     rows = sheet["items"]
     ids = [row["id"] for row in rows]
@@ -181,7 +191,9 @@ def score(sheet, limits, label):
         # 原规则允许 F2.5 正面先例加 0.5，仍受 F 维度满分约束。
         if row["id"] == "F2.5" and row.get("positive_precedent") is True:
             cap += 0.5
-        require(0 <= number(row["score"]) <= cap, f"{label}/{row['id']}超出分值")
+        value = number(row["score"])
+        legal_negative = row["id"] == "F1" and value < 0 and value in f1_negative_tiers()
+        require(legal_negative or 0 <= value <= cap, f"{label}/{row['id']}超出分值")
         require(bool(row.get("rule_ref")) and bool(row.get("reason")) and bool(row.get("evidence_refs")),
                 f"{label}/{row['id']}缺规则、理由或证据定位")
     total = sum(row["score"] for row in rows)
@@ -189,21 +201,58 @@ def score(sheet, limits, label):
     return total
 
 
-def validate_explicit_tiers(items):
+def validate_explicit_tiers(items, version=1):
     """只核封闭档位，取值仍从原评分表解析；不把定性开放区间伪装成公式。"""
     text = (ROOT / "deep-prebuy-skill/SKILL.md").read_text(encoding="utf-8")
     ranges = {}
+    wanted = {"A3", "D1", "F2"}
+    if version == 2:
+        wanted |= {"C1", "C2", "C3+C4", "F2.5"}
     for line in text.splitlines():
         cells = [cell.strip() for cell in line.strip("|").split("|")]
         key = cells[0].split()[0] if cells[0] else ""
-        if len(cells) == 4 and key in ("A3", "D1", "F2"):
+        if len(cells) == 4 and key in wanted:
             ranges[key] = [(float(low), float(high or low))
                            for low, high in re.findall(r"=(\d+(?:\.\d+)?)(?:-(\d+(?:\.\d+)?))?", cells[1])]
-    require(set(ranges) == {"A3", "D1", "F2"} and all(ranges.values()), "显式评分档位无法解析")
+    require(set(ranges) == wanted and all(ranges.values()), "显式评分档位无法解析")
     for row in items:
         if row["id"] in ranges and row.get("score") is not None:
-            require(any(low <= number(row["score"]) <= high for low, high in ranges[row["id"]]),
+            value = number(row["score"])
+            if version == 2 and row["id"] == "F2.5" and row.get("positive_precedent") is True:
+                limits = scoring_rules()[0]
+                headroom = sum(cap for key, cap in limits.items() if key.startswith("F")) - sum(
+                    number(other["score"]) for other in items if other["id"].startswith("F") and other["id"] != "F2.5")
+                valid = any(math.isclose(value, min(low + 0.5, headroom), abs_tol=1e-9)
+                            for low, high in ranges[row["id"]] if low == high)
+            else:
+                valid = any(low <= value <= high for low, high in ranges[row["id"]])
+            require(valid,
                     row["id"] + "违反原规则显式档位，不能自造中间分")
+
+
+def validate_capex(row):
+    """检查原E4半分调整的算术；拆分是否真实充分仍由独立审核判断。"""
+    item = row["capex_check"]
+    require(type(item.get("applicable")) is bool, "E4缺Capex适用性声明")
+    if not item["applicable"]:
+        require(bool(item.get("reason")), "E4不适用Capex须说明行业依据")
+        return
+    current, previous = number(item["current"]), number(item["previous"])
+    require(current >= 0 and previous > 0, "Capex比较须使用非负本期、正数上期；不可比期别须明确不适用及原因")
+    require(item.get("unit") and item.get("current_period") and item.get("previous_period") and item.get("evidence_refs"),
+            "Capex缺单位、期别或原件引用")
+    require(type(item.get("split_complete")) is bool, "Capex缺经营/非经营拆分状态")
+    text = (ROOT / "deep-prebuy-skill/SKILL.md").read_text(encoding="utf-8")
+    rule = next(line for line in text.splitlines() if line.startswith("**Capex 拆分检查"))
+    trigger = re.search(r"同比变化 > (\d+(?:\.\d+)?)%", rule)
+    penalty = re.search(r"降低 E4 得分 (\d+(?:\.\d+)?) 分", rule)
+    require(trigger is not None and penalty is not None, "Capex原规则变化，须复核解析器")
+    change, threshold = abs(current / previous - 1), float(trigger.group(1)) / 100
+    triggered = change > threshold and not math.isclose(change, threshold, rel_tol=1e-12, abs_tol=1e-12)
+    deduction = float(penalty.group(1)) if triggered and not item["split_complete"] else 0
+    base = number(item["score_before_capex_adjustment"])
+    require(0 <= base <= scoring_rules()[0]["E4"], "E4调整前分越界")
+    close(row["score"], max(0, base - deduction), "E4原规则Capex调整")
 
 
 def calculate_model(model):
@@ -279,9 +328,11 @@ def check(data, root=ROOT, reports=True, repair=False, previous=None):
         result["cScore"] = score(data["scores"]["company"], company, "公司")
         result["mScore"] = score(data["scores"]["management"], management, "管理层")
         rows = {row["id"]: row for row in data["scores"]["company"]["items"]}
-        require(data.get("score_rule_validation") in (None, "explicit_tiers_v1"), "未知评分规则校验模式")
-        if data.get("score_rule_validation") == "explicit_tiers_v1":
-            validate_explicit_tiers(list(rows.values()))
+        require(data.get("score_rule_validation") in (None, "explicit_tiers_v1", "explicit_tiers_v2"), "未知评分规则校验模式")
+        if data.get("score_rule_validation") in ("explicit_tiers_v1", "explicit_tiers_v2"):
+            validate_explicit_tiers(list(rows.values()), 2 if data["score_rule_validation"] == "explicit_tiers_v2" else 1)
+        if data.get("score_rule_validation") == "explicit_tiers_v2":
+            validate_capex(rows["E4"])
         for group in "ABCDEF":
             obtained = sum(row["score"] for key, row in rows.items() if key.startswith(group))
             cap = sum(value for key, value in company.items() if key.startswith(group))

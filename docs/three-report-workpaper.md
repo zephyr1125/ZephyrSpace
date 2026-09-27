@@ -49,7 +49,7 @@
 
 ## 中间产物去重
 
-评分前置阶段使用 `triplet_workpaper.py check <workpaper.json> --no-reports` 核分项、估值状态及桥接计算；新底稿声明 `score_rule_validation: "explicit_tiers_v1"`，额外从原规则检查A3/D1/F2封闭档位，不对开放的专业判断自动插值。输出scope明确reports=false，不要求为了脚本先生成三份长报告。该检查不批准评分；完整报告仍走装配及独立验收。历史底稿缺新字段保留原机械检查范围，不追改获批快照。
+评分前置阶段使用[评分交接](three-report-score-flow.md)的紧凑check，复用原底稿检查并核评分引用；旧 `triplet_workpaper.py check <workpaper.json> --no-reports` 保留用于调试。新底稿声明 `score_rule_validation: "explicit_tiers_v2"`，从原规则检查A3/D1/F2、C1/C2/C3+C4及F2.5封闭档位和条件加分；v1仅兼容冻结历史稿，不对开放的专业判断自动插值。不要求为了脚本先生成三份长报告；程序不批准评分。局部修复用同页delta接口，完整报告仍走装配及独立验收。历史底稿缺新字段保留原机械检查范围，不追改获批快照。
 
 - 不单设盲审风险卡；评分审核覆盖全部分项、反证和决定性原件，重大风险不能为控制长度而省略。
 - 评分或完整报告审核输出 `review-<role>.json`，其中 `findings` 数组每项必含 `severity/location/claim/evidence/impact/recommendation`（字符串，原文定位与关键推导写在 evidence）。可另含精简 `coverage`、评分或结论变化及 `uncovered`。通过项只记“已核/无问题”。零问题也须交覆盖记录，不重写一份长 Markdown 同义稿。
@@ -64,3 +64,11 @@ python -X utf8 scripts/review_trial.py anonymize data/reviews/<run-id>/review-so
 - 新任务裁决只维护交付规范的decision.json：额外保留candidate_dispositions（全部候选ID、成立/部分成立/误报/缺证/建议、理由及原件），参数和逐问题验收；不另转录同义修复长文。主任务核候选全覆盖、评分桥及原验收条件后一次交作者。旧repair-package格式仅供历史run复现，见历史闸门。
 
 整套更新与计量沿用[调度SOP](three-report-economy-routing.md)，本文件只维护底稿与产物格式。
+
+### E4原规则机械执行
+
+v2底稿在E4分项增加`capex_check`。适用时填`applicable: true`、`current/previous`（同单位现金Capex）、`unit/current_period/previous_period/evidence_refs`、`split_complete`（是否已完成运营/非运营拆分）、`score_before_capex_adjustment`。程序按原文阈值核同比变化绝对值及未拆分扣分，包含大幅下降；拆分的真实性由双复核核验。不适用行业或不可比基期填`applicable: false`及具体`reason`，不可借此跳过实际触发项。此字段只是执行已有规则，不增加新扣分。
+
+### F1原负分档
+
+F1评分表明确列出的负分档按原值录入，不能取绝对值或被通用零下限截断。程序从原表读取允许的负值，不开放连续负分，也不允许其他分项任意取负。具体事件是否满足相应档位仍须依据原件及规则裁决；历史冻结稿不追溯改写。

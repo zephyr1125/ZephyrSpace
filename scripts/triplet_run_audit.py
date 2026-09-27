@@ -68,7 +68,23 @@ def summarize(path, until=None):
             "tool_calls": dict(calls)}
 
 
-def audit(log_directory, root_id, until=None):
+def window_usage(path, since, until=None):
+    """续跑取窗口累计差；没有窗口内快照时标未知，不虚填零。"""
+    before, end = summarize(path, since), summarize(path, until)
+    samples = [event for event in events(path)
+               if event.get("type") == "event_msg" and event.get("payload", {}).get("type") == "token_count"
+               and (event.get("payload", {}).get("info") or {}).get("total_token_usage")
+               and datetime.fromisoformat(event["timestamp"].replace("Z", "+00:00")) > since
+               and (until is None or datetime.fromisoformat(event["timestamp"].replace("Z", "+00:00")) <= until)]
+    usage = {}
+    for field in (*FIELDS, "uncached_input_tokens"):
+        initial = before["usage"][field] if before["usage_samples"] else 0
+        final = end["usage"][field]
+        usage[field] = (final - initial if samples and final is not None and initial is not None and final >= initial else None)
+    return {**end, "usage": usage, "window_usage_samples": len(samples)}
+
+
+def audit(log_directory, root_id, until=None, since=None, session_ids=None):
     catalog = {}
     for path in Path(log_directory).rglob("*.jsonl"):
         meta = metadata(path)
@@ -84,17 +100,23 @@ def audit(log_directory, root_id, until=None):
         if extra <= chosen:
             break
         chosen |= extra
+    if session_ids is not None:
+        requested = set(session_ids) | {root_id}
+        if not requested <= chosen:
+            raise ValueError("指定会话缺日志或不属于目标任务树")
+        chosen = requested
     rows = []
     for key in sorted(chosen):
         path, meta = catalog[key]
         source = meta.get("source", {})
         role = source.get("subagent", {}).get("thread_spawn", {}).get("agent_role") if isinstance(source, dict) else "root"
         rows.append({"thread_id": key, "parent_thread_id": parent(meta), "role": role,
-                     "log_path": str(path), **summarize(path, until)})
+                     "log_path": str(path), **(window_usage(path, since, until) if since else summarize(path, until))})
     fields = (*FIELDS, "uncached_input_tokens")
     totals = {field: sum(row["usage"][field] for row in rows)
               if all(row["usage"][field] is not None for row in rows) else None for field in fields}
     return {"root_thread_id": root_id, "until": until.isoformat() if until else None,
+            "since": since.isoformat() if since else None, "explicit_session_selection": session_ids is not None,
             "source": "本地session_meta/turn_context与event_msg.token_count累计末值；含主任务及可定位的所有后代",
             "sessions": rows, "totals": totals,
             "limitations": ["累计输入包含重复上下文；缓存输入是其子集，不等于新增阅读量或账户额度扣减。",
@@ -109,9 +131,12 @@ def main():
     parser.add_argument("logs", type=Path)
     parser.add_argument("root_id")
     parser.add_argument("--until")
+    parser.add_argument("--since", help="续跑起点，累计快照作差；缺窗口内快照则未知")
+    parser.add_argument("--session", action="append", help="本轮子任务ID，可重复；主任务始终纳入")
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
-    result = audit(args.logs, args.root_id, datetime.fromisoformat(args.until.replace("Z", "+00:00")) if args.until else None)
+    result = audit(args.logs, args.root_id, datetime.fromisoformat(args.until.replace("Z", "+00:00")) if args.until else None,
+                   datetime.fromisoformat(args.since.replace("Z", "+00:00")) if args.since else None, args.session)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     with args.output.open("x", encoding="utf-8") as stream:
         json.dump(result, stream, ensure_ascii=False, indent=2)

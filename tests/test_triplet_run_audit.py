@@ -49,6 +49,24 @@ class AuditTests(unittest.TestCase):
             result = audit.audit(directory, "root", audit.datetime.fromisoformat("2026-09-19T00:00:01+00:00"))
             self.assertEqual(result["totals"]["input_tokens"], 100)
 
+    def test_window_excludes_prior_usage_and_other_descendants(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            self.write_log(root, "root")
+            self.write_log(root, "chosen", "root")
+            self.write_log(root, "other", "root")
+            since = audit.datetime.fromisoformat("2026-09-19T00:00:01+00:00")
+            result = audit.audit(root, "root", since=since, session_ids=["chosen"])
+            self.assertEqual(len(result["sessions"]), 2)
+            self.assertEqual(result["totals"]["input_tokens"], 100)
+            with self.assertRaises(ValueError): audit.audit(root, "root", session_ids=["missing"])
+
+    def test_no_window_snapshot_is_unknown(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = self.write_log(Path(directory), "root")
+            result = audit.window_usage(path, audit.datetime.fromisoformat("2026-09-20T00:00:00+00:00"))
+            self.assertIsNone(result["usage"]["input_tokens"])
+
 
 if __name__ == "__main__":
     unittest.main()
