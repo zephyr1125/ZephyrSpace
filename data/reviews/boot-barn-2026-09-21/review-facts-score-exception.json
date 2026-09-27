@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "review_stage": "bounded_score_exception_recheck",
+  "cutoff": "2026-09-21",
+  "workpaper_path": "data/reviews/boot-barn-2026-09-21/repair-v2/workpaper.json",
+  "workpaper_sha256": "3566EE92416C4738BC164DB64AD4F46E1B2778C727D71E63FD025A01AFD73516",
+  "base_workpaper_sha256": "4BB3B12EFA39C70DEB9086809DDA942FCB78F7E42BCA4D5DD78A6749E579E8D1",
+  "decision_path": "data/reviews/boot-barn-2026-09-21/decision.json",
+  "acceptance": [
+    {
+      "id": "BOOT-A01",
+      "conclusion": "通过",
+      "affected_items": ["company:D2", "management:诚信与透明度", "management:战略稳定性"],
+      "evidence": "独立核对 FY2024–FY2026 首发全年指引、三份 10-K 实际及新增修订原件。六项统一核心结果为开店、销售、同店、经营利润、净利润、稀释 EPS；税率和稀释股数仅为假设，未被强作独立计分。FY2024 为 5/6：销售 $1.667009bn 低于首发 $1.690–1.723bn，开店 55/52、同店 -6.2%（指引 -6.5%至-4.5%）、经营利润 $198.214m、净利润 $146.996m、EPS $4.80 均达首发范围；FY2025、FY2026 六项均达到或超过首发范围。FY2024 的销售/同店/EPS 下修以及 FY2025/FY2026 的上修已被登记，未以修订抹掉首发销售落空。Capex 指引为扣房东补贴的净额，年度现金流是毛额，未直接混为同一分母。三年年度达标率 3/3，D2=5 与原规则相符；诚信 17、战略稳定性 13 未因补证额外上调。"
+    },
+    {
+      "id": "BOOT-A08",
+      "conclusion": "通过",
+      "affected_items": ["management:危机处理能力", "management:资本配置能力", "management:组织与人才能力"],
+      "evidence": "独立回看 2020-04-09 COVID 8-K 及 FY2021 10-K。压力下的及时行动为临时闭店、缩短工时、约40%员工暂时停工、撤回指引，Conroy 降薪50%、其他高管降薪25%、奖金递延和董事放弃现金报酬。结果为 FY2021 末除 COVID 临时闭店外门店均开放、OCF 达 $155.922m、循环信贷余额降至零且可用额度 $165m；机制为线上下单门店/路边提货、门店退货/发货、当日配送和仓库自动化。电商占比 15.9% 至18.6%只作为渠道占比证据，未冒充绝对销售增长。Conroy 作为当时 CEO 负责公司层面响应；Hazen 当时为 CDO、属于连续团队，未被错误归因为全部恢复结果。该行动—结果—机制链支持有效应对 7 分，未宣称多次跨危机卓越；资本配置 19、组织与人才 8 的联动理由未重复加分。"
+    }
+  ],
+  "findings": [],
+  "coverage": "仅核裁决锁定的 A01、A08 与其明确联动，独立重算 FY2024–FY2026 六项年度核心结果、首发与修订区间，以及 FY2021 OCF/信贷恢复数据；回看新增 SEC 官方修订 8-K、既有年度 10-K 与 COVID 8-K。repair-v2/check.json 为 mechanically_checked_pending_review、无错误或警告；机械检查未替代本次原件验收。",
+  "uncovered": [
+    "未重做此前已通过的其余评分验收，亦未开展最终三份长报告的全文复核。",
+    "Capex 维持/扩张拆分、实际 cohort 回报、人才流失率等既有未知边界不属于本次例外范围，仍按 repair-v2 底稿保留。"
+  ]
+}

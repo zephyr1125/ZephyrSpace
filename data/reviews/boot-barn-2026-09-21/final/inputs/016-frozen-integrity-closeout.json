@@ -1,0 +1,7 @@
+{
+  "report_mismatches": [],
+  "note": "旧build未获发布批准；唯一变化输入为终局状态更新后的decision.json，不声称旧build完整verify通过。冻结报告、源稿、底稿与其他证据字节保持一致。",
+  "input_mismatches": [
+    "data/reviews/boot-barn-2026-09-21/decision.json"
+  ]
+}

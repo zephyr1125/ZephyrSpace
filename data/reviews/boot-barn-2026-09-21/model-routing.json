@@ -1,0 +1,111 @@
+{
+  "started_at": "2026-09-21T11:23:22Z",
+  "cutoff": "2026-09-21",
+  "run_id": "boot-barn-2026-09-21",
+  "evidence_version": "score-freeze-v1",
+  "root_thread_id": "01a0c3b4-d0c1-7020-944d-39e84075d787",
+  "research_status": "execution_incomplete",
+  "roles": [
+    {
+      "requested_model": "gpt-5.6-terra",
+      "agent_id": "01a0c3b5-b8f8-7871-9589-6638287f06fa",
+      "role": "triplet_writer",
+      "status": "completed_assigned_scope",
+      "dispatch_method": "custom_role",
+      "artifacts": [],
+      "actual_model_source": "本地turn_context / low",
+      "actual_model": "gpt-5.6-terra",
+      "requested_effort": "low"
+    },
+    {
+      "requested_model": "gpt-5.6-terra",
+      "agent_id": "01a0c3b5-ec1a-7112-89cc-da536b03e64f",
+      "role": "triplet_evidence",
+      "status": "completed_assigned_scope",
+      "dispatch_method": "custom_role",
+      "artifacts": [],
+      "actual_model_source": "本地turn_context / low",
+      "actual_model": "gpt-5.6-terra",
+      "requested_effort": "low"
+    },
+    {
+      "requested_model": "gpt-5.6-terra",
+      "actual_model_source": "本地turn_context / low",
+      "artifacts": [],
+      "status": "completed_assigned_scope",
+      "requested_effort": "low",
+      "actual_model": "gpt-5.6-terra",
+      "agent_id": "01a0c3c7-b123-7722-a626-cc0e3a1aa9e1",
+      "dispatch_method": "custom_role",
+      "role": "triplet_review_facts"
+    },
+    {
+      "requested_model": "gpt-5.6-sol",
+      "actual_model_source": "本地turn_context / low",
+      "artifacts": [],
+      "status": "completed_assigned_scope",
+      "requested_effort": "low",
+      "actual_model": "gpt-5.6-sol",
+      "agent_id": "01a0c3c7-edcb-7ee1-87f2-af14308a192c",
+      "dispatch_method": "custom_role",
+      "role": "triplet_review_reasoning"
+    },
+    {
+      "agent_id": "01a0c3ce-f14d-7642-9949-f249c1d6e69f",
+      "requested_effort": "low",
+      "status": "completed_assigned_scope",
+      "requested_model": "gpt-6-astra",
+      "actual_model_source": "本地turn_context / low",
+      "artifacts": [],
+      "dispatch_method": "custom_role",
+      "actual_model": "gpt-6-astra",
+      "role": "triplet_adjudicator"
+    },
+    {
+      "dispatch_method": "custom_role",
+      "agent_id": "01a0c3e7-2dd8-7330-bc7f-7e8130f225cd",
+      "actual_model_source": "本地turn_context / low",
+      "requested_model": "gpt-5.6-sol",
+      "requested_effort": "low",
+      "artifacts": [],
+      "actual_model": "gpt-5.6-sol",
+      "role": "triplet_repair_writer",
+      "status": "completed_assigned_scope"
+    }
+  ],
+  "start_time_note": "主任务session_meta时间；阶段时间以实际记录为准",
+  "gate_status": "not_applicable",
+  "repair_rounds": 2,
+  "score_frozen_sha256": "B5B00D983AA91E6FF4FF27A8AEA2A6B3458560E45FA41478B45CAB7D05BF02AA",
+  "score_review_started_at": "2026-09-21T11:44:36.9831869Z",
+  "score_review_completed_at": "2026-09-21T11:52:05.2155012Z",
+  "repair_started_at": "2026-09-21T11:58:18.6233115Z",
+  "score_checkpoint": {
+    "decisive_remaining": [
+      "BOOT-A01 年度目标兑现覆盖",
+      "BOOT-A08 危机应对结果链"
+    ],
+    "checked_at": "2026-09-21T12:17:56.1064116Z",
+    "action": "两路其余验收通过，剩余分歧由原裁決按原条件定向处理；暂停背景扩展",
+    "elapsed_minutes": 54,
+    "score_state": "pending"
+  },
+  "reopen_reason": "首轮合并修复A01/A08实质未关，原裁决授权唯一有界例外，Sol替代原作者处理剩余额度",
+  "score_60min_target": {
+    "reason": "A01目标兑现覆盖与A08危机恢复结果链首轮修复未验收，已授权唯一有界例外；不得以未批准候选分冒充达标",
+    "achieved": false,
+    "checked_at": "2026-09-21T12:23:26Z"
+  },
+  "score_dual_review_completed_at": "2026-09-21T12:29:00.221531Z",
+  "score_approved_at": "2026-09-21T12:31:04.1843663Z",
+  "score_state": "approved",
+  "approved_score_workpaper_sha256": "3566ee92416c4738bc164db64ad4f46e1b2778c727d71e63fd025a01afd73516",
+  "ended_at": "2026-09-21T12:55:55.9688283Z",
+  "decision": "defer",
+  "valuation_state": "not_approved",
+  "final_artifacts": [
+    "data/reviews/boot-barn-2026-09-21/final/评分结论.md",
+    "data/reviews/boot-barn-2026-09-21/final/score-package.json",
+    "data/reviews/boot-barn-2026-09-21/decision-closeout.json"
+  ]
+}

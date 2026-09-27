@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "company": "Boot Barn",
+  "ticker": "BOOT.US",
+  "cutoff": "2026-09-21",
+  "decision": "defer",
+  "research_status": "execution_incomplete",
+  "research_state": "pending",
+  "score_state": "approved",
+  "delivery_state": "blocked_by_valuation_research",
+  "publish_allowed": false,
+  "answer": "公司80、管理层79、合计159已批准，最高分数门槛候选B_GROWTH；完整三件套未完成。正式目标价、确定性与买入价为null，不能入池。本次未完成源于估值参数依据与验收不足，不是企业不合格。",
+  "approved_parameters": {
+    "company_score": 80,
+    "management_score": 79,
+    "combined_score": 159,
+    "target_price": null,
+    "certainty": null,
+    "buy_price": null,
+    "max_position": null,
+    "tier": null
+  },
+  "score_bounds": {
+    "company": [
+      80,
+      80
+    ],
+    "management": [
+      79,
+      79
+    ],
+    "combined": [
+      159,
+      159
+    ]
+  },
+  "approved_score_workpaper": "data/reviews/boot-barn-2026-09-21/repair-v2/workpaper.json",
+  "approved_score_workpaper_sha256": "3566EE92416C4738BC164DB64AD4F46E1B2778C727D71E63FD025A01AFD73516",
+  "withdrawn_fields": [
+    {
+      "field": "target_price",
+      "withdrawn_value": 100.61054701353017,
+      "approved_value": null
+    },
+    {
+      "field": "certainty",
+      "withdrawn_value": 0.52,
+      "approved_value": null
+    },
+    {
+      "field": "buy_price",
+      "withdrawn_value": 75.73961979178551,
+      "approved_value": null
+    },
+    {
+      "field": "weighted_scenarios_and_price_zones",
+      "approved_value": null,
+      "scope": "未批准模型派生的价格带、低估/中性/追高定位及市场价高低结论均不得作为正式结论。"
+    },
+    {
+      "field": "reverse_valuation_conclusion",
+      "approved_value": null,
+      "scope": "6.24%仅为未批准假设下的历史试算，不得作为已验收市场高估证据。"
+    }
+  ],
+  "verified_findings": [
+    "评分25+7分项及80/79/159已获批准，原A01-A11验收关闭。",
+    "首次两路三份全文覆盖已完成，但完整研究未获批准。",
+    "三情景DCF、加权值与机械买入价算术可复算；正确计算不替代关键假设依据。",
+    "两个FCFE证据文字结果错误和三处公司链接错误属确定性交付问题。"
+  ],
+  "blocking_items": [
+    {
+      "id": "BOOT-V01",
+      "category": "presentation",
+      "impact": "两个预测桥文字结果不一致；不影响既有公式输出",
+      "disposition": "corrected",
+      "source_ref": [
+        "data/reviews/boot-barn-2026-09-21/valuation-facts-v2.json#/2",
+        "data/reviews/boot-barn-2026-09-21/valuation-input-v2.json",
+        "data/reviews/boot-barn-2026-09-21/valuation-output-v2.json",
+        "data/reviews/boot-barn-2026-09-21/workpaper-v2.json",
+        "data/reviews/boot-barn-2026-09-21/build-v2/valuation.md"
+      ],
+      "verification_refs": [
+        "data/reviews/boot-barn-2026-09-21/review-facts-delivery-closeout.json"
+      ]
+    },
+    {
+      "id": "BOOT-V02",
+      "category": "presentation",
+      "impact": "三份公司页死链；不影响判断",
+      "disposition": "corrected",
+      "source_ref": [
+        "data/reviews/boot-barn-2026-09-21/source/deep.md",
+        "data/reviews/boot-barn-2026-09-21/source/management.md",
+        "data/reviews/boot-barn-2026-09-21/source/valuation.md",
+        "01-公司/Boot Barn(BOOT).md"
+      ],
+      "verification_refs": [
+        "data/reviews/boot-barn-2026-09-21/review-facts-delivery-closeout.json"
+      ]
+    },
+    {
+      "id": "BOOT-V03",
+      "category": "evidence_gap",
+      "impact": "PE/Ke/远期FCFE关键依据不足，正式估值和完整研究不能批准",
+      "disposition": "open",
+      "source_ref": [
+        "skills/valuation/SKILL.md:方法选择矩阵/计算纪律/方法独立性",
+        "docs/three-report-closeout.md:证据、评分与预测的边界",
+        "data/reviews/boot-barn-2026-09-21/build-v2/valuation.md:103-181",
+        "data/reviews/boot-barn-2026-09-21/workpaper-v2.json#/valuation/models",
+        "data/reviews/boot-barn-2026-09-21/valuation-input-v2.json",
+        "data/reviews/boot-barn-2026-09-21/valuation-facts-v1.json",
+        "data/reviews/boot-barn-2026-09-21/valuation-facts-v2.json"
+      ]
+    }
+  ],
+  "review_refs": [
+    "data/reviews/boot-barn-2026-09-21/review-facts-score.json",
+    "data/reviews/boot-barn-2026-09-21/review-reasoning-score.json",
+    "data/reviews/boot-barn-2026-09-21/review-facts-score-recheck.json",
+    "data/reviews/boot-barn-2026-09-21/review-reasoning-score-recheck.json",
+    "data/reviews/boot-barn-2026-09-21/review-facts-score-exception.json",
+    "data/reviews/boot-barn-2026-09-21/review-reasoning-score-exception.json"
+  ],
+  "full_review_anonymous_ref": {
+    "first_full_coverage_completed": true,
+    "research_approved": false,
+    "coverage_provenance": "主任务确认首次两路各完整读三稿；裁决仅读anonymous-full/candidates.json，不读具名full审核。",
+    "anonymous_candidates": "data/reviews/boot-barn-2026-09-21/anonymous-full/candidates.json",
+    "anonymous_candidates_sha256": "2EAF6AF7E0DA05F03AC6262D2CD4BC4D10233968102128C40D2E7574060D126F",
+    "workpaper": "data/reviews/boot-barn-2026-09-21/workpaper-v2.json",
+    "workpaper_sha256": "E4F08D5C1EA3C16A7F6838657AEFACEE5481BF80B86D75FF6A3CFA212FF7D33D",
+    "manifest": "data/reviews/boot-barn-2026-09-21/build-v2/manifest.json",
+    "manifest_sha256": "68F66C8B9CF525F7553775B007588573F7163105AFD1879D00F0A8F973297AB8",
+    "reports": {
+      "deep.md": {
+        "path": "data/reviews/boot-barn-2026-09-21/build-v2/deep.md",
+        "sha256": "3403542CF540F002929DCE563E5D70529B063927A482D81C148FE9FC2C029485",
+        "line_count": 400
+      },
+      "management.md": {
+        "path": "data/reviews/boot-barn-2026-09-21/build-v2/management.md",
+        "sha256": "673F577FD7A082B8E33A3807FF5AF476765291B14A92832E88AFE01624B3FB22",
+        "line_count": 404
+      },
+      "valuation.md": {
+        "path": "data/reviews/boot-barn-2026-09-21/build-v2/valuation.md",
+        "sha256": "DB215AEDFA4059F7DE3CB2FB9FE665BC6674FDA612ADE9A688E90451BA2E6A48",
+        "line_count": 320
+      }
+    },
+    "approved_manifest_sha256": null,
+    "release_review_refs": []
+  },
+  "decision_ref": "data/reviews/boot-barn-2026-09-21/decision.json",
+  "decision_sha256": "FAEB430FD4D2B886BCA959E0FB9D412EE44A1069ED07B469776A32FED5E8D485",
+  "round_closeout": {
+    "default_merged_repair_used": 1,
+    "bounded_exception_used": 1,
+    "remaining_research_repair_rounds": 0,
+    "first_full_report_review": "已完成首次覆盖，不是第三次研究修复授权。",
+    "new_valuation_dispute": "首次出现的新估值P1须如实记录；SOP未给每模块单独重置额度，不能改称参数桥/估值首轮绕过上限。",
+    "allowed_now": "只做V01/V02确定性交付更正与撤回未批准价格的状态传播、评分归档；不新增模型参数、来源研究或经济判断。",
+    "not_allowed": "本run再派作者/例外作者补研究参数、重选倍数/Ke/增长并再审；不得因公司分合格直接入池。",
+    "new_run_condition": "补实质估值证据后按真实新run恢复，不复制同一缺口重启或请求无必要确认。"
+  },
+  "next_trigger": "本run以评分已批准、完整研究执行未完成收尾。恢复须带PE经营/可比或替代经济锚、Ke风险锚、FCFE增长及再投资桥的实质证据进入新run；无需为当前归档或确定性更正另求用户确认。",
+  "archive_and_publish_boundary": {
+    "score_package": "允许主任务归档绑定已批repair-v2底稿、完整评分复核链和本裁决的可携带评分包，明确完整三件套未完成。",
+    "withdrawal_propagation": "不得修改冻结workpaper-v2/build-v2；若产生收尾新稿，仅将正式target/certainty/buy设null，撤下其依赖的正式价格区间与结论，并保留评分80/79。旧试算保存在冻结研究材料中标未获批准，不引用为当前正式参数。",
+    "delivery_fixes": "V01/V02可精确修改源材料新版本并定向核验；不得借重新装配恢复价格或宣称完整通过。",
+    "publication": "不发布完整三稿、不切换公司页/索引的历史已发布链接、不写或同步Watchlist。"
+  }
+}

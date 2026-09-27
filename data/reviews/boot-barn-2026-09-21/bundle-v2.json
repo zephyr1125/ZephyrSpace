@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "workpaper": "data/reviews/boot-barn-2026-09-21/workpaper-v2.json",
+  "decision": "data/reviews/boot-barn-2026-09-21/decision.json",
+  "evidence": [
+    "data/reviews/boot-barn-2026-09-21/facts-financial.json",
+    "data/reviews/boot-barn-2026-09-21/sources-financial.json",
+    "data/reviews/boot-barn-2026-09-21/facts-governance.json",
+    "data/reviews/boot-barn-2026-09-21/sources-governance.json",
+    "data/reviews/boot-barn-2026-09-21/facts-repair-v1.json",
+    "data/reviews/boot-barn-2026-09-21/sources-repair-v1.json",
+    "data/reviews/boot-barn-2026-09-21/facts-crisis.json",
+    "data/reviews/boot-barn-2026-09-21/sources-crisis.json",
+    "data/reviews/boot-barn-2026-09-21/facts-repair-v2.json",
+    "data/reviews/boot-barn-2026-09-21/sources-repair-v2.json",
+    "data/reviews/boot-barn-2026-09-21/valuation-facts-v1.json",
+    "data/reviews/boot-barn-2026-09-21/valuation-facts-v2.json",
+    "data/reviews/boot-barn-2026-09-21/valuation-sources-v1.json",
+    "data/reviews/boot-barn-2026-09-21/market-snapshot-v1.json"
+  ],
+  "id_prefixes": ["BOOT-"],
+  "facts": {
+    "valuation_boundary": {
+      "text": "估值区分实际、预测和假设；维持/扩张Capex拆分及实际新店cohort回报仍未知。",
+      "refs": ["BOOT-VAL-C-FY27-FCFE-BRIDGE", "BOOT-VAL-F-UNIT-ECONOMICS-001"],
+      "retired": []
+    }
+  },
+  "templates": {
+    "deep": "data/reviews/boot-barn-2026-09-21/source/deep.md",
+    "management": "data/reviews/boot-barn-2026-09-21/source/management.md",
+    "valuation": "data/reviews/boot-barn-2026-09-21/source/valuation.md"
+  },
+  "publication_ready": true
+}

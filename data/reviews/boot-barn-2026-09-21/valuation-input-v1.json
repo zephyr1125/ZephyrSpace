@@ -1,0 +1,19 @@
+{
+  "schema_version":1,"cutoff":"2026-09-21","currency":"USD","market_snapshot":"data/reviews/boot-barn-2026-09-21/market-snapshot-v1.json",
+  "normalization_bridge":{
+    "fy2026_ocf_m":304.903,"fy2026_cash_capex_m":178.561,"fy2026_fcf_m":126.342,
+    "q1fy2027_ocf_m":83.843,"q1fy2027_cash_capex_m":51.089,"fy2027_net_capex_guidance_m":[125,130],"landlord_allowances_m":47.6,
+    "bridge":"基准FCFE $140m：从FY2026 FCF $126.3m出发，假设FY2027经营现金流随正常化盈利改善约$18m；使用FY2027净Capex $127.5m（中点，已扣房东补贴），不额外把房东补贴加回；保留所有扩张Capex，未将增长投资错误剔除。$140m是有据假设，非已披露事实。",
+    "capex_boundary":"维持/扩张拆分未公开；情景通过FCFE $110m/$140m/$170m与增长率联动覆盖，而非虚构精确拆分。"
+  },
+  "earnings":{
+    "fy2027_eps_guidance_including_tariff":[8.80,9.23],"tariff_eps_benefit":0.46,"normalised_guidance_midpoint_eps":8.555,
+    "base_eps":8.75,"bear_eps":7.50,"bull_eps":9.50,
+    "basis":"基准高于剔除关税后的指引中点，因9月14日称Q2销售及EPS预期处于既有指引高端；仍未把Q2更新当实绩。悲观反映同店/毛利压力，乐观反映扩店和同店恢复。"
+  },
+  "shares_m":30.601,"net_debt_m":0,
+  "models":{
+    "pe":{"bear":{"eps":7.5,"multiple":14},"base":{"eps":8.75,"multiple":17},"bull":{"eps":9.5,"multiple":20},"independent_basis":"专业零售相对盈利倍数；不与DCF作为完全独立预测来源。"},
+    "fcfe_dcf":{"bear":{"fcfe_m":110,"growth_1_3":0.04,"growth_4_5":0.03,"ke":0.105,"terminal_g":0.02},"base":{"fcfe_m":140,"growth_1_3":0.08,"growth_4_5":0.05,"ke":0.095,"terminal_g":0.025},"bull":{"fcfe_m":170,"growth_1_3":0.11,"growth_4_5":0.06,"ke":0.09,"terminal_g":0.03},"independent_basis":"扩店后可分配股东现金流；FCFE已经保留增长所需净Capex。"}
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "base_sha256": "4bb3b12efa39c70deb9086809dda942fcb78f7e42bca4d5dd78a6749e579e8d1",
+  "decision_sha256": "7f765581025081023731734c6b6bc949625a1ab94b95ee3e55f2cb83173d4e85",
+  "changes": [
+    {
+      "group": "company",
+      "item": "D2",
+      "acceptance_ids": ["BOOT-A01"],
+      "set": {
+        "score": 5,
+        "rule_ref": "公司规则D2：连续至少3年年度目标；年度达标率≥2/3取5，50%取3，持续落空取0；有管理层官方原话不受间接验证4分上限约束",
+        "reason": "三年均用相同年度判定原则：开店、销售、同店、经营利润、净利润、稀释EPS六项核心结果中多数达成即该年达标；税率和股数不独立计分。FY2024为5/6，仅首发销售目标落空；FY2025、FY2026均为6/6，故年度达标率3/3，符合≥2/3的5分档。三年官方8-K首发及修订展望均属管理层公开原话；FY2024销售/同店/EPS曾明显下修，FY2025和FY2026则上修，反证已纳入。开店是扩张战略的直接结果，但未单独替代盈利与同店结果。净Capex与现金流毛Capex口径不可比，不列年度分母。",
+        "evidence_refs": ["BOOT-EXC-D2-CORE-001", "BOOT-EXC-D2-REV-001", "BOOT-EXC-D2-CAPEX-001"],
+        "original_statement_found": true,
+        "strategy_drift": false
+      }
+    },
+    {
+      "group": "management",
+      "item": "诚信与透明度",
+      "acceptance_ids": ["BOOT-A01"],
+      "set": {
+        "score": 17,
+        "reason": "三年首发与重大修订展望均通过官方8-K披露，且可与年报实际逐项对照；FY2024首发销售落空及年内下修没有被省略。该透明度证据支持维持17分，不因补齐D2表额外奖励；关联交易独立定价比较仍未披露，限制更高档。",
+        "evidence_refs": ["BOOT-EXC-D2-CORE-001", "BOOT-EXC-D2-REV-001", "BOOT-REP-RELATED-001"]
+      }
+    },
+    {
+      "group": "management",
+      "item": "战略稳定性",
+      "acceptance_ids": ["BOOT-A01"],
+      "set": {
+        "score": 13,
+        "reason": "开店目标连续兑现，FY2025和FY2026核心经营目标整体超出首发并上修；FY2024首发销售落空且销售、同店与EPS年内下修，是需求波动下的明确反证，但未显示战略主题漂移。维持13分，不以D2补表重复加分。",
+        "evidence_refs": ["BOOT-EXC-D2-CORE-001", "BOOT-EXC-D2-REV-001", "BOOT-GOV-STRAT-001"]
+      }
+    },
+    {
+      "group": "management",
+      "item": "危机处理能力",
+      "acceptance_ids": ["BOOT-A08"],
+      "set": {
+        "score": 7,
+        "reason": "COVID期公司及时披露临时闭店、缩减工时、约40%员工暂时停工、撤回指引及高管/董事薪酬措施；随后FY2021末除COVID临时闭店外门店均开放，OCF升至1.55922亿美元、循环信贷余额降至零且保有1.65亿美元可用额度。路边提货、门店退货/发货、当日配送和仓库自动化构成延续机制，电商占比18.6%对15.9%仅作渠道证据。Conroy承担CEO层面响应，Hazen当时为CDO并参与连续团队，不能把全部恢复单独归因于Hazen。行动、恢复结果和机制闭合，符合有效应对7分；无多次跨危机卓越记录，不取更高档。",
+        "evidence_refs": ["BOOT-CRISIS-001", "BOOT-CRISIS-002", "BOOT-EXC-CRISIS-RESULT-001", "BOOT-EXC-CRISIS-ROLES-001"]
+      }
+    },
+    {
+      "group": "management",
+      "item": "资本配置能力",
+      "acceptance_ids": ["BOOT-A08"],
+      "set": {
+        "score": 19,
+        "reason": "疫情期通过薪酬/奖金措施、库存收缩和现金流恢复保护流动性，FY2021末循环信贷余额降至零且保有充足可用额度；该历史与当前扩店模型和无循环贷款提款共同支持配置纪律。新店回收仍只是目标，Capex拆分、实际cohort回报和租赁约束仍限制更高档，疫情行动不重复加分，维持19分。",
+        "evidence_refs": ["BOOT-EXC-CRISIS-RESULT-001", "BOOT-REP-CAP-001", "BOOT-REP-LEASE-001"]
+      }
+    },
+    {
+      "group": "management",
+      "item": "组织与人才能力",
+      "acceptance_ids": ["BOOT-A08"],
+      "set": {
+        "score": 8,
+        "reason": "疫情期Conroy负责公司层面响应，Hazen以CDO身份参与连续高管团队；全渠道与仓库机制持续到FY2021，说明团队具有跨职能执行能力，但原件不足以把全部恢复归因于Hazen。结合此后内部继任、培训和激励证据，维持8分；人才流失率未知仍限制满分。",
+        "evidence_refs": ["BOOT-EXC-CRISIS-ROLES-001", "BOOT-EXC-CRISIS-RESULT-001", "BOOT-REP-SUCCESSION-001", "BOOT-SEC-10K-2026"]
+      }
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "review_role": "triplet_review_reasoning",
+  "stage": "first_full_three_report_review",
+  "cutoff": "2026-09-21",
+  "frozen_inputs": {
+    "manifest": {
+      "path": "data/reviews/boot-barn-2026-09-21/build-v2/manifest.json",
+      "sha256": "68f66c8b9cf525f7553775b007588573f7163105afd1879d00f0a8f973297ab8"
+    },
+    "workpaper": {
+      "path": "data/reviews/boot-barn-2026-09-21/workpaper-v2.json",
+      "sha256": "e4f08d5c1ea3c16a7f6838657aefacee5481bf80b86d75ff6a3cfa212ff7d33d"
+    },
+    "bundle": {
+      "path": "data/reviews/boot-barn-2026-09-21/bundle-v2.json",
+      "sha256": "9b5014521c037862f1969668f973730468a0ad68380f96d12f723d542d81588d"
+    },
+    "reports": {
+      "deep": {
+        "path": "data/reviews/boot-barn-2026-09-21/build-v2/deep.md",
+        "sha256": "3403542cf540f002929dce563e5d70529b063927a482d81c148fe9fc2c029485",
+        "lines_read": "1-400"
+      },
+      "management": {
+        "path": "data/reviews/boot-barn-2026-09-21/build-v2/management.md",
+        "sha256": "673f577fd7a082b8e33a3807ff5af476765291b14a92832e88afe01624b3fb22",
+        "lines_read": "1-404"
+      },
+      "valuation": {
+        "path": "data/reviews/boot-barn-2026-09-21/build-v2/valuation.md",
+        "sha256": "db215aedfa4059f7de3cb2fb9fe665bc6674fda612ade9a688e90451ba2e6a48",
+        "lines_read": "1-320"
+      }
+    },
+    "valuation_artifacts": {
+      "input_sha256": "36c4b9178f453108ebb34c487cda1ac825078dc7871592cc336519e2187b24f6",
+      "output_sha256": "b5e81f7a44ae85b7c0f6cb49bdcd94edef10e1d97c104d7f33109cffd1f7fa7f",
+      "facts_v2_sha256": "a09b9105059c037b8ececc39c156322d4cc452641a53762df5e5302cec908aa4",
+      "calculation_script_sha256": "d6b8d67dcea92626dfa2c3f55e546482f8f38c110ea877c178ee86490e602170"
+    }
+  },
+  "approved_score_context": {
+    "company": 80,
+    "management": 79,
+    "combined": 159,
+    "scope_note": "评分已批准；本轮未重做未变分项，仅核三稿全文、正文与冻结底稿一致性以及新估值。"
+  },
+  "independent_recalculation": {
+    "status": "reproduced",
+    "pe_per_share": {
+      "bear": 96.0,
+      "base": 128.325,
+      "bull": 160.2
+    },
+    "fy2027_owner_fcfe_m": {
+      "bear": 72.6888,
+      "base": 115.8140349,
+      "bull": 150.836125
+    },
+    "fcfe_dcf_per_share": {
+      "bear": 26.851450540660498,
+      "base": 66.7373266967337,
+      "bull": 110.70834974351843
+    },
+    "weighted_55_45_per_share": {
+      "bear": 64.88315274329723,
+      "base": 100.61054701353017,
+      "bull": 137.92875738458332
+    },
+    "reverse_dcf_implied_terminal_g": 0.0624285546512007,
+    "certainty": 0.52,
+    "buy_price": 75.73961979178551,
+    "buy_price_formula": "100.61054701353017*(0.68+0.14*0.52)",
+    "accounting_conclusion": "FY2027净Capex加47.6百万美元房东补贴转换为毛Capex的方向正确；经营租赁现金已在OCF，不再扣经营租赁负债；融资租赁本金单列；SBC从owner FCFE扣除。未发现这些项目双计。"
+  },
+  "findings": [
+    {
+      "severity": "P1",
+      "location": "build-v2/valuation.md:103-181；workpaper-v2.json valuation.models；valuation-input-v2.json",
+      "claim": "正式目标价的关键估值假设尚未形成可审计的经营、历史或市场风险锚。15倍基准PE只有定性说明；9.75%基准权益成本没有无风险利率、风险溢价、beta或替代构成；FY2028-FY2031的12%/12%/8%/8% owner FCFE增长也未与门店扩张、同店、利润或再投资桥明确连接。底稿把PE倍数和Ke引用到BOOT-VAL-F-MARKET-001（仅122.92美元股价），把终值增长引用到BOOT-VAL-F-OWNERCASH-001（仅FY2026 owner FCFE），这些引用不支持参数本身。",
+      "evidence": "估值报告第115-117行承认15倍不是历史中枢且缺统一历史PE分位；第139-149行直接给出增长、Ke和终值增长但未给形成依据。workpaper中multiple与ke的evidence_refs为BOOT-VAL-F-MARKET-001，terminal_g的evidence_refs为BOOT-VAL-F-OWNERCASH-001。现有经营事实可提供方向锚（FY2026收入增长17.9%、长期约1,200店空间、实际cohort回报未知），但正文没有把它们转化为这些参数的可复核桥。",
+      "impact": "PE占55%、DCF占45%，两套基准值相差约61.59美元；缺少参数锚使100.61美元中枢及0.52确定性的经济合理性无法完成独立复核。计算正确不能替代模型输入依据，因此当前不能批准完整研究或发布。",
+      "recommendation": "补充最小参数桥：说明12x/15x/18x相对估值档位所对应的增长、资本强度和风险边界；给出9.75% Ke的可复算构成或可靠替代锚；把五年FCFE增长与门店/同店/利润和再投资假设连接，并说明从8%过渡到2.5%终值增长的收敛逻辑。随后重算并定向复核目标价、确定性、买入价及三稿联动。无需证明预测唯一，也不要求强行取得不存在的公司披露。"
+    },
+    {
+      "severity": "P2",
+      "location": "valuation-facts-v2.json /2 BOOT-VAL-C-FY27-FCFE-BRIDGE",
+      "claim": "基准FY2027 owner FCFE的证据记录写成115.69百万美元，与其同句公式及正式计算不一致。",
+      "evidence": "8.555×30.601×1.18-175.1-17.0-1.0=115.8140349，而非115.69。valuation-output-v2.json、workpaper-v2.json及valuation.md第97行均采用115.814，正式目标价按正确值计算。",
+      "impact": "不改变当前价格结论，但引用该事实ID时会形成证据链内部矛盾，削弱可审计性。",
+      "recommendation": "将该事实记录统一为115.814百万美元（展示可四舍五入为115.81），重新装配并验证所有引用；保持计算输出不变。"
+    }
+  ],
+  "coverage": {
+    "full_report_read": {
+      "deep": true,
+      "management": true,
+      "valuation": true
+    },
+    "checked": [
+      "三稿分数、状态、目标价和关键事实的一致性",
+      "正常化FY2027 EPS与关税退款剔除",
+      "15x PE及12x/18x情景",
+      "owner FCFE首年桥、五年现金流、Ke、终值增长和敏感性",
+      "55%/45%权重、模型共享假设、不同估值依据及分歧解释",
+      "毛Capex、房东补贴、SBC、经营租赁和融资租赁本金口径",
+      "反向DCF、确定性与机械买入价",
+      "深度分析与管理层报告对已批准评分底稿的叙述一致性",
+      "三稿事实/推断/未知和反证边界",
+      "证据清单中本轮估值事实、来源及计算实现"
+    ],
+    "uncovered": [
+      "未读取另一审核路线的意见或产物",
+      "未重新审理已批准且本轮未变化的32项评分",
+      "未进行无限范围的州级诉讼、劳动或消费者记录穷尽检索"
+    ],
+    "limitations": "对未来经营预测只审查可复算性、经济合理性与锚定，不要求预测具有唯一答案。"
+  },
+  "conclusion": {
+    "research_approval": "not_approved",
+    "publication_approval": "not_approved",
+    "score_approval_impact": "none",
+    "reason": "三稿全文结构和已批准评分叙述总体一致，估值算术及资本口径可复现；但关键估值参数缺少可审计锚，且一处估值事实记录算术不一致。P1关闭并完成联动复核前不能批准完整研究或发布。"
+  }
+}

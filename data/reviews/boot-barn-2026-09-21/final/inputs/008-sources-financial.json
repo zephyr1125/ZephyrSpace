@@ -1,0 +1,10 @@
+[
+  {"source_id":"BOOT-SEC-10K-2024","url":"https://www.sec.gov/Archives/edgar/data/1610250/000155837024008176/boot-20240330x10k.htm","path":"财报/Boot Barn/Boot Barn FY2024 10-K 2024-05-15.htm","period":"FY2024","kind":"SEC Form 10-K","retrieved_at":"2026-09-21"},
+  {"source_id":"BOOT-SEC-10K-2025","url":"https://www.sec.gov/Archives/edgar/data/1610250/000155837025007889/boot-20250329x10k.htm","path":"财报/Boot Barn/Boot Barn FY2025 10-K 2025-05-15.htm","period":"FY2025","kind":"SEC Form 10-K","retrieved_at":"2026-09-21"},
+  {"source_id":"BOOT-SEC-10K-2026","url":"https://www.sec.gov/Archives/edgar/data/1610250/000110465926061346/boot-20260328x10k.htm","path":"财报/Boot Barn/Boot Barn FY2026 10-K.html","period":"FY2026","kind":"SEC Form 10-K","retrieved_at":"2026-09-21"},
+  {"source_id":"BOOT-SEC-DEF-2026","url":"https://www.sec.gov/Archives/edgar/data/1610250/000110465926084071/boot-20260826xdef14a.htm","path":"data/reviews/boot-barn-2026-09-21/sec-def14a-fy2026-2026-07-16.htm","period":"FY2026 proxy","kind":"SEC DEF 14A","retrieved_at":"2026-09-21"},
+  {"source_id":"BOOT-SEC-10Q-Q1FY27","url":"https://www.sec.gov/Archives/edgar/data/1610250/000110465926088262/boot-20260627x10q.htm","path":"财报/Boot Barn/Boot Barn FY2027 Q1 10-Q.html","period":"FY2027 Q1 ended 2026-06-27","kind":"SEC Form 10-Q","retrieved_at":"2026-09-21"},
+  {"source_id":"BOOT-SEC-8K-20260914","url":"https://www.sec.gov/Archives/edgar/data/1610250/000110465926107497/boot-20260914x8k.htm","path":"财报/Boot Barn/Boot Barn 2026-09-14 8-K.html","period":"2026-09-14","kind":"SEC Form 8-K and Exhibit 99.1","retrieved_at":"2026-09-21"},
+  {"source_id":"BOOT-SEC-XBRL","url":"https://data.sec.gov/api/xbrl/companyfacts/CIK0001610250.json","period":"FY2020-FY2027Q1","kind":"SEC Company Facts structured cross-check","retrieved_at":"2026-09-21"},
+  {"source_id":"BOOT-SEC-SUBMISSIONS","url":"https://data.sec.gov/submissions/CIK0001610250.json","period":"through 2026-09-21","kind":"SEC filing-index cross-check","retrieved_at":"2026-09-21"}
+]

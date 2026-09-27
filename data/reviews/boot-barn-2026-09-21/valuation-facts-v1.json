@@ -1,0 +1,38 @@
+[
+  {
+    "fact_id": "BOOT-VAL-F-MARKET-001",
+    "statement": "BOOT于2026-09-18纽约证券交易所常规交易收盘价为每股122.92美元。",
+    "source_ids": ["BOOT-VAL-S-MARKET-20260918", "BOOT-VAL-S-PRICE-CROSSCHECK"],
+    "fact_or_inference": "事实"
+  },
+  {
+    "fact_id": "BOOT-VAL-F-SHARES-001",
+    "statement": "FY2027 Q1 10-Q封面列示截至2026-07-24实有普通股30,284,844股；该季度稀释加权平均股数为30.601百万股。",
+    "source_ids": ["BOOT-VAL-S-Q1"],
+    "fact_or_inference": "事实"
+  },
+  {
+    "fact_id": "BOOT-VAL-F-NORMALIZATION-001",
+    "statement": "FY2026经营现金流304.903百万美元、现金资本开支178.561百万美元，得现金流量表口径自由现金流126.342百万美元；FY2027净资本开支指引125至130百万美元，包含房东租户补贴47.6百万美元的影响。",
+    "source_ids": ["BOOT-VAL-S-FY26", "BOOT-VAL-S-Q1GUIDANCE"],
+    "fact_or_inference": "事实"
+  },
+  {
+    "fact_id": "BOOT-VAL-F-GUIDANCE-001",
+    "statement": "FY2027调整后每股收益指引8.80至9.23美元，其中含每股0.46美元关税退款收益；2026-09-14更新仅称Q2销售和每股收益预期处于既有指引高端。",
+    "source_ids": ["BOOT-VAL-S-Q1GUIDANCE", "BOOT-VAL-S-UPDATE"],
+    "fact_or_inference": "事实"
+  },
+  {
+    "fact_id": "BOOT-VAL-F-UNIT-ECONOMICS-001",
+    "statement": "FY2026年报披露新店平均净现金投入约170万美元及目标三年回收期；该目标不是已实现的分批次成熟门店回报披露。",
+    "source_ids": ["BOOT-VAL-S-FY26"],
+    "fact_or_inference": "事实"
+  },
+  {
+    "fact_id": "BOOT-VAL-I-FCFE-001",
+    "statement": "基准FCFE采用140百万美元预测假设，不把房东补贴重复加回，也不从经营现金流派生的FCFE另扣租赁负债或最低租赁承诺。",
+    "source_ids": ["BOOT-VAL-S-FY26", "BOOT-VAL-S-Q1GUIDANCE", "BOOT-VAL-S-Q1"],
+    "fact_or_inference": "推断/假设"
+  }
+]

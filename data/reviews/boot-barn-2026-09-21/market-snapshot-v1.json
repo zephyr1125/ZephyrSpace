@@ -1,0 +1,9 @@
+{
+  "as_of_date":"2026-09-18",
+  "cutoff":"2026-09-21",
+  "reason_for_as_of_date":"资料截止日为周一盘前估值准备，采用此前最近完整NYSE收盘。",
+  "security":"BOOT","market":"NYSE","currency":"USD","close_price":122.92,"price_adjustment":"未复权；未用于总回报计算",
+  "shares_outstanding":30284844,"shares_date":"2026-07-24（FY2027 Q1 10-Q封面最新已披露实有普通股数）",
+  "market_cap":3722611026.48,"calculation_id":"BOOT-VAL-C-MARKET-001","calculation":"$122.92 × 30,284,844 shares = $3,722.611m","sources":["BOOT-VAL-S-MARKET-20260918","BOOT-VAL-S-PRICE-CROSSCHECK","BOOT-VAL-S-Q1"],
+  "limitations":"9月18日无新的法定实有股数，采用截至7月24日的最新披露实有普通股数；EPS/FCFE每股分母另用Q1稀释加权平均30.601m，二者不可混称同一口径。"
+}

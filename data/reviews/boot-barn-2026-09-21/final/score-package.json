@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "company": "Boot Barn",
+  "code": "BOOT.US",
+  "cutoff": "2026-09-21",
+  "score_state": "approved",
+  "company_score": 80,
+  "management_score": 79,
+  "combined_score": 159,
+  "score_gate_candidate": "B_GROWTH",
+  "research_status": "execution_incomplete",
+  "valuation_state": "not_approved",
+  "target_price": null,
+  "valuation_certainty": null,
+  "buy_price": null,
+  "publish_allowed": false,
+  "files": {
+    "data/WATCHLIST_RULES.md": {
+      "archive": "inputs/000-WATCHLIST_RULES.md",
+      "sha256": "74a3b69f0d66815c7c1626adc69eeb6ff4e6d9af1d9dccc99116673a0ab0456a"
+    },
+    "data/WATCHLIST_SCHEMA.md": {
+      "archive": "inputs/001-WATCHLIST_SCHEMA.md",
+      "sha256": "fba014df72709dd9eb54a28b4db3cc1e6e60999286638951192be1604566f515"
+    },
+    "data/reviews/boot-barn-2026-09-21/facts-crisis.json": {
+      "archive": "inputs/002-facts-crisis.json",
+      "sha256": "902d0142016cd5ad8e4150770c8eeb987eddf00bb3b5bf1613740cbf8ce8c48b"
+    },
+    "data/reviews/boot-barn-2026-09-21/facts-financial.json": {
+      "archive": "inputs/003-facts-financial.json",
+      "sha256": "07bd839f0967cbbf5a278ecf5c2f8a28e6390dc5ae12c74b3762082bb7dd523f"
+    },
+    "data/reviews/boot-barn-2026-09-21/facts-governance.json": {
+      "archive": "inputs/004-facts-governance.json",
+      "sha256": "22a1dd260ee39145bbd67666b1aea455ed38a6188a5642fead252098752c1254"
+    },
+    "data/reviews/boot-barn-2026-09-21/facts-repair-v1.json": {
+      "archive": "inputs/005-facts-repair-v1.json",
+      "sha256": "5d895f0461e0de3d6e64e44f7e3b59a97a785b631e9e8338f69b4778aed32ac8"
+    },
+    "data/reviews/boot-barn-2026-09-21/facts-repair-v2.json": {
+      "archive": "inputs/006-facts-repair-v2.json",
+      "sha256": "33cf538cb6a55333a12cb717941743dd6d462a4dfcd2c01896faed53abd387d6"
+    },
+    "data/reviews/boot-barn-2026-09-21/sources-crisis.json": {
+      "archive": "inputs/007-sources-crisis.json",
+      "sha256": "c0d48e1a0af5e1e771752b626a896520423b67e7be366a4a36a1b370d8023d66"
+    },
+    "data/reviews/boot-barn-2026-09-21/sources-financial.json": {
+      "archive": "inputs/008-sources-financial.json",
+      "sha256": "79bb929869a71f3262a93d04bfb24b35abece951146cbbb61a535fc6ce5add7c"
+    },
+    "data/reviews/boot-barn-2026-09-21/sources-governance.json": {
+      "archive": "inputs/009-sources-governance.json",
+      "sha256": "fc42b2d332c5ed6d6abcfabc3e9c5fabe61d3ff292a939bd748b7949fb9f28c3"
+    },
+    "data/reviews/boot-barn-2026-09-21/sources-repair-v1.json": {
+      "archive": "inputs/010-sources-repair-v1.json",
+      "sha256": "1f43bcf7bd3d98ee77bc6e017dcd3b43561bf95a6d45f19aade39cf13b24652a"
+    },
+    "data/reviews/boot-barn-2026-09-21/sources-repair-v2.json": {
+      "archive": "inputs/011-sources-repair-v2.json",
+      "sha256": "87c6bb1318d419641ecbe61859708d6dabe4e3493134b959e1db0b24ea611478"
+    },
+    "data\\reviews\\boot-barn-2026-09-21\\decision-closeout.json": {
+      "archive": "inputs/012-decision-closeout.json",
+      "sha256": "7af8ec98c69b5ad21dae34da9bc166951183dcae5f6c0e940660c54380979bf9"
+    },
+    "data\\reviews\\boot-barn-2026-09-21\\decision.json": {
+      "archive": "inputs/013-decision.json",
+      "sha256": "faeb430fd4d2b886bca959e0fb9d412ee44a1069ed07b469776a32fed5e8d485"
+    },
+    "data\\reviews\\boot-barn-2026-09-21\\delivery-closeout.md": {
+      "archive": "inputs/014-delivery-closeout.md",
+      "sha256": "1c9c7c2cc6c618c51eb70fa66744621358cbba6900209233ecb1dd7d6a409454"
+    },
+    "data\\reviews\\boot-barn-2026-09-21\\delta-repair-v2.json": {
+      "archive": "inputs/015-delta-repair-v2.json",
+      "sha256": "4e515ea4df03c6b1c994aceba1aee0fadf6f4fb626f4124f14e6690a10c01f3b"
+    },
+    "data\\reviews\\boot-barn-2026-09-21\\frozen-integrity-closeout.json": {
+      "archive": "inputs/016-frozen-integrity-closeout.json",
+      "sha256": "6a37909c6fc6f02b487328cca3a199b025f1113105431421a77b53ca4992ee88"
+    },
+    "data\\reviews\\boot-barn-2026-09-21\\repair-v2\\acceptance.md": {
+      "archive": "inputs/017-acceptance.md",
+      "sha256": "75e7c65936fa333e3104d5aabd7aa37e048713b0025edfa37c5247929d402e81"
+    },
+    "data\\reviews\\boot-barn-2026-09-21\\repair-v2\\check.json": {
+      "archive": "inputs/018-check.json",
+      "sha256": "6a7e0c1b0352b7dc0903b84be4c8db1613711a02f3a7646446b5f5dd49777c3c"
+    },
+    "data\\reviews\\boot-barn-2026-09-21\\repair-v2\\receipt.json": {
+      "archive": "inputs/019-receipt.json",
+      "sha256": "5d916ff427e358dd66c013d8b7755b6562d78ff01fbec84f240fa6d158b8d36a"
+    },
+    "data\\reviews\\boot-barn-2026-09-21\\repair-v2\\workpaper.json": {
+      "archive": "inputs/020-workpaper.json",
+      "sha256": "3566ee92416c4738bc164db64ad4f46e1b2778c727d71e63fd025a01afd73516"
+    },
+    "data\\reviews\\boot-barn-2026-09-21\\review-facts-delivery-closeout.json": {
+      "archive": "inputs/021-review-facts-delivery-closeout.json",
+      "sha256": "cd78def98d532ed3df71a9f7abf752c552903706c66bb68c60563f0b0e3dd8a9"
+    },
+    "data\\reviews\\boot-barn-2026-09-21\\review-facts-full.json": {
+      "archive": "inputs/022-review-facts-full.json",
+      "sha256": "5ff62912f02afc5b1107329e5c7a17ebe907b87460aedb5cb9559d6b5de193fc"
+    },
+    "data\\reviews\\boot-barn-2026-09-21\\review-facts-score-exception.json": {
+      "archive": "inputs/023-review-facts-score-exception.json",
+      "sha256": "325c72da0711c5d7e61c226bb6023fc91754bd674b6986f3ad75871e2dce7f19"
+    },
+    "data\\reviews\\boot-barn-2026-09-21\\review-facts-score-recheck.json": {
+      "archive": "inputs/024-review-facts-score-recheck.json",
+      "sha256": "f57f234ea3928198bda80c4da469444d4e1e7317cb3aeb7b00cac07ef8bdc8aa"
+    },
+    "data\\reviews\\boot-barn-2026-09-21\\review-facts-score.json": {
+      "archive": "inputs/025-review-facts-score.json",
+      "sha256": "6271a7bdb9142b4c7d2e513e8daa548ced5af3ce07fb18c1ff2e0ae78683bec3"
+    },
+    "data\\reviews\\boot-barn-2026-09-21\\review-reasoning-full.json": {
+      "archive": "inputs/026-review-reasoning-full.json",
+      "sha256": "d6471d3e0873dd6e5ef7847b3e7ed5a0244f23a101845f4ac1a91e957397a032"
+    },
+    "data\\reviews\\boot-barn-2026-09-21\\review-reasoning-score-exception.json": {
+      "archive": "inputs/027-review-reasoning-score-exception.json",
+      "sha256": "dc591786f495c7df7baed2563835ff9996d8a53674a86418ba3648c5891c41df"
+    },
+    "data\\reviews\\boot-barn-2026-09-21\\review-reasoning-score-recheck.json": {
+      "archive": "inputs/028-review-reasoning-score-recheck.json",
+      "sha256": "801a179fef532f046670b69939b991e1428f2738a1ab285f711bdf597c22cb9e"
+    },
+    "data\\reviews\\boot-barn-2026-09-21\\review-reasoning-score.json": {
+      "archive": "inputs/029-review-reasoning-score.json",
+      "sha256": "03928d4a7e71c3ef3c099c2bf72997325d485080b738e4500d9541a66bde62ee"
+    },
+    "data\\reviews\\boot-barn-2026-09-21\\score-rules.md": {
+      "archive": "inputs/030-score-rules.md",
+      "sha256": "66a3034d0df68edfdc6a5d43f698130aac2a9902be66e7742c1bc0a05dc81e68"
+    },
+    "deep-prebuy-skill/SKILL.md": {
+      "archive": "inputs/031-SKILL.md",
+      "sha256": "0c1314124a2a3d9c6e166824565117d6c5dde3404f943e410088ac919419829f"
+    },
+    "docs/three-report-closeout.md": {
+      "archive": "inputs/032-three-report-closeout.md",
+      "sha256": "830ef04de91b17289ab4fbd87daabe934b8662d433f1666a2355f9e807fc5f37"
+    },
+    "management-archive/SKILL.md": {
+      "archive": "inputs/033-SKILL.md",
+      "sha256": "eb1045e7868fb4741d6ad29a464fed223fe2465ada888a675c4218c69c3d78c0"
+    }
+  },
+  "originals_retained_with_hash": {
+    "财报/Boot Barn/Boot Barn FY2024 10-K 2024-05-15.htm": "1b874815bbf0366ff2fd9f4026f45162718f9f44b756d9ae619d0c3bed8241ca",
+    "财报/Boot Barn/Boot Barn FY2025 10-K 2025-05-15.htm": "d043ae93a9890f515077a7883d73fce9a5ba1d75e3c4d96f8576552d6fa57011",
+    "财报/Boot Barn/Boot Barn FY2026 10-K.html": "aeded0c93f92015e69fbabc14ea8c5a460b83389dd6f94a50ba1bfd7989b663a",
+    "data/reviews/boot-barn-2026-09-21/sec-def14a-fy2026-2026-07-16.htm": "ad53f0462d9aac4bba08e0fd04b0d9466f37fc3f0c75e1613bdc8289de33feb4",
+    "财报/Boot Barn/Boot Barn FY2027 Q1 10-Q.html": "8e38cd99dba2f02e3e4f3461606212eeb217ee0114081647cfa58cbef2ec84be",
+    "财报/Boot Barn/Boot Barn 2026-09-14 8-K.html": "ffe831f42c8cff7e11fdada773760b5d9c84a33f1c0d19d3fe780ea92da68ea5",
+    "data/reviews/boot-barn-2026-09-21/sec-submissions-2026-09-21.json": "837e435c92eb7cc2b1fb3fbe13d60368370aeb29b21d21fc2504fd4d9f5a69d3",
+    "data/reviews/boot-barn-2026-09-21/ir-john-hazen-ceo-2025.html": "47a4c87876a173fd4057ffc98bc6adbdf6a8e5756dca45fadddf23209b3068e9",
+    "data/reviews/boot-barn-2026-09-21/sec-8k-2026-07-29.htm": "0f819f03b3932b582fdcc33e9b60d421fb9050f4631b65aea47a86a1b991f696",
+    "data/reviews/boot-barn-2026-09-21/sec-8k-2026-08-27.htm": "020a2f2a480448f337f6c1791f06a87dcced00c5004f89b49c4a286c4cebc462",
+    "data/reviews/boot-barn-2026-09-21/sec-8k-2026-09-14.htm": "ffe831f42c8cff7e11fdada773760b5d9c84a33f1c0d19d3fe780ea92da68ea5",
+    "data/reviews/boot-barn-2026-09-21/sec-form4-2026-05-26.xml": "6ff9c0ad012c84aad3066ed7af115379422195428075cb5c70ae8ac9f3744d52",
+    "data/reviews/boot-barn-2026-09-21/sec-8k-conroy-2024-10-28.htm": "0c22be6d46c60f6c136e45fb9d04581c731c97cb854bbd01b27b2d13bd98bbe9",
+    "data/reviews/boot-barn-2026-09-21/sec-8k-starrett-2026-01-05.htm": "39e7c1e66ef2be0042324be2acaa998b41add0f732691f745d8fceb4d9b3e624",
+    "data/reviews/boot-barn-2026-09-21/sec-s1-ipo-2014-09-29.htm": "6bcdff181c5052036a2a4463e420dc31b95c0eb73e44ebed848debba31721f03",
+    "data/reviews/boot-barn-2026-09-21/tavily-prebuy-web-research-2026-09-21.json": "606715b0363b4d141fac3426031aba6bb923658a2ad45a1bb57e795941c2d2dc",
+    "data/reviews/boot-barn-2026-09-21/tavily-governance-named-queries-2026-09-21.json": "81a64a50a57401f21c44908f04de6c3d440fccc5981d21ae8e9f155631329d1a",
+    "data/reviews/boot-barn-2026-09-21/sec-fy2023-guidance.html": "be57d034d221953199a96fd774469044443efab23a0c272ec81d6087019a7cdf",
+    "data/reviews/boot-barn-2026-09-21/sec-fy2024-guidance.html": "87134ea972f61bf6d2545f28cd81e3708372c7d6d2eff3f0ba5b8cfb0de0ea99",
+    "data/reviews/boot-barn-2026-09-21/sec-fy2025-guidance.html": "9177d8adde6bf242336c86b6bac5eb650ba85e174c6493b589e4234ae2bc3160",
+    "财报/Boot Barn/Boot Barn COVID 8-K 2020-04-09.html": "3c302a23a0089b4be7fef1b2ff2a4647d4a5dcca917ed05a2ad1323da64d4ee3",
+    "财报/Boot Barn/Boot Barn FY2021 10-K.html": "05b850837c2705d60e37b76f0259ea22cc3870acdf0f2f7a8f0e7d492b63f3fe"
+  },
+  "scope": "仅归档已批准评分及其独立验收；不是完整三件套发布验收包，不授权Watchlist回写。"
+}

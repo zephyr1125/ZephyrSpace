@@ -1,0 +1,571 @@
+{
+  "changes": [
+    {
+      "group": "company",
+      "item": "B2",
+      "before": {
+        "id": "B2",
+        "score": 3,
+        "rule_ref": "公司规则B2：高复购/刚性=3",
+        "reason": "工作靴和工装存在替换需求，专业门店服务支持复购；但生活方式服饰及区域消费仍为可选消费，需求并非订阅式刚性。",
+        "evidence_refs": [
+          "BOOT-SEC-10K-2026"
+        ]
+      },
+      "after": {
+        "id": "B2",
+        "score": 3,
+        "rule_ref": "公司规则B2：高复购/刚性=3",
+        "reason": "FY2026约1,080万过去三年购买会员贡献多数销售，工作鞋服的日常/替换需求与专业服务共同支持高复购或刚性档；反证是未披露复购率和年购买频率，且生活方式品类仍可选，故不据此上调。",
+        "evidence_refs": [
+          "BOOT-REP-B2-001"
+        ]
+      },
+      "acceptance_ids": [
+        "BOOT-A09"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "B4",
+      "before": {
+        "id": "B4",
+        "score": 5,
+        "rule_ref": "公司规则B4：行业成长期且内生增长主导=5",
+        "reason": "FY2020-FY2026销售由$0.893bn增长至$2.254bn，Q1仍收入增长17.7%，门店由566增至577；扩店和同店恢复提供内生增长，反证是未来白空间仍属管理层预期。",
+        "evidence_refs": [
+          "BOOT-FIN-ANNUAL",
+          "BOOT-FIN-Q1FY27",
+          "BOOT-FIN-LATEST"
+        ]
+      },
+      "after": {
+        "id": "B4",
+        "score": 3,
+        "rule_ref": "公司规则B4：行业成长期且内生增长主导=5",
+        "reason": "FY2020收入为$845.575m、FY2026为$2,253.859m，累计增长166.5475%；但公司增长和约1,200店白空间不能证明行业成长期。官方竞争披露支持长期分散专业市场及份额整合，故取成熟/整合档；未见行业衰退的决定性原件。",
+        "evidence_refs": [
+          "BOOT-FIN-ANNUAL",
+          "BOOT-REP-B4-001"
+        ]
+      },
+      "acceptance_ids": [
+        "BOOT-A02"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "D2",
+      "before": {
+        "id": "D2",
+        "score": 4,
+        "rule_ref": "公司规则D2：缺逐字原话验证时上限4",
+        "reason": "FY2024-FY2026电商访问量连续上升，FY2026销售、营业利润及OCF增长，Q1新增27店支持执行力；本稿尚未取得管理层目标原话与逐年目标—实际对照的完整原件，因此按规则不超过4分。",
+        "evidence_refs": [
+          "BOOT-GOV-STRAT-001",
+          "BOOT-FIN-ANNUAL",
+          "BOOT-FIN-Q1FY27"
+        ],
+        "original_statement_found": false,
+        "strategy_drift": false
+      },
+      "after": {
+        "id": "D2",
+        "score": 5,
+        "rule_ref": "公司规则D2：缺逐字原话验证时上限4",
+        "reason": "首发原件对FY2024/25/26分别提出开52/60/65至70店，年终实际开55/60/80店，三年均达标或超目标；目标、实际与分母均已定位，未只挑单年。反证是FY2024首发销售指引$1.690–1.723bn而实际$1.667bn，未达下限；FY2025/26销售实际$1.911bn/$2.254bn则超过首发区间。开店目标代表扩张战略，不用销售波动掩盖其达标，也不据此另加管理层分。",
+        "evidence_refs": [
+          "BOOT-REP-D2-001"
+        ],
+        "original_statement_found": true,
+        "strategy_drift": false
+      },
+      "acceptance_ids": [
+        "BOOT-A01"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "E4",
+      "before": {
+        "id": "E4",
+        "score": 1,
+        "rule_ref": "公司规则E4：结构一般=1；Capex同比>30%而未完整拆分",
+        "reason": "无有息循环贷款且流动性充裕是正面；FY2026现金Capex同比+20%，Q1同比+62%，并且FY2027净Capex含$47.6m房东补贴、缺维持/扩张完整拆分，租赁负债亦升至$792.8m，因此不取满分。",
+        "evidence_refs": [
+          "BOOT-FIN-CAPITAL",
+          "BOOT-FIN-Q1FY27"
+        ],
+        "capex_check": {
+          "applicable": true,
+          "current": 51.089,
+          "previous": 31.462,
+          "unit": "USD million",
+          "current_period": "FY2027 Q1",
+          "previous_period": "FY2026 Q1",
+          "evidence_refs": [
+            "BOOT-FIN-Q1FY27"
+          ],
+          "split_complete": false,
+          "score_before_capex_adjustment": 1.5
+        }
+      },
+      "after": {
+        "id": "E4",
+        "score": 1,
+        "rule_ref": "公司规则E4：结构一般=1；Capex同比>30%而未完整拆分",
+        "reason": "FY2026新店投入目标可得，但不是实际cohort回报；FY2027净Capex指引125至130百万美元、Q1实际51.089百万美元，维持/扩张拆分仍未披露。Q1 Capex同比62.3832%且未拆分，1.5分扣0.5维持1分。",
+        "evidence_refs": [
+          "BOOT-REP-CAP-001"
+        ],
+        "capex_check": {
+          "applicable": true,
+          "current": 51.089,
+          "previous": 31.462,
+          "unit": "USD million",
+          "current_period": "FY2027 Q1",
+          "previous_period": "FY2026 Q1",
+          "evidence_refs": [
+            "BOOT-FIN-Q1FY27"
+          ],
+          "split_complete": false,
+          "score_before_capex_adjustment": 1.5
+        }
+      },
+      "acceptance_ids": [
+        "BOOT-A03"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "F2.5",
+      "before": {
+        "id": "F2.5",
+        "score": 2,
+        "rule_ref": "公司规则F2.5：审慎配置+回报可验证=2",
+        "reason": "扩店由经营现金流及无提款循环信贷支持，FY2026收入、营业利润和OCF均显著增长；房东补贴与租赁承诺意味着资本成本不可低估，但尚不足以证明纪律缺失。",
+        "evidence_refs": [
+          "BOOT-FIN-ANNUAL",
+          "BOOT-FIN-CAPITAL"
+        ],
+        "positive_precedent": false
+      },
+      "after": {
+        "id": "F2.5",
+        "score": 2,
+        "rule_ref": "公司规则F2.5：审慎配置+回报可验证=2",
+        "reason": "新店目标模型改善资本信息充分性，但目标不是实际资本回报；经营租赁、融资租赁现值与未开始租赁承诺须分列，且经营租金已在OCF。资本约束存在但未证明失控，维持2分。",
+        "evidence_refs": [
+          "BOOT-REP-CAP-001",
+          "BOOT-REP-LEASE-001"
+        ],
+        "positive_precedent": false
+      },
+      "acceptance_ids": [
+        "BOOT-A03"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "资本配置能力",
+      "before": {
+        "id": "资本配置能力",
+        "score": 19,
+        "rule_ref": "管理层规则：资本配置能力满分25",
+        "reason": "经营现金流支持扩店，循环信贷零借款且Q1继续回购；Capex和租赁承诺增长、净Capex扣房东补贴及项目级新店回报未披露，限制评分。",
+        "evidence_refs": [
+          "BOOT-FIN-CAPITAL",
+          "BOOT-FIN-TREND"
+        ]
+      },
+      "after": {
+        "id": "资本配置能力",
+        "score": 19,
+        "rule_ref": "管理层规则：资本配置能力满分25",
+        "reason": "扩店模型、现金流和无循环贷款提款支持配置纪律；新店回收只是目标、Capex拆分和实际cohort回报未披露，租赁承诺形成资本约束。疫情期薪酬和奖金措施是流动性保护行动，不重复加分，维持19分。",
+        "evidence_refs": [
+          "BOOT-REP-CAP-001",
+          "BOOT-REP-LEASE-001",
+          "BOOT-CRISIS-002"
+        ]
+      },
+      "acceptance_ids": [
+        "BOOT-A03",
+        "BOOT-A08"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "F3",
+      "before": {
+        "id": "F3",
+        "score": 3,
+        "rule_ref": "公司规则F3：透明清洁且轻资产运营ESG风险低=3",
+        "reason": "最新10-Q披露控制有效、季度无重大内控变更；FY2026 10-K仅披露偶发或受威胁诉讼并称管理层认为不重大，轻资产零售亦不适用制造业生产风险门槛。该结论不外推为不存在全部诉讼或监管风险。",
+        "evidence_refs": [
+          "BOOT-SEC-10Q-Q1FY27",
+          "BOOT-GOV-RISK-002"
+        ]
+      },
+      "after": {
+        "id": "F3",
+        "score": 2,
+        "rule_ref": "公司规则F3：透明清洁且轻资产运营ESG风险低=3",
+        "reason": "Grijalva相关供应商采购连续三年存在，采购额约占营收1.65%至1.99%；审批政策和获批可核，但独立公允价格比较、最终家庭所得不可得。持续家庭利益关系构成小瑕疵，降为2分；未证利益输送。",
+        "evidence_refs": [
+          "BOOT-REP-RELATED-001"
+        ]
+      },
+      "acceptance_ids": [
+        "BOOT-A04"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "E5.5",
+      "before": {
+        "id": "E5.5",
+        "score": 2,
+        "rule_ref": "公司规则E5.5：有小瑕疵=2",
+        "reason": "已核FY2026审计原件及最新10-Q，未见重大政策变更或保留意见；零售库存、租赁与关税成本为高判断区，且本轮无MinerU年报MD的KAM逐项提取，不给满分。",
+        "evidence_refs": [
+          "BOOT-SEC-10K-2026",
+          "BOOT-SEC-10Q-Q1FY27"
+        ]
+      },
+      "after": {
+        "id": "E5.5",
+        "score": 3,
+        "rule_ref": "公司规则E5.5：有小瑕疵=2",
+        "reason": "Deloitte自2012年起审计、FY2026无保留意见；库存计价CAM的账龄、低价销售、当前售价、数学及回溯测试已披露，最新10-Q无重大关键政策/估计变更。常规存货CAM未见具体不足，取3分但不保证未来无减值。",
+        "evidence_refs": [
+          "BOOT-REP-AUDIT-001"
+        ]
+      },
+      "acceptance_ids": [
+        "BOOT-A05"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "E2",
+      "before": {
+        "id": "E2",
+        "score": 4,
+        "rule_ref": "公司规则E2：基本达标至强的专业判断",
+        "reason": "FY2020-FY2026 OCF/净利均值约1.23，且FY2026为1.35；但FY2021-22不足1、FCF受扩店和库存投资大幅波动，不能按持续稳定正FCF给满分。",
+        "evidence_refs": [
+          "BOOT-FIN-TREND",
+          "BOOT-FIN-ANNUAL"
+        ]
+      },
+      "after": {
+        "id": "E2",
+        "score": 3,
+        "rule_ref": "公司规则E2：基本达标至强的专业判断",
+        "reason": "七年OCF/净利简单均值1.129680、近三年1.257091，但FY2020/22/23/25低于1；OCF减现金Capex仅4/7年为正。库存和扩店解释波动但不消除波动，现金转化基本达标而不属强档。经营租金已在OCF，融资租赁本金另列。",
+        "evidence_refs": [
+          "BOOT-REP-CASH-001"
+        ]
+      },
+      "acceptance_ids": [
+        "BOOT-A06"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "D5",
+      "before": {
+        "id": "D5",
+        "score": 3,
+        "rule_ref": "公司规则D5：人均创收上升或组织信号健康=3",
+        "reason": "FY2020-FY2026营收增长超过150%，门店网络持续扩张且Q1新增27店；缺逐年员工数序列，结论依赖运营扩张结果并需组织证据复核。",
+        "evidence_refs": [
+          "BOOT-FIN-ANNUAL",
+          "BOOT-FIN-Q1FY27"
+        ]
+      },
+      "after": {
+        "id": "D5",
+        "score": 2,
+        "rule_ref": "公司规则D5：人均创收上升或组织信号健康=3",
+        "reason": "期末人数FY2024/25/26为11,300/10,400/12,700，收入除人数约147,522.92/183,760.00/177,469.21美元，FY2026同比下降3.4234%。兼职与开店时点使其不是平均FTE生产率，但混合信号不足满档，取2分。",
+        "evidence_refs": [
+          "BOOT-REP-HC-001"
+        ]
+      },
+      "acceptance_ids": [
+        "BOOT-A07"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "危机处理能力",
+      "before": {
+        "id": "危机处理能力",
+        "score": 6,
+        "rule_ref": "管理层规则：危机处理能力满分10",
+        "reason": "对关税退款和7月同店疲软作了具体拆分和后续更新；现团队未历经深度消费衰退下的大规模缩店或库存去化，不能从正常季度波动推为危机验证。",
+        "evidence_refs": [
+          "BOOT-FIN-TARIFF",
+          "BOOT-FIN-LATEST"
+        ]
+      },
+      "after": {
+        "id": "危机处理能力",
+        "score": 7,
+        "rule_ref": "管理层规则：危机处理能力满分10",
+        "reason": "COVID期官方8-K记录门店/工时调整、约40%员工furlough并撤回指引；Conroy、其他高管、董事及当时数字业务负责人Hazen采取降薪、奖金递延或放弃现金retainer，FY2021年报说明流动性/运营风险应对语境。行动及时透明且与连续团队相关，取有效应对7分；未以数字平台披露倒推疫情期间数字销售成果，也无多次跨危机卓越记录。",
+        "evidence_refs": [
+          "BOOT-CRISIS-001",
+          "BOOT-CRISIS-002",
+          "BOOT-CRISIS-003"
+        ]
+      },
+      "acceptance_ids": [
+        "BOOT-A08"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "组织与人才能力",
+      "before": {
+        "id": "组织与人才能力",
+        "score": 7,
+        "rule_ref": "管理层规则：组织与人才能力满分10",
+        "reason": "快速开店、9月577店及Q1新增27店显示组织交付能力；Conroy离职、Hazen接任及Starrett角色转换均有原件，过渡未妨碍增长，但新CEO任期和关键人才留任率限制满分。",
+        "evidence_refs": [
+          "BOOT-FIN-Q1FY27",
+          "BOOT-FIN-LATEST",
+          "BOOT-GOV-ORG-001",
+          "BOOT-GOV-ORG-004",
+          "BOOT-GOV-ORG-005"
+        ]
+      },
+      "after": {
+        "id": "组织与人才能力",
+        "score": 8,
+        "rule_ref": "管理层规则：组织与人才能力满分10",
+        "reason": "Conroy离任、Hazen内部代理后转正及Starrett回任非执行董事长构成一次有序交接，不是多次不稳定事件；FY2024 EPS PSU达目标109%、归属146%且三年平均burn rate0.60%，培训/内部晋升机制支持较强档。146%不是EPS增幅，人才流失率未知限制满分。",
+        "evidence_refs": [
+          "BOOT-REP-SUCCESSION-001",
+          "BOOT-SEC-10K-2026"
+        ]
+      },
+      "acceptance_ids": [
+        "BOOT-A08",
+        "BOOT-A10"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "F1",
+      "before": {
+        "id": "F1",
+        "score": 3,
+        "rule_ref": "公司规则F1：核心团队有过渡、激励需复核=3",
+        "reason": "Conroy于2024-11-22离职，Hazen转任临时CEO后于2025-05-05出任CEO，Starrett随后转为非执行董事长；交接有明确官方原件且未见现任被调查事实，但连续CEO/董事长角色变化与新CEO任期限制稳定性选档。",
+        "evidence_refs": [
+          "BOOT-GOV-ORG-001",
+          "BOOT-GOV-ORG-004",
+          "BOOT-GOV-ORG-005"
+        ]
+      },
+      "after": {
+        "id": "F1",
+        "score": 5,
+        "rule_ref": "公司规则F1：核心团队有过渡、激励需复核=3",
+        "reason": "正常内部继任、经验团队、无分歧离任声明及业绩绑定长期激励符合满档条件；同一继任事实仅在组织与人才项评价其执行机制，不重复当作不稳定惩罚。",
+        "evidence_refs": [
+          "BOOT-REP-SUCCESSION-001"
+        ]
+      },
+      "acceptance_ids": [
+        "BOOT-A10"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "F2",
+      "before": {
+        "id": "F2",
+        "score": 3,
+        "rule_ref": "公司规则F2：一般对齐=3",
+        "reason": "公司持续实施回购，Q1回购$25.3m；但没有常规现金股利。7月30日至9月21日SEC submissions未列Form 4或144，这只限定该窗口、不能外推不存在计划或全体内部人净买卖，故不评高分。",
+        "evidence_refs": [
+          "BOOT-SEC-10Q-Q1FY27",
+          "BOOT-GOV-INSIDER-002",
+          "BOOT-GOV-CAP-001"
+        ]
+      },
+      "after": {
+        "id": "F2",
+        "score": 3,
+        "rule_ref": "公司规则F2：一般对齐=3",
+        "reason": "F2维持3分；Q1回购现金流金额统一为25.003百万美元（发行人回购表约25.0百万美元，不含消费税），不再写25.3百万美元。",
+        "evidence_refs": [
+          "BOOT-SEC-10Q-Q1FY27",
+          "BOOT-GOV-INSIDER-002",
+          "BOOT-GOV-CAP-001"
+        ]
+      },
+      "acceptance_ids": [
+        "BOOT-A11"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "诚信与透明度",
+      "before": {
+        "id": "诚信与透明度",
+        "score": 17,
+        "rule_ref": "管理层规则：诚信与透明度满分20",
+        "reason": "Q1清晰披露关税、产品、运费和占用成本对毛利的桥接，9月更新亦直接说明同店改善与指引边界；仍需治理包核验历史监管和人事边界。",
+        "evidence_refs": [
+          "BOOT-FIN-TARIFF",
+          "BOOT-FIN-LATEST"
+        ]
+      },
+      "after": {
+        "id": "诚信与透明度",
+        "score": 17,
+        "rule_ref": "管理层规则：诚信与透明度满分20",
+        "reason": "目标—实际及关联交易均有主动公开披露、关联交易经政策审批且规模可辨认；独立定价比较未披露，且不将审批等同完全清洁。未见虚假披露或资金占用证据，维持17分。",
+        "evidence_refs": [
+          "BOOT-REP-D2-001",
+          "BOOT-REP-RELATED-001"
+        ]
+      },
+      "acceptance_ids": [
+        "BOOT-A01",
+        "BOOT-A04"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "战略稳定性",
+      "before": {
+        "id": "战略稳定性",
+        "score": 13,
+        "rule_ref": "管理层规则：战略稳定性满分15",
+        "reason": "门店、同店、商品和数字化战略连续，Q1与9月更新均支持执行；需求与关税的外部敏感性限制满分。",
+        "evidence_refs": [
+          "BOOT-FIN-Q1FY27",
+          "BOOT-FIN-LATEST"
+        ]
+      },
+      "after": {
+        "id": "战略稳定性",
+        "score": 13,
+        "rule_ref": "管理层规则：战略稳定性满分15",
+        "reason": "三年连续开店目标及完成情况支持门店扩张战略持续执行；销售/同店目标存在波动，关税和需求仍是外部约束，维持13分。",
+        "evidence_refs": [
+          "BOOT-REP-D2-001",
+          "BOOT-GOV-STRAT-001"
+        ]
+      },
+      "acceptance_ids": [
+        "BOOT-A01"
+      ]
+    }
+  ],
+  "metadata_changes": [
+    {
+      "field": "evidence_gaps",
+      "before": [
+        {
+          "affected_items": [
+            "E4",
+            "F2.5",
+            "资本配置能力"
+          ],
+          "kind": "Capex维持/扩张及新店成熟回报的项目级拆分未披露",
+          "impact": "限制资本配置相关分项满分及正式估值现金流正常化；不阻断已核财务质量判断。",
+          "search_scope": "FY2024-FY2027 Q1年报/季报、电话会及官方投资者材料",
+          "evidence_refs": [
+            "BOOT-FIN-CAPITAL",
+            "BOOT-FIN-Q1FY27"
+          ]
+        }
+      ],
+      "after": [
+        {
+          "affected_items": [
+            "E4",
+            "F2.5",
+            "资本配置能力"
+          ],
+          "kind": "维持/扩张Capex拆分及新店实际cohort回报未披露",
+          "impact": "限制资本配置满分与FCFE正常化；不阻断新店目标和租赁约束评价。",
+          "search_scope": "FY2024-FY2027 Q1官方年报、季报、业绩材料",
+          "evidence_refs": [
+            "BOOT-REP-CAP-001",
+            "BOOT-REP-LEASE-001"
+          ]
+        },
+        {
+          "affected_items": [
+            "F3",
+            "诚信与透明度"
+          ],
+          "kind": "关联供应商独立公允价格比较及高管家庭最终所得未披露",
+          "impact": "持续冲突按小瑕疵处理；不推断利益输送。",
+          "search_scope": "FY2026 DEF 14A关联交易披露",
+          "evidence_refs": [
+            "BOOT-REP-RELATED-001"
+          ]
+        },
+        {
+          "affected_items": [
+            "D5",
+            "组织与人才能力"
+          ],
+          "kind": "员工人数为期末人数而非平均FTE，人才流失率未披露",
+          "impact": "限制人效与人才卓越结论。",
+          "search_scope": "FY2024-FY2026官方年报人力资本披露",
+          "evidence_refs": [
+            "BOOT-REP-HC-001"
+          ]
+        }
+      ],
+      "acceptance_ids": [
+        "BOOT-A01",
+        "BOOT-A02",
+        "BOOT-A03",
+        "BOOT-A04",
+        "BOOT-A05",
+        "BOOT-A06",
+        "BOOT-A07",
+        "BOOT-A08",
+        "BOOT-A09",
+        "BOOT-A10"
+      ]
+    }
+  ],
+  "check": {
+    "status": "mechanically_checked_pending_review",
+    "errors": [],
+    "warnings": [],
+    "scores": {
+      "cScore": 80,
+      "mScore": 79
+    },
+    "inputs": {
+      "data/reviews/boot-barn-2026-09-21/facts-financial.json": "07bd839f0967cbbf5a278ecf5c2f8a28e6390dc5ae12c74b3762082bb7dd523f",
+      "data/reviews/boot-barn-2026-09-21/sources-financial.json": "79bb929869a71f3262a93d04bfb24b35abece951146cbbb61a535fc6ce5add7c",
+      "data/reviews/boot-barn-2026-09-21/facts-governance.json": "22a1dd260ee39145bbd67666b1aea455ed38a6188a5642fead252098752c1254",
+      "data/reviews/boot-barn-2026-09-21/sources-governance.json": "fc42b2d332c5ed6d6abcfabc3e9c5fabe61d3ff292a939bd748b7949fb9f28c3",
+      "data/reviews/boot-barn-2026-09-21/facts-repair-v1.json": "5d895f0461e0de3d6e64e44f7e3b59a97a785b631e9e8338f69b4778aed32ac8",
+      "data/reviews/boot-barn-2026-09-21/sources-repair-v1.json": "1f43bcf7bd3d98ee77bc6e017dcd3b43561bf95a6d45f19aade39cf13b24652a",
+      "data/reviews/boot-barn-2026-09-21/facts-crisis.json": "902d0142016cd5ad8e4150770c8eeb987eddf00bb3b5bf1613740cbf8ce8c48b",
+      "data/reviews/boot-barn-2026-09-21/sources-crisis.json": "c0d48e1a0af5e1e771752b626a896520423b67e7be366a4a36a1b370d8023d66"
+    }
+  },
+  "base": "data/reviews/boot-barn-2026-09-21/workpaper-v1.json",
+  "base_sha256": "b5b00d983aa91e6ff4ff27a8aea2a6b3458560e45fa41478b45cab7d05bf02aa",
+  "decision": "data/reviews/boot-barn-2026-09-21/decision.json",
+  "decision_sha256": "5fe73c39c6e9f7f0e6d48ad52cdec5ef55cba4178e4949bd68a969026a2e30d6",
+  "unmodified_scope_items": [],
+  "limitations": "未修改的验收项仍须逐项答复；引用存在不证明语义正确，须双路复核变更及联动。",
+  "workpaper_sha256": "4bb3b12efa39c70deb9086809dda942fcb78f7e42bca4d5dd78a6749e579e8d1"
+}

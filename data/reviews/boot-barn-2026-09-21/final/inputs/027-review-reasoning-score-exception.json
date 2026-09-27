@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "review_role": "triplet_review_reasoning",
+  "stage": "score_bounded_exception_recheck",
+  "company": "Boot Barn Holdings, Inc.",
+  "as_of": "2026-09-21",
+  "repaired_workpaper": "data/reviews/boot-barn-2026-09-21/repair-v2/workpaper.json",
+  "repaired_workpaper_sha256": "3566EE92416C4738BC164DB64AD4F46E1B2778C727D71E63FD025A01AFD73516",
+  "delta": "data/reviews/boot-barn-2026-09-21/delta-repair-v2.json",
+  "receipt": "data/reviews/boot-barn-2026-09-21/repair-v2/receipt.json",
+  "check": "data/reviews/boot-barn-2026-09-21/repair-v2/check.json",
+  "acceptance_record": "data/reviews/boot-barn-2026-09-21/repair-v2/acceptance.md",
+  "candidate_scores_reviewed": {
+    "company": 80,
+    "management": 79,
+    "combined": 159
+  },
+  "review_conclusion": "accepted_within_exception_scope",
+  "acceptance_results": [
+    {
+      "acceptance_id": "BOOT-A01",
+      "status": "accepted",
+      "affected_items": [
+        "company:D2",
+        "management:诚信与透明度",
+        "management:战略稳定性"
+      ],
+      "conclusion": "例外验收条件已满足。三年均使用开店、销售、同店销售、经营利润、净利润和稀释EPS六项统一核心结果分母；税率和股数仅为利润/EPS假设，未重复计分；净Capex指引与现金流毛Capex不可比的排除理由成立。FY2024为5/6，FY2025和FY2026均为6/6，三年年度达标率3/3，D2=5符合原规则。诚信与透明度17、战略稳定性13的同源联动保留反证且未额外加分。",
+      "evidence": [
+        "FY2024首发：开店52/实际55；销售$1.690–1.723bn/实际$1.667009bn未达；同店-6.5%至-4.5%/实际-6.2%；经营利润$197.5–209.9m/实际$198.214m；净利润$143.8–153.0m/实际$146.996m；EPS $4.70–5.00/实际$4.80，合计5/6。",
+        "FY2025首发六项实际均达到或超过区间；FY2026首发六项实际均达到或超过区间。",
+        "2024-01-31修订原件确认FY2024销售、同店和EPS下修，最终值略高于修订上限；2024-10-28及2026-02-04修订原件确认FY2025、FY2026主要目标上修。修订没有抹去FY2024首发销售落空。",
+        "经营利润已综合毛利与SG&A核心经营结果，未再把税率、稀释股数等假设当独立兑现项；净Capex与现金流毛Capex口径不同，未强行比较。"
+      ],
+      "linkage": {
+        "company_D2": 5,
+        "management_integrity_transparency": 17,
+        "management_strategy_stability": 13,
+        "assessment": "三年公开指引与修订提升可核性，但FY2024首发销售落空及年内下修仍是反证；不触发管理层分额外奖励或扣减。"
+      }
+    },
+    {
+      "acceptance_id": "BOOT-A08",
+      "status": "accepted",
+      "affected_items": [
+        "management:危机处理能力",
+        "management:资本配置能力",
+        "management:组织与人才能力"
+      ],
+      "conclusion": "例外验收条件已满足。COVID真实压力、即时行动、FY2021恢复结果、流动性改善和延续机制形成最小闭环；Conroy与Hazen职责边界清楚。危机处理7代表有效应对且未冒充多次跨危机卓越记录，资本配置19和组织人才8仅更新理由、不重复加分。",
+      "evidence": [
+        "2020-04-09 8-K确认临时闭店、缩减工时、约40%员工暂时停工、撤回指引、CEO降薪50%、其他高管降薪25%、奖金递延及董事放弃当季现金报酬。",
+        "FY2021 10-K确认OCF由FY2020的$25.317m升至$155.922m；循环信贷由$129.9m降至零，期末仍有$165.0m可用额度和$73.148m现金。",
+        "FY2021 10-K确认全渠道举措包括线上下单门店/路边提货、门店退货、门店发货、当日配送和仓库自动化；电商占比18.6%对15.9%仅作为渠道证据，未写成绝对销售增长。",
+        "Conroy当时任CEO并承担公司层面响应；Hazen自2018年任CDO且签署降薪同意，证明团队连续性及与数字机制相关，但修复未把全部经营恢复单独归因于Hazen。"
+      ],
+      "linkage": {
+        "management_crisis_handling": 7,
+        "management_capital_allocation": 19,
+        "management_organization_talent": 8,
+        "assessment": "危机材料补足有效应对证据；同一历史未在资本配置和组织人才中重复加分，原有新店实际回报、Capex拆分、租赁约束及人才流失率未知仍限制更高档。"
+      }
+    }
+  ],
+  "findings": [],
+  "score_and_qualification": {
+    "arithmetic_check": "repair-v2分项独立加总为公司80、管理层79、合计159，与check.json一致。",
+    "reasoning_review_score_state": "accepted",
+    "scores_supported_in_scope": {
+      "company": 80,
+      "management": 79,
+      "combined": 159
+    },
+    "qualification_effect": "A01与A08不再阻断B_GROWTH分数门槛判断；整体评分批准仍由主任务结合另一独立验收、A11事实验收及裁决台账统一收尾。",
+    "watchlist_action": "none"
+  },
+  "coverage": {
+    "scope": "仅复查有界例外BOOT-A01、BOOT-A08及必要联动；未重做此前通过的BOOT-A02至A07、A09、A10，未复查BOOT-A11，未读取另一审核意见。",
+    "accepted": [
+      "BOOT-A01",
+      "BOOT-A08"
+    ],
+    "open": [],
+    "independent_recalculations": [
+      "FY2024统一六项核心结果5/6达成",
+      "FY2025统一六项核心结果6/6达成",
+      "FY2026统一六项核心结果6/6达成",
+      "三年年度达标率3/3",
+      "FY2021 OCF $155.922m对FY2020 $25.317m",
+      "FY2021循环信贷余额由$129.9m降至零，期末可用额度$165.0m",
+      "repair-v2公司/管理层分项加总80/79"
+    ],
+    "source_checks": [
+      "三份首次全年官方指引",
+      "FY2024/FY2025/FY2026重大修订官方8-K附件",
+      "FY2024/FY2025/FY2026 10-K实际结果",
+      "2020-04-09 COVID 8-K",
+      "FY2021 10-K现金流、流动性与全渠道章节"
+    ]
+  },
+  "uncovered": [
+    "BOOT-A11不属于本角色本次例外验收范围。",
+    "三份最终长文尚未在本阶段审核。"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "score_display": "integer_half_up",
+  "score_rule_validation": "explicit_tiers_v2",
+  "cutoff": "2026-09-21",
+  "scope": "Boot Barn 完整三件套更新的评分阶段；估值尚未展开。",
+  "scores": {
+    "company": {"total": 81, "items": [
+      {"id":"A1","score":3,"rule_ref":"公司规则A1：先发优势/技术驱动=3","reason":"1978年创立并长期专注西部及工作服饰专业零售；并非依赖政策或资源套利。反证是业务本身仍受可选消费周期影响。","evidence_refs":["BOOT-SEC-10K-2026"]},
+      {"id":"A2","score":2,"rule_ref":"公司规则A2：一次合理变更=2","reason":"IPO前Freeman Spogli相关实体拥有89.1%并持有FSEP VI的投票及处置权；公开资料未显示壳化或频繁控制权争夺，但并非创始人控制长期不变，故按一次合理控制结构演变选2分。","evidence_refs":["BOOT-GOV-ORG-003","BOOT-SEC-DEF-2026"]},
+      {"id":"A3","score":4,"rule_ref":"公司规则A3：融资用途清晰且无卖资产保利润=4","reason":"扩张主要由经营现金流、无提款循环信贷及适度回购支持；未见以卖资产保利润或跨界并购维持利润的证据。租赁承诺和扩店资本投入属于已披露经营约束，不改变资本运作清洁度。","evidence_refs":["BOOT-FIN-CAPITAL","BOOT-FIN-ANNUAL"]},
+      {"id":"B0","score":2,"rule_ref":"公司规则B0：三项判断及分类完整=2","reason":"早期与当下均以门店专业选品、试穿服务和商品周转销售变现，属于门店网络驱动的重投入专业零售模式；未见靠并购改变商业本质。","evidence_refs":["BOOT-SEC-10K-2026"]},
+      {"id":"B1","score":3,"rule_ref":"公司规则B1：集中但逻辑清晰=3","reason":"单一报告分部、品类围绕西部与工作相关鞋服配件，集中度高但由工作、生活方式及电商子维度补充。集中于同一消费场景仍限制满分。","evidence_refs":["BOOT-SEC-10K-2026","BOOT-FIN-LATEST"]},
+      {"id":"B2","score":3,"rule_ref":"公司规则B2：高复购/刚性=3","reason":"工作靴和工装存在替换需求，专业门店服务支持复购；但生活方式服饰及区域消费仍为可选消费，需求并非订阅式刚性。","evidence_refs":["BOOT-SEC-10K-2026"]},
+      {"id":"B3","score":4,"rule_ref":"公司规则B3：中等定价权=4","reason":"专业化选品、独家/自有商品及持续高毛利支持中等定价权；Q1剔除一次性关税退款后的毛利承压、第三方品牌可多渠道购买，不能评强。","evidence_refs":["BOOT-FIN-TARIFF","BOOT-SEC-10Q-Q1FY27"]},
+      {"id":"B4","score":5,"rule_ref":"公司规则B4：行业成长期且内生增长主导=5","reason":"FY2020-FY2026销售由$0.893bn增长至$2.254bn，Q1仍收入增长17.7%，门店由566增至577；扩店和同店恢复提供内生增长，反证是未来白空间仍属管理层预期。","evidence_refs":["BOOT-FIN-ANNUAL","BOOT-FIN-Q1FY27","BOOT-FIN-LATEST"]},
+      {"id":"C1","score":6,"rule_ref":"公司规则C1：绝对龙头/Top3=6","reason":"公司在官方披露中定位为美国领先的西部与工作相关生活方式零售商，并已运营577店覆盖49州；结论限于该专业细分。","evidence_refs":["BOOT-FIN-LATEST","BOOT-SEC-10K-2026"]},
+      {"id":"C2","score":3,"rule_ref":"公司规则C2：产业链参与者=3","reason":"规模、专业采购和门店网络带来供应链效率，但主要销售第三方品牌，消费者和品牌均有替代渠道；因此是参与者而非产业链主导者。","evidence_refs":["BOOT-SEC-10K-2026","BOOT-FIN-TARIFF"]},
+      {"id":"C3+C4","score":5,"rule_ref":"公司规则C3+C4：3星=5","reason":"全国门店密度、专业陈列试穿和供应链规模形成中等进入壁垒；第三方品牌依赖、低转换成本和电商替代限制护城河，符合3星而非4星。","evidence_refs":["BOOT-FIN-LATEST","BOOT-SEC-10K-2026"]},
+      {"id":"D1","score":4,"rule_ref":"公司规则D1：长期一致且逻辑清晰=4","reason":"FY2024-FY2026官方披露的电商访问量由逾8600万增至逾1.64亿，且门店扩张、同店销售、数字化和商品组合长期为核心方向；截至Q1及9月更新未见战略漂移。","evidence_refs":["BOOT-GOV-STRAT-001","BOOT-FIN-LATEST"]},
+      {"id":"D2","score":4,"rule_ref":"公司规则D2：缺逐字原话验证时上限4","reason":"FY2024-FY2026电商访问量连续上升，FY2026销售、营业利润及OCF增长，Q1新增27店支持执行力；本稿尚未取得管理层目标原话与逐年目标—实际对照的完整原件，因此按规则不超过4分。","evidence_refs":["BOOT-GOV-STRAT-001","BOOT-FIN-ANNUAL","BOOT-FIN-Q1FY27"],"original_statement_found":false,"strategy_drift":false},
+      {"id":"D3","score":3,"rule_ref":"公司规则D3：顺风=3","reason":"专业西部/工作服饰的门店渗透仍有空间，9月更新显示同店由7月疲弱转回2%；关税与可选消费风险存在，但不足以推翻总体扩张顺风。","evidence_refs":["BOOT-FIN-LATEST","BOOT-FIN-TARIFF"]},
+      {"id":"D5","score":3,"rule_ref":"公司规则D5：人均创收上升或组织信号健康=3","reason":"FY2020-FY2026营收增长超过150%，门店网络持续扩张且Q1新增27店；缺逐年员工数序列，结论依赖运营扩张结果并需组织证据复核。","evidence_refs":["BOOT-FIN-ANNUAL","BOOT-FIN-Q1FY27"]},
+      {"id":"E1","score":5,"rule_ref":"公司规则E1：非杠杆驱动的高回报=5","reason":"FY2026净利率约10.0%，资产周转约1.01次；权益由FY2020末$321.7m增至FY2026末$1.319bn，同时循环信贷无提款。回报主要来自利润与周转而非有息杠杆。","evidence_refs":["BOOT-FIN-ANNUAL","BOOT-FIN-CAPITAL"]},
+      {"id":"E2","score":4,"rule_ref":"公司规则E2：基本达标至强的专业判断","reason":"FY2020-FY2026 OCF/净利均值约1.23，且FY2026为1.35；但FY2021-22不足1、FCF受扩店和库存投资大幅波动，不能按持续稳定正FCF给满分。","evidence_refs":["BOOT-FIN-TREND","BOOT-FIN-ANNUAL"]},
+      {"id":"E3","score":2,"rule_ref":"公司规则E3：一次性项目可辨认=2","reason":"增长来自门店、同店和电商，但Q1 $14.7m关税退款抬高GAAP毛利和利润；一次性项目已可识别，故不把该收益当作核心增长。","evidence_refs":["BOOT-FIN-Q1FY27","BOOT-FIN-TARIFF"]},
+      {"id":"E4","score":1,"rule_ref":"公司规则E4：结构一般=1；Capex同比>30%而未完整拆分","reason":"无有息循环贷款且流动性充裕是正面；FY2026现金Capex同比+20%，Q1同比+62%，并且FY2027净Capex含$47.6m房东补贴、缺维持/扩张完整拆分，租赁负债亦升至$792.8m，因此不取满分。","evidence_refs":["BOOT-FIN-CAPITAL","BOOT-FIN-Q1FY27"],"capex_check":{"applicable":true,"current":51.089,"previous":31.462,"unit":"USD million","current_period":"FY2027 Q1","previous_period":"FY2026 Q1","evidence_refs":["BOOT-FIN-Q1FY27"],"split_complete":false,"score_before_capex_adjustment":1.5}},
+      {"id":"E5","score":2,"rule_ref":"公司规则E5：标准审计、低商誉、资产质量可核=2","reason":"FY2026经审计10-K和Q1 10-Q未见重大审计保留；资产端重点为可周转商品库存而非商誉。库存$900.0m需要持续跟踪，但目前销售增速和季节性背景未显示确定减值红旗。","evidence_refs":["BOOT-SEC-10K-2026","BOOT-FIN-Q1FY27"]},
+      {"id":"E5.5","score":2,"rule_ref":"公司规则E5.5：有小瑕疵=2","reason":"已核FY2026审计原件及最新10-Q，未见重大政策变更或保留意见；零售库存、租赁与关税成本为高判断区，且本轮无MinerU年报MD的KAM逐项提取，不给满分。","evidence_refs":["BOOT-SEC-10K-2026","BOOT-SEC-10Q-Q1FY27"]},
+      {"id":"F1","score":3,"rule_ref":"公司规则F1：核心团队有过渡、激励需复核=3","reason":"Conroy于2024-11-22离职，Hazen转任临时CEO后于2025-05-05出任CEO，Starrett随后转为非执行董事长；交接有明确官方原件且未见现任被调查事实，但连续CEO/董事长角色变化与新CEO任期限制稳定性选档。","evidence_refs":["BOOT-GOV-ORG-001","BOOT-GOV-ORG-004","BOOT-GOV-ORG-005"]},
+      {"id":"F2","score":3,"rule_ref":"公司规则F2：一般对齐=3","reason":"公司持续实施回购，Q1回购$25.3m；但没有常规现金股利。7月30日至9月21日SEC submissions未列Form 4或144，这只限定该窗口、不能外推不存在计划或全体内部人净买卖，故不评高分。","evidence_refs":["BOOT-SEC-10Q-Q1FY27","BOOT-GOV-INSIDER-002","BOOT-GOV-CAP-001"]},
+      {"id":"F2.5","score":2,"rule_ref":"公司规则F2.5：审慎配置+回报可验证=2","reason":"扩店由经营现金流及无提款循环信贷支持，FY2026收入、营业利润和OCF均显著增长；房东补贴与租赁承诺意味着资本成本不可低估，但尚不足以证明纪律缺失。","evidence_refs":["BOOT-FIN-ANNUAL","BOOT-FIN-CAPITAL"],"positive_precedent":false},
+      {"id":"F3","score":3,"rule_ref":"公司规则F3：透明清洁且轻资产运营ESG风险低=3","reason":"最新10-Q披露控制有效、季度无重大内控变更；FY2026 10-K仅披露偶发或受威胁诉讼并称管理层认为不重大，轻资产零售亦不适用制造业生产风险门槛。该结论不外推为不存在全部诉讼或监管风险。","evidence_refs":["BOOT-SEC-10Q-Q1FY27","BOOT-GOV-RISK-002"]}
+    ]},
+    "management": {"total":77,"items":[
+      {"id":"诚信与透明度","score":17,"rule_ref":"管理层规则：诚信与透明度满分20","reason":"Q1清晰披露关税、产品、运费和占用成本对毛利的桥接，9月更新亦直接说明同店改善与指引边界；仍需治理包核验历史监管和人事边界。","evidence_refs":["BOOT-FIN-TARIFF","BOOT-FIN-LATEST"]},
+      {"id":"资本配置能力","score":19,"rule_ref":"管理层规则：资本配置能力满分25","reason":"经营现金流支持扩店，循环信贷零借款且Q1继续回购；Capex和租赁承诺增长、净Capex扣房东补贴及项目级新店回报未披露，限制评分。","evidence_refs":["BOOT-FIN-CAPITAL","BOOT-FIN-TREND"]},
+      {"id":"战略稳定性","score":13,"rule_ref":"管理层规则：战略稳定性满分15","reason":"门店、同店、商品和数字化战略连续，Q1与9月更新均支持执行；需求与关税的外部敏感性限制满分。","evidence_refs":["BOOT-FIN-Q1FY27","BOOT-FIN-LATEST"]},
+      {"id":"对股东友好度","score":11,"rule_ref":"管理层规则：对股东友好度满分15","reason":"有持续回购且不依赖股权融资；未常规派息、近期回购的估值时点和内部人交易质量尚待DEF 14A及Form 4核验。","evidence_refs":["BOOT-SEC-10Q-Q1FY27","BOOT-SEC-DEF-2026"]},
+      {"id":"危机处理能力","score":6,"rule_ref":"管理层规则：危机处理能力满分10","reason":"对关税退款和7月同店疲软作了具体拆分和后续更新；现团队未历经深度消费衰退下的大规模缩店或库存去化，不能从正常季度波动推为危机验证。","evidence_refs":["BOOT-FIN-TARIFF","BOOT-FIN-LATEST"]},
+      {"id":"组织与人才能力","score":7,"rule_ref":"管理层规则：组织与人才能力满分10","reason":"快速开店、9月577店及Q1新增27店显示组织交付能力；Conroy离职、Hazen接任及Starrett角色转换均有原件，过渡未妨碍增长，但新CEO任期和关键人才留任率限制满分。","evidence_refs":["BOOT-FIN-Q1FY27","BOOT-FIN-LATEST","BOOT-GOV-ORG-001","BOOT-GOV-ORG-004","BOOT-GOV-ORG-005"]},
+      {"id":"表达清晰度与认知质量","score":4,"rule_ref":"管理层规则：表达清晰度满分5","reason":"Q1量化披露毛利率桥和7月同店压力，9月进一步给出8月及9月初的同店趋势并限定为既有指引高端；未取得完整Q&A逐字稿，保留1分。","evidence_refs":["BOOT-FIN-TARIFF","BOOT-FIN-LATEST"]}
+    ]}
+  },
+  "evidence_gaps":[
+    {"affected_items":["E4","F2.5","资本配置能力"],"kind":"Capex维持/扩张及新店成熟回报的项目级拆分未披露","impact":"限制资本配置相关分项满分及正式估值现金流正常化；不阻断已核财务质量判断。","search_scope":"FY2024-FY2027 Q1年报/季报、电话会及官方投资者材料","evidence_refs":["BOOT-FIN-CAPITAL","BOOT-FIN-Q1FY27"]}
+  ],
+  "valuation":{"status":"deferred","reason":"遵循评分优先，尚未进入估值模块。","currency":"USD","models":[],"target_price":null,"certainty":null,"buy_price":null},
+  "bridges":[],"bridges_not_applicable":"评分阶段尚未建立估值权益桥。","score_state":"pending_review","research_state":"pending_review","publish_allowed":false
+}

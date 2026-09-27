@@ -1,0 +1,178 @@
+{
+  "schema_version": 1,
+  "review_role": "triplet_review_reasoning",
+  "stage": "score_repair_recheck_v1",
+  "company": "Boot Barn Holdings, Inc.",
+  "as_of": "2026-09-21",
+  "base_decision": "data/reviews/boot-barn-2026-09-21/decision.json",
+  "repaired_workpaper": "data/reviews/boot-barn-2026-09-21/repair-v1/workpaper.json",
+  "repaired_workpaper_sha256": "4BB3B12EFA39C70DEB9086809DDA942FCB78F7E42BCA4D5DD78A6749E579E8D1",
+  "receipt": "data/reviews/boot-barn-2026-09-21/repair-v1/receipt.json",
+  "check": "data/reviews/boot-barn-2026-09-21/repair-v1/check.json",
+  "candidate_scores_reviewed": {
+    "company": 80,
+    "management": 79,
+    "combined": 159
+  },
+  "review_conclusion": "not_accepted_original_conditions_open",
+  "acceptance_results": [
+    {
+      "acceptance_id": "BOOT-A01",
+      "status": "open",
+      "affected_items": [
+        "company:D2",
+        "management:诚信与透明度",
+        "management:战略稳定性"
+      ],
+      "conclusion": "未满足原验收条件。新增原件证明三年开店目标全部达成、销售目标两年达成一年未达，但未覆盖同期正式全年指引中的全部主要目标，也未记录后续修订及统一达标分母；D2=5仍不可批准。诚信与透明度17、战略稳定性13暂未发现需联动改变的新反证。",
+      "evidence": "FY2024首次全年指引除开店和销售外，还包含同店销售、毛利/毛利率、SG&A、营业利润、净利润、EPS及Capex；FY2025与FY2026首次全年指引同样包含同店、利润、EPS、Capex等多项。BOOT-REP-D2-001只登记开店与销售，repair-v1底稿以开店3/3及销售2/3支持满分，没有说明为何这些是完整分母，也没有列后续修订。"
+    },
+    {
+      "acceptance_id": "BOOT-A02",
+      "status": "accepted",
+      "affected_items": [
+        "company:B4"
+      ],
+      "conclusion": "满足。FY2020/FY2026收入及166.5475%累计增长已纠正；公司白空间与行业生命周期已分开，官方竞争章节支持分散成熟市场及份额整合，B4=3与相邻5分档的差异解释充分。",
+      "evidence": "BOOT-REP-B4-001与FY2026 10-K Competition/Our Growth Strategies；独立复算(2253.859/845.575-1)=166.5475%。"
+    },
+    {
+      "acceptance_id": "BOOT-A03",
+      "status": "accepted",
+      "affected_items": [
+        "company:E4",
+        "company:F2.5",
+        "management:资本配置能力"
+      ],
+      "conclusion": "满足。新店目标经济性、净Capex/房东补贴、Q1实际Capex、租赁现值与未开始租赁承诺均分列，目标与实际边界清楚，未重复扣减；E4=1、F2.5=2、资本配置能力=19按裁决维持。",
+      "evidence": "FY2027 Q1 10-Q列经营/融资租赁现值792.817/13.232百万美元、尚未开始租赁承诺157.7百万美元，以及经营租赁现金39.893百万美元、融资租赁本金0.251百万美元；FY2026 10-K列新店平均净投入1.7百万美元及目标三年回收。"
+    },
+    {
+      "acceptance_id": "BOOT-A04",
+      "status": "accepted",
+      "affected_items": [
+        "company:F3",
+        "management:诚信与透明度"
+      ],
+      "conclusion": "满足。关联采购、供应商佣金、部分转付、营收占比、审批政策和公允性未知均已分开；F3降至2，诚信17维持，未把披露审批冒充无冲突或把未知冒充利益输送。",
+      "evidence": "2026 DEF 14A Certain Relationships and Related Party Transactions；独立复算32.8/1667.009、38.0/1911.104、37.3/2253.859分别约1.9676%、1.9884%、1.6549%。"
+    },
+    {
+      "acceptance_id": "BOOT-A05",
+      "status": "accepted",
+      "affected_items": [
+        "company:E5.5"
+      ],
+      "conclusion": "满足。官方HTML审计证据替代载体缺失，Deloitte任期、无保留意见、存货CAM程序及最新季度无重大政策/估计变更均已登记；E5.5=3未外推为未来无减值。",
+      "evidence": "FY2026 10-K审计报告及Inventory CAM、FY2027 Q1 10-Q Critical Accounting Policies and Estimates。"
+    },
+    {
+      "acceptance_id": "BOOT-A06",
+      "status": "accepted",
+      "affected_items": [
+        "company:E2"
+      ],
+      "conclusion": "满足。七年与近三年现金转化、低于1的年份和七年简化FCF均已纠正；经营租赁现金与融资租赁本金口径分开，E2由4降3。",
+      "evidence": "独立重算七年OCF/净利均值1.129680、近三年均值1.257091；OCF减现金Capex仅4/7年为正，与BOOT-REP-CASH-001一致。"
+    },
+    {
+      "acceptance_id": "BOOT-A07",
+      "status": "accepted",
+      "affected_items": [
+        "company:D5"
+      ],
+      "conclusion": "满足。三年全职/兼职及期末总人数、人均收入和口径限制均登记；FY2026同比下降3.4234%按混合信号取2，没有把非FTE指标冒充精确劳动生产率。",
+      "evidence": "FY2024-FY2026 10-K人力资本披露；独立复算收入/期末人数与BOOT-REP-HC-001一致。"
+    },
+    {
+      "acceptance_id": "BOOT-A08",
+      "status": "open",
+      "affected_items": [
+        "management:危机处理能力",
+        "management:资本配置能力",
+        "management:组织与人才能力"
+      ],
+      "conclusion": "未满足原验收条件。官方8-K足以证明COVID初期真实行动及Hazen当时属于连续团队，但新增事实没有登记恢复结果和可持续防复发/运营机制，FY2021 10-K摘录主要是风险语境与既有数字平台描述；危机处理7分的完整因果链尚未闭合。资本配置19与组织人才8未因本次危机材料额外加分，联动边界正确。",
+      "evidence": "BOOT-CRISIS-001/002证明缩短工时、约40% furlough、撤回指引、高管降薪、奖金递延和董事放弃现金retainer；BOOT-CRISIS-003只证明FY2021风险披露、平台基础及Hazen当时为高级管理人员，没有记录门店恢复时间、员工复岗、流动性结果、经营恢复指标或由危机形成的持续机制。"
+    },
+    {
+      "acceptance_id": "BOOT-A09",
+      "status": "accepted",
+      "affected_items": [
+        "company:B2"
+      ],
+      "conclusion": "满足。修复没有仅凭‘无订阅’机械降1，也没有把会员数误写成复购率；10-K同时披露多数销售来自近三年购买会员、产品覆盖日常需求、许多商品为基础品/必需品、核心款式长期延续并能推动repeat visits，足以支持整体高复购或刚性档，同时保留生活方式品类可选及频率未披露的反证。",
+      "evidence": "FY2026 10-K Our Company、Loyal customer base、Merchandising Strategy及MD&A Overview；B Rewarded约1,080万近三年购买会员且多数销售来自该群体，但没有量化复购率。"
+    },
+    {
+      "acceptance_id": "BOOT-A10",
+      "status": "accepted",
+      "affected_items": [
+        "company:F1",
+        "management:组织与人才能力"
+      ],
+      "conclusion": "满足。通知日/生效日、无分歧、内部代理转正及董事长回归非执行已串成一次有序交接；EPS PSU、109%目标达成、146%归属、0.60% burn rate及培训机制已纳入且未误读146%；F1=5、组织人才=8的相邻档解释符合裁决。",
+      "evidence": "2024-10-28 8-K、2025-05-05 CEO任命、2026-01-05 8-K、2026 DEF 14A及FY2026 10-K Talent Development。"
+    }
+  ],
+  "findings": [
+    {
+      "severity": "P1",
+      "location": "BOOT-A01 / facts-repair-v1.json BOOT-REP-D2-001 / repair-v1 workpaper company:D2",
+      "claim": "D2修复选择性登记开店和销售两个目标系列，却未按原验收条件覆盖同期首次全年指引的全部主要目标、后续修订和统一达标分母，因此5分仍是以部分兑现目标代表整体兑现。",
+      "evidence": "三份首次全年Outlook逐年同时给出开店、销售、同店销售、毛利/毛利率、营业利润、净利润或EPS、Capex等目标。现事实只列开店3/3达成和销售2/3达成；未列FY2024-FY2026同店、EPS/净利、利润率与Capex实际，也没有后续修订。原BOOT-A01明确要求‘不只挑兑现目标’、明确首次目标/修订/达标分母。",
+      "impact": "D2=5及公司总分80不能批准；若完整目标达标率低于2/3或呈系统性偏差，D2需按原档位重评，并检查诚信17与战略稳定13是否出现反向事实。",
+      "recommendation": "仅补三年正式全年Outlook中所有可复算主要指标的首次值、重大修订、实际值和统一达标口径，明确年度或目标级分母；再按BOOT-A01档位规则选分，不新增研究域。"
+    },
+    {
+      "severity": "P1",
+      "location": "BOOT-A08 / facts-crisis.json / repair-v1 workpaper management:危机处理能力",
+      "claim": "危机补证证明了真实事件、初期行动和Hazen团队连续性，但没有登记恢复结果与可持续机制，尚不足以满足裁决对7分的完整条件。",
+      "evidence": "2020-04-09 8-K证明门店/工时调整、约40%员工furlough、撤回指引、CEO及高管降薪、奖金递延和董事放弃retainer；FY2021 10-K摘录证明疫情风险、数字平台基础及Hazen当时在任。新增facts未列复店/复岗、流动性和债务变化、经营恢复结果，亦未把后续数字渠道或运营机制与危机行动建立可核因果关系。BOOT-A08要求行动、恢复结果和当前团队连续性同时闭合后方可取7。",
+      "impact": "管理层危机处理7分和管理层总分79不能批准；这属于证据链未闭合，不得退回任意6分或因缺证扣为5分。",
+      "recommendation": "在既定FY2020-FY2022官方原件范围内补最小结果链：关键门店/员工恢复节点、流动性或债务结果、经营/电商恢复指标及持续机制，并准确归属Conroy与Hazen职责；若仍无法闭合，按BOOT-A08携单一ID回原裁决。"
+    }
+  ],
+  "score_and_qualification": {
+    "arithmetic_check": "修复底稿分项独立加总为公司80、管理层79、合计159，与check一致。",
+    "approved_scores": null,
+    "score_state": "pending",
+    "qualification": "pending",
+    "reason": "A01可能改变公司D2及公司总分，A08可能改变管理层危机处理及管理层总分；候选合计159虽表面超过B_GROWTH 150门槛且单项超过70，但原验收条件未全部关闭，不能据机械通过批准资格。",
+    "watchlist_action": "none"
+  },
+  "coverage": {
+    "scope": "仅复查BOOT-A01至BOOT-A10及其同源联动；未重启未变化评分研究，未复查A11，未读取另一审核意见，未审核三份最终长文。",
+    "accepted": [
+      "BOOT-A02",
+      "BOOT-A03",
+      "BOOT-A04",
+      "BOOT-A05",
+      "BOOT-A06",
+      "BOOT-A07",
+      "BOOT-A09",
+      "BOOT-A10"
+    ],
+    "open": [
+      "BOOT-A01",
+      "BOOT-A08"
+    ],
+    "not_in_scope": [
+      "BOOT-A11"
+    ],
+    "independent_recalculations": [
+      "FY2020至FY2026收入累计增长166.5475%",
+      "关联采购占同期营收约1.9676%/1.9884%/1.6549%",
+      "七年OCF/净利简单均值1.129680、近三年1.257091",
+      "七年OCF减现金Capex为正4/7年",
+      "FY2024/FY2025/FY2026收入除期末人数约147522.92/183760.00/177469.21美元，最新同比-3.4234%",
+      "经营与融资租赁现值合计806.049百万美元",
+      "公司及管理层分项加总80/79"
+    ]
+  },
+  "uncovered": [
+    "BOOT-A01要求的三年全目标、重大修订及统一达标分母尚未形成。",
+    "BOOT-A08要求的危机恢复结果及可持续机制尚未形成。",
+    "BOOT-A11由原事实审核员单独验收，本文件不作结论。"
+  ]
+}

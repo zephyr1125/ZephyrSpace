@@ -1,0 +1,15 @@
+{
+  "status": "mechanically_checked_pending_review",
+  "errors": [],
+  "warnings": [],
+  "scores": {
+    "cScore": 82,
+    "mScore": 77
+  },
+  "inputs": {
+    "data/reviews/boot-barn-2026-09-21/facts-financial.json": "bf11de4f5c6a9b42036b73e0066c8b8ff609c63cad47237f954708b59707d7c2",
+    "data/reviews/boot-barn-2026-09-21/sources-financial.json": "79bb929869a71f3262a93d04bfb24b35abece951146cbbb61a535fc6ce5add7c",
+    "data/reviews/boot-barn-2026-09-21/facts-governance.json": "d05c0544e84eaa2217cbf96525b644ce33c110a774bfb1f20b38ce40d826491c",
+    "data/reviews/boot-barn-2026-09-21/sources-governance.json": "dd51409fe4db047660510dfffc00880766a83e1183125040c8c918ccf521e221"
+  }
+}

@@ -1,0 +1,1215 @@
+{
+  "schema_version": 1,
+  "company": "Boot Barn",
+  "ticker": "BOOT.US",
+  "cutoff": "2026-09-21",
+  "stage": "full_report_terminal_defer",
+  "decision": "defer",
+  "research_state": "pending",
+  "score_state": "approved",
+  "research_status": "execution_incomplete",
+  "delivery_state": "blocked_by_valuation_research",
+  "publish_allowed": false,
+  "basis": "评分80/79/159已批准，最高分数门槛候选B_GROWTH；首次完整三稿双复核已执行，但新估值参数依据未达到验收要求。C003为研究缺口且本run一次合并修复及唯一有界例外已用尽，不能另开估值研究修复轮次。正式目标价、确定性、买入价均撤回为null，既非质量否决，也不等于完整三件套完成。",
+  "base_workpaper": "data/reviews/boot-barn-2026-09-21/repair-v1/workpaper.json",
+  "base_workpaper_sha256": "4BB3B12EFA39C70DEB9086809DDA942FCB78F7E42BCA4D5DD78A6749E579E8D1",
+  "anonymous_candidates": "data/reviews/boot-barn-2026-09-21/anonymous/candidates.json",
+  "anonymous_candidates_sha256": "553929e6798f0f62b481422c92f059be1ac42283a083dd1ffe20658c7036f485",
+  "review_refs": [
+    "data/reviews/boot-barn-2026-09-21/review-facts-score.json",
+    "data/reviews/boot-barn-2026-09-21/review-reasoning-score.json",
+    "data/reviews/boot-barn-2026-09-21/review-facts-score-recheck.json",
+    "data/reviews/boot-barn-2026-09-21/review-reasoning-score-recheck.json",
+    "data/reviews/boot-barn-2026-09-21/review-facts-score-exception.json",
+    "data/reviews/boot-barn-2026-09-21/review-reasoning-score-exception.json"
+  ],
+  "review_binding_note": "匿名裁决期间未获取审核员身份或具名审核路径；批准阶段由主任务提供验收记录的精确路径，不读取来源映射。",
+  "candidate_dispositions": [
+    {
+      "candidate_id": "C001",
+      "disposition": "部分成立",
+      "reason": "证据缺口成立；不接受在公开资料未取到时自动设null。",
+      "lane": "research",
+      "acceptance_ids": [
+        "BOOT-A01"
+      ],
+      "source_refs": [
+        "score-rules.md:D2",
+        "BOOT-GOV-STRAT-001",
+        "BOOT-SEC-10K-2024",
+        "BOOT-SEC-10K-2025",
+        "BOOT-SEC-10K-2026"
+      ]
+    },
+    {
+      "candidate_id": "C002",
+      "disposition": "部分成立",
+      "reason": "新店模型遗漏成立，但目标回本非实际cohort回报，不据此自动加分。",
+      "lane": "research",
+      "acceptance_ids": [
+        "BOOT-A03"
+      ],
+      "source_refs": [
+        "BOOT-SEC-10K-2026:Store economics及new store model",
+        "BOOT-SEC-10Q-Q1FY27:Leases附注及Liquidity and Capital Resources"
+      ]
+    },
+    {
+      "candidate_id": "C003",
+      "disposition": "部分成立",
+      "reason": "遗漏及F3小瑕疵成立；未证不公允或利益输送，不自动扣管理层诚信。",
+      "lane": "research",
+      "acceptance_ids": [
+        "BOOT-A04"
+      ],
+      "source_refs": [
+        "BOOT-SEC-DEF-2026:Certain Relationships and Related Party Transactions pp.66-67"
+      ]
+    },
+    {
+      "candidate_id": "C004",
+      "disposition": "部分成立",
+      "reason": "缺口成立，锁三年对照后按条件选档。",
+      "lane": "research",
+      "acceptance_ids": [
+        "BOOT-A01"
+      ],
+      "source_refs": [
+        "score-rules.md:D2",
+        "BOOT-GOV-STRAT-001",
+        "BOOT-SEC-10K-2024",
+        "BOOT-SEC-10K-2025",
+        "BOOT-SEC-10K-2026"
+      ]
+    },
+    {
+      "candidate_id": "C005",
+      "disposition": "部分成立",
+      "reason": "公司增长与行业增长混同成立；缺成长证据不自动证明成熟。",
+      "lane": "research",
+      "acceptance_ids": [
+        "BOOT-A02"
+      ],
+      "source_refs": [
+        "score-rules.md:B4",
+        "BOOT-FIN-ANNUAL",
+        "BOOT-SEC-10K-2026:Competition及Our Growth Strategies"
+      ]
+    },
+    {
+      "candidate_id": "C006",
+      "disposition": "成立",
+      "reason": "无MinerU载体不是会计风险；官方HTML已经提供审计和政策证据。",
+      "lane": "research",
+      "acceptance_ids": [
+        "BOOT-A05"
+      ],
+      "source_refs": [
+        "BOOT-SEC-10K-2026:Auditor report pp.55-56及Note 2",
+        "BOOT-SEC-10Q-Q1FY27:Critical Accounting Policies and Estimates"
+      ]
+    },
+    {
+      "candidate_id": "C007",
+      "disposition": "成立",
+      "reason": "公司扩店增长不能证明行业成长期，且FY2020金额错配。",
+      "lane": "research",
+      "acceptance_ids": [
+        "BOOT-A02"
+      ],
+      "source_refs": [
+        "score-rules.md:B4",
+        "BOOT-FIN-ANNUAL",
+        "BOOT-SEC-10K-2026:Competition及Our Growth Strategies"
+      ]
+    },
+    {
+      "candidate_id": "C008",
+      "disposition": "部分成立",
+      "reason": "遗漏成立，资本约束需补齐；无需因同一现金承诺重复扣分。",
+      "lane": "research",
+      "acceptance_ids": [
+        "BOOT-A03"
+      ],
+      "source_refs": [
+        "BOOT-SEC-10K-2026:Store economics及new store model",
+        "BOOT-SEC-10Q-Q1FY27:Leases附注及Liquidity and Capital Resources"
+      ]
+    },
+    {
+      "candidate_id": "C009",
+      "disposition": "成立",
+      "reason": "Q1回购金额的确定性展示错误。",
+      "lane": "delivery",
+      "acceptance_ids": [
+        "BOOT-A11"
+      ],
+      "source_refs": [
+        "BOOT-SEC-10Q-Q1FY27:cash flow statement p.6及Issuer Purchases"
+      ]
+    },
+    {
+      "candidate_id": "C010",
+      "disposition": "成立",
+      "reason": "现金流理由混用期间并错列年份；4分缺乏优于基本达标档的证据。",
+      "lane": "research",
+      "acceptance_ids": [
+        "BOOT-A06"
+      ],
+      "source_refs": [
+        "BOOT-FIN-ANNUAL",
+        "BOOT-FIN-TREND",
+        "BOOT-SEC-10K-2024",
+        "BOOT-SEC-10K-2025",
+        "BOOT-SEC-10K-2026",
+        "BOOT-SEC-10Q-Q1FY27:lease supplemental cash flows"
+      ]
+    },
+    {
+      "candidate_id": "C011",
+      "disposition": "成立",
+      "reason": "员工序列已披露，人均收入呈先升后降，满档理由不成立。",
+      "lane": "research",
+      "acceptance_ids": [
+        "BOOT-A07"
+      ],
+      "source_refs": [
+        "BOOT-SEC-10K-2024:Our employees",
+        "BOOT-SEC-10K-2025:Human capital management",
+        "BOOT-SEC-10K-2026:Human capital management"
+      ]
+    },
+    {
+      "candidate_id": "C012",
+      "disposition": "部分成立",
+      "reason": "原6分论证无效；先补可得历史，不能从当前团队任期短断言无危机经验。",
+      "lane": "research",
+      "acceptance_ids": [
+        "BOOT-A08"
+      ],
+      "source_refs": [
+        "score-rules.md:管理层危机处理记录及评价标准",
+        "BOOT-FIN-TARIFF",
+        "BOOT-FIN-LATEST"
+      ]
+    },
+    {
+      "candidate_id": "C013",
+      "disposition": "成立",
+      "reason": "员工序列已披露，人均收入呈先升后降，满档理由不成立。",
+      "lane": "research",
+      "acceptance_ids": [
+        "BOOT-A07"
+      ],
+      "source_refs": [
+        "BOOT-SEC-10K-2024:Our employees",
+        "BOOT-SEC-10K-2025:Human capital management",
+        "BOOT-SEC-10K-2026:Human capital management"
+      ]
+    },
+    {
+      "candidate_id": "C014",
+      "disposition": "部分成立",
+      "reason": "原3分论证不足成立；无订阅及低转换成本本身不证明不具高复购，拒绝机械判1。",
+      "lane": "research",
+      "acceptance_ids": [
+        "BOOT-A09"
+      ],
+      "source_refs": [
+        "score-rules.md:B2盈利机制及评分表",
+        "BOOT-SEC-10K-2026:Loyal customer base及产品/客户构成"
+      ]
+    },
+    {
+      "candidate_id": "C015",
+      "disposition": "部分成立",
+      "reason": "继任误归因成立；同一事实可评价不同维度，但不得重复惩罚并不存在的不稳定。",
+      "lane": "research",
+      "acceptance_ids": [
+        "BOOT-A10"
+      ],
+      "source_refs": [
+        "BOOT-GOV-SRC-8K-CONROY-20241028:Item 5.02",
+        "BOOT-GOV-SRC-IR-HAZEN-20250505",
+        "BOOT-GOV-SRC-8K-STARRETT-20260105:Item 5.02",
+        "BOOT-SEC-DEF-2026:Long-term incentives pp.27-28及Burn Rate p.53",
+        "BOOT-SEC-10K-2026:Talent Development"
+      ]
+    },
+    {
+      "candidate_id": "C016",
+      "disposition": "成立",
+      "reason": "现金流理由混用期间并错列年份；4分缺乏优于基本达标档的证据。",
+      "lane": "research",
+      "acceptance_ids": [
+        "BOOT-A06"
+      ],
+      "source_refs": [
+        "BOOT-FIN-ANNUAL",
+        "BOOT-FIN-TREND",
+        "BOOT-SEC-10K-2024",
+        "BOOT-SEC-10K-2025",
+        "BOOT-SEC-10K-2026",
+        "BOOT-SEC-10Q-Q1FY27:lease supplemental cash flows"
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "id": "BOOT-A01",
+      "candidate_ids": [
+        "C001",
+        "C004"
+      ],
+      "severity": "P1",
+      "lane": "research",
+      "status": "closed",
+      "reason": "D2上限不是自动得分；访问量结果没有事前目标，属于公开资料尚未提取。",
+      "acceptance": "1. 定向从FY2023-FY2025年报及同期官方全年业绩指引提取对FY2024-FY2026的事前年度目标，对照实际；至少连续三年，明确首次目标、后续修订和达标分母，不只挑兑现目标。\n2. 优先核开店、销售、同店或EPS等公司实际提出的目标；若以开店作为连续战略目标，须解释其代表性并披露其他明显未达目标。尝试管理层原话，记录来源定位，不需要重复全域检索。\n3. 依原规则：年度达标率至少2/3且有相应原话验证取5；只能年报间接验证取4上限；约50%取3；持续落空取0。其他达标率须解释与相邻档匹配，不机械插值。确实未披露且无法间接验证才提交有据边界，不用公开待查作null终局。\n4. 对管理层诚信与透明度、战略稳定性作同源联动检查；若无反向新事实，分别保留17、13，不以D2补表额外奖励。",
+      "source_refs": [
+        "score-rules.md:D2",
+        "BOOT-GOV-STRAT-001",
+        "BOOT-SEC-10K-2024",
+        "BOOT-SEC-10K-2025",
+        "BOOT-SEC-10K-2026"
+      ],
+      "affected_items": [
+        "company:D2",
+        "management:诚信与透明度",
+        "management:战略稳定性"
+      ],
+      "recheck_disposition": "closed_by_bounded_exception",
+      "verification_refs": [
+        "data/reviews/boot-barn-2026-09-21/review-facts-score-exception.json",
+        "data/reviews/boot-barn-2026-09-21/review-reasoning-score-exception.json"
+      ],
+      "verification_basis": "唯一有界例外的两路独立验收均通过，findings为空，均绑定最终底稿哈希。原选档及联动条件闭合。",
+      "previous_remaining_reason": "首发Outlook确含同店、利润和资本投入约束。现修复只登记开店与销售，无后续重大修订记录；以开店3/3替代年度达标率，代表性及反证覆盖未充分交代。原验收第1、2条尚未全满足；不认定已证策略失信，也不自动降分。"
+    },
+    {
+      "id": "BOOT-A02",
+      "candidate_ids": [
+        "C005",
+        "C007"
+      ],
+      "severity": "P1",
+      "lane": "research",
+      "status": "closed",
+      "reason": "公司扩店增长不能证明行业成长期，且FY2020金额错配。",
+      "acceptance": "1. 更正FY2020收入845.575百万美元、FY2026收入2253.859百万美元，累计增长166.5475%；893.491百万美元属于FY2021，152.3%为另一窗口。\n2. 仅补行业生命周期/TAM决定性证据：优先既有官方10-K竞争章节和公司IR引用的行业规模原始来源；区分公司1200店白空间和行业增长。完整行业报告采购或全域市场研究不是验收条件。\n3. 若可核行业成长期且增长主要内生，B4=5；若证据为长期存在的分散专业市场、需求稳定及份额整合，B4=3。现有Competition原文支持后者的竞争结构，但不能只因缺成长期数据就强制3。作者以窄范围补证锁定一个点值并说明相邻档；新证据显示衰退才回原裁决，不预设衰退。",
+      "source_refs": [
+        "score-rules.md:B4",
+        "BOOT-FIN-ANNUAL",
+        "BOOT-SEC-10K-2026:Competition及Our Growth Strategies"
+      ],
+      "affected_items": [
+        "company:B4"
+      ],
+      "verification_refs": [
+        "data/reviews/boot-barn-2026-09-21/review-facts-score-recheck.json",
+        "data/reviews/boot-barn-2026-09-21/review-reasoning-score-recheck.json"
+      ],
+      "verification_basis": "一次合并修复两路共同通过，例外阶段保留其结论及分项，真实路径已绑定。"
+    },
+    {
+      "id": "BOOT-A03",
+      "candidate_ids": [
+        "C002",
+        "C008"
+      ],
+      "severity": "P1",
+      "lane": "research",
+      "status": "closed",
+      "reason": "新店模型公开但实际cohort回报未披露；遗漏未开始租赁承诺，须统一资本口径而非多次扣减。",
+      "acceptance": "1. 登记FY2026新店模型：12000–15000平方英尺、平均净现金投资约1.7百万美元、目标平均回收期3年；明确目标不是实际cohort ROIC。\n2. 列明FY2027净Capex预测125–130百万美元、预计房东补贴47.6百万美元，相应补贴前现金投入预测172.6–177.6百万美元；不把未来补贴当作已收到，不将补贴再次扣除。Q1现金Capex51.089百万美元为实际值，与全年预测分开。\n3. 列明Q1经营租赁现值792.817、融资租赁现值13.232、合计806.049百万美元；另列尚未开始租赁未折现承诺157.7百万美元，不与现值直接混成一个净债务数。经营租金已在OCF中，融资租赁本金另列；不重复减租金与租赁负债。\n4. E4维持1，保留Q1 Capex同比62.3832%且未拆分所触发0.5扣分（1.5至1）；F2.5维持2；资本配置能力维持19。新店模型是目标，改善信息充分性却不足以把目标升级为已实现资本回报；新增承诺亦未证明配置失控，故不再扣分。",
+      "source_refs": [
+        "BOOT-SEC-10K-2026:Store economics及new store model",
+        "BOOT-SEC-10Q-Q1FY27:Leases附注及Liquidity and Capital Resources"
+      ],
+      "affected_items": [
+        "company:E4",
+        "company:F2.5",
+        "management:资本配置能力"
+      ],
+      "verification_refs": [
+        "data/reviews/boot-barn-2026-09-21/review-facts-score-recheck.json",
+        "data/reviews/boot-barn-2026-09-21/review-reasoning-score-recheck.json"
+      ],
+      "verification_basis": "一次合并修复两路共同通过，例外阶段保留其结论及分项，真实路径已绑定。"
+    },
+    {
+      "id": "BOOT-A04",
+      "candidate_ids": [
+        "C003"
+      ],
+      "severity": "P1",
+      "lane": "research",
+      "status": "closed",
+      "reason": "持续核心采购关联关系是必须评价的治理摩擦；审批披露不等于完全清洁，也不是已证利益输送。",
+      "acceptance": "1. 新增事实记录Proxy Transactions involving John Grijalva：FY2024/25/26供应商采购32.8/38.0/37.3百万美元，供应商支付佣金2.2/2.5/2.6百万美元，部分转付其他代表；区分公司采购、供应商佣金及高管家庭最终所得。\n2. 采购额/同期营收约1.9676%/1.9884%/1.6549%，只是规模参照，不冒充占采购总额；未有真实采购总额时不以COGS冒充。记录审计委员会/无利害关系委员审批政策及本次交易按政策获批，独立公允价格比较未披露则保留未知。\n3. F3由3改2：持续且与首席商品官家庭利益相关，属于小瑕疵；管理层诚信与透明度保留17：主动披露、获批和规模可辨认，没有虚假披露或资金占用证据，不把同一冲突自动再次扣分。",
+      "source_refs": [
+        "BOOT-SEC-DEF-2026:Certain Relationships and Related Party Transactions pp.66-67"
+      ],
+      "affected_items": [
+        "company:F3",
+        "management:诚信与透明度"
+      ],
+      "verification_refs": [
+        "data/reviews/boot-barn-2026-09-21/review-facts-score-recheck.json",
+        "data/reviews/boot-barn-2026-09-21/review-reasoning-score-recheck.json"
+      ],
+      "verification_basis": "一次合并修复两路共同通过，例外阶段保留其结论及分项，真实路径已绑定。"
+    },
+    {
+      "id": "BOOT-A05",
+      "candidate_ids": [
+        "C006"
+      ],
+      "severity": "P1",
+      "lane": "research",
+      "status": "closed",
+      "reason": "无MinerU载体不是会计风险；官方HTML已经提供审计和政策证据。",
+      "acceptance": "1. 登记Deloitte自2012年审计、无保留意见、存货计价CAM及程序：账龄、低价销售、当前售价、数学及回溯测试；登记最新10-Q无重大关键政策/估计变更。\n2. E5.5由2改3。常规存货CAM无异常描述，现有计提政策与审计测试未见具体不足；这是依据可得审计证据选档，不是保证未来无减值。删除格式缺失和高判断领域本身导致扣分的表述。",
+      "source_refs": [
+        "BOOT-SEC-10K-2026:Auditor report pp.55-56及Note 2",
+        "BOOT-SEC-10Q-Q1FY27:Critical Accounting Policies and Estimates"
+      ],
+      "affected_items": [
+        "company:E5.5"
+      ],
+      "verification_refs": [
+        "data/reviews/boot-barn-2026-09-21/review-facts-score-recheck.json",
+        "data/reviews/boot-barn-2026-09-21/review-reasoning-score-recheck.json"
+      ],
+      "verification_basis": "一次合并修复两路共同通过，例外阶段保留其结论及分项，真实路径已绑定。"
+    },
+    {
+      "id": "BOOT-A06",
+      "candidate_ids": [
+        "C010",
+        "C016"
+      ],
+      "severity": "P1",
+      "lane": "research",
+      "status": "closed",
+      "reason": "现金流理由混用期间并错列年份；4分缺乏优于基本达标档的证据。",
+      "acceptance": "1. 按年度合并OCF/净利重算七年0.527998/2.625568/0.461751/0.521169/1.606030/0.815399/1.349845，简单均值1.129680；FY2024-FY2026近三年均值1.257091；低于1为FY2020/22/23/25。核回年度现金流量表，尤其索引的早年映射。\n2. OCF减现金Capex七年为-11.878/127.498/28.421/-35.647/117.298/-0.753/126.342百万美元，4/7年正；说明非标准FCF口径、经营租赁现金已在OCF内，融资租赁本金另列。\n3. E2由4改3：近期及长期平均现金转化基本达标，但全周期持续正FCF条件不成立，不能用FY2021异常高比率掩盖波动；库存及扩店解释波动而不消除波动，不认定造假。",
+      "source_refs": [
+        "BOOT-FIN-ANNUAL",
+        "BOOT-FIN-TREND",
+        "BOOT-SEC-10K-2024",
+        "BOOT-SEC-10K-2025",
+        "BOOT-SEC-10K-2026",
+        "BOOT-SEC-10Q-Q1FY27:lease supplemental cash flows"
+      ],
+      "affected_items": [
+        "company:E2"
+      ],
+      "verification_refs": [
+        "data/reviews/boot-barn-2026-09-21/review-facts-score-recheck.json",
+        "data/reviews/boot-barn-2026-09-21/review-reasoning-score-recheck.json"
+      ],
+      "verification_basis": "一次合并修复两路共同通过，例外阶段保留其结论及分项，真实路径已绑定。"
+    },
+    {
+      "id": "BOOT-A07",
+      "candidate_ids": [
+        "C011",
+        "C013"
+      ],
+      "severity": "P1",
+      "lane": "research",
+      "status": "closed",
+      "reason": "员工序列已披露，人均收入呈先升后降，满档理由不成立。",
+      "acceptance": "1. 登记FY2024全职3100/兼职8200、FY2025全职3300/兼职7100、FY2026全职3800/兼职8900；期末总人数11300/10400/12700，非平均FTE。\n2. 收入除期末人数约147522.92/183760.00/177469.21美元，最新同比下降3.4234%；说明兼职及开店时点影响，不将其等同真实单位劳动生产率恶化。\n3. D5由3改2，采用混合信号；专业零售研发指标不适用，不因无研发扣分，不用缺研发或营收总量替代人效。",
+      "source_refs": [
+        "BOOT-SEC-10K-2024:Our employees",
+        "BOOT-SEC-10K-2025:Human capital management",
+        "BOOT-SEC-10K-2026:Human capital management"
+      ],
+      "affected_items": [
+        "company:D5"
+      ],
+      "verification_refs": [
+        "data/reviews/boot-barn-2026-09-21/review-facts-score-recheck.json",
+        "data/reviews/boot-barn-2026-09-21/review-reasoning-score-recheck.json"
+      ],
+      "verification_basis": "一次合并修复两路共同通过，例外阶段保留其结论及分项，真实路径已绑定。"
+    },
+    {
+      "id": "BOOT-A08",
+      "candidate_ids": [
+        "C012"
+      ],
+      "severity": "P1",
+      "lane": "research",
+      "status": "closed",
+      "reason": "季度波动与关税退款本身不能证明危机处理；现任CEO任期短也不能抹掉连续团队的历史。",
+      "acceptance": "1. 仅补FY2020-FY2022疫情/供应链真实压力期官方年报或公告：事件、管理行动（库存/现金/员工/门店/数字渠道）、反应时间、结果和可持续机制，区分Conroy当时CEO与Hazen当时数字业务职责，不从恢复数字倒推行动。\n2. 若核得及时、透明的沟通及明确流动性/门店/数字运营行动、恢复结果和当前团队连续性，危机处理取7；此档代表有效应对、非卓越跨危机记录。若行动有显著迟缓或代价且结果混合，取5并列具体反证；不能因未知选5。若原件支持更高/更低实质结论或有界检索仍无可评价危机，只携本ID请求原裁决定向确认，不能自行用6或全域区间占位。\n3. 相关历史如改变资本配置/组织评价，限本台账关联项说明联动；不得新增无关研究轮次。",
+      "source_refs": [
+        "score-rules.md:管理层危机处理记录及评价标准",
+        "BOOT-FIN-TARIFF",
+        "BOOT-FIN-LATEST"
+      ],
+      "affected_items": [
+        "management:危机处理能力",
+        "management:资本配置能力",
+        "management:组织与人才能力"
+      ],
+      "recheck_disposition": "closed_by_bounded_exception",
+      "verification_refs": [
+        "data/reviews/boot-barn-2026-09-21/review-facts-score-exception.json",
+        "data/reviews/boot-barn-2026-09-21/review-reasoning-score-exception.json"
+      ],
+      "verification_basis": "唯一有界例外的两路独立验收均通过，findings为空，均绑定最终底稿哈希。原选档及联动条件闭合。",
+      "previous_remaining_reason": "2020-04-09行动及团队连续性已经成立；facts-crisis-003主要摘风险与平台背景，尚未登记经营/流动性结果及可持续机制，修复理由不能闭合原验收第1、2条的7分条件。FY2021原件存在可直接补入的运营机制与电商指标，不属于不可知。"
+    },
+    {
+      "id": "BOOT-A09",
+      "candidate_ids": [
+        "C014"
+      ],
+      "severity": "P1",
+      "lane": "research",
+      "status": "closed",
+      "reason": "原理由仅凭替换需求不足；但无订阅/无转换成本并不排除高复购，不能据此直接判1。",
+      "acceptance": "1. 登记FY2026 Loyal customer base：1080万过去三年购买会员，销售多数来自会员；明确这不是会员复购率或年购买频率。\n2. 定向核公司10-K/官方IR对工作用品刚性、品类构成、客户重复购买或购买频率的实际披露。若高复购或刚性需求对整体盈利具有实质支撑，B2=3并写正反证；若可核主要为逐次可选零售且无高复购特征，按一次性购买档B2=1。非项目制不能为求中间值取2。\n3. 未找到单一复购率不是自动降分条件，可以用多项经营证据作定性判断；如两种经济解释仍不能选择，提交本ID具体冲突，不凭无订阅机械降分、不填任意区间。",
+      "source_refs": [
+        "score-rules.md:B2盈利机制及评分表",
+        "BOOT-SEC-10K-2026:Loyal customer base及产品/客户构成"
+      ],
+      "affected_items": [
+        "company:B2"
+      ],
+      "verification_refs": [
+        "data/reviews/boot-barn-2026-09-21/review-facts-score-recheck.json",
+        "data/reviews/boot-barn-2026-09-21/review-reasoning-score-recheck.json"
+      ],
+      "verification_basis": "一次合并修复两路共同通过，例外阶段保留其结论及分项，真实路径已绑定。"
+    },
+    {
+      "id": "BOOT-A10",
+      "candidate_ids": [
+        "C015"
+      ],
+      "severity": "P1",
+      "lane": "research",
+      "status": "closed",
+      "reason": "正常离任、内部继任和过渡董事长恢复原职被当作多个不稳定事件，缺乏依据。",
+      "acceptance": "1. 保留Conroy通知日2024-10-22、生效日2024-11-22及无分歧声明；Hazen自2018年CDO、2024-11代理、2025-05正式；Starrett2026-01回任非执行。串联既有五年C-suite记录，区分一项交接及多份公告，不当作密集离职。\n2. 加入Proxy三年累计EPS PSU、FY2024批次业绩达目标109%/归属146%、三年平均burn rate0.60%及公司培训/内部晋升机制；不能把146%理解为EPS增幅。\n3. F1由3改5：正常内部继任、经验团队、已核范围未见腐败及业绩绑定激励符合原满档；组织与人才由7改8，稳定继任和可执行训练/激励支持较强档，跨周期人才保留质量不冒充已证卓越。真实人才流失率未知只限制置信度，不作为扣分事件；解释8分相较7分改善来自已核继任机制，相较10分仍缺卓越结果证据。若五年原件出现新实质异常，按原ID回裁决，不能隐瞒。",
+      "source_refs": [
+        "BOOT-GOV-SRC-8K-CONROY-20241028:Item 5.02",
+        "BOOT-GOV-SRC-IR-HAZEN-20250505",
+        "BOOT-GOV-SRC-8K-STARRETT-20260105:Item 5.02",
+        "BOOT-SEC-DEF-2026:Long-term incentives pp.27-28及Burn Rate p.53",
+        "BOOT-SEC-10K-2026:Talent Development"
+      ],
+      "affected_items": [
+        "company:F1",
+        "management:组织与人才能力"
+      ],
+      "verification_refs": [
+        "data/reviews/boot-barn-2026-09-21/review-facts-score-recheck.json",
+        "data/reviews/boot-barn-2026-09-21/review-reasoning-score-recheck.json"
+      ],
+      "verification_basis": "一次合并修复两路共同通过，例外阶段保留其结论及分项，真实路径已绑定。"
+    },
+    {
+      "id": "BOOT-A11",
+      "candidate_ids": [
+        "C009"
+      ],
+      "severity": "P2",
+      "lane": "delivery",
+      "status": "closed",
+      "reason": "Q1回购金额的确定性展示错误。",
+      "acceptance": "1. F2=3不变，金额统一为现金流量表25.003百万美元，或发行人回购表约25.0百万美元（不含消费税）；不再写25.3。原事实复核员仅核该字段及引用，主任务核新版本。",
+      "source_refs": [
+        "BOOT-SEC-10Q-Q1FY27:cash flow statement p.6及Issuer Purchases"
+      ],
+      "affected_items": [
+        "company:F2"
+      ],
+      "classified_by": "adjudicator",
+      "no_decision_impact": true,
+      "no_decision_impact_basis": "已直接核Q1现金流量表25.003百万美元；F2=3不依赖0.297百万美元差异，资本配置与股东友好判断均不使用该差额。仅修正已确定金额，真实来源和选档无争议。",
+      "verification_refs": [
+        "data/reviews/boot-barn-2026-09-21/review-facts-score-recheck.json"
+      ],
+      "verification_basis": "原事实复核员已对回购25.003百万美元及F2=3作纯交付定向验收；最终底稿沿用。"
+    },
+    {
+      "id": "BOOT-V01",
+      "candidate_namespace": "anonymous-full",
+      "candidate_ids": [
+        "C001",
+        "C004"
+      ],
+      "severity": "P2",
+      "lane": "delivery",
+      "status": "closed",
+      "classified_by": "adjudicator",
+      "no_decision_impact": true,
+      "no_decision_impact_basis": "直接从已锁输入独立复算基准115.8140349、乐观150.836125百万美元；workpaper、output及正文使用这些正确值。仅facts中的两个文字结果115.69/150.51有误，修正不改任何模型输入、公式、权重或评分。估值仍因另项V03未获批准。",
+      "reason": "确定性预测桥计算结果转录笔误，真实输入、公式及原件来源已核，不涉及新增估计。",
+      "acceptance": "1. 新版证据记录将基准结果改为115.814百万美元、乐观150.836百万美元，保留实际/预测标签和原公式；新ID或有效版本清单须明确替换，不改冻结v2。\n2. 如生成新的收尾草稿，使用新证据重装配并核所有引用及哈希；原事实审核员只核两个数字和引用。不得因此宣称估值已批准。",
+      "source_refs": [
+        "data/reviews/boot-barn-2026-09-21/valuation-facts-v2.json#/2",
+        "data/reviews/boot-barn-2026-09-21/valuation-input-v2.json",
+        "data/reviews/boot-barn-2026-09-21/valuation-output-v2.json",
+        "data/reviews/boot-barn-2026-09-21/workpaper-v2.json",
+        "data/reviews/boot-barn-2026-09-21/build-v2/valuation.md"
+      ],
+      "verification_refs": [
+        "data/reviews/boot-barn-2026-09-21/review-facts-delivery-closeout.json"
+      ],
+      "verification_basis": "原事实复核员完成确定性交付定向验收，修正数字或链接及新版本哈希；不涉及估值研究批准。"
+    },
+    {
+      "id": "BOOT-V02",
+      "candidate_namespace": "anonymous-full",
+      "candidate_ids": [
+        "C002"
+      ],
+      "severity": "P2",
+      "lane": "delivery",
+      "status": "closed",
+      "classified_by": "adjudicator",
+      "no_decision_impact": true,
+      "no_decision_impact_basis": "已核01-公司/Boot Barn(BOOT).md存在且01-公司/Boot Barn.md不存在；双方是同一BOOT主体的链接目标校正，不改研究实体、事实或评分。",
+      "reason": "三份frontmatter公司链接指向不存在页面。",
+      "acceptance": "在三份叙述源稿将[[01-公司/Boot Barn]]精确改为[[01-公司/Boot Barn(BOOT)]]，生成新版本后由原事实复核员核三处链接及目标存在；不修改公司页，不改冻结build-v2，不授权完整三稿发布。",
+      "source_refs": [
+        "data/reviews/boot-barn-2026-09-21/source/deep.md",
+        "data/reviews/boot-barn-2026-09-21/source/management.md",
+        "data/reviews/boot-barn-2026-09-21/source/valuation.md",
+        "01-公司/Boot Barn(BOOT).md"
+      ],
+      "verification_refs": [
+        "data/reviews/boot-barn-2026-09-21/review-facts-delivery-closeout.json"
+      ],
+      "verification_basis": "原事实复核员完成确定性交付定向验收，修正数字或链接及新版本哈希；不涉及估值研究批准。"
+    },
+    {
+      "id": "BOOT-V03",
+      "candidate_namespace": "anonymous-full",
+      "candidate_ids": [
+        "C003"
+      ],
+      "severity": "P1",
+      "lane": "research",
+      "status": "open",
+      "reason": "PE倍数、Ke及FY2028以后FCFE增长的关键依据缺失，涉及正式模型可靠性，不是表达风格或引用拼写。现有事实只能支持方向，不能唯一或充分支持本组参数；无需证明未来必然实现，但须有可审计假设形成过程。",
+      "acceptance": "本run不再执行研究修复，问题保持open。恢复条件为新run带实质新增估值依据：①12/15/18倍相对经营增长、资本强度及风险的可审计锚（历史或适用可比、或有明确经济推导的替代锚），并说明与DCF不同的信息依据；②Ke的风险构成或可靠替代锚，不能只引用单日股价；③显式期FCFE增长与门店/同店/利润、现金转化及再投资的相容桥，并说明向长期g收敛。无需取得未披露实际cohort结果或证明预测唯一。届时重算三情景、双变量、反向验证、权重、确定性及机械买入价，并完成所需独立验收；撤回价格本身不视为问题关闭。",
+      "source_refs": [
+        "skills/valuation/SKILL.md:方法选择矩阵/计算纪律/方法独立性",
+        "docs/three-report-closeout.md:证据、评分与预测的边界",
+        "data/reviews/boot-barn-2026-09-21/build-v2/valuation.md:103-181",
+        "data/reviews/boot-barn-2026-09-21/workpaper-v2.json#/valuation/models",
+        "data/reviews/boot-barn-2026-09-21/valuation-input-v2.json",
+        "data/reviews/boot-barn-2026-09-21/valuation-facts-v1.json",
+        "data/reviews/boot-barn-2026-09-21/valuation-facts-v2.json"
+      ],
+      "adjudication_details": {
+        "pe": "15倍仅被称为专业零售增长、低杠杆及可选消费风险的分析假设；无历史/可比或其他数值锚。不能把缺历史PE分位本身当错误，但目前连替代依据也没有。PE引用122.92美元收盘价不支持12/15/18倍，55%权重的独立相对定价基础未建立。",
+        "ke": "9.75%可作为有依据的主观必要报酬率，不强制CAPM。但当前未给无风险/风险溢价/beta构成或其他机会成本/风险要求锚；引用市价不提供该判断。",
+        "growth": "首年净利至OCF、Capex、SBC、融资租赁桥可复算；随后12%/12%/8%/8%只是对首年FCFE等比外推。既有17.9%收入增长与1200店白空间不能自行证明现金流在相应再投资下同速增长，长期2.5%也无收敛说明。裁决若自行补完整路径即是在代写新的估值研究。",
+        "forecast_boundary": "不是要求未来事实确定或参数唯一；合理预测分歧可接受，本项是关键参数缺少形成依据。",
+        "calculation": "独立复算PE 96/128.325/160.2；DCF 26.85145054/66.73732670/110.70834974；加权64.88315274/100.61054701/137.92875738及买入75.73961979算术正确，但不批准经济结论。"
+      }
+    }
+  ],
+  "score_repair_scope": [],
+  "metadata_repair_scope": [],
+  "directed_parameters": {
+    "company": {
+      "D5": 2,
+      "E2": 3,
+      "E5.5": 3,
+      "F1": 5,
+      "F3": 2,
+      "E4": 1,
+      "F2.5": 2,
+      "F2": 3
+    },
+    "management": {
+      "诚信与透明度": 17,
+      "资本配置能力": 19,
+      "战略稳定性": 13,
+      "组织与人才能力": 8
+    },
+    "note": "确定修复方向，仍需在新底稿注册证据并验收；非已批准最终分。其余未变分项原值保留，不借修复重做全32项。"
+  },
+  "conditional_items": [],
+  "score_bridge": {
+    "base_company": 81,
+    "base_management": 77,
+    "company_fixed_changes": [
+      {
+        "item": "D5",
+        "before": 3,
+        "after": 2
+      },
+      {
+        "item": "E2",
+        "before": 4,
+        "after": 3
+      },
+      {
+        "item": "E5.5",
+        "before": 2,
+        "after": 3
+      },
+      {
+        "item": "F1",
+        "before": 3,
+        "after": 5
+      },
+      {
+        "item": "F3",
+        "before": 3,
+        "after": 2
+      },
+      {
+        "item": "E4",
+        "before": 1,
+        "after": 1
+      },
+      {
+        "item": "F2.5",
+        "before": 2,
+        "after": 2
+      },
+      {
+        "item": "F2",
+        "before": 3,
+        "after": 3
+      }
+    ],
+    "management_fixed_changes": [
+      {
+        "item": "组织与人才能力",
+        "before": 7,
+        "after": 8
+      }
+    ],
+    "company_formula": "69 + B2 + B4 + D2",
+    "management_formula": "72 + 危机处理能力",
+    "combined_formula": "141 + B2 + B4 + D2 + 危机处理能力",
+    "note": "公司固定变动净额0；管理层固定变动+1。公式移除B2=3、B4=5、D2=4及危机=6的初稿占位。未确定项不能把当前候选值代回充作最终分；本式不是有据上下界。",
+    "current_repair_candidates": {
+      "company": 80,
+      "management": 79,
+      "combined": 159,
+      "approved": false,
+      "note": "repair-v1当时未批准的历史候选；最终批准仅绑定repair-v2及approved_final。"
+    },
+    "remaining_company_formula": "75 + D2",
+    "remaining_management_formula": "72 + 危机处理能力",
+    "remaining_combined_formula": "147 + D2 + 危机处理能力",
+    "linkage_note": "以上剩余公式以诚信17、战略稳定13、资本配置19、组织人才8维持为前提；如限定补证确实改变这些联动项，用实际差额显式加桥并经原ID验收。",
+    "approved_final": {
+      "company": 80,
+      "management": 79,
+      "combined": 159,
+      "company_calculation": "75 + D2(5) = 80",
+      "management_calculation": "72 + 危机处理(7) = 79",
+      "combined_calculation": "80 + 79 = 159",
+      "from_original": {
+        "company": -1,
+        "management": 2,
+        "combined": 1
+      }
+    }
+  },
+  "approved_parameters": {
+    "company_score": 80,
+    "management_score": 79,
+    "combined_score": 159,
+    "target_price": null,
+    "certainty": null,
+    "buy_price": null,
+    "max_position": null,
+    "tier": null
+  },
+  "valuation_approval": {
+    "state": "deferred_unapproved",
+    "approved_scope": [],
+    "currency": "USD",
+    "target_price": null,
+    "certainty": null,
+    "buy_price": null,
+    "quality_stop_approved": false,
+    "reason": "BOOT-V03实质研究缺口，轮次耗尽；未完成正式定价。公司质量未被否决。"
+  },
+  "verification_plan": {
+    "research": "唯一有界例外：triplet_repair_writer从repair-v1完整稿提交局部delta及必要新证据，双路仅复查原BOOT-A01/A08和锁定联动。",
+    "delivery": "BOOT-A11由原事实复核员核金额、引用和F2维持；可随同合并修复交付但不因此重启研究。",
+    "full_reports": "评分批准后才写三份长文；首次三份全文双复核不得省略。",
+    "reopen": "仅本台账选档冲突、原重大问题未关、重大新错或决定性新原件可回原裁决；不以修复名称另开研究轮次。"
+  },
+  "next_trigger": "本run以评分已批准、完整研究执行未完成收尾。恢复须带PE经营/可比或替代经济锚、Ke风险锚、FCFE增长及再投资桥的实质证据进入新run；无需为当前归档或确定性更正另求用户确认。",
+  "adjudication_history": [
+    {
+      "stage": "score_adjudication_first",
+      "decision_sha256_before_update": "5FE73C39C6E9F7F0E6D48AD52CDEC5EF55CBA4178E4949BD68A969026A2E30D6",
+      "base_workpaper": "data/reviews/boot-barn-2026-09-21/workpaper-v1.json",
+      "base_workpaper_sha256": "B5B00D983AA91E6FF4FF27A8AEA2A6B3458560E45FA41478B45CAB7D05BF02AA",
+      "score_repair_scope": [
+        {
+          "group": "company",
+          "item": "D2",
+          "acceptance_ids": [
+            "BOOT-A01"
+          ]
+        },
+        {
+          "group": "management",
+          "item": "诚信与透明度",
+          "acceptance_ids": [
+            "BOOT-A01",
+            "BOOT-A04"
+          ]
+        },
+        {
+          "group": "management",
+          "item": "战略稳定性",
+          "acceptance_ids": [
+            "BOOT-A01"
+          ]
+        },
+        {
+          "group": "company",
+          "item": "B4",
+          "acceptance_ids": [
+            "BOOT-A02"
+          ]
+        },
+        {
+          "group": "company",
+          "item": "E4",
+          "acceptance_ids": [
+            "BOOT-A03"
+          ]
+        },
+        {
+          "group": "company",
+          "item": "F2.5",
+          "acceptance_ids": [
+            "BOOT-A03"
+          ]
+        },
+        {
+          "group": "management",
+          "item": "资本配置能力",
+          "acceptance_ids": [
+            "BOOT-A03",
+            "BOOT-A08"
+          ]
+        },
+        {
+          "group": "company",
+          "item": "F3",
+          "acceptance_ids": [
+            "BOOT-A04"
+          ]
+        },
+        {
+          "group": "company",
+          "item": "E5.5",
+          "acceptance_ids": [
+            "BOOT-A05"
+          ]
+        },
+        {
+          "group": "company",
+          "item": "E2",
+          "acceptance_ids": [
+            "BOOT-A06"
+          ]
+        },
+        {
+          "group": "company",
+          "item": "D5",
+          "acceptance_ids": [
+            "BOOT-A07"
+          ]
+        },
+        {
+          "group": "management",
+          "item": "危机处理能力",
+          "acceptance_ids": [
+            "BOOT-A08"
+          ]
+        },
+        {
+          "group": "management",
+          "item": "组织与人才能力",
+          "acceptance_ids": [
+            "BOOT-A08",
+            "BOOT-A10"
+          ]
+        },
+        {
+          "group": "company",
+          "item": "B2",
+          "acceptance_ids": [
+            "BOOT-A09"
+          ]
+        },
+        {
+          "group": "company",
+          "item": "F1",
+          "acceptance_ids": [
+            "BOOT-A10"
+          ]
+        },
+        {
+          "group": "company",
+          "item": "F2",
+          "acceptance_ids": [
+            "BOOT-A11"
+          ]
+        }
+      ],
+      "metadata_repair_scope": [
+        {
+          "field": "evidence_gaps",
+          "acceptance_ids": [
+            "BOOT-A01",
+            "BOOT-A02",
+            "BOOT-A03",
+            "BOOT-A04",
+            "BOOT-A05",
+            "BOOT-A06",
+            "BOOT-A07",
+            "BOOT-A08",
+            "BOOT-A09",
+            "BOOT-A10"
+          ]
+        }
+      ],
+      "note": "首次16候选及全部原验收正文原样保留；本次仅裁决一次修复后的剩余争议。"
+    },
+    {
+      "stage": "score_recheck_bounded_exception_authorized",
+      "decision_sha256_before_update": "7F765581025081023731734C6B6BC949625A1AB94B95EE3E55F2CB83173D4E85",
+      "base_workpaper": "data/reviews/boot-barn-2026-09-21/repair-v1/workpaper.json",
+      "base_workpaper_sha256": "4BB3B12EFA39C70DEB9086809DDA942FCB78F7E42BCA4D5DD78A6749E579E8D1",
+      "outcome": "唯一有界例外后两路接受A01/A08，评分闭合；候选处置不变。"
+    },
+    {
+      "stage": "score_approved_reports_pending",
+      "decision_sha256_before_update": "478B6B0D5546956365B4C7F3933F30134516B2D2B6071960B477CC5ECBD13563",
+      "outcome": "评分80/79/159获批保持有效；首次新估值全文裁决见full_report_candidate_dispositions。"
+    }
+  ],
+  "anonymous_verification_registry": [
+    {
+      "id": "BOOT-ANON-RECHECK-ALL-PASS",
+      "scope": "BOOT-A01至A11",
+      "result": "all_passed",
+      "provenance": "主任务本次交接确认的一路独立验收；裁决未读具名记录",
+      "binding_status": "bound_after_disputes_resolved",
+      "bound_review_path": "data/reviews/boot-barn-2026-09-21/review-facts-score-recheck.json"
+    },
+    {
+      "id": "BOOT-ANON-RECHECK-REMAINING",
+      "scope": "BOOT-A01至A11",
+      "result": "BOOT-A01/BOOT-A08 open，其他通过",
+      "candidate_path": "data/reviews/boot-barn-2026-09-21/anonymous-recheck/candidates.json",
+      "candidate_sha256": "D5C16BBEE6F1BE3A80B0AC8222946A62F3A3190840FDDF8D7FEC834F4C30309A",
+      "provenance": "主任务交接与匿名剩余候选",
+      "binding_status": "bound_after_disputes_resolved",
+      "bound_review_path": "data/reviews/boot-barn-2026-09-21/review-reasoning-score-recheck.json"
+    }
+  ],
+  "recheck_candidate_dispositions": [
+    {
+      "namespace": "anonymous-recheck",
+      "candidate_id": "C001",
+      "original_acceptance_ids": [
+        "BOOT-A08"
+      ],
+      "disposition": "成立",
+      "lane": "research",
+      "reason": "原条件要求行动、结果、持续机制及责任连续性；当前只完成事件与初期行动，结果链未登记，属实质未关。",
+      "source_refs": [
+        "财报/Boot Barn/Boot Barn COVID 8-K 2020-04-09.html:Items 5.02/8.01",
+        "财报/Boot Barn/Boot Barn FY2021 10-K.html:Our Growth Strategies/MD&A/Liquidity and Capital Resources",
+        "data/reviews/boot-barn-2026-09-21/facts-crisis.json"
+      ],
+      "scope_limit": "接受最小充分结果链，不要求必须同时取得所有复店、复岗、债务、经营及电商指标；不要求证明疫情应对唯一导致恢复。"
+    },
+    {
+      "namespace": "anonymous-recheck",
+      "candidate_id": "C002",
+      "original_acceptance_ids": [
+        "BOOT-A01"
+      ],
+      "disposition": "部分成立",
+      "lane": "research",
+      "reason": "缺重大修订记录、年度分母和代表性说明成立。拒绝把原条件扩大为税率、股数等全部假设均必须独立计分；也不得重复将收入、增长率或净利、EPS当成互相独立投票。",
+      "source_refs": [
+        "data/reviews/boot-barn-2026-09-21/sec-fy2023-guidance.html:Fiscal Year 2024 Outlook",
+        "data/reviews/boot-barn-2026-09-21/sec-fy2024-guidance.html:Fiscal Year 2025 Outlook",
+        "data/reviews/boot-barn-2026-09-21/sec-fy2025-guidance.html:Fiscal Year 2026 Outlook",
+        "data/reviews/boot-barn-2026-09-21/facts-repair-v1.json:BOOT-REP-D2-001"
+      ],
+      "scope_limit": "保留连续三年、首次/重大修订/实际、非选择性反证及年度达标率的原要求；可用核心结果与代表性论证，无须另建全行业背景。"
+    }
+  ],
+  "bounded_exception": {
+    "authorized": true,
+    "exception_number": 1,
+    "maximum_exception_rounds": 1,
+    "assigned_role": "triplet_repair_writer",
+    "original_acceptance_ids": [
+      "BOOT-A01",
+      "BOOT-A08"
+    ],
+    "reason": "一次合并修复与一次双路定向验收后，原重大证据条件未关闭；不是新增偏好或单纯格式问题。",
+    "base_workpaper": "data/reviews/boot-barn-2026-09-21/repair-v1/workpaper.json",
+    "base_sha256": "4BB3B12EFA39C70DEB9086809DDA942FCB78F7E42BCA4D5DD78A6749E579E8D1",
+    "research_scope": "仅原A01/A08及锁定联动；既有证据中补遗漏事实，确有缺原件时只取同范围官方材料。",
+    "preserve": "原16候选、所有原验收ID与正文、不涉本范围的分项及其已验收状态；不写长文、不改历史、不改公司页/索引/Watchlist。",
+    "a01_minimum_application": "在原三年Outlook范围核核心经营结果及任何可能影响整体达标结论的明显落空项、重大修订；解释为何开店可代表战略且不掩盖盈利/同店/投入反证。用相同年度判定原则计算年度达标率，目标级表仅为证据，不改变原2/3年度门槛。Capex目标按净/毛口径匹配，勿直接用现金流毛Capex与扣房东补贴指引比较。",
+    "a08_minimum_application": "从FY2020-FY2022官方材料补至少足以评估应对有效性的经营或流动性结果，并把实际行动与延续机制对应；已见FY2021 Our Growth Strategies明确路边提货、门店退货、门店发货、当日配送及仓库自动化，电商占比18.6%对15.9%，可作为提取起点但占比上升不自动等于电商绝对增长。不要求新增危机或证明现任CEO单独负责全部结果。",
+    "score_rule": "原A01/A08选档条件不变；不能因暂缺材料退回任意6分/5分，也不能以两路票数决定。",
+    "verification": "接手修复后，两路仅按原ID核改变处与必要联动；再由原裁决依原条件终局。无第三次研究修复或新run绕过额度。",
+    "if_still_unresolved": "撤回未获支持的分数/依赖资格，按已核事实及真实未知收尾；不将企业判为不合格来掩盖执行未完成。",
+    "status": "completed_accepted",
+    "remaining_exception_rounds": 0,
+    "verification_refs": [
+      "data/reviews/boot-barn-2026-09-21/review-facts-score-exception.json",
+      "data/reviews/boot-barn-2026-09-21/review-reasoning-score-exception.json"
+    ]
+  },
+  "approved_workpaper": "data/reviews/boot-barn-2026-09-21/repair-v2/workpaper.json",
+  "approved_workpaper_sha256": "3566EE92416C4738BC164DB64AD4F46E1B2778C727D71E63FD025A01AFD73516",
+  "approved_score_workpaper": "data/reviews/boot-barn-2026-09-21/repair-v2/workpaper.json",
+  "approved_score_workpaper_sha256": "3566EE92416C4738BC164DB64AD4F46E1B2778C727D71E63FD025A01AFD73516",
+  "score_bounds": {
+    "company": [
+      80,
+      80
+    ],
+    "management": [
+      79,
+      79
+    ],
+    "combined": [
+      159,
+      159
+    ]
+  },
+  "bounds_approved": true,
+  "review_materials": [
+    {
+      "stage": "initial_facts",
+      "path": "data/reviews/boot-barn-2026-09-21/review-facts-score.json",
+      "sha256": "6271A7BDB9142B4C7D2E513E8DAA548CED5AF3CE07FB18C1FF2E0AE78683BEC3"
+    },
+    {
+      "stage": "initial_reasoning",
+      "path": "data/reviews/boot-barn-2026-09-21/review-reasoning-score.json",
+      "sha256": "03928D4A7E71C3EF3C099C2BF72997325D485080B738E4500D9541A66BDE62EE"
+    },
+    {
+      "stage": "recheck_facts",
+      "path": "data/reviews/boot-barn-2026-09-21/review-facts-score-recheck.json",
+      "sha256": "F57F234EA3928198BDA80C4DA469444D4E1E7317CB3AEB7B00CAC07EF8BDC8AA"
+    },
+    {
+      "stage": "recheck_reasoning",
+      "path": "data/reviews/boot-barn-2026-09-21/review-reasoning-score-recheck.json",
+      "sha256": "801A179FEF532F046670B69939B991E1428F2738A1AB285F711BDF597C22CB9E"
+    },
+    {
+      "stage": "exception_facts",
+      "path": "data/reviews/boot-barn-2026-09-21/review-facts-score-exception.json",
+      "sha256": "325C72DA0711C5D7E61C226BB6023FC91754BD674B6986F3AD75871E2DCE7F19"
+    },
+    {
+      "stage": "exception_reasoning",
+      "path": "data/reviews/boot-barn-2026-09-21/review-reasoning-score-exception.json",
+      "sha256": "DC591786F495C7DF7BAED2563835FF9996D8A53674A86418BA3648C5891C41DF"
+    }
+  ],
+  "identity_binding_note": "主任务明确在全部例外验收无分歧后解除身份隔离，仅用于绑定真实验收材料；未读取unblinding或来源映射，首次及复查匿名候选处置不变。",
+  "score_qualification": {
+    "highest_score_gate": "B_GROWTH",
+    "company": 80,
+    "management": 79,
+    "combined": 159,
+    "B_GROWTH": "159≥150且80/79均≥70，满足分数门槛。",
+    "A_CORE": "80/79均≥76，但159<160，不满足。",
+    "S_STRATEGIC": "159<170且两项未均达82，不满足。",
+    "rule_ref": "data/WATCHLIST_RULES.md:三层分级定义",
+    "status": "score_gate_approved_only",
+    "tier_for_watchlist": null,
+    "watchlist_allowed": false,
+    "reason": "评分门槛不等于完整入库资格；估值、三份全文、公司页与索引验收尚未完成。"
+  },
+  "score_approval": {
+    "approved": true,
+    "scope": "公司全部25分项和管理层全部7分项，两个总分及合计；仅评分。",
+    "workpaper": "data/reviews/boot-barn-2026-09-21/repair-v2/workpaper.json",
+    "sha256": "3566EE92416C4738BC164DB64AD4F46E1B2778C727D71E63FD025A01AFD73516",
+    "company": 80,
+    "management": 79,
+    "combined": 159,
+    "D2": 5,
+    "危机处理能力": 7,
+    "reason": "A01三年核心结果及重大修订已覆盖，FY2024销售落空未被修订掩盖；FY2025/FY2026明确达标，已足以满足至少2/3年度门槛。A08行动、现金/信贷结果及全渠道机制已闭合，现任团队责任归属有边界。",
+    "D2_robustness": "六项是对照视图，不应解释为六份互相独立经济证据；净利润与EPS有关联。即合并相关利润指标，或审慎将FY2024视为部分达标，FY2025/FY2026两年仍满足至少2/3年度门槛，5分结论不依赖重复计票。",
+    "research_approval": false,
+    "full_report_review_completed": true,
+    "valuation_approved": false,
+    "full_report_research_approved": false
+  },
+  "full_report_review": {
+    "first_full_coverage_completed": true,
+    "research_approved": false,
+    "coverage_provenance": "主任务确认首次两路各完整读三稿；裁决仅读anonymous-full/candidates.json，不读具名full审核。",
+    "anonymous_candidates": "data/reviews/boot-barn-2026-09-21/anonymous-full/candidates.json",
+    "anonymous_candidates_sha256": "2EAF6AF7E0DA05F03AC6262D2CD4BC4D10233968102128C40D2E7574060D126F",
+    "workpaper": "data/reviews/boot-barn-2026-09-21/workpaper-v2.json",
+    "workpaper_sha256": "E4F08D5C1EA3C16A7F6838657AEFACEE5481BF80B86D75FF6A3CFA212FF7D33D",
+    "manifest": "data/reviews/boot-barn-2026-09-21/build-v2/manifest.json",
+    "manifest_sha256": "68F66C8B9CF525F7553775B007588573F7163105AFD1879D00F0A8F973297AB8",
+    "reports": {
+      "deep.md": {
+        "path": "data/reviews/boot-barn-2026-09-21/build-v2/deep.md",
+        "sha256": "3403542CF540F002929DCE563E5D70529B063927A482D81C148FE9FC2C029485",
+        "line_count": 400
+      },
+      "management.md": {
+        "path": "data/reviews/boot-barn-2026-09-21/build-v2/management.md",
+        "sha256": "673F577FD7A082B8E33A3807FF5AF476765291B14A92832E88AFE01624B3FB22",
+        "line_count": 404
+      },
+      "valuation.md": {
+        "path": "data/reviews/boot-barn-2026-09-21/build-v2/valuation.md",
+        "sha256": "DB215AEDFA4059F7DE3CB2FB9FE665BC6674FDA612ADE9A688E90451BA2E6A48",
+        "line_count": 320
+      }
+    },
+    "approved_manifest_sha256": null,
+    "release_review_refs": []
+  },
+  "full_report_candidate_dispositions": [
+    {
+      "namespace": "anonymous-full",
+      "candidate_id": "C001",
+      "disposition": "成立",
+      "lane": "delivery",
+      "acceptance_ids": [
+        "BOOT-V01"
+      ],
+      "reason": "确定性预测桥计算结果转录笔误，真实输入、公式及原件来源已核，不涉及新增估计。",
+      "source_refs": [
+        "data/reviews/boot-barn-2026-09-21/valuation-facts-v2.json#/2",
+        "data/reviews/boot-barn-2026-09-21/valuation-input-v2.json",
+        "data/reviews/boot-barn-2026-09-21/valuation-output-v2.json",
+        "data/reviews/boot-barn-2026-09-21/workpaper-v2.json",
+        "data/reviews/boot-barn-2026-09-21/build-v2/valuation.md"
+      ]
+    },
+    {
+      "namespace": "anonymous-full",
+      "candidate_id": "C002",
+      "disposition": "成立",
+      "lane": "delivery",
+      "acceptance_ids": [
+        "BOOT-V02"
+      ],
+      "reason": "三份frontmatter公司链接指向不存在页面。",
+      "source_refs": [
+        "data/reviews/boot-barn-2026-09-21/source/deep.md",
+        "data/reviews/boot-barn-2026-09-21/source/management.md",
+        "data/reviews/boot-barn-2026-09-21/source/valuation.md",
+        "01-公司/Boot Barn(BOOT).md"
+      ]
+    },
+    {
+      "namespace": "anonymous-full",
+      "candidate_id": "C003",
+      "disposition": "成立",
+      "lane": "research",
+      "acceptance_ids": [
+        "BOOT-V03"
+      ],
+      "reason": "PE倍数、Ke及FY2028以后FCFE增长的关键依据缺失，涉及正式模型可靠性，不是表达风格或引用拼写。现有事实只能支持方向，不能唯一或充分支持本组参数；无需证明未来必然实现，但须有可审计假设形成过程。",
+      "source_refs": [
+        "skills/valuation/SKILL.md:方法选择矩阵/计算纪律/方法独立性",
+        "docs/three-report-closeout.md:证据、评分与预测的边界",
+        "data/reviews/boot-barn-2026-09-21/build-v2/valuation.md:103-181",
+        "data/reviews/boot-barn-2026-09-21/workpaper-v2.json#/valuation/models",
+        "data/reviews/boot-barn-2026-09-21/valuation-input-v2.json",
+        "data/reviews/boot-barn-2026-09-21/valuation-facts-v1.json",
+        "data/reviews/boot-barn-2026-09-21/valuation-facts-v2.json"
+      ]
+    },
+    {
+      "namespace": "anonymous-full",
+      "candidate_id": "C004",
+      "disposition": "成立",
+      "lane": "delivery",
+      "acceptance_ids": [
+        "BOOT-V01"
+      ],
+      "reason": "确定性预测桥计算结果转录笔误，真实输入、公式及原件来源已核，不涉及新增估计。",
+      "source_refs": [
+        "data/reviews/boot-barn-2026-09-21/valuation-facts-v2.json#/2",
+        "data/reviews/boot-barn-2026-09-21/valuation-input-v2.json",
+        "data/reviews/boot-barn-2026-09-21/valuation-output-v2.json",
+        "data/reviews/boot-barn-2026-09-21/workpaper-v2.json",
+        "data/reviews/boot-barn-2026-09-21/build-v2/valuation.md"
+      ]
+    }
+  ],
+  "round_closeout": {
+    "default_merged_repair_used": 1,
+    "bounded_exception_used": 1,
+    "remaining_research_repair_rounds": 0,
+    "first_full_report_review": "已完成首次覆盖，不是第三次研究修复授权。",
+    "new_valuation_dispute": "首次出现的新估值P1须如实记录；SOP未给每模块单独重置额度，不能改称参数桥/估值首轮绕过上限。",
+    "allowed_now": "只做V01/V02确定性交付更正与撤回未批准价格的状态传播、评分归档；不新增模型参数、来源研究或经济判断。",
+    "not_allowed": "本run再派作者/例外作者补研究参数、重选倍数/Ke/增长并再审；不得因公司分合格直接入池。",
+    "new_run_condition": "补实质估值证据后按真实新run恢复，不复制同一缺口重启或请求无必要确认。"
+  },
+  "withdrawn_fields": [
+    {
+      "field": "target_price",
+      "withdrawn_value": 100.61054701353017,
+      "approved_value": null
+    },
+    {
+      "field": "certainty",
+      "withdrawn_value": 0.52,
+      "approved_value": null
+    },
+    {
+      "field": "buy_price",
+      "withdrawn_value": 75.73961979178551,
+      "approved_value": null
+    },
+    {
+      "field": "weighted_scenarios_and_price_zones",
+      "approved_value": null,
+      "scope": "未批准模型派生的价格带、低估/中性/追高定位及市场价高低结论均不得作为正式结论。"
+    },
+    {
+      "field": "reverse_valuation_conclusion",
+      "approved_value": null,
+      "scope": "6.24%仅为未批准假设下的历史试算，不得作为已验收市场高估证据。"
+    }
+  ],
+  "terminal_actions": {
+    "score_package": "允许主任务归档绑定已批repair-v2底稿、完整评分复核链和本裁决的可携带评分包，明确完整三件套未完成。",
+    "withdrawal_propagation": "不得修改冻结workpaper-v2/build-v2；若产生收尾新稿，仅将正式target/certainty/buy设null，撤下其依赖的正式价格区间与结论，并保留评分80/79。旧试算保存在冻结研究材料中标未获批准，不引用为当前正式参数。",
+    "delivery_fixes": "V01/V02可精确修改源材料新版本并定向核验；不得借重新装配恢复价格或宣称完整通过。",
+    "publication": "不发布完整三稿、不切换公司页/索引的历史已发布链接、不写或同步Watchlist。"
+  }
+}

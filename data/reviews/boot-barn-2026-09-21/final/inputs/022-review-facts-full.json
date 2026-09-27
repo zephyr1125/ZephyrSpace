@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "review_type": "triplet_review_facts_full",
+  "company": "Boot Barn",
+  "cutoff": "2026-09-21",
+  "scope": "首次完整通读 build-v2/deep.md（400行）、management.md（404行）与 valuation.md（320行）；评分80/79已批准，未重做未变化评分项。独立复核新估值输入、公式、原件口径、正文一致性与交付链接。",
+  "bound_artifacts": {
+    "manifest": {
+      "path": "data/reviews/boot-barn-2026-09-21/build-v2/manifest.json",
+      "sha256": "68f66c8b9cf525f7553775b007588573f7163105afd1879d00f0a8f973297ab8"
+    },
+    "workpaper": {
+      "path": "data/reviews/boot-barn-2026-09-21/workpaper-v2.json",
+      "sha256": "e4f08d5c1ea3c16a7f6838657aefacee5481bf80b86d75ff6a3cfa212ff7d33d"
+    },
+    "reports": {
+      "deep": "3403542cf540f002929dce563e5d70529b063927a482d81c148fe9fc2c029485",
+      "management": "673f577fd7a082b8e33a3807ff5af476765291b14a92832e88afe01624b3fb22",
+      "valuation": "db215aedfa4059f7de3cb2fb9fe665bc6674fda612ade9a688e90451ba2e6a48"
+    },
+    "bundle": {
+      "path": "data/reviews/boot-barn-2026-09-21/bundle-v2.json",
+      "sha256": "e0e9713d4b5d5120bd86b13b508b8b1685a29bd68dfb8cdeec10da16e9ed5fd2"
+    }
+  },
+  "independent_recalculation": {
+    "method": "独立按输入表重算，不使用作者计算脚本的输出。",
+    "results": {
+      "fy27_fcfe_m": {
+        "bear": 72.6888,
+        "base": 115.8140349,
+        "bull": 150.836125
+      },
+      "fcfe_dcf_per_share": {
+        "bear": 26.85145054,
+        "base": 66.73732670,
+        "bull": 110.70834974
+      },
+      "weighted_value_per_share": {
+        "bear": 64.88315274,
+        "base": 100.61054701,
+        "bull": 137.92875738
+      },
+      "buy_price": 75.73961979
+    },
+    "conclusion": "重算与 valuation-output-v2.json、三份正文中的目标价100.61、情景64.88/137.93和买入价75.74一致。"
+  },
+  "findings": [
+    {
+      "severity": "P2",
+      "type": "research_evidence",
+      "location": "data/reviews/boot-barn-2026-09-21/valuation-facts-v2.json: BOOT-VAL-C-FY27-FCFE-BRIDGE",
+      "claim": "该事实记录的基准和乐观首年 owner FCFE 算式结果分别写为115.69和150.51百万美元，但其列示输入的正确结果分别为115.8140349和150.836125百万美元。",
+      "evidence": "独立计算：8.555×30.601×1.18−175.1−17−1=115.8140349；8.90×30.601×1.25−172.6−16−1=150.836125。workpaper-v2.json 的桥接结果、valuation-output-v2.json 及 valuation.md 第97至99行均使用正确数值。",
+      "impact": "当前三份正文、DCF、加权目标价和买入价未受影响；但决定性预测桥所引用的事实记录与其衍生输出不一致，后续重建或复核可能错误采用该记录的文字数值。",
+      "recommendation": "将该事实记录的两个结果更正为115.814和150.836百万美元，并以更新后的证据清单重新装配、绑定哈希；无需改变已批准评分或当前估值输出。"
+    },
+    {
+      "severity": "P2",
+      "type": "delivery",
+      "location": "build-v2/deep.md、management.md、valuation.md frontmatter 第5行",
+      "claim": "三份报告均链接至[[01-公司/Boot Barn]]，但现有公司页为01-公司/Boot Barn(BOOT).md，前者不存在。",
+      "evidence": "已验证01-公司/Boot Barn(BOOT).md存在，01-公司/Boot Barn.md不存在；三份 frontmatter 均为公司: \"[[01-公司/Boot Barn]]\"。",
+      "impact": "发布后会形成公司页死链，但不影响研究判断、评分、估值或任何计算。",
+      "recommendation": "裁决后统一将三份 frontmatter 链接改为[[01-公司/Boot Barn(BOOT)]]，重装配并复核链接。"
+    }
+  ],
+  "coverage": [
+    "逐份完整阅读 deep、management、valuation 三稿，并核对三稿评分80/79/159、目标价、确定性和买入价相互一致。",
+    "核对 manifest、bundle-v2 与 evidence-files.json：14个有效证据文件已列入冻结包，workpaper-v2 哈希与指定值一致。",
+    "独立重算PE、owner FCFE DCF、55%/45%权重及基于certainty 0.52的机械买入价。",
+    "核对FY2026 OCF304.903、现金Capex178.561、SBC16.103；FY2027以净Capex指引加房东补贴转换为毛Capex，未把补贴同时加回OCF和减去净Capex。",
+    "核对经营租赁现金支付已在OCF、不重复扣经营租赁负债；融资租赁本金单列；SBC作为OCF加回项在owner FCFE中扣回一次；回购未从FCFE生成桥再扣。",
+    "核对关税退款每股0.46从FY2027调整后EPS指引剔除，30.601百万稀释加权平均股数用于每股估值，30,284,844实际流通股仅用于市值快照，未混用。",
+    "核对估值参数均被明确标为情景假设或市场隐含反解，未将未来现金转换、倍数、增长率或权益成本表述为公司事实。",
+    "索引外风险抽核：公司页链接实际解析，发现三份frontmatter同一死链。"
+  ],
+  "uncovered": [
+    "维持/扩张Capex拆分及成熟门店cohort实际回报仍为已披露研究缺口；报告已将其作为不确定性和确定性限制，未把缺口误作公司真实缺陷或评分降档理由。",
+    "manifest 当前research_state为pending、publish_allowed为false，符合首次完整双复核和裁决尚未完成的流程状态；这不是研究错误。裁决更新decision状态后须重新装配，不能把当前pending文字直接用于发布。"
+  ],
+  "approval": {
+    "research": "暂不建议批准：需先更正P2决定性预测桥事实记录并重新绑定装配物；未发现改变80/79已批准评分、估值结论或触发P1阻塞的原件/计算问题。",
+    "publication": "不建议批准：除上述证据记录更正外，三份报告均有公司页死链；并且当前manifest仍为assembled_for_review/pending，须经统一裁决更新decision后重装配。"
+  }
+}

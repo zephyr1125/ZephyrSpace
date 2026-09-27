@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "review_role": "triplet_review_reasoning",
+  "stage": "score_review",
+  "company": "Boot Barn Holdings, Inc.",
+  "as_of": "2026-09-21",
+  "workpaper_path": "data/reviews/boot-barn-2026-09-21/workpaper-v1.json",
+  "workpaper_sha256": "B5B00D983AA91E6FF4FF27A8AEA2A6B3458560E45FA41478B45CAB7D05BF02AA",
+  "candidate_scores_reviewed": {
+    "company": 81,
+    "management": 77
+  },
+  "review_conclusion": "not_approved_research_findings_open",
+  "findings": [
+    {
+      "severity": "P1",
+      "location": "workpaper-v1.json / scores.company.items[B2]",
+      "claim": "B2以工作靴和工装存在替换需求为由给3/3，把普通商品的重复购买等同于原规则的高复购/刚性满档；生活方式服饰、第三方品牌和低转换成本等反证已由底稿自身承认。",
+      "evidence": "score-rules.md的B2明确为‘订阅/高复购/刚性=3；项目制但稳定=2；一次性/强周期=1’。FY2026 10-K说明公司销售西部及工作相关鞋服配件，消费者也可从百货、独立店和线上渠道购买；不存在订阅、合同续费或高转换成本。底稿B2理由中的‘可选消费，需求并非订阅式刚性’与3分档本身冲突。",
+      "impact": "公司分至少存在高估风险；该项属于规则归因错误，可能从3分下调至1分或由裁决在原档位中确定，影响公司总分和B_GROWTH资格余量。",
+      "recommendation": "按原封闭档位重评B2，明确工作用品替换需求为何足以或不足以跨越‘一次性零售’档；不得用泛化的复购可能性替代高复购/刚性证据。"
+    },
+    {
+      "severity": "P1",
+      "location": "workpaper-v1.json / scores.company.items[B4]",
+      "claim": "B4把Boot Barn自身扩店白空间和收入增长直接归因为‘行业成长期’，未证明原规则满分要求的行业生命周期与TAM。",
+      "evidence": "FY2026 10-K原件可核公司自称美国最大专业连锁、539店、门店数超过最近直接竞争者四倍，并预计长期可达约1,200店；同一段也明确1,200店是公司基于自身分析的belief。底稿引用的FY2020-FY2026收入、Q1增长和577店只证明公司增长及份额扩张，不证明西部/工作服饰行业本身处于成长期。原规则B4满分为‘行业成长期+内生增长主导’，成熟期稳定档为3分。",
+      "impact": "B4的5分缺少决定性行业证据；若按成熟细分市场中的份额整合逻辑，可能应为3分。该差异会直接改变公司总分。",
+      "recommendation": "定向补独立行业规模、增速和生命周期证据；在补证前不要把公司的门店渗透机会冒充行业成长期，按可辩护档位或有据边界处理。"
+    },
+    {
+      "severity": "P1",
+      "location": "workpaper-v1.json / scores.company.items[D2]",
+      "claim": "D2的4/5仅展示电商访问量、销售和开店结果，没有原规则要求的连续至少三年‘上一年目标—下一年实际—达标率’对照，因此不能依据上限规则直接取得4分。",
+      "evidence": "score-rules.md要求D2必查连续至少3年年度目标并计算达标率；缺第1/2优先级管理层原话时，4分只是上限，且仍要求年报执行记录。BOOT-GOV-STRAT-001只列FY2024-FY2026电商访问量86m/114m/164m，没有对应事前目标；底稿original_statement_found=false、strategy_drift=false，也没有年度目标达成表。",
+      "impact": "这是研究证据缺口，不是公司真实执行缺陷，既不能保留无依据4分，也不能因资料未取到任意降档。D2未知边界可能改变公司总分及合计资格。",
+      "recommendation": "从FY2023-FY2026 10-K/业绩指引定向提取至少三年可验证目标并逐年对照；若公司未给可量化目标，按收尾规范将D2设为null并给有据bounds及资格影响，不取任意点值。"
+    },
+    {
+      "severity": "P1",
+      "location": "workpaper-v1.json / scores.company.items[D5]",
+      "claim": "D5给3/3但理由承认缺员工序列；官方原件实际已有三年员工数，独立重算显示人均创收为先升后降的混合信号，不符合‘人均创收上升’满档。",
+      "evidence": "FY2024、FY2025、FY2026 10-K分别披露约11,300、10,400、12,700名员工；对应收入$1.667bn、$1.911bn、$2.254bn，粗算人均收入约$147.5k、$183.8k、$177.5k。FY2026较FY2025回落约3.4%，且零售公司研发投入项不适用。原规则D5为‘人均创收上升+研发投入健康=3；混合信号=2’。",
+      "impact": "现有3分忽略已公开的反证，建议降至2分；公司总分减少1分。",
+      "recommendation": "将三年员工口径与人均创收计算写入底稿，说明兼职人数波动的限制，并按混合信号2分重评。"
+    },
+    {
+      "severity": "P1",
+      "location": "workpaper-v1.json / scores.company.items[E2] and reason",
+      "claim": "E2理由把FY2020-FY2026 OCF/净利简单均值写为约1.23，独立重算为约1.130；同时简化FCF仅4/7年为正，4/5缺少相邻档比较。",
+      "evidence": "底稿引用的七个比值为0.528、2.626、0.462、0.521、1.606、0.815、1.350，算术平均=1.1297。同期OCF减现金Capex为正的年份仅FY2021、FY2022、FY2024、FY2026共4年，FY2020、FY2023、FY2025为负。原规则E2的5分要求OCF/净利>80%且自由现金流持续正，基本达标档为3分。对租赁密集零售，简化FCF表述还须明确经营租赁现金已在OCF中反映、融资租赁本金另列，避免与租赁约束重复或遗漏。",
+      "impact": "明确算术错误必须修复；修正后的历史波动更接近基本达标档，E2可能由4分降至3分，并联动公司总分。",
+      "recommendation": "更正均值并保留逐年分布，不用异常高的FY2021掩盖波动；按原规则解释为何取3或4，若保留4须给出区别于3档的充分依据。"
+    },
+    {
+      "severity": "P1",
+      "location": "workpaper-v1.json / scores.company.items[E5.5]",
+      "claim": "E5.5因‘本轮无MinerU年报MD的KAM逐项提取’降为2分，把研究载体缺失当作公司会计瑕疵，并忽略官方HTML中已有的正面审计证据。",
+      "evidence": "FY2026 10-K官方原件可读：Deloitte & Touche LLP自2012年任审计师，出具无保留意见；唯一Critical Audit Matter为存货按成本与可变现净值孰低计量，审计程序覆盖存货账龄、低于成本销售历史和当前售价；最新10-Q称关键会计政策及估计无重大变化。原规则与证据规范均允许可访问HTML原件，不能因无MinerU MD降分。",
+      "impact": "当前2分的理由属于研究缺口误扣，可能低估公司分1分；若存货计提另有实质异常，应以原件事实而非文件格式证明。",
+      "recommendation": "基于官方10-K补齐CAM、政策变更和存货计提判断后重评；若未发现小瑕疵且计提充分，考虑3分，若仍为2分须指出真实会计瑕疵。"
+    },
+    {
+      "severity": "P1",
+      "location": "workpaper-v1.json / scores.company.items[F1] and scores.management.items[组织与人才能力]",
+      "claim": "公司F1=3及管理层组织与人才=7把一次正常CEO离任和顺畅内部继任作为主要扣分依据，未按管理层原规则区分‘个别离任+内部晋升+无缝过渡’与密集离任红旗，也低估已披露的业绩绑定激励。",
+      "evidence": "2024-10-28 8-K明确James Conroy为追求其他机会辞任，且‘not the result of any disagreement’；John Hazen自2018年任Chief Digital Officer，2024-11任interim CEO、2025-05正式任CEO，属于内部继任；Peter Starrett仅在过渡期任Executive Chairman并于2026-01恢复非执行Chair。管理层规则6.1明确‘个别离任+内部晋升接任+无缝过渡+原因清晰’为正常。2026 Proxy还披露NEO长期激励含三年累计EPS业绩PSU，FY2024 PSU最终按目标109%实现并以146%归属，三年平均burn rate仅0.60%。",
+      "impact": "这是对正常人事变化的重复/误归因，可能同时低估公司F1和管理层组织与人才评分；缺新CEO长任期可作为置信度限制，但不能等同于已发生治理缺陷。",
+      "recommendation": "按近5年完整C-suite时间线重评稳定性；删除由正常离任产生的惩罚，分别评价继任质量、核心人才保留未知和绩效激励正面证据，避免在公司分与管理层分中重复扣同一事件。"
+    },
+    {
+      "severity": "P1",
+      "location": "workpaper-v1.json / scores.management.items[资本配置能力]",
+      "claim": "资本配置19/25的限制理由称项目级新店回报未披露，遗漏FY2026 10-K已公开的新店模型经济性，属于忽略已有正面证据；同时房东补贴后的净Capex指引和租赁负债约束需要保持但不可与门店投入重复扣减。",
+      "evidence": "FY2026 10-K原件披露典型新店面积12,000–15,000平方英尺、平均净现金投入约$1.7m、目标平均回收期3年，并称FY2026无并购新开80店。FY2027 Q1 10-Q披露Capex指引$125m–$130m为扣除预计$47.6m landlord tenant allowances后的净额；Q1短期及长期租赁负债合计约$806.0m，SBC费用$4.512m，均需在完整资本成本中单列。目标回收期不是已实现cohort ROIC，但比‘未披露’更强。",
+      "impact": "现有19分可能因遗漏公开正面证据而偏低；另一方面若把净Capex、房东补贴和租赁承诺分别当作三项独立资本消耗又会重复归因。该项可能改变管理层总分及B_GROWTH合计门槛。",
+      "recommendation": "补入官方新店经济性并明确‘目标’与‘实际cohort回报’边界；用一个完整门店投入桥统一现金Capex、房东补贴和租赁承诺后重评资本配置，不因资料未取到降档。"
+    },
+    {
+      "severity": "P1",
+      "location": "workpaper-v1.json / scores.management.items[危机处理能力]",
+      "claim": "危机处理给6/10，但所引关税退款和7月同店波动是正常经营波动，底稿也承认现团队未经历真实深度危机；现有证据无法支持一个确定点值。",
+      "evidence": "管理层规则要求列明危机事件、反应、处理、结果及防复发机制。BOOT-FIN-TARIFF只是一次性关税退款会计与成本桥，BOOT-FIN-LATEST只是月度同店销售及指引更新；两者不足以构成召回、重大库存危机、流动性危机或大规模缩店。收尾规范要求未公开/未取得且决定性时用null和有据bounds，不得用资料不足任意扣分。",
+      "impact": "管理层77分包含一个缺乏真实事件基础的6分。若该项未知范围跨越管理层单项70分或双评分150分门槛，评分与资格均不能批准。",
+      "recommendation": "定向核FY2020-FY2022疫情、供应链或其他真实压力期的管理行动及结果，并区分当时责任人与当前团队连续性；若仍无可评价危机，按收尾规范设null/bounds并明确资格影响。"
+    },
+    {
+      "severity": "P1",
+      "location": "workpaper-v1.json / scores.company.items[F3] and scores.management.items[诚信与透明度]; evidence index omission risk",
+      "claim": "索引外原件检查发现2026 Proxy披露持续三年的高管近亲属供应商交易；现有证据索引、F3满分理由和管理层诚信论证均未覆盖，‘透明清洁’结论不完整。",
+      "evidence": "2026 DEF 14A ‘Transactions involving John Grijalva’披露：Chief Merchandising Officer Laurie Grijalva之夫通过夫妻共同持有的LLC从事独立销售代表业务；公司向其所代表供应商采购FY2026/FY2025/FY2024约$37.3m/$38.0m/$32.8m，对方获得佣金约$2.6m/$2.5m/$2.2m（部分转付其他销售代表）。Proxy称交易依关联方政策获批。该事实未出现在facts-governance.json或现有F3 evidence_refs。",
+      "impact": "披露与审批是透明度正面证据，但持续、与核心商品采购相关且使高管家庭受益，至少构成必须评价的关联交易小瑕疵；公司F3 3/3可能应为2/3，并需判断管理层诚信17/20是否仍匹配。遗漏也证明共享索引存在盲区。",
+      "recommendation": "将该关联交易注册为新事实，量化占采购/营收比例、核审批及定价公允性；按‘透明但存在持续关联交易’重评F3及管理层诚信，不得仅以已披露等同于不存在治理摩擦。"
+    }
+  ],
+  "coverage": {
+    "scope": "已独立复核公司25个分项和管理层7个维度的规则归因、反证、遗漏、算术与资格；回看FY2024-FY2026 10-K、FY2027 Q1 10-Q、2026 DEF 14A、CEO变动8-K、Form 4及S-1等决定性原件。评分阶段未阅读或审核三份最终长文。",
+    "company_items_reviewed": [
+      "A1",
+      "A2",
+      "A3",
+      "B0",
+      "B1",
+      "B2",
+      "B3",
+      "B4",
+      "C1",
+      "C2",
+      "C3+C4",
+      "D1",
+      "D2",
+      "D3",
+      "D5",
+      "E1",
+      "E2",
+      "E3",
+      "E4",
+      "E5",
+      "E5.5",
+      "F1",
+      "F2",
+      "F2.5",
+      "F3"
+    ],
+    "management_items_reviewed": [
+      "诚信与透明度",
+      "资本配置能力",
+      "战略稳定性",
+      "对股东友好度",
+      "危机处理能力",
+      "组织与人才能力",
+      "表达清晰度与认知质量"
+    ],
+    "independent_recalculations": [
+      "FY2020-FY2026 OCF/净利七年简单均值=1.1297，不是1.23",
+      "FY2020-FY2026简化FCF正值年份=4/7",
+      "FY2020-FY2026收入CAGR约17.75%",
+      "FY2026按期初期末平均权益计算ROE约18.44%",
+      "FY2024/FY2025/FY2026粗略人均收入约$147.5k/$183.8k/$177.5k"
+    ],
+    "original_source_checks": [
+      "FY2026 10-K确认公司为美国最大西部及工作相关生活方式专业连锁、门店数超过最近直接竞争者四倍，支持C1细分龙头6分，不外推至整个服饰零售行业",
+      "FY2026 10-K确认新店平均净现金投入约$1.7m、目标平均回收期3年；这是目标经济性而非已实现cohort ROIC",
+      "FY2027 Q1 10-Q确认Capex指引为扣房东补贴后的净额，租赁负债及SBC需单列，未发现底稿把$47.6m房东补贴直接当现金Capex",
+      "2026-05-26 Form 4交易代码为S，230股属于主动出售；F1/F2仅解释交易后持股构成，不是税款代扣代码F",
+      "2024-10-28 8-K确认Conroy为追求其他机会正常辞任且无分歧，Hazen为内部继任",
+      "FY2026 10-K确认Deloitte无保留意见、唯一CAM为存货估值",
+      "2026 Proxy确认三年EPS业绩PSU、三年平均burn rate 0.60%及FY2024 PSU兑现结果"
+    ],
+    "index_outside_risk_check": "从2026 DEF 14A关联交易章节主动检查，发现Laurie Grijalva近亲属供应商代表交易未进入facts-governance.json，已列为P1。"
+  },
+  "qualification_assessment": {
+    "current_candidate": "81+77=158，表面满足B_GROWTH两项均不低于70且合计不低于150的分数门槛，但不满足A_CORE合计160门槛；非分数门槛仍需完整研究验收。",
+    "independent_assessment": "多项确定性研究错误及D2、危机处理的未知边界尚未关闭，可信公司分和管理层分未形成，B_GROWTH资格暂不能批准。不能把证据缺口当作公司缺陷直接扣分，也不能用候选点值占位越过门槛。",
+    "score_state": "pending_research_repair_and_adjudication",
+    "watchlist_action": "none"
+  },
+  "uncovered": [
+    "未取得连续至少三年的事前量化目标与事后实际对照，D2无法选定点值。",
+    "未核真实危机期中当前管理团队可归责的处理记录，危机处理能力无法选定点值。",
+    "未取得独立行业TAM及生命周期证据，B4行业成长期判断未闭合。",
+    "未取得新店实际cohort回报及含房东补贴、租赁承诺的完整投入回报桥；现有10-K只有平均目标模型。",
+    "关联交易已发现但尚未核定价公允性及占总采购比例。"
+  ]
+}

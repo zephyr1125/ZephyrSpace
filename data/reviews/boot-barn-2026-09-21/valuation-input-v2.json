@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "cutoff": "2026-09-21",
+  "currency": "USD",
+  "shares_m": 30.601,
+  "market_price": 122.92,
+  "weights": {"pe": 0.55, "fcfe_dcf": 0.45},
+  "pe": {
+    "bear": {"eps": 8.0, "multiple": 12.0},
+    "base": {"eps": 8.555, "multiple": 15.0},
+    "bull": {"eps": 8.9, "multiple": 18.0}
+  },
+  "fcfe_dcf": {
+    "bear": {"eps": 8.0, "cash_conversion": 1.10, "gross_capex_m": 177.6, "sbc_m": 18.0, "finance_lease_principal_m": 1.0, "growth_y2_y3": 0.03, "growth_y4_y5": 0.02, "ke": 0.11, "terminal_g": 0.02},
+    "base": {"eps": 8.555, "cash_conversion": 1.18, "gross_capex_m": 175.1, "sbc_m": 17.0, "finance_lease_principal_m": 1.0, "growth_y2_y3": 0.12, "growth_y4_y5": 0.08, "ke": 0.0975, "terminal_g": 0.025},
+    "bull": {"eps": 8.9, "cash_conversion": 1.25, "gross_capex_m": 172.6, "sbc_m": 16.0, "finance_lease_principal_m": 1.0, "growth_y2_y3": 0.14, "growth_y4_y5": 0.10, "ke": 0.09, "terminal_g": 0.03}
+  },
+  "certainty": 0.52
+}

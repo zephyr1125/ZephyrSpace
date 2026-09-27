@@ -1,0 +1,19 @@
+{
+  "status": "mechanically_checked_pending_review",
+  "errors": [],
+  "warnings": [],
+  "scores": {
+    "cScore": 80,
+    "mScore": 79
+  },
+  "inputs": {
+    "data/reviews/boot-barn-2026-09-21/facts-financial.json": "07bd839f0967cbbf5a278ecf5c2f8a28e6390dc5ae12c74b3762082bb7dd523f",
+    "data/reviews/boot-barn-2026-09-21/sources-financial.json": "79bb929869a71f3262a93d04bfb24b35abece951146cbbb61a535fc6ce5add7c",
+    "data/reviews/boot-barn-2026-09-21/facts-governance.json": "22a1dd260ee39145bbd67666b1aea455ed38a6188a5642fead252098752c1254",
+    "data/reviews/boot-barn-2026-09-21/sources-governance.json": "fc42b2d332c5ed6d6abcfabc3e9c5fabe61d3ff292a939bd748b7949fb9f28c3",
+    "data/reviews/boot-barn-2026-09-21/facts-repair-v1.json": "5d895f0461e0de3d6e64e44f7e3b59a97a785b631e9e8338f69b4778aed32ac8",
+    "data/reviews/boot-barn-2026-09-21/sources-repair-v1.json": "1f43bcf7bd3d98ee77bc6e017dcd3b43561bf95a6d45f19aade39cf13b24652a",
+    "data/reviews/boot-barn-2026-09-21/facts-crisis.json": "902d0142016cd5ad8e4150770c8eeb987eddf00bb3b5bf1613740cbf8ce8c48b",
+    "data/reviews/boot-barn-2026-09-21/sources-crisis.json": "c0d48e1a0af5e1e771752b626a896520423b67e7be366a4a36a1b370d8023d66"
+  }
+}

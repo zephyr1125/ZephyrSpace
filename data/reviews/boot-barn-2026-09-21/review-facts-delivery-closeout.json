@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "review_type": "triplet_review_facts_delivery_closeout",
+  "company": "Boot Barn",
+  "cutoff": "2026-09-21",
+  "scope": "仅对已裁决为delivery/no_decision_impact的BOOT-V01与BOOT-V02定向验收；不重启评分、估值模型或研究判断。",
+  "bound_artifacts": {
+    "delivery_closeout": {
+      "path": "data/reviews/boot-barn-2026-09-21/delivery-closeout.md",
+      "sha256": "1c9c7c2cc6c618c51eb70fa66744621358cbba6900209233ecb1dd7d6a409454"
+    },
+    "valuation_facts_v3": {
+      "path": "data/reviews/boot-barn-2026-09-21/valuation-facts-v3.json",
+      "sha256": "4918a09d0947b233e80388fa95ca76ce86fd7917518150a71214e647957d4d7b"
+    },
+    "frozen_artifacts_unchanged": {
+      "source/deep.md": "fb45b705c833d27f06828f32e33bb1efca2253e936866429a84e9d52858084d9",
+      "source/management.md": "467a7daf1deb2495a570b286e5025e664ca547438d5994d17e125288ccf7d924",
+      "source/valuation.md": "c353ecfe3b4e789d4c8be32dde30e23c5c0cb60628b6ce8cbf9d582687e111fa",
+      "valuation-facts-v2.json": "a09b9105059c037b8ececc39c156322d4cc452641a53762df5e5302cec908aa4",
+      "build-v2/deep.md": "3403542cf540f002929dce563e5d70529b063927a482d81c148fe9fc2c029485",
+      "build-v2/management.md": "673f577fd7a082b8e33a3807ff5af476765291b14a92832e88afe01624b3fb22",
+      "build-v2/valuation.md": "db215aedfa4059f7de3cb2fb9fe665bc6674fda612ade9a688e90451ba2e6a48",
+      "build-v2/manifest.json": "68f66c8b9cf525f7553775b007588573f7163105afd1879d00f0a8f973297ab8",
+      "workpaper-v2.json": "e4f08d5c1ea3c16a7f6838657aefacee5481bf80b86d75ff6a3cfa212ff7d33d"
+    }
+  },
+  "acceptance": [
+    {
+      "id": "BOOT-V01",
+      "result": "passed",
+      "claim": "v3将预测桥转录结果修正为基准115.814百万美元、乐观150.836百万美元，并以v3作为未来有效交付版本替代冻结v2。",
+      "evidence": "valuation-facts-v3.json的BOOT-VAL-C-FY27-FCFE-BRIDGE保留原事实ID、输入及公式；8.555×30.601×1.18−175.1−17−1=115.8140349，8.90×30.601×1.25−172.6−16−1=150.836125，与冻结workpaper-v2桥接和原估值输出一致。delivery-closeout.md记录v2/v3哈希、替代规则及不同时登记要求。",
+      "impact": "纯转录纠正；不改变输入、公式、权重、评分或正式估值状态。"
+    },
+    {
+      "id": "BOOT-V02",
+      "result": "passed",
+      "claim": "source-closeout/deep.md、management.md、valuation.md三处frontmatter均改为有效公司页链接[[01-公司/Boot Barn(BOOT)]]，且各稿顶部完成未批准状态传播。",
+      "evidence": "已验证01-公司/Boot Barn(BOOT).md存在、01-公司/Boot Barn.md不存在；三份source-closeout文件第5行均为目标链接，顶部均写明“未完成完整三件套”“历史估值试算全部未获批准”“当前正式价格为null”。估值稿另在第159、163、197、232行撤回正式目标价、确定性、机械买入价和价格分区。",
+      "impact": "消除发布死链和历史价格误传播；不改变研究结论。"
+    }
+  ],
+  "findings": [],
+  "coverage": [
+    "核验三个source-closeout稿的公司链接、顶部未完成状态和实际公司页存在性。",
+    "核验valuation-facts-v3预测桥数值与冻结公式独立一致，及v3替代v2的交付边界。",
+    "核验delivery-closeout.md所列新旧哈希与当前文件一致。",
+    "核验冻结source、build-v2、valuation-facts-v2、workpaper-v2当前哈希未变。",
+    "核验正式价格撤回传播：三稿顶部均为null，估值稿明确目标价、确定性、买入价和价格分区均不构成正式结论。"
+  ],
+  "uncovered": [
+    "BOOT-V03仍为研究open：估值参数锚不足；本次定向交付验收不评价或修复该问题。",
+    "评分80/79/159已批准但完整三件套和估值均未获批准；本验收不构成研究、估值或发布授权。"
+  ],
+  "approval": {
+    "delivery_v01_v02": "passed",
+    "valuation": "not_approved",
+    "full_publication": "not_approved",
+    "reason": "decision状态仍为defer/research pending，BOOT-V03保持open，正式目标价、确定性与机械买入价均为null。"
+  }
+}
