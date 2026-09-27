@@ -1,0 +1,1365 @@
+{
+  "schema_version": 1,
+  "company": "贵州茅台",
+  "ticker": "600519.SH",
+  "cutoff": "2026-09-20",
+  "stage": "bounded_exception_adjudication",
+  "decision": "defer",
+  "score_state": "pending",
+  "research_state": "pending",
+  "research_status": "execution_incomplete",
+  "delivery_state": "not_in_scope",
+  "publish_allowed": false,
+  "basis": "一次合并修复后5/19条件闭合；其余14条件含一项已核事实的交付登记、13项研究条件。错误和缺口仍可能改变评分，不以复核票数或耗时放行。",
+  "frozen_workpaper": "data\\reviews\\triplet-token-cycle-2026-09-20\\round-5\\writer\\rebuilt-v2\\workpaper.json",
+  "frozen_workpaper_sha256": "0dc7ed8b7ea2654df18cd1390b718ae7c826d538a1778e533680fc94a98c93ad",
+  "prior_decision": "data\\reviews\\triplet-token-cycle-2026-09-20\\round-5\\adjudicator\\decision-v1-tool.json",
+  "candidate_dispositions": [
+    {
+      "candidate_id": "C001",
+      "candidate_source": "anonymous-recheck-v2/candidates.json",
+      "disposition": "成立",
+      "acceptance_ids": [
+        "R5-HISTORY-A01"
+      ],
+      "reason": "未闭合。v5 Q01仅起点终点，无中间历史窗口覆盖或控制变更检索响应；保留原条件，不要求每年重复。",
+      "lane": "research"
+    },
+    {
+      "candidate_id": "C002",
+      "candidate_source": "anonymous-recheck-v2/candidates.json",
+      "disposition": "成立",
+      "acceptance_ids": [
+        "R5-DIVIDEND-A01",
+        "R5-DIVIDEND-A03"
+      ],
+      "reason": "未闭合且新增同根因错误。MT5R2-DIV的2020年24.236/46.697亿元应约242.361/466.973亿元；2023中期300.01亿元错配，2024年报845明确2024中期。2023年报856特别分红每10股191.06元。补2024及分类/归属，禁止跨年重复；可用已实施常规下限，无需为满额穷尽特别分红。；未闭合。F2删去股东行动有界检索，融资审慎论证不足；恢复已核范围与边界。F2融资工具原窗口为近5年，不要求为F2额外扩大为IPO全期；A3自身历史问题独立处理。",
+      "lane": "research"
+    },
+    {
+      "candidate_id": "C003",
+      "candidate_source": "anonymous-recheck-v2/candidates.json",
+      "disposition": "成立",
+      "acceptance_ids": [
+        "R5-ACCOUNTING-A03"
+      ],
+      "reason": "未闭合。F3及诚信未因KAM自动扣分的联动合理，但E5.5最高档仍依赖A02，先补证再判断。",
+      "lane": "research"
+    },
+    {
+      "candidate_id": "C004",
+      "candidate_source": "anonymous-recheck-v2/candidates.json",
+      "disposition": "成立",
+      "acceptance_ids": [
+        "R5-STATUS-A02"
+      ],
+      "reason": "闭合。F1=-2、调查边界及相关身份同步正确；治理6/15重大警告保留。",
+      "lane": "research"
+    },
+    {
+      "candidate_id": "C005",
+      "candidate_source": "anonymous-recheck-v2/candidates.json",
+      "disposition": "成立",
+      "acceptance_ids": [
+        "R5-ACCOUNTING-A02"
+      ],
+      "reason": "未闭合。2023年报98、2234、2238明示解释16号追溯调整：合并权益-26,606,990.22元、所得税费用+903,191.13元，属于2022比较期影响，非2023当期利润增益。须登记三年政策实质/次数及期别，不能机械将法定准则变更当激进政策。2025应收账龄2308为一年内2,609,048.49元、五年以上236,198元；账龄应配合计提分析，商誉适用性须明确。",
+      "lane": "research"
+    },
+    {
+      "candidate_id": "C006",
+      "candidate_source": "anonymous-recheck-v2/candidates.json",
+      "disposition": "部分成立",
+      "acceptance_ids": [
+        "R5-HISTORY-A01"
+      ],
+      "reason": "未闭合。v5 Q01仅起点终点，无中间历史窗口覆盖或控制变更检索响应；保留原条件，不要求每年重复。",
+      "lane": "research"
+    },
+    {
+      "candidate_id": "C007",
+      "candidate_source": "anonymous-recheck-v2/candidates.json",
+      "disposition": "成立",
+      "acceptance_ids": [
+        "R5-TALENT-A01",
+        "R5-TALENT-A02"
+      ],
+      "reason": "未闭合。仅董事长和财务负责人样本不能替代原5年非独董及高管时间线；补规定统计，人才留存未知不等同统计不可执行。；部分闭合。未知扣分已去除，但稳定性/人才保留/激励点值判断仍缺，依赖A01；不用强制小数子分，只须可辩护并保持总上限。",
+      "lane": "research"
+    },
+    {
+      "candidate_id": "C008",
+      "candidate_source": "anonymous-recheck-v2/candidates.json",
+      "disposition": "成立",
+      "acceptance_ids": [
+        "R5-CHAIN-A01"
+      ],
+      "reason": "未闭合。事实只列合作社采购、量价及成本，仍未处理已知供应集中38.12%、地域替代约束、需求传导和周期位置；利用现有原件回答，不另造全行业调查。",
+      "lane": "research"
+    },
+    {
+      "candidate_id": "C009",
+      "candidate_source": "anonymous-recheck-v2/candidates.json",
+      "disposition": "成立",
+      "acceptance_ids": [
+        "R5-ACCOUNTING-A02"
+      ],
+      "reason": "未闭合。2023年报98、2234、2238明示解释16号追溯调整：合并权益-26,606,990.22元、所得税费用+903,191.13元，属于2022比较期影响，非2023当期利润增益。须登记三年政策实质/次数及期别，不能机械将法定准则变更当激进政策。2025应收账龄2308为一年内2,609,048.49元、五年以上236,198元；账龄应配合计提分析，商誉适用性须明确。",
+      "lane": "research"
+    },
+    {
+      "candidate_id": "C010",
+      "candidate_source": "anonymous-recheck-v2/candidates.json",
+      "disposition": "成立",
+      "acceptance_ids": [
+        "R5-ACCOUNTING-A02",
+        "R5-ACCOUNTING-A03"
+      ],
+      "reason": "未闭合。2023年报98、2234、2238明示解释16号追溯调整：合并权益-26,606,990.22元、所得税费用+903,191.13元，属于2022比较期影响，非2023当期利润增益。须登记三年政策实质/次数及期别，不能机械将法定准则变更当激进政策。2025应收账龄2308为一年内2,609,048.49元、五年以上236,198元；账龄应配合计提分析，商誉适用性须明确。；未闭合。F3及诚信未因KAM自动扣分的联动合理，但E5.5最高档仍依赖A02，先补证再判断。",
+      "lane": "research"
+    },
+    {
+      "candidate_id": "C011",
+      "candidate_source": "anonymous-recheck-v2/candidates.json",
+      "disposition": "部分成立",
+      "acceptance_ids": [
+        "R5-LATEST-A02"
+      ],
+      "reason": "部分闭合。B4=3、D3=2更新理由可保留；E3只论非经常损益而未解释量价，C2仍受产业链未闭合条件约束。仅修E3/C2，不重做B4/D3。",
+      "lane": "research"
+    },
+    {
+      "candidate_id": "C012",
+      "candidate_source": "anonymous-recheck-v2/candidates.json",
+      "disposition": "部分成立",
+      "acceptance_ids": [
+        "R5-TALENT-A02"
+      ],
+      "reason": "部分闭合。未知扣分已去除，但稳定性/人才保留/激励点值判断仍缺，依赖A01；不用强制小数子分，只须可辩护并保持总上限。",
+      "lane": "research"
+    },
+    {
+      "candidate_id": "C013",
+      "candidate_source": "anonymous-recheck-v2/candidates.json",
+      "disposition": "成立",
+      "acceptance_ids": [
+        "R5-STATUS-A01"
+      ],
+      "reason": "闭合。2026H1原件330和新事实明确已解聘/接任，不以披露调查等同现任。",
+      "lane": "research"
+    },
+    {
+      "candidate_id": "C014",
+      "candidate_source": "anonymous-recheck-v2/candidates.json",
+      "disposition": "成立",
+      "acceptance_ids": [
+        "R5-ATTRIBUTION-A01"
+      ],
+      "reason": "部分闭合。已撤未知扣分，但13/15及4/5只有正面表述和维持原分，未给真实限制或档位判断；允许专业判断，不要求公司公布分数或为分差造负面。",
+      "lane": "research"
+    },
+    {
+      "candidate_id": "C015",
+      "candidate_source": "anonymous-recheck-v2/candidates.json",
+      "disposition": "成立",
+      "acceptance_ids": [
+        "R5-DIVIDEND-A02"
+      ],
+      "reason": "闭合。2025中期300.01/823.20约36.44%下限足够跨30%参考线，未计未实施预案。此闭合不放行其他年份错误。",
+      "lane": "research"
+    },
+    {
+      "candidate_id": "C016",
+      "candidate_source": "anonymous-recheck-v2/candidates.json",
+      "disposition": "成立",
+      "acceptance_ids": [
+        "R5-DIVIDEND-A02"
+      ],
+      "reason": "闭合。2025中期300.01/823.20约36.44%下限足够跨30%参考线，未计未实施预案。此闭合不放行其他年份错误。",
+      "lane": "research"
+    },
+    {
+      "candidate_id": "C017",
+      "candidate_source": "anonymous-recheck-v2/candidates.json",
+      "disposition": "成立",
+      "acceptance_ids": [
+        "R5-ATTRIBUTION-A02"
+      ],
+      "reason": "闭合。管理层战略11分由目标兑现及2025未达支持，公司D2原上限独立保留。",
+      "lane": "research"
+    },
+    {
+      "candidate_id": "C018",
+      "candidate_source": "anonymous-recheck-v2/candidates.json",
+      "disposition": "成立",
+      "acceptance_ids": [
+        "R5-TALENT-A02"
+      ],
+      "reason": "部分闭合。未知扣分已去除，但稳定性/人才保留/激励点值判断仍缺，依赖A01；不用强制小数子分，只须可辩护并保持总上限。",
+      "lane": "research"
+    },
+    {
+      "candidate_id": "C019",
+      "candidate_source": "anonymous-recheck-v2/candidates.json",
+      "disposition": "成立",
+      "acceptance_ids": [
+        "R5-HISTORY-A02"
+      ],
+      "reason": "未闭合。v5仅IPO用途及2002单项执行，Q02/Q03没有实际覆盖全期的记录和压力年份处理。需补原范围，不能将边界声明当充分依据。",
+      "lane": "research"
+    },
+    {
+      "candidate_id": "C020",
+      "candidate_source": "anonymous-recheck-v2/candidates.json",
+      "disposition": "成立",
+      "acceptance_ids": [
+        "R5-LATEST-A02"
+      ],
+      "reason": "部分闭合。B4=3、D3=2更新理由可保留；E3只论非经常损益而未解释量价，C2仍受产业链未闭合条件约束。仅修E3/C2，不重做B4/D3。",
+      "lane": "research"
+    },
+    {
+      "candidate_id": "C021",
+      "candidate_source": "anonymous-recheck-v2/candidates.json",
+      "disposition": "成立",
+      "acceptance_ids": [
+        "R5-ATTRIBUTION-A02"
+      ],
+      "reason": "闭合。管理层战略11分由目标兑现及2025未达支持，公司D2原上限独立保留。",
+      "lane": "research"
+    },
+    {
+      "candidate_id": "C022",
+      "candidate_source": "anonymous-recheck-v2/candidates.json",
+      "disposition": "部分成立",
+      "acceptance_ids": [
+        "R5-HISTORY-A03"
+      ],
+      "reason": "未闭合。依赖A01/A02，当前3/4点值不因未命中即可批准，也不因缺证直接扣分。",
+      "lane": "research"
+    },
+    {
+      "candidate_id": "C023",
+      "candidate_source": "anonymous-recheck-v2/candidates.json",
+      "disposition": "成立",
+      "acceptance_ids": [
+        "R5-ACCOUNTING-A02",
+        "R5-ACCOUNTING-A03"
+      ],
+      "reason": "未闭合。2023年报98、2234、2238明示解释16号追溯调整：合并权益-26,606,990.22元、所得税费用+903,191.13元，属于2022比较期影响，非2023当期利润增益。须登记三年政策实质/次数及期别，不能机械将法定准则变更当激进政策。2025应收账龄2308为一年内2,609,048.49元、五年以上236,198元；账龄应配合计提分析，商誉适用性须明确。；未闭合。F3及诚信未因KAM自动扣分的联动合理，但E5.5最高档仍依赖A02，先补证再判断。",
+      "lane": "research"
+    },
+    {
+      "candidate_id": "C024",
+      "candidate_source": "anonymous-recheck-v2/candidates.json",
+      "disposition": "部分成立",
+      "acceptance_ids": [
+        "R5-ATTRIBUTION-A01"
+      ],
+      "reason": "部分闭合。已撤未知扣分，但13/15及4/5只有正面表述和维持原分，未给真实限制或档位判断；允许专业判断，不要求公司公布分数或为分差造负面。",
+      "lane": "research"
+    },
+    {
+      "candidate_id": "C025",
+      "candidate_source": "anonymous-recheck-v2/candidates.json",
+      "disposition": "成立",
+      "acceptance_ids": [
+        "R5-HISTORY-A03"
+      ],
+      "reason": "未闭合。依赖A01/A02，当前3/4点值不因未命中即可批准，也不因缺证直接扣分。",
+      "lane": "research"
+    },
+    {
+      "candidate_id": "C026",
+      "candidate_source": "anonymous-recheck-v2/candidates.json",
+      "disposition": "成立",
+      "acceptance_ids": [
+        "R5-STATUS-A02"
+      ],
+      "reason": "闭合。F1=-2、调查边界及相关身份同步正确；治理6/15重大警告保留。",
+      "lane": "research"
+    },
+    {
+      "candidate_id": "C027",
+      "candidate_source": "anonymous-recheck-v2/candidates.json",
+      "disposition": "部分成立",
+      "acceptance_ids": [
+        "R5-DIVIDEND-A03"
+      ],
+      "reason": "未闭合。F2删去股东行动有界检索，融资审慎论证不足；恢复已核范围与边界。F2融资工具原窗口为近5年，不要求为F2额外扩大为IPO全期；A3自身历史问题独立处理。",
+      "lane": "research"
+    },
+    {
+      "candidate_id": "C028",
+      "candidate_source": "anonymous-recheck-v2/candidates.json",
+      "disposition": "成立",
+      "acceptance_ids": [
+        "R5-CHAIN-A02"
+      ],
+      "reason": "未闭合。销量增加本身不证明价格转嫁；部分成本传导与主导档之间仍需实质推导，非强制精确季度或独立计量模型。",
+      "lane": "research"
+    },
+    {
+      "candidate_id": "C029",
+      "candidate_source": "anonymous-recheck-v2/candidates.json",
+      "disposition": "部分成立",
+      "acceptance_ids": [
+        "R5-ACCOUNTING-A01"
+      ],
+      "reason": "事实判断已核，但分别登记未完成。原2025年报1530—1546收入KAM为确认判断及目标固有风险，以合同、函证、截止测试应对；1556—1570关联交易KAM为金额准确及披露完整，以名单、授权、对账和比价应对。两者为收入真实性/治理透明风险关注，非错报结论。只需据已核原文将两项登记分开。",
+      "lane": "delivery"
+    },
+    {
+      "candidate_id": "C030",
+      "candidate_source": "anonymous-recheck-v2/candidates.json",
+      "disposition": "成立",
+      "acceptance_ids": [
+        "R5-HISTORY-A01",
+        "R5-HISTORY-A02",
+        "R5-HISTORY-A03"
+      ],
+      "reason": "未闭合。v5 Q01仅起点终点，无中间历史窗口覆盖或控制变更检索响应；保留原条件，不要求每年重复。；未闭合。v5仅IPO用途及2002单项执行，Q02/Q03没有实际覆盖全期的记录和压力年份处理。需补原范围，不能将边界声明当充分依据。；未闭合。依赖A01/A02，当前3/4点值不因未命中即可批准，也不因缺证直接扣分。",
+      "lane": "research"
+    },
+    {
+      "candidate_id": "C031",
+      "candidate_source": "anonymous-recheck-v2/candidates.json",
+      "disposition": "部分成立",
+      "acceptance_ids": [
+        "R5-CHAIN-A02"
+      ],
+      "reason": "未闭合。销量增加本身不证明价格转嫁；部分成本传导与主导档之间仍需实质推导，非强制精确季度或独立计量模型。",
+      "lane": "research"
+    },
+    {
+      "candidate_id": "C032",
+      "candidate_source": "anonymous-recheck-v2/candidates.json",
+      "disposition": "部分成立",
+      "acceptance_ids": [
+        "R5-CHAIN-A01"
+      ],
+      "reason": "未闭合。事实只列合作社采购、量价及成本，仍未处理已知供应集中38.12%、地域替代约束、需求传导和周期位置；利用现有原件回答，不另造全行业调查。",
+      "lane": "research"
+    },
+    {
+      "candidate_id": "C033",
+      "candidate_source": "anonymous-recheck-v2/candidates.json",
+      "disposition": "成立",
+      "acceptance_ids": [
+        "R5-LATEST-A01"
+      ],
+      "reason": "闭合。新事实与2026H1原件88、128、164—167、210一致，保留同比与年末口径及预收政策原因。",
+      "lane": "research"
+    },
+    {
+      "candidate_id": "C034",
+      "candidate_source": "anonymous-recheck-v2/candidates.json",
+      "disposition": "部分成立",
+      "acceptance_ids": [
+        "R5-TALENT-A01"
+      ],
+      "reason": "未闭合。仅董事长和财务负责人样本不能替代原5年非独董及高管时间线；补规定统计，人才留存未知不等同统计不可执行。",
+      "lane": "research"
+    },
+    {
+      "candidate_id": "C035",
+      "candidate_source": "anonymous-recheck-v2/candidates.json",
+      "disposition": "部分成立",
+      "acceptance_ids": [
+        "R5-DIVIDEND-A01"
+      ],
+      "reason": "未闭合且新增同根因错误。MT5R2-DIV的2020年24.236/46.697亿元应约242.361/466.973亿元；2023中期300.01亿元错配，2024年报845明确2024中期。2023年报856特别分红每10股191.06元。补2024及分类/归属，禁止跨年重复；可用已实施常规下限，无需为满额穷尽特别分红。",
+      "lane": "research"
+    },
+    {
+      "candidate_id": "C036",
+      "candidate_source": "anonymous-recheck-v2/candidates.json",
+      "disposition": "成立",
+      "acceptance_ids": [
+        "R5-DIVIDEND-A03"
+      ],
+      "reason": "未闭合。F2删去股东行动有界检索，融资审慎论证不足；恢复已核范围与边界。F2融资工具原窗口为近5年，不要求为F2额外扩大为IPO全期；A3自身历史问题独立处理。",
+      "lane": "research"
+    },
+    {
+      "candidate_id": "C037",
+      "candidate_source": "anonymous-recheck-v2/candidates.json",
+      "disposition": "部分成立",
+      "acceptance_ids": [
+        "R5-HISTORY-A02"
+      ],
+      "reason": "未闭合。v5仅IPO用途及2002单项执行，Q02/Q03没有实际覆盖全期的记录和压力年份处理。需补原范围，不能将边界声明当充分依据。",
+      "lane": "research"
+    },
+    {
+      "candidate_id": "C038",
+      "candidate_source": "anonymous-recheck-v2/candidates.json",
+      "disposition": "部分成立",
+      "acceptance_ids": [
+        "R5-ACCOUNTING-A01"
+      ],
+      "reason": "事实判断已核，但分别登记未完成。原2025年报1530—1546收入KAM为确认判断及目标固有风险，以合同、函证、截止测试应对；1556—1570关联交易KAM为金额准确及披露完整，以名单、授权、对账和比价应对。两者为收入真实性/治理透明风险关注，非错报结论。只需据已核原文将两项登记分开。",
+      "lane": "delivery"
+    },
+    {
+      "candidate_id": "C039",
+      "candidate_source": "anonymous-recheck-v2/candidates.json",
+      "disposition": "成立",
+      "acceptance_ids": [
+        "R5-ACCOUNTING-A03"
+      ],
+      "reason": "未闭合。F3及诚信未因KAM自动扣分的联动合理，但E5.5最高档仍依赖A02，先补证再判断。",
+      "lane": "research"
+    },
+    {
+      "candidate_id": "C040",
+      "candidate_source": "anonymous-recheck-v2/candidates.json",
+      "disposition": "成立",
+      "acceptance_ids": [
+        "R5-DIVIDEND-A01"
+      ],
+      "reason": "未闭合且新增同根因错误。MT5R2-DIV的2020年24.236/46.697亿元应约242.361/466.973亿元；2023中期300.01亿元错配，2024年报845明确2024中期。2023年报856特别分红每10股191.06元。补2024及分类/归属，禁止跨年重复；可用已实施常规下限，无需为满额穷尽特别分红。",
+      "lane": "research"
+    },
+    {
+      "candidate_id": "C041",
+      "candidate_source": "anonymous-recheck-v2/candidates.json",
+      "disposition": "成立",
+      "acceptance_ids": [
+        "R5-TALENT-A01"
+      ],
+      "reason": "未闭合。仅董事长和财务负责人样本不能替代原5年非独董及高管时间线；补规定统计，人才留存未知不等同统计不可执行。",
+      "lane": "research"
+    },
+    {
+      "candidate_id": "C042",
+      "candidate_source": "anonymous-recheck-v2/candidates.json",
+      "disposition": "成立",
+      "acceptance_ids": [
+        "R5-STATUS-A01"
+      ],
+      "reason": "闭合。2026H1原件330和新事实明确已解聘/接任，不以披露调查等同现任。",
+      "lane": "research"
+    },
+    {
+      "candidate_id": "C043",
+      "candidate_source": "anonymous-recheck-v2/candidates.json",
+      "disposition": "成立",
+      "acceptance_ids": [
+        "R5-LATEST-A01"
+      ],
+      "reason": "闭合。新事实与2026H1原件88、128、164—167、210一致，保留同比与年末口径及预收政策原因。",
+      "lane": "research"
+    }
+  ],
+  "issues": [
+    {
+      "id": "R5-HISTORY",
+      "candidate_ids": [
+        "C003",
+        "C009"
+      ],
+      "original_acceptance_ids": [
+        "C003",
+        "C009"
+      ],
+      "lane": "research",
+      "severity": "P1",
+      "status": "open",
+      "affected_items": [
+        "A2",
+        "A3"
+      ],
+      "reason": "近期控制链及资本项目不能证明IPO以来控制稳定和资本运作清洁。",
+      "acceptance": [
+        {
+          "id": "R5-HISTORY-A01",
+          "condition": "补IPO至截止日控制链连续性依据：可用官方历次变更/沿革汇总或带时间范围的公告检索加关键节点原件，不要求逐年重复相同记录；说明国资监管机构更名与实质控制变更的区别。",
+          "status": "open",
+          "adjudication": "未闭合。v5 Q01仅起点终点，无中间历史窗口覆盖或控制变更检索响应；保留原条件，不要求每年重复。",
+          "verification_refs": [
+            "writer/rebuilt-v2/workpaper.json",
+            "writer/repair-v2/facts.json",
+            "external/v5/facts.json",
+            "external/v5/query-record.json"
+          ]
+        },
+        {
+          "id": "R5-HISTORY-A02",
+          "condition": "按原规则列IPO、再融资工具、重大并购及业绩压力年份重大非主营资产处置；发生事项核用途承诺与实际用途、商誉及利润影响；未发生类别给有界官方检索记录，不能用近期不适用外推全历史。",
+          "status": "open",
+          "adjudication": "未闭合。v5仅IPO用途及2002单项执行，Q02/Q03没有实际覆盖全期的记录和压力年份处理。需补原范围，不能将边界声明当充分依据。",
+          "verification_refs": [
+            "writer/rebuilt-v2/workpaper.json",
+            "writer/repair-v2/facts.json",
+            "external/v5/facts.json",
+            "external/v5/query-record.json"
+          ]
+        },
+        {
+          "id": "R5-HISTORY-A03",
+          "condition": "据事实重选A2/A3并解释相邻档，公开可得但未取证仍为缺口，不因未知降分。",
+          "status": "open",
+          "adjudication": "未闭合。依赖A01/A02，当前3/4点值不因未命中即可批准，也不因缺证直接扣分。",
+          "verification_refs": [
+            "writer/rebuilt-v2/workpaper.json",
+            "writer/repair-v2/facts.json",
+            "external/v5/facts.json",
+            "external/v5/query-record.json"
+          ]
+        }
+      ],
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-5/score-rules.md:130-155",
+        "external/facts.json:MT5-EXT-CTRL-001/002、MT5-EXT-CAP-001/002"
+      ]
+    },
+    {
+      "id": "R5-CHAIN",
+      "candidate_ids": [
+        "C004"
+      ],
+      "original_acceptance_ids": [
+        "C004"
+      ],
+      "lane": "research",
+      "severity": "P1",
+      "status": "open",
+      "affected_items": [
+        "C2"
+      ],
+      "reason": "高毛利和低客户集中度支持议价优势，但现有理由跳过成本传导等明确规则。",
+      "acceptance": [
+        {
+          "id": "R5-CHAIN-A01",
+          "condition": "补上游集中度及替代约束，结合已有2024H1销量/价格与成本变化和最新半年报，回答成本传导、需求传导、周期位置、综合上下游议价四维。已知限制须纳入；精确库存或传导季度未公开可标未知并说明不影响选档依据，不新增全行业调查。",
+          "status": "open",
+          "adjudication": "未闭合。事实只列合作社采购、量价及成本，仍未处理已知供应集中38.12%、地域替代约束、需求传导和周期位置；利用现有原件回答，不另造全行业调查。",
+          "verification_refs": [
+            "writer/rebuilt-v2/workpaper.json",
+            "writer/repair-v2/facts.json",
+            "external/v5/facts.json",
+            "external/v5/query-record.json"
+          ]
+        },
+        {
+          "id": "R5-CHAIN-A02",
+          "condition": "区分高毛利水平与实际成本转嫁证据，给C2=5或相邻档的可辩护判断；仅补表格标题不能通过。",
+          "status": "open",
+          "adjudication": "未闭合。销量增加本身不证明价格转嫁；部分成本传导与主导档之间仍需实质推导，非强制精确季度或独立计量模型。",
+          "verification_refs": [
+            "writer/rebuilt-v2/workpaper.json",
+            "writer/repair-v2/facts.json",
+            "external/v5/facts.json",
+            "external/v5/query-record.json"
+          ]
+        }
+      ],
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-5/score-rules.md:298-324",
+        "财报/贵州茅台/贵州茅台2026半年度报告.md:128,164-167",
+        "external/facts.json:MT5-EXT-BIZ-001"
+      ]
+    },
+    {
+      "id": "R5-LATEST",
+      "candidate_ids": [
+        "C002"
+      ],
+      "original_acceptance_ids": [
+        "C002"
+      ],
+      "lane": "research",
+      "severity": "P1",
+      "status": "open",
+      "affected_items": [
+        "B4",
+        "D3",
+        "E3",
+        "C2",
+        "关键反证"
+      ],
+      "reason": "最新经营信号未进入评分；合同负债下降不可径直归因为需求恶化。",
+      "acceptance": [
+        {
+          "id": "R5-LATEST-A01",
+          "condition": "注册2026H1营收+1.47%、归母利润-1.95%、成本+21.81%、合同负债-60.31%及对应同比/年末比较口径，带公司销量、生产成本和预收政策改变的解释。",
+          "status": "closed",
+          "adjudication": "闭合。新事实与2026H1原件88、128、164—167、210一致，保留同比与年末口径及预收政策原因。",
+          "verification_refs": [
+            "writer/rebuilt-v2/workpaper.json",
+            "writer/repair-v2/facts.json",
+            "external/v5/facts.json",
+            "external/v5/query-record.json"
+          ]
+        },
+        {
+          "id": "R5-LATEST-A02",
+          "condition": "将最新信号与年度长期趋势合并重评B4/D3/E3并联动C2；E3量价判断需已有价格证据支持，不能由扣非接近净利润替代；允许有据不改分，不机械年化半年数。",
+          "status": "open",
+          "adjudication": "部分闭合。B4=3、D3=2更新理由可保留；E3只论非经常损益而未解释量价，C2仍受产业链未闭合条件约束。仅修E3/C2，不重做B4/D3。",
+          "verification_refs": [
+            "writer/rebuilt-v2/workpaper.json",
+            "writer/repair-v2/facts.json",
+            "external/v5/facts.json",
+            "external/v5/query-record.json"
+          ]
+        }
+      ],
+      "source_refs": [
+        "财报/贵州茅台/贵州茅台2026半年度报告.md:88,128,138,164-167,210"
+      ]
+    },
+    {
+      "id": "R5-ACCOUNTING",
+      "candidate_ids": [
+        "C001",
+        "C005"
+      ],
+      "original_acceptance_ids": [
+        "C001",
+        "C005"
+      ],
+      "lane": "research",
+      "severity": "P1",
+      "status": "open",
+      "affected_items": [
+        "E5.5",
+        "F3",
+        "诚信与透明度"
+      ],
+      "reason": "KAM存在不是异常；但原理由未完成三年变更和计提充分性判断，不能将断链归为纯排版。",
+      "acceptance": [
+        {
+          "id": "R5-ACCOUNTING-A01",
+          "condition": "分别记录2025收入确认及关联方交易KAM的关注点、审计应对和对分析的含义；不得把固有风险措辞当已发生错报或审计质疑，也不得说无KAM。",
+          "status": "open",
+          "adjudication": "事实判断已核，但分别登记未完成。原2025年报1530—1546收入KAM为确认判断及目标固有风险，以合同、函证、截止测试应对；1556—1570关联交易KAM为金额准确及披露完整，以名单、授权、对账和比价应对。两者为收入真实性/治理透明风险关注，非错报结论。只需据已核原文将两项登记分开。",
+          "verification_refs": [
+            "writer/rebuilt-v2/workpaper.json",
+            "writer/repair-v2/facts.json",
+            "external/v5/facts.json",
+            "external/v5/query-record.json"
+          ],
+          "lane": "delivery",
+          "classified_by": "adjudicator",
+          "no_decision_impact": true,
+          "no_decision_impact_basis": "裁决已独立核2025原文的两项关注点及审计应对，正确判断未改变；只分开登记，A02/A03仍按research不得据此批准E5.5。"
+        },
+        {
+          "id": "R5-ACCOUNTING-A02",
+          "condition": "用2023—2025原件核会计政策/估计变更次数及实质、利润影响，补最新应收账龄与计提、存货计提及适用商誉检查并计算关键比率。应收计提约8.30%、存货约0.00209%；低存货计提按白酒原规则判断，不机械扣分。",
+          "status": "open",
+          "adjudication": "未闭合。2023年报98、2234、2238明示解释16号追溯调整：合并权益-26,606,990.22元、所得税费用+903,191.13元，属于2022比较期影响，非2023当期利润增益。须登记三年政策实质/次数及期别，不能机械将法定准则变更当激进政策。2025应收账龄2308为一年内2,609,048.49元、五年以上236,198元；账龄应配合计提分析，商誉适用性须明确。",
+          "verification_refs": [
+            "writer/rebuilt-v2/workpaper.json",
+            "writer/repair-v2/facts.json",
+            "external/v5/facts.json",
+            "external/v5/query-record.json"
+          ]
+        },
+        {
+          "id": "R5-ACCOUNTING-A03",
+          "condition": "重选E5.5并说明F3/诚信与透明度是否联动及理由；登记精确原件位置。三年政策记录或关键计提仍未核时不能仅靠无保留意见批准3分。",
+          "status": "open",
+          "adjudication": "未闭合。F3及诚信未因KAM自动扣分的联动合理，但E5.5最高档仍依赖A02，先补证再判断。",
+          "verification_refs": [
+            "writer/rebuilt-v2/workpaper.json",
+            "writer/repair-v2/facts.json",
+            "external/v5/facts.json",
+            "external/v5/query-record.json"
+          ]
+        }
+      ],
+      "source_refs": [
+        "财报/贵州茅台/贵州茅台2025年度报告.md:1508-1570,1059-1067,2316,2523",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-5/score-rules.md:561-629"
+      ]
+    },
+    {
+      "id": "R5-DIVIDEND",
+      "candidate_ids": [
+        "C006"
+      ],
+      "original_acceptance_ids": [
+        "C006"
+      ],
+      "lane": "research",
+      "severity": "P1",
+      "status": "open",
+      "affected_items": [
+        "F2",
+        "资本配置能力",
+        "对股东友好度"
+      ],
+      "reason": "算术正确但分红分子与盈利年度不对应，必须替换。",
+      "acceptance": [
+        {
+          "id": "R5-DIVIDEND-A01",
+          "condition": "撤回实施年分红/同年利润的46%/87%/76%/80%序列；按归属年度列已实施常规、特别/中期分红及同年度归母净利，回购单列，避免重复。",
+          "status": "open",
+          "adjudication": "未闭合且新增同根因错误。MT5R2-DIV的2020年24.236/46.697亿元应约242.361/466.973亿元；2023中期300.01亿元错配，2024年报845明确2024中期。2023年报856特别分红每10股191.06元。补2024及分类/归属，禁止跨年重复；可用已实施常规下限，无需为满额穷尽特别分红。",
+          "verification_refs": [
+            "writer/rebuilt-v2/workpaper.json",
+            "writer/repair-v2/facts.json",
+            "external/v5/facts.json",
+            "external/v5/query-record.json"
+          ]
+        },
+        {
+          "id": "R5-DIVIDEND-A02",
+          "condition": "按原窗口完成实际计算；严格同口径已实施分红下限若已足够选档即可，不要求无影响的末位金额。例如2025已实施中期300.01亿元/2025归母823.200671亿元约36.44%，足以跨30%参考线，须明确仅为下限而非全年总分红率；未实施预案不得冒充实施。",
+          "status": "closed",
+          "adjudication": "闭合。2025中期300.01/823.20约36.44%下限足够跨30%参考线，未计未实施预案。此闭合不放行其他年份错误。",
+          "verification_refs": [
+            "writer/rebuilt-v2/workpaper.json",
+            "writer/repair-v2/facts.json",
+            "external/v5/facts.json",
+            "external/v5/query-record.json"
+          ]
+        },
+        {
+          "id": "R5-DIVIDEND-A03",
+          "condition": "重核F2及两管理层维度的理由强度；高分红不是F2满分全部条件，保留已核减持与融资审慎依据和检索边界。",
+          "status": "open",
+          "adjudication": "未闭合。F2删去股东行动有界检索，融资审慎论证不足；恢复已核范围与边界。F2融资工具原窗口为近5年，不要求为F2额外扩大为IPO全期；A3自身历史问题独立处理。",
+          "verification_refs": [
+            "writer/rebuilt-v2/workpaper.json",
+            "writer/repair-v2/facts.json",
+            "external/v5/facts.json",
+            "external/v5/query-record.json"
+          ]
+        }
+      ],
+      "source_refs": [
+        "data\\reviews\\triplet-token-cycle-2026-09-20\\round-5\\numeric\\v2\\dividend-basis.json",
+        "财报/贵州茅台/贵州茅台2025年度报告.md:875-897",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-5/score-rules.md:837"
+      ]
+    },
+    {
+      "id": "R5-ATTRIBUTION",
+      "candidate_ids": [
+        "C007"
+      ],
+      "original_acceptance_ids": [
+        "C007"
+      ],
+      "lane": "research",
+      "severity": "P1",
+      "status": "open",
+      "affected_items": [
+        "对股东友好度",
+        "表达清晰度与认知质量",
+        "战略稳定性"
+      ],
+      "reason": "未取得资料不是公司缺点，不支持保留一两分；不因此自动改满分。",
+      "acceptance": [
+        {
+          "id": "R5-ATTRIBUTION-A01",
+          "condition": "删除股东行动查询边界和未取得电话会原话作为扣分原因，用已核正反事实选择点值并解释相邻档，置信度/未知分开。",
+          "status": "open",
+          "adjudication": "部分闭合。已撤未知扣分，但13/15及4/5只有正面表述和维持原分，未给真实限制或档位判断；允许专业判断，不要求公司公布分数或为分差造负面。",
+          "verification_refs": [
+            "writer/rebuilt-v2/workpaper.json",
+            "writer/repair-v2/facts.json",
+            "external/v5/facts.json",
+            "external/v5/query-record.json"
+          ]
+        },
+        {
+          "id": "R5-ATTRIBUTION-A02",
+          "condition": "同根因检查管理层战略稳定性中“无管理层原话验证，保留扣分”并修正归因；公司D2原规则明确缺原话上限4分继续适用，不混同两条规则。",
+          "status": "closed",
+          "adjudication": "闭合。管理层战略11分由目标兑现及2025未达支持，公司D2原上限独立保留。",
+          "verification_refs": [
+            "writer/rebuilt-v2/workpaper.json",
+            "writer/repair-v2/facts.json",
+            "external/v5/facts.json",
+            "external/v5/query-record.json"
+          ]
+        }
+      ],
+      "source_refs": [
+        "writer/workpaper-v1.json:scores.management",
+        "docs/three-report-closeout.md:证据、评分与预测的边界"
+      ]
+    },
+    {
+      "id": "R5-STATUS",
+      "candidate_ids": [
+        "C008"
+      ],
+      "original_acceptance_ids": [
+        "C008"
+      ],
+      "lane": "research",
+      "severity": "P1",
+      "status": "closed",
+      "affected_items": [
+        "F1",
+        "诚信与透明度",
+        "危机处理能力",
+        "组织与人才能力",
+        "风险表述"
+      ],
+      "reason": "原件明确解聘，截止日现任假设错误；仍在涉嫌违法事项中披露不代表仍任职。",
+      "acceptance": [
+        {
+          "id": "R5-STATUS-A01",
+          "condition": "注册2026H1 L330蒋焰解聘、余思明接任，区分事发时职务与截止日身份；不以离任等同调查结案。",
+          "status": "closed",
+          "adjudication": "闭合。2026H1原件330和新事实明确已解聘/接任，不以披露调查等同现任。",
+          "verification_refs": [
+            "writer/rebuilt-v2/workpaper.json",
+            "writer/repair-v2/facts.json",
+            "external/v5/facts.json",
+            "external/v5/query-record.json"
+          ]
+        },
+        {
+          "id": "R5-STATUS-A02",
+          "condition": "维持历史周期性腐败F1=-2的原规则适用，不追加基于现任的降级；保留调查风险及治理维度6/15触及40%重大警告。与身份有关管理层理由同步，不能虚构现任或结案。",
+          "status": "closed",
+          "adjudication": "闭合。F1=-2、调查边界及相关身份同步正确；治理6/15重大警告保留。",
+          "verification_refs": [
+            "writer/rebuilt-v2/workpaper.json",
+            "writer/repair-v2/facts.json",
+            "external/v5/facts.json",
+            "external/v5/query-record.json"
+          ]
+        }
+      ],
+      "source_refs": [
+        "财报/贵州茅台/贵州茅台2026半年度报告.md:330,415-419",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-5/score-rules.md:836,891-902"
+      ],
+      "verification_refs": [
+        "writer/rebuilt-v2/workpaper.json",
+        "财报/贵州茅台/贵州茅台2026半年度报告.md:330,415-419"
+      ]
+    },
+    {
+      "id": "R5-TALENT",
+      "candidate_ids": [
+        "C010"
+      ],
+      "original_acceptance_ids": [
+        "C010"
+      ],
+      "lane": "research",
+      "severity": "P1",
+      "status": "open",
+      "affected_items": [
+        "组织与人才能力",
+        "危机处理能力"
+      ],
+      "reason": "单一继任事实不足以支撑近5年组织人才判断。",
+      "acceptance": [
+        {
+          "id": "R5-TALENT-A01",
+          "condition": "按近5年窗口从年报与任免公告建立非独董及高管变动时间线，列近3/5年离任数、12个月集中离任、继任来源和关键岗位空缺；同人多职勿重复计人数，窗口与截止日写清。",
+          "status": "open",
+          "adjudication": "未闭合。仅董事长和财务负责人样本不能替代原5年非独董及高管时间线；补规定统计，人才留存未知不等同统计不可执行。",
+          "verification_refs": [
+            "writer/rebuilt-v2/workpaper.json",
+            "writer/repair-v2/facts.json",
+            "external/v5/facts.json",
+            "external/v5/query-record.json"
+          ]
+        },
+        {
+          "id": "R5-TALENT-A02",
+          "condition": "据高管稳定性、人才保留、激励三方面解释最终点值，子判断权重服从10分总上限，不能机械将3—4/3—4/2—3分相加突破上限；人才保留未披露标未知，已核继任/组织/激励证据足以选档时不要求穷尽私人信息。",
+          "status": "open",
+          "adjudication": "部分闭合。未知扣分已去除，但稳定性/人才保留/激励点值判断仍缺，依赖A01；不用强制小数子分，只须可辩护并保持总上限。",
+          "verification_refs": [
+            "writer/rebuilt-v2/workpaper.json",
+            "writer/repair-v2/facts.json",
+            "external/v5/facts.json",
+            "external/v5/query-record.json"
+          ]
+        }
+      ],
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-5/score-rules.md:1156-1195,1238",
+        "财报/贵州茅台/贵州茅台2026半年度报告.md:330"
+      ]
+    }
+  ],
+  "score_bridge": {
+    "company": {
+      "before_total": 83.5,
+      "candidate_total": 83.5,
+      "verified_arithmetic_total": 83.5,
+      "observed_delta": 0,
+      "approved_total": null,
+      "items": [
+        {
+          "id": "A1",
+          "v1": 2,
+          "v2": 2,
+          "observed_delta": 0,
+          "approved_after": 2,
+          "status": "retain_verified"
+        },
+        {
+          "id": "A2",
+          "v1": 3,
+          "v2": 3,
+          "observed_delta": 0,
+          "approved_after": null,
+          "status": "pending"
+        },
+        {
+          "id": "A3",
+          "v1": 4,
+          "v2": 4,
+          "observed_delta": 0,
+          "approved_after": null,
+          "status": "pending"
+        },
+        {
+          "id": "B0",
+          "v1": 2,
+          "v2": 2,
+          "observed_delta": 0,
+          "approved_after": 2,
+          "status": "retain_verified"
+        },
+        {
+          "id": "B1",
+          "v1": 3,
+          "v2": 3,
+          "observed_delta": 0,
+          "approved_after": 3,
+          "status": "retain_verified"
+        },
+        {
+          "id": "B2",
+          "v1": 3,
+          "v2": 3,
+          "observed_delta": 0,
+          "approved_after": 3,
+          "status": "retain_verified"
+        },
+        {
+          "id": "B3",
+          "v1": 6,
+          "v2": 6,
+          "observed_delta": 0,
+          "approved_after": 6,
+          "status": "retain_verified"
+        },
+        {
+          "id": "B4",
+          "v1": 3,
+          "v2": 3,
+          "observed_delta": 0,
+          "approved_after": 3,
+          "status": "retain_verified"
+        },
+        {
+          "id": "C1",
+          "v1": 6,
+          "v2": 6,
+          "observed_delta": 0,
+          "approved_after": 6,
+          "status": "retain_verified"
+        },
+        {
+          "id": "C2",
+          "v1": 5,
+          "v2": 5,
+          "observed_delta": 0,
+          "approved_after": null,
+          "status": "pending"
+        },
+        {
+          "id": "C3+C4",
+          "v1": 9,
+          "v2": 9,
+          "observed_delta": 0,
+          "approved_after": 9,
+          "status": "retain_verified"
+        },
+        {
+          "id": "D1",
+          "v1": 4,
+          "v2": 4,
+          "observed_delta": 0,
+          "approved_after": 4,
+          "status": "retain_verified"
+        },
+        {
+          "id": "D2",
+          "v1": 4,
+          "v2": 4,
+          "observed_delta": 0,
+          "approved_after": 4,
+          "status": "retain_verified"
+        },
+        {
+          "id": "D3",
+          "v1": 2,
+          "v2": 2,
+          "observed_delta": 0,
+          "approved_after": 2,
+          "status": "retain_verified"
+        },
+        {
+          "id": "D5",
+          "v1": 2,
+          "v2": 2,
+          "observed_delta": 0,
+          "approved_after": 2,
+          "status": "retain_verified"
+        },
+        {
+          "id": "E1",
+          "v1": 5,
+          "v2": 5,
+          "observed_delta": 0,
+          "approved_after": 5,
+          "status": "retain_verified"
+        },
+        {
+          "id": "E2",
+          "v1": 5,
+          "v2": 5,
+          "observed_delta": 0,
+          "approved_after": 5,
+          "status": "retain_verified"
+        },
+        {
+          "id": "E3",
+          "v1": 3,
+          "v2": 3,
+          "observed_delta": 0,
+          "approved_after": null,
+          "status": "pending"
+        },
+        {
+          "id": "E4",
+          "v1": 1.5,
+          "v2": 1.5,
+          "observed_delta": 0,
+          "approved_after": 1.5,
+          "status": "retain_verified"
+        },
+        {
+          "id": "E5",
+          "v1": 2,
+          "v2": 2,
+          "observed_delta": 0,
+          "approved_after": 2,
+          "status": "retain_verified"
+        },
+        {
+          "id": "E5.5",
+          "v1": 3,
+          "v2": 3,
+          "observed_delta": 0,
+          "approved_after": null,
+          "status": "pending"
+        },
+        {
+          "id": "F1",
+          "v1": -2,
+          "v2": -2,
+          "observed_delta": 0,
+          "approved_after": -2,
+          "status": "retain_verified"
+        },
+        {
+          "id": "F2",
+          "v1": 5,
+          "v2": 5,
+          "observed_delta": 0,
+          "approved_after": null,
+          "status": "pending"
+        },
+        {
+          "id": "F2.5",
+          "v1": 1,
+          "v2": 1,
+          "observed_delta": 0,
+          "approved_after": 1,
+          "status": "retain_verified"
+        },
+        {
+          "id": "F3",
+          "v1": 2,
+          "v2": 2,
+          "observed_delta": 0,
+          "approved_after": 2,
+          "status": "retain_verified"
+        }
+      ],
+      "formula": "新稿总分=冻结v2总分+逐项实证修复delta；未知delta不当0。"
+    },
+    "management": {
+      "before_total": 65,
+      "candidate_total": 65,
+      "verified_arithmetic_total": 65,
+      "observed_delta": 0,
+      "approved_total": null,
+      "items": [
+        {
+          "id": "诚信与透明度",
+          "v1": 10,
+          "v2": 10,
+          "observed_delta": 0,
+          "approved_after": 10,
+          "status": "retain_verified"
+        },
+        {
+          "id": "资本配置能力",
+          "v1": 18,
+          "v2": 18,
+          "observed_delta": 0,
+          "approved_after": null,
+          "status": "pending"
+        },
+        {
+          "id": "战略稳定性",
+          "v1": 11,
+          "v2": 11,
+          "observed_delta": 0,
+          "approved_after": 11,
+          "status": "retain_verified"
+        },
+        {
+          "id": "对股东友好度",
+          "v1": 13,
+          "v2": 13,
+          "observed_delta": 0,
+          "approved_after": null,
+          "status": "pending"
+        },
+        {
+          "id": "危机处理能力",
+          "v1": 5,
+          "v2": 5,
+          "observed_delta": 0,
+          "approved_after": null,
+          "status": "pending"
+        },
+        {
+          "id": "组织与人才能力",
+          "v1": 4,
+          "v2": 4,
+          "observed_delta": 0,
+          "approved_after": null,
+          "status": "pending"
+        },
+        {
+          "id": "表达清晰度与认知质量",
+          "v1": 4,
+          "v2": 4,
+          "observed_delta": 0,
+          "approved_after": null,
+          "status": "pending"
+        }
+      ],
+      "formula": "新稿总分=冻结v2总分+逐项实证修复delta；未知delta不当0。"
+    }
+  },
+  "score_repair_scope": [
+    {
+      "group": "company",
+      "item": "A2",
+      "acceptance_ids": [
+        "R5-HISTORY-A01",
+        "R5-HISTORY-A02",
+        "R5-HISTORY-A03"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "A3",
+      "acceptance_ids": [
+        "R5-HISTORY-A01",
+        "R5-HISTORY-A02",
+        "R5-HISTORY-A03"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "C2",
+      "acceptance_ids": [
+        "R5-CHAIN-A01",
+        "R5-CHAIN-A02",
+        "R5-LATEST-A02"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "E3",
+      "acceptance_ids": [
+        "R5-LATEST-A02"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "E5.5",
+      "acceptance_ids": [
+        "R5-ACCOUNTING-A01",
+        "R5-ACCOUNTING-A02",
+        "R5-ACCOUNTING-A03"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "F2",
+      "acceptance_ids": [
+        "R5-DIVIDEND-A01",
+        "R5-DIVIDEND-A03"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "F3",
+      "acceptance_ids": [
+        "R5-ACCOUNTING-A01",
+        "R5-ACCOUNTING-A02",
+        "R5-ACCOUNTING-A03"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "诚信与透明度",
+      "acceptance_ids": [
+        "R5-ACCOUNTING-A01",
+        "R5-ACCOUNTING-A02",
+        "R5-ACCOUNTING-A03"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "资本配置能力",
+      "acceptance_ids": [
+        "R5-DIVIDEND-A01",
+        "R5-DIVIDEND-A03"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "对股东友好度",
+      "acceptance_ids": [
+        "R5-DIVIDEND-A01",
+        "R5-DIVIDEND-A03",
+        "R5-ATTRIBUTION-A01"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "危机处理能力",
+      "acceptance_ids": [
+        "R5-TALENT-A01",
+        "R5-TALENT-A02"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "组织与人才能力",
+      "acceptance_ids": [
+        "R5-TALENT-A01",
+        "R5-TALENT-A02"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "表达清晰度与认知质量",
+      "acceptance_ids": [
+        "R5-ATTRIBUTION-A01"
+      ]
+    }
+  ],
+  "metadata_repair_scope": [
+    {
+      "field": "evidence_gaps",
+      "acceptance_ids": [
+        "R5-HISTORY-A01",
+        "R5-HISTORY-A02",
+        "R5-HISTORY-A03",
+        "R5-CHAIN-A01",
+        "R5-CHAIN-A02",
+        "R5-LATEST-A02",
+        "R5-ACCOUNTING-A01",
+        "R5-ACCOUNTING-A02",
+        "R5-ACCOUNTING-A03",
+        "R5-DIVIDEND-A01",
+        "R5-DIVIDEND-A03",
+        "R5-ATTRIBUTION-A01",
+        "R5-TALENT-A01",
+        "R5-TALENT-A02"
+      ]
+    }
+  ],
+  "approved_parameters": {
+    "company_score": null,
+    "management_score": null,
+    "combined_score": null,
+    "F1": -2,
+    "B4": 3,
+    "D3": 2,
+    "F3": 2,
+    "诚信与透明度": 10,
+    "战略稳定性": 11,
+    "target_price": null,
+    "buy_price": null,
+    "certainty": null
+  },
+  "valuation_approval": {
+    "status": "not_in_scope",
+    "approved_models": [],
+    "approved_range": null,
+    "reason": "仅评分授权，未开展或批准正式估值"
+  },
+  "score_bounds": null,
+  "quality_stop_approved": false,
+  "review_refs": [
+    "data\\reviews\\triplet-token-cycle-2026-09-20\\round-5\\anonymous-recheck-v2\\candidates.json"
+  ],
+  "exception": {
+    "authorized": true,
+    "role": "triplet_repair_writer",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "low",
+    "exception_number": 1,
+    "max_additional_research_repairs": 1,
+    "reason": "原重大条件未闭合且修复新增分红归属/单位错误；原件可得，允许最后一次有界修复，不能同作者重复泛改。",
+    "acceptance_ids": [
+      "R5-HISTORY-A01",
+      "R5-HISTORY-A02",
+      "R5-HISTORY-A03",
+      "R5-CHAIN-A01",
+      "R5-CHAIN-A02",
+      "R5-LATEST-A02",
+      "R5-ACCOUNTING-A01",
+      "R5-ACCOUNTING-A02",
+      "R5-ACCOUNTING-A03",
+      "R5-DIVIDEND-A01",
+      "R5-DIVIDEND-A03",
+      "R5-ATTRIBUTION-A01",
+      "R5-TALENT-A01",
+      "R5-TALENT-A02"
+    ],
+    "conditions": "沿用原19ID及条件；只修未闭合项和必要联动。已有闭合条件不得重开；分红可按同口径保守下限完成各年。不新增全行业、非公开人才或原规则外调查。例外后只做一次双路定向验收，仍不闭合则按真实边界收尾，不给第三次机会。"
+  },
+  "answer": "候选83.5/65算术无变，但总分未批准。保留已核分项；最后一次Sol low例外只处理本台账未闭合条件。",
+  "next_trigger": "例外作者交局部delta、原件与逐ID位置后，原双路仅核剩余研究条件和联动；已核KAM拆分登记由原事实复核员定向验收。",
+  "new_evidence_findings": [
+    {
+      "acceptance_id": "R5-DIVIDEND-A01",
+      "source": "2023年报854-856；2024年报843-845；numeric/v2/dividend-basis.json",
+      "finding": "2020单位缩小十倍；2024中期被错放2023，属于同根因事实错误，非可忽略末位。"
+    },
+    {
+      "acceptance_id": "R5-ACCOUNTING-A02",
+      "source": "2023年报98、2234、2238；2025年报2308",
+      "finding": "解释16号有实际追溯调整；账龄已可得，补登记并按期别分析。"
+    }
+  ]
+}

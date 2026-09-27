@@ -1,0 +1,12 @@
+{
+  "dupont": {
+    "2023": {"inputs_yuan":{"net_profit":"77521476277.80","revenue":"150560330316.45","assets_begin":"254500826096.02","assets_end":"272699660092.25","equity_begin":"204938081263.86","equity_end":"223656469294.82"},"net_margin":"0.5148864652120792912956388198","asset_turnover":"0.5711691633861012442414529920","equity_multiplier":"1.230068103994919094655120090","roe":"0.3617473725540816557314731616"},
+    "2024": {"inputs_yuan":{"net_profit":"89334728025.90","revenue":"174144069958.25","assets_begin":"272699660092.25","assets_end":"298944579918.70","equity_begin":"223656469294.82","equity_end":"242011315120.60"},"net_margin":"0.5129932247897816281368259222","asset_turnover":"0.6092742925387098215083932753","equity_multiplier":"1.227579530176364769898135249","roe":"0.3836843819378534334154774312"},
+    "2025": {"inputs_yuan":{"net_profit":"85310324833.67","revenue":"172054171890.91","assets_begin":"298944579918.70","assets_end":"303834844021.44","equity_begin":"242011315120.60","equity_end":"253959253909.07"},"net_margin":"0.4958340962970693995438093811","asset_turnover":"0.5708694260539195907317294671","equity_multiplier":"1.215353211621878455072560699","roe":"0.3440136579094738880964243459"}
+  },
+  "capital_boundary": {
+    "50000":{"annual_operating_contribution_yuan":"320000000","contribution_on_budget":"0.09264191583481946406651689557","simple_payback_years":"10.79425"},
+    "75000":{"annual_operating_contribution_yuan":"480000000","contribution_on_budget":"0.1389628737522291960997753434","simple_payback_years":"7.196166666666666666666666667"},
+    "100000":{"annual_operating_contribution_yuan":"640000000","contribution_on_budget":"0.1852838316696389281330337911","simple_payback_years":"5.397125"}
+  }
+}

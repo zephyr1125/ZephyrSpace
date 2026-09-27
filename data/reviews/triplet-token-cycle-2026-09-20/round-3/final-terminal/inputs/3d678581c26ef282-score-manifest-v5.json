@@ -1,0 +1,17 @@
+{
+  "stage": "merged_repair_pending_review",
+  "frozen_at": "2026-09-20T17:45:53.824446+00:00",
+  "workpaper": "data\\reviews\\triplet-token-cycle-2026-09-20\\round-3\\writer\\rebuilt-v5-final\\workpaper.json",
+  "workpaper_sha256": "191ed53323c50882600bf63d5f0fbd3f773089c674ee1d3af4ef508318b40a7d",
+  "files": {
+    "data\\reviews\\triplet-token-cycle-2026-09-20\\round-3\\writer\\rebuilt-v5-final\\workpaper.json": "191ed53323c50882600bf63d5f0fbd3f773089c674ee1d3af4ef508318b40a7d",
+    "data\\reviews\\triplet-token-cycle-2026-09-20\\round-3\\writer\\rebuilt-v5-final\\receipt.json": "d9696d4d35830c7d313b41ea38cdf8c4328dd9b43e24527b1b33e007fb13830c",
+    "data\\reviews\\triplet-token-cycle-2026-09-20\\round-3\\writer\\repair-v5\\acceptance-response.md": "7c7fe702ce80e04961102ecbb535ac46e9cfac6cdafdb5c853e0d4425a72bd87",
+    "data\\reviews\\triplet-token-cycle-2026-09-20\\round-3\\writer\\repair-v5\\delta.json": "9795576dbc13291fd1bb0ea7835d8bcf0bd9b6ed129d758e7a399fd4a584bbc0",
+    "data\\reviews\\triplet-token-cycle-2026-09-20\\round-3\\writer\\repair-v5\\evidence-files.json": "b145dd1440ce0d346c0a0b2cac555e225b23cfb20d7df6634229d2311c27c103",
+    "data\\reviews\\triplet-token-cycle-2026-09-20\\round-3\\writer\\repair-v5\\facts-v5.json": "fdf9e2ab178b253cd68f0bbc236193fbbf73bbad691081255beb5a3e2836c791",
+    "data\\reviews\\triplet-token-cycle-2026-09-20\\round-3\\writer\\repair-v5\\sources-v5.json": "c0264e44e6b03242ebec2eba9afba775cd40de28788f015f480c62bffb0424d5",
+    "data\\reviews\\triplet-token-cycle-2026-09-20\\round-3\\writer\\repair-v5\\检索记录.md": "20f5700a12eb9875f034d0ea836e8765eb05efb99bb44d94febe6ce17c11f732",
+    "data\\reviews\\triplet-token-cycle-2026-09-20\\round-3\\writer\\repair-v5\\论证.md": "b960d54564d7cb36f814b6148d73f4759cf9dc09e72c2858fb7adc42b4835b46"
+  }
+}

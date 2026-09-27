@@ -1,0 +1,610 @@
+{
+  "changes": [
+    {
+      "group": "company",
+      "item": "A2",
+      "before": {
+        "id": "A2",
+        "score": 3,
+        "rule_ref": "A2",
+        "reason": "IPO、2023—2026H1均由茅台集团/贵州国资体系控制，主要直接股东持股桥稳定且集团2025增持；符合从未变更控制权的强稳定档。",
+        "evidence_refs": [
+          "MT5-EXT-CTRL-001",
+          "MT5-EXT-CTRL-002",
+          "MT5V4-EQ-001"
+        ]
+      },
+      "after": {
+        "id": "A2",
+        "score": 3,
+        "rule_ref": "A2",
+        "reason": "1999设立、2001上市至2026H1均由茅台集团/贵州国资体系控制；国资监管机构表述变化不等于实质控制变更，符合稳定档。",
+        "evidence_refs": [
+          "MT5V5-HIST-CTRL-001"
+        ]
+      },
+      "acceptance_ids": [
+        "R5-HISTORY-A01",
+        "R5-HISTORY-A02",
+        "R5-HISTORY-A03"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "A3",
+      "before": {
+        "id": "A3",
+        "score": 4,
+        "rule_ref": "A3",
+        "reason": "IPO后主业未见壳化线索，近年无可转债或股权激励摊薄且有回购注销；已核资本项目和产业基金均在主业/产业链语境，未见卖资产保利润证据。",
+        "evidence_refs": [
+          "MT5-EXT-CAP-001",
+          "MT5-EXT-CAP-002",
+          "MT-R5-V2-CIP-2025",
+          "MT-R5-V2-FUND-2025"
+        ]
+      },
+      "after": {
+        "id": "A3",
+        "score": 4,
+        "rule_ref": "A3",
+        "reason": "IPO募集项目及2002习酒资产收购用途/执行已核；当前无可转债且回购注销，关键词检索未获重大重组、商誉或压力年处置原件。有限未命中不作负面推断，已核事实支持清洁档。",
+        "evidence_refs": [
+          "MT5V5-HIST-FIN-001",
+          "MT5V5-HIST-FIN-002",
+          "MT5V5-HIST-MA-001",
+          "MT5V5-HIST-MA-002"
+        ]
+      },
+      "acceptance_ids": [
+        "R5-HISTORY-A01",
+        "R5-HISTORY-A02",
+        "R5-HISTORY-A03"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "B4",
+      "before": {
+        "id": "B4",
+        "score": 3,
+        "rule_ref": "B4",
+        "reason": "白酒为成熟行业，核心酒稳定但2025总收入-1.21%、系列酒调整，不能按成长期内生引擎评5分；成熟而稳定档为3分。",
+        "evidence_refs": [
+          "MT-R5-FIN-2020-2025",
+          "MT-R5-AR2025"
+        ]
+      },
+      "after": {
+        "id": "B4",
+        "score": 3,
+        "rule_ref": "B4",
+        "reason": "2026H1收入+1.47%、利润-1.95%，与2025调整共同显示成熟稳定而非成长加速；不年化半年数，维持成熟稳定档。",
+        "evidence_refs": [
+          "MT5R2-LATEST",
+          "MT-R5-AR2025"
+        ]
+      },
+      "acceptance_ids": [
+        "R5-LATEST-A01",
+        "R5-LATEST-A02"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "C2",
+      "before": {
+        "id": "C2",
+        "score": 5,
+        "rule_ref": "C2",
+        "reason": "前五客户占10.10%、无单一客户超50%，上游采取合作社/农户模式，核心酒高毛利支撑成本传导；选吃肉主导档，系列酒和批发调整为持续监测反证。",
+        "evidence_refs": [
+          "MT5-EXT-BIZ-001",
+          "MT-R5-AR2025"
+        ]
+      },
+      "after": {
+        "id": "C2",
+        "score": 5,
+        "rule_ref": "C2",
+        "reason": "上游合作社/农户模式降低单一供应约束，下游客户分散；价格调整和销量可支持部分成本传导。2026H1成本快于收入及合同负债政策变化是限制，未公开精确传导期不改变主导档。",
+        "evidence_refs": [
+          "MT5R2-CHAIN",
+          "MT5R2-LATEST",
+          "MT-R5-OPS-2023-2025"
+        ]
+      },
+      "acceptance_ids": [
+        "R5-CHAIN-A01",
+        "R5-CHAIN-A02",
+        "R5-LATEST-A01",
+        "R5-LATEST-A02"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "D3",
+      "before": {
+        "id": "D3",
+        "score": 2,
+        "rule_ref": "D3",
+        "reason": "品牌和地理标志有顺风，但宏观消费、商务场景及渠道库存造成2025系列酒/批发调整；外部环境为中性。",
+        "evidence_refs": [
+          "MT-R5-AR2025",
+          "MT5-EXT-BIZ-001"
+        ]
+      },
+      "after": {
+        "id": "D3",
+        "score": 2,
+        "rule_ref": "D3",
+        "reason": "品牌与地理标志仍支撑环境，但2026H1成本增速和利润压力、2025系列酒调整说明消费环境中性，维持2分。",
+        "evidence_refs": [
+          "MT5R2-LATEST",
+          "MT-R5-AR2025"
+        ]
+      },
+      "acceptance_ids": [
+        "R5-LATEST-A01",
+        "R5-LATEST-A02"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "E3",
+      "before": {
+        "id": "E3",
+        "score": 3,
+        "rule_ref": "E3",
+        "reason": "2025扣非EPS65.64与基本EPS65.66接近，非经常性损益占比较低；成长含量价与渠道结构变化，未依赖补贴，选最高档。",
+        "evidence_refs": [
+          "MT-R5-AR2025",
+          "MT-R5-FIN-2020-2025"
+        ]
+      },
+      "after": {
+        "id": "E3",
+        "score": 3,
+        "rule_ref": "E3",
+        "reason": "2026H1利润小幅回落已纳入；2025扣非与归母接近、最新变化有销量/成本/预收政策解释，未显示补贴或一次性利润主导，维持3分。",
+        "evidence_refs": [
+          "MT5R2-LATEST",
+          "MT-R5-AR2025"
+        ]
+      },
+      "acceptance_ids": [
+        "R5-LATEST-A01",
+        "R5-LATEST-A02"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "E5.5",
+      "before": {
+        "id": "E5.5",
+        "score": 3,
+        "rule_ref": "E5.5",
+        "reason": "最新标准无保留意见、审计机构与审计年限已定位，报告未列重大政策变更或KAM质疑；选稳健档。",
+        "evidence_refs": [
+          "MT-R5-AR2025"
+        ]
+      },
+      "after": {
+        "id": "E5.5",
+        "score": 3,
+        "rule_ref": "E5.5",
+        "reason": "KAM覆盖收入与关联交易，审计应对为控制和实质程序而非错报结论；2023—25未见重大政策/估计变更，计提比率与白酒长周期存货特性相符，维持稳健3分。",
+        "evidence_refs": [
+          "MT5R2-ACCOUNTING"
+        ]
+      },
+      "acceptance_ids": [
+        "R5-ACCOUNTING-A01",
+        "R5-ACCOUNTING-A02",
+        "R5-ACCOUNTING-A03"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "F1",
+      "before": {
+        "id": "F1",
+        "score": -2,
+        "rule_ref": "F1",
+        "reason": "袁仁国和高卫东两名前董事长均被官方判无期，蒋焰2026被留置；原表将近十年周期性高管腐败规定为独立-2分档，而非从5分扣2，故直接选-2。",
+        "evidence_refs": [
+          "MT5V4-GOV-001",
+          "MT5V3-GOV-001",
+          "MT5-EXT-GOV-003"
+        ]
+      },
+      "after": {
+        "id": "F1",
+        "score": -2,
+        "rule_ref": "F1",
+        "reason": "蒋焰事发时任财务总监、截至截止日已解聘并由余思明接任，调查未见结案；两名前董事长判决仍满足历史周期性腐败独立-2档，不追加现任降级。",
+        "evidence_refs": [
+          "MT5R2-STATUS",
+          "MT5V4-GOV-001",
+          "MT5V3-GOV-001"
+        ]
+      },
+      "acceptance_ids": [
+        "R5-STATUS-A01",
+        "R5-STATUS-A02"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "F2",
+      "before": {
+        "id": "F2",
+        "score": 5,
+        "rule_ref": "F2",
+        "reason": "实施年2021—24现金分红/当年归母净利分别约46%/87%/76%/80%，均远超30%参考线；另有回购注销和集团增持。未实施的2025年度预案不计分红分子，2026H2查询无命中不表述为不存在。",
+        "evidence_refs": [
+          "MT-R5-AR2021",
+          "MT-R5-AR2022",
+          "MT-R5-AR2023",
+          "MT-R5-AR2024",
+          "MT5-EXT-CAP-001",
+          "MT5V4-EQ-001",
+          "MT5V4-EQ-002"
+        ]
+      },
+      "after": {
+        "id": "F2",
+        "score": 5,
+        "rule_ref": "F2",
+        "reason": "归属年度已实施常规/特别或中期分红分别与同年归母净利配对；2025已实施中期300.01亿元/归母823.20亿元为36.44%下限。回购及集团增持另列，未实施预案不计入，维持5分。",
+        "evidence_refs": [
+          "MT5R2-DIV",
+          "MT5-EXT-CAP-001",
+          "MT5V4-EQ-001"
+        ]
+      },
+      "acceptance_ids": [
+        "R5-DIVIDEND-A01",
+        "R5-DIVIDEND-A02",
+        "R5-DIVIDEND-A03"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "F3",
+      "before": {
+        "id": "F3",
+        "score": 2,
+        "rule_ref": "F3",
+        "reason": "关联交易逐项披露且多数引用第三方或相同价格，但未履行激励承诺、兼职与有界外部查询限制构成治理瑕疵；无已核重大资金占用或停产事故，选小瑕疵档。",
+        "evidence_refs": [
+          "MT5-EXT-GOV-001",
+          "MT5-EXT-GOV-002",
+          "MT5V4-ENV-001",
+          "MT-R5-AR2025"
+        ]
+      },
+      "after": {
+        "id": "F3",
+        "score": 2,
+        "rule_ref": "F3",
+        "reason": "KAM和关联交易重大性不等于错报；审计应对及披露完整，未履行激励承诺/兼职仍是已核瑕疵，维持2分且不因KAM自动扣分。",
+        "evidence_refs": [
+          "MT5R2-ACCOUNTING",
+          "MT5-EXT-GOV-001",
+          "MT5-EXT-GOV-002"
+        ]
+      },
+      "acceptance_ids": [
+        "R5-ACCOUNTING-A01",
+        "R5-ACCOUNTING-A02",
+        "R5-ACCOUNTING-A03"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "诚信与透明度",
+      "before": {
+        "id": "诚信与透明度",
+        "score": 10,
+        "rule_ref": "管理层七维评分：诚信与透明度",
+        "reason": "标准审计和披露为正面，但两名前董事长因受贿被判无期且2026财务总监被留置，长期未履行激励承诺，诚信不能高评。",
+        "evidence_refs": [
+          "MT5V4-GOV-001",
+          "MT5V3-GOV-001",
+          "MT5-EXT-GOV-003",
+          "MT5-EXT-GOV-001"
+        ]
+      },
+      "after": {
+        "id": "诚信与透明度",
+        "score": 10,
+        "rule_ref": "管理层七维评分：诚信与透明度",
+        "reason": "KAM不构成错报，审计披露为正面；历史两名前董事长判决、蒋焰留置与未履行激励承诺为实质负面。蒋焰截至截止日已解聘，分数维持。",
+        "evidence_refs": [
+          "MT5R2-ACCOUNTING",
+          "MT5R2-STATUS",
+          "MT5V4-GOV-001",
+          "MT5V3-GOV-001"
+        ]
+      },
+      "acceptance_ids": [
+        "R5-ACCOUNTING-A01",
+        "R5-ACCOUNTING-A02",
+        "R5-ACCOUNTING-A03",
+        "R5-STATUS-A01",
+        "R5-STATUS-A02"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "资本配置能力",
+      "before": {
+        "id": "资本配置能力",
+        "score": 18,
+        "rule_ref": "管理层七维评分：资本配置能力",
+        "reason": "高ROE、持续高分红与回购体现回报纪律；大额项目和基金尚缺最终产出/退出记录，故不按优秀满分评。",
+        "evidence_refs": [
+          "MT-R5-V2-CIP-2025",
+          "MT-R5-V2-FUND-2025",
+          "MT-R5-V2-EQUITY-2025"
+        ]
+      },
+      "after": {
+        "id": "资本配置能力",
+        "score": 18,
+        "rule_ref": "管理层七维评分：资本配置能力",
+        "reason": "同口径实际分红和回购支持资本回报；项目/基金未实现回报不据此推断失败，维持非满分的审慎判断。",
+        "evidence_refs": [
+          "MT5R2-DIV",
+          "MT-R5-V2-CIP-2025",
+          "MT-R5-V2-FUND-2025"
+        ]
+      },
+      "acceptance_ids": [
+        "R5-DIVIDEND-A01",
+        "R5-DIVIDEND-A02",
+        "R5-DIVIDEND-A03"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "战略稳定性",
+      "before": {
+        "id": "战略稳定性",
+        "score": 11,
+        "rule_ref": "管理层七维评分：战略稳定性",
+        "reason": "五年中四年收入达目标，品质品牌和渠道战略连续；2025未达目标且无管理层原话验证，保留扣分。",
+        "evidence_refs": [
+          "MT-R5-V2-PLAN-2021-2025",
+          "MT-R5-AR2025"
+        ]
+      },
+      "after": {
+        "id": "战略稳定性",
+        "score": 11,
+        "rule_ref": "管理层七维评分：战略稳定性",
+        "reason": "五年目标四年达标与品质品牌渠道战略连续是正面，2025未达为实际反证；不以缺电话会原话作为扣分理由，维持11分。",
+        "evidence_refs": [
+          "MT-R5-V2-PLAN-2021-2025",
+          "MT-R5-AR2025"
+        ]
+      },
+      "acceptance_ids": [
+        "R5-ATTRIBUTION-A01",
+        "R5-ATTRIBUTION-A02"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "对股东友好度",
+      "before": {
+        "id": "对股东友好度",
+        "score": 13,
+        "rule_ref": "管理层七维评分：对股东友好度",
+        "reason": "已实施高分红、回购注销和集团增持是强正面；2025年度分红为预案而未作为已实施事实，且股东行动查询有边界，非满分。",
+        "evidence_refs": [
+          "MT-R5-AR2022",
+          "MT-R5-AR2023",
+          "MT-R5-AR2024",
+          "MT5-EXT-CAP-001",
+          "MT5V4-EQ-001"
+        ]
+      },
+      "after": {
+        "id": "对股东友好度",
+        "score": 13,
+        "rule_ref": "管理层七维评分：对股东友好度",
+        "reason": "同口径已实施分红下限、回购及集团增持为正面；未实施预案不计入，分数基于已核资本回报事实而非检索边界，维持13分。",
+        "evidence_refs": [
+          "MT5R2-DIV",
+          "MT5-EXT-CAP-001",
+          "MT5V4-EQ-001"
+        ]
+      },
+      "acceptance_ids": [
+        "R5-DIVIDEND-A01",
+        "R5-DIVIDEND-A02",
+        "R5-DIVIDEND-A03",
+        "R5-ATTRIBUTION-A01",
+        "R5-ATTRIBUTION-A02"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "危机处理能力",
+      "before": {
+        "id": "危机处理能力",
+        "score": 5,
+        "rule_ref": "管理层七维评分：危机处理能力",
+        "reason": "蒋焰留置后迅速安排代行董秘并披露正常经营，但多名前高管腐败事件使危机治理记录不能高评。",
+        "evidence_refs": [
+          "MT5-EXT-GOV-003",
+          "MT5V4-GOV-001",
+          "MT5V3-GOV-001"
+        ]
+      },
+      "after": {
+        "id": "危机处理能力",
+        "score": 5,
+        "rule_ref": "管理层七维评分：危机处理能力",
+        "reason": "留置后由陈华代行、后续余思明接任显示即时安排；董事长多次继任和历史腐败链限制危机评价，维持5分。",
+        "evidence_refs": [
+          "MT5R2-STATUS",
+          "MT5R2-TALENT",
+          "MT5-EXT-GOV-003"
+        ]
+      },
+      "acceptance_ids": [
+        "R5-STATUS-A01",
+        "R5-STATUS-A02",
+        "R5-TALENT-A01",
+        "R5-TALENT-A02"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "组织与人才能力",
+      "before": {
+        "id": "组织与人才能力",
+        "score": 4,
+        "rule_ref": "管理层七维评分：组织与人才能力",
+        "reason": "余思明具内部审计和财务经历，继任可见；激励承诺长期未履行、兼职与留置事件削弱组织与人才评价。",
+        "evidence_refs": [
+          "MT-R5-AR2025",
+          "MT5-EXT-GOV-001",
+          "MT5-EXT-GOV-002",
+          "MT5-EXT-GOV-003"
+        ]
+      },
+      "after": {
+        "id": "组织与人才能力",
+        "score": 4,
+        "rule_ref": "管理层七维评分：组织与人才能力",
+        "reason": "近五年董事长三次继任及蒋焰后续接任已纳入；激励承诺未履行是负面，人才留存率未披露仅标未知而非扣分原因，维持4分。",
+        "evidence_refs": [
+          "MT5R2-TALENT",
+          "MT5R2-STATUS",
+          "MT5-EXT-GOV-001"
+        ]
+      },
+      "acceptance_ids": [
+        "R5-STATUS-A01",
+        "R5-STATUS-A02",
+        "R5-TALENT-A01",
+        "R5-TALENT-A02"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "表达清晰度与认知质量",
+      "before": {
+        "id": "表达清晰度与认知质量",
+        "score": 4,
+        "rule_ref": "管理层七维评分：表达清晰度与认知质量",
+        "reason": "年报清晰披露经营模式、渠道调整、关联交易和风险事项；但未取得独立电话会原话包，保留1分。",
+        "evidence_refs": [
+          "MT-R5-AR2025",
+          "MT5-EXT-BIZ-001"
+        ]
+      },
+      "after": {
+        "id": "表达清晰度与认知质量",
+        "score": 4,
+        "rule_ref": "管理层七维评分：表达清晰度与认知质量",
+        "reason": "年报对经营变动、KAM和关联交易有明确披露；分数基于已核披露质量而非缺电话会材料，维持4分。",
+        "evidence_refs": [
+          "MT5R2-ACCOUNTING",
+          "MT-R5-AR2025"
+        ]
+      },
+      "acceptance_ids": [
+        "R5-ATTRIBUTION-A01",
+        "R5-ATTRIBUTION-A02"
+      ]
+    }
+  ],
+  "metadata_changes": [
+    {
+      "field": "evidence_gaps",
+      "before": [
+        {
+          "affected_items": [
+            "F3",
+            "诚信与透明度"
+          ],
+          "kind": "bounded_external_search",
+          "impact": "主体级环境、安全和职业健康查询为有界官方检索；未命中不得表述为无任何事件。",
+          "search_scope": "external/v4 query-record MT5V4-Q02",
+          "evidence_refs": [
+            "MT5V4-ENV-001"
+          ]
+        }
+      ],
+      "after": [
+        {
+          "affected_items": [
+            "A3",
+            "F3"
+          ],
+          "kind": "bounded_official_search",
+          "impact": "有界检索未命中不等于全历史不存在事项，评分未据未知扣分。",
+          "search_scope": "external/v4/v5 query-record",
+          "evidence_refs": [
+            "MT5V5-HIST-MA-002",
+            "MT5V4-ENV-001"
+          ]
+        }
+      ],
+      "acceptance_ids": [
+        "R5-HISTORY-A01",
+        "R5-HISTORY-A02",
+        "R5-HISTORY-A03",
+        "R5-CHAIN-A01",
+        "R5-CHAIN-A02",
+        "R5-LATEST-A01",
+        "R5-LATEST-A02",
+        "R5-ACCOUNTING-A01",
+        "R5-ACCOUNTING-A02",
+        "R5-ACCOUNTING-A03",
+        "R5-DIVIDEND-A01",
+        "R5-DIVIDEND-A02",
+        "R5-DIVIDEND-A03",
+        "R5-ATTRIBUTION-A01",
+        "R5-ATTRIBUTION-A02",
+        "R5-STATUS-A01",
+        "R5-STATUS-A02",
+        "R5-TALENT-A01",
+        "R5-TALENT-A02"
+      ]
+    }
+  ],
+  "check": {
+    "status": "mechanically_checked_pending_review",
+    "errors": [],
+    "warnings": [
+      "公司F维度触发原规则重大警告；须人工处理，程序不判入库"
+    ],
+    "scores": {
+      "cScore": 83.5,
+      "mScore": 65
+    },
+    "inputs": {
+      "data/reviews/triplet-token-cycle-2026-09-20/round-5/numeric/facts.json": "af7104e59abae22df8448bfa13dfdd14df6cfaf9b6d6273e599e30938683623b",
+      "data/reviews/triplet-token-cycle-2026-09-20/round-5/numeric/sources.json": "bf15233c0fd8e49a9e341754f98d9a41d0de230c230960d65fd0d537c63b55b6",
+      "data/reviews/triplet-token-cycle-2026-09-20/round-5/numeric/v2/facts.json": "df3b4175cedbfa3ecae59d24dae815c40bed828ac88a9d5a44b1d00916150c33",
+      "data/reviews/triplet-token-cycle-2026-09-20/round-5/external/facts.json": "08c6e02a8e75de5fb4b01fe8cbdb4edabb3ad30c6233d0989cda27164b3a900b",
+      "data/reviews/triplet-token-cycle-2026-09-20/round-5/external/v3/facts.json": "580018d79ed740be9dcaf275271ce163a17838fb836b29201f12bfa934a32330",
+      "data/reviews/triplet-token-cycle-2026-09-20/round-5/external/v4/facts.json": "fd9281eac3608d9deab7c0ed1a4d2dd882f1f185b0f37e8a81834b4a8499d577",
+      "data/reviews/triplet-token-cycle-2026-09-20/round-5/external/v5/facts.json": "5c1e795018eaff39557726338907517544f03376ead1f8096c087f69af39e701",
+      "data/reviews/triplet-token-cycle-2026-09-20/round-5/writer/repair-v2/facts.json": "f9ff70ca90d6be5105653991a26eb0b3a629c913cc383eca83263decef995294"
+    }
+  },
+  "base": "data/reviews/triplet-token-cycle-2026-09-20/round-5/writer/workpaper-v1.json",
+  "base_sha256": "7605d370cc4fb2173eb587befc5b7adbd35a99c14122bb9e9cab5dfbb942d1c4",
+  "decision": "data/reviews/triplet-token-cycle-2026-09-20/round-5/adjudicator/decision-v1-tool.json",
+  "decision_sha256": "9c11ba4383ecc240b836b1c70067421f3f59c2d273a58d0e7d17ae06901b4f66",
+  "unmodified_scope_items": [],
+  "limitations": "未修改的验收项仍须逐项答复；引用存在不证明语义正确，须双路复核变更及联动。",
+  "workpaper_sha256": "0dc7ed8b7ea2654df18cd1390b718ae7c826d538a1778e533680fc94a98c93ad"
+}

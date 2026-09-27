@@ -1,0 +1,11 @@
+[
+  "data/reviews/triplet-token-cycle-2026-09-20/round-1/evidence/sources.json",
+  "data/reviews/triplet-token-cycle-2026-09-20/round-1/evidence/facts.json",
+  "data/reviews/triplet-token-cycle-2026-09-20/round-1/evidence/sources-v2.json",
+  "data/reviews/triplet-token-cycle-2026-09-20/round-1/evidence/facts-v2.json",
+  "data/reviews/triplet-token-cycle-2026-09-20/round-1/evidence/sources-v3.json",
+  "data/reviews/triplet-token-cycle-2026-09-20/round-1/evidence/facts-v3.json",
+  "data/reviews/triplet-token-cycle-2026-09-20/round-1/evidence/facts-local-completion.json",
+  "data/reviews/triplet-token-cycle-2026-09-20/round-1/writer/supplement-sources.json",
+  "data/reviews/triplet-token-cycle-2026-09-20/round-1/writer/supplement-facts.json"
+]

@@ -1,0 +1,20 @@
+{
+  "evidence_index": "data/reviews/triplet-token-cycle-2026-09-20/round-5/writer/evidence-files-v1.json",
+  "numeric": [
+    "data/reviews/triplet-token-cycle-2026-09-20/round-5/numeric/inputs.json",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-5/numeric/calculations.py",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-5/numeric/calculations.json",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-5/numeric/v2/inputs-addendum.json",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-5/numeric/v2/calculations.py",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-5/numeric/v2/calculations.json",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-5/numeric/v2/dividend-basis.json"
+  ],
+  "external": [
+    "data/reviews/triplet-token-cycle-2026-09-20/round-5/external/sources.json",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-5/external/query-record.json",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-5/external/v3/sources.json",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-5/external/v3/query-record.json",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-5/external/v4/sources.json",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-5/external/v4/query-record.json"
+  ]
+}

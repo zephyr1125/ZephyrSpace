@@ -1,0 +1,855 @@
+{
+  "changes": [
+    {
+      "group": "company",
+      "item": "F2.5",
+      "before": {
+        "id": "F2.5",
+        "score": 2,
+        "rule_ref": "F2.5",
+        "reason": "分红和注销回购证明股东回报但不是相似投入后的可验证成功先例；两只产业基金尚无回报数据，撤销0.5加分，基础审慎资本配置档为2分。",
+        "evidence_refs": [
+          "R004",
+          "R006"
+        ],
+        "positive_precedent": false
+      },
+      "after": {
+        "id": "F2.5",
+        "score": 2,
+        "rule_ref": "F2.5",
+        "reason": "主业技改为主要资本投入，2025行业调整期现金Capex收缩并实施注销式回购；高ROE、低杠杆和强现金回报支持审慎基础档。两只基金缺完整回报，计划与实际Capex口径未逐年完全可比，positive_precedent=false，不恢复0.5加分。",
+        "evidence_refs": [
+          "R002",
+          "R004",
+          "R006",
+          "R021",
+          "R023"
+        ],
+        "positive_precedent": false
+      },
+      "acceptance_ids": [
+        "C005",
+        "C007",
+        "C015"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "E1",
+      "before": {
+        "id": "E1",
+        "score": 5,
+        "rule_ref": "E1",
+        "reason": "2025年ROE32.53%、高利润率和低杠杆支持高质量ROE；完整2020-2025趋势与杜邦计算已列为复核重算对象，未将单期现金流归因替代杜邦。",
+        "evidence_refs": [
+          "R003",
+          "F010"
+        ]
+      },
+      "after": {
+        "id": "E1",
+        "score": 5,
+        "rule_ref": "E1",
+        "reason": "2020-2025收入、利润、资产和归母权益完整趋势显示长期高盈利；2025同口径杜邦约为净利率48.76%、资产周转0.56次、权益乘数1.26倍，高ROE主要由净利率而非杠杆驱动。",
+        "evidence_refs": [
+          "R003",
+          "R009",
+          "R010"
+        ]
+      },
+      "acceptance_ids": [
+        "C003",
+        "C004",
+        "C008",
+        "C009",
+        "C011"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "E3",
+      "before": {
+        "id": "E3",
+        "score": 3,
+        "rule_ref": "E3",
+        "reason": "扣非ROE与ROE接近、2026H1销量仍增长支持经营质量；行业调整导致利润下降，量价完整周期结构尚待复核，维持现有3分而非以H1销量单独证明。",
+        "evidence_refs": [
+          "R003",
+          "R007"
+        ]
+      },
+      "after": {
+        "id": "E3",
+        "score": 3,
+        "rule_ref": "E3",
+        "reason": "五年营收和归母净利CAGR均约12%，三年扣非/归母接近100%；2025核心酒销量微增而系列酒收入下滑、整体收入利润转负，完整周期质量仍好但当前量价结构承压，维持3分。",
+        "evidence_refs": [
+          "R007",
+          "R009",
+          "R011"
+        ]
+      },
+      "acceptance_ids": [
+        "C003",
+        "C008",
+        "C011"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "E5.5",
+      "before": {
+        "id": "E5.5",
+        "score": 3,
+        "rule_ref": "E5.5",
+        "reason": "KAM为收入确认和关联交易，非持续经营；无保留意见及扣非ROE接近支持稳健性，关联交易仍是持续复核事项。",
+        "evidence_refs": [
+          "R003",
+          "F007"
+        ]
+      },
+      "after": {
+        "id": "E5.5",
+        "score": 3,
+        "rule_ref": "E5.5",
+        "reason": "标准无保留审计，收入按控制权转移确认、信用减值采用预期信用损失模型；KAM为收入确认与关联交易，提示持续核验而不自动构成错报或异常。",
+        "evidence_refs": [
+          "R003",
+          "R012"
+        ]
+      },
+      "acceptance_ids": [
+        "C003",
+        "C004",
+        "C008",
+        "C009",
+        "C011"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "A1",
+      "before": {
+        "id": "A1",
+        "score": 2,
+        "rule_ref": "A1",
+        "reason": "1999年省政府批复设立、2001年上市说明国资背景；该标签不能否定品牌和稀缺产区积累，维持政策/资源起源的2分。",
+        "evidence_refs": [
+          "F001"
+        ]
+      },
+      "after": {
+        "id": "A1",
+        "score": 2,
+        "rule_ref": "A1",
+        "reason": "招股书显示由茅台集团主发起设立，承接历史品牌、特定产区和传统工艺，属于资源禀赋与长期先发积累型起源；国资背景不否定先发优势。按A1量表资源/政策起源维持2分。",
+        "evidence_refs": [
+          "R013"
+        ]
+      },
+      "acceptance_ids": [
+        "C004",
+        "C009"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "A2",
+      "before": {
+        "id": "A2",
+        "score": 3,
+        "rule_ref": "A2",
+        "reason": "现有原件确认控股股东和最终控制方；IPO以来连续控制链待逐份历史原件复核，现有判断不扩展为控制权争夺结论。",
+        "evidence_refs": [
+          "F001"
+        ]
+      },
+      "after": {
+        "id": "A2",
+        "score": 3,
+        "rule_ref": "A2",
+        "reason": "自IPO至2025各期原件连续列茅台集团为控股股东，未见实控权争夺、壳运作或主业更换，控制链长期稳定。",
+        "evidence_refs": [
+          "R013",
+          "R014"
+        ]
+      },
+      "acceptance_ids": [
+        "C004",
+        "C009"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "A3",
+      "before": {
+        "id": "A3",
+        "score": 4,
+        "rule_ref": "A3",
+        "reason": "原件显示高现金回报和注销回购；重大融资、并购及资金用途的完整历史汇总待复核，不以未检全自动降分。",
+        "evidence_refs": [
+          "R006",
+          "R004"
+        ]
+      },
+      "after": {
+        "id": "A3",
+        "score": 4,
+        "rule_ref": "A3",
+        "reason": "重大资本动作集中于主业技改、现金分红、回购注销和两只产业基金；未见高频股权融资、跨界并购或卖资产保利润，基金回报未知限制满档。",
+        "evidence_refs": [
+          "R014",
+          "R004",
+          "R006"
+        ]
+      },
+      "acceptance_ids": [
+        "C004",
+        "C009"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "B0",
+      "before": {
+        "id": "B0",
+        "score": 2,
+        "rule_ref": "B0",
+        "reason": "长期以品牌白酒、经销与直销为核心，当前收入结构可核；早期模式三个判断待招股书补证。",
+        "evidence_refs": [
+          "F001",
+          "F002"
+        ]
+      },
+      "after": {
+        "id": "B0",
+        "score": 2,
+        "rule_ref": "B0",
+        "reason": "早期即以茅台酒及系列酒生产销售为核心，客户价值来自品牌、稀缺产区和品质，渠道承担分销、收入按酒类销售形成，关键资源为品牌工艺与基酒，重资产长周期但高毛利，规模效应随品牌与产能积累增强。",
+        "evidence_refs": [
+          "R013",
+          "R014"
+        ]
+      },
+      "acceptance_ids": [
+        "C004",
+        "C009"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "C1",
+      "before": {
+        "id": "C1",
+        "score": 6,
+        "rule_ref": "C1",
+        "reason": "核心产品1465亿元收入支持绝对龙头判断；精确CR5与三年排名趋势待独立行业原件复核。",
+        "evidence_refs": [
+          "F002"
+        ]
+      },
+      "after": {
+        "id": "C1",
+        "score": 6,
+        "rule_ref": "C1",
+        "reason": "核心茅台酒收入1465亿元且长期处于高端白酒第一梯队；无需精确CR5即可确认绝对龙头，2025增长放缓是趋势限制但未改变第一梯队位置。",
+        "evidence_refs": [
+          "F002",
+          "R020"
+        ]
+      },
+      "acceptance_ids": [
+        "C004",
+        "C009",
+        "C012"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "D1",
+      "before": {
+        "id": "D1",
+        "score": 4,
+        "rule_ref": "D1",
+        "reason": "年报规划、预算和主业表述支持战略延续；需以2020-2025原文时间序列复核，不将资料缺口映射漂移。",
+        "evidence_refs": [
+          "F011",
+          "R008"
+        ]
+      },
+      "after": {
+        "id": "D1",
+        "score": 4,
+        "rule_ref": "D1",
+        "reason": "2020-2025战略持续围绕核心茅台酒、系列酒协同、质量产能、渠道数字化与国际化，资源投入与主业一致；2025后的市场化调整是应对行业变化，未构成战略漂移。",
+        "evidence_refs": [
+          "R017",
+          "R008"
+        ]
+      },
+      "acceptance_ids": [
+        "C004",
+        "C006",
+        "C009",
+        "C010"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "E5",
+      "before": {
+        "id": "E5",
+        "score": 2,
+        "rule_ref": "E5",
+        "reason": "标准无保留、低应收支持资产质量；商誉、应收账龄及近三年减值须从附注补足，KAM不自动构成异常。",
+        "evidence_refs": [
+          "R003",
+          "F010"
+        ]
+      },
+      "after": {
+        "id": "E5",
+        "score": 2,
+        "rule_ref": "E5",
+        "reason": "标准无保留审计、低商誉和低客户集中支持资产质量；应收执行预期信用损失政策，近三年原件未见足以改变结论的重大商誉或固定资产/在建工程减值，但存货增长和关联交易仍需跟踪。",
+        "evidence_refs": [
+          "R012",
+          "R015"
+        ]
+      },
+      "acceptance_ids": [
+        "C004",
+        "C009"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "F1",
+      "before": {
+        "id": "F1",
+        "score": 4,
+        "rule_ref": "F1",
+        "reason": "高管任免和期末职务已核；留置原公告案件状态及近十年逐名廉洁事件仍待补，不能把解聘推定为结案。",
+        "evidence_refs": [
+          "R005"
+        ]
+      },
+      "after": {
+        "id": "F1",
+        "score": 3,
+        "rule_ref": "F1",
+        "reason": "蒋焰留置及随后免职是明确治理负面，案件终局未公开；余思明已接任财务总监和董秘，未见生产经营中断。按个别已证事件处理，不把解任当结案，也不外推系统性腐败。",
+        "evidence_refs": [
+          "R005",
+          "R022",
+          "R023"
+        ]
+      },
+      "acceptance_ids": [
+        "C005",
+        "C007"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "F2",
+      "before": {
+        "id": "F2",
+        "score": 5,
+        "rule_ref": "F2",
+        "reason": "高比例分红和注销回购是股东友好正证；近三年减持和监管检索尚待补，不能以此缺口否定已核回报。",
+        "evidence_refs": [
+          "R006",
+          "R005"
+        ]
+      },
+      "after": {
+        "id": "F2",
+        "score": 5,
+        "rule_ref": "F2",
+        "reason": "高比例现金分红与注销式回购提供强股东对齐正证；近三年定向检索未发现控股股东或现任核心高管集中减持改变结论，治理事件作为限制但不抵销已实现回报。",
+        "evidence_refs": [
+          "R006",
+          "R022",
+          "R023"
+        ]
+      },
+      "acceptance_ids": [
+        "C005",
+        "C007",
+        "C015"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "F3",
+      "before": {
+        "id": "F3",
+        "score": 2,
+        "rule_ref": "F3",
+        "reason": "关联交易KAM及两项治理自查问题支持小瑕疵档；须补近三年关联交易、基金和监管原件，不推定基金为不良投资。",
+        "evidence_refs": [
+          "R003",
+          "R004",
+          "R005"
+        ]
+      },
+      "after": {
+        "id": "F3",
+        "score": 2,
+        "rule_ref": "F3",
+        "reason": "关联交易为KAM且存在两项治理自查问题，支持小瑕疵档；定向检索未发现反复问询、重大处罚或资金占用证据，但检索结果不等于不存在未公开事项。",
+        "evidence_refs": [
+          "R003",
+          "R012",
+          "R023"
+        ]
+      },
+      "acceptance_ids": [
+        "C005",
+        "C007",
+        "C015"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "诚信与透明度",
+      "before": {
+        "id": "诚信与透明度",
+        "score": 16,
+        "rule_ref": "管理层评分表/诚信与透明度",
+        "reason": "无保留审计为正证；关联交易KAM、治理自查和留置事项原公告状态待补，不能以年报转引下结论。",
+        "evidence_refs": [
+          "R003",
+          "R005"
+        ]
+      },
+      "after": {
+        "id": "诚信与透明度",
+        "score": 14,
+        "rule_ref": "管理层评分表/诚信与透明度",
+        "reason": "标准无保留审计和A级信披为正证；关联交易KAM与蒋焰留置为实质负面，公告及时但案件终局未公开，因此从原16分下调至14分。",
+        "evidence_refs": [
+          "R003",
+          "R012",
+          "R022",
+          "R023"
+        ]
+      },
+      "acceptance_ids": [
+        "C005",
+        "C007",
+        "C014"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "对股东友好度",
+      "before": {
+        "id": "对股东友好度",
+        "score": 15,
+        "rule_ref": "管理层评分表/对股东友好度",
+        "reason": "86.43%分红加回购比例为强正证；减持与监管检索待补。",
+        "evidence_refs": [
+          "R006"
+        ]
+      },
+      "after": {
+        "id": "对股东友好度",
+        "score": 15,
+        "rule_ref": "管理层评分表/对股东友好度",
+        "reason": "2025分红与注销回购合计占归母净利86.43%，近三年未发现集中减持改变判断；维持满分，治理事件不直接否定已实现现金回报。",
+        "evidence_refs": [
+          "R006",
+          "R023"
+        ]
+      },
+      "acceptance_ids": [
+        "C005",
+        "C007",
+        "C014"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "组织与人才能力",
+      "before": {
+        "id": "组织与人才能力",
+        "score": 7,
+        "rule_ref": "管理层评分表/组织与人才能力",
+        "reason": "期末高管职务与本期任免已核；近五年继任、人才保留和激励完整时间线待补。",
+        "evidence_refs": [
+          "R005"
+        ]
+      },
+      "after": {
+        "id": "组织与人才能力",
+        "score": 7,
+        "rule_ref": "管理层评分表/组织与人才能力",
+        "reason": "三年员工规模与收入增长总体匹配、研发投入持续增加；蒋焰事件后财务总监与董秘完成接替，体现连续性，但关键岗位突发变动和2025人效回落限制更高档。",
+        "evidence_refs": [
+          "R016",
+          "R022"
+        ]
+      },
+      "acceptance_ids": [
+        "C005",
+        "C007",
+        "C014"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "危机处理能力",
+      "before": {
+        "id": "危机处理能力",
+        "score": 8,
+        "rule_ref": "管理层评分表/危机处理能力",
+        "reason": "行业调整中销量增长但净利下降；无可直接归因的完整危机处置案例，明确边界而不凑案例。",
+        "evidence_refs": [
+          "R007"
+        ]
+      },
+      "after": {
+        "id": "危机处理能力",
+        "score": 8,
+        "rule_ref": "管理层评分表/危机处理能力",
+        "reason": "面对行业调整，公司推进市场化转型、收缩Capex并保持销量和治理职能连续；尚无可归因且已完整闭环的重大危机案例，维持8分而不凑案例。",
+        "evidence_refs": [
+          "R007",
+          "R017",
+          "R021",
+          "R022"
+        ]
+      },
+      "acceptance_ids": [
+        "C005",
+        "C007",
+        "C014"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "D2",
+      "before": {
+        "id": "D2",
+        "score": 4,
+        "rule_ref": "D2",
+        "reason": "2021-2025五个已结束年度收入目标中4/5达标；无管理层原话验证且无战略漂移，按原规则D2上限4分，不将2026未结束年度计失败。",
+        "evidence_refs": [
+          "R008"
+        ],
+        "original_statement_found": false,
+        "strategy_drift": false
+      },
+      "after": {
+        "id": "D2",
+        "score": 4,
+        "rule_ref": "D2",
+        "reason": "2021-2025五个已结束年度收入目标4/5达标，无管理层原话验证，且D1核验未发现战略漂移，按原规则保留4分上限；2026未结束不计失败。",
+        "evidence_refs": [
+          "R008",
+          "R017"
+        ],
+        "original_statement_found": false,
+        "strategy_drift": false
+      },
+      "acceptance_ids": [
+        "C006",
+        "C010"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "D5",
+      "before": {
+        "id": "D5",
+        "score": 3,
+        "rule_ref": "D5",
+        "reason": "制度和预算推进是组织正证；三年人均创收、员工和研发时间序列尚待补桥，财务负责人更替为限制。",
+        "evidence_refs": [
+          "F009",
+          "F011",
+          "R008"
+        ]
+      },
+      "after": {
+        "id": "D5",
+        "score": 3,
+        "rule_ref": "D5",
+        "reason": "2023-2025员工33302、34750、34992人，人均收入约443.5、491.8、482.5万元；研发投入6.22、6.95、8.03亿元。组织扩张与增长总体匹配，2025人效小幅回落，维持3分。",
+        "evidence_refs": [
+          "R016"
+        ]
+      },
+      "acceptance_ids": [
+        "C006",
+        "C010"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "战略稳定性",
+      "before": {
+        "id": "战略稳定性",
+        "score": 12,
+        "rule_ref": "管理层评分表/战略稳定性",
+        "reason": "规划和预算机制支持稳定性；年度计划—实绩序列待补，不以缺失定性漂移。",
+        "evidence_refs": [
+          "F011",
+          "R008"
+        ]
+      },
+      "after": {
+        "id": "战略稳定性",
+        "score": 13,
+        "rule_ref": "管理层评分表/战略稳定性",
+        "reason": "六年战略与资源持续聚焦核心酒业、质量产能、渠道与国际化，年度目标4/5达成；2025转向市场化应对行业调整而非漂移，较原12分上调至13分。",
+        "evidence_refs": [
+          "R008",
+          "R017"
+        ]
+      },
+      "acceptance_ids": [
+        "C006",
+        "C010",
+        "C014"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "表达清晰度与认知质量",
+      "before": {
+        "id": "表达清晰度与认知质量",
+        "score": 4,
+        "rule_ref": "管理层评分表/表达清晰度与认知质量",
+        "reason": "年报对行业调整和规划有明确表述；电话会/逐条承诺兑现证据待补。",
+        "evidence_refs": [
+          "F011",
+          "R007"
+        ]
+      },
+      "after": {
+        "id": "表达清晰度与认知质量",
+        "score": 4,
+        "rule_ref": "管理层评分表/表达清晰度与认知质量",
+        "reason": "年报明确识别行业周期与结构调整，并将行动落实到价格、渠道、产品和国际化；缺少足够即兴问答样本，维持4分。",
+        "evidence_refs": [
+          "R007",
+          "R017"
+        ]
+      },
+      "acceptance_ids": [
+        "C006",
+        "C010",
+        "C014"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "B3",
+      "before": {
+        "id": "B3",
+        "score": 6,
+        "rule_ref": "B3",
+        "reason": "高毛利核心品牌和双渠道结构支持强定价权；近五年毛利率、正式调价和可比公司毛利率待补，行业调整为反证。",
+        "evidence_refs": [
+          "F002",
+          "R007"
+        ]
+      },
+      "after": {
+        "id": "B3",
+        "score": 6,
+        "rule_ref": "B3",
+        "reason": "酒类毛利率长期约九成，2023正式提价约21%，2025核心茅台酒毛利率93.53%，品牌定价权强；2025整体毛利率与收入利润承压构成反证，维持6分。",
+        "evidence_refs": [
+          "R018",
+          "R011"
+        ]
+      },
+      "acceptance_ids": [
+        "C012"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "C2",
+      "before": {
+        "id": "C2",
+        "score": 5,
+        "rule_ref": "C2",
+        "reason": "低应收和品牌渠道支持较强议价；供应商客户集中、成本传导及需求时滞四维证据待补，不虚填季度。",
+        "evidence_refs": [
+          "F010",
+          "F002"
+        ]
+      },
+      "after": {
+        "id": "C2",
+        "score": 5,
+        "rule_ref": "C2",
+        "reason": "前五客户仅10.10%，下游不集中；前五供应商38.12%，公司凭品牌、渠道和高毛利具备较强成本传导。可选消费需求可在年度内传导，2025负增长表明并非无弹性，维持5分。",
+        "evidence_refs": [
+          "R019"
+        ]
+      },
+      "acceptance_ids": [
+        "C012"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "C3+C4",
+      "before": {
+        "id": "C3+C4",
+        "score": 9,
+        "rule_ref": "C3+C4",
+        "reason": "品牌、稀缺产区工艺与渠道支持五星综合判断；替代品和新进入者反证及逐类壁垒仍待补。",
+        "evidence_refs": [
+          "F001",
+          "F002",
+          "R007"
+        ]
+      },
+      "after": {
+        "id": "C3+C4",
+        "score": 9,
+        "rule_ref": "C3+C4",
+        "reason": "特定产区、复杂工艺、长周期基酒、品牌心智和全国渠道构成强综合壁垒；其他高端酒与消费降级是替代反证，网络效应非核心，新进入者难复制时间和品牌积累，维持五星综合档。",
+        "evidence_refs": [
+          "R020",
+          "R018"
+        ]
+      },
+      "acceptance_ids": [
+        "C012"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "资本配置能力",
+      "before": {
+        "id": "资本配置能力",
+        "score": 22,
+        "rule_ref": "管理层评分表/资本配置能力",
+        "reason": "分红与回购证明回报，产业基金认缴/实缴已核但收益未公开；未将未到期承诺判成功或失败。",
+        "evidence_refs": [
+          "R004",
+          "R006"
+        ]
+      },
+      "after": {
+        "id": "资本配置能力",
+        "score": 21,
+        "rule_ref": "管理层评分表/资本配置能力",
+        "reason": "主业技改、高分红与注销回购显示审慎配置，行业调整期收缩Capex；两只产业基金缺完整回报、计划与实际Capex口径不能逐年完全比较，故从22分下调至21分，不把未知当失败。",
+        "evidence_refs": [
+          "R004",
+          "R006",
+          "R021"
+        ]
+      },
+      "acceptance_ids": [
+        "C014",
+        "C015"
+      ]
+    }
+  ],
+  "metadata_changes": [
+    {
+      "field": "evidence_gaps",
+      "before": [
+        {
+          "affected_items": [
+            "A1",
+            "A2",
+            "A3",
+            "B0",
+            "C1",
+            "D1",
+            "D2",
+            "D5",
+            "E1",
+            "E5",
+            "F1",
+            "F2",
+            "F3",
+            "诚信与透明度",
+            "组织与人才能力"
+          ],
+          "kind": "public_not_checked",
+          "impact": "裁决锁定的历史控制、资本动作、目标兑现、行业排名、治理公告、减持/监管、组织时间序列及附注细项尚未完成最小原件闭合；可能影响相应评分。",
+          "search_scope": "裁决C004-C015列示的本地年报、临时公告及定向官方治理检索。",
+          "evidence_refs": [
+            "R001",
+            "R004",
+            "R005",
+            "R008"
+          ]
+        }
+      ],
+      "after": [
+        {
+          "affected_items": [
+            "F1",
+            "F3",
+            "诚信与透明度"
+          ],
+          "kind": "unpublished",
+          "impact": "蒋焰留置案件终局截至截止日未公开；已按公开状态计入治理负面，不推定终局。",
+          "search_scope": "临2026-004/005、2025年报、2026半年报及截至2026-09-20公开状态检索。",
+          "evidence_refs": [
+            "R022",
+            "R023"
+          ]
+        },
+        {
+          "affected_items": [
+            "F2.5",
+            "资本配置能力"
+          ],
+          "kind": "unpublished",
+          "impact": "两只产业基金完整退出与回报尚未披露，限制正面先例判断但不按失败扣分。",
+          "search_scope": "2023-2025年报产业基金、公允价值及重大投资附注。",
+          "evidence_refs": [
+            "R004",
+            "R021"
+          ]
+        }
+      ],
+      "acceptance_ids": [
+        "C005",
+        "C006",
+        "C007",
+        "C010",
+        "C014"
+      ]
+    }
+  ],
+  "check": {
+    "status": "mechanically_checked_pending_review",
+    "errors": [],
+    "warnings": [],
+    "scores": {
+      "cScore": 90.5,
+      "mScore": 82
+    },
+    "inputs": {
+      "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/facts.json": "a5819c838f10ce8338a24c5c56caa6391618b0ab8a713e67045392f4a90c2489",
+      "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/sources.json": "2affbaa1a45d21d46a2166c183f46bc8a8f69fce03fdda3327a908af2ed0c544",
+      "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-v2/facts.json": "674124c5d3ad4c40df48127fd26f543932ae54cb4bc917c72f5af30c8e189d9d",
+      "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-v2/sources.json": "857cf949618cedf33c69301406fb73e008b87bf9867b059ee9d4c8193737c1e4",
+      "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-writer/facts.json": "b8732c0aae8d403111191223416e15e1e13f84af74ec70c4bdc8da7078d18690",
+      "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-writer/sources.json": "04cb2470f27716d2ba7a39355787a221e84490b8c69fce1f02b430e45a17f1ff"
+    }
+  },
+  "base": "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/rebuilt-v2/workpaper.json",
+  "base_sha256": "bb45b606b54b1d9caedcc735574f282f46cc3a1774e5862208fdfb84342cde60",
+  "decision": "data/reviews/triplet-token-cycle-2026-09-20/round-2/adjudicator/decision-v3.json",
+  "decision_sha256": "28cd683f2f2c1dcc84e77c15f6ac0f7247aea8d734c2228d3cb67cefb9f479b9",
+  "unmodified_scope_items": [],
+  "limitations": "未修改的验收项仍须逐项答复；引用存在不证明语义正确，须双路复核变更及联动。",
+  "workpaper_sha256": "ea9df3e1ea6606c8e81575c7249d21cad8ab5d1fbe55190b26bb1e88da4adfb3"
+}

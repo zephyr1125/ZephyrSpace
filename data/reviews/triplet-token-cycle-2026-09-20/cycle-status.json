@@ -1,0 +1,433 @@
+{
+  "objective": "最多5轮验证：同范围非缓存输入加输出减少30%，保留评分质量并60分钟内批准最终评分；估值完整报告效果不得由评分实验推断",
+  "max_rounds": 5,
+  "current_round": 5,
+  "status": "five_rounds_completed_targets_not_met",
+  "previous_goal_turn_classification": "progress",
+  "rounds": [
+    {
+      "round": 1,
+      "directory": "data/reviews/triplet-token-cycle-2026-09-20/round-1",
+      "started_at": "2026-09-20T14:57:13.324802+00:00",
+      "status": "failed",
+      "baseline": "data/reviews/triplet-score-cycle-2026-09-20/round-2/score-usage-audit.json",
+      "baseline_metric": 1325995,
+      "target_metric": 928196.5,
+      "comparability_limitations": [
+        "同公司同截止独立重做，非随机对照",
+        "旧主任务计量含前轮收尾，角色用量另比",
+        "原始本地资料覆盖核验中，新增来源差异须登记"
+      ],
+      "baseline_roles_metric": 1056940,
+      "target_roles_metric": 739858,
+      "plan_sha256": "e50a7d5cf739da384bb3aadf3813438089d1861d792d09924bd87e3adc14259d",
+      "plan_adjustment": "主任务补充合并财务公司现金流隔离及原规则Capex拆分口径；未告知旧分数",
+      "original_hash_comparison": "7份历史核心原件一致，0冲突",
+      "evidence_handoff_rejections": [
+        {
+          "at": "2026-09-20T15:11:32.038329+00:00",
+          "reason": "仅11事实、1covered/31bounded；公开未提取资料冒充有界未知，主任务拦截未送作者",
+          "fix": "新计划回答强制remaining_kind与supports_scoring；public_not_checked或决定项不支持评分阻断；原取证角色继续v2",
+          "clock_reset": false
+        }
+      ],
+      "author_supplement_scope": "取证多次提前收尾后，同一作者并行核外部控制融资/治理行业/IR原件，不评分；证据角色补本地历史数据与附注。计时不重置。",
+      "execution_findings": [
+        "证据角色三次在实质资料未齐时终止，主任务继续定向分派，未放行评分",
+        "本地单行HTML表造成检索输出膨胀与截断；改为限列定位再按表结构提取",
+        "目标实际初配对疑似将年报中的下一年计划当当年目标，已要求回原件核标题并纠正"
+      ],
+      "workflow_adjustment": "作者不空等全部覆盖表，按明确分工并行核原件补证；全32充分性门禁放在送审前。决定性缺口不能任意估分，仍双路审核与裁决。计时和用量不重置。",
+      "score_manifest": "data/reviews/triplet-token-cycle-2026-09-20/round-1/score-manifest-v1.json",
+      "token_failure_observed_at": "2026-09-20T15:42:58.884413+00:00",
+      "observed_metric_before_review_completion": 1009093,
+      "token_target_met": false,
+      "score_state": "not_approved",
+      "checkpoint_45_min": "双路审核仍在运行，尚未评分批准；保留原计时，不削减独立核验",
+      "ended_at": "2026-09-20T15:48:34.859846+00:00",
+      "elapsed_seconds": 3081.535044,
+      "noncached_plus_output": 1169204,
+      "roles_noncached_plus_output": 792365,
+      "review_findings_unadjudicated": {
+        "facts": {
+          "P0": 1,
+          "P1": 8,
+          "P2": 0
+        },
+        "reasoning": {
+          "P0": 0,
+          "P1": 8,
+          "P2": 1
+        }
+      },
+      "reason": [
+        "完成前token已超过目标",
+        "两路发现决定性评分问题，未批准",
+        "已确认闭合档位C2/F2.5和Capex规则的机械检查覆盖不足；其他意见待后续独立研究，未直接改为公司结论"
+      ],
+      "candidate_scores_only": {
+        "company": 81.5,
+        "management": 75
+      },
+      "publish_allowed": false,
+      "next": "简化取证交接，作者对证据到评分负责；证据角色仅明确缺口，保留独立双复核，新增v2闭合档位检查。"
+    },
+    {
+      "round": 2,
+      "directory": "data/reviews/triplet-token-cycle-2026-09-20/round-2",
+      "started_at": "2026-09-20T15:54:16.411080+00:00",
+      "status": "failed",
+      "baseline_metric": 1325995,
+      "target_metric": 928196.5,
+      "baseline_roles_metric": 1056940,
+      "target_roles_metric": 739858,
+      "changes": [
+        "已有完整原始财报时作者直接完成32项底稿，证据角色仅明确缺口派发",
+        "取消默认全32计划/coverage重复副本，独立双复核仍全部覆盖",
+        "新稿explicit_tiers_v2检查封闭档位及E4 Capex原规则"
+      ],
+      "evidence_role_status": "not_dispatched_existing_originals",
+      "independence": "新作者及新审核，不读旧run/旧报告/旧分数",
+      "score_state": "not_approved",
+      "valuation_scope": "未纳入本轮评分基线，不能外推完整三件套节省率",
+      "concurrent_user_discussion": {
+        "since": "2026-09-20T15:55:15.212Z",
+        "until": "2026-09-20T15:56:57.050Z",
+        "scope": "本地MD与token问答，含一次研究状态只读核查",
+        "accounting": "墙钟和主任务原始用量保留，不主观扣除；另列研究子角色口径"
+      },
+      "candidate_raw_scores": {
+        "company": 90.5,
+        "management": 82
+      },
+      "score_manifest": "data/reviews/triplet-token-cycle-2026-09-20/round-2/score-manifest-v1.json",
+      "author_finished_at": "2026-09-20T16:02:07.271437+00:00",
+      "review_candidates": 15,
+      "decision": "data\\reviews\\triplet-token-cycle-2026-09-20\\round-2\\adjudicator\\decision-v3.json",
+      "repair_rounds": 2,
+      "token_target_met": false,
+      "token_failure_observed_at": "2026-09-20T16:14:23+00:00",
+      "observed_metric_before_repair": 978136,
+      "observed_roles_metric_before_repair": 527638,
+      "score_manifest_v2": "data\\reviews\\triplet-token-cycle-2026-09-20\\round-2\\score-manifest-v2.json",
+      "first_repair_author_open_ids": [
+        "C004",
+        "C005",
+        "C007",
+        "C009",
+        "C010",
+        "C012",
+        "C014"
+      ],
+      "checkpoint_45_min": "首轮修复未闭合，裁决锁定最后一次Sol例外；原计时不重置，token目标已失败。",
+      "score_manifest_v3": "data\\reviews\\triplet-token-cycle-2026-09-20\\round-2\\score-manifest-v3.json",
+      "ended_at": "2026-09-20T16:50:52.627720+00:00",
+      "elapsed_seconds": 3396.21664,
+      "noncached_plus_output": 2019987,
+      "roles_noncached_plus_output": 1489434,
+      "research_status": "execution_incomplete_exception_exhausted",
+      "approved_scores": null,
+      "reason": [
+        "总token超过目标",
+        "两次修复后决定性原条件仍未闭合，独立裁决不批准"
+      ],
+      "publish_allowed": false
+    },
+    {
+      "round": 3,
+      "directory": "data\\reviews\\triplet-token-cycle-2026-09-20\\round-3",
+      "started_at": "2026-09-20T16:51:47.052494+00:00",
+      "status": "failed",
+      "baseline_metric": 1325995,
+      "target_metric": 928196.5,
+      "baseline_roles_metric": 1056940,
+      "target_roles_metric": 739858,
+      "changes": [
+        "独立测试执行上下文，全部子任务用量仍纳入",
+        "原件HTML表逐行阅读视图，原件哈希及坐标保留",
+        "送审前抽核历史窗口与检索记录，未就绪不交双审"
+      ],
+      "score_state": "not_approved",
+      "valuation_scope": "未纳入本轮评分基线，不能外推完整三件套节省率",
+      "independence": "测试执行者和研究角色不读旧run/旧报告/旧分数",
+      "preflight_returns": 2,
+      "preflight_reason": "公开未查被用作扣分及历史证据窗口不足，独立测试执行者送审前拦截",
+      "clock_reset": false,
+      "adaptive_action": "同一作者反复未完成公开原件缺口，主任务要求按既有SOP改为明确范围的Terra并行取证，不重做整份证据计划、不重置计量",
+      "capacity_failures": [
+        {
+          "action": "执行者新建定向Terra证据角色",
+          "error": "agent thread limit reached"
+        },
+        {
+          "action": "主任务直接新建定向Terra证据角色",
+          "error": "agent thread limit reached"
+        },
+        {
+          "action": "恢复模型匹配且无茅台旧结论的历史证据会话",
+          "error": "live agent path not found"
+        }
+      ],
+      "capacity_boundary": "未发现释放会话工具；后续独立双复核不得替换模型或由作者兼任",
+      "preflight_financial_errors": [
+        "归母净资产加合并负债冒充合并总资产，漏少数股东权益",
+        "营业收入与营业总收入口径混用"
+      ],
+      "ended_at": "2026-09-20T17:57:53.922233+00:00",
+      "elapsed_seconds": 3966.869739,
+      "noncached_plus_output": 1373355,
+      "roles_noncached_plus_output": 1133431,
+      "approved_scores": null,
+      "final_package": "data\\reviews\\triplet-token-cycle-2026-09-20\\round-3\\final-terminal\\evaluation.json",
+      "full_32_item_dual_review": true,
+      "performance_verdict": "failed_token_and_wall_clock",
+      "resume_from": "冻结v4候选的双路全32项独立初审，原计时不得重置",
+      "capacity_recovered_at": "2026-09-20T17:22:13.111573+00:00",
+      "coordination_note": "两位新审核已运行；恢复原测试执行者又遇会话上限，由主任务暂代调度，不影响审核隔离。容量曾在后续目标轮恢复，不能再推断为永久阻塞。",
+      "repair_rounds": 1,
+      "decision": "data\\reviews\\triplet-token-cycle-2026-09-20\\round-3\\adjudicator\\decision-v2-terminal.json",
+      "quality_finding": "独立裁决确认F1原文负分档；机械通用零下限错误已修复，历史稿未改",
+      "latest_elapsed_seconds": 3762.436602,
+      "checkpoint_45_min": "初审及裁决已完成，合并修复中；时间与工具中断均照计。",
+      "score_manifest_v5": "data/reviews/triplet-token-cycle-2026-09-20/round-3/score-manifest-v5.json",
+      "author_unclosed_conditions": [
+        "C003-A1",
+        "C001-A1（部分完成）"
+      ],
+      "token_target_met": false,
+      "wall_clock_target_met": false,
+      "latest_noncached_plus_output": 1195257,
+      "exception_repair_used": false,
+      "candidate_only": {
+        "company": 82.5,
+        "management": 67
+      },
+      "closed_acceptance_ids_count": 7,
+      "unclosed_acceptance_ids_count": 9,
+      "exception_used": false,
+      "termination_reason": "性能验证已失败，剩余决定性条件未闭合；未耗尽例外额度",
+      "publish_allowed": false,
+      "prior_snapshot": "../final/score-package.json",
+      "scope": "仅评分验证，不外推估值或完整三件套"
+    },
+    {
+      "round": 4,
+      "directory": "data/reviews/triplet-token-cycle-2026-09-20/round-4",
+      "started_at": "2026-09-20T17:58:35.152365+00:00",
+      "status": "failed",
+      "score_state": "not_approved",
+      "baseline_metric": 1325995,
+      "target_metric": 928196.5,
+      "baseline_roles_metric": 1056940,
+      "target_roles_metric": 739858,
+      "changes": [
+        "明确非财报历史与外部监管缺口提前定向并行取证",
+        "原件阅读视图及原规则负档机械核验保留"
+      ],
+      "scope": "仅评分验证，不外推估值或完整三件套",
+      "publish_allowed": false,
+      "in_progress_evidence_check": {
+        "status": "continued_before_freeze",
+        "findings": [
+          "控制与融资历史仍待实际官方补证，未允许以bounded完成交接",
+          "合并现金流股利利润及利息支付不能直接等同上市公司现金分红"
+        ],
+        "action": "原角色继续定向核实，不重置时钟、不指定分数"
+      },
+      "evidence_progress": {
+        "version": "evidence/v2",
+        "substantive_new_sources": [
+          "上交所首发招股书及2002年报",
+          "上交所2020集团发行主体沿革",
+          "最高检转载袁仁国及高卫东法院判决",
+          "临2026-004留置公告"
+        ],
+        "remaining_boundary": "全历史发行汇总未取得，作者需据实际窗口判断充分性，不用未知任意扣分",
+        "score_freeze": "pending_author_integration"
+      },
+      "score_manifest": "data\\reviews\\triplet-token-cycle-2026-09-20\\round-4\\score-manifest-v1.json",
+      "preflight_version_sync_fix": true,
+      "initial_review_candidates": 19,
+      "repair_rounds": 2,
+      "decision": "data\\reviews\\triplet-token-cycle-2026-09-20\\round-4\\adjudicator\\decision-v3-terminal.json",
+      "decision_sha256": "5b3661d9e1cf18ad02b5f3564c6c4f7499ef5362fa6d265620de00eab9c3a493",
+      "original_acceptance_count": 11,
+      "repair_parallelism": "同一合并修复：作者本地计算与判断；原证据角色定向外部融资及同行取证",
+      "score_manifest_v2": "data\\reviews\\triplet-token-cycle-2026-09-20\\round-4\\score-manifest-v2.json",
+      "latest_elapsed_seconds": 3698.007206,
+      "latest_noncached_plus_output": 992167,
+      "token_target_met": false,
+      "token_failure_observed_at": "2026-09-20T18:39:50.029042+00:00",
+      "observed_metric_before_recheck": 992167,
+      "checkpoint_45_min": "双路定向复查均未批准，原裁决评估最后一次有界例外；token目标已失败，原计时不重置",
+      "recheck_counts": {
+        "facts": {
+          "passed": 5,
+          "not_passed": 6
+        },
+        "reasoning": {
+          "passed": 5,
+          "partial": 1,
+          "failed": 5
+        }
+      },
+      "exception_used": true,
+      "remaining_original_acceptance_count": 6,
+      "closed_original_acceptance_count": 5,
+      "score_manifest_v3": "data/reviews/triplet-token-cycle-2026-09-20/round-4/score-manifest-v3.json",
+      "candidate_raw_scores": {
+        "company": 83.5,
+        "management": 78
+      },
+      "final_recheck_disagreement": "一路6通过；另一路4通过2未通过，含资本利用率阈值算术与融资/分红窗口",
+      "wall_clock_target_met": false,
+      "approved_scores": null,
+      "candidate_only": {
+        "company": 83.5,
+        "management": 78
+      },
+      "full_32_item_dual_review": true,
+      "closed_acceptance_ids_count": 9,
+      "unclosed_acceptance_ids_count": 2,
+      "research_status": "execution_incomplete_exception_exhausted",
+      "ended_at": "2026-09-20T19:03:23.831853+00:00",
+      "elapsed_seconds": 3888.679488,
+      "noncached_plus_output": 1713492,
+      "roles_noncached_plus_output": 1560136,
+      "cached_input_tokens": 45572224,
+      "remaining": "资本利用率阈值算术及五年实际分红/截止前股东变动核验",
+      "final_package": "data\\reviews\\triplet-token-cycle-2026-09-20\\round-4\\final\\evaluation.json"
+    },
+    {
+      "round": 5,
+      "directory": "data/reviews/triplet-token-cycle-2026-09-20/round-5",
+      "started_at": "2026-09-20T19:04:11.063284+00:00",
+      "status": "failed_performance_partial_score_approval",
+      "score_state": "partially_approved",
+      "baseline_metric": 1325995,
+      "target_metric": 928196.5,
+      "baseline_roles_metric": 1056940,
+      "target_roles_metric": 739858,
+      "changes": [
+        "新增同模型Terra中性数值取证实例，按完整年份序列和可复算输入交接",
+        "另一Terra证据实例定向外部原件，作者只整合与独立判断",
+        "不复制旧事实或旧分数，不减32项双审；全部角色及准备照计"
+      ],
+      "scope": "仅评分；未开展正式估值或三份长报告，不外推完整三件套效果",
+      "publish_allowed": false,
+      "capacity_failures": [
+        {
+          "action": "启动独立作者",
+          "error": "agent thread limit reached"
+        },
+        {
+          "action": "后续目标轮复核后再次启动作者",
+          "error": "agent thread limit reached"
+        },
+        {
+          "action": "首轮修复后第二路复查继续",
+          "error": "agent thread limit reached",
+          "cause_observed": "作者交付消息后仍running，等待终态释放"
+        }
+      ],
+      "clock_reset": false,
+      "adaptive_action": "两路证据继续运行；待一个证据角色完成后再启动独立作者，不更换模型、不复用受旧评分污染的作者、不重置计时",
+      "writer_started_at": "2026-09-20T19:12:02.850060+00:00",
+      "capacity_recovered": true,
+      "evidence_initial_handoff": "两份初包未齐；数值角色经一次继续补齐主要窗口，外部角色继续补具体原任务缺口",
+      "numeric_package": "data/reviews/triplet-token-cycle-2026-09-20/round-5/numeric/v2",
+      "concurrency_note": "平台同时运行两名子角色；数值完成后外部补证与作者并行，所有等待照计",
+      "external_package": "data/reviews/triplet-token-cycle-2026-09-20/round-5/external/v4",
+      "workflow_finding": "结构化数值包改善可复算性，但证据角色仍需拆小缺口后继续，初包完成声明不能替代充分性",
+      "sufficiency_note": "作者按原规则检验严格分红下限是否足以选档，不强求无影响精确末位，不将下限冒充总额",
+      "score_manifest": "data/reviews/triplet-token-cycle-2026-09-20/round-5/score-manifest-v1.json",
+      "token_target_met": false,
+      "token_failure_observed_at": "2026-09-20T19:39:25.021721+00:00",
+      "observed_metric_before_repair": 957959,
+      "initial_review_candidates": 10,
+      "full_32_item_dual_review": true,
+      "repair_rounds": 2,
+      "decision": "data/reviews/triplet-token-cycle-2026-09-20/round-5/adjudicator/decision-v3-terminal.json",
+      "original_acceptance_count": 19,
+      "repair_parallelism": "原作者本地修复与原外部角色HISTORY补证并行，同一次合并修复",
+      "checkpoint_45_min": "合并修复证据已回，作者生成delta与逐19条件答复；只完成评分闭环，token目标已失败，时间不重置",
+      "score_manifest_v2": "data/reviews/triplet-token-cycle-2026-09-20/round-5/score-manifest-v2.json",
+      "recheck_counts": {
+        "facts": {
+          "passed": 17,
+          "partial": 1,
+          "failed": 1
+        },
+        "reasoning": {
+          "passed": 5,
+          "partial": 9,
+          "failed": 5
+        }
+      },
+      "exception_used": true,
+      "closed_original_acceptance_count": 5,
+      "remaining_original_acceptance_count": 14,
+      "score_manifest_v3": "data/reviews/triplet-token-cycle-2026-09-20/round-5/score-manifest-v3.json",
+      "wall_clock_target_met": false,
+      "wall_clock_failure_observed_at": "2026-09-20T20:05:40.255795+00:00",
+      "latest_elapsed_seconds": 3689.192511,
+      "final_recheck_counts": {
+        "facts": {
+          "passed": 14
+        },
+        "reasoning": {
+          "passed": 11,
+          "partial": 1,
+          "failed": 2
+        }
+      },
+      "ended_at": "2026-09-20T20:10:35.592697+00:00",
+      "elapsed_seconds": 3984.529413,
+      "noncached_plus_output": 1629020,
+      "roles_noncached_plus_output": 1346183,
+      "cached_input_tokens": 56063104,
+      "full_score_quality_target_met": false,
+      "score_states": {
+        "company": "not_approved",
+        "management": "approved"
+      },
+      "approved_scores": {
+        "company": null,
+        "management": 65,
+        "combined": null
+      },
+      "candidate_only": {
+        "company": 83.5
+      },
+      "research_status": "execution_incomplete",
+      "closed_acceptance_ids_count": 16,
+      "unclosed_acceptance_ids_count": 3,
+      "open_acceptance_ids": [
+        "R5-HISTORY-A01",
+        "R5-HISTORY-A02",
+        "R5-HISTORY-A03"
+      ],
+      "session_count": 8,
+      "decision_sha256": "575bc8b93995bf8c7a9fce899caef936dee32c2bacb5a8c52176938288d228e1",
+      "snapshot_count": 61
+    }
+  ],
+  "acceptance": {
+    "token": "同范围非缓存输入+输出<=基线70%；总量和研究角色小计同时报告",
+    "wall_clock": "本轮开始至评分批准<=3600秒",
+    "quality": "全32项双路独立核验，原件与计算、索引外风险覆盖；所有决定性问题关闭；评分变化有原规则和证据桥",
+    "scope": "本次旧基线仅含独立取证至评分批准，不能宣称完整三件套/估值节省率",
+    "cap": "最多5次真实研究验证；每轮仍受SOP修复轮次约束，工具回归不占真实研究轮次"
+  },
+  "completed_rounds": 5,
+  "initiated_rounds": 5,
+  "blocking_audit": {
+    "condition": "本任务Agent会话数量上限，不能新建必要独立审核角色；无释放接口，待用户明确授权新任务继续",
+    "confirmed_goal_turns": 0,
+    "goal_status": "active",
+    "resume_request": "data/reviews/triplet-token-cycle-2026-09-20/resume-request.md",
+    "pending_question": "容量恢复，已在原任务继续，无需创建新任务",
+    "resolved": true
+  },
+  "further_rounds_authorized": false
+}

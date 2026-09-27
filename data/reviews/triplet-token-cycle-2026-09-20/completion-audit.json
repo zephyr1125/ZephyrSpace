@@ -1,0 +1,51 @@
+{
+  "checked_at": "2026-09-20T20:14:20.588815+00:00",
+  "completion_basis": "已完成用户允许的5次真实验证，优化目标未达到；不追加第6次",
+  "cap_completed": true,
+  "optimization_achieved": false,
+  "round_count": 5,
+  "round_results": [
+    {
+      "round": 1,
+      "status": "failed",
+      "elapsed_seconds": 3081.535044,
+      "noncached_plus_output": 1169204
+    },
+    {
+      "round": 2,
+      "status": "failed",
+      "elapsed_seconds": 3396.21664,
+      "noncached_plus_output": 2019987
+    },
+    {
+      "round": 3,
+      "status": "failed",
+      "elapsed_seconds": 3966.869739,
+      "noncached_plus_output": 1373355
+    },
+    {
+      "round": 4,
+      "status": "failed",
+      "elapsed_seconds": 3888.679488,
+      "noncached_plus_output": 1713492
+    },
+    {
+      "round": 5,
+      "status": "failed_performance_partial_score_approval",
+      "elapsed_seconds": 3984.529413,
+      "noncached_plus_output": 1629020
+    }
+  ],
+  "snapshot_rows_verified": 188,
+  "snapshot_hash_errors": [],
+  "ignored_required_snapshots": [],
+  "latest_raw_originals_hash_verified": 10,
+  "final_round_sessions_verified": 8,
+  "fixed_models_verified": true,
+  "original_rules_and_historical_research_changes": [],
+  "tool_checks": "tool-validation.json：81 tests + entry + 3-module migration passed",
+  "quality_result": "管理层65独立批准；公司A2/A3三个条件未闭，完整评分目标失败",
+  "valuation_result": "未在评分基线内，不宣称质量或性能验证",
+  "git_delivery": "未提交或推送；过程目录忽略，必要终局输入保留",
+  "remaining_authorized_work": []
+}

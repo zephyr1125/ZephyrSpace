@@ -1,0 +1,19 @@
+{
+  "status": "mechanically_checked_pending_review",
+  "errors": [],
+  "warnings": [
+    "公司F维度触发原规则重大警告；须人工处理，程序不判入库"
+  ],
+  "scores": {
+    "cScore": 83.5,
+    "mScore": 65
+  },
+  "inputs": {
+    "data/reviews/triplet-token-cycle-2026-09-20/round-5/numeric/facts.json": "af7104e59abae22df8448bfa13dfdd14df6cfaf9b6d6273e599e30938683623b",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-5/numeric/sources.json": "bf15233c0fd8e49a9e341754f98d9a41d0de230c230960d65fd0d537c63b55b6",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-5/numeric/v2/facts.json": "df3b4175cedbfa3ecae59d24dae815c40bed828ac88a9d5a44b1d00916150c33",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-5/external/facts.json": "08c6e02a8e75de5fb4b01fe8cbdb4edabb3ad30c6233d0989cda27164b3a900b",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-5/external/v3/facts.json": "580018d79ed740be9dcaf275271ce163a17838fb836b29201f12bfa934a32330",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-5/external/v4/facts.json": "fd9281eac3608d9deab7c0ed1a4d2dd882f1f185b0f37e8a81834b4a8499d577"
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "review_role": "triplet_review_facts",
+  "review_stage": "score_repair_targeted_recheck_v5",
+  "company": "贵州茅台",
+  "ticker": "600519.SH",
+  "cutoff": "2026-09-20",
+  "inputs": {
+    "decision": "data/reviews/triplet-token-cycle-2026-09-20/round-3/adjudicator/decision-v1.json",
+    "decision_sha256": "7e5f1e656854199b7a908d8bf0da49f9ce0f91dbbc0ce4c1cf389c373f9784a5",
+    "workpaper": "data/reviews/triplet-token-cycle-2026-09-20/round-3/writer/rebuilt-v5-final/workpaper.json",
+    "workpaper_sha256": "191ed53323c50882600bf63d5f0fbd3f773089c674ee1d3af4ef508318b40a7d",
+    "receipt_sha256": "d9696d4d35830c7d313b41ea38cdf8c4328dd9b43e24527b1b33e007fb13830c",
+    "score_manifest_sha256": "3d678581c26ef282909149c432a24dfbc8afd9a0605836bdefc122e320928f7a",
+    "facts_v5_sha256": "fdf9e2ab178b253cd68f0bbc236193fbbf73bbad691081255beb5a3e2836c791",
+    "sources_v5_sha256": "c0264e44e6b03242ebec2eba9afba775cd40de28788f015f480c62bffb0424d5"
+  },
+  "results": [
+    {
+      "id": "C001-A1",
+      "status": "partial",
+      "evidence": "MT-R5-A3及2025年报L600-L611可核首发执行线索、两只产业基金和当年无进行中重大资产重组/重大资产出售；但未提供IPO至截止日融资工具、重要并购和业绩压力期资产处置的可复核官方汇总或分段历史命中记录。",
+      "remaining": "资本运作全史正面链未闭合，不能由“本轮所查未见”替代。"
+    },
+    {
+      "id": "C001-A2",
+      "status": "partial",
+      "evidence": "v5已将A3及管理层资本配置的论证限定为已核范围，并将项目IRR列为边界；未把检索未命中写成不存在。",
+      "remaining": "C001-A1的历史资本动作断链仍在，现有材料不足以独立确认A3满分档所需的“无异常”正面结论及其资本配置联动。"
+    },
+    {
+      "id": "C002-A1",
+      "status": "completed",
+      "evidence": "v5 F1=-2，MT-R5-F1逐人列明袁仁国、高卫东曾任上市公司董事长及近十年调查/判决窗口；未外推为现任在查。",
+      "remaining": "无。"
+    },
+    {
+      "id": "C002-A2",
+      "status": "completed",
+      "evidence": "receipt记录负值仅F1=-2且机械检查无错误；v5 rule_ref明确其为原规则负档。",
+      "remaining": "无。"
+    },
+    {
+      "id": "C003-A1",
+      "status": "open",
+      "evidence": "MT-R5-CONTROL仍只有IPO端点及2020-2025连续年报，作者也明示未闭合2001-2019控制链。",
+      "remaining": "需官方股权沿革、覆盖IPO至今的控制权变更汇总或必要年份年报，以区分监管机构名称调整与真实控制转移。"
+    },
+    {
+      "id": "C004-A1",
+      "status": "partial",
+      "evidence": "v5不再维持未经证明的“从未变更”3分，并在evidence_gaps标示可能重判2或3分。",
+      "remaining": "A2=2的“一项合理变更”并无已核实的变更次数和原因支撑；在C003-A1未闭合时，不能把未知控制史改写成已发生一次合理变更。"
+    },
+    {
+      "id": "C005-A1",
+      "status": "completed",
+      "evidence": "MT-R5-D2和2020-2024年报经营计划原文可复核2021-2025五个目标；2025年报L96验证2025营业收入同比-1.21%。v5以4/5达标、无第1/2优先级原话的4分上限处理，未将2026未完年度计入。",
+      "remaining": "无。"
+    },
+    {
+      "id": "C005-A2",
+      "status": "partial",
+      "evidence": "MT-R5-CAPEX-PROJECT正确区分固定资产计划、现金Capex和产能释放；2025年报L410-L430可核在建项目计划/累计投入，L600-L611可核产业基金。",
+      "remaining": "裁决要求近5年资本配置的计划、实际、营收变化、重要并购及回购时点。v5仅形成2020和2025项目例证，未完成五年范围的可复核链。"
+    },
+    {
+      "id": "C005-A3",
+      "status": "completed",
+      "evidence": "v5已逐项重述D1、F2、管理层资本配置、战略稳定性和股东友好度的维持理由，并将2025未达目标作为反证；没有因新增事实机械改分。",
+      "remaining": "不替代C005-A2尚未完成的资本配置事实链。"
+    },
+    {
+      "id": "C006-A1",
+      "status": "completed",
+      "evidence": "2025年报L975-L977确认控股股东股权激励承诺未履行及高管在控股股东兼职仍存在；v5组织、诚信和危机处理理由均未称问题已整改。",
+      "remaining": "无。"
+    },
+    {
+      "id": "C007-A1",
+      "status": "partial",
+      "evidence": "v5 gaps已分别记录控制史、项目回报细节、管理层原话和环境安全边界，未笼统将Q&A或单项目IRR定义为决定性缺口。",
+      "remaining": "控制史仍是决定性断链；A3历史资本动作及F4外部检索也未完整关闭，应继续在gaps中按实际影响保留，不能因文本已细分而视为全部关闭。"
+    },
+    {
+      "id": "C007-A2",
+      "status": "completed",
+      "evidence": "v5分项独立加总为公司82.5、管理层67、合计149.5；整数显示83/67/150，与receipt和冻结workpaper一致。",
+      "remaining": "无。"
+    },
+    {
+      "id": "C008-A1",
+      "status": "partial",
+      "evidence": "MT-R5-ESG-SEARCH保留2021安全报告及2022-2024 ESG披露，且将习酒事故排除为非上市公司/主要生产主体；2025年报L940-L1014也可核环境信息披露和ESG报告入口。",
+      "remaining": "验收要求环境处罚、停产、职业健康和重大安全的有界实际检索。现有材料主要为公司自披露，未见外部监管处罚/安全事故检索的查询、响应或主体命中记录，不能当作该范围已充分核查。"
+    },
+    {
+      "id": "C008-A2",
+      "status": "completed",
+      "evidence": "v5将F3的2分归因于关联交易及历史信披瑕疵，并明确未将未命中处罚包装为低风险；未据此自动加减分。",
+      "remaining": "C008-A1的外部检索边界仍须保留为真实未知。"
+    },
+    {
+      "id": "C009-A1",
+      "status": "partial",
+      "evidence": "v5未把ROE当作项目IRR，且2020/2025项目计划—实施—产能释放及整体资本回报能够支持部分资本配置判断；未加未经验证的0.5先例分。",
+      "remaining": "逆周期布局与资金回报高于成本的完整依据仍依赖C005-A2未完成的五年资本执行链；因此F2.5=2尚未得到全部逐项验收。"
+    },
+    {
+      "id": "C010-A1",
+      "status": "completed",
+      "evidence": "F1由2修正为-2，A2由3调整为2；v5公司82.5、管理层67、合计149.5，原始分相加与ROUND_HALF_UP显示均正确。",
+      "remaining": "无。"
+    }
+  ],
+  "findings": [
+    {
+      "severity": "P1",
+      "location": "A2；C003-A1；C004-A1",
+      "claim": "控制权历史未闭合，但A2以“一项合理变更”记2分。",
+      "evidence": "MT-R5-CONTROL只覆盖IPO端点和2020-2025；既无2001-2019官方连续沿革，也无一项实际控制转移的日期、次数或原因。",
+      "impact": "A2的档位仍无法按已核实变更次数匹配，且C003-A1仍为决定性未完成。",
+      "recommendation": "按C003-A1补控制权连续证据；在此之前保留真实未知，不把缺文档视为已发生一次变更。"
+    },
+    {
+      "severity": "P1",
+      "location": "A3、F2.5、管理层资本配置能力；C001-A1/C001-A2/C005-A2/C009-A1",
+      "claim": "v5只补入有限项目例证，未完成裁决要求的资本动作全史和近五年资本配置执行链。",
+      "evidence": "2025年报L410-L430、L600-L611可证明部分项目和基金事实；但材料未建立近5年计划、实际、营收变化、并购和回购时点的完整可复核范围。",
+      "impact": "不能确认A3=4、F2.5=2和管理层资本配置能力=20已满足原验收条件；不应仅因缺口自动降分。",
+      "recommendation": "按原验收ID补足有界历史证据与项目/回购时间线，再重审受影响项目及联动。"
+    },
+    {
+      "severity": "P1",
+      "location": "F3；C008-A1",
+      "claim": "环境安全核验以公司ESG/安全自披露为主，尚未完成裁决要求的外部处罚、停产、职业健康和重大安全有界检索。",
+      "evidence": "MT-R5-ESG-SEARCH所列来源均为公司或巨潮披露，未附外部监管查询/响应；公司披露的零重大事故并不等同于监管处罚记录穷尽。",
+      "impact": "F4联动的真实未知仍存在，不能认为C008-A1已关闭。",
+      "recommendation": "补留主体清单、检索式、监管/公开响应和归属判断；无命中时准确写为已检索范围内未命中。"
+    }
+  ],
+  "conclusion": {
+    "score_state": "not_approved",
+    "repair_recheck": "failed_pending_open_acceptance",
+    "company_total_candidate": 82.5,
+    "management_total_candidate": 67,
+    "combined_total_candidate": 149.5,
+    "open_or_partial_acceptance_ids": [
+      "C001-A1",
+      "C001-A2",
+      "C003-A1",
+      "C004-A1",
+      "C005-A2",
+      "C007-A1",
+      "C008-A1",
+      "C009-A1"
+    ],
+    "note": "F1负档、D2窗口、治理持续性和分数同步已通过本次定向复查；未完成的原验收条件不得以作者自述或机械检查通过替代。"
+  }
+}

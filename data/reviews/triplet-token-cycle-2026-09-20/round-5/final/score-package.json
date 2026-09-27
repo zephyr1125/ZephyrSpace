@@ -1,0 +1,70 @@
+{
+  "score_states": {
+    "company": "not_approved",
+    "management": "approved"
+  },
+  "approved_parameters": {
+    "company_score": null,
+    "management_score": 65,
+    "combined_score": null,
+    "company_items": {
+      "A1": 2,
+      "A2": null,
+      "A3": null,
+      "B0": 2,
+      "B1": 3,
+      "B2": 3,
+      "B3": 6,
+      "B4": 3,
+      "C1": 6,
+      "C2": 5,
+      "C3+C4": 9,
+      "D1": 4,
+      "D2": 4,
+      "D3": 2,
+      "D5": 2,
+      "E1": 5,
+      "E2": 5,
+      "E3": 3,
+      "E4": 1.5,
+      "E5": 2,
+      "E5.5": 3,
+      "F1": -2,
+      "F2": 5,
+      "F2.5": 1,
+      "F3": 2
+    },
+    "management_items": {
+      "诚信与透明度": 10,
+      "资本配置能力": 18,
+      "战略稳定性": 11,
+      "对股东友好度": 13,
+      "危机处理能力": 5,
+      "组织与人才能力": 4,
+      "表达清晰度与认知质量": 4
+    },
+    "target_price": null,
+    "buy_price": null,
+    "certainty": null
+  },
+  "management_approval_boundary": "批准绑定本冻结底稿的management七项及所引证据，并以本终局人才窗口注释为准。管理层判断依据近年回报/治理/继任与执行证据，不依赖公司A2/A3的全历史最高档。并非完整三件套获批，不授权入库发布。",
+  "non_decisive_corrections": [
+    {
+      "acceptance_id": "R5-TALENT-A01",
+      "field": "五年离任12人",
+      "effective_reading": "2021-01-01至截止扩展观察窗累计12人；严格滚动五年11人，近三年7人。",
+      "reason": "2021王焱1月8日已在滚动五年之外；集中离任及继任结构判断相同，不改变组织4分/危机5分，不重启研究。",
+      "source_ref": "2021年报674；2023年报750；2024年报745"
+    }
+  ],
+  "open_acceptance_ids": [
+    "R5-HISTORY-A01",
+    "R5-HISTORY-A02",
+    "R5-HISTORY-A03"
+  ],
+  "publish_allowed": false,
+  "frozen_workpaper_sha256": "7006717b85dd80dd524ac9fe874eaa363046e8859495361003d7337b0205f11e",
+  "decision_sha256": "575bc8b93995bf8c7a9fce899caef936dee32c2bacb5a8c52176938288d228e1",
+  "input_snapshots": "input-snapshots.json",
+  "valuation_status": "not_in_scope"
+}

@@ -1,0 +1,433 @@
+{
+  "schema_version": 1,
+  "score_display": "integer_half_up",
+  "score_rule_validation": "explicit_tiers_v2",
+  "cutoff": "2026-09-20",
+  "scope": "仅公司与管理层评分，估值未展开",
+  "scores": {
+    "company": {
+      "total": 82.5,
+      "items": [
+        {
+          "id": "A1",
+          "score": 3,
+          "rule_ref": "公司规则A1：先发优势/技术驱动=3",
+          "reason": "1999年国企设立、2001年上市，法定产区与长期品牌资产构成先发基因；反证是资源禀赋亦依赖产区。",
+          "evidence_refs": [
+            "MT-F-ORIGIN",
+            "MT-F-BUSINESS"
+          ]
+        },
+        {
+          "id": "A2",
+          "score": 2,
+          "rule_ref": "公司规则A2：从未变更=3",
+          "reason": "官方IPO端点与2020-2025连续年报确认国有控制主线，但未取得闭合2001-2019真实控制转移次数的官方汇总；不能维持“从未变更”3分，也不因缺文档任意落0/1，按原规则一项合理变更档2分并保留边界。",
+          "evidence_refs": [
+            "MT-R5-CONTROL"
+          ]
+        },
+        {
+          "id": "A3",
+          "score": 4,
+          "rule_ref": "公司规则A3：融资用途清晰且无卖资产保利润=4",
+          "reason": "首发项目执行已有官方年报线索；本轮所查重大重组章节未见进行中重组，产业基金投资有金额和投向披露，且未发现业绩压力期卖资产保利润证据。检索未命中不等于不存在，故结论限于可复核范围，仍支持原档。",
+          "evidence_refs": [
+            "MT-R5-A3",
+            "MT-R5-CAPITAL-ACTIONS",
+            "MT-F-IPO-HISTORY"
+          ]
+        },
+        {
+          "id": "B0",
+          "score": 2,
+          "rule_ref": "公司规则B0：三项判断及分类完整=2",
+          "reason": "招股材料及上市资料确认1999年设立、2001年首发；原料采购—生产陈酿—销售的模式与当下双渠道一致，属于重资产构建深壁垒型，而非靠后续并购改造的模式。",
+          "evidence_refs": [
+            "MT-F-IPO-HISTORY",
+            "MT-F-ORIGIN",
+            "MT-F-BUSINESS"
+          ]
+        },
+        {
+          "id": "B1",
+          "score": 3,
+          "rule_ref": "公司规则B1：过度集中但逻辑清晰=3",
+          "reason": "茅台酒为绝对核心，系列酒、直销/批发及国际化提供子维度拆分；集中度高使单一品类需求下行仍为反证。",
+          "evidence_refs": [
+            "MT-F-BUSINESS",
+            "MT-F-FIN"
+          ]
+        },
+        {
+          "id": "B2",
+          "score": 3,
+          "rule_ref": "公司规则B2：高复购/刚性=3",
+          "reason": "白酒消费为重复购买，品牌和陈酿库存支持高毛利，直销与代理并存；宏观周期会影响礼赠和商务需求。",
+          "evidence_refs": [
+            "MT-F-BUSINESS",
+            "MT-F-FIN"
+          ]
+        },
+        {
+          "id": "B3",
+          "score": 6,
+          "rule_ref": "公司规则B3：强=6",
+          "reason": "长期超高盈利、产品价格调整及品牌渠道控制支持强定价权；2025收入下滑显示定价权不能消除行业调整。",
+          "evidence_refs": [
+            "MT-F-FIN",
+            "MT-F-BUSINESS"
+          ]
+        },
+        {
+          "id": "B4",
+          "score": 3,
+          "rule_ref": "公司规则B4：成熟期但稳定=3",
+          "reason": "成熟高端白酒市场仍有渠道、国际化和产品结构增长点，但2025及2026H1利润走弱，不满足成长期满分。",
+          "evidence_refs": [
+            "MT-F-FIN",
+            "MT-F-EXEC"
+          ]
+        },
+        {
+          "id": "C1",
+          "score": 6,
+          "rule_ref": "公司规则C1：绝对龙头/Top3=6",
+          "reason": "公司年报将茅台酒列为千亿级单品并披露世界级品牌地位；本轮未另取全行业CR5，结论限于高端酱香细分。",
+          "evidence_refs": [
+            "MT-F-FIN",
+            "MT-F-BUSINESS"
+          ]
+        },
+        {
+          "id": "C2",
+          "score": 5,
+          "rule_ref": "公司规则C2：吃肉主导=5",
+          "reason": "对上游采用政府/合作社/农户组织采购，对下游直销与代理双渠道；前五客户仅10.10%，客户集中度低。",
+          "evidence_refs": [
+            "MT-F-BUSINESS",
+            "MT-F-RELATED"
+          ]
+        },
+        {
+          "id": "C3+C4",
+          "score": 9,
+          "rule_ref": "公司规则C3+C4：5星=9",
+          "reason": "产区、工艺、长周期陈酿、品牌和渠道共同构成高进入门槛；反证为高端白酒竞争和需求周期。",
+          "evidence_refs": [
+            "MT-F-BUSINESS",
+            "MT-F-FIN"
+          ]
+        },
+        {
+          "id": "D1",
+          "score": 4,
+          "rule_ref": "公司规则D1：长期一致且逻辑清晰=4",
+          "reason": "2021-2025计划与实际窗口显示质量、品牌、渠道、产能和治理主线持续；2025市场化转型为行业调整下的策略延展。2025目标未达影响D2执行，不构成D1战略漂移。",
+          "evidence_refs": [
+            "MT-R5-D2",
+            "MT-R5-CAPEX-PROJECT"
+          ]
+        },
+        {
+          "id": "D2",
+          "score": 4,
+          "rule_ref": "公司规则D2：第3优先级年报经营计划可作间接验证，缺第1/2优先级原话上限4",
+          "reason": "以营业总收入一致口径配对：2021-2024四年目标均达标，2025目标约+9%而实际-1.21%未达，达标率4/5≥2/3；年报计划属第3优先级间接验证，未取得第1/2优先级原话，按规则上限4分。2026未完年度未计入。",
+          "evidence_refs": [
+            "MT-R5-D2"
+          ],
+          "original_statement_found": false,
+          "strategy_drift": false
+        },
+        {
+          "id": "D3",
+          "score": 2,
+          "rule_ref": "公司规则D3：中性=2",
+          "reason": "品牌和产区壁垒提供韧性，但宏观消费、舆情及环境风险均被年报列示，行业进入周期性结构调整。",
+          "evidence_refs": [
+            "MT-F-EXEC",
+            "MT-F-FIN"
+          ]
+        },
+        {
+          "id": "D5",
+          "score": 2,
+          "rule_ref": "公司规则D5：混合信号=2",
+          "reason": "2023-2025研发人员约800人且较稳定；业务收入高但未形成可比的人均创收/人才流失完整序列，且2026H1财务高管解聘。",
+          "evidence_refs": [
+            "MT-F-PEOPLE",
+            "MT-F-FIN"
+          ]
+        },
+        {
+          "id": "E1",
+          "score": 5,
+          "rule_ref": "公司规则E1：净利率/周转率驱动ROE>15%=5",
+          "reason": "以合并营业收入、合并资产总计与归母净利/归母权益作同口径近似杜邦，2020-2024归母净利率约49%-51%，资产周转由0.4788升至0.5979次，权益乘数由1.3333降至1.2738；高归母ROE来自高归母净利率与周转改善，非加杠杆。",
+          "evidence_refs": [
+            "MT-F-DUPONT"
+          ]
+        },
+        {
+          "id": "E2",
+          "score": 4,
+          "rule_ref": "公司规则E2：基本达标=3至5的专业判断",
+          "reason": "2023-2025经营现金流/归母净利约0.89/1.07/0.75，三年均值约0.90，现金创造总体强；2025受财务公司存款及同业存款影响显著下降，不能给满分。",
+          "evidence_refs": [
+            "MT-F-FIN",
+            "MT-F-RELATED"
+          ]
+        },
+        {
+          "id": "E3",
+          "score": 3,
+          "rule_ref": "公司规则E3：扣非>85%且量价双驱动=3",
+          "reason": "2025扣非与归母几乎相等，增长主要靠销量、价格和产品结构；2025收入和利润下降是阶段性反证但非补贴依赖。",
+          "evidence_refs": [
+            "MT-F-FIN"
+          ]
+        },
+        {
+          "id": "E4",
+          "score": 1.5,
+          "rule_ref": "公司规则E4及Capex同比>30%未拆分扣0.5",
+          "reason": "经营现金流强、未见高杠杆信号；2025现金Capex同比下降33.15%，仅知基建工程款减少，未完成维持/扩张拆分，按原规则从2分扣0.5。",
+          "evidence_refs": [
+            "MT-F-CAPEX",
+            "MT-F-FIN"
+          ],
+          "capex_check": {
+            "applicable": true,
+            "current": 31.2759491641,
+            "previous": 46.7871205356,
+            "unit": "亿元",
+            "current_period": "2025年度",
+            "previous_period": "2024年度",
+            "evidence_refs": [
+              "MT-F-CAPEX"
+            ],
+            "split_complete": false,
+            "score_before_capex_adjustment": 2
+          }
+        },
+        {
+          "id": "E5",
+          "score": 2,
+          "rule_ref": "公司规则E5：标准审计+低商誉+应收质量好=2",
+          "reason": "2023-2025标准无保留审计，且本轮未见重大商誉/应收减值红旗；存货较高符合陈酿经营属性但仍需跟踪渠道消化。",
+          "evidence_refs": [
+            "MT-F-AUDIT",
+            "MT-F-CAPEX"
+          ]
+        },
+        {
+          "id": "E5.5",
+          "score": 2,
+          "rule_ref": "公司规则E5.5：有小瑕疵=2",
+          "reason": "年报KAM为收入确认和关联交易，均有审计程序，不是持续经营意见；两项均属金额重大和判断敏感领域，故不按无异常给满分。",
+          "evidence_refs": [
+            "MT-F-AUDIT",
+            "MT-F-RELATED"
+          ]
+        },
+        {
+          "id": "F1",
+          "score": -2,
+          "rule_ref": "公司规则F1：周期性高管腐败（近10年≥2人被查）=-2，属情形得分而非从5分扣减",
+          "reason": "袁仁国、高卫东均曾任上市公司董事长，近十年窗口内分别有刑事判决/调查及判决记录，适用原表-2负档；两案均为历史人物事件，未外推为现任核心高管在查。",
+          "evidence_refs": [
+            "MT-R5-F1"
+          ]
+        },
+        {
+          "id": "F2",
+          "score": 5,
+          "rule_ref": "公司规则F2：高分红+无不良减持+融资审慎=5",
+          "reason": "持续高额现金分红、注销式回购及控股股东增持已核；新增资本配置证据没有改变融资审慎、未见不良减持的既有判断，维持5分。",
+          "evidence_refs": [
+            "MT-F-RETURN",
+            "MT-F-HOLDER-RETURN",
+            "MT-R5-CAPITAL-ACTIONS"
+          ]
+        },
+        {
+          "id": "F2.5",
+          "score": 2,
+          "rule_ref": "公司规则F2.5：审慎配置+逆周期布局+资金回报>成本=2",
+          "reason": "资本开支计划、实际现金Capex、产能投产三者口径不同，未直接相除；2020与2025主要项目均有计划—实施—产能释放链，整体资本回报见同口径杜邦，分红与注销回购并行。该证据支持审慎配置、逆周期产能布局和整体回报判断；未验证先例，未加0.5。",
+          "evidence_refs": [
+            "MT-R5-CAPEX-PROJECT",
+            "MT-F-CAPITAL-RETURN",
+            "MT-F-RETURN"
+          ],
+          "positive_precedent": false
+        },
+        {
+          "id": "F3",
+          "score": 2,
+          "rule_ref": "公司规则F3：有小瑕疵或ESG中等风险=2",
+          "reason": "关联交易及历史信披监管瑕疵仍是本项2分的内控依据；近五年年报/环境披露显示环评、许可、应急及排放信息，但没有将未命中处罚包装为“ESG低风险”。本次有界证据未见可归属公司/主要生产主体的重大停产、职业健康或环境处罚事件，故F4不新增扣分。",
+          "evidence_refs": [
+            "MT-R5-ESG",
+            "MT-R5-ESG-SEARCH",
+            "MT-F-RELATED",
+            "MT-F-INTEGRITY"
+          ]
+        }
+      ]
+    },
+    "management": {
+      "total": 67,
+      "items": [
+        {
+          "id": "诚信与透明度",
+          "score": 8,
+          "rule_ref": "管理层规则：诚信≤8触发红旗",
+          "reason": "历史两任董事长腐败与信披警示构成红旗；2025仍有未及时履行的激励承诺，环境事项未发现本轮可归属重大事件但不包装为已核低风险。8分维持，且仍触发原规则红旗。",
+          "evidence_refs": [
+            "MT-R5-F1",
+            "MT-R5-GOV",
+            "MT-R5-ESG",
+            "MT-R5-ESG-SEARCH"
+          ]
+        },
+        {
+          "id": "资本配置能力",
+          "score": 20,
+          "rule_ref": "管理层规则：资本配置能力满分25",
+          "reason": "首发承诺执行、2020/2025产能项目计划—实施—释放、基金投资披露及分红/回购共同构成资本动作链；整体资本效率以同口径杜邦支持但不等同单项目IRR。2025产业基金尚在投资期和项目IRR未披露限制满分，20分维持。",
+          "evidence_refs": [
+            "MT-R5-A3",
+            "MT-R5-CAPEX-PROJECT",
+            "MT-R5-CAPITAL-ACTIONS",
+            "MT-F-CAPITAL-RETURN"
+          ]
+        },
+        {
+          "id": "战略稳定性",
+          "score": 11,
+          "rule_ref": "管理层规则：战略稳定性满分15",
+          "reason": "2021-2024营收目标达成、2025未达以及连续的产品/渠道/产能战略形成正反证；行业调整下的市场化转型不构成战略断裂，维持11分。",
+          "evidence_refs": [
+            "MT-R5-D2",
+            "MT-R5-CAPEX-PROJECT"
+          ]
+        },
+        {
+          "id": "对股东友好度",
+          "score": 13,
+          "rule_ref": "管理层规则：对股东友好度满分15",
+          "reason": "高分红、注销回购、控股股东增持均已核；新增资本项目证据未改变此判断，维持13分。",
+          "evidence_refs": [
+            "MT-F-RETURN",
+            "MT-F-HOLDER-RETURN"
+          ]
+        },
+        {
+          "id": "危机处理能力",
+          "score": 6,
+          "rule_ref": "管理层规则：危机处理能力满分10",
+          "reason": "治理自查问题持续存在，不能宣称整改完成；同时年报有风险管理、环保应急与行业调整行动记录。新增证据支持原有正反证并存，维持6分。",
+          "evidence_refs": [
+            "MT-R5-GOV",
+            "MT-R5-ESG",
+            "MT-R5-ESG-SEARCH",
+            "MT-R5-D2"
+          ]
+        },
+        {
+          "id": "组织与人才能力",
+          "score": 6,
+          "rule_ref": "管理层规则：组织与人才能力满分10",
+          "reason": "生产销售内部人才与研发队伍稳定仍为正面；截至2025年末控股股东激励承诺仍未及时履行，不能表述为已整改，董事长变动亦限制满分，6分维持。",
+          "evidence_refs": [
+            "MT-R5-GOV",
+            "MT-F-PEOPLE"
+          ]
+        },
+        {
+          "id": "表达清晰度与认知质量",
+          "score": 3,
+          "rule_ref": "管理层规则：表达清晰度满分5",
+          "reason": "2025年报对市场化转型、渠道、价格、风险防控和资本项目给出具体行动方向，表达结构清楚；业绩说明会逐字问答未取得，故不评价即时追问下的解释质量。",
+          "evidence_refs": [
+            "MT-F-EXEC"
+          ]
+        }
+      ]
+    }
+  },
+  "evidence_gaps": [
+    {
+      "affected_items": [
+        "A2"
+      ],
+      "kind": "control_history_partial",
+      "impact": "2001-2019控制权变更次数未由官方连续历史完全闭合；已按一项合理变更档处理，若取得汇总可重新判断2或3分。",
+      "search_scope": "IPO端点、2020-2025连续年报及控制权变更官方汇总；未把缺文档作为低档处罚。",
+      "evidence_refs": [
+        "MT-R5-CONTROL"
+      ]
+    },
+    {
+      "affected_items": [
+        "A3",
+        "资本配置能力",
+        "F2.5"
+      ],
+      "kind": "project_return_detail",
+      "impact": "未取得产业基金及单个基建项目IRR；不影响已核项目投产/产能释放和整体资本效率判断，但限制满分及项目级回报表述。",
+      "search_scope": "首发执行、2020/2025产能项目、2025产业基金、现金Capex、分红回购及整体杜邦。",
+      "evidence_refs": [
+        "MT-R5-CAPEX-PROJECT",
+        "MT-R5-CAPITAL-ACTIONS",
+        "MT-F-CAPITAL-RETURN"
+      ]
+    },
+    {
+      "affected_items": [
+        "D2"
+      ],
+      "kind": "management_verbatim",
+      "impact": "未取得第1/2优先级业绩说明会/IR逐字原话，原规则将年报计划作为第3优先级，D2已按4分上限处理。",
+      "search_scope": "年报经营计划与实际营业总收入2021-2025配对。",
+      "evidence_refs": [
+        "MT-R5-D2"
+      ]
+    },
+    {
+      "affected_items": [
+        "F3",
+        "诚信与透明度",
+        "危机处理能力"
+      ],
+      "kind": "environment_safety_search_boundary",
+      "impact": "近5年年报环境披露及有界检索未支持可归属重大事件；这不是“已核低风险”结论，F3保持既有内控瑕疵归因。",
+      "search_scope": "上市公司及主要生产主体2020-2026-09-20环境处罚、停产、职业健康和重大安全，配合年报环境信息。",
+      "evidence_refs": [
+        "MT-R5-ESG",
+        "MT-R5-ESG-SEARCH"
+      ]
+    }
+  ],
+  "valuation": {
+    "status": "deferred",
+    "reason": "本轮明确排除估值",
+    "currency": "CNY",
+    "models": [],
+    "target_price": null,
+    "certainty": null,
+    "buy_price": null
+  },
+  "bridges": [],
+  "bridges_not_applicable": "本轮仅评分，未建立估值权益桥。",
+  "score_state": "pending_review",
+  "research_state": "pending_review",
+  "publish_allowed": false,
+  "qualification": {
+    "highest_score_gate": "NONE",
+    "status": "pending_review",
+    "reason": "仅重算评分门槛，须复核红线和全部入池条件"
+  }
+}

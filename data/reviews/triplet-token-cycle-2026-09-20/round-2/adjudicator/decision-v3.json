@@ -1,0 +1,1545 @@
+{
+  "schema_version": 1,
+  "company": "贵州茅台",
+  "ticker": "600519.SH",
+  "cutoff": "2026-09-20",
+  "stage": "bounded_exception_after_first_repair",
+  "decision": "defer",
+  "score_state": "pending_repair",
+  "research_state": "pending",
+  "research_status": "execution_incomplete",
+  "delivery_state": "not_in_scope",
+  "publish_allowed": false,
+  "basis": "第一轮合并修复只完成原验收部分条件，仍将公开未查项目作为原点值占位；已关闭C001/C002/C013，其余12个原ID仅未完成子条件进入SOP最后一次例外修复。按原条件裁定，不按票数或严重级别。总分未获批。",
+  "review_refs": [
+    "data/reviews/triplet-token-cycle-2026-09-20/round-2/anonymous-recheck-v2/candidates.json"
+  ],
+  "frozen_workpaper_sha256": "bb45b606b54b1d9caedcc735574f282f46cc3a1774e5862208fdfb84342cde60",
+  "frozen_manifest_sha256": "fd81395dae43815fe32d3227dd4ad03742383ea02920beaed99923e31e94a189",
+  "freeze_verified": true,
+  "approved_parameters": {
+    "company_score": null,
+    "management_score": null,
+    "combined_score": null,
+    "target_price": null,
+    "certainty": null,
+    "buy_price": null
+  },
+  "valuation_approval_scope": {
+    "status": "not_in_scope",
+    "approved": false,
+    "reason": "仅评分阶段，不启动估值，不将空值解释为质量停止定价。"
+  },
+  "candidate_dispositions": [
+    {
+      "candidate_id": "C001",
+      "disposition": "成立",
+      "classification": "真实错误",
+      "reason": "已核同名合并现金Capex，绝对降幅33.15%，必须执行适用检查。",
+      "issue_ids": [
+        "C001"
+      ],
+      "acceptance_ids": [
+        "C001"
+      ],
+      "source_refs": [
+        "S2025:339,1680",
+        "S2026H1:727",
+        "deep-prebuy-skill/SKILL.md:E4",
+        "docs/three-report-workpaper.md:E4原规则机械执行"
+      ]
+    },
+    {
+      "candidate_id": "C002",
+      "disposition": "成立",
+      "classification": "交付错误",
+      "reason": "汇总文字错误可确定，降为P2交付；不批准仍有研究问题的底稿。",
+      "issue_ids": [
+        "C002"
+      ],
+      "acceptance_ids": [
+        "C002"
+      ],
+      "source_refs": [
+        "writer/workpaper-v1.json:scores.company",
+        "writer/score-rationale.md:3"
+      ]
+    },
+    {
+      "candidate_id": "C003",
+      "disposition": "部分成立",
+      "classification": "规则适用分歧及引用缺口",
+      "reason": "单年比率正确，单年不足80%即不符合5分的推断误用期间；三年均值90.36%且FCF均正。需登记正确桥及归因，不预设降分。",
+      "issue_ids": [
+        "C003"
+      ],
+      "acceptance_ids": [
+        "C003"
+      ],
+      "source_refs": [
+        "S2025:96,106,1680,3332",
+        "S2024:98,1724",
+        "S2023:1691",
+        "S2026H1:88,98,164-172",
+        "deep-prebuy-skill/SKILL.md:E1-E3,E5.5"
+      ]
+    },
+    {
+      "candidate_id": "C004",
+      "disposition": "成立",
+      "classification": "证据缺口",
+      "reason": "引用没有覆盖历史、排名、杜邦和附注必要条件；补最小原件不重做全公司。",
+      "issue_ids": [
+        "C004"
+      ],
+      "acceptance_ids": [
+        "C004"
+      ],
+      "source_refs": [
+        "writer/facts.json:F001,F002,F004,F005,F010,F011",
+        "S2025:1720-1724,1510-1556",
+        "deep-prebuy-skill/SKILL.md:A1-A3,B0,E1,E5,E5.5"
+      ]
+    },
+    {
+      "candidate_id": "C005",
+      "disposition": "成立",
+      "classification": "证据缺口",
+      "reason": "已执行范围与未见结论不匹配，原件还有留置反证。",
+      "issue_ids": [
+        "C005"
+      ],
+      "acceptance_ids": [
+        "C005"
+      ],
+      "source_refs": [
+        "S2025:1119-1123,977",
+        "S2026H1:330,417-419",
+        "deep-prebuy-skill/SKILL.md:F1-F3",
+        "docs/three-report-evidence-contract.md:核心人员治理检索"
+      ]
+    },
+    {
+      "candidate_id": "C006",
+      "disposition": "成立",
+      "classification": "真实错误",
+      "reason": "缺资料不能映射50%兑现率。",
+      "issue_ids": [
+        "C006"
+      ],
+      "acceptance_ids": [
+        "C006"
+      ],
+      "source_refs": [
+        "writer/workpaper-v1.json:D1,D2,D5",
+        "deep-prebuy-skill/SKILL.md:D1,D2,D5及D维度上限规则"
+      ]
+    },
+    {
+      "candidate_id": "C007",
+      "disposition": "成立",
+      "classification": "真实错误",
+      "reason": "年报和半年报明示留置公告；案件状态仍须原公告，不以转引推定终局。",
+      "issue_ids": [
+        "C005"
+      ],
+      "acceptance_ids": [
+        "C007"
+      ],
+      "source_refs": [
+        "S2025:1119-1123,977",
+        "S2026H1:330,417-419",
+        "deep-prebuy-skill/SKILL.md:F1-F3",
+        "docs/three-report-evidence-contract.md:核心人员治理检索"
+      ]
+    },
+    {
+      "candidate_id": "C008",
+      "disposition": "部分成立",
+      "classification": "归因不充分",
+      "reason": "3332行确有存货及经营应收应付调整，非凭空编造；但未分财务公司经济原因，不能称主要源于酒业营运资本。",
+      "issue_ids": [
+        "C003"
+      ],
+      "acceptance_ids": [
+        "C008"
+      ],
+      "source_refs": [
+        "S2025:96,106,1680,3332",
+        "S2024:98,1724",
+        "S2023:1691",
+        "S2026H1:88,98,164-172",
+        "deep-prebuy-skill/SKILL.md:E1-E3,E5.5"
+      ]
+    },
+    {
+      "candidate_id": "C009",
+      "disposition": "成立",
+      "classification": "证据缺口",
+      "reason": "A1国资标签排除先发优势亦不足；A2/A3/B0缺历史证据。",
+      "issue_ids": [
+        "C004"
+      ],
+      "acceptance_ids": [
+        "C009"
+      ],
+      "source_refs": [
+        "writer/facts.json:F001,F002,F004,F005,F010,F011",
+        "S2025:1720-1724,1510-1556",
+        "deep-prebuy-skill/SKILL.md:A1-A3,B0,E1,E5,E5.5"
+      ]
+    },
+    {
+      "candidate_id": "C010",
+      "disposition": "成立",
+      "classification": "真实错误及证据缺口",
+      "reason": "年度执行与组织趋势缺口成立；不强求2020-2025每年都有可配对上一年资料，不以未结束2026年判失败。",
+      "issue_ids": [
+        "C006"
+      ],
+      "acceptance_ids": [
+        "C010"
+      ],
+      "source_refs": [
+        "writer/workpaper-v1.json:D1,D2,D5",
+        "deep-prebuy-skill/SKILL.md:D1,D2,D5及D维度上限规则"
+      ]
+    },
+    {
+      "candidate_id": "C011",
+      "disposition": "部分成立",
+      "classification": "证据缺口及合理期间分歧",
+      "reason": "三年比率/FCF已独立复算通过数值条件；E3须全周期量价，单期只有销量不能支持也不能独自否定全周期满档。",
+      "issue_ids": [
+        "C003"
+      ],
+      "acceptance_ids": [
+        "C011"
+      ],
+      "source_refs": [
+        "S2025:96,106,1680,3332",
+        "S2024:98,1724",
+        "S2023:1691",
+        "S2026H1:88,98,164-172",
+        "deep-prebuy-skill/SKILL.md:E1-E3,E5.5"
+      ]
+    },
+    {
+      "candidate_id": "C012",
+      "disposition": "部分成立",
+      "classification": "证据缺口",
+      "reason": "需要行业/定价/壁垒证据；精确CR5和五类壁垒全强不作为附加硬门槛。",
+      "issue_ids": [
+        "C012"
+      ],
+      "acceptance_ids": [
+        "C012"
+      ],
+      "source_refs": [
+        "writer/facts.json:F002,F010",
+        "deep-prebuy-skill/SKILL.md:B3,C1-C5"
+      ]
+    },
+    {
+      "candidate_id": "C013",
+      "disposition": "成立",
+      "classification": "交付错误",
+      "reason": "与C002重复，保留验收ID；原25项加总无错，P0不采纳。",
+      "issue_ids": [
+        "C002"
+      ],
+      "acceptance_ids": [
+        "C013"
+      ],
+      "source_refs": [
+        "writer/workpaper-v1.json:scores.company",
+        "writer/score-rationale.md:3"
+      ]
+    },
+    {
+      "candidate_id": "C014",
+      "disposition": "部分成立",
+      "classification": "证据缺口",
+      "reason": "六项明显桥不足，股东友好已有回报正证但需联动治理；不因缺真实危机自动降档或要求凑案例。",
+      "issue_ids": [
+        "C014"
+      ],
+      "acceptance_ids": [
+        "C014"
+      ],
+      "source_refs": [
+        "writer/workpaper-v1.json:scores.management",
+        "S2025:977,1123",
+        "S2026H1:98,330,419",
+        "management-archive/references/review-checks.md",
+        "docs/three-report-closeout.md:充分证据原则"
+      ]
+    },
+    {
+      "candidate_id": "C015",
+      "disposition": "部分成立",
+      "classification": "规则适用错误及证据遗漏",
+      "reason": "0.5先例与基金遗漏成立；同一事实跨维度引用不自动违规，须检验各自命题。",
+      "issue_ids": [
+        "C015"
+      ],
+      "acceptance_ids": [
+        "C015"
+      ],
+      "source_refs": [
+        "S2025:3944-3952",
+        "S2026H1:2906",
+        "deep-prebuy-skill/SKILL.md:F2,F2.5,F3"
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "lane": "research",
+      "severity": "P1",
+      "reason": "现金Capex可比项目确已下降33.152652%；金融投资现金流混合不能使购建长期资产现金项目不适用。",
+      "source_refs": [
+        "S2025:339,1680",
+        "S2026H1:727",
+        "deep-prebuy-skill/SKILL.md:E4",
+        "docs/three-report-workpaper.md:E4原规则机械执行"
+      ],
+      "id": "C001",
+      "acceptance_ids": [
+        "C001"
+      ],
+      "candidate_ids": [
+        "C001"
+      ],
+      "status": "closed",
+      "acceptance": [
+        {
+          "id": "C001",
+          "condition": "登记2025/2024现金Capex为3127594916.41/4678712053.56元，applicable=true；核可用拆分资料，可靠拆分则登记依据，否则split_complete=false、标明未拆分并在E4调整前得分上减0.5。同期2026H1亦大幅下降，解释延续性，不重复扣分；F2.5仅重评资本纪律，不另自动扣0.5。"
+        }
+      ],
+      "completed_conditions": "Capex=3127594916.41/4678712053.56元，降33.1527%，applicable=true、split_complete=false，从2扣至1.5。",
+      "remaining_conditions": "无。现金Capex适用、未拆分扣0.5已验收，E4=1.5保留；资本配置的独立基础档缺口由C015承接，不重开本项。",
+      "verification_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/score-manifest-v2.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/rebuilt-v2/workpaper.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-v2/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/anonymous-recheck-v2/candidates.json"
+      ]
+    },
+    {
+      "lane": "delivery",
+      "severity": "P2",
+      "reason": "论证93.5/94与底稿91.5/92冲突成立；这是可确定的汇总展示错误，非底稿算术错误。",
+      "source_refs": [
+        "writer/workpaper-v1.json:scores.company",
+        "writer/score-rationale.md:3"
+      ],
+      "classified_by": "adjudicator",
+      "no_decision_impact": true,
+      "no_decision_impact_basis": "底稿25项与total一致，原始91.5、展示92可独立复算；冲突只在论证手填总分，不改变任何分项。实质修复后的数值由唯一底稿重新生成。",
+      "id": "C002",
+      "acceptance_ids": [
+        "C002"
+      ],
+      "candidate_ids": [
+        "C002"
+      ],
+      "status": "closed",
+      "acceptance": [
+        {
+          "id": "C002",
+          "condition": "从修复后的唯一分项和total生成论证原始与ROUND_HALF_UP总分；新冻结包数值一致，原事实审核员核受影响位置，主任务核哈希。"
+        }
+      ],
+      "completed_conditions": "当前25分项合计91.5，管理层84，合计175.5；论证同步，无93.5/94残留。",
+      "remaining_conditions": "无。当前底稿及论证总分一致；后续新分项变化仍须程序同步总分，这是版本一致性检查而非重开研究。",
+      "verification_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/score-manifest-v2.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/rebuilt-v2/workpaper.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-v2/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/anonymous-recheck-v2/candidates.json"
+      ]
+    },
+    {
+      "lane": "research",
+      "severity": "P1",
+      "reason": "E2单年降档主张不成立；三年均值和FCF均已算明。F004补充表确有营运资本变动，但不能以其替代管理层对财务公司存款的经济归因。E3销量增长不证明量价双驱动。",
+      "source_refs": [
+        "S2025:96,106,1680,3332",
+        "S2024:98,1724",
+        "S2023:1691",
+        "S2026H1:88,98,164-172",
+        "deep-prebuy-skill/SKILL.md:E1-E3,E5.5"
+      ],
+      "id": "C003",
+      "acceptance_ids": [
+        "C003"
+      ],
+      "candidate_ids": [
+        "C003"
+      ],
+      "status": "open",
+      "acceptance": [
+        {
+          "id": "C003",
+          "condition": "E2登记2023-2025逐年OCF/归母净利及FCF桥，采用三年比率算术均值90.357921%；FCF三年均正。区分财务公司资金与酒业现金创造，2026H1不可混作年度或主营改善证据，允许经正确归因维持5分。E1补2020-2025可得完整财务趋势及同口径杜邦，说明归母/合并与平均资产权益。E3补五年增长、三年扣非比率和量价结构，允许跨完整周期论证，不因H1单期无提价便强降；不能以销量独证满档。E5.5按附注核会计政策、计提和KAM，不将KAM自动视为异常。"
+        }
+      ],
+      "completed_conditions": "三年转换率均值90.357921%、FCF均正及财务公司经济归因。",
+      "remaining_conditions": "仅补E1的2020-2025同口径财务趋势及杜邦、E3五年增长/三年扣非/完整周期量价结构、E5.5附注政策/计提/KAM桥。E2三年计算与经济归因已核，保留5分，不重复取证。",
+      "verification_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/score-manifest-v2.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/rebuilt-v2/workpaper.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-v2/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/anonymous-recheck-v2/candidates.json"
+      ]
+    },
+    {
+      "lane": "research",
+      "severity": "P1",
+      "reason": "历史与部分财务/行业高档的引用覆盖不足成立，当前控制方不能证明IPO以来连续控制；国资背景本身也不足以否定先发优势。",
+      "source_refs": [
+        "writer/facts.json:F001,F002,F004,F005,F010,F011",
+        "S2025:1720-1724,1510-1556",
+        "deep-prebuy-skill/SKILL.md:A1-A3,B0,E1,E5,E5.5"
+      ],
+      "id": "C004",
+      "acceptance_ids": [
+        "C004"
+      ],
+      "candidate_ids": [
+        "C004"
+      ],
+      "status": "open",
+      "acceptance": [
+        {
+          "id": "C004",
+          "condition": "A1/B0定向核招股书或同等官方历史原件，回答起源优势与早期商业模式三个关键判断；A2控制链连续到IPO并列真实变更；A3以融资资本动作汇总加重大事件原件判资金用途与卖资产问题，不要求逐份无关公告。E5登记低商誉、应收账龄质量及近三年重大减值结论；E1/E5.5、C1、D1分别复用本裁决相应验收，避免重复补证。充分证据支持点值即可，不因缺表降分。"
+        }
+      ],
+      "completed_conditions": "撤回未见即稳定/清洁的过度主张，缺口已显式承认；实质历史证据未补。",
+      "remaining_conditions": "补A1/B0历史原件和早期三判断、A2自IPO控制链、A3重大资本动作及用途、E5商誉/账龄/近三年减值。其共用C1/D1/E1/E5.5条件复用其他原ID对应补证，不重复收集。",
+      "verification_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/score-manifest-v2.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/rebuilt-v2/workpaper.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-v2/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/anonymous-recheck-v2/candidates.json"
+      ]
+    },
+    {
+      "lane": "research",
+      "severity": "P1",
+      "reason": "治理检索边界失真且漏留置为已证错误；但不能仅凭报告转引就判现任人员仍被调查或系统性腐败。",
+      "source_refs": [
+        "S2025:1119-1123,977",
+        "S2026H1:330,417-419",
+        "deep-prebuy-skill/SKILL.md:F1-F3",
+        "docs/three-report-evidence-contract.md:核心人员治理检索"
+      ],
+      "id": "C005",
+      "acceptance_ids": [
+        "C005"
+      ],
+      "candidate_ids": [
+        "C005"
+      ],
+      "status": "open",
+      "acceptance": [
+        {
+          "id": "C005",
+          "condition": "补临2026-004/005原公告，确认姓名、当时职务、日期、解任与案件状态；按核心职务逐名覆盖近10年已公开廉洁事件，区分个别、重复及现任，不能把解聘等同调查结案。补近3年减持及监管/问询与适用行业处罚检索，列执行范围和结果。evidence_gaps撤回仅缺任免日期及缺资料支持非满分表述，登记真实未决及影响。F1、F2、F3与诚信/股东友好/组织/危机分别重评，分数不变亦给理由。"
+        }
+      ],
+      "completed_conditions": "不再把解聘等同案件结案，期末职务/年报转引已登记；原公告证据链及范围未完成。",
+      "remaining_conditions": "核临2026-004/005原件及截至截止日可得案件/职务状态；完成近十年核心职务逐名廉洁、近三年减持、监管问询及适用行业处罚检索，登记已执行范围，按原条件联动评分。半年报转引和作者无原件登记的R005不能代替原公告；不可要求取得未公开调查终局。",
+      "verification_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/score-manifest-v2.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/rebuilt-v2/workpaper.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-v2/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/anonymous-recheck-v2/candidates.json"
+      ]
+    },
+    {
+      "lane": "research",
+      "severity": "P1",
+      "reason": "以未取得年度目标和电话会为低档理由错误，D1/D5高档也缺时间序列。",
+      "source_refs": [
+        "writer/workpaper-v1.json:D1,D2,D5",
+        "deep-prebuy-skill/SKILL.md:D1,D2,D5及D维度上限规则"
+      ],
+      "id": "C006",
+      "acceptance_ids": [
+        "C006"
+      ],
+      "candidate_ids": [
+        "C006"
+      ],
+      "status": "open",
+      "acceptance": [
+        {
+          "id": "C006",
+          "condition": "用本地2020-2025年报经营计划—次年实绩覆盖可配对2021-2025年，列达标定义及比率；2026年度目标尚未结束不可记未达标。尝试原话来源并如实设置D2 original_statement_found/strategy_drift，执行原规则原话不足上限而非把未知当50%达标。D1核3-5年战略资源一致性，D5核三年人均创收/员工/研发及适用性。管理层战略与表达依已核证据选相邻档，evidence_gaps同步真实缺口。"
+        }
+      ],
+      "completed_conditions": "2021-2025收入目标4/5达标，D2=4，无原话标记false，不计2026失败。",
+      "remaining_conditions": "D2的2021-2025收入目标4/5达标及原话不足上限4分已核；剩D1三至五年战略资源一致性、D5三年组织指标和管理层战略/表达相邻档理由及真实缺口同步。D2仅允许因本次D1原条件核出战略漂移而联动既有上限，不重做已核目标表。",
+      "verification_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/score-manifest-v2.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/rebuilt-v2/workpaper.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-v2/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/anonymous-recheck-v2/candidates.json"
+      ]
+    },
+    {
+      "lane": "research",
+      "severity": "P1",
+      "reason": "治理检索边界失真且漏留置为已证错误；但不能仅凭报告转引就判现任人员仍被调查或系统性腐败。",
+      "source_refs": [
+        "S2025:1119-1123,977",
+        "S2026H1:330,417-419",
+        "deep-prebuy-skill/SKILL.md:F1-F3",
+        "docs/three-report-evidence-contract.md:核心人员治理检索"
+      ],
+      "id": "C007",
+      "acceptance_ids": [
+        "C007"
+      ],
+      "candidate_ids": [
+        "C007"
+      ],
+      "status": "open",
+      "acceptance": [
+        {
+          "id": "C007",
+          "condition": "补临2026-004/005原公告，确认姓名、当时职务、日期、解任与案件状态；按核心职务逐名覆盖近10年已公开廉洁事件，区分个别、重复及现任，不能把解聘等同调查结案。补近3年减持及监管/问询与适用行业处罚检索，列执行范围和结果。evidence_gaps撤回仅缺任免日期及缺资料支持非满分表述，登记真实未决及影响。F1、F2、F3与诚信/股东友好/组织/危机分别重评，分数不变亦给理由。"
+        }
+      ],
+      "completed_conditions": "解聘不等于调查结束的边界已修正。",
+      "remaining_conditions": "同C005剩余条件；保留不把解聘当结案的修正，补原公告及有界状态与治理检索，不自行推定现任被查或系统性腐败。",
+      "verification_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/score-manifest-v2.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/rebuilt-v2/workpaper.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-v2/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/anonymous-recheck-v2/candidates.json"
+      ]
+    },
+    {
+      "lane": "research",
+      "severity": "P1",
+      "reason": "E2单年降档主张不成立；三年均值和FCF均已算明。F004补充表确有营运资本变动，但不能以其替代管理层对财务公司存款的经济归因。E3销量增长不证明量价双驱动。",
+      "source_refs": [
+        "S2025:96,106,1680,3332",
+        "S2024:98,1724",
+        "S2023:1691",
+        "S2026H1:88,98,164-172",
+        "deep-prebuy-skill/SKILL.md:E1-E3,E5.5"
+      ],
+      "id": "C008",
+      "acceptance_ids": [
+        "C008"
+      ],
+      "candidate_ids": [
+        "C008"
+      ],
+      "status": "open",
+      "acceptance": [
+        {
+          "id": "C008",
+          "condition": "E2登记2023-2025逐年OCF/归母净利及FCF桥，采用三年比率算术均值90.357921%；FCF三年均正。区分财务公司资金与酒业现金创造，2026H1不可混作年度或主营改善证据，允许经正确归因维持5分。E1补2020-2025可得完整财务趋势及同口径杜邦，说明归母/合并与平均资产权益。E3补五年增长、三年扣非比率和量价结构，允许跨完整周期论证，不因H1单期无提价便强降；不能以销量独证满档。E5.5按附注核会计政策、计提和KAM，不将KAM自动视为异常。"
+        }
+      ],
+      "completed_conditions": "2025与2026H1财务公司资金因素归因已区分。",
+      "remaining_conditions": "现金流经济归因已修复并保留；依decision-v2本ID共享验收仍有E1/E3/E5.5未闭合，分别复用C003的剩余桥，不重复核现金流。",
+      "verification_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/score-manifest-v2.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/rebuilt-v2/workpaper.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-v2/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/anonymous-recheck-v2/candidates.json"
+      ]
+    },
+    {
+      "lane": "research",
+      "severity": "P1",
+      "reason": "历史与部分财务/行业高档的引用覆盖不足成立，当前控制方不能证明IPO以来连续控制；国资背景本身也不足以否定先发优势。",
+      "source_refs": [
+        "writer/facts.json:F001,F002,F004,F005,F010,F011",
+        "S2025:1720-1724,1510-1556",
+        "deep-prebuy-skill/SKILL.md:A1-A3,B0,E1,E5,E5.5"
+      ],
+      "id": "C009",
+      "acceptance_ids": [
+        "C009"
+      ],
+      "candidate_ids": [
+        "C009"
+      ],
+      "status": "open",
+      "acceptance": [
+        {
+          "id": "C009",
+          "condition": "A1/B0定向核招股书或同等官方历史原件，回答起源优势与早期商业模式三个关键判断；A2控制链连续到IPO并列真实变更；A3以融资资本动作汇总加重大事件原件判资金用途与卖资产问题，不要求逐份无关公告。E5登记低商誉、应收账龄质量及近三年重大减值结论；E1/E5.5、C1、D1分别复用本裁决相应验收，避免重复补证。充分证据支持点值即可，不因缺表降分。"
+        }
+      ],
+      "completed_conditions": "国资标签不再自动否定先发优势。",
+      "remaining_conditions": "保留国资背景不能自动排除先发优势的修正；补C004所列历史及附注共用条件，不能用待补标签维持无证据点值。",
+      "verification_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/score-manifest-v2.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/rebuilt-v2/workpaper.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-v2/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/anonymous-recheck-v2/candidates.json"
+      ]
+    },
+    {
+      "lane": "research",
+      "severity": "P1",
+      "reason": "以未取得年度目标和电话会为低档理由错误，D1/D5高档也缺时间序列。",
+      "source_refs": [
+        "writer/workpaper-v1.json:D1,D2,D5",
+        "deep-prebuy-skill/SKILL.md:D1,D2,D5及D维度上限规则"
+      ],
+      "id": "C010",
+      "acceptance_ids": [
+        "C010"
+      ],
+      "candidate_ids": [
+        "C010"
+      ],
+      "status": "open",
+      "acceptance": [
+        {
+          "id": "C010",
+          "condition": "用本地2020-2025年报经营计划—次年实绩覆盖可配对2021-2025年，列达标定义及比率；2026年度目标尚未结束不可记未达标。尝试原话来源并如实设置D2 original_statement_found/strategy_drift，执行原规则原话不足上限而非把未知当50%达标。D1核3-5年战略资源一致性，D5核三年人均创收/员工/研发及适用性。管理层战略与表达依已核证据选相邻档，evidence_gaps同步真实缺口。"
+        }
+      ],
+      "completed_conditions": "D2目标兑现桥及未结束年度处理已修复。",
+      "remaining_conditions": "同C006剩余条件，保留已核D2目标兑现桥，不将2026未结束年度或未取得资料记为失败。",
+      "verification_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/score-manifest-v2.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/rebuilt-v2/workpaper.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-v2/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/anonymous-recheck-v2/candidates.json"
+      ]
+    },
+    {
+      "lane": "research",
+      "severity": "P1",
+      "reason": "E2单年降档主张不成立；三年均值和FCF均已算明。F004补充表确有营运资本变动，但不能以其替代管理层对财务公司存款的经济归因。E3销量增长不证明量价双驱动。",
+      "source_refs": [
+        "S2025:96,106,1680,3332",
+        "S2024:98,1724",
+        "S2023:1691",
+        "S2026H1:88,98,164-172",
+        "deep-prebuy-skill/SKILL.md:E1-E3,E5.5"
+      ],
+      "id": "C011",
+      "acceptance_ids": [
+        "C011"
+      ],
+      "candidate_ids": [
+        "C011"
+      ],
+      "status": "open",
+      "acceptance": [
+        {
+          "id": "C011",
+          "condition": "E2登记2023-2025逐年OCF/归母净利及FCF桥，采用三年比率算术均值90.357921%；FCF三年均正。区分财务公司资金与酒业现金创造，2026H1不可混作年度或主营改善证据，允许经正确归因维持5分。E1补2020-2025可得完整财务趋势及同口径杜邦，说明归母/合并与平均资产权益。E3补五年增长、三年扣非比率和量价结构，允许跨完整周期论证，不因H1单期无提价便强降；不能以销量独证满档。E5.5按附注核会计政策、计提和KAM，不将KAM自动视为异常。"
+        }
+      ],
+      "completed_conditions": "三年现金流/FCF已核，撤去H1销量独证量价满档的主张。",
+      "remaining_conditions": "同C003剩余财务条件；保留三年现金转换/FCF及H1不独证量价的修正。E3完整周期事实尚缺，不能仅更换理由保留满档。",
+      "verification_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/score-manifest-v2.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/rebuilt-v2/workpaper.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-v2/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/anonymous-recheck-v2/candidates.json"
+      ]
+    },
+    {
+      "lane": "research",
+      "severity": "P1",
+      "reason": "自身规模和低应收不能单独证明行业排名、定价与五星壁垒；但不要求五类壁垒全强或精确CR5才能得高档。",
+      "source_refs": [
+        "writer/facts.json:F002,F010",
+        "deep-prebuy-skill/SKILL.md:B3,C1-C5"
+      ],
+      "id": "C012",
+      "acceptance_ids": [
+        "C012"
+      ],
+      "candidate_ids": [
+        "C012"
+      ],
+      "status": "open",
+      "acceptance": [
+        {
+          "id": "C012",
+          "condition": "补近五年毛利率和有日期的价格调整证据，核合理可比毛利率；C1至少可追溯Top3/绝对龙头排名与近三年地位趋势，CR5无法可靠取得可有界说明，不单独阻断明确排名。C2补供应商/客户集中及成本、需求时滞、周期、净议价四维；时滞可有据定性不虚填季度。C3+C4逐类判断适用性及替代品/新进入者反证，再论证综合星级。"
+        }
+      ],
+      "completed_conditions": "已承认行业、价格、议价与壁垒证据待补，无新增实质证据。",
+      "remaining_conditions": "按原条件补五年毛利率/正式调价/可比毛利率、排名趋势、上下游集中与四维议价、逐类壁垒及替代品/新进入者反证；无需精确CR5或五类全强，不增加新的门槛。",
+      "verification_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/score-manifest-v2.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/rebuilt-v2/workpaper.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-v2/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/anonymous-recheck-v2/candidates.json"
+      ]
+    },
+    {
+      "lane": "delivery",
+      "severity": "P2",
+      "reason": "论证93.5/94与底稿91.5/92冲突成立；这是可确定的汇总展示错误，非底稿算术错误。",
+      "source_refs": [
+        "writer/workpaper-v1.json:scores.company",
+        "writer/score-rationale.md:3"
+      ],
+      "classified_by": "adjudicator",
+      "no_decision_impact": true,
+      "no_decision_impact_basis": "底稿25项与total一致，原始91.5、展示92可独立复算；冲突只在论证手填总分，不改变任何分项。实质修复后的数值由唯一底稿重新生成。",
+      "id": "C013",
+      "acceptance_ids": [
+        "C013"
+      ],
+      "candidate_ids": [
+        "C013"
+      ],
+      "status": "closed",
+      "acceptance": [
+        {
+          "id": "C013",
+          "condition": "从修复后的唯一分项和total生成论证原始与ROUND_HALF_UP总分；新冻结包数值一致，原事实审核员核受影响位置，主任务核哈希。"
+        }
+      ],
+      "completed_conditions": "同C002汇总展示错误已修复。",
+      "remaining_conditions": "同C002，已关闭。",
+      "verification_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/score-manifest-v2.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/rebuilt-v2/workpaper.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-v2/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/anonymous-recheck-v2/candidates.json"
+      ]
+    },
+    {
+      "lane": "research",
+      "severity": "P1",
+      "reason": "管理层高分缺乏事件级桥成立；不要求公司披露分数、不以缺危机或缺电话会机械扣分。",
+      "source_refs": [
+        "writer/workpaper-v1.json:scores.management",
+        "S2025:977,1123",
+        "S2026H1:98,330,419",
+        "management-archive/references/review-checks.md",
+        "docs/three-report-closeout.md:充分证据原则"
+      ],
+      "id": "C014",
+      "acceptance_ids": [
+        "C014"
+      ],
+      "candidate_ids": [
+        "C014"
+      ],
+      "status": "open",
+      "acceptance": [
+        {
+          "id": "C014",
+          "condition": "复用治理、战略、资本验收形成七项事实→限制→相邻档理由；诚信核承诺兑现及留置关联边界；资本核结果；组织核近五年任免/继任/激励；危机必须有管理动作和结果，销量韧性与财务公司现金变化不能替代，无适用真实危机则明确边界并作有据判断；股东友好已核回报可保留正面证据，仅检验治理和减持是否改变满分。更新相关evidence_gaps，不强补非重大履历或逐条全部电话会。"
+        }
+      ],
+      "completed_conditions": "补入回报、基金及治理限制语；尚未完成原锁定的相邻档证据桥。",
+      "remaining_conditions": "七项管理层仍需原锁定的事件级证据到相邻档桥，复用治理、战略、资本与组织取证；保留已核分红回购等正证。无真实危机可有据说明适用边界，不要求凑案例；不新增人才保留率或全部电话会逐条证据硬要求。",
+      "verification_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/score-manifest-v2.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/rebuilt-v2/workpaper.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-v2/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/anonymous-recheck-v2/candidates.json"
+      ]
+    },
+    {
+      "lane": "research",
+      "severity": "P1",
+      "reason": "正面先例加分当前不成立；基金承诺已在原件但未评估。跨维度引用同一回报事实本身不属重复扣分或禁止事项，关键是各自证明的命题。",
+      "source_refs": [
+        "S2025:3944-3952",
+        "S2026H1:2906",
+        "deep-prebuy-skill/SKILL.md:F2,F2.5,F3"
+      ],
+      "id": "C015",
+      "acceptance_ids": [
+        "C015"
+      ],
+      "candidate_ids": [
+        "C015"
+      ],
+      "status": "open",
+      "acceptance": [
+        {
+          "id": "C015",
+          "condition": "F2.5不得以分红/注销回购本身作为相似先投入后产出成功先例，除非补到匹配实例，否则positive_precedent=false、撤0.5加分，再据资本纪律定基础档。登记基金各认缴50亿元、已缴20亿元、未缴30亿元，合计未缴60亿元，核用途/资产与可得回报；未到期收益不可假造为成功或失败。补近五年资本开支计划与现金实绩的口径差异、重大并购融资、回购时机与ROIC/WACC有据比较。F2/F3分别复用减持检索、近三年关联交易与监管核验，基金承诺不能自动判挪用或坏投资。"
+        }
+      ],
+      "completed_conditions": "基金各认缴50亿元、已缴20亿元、未缴30亿元已核；F2.5撤0.5加分，positive_precedent=false，未把未知收益当成败。",
+      "remaining_conditions": "保留两只基金认缴/实缴/未缴金额和positive_precedent=false；剩近五年Capex计划与实绩口径、重大并购融资、回购时机、ROIC/WACC有据比较以判F2.5基础档，并复用F2/F3減持/关联交易/监管及管理层资本配置联动。收益确未披露则有界说明，不能假造回报或把未知当失败。",
+      "verification_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/score-manifest-v2.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/rebuilt-v2/workpaper.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-v2/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/anonymous-recheck-v2/candidates.json"
+      ]
+    }
+  ],
+  "score_repair_scope": [
+    {
+      "group": "company",
+      "item": "F2.5",
+      "acceptance_ids": [
+        "C005",
+        "C007",
+        "C015"
+      ],
+      "constraint": "只补基础档资本纪律及原条件联动；不得恢复已否决的分红/回购正面先例0.5。"
+    },
+    {
+      "group": "company",
+      "item": "E1",
+      "acceptance_ids": [
+        "C003",
+        "C004",
+        "C008",
+        "C009",
+        "C011"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "E3",
+      "acceptance_ids": [
+        "C003",
+        "C008",
+        "C011"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "E5.5",
+      "acceptance_ids": [
+        "C003",
+        "C004",
+        "C008",
+        "C009",
+        "C011"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "A1",
+      "acceptance_ids": [
+        "C004",
+        "C009"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "A2",
+      "acceptance_ids": [
+        "C004",
+        "C009"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "A3",
+      "acceptance_ids": [
+        "C004",
+        "C009"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "B0",
+      "acceptance_ids": [
+        "C004",
+        "C009"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "C1",
+      "acceptance_ids": [
+        "C004",
+        "C009",
+        "C012"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "D1",
+      "acceptance_ids": [
+        "C004",
+        "C006",
+        "C009",
+        "C010"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "E5",
+      "acceptance_ids": [
+        "C004",
+        "C009"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "F1",
+      "acceptance_ids": [
+        "C005",
+        "C007"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "F2",
+      "acceptance_ids": [
+        "C005",
+        "C007",
+        "C015"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "F3",
+      "acceptance_ids": [
+        "C005",
+        "C007",
+        "C015"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "诚信与透明度",
+      "acceptance_ids": [
+        "C005",
+        "C007",
+        "C014"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "对股东友好度",
+      "acceptance_ids": [
+        "C005",
+        "C007",
+        "C014"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "组织与人才能力",
+      "acceptance_ids": [
+        "C005",
+        "C007",
+        "C014"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "危机处理能力",
+      "acceptance_ids": [
+        "C005",
+        "C007",
+        "C014"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "D2",
+      "acceptance_ids": [
+        "C006",
+        "C010"
+      ],
+      "constraint": "只允许本轮D1原条件核实出战略漂移时同步既有D2上限；已核收入目标表和当前4分保留，不另寻原话或重做目标桥。"
+    },
+    {
+      "group": "company",
+      "item": "D5",
+      "acceptance_ids": [
+        "C006",
+        "C010"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "战略稳定性",
+      "acceptance_ids": [
+        "C006",
+        "C010",
+        "C014"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "表达清晰度与认知质量",
+      "acceptance_ids": [
+        "C006",
+        "C010",
+        "C014"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "B3",
+      "acceptance_ids": [
+        "C012"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "C2",
+      "acceptance_ids": [
+        "C012"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "C3+C4",
+      "acceptance_ids": [
+        "C012"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "资本配置能力",
+      "acceptance_ids": [
+        "C014",
+        "C015"
+      ]
+    }
+  ],
+  "metadata_repair_scope": [
+    {
+      "field": "evidence_gaps",
+      "acceptance_ids": [
+        "C005",
+        "C006",
+        "C007",
+        "C010",
+        "C014"
+      ]
+    }
+  ],
+  "repair_mode": "score_delta_with_evidence_refresh",
+  "repair_boundary": "只修score_repair_scope和授权evidence_gaps；证据/答复/论证另交新版本。C001/C002/C013保持closed；E2、E4不重做；D2仅保留已有D1上限联动。全部原acceptance.condition逐字保留，remaining_conditions为扣除已完成工作的执行切片。",
+  "acceptance_id_policy": "匿名候选仅提供C001-C015，未提供其他原验收ID；逐候选保留这些ID，重复问题共享条件但不删除ID。",
+  "verified_calculations": {
+    "period": "2023FY-2025FY",
+    "unit": "CNY元",
+    "scope": "合并OCF；归母净利润作转换率分母；FCF=合并OCF-合并现金Capex，不冒充归母可分配现金",
+    "ocf": [
+      66593247721.09,
+      92463692168.43,
+      61522204989.35
+    ],
+    "parent_net_profit": [
+      74734071550.75,
+      86228146421.62,
+      82320067101.68
+    ],
+    "cash_capex": [
+      2619755888.79,
+      4678712053.56,
+      3127594916.41
+    ],
+    "ocf_conversion": [
+      0.8910694458265696,
+      1.0723145052465903,
+      0.747353678822432
+    ],
+    "mean_conversion": 0.9035792099651972,
+    "fcf": [
+      63973491832.3,
+      87784980114.87,
+      58394610072.94
+    ],
+    "capex_2025_change": -0.3315265225543782,
+    "sources": [
+      "S2025:96,1680",
+      "S2024:98,1724",
+      "S2023:1691"
+    ],
+    "ocr_resolution": "2023年报96行归母数有OCR缺位；以2024年报98行与2025年报96行相同对比期数74734071550.75核定。"
+  },
+  "score_bridge": {
+    "base_workpaper_sha256": "bb45b606b54b1d9caedcc735574f282f46cc3a1774e5862208fdfb84342cde60",
+    "base_company_sum": 91.5,
+    "base_management_sum": 84,
+    "base_combined_sum": 175.5,
+    "first_repair_changes": [
+      {
+        "item": "D2",
+        "from": 3,
+        "to": 4,
+        "delta": 1
+      },
+      {
+        "item": "E4",
+        "from": 2,
+        "to": 1.5,
+        "delta": -0.5
+      },
+      {
+        "item": "F2.5",
+        "from": 2.5,
+        "to": 2,
+        "delta": -0.5
+      }
+    ],
+    "formula": "例外新总分=rebuilt-v2原始总分+Σ(本次锁定项新分-当前分)；未改分项原字节保留，总分和论证由程序同步。",
+    "final_score": null,
+    "approval_note": "91.5/84是未获批候选值；不为时间取中档、固定点值或任意降分。"
+  },
+  "next_step": "主任务派Sol例外作者从repair_base一次完成剩余证据与评分桥；双路按原15验收ID核剩余条件并联动，随后按SOP终局，不增加研究轮次。估值与长报告仍不在本轮。",
+  "previous_decision": "data/reviews/triplet-token-cycle-2026-09-20/round-2/adjudicator/decision-v2.json",
+  "previous_decision_sha256": "9ba314ae7d3ded6db144aed730482f9fa3f104d02bc9152e6607b13ac7d246cf",
+  "repair_base": "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/rebuilt-v2/workpaper.json",
+  "recheck_candidate_dispositions": [
+    {
+      "candidate_id": "C001",
+      "original_acceptance_id": "C010",
+      "disposition": "采纳",
+      "status": "open",
+      "reason": "与原验收及本次底稿/证据核验相符；同C006剩余条件，保留已核D2目标兑现桥，不将2026未结束年度或未取得资料记为失败。",
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/score-manifest-v2.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/rebuilt-v2/workpaper.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-v2/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/anonymous-recheck-v2/candidates.json"
+      ]
+    },
+    {
+      "candidate_id": "C002",
+      "original_acceptance_id": "C008",
+      "disposition": "采纳",
+      "status": "open",
+      "reason": "与原验收及本次底稿/证据核验相符；现金流经济归因已修复并保留；依decision-v2本ID共享验收仍有E1/E3/E5.5未闭合，分别复用C003的剩余桥，不重复核现金流。",
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/score-manifest-v2.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/rebuilt-v2/workpaper.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-v2/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/anonymous-recheck-v2/candidates.json"
+      ]
+    },
+    {
+      "candidate_id": "C003",
+      "original_acceptance_id": "C009",
+      "disposition": "采纳",
+      "status": "open",
+      "reason": "与原验收及本次底稿/证据核验相符；保留国资背景不能自动排除先发优势的修正；补C004所列历史及附注共用条件，不能用待补标签维持无证据点值。",
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/score-manifest-v2.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/rebuilt-v2/workpaper.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-v2/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/anonymous-recheck-v2/candidates.json"
+      ]
+    },
+    {
+      "candidate_id": "C004",
+      "original_acceptance_id": "C006",
+      "disposition": "采纳",
+      "status": "open",
+      "reason": "与原验收及本次底稿/证据核验相符；D2的2021-2025收入目标4/5达标及原话不足上限4分已核；剩D1三至五年战略资源一致性、D5三年组织指标和管理层战略/表达相邻档理由及真实缺口同步。D2仅允许因本次D1原条件核出战略漂移而联动既有上限，不重做已核目标表。",
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/score-manifest-v2.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/rebuilt-v2/workpaper.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-v2/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/anonymous-recheck-v2/candidates.json"
+      ]
+    },
+    {
+      "candidate_id": "C005",
+      "original_acceptance_id": "C013",
+      "disposition": "采纳",
+      "status": "closed",
+      "reason": "与原验收及本次底稿/证据核验相符；同C002，已关闭。",
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/score-manifest-v2.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/rebuilt-v2/workpaper.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-v2/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/anonymous-recheck-v2/candidates.json"
+      ]
+    },
+    {
+      "candidate_id": "C006",
+      "original_acceptance_id": "C014",
+      "disposition": "采纳",
+      "status": "open",
+      "reason": "与原验收及本次底稿/证据核验相符；七项管理层仍需原锁定的事件级证据到相邻档桥，复用治理、战略、资本与组织取证；保留已核分红回购等正证。无真实危机可有据说明适用边界，不要求凑案例；不新增人才保留率或全部电话会逐条证据硬要求。",
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/score-manifest-v2.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/rebuilt-v2/workpaper.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-v2/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/anonymous-recheck-v2/candidates.json"
+      ]
+    },
+    {
+      "candidate_id": "C007",
+      "original_acceptance_id": "C010",
+      "disposition": "采纳",
+      "status": "open",
+      "reason": "与原验收及本次底稿/证据核验相符；同C006剩余条件，保留已核D2目标兑现桥，不将2026未结束年度或未取得资料记为失败。",
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/score-manifest-v2.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/rebuilt-v2/workpaper.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-v2/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/anonymous-recheck-v2/candidates.json"
+      ]
+    },
+    {
+      "candidate_id": "C008",
+      "original_acceptance_id": "C011",
+      "disposition": "采纳",
+      "status": "open",
+      "reason": "与原验收及本次底稿/证据核验相符；同C003剩余财务条件；保留三年现金转换/FCF及H1不独证量价的修正。E3完整周期事实尚缺，不能仅更换理由保留满档。",
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/score-manifest-v2.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/rebuilt-v2/workpaper.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-v2/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/anonymous-recheck-v2/candidates.json"
+      ]
+    },
+    {
+      "candidate_id": "C009",
+      "original_acceptance_id": "C008",
+      "disposition": "采纳",
+      "status": "open",
+      "reason": "与原验收及本次底稿/证据核验相符；现金流经济归因已修复并保留；依decision-v2本ID共享验收仍有E1/E3/E5.5未闭合，分别复用C003的剩余桥，不重复核现金流。",
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/score-manifest-v2.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/rebuilt-v2/workpaper.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-v2/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/anonymous-recheck-v2/candidates.json"
+      ]
+    },
+    {
+      "candidate_id": "C010",
+      "original_acceptance_id": "C012",
+      "disposition": "采纳",
+      "status": "open",
+      "reason": "与原验收及本次底稿/证据核验相符；按原条件补五年毛利率/正式调价/可比毛利率、排名趋势、上下游集中与四维议价、逐类壁垒及替代品/新进入者反证；无需精确CR5或五类全强，不增加新的门槛。",
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/score-manifest-v2.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/rebuilt-v2/workpaper.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-v2/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/anonymous-recheck-v2/candidates.json"
+      ]
+    },
+    {
+      "candidate_id": "C011",
+      "original_acceptance_id": "C002",
+      "disposition": "采纳",
+      "status": "closed",
+      "reason": "与原验收及本次底稿/证据核验相符；无。当前底稿及论证总分一致；后续新分项变化仍须程序同步总分，这是版本一致性检查而非重开研究。",
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/score-manifest-v2.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/rebuilt-v2/workpaper.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-v2/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/anonymous-recheck-v2/candidates.json"
+      ]
+    },
+    {
+      "candidate_id": "C012",
+      "original_acceptance_id": "C001",
+      "disposition": "采纳",
+      "status": "closed",
+      "reason": "与原验收及本次底稿/证据核验相符；无。现金Capex适用、未拆分扣0.5已验收，E4=1.5保留；资本配置的独立基础档缺口由C015承接，不重开本项。",
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/score-manifest-v2.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/rebuilt-v2/workpaper.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-v2/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/anonymous-recheck-v2/candidates.json"
+      ]
+    },
+    {
+      "candidate_id": "C013",
+      "original_acceptance_id": "C014",
+      "disposition": "采纳",
+      "status": "open",
+      "reason": "与原验收及本次底稿/证据核验相符；七项管理层仍需原锁定的事件级证据到相邻档桥，复用治理、战略、资本与组织取证；保留已核分红回购等正证。无真实危机可有据说明适用边界，不要求凑案例；不新增人才保留率或全部电话会逐条证据硬要求。",
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/score-manifest-v2.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/rebuilt-v2/workpaper.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-v2/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/anonymous-recheck-v2/candidates.json"
+      ]
+    },
+    {
+      "candidate_id": "C014",
+      "original_acceptance_id": "C009",
+      "disposition": "采纳",
+      "status": "open",
+      "reason": "与原验收及本次底稿/证据核验相符；保留国资背景不能自动排除先发优势的修正；补C004所列历史及附注共用条件，不能用待补标签维持无证据点值。",
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/score-manifest-v2.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/rebuilt-v2/workpaper.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-v2/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/anonymous-recheck-v2/candidates.json"
+      ]
+    },
+    {
+      "candidate_id": "C015",
+      "original_acceptance_id": "C015",
+      "disposition": "部分采纳",
+      "status": "open",
+      "reason": "部分成立：基金金额及撤销加分可保留，但decision-v2 C015明确还要求资本纪律基础档及联动；不能将未完成条件移给其他ID后宣称本ID全部通过。",
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/score-manifest-v2.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/rebuilt-v2/workpaper.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-v2/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/anonymous-recheck-v2/candidates.json"
+      ]
+    },
+    {
+      "candidate_id": "C016",
+      "original_acceptance_id": "C003",
+      "disposition": "采纳",
+      "status": "open",
+      "reason": "与原验收及本次底稿/证据核验相符；仅补E1的2020-2025同口径财务趋势及杜邦、E3五年增长/三年扣非/完整周期量价结构、E5.5附注政策/计提/KAM桥。E2三年计算与经济归因已核，保留5分，不重复取证。",
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/score-manifest-v2.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/rebuilt-v2/workpaper.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-v2/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/anonymous-recheck-v2/candidates.json"
+      ]
+    },
+    {
+      "candidate_id": "C017",
+      "original_acceptance_id": "C004",
+      "disposition": "采纳",
+      "status": "open",
+      "reason": "与原验收及本次底稿/证据核验相符；补A1/B0历史原件和早期三判断、A2自IPO控制链、A3重大资本动作及用途、E5商誉/账龄/近三年减值。其共用C1/D1/E1/E5.5条件复用其他原ID对应补证，不重复收集。",
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/score-manifest-v2.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/rebuilt-v2/workpaper.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-v2/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/anonymous-recheck-v2/candidates.json"
+      ]
+    },
+    {
+      "candidate_id": "C018",
+      "original_acceptance_id": "C004",
+      "disposition": "采纳",
+      "status": "open",
+      "reason": "与原验收及本次底稿/证据核验相符；补A1/B0历史原件和早期三判断、A2自IPO控制链、A3重大资本动作及用途、E5商誉/账龄/近三年减值。其共用C1/D1/E1/E5.5条件复用其他原ID对应补证，不重复收集。",
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/score-manifest-v2.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/rebuilt-v2/workpaper.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-v2/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/anonymous-recheck-v2/candidates.json"
+      ]
+    },
+    {
+      "candidate_id": "C019",
+      "original_acceptance_id": "C007",
+      "disposition": "采纳",
+      "status": "open",
+      "reason": "与原验收及本次底稿/证据核验相符；同C005剩余条件；保留不把解聘当结案的修正，补原公告及有界状态与治理检索，不自行推定现任被查或系统性腐败。",
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/score-manifest-v2.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/rebuilt-v2/workpaper.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-v2/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/anonymous-recheck-v2/candidates.json"
+      ]
+    },
+    {
+      "candidate_id": "C020",
+      "original_acceptance_id": "C015",
+      "disposition": "采纳",
+      "status": "open",
+      "reason": "与原验收及本次底稿/证据核验相符；保留两只基金认缴/实缴/未缴金额和positive_precedent=false；剩近五年Capex计划与实绩口径、重大并购融资、回购时机、ROIC/WACC有据比较以判F2.5基础档，并复用F2/F3減持/关联交易/监管及管理层资本配置联动。收益确未披露则有界说明，不能假造回报或把未知当失败。",
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/score-manifest-v2.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/rebuilt-v2/workpaper.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-v2/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/anonymous-recheck-v2/candidates.json"
+      ]
+    },
+    {
+      "candidate_id": "C021",
+      "original_acceptance_id": "C006",
+      "disposition": "采纳",
+      "status": "open",
+      "reason": "与原验收及本次底稿/证据核验相符；D2的2021-2025收入目标4/5达标及原话不足上限4分已核；剩D1三至五年战略资源一致性、D5三年组织指标和管理层战略/表达相邻档理由及真实缺口同步。D2仅允许因本次D1原条件核出战略漂移而联动既有上限，不重做已核目标表。",
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/score-manifest-v2.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/rebuilt-v2/workpaper.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-v2/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/anonymous-recheck-v2/candidates.json"
+      ]
+    },
+    {
+      "candidate_id": "C022",
+      "original_acceptance_id": "C001",
+      "disposition": "采纳",
+      "status": "closed",
+      "reason": "与原验收及本次底稿/证据核验相符；无。现金Capex适用、未拆分扣0.5已验收，E4=1.5保留；资本配置的独立基础档缺口由C015承接，不重开本项。",
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/score-manifest-v2.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/rebuilt-v2/workpaper.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-v2/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/anonymous-recheck-v2/candidates.json"
+      ]
+    },
+    {
+      "candidate_id": "C023",
+      "original_acceptance_id": "C013",
+      "disposition": "采纳",
+      "status": "closed",
+      "reason": "与原验收及本次底稿/证据核验相符；同C002，已关闭。",
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/score-manifest-v2.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/rebuilt-v2/workpaper.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-v2/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/anonymous-recheck-v2/candidates.json"
+      ]
+    },
+    {
+      "candidate_id": "C024",
+      "original_acceptance_id": "C011",
+      "disposition": "采纳",
+      "status": "open",
+      "reason": "与原验收及本次底稿/证据核验相符；同C003剩余财务条件；保留三年现金转换/FCF及H1不独证量价的修正。E3完整周期事实尚缺，不能仅更换理由保留满档。",
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/score-manifest-v2.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/rebuilt-v2/workpaper.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-v2/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/anonymous-recheck-v2/candidates.json"
+      ]
+    },
+    {
+      "candidate_id": "C025",
+      "original_acceptance_id": "C012",
+      "disposition": "采纳",
+      "status": "open",
+      "reason": "与原验收及本次底稿/证据核验相符；按原条件补五年毛利率/正式调价/可比毛利率、排名趋势、上下游集中与四维议价、逐类壁垒及替代品/新进入者反证；无需精确CR5或五类全强，不增加新的门槛。",
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/score-manifest-v2.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/rebuilt-v2/workpaper.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-v2/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/anonymous-recheck-v2/candidates.json"
+      ]
+    },
+    {
+      "candidate_id": "C026",
+      "original_acceptance_id": "C003",
+      "disposition": "采纳",
+      "status": "open",
+      "reason": "与原验收及本次底稿/证据核验相符；仅补E1的2020-2025同口径财务趋势及杜邦、E3五年增长/三年扣非/完整周期量价结构、E5.5附注政策/计提/KAM桥。E2三年计算与经济归因已核，保留5分，不重复取证。",
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/score-manifest-v2.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/rebuilt-v2/workpaper.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-v2/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/anonymous-recheck-v2/candidates.json"
+      ]
+    },
+    {
+      "candidate_id": "C027",
+      "original_acceptance_id": "C002",
+      "disposition": "采纳",
+      "status": "closed",
+      "reason": "与原验收及本次底稿/证据核验相符；无。当前底稿及论证总分一致；后续新分项变化仍须程序同步总分，这是版本一致性检查而非重开研究。",
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/score-manifest-v2.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/rebuilt-v2/workpaper.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-v2/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/anonymous-recheck-v2/candidates.json"
+      ]
+    },
+    {
+      "candidate_id": "C028",
+      "original_acceptance_id": "C007",
+      "disposition": "采纳",
+      "status": "open",
+      "reason": "与原验收及本次底稿/证据核验相符；同C005剩余条件；保留不把解聘当结案的修正，补原公告及有界状态与治理检索，不自行推定现任被查或系统性腐败。",
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/score-manifest-v2.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/rebuilt-v2/workpaper.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-v2/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/anonymous-recheck-v2/candidates.json"
+      ]
+    },
+    {
+      "candidate_id": "C029",
+      "original_acceptance_id": "C005",
+      "disposition": "采纳",
+      "status": "open",
+      "reason": "与原验收及本次底稿/证据核验相符；核临2026-004/005原件及截至截止日可得案件/职务状态；完成近十年核心职务逐名廉洁、近三年减持、监管问询及适用行业处罚检索，登记已执行范围，按原条件联动评分。半年报转引和作者无原件登记的R005不能代替原公告；不可要求取得未公开调查终局。",
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/score-manifest-v2.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/rebuilt-v2/workpaper.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-v2/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/anonymous-recheck-v2/candidates.json"
+      ]
+    },
+    {
+      "candidate_id": "C030",
+      "original_acceptance_id": "C005",
+      "disposition": "采纳",
+      "status": "open",
+      "reason": "与原验收及本次底稿/证据核验相符；核临2026-004/005原件及截至截止日可得案件/职务状态；完成近十年核心职务逐名廉洁、近三年减持、监管问询及适用行业处罚检索，登记已执行范围，按原条件联动评分。半年报转引和作者无原件登记的R005不能代替原公告；不可要求取得未公开调查终局。",
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/score-manifest-v2.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/rebuilt-v2/workpaper.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-v2/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-2/anonymous-recheck-v2/candidates.json"
+      ]
+    }
+  ],
+  "metadata_minimum_condition": "只同步原范围真实缺口及已核状态：不把已核D2目标兑现继续列为公开未查，未完成E3/E5.5/F2.5等实际影响不得藏于笼统字段；search_scope只写实际执行检索，不把裁决待办当已查。此系原缺口真实性条件，不新增研究对象。",
+  "exception_repair": {
+    "authorized": true,
+    "role": "triplet_repair_writer",
+    "model": "gpt-5.6-sol",
+    "effort": "low",
+    "remaining_research_repair_rounds": 1,
+    "reason": "首次修复仅完成部分条件，多项公开可得历史、行业、财务附注、治理原公告未查；作者以待补/限制文字保留分数，未完成事实到相邻档桥。满足SOP原重大问题未关的唯一有界例外。",
+    "acceptance_ids": [
+      "C003",
+      "C004",
+      "C005",
+      "C006",
+      "C007",
+      "C008",
+      "C009",
+      "C010",
+      "C011",
+      "C012",
+      "C014",
+      "C015"
+    ],
+    "new_evidence": "未引入新研究问题或决定性新原件；用已有原件及原裁决明确指定的补证范围完成。",
+    "review_requirement": "双路仅复查剩余条件和改变的联动，已验收子条件复用；保留全部15原ID并分别记关闭/未关，不得用新匿名候选编号替换。",
+    "terminal_boundary": "最后例外修复及双路定向验收后，若仍有重大未关或未知影响资格，按真实边界收尾；不得再换名称、新run或角色重复启动研究。非公開未知须有界，不要求证明未披露未来事实。"
+  },
+  "preserved_verified_subitems": [
+    {
+      "group": "company",
+      "item": "E2",
+      "score": 5,
+      "state": "verified_for_current_scope",
+      "reason": "三年条件及归因已核。"
+    },
+    {
+      "group": "company",
+      "item": "E4",
+      "score": 1.5,
+      "state": "verified_for_current_scope",
+      "reason": "现金Capex适用及原规则扣分已核。"
+    },
+    {
+      "group": "company",
+      "item": "D2",
+      "score": 4,
+      "state": "verified_subject_to_existing_D1_dependency",
+      "reason": "收入目标桥及无原话上限已核，唯D1战略漂移尚在原条件核验范围。"
+    }
+  ]
+}

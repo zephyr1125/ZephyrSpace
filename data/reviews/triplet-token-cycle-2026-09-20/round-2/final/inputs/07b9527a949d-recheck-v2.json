@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "review_type": "targeted_recheck_after_merged_repair",
+  "verdict": "not_approved",
+  "score_state": "pending_repair",
+  "results": [
+    {"id":"C001","status":"closed","evidence":"R002及rebuilt-v2 E4登记2025/2024现金Capex 31.276/46.787亿元、同比-33.15%，applicable=true、split_complete=false，并从2分扣至1.5；F2.5另行重评，未重复扣分。","remaining":"无。"},
+    {"id":"C002","status":"closed","evidence":"rebuilt-v2公司分项加总91.5，score-rationale同步91.5；ROUND_HALF_UP展示逻辑不再手填94。","remaining":"无。"},
+    {"id":"C003","status":"open","evidence":"R001完成2023-2025 OCF/归母净利及FCF桥，均值90.3579%，E2归因已纠正；但同一验收条件还要求E1的2020-2025同口径杜邦、E3五年增长/三年扣非与量价结构、E5.5会计政策/计提/KAM附注核验。新底稿仍明确这些项目待补。","remaining":"补齐E1、E3、E5.5的裁决最小证据后，才能关闭该ID；当前E1=5、E3=3、E5.5=3尚未获批。"},
+    {"id":"C004","status":"open","evidence":"作者自报open；A1/B0仍无招股书或同等历史原件，A2无IPO以来控制链，A3无融资/并购/资金用途汇总，E5无商誉、应收账龄和近三年重大减值桥。","remaining":"执行裁决列明的历史原件与附注最小核验，不能以公开未查的满档点值占位。"},
+    {"id":"C005","status":"open","evidence":"R005补了蒋焰姓名、当时职务和2026-03-13留置通知信息，但sources.json只登记R2026H1半年报，未登记临2026-004/005原公告路径；近十年逐名廉洁、近三年减持、监管/问询和适用行业处罚仍未查。writer标bounded不满足裁决的完整验收条件。","remaining":"登记并核临时公告原件及案件状态，完成指定治理检索范围，并联动F1/F2/F3及管理层四项。"},
+    {"id":"C006","status":"open","evidence":"R008已完成2021-2025收入目标桥并支持D2=4，修正了把缺资料当50%兑现率的错误；但验收同时要求D1三至五年战略资源一致性、D5三年人均创收/员工/研发，以及管理层战略与表达相邻档依据。新底稿仍写时间序列待补。","remaining":"D2子项可保留修复结果；补D1、D5及管理层联动后再关闭。"},
+    {"id":"C007","status":"open","evidence":"作者自报open；已撤回把解聘当结案，但尚未以临2026-004/005原件确认案件后续状态，且治理联动未完成。","remaining":"按C005共同条件补原公告、状态与近十年逐名廉洁事件。"},
+    {"id":"C008","status":"open","evidence":"E2已不再把现金流变化归因于酒业营运资本，2026H1财务公司资金因素也被区分；但裁决给C008的验收条件与C003相同，包含E1/E3/E5.5完整桥，尚未满足。","remaining":"保留已修正归因，完成C003所列剩余财务核验。"},
+    {"id":"C009","status":"open","evidence":"已撤回‘国资背景排除先发优势’的错误推理，但仍以2分维持A1，且A1/A2/A3/B0所需历史原件均未取得。","remaining":"同C004，须以招股书/官方历史原件选择相邻档，不得因资料未取得维持未经证明的点值。"},
+    {"id":"C010","status":"open","evidence":"D2收入目标桥已完成且未把2026未结束年度计失败；D1与D5时间序列、组织效率信号和管理层联动仍公开未查。","remaining":"补三至五年战略一致性及三年人均创收、员工、研发趋势。"},
+    {"id":"C011","status":"open","evidence":"现金转换率与FCF已核，且E3理由不再用H1销量单独证明满档；但E3仍维持3分，同时明确五年增长、三年扣非和量价完整周期尚待复核，未满足该ID的完整验收条件。","remaining":"补完整周期量价/结构与扣非桥，并完成同条件的E1/E5.5核验。"},
+    {"id":"C012","status":"open","evidence":"作者自报open；B3仍缺五年毛利率、正式调价和可比毛利率，C1缺可追溯排名趋势，C2缺集中度与四维议价，C3+C4缺替代品/新进入者及逐类壁垒反证，却仍维持全部最高档。","remaining":"按裁决最小条件补行业与竞争证据后重选相邻档。"},
+    {"id":"C013","status":"closed","evidence":"与C002同一确定性交付错误；新论证与唯一底稿均为公司91.5、管理层84、合计175.5。","remaining":"无。"},
+    {"id":"C014","status":"open","evidence":"七项理由增加了限制语，但诚信仍缺留置公告状态和承诺兑现，资本22分缺投入结果，组织7分缺近五年任免/继任/激励，危机8分明确无完整危机处置案例，对股东友好15分仍缺减持治理联动；新增文字未形成事实到相邻档的桥。","remaining":"复用C005/C006/C015完成治理、战略、资本与组织证据，再逐项说明相邻档；无真实危机时作有据边界判断，不能仅保留原8分。"},
+    {"id":"C015","status":"open","evidence":"已正确撤销positive_precedent 0.5并登记两只基金各认缴50亿元、已缴20亿元、未缴30亿元；但基础F2.5仍给2分，未补近五年资本开支计划与实绩、重大并购融资、回购时机、ROIC/WACC比较，也未完成F2/F3减持、关联交易与监管核验。作者将该ID标closed不充分。","remaining":"保留撤销加分结论；完成资本纪律基础档及F2/F3联动的裁决最小核验。"}
+  ],
+  "remaining_p1": ["C003","C004","C005","C006","C007","C008","C009","C010","C011","C012","C014","C015"],
+  "closed_ids": ["C001","C002","C013"],
+  "reasoning_summary": "本次修复闭合了Capex触发扣分、汇总展示冲突和F2.5错误先例加分；D2与E2的局部计算也已纠正，可作为后续修复的已核子结论。但裁决按每个acceptance ID给出的条件是整体最小条件，作者不能把完成其中一段写成closed。公开可得但尚未核验的历史、治理、行业、资本和管理层证据仍可能改变多个高档分数，因此公司91.5和管理层84均不批准。",
+  "hashes": {
+    "decision-v2.json":"9ba314ae7d3ded6db144aed730482f9fa3f104d02bc9152e6607b13ac7d246cf",
+    "rebuilt-v2/workpaper.json":"bb45b606b54b1d9caedcc735574f282f46cc3a1774e5862208fdfb84342cde60",
+    "rebuilt-v2/receipt.json":"e63e4214833197ef8c9746bafdf42d3afff7150ee26548da36f7c0a5484336c8",
+    "repair-v2/facts.json":"674124c5d3ad4c40df48127fd26f543932ae54cb4bc917c72f5af30c8e189d9d",
+    "repair-v2/sources.json":"857cf949618cedf33c69301406fb73e008b87bf9867b059ee9d4c8193737c1e4",
+    "repair-v2/evidence-files.json":"7acfb5dd11173b0139ee0821df87f471c14357d9185cc42ce018beab35bce13d",
+    "repair-v2/acceptance-response.json":"40c4784f649a467e1d3414d2a6952e4d43ca6d6213a17f0038068cdc42892768",
+    "repair-v2/score-rationale.md":"fa1c59434b989eea0c0c1feb2c55fa1e2462727cc17805853dde2f066f5af782"
+  }
+}

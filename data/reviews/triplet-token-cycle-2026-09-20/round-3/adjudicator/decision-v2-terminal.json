@@ -1,0 +1,1154 @@
+{
+  "schema_version": 1,
+  "company": "贵州茅台",
+  "ticker": "600519.SH",
+  "cutoff": "2026-09-20",
+  "stage": "score_terminal_adjudication",
+  "decision": "defer",
+  "score_state": "not_approved",
+  "research_state": "pending",
+  "research_status": "execution_incomplete",
+  "delivery_state": "not_approved",
+  "publish_allowed": false,
+  "answer": "本轮终止，未批准公司分或管理层总分；候选82.5/67不作最终值。保留F1=-2及已核事实，历史控制、资本运作、五年资本配置及外部ESG查询仍未闭合。",
+  "basis": "按原16项验收逐一裁决，32条匿名结果全部处置。定向抽核发现双方通过的2025收入口径仍错误，但可确定不改变D2档位，按delivery保留修正。其他决定性缺口不得降为交付。",
+  "termination": {
+    "reason": "performance_validation_failed",
+    "elapsed_over_60_minutes": true,
+    "timer_reset": false,
+    "research_repairs_used": 1,
+    "targeted_dual_recheck_completed": true,
+    "exception_used": false,
+    "exception_exhausted": false,
+    "additional_repair_authorized": false,
+    "note": "依主任务明确指令，本轮以性能失败终止，不启动可选例外；不是例外耗尽，不降低质量条件。"
+  },
+  "input_workpaper_sha256": "191ed53323c50882600bf63d5f0fbd3f773089c674ee1d3af4ef508318b40a7d",
+  "manifest_sha256": "3d678581c26ef282909149c432a24dfbc8afd9a0605836bdefc122e320928f7a",
+  "manifest_hash_verification": "全部manifest所列文件哈希匹配",
+  "review_refs": [
+    "data/reviews/triplet-token-cycle-2026-09-20/round-3/anonymous-recheck-v5/candidates.json"
+  ],
+  "candidate_dispositions": [
+    {
+      "id": "C001",
+      "acceptance_id": "C001-A1",
+      "disposition": "采纳未闭合结论",
+      "reason": "仅补2025重组/产业基金及首发执行线索，未给IPO至截止日融资、重要并购、压力期处置的等效官方历史证据。",
+      "evidence_refs": [
+        "MT-R5-A3；MT-R5-CAPITAL-ACTIONS；acceptance-response.md"
+      ]
+    },
+    {
+      "id": "C002",
+      "acceptance_id": "C010-A1",
+      "disposition": "采纳通过结论",
+      "reason": "独立加总公司82.5、管理67、合计149.5；相对v4 F1减4、A2减1，算术正确。A2变动未获语义批准，因此该桥只是候选算术。",
+      "evidence_refs": [
+        "workpaper全32项；receipt"
+      ]
+    },
+    {
+      "id": "C003",
+      "acceptance_id": "C005-A2",
+      "disposition": "不采纳完全通过结论",
+      "reason": "2020与2025产能例证及不同口径说明有效，但没有近5年计划/实际/可比偏差、重要资本动作及回购时机链。投产例证仅满足原条件的一部分，不能代替五年范围。",
+      "evidence_refs": [
+        "MT-R5-CAPEX-PROJECT；MT-R5-CAPITAL-ACTIONS；2025年报L419、L427"
+      ]
+    },
+    {
+      "id": "C004",
+      "acceptance_id": "C007-A2",
+      "disposition": "采纳通过结论",
+      "reason": "候选总分82.5/67/149.5及整数83/67/150与本版底稿相符，旧61/148.5/149不作本版值。关闭同步不赋予候选最终身份。",
+      "evidence_refs": [
+        "论证.md；workpaper；receipt"
+      ]
+    },
+    {
+      "id": "C005",
+      "acceptance_id": "C009-A1",
+      "disposition": "不采纳完全通过结论",
+      "reason": "未加先例分及不冒充项目IRR正确；2020/2025投产并不自动证明逆周期决策时点，项目投入时点/周期与资金回报高于成本的论证未闭合，且依赖C005-A2。不能批准F2.5=2，也不自动判1。",
+      "evidence_refs": [
+        "workpaper F2.5；MT-R5-CAPEX-PROJECT；原C009-A1"
+      ]
+    },
+    {
+      "id": "C006",
+      "acceptance_id": "C006-A1",
+      "disposition": "采纳通过结论",
+      "reason": "最新年末激励承诺未履行及高管兼职原件已核，相关理由没有宣称整改完成；组织6分无需因同一事实重复扣分。",
+      "evidence_refs": [
+        "2025年报L977；MT-R5-GOV；workpaper相关项"
+      ]
+    },
+    {
+      "id": "C007",
+      "acceptance_id": "C002-A2",
+      "disposition": "采纳通过结论",
+      "reason": "receipt无机械错误且新底稿负数仅F1=-2；主任务已报告原规则-1/-2限定检查与11项测试通过，未改冻结稿。此关闭不为其他评分背书。",
+      "evidence_refs": [
+        "receipt check；workpaper F1；本会话主任务工具修复核验通知"
+      ]
+    },
+    {
+      "id": "C008",
+      "acceptance_id": "C002-A2",
+      "disposition": "采纳通过结论",
+      "reason": "receipt无机械错误且新底稿负数仅F1=-2；主任务已报告原规则-1/-2限定检查与11项测试通过，未改冻结稿。此关闭不为其他评分背书。",
+      "evidence_refs": [
+        "receipt check；workpaper F1；本会话主任务工具修复核验通知"
+      ]
+    },
+    {
+      "id": "C009",
+      "acceptance_id": "C008-A1",
+      "disposition": "采纳未闭合结论",
+      "reason": "记录主要列公司自披露ESG/安全材料及无来源细节的习酒命中，没有近五年环境处罚/停产方向的实际查询和响应；并非要求穷尽罚单库或捏造零罚单证明，原有界外部检索条件仍未达到。",
+      "evidence_refs": [
+        "检索记录.md；MT-R5-ESG-SEARCH；sources-v5.json"
+      ]
+    },
+    {
+      "id": "C010",
+      "acceptance_id": "C005-A3",
+      "disposition": "采纳通过结论",
+      "reason": "新增证据及维持分数的联动理由已逐项记录；关闭仅指联动检查动作，不批准仍受A3/五年资本链约束的资本配置20分。",
+      "evidence_refs": [
+        "workpaper D1、F2及管理层资本配置/战略稳定/股东友好"
+      ]
+    },
+    {
+      "id": "C011",
+      "acceptance_id": "C001-A2",
+      "disposition": "采纳未闭合结论",
+      "reason": "撤回绝对断言有效，但A3仍保留4分，实际缺口未被完整登记；有限历史未命中不能证明满档。资本配置联动说明不替代该前提。",
+      "evidence_refs": [
+        "workpaper A3、资本配置能力；evidence_gaps"
+      ]
+    },
+    {
+      "id": "C012",
+      "acceptance_id": "C007-A2",
+      "disposition": "采纳通过结论",
+      "reason": "候选总分82.5/67/149.5及整数83/67/150与本版底稿相符，旧61/148.5/149不作本版值。关闭同步不赋予候选最终身份。",
+      "evidence_refs": [
+        "论证.md；workpaper；receipt"
+      ]
+    },
+    {
+      "id": "C013",
+      "acceptance_id": "C003-A1",
+      "disposition": "采纳未闭合结论",
+      "reason": "MT-R5-CONTROL明确仍缺2001—2019控制史；IPO与近年两个端段不能排除中间转移。",
+      "evidence_refs": [
+        "MT-R5-CONTROL"
+      ]
+    },
+    {
+      "id": "C014",
+      "acceptance_id": "C001-A1",
+      "disposition": "采纳未闭合结论",
+      "reason": "仅补2025重组/产业基金及首发执行线索，未给IPO至截止日融资、重要并购、压力期处置的等效官方历史证据。",
+      "evidence_refs": [
+        "MT-R5-A3；MT-R5-CAPITAL-ACTIONS；acceptance-response.md"
+      ]
+    },
+    {
+      "id": "C015",
+      "acceptance_id": "C008-A1",
+      "disposition": "采纳未闭合结论",
+      "reason": "记录主要列公司自披露ESG/安全材料及无来源细节的习酒命中，没有近五年环境处罚/停产方向的实际查询和响应；并非要求穷尽罚单库或捏造零罚单证明，原有界外部检索条件仍未达到。",
+      "evidence_refs": [
+        "检索记录.md；MT-R5-ESG-SEARCH；sources-v5.json"
+      ]
+    },
+    {
+      "id": "C016",
+      "acceptance_id": "C004-A1",
+      "disposition": "采纳未闭合结论；否决无依据的2分及2—3边界",
+      "reason": "没有一次合理控制变更事实，不能给2分；rule_ref仍写从未变更=3且reason转成2，更显矛盾。2—3也不是经证据支持的边界，不能批准或用下端点代替未知。",
+      "evidence_refs": [
+        "workpaper A2；evidence_gaps[control_history_partial]"
+      ]
+    },
+    {
+      "id": "C017",
+      "acceptance_id": "C009-A1",
+      "disposition": "采纳未闭合结论",
+      "reason": "未加先例分及不冒充项目IRR正确；2020/2025投产并不自动证明逆周期决策时点，项目投入时点/周期与资金回报高于成本的论证未闭合，且依赖C005-A2。不能批准F2.5=2，也不自动判1。",
+      "evidence_refs": [
+        "workpaper F2.5；MT-R5-CAPEX-PROJECT；原C009-A1"
+      ]
+    },
+    {
+      "id": "C018",
+      "acceptance_id": "C007-A1",
+      "disposition": "不采纳完全通过结论",
+      "reason": "gaps把A2未知变成有据2—3，把A3与资本链缺口压成单项目IRR边界；acceptance-response末段又称仅控制史决定性。与实际未闭合事项冲突，不能按文本细分即通过。",
+      "evidence_refs": [
+        "workpaper evidence_gaps；acceptance-response末段；MT-R5-A3"
+      ]
+    },
+    {
+      "id": "C019",
+      "acceptance_id": "C005-A1",
+      "disposition": "部分采纳：窗口和D2判断通过，否决口径已完全修复；剩余为确定性交付修正",
+      "reason": "五年配对与4/5达标判断可以保留，D2=4不变；但2025实际1688.38亿元/-1.21%是营业收入，不是营业总收入。原件L1660给营业总收入1720.5417189091亿元、2024为1741.4406995825亿元，同比约-1.20%，仍远低于+9%目标。仅须确定数值/口径同步，无新增判断。",
+      "evidence_refs": [
+        "2025年报L96、L1660；2024年报L637；MT-R5-D2；workpaper D2"
+      ]
+    },
+    {
+      "id": "C020",
+      "acceptance_id": "C007-A1",
+      "disposition": "采纳未闭合结论",
+      "reason": "gaps把A2未知变成有据2—3，把A3与资本链缺口压成单项目IRR边界；acceptance-response末段又称仅控制史决定性。与实际未闭合事项冲突，不能按文本细分即通过。",
+      "evidence_refs": [
+        "workpaper evidence_gaps；acceptance-response末段；MT-R5-A3"
+      ]
+    },
+    {
+      "id": "C021",
+      "acceptance_id": "C001-A2",
+      "disposition": "采纳未闭合结论",
+      "reason": "撤回绝对断言有效，但A3仍保留4分，实际缺口未被完整登记；有限历史未命中不能证明满档。资本配置联动说明不替代该前提。",
+      "evidence_refs": [
+        "workpaper A3、资本配置能力；evidence_gaps"
+      ]
+    },
+    {
+      "id": "C022",
+      "acceptance_id": "C004-A1",
+      "disposition": "采纳未闭合结论；否决无依据的2分及2—3边界",
+      "reason": "没有一次合理控制变更事实，不能给2分；rule_ref仍写从未变更=3且reason转成2，更显矛盾。2—3也不是经证据支持的边界，不能批准或用下端点代替未知。",
+      "evidence_refs": [
+        "workpaper A2；evidence_gaps[control_history_partial]"
+      ]
+    },
+    {
+      "id": "C023",
+      "acceptance_id": "C002-A1",
+      "disposition": "采纳通过结论",
+      "reason": "F1=-2、历史人物身份及十年窗口与原裁决一致，未外推现任在查。",
+      "evidence_refs": [
+        "workpaper F1；MT-R5-F1；原decision-v1原件核验"
+      ]
+    },
+    {
+      "id": "C024",
+      "acceptance_id": "C010-A1",
+      "disposition": "采纳通过结论",
+      "reason": "独立加总公司82.5、管理67、合计149.5；相对v4 F1减4、A2减1，算术正确。A2变动未获语义批准，因此该桥只是候选算术。",
+      "evidence_refs": [
+        "workpaper全32项；receipt"
+      ]
+    },
+    {
+      "id": "C025",
+      "acceptance_id": "C003-A1",
+      "disposition": "采纳未闭合结论",
+      "reason": "MT-R5-CONTROL明确仍缺2001—2019控制史；IPO与近年两个端段不能排除中间转移。",
+      "evidence_refs": [
+        "MT-R5-CONTROL"
+      ]
+    },
+    {
+      "id": "C026",
+      "acceptance_id": "C005-A2",
+      "disposition": "采纳未闭合结论",
+      "reason": "2020与2025产能例证及不同口径说明有效，但没有近5年计划/实际/可比偏差、重要资本动作及回购时机链。投产例证仅满足原条件的一部分，不能代替五年范围。",
+      "evidence_refs": [
+        "MT-R5-CAPEX-PROJECT；MT-R5-CAPITAL-ACTIONS；2025年报L419、L427"
+      ]
+    },
+    {
+      "id": "C027",
+      "acceptance_id": "C006-A1",
+      "disposition": "采纳通过结论",
+      "reason": "最新年末激励承诺未履行及高管兼职原件已核，相关理由没有宣称整改完成；组织6分无需因同一事实重复扣分。",
+      "evidence_refs": [
+        "2025年报L977；MT-R5-GOV；workpaper相关项"
+      ]
+    },
+    {
+      "id": "C028",
+      "acceptance_id": "C008-A2",
+      "disposition": "采纳通过结论",
+      "reason": "F3内控瑕疵归因与ESG边界已分开，诚信/危机联动有说明，未因无罚单机械加减分。其“F4不新增扣分”只能是候选状态，不能替代C008-A1关闭或批准F3最终值。",
+      "evidence_refs": [
+        "workpaper F3、诚信与透明度、危机处理能力"
+      ]
+    },
+    {
+      "id": "C029",
+      "acceptance_id": "C002-A1",
+      "disposition": "采纳通过结论",
+      "reason": "F1=-2、历史人物身份及十年窗口与原裁决一致，未外推现任在查。",
+      "evidence_refs": [
+        "workpaper F1；MT-R5-F1；原decision-v1原件核验"
+      ]
+    },
+    {
+      "id": "C030",
+      "acceptance_id": "C005-A1",
+      "disposition": "部分采纳：窗口和D2判断通过，否决口径已完全修复；剩余为确定性交付修正",
+      "reason": "五年配对与4/5达标判断可以保留，D2=4不变；但2025实际1688.38亿元/-1.21%是营业收入，不是营业总收入。原件L1660给营业总收入1720.5417189091亿元、2024为1741.4406995825亿元，同比约-1.20%，仍远低于+9%目标。仅须确定数值/口径同步，无新增判断。",
+      "evidence_refs": [
+        "2025年报L96、L1660；2024年报L637；MT-R5-D2；workpaper D2"
+      ]
+    },
+    {
+      "id": "C031",
+      "acceptance_id": "C005-A3",
+      "disposition": "采纳通过结论",
+      "reason": "新增证据及维持分数的联动理由已逐项记录；关闭仅指联动检查动作，不批准仍受A3/五年资本链约束的资本配置20分。",
+      "evidence_refs": [
+        "workpaper D1、F2及管理层资本配置/战略稳定/股东友好"
+      ]
+    },
+    {
+      "id": "C032",
+      "acceptance_id": "C008-A2",
+      "disposition": "采纳通过结论",
+      "reason": "F3内控瑕疵归因与ESG边界已分开，诚信/危机联动有说明，未因无罚单机械加减分。其“F4不新增扣分”只能是候选状态，不能替代C008-A1关闭或批准F3最终值。",
+      "evidence_refs": [
+        "workpaper F3、诚信与透明度、危机处理能力"
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "id": "R-A3",
+      "candidate_ids": [
+        "C001"
+      ],
+      "severity": "P1",
+      "lane": "research",
+      "reason": "IPO承诺执行仅有搜索摘录，后续融资/资本动作仅有限未命中，尚不足以独立核验资本运作清洁度。拒绝把全量逐年公告穷尽作为必要条件。",
+      "status": "open",
+      "acceptance": [
+        {
+          "id": "C001-A1",
+          "original_issue_id": "R-A3",
+          "condition": "核招股/首发用途与实际执行的可读官方原件；针对IPO至截止日融资工具、重要并购及业绩压力期资产处置给可复核官方汇总或分段历史证据、检索范围及命中记录。无需逐份下载所有无关公告。",
+          "status": "open",
+          "lane": "research",
+          "reason": "仅补2025重组/产业基金及首发执行线索，未给IPO至截止日融资、重要并购、压力期处置的等效官方历史证据。",
+          "verification_refs": [
+            "MT-R5-A3；MT-R5-CAPITAL-ACTIONS；acceptance-response.md"
+          ],
+          "anonymous_candidate_ids": [
+            "C001",
+            "C014"
+          ]
+        },
+        {
+          "id": "C001-A2",
+          "original_issue_id": "R-A3",
+          "condition": "说明证据为何足以支持A3原档并核资本配置能力联动；如仍有决定性空白，撤回无依据断言并明确其实际影响，不把未查到当无事项或自动低扣。",
+          "status": "open",
+          "lane": "research",
+          "reason": "撤回绝对断言有效，但A3仍保留4分，实际缺口未被完整登记；有限历史未命中不能证明满档。资本配置联动说明不替代该前提。",
+          "verification_refs": [
+            "workpaper A3、资本配置能力；evidence_gaps"
+          ],
+          "anonymous_candidate_ids": [
+            "C011",
+            "C021"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-F1",
+      "candidate_ids": [
+        "C002",
+        "C010"
+      ],
+      "severity": "P0",
+      "lane": "research",
+      "reason": "原正文要求扣分但未规定基准分减2；原评分表将5、-1、-2以等号并列为情形得分。故周期性历史腐败适用-2，而非先给4再扣2。两名前上市公司董事长事件落入近十年审查/判刑窗口。",
+      "status": "closed",
+      "acceptance": [
+        {
+          "id": "C002-A1",
+          "original_issue_id": "R-F1",
+          "condition": "F1固定修正为-2，rule_ref及reason说明这是负分档；保留历史与现任区别，不把历史案件外推为现任在查。证据列两人上市公司职务与十年窗口内处分/刑事程序记录。",
+          "status": "closed",
+          "lane": "research",
+          "reason": "F1=-2、历史人物身份及十年窗口与原裁决一致，未外推现任在查。",
+          "verification_refs": [
+            "workpaper F1；MT-R5-F1；原decision-v1原件核验"
+          ],
+          "anonymous_candidate_ids": [
+            "C023",
+            "C029"
+          ]
+        },
+        {
+          "id": "C010-A1",
+          "original_issue_id": "R-F1",
+          "condition": "独立核新底稿F维度及总分；只改F1时F小计11→7，公司87.5→83.5，管理层67不由此机械再扣；其他修复另列逐项桥，合计先加原始分后ROUND_HALF_UP。",
+          "status": "closed",
+          "lane": "research",
+          "reason": "独立加总公司82.5、管理67、合计149.5；相对v4 F1减4、A2减1，算术正确。A2变动未获语义批准，因此该桥只是候选算术。",
+          "verification_refs": [
+            "workpaper全32项；receipt"
+          ],
+          "anonymous_candidate_ids": [
+            "C002",
+            "C024"
+          ]
+        },
+        {
+          "id": "C002-A2",
+          "original_issue_id": "R-F1",
+          "condition": "机械检查允许原规则明确的F1负档-1和-2，下限-2；不得放开任意负数或将全部分项下限改为-2。新底稿及派生论证保持一致，原冻结稿不改。",
+          "status": "closed",
+          "lane": "research",
+          "reason": "receipt无机械错误且新底稿负数仅F1=-2；主任务已报告原规则-1/-2限定检查与11项测试通过，未改冻结稿。此关闭不为其他评分背书。",
+          "verification_refs": [
+            "receipt check；workpaper F1；本会话主任务工具修复核验通知"
+          ],
+          "anonymous_candidate_ids": [
+            "C007",
+            "C008"
+          ]
+        }
+      ],
+      "verification_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-3/anonymous-recheck-v5/candidates.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-3/writer/rebuilt-v5-final/workpaper.json"
+      ]
+    },
+    {
+      "id": "R-A2",
+      "candidate_ids": [
+        "C003",
+        "C004"
+      ],
+      "severity": "P1",
+      "lane": "research",
+      "reason": "A2明确研究IPO至今，事实包自限2020—2025，IPO端点不能排除中途变更后恢复。该断链影响从未变更满档，属于研究问题。",
+      "status": "open",
+      "acceptance": [
+        {
+          "id": "C003-A1",
+          "original_issue_id": "R-A2",
+          "condition": "以官方股权沿革、覆盖IPO至今的控制权变更汇总，或必要年份年报，闭合2001—2019控制链；区分国资监管机构名称/职能调整与真实控制转移。无需强制18份逐年文件，等效官方连续历史证据可验收。",
+          "status": "open",
+          "lane": "research",
+          "reason": "MT-R5-CONTROL明确仍缺2001—2019控制史；IPO与近年两个端段不能排除中间转移。",
+          "verification_refs": [
+            "MT-R5-CONTROL"
+          ],
+          "anonymous_candidate_ids": [
+            "C013",
+            "C025"
+          ]
+        },
+        {
+          "id": "C004-A1",
+          "original_issue_id": "R-A2",
+          "condition": "A2按核实的实控人变更次数和原因匹配原档，同步evidence_gaps；证据仍不足时列具体可能改变的档位及未知，不因缺文档任意给0/1，也不维持未经证明的从未变更。",
+          "status": "open",
+          "lane": "research",
+          "reason": "没有一次合理控制变更事实，不能给2分；rule_ref仍写从未变更=3且reason转成2，更显矛盾。2—3也不是经证据支持的边界，不能批准或用下端点代替未知。",
+          "verification_refs": [
+            "workpaper A2；evidence_gaps[control_history_partial]"
+          ],
+          "anonymous_candidate_ids": [
+            "C016",
+            "C022"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-EXEC-CAPITAL",
+      "candidate_ids": [
+        "C005",
+        "C009"
+      ],
+      "severity": "P1",
+      "lane": "research",
+      "reason": "D2漏可得年度，F2.5缺逆周期布局及计划执行依据；管理层资本配置20分是开放专业判断，不因公司F2.5不足机械等比例下降。整体高ROE不是新增项目回报率，但单项目IRR并非必须由公司公布。",
+      "status": "open",
+      "acceptance": [
+        {
+          "id": "C005-A1",
+          "original_issue_id": "R-EXEC-CAPITAL",
+          "condition": "D2补齐现有2020—2025年报可配对的2021—2025目标与实际，核营业总收入/营业收入一致口径，纳入2025目标约+9%与实际下滑的反证；2026未完年度不算全年落空。以原≥2/3等档及无原话4分上限确定得分，说明D1/战略稳定性联动是否改变。",
+          "status": "open",
+          "lane": "delivery",
+          "reason": "五年配对与4/5达标判断可以保留，D2=4不变；但2025实际1688.38亿元/-1.21%是营业收入，不是营业总收入。原件L1660给营业总收入1720.5417189091亿元、2024为1741.4406995825亿元，同比约-1.20%，仍远低于+9%目标。仅须确定数值/口径同步，无新增判断。",
+          "verification_refs": [
+            "2025年报L96、L1660；2024年报L637；MT-R5-D2；workpaper D2"
+          ],
+          "anonymous_candidate_ids": [
+            "C019",
+            "C030"
+          ],
+          "classified_by": "adjudicator",
+          "no_decision_impact": true
+        },
+        {
+          "id": "C005-A2",
+          "original_issue_id": "R-EXEC-CAPITAL",
+          "condition": "对近5年资本配置补计划固定资产投资/实际投入、现金Capex的口径差异和可比偏差、营收变化、重要并购及回购时机；核至少一个主要项目计划—实施—产能投产/可观察回报。不同口径不得直接相除制造超支率。",
+          "status": "open",
+          "lane": "research",
+          "reason": "2020与2025产能例证及不同口径说明有效，但没有近5年计划/实际/可比偏差、重要资本动作及回购时机链。投产例证仅满足原条件的一部分，不能代替五年范围。",
+          "verification_refs": [
+            "MT-R5-CAPEX-PROJECT；MT-R5-CAPITAL-ACTIONS；2025年报L419、L427"
+          ],
+          "anonymous_candidate_ids": [
+            "C003",
+            "C026"
+          ]
+        },
+        {
+          "id": "C009-A1",
+          "original_issue_id": "R-EXEC-CAPITAL",
+          "condition": "F2.5的2分需逐一论证审慎配置、逆周期布局、资金回报高于成本；可用可辩护资本回报推导和重大项目/回购事实，不强制未披露IRR，不把高ROE等同项目IRR。若证据支持有瑕疵再选1，不能仅因缺资料自动选1。未验证先例不加0.5。",
+          "status": "open",
+          "lane": "research",
+          "reason": "未加先例分及不冒充项目IRR正确；2020/2025投产并不自动证明逆周期决策时点，项目投入时点/周期与资金回报高于成本的论证未闭合，且依赖C005-A2。不能批准F2.5=2，也不自动判1。",
+          "verification_refs": [
+            "workpaper F2.5；MT-R5-CAPEX-PROJECT；原C009-A1"
+          ],
+          "anonymous_candidate_ids": [
+            "C005",
+            "C017"
+          ]
+        },
+        {
+          "id": "C005-A3",
+          "original_issue_id": "R-EXEC-CAPITAL",
+          "condition": "重评资本配置能力20分的正反证与相邻分数理由；核D1、战略稳定性、对股东友好度及F2联动，只在新增证据改变判断时改分，明确记录维持依据。",
+          "status": "closed",
+          "lane": "research",
+          "reason": "新增证据及维持分数的联动理由已逐项记录；关闭仅指联动检查动作，不批准仍受A3/五年资本链约束的资本配置20分。",
+          "verification_refs": [
+            "workpaper D1、F2及管理层资本配置/战略稳定/股东友好"
+          ],
+          "anonymous_candidate_ids": [
+            "C010",
+            "C031"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R-GOV-UPDATE",
+      "candidate_ids": [
+        "C006"
+      ],
+      "severity": "P2",
+      "lane": "research",
+      "reason": "2025年报L975—977证实两项治理问题仍未整改；现有理由已据此限制组织得分，遗漏不证明必须降分，但最新持续性影响治理判断，不能当纯引用排版。",
+      "status": "closed",
+      "acceptance": [
+        {
+          "id": "C006-A1",
+          "original_issue_id": "R-GOV-UPDATE",
+          "condition": "将MT-F-GOV-REMEDY更新至2025年末的原件定位，准确区分控股股东未履行激励承诺及高管兼职；组织与人才6分可保留，核诚信、F1、危机处理的限制/整改成效表述，不把持续未整改表述为已解决。",
+          "status": "closed",
+          "lane": "research",
+          "reason": "最新年末激励承诺未履行及高管兼职原件已核，相关理由没有宣称整改完成；组织6分无需因同一事实重复扣分。",
+          "verification_refs": [
+            "2025年报L977；MT-R5-GOV；workpaper相关项"
+          ],
+          "anonymous_candidate_ids": [
+            "C006",
+            "C027"
+          ]
+        }
+      ],
+      "verification_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-3/anonymous-recheck-v5/candidates.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-3/writer/rebuilt-v5-final/workpaper.json"
+      ]
+    },
+    {
+      "id": "R-GAPS",
+      "candidate_ids": [
+        "C007"
+      ],
+      "severity": "P1",
+      "lane": "research",
+      "reason": "缺口清单是否决定性须由本轮研究裁决确定，不能只把旧文本删掉当交付修正。",
+      "status": "open",
+      "acceptance": [
+        {
+          "id": "C007-A1",
+          "original_issue_id": "R-GAPS",
+          "condition": "evidence_gaps和简明论证按本裁决剩余问题同步：控制史/资本运作/目标窗口/资本配置及F4按实际结果关闭或保留；逐字Q&A及单项目IRR若仅限制满分须写边界性未知，不能笼统称决定性缺口，也不能把决定性断链降级。",
+          "status": "open",
+          "lane": "research",
+          "reason": "gaps把A2未知变成有据2—3，把A3与资本链缺口压成单项目IRR边界；acceptance-response末段又称仅控制史决定性。与实际未闭合事项冲突，不能按文本细分即通过。",
+          "verification_refs": [
+            "workpaper evidence_gaps；acceptance-response末段；MT-R5-A3"
+          ],
+          "anonymous_candidate_ids": [
+            "C018",
+            "C020"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "D-SCORE-TEXT",
+      "candidate_ids": [
+        "C007"
+      ],
+      "severity": "P2",
+      "lane": "delivery",
+      "reason": "冻结v4七项独立相加为67，旧简明论证仍为61。总分文本的确定同步本身不改变底稿研究判断；最终数值须等研究修复确定后由唯一底稿生成。",
+      "classified_by": "adjudicator",
+      "no_decision_impact": true,
+      "status": "closed",
+      "acceptance": [
+        {
+          "id": "C007-A2",
+          "original_issue_id": "D-SCORE-TEXT",
+          "condition": "从修复后唯一完整底稿生成简明论证，核公司、管理层、合计及ROUND_HALF_UP显示；基准v4为87.5/67/154.5，旧61/148.5/149全部停止作为本版值。由原事实审核员局部验收，主任务核版本。",
+          "status": "closed",
+          "lane": "delivery",
+          "reason": "候选总分82.5/67/149.5及整数83/67/150与本版底稿相符，旧61/148.5/149不作本版值。关闭同步不赋予候选最终身份。",
+          "verification_refs": [
+            "论证.md；workpaper；receipt"
+          ],
+          "anonymous_candidate_ids": [
+            "C004",
+            "C012"
+          ],
+          "classified_by": "adjudicator",
+          "no_decision_impact": true
+        }
+      ],
+      "verification_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-3/anonymous-recheck-v5/candidates.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-3/writer/rebuilt-v5-final/workpaper.json"
+      ]
+    },
+    {
+      "id": "R-ESG",
+      "candidate_ids": [
+        "C008"
+      ],
+      "severity": "P1",
+      "lane": "research",
+      "reason": "F3理由实为关联交易及历史信披瑕疵，并没有断言生产ESG中风险，因此候选此部分不成立；但F4对制造业要求近5年环境/安全核查，现记录仅2023—2026关键词及未取得罚单声明，不足以排除影响F3的重大事件。",
+      "status": "open",
+      "acceptance": [
+        {
+          "id": "C008-A1",
+          "original_issue_id": "R-ESG",
+          "condition": "对截至2026-09-20近5年上市公司及主要生产主体作有界环境处罚、停产、职业健康/重大安全检索，保留实际命中/无命中响应、主体归属和窗口；结合年报及ESG/环境信息披露原件核重大事项。无事件时不强求不存在的官方罚单。",
+          "status": "open",
+          "lane": "research",
+          "reason": "记录主要列公司自披露ESG/安全材料及无来源细节的习酒命中，没有近五年环境处罚/停产方向的实际查询和响应；并非要求穷尽罚单库或捏造零罚单证明，原有界外部检索条件仍未达到。",
+          "verification_refs": [
+            "检索记录.md；MT-R5-ESG-SEARCH；sources-v5.json"
+          ],
+          "anonymous_candidate_ids": [
+            "C009",
+            "C015"
+          ]
+        },
+        {
+          "id": "C008-A2",
+          "original_issue_id": "R-ESG",
+          "condition": "将F3已有内控瑕疵归因与ESG结论分开，依实际风险应用原F4联动并检查诚信、危机处理；未知不得包装为已核低/中风险，不因未取得监管罚单直接扣分。",
+          "status": "closed",
+          "lane": "research",
+          "reason": "F3内控瑕疵归因与ESG边界已分开，诚信/危机联动有说明，未因无罚单机械加减分。其“F4不新增扣分”只能是候选状态，不能替代C008-A1关闭或批准F3最终值。",
+          "verification_refs": [
+            "workpaper F3、诚信与透明度、危机处理能力"
+          ],
+          "anonymous_candidate_ids": [
+            "C028",
+            "C032"
+          ]
+        }
+      ]
+    }
+  ],
+  "acceptance_results": [
+    {
+      "id": "C001-A1",
+      "original_issue_id": "R-A3",
+      "condition": "核招股/首发用途与实际执行的可读官方原件；针对IPO至截止日融资工具、重要并购及业绩压力期资产处置给可复核官方汇总或分段历史证据、检索范围及命中记录。无需逐份下载所有无关公告。",
+      "status": "open",
+      "lane": "research",
+      "reason": "仅补2025重组/产业基金及首发执行线索，未给IPO至截止日融资、重要并购、压力期处置的等效官方历史证据。",
+      "verification_refs": [
+        "MT-R5-A3；MT-R5-CAPITAL-ACTIONS；acceptance-response.md"
+      ],
+      "anonymous_candidate_ids": [
+        "C001",
+        "C014"
+      ]
+    },
+    {
+      "id": "C001-A2",
+      "original_issue_id": "R-A3",
+      "condition": "说明证据为何足以支持A3原档并核资本配置能力联动；如仍有决定性空白，撤回无依据断言并明确其实际影响，不把未查到当无事项或自动低扣。",
+      "status": "open",
+      "lane": "research",
+      "reason": "撤回绝对断言有效，但A3仍保留4分，实际缺口未被完整登记；有限历史未命中不能证明满档。资本配置联动说明不替代该前提。",
+      "verification_refs": [
+        "workpaper A3、资本配置能力；evidence_gaps"
+      ],
+      "anonymous_candidate_ids": [
+        "C011",
+        "C021"
+      ]
+    },
+    {
+      "id": "C002-A1",
+      "original_issue_id": "R-F1",
+      "condition": "F1固定修正为-2，rule_ref及reason说明这是负分档；保留历史与现任区别，不把历史案件外推为现任在查。证据列两人上市公司职务与十年窗口内处分/刑事程序记录。",
+      "status": "closed",
+      "lane": "research",
+      "reason": "F1=-2、历史人物身份及十年窗口与原裁决一致，未外推现任在查。",
+      "verification_refs": [
+        "workpaper F1；MT-R5-F1；原decision-v1原件核验"
+      ],
+      "anonymous_candidate_ids": [
+        "C023",
+        "C029"
+      ]
+    },
+    {
+      "id": "C010-A1",
+      "original_issue_id": "R-F1",
+      "condition": "独立核新底稿F维度及总分；只改F1时F小计11→7，公司87.5→83.5，管理层67不由此机械再扣；其他修复另列逐项桥，合计先加原始分后ROUND_HALF_UP。",
+      "status": "closed",
+      "lane": "research",
+      "reason": "独立加总公司82.5、管理67、合计149.5；相对v4 F1减4、A2减1，算术正确。A2变动未获语义批准，因此该桥只是候选算术。",
+      "verification_refs": [
+        "workpaper全32项；receipt"
+      ],
+      "anonymous_candidate_ids": [
+        "C002",
+        "C024"
+      ]
+    },
+    {
+      "id": "C002-A2",
+      "original_issue_id": "R-F1",
+      "condition": "机械检查允许原规则明确的F1负档-1和-2，下限-2；不得放开任意负数或将全部分项下限改为-2。新底稿及派生论证保持一致，原冻结稿不改。",
+      "status": "closed",
+      "lane": "research",
+      "reason": "receipt无机械错误且新底稿负数仅F1=-2；主任务已报告原规则-1/-2限定检查与11项测试通过，未改冻结稿。此关闭不为其他评分背书。",
+      "verification_refs": [
+        "receipt check；workpaper F1；本会话主任务工具修复核验通知"
+      ],
+      "anonymous_candidate_ids": [
+        "C007",
+        "C008"
+      ]
+    },
+    {
+      "id": "C003-A1",
+      "original_issue_id": "R-A2",
+      "condition": "以官方股权沿革、覆盖IPO至今的控制权变更汇总，或必要年份年报，闭合2001—2019控制链；区分国资监管机构名称/职能调整与真实控制转移。无需强制18份逐年文件，等效官方连续历史证据可验收。",
+      "status": "open",
+      "lane": "research",
+      "reason": "MT-R5-CONTROL明确仍缺2001—2019控制史；IPO与近年两个端段不能排除中间转移。",
+      "verification_refs": [
+        "MT-R5-CONTROL"
+      ],
+      "anonymous_candidate_ids": [
+        "C013",
+        "C025"
+      ]
+    },
+    {
+      "id": "C004-A1",
+      "original_issue_id": "R-A2",
+      "condition": "A2按核实的实控人变更次数和原因匹配原档，同步evidence_gaps；证据仍不足时列具体可能改变的档位及未知，不因缺文档任意给0/1，也不维持未经证明的从未变更。",
+      "status": "open",
+      "lane": "research",
+      "reason": "没有一次合理控制变更事实，不能给2分；rule_ref仍写从未变更=3且reason转成2，更显矛盾。2—3也不是经证据支持的边界，不能批准或用下端点代替未知。",
+      "verification_refs": [
+        "workpaper A2；evidence_gaps[control_history_partial]"
+      ],
+      "anonymous_candidate_ids": [
+        "C016",
+        "C022"
+      ]
+    },
+    {
+      "id": "C005-A1",
+      "original_issue_id": "R-EXEC-CAPITAL",
+      "condition": "D2补齐现有2020—2025年报可配对的2021—2025目标与实际，核营业总收入/营业收入一致口径，纳入2025目标约+9%与实际下滑的反证；2026未完年度不算全年落空。以原≥2/3等档及无原话4分上限确定得分，说明D1/战略稳定性联动是否改变。",
+      "status": "open",
+      "lane": "delivery",
+      "reason": "五年配对与4/5达标判断可以保留，D2=4不变；但2025实际1688.38亿元/-1.21%是营业收入，不是营业总收入。原件L1660给营业总收入1720.5417189091亿元、2024为1741.4406995825亿元，同比约-1.20%，仍远低于+9%目标。仅须确定数值/口径同步，无新增判断。",
+      "verification_refs": [
+        "2025年报L96、L1660；2024年报L637；MT-R5-D2；workpaper D2"
+      ],
+      "anonymous_candidate_ids": [
+        "C019",
+        "C030"
+      ],
+      "classified_by": "adjudicator",
+      "no_decision_impact": true
+    },
+    {
+      "id": "C005-A2",
+      "original_issue_id": "R-EXEC-CAPITAL",
+      "condition": "对近5年资本配置补计划固定资产投资/实际投入、现金Capex的口径差异和可比偏差、营收变化、重要并购及回购时机；核至少一个主要项目计划—实施—产能投产/可观察回报。不同口径不得直接相除制造超支率。",
+      "status": "open",
+      "lane": "research",
+      "reason": "2020与2025产能例证及不同口径说明有效，但没有近5年计划/实际/可比偏差、重要资本动作及回购时机链。投产例证仅满足原条件的一部分，不能代替五年范围。",
+      "verification_refs": [
+        "MT-R5-CAPEX-PROJECT；MT-R5-CAPITAL-ACTIONS；2025年报L419、L427"
+      ],
+      "anonymous_candidate_ids": [
+        "C003",
+        "C026"
+      ]
+    },
+    {
+      "id": "C009-A1",
+      "original_issue_id": "R-EXEC-CAPITAL",
+      "condition": "F2.5的2分需逐一论证审慎配置、逆周期布局、资金回报高于成本；可用可辩护资本回报推导和重大项目/回购事实，不强制未披露IRR，不把高ROE等同项目IRR。若证据支持有瑕疵再选1，不能仅因缺资料自动选1。未验证先例不加0.5。",
+      "status": "open",
+      "lane": "research",
+      "reason": "未加先例分及不冒充项目IRR正确；2020/2025投产并不自动证明逆周期决策时点，项目投入时点/周期与资金回报高于成本的论证未闭合，且依赖C005-A2。不能批准F2.5=2，也不自动判1。",
+      "verification_refs": [
+        "workpaper F2.5；MT-R5-CAPEX-PROJECT；原C009-A1"
+      ],
+      "anonymous_candidate_ids": [
+        "C005",
+        "C017"
+      ]
+    },
+    {
+      "id": "C005-A3",
+      "original_issue_id": "R-EXEC-CAPITAL",
+      "condition": "重评资本配置能力20分的正反证与相邻分数理由；核D1、战略稳定性、对股东友好度及F2联动，只在新增证据改变判断时改分，明确记录维持依据。",
+      "status": "closed",
+      "lane": "research",
+      "reason": "新增证据及维持分数的联动理由已逐项记录；关闭仅指联动检查动作，不批准仍受A3/五年资本链约束的资本配置20分。",
+      "verification_refs": [
+        "workpaper D1、F2及管理层资本配置/战略稳定/股东友好"
+      ],
+      "anonymous_candidate_ids": [
+        "C010",
+        "C031"
+      ]
+    },
+    {
+      "id": "C006-A1",
+      "original_issue_id": "R-GOV-UPDATE",
+      "condition": "将MT-F-GOV-REMEDY更新至2025年末的原件定位，准确区分控股股东未履行激励承诺及高管兼职；组织与人才6分可保留，核诚信、F1、危机处理的限制/整改成效表述，不把持续未整改表述为已解决。",
+      "status": "closed",
+      "lane": "research",
+      "reason": "最新年末激励承诺未履行及高管兼职原件已核，相关理由没有宣称整改完成；组织6分无需因同一事实重复扣分。",
+      "verification_refs": [
+        "2025年报L977；MT-R5-GOV；workpaper相关项"
+      ],
+      "anonymous_candidate_ids": [
+        "C006",
+        "C027"
+      ]
+    },
+    {
+      "id": "C007-A1",
+      "original_issue_id": "R-GAPS",
+      "condition": "evidence_gaps和简明论证按本裁决剩余问题同步：控制史/资本运作/目标窗口/资本配置及F4按实际结果关闭或保留；逐字Q&A及单项目IRR若仅限制满分须写边界性未知，不能笼统称决定性缺口，也不能把决定性断链降级。",
+      "status": "open",
+      "lane": "research",
+      "reason": "gaps把A2未知变成有据2—3，把A3与资本链缺口压成单项目IRR边界；acceptance-response末段又称仅控制史决定性。与实际未闭合事项冲突，不能按文本细分即通过。",
+      "verification_refs": [
+        "workpaper evidence_gaps；acceptance-response末段；MT-R5-A3"
+      ],
+      "anonymous_candidate_ids": [
+        "C018",
+        "C020"
+      ]
+    },
+    {
+      "id": "C007-A2",
+      "original_issue_id": "D-SCORE-TEXT",
+      "condition": "从修复后唯一完整底稿生成简明论证，核公司、管理层、合计及ROUND_HALF_UP显示；基准v4为87.5/67/154.5，旧61/148.5/149全部停止作为本版值。由原事实审核员局部验收，主任务核版本。",
+      "status": "closed",
+      "lane": "delivery",
+      "reason": "候选总分82.5/67/149.5及整数83/67/150与本版底稿相符，旧61/148.5/149不作本版值。关闭同步不赋予候选最终身份。",
+      "verification_refs": [
+        "论证.md；workpaper；receipt"
+      ],
+      "anonymous_candidate_ids": [
+        "C004",
+        "C012"
+      ],
+      "classified_by": "adjudicator",
+      "no_decision_impact": true
+    },
+    {
+      "id": "C008-A1",
+      "original_issue_id": "R-ESG",
+      "condition": "对截至2026-09-20近5年上市公司及主要生产主体作有界环境处罚、停产、职业健康/重大安全检索，保留实际命中/无命中响应、主体归属和窗口；结合年报及ESG/环境信息披露原件核重大事项。无事件时不强求不存在的官方罚单。",
+      "status": "open",
+      "lane": "research",
+      "reason": "记录主要列公司自披露ESG/安全材料及无来源细节的习酒命中，没有近五年环境处罚/停产方向的实际查询和响应；并非要求穷尽罚单库或捏造零罚单证明，原有界外部检索条件仍未达到。",
+      "verification_refs": [
+        "检索记录.md；MT-R5-ESG-SEARCH；sources-v5.json"
+      ],
+      "anonymous_candidate_ids": [
+        "C009",
+        "C015"
+      ]
+    },
+    {
+      "id": "C008-A2",
+      "original_issue_id": "R-ESG",
+      "condition": "将F3已有内控瑕疵归因与ESG结论分开，依实际风险应用原F4联动并检查诚信、危机处理；未知不得包装为已核低/中风险，不因未取得监管罚单直接扣分。",
+      "status": "closed",
+      "lane": "research",
+      "reason": "F3内控瑕疵归因与ESG边界已分开，诚信/危机联动有说明，未因无罚单机械加减分。其“F4不新增扣分”只能是候选状态，不能替代C008-A1关闭或批准F3最终值。",
+      "verification_refs": [
+        "workpaper F3、诚信与透明度、危机处理能力"
+      ],
+      "anonymous_candidate_ids": [
+        "C028",
+        "C032"
+      ]
+    }
+  ],
+  "approved_parameters": {
+    "company_total": null,
+    "management_total": null,
+    "combined_total": null,
+    "F1": -2,
+    "D2_judgment": 4
+  },
+  "approved_scope_note": "F1负档修复获核，D2=4的判断保留但2025口径文字未验收；不批准完整评分底稿，不将管理层67视为独立获批总分。",
+  "candidate_scores": {
+    "company": 82.5,
+    "management": 67,
+    "combined": 149.5,
+    "status": "unapproved_historical_candidate"
+  },
+  "withdrawn_fields": [
+    "A2=2作为获批评分",
+    "A2=[2,3]作为有据边界",
+    "公司82.5/管理67/合计149.5作为最终分",
+    "A3=4及F2.5=2已完成验收的声明",
+    "只有控制史尚未闭合的声明"
+  ],
+  "score_bridge": {
+    "v4": {
+      "company": 87.5,
+      "management": 67,
+      "combined": 154.5
+    },
+    "v5_candidate_changes": [
+      {
+        "item": "F1",
+        "before": 2,
+        "after": -2,
+        "delta": -4,
+        "approved": true
+      },
+      {
+        "item": "A2",
+        "before": 3,
+        "after": 2,
+        "delta": -1,
+        "approved": false
+      }
+    ],
+    "v5_candidate_arithmetic": {
+      "company": 82.5,
+      "management": 67,
+      "combined": 149.5
+    },
+    "approved_final_totals": null
+  },
+  "valuation_approval_scope": {
+    "status": "out_of_scope",
+    "approved": false,
+    "target_price": null,
+    "certainty": null,
+    "buy_price": null
+  },
+  "remaining_acceptance_ids": [
+    "C001-A1",
+    "C001-A2",
+    "C003-A1",
+    "C004-A1",
+    "C005-A1",
+    "C005-A2",
+    "C009-A1",
+    "C007-A1",
+    "C008-A1"
+  ],
+  "closed_acceptance_ids": [
+    "C002-A1",
+    "C010-A1",
+    "C002-A2",
+    "C005-A3",
+    "C006-A1",
+    "C007-A2",
+    "C008-A2"
+  ],
+  "score_repair_scope": [
+    {
+      "group": "company",
+      "item": "A2",
+      "acceptance_ids": [
+        "C003-A1",
+        "C004-A1"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "A3",
+      "acceptance_ids": [
+        "C001-A1",
+        "C001-A2"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "F1",
+      "acceptance_ids": [
+        "C002-A1",
+        "C010-A1",
+        "C002-A2",
+        "C006-A1"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "D2",
+      "acceptance_ids": [
+        "C005-A1"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "F2.5",
+      "acceptance_ids": [
+        "C005-A2",
+        "C009-A1"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "F3",
+      "acceptance_ids": [
+        "C008-A1",
+        "C008-A2"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "D1",
+      "acceptance_ids": [
+        "C005-A1",
+        "C005-A3"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "F2",
+      "acceptance_ids": [
+        "C005-A3"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "资本配置能力",
+      "acceptance_ids": [
+        "C001-A2",
+        "C005-A2",
+        "C005-A3"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "战略稳定性",
+      "acceptance_ids": [
+        "C005-A1",
+        "C005-A3"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "对股东友好度",
+      "acceptance_ids": [
+        "C005-A3"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "组织与人才能力",
+      "acceptance_ids": [
+        "C006-A1"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "诚信与透明度",
+      "acceptance_ids": [
+        "C006-A1",
+        "C008-A2"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "危机处理能力",
+      "acceptance_ids": [
+        "C006-A1",
+        "C008-A2"
+      ]
+    }
+  ],
+  "metadata_repair_scope": [
+    {
+      "field": "evidence_gaps",
+      "acceptance_ids": [
+        "C004-A1",
+        "C001-A2",
+        "C005-A2",
+        "C009-A1",
+        "C007-A1",
+        "C008-A1"
+      ]
+    }
+  ],
+  "next_trigger": "本轮不自动恢复。后续仅在补充决定性官方历史/资本/外部检索证据或用户明确重启、主任务重新授权后继续；沿用未闭合原验收ID，不更名绕过。",
+  "source_checks": [
+    {
+      "path": "财报/贵州茅台/贵州茅台2025年度报告.md",
+      "lines": [
+        96,
+        419,
+        427,
+        605,
+        611,
+        977,
+        1660
+      ],
+      "finding": "核营业收入与营业总收入区别、产能释放、基金/重组及持续治理问题。"
+    },
+    {
+      "path": "财报/贵州茅台/贵州茅台2024年度报告.md",
+      "lines": [
+        180,
+        637
+      ],
+      "finding": "核2024营业总收入及2025+9%目标。"
+    }
+  ]
+}

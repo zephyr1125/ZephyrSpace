@@ -1,0 +1,118 @@
+{
+  "dupont": {
+    "2023": {
+      "formula": "合并净利/收入×收入/平均资产×平均资产/平均合并权益",
+      "net_margin": 0.5248803851790048,
+      "asset_turnover": 0.5604384843877526,
+      "equity_multiplier": 1.2296744008194904,
+      "roe": 0.36172491680584307
+    },
+    "2024": {
+      "formula": "合并净利/收入×收入/平均资产×平均资产/平均合并权益",
+      "net_margin": 0.5227335936777954,
+      "asset_turnover": 0.5979213654739752,
+      "equity_multiplier": 1.2275795301763646,
+      "roe": 0.38368438193785337
+    },
+    "2025": {
+      "formula": "合并净利/收入×收入/平均资产×平均资产/平均合并权益",
+      "net_margin": 0.5052788651554344,
+      "asset_turnover": 0.5601986259290654,
+      "equity_multiplier": 1.2153532116218784,
+      "roe": 0.34401365790947386
+    }
+  },
+  "targets_vs_actual": {
+    "2021": {
+      "growth_target_pct": 10.5,
+      "target_total_revenue": 108282561023.84,
+      "actual_total_revenue": 109464278563.89,
+      "fixed_investment_plan": 6821000000,
+      "source": "MT-R5-AR2020 L521",
+      "target_gap": 1181717540.050003
+    },
+    "2022": {
+      "growth_target_pct": 15,
+      "target_total_revenue": 125883920348.47,
+      "actual_total_revenue": 127553959355.97,
+      "fixed_investment_plan": 6969000000,
+      "source": "MT-R5-AR2021 L556",
+      "target_gap": 1670039007.5
+    },
+    "2023": {
+      "growth_target_pct": 15,
+      "target_total_revenue": 146687053259.37,
+      "actual_total_revenue": 150560330316.45,
+      "fixed_investment_plan": 7109000000,
+      "source": "MT-R5-AR2022 L588",
+      "target_gap": 3873277057.080017
+    },
+    "2024": {
+      "growth_target_pct": 15,
+      "target_total_revenue": 173144379863.92,
+      "actual_total_revenue": 174144069958.25,
+      "fixed_investment_plan": 6179000000,
+      "source": "MT-R5-AR2023 L643",
+      "target_gap": 999690094.3299866
+    },
+    "2025": {
+      "growth_target_pct": 9,
+      "target_total_revenue": 189817036254.49,
+      "actual_total_revenue": 172054171890.91,
+      "fixed_investment_plan": 4711000000,
+      "source": "MT-R5-AR2024 L637",
+      "target_gap": -17762864363.579987
+    }
+  },
+  "dividends": {
+    "2021": {
+      "attribution": "2020年度",
+      "per10": 192.93,
+      "implementation": "2021-06",
+      "source": "MT-R5-AR2021 L770",
+      "attributable_profit": 46697285429.81
+    },
+    "2022": {
+      "attribution": "2021年度+特别分红",
+      "cash_dividend": 54751381113.01,
+      "implementation": "2022-06,2022-12",
+      "source": "MT-R5-AR2022 L799-L821",
+      "attributable_profit": 62716443738.27
+    },
+    "2023": {
+      "attribution": "2022年度+特别分红",
+      "per10": [
+        259.11,
+        191.06
+      ],
+      "share_base": 1256197800,
+      "implementation": "2023-06,2023-12",
+      "source": "MT-R5-AR2023 L854-L856",
+      "attributable_profit": 74734071550.75,
+      "cash_dividend": 56550256362.600006
+    },
+    "2024": {
+      "attribution": "2023年度+2024中期",
+      "per10": [
+        308.76,
+        238.82
+      ],
+      "share_base": 1256197800,
+      "implementation": "2024-06,2024-12",
+      "source": "MT-R5-AR2024 L843-L845",
+      "attributable_profit": 86228146421.62,
+      "cash_dividend": 68786879132.4
+    },
+    "2025": {
+      "attribution": "2024年度+2025中期",
+      "per10": [
+        276.24,
+        239.57
+      ],
+      "share_base": "年度分红按实施登记日扣回购股；中期为1252270200",
+      "implementation": "2025-06,2025-12",
+      "source": "MT-R5-AR2025 L875-L897",
+      "attributable_profit": 82320067101.68
+    }
+  }
+}

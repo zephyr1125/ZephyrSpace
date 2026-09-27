@@ -1,0 +1,57 @@
+{
+  "root_thread_id": "01a0b99c-1c9b-7732-8dfe-cf7f4a687e21",
+  "roles": [
+    {
+      "role": "independent_test_executor",
+      "agent_path": "/root/token_r3_executor",
+      "agent_id": "01a0bfbb-876d-7e91-bd60-e2466e612c3a",
+      "actual_model": "gpt-6-astra",
+      "actual_effort": "low",
+      "actual_model_source": "C:\\Users\\zephy\\.codex\\sessions\\2026\\09\\21\\rollout-2026-09-21T00-52-13-01a0bfbb-876d-7e91-bd60-e2466e612c3a.jsonl",
+      "accounting": "作为本轮子任务计入总量，不能从角色小计排除"
+    },
+    {
+      "role": "triplet_review_facts",
+      "agent_path": "/root/token_r3_facts",
+      "agent_id": "01a0bfd6-56f3-73e0-88a6-14ce22116b5e",
+      "actual_model": "gpt-5.6-terra",
+      "actual_effort": "low",
+      "actual_model_source": "C:\\Users\\zephy\\.codex\\sessions\\2026\\09\\21\\rollout-2026-09-21T01-21-30-01a0bfd6-56f3-73e0-88a6-14ce22116b5e.jsonl"
+    },
+    {
+      "role": "triplet_review_reasoning",
+      "agent_path": "/root/token_r3_reasoning",
+      "agent_id": "01a0bfd6-8e77-7793-aea1-eaf9768ffd89",
+      "actual_model": "gpt-5.6-sol",
+      "actual_effort": "low",
+      "actual_model_source": "C:\\Users\\zephy\\.codex\\sessions\\2026\\09\\21\\rollout-2026-09-21T01-21-44-01a0bfd6-8e77-7793-aea1-eaf9768ffd89.jsonl"
+    },
+    {
+      "actual_model": "gpt-5.6-terra",
+      "requested_effort": "low",
+      "actual_model_source": "C:/Users/zephy/.codex/sessions/2026/09/21/rollout-2026-09-21T00-53-04-01a0bfbc-4ed4-7471-9734-6ff1a80ba677.jsonl turn_context",
+      "role": "triplet_writer",
+      "dispatch_method": "custom_role",
+      "agent_id": "01a0bfbc-4ed4-7471-9734-6ff1a80ba677",
+      "agent_path": "/root/token_r3_executor/writer",
+      "actual_effort": "low",
+      "requested_model": "gpt-5.6-terra",
+      "status": "completed_candidate_only"
+    },
+    {
+      "role": "triplet_adjudicator",
+      "agent_id": "01a0bfdb-d3bc-75d3-9acf-38b751a0a486",
+      "agent_path": "/root/token_r3_adjudicator",
+      "actual_model": "gpt-6-astra",
+      "actual_effort": "low",
+      "actual_model_source": "C:\\Users\\zephy\\.codex\\sessions\\2026\\09\\21\\rollout-2026-09-21T01-27-30-01a0bfdb-d3bc-75d3-9acf-38b751a0a486.jsonl"
+    }
+  ],
+  "failed_dispatches": [
+    {
+      "role": "triplet_review_facts",
+      "agent_id": null,
+      "status": "not_dispatched_tool_capacity_blocked"
+    }
+  ]
+}

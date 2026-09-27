@@ -1,0 +1,86 @@
+{
+  "root_thread_id": "01a0b99c-1c9b-7732-8dfe-cf7f4a687e21",
+  "executor_thread_id": "01a0bfbb-876d-7e91-bd60-e2466e612c3a",
+  "started_at": "2026-09-21T00:51:47.052494+08:00",
+  "scope": "独立32项评分；未完成完整三件套",
+  "gate_status": "not_applicable",
+  "score_state": "not_approved",
+  "research_state": "pending",
+  "repair_rounds": 0,
+  "roles": [
+    {
+      "actual_model_source": "运行时turn_context",
+      "agent_id": "01a0bfbb-876d-7e91-bd60-e2466e612c3a",
+      "role": "executor",
+      "actual_model": "gpt-6-astra",
+      "actual_effort": "low",
+      "status": "running"
+    },
+    {
+      "actual_model": "gpt-5.6-terra",
+      "requested_effort": "low",
+      "actual_model_source": "C:/Users/zephy/.codex/sessions/2026/09/21/rollout-2026-09-21T00-53-04-01a0bfbc-4ed4-7471-9734-6ff1a80ba677.jsonl turn_context",
+      "role": "triplet_writer",
+      "dispatch_method": "custom_role",
+      "agent_id": "01a0bfbc-4ed4-7471-9734-6ff1a80ba677",
+      "agent_path": "/root/token_r3_executor/writer",
+      "actual_effort": "low",
+      "requested_model": "gpt-5.6-terra",
+      "status": "completed_candidate_only"
+    },
+    {
+      "role": "triplet_review_facts",
+      "agent_id": null,
+      "status": "not_dispatched_tool_capacity_blocked"
+    },
+    {
+      "role": "triplet_review_reasoning",
+      "agent_id": null,
+      "status": "not_dispatched_tool_capacity_blocked"
+    },
+    {
+      "role": "triplet_adjudicator",
+      "agent_id": null,
+      "status": "not_dispatched_tool_capacity_blocked"
+    }
+  ],
+  "stages": [
+    {
+      "ended_at": "2026-09-20T16:53:45.1990528Z",
+      "status": "complete",
+      "sources_hash_verified": 10,
+      "stage": "source_views_and_score_packet"
+    },
+    {
+      "status": "running",
+      "started_at": "2026-09-21T00:53:04+08:00",
+      "stage": "writer"
+    },
+    {
+      "ended_at": "2026-09-20T17:02:18.5209926Z",
+      "stage": "pre_review_substantive_check",
+      "reason": "历史控制及财务窗口不足；公开待查资料被用作扣分；尚未冻结和双审，不计合并修复轮",
+      "status": "returned_to_current_stage"
+    },
+    {
+      "stage": "candidate_correction_and_freeze",
+      "ended_at": "2026-09-20T17:16:33.104423+00:00",
+      "status": "complete_candidate_only",
+      "next_stage": "independent_dual_review",
+      "next_stage_status": "tool_capacity_blocked"
+    }
+  ],
+  "dispatch_failures": [
+    {
+      "error": "agent thread limit reached",
+      "created": false,
+      "attempted_at": "2026-09-20T17:08:31.4073973Z",
+      "role": "triplet_evidence",
+      "impact": "定向证据并行不可用；作者继续补证。可能影响后续新双审。"
+    }
+  ],
+  "ended_at": "2026-09-20T17:16:33.104423+00:00",
+  "status": "tool_capacity_blocked",
+  "pre_review_revision_count": 3,
+  "freeze_workpaper_sha256": "12c0e8c4b36fdde3936d289b62adcf00661ae0b3d053acf6b5a5e8fbc0f386de"
+}

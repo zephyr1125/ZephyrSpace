@@ -1,0 +1,27 @@
+{
+  "status": "failed",
+  "score_state": "not_approved",
+  "approved_scores": null,
+  "candidate_only": {
+    "company": 83.5,
+    "management": 78
+  },
+  "full_32_item_dual_review": true,
+  "closed_acceptance_ids_count": 9,
+  "unclosed_acceptance_ids_count": 2,
+  "repair_rounds": 2,
+  "exception_used": true,
+  "research_status": "execution_incomplete_exception_exhausted",
+  "started_at": "2026-09-20T17:58:35.152365+00:00",
+  "ended_at": "2026-09-20T19:03:23.831853+00:00",
+  "elapsed_seconds": 3888.679488,
+  "noncached_plus_output": 1713492,
+  "roles_noncached_plus_output": 1560136,
+  "cached_input_tokens": 45572224,
+  "target_metric": 928196.5,
+  "token_target_met": false,
+  "wall_clock_target_met": false,
+  "publish_allowed": false,
+  "scope": "仅评分验证，不外推估值或完整三件套",
+  "remaining": "资本利用率阈值算术及五年实际分红/截止前股东变动核验"
+}

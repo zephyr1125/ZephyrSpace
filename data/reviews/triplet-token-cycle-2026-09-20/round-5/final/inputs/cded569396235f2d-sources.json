@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "evidence_version": "external-r1-2026-09-21",
+  "sources": [
+    {
+      "source_id": "MT5-EXT-SRC-IPO-2001",
+      "title": "贵州茅台酒股份有限公司招股说明书",
+      "publisher": "上海证券交易所",
+      "url": "https://www.sse.com.cn/disclosure/listedinfo/announcement/c/600519_20010726_2.pdf",
+      "published_date": "2001-07-26",
+      "accessed_date": "2026-09-21",
+      "locator": "检索响应摘录：主要客户依赖风险、自然生态环境风险；原PDF页码以复核时打开原件为准。"
+    },
+    {
+      "source_id": "MT5-EXT-SRC-CNINFO-2026-004",
+      "title": "贵州茅台关于高级管理人员被实施留置的公告（临2026-004）",
+      "publisher": "巨潮资讯网/贵州茅台",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-03-14/1225009431.PDF",
+      "published_date": "2026-03-14",
+      "accessed_date": "2026-09-21",
+      "locator": "公告全文。"
+    },
+    {
+      "source_id": "MT5-EXT-SRC-2026H1",
+      "title": "贵州茅台酒股份有限公司2026年半年度报告",
+      "publisher": "巨潮资讯网/贵州茅台",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-08-15/1225475868.PDF",
+      "published_date": "2026-08-15",
+      "accessed_date": "2026-09-21",
+      "local_view": "data/reviews/triplet-token-cycle-2026-09-20/round-5/source-views/贵州茅台2026半年度报告.md",
+      "locator": "视图L389、L419、L598、L649、L663、L773。"
+    },
+    {
+      "source_id": "MT5-EXT-SRC-2025AR",
+      "title": "贵州茅台酒股份有限公司2025年年度报告",
+      "publisher": "贵州茅台",
+      "local_view": "data/reviews/triplet-token-cycle-2026-09-20/round-5/source-views/贵州茅台2025年度报告.md",
+      "version_hash": "671846da0415046e5ba83adde16a4600f4a758ce1cb895c232fac17a35023b4b",
+      "locator": "视图L977、L1027、L1123、L1348、L1354、L1496、L1720、L3713。"
+    },
+    {
+      "source_id": "MT5-EXT-SRC-2024H1",
+      "title": "贵州茅台酒股份有限公司2024年半年度报告",
+      "publisher": "贵州茅台",
+      "local_view": "data/reviews/triplet-token-cycle-2026-09-20/round-5/source-views/贵州茅台2024半年度报告.md",
+      "version_hash": "51279f2851ae136e20e39d512193d752fbea0481da157885d45e3e33f8ba6a5b",
+      "locator": "视图L121-L123、L155-L157、L179、L239、L283。"
+    },
+    {
+      "source_id": "MT5-EXT-SRC-2023AR",
+      "title": "贵州茅台酒股份有限公司2023年年度报告",
+      "publisher": "贵州茅台",
+      "local_view": "data/reviews/triplet-token-cycle-2026-09-20/round-5/source-views/贵州茅台2023年度报告.md",
+      "version_hash": "cfd96c63c17ffd1625467e72ed1a799d484649e0edff9f1feab35f06b3fbf9a0",
+      "locator": "视图L683、L942、L1077、L1167、L1375。"
+    }
+  ]
+}

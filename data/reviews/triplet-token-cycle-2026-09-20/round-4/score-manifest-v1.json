@@ -1,0 +1,21 @@
+{
+  "stage": "full_32_item_dual_initial_review",
+  "frozen_at": "2026-09-20T18:15:54.978332+00:00",
+  "workpaper": "data\\reviews\\triplet-token-cycle-2026-09-20\\round-4\\writer\\v3\\workpaper.json",
+  "workpaper_sha256": "fd1c54b9f84713c644a9d91bc29e430b07738b1bb42a984236894e1f192ea0e9",
+  "files": {
+    "data/reviews/triplet-token-cycle-2026-09-20/round-4/writer/v3/workpaper.json": "fd1c54b9f84713c644a9d91bc29e430b07738b1bb42a984236894e1f192ea0e9",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-4/writer/v3/evidence-files.json": "958dfc9681b53310332e83a9c9433e6a69daf3e279ffb0eb444faaa0adae786d",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-4/writer/v3/论证.md": "643d82d23399457cb6eb046b4d4d90b16d4db3ba19d33e28ae72697b908b8a7c",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-4/writer/v3/check.json": "f7f707dd82f7108c8b4c98647d0ac0d78641337193542a25b9cd2b98d6b25b2d",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-4/writer/facts.json": "6f8d0611c54900e58306f86c7a527b57c7eb1ad74c0adfb0e524b3031eec3afd",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-4/writer/sources.json": "becc0f531ec9839fd1f99440d155f0a4a431ee798c436f8586de2e69e185b1c7",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-4/evidence/facts.json": "9ae82713cbeab8779b741b794ec9102c44a7e12fb99089aad9814182e3604181",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-4/evidence/sources.json": "5c7de7ad4aaa0ec40d70f8c5bda74b4d88a3ac335bd0b577994e5f413ae79b65",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-4/evidence/v2/facts.json": "f98d2554abb79b96bca92f02e25ccf2d2103a485410bc2e3c0194c3eca1997f0",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-4/evidence/v2/sources.json": "dd27823d0c7c810802c7d13348a230e65013ea52ce964c29d7448fe2ab0fd64a",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-4/evidence/检索记录.md": "946055b4e7c7b0b2ed768af8e2cdf79b1d995bd5eedf51dfcc70ad25c547c527",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-4/score-rules.md": "66a3034d0df68edfdc6a5d43f698130aac2a9902be66e7742c1bc0a05dc81e68",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-4/raw-inputs.json": "258cfbe61ecae67da8c27332a0ce943179e151197594768439f5cb79a4408ce6"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "checked_at": "2026-09-20T19:27:08Z",
+  "scope": "工具回归、唯一技能入口、原模块迁移；不证明研究评分获批，不占真实研究轮次",
+  "results": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "tests",
+        "chunk_id": "296afa",
+        "wall_time_seconds": 4.6409073,
+        "exit_code": 0,
+        "original_token_count": 158,
+        "output": "复核目录：C:\\Users\\zephy\\AppData\\Local\\Temp\\tmplmzopqi6\\data\\reviews\\test\\20260920T192703027733Z\r\n正在执行第一阶段：独立判断。\r\n正在执行第二阶段：初稿对照。\r\n外部意见已保存，等待 Codex 事实核查和主 Agent 裁决；未修改报告与 Watchlist。\r\n复核目录：C:\\Users\\zephy\\AppData\\Local\\Temp\\tmp2iy2d536\\data\\reviews\\test\\20260920T192703066523Z\r\n正在执行第一阶段：独立判断。\r\n正在执行第二阶段：初稿对照。\r\n外部复核未完成：第二阶段失败\r\n----------------------------------------------------------------------\r\nRan 81 tests in 4.071s\r\n\r\nOK\r\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "entry",
+        "chunk_id": "58e5f0",
+        "wall_time_seconds": 0.4894603,
+        "exit_code": 0,
+        "original_token_count": 45,
+        "output": "检查通过：唯一入口 C:\\Users\\zephy\\.agents\\skills\\company-triplet -> E:\\ObsidianVaults\\ZephyrSpace\\skills\\company-triplet；旧PreBuy及独立模块入口均不存在。\r\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "migration",
+        "chunk_id": "431c2e",
+        "wall_time_seconds": 0.4052075,
+        "exit_code": 0,
+        "original_token_count": 15,
+        "output": "{\r\n  \"status\": \"migration_verified\",\r\n  \"modules\": 3\r\n}\r\n"
+      }
+    }
+  ]
+}

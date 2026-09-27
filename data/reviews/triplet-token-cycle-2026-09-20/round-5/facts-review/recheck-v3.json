@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "review_role": "triplet_review_facts",
+  "stage": "last_exception_final_directed_recheck",
+  "frozen_workpaper": "data/reviews/triplet-token-cycle-2026-09-20/round-5/rebuilt-sol/workpaper.json",
+  "frozen_workpaper_sha256": "7006717b85dd80dd524ac9fe874eaa363046e8859495361003d7337b0205f11e",
+  "results": [
+    {"id":"R5-HISTORY-A01","status":"passed","evidence":"repair-sol/facts.json:MT5SOL-HISTORY-001以2021—2025年报及2026H1形成连续披露链；A2明确1999设立/2001上市和监管名称、持股小幅变化不构成实质控制变更。","remaining":""},
+    {"id":"R5-HISTORY-A02","status":"passed","evidence":"MT5SOL-HISTORY-002核IPO用途和2002执行、2001—2013送转股本沿革、近年募集资金/债券/可转债不适用、筹资现金流入为零、2025商誉为空及处置子公司现金为空，并保留检索边界。","remaining":""},
+    {"id":"R5-HISTORY-A03","status":"passed","evidence":"A2/A3均说明相邻档；A3未将关键词未命中说成全历史绝对不存在，未知未直接扣分。","remaining":""},
+    {"id":"R5-CHAIN-A01","status":"passed","evidence":"MT5SOL-CHAIN-001登记上游前五供应商38.12%、关联方15.22%、地域替代约束、客户集中10.10%、2026H1成本传导反例、预收政策扰动、需求传导边界及成熟调整/平台偏弱周期位置。","remaining":""},
+    {"id":"R5-CHAIN-A02","status":"passed","evidence":"C2区分2024H1提价/销量的品牌定价证据与2026H1成本+21.81%、收入+1.47%的非即时完全转嫁反例，5分判断未以高毛利替代成本传导。","remaining":""},
+    {"id":"R5-LATEST-A02","status":"passed","evidence":"E3新增2024H1量价与2026H1收入、成本、利润信号，归因为量价增速放缓及成本上行而非一次性损益；C2已联动，B4/D3维持裁决已核判断。","remaining":""},
+    {"id":"R5-ACCOUNTING-A01","status":"passed","evidence":"MT5SOL-ACCOUNTING-001分别列收入确认和关联交易KAM、关注点及控制/实质审计程序；E5.5/F3/诚信均未把KAM作为已发生错报。","remaining":""},
+    {"id":"R5-ACCOUNTING-A02","status":"passed","evidence":"2023年报L2234/L2238核解释16号：比较期追溯调整、合并权益-26,606,990.22元及所得税费用+903,191.13元；修复事实登记2024—2025无政策/估计变更，2025应收账龄和8.30%准备、0.00209%存货跌价率及商誉为空。","remaining":""},
+    {"id":"R5-ACCOUNTING-A03","status":"passed","evidence":"E5.5将解释16号明确为法定变更且非当期利润增益，并用计提、商誉、两项KAM重新支持3分；F3及诚信说明不因KAM自动联动扣分，历史治理瑕疵仍保留。","remaining":""},
+    {"id":"R5-DIVIDEND-A01","status":"passed","evidence":"MT5SOL-DIVIDEND-001修正2020单位为242.361亿元，且按归属年度重新配对；独立复算2023特别分红191.06元/10股×1,256,197,800股=240.009亿元，2024中期238.82元/10股对应约300.01亿元，未跨年重复。","remaining":""},
+    {"id":"R5-DIVIDEND-A03","status":"passed","evidence":"F2补近五年无新增融资稀释、注销回购、集团增持及近五年减持检索边界；资本配置18分另保留项目/基金ROIC未验证及国资自主性限制，股东友好13分保留个人绑定、激励和未履约承诺限制。","remaining":""},
+    {"id":"R5-ATTRIBUTION-A01","status":"passed","evidence":"对股东友好度13/15和表达4/5均列已核相邻档限制：个人利益绑定弱、无股权激励/未履约承诺，以及对目标未达和渠道调整复盘不足；未再以材料缺失或检索未命中扣分。","remaining":""},
+    {"id":"R5-TALENT-A01","status":"passed","evidence":"MT5SOL-TALENT-001按2021-01-01至2026-09-20窗口逐年列非独董及高管变动，按人去重为五年12人、近三年7人；2024年5—10月4人离任，接任来源及关键岗位无超过6个月空缺均已列明。","remaining":""},
+    {"id":"R5-TALENT-A02","status":"passed","evidence":"组织与人才能力将稳定性偏弱、内部继任/无长期空缺、人才留存未知、任期制考核、无股权激励及未履约承诺合并判断为4/10，未机械相加；危机处理同步反映密集变动和接任安排。","remaining":""}
+  ],
+  "closed_item_regression": "已闭合的R5-STATUS-A01/A02、R5-DIVIDEND-A02及R5-ATTRIBUTION-A02在rebuilt-sol中仍保持：蒋焰截至截止日已解聘且调查未结案、F1=-2历史档不追加现任降级、2025中期36.44%仅作已实施下限、管理层战略稳定性不再因缺原话扣分。",
+  "new_findings": []
+}

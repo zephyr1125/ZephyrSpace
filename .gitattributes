@@ -1,4 +1,7 @@
 # 冻结试验按原始字节计算SHA256，禁止Git换行转换破坏复核。
+/data/reviews/triplet-token-cycle-2026-09-20/** -text
+/data/reviews/boot-barn-2026-09-21/** -text
+"/财报/Boot Barn/**" -text
 /data/reviews/batch1-*/** -text
 /data/reviews/consun-huaming-repairs-2026-09-08/** -text
 "/深度分析/康臣药业 深度分析 81 2026-09-08.md" -text

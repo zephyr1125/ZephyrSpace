@@ -1,0 +1,417 @@
+{
+  "schema_version": 1,
+  "score_display": "integer_half_up",
+  "score_rule_validation": "explicit_tiers_v2",
+  "company": "贵州茅台",
+  "ticker": "600519.SH",
+  "cutoff": "2026-09-20",
+  "score_state": "pending_review",
+  "research_state": "pending_review",
+  "publish_allowed": false,
+  "scores": {
+    "company": {
+      "items": [
+        {
+          "id": "A1",
+          "score": 2,
+          "rule_ref": "score-rules.md:A1",
+          "reason": "国有控股白酒核心资产具历史品牌与产区禀赋，但原规则的起源分类不是技术或先发创业型，取政策红利档。",
+          "evidence_refs": [
+            "GZMT-R4-CTRL-001"
+          ]
+        },
+        {
+          "id": "A2",
+          "score": 3,
+          "rule_ref": "score-rules.md:A2",
+          "reason": "1952至2026可得材料的控制链均指向国有体系，1999设立后2020和2026两端均为贵州省国资委—茅台集团控制；2020后持股口径差异不自行推定控制转移。",
+          "evidence_refs": [
+            "GZMT-R4V2-CTRL-001",
+            "GZMT-R4-CTRL-002"
+          ]
+        },
+        {
+          "id": "A3",
+          "score": 4,
+          "rule_ref": "score-rules.md:A3",
+          "reason": "上市以来仅核得2001首发现金融资，资金承诺投向27个主业项目，2002已核一项习酒资产及技改执行；2002—2015股本增加均为送股或资本公积转增，2021—2024无股本变化且可转债、优先股不适用，2025—2026H1仅回购注销缩股。定期报告对重大资产出售列不适用，未见以出售资产保利润，支持4分；不宣称逐件核完27项目。",
+          "evidence_refs": [
+            "GZMT-R4SOL-FINANCING-001",
+            "GZMT-R4-CAP-002"
+          ]
+        },
+        {
+          "id": "B0",
+          "score": 1,
+          "rule_ref": "score-rules.md:B0",
+          "reason": "既有首发材料仅足以核身份和募投，未取得早期九要素与三个判断所需业务原文；按原规则部分覆盖1分，撤回未经证实的早期重资产分类。",
+          "evidence_refs": [
+            "GZMT-R4V2-CAP-001"
+          ]
+        },
+        {
+          "id": "B1",
+          "score": 3,
+          "rule_ref": "score-rules.md:B1",
+          "reason": "收入高度集中于茅台酒及系列酒，但产品层级和直销/批发代理双渠道清晰，非瘦狗，按“过度集中但逻辑清晰”档。",
+          "evidence_refs": [
+            "MOUTAI-AR25"
+          ]
+        },
+        {
+          "id": "B2",
+          "score": 3,
+          "rule_ref": "score-rules.md:B2",
+          "reason": "白酒消费品具有复购、预收和品牌渠道特征；2025主营收入占营业收入99.96%，利润由主营而非一次性项目驱动。",
+          "evidence_refs": [
+            "MOUTAI-AR25",
+            "MOUTAI-FIN-002"
+          ]
+        },
+        {
+          "id": "B3",
+          "score": 6,
+          "rule_ref": "score-rules.md:B3",
+          "reason": "2021—2025酒类毛利率91.62%、92.00%、92.11%、92.01%、91.23%，长期显著高于五粮液、泸州老窖代表性样本；2023年飞天/五星出厂价主动上调约20%，且不混同市场指导价。2025毛利率下降0.78个百分点及2026H1收入微增、利润下降说明定价权并非无条件，仍属有历史验证的强档6分。",
+          "evidence_refs": [
+            "GZMT-R4SOL-B3-001"
+          ]
+        },
+        {
+          "id": "B4",
+          "score": 3,
+          "rule_ref": "score-rules.md:B4",
+          "reason": "成熟行业、品牌稳定且增长主要内生，2025和2026H1收入与利润出现放缓，不能按行业成长期5分。",
+          "evidence_refs": [
+            "MOUTAI-FIN-001",
+            "MOUTAI-FIN-005"
+          ]
+        },
+        {
+          "id": "C1",
+          "score": 6,
+          "rule_ref": "score-rules.md:C1",
+          "reason": "按酒类收入同口径，茅台2023—2025为1472.19/1706.12/1687.75亿元，连续高于五粮液约764.47/831.27/371.04亿元及泸州老窖约300.77/310.53/256.06亿元；五粮液2025调整收入确认，故不机械比较增长。该Top3规模与三年领先支持行业龙头6分，但不是完整CR5或行业份额。",
+          "evidence_refs": [
+            "GZMT-R4SOL-C1-001"
+          ]
+        },
+        {
+          "id": "C2",
+          "score": 5,
+          "rule_ref": "score-rules.md:C2",
+          "reason": "客户集中度约10%、供应商35%—38%，下游分散而上游相对集中；高毛利与已核提价支持长期成本传导，但不证明即时转嫁。贮存和渠道可缓冲需求，2025收入毛利回落及2026H1利润下降表明不能消除周期冲击。四维综合仍支持产业链主导5分。",
+          "evidence_refs": [
+            "GZMT-R4SOL-C2C4-001",
+            "GZMT-R4SOL-B3-001"
+          ]
+        },
+        {
+          "id": "C3+C4",
+          "score": 9,
+          "rule_ref": "score-rules.md:C3+C4",
+          "reason": "核心产区自然条件与长期品牌心智最难复制，贮存形成时间成本；工艺可学习但稳定批量复制难，渠道可调整也可被竞品和新渠道替代。同行高毛利、系列酒结构调整和当期下滑均是反证。按整体壁垒持续性而非五个名词计数，综合仍支持五星9分。",
+          "evidence_refs": [
+            "GZMT-R4SOL-C2C4-001"
+          ]
+        },
+        {
+          "id": "D1",
+          "score": 4,
+          "rule_ref": "score-rules.md:D1",
+          "reason": "2023-2025年报均围绕品质、核心产区产能、渠道和品牌升级，计划项目连续，未见战略漂移。",
+          "evidence_refs": [
+            "MOUTAI-AR23",
+            "MOUTAI-AR24",
+            "MOUTAI-AR25"
+          ]
+        },
+        {
+          "id": "D2",
+          "score": 4,
+          "rule_ref": "score-rules.md:D2",
+          "reason": "2023、2024营业总收入目标均达成，2025约9%目标未达，连续三年为2/3；无管理层原话，原规则上限4分。",
+          "evidence_refs": [
+            "GZMT-R4R-D2-001"
+          ],
+          "original_statement_found": false,
+          "strategy_drift": false
+        },
+        {
+          "id": "D3",
+          "score": 1,
+          "rule_ref": "score-rules.md:D3",
+          "reason": "白酒行业处于周期性和结构性调整，2026H1收入仅增1.47%、归母净利降1.95%，外部环境为逆风。",
+          "evidence_refs": [
+            "MOUTAI-FIN-005"
+          ]
+        },
+        {
+          "id": "D5",
+          "score": 3,
+          "rule_ref": "score-rules.md:D5",
+          "reason": "2023-25人均收入总体上升但2025回落，研发投入比0.42%、0.41%、0.48%健康；未将无离职率误作零流失。",
+          "evidence_refs": [
+            "GZMT-R4R-D5-001"
+          ]
+        },
+        {
+          "id": "E1",
+          "score": 5,
+          "rule_ref": "score-rules.md:E1",
+          "reason": "2020—2025披露归母加权ROE为31.41%、29.90%、30.26%、34.19%、36.02%、32.53%。以合并净利/营业总收入、营业总收入/平均合并资产、平均合并资产/平均合并总权益统一拆解，2023—2025杜邦ROE为36.1747%、38.3684%、34.4014%；净利率约49.6%—51.5%，权益乘数仅1.22左右，经营利润率而非杠杆驱动，满足5分。与披露ROE的差异来自合并口径与归母加权口径。",
+          "evidence_refs": [
+            "GZMT-R4SOL-E1-001"
+          ]
+        },
+        {
+          "id": "E2",
+          "score": 5,
+          "rule_ref": "score-rules.md:E2",
+          "reason": "2023-2025 OCF/归母净利约89%、107%、75%，三年均值约90%；各年现金Capex后仍为正自由现金流。2022现金流波动已记录，不将其忽略。",
+          "evidence_refs": [
+            "MOUTAI-FIN-001",
+            "MOUTAI-FIN-002",
+            "MOUTAI-CAPEX-001"
+          ]
+        },
+        {
+          "id": "E3",
+          "score": 3,
+          "rule_ref": "score-rules.md:E3",
+          "reason": "2020-2025营收和归母净利CAGR各约12%，扣非与归母利润接近，未见依赖政府补贴或资产出售；2025转负及2026H1利润下滑为增长放缓反证。",
+          "evidence_refs": [
+            "MOUTAI-FIN-001",
+            "MOUTAI-FIN-002",
+            "MOUTAI-FIN-005"
+          ]
+        },
+        {
+          "id": "E4",
+          "score": 1.5,
+          "rule_ref": "score-rules.md:E4",
+          "reason": "2025合并资产负债率16.42%、披露短长借款为零，偿债宽裕。现金Capex在2024同比+78.59%且未按运营/非运营拆分，原规则扣0.5后为1.5。",
+          "evidence_refs": [
+            "MOUTAI-FIN-003",
+            "MOUTAI-CAPEX-001"
+          ],
+          "capex_check": {
+            "applicable": true,
+            "current": 46.7871205356,
+            "previous": 26.1975588879,
+            "unit": "亿元人民币",
+            "current_period": "2024年度",
+            "previous_period": "2023年度",
+            "evidence_refs": [
+              "MOUTAI-CAPEX-001"
+            ],
+            "split_complete": false,
+            "score_before_capex_adjustment": 2
+          }
+        },
+        {
+          "id": "E5",
+          "score": 2,
+          "rule_ref": "score-rules.md:E5",
+          "reason": "2025标准无保留审计、无商誉、应收账款极低；资产质量未见重大疑点。",
+          "evidence_refs": [
+            "MOUTAI-FIN-003",
+            "MOUTAI-FIN-004"
+          ]
+        },
+        {
+          "id": "E5.5",
+          "score": 3,
+          "rule_ref": "score-rules.md:E5.5",
+          "reason": "KAM为收入确认及关联交易，审计师已列对应程序；未见重大政策估计变更或持续经营KAM，取稳健档。关联交易金额较大仍在F3反映。",
+          "evidence_refs": [
+            "MOUTAI-FIN-004",
+            "MOUTAI-AR25"
+          ]
+        },
+        {
+          "id": "F1",
+          "score": -2,
+          "rule_ref": "score-rules.md:F1",
+          "reason": "两名前核心负责人近十年司法腐败事实已满足负2分档；持续治理缺口在F3和管理层项反映，不重复扣同一风险。",
+          "evidence_refs": [
+            "GZMT-R4V2-GOV-001",
+            "GZMT-R4V2-GOV-002",
+            "GZMT-R4R-GOV-001"
+          ]
+        },
+        {
+          "id": "F2",
+          "score": 5,
+          "rule_ref": "score-rules.md:F2",
+          "reason": "2021—2024潜在摊薄工具不适用且股本不变，2025—2026H1回购注销缩股；2023—2025分红规模高，2025年报披露最近三年现金分红与注销回购合计1960.09亿元。控股股东及技术开发公司2023—2026H1股份数连续桥仅见增持或不变，未把回购导致的比例变化当减持；截止日后段无新增原件保留为有界未知。股东回报和反摊薄记录支持5分。",
+          "evidence_refs": [
+            "GZMT-R4SOL-FINANCING-001",
+            "GZMT-R4V3-CAP-002"
+          ]
+        },
+        {
+          "id": "F2.5",
+          "score": 2,
+          "rule_ref": "score-rules.md:F2.5",
+          "reason": "6400吨系列酒项目预算34.5416亿元，已投产并释放，2023系列酒实际产能相对设计产能利用率96.57%。按新增产能满产、每吨经营贡献5/7.5/10万元，预算简单经营贡献率为9.26%/13.90%/18.53%；低情景在利用率约54%以上才覆盖8%资本成本代理。该边界不是IRR，也不归因全公司利润。另有基金60亿元待缴及未实现回报，故维持2分但保留项目级IRR未知。",
+          "evidence_refs": [
+            "GZMT-R4SOL-CAPITAL-001"
+          ],
+          "positive_precedent": false
+        },
+        {
+          "id": "F3",
+          "score": 2,
+          "rule_ref": "score-rules.md:F3",
+          "reason": "关联交易KAM与长期激励承诺、兼职规范的治理瑕疵容纳于2分；未归因恶意失信。",
+          "evidence_refs": [
+            "MOUTAI-FIN-004",
+            "GZMT-R4R-GOV-001"
+          ]
+        }
+      ],
+      "total": 83.5
+    },
+    "management": {
+      "items": [
+        {
+          "id": "诚信与透明度",
+          "score": 12,
+          "rule_ref": "score-rules.md:管理层评分",
+          "reason": "司法腐败与持续治理承诺缺口限制诚信，公开披露不抵消历史事实。",
+          "evidence_refs": [
+            "GZMT-R4V2-GOV-001",
+            "GZMT-R4V2-GOV-002",
+            "GZMT-R4R-GOV-001"
+          ]
+        },
+        {
+          "id": "资本配置能力",
+          "score": 21,
+          "rule_ref": "score-rules.md:管理层评分",
+          "reason": "核心产能项目已投产且高利用，保守经营贡献情景在合理利用率下高于资金成本代理；持续分红与低杠杆体现纪律。项目级IRR未公开、基金60亿元待缴且回报尚未实现，限制满分但不否定主业配置记录，维持21分。",
+          "evidence_refs": [
+            "GZMT-R4SOL-CAPITAL-001",
+            "MOUTAI-CAPEX-004"
+          ]
+        },
+        {
+          "id": "战略稳定性",
+          "score": 13,
+          "rule_ref": "score-rules.md:管理层评分",
+          "reason": "两年达目标、2025未达不等于方向漂移；战略连续，执行反证已纳入。",
+          "evidence_refs": [
+            "GZMT-R4R-D2-001"
+          ]
+        },
+        {
+          "id": "对股东友好度",
+          "score": 14,
+          "rule_ref": "score-rules.md:管理层评分",
+          "reason": "连续高额分红、回购注销、控股股东增持及无摊薄工具构成明确正面记录；已核持续治理承诺与代理制衡约束限制满分。14分来自正面回报与治理约束并列，不以资料缺口机械扣分。",
+          "evidence_refs": [
+            "GZMT-R4SOL-FINANCING-001",
+            "GZMT-R4R-GOV-001"
+          ]
+        },
+        {
+          "id": "危机处理能力",
+          "score": 7,
+          "rule_ref": "score-rules.md:管理层评分",
+          "reason": "留置通知、公告、免职与补位时间链支持透明沟通和连续性；整改机制及最终司法结论未核，非高档。",
+          "evidence_refs": [
+            "GZMT-R4R-CRISIS-001"
+          ]
+        },
+        {
+          "id": "组织与人才能力",
+          "score": 7,
+          "rule_ref": "score-rules.md:管理层评分",
+          "reason": "长期代行与治理边界限制组织分，留置后人事补位支持职责连续；不把未知动机当零流失。",
+          "evidence_refs": [
+            "GZMT-R4R-GOV-001",
+            "GZMT-R4R-CRISIS-001"
+          ]
+        },
+        {
+          "id": "表达清晰度与认知质量",
+          "score": 4,
+          "rule_ref": "score-rules.md:管理层评分",
+          "reason": "目标明确且可核，2025未达不把目标清晰等同兑现。",
+          "evidence_refs": [
+            "GZMT-R4R-D2-001"
+          ]
+        }
+      ],
+      "total": 78
+    }
+  },
+  "valuation": {
+    "status": "deferred",
+    "currency": "CNY",
+    "reason": "本轮授权仅至公司及管理层评分；正式估值和长报告不在范围。",
+    "models": [],
+    "target_price": null,
+    "certainty": null,
+    "buy_price": null
+  },
+  "bridges": [],
+  "bridges_not_applicable": "本轮未开展正式估值，未建立权益价值桥。",
+  "evidence_gaps": [
+    {
+      "affected_items": [
+        "B0"
+      ],
+      "kind": "public_not_checked",
+      "impact": "首发材料身份与募投已核，但早期业务九要素和三个判断的官方原文未取得；B0已按部分覆盖1分。",
+      "search_scope": "2001招股书业务、客户、渠道、成本及工艺章节。",
+      "evidence_refs": [
+        "GZMT-R4V2-CAP-001"
+      ]
+    },
+    {
+      "affected_items": [
+        "F2.5",
+        "资本配置能力"
+      ],
+      "kind": "unpublished",
+      "impact": "项目级税后现金流、营运资本、维护资本支出及IRR未公开；本稿用已投产、利用率和单位经营贡献敏感性形成可复算边界，未将合并ROE当项目回报。若单位贡献低于4.32万元/吨或利用率显著低于54%（8%资本成本代理），须重评。",
+      "search_scope": "项目竣工决算、分项目销量售价成本与基金定期报告。",
+      "evidence_refs": [
+        "GZMT-R4SOL-CAPITAL-001"
+      ]
+    },
+    {
+      "affected_items": [
+        "F2",
+        "对股东友好度"
+      ],
+      "kind": "public_not_checked",
+      "impact": "2023—2026H1控股股东和技术开发公司股份数连续桥只见增持或不变；冻结包未取得2026-07-01至2026-09-20新增股东权益变动原件。该短尾未知不改变已核五年无摊薄、高分红及回购注销判断；若出现大额不当减持则重评。",
+      "search_scope": "2026-07-01至2026-09-20控股股东权益变动公告。",
+      "evidence_refs": [
+        "GZMT-R4SOL-FINANCING-001"
+      ]
+    },
+    {
+      "affected_items": [
+        "诚信与透明度",
+        "危机处理能力",
+        "组织与人才能力"
+      ],
+      "kind": "public_not_checked",
+      "impact": "留置通知、公告、免职与补位已核；最终司法结论、整改机制及动机未取得。",
+      "search_scope": "2026-03-30后留置处置、整改及人事公告。",
+      "evidence_refs": [
+        "GZMT-R4R-CRISIS-001",
+        "GZMT-R4-GOV-002"
+      ]
+    }
+  ],
+  "qualification": {
+    "highest_score_gate": "A_CORE",
+    "status": "pending_review",
+    "reason": "仅重算评分门槛，须复核红线和全部入池条件"
+  }
+}

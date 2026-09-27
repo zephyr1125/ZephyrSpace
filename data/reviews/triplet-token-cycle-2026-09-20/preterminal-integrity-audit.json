@@ -1,0 +1,27 @@
+{
+  "checked_at": "2026-09-20T19:35:56.772644+00:00",
+  "scope": "前四轮归档哈希与原模块/历史研究修改边界；第五轮仍运行",
+  "snapshot_checks": [
+    {
+      "manifest": "data/reviews/triplet-token-cycle-2026-09-20/round-1/final/input-snapshots.json",
+      "count": 18,
+      "mismatches": []
+    },
+    {
+      "manifest": "data/reviews/triplet-token-cycle-2026-09-20/round-2/final/input-snapshots.json",
+      "count": 39,
+      "mismatches": []
+    },
+    {
+      "manifest": "data/reviews/triplet-token-cycle-2026-09-20/round-3/final-terminal/input-snapshots.json",
+      "count": 21,
+      "mismatches": []
+    },
+    {
+      "manifest": "data/reviews/triplet-token-cycle-2026-09-20/round-4/final/input-snapshots.json",
+      "count": 49,
+      "mismatches": []
+    }
+  ],
+  "protected_changes": []
+}

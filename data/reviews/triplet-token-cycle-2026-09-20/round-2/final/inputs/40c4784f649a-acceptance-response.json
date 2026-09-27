@@ -1,0 +1,20 @@
+{
+ "decision_sha256":"9ba314ae7d3ded6db144aed730482f9fa3f104d02bc9152e6607b13ac7d246cf",
+ "responses":[
+  {"id":"C001","status":"closed","evidence_refs":["R002"],"response":"E4已按-33.15%触发且未拆分，从2降至1.5；F2.5单独重评。"},
+  {"id":"C002","status":"closed","evidence_refs":[],"response":"新总分只由rebuilt-v2计算，论证不再手填。"},
+  {"id":"C003","status":"closed","evidence_refs":["R001","R003"],"response":"三年转换均值90.36%、FCF均正已登记；修正单年归因。"},
+  {"id":"C004","status":"open","evidence_refs":["F001","R003"],"response":"已补最小已有原件；招股书、完整控制链、资本动作和附注细项仍待核。"},
+  {"id":"C005","status":"bounded","evidence_refs":["R005"],"response":"已核临2026-004姓名、当时职务、通知日、留置状态及后续代行安排；近十年逐名廉洁、减持和监管检索仍待闭合。"},
+  {"id":"C006","status":"closed","evidence_refs":["R008"],"response":"已完成2021-2025收入目标—实际桥：4/5达标；无原话验证故D2适用4分上限。"},
+  {"id":"C007","status":"open","evidence_refs":["R005"],"response":"不再把解聘视为案件结案；原公告状态待核。"},
+  {"id":"C008","status":"closed","evidence_refs":["R001"],"response":"不再将2025现金流变动归因于酒业营运资本。"},
+  {"id":"C009","status":"open","evidence_refs":["F001"],"response":"国资背景不再作为否定先发优势理由；历史原件待补。"},
+  {"id":"C010","status":"open","evidence_refs":["R008"],"response":"不以2026未结束或资料缺失判执行失败；时间序列待补。"},
+  {"id":"C011","status":"closed","evidence_refs":["R001","R007"],"response":"三年现金与FCF条件已核，E3不以单期销量独证。"},
+  {"id":"C012","status":"open","evidence_refs":["F002","F010"],"response":"已限定为待补行业、定价、四维议价及壁垒反证。"},
+  {"id":"C013","status":"closed","evidence_refs":[],"response":"同C002，由重建底稿计算。"},
+  {"id":"C014","status":"open","evidence_refs":["R004","R005","R006","R007"],"response":"七项管理层理由已补事实/限制；组织、危机和诚信公告桥仍待闭合。"},
+  {"id":"C015","status":"closed","evidence_refs":["R004","R006"],"response":"已撤F2.5正面先例0.5；基金认缴、实缴及未缴已登记，不虚构回报。"}
+ ]
+}

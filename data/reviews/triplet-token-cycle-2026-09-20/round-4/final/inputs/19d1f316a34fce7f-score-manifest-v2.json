@@ -1,0 +1,26 @@
+{
+  "stage": "merged_repair_directed_recheck",
+  "frozen_at": "2026-09-20T18:38:58.839318+00:00",
+  "workpaper": "data\\reviews\\triplet-token-cycle-2026-09-20\\round-4\\writer\\rebuilt-v4-ready\\workpaper.json",
+  "workpaper_sha256": "dcb8787dc9ef765df37ca89f76bee899f359e3bef477dcfe3883d7c15c24753b",
+  "files": {
+    "data/reviews/triplet-token-cycle-2026-09-20/round-4/writer/rebuilt-v4-ready/workpaper.json": "dcb8787dc9ef765df37ca89f76bee899f359e3bef477dcfe3883d7c15c24753b",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-4/writer/rebuilt-v4-ready/receipt.json": "04be48958e93fddbca1d49ab57df7abcac696167b919500012f88e14b98cf0bf",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-4/writer/repair-v4/delta.json": "cec43554455a1631f4dc2d8558d708b6428cfa3e84dc67dc2ccfba0dc24c670c",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-4/writer/repair-v4/dupond-calculation.json": "8a52fe205d948a326f7a2d67e9dbd6745e786fed6511ee987f316d7f4dbff88b",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-4/writer/repair-v4/effective-evidence.json": "f2c28f5c4baa4b4a0e5f35798805411891a810324de3000c74872f2625183fe6",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-4/writer/repair-v4/facts.json": "c6ca24827bf15848e0b4729ff095f09cd1869c92173bbe1b63e540e6f6642482",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-4/writer/repair-v4/sources.json": "ef24c90794b468ab4ba1971fc4dff43913a1ea77cb8c2d8d888674f9da7b050d",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-4/writer/facts.json": "6f8d0611c54900e58306f86c7a527b57c7eb1ad74c0adfb0e524b3031eec3afd",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-4/writer/sources.json": "becc0f531ec9839fd1f99440d155f0a4a431ee798c436f8586de2e69e185b1c7",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-4/evidence/facts.json": "9ae82713cbeab8779b741b794ec9102c44a7e12fb99089aad9814182e3604181",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-4/evidence/sources.json": "5c7de7ad4aaa0ec40d70f8c5bda74b4d88a3ac335bd0b577994e5f413ae79b65",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-4/evidence/v2/facts.json": "f98d2554abb79b96bca92f02e25ccf2d2103a485410bc2e3c0194c3eca1997f0",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-4/evidence/v2/sources.json": "dd27823d0c7c810802c7d13348a230e65013ea52ce964c29d7448fe2ab0fd64a",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-4/evidence/v3/facts.json": "ce98045540f7b4bde29e7f9aa8e279e75ea3ddc8cc19186a26b7602d63d6d1a9",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-4/evidence/v3/sources.json": "e1d7c1c2254113cecb2cfbf35e5debe6476aa4df21dec421925945fb63dffce5",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-4/evidence/v4/facts.json": "82f1cb113fac2c930794c6aa27770fbf02e63221b9571856aeff5639810308b8",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-4/evidence/v4/sources.json": "421e4792da19702bd3c7733191370510c61c65e89fd496ee3577aa7ee88af288",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-4/adjudicator/decision-v1.json": "5b3661d9e1cf18ad02b5f3564c6c4f7499ef5362fa6d265620de00eab9c3a493"
+  }
+}

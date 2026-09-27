@@ -1,0 +1,531 @@
+{
+  "schema_version": 1,
+  "company": "贵州茅台",
+  "ticker": "600519.SH",
+  "cutoff": "2026-09-20",
+  "stage": "score_initial_adjudication",
+  "decision": "defer",
+  "score_state": "not_approved",
+  "research_state": "pending",
+  "research_status": "execution_incomplete",
+  "delivery_state": "pending_repair",
+  "publish_allowed": false,
+  "basis": "全部候选按冻结v4及原规则裁决；F1已定-2，其余决定性评分问题需一次合并修复与双路定向核验。未批准最终总分，不评价估值、完整报告或Watchlist资格。",
+  "input_workpaper_sha256": "12c0e8c4b36fdde3936d289b62adcf00661ae0b3d053acf6b5a5e8fbc0f386de",
+  "review_refs": [
+    "data/reviews/triplet-token-cycle-2026-09-20/round-3/anonymous/candidates.json"
+  ],
+  "review_reference_note": "仅匿名候选路径；角色身份映射保持隔离，由主任务在最终归档绑定真实两路复核记录。",
+  "candidate_dispositions": [
+    {
+      "id": "C001",
+      "disposition": "部分成立",
+      "reason": "资本运作正面链不足成立；穷尽全部历史公告要求过强，以等效官方历史汇总及风险定向核查即可。",
+      "issue_ids": [
+        "R-A3"
+      ],
+      "evidence_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-3/final/inputs/data/reviews/triplet-token-cycle-2026-09-20/round-3/writer/workpaper-v4.json",
+        "deep-prebuy-skill/SKILL.md",
+        "management-archive/SKILL.md"
+      ]
+    },
+    {
+      "id": "C002",
+      "disposition": "成立",
+      "reason": "核完整原文后判-2为情形得分，不以程序范围反推；仅F1纠正减少4分。",
+      "issue_ids": [
+        "R-F1"
+      ],
+      "evidence_refs": [
+        "deep-prebuy-skill/SKILL.md:635-658,831-839；冻结score-rules.md:636-659,832-840",
+        "https://www.spp.gov.cn/zdgz/202109/t20210923_530571.shtml",
+        "https://www.spp.gov.cn/spp/qwfb/201906/t20190628_423311.shtml",
+        "https://m.ccdi.gov.cn/content/ed/e2/98144.html",
+        "https://www.xinhuanet.com/20240202/55f1abf4431e4cd4b2a5b11881007349/c.html"
+      ]
+    },
+    {
+      "id": "C003",
+      "disposition": "成立",
+      "reason": "历史窗口缺口成立；逐年年报不是唯一验收方法。",
+      "issue_ids": [
+        "R-A2"
+      ],
+      "evidence_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-3/final/inputs/data/reviews/triplet-token-cycle-2026-09-20/round-3/writer/workpaper-v4.json",
+        "deep-prebuy-skill/SKILL.md",
+        "management-archive/SKILL.md"
+      ]
+    },
+    {
+      "id": "C004",
+      "disposition": "成立",
+      "reason": "同C003合并但保留本ID验收；实控历史断链属于research。",
+      "issue_ids": [
+        "R-A2"
+      ],
+      "evidence_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-3/final/inputs/data/reviews/triplet-token-cycle-2026-09-20/round-3/writer/workpaper-v4.json",
+        "deep-prebuy-skill/SKILL.md",
+        "management-archive/SKILL.md"
+      ]
+    },
+    {
+      "id": "C005",
+      "disposition": "成立",
+      "reason": "D2长窗口和资本配置执行链遗漏成立；不能据此预设降分。",
+      "issue_ids": [
+        "R-EXEC-CAPITAL"
+      ],
+      "evidence_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-3/final/inputs/data/reviews/triplet-token-cycle-2026-09-20/round-3/writer/workpaper-v4.json",
+        "deep-prebuy-skill/SKILL.md",
+        "management-archive/SKILL.md"
+      ]
+    },
+    {
+      "id": "C006",
+      "disposition": "成立",
+      "reason": "2025原件确认持续未履行，P2研究更新；不自动改6分。",
+      "issue_ids": [
+        "R-GOV-UPDATE"
+      ],
+      "evidence_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-3/final/inputs/data/reviews/triplet-token-cycle-2026-09-20/round-3/writer/workpaper-v4.json",
+        "deep-prebuy-skill/SKILL.md",
+        "management-archive/SKILL.md"
+      ]
+    },
+    {
+      "id": "C007",
+      "disposition": "成立",
+      "reason": "数值同步部分delivery，缺口性质部分research，分别验收。",
+      "issue_ids": [
+        "R-GAPS",
+        "D-SCORE-TEXT"
+      ],
+      "evidence_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-3/final/inputs/data/reviews/triplet-token-cycle-2026-09-20/round-3/writer/workpaper-v4.json",
+        "deep-prebuy-skill/SKILL.md",
+        "management-archive/SKILL.md"
+      ]
+    },
+    {
+      "id": "C008",
+      "disposition": "部分成立",
+      "reason": "F4检索窗口及实证记录不足成立；F3把生产ESG视为已覆盖的指控不符合reason原文。",
+      "issue_ids": [
+        "R-ESG"
+      ],
+      "evidence_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-3/final/inputs/data/reviews/triplet-token-cycle-2026-09-20/round-3/writer/workpaper-v4.json",
+        "deep-prebuy-skill/SKILL.md",
+        "management-archive/SKILL.md"
+      ]
+    },
+    {
+      "id": "C009",
+      "disposition": "部分成立",
+      "reason": "满档逆周期条件不足成立；强制单项目IRR和缺证必落1分不成立。",
+      "issue_ids": [
+        "R-EXEC-CAPITAL"
+      ],
+      "evidence_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-3/final/inputs/data/reviews/triplet-token-cycle-2026-09-20/round-3/writer/workpaper-v4.json",
+        "deep-prebuy-skill/SKILL.md",
+        "management-archive/SKILL.md"
+      ]
+    },
+    {
+      "id": "C010",
+      "disposition": "成立",
+      "reason": "独立原文语义和人物事实支持-2，不因双路相同而采纳。",
+      "issue_ids": [
+        "R-F1"
+      ],
+      "evidence_refs": [
+        "deep-prebuy-skill/SKILL.md:635-658,831-839；冻结score-rules.md:636-659,832-840",
+        "https://www.spp.gov.cn/zdgz/202109/t20210923_530571.shtml",
+        "https://www.spp.gov.cn/spp/qwfb/201906/t20190628_423311.shtml",
+        "https://m.ccdi.gov.cn/content/ed/e2/98144.html",
+        "https://www.xinhuanet.com/20240202/55f1abf4431e4cd4b2a5b11881007349/c.html"
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "id": "R-A3",
+      "candidate_ids": [
+        "C001"
+      ],
+      "severity": "P1",
+      "lane": "research",
+      "status": "open",
+      "reason": "IPO承诺执行仅有搜索摘录，后续融资/资本动作仅有限未命中，尚不足以独立核验资本运作清洁度。拒绝把全量逐年公告穷尽作为必要条件。",
+      "acceptance": [
+        {
+          "id": "C001-A1",
+          "condition": "核招股/首发用途与实际执行的可读官方原件；针对IPO至截止日融资工具、重要并购及业绩压力期资产处置给可复核官方汇总或分段历史证据、检索范围及命中记录。无需逐份下载所有无关公告。"
+        },
+        {
+          "id": "C001-A2",
+          "condition": "说明证据为何足以支持A3原档并核资本配置能力联动；如仍有决定性空白，撤回无依据断言并明确其实际影响，不把未查到当无事项或自动低扣。"
+        }
+      ]
+    },
+    {
+      "id": "R-F1",
+      "candidate_ids": [
+        "C002",
+        "C010"
+      ],
+      "severity": "P0",
+      "lane": "research",
+      "status": "open",
+      "reason": "原正文要求扣分但未规定基准分减2；原评分表将5、-1、-2以等号并列为情形得分。故周期性历史腐败适用-2，而非先给4再扣2。两名前上市公司董事长事件落入近十年审查/判刑窗口。",
+      "acceptance": [
+        {
+          "id": "C002-A1",
+          "condition": "F1固定修正为-2，rule_ref及reason说明这是负分档；保留历史与现任区别，不把历史案件外推为现任在查。证据列两人上市公司职务与十年窗口内处分/刑事程序记录。"
+        },
+        {
+          "id": "C010-A1",
+          "condition": "独立核新底稿F维度及总分；只改F1时F小计11→7，公司87.5→83.5，管理层67不由此机械再扣；其他修复另列逐项桥，合计先加原始分后ROUND_HALF_UP。"
+        },
+        {
+          "id": "C002-A2",
+          "condition": "机械检查允许原规则明确的F1负档-1和-2，下限-2；不得放开任意负数或将全部分项下限改为-2。新底稿及派生论证保持一致，原冻结稿不改。"
+        }
+      ]
+    },
+    {
+      "id": "R-A2",
+      "candidate_ids": [
+        "C003",
+        "C004"
+      ],
+      "severity": "P1",
+      "lane": "research",
+      "status": "open",
+      "reason": "A2明确研究IPO至今，事实包自限2020—2025，IPO端点不能排除中途变更后恢复。该断链影响从未变更满档，属于研究问题。",
+      "acceptance": [
+        {
+          "id": "C003-A1",
+          "condition": "以官方股权沿革、覆盖IPO至今的控制权变更汇总，或必要年份年报，闭合2001—2019控制链；区分国资监管机构名称/职能调整与真实控制转移。无需强制18份逐年文件，等效官方连续历史证据可验收。"
+        },
+        {
+          "id": "C004-A1",
+          "condition": "A2按核实的实控人变更次数和原因匹配原档，同步evidence_gaps；证据仍不足时列具体可能改变的档位及未知，不因缺文档任意给0/1，也不维持未经证明的从未变更。"
+        }
+      ]
+    },
+    {
+      "id": "R-EXEC-CAPITAL",
+      "candidate_ids": [
+        "C005",
+        "C009"
+      ],
+      "severity": "P1",
+      "lane": "research",
+      "status": "open",
+      "reason": "D2漏可得年度，F2.5缺逆周期布局及计划执行依据；管理层资本配置20分是开放专业判断，不因公司F2.5不足机械等比例下降。整体高ROE不是新增项目回报率，但单项目IRR并非必须由公司公布。",
+      "acceptance": [
+        {
+          "id": "C005-A1",
+          "condition": "D2补齐现有2020—2025年报可配对的2021—2025目标与实际，核营业总收入/营业收入一致口径，纳入2025目标约+9%与实际下滑的反证；2026未完年度不算全年落空。以原≥2/3等档及无原话4分上限确定得分，说明D1/战略稳定性联动是否改变。"
+        },
+        {
+          "id": "C005-A2",
+          "condition": "对近5年资本配置补计划固定资产投资/实际投入、现金Capex的口径差异和可比偏差、营收变化、重要并购及回购时机；核至少一个主要项目计划—实施—产能投产/可观察回报。不同口径不得直接相除制造超支率。"
+        },
+        {
+          "id": "C009-A1",
+          "condition": "F2.5的2分需逐一论证审慎配置、逆周期布局、资金回报高于成本；可用可辩护资本回报推导和重大项目/回购事实，不强制未披露IRR，不把高ROE等同项目IRR。若证据支持有瑕疵再选1，不能仅因缺资料自动选1。未验证先例不加0.5。"
+        },
+        {
+          "id": "C005-A3",
+          "condition": "重评资本配置能力20分的正反证与相邻分数理由；核D1、战略稳定性、对股东友好度及F2联动，只在新增证据改变判断时改分，明确记录维持依据。"
+        }
+      ]
+    },
+    {
+      "id": "R-GOV-UPDATE",
+      "candidate_ids": [
+        "C006"
+      ],
+      "severity": "P2",
+      "lane": "research",
+      "status": "open",
+      "reason": "2025年报L975—977证实两项治理问题仍未整改；现有理由已据此限制组织得分，遗漏不证明必须降分，但最新持续性影响治理判断，不能当纯引用排版。",
+      "acceptance": [
+        {
+          "id": "C006-A1",
+          "condition": "将MT-F-GOV-REMEDY更新至2025年末的原件定位，准确区分控股股东未履行激励承诺及高管兼职；组织与人才6分可保留，核诚信、F1、危机处理的限制/整改成效表述，不把持续未整改表述为已解决。"
+        }
+      ]
+    },
+    {
+      "id": "R-GAPS",
+      "candidate_ids": [
+        "C007"
+      ],
+      "severity": "P1",
+      "lane": "research",
+      "status": "open",
+      "reason": "缺口清单是否决定性须由本轮研究裁决确定，不能只把旧文本删掉当交付修正。",
+      "acceptance": [
+        {
+          "id": "C007-A1",
+          "condition": "evidence_gaps和简明论证按本裁决剩余问题同步：控制史/资本运作/目标窗口/资本配置及F4按实际结果关闭或保留；逐字Q&A及单项目IRR若仅限制满分须写边界性未知，不能笼统称决定性缺口，也不能把决定性断链降级。"
+        }
+      ]
+    },
+    {
+      "id": "D-SCORE-TEXT",
+      "candidate_ids": [
+        "C007"
+      ],
+      "severity": "P2",
+      "lane": "delivery",
+      "status": "open",
+      "reason": "冻结v4七项独立相加为67，旧简明论证仍为61。总分文本的确定同步本身不改变底稿研究判断；最终数值须等研究修复确定后由唯一底稿生成。",
+      "acceptance": [
+        {
+          "id": "C007-A2",
+          "condition": "从修复后唯一完整底稿生成简明论证，核公司、管理层、合计及ROUND_HALF_UP显示；基准v4为87.5/67/154.5，旧61/148.5/149全部停止作为本版值。由原事实审核员局部验收，主任务核版本。"
+        }
+      ],
+      "classified_by": "adjudicator",
+      "no_decision_impact": true
+    },
+    {
+      "id": "R-ESG",
+      "candidate_ids": [
+        "C008"
+      ],
+      "severity": "P1",
+      "lane": "research",
+      "status": "open",
+      "reason": "F3理由实为关联交易及历史信披瑕疵，并没有断言生产ESG中风险，因此候选此部分不成立；但F4对制造业要求近5年环境/安全核查，现记录仅2023—2026关键词及未取得罚单声明，不足以排除影响F3的重大事件。",
+      "acceptance": [
+        {
+          "id": "C008-A1",
+          "condition": "对截至2026-09-20近5年上市公司及主要生产主体作有界环境处罚、停产、职业健康/重大安全检索，保留实际命中/无命中响应、主体归属和窗口；结合年报及ESG/环境信息披露原件核重大事项。无事件时不强求不存在的官方罚单。"
+        },
+        {
+          "id": "C008-A2",
+          "condition": "将F3已有内控瑕疵归因与ESG结论分开，依实际风险应用原F4联动并检查诚信、危机处理；未知不得包装为已核低/中风险，不因未取得监管罚单直接扣分。"
+        }
+      ]
+    }
+  ],
+  "approved_parameters": {
+    "company_total": null,
+    "management_total": null,
+    "combined_total": null,
+    "F1": -2
+  },
+  "score_bridge": {
+    "baseline": {
+      "company": 87.5,
+      "management": 67,
+      "combined": 154.5
+    },
+    "fixed_changes": [
+      {
+        "group": "company",
+        "item": "F1",
+        "before": 2,
+        "after": -2,
+        "delta": -4
+      }
+    ],
+    "conditional_after_fixed_changes_only": {
+      "company": 83.5,
+      "management": 67,
+      "combined": 150.5
+    },
+    "note": "条件算术桥，不是最终获批总分；其余项目依修复结果增列变化，不倒填目标总分。"
+  },
+  "valuation_approval_scope": {
+    "status": "out_of_scope",
+    "approved": false,
+    "target_price": null,
+    "certainty": null,
+    "buy_price": null
+  },
+  "score_repair_scope": [
+    {
+      "group": "company",
+      "item": "A2",
+      "acceptance_ids": [
+        "C003-A1",
+        "C004-A1"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "A3",
+      "acceptance_ids": [
+        "C001-A1",
+        "C001-A2"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "F1",
+      "acceptance_ids": [
+        "C002-A1",
+        "C010-A1",
+        "C002-A2",
+        "C006-A1"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "D2",
+      "acceptance_ids": [
+        "C005-A1"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "F2.5",
+      "acceptance_ids": [
+        "C005-A2",
+        "C009-A1"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "F3",
+      "acceptance_ids": [
+        "C008-A1",
+        "C008-A2"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "D1",
+      "acceptance_ids": [
+        "C005-A1",
+        "C005-A3"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "F2",
+      "acceptance_ids": [
+        "C005-A3"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "资本配置能力",
+      "acceptance_ids": [
+        "C001-A2",
+        "C005-A2",
+        "C005-A3"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "战略稳定性",
+      "acceptance_ids": [
+        "C005-A1",
+        "C005-A3"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "对股东友好度",
+      "acceptance_ids": [
+        "C005-A3"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "组织与人才能力",
+      "acceptance_ids": [
+        "C006-A1"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "诚信与透明度",
+      "acceptance_ids": [
+        "C006-A1",
+        "C008-A2"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "危机处理能力",
+      "acceptance_ids": [
+        "C006-A1",
+        "C008-A2"
+      ]
+    }
+  ],
+  "metadata_repair_scope": [
+    {
+      "field": "evidence_gaps",
+      "acceptance_ids": [
+        "C001-A2",
+        "C003-A1",
+        "C004-A1",
+        "C005-A1",
+        "C005-A2",
+        "C009-A1",
+        "C007-A1",
+        "C008-A1",
+        "C008-A2"
+      ]
+    }
+  ],
+  "repair_protocol": {
+    "research_rounds_authorized": 1,
+    "verification": "双路仅核本裁决受影响评分与联动；纯delivery由原事实审核员局部验收。保留所有原ID。",
+    "approval_condition": "全部决定性验收ID关闭并绑定修复底稿哈希；若失败按SOP申请原裁决锁定一次有界例外，不能自行再开全域研究。",
+    "timing": "沿原run计时，工具容量中断不重置，不因时限降低证据标准。"
+  },
+  "source_verification": [
+    {
+      "ref": "deep-prebuy-skill/SKILL.md:635-658,831-839；冻结score-rules.md:636-659,832-840",
+      "finding": "完整正文/表一致：扣分是方向性要求，未有基准减2算法；评分表明确负档。F2.5正文使用+0.5加分语义、F4使用得分扣1–2语义，与F1等号档位形式不同。"
+    },
+    {
+      "ref": "https://www.spp.gov.cn/zdgz/202109/t20210923_530571.shtml",
+      "finding": "直开403，站内搜索返回官方全文：袁仁国2021-09-23判无期，上市公司董事长任职及受贿事实明确。"
+    },
+    {
+      "ref": "https://www.spp.gov.cn/spp/qwfb/201906/t20190628_423311.shtml",
+      "finding": "官方检察公开信息2019-06-28确认调查终结并提起公诉，属于近十年窗口。"
+    },
+    {
+      "ref": "https://m.ccdi.gov.cn/content/ed/e2/98144.html",
+      "finding": "中央纪委官方处分通报确认高卫东立案审查调查、严重违纪违法及涉嫌受贿移送检察；与2020年上市公司年报L1193董事长任职原表相连。"
+    },
+    {
+      "ref": "https://www.xinhuanet.com/20240202/55f1abf4431e4cd4b2a5b11881007349/c.html",
+      "finding": "新华社法院宣判报道确认高卫东2024-02-02无期；原最高检链接403，未伪称成功直开。"
+    },
+    {
+      "ref": "财报/贵州茅台/贵州茅台2025年度报告.md:419,427,975-995",
+      "finding": "核主要项目计划/累计投资与2025新增产能2026释放；两项治理问题仍存及环境披露/ESG报告入口。"
+    },
+    {
+      "ref": "财报/贵州茅台/贵州茅台2023年度报告.md:179,643；财报/贵州茅台/贵州茅台2024年度报告.md:180,637",
+      "finding": "2023实际营业总收入增18.04%，2024目标15%实际15.66%，2025目标9%；当前事实包D2部分增速与原件不同，补窗口时必须统一营业总收入口径。"
+    },
+    {
+      "ref": "https://static.sse.com.cn/sseportal/cs/zhs/scfw/gg/ssgs/2003-03-26/600519_2002_n.pdf",
+      "finding": "直开404；IPO执行搜索摘录不足以由本裁决独立验收，列C001补可读官方原件。"
+    },
+    {
+      "ref": "data/reviews/triplet-token-cycle-2026-09-20/round-3/final/inputs/data/reviews/triplet-token-cycle-2026-09-20/round-3/writer/workpaper-v4.json",
+      "finding": "SHA256与冻结清单一致；全部32项已读取，独立加总87.5/67，旧简明论证61确定不一致。"
+    }
+  ]
+}

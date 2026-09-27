@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "kind": "writer_supplement_sources",
+  "company": "贵州茅台",
+  "ticker": "600519.SH",
+  "cutoff": "2026-09-20",
+  "retrieved_at": "2026-09-20",
+  "scope": [
+    "上市设立、历史控制与融资",
+    "白酒市场行业旁证",
+    "管理层IR/业绩说明会原话",
+    "近10年关键高管重大治理事件及证券、食品、环境、安全重大监管事项"
+  ],
+  "sources": [
+    {
+      "id": "SUP-S01",
+      "type": "company_ir",
+      "title": "贵州茅台公司简介",
+      "url": "https://www.moutaichina.com/mtgf/qygk/gsjj/index.html",
+      "published_date": null,
+      "used_for": ["设立日期", "主发起人", "当前控股股东", "上市日期", "累计分红口径"],
+      "limitation": "公司自述可支持当前状态与基础沿革，不单独证明上市以来控制权从未发生实质变化。"
+    },
+    {
+      "id": "SUP-S02",
+      "type": "official_annual_report",
+      "title": "贵州茅台酒股份有限公司2016年年度报告",
+      "url": "https://www.moutaichina.com/uploadfile/2017/0417/20170417031611269.pdf",
+      "published_date": "2017-04-17",
+      "used_for": ["设立批复", "八家发起人", "2001年IPO股份及国有存量发行"],
+      "limitation": "只用于历史设立和IPO事实；控制权连续性仍须由年度股东资料逐年核验。"
+    },
+    {
+      "id": "SUP-S03",
+      "type": "official_half_year_report",
+      "title": "贵州茅台酒股份有限公司2026年半年度报告",
+      "path": "财报/贵州茅台/贵州茅台2026半年度报告.md",
+      "sha256": "1d82e9fa3bc862041bfffa2a2fc8dd7c3726deca4b1f8ae9a4e210528e44156f",
+      "published_date": "2026-08-15",
+      "used_for": ["主营模式", "行业周期与结构调整表述", "财务公司现金流影响", "2026年改革表述"],
+      "location": "第98、128、140—144行",
+      "limitation": "报告内管理层叙述是公司主张；行业结论不能据此替代独立行业统计。"
+    },
+    {
+      "id": "SUP-S04",
+      "type": "official_ir_transcript",
+      "title": "贵州茅台2026年半年度业绩说明会实录（节选）",
+      "url": "https://www.moutai.com.cn/mtjt/2026-08/21/article_2026082123470131571.html",
+      "published_date": "2026-08-21",
+      "used_for": ["管理层对行业深度调整、消费需求、市场化改革、动态定价和渠道模式的公开回应"],
+      "limitation": "为公司回应，后续执行效果需与法定披露和实际经营数据对照。"
+    },
+    {
+      "id": "SUP-S05",
+      "type": "official_ir_transcript",
+      "title": "聚焦高质量 全面向C端：2025年度及2026年第一季度业绩说明会",
+      "url": "https://www.moutai.com.cn/mtjt/2026-05/12/article_2026051211582697533.html",
+      "published_date": "2026-05-12",
+      "used_for": ["管理层关于主动收缩规模、市场化转型与短期吨酒收入/利润影响的说明"],
+      "limitation": "为管理层解释，不构成对渠道或价格体系实际成效的独立验证。"
+    },
+    {
+      "id": "SUP-S06",
+      "type": "official_regulator",
+      "title": "贵州茅台酒股份有限公司原副总经理谭定华被调查",
+      "url": "https://m.ccdi.gov.cn/content/20/06/9120.html",
+      "published_date": "2016-03-25",
+      "used_for": ["已退休的上市公司原副总经理/财务总监谭定华于2016年被调查的身份与时间"],
+      "limitation": "原文是调查公告，不能在本补充包中将其改述为已定罪或归因于现任团队。"
+    },
+    {
+      "id": "SUP-S07",
+      "type": "official_regulator",
+      "title": "贵州茅台酒厂公司原董事长袁仁国被“双开”",
+      "url": "https://m.ccdi.gov.cn/content/85/76/44006.html",
+      "published_date": "2019-05-22",
+      "used_for": ["袁仁国兼任上市公司董事长期间、纪律审查处分及涉及营销经营权的官方描述"],
+      "limitation": "事件涉及集团及其原负责人；评分时须按任期、上市公司职责和后续治理整改分别分析，不能直接归咎现任管理层。"
+    },
+    {
+      "id": "SUP-S08",
+      "type": "official_regulator",
+      "title": "13名高管接连落马警示靠企吃企问题依然严峻 茅台窝案背后",
+      "url": "https://www.ccdi.gov.cn/toutiao/202007/t20200713_221814.html",
+      "published_date": "2020-07-13",
+      "used_for": ["2019年5月至2020年7月间集团及子公司至少13名高管被查的监管报道与范围"],
+      "limitation": "统计范围为集团及子公司，不能直接等同上市公司高管人数；具体个人、职务及案件结果须逐项复核。"
+    },
+    {
+      "id": "SUP-S09",
+      "type": "official_group_disclosure",
+      "title": "茅台集团2026年度安全综治生态环保工作会召开",
+      "url": "https://www.moutai.com.cn/mtjt/2026-01/16/article_2026011621544889219.html",
+      "published_date": "2026-01-16",
+      "used_for": ["集团层面披露的2025年度股份公司安全生产、综治保卫、生态环保工作报告已被听取，以及2026年安全环保责任部署"],
+      "limitation": "是集团会议与部署信息，不是监管处罚查询结果，不能证明不存在或存在行政处罚。"
+    },
+    {
+      "id": "SUP-S10",
+      "type": "official_regulator",
+      "title": "城关区峰坤商行销售侵犯注册商标专用权白酒案",
+      "url": "https://scjg.lasa.gov.cn/scjgj/c100886/202607/ac7449929dad4d719cf0441693ce375a.shtml",
+      "published_date": "2026-07-08",
+      "used_for": ["假冒贵州茅台商品由经销商被处罚、并非上市公司被处罚的主体边界"],
+      "limitation": "案件行政相对人是商行；不得计入上市公司食品安全或合规处罚。"
+    }
+  ],
+  "search_log": [
+    {
+      "domain_scope": "公司IR、上交所、巨潮、中央纪委国家监委、市场监管/生态环境/应急公开站点",
+      "queries": ["贵州茅台 600519 高管 被查 反腐", "贵州茅台 环保处罚 安全生产 食品安全 处罚", "贵州茅台 业绩说明会 2025 2026"],
+      "result_boundary": "检到历史集团/上市公司原高管治理事件及假冒产品经销商处罚；在本次定向检索中未取得可直接归属于上市公司、且截至截止日的食品、环境或安全重大行政处罚原件。该结果仅表示本次检索未定位到合格原件，不可表述为不存在。"
+    }
+  ]
+}

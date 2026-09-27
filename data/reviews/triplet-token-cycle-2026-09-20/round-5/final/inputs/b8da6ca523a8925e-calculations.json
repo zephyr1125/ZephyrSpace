@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "unit": "yuan",
+  "calculations": {
+    "MT-R5-CALC-DUPONT-2023": {
+      "formula": "合并净利/营业收入×营业收入/平均合并资产×平均合并资产/平均合并权益",
+      "net_margin": 0.5248803851790048,
+      "asset_turnover": 0.5604384843877526,
+      "equity_multiplier": 1.2296744008194904,
+      "roe": 0.36172491680584307
+    },
+    "MT-R5-CALC-DUPONT-2024": {
+      "formula": "合并净利/营业收入×营业收入/平均合并资产×平均合并资产/平均合并权益",
+      "net_margin": 0.5227335936777954,
+      "asset_turnover": 0.5979213654739752,
+      "equity_multiplier": 1.2275795301763646,
+      "roe": 0.38368438193785337
+    },
+    "MT-R5-CALC-DUPONT-2025": {
+      "status": "not_calculated",
+      "reason": "合并权益期末原值未提取，禁止以归母权益替代"
+    },
+    "MT-R5-CALC-REV-EMP-2023": {
+      "formula": "营业收入/员工数",
+      "value": 4434977.028230737
+    },
+    "MT-R5-CALC-REV-EMP-2024": {
+      "formula": "营业收入/员工数",
+      "value": 4917961.216585323
+    },
+    "MT-R5-CALC-REV-EMP-2025": {
+      "formula": "营业收入/员工数",
+      "value": 4825048.65440072
+    }
+  }
+}

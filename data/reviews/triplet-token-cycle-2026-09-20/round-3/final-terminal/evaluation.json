@@ -1,0 +1,26 @@
+{
+  "status": "failed",
+  "score_state": "not_approved",
+  "approved_scores": null,
+  "candidate_only": {
+    "company": 82.5,
+    "management": 67
+  },
+  "full_32_item_dual_review": true,
+  "closed_acceptance_ids_count": 7,
+  "unclosed_acceptance_ids_count": 9,
+  "repair_rounds": 1,
+  "exception_used": false,
+  "termination_reason": "性能验证已失败，剩余决定性条件未闭合；未耗尽例外额度",
+  "started_at": "2026-09-20T16:51:47.052494+00:00",
+  "ended_at": "2026-09-20T17:57:53.922233+00:00",
+  "elapsed_seconds": 3966.869739,
+  "noncached_plus_output": 1373355,
+  "roles_noncached_plus_output": 1133431,
+  "target_metric": 928196.5,
+  "token_target_met": false,
+  "wall_clock_target_met": false,
+  "publish_allowed": false,
+  "prior_snapshot": "../final/score-package.json",
+  "scope": "仅评分验证，不外推估值或完整三件套"
+}

@@ -1,0 +1,26 @@
+{
+  "decision_sha256":"28cd683f2f2c1dcc84e77c15f6ac0f7247aea8d734c2228d3cb67cefb9f479b9",
+  "rebuilt_workpaper_sha256":"ea9df3e1ea6606c8e81575c7249d21cad8ab5d1fbe55190b26bb1e88da4adfb3",
+  "responses":[
+    {"id":"C001","status":"closed","evidence_refs":["R002"],"response":"复用已验收E4=1.5；未改。"},
+    {"id":"C002","status":"closed","evidence_refs":[],"response":"总分由apply-delta重算，公司90.5、管理层82。"},
+    {"id":"C003","status":"closed","evidence_refs":["R009","R010","R011","R012"],"response":"补齐2020-2025趋势与杜邦、五年增长/三年扣非/量价结构、会计政策与KAM桥；E2保持5分。"},
+    {"id":"C004","status":"closed","evidence_refs":["R013","R014","R015","R020"],"response":"补招股书历史起源、自IPO控制链、重大资本动作及用途、商誉/应收/减值结论，并复用C1/D1/E1/E5.5。"},
+    {"id":"C005","status":"closed_with_bounded_unknown","evidence_refs":["R022","R023"],"response":"核留置公告链、职务接替与公开状态，完成减持/监管/处罚定向检索；案件终局属截至截止日未公开事实，保留为有界未知并已下调F1与诚信。"},
+    {"id":"C006","status":"closed","evidence_refs":["R016","R017","R008"],"response":"补六年战略资源一致性与三年员工、人效、研发序列；D2保留已核4分，无战略漂移联动。"},
+    {"id":"C007","status":"closed_with_bounded_unknown","evidence_refs":["R022","R023"],"response":"未把解任等同结案，未推定现任被查或系统性腐败；公开终局不可得已准确入gap。"},
+    {"id":"C008","status":"closed","evidence_refs":["R009","R010","R011","R012"],"response":"复用C003完整财务桥；不重做已核现金流归因。"},
+    {"id":"C009","status":"closed","evidence_refs":["R013","R014","R015"],"response":"国资标签不否定先发优势；历史、控制链、资本动作和资产附注均已实质补证。"},
+    {"id":"C010","status":"closed","evidence_refs":["R016","R017","R008"],"response":"复用已核D2，补D1/D5及管理层战略与表达相邻档依据。"},
+    {"id":"C011","status":"closed","evidence_refs":["R009","R011","R012"],"response":"E3用完整周期量价与增长重评为3分；不以H1单期独证，E1/E5.5同步闭合。"},
+    {"id":"C012","status":"closed","evidence_refs":["R018","R019","R020"],"response":"补五年毛利趋势、正式提价、客户供应商集中、四维议价、逐类壁垒及替代/新进入反证；未增加精确CR5硬门槛。"},
+    {"id":"C013","status":"closed","evidence_refs":[],"response":"同C002，程序重算总分。"},
+    {"id":"C014","status":"closed","evidence_refs":["R016","R017","R021","R022","R023"],"response":"七项管理层均完成事件级桥；无真实危机闭环处明确适用边界，未凑案例。管理层由84调整为82。"},
+    {"id":"C015","status":"closed_with_bounded_unknown","evidence_refs":["R004","R006","R021","R023"],"response":"补资本纪律基础档、主业Capex、并购融资、回购时机与高ROE低杠杆桥；基金回报未披露保持有界，F2.5=2且positive_precedent=false，资本配置21。"}
+  ],
+  "unclosed_conditions":[],
+  "bounded_unknowns":[
+    "蒋焰留置案件终局截至2026-09-20未公开，已按公开状态计入分数。",
+    "两只产业基金完整退出与回报尚未披露，限制正面先例，不作失败推断。"
+  ]
+}

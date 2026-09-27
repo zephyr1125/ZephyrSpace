@@ -1,0 +1,107 @@
+[
+  {
+    "source": "data/reviews/triplet-token-cycle-2026-09-20/round-3/writer/rebuilt-v5-final/workpaper.json",
+    "snapshot": "data/reviews/triplet-token-cycle-2026-09-20/round-3/final-terminal/inputs/191ed53323c50882-workpaper.json",
+    "sha256": "191ed53323c50882600bf63d5f0fbd3f773089c674ee1d3af4ef508318b40a7d"
+  },
+  {
+    "source": "data/reviews/triplet-token-cycle-2026-09-20/round-3/writer/rebuilt-v5-final/receipt.json",
+    "snapshot": "data/reviews/triplet-token-cycle-2026-09-20/round-3/final-terminal/inputs/d9696d4d35830c7d-receipt.json",
+    "sha256": "d9696d4d35830c7d313b41ea38cdf8c4328dd9b43e24527b1b33e007fb13830c"
+  },
+  {
+    "source": "data/reviews/triplet-token-cycle-2026-09-20/round-3/writer/repair-v5/acceptance-response.md",
+    "snapshot": "data/reviews/triplet-token-cycle-2026-09-20/round-3/final-terminal/inputs/7c7fe702ce80e049-acceptance-response.md",
+    "sha256": "7c7fe702ce80e04961102ecbb535ac46e9cfac6cdafdb5c853e0d4425a72bd87"
+  },
+  {
+    "source": "data/reviews/triplet-token-cycle-2026-09-20/round-3/writer/repair-v5/delta.json",
+    "snapshot": "data/reviews/triplet-token-cycle-2026-09-20/round-3/final-terminal/inputs/9795576dbc13291f-delta.json",
+    "sha256": "9795576dbc13291fd1bb0ea7835d8bcf0bd9b6ed129d758e7a399fd4a584bbc0"
+  },
+  {
+    "source": "data/reviews/triplet-token-cycle-2026-09-20/round-3/writer/repair-v5/evidence-files.json",
+    "snapshot": "data/reviews/triplet-token-cycle-2026-09-20/round-3/final-terminal/inputs/b145dd1440ce0d34-evidence-files.json",
+    "sha256": "b145dd1440ce0d346c0a0b2cac555e225b23cfb20d7df6634229d2311c27c103"
+  },
+  {
+    "source": "data/reviews/triplet-token-cycle-2026-09-20/round-3/writer/repair-v5/facts-v5.json",
+    "snapshot": "data/reviews/triplet-token-cycle-2026-09-20/round-3/final-terminal/inputs/fdf9e2ab178b253c-facts-v5.json",
+    "sha256": "fdf9e2ab178b253cd68f0bbc236193fbbf73bbad691081255beb5a3e2836c791"
+  },
+  {
+    "source": "data/reviews/triplet-token-cycle-2026-09-20/round-3/writer/repair-v5/sources-v5.json",
+    "snapshot": "data/reviews/triplet-token-cycle-2026-09-20/round-3/final-terminal/inputs/c0264e44e6b03242-sources-v5.json",
+    "sha256": "c0264e44e6b03242ebec2eba9afba775cd40de28788f015f480c62bffb0424d5"
+  },
+  {
+    "source": "data/reviews/triplet-token-cycle-2026-09-20/round-3/writer/repair-v5/检索记录.md",
+    "snapshot": "data/reviews/triplet-token-cycle-2026-09-20/round-3/final-terminal/inputs/20f5700a12eb9875-检索记录.md",
+    "sha256": "20f5700a12eb9875f034d0ea836e8765eb05efb99bb44d94febe6ce17c11f732"
+  },
+  {
+    "source": "data/reviews/triplet-token-cycle-2026-09-20/round-3/writer/repair-v5/论证.md",
+    "snapshot": "data/reviews/triplet-token-cycle-2026-09-20/round-3/final-terminal/inputs/b960d54564d7cb36-论证.md",
+    "sha256": "b960d54564d7cb36f814b6148d73f4759cf9dc09e72c2858fb7adc42b4835b46"
+  },
+  {
+    "source": "data/reviews/triplet-token-cycle-2026-09-20/round-3/score-manifest-v5.json",
+    "snapshot": "data/reviews/triplet-token-cycle-2026-09-20/round-3/final-terminal/inputs/3d678581c26ef282-score-manifest-v5.json",
+    "sha256": "3d678581c26ef282909149c432a24dfbc8afd9a0605836bdefc122e320928f7a"
+  },
+  {
+    "source": "data/reviews/triplet-token-cycle-2026-09-20/round-3/score-manifest-initial-review.json",
+    "snapshot": "data/reviews/triplet-token-cycle-2026-09-20/round-3/final-terminal/inputs/32ffeb8ffd87d26b-score-manifest-initial-review.json",
+    "sha256": "32ffeb8ffd87d26b5d7f71982cb3fb97a45c8fc9da166b40caf89abb059a9e72"
+  },
+  {
+    "source": "data/reviews/triplet-token-cycle-2026-09-20/round-3/model-routing.json",
+    "snapshot": "data/reviews/triplet-token-cycle-2026-09-20/round-3/final-terminal/inputs/fdf0144a91e27aea-model-routing.json",
+    "sha256": "fdf0144a91e27aead113e4934035c856ad56b28515ee4d13ee84bb01da4a5c5c"
+  },
+  {
+    "source": "data/reviews/triplet-token-cycle-2026-09-20/round-3/raw-inputs.json",
+    "snapshot": "data/reviews/triplet-token-cycle-2026-09-20/round-3/final-terminal/inputs/258cfbe61ecae67d-raw-inputs.json",
+    "sha256": "258cfbe61ecae67da8c27332a0ce943179e151197594768439f5cb79a4408ce6"
+  },
+  {
+    "source": "data/reviews/triplet-token-cycle-2026-09-20/round-3/adjudicator/decision-v1.json",
+    "snapshot": "data/reviews/triplet-token-cycle-2026-09-20/round-3/final-terminal/inputs/7e5f1e656854199b-decision-v1.json",
+    "sha256": "7e5f1e656854199b7a908d8bf0da49f9ce0f91dbbc0ce4c1cf389c373f9784a5"
+  },
+  {
+    "source": "data/reviews/triplet-token-cycle-2026-09-20/round-3/adjudicator/decision-v2-terminal.json",
+    "snapshot": "data/reviews/triplet-token-cycle-2026-09-20/round-3/final-terminal/inputs/da55e8ae038f6afb-decision-v2-terminal.json",
+    "sha256": "da55e8ae038f6afb56a10a13898f8b811ae357eabd01d0cc6adb22c46f436fb9"
+  },
+  {
+    "source": "data/reviews/triplet-token-cycle-2026-09-20/round-3/review-facts/review.json",
+    "snapshot": "data/reviews/triplet-token-cycle-2026-09-20/round-3/final-terminal/inputs/93474c47235205bb-review.json",
+    "sha256": "93474c47235205bb587893997ebff059fddff515297606f3c1f1290d823c7707"
+  },
+  {
+    "source": "data/reviews/triplet-token-cycle-2026-09-20/round-3/review-reasoning/review.json",
+    "snapshot": "data/reviews/triplet-token-cycle-2026-09-20/round-3/final-terminal/inputs/ab51dbb34bc589da-review.json",
+    "sha256": "ab51dbb34bc589dad1b6d83e9434c4c89e9ecb0989e77c99be5041fec48df481"
+  },
+  {
+    "source": "data/reviews/triplet-token-cycle-2026-09-20/round-3/review-facts/recheck-v5.json",
+    "snapshot": "data/reviews/triplet-token-cycle-2026-09-20/round-3/final-terminal/inputs/2c31d751312f536e-recheck-v5.json",
+    "sha256": "2c31d751312f536e65154820f86b61090629dfc72a32180d4b46861c58adbce4"
+  },
+  {
+    "source": "data/reviews/triplet-token-cycle-2026-09-20/round-3/review-reasoning/recheck-v5.json",
+    "snapshot": "data/reviews/triplet-token-cycle-2026-09-20/round-3/final-terminal/inputs/508808345a0a5f36-recheck-v5.json",
+    "sha256": "508808345a0a5f3607e986e99a8c459ade691821efe9206d1665d1305534ed94"
+  },
+  {
+    "source": "data/reviews/triplet-token-cycle-2026-09-20/round-3/anonymous/candidates.json",
+    "snapshot": "data/reviews/triplet-token-cycle-2026-09-20/round-3/final-terminal/inputs/3fc00fa0e02c7f45-candidates.json",
+    "sha256": "3fc00fa0e02c7f45f7c8a84a5d9044a4ef69c9fe5d966496dc81c13065829453"
+  },
+  {
+    "source": "data/reviews/triplet-token-cycle-2026-09-20/round-3/anonymous-recheck-v5/candidates.json",
+    "snapshot": "data/reviews/triplet-token-cycle-2026-09-20/round-3/final-terminal/inputs/795fd4c745f01afc-candidates.json",
+    "sha256": "795fd4c745f01afc2016e7f9de001e0583dee7b630a56091f502152710b18ea1"
+  }
+]

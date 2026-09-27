@@ -1,0 +1,57 @@
+[
+  {
+    "year": 2020,
+    "revenue": 949.1538091672,
+    "attributable_profit": 466.9728542981,
+    "total_assets": 2133.9581052746,
+    "attributable_equity": 1613.2273508756,
+    "attributable_net_margin_pct": 49.1989,
+    "asset_turnover": 0.478841,
+    "equity_multiplier": 1.333313,
+    "implied_attributable_roe_pct": 31.4108
+  },
+  {
+    "year": 2021,
+    "revenue": 1061.9015484376,
+    "attributable_profit": 524.6014437816,
+    "total_assets": 2551.681951599,
+    "attributable_equity": 1895.3936879729,
+    "attributable_net_margin_pct": 49.4021,
+    "asset_turnover": 0.453258,
+    "equity_multiplier": 1.335465,
+    "implied_attributable_roe_pct": 29.9036
+  },
+  {
+    "year": 2022,
+    "revenue": 1240.9984377199,
+    "attributable_profit": 627.1644373827,
+    "total_assets": 2543.6480499525,
+    "attributable_equity": 1975.06672396,
+    "attributable_net_margin_pct": 50.5371,
+    "asset_turnover": 0.487112,
+    "equity_multiplier": 1.316466,
+    "implied_attributable_roe_pct": 32.4077
+  },
+  {
+    "year": 2023,
+    "revenue": 1476.9360499414,
+    "attributable_profit": 747.3407155075,
+    "total_assets": 2726.9966009225,
+    "attributable_equity": 2156.6857160743,
+    "attributable_net_margin_pct": 50.6007,
+    "asset_turnover": 0.560438,
+    "equity_multiplier": 1.275644,
+    "implied_attributable_roe_pct": 36.1755
+  },
+  {
+    "year": 2024,
+    "revenue": 1708.9915227634,
+    "attributable_profit": 862.2814642162,
+    "total_assets": 2989.445799187,
+    "attributable_equity": 2331.0598439947,
+    "attributable_net_margin_pct": 50.4556,
+    "asset_turnover": 0.597921,
+    "equity_multiplier": 1.273789,
+    "implied_attributable_roe_pct": 38.4283
+  }
+]

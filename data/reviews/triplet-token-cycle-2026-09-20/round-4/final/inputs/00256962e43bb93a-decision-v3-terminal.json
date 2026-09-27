@@ -1,0 +1,914 @@
+{
+  "schema_version": 1,
+  "company": "贵州茅台",
+  "ticker": "600519.SH",
+  "cutoff": "2026-09-20",
+  "stage": "terminal_score_adjudication_repair_budget_exhausted",
+  "decision": "defer",
+  "score_state": "not_approved",
+  "research_state": "pending",
+  "research_status": "execution_incomplete",
+  "delivery_state": "not_in_scope",
+  "publish_allowed": false,
+  "basis": "原11个验收ID已关闭9个，资本回报与融资回报窗口2个未闭合。研究修复额度已耗尽；当前83.5/78不是最终批准分数。失败来自一处未纠正的决定性算术及部分已公开窗口未完成核验，不是全部原件缺失，也不是企业已判不合格。",
+  "frozen_workpaper": "data/reviews/triplet-token-cycle-2026-09-20/round-4/rebuilt-sol/workpaper.json",
+  "frozen_workpaper_sha256": "f2094373fc5001d5818d83a475e01d9d4ec4a1934b7c8811d0b36def87f1fc58",
+  "anonymous_candidates": "data/reviews/triplet-token-cycle-2026-09-20/round-4/anonymous-recheck-sol/candidates.json",
+  "review_refs": [],
+  "review_refs_note": "裁决按隔离要求仅接收匿名候选；两路真实复核路径由主任务验收归档绑定，不读取或猜测来源映射。",
+  "candidate_dispositions": [
+    {
+      "candidate_id": "C001",
+      "disposition": "部分成立",
+      "issue_ids": [
+        "R4-CAPITAL"
+      ],
+      "acceptance_ids": [
+        "R4-CAPITAL-A1"
+      ],
+      "reason": "满产三情景计算和预算原件成立，但未核54%失效阈值且将整体利用率当充分边界，passed不成立。",
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-4/repair-sol/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-4/rebuilt-sol/workpaper.json"
+      ]
+    },
+    {
+      "candidate_id": "C002",
+      "disposition": "成立",
+      "issue_ids": [
+        "R4-C1"
+      ],
+      "acceptance_ids": [
+        "R4-C1-A1"
+      ],
+      "reason": "酒类三年可比规模及口径限制已核，C1关闭。",
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-4/repair-sol/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-4/rebuilt-sol/workpaper.json"
+      ]
+    },
+    {
+      "candidate_id": "C003",
+      "disposition": "部分成立",
+      "issue_ids": [
+        "R4-CAPITAL"
+      ],
+      "acceptance_ids": [
+        "R4-CAPITAL-A1"
+      ],
+      "reason": "低情景正确86.354%，failed成立；“54%左右对应7.5万元情景”亦不精确，该情景应57.5693%，已统一纠正。",
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-4/repair-sol/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-4/rebuilt-sol/workpaper.json"
+      ]
+    },
+    {
+      "candidate_id": "C004",
+      "disposition": "成立",
+      "issue_ids": [
+        "R4-B3"
+      ],
+      "acceptance_ids": [
+        "R4-B3-A1"
+      ],
+      "reason": "五年毛利率和提价/反证已核，B3关闭。",
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-4/repair-sol/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-4/rebuilt-sol/workpaper.json"
+      ]
+    },
+    {
+      "candidate_id": "C005",
+      "disposition": "成立",
+      "issue_ids": [
+        "R4-E1"
+      ],
+      "acceptance_ids": [
+        "R4-E1-A1"
+      ],
+      "reason": "杜邦原值和三因子现一致，E1关闭。",
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-4/repair-sol/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-4/rebuilt-sol/workpaper.json"
+      ]
+    },
+    {
+      "candidate_id": "C006",
+      "disposition": "部分成立",
+      "issue_ids": [
+        "R4-FINANCING"
+      ],
+      "acceptance_ids": [
+        "R4-FINANCING-A1"
+      ],
+      "reason": "历史股本、回购、三年股东数量及分红记录有效；不足以替代五年实际派息和截止日窗口，passed不成立。",
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-4/repair-sol/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-4/rebuilt-sol/workpaper.json"
+      ]
+    },
+    {
+      "candidate_id": "C007",
+      "disposition": "成立",
+      "issue_ids": [
+        "R4-B3"
+      ],
+      "acceptance_ids": [
+        "R4-B3-A1"
+      ],
+      "reason": "B3原条件已满足。",
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-4/repair-sol/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-4/rebuilt-sol/workpaper.json"
+      ]
+    },
+    {
+      "candidate_id": "C008",
+      "disposition": "成立",
+      "issue_ids": [
+        "R4-CAPITAL"
+      ],
+      "acceptance_ids": [
+        "R4-CAPITAL-A1"
+      ],
+      "reason": "新算术问题成立，并入原R4-CAPITAL-A1；正确三档阈值86.354%、57.5693%、43.177%。",
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-4/repair-sol/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-4/rebuilt-sol/workpaper.json"
+      ]
+    },
+    {
+      "candidate_id": "C009",
+      "disposition": "部分成立",
+      "issue_ids": [
+        "R4-FINANCING"
+      ],
+      "acceptance_ids": [
+        "R4-FINANCING-A1"
+      ],
+      "reason": "五年派息及尾段查询缺口成立；2016—2020未逐年单列不是独立阻断A3的必要条件，官方沿革摘要已支持重大融资概况。",
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-4/repair-sol/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-4/rebuilt-sol/workpaper.json"
+      ]
+    },
+    {
+      "candidate_id": "C010",
+      "disposition": "成立",
+      "issue_ids": [
+        "R4-E1"
+      ],
+      "acceptance_ids": [
+        "R4-E1-A1"
+      ],
+      "reason": "精确杜邦数值闭合，属于合并公司ROE而非项目ROE，关闭E1。",
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-4/repair-sol/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-4/rebuilt-sol/workpaper.json"
+      ]
+    },
+    {
+      "candidate_id": "C011",
+      "disposition": "成立",
+      "issue_ids": [
+        "R4-C2C4"
+      ],
+      "acceptance_ids": [
+        "R4-C2C4-A1"
+      ],
+      "reason": "四维、壁垒可替代性及反证已写实，C2C4关闭。",
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-4/repair-sol/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-4/rebuilt-sol/workpaper.json"
+      ]
+    },
+    {
+      "candidate_id": "C012",
+      "disposition": "成立",
+      "issue_ids": [
+        "R4-C2C4"
+      ],
+      "acceptance_ids": [
+        "R4-C2C4-A1"
+      ],
+      "reason": "同原条件关闭C2C4，非因票数。",
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-4/repair-sol/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-4/rebuilt-sol/workpaper.json"
+      ]
+    },
+    {
+      "candidate_id": "C013",
+      "disposition": "成立",
+      "issue_ids": [
+        "R4-C1"
+      ],
+      "acceptance_ids": [
+        "R4-C1-A1"
+      ],
+      "reason": "按原裁决接受主要同行规模和口径边界，C1关闭。",
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-4/repair-sol/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-4/rebuilt-sol/workpaper.json"
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "id": "R4-B0",
+      "lane": "research",
+      "severity": "P1",
+      "status": "closed",
+      "candidate_ids": [],
+      "reason": "早期模式覆盖与封闭档位不符：冻结稿仅给当前模式及连续性，未回答三个关键判断。原规则确实允许部分覆盖1分，此为研究覆盖评分，不是证明企业早期低毛利。",
+      "acceptance": [
+        {
+          "id": "R4-B0-A1",
+          "condition": "以招股书或早期官方材料简明回答早期九要素和三个判断并说明分类适用性，可维持2；否则按已有部分覆盖改1并删除未经证实的早期低毛利/重资产分类断言。无需重建每年历史或强造毛利率质变节点，不适用须说明。"
+        }
+      ],
+      "affected_items": {
+        "company": [
+          "B0"
+        ],
+        "management": []
+      },
+      "source_refs": [
+        "score-rules.md:L176-L205,L275",
+        "writer/v3/workpaper.json:B0"
+      ],
+      "verification_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-4/adjudicator/decision-v2.json"
+      ],
+      "verification": "保留上轮关闭。",
+      "retained_closed_from": "data/reviews/triplet-token-cycle-2026-09-20/round-4/adjudicator/decision-v2.json"
+    },
+    {
+      "id": "R4-E1",
+      "lane": "research",
+      "severity": "P1",
+      "status": "closed",
+      "candidate_ids": [
+        "C005",
+        "C010"
+      ],
+      "reason": "杜邦计算链缺失：2025年报L100已含2023—2025加权ROE34.19%、36.02%、32.53%，但底稿引用缺序列且未给杜邦计算。低杠杆是强佐证，不能替代原规则必做拆解。",
+      "acceptance": [
+        {
+          "id": "R4-E1-A1",
+          "condition": "登记2020—2025披露ROE序列及2023—2025至少三年同口径杜邦：净利润/收入×收入/平均资产×平均资产/平均权益；明确合并净利/总权益或归母净利/归母权益的选择，并解释与披露加权ROE差异。核算支持经营利润率驱动且ROE>15%则维持5；不要求六年每年全部拆解。"
+        }
+      ],
+      "affected_items": {
+        "company": [
+          "E1"
+        ],
+        "management": []
+      },
+      "source_refs": [
+        "财报/贵州茅台/贵州茅台2025年度报告.md:L100",
+        "score-rules.md:L493-L511"
+      ],
+      "verification_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-4/rebuilt-sol/workpaper.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-4/repair-sol/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-4/anonymous-recheck-sol/candidates.json#C005,C010"
+      ],
+      "verification": "已核最终底稿、修复事实及原件/计算，原条件满足。C1限可靠主要同行比较；B3为五年同口径；C2C4为含反证的四维判断；E1精确元值及结果一致。"
+    },
+    {
+      "id": "R4-D2",
+      "lane": "research",
+      "severity": "P1",
+      "status": "closed",
+      "candidate_ids": [],
+      "reason": "遗漏最新年度目标反证：2024年报L637为2025营业总收入增长约9%目标，冻结稿只写2023、2024兑现，遗漏2025未达。不是单纯显示问题，需联动言行判断。",
+      "acceptance": [
+        {
+          "id": "R4-D2-A1",
+          "condition": "列2023—2025连续三年目标与同口径结果，营业收入不得直接冒充营业总收入（-1.21%须核口径）；确认2/3达标，按基础5分及缺原话上限4维持D2=4。战略稳定性13、表达4可保留，但分别说明一年执行落空不等于方向漂移、目标清晰不等于兑现；不得把目标落空直接等同恶意失信。"
+        }
+      ],
+      "affected_items": {
+        "company": [
+          "D2"
+        ],
+        "management": [
+          "战略稳定性",
+          "表达清晰度与认知质量"
+        ]
+      },
+      "source_refs": [
+        "财报/贵州茅台/贵州茅台2024年度报告.md:L637",
+        "writer/v3/workpaper.json:D2",
+        "score-rules.md:L374-L478"
+      ],
+      "verification_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-4/adjudicator/decision-v2.json"
+      ],
+      "verification": "保留上轮关闭。",
+      "retained_closed_from": "data/reviews/triplet-token-cycle-2026-09-20/round-4/adjudicator/decision-v2.json"
+    },
+    {
+      "id": "R4-D5",
+      "lane": "research",
+      "severity": "P1",
+      "status": "closed",
+      "candidate_ids": [],
+      "reason": "组织指标漏入决定链：已抽核员工33302、34750、34992；研发投入6.2151、6.9538、8.0313亿元；人均收入约443.5、491.8、482.5万元。三年总体改善，末年回落，不是连续恶化。",
+      "acceptance": [
+        {
+          "id": "R4-D5-A1",
+          "condition": "登记2023—2025员工、人均收入及研发投入/收入0.42%、0.41%、0.48%，区分研发投入与利润表研发费用，纳入2025人效回落反证及可得核心人员流失/任免信号。可维持D5=3：三年趋势上升且投入健康，原规则未要求逐年单调；不能仅凭末年下降机械改2，也不能把无公开离职率当作零流失。"
+        }
+      ],
+      "affected_items": {
+        "company": [
+          "D5"
+        ],
+        "management": []
+      },
+      "source_refs": [
+        "财报/贵州茅台/贵州茅台2023年度报告.md:L289,L824",
+        "财报/贵州茅台/贵州茅台2024年度报告.md:L288,L817",
+        "财报/贵州茅台/贵州茅台2025年度报告.md:L315,L849"
+      ],
+      "verification_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-4/adjudicator/decision-v2.json"
+      ],
+      "verification": "保留上轮关闭。",
+      "retained_closed_from": "data/reviews/triplet-token-cycle-2026-09-20/round-4/adjudicator/decision-v2.json"
+    },
+    {
+      "id": "R4-C1",
+      "lane": "research",
+      "severity": "P1",
+      "status": "closed",
+      "candidate_ids": [
+        "C002",
+        "C013"
+      ],
+      "reason": "龙头判断缺可比较口径：千亿单品及扩产不能单独完成市场排名比较；不据此把公司降为第二梯队。",
+      "acceptance": [
+        {
+          "id": "R4-C1-A1",
+          "condition": "在明确白酒/高端白酒/酱香白酒边界下，提供权威行业统计或同口径可复算的主要竞争者规模排名及2023—2025趋势，说明CR5/市占率可得程度。可靠Top3比较即可支撑6分，不因无完整行业分母无限阻塞；不得把品牌价值排名当销量/收入份额。"
+        }
+      ],
+      "affected_items": {
+        "company": [
+          "C1"
+        ],
+        "management": []
+      },
+      "source_refs": [
+        "score-rules.md:L286-L296,L354",
+        "writer/v3/workpaper.json:C1"
+      ],
+      "verification_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-4/rebuilt-sol/workpaper.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-4/repair-sol/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-4/anonymous-recheck-sol/candidates.json#C002,C013"
+      ],
+      "verification": "已核最终底稿、修复事实及原件/计算，原条件满足。C1限可靠主要同行比较；B3为五年同口径；C2C4为含反证的四维判断；E1精确元值及结果一致。"
+    },
+    {
+      "id": "R4-B3",
+      "lane": "research",
+      "severity": "P1",
+      "status": "closed",
+      "candidate_ids": [
+        "C004",
+        "C007"
+      ],
+      "reason": "定价权历史验证未做：收入利润增长不等于主动定价能力，五年毛利率、提价及行业比较是原规则必查。",
+      "acceptance": [
+        {
+          "id": "R4-B3-A1",
+          "condition": "登记2021—2025同口径毛利率、可核主动提价公告及同期行业均值或明确口径的代表性同行比较（不可将同行样本伪称全行业均值）。纳入2025毛利率下降及2026H1收入/利润背离反证，区分出厂价与渠道市场价；由此确认强档6或按原档位调整，不因漏引自动降中档。"
+        }
+      ],
+      "affected_items": {
+        "company": [
+          "B3"
+        ],
+        "management": []
+      },
+      "source_refs": [
+        "score-rules.md:L236-L260",
+        "财报/贵州茅台/贵州茅台2025年度报告.md:L228"
+      ],
+      "verification_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-4/rebuilt-sol/workpaper.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-4/repair-sol/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-4/anonymous-recheck-sol/candidates.json#C004,C007"
+      ],
+      "verification": "已核最终底稿、修复事实及原件/计算，原条件满足。C1限可靠主要同行比较；B3为五年同口径；C2C4为含反证的四维判断；E1精确元值及结果一致。"
+    },
+    {
+      "id": "R4-C2C4",
+      "lane": "research",
+      "severity": "P1",
+      "status": "closed",
+      "candidate_ids": [
+        "C011",
+        "C012"
+      ],
+      "reason": "产业链四维及护城河论证不足：客户/供应商原件数据支持下游分散；公司五大竞争力不是五个独立经济壁垒，原规则五星也不要求恰好五层。",
+      "acceptance": [
+        {
+          "id": "R4-C2C4-A1",
+          "condition": "登记2023—2025前五客户9.99%、11.52%、10.10%及供应商36.45%、35.43%、38.12%，结合B3/C1共用证据回答成本传导、需求传导、周期、上下游议价四维。对产区/工艺/贮存/品牌/渠道解释哪些不可复制、哪些可替代及竞争反证，按整体持续性辩护9或7；C2可维持5但不能仅凭集中度断言瞬时转嫁成本，不要求精确预测周期切换季度。"
+        }
+      ],
+      "affected_items": {
+        "company": [
+          "C2",
+          "C3+C4"
+        ],
+        "management": []
+      },
+      "source_refs": [
+        "财报/贵州茅台/贵州茅台2023年度报告.md:L257,L267",
+        "财报/贵州茅台/贵州茅台2024年度报告.md:L256,L266",
+        "财报/贵州茅台/贵州茅台2025年度报告.md:L263,L265",
+        "score-rules.md:L298-L356"
+      ],
+      "verification_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-4/rebuilt-sol/workpaper.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-4/repair-sol/facts.json",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-4/anonymous-recheck-sol/candidates.json#C011,C012"
+      ],
+      "verification": "已核最终底稿、修复事实及原件/计算，原条件满足。C1限可靠主要同行比较；B3为五年同口径；C2C4为含反证的四维判断；E1精确元值及结果一致。"
+    },
+    {
+      "id": "R4-CAPITAL",
+      "lane": "research",
+      "severity": "P1",
+      "status": "open",
+      "candidate_ids": [
+        "C001",
+        "C003",
+        "C008"
+      ],
+      "reason": "资本回报论证及基金口径不充分：低Capex/OCF与分红不能单独证明增量回报。2025年报L605/L609的22.04亿为基金整体首期规模，不是上市公司各自认缴；L3948-L3952列上市公司各认缴50亿、各未实缴30亿。",
+      "acceptance": [
+        {
+          "id": "R4-CAPITAL-A1",
+          "condition": "将基金整体与上市公司份额、实缴/认缴/已投资区分，纳入60亿元待缴责任。用已投产核心项目产能、可得利用率/分部利润/现金产出和投入给出保守回报边界，解释逆周期布局及回报高于成本，方可维持F2.5=2；不能用合并ROE直接当新项目IRR。计划/实际不可比明确保留，未公开项目IRR不必强补、基金未实现回报不当零。管理层21可由主业投入产出、分红纪律及非核心配置限制辩护，允许相邻开放点值；不要求证明21恰好优于20或22。若回报仍决定性未知，给有据边界而非自动按瑕疵1分。"
+        }
+      ],
+      "affected_items": {
+        "company": [
+          "F2.5"
+        ],
+        "management": [
+          "资本配置能力"
+        ]
+      },
+      "source_refs": [
+        "财报/贵州茅台/贵州茅台2025年度报告.md:L605-L609,L3948-L3952",
+        "writer/facts.json:MOUTAI-CAPEX-002,MOUTAI-CAPEX-004",
+        "score-rules.md:L679-L729,L838"
+      ],
+      "terminal_ruling": "不通过。预算/产能/满产贡献率及基金待缴已核，但54%错误夸大低情景安全垫。正确低情景需86.354%；96.57%为系列酒整体实际产能/设计产能比，并非6400吨项目单体已实现销售或回报，不能自动替代。经营贡献为税前、维护资本开支前，不足单独证成税后资本回报高于成本。F2.5=2及资本配置21的当前论证依赖该错误，尚未完成原验收。项目IRR未公开本身不是失败原因。",
+      "terminal_disposition": "已在本裁决纠正算术事实并撤回依赖评分的批准，冻结底稿保持原貌且不得作为获批稿；不追加修复轮次。"
+    },
+    {
+      "id": "R4-GOV",
+      "lane": "research",
+      "severity": "P1",
+      "status": "closed",
+      "candidate_ids": [],
+      "reason": "持续治理反证遗漏：2023、2024、2025连续自查披露激励承诺与兼职问题；2026H1仍列2017期限承诺未履行且原因为上级无指导措施。存在代理制衡缺口，但不能归因为上市公司恶意失信。",
+      "acceptance": [
+        {
+          "id": "R4-GOV-A1",
+          "condition": "注册承诺方/政策原因、兼职主体、王莉自2023年8月代行总经理及集团职位；分别解释F1=-2不再重复扣同一腐败风险，F3=2是否已容纳该内控瑕疵，以及诚信12、股东友好14、组织人才7的影响。分数可不变但不得以未知一律保留1分；组织判断按近5年公开任免及长期代行、激励机制评价，不要求2016—2019全量任免作为新门槛。"
+        }
+      ],
+      "affected_items": {
+        "company": [
+          "F1",
+          "F3"
+        ],
+        "management": [
+          "诚信与透明度",
+          "对股东友好度",
+          "组织与人才能力"
+        ]
+      },
+      "source_refs": [
+        "财报/贵州茅台/贵州茅台2023年度报告.md:L942",
+        "财报/贵州茅台/贵州茅台2024年度报告.md:L936",
+        "财报/贵州茅台/贵州茅台2025年度报告.md:L745-L761,L977",
+        "财报/贵州茅台/贵州茅台2026半年度报告.md:L389"
+      ],
+      "verification_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-4/adjudicator/decision-v2.json"
+      ],
+      "verification": "保留上轮关闭。",
+      "retained_closed_from": "data/reviews/triplet-token-cycle-2026-09-20/round-4/adjudicator/decision-v2.json"
+    },
+    {
+      "id": "R4-FINANCING",
+      "lane": "research",
+      "severity": "P1",
+      "status": "open",
+      "candidate_ids": [
+        "C006",
+        "C009"
+      ],
+      "reason": "融资和股东回报窗口缺核：首发一项执行与少数年度不适用不足覆盖融资工具；没有全史汇总本身也不等于存在融资瑕疵。",
+      "acceptance": [
+        {
+          "id": "R4-FINANCING-A1",
+          "condition": "以官方证券发行/股本演变汇总或连续年报相关章节建立上市以来重大融资及用途概况，识别重大变更与业绩压力年份资产出售；不要求逐件收齐27募投项目每年文件。F2集中核2021—2025所有潜在摊薄工具、分红/净利及回购注销，近3年至截止日大股东减持（无偿划转与市场减持分开）；延伸已披露2026事件至截止日。可用有覆盖窗口的官方负面声明及股本桥，不用单个空接口证明无事件。支持原档则维持A3=4、F2=5；管理层14须说明回报正面与已核治理约束，而非缺资料扣1。"
+        }
+      ],
+      "affected_items": {
+        "company": [
+          "A3",
+          "F2"
+        ],
+        "management": [
+          "对股东友好度"
+        ]
+      },
+      "source_refs": [
+        "evidence/facts.json:GZMT-R4-CAP-001,GZMT-R4-CAP-002",
+        "evidence/v2/facts.json:GZMT-R4V2-CAP-001",
+        "score-rules.md:L142-L151,L660-L677,L943"
+      ],
+      "terminal_ruling": "部分满足但不关闭。官方2021年报公司沿革已列截至当期历次增资至2015，同当前股本及后续桥可构成重大现金融资概况，未逐年列2016—2020不单独推翻A3=4；该分项可保留。F2原条件要求2021—2025实际分红与净利关系，现仅登记2023—2025年度方案及三年累计数，缺2021—2022，且方案/累计口径不能代替五年实际序列。2026-07-01至09-20仅称未取得原件，未有覆盖窗口的查询记录，不能称有界检索。F2=5和股东友好14仍未满足原条件，不能以短尾较短免核。",
+      "terminal_disposition": "融资/回购已核正面事实保留；撤回F2=5、管理层友好度14及依赖总分的批准，不把缺口判为发生减持或企业不合格。"
+    },
+    {
+      "id": "R4-CRISIS",
+      "lane": "research",
+      "severity": "P1",
+      "status": "closed",
+      "candidate_ids": [],
+      "reason": "危机评分证据对象错位：营收韧性不是危机响应行为。2025年报L747、2026H1 L330/L419已确认免职决议、解任及补位，不能再称全部后续处置未知。",
+      "acceptance": [
+        {
+          "id": "R4-CRISIS-A1",
+          "condition": "核现有公告及定期报告披露的时间链：留置通知、及时公告、临时代行、3月30日免职、后续补位；截至截止日只补决定性后续披露。以透明沟通和职责连续性支持危机7，解释缺少可核机制整改/责任归因使其非高档；未公开动机和最终司法结论留未知，不强求结案。若临2026-005全文仍不可得，定期报告对决议和人事动作的正式确认可支撑这些动作，不因缺重复原件单独阻断。"
+        }
+      ],
+      "affected_items": {
+        "company": [],
+        "management": [
+          "危机处理能力",
+          "组织与人才能力"
+        ]
+      },
+      "source_refs": [
+        "财报/贵州茅台/贵州茅台2025年度报告.md:L747",
+        "财报/贵州茅台/贵州茅台2026半年度报告.md:L330,L419",
+        "evidence/facts.json:GZMT-R4-GOV-002"
+      ],
+      "verification_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-4/adjudicator/decision-v2.json"
+      ],
+      "verification": "保留上轮关闭。",
+      "retained_closed_from": "data/reviews/triplet-token-cycle-2026-09-20/round-4/adjudicator/decision-v2.json"
+    }
+  ],
+  "score_repair_scope": [],
+  "metadata_repair_scope": [],
+  "approved_parameters": {
+    "company_total": null,
+    "management_total": null,
+    "combined_total": null,
+    "target_price": null,
+    "certainty": null,
+    "buy_price": null,
+    "watchlist_tier": null,
+    "approved_items": {
+      "company": {
+        "A1": 2,
+        "A2": 3,
+        "A3": 4,
+        "B0": 1,
+        "B1": 3,
+        "B2": 3,
+        "B3": 6,
+        "B4": 3,
+        "C1": 6,
+        "C2": 5,
+        "C3+C4": 9,
+        "D1": 4,
+        "D2": 4,
+        "D3": 1,
+        "D5": 3,
+        "E1": 5,
+        "E2": 5,
+        "E3": 3,
+        "E4": 1.5,
+        "E5": 2,
+        "E5.5": 3,
+        "F1": -2,
+        "F3": 2
+      },
+      "management": {
+        "诚信与透明度": 12,
+        "战略稳定性": 13,
+        "危机处理能力": 7,
+        "组织与人才能力": 7,
+        "表达清晰度与认知质量": 4
+      }
+    },
+    "not_approved_items": [
+      {
+        "group": "company",
+        "item": "F2",
+        "value": null,
+        "frozen_candidate": 5
+      },
+      {
+        "group": "company",
+        "item": "F2.5",
+        "value": null,
+        "frozen_candidate": 2
+      },
+      {
+        "group": "management",
+        "item": "对股东友好度",
+        "value": null,
+        "frozen_candidate": 14
+      },
+      {
+        "group": "management",
+        "item": "资本配置能力",
+        "value": null,
+        "frozen_candidate": 21
+      }
+    ]
+  },
+  "score_bridge": {
+    "initial_candidate": [
+      84.5,
+      78,
+      162.5
+    ],
+    "last_frozen_candidate": [
+      83.5,
+      78,
+      161.5
+    ],
+    "verified_change": {
+      "B0": [
+        2,
+        1,
+        -1
+      ]
+    },
+    "approved_item_subtotals": {
+      "company": 76.5,
+      "management": 43
+    },
+    "unresolved_items": [
+      {
+        "group": "company",
+        "item": "F2",
+        "value": null,
+        "frozen_candidate": 5
+      },
+      {
+        "group": "company",
+        "item": "F2.5",
+        "value": null,
+        "frozen_candidate": 2
+      },
+      {
+        "group": "management",
+        "item": "对股东友好度",
+        "value": null,
+        "frozen_candidate": 14
+      },
+      {
+        "group": "management",
+        "item": "资本配置能力",
+        "value": null,
+        "frozen_candidate": 21
+      }
+    ],
+    "final_totals": {
+      "company": null,
+      "management": null,
+      "combined": null
+    },
+    "note": "已核分项小计不是最终总分，不以候选值、零分、中档或任意区间填补未知。"
+  },
+  "valuation_approval_scope": {
+    "status": "not_requested_deferred",
+    "approved_models": [],
+    "formal_pricing_approved": false,
+    "quality_stop_approved": false,
+    "reason": "本轮只做独立评分验证；估值不在授权范围，不要求补双模型、不影响未来独立评分批准。"
+  },
+  "delivery_classification": {
+    "pure_delivery_issues": [],
+    "reason": "算术改变回报安全垫且评分依赖未撤尽；截止窗口及五年实际派息缺核影响F2判断。不能改称展示错误规避验收。"
+  },
+  "verification_requirements": {
+    "status": "terminal_not_all_passed",
+    "closed_acceptance_ids": [
+      "R4-B0-A1",
+      "R4-E1-A1",
+      "R4-D2-A1",
+      "R4-D5-A1",
+      "R4-C1-A1",
+      "R4-B3-A1",
+      "R4-C2C4-A1",
+      "R4-GOV-A1",
+      "R4-CRISIS-A1"
+    ],
+    "open_acceptance_ids": [
+      "R4-CAPITAL-A1",
+      "R4-FINANCING-A1"
+    ],
+    "further_research_authorized": false
+  },
+  "next_trigger": "本run终止研究修复。仅在补实质新证据或用户明确重启后按SOP开启新任务；不得因本裁决自动新增轮次。",
+  "prior_decision": "data/reviews/triplet-token-cycle-2026-09-20/round-4/adjudicator/decision-v2.json",
+  "prior_decision_sha256": "2efa7623a9765ea0053069933909fe9a421b234555fcf913b11e534e6bc5f4f8",
+  "prior_candidate_dispositions_ref": "data/reviews/triplet-token-cycle-2026-09-20/round-4/adjudicator/decision-v1.json",
+  "exception_authorization": {
+    "authorized": false,
+    "remaining_research_repair_rounds": 0,
+    "reason": "最后例外与双路验收已使用，终局不再分派修复。"
+  },
+  "adjudicator_recalculation": {
+    "unit": "人民币元；比率为小数",
+    "formula": "net_profit/average_equity = (net_profit/revenue)*(revenue/average_assets)*(average_assets/average_equity)",
+    "years": {
+      "2023": {
+        "net_profit": 77521476277.8,
+        "revenue": 150560330316.45,
+        "assets_begin": 254500826096.02,
+        "assets_end": 272699660092.25,
+        "equity_begin": 204938081263.86,
+        "equity_end": 223656469294.82,
+        "net_margin": 0.5148864652120793,
+        "asset_turnover": 0.5711691633861012,
+        "equity_multiplier": 1.230068103994919,
+        "roe": 0.3617473725540817,
+        "source": "财报/贵州茅台/贵州茅台2023年度报告.md:L1643,L1645,L1671"
+      },
+      "2024": {
+        "net_profit": 89334728025.9,
+        "revenue": 174144069958.25,
+        "assets_begin": 272699660092.25,
+        "assets_end": 298944579918.7,
+        "equity_begin": 223656469294.82,
+        "equity_end": 242011315120.6,
+        "net_margin": 0.5129932247897816,
+        "asset_turnover": 0.6092742925387099,
+        "equity_multiplier": 1.2275795301763646,
+        "roe": 0.38368438193785337,
+        "source": "财报/贵州茅台/贵州茅台2024年度报告.md:L1682,L1704"
+      },
+      "2025": {
+        "net_profit": 85310324833.67,
+        "revenue": 172054171890.91,
+        "assets_begin": 298944579918.7,
+        "assets_end": 303834844021.44,
+        "equity_begin": 242011315120.6,
+        "equity_end": 253959253909.07,
+        "net_margin": 0.49583409629706937,
+        "asset_turnover": 0.5708694260539195,
+        "equity_multiplier": 1.2153532116218784,
+        "roe": 0.34401365790947386,
+        "source": "财报/贵州茅台/贵州茅台2025年度报告.md:L1638,L1660"
+      }
+    },
+    "result": "E1原计算多处不一致为研究错误；纠正后高净利率、低权益乘数支撑5分，仍须正确同步并定向验收。"
+  },
+  "terminal": true,
+  "answer": "评分尚未完成验收；不批准公司/管理层总分，不开展估值或入库。保留28个已核分项及9个已闭合问题，4个分项不批准。",
+  "withdrawn_fields": [
+    "公司总分83.5的最终批准",
+    "管理层总分78的最终批准",
+    "合计161.5的最终批准",
+    "F2=5的批准",
+    "F2.5=2的批准",
+    "资本配置能力=21的批准",
+    "对股东友好度=14的批准",
+    "低情景利用率54%覆盖8%资金成本",
+    "未核短尾=有界检索完成",
+    "资格字段A_CORE作为最终结论"
+  ],
+  "capital_terminal_calculation": {
+    "budget_yuan": 3454160000,
+    "capacity_tonnes": 6400,
+    "capital_cost_assumption": 0.08,
+    "formula": "required_utilization = budget * capital_cost / (capacity * contribution_per_tonne)",
+    "scenarios": [
+      {
+        "contribution_yuan_per_tonne": 50000,
+        "full_capacity_annual_contribution": 320000000,
+        "simple_contribution_rate": 0.09264191583481947,
+        "required_utilization": 0.86354
+      },
+      {
+        "contribution_yuan_per_tonne": 75000,
+        "full_capacity_annual_contribution": 480000000,
+        "simple_contribution_rate": 0.13896287375222918,
+        "required_utilization": 0.5756933333333333
+      },
+      {
+        "contribution_yuan_per_tonne": 100000,
+        "full_capacity_annual_contribution": 640000000,
+        "simple_contribution_rate": 0.18528383166963894,
+        "required_utilization": 0.43177
+      }
+    ],
+    "full_capacity_unit_contribution_threshold_yuan_per_tonne": 43177.0,
+    "source_refs": [
+      "财报/贵州茅台/贵州茅台2021年度报告.md:L355,L2471",
+      "财报/贵州茅台/贵州茅台2023年度报告.md:L399,L401",
+      "repair-sol/calculations.py",
+      "repair-sol/facts.json:GZMT-R4SOL-CAPITAL-001"
+    ],
+    "checks": "已执行原脚本，其输出与calculations.json一致；脚本只验证满产贡献率和回收期，未计算54%阈值。裁决独立重算确认新问题。",
+    "economic_limit": "利用率96.57%为系列酒整体实际产能/设计产能比；单位贡献和8%为假设，税费、维护Capex、营运资本尚未入式。纠正算术不等于项目资金回报条件已核。"
+  },
+  "blocking_items": [
+    {
+      "id": "R4-CAPITAL-A1",
+      "category": "model_error",
+      "impact": "F2.5及管理层资本配置、两总分",
+      "disposition": "open",
+      "source_ref": "repair-sol/facts.json:GZMT-R4SOL-CAPITAL-001",
+      "note": "不通过。预算/产能/满产贡献率及基金待缴已核，但54%错误夸大低情景安全垫。正确低情景需86.354%；96.57%为系列酒整体实际产能/设计产能比，并非6400吨项目单体已实现销售或回报，不能自动替代。经营贡献为税前、维护资本开支前，不足单独证成税后资本回报高于成本。F2.5=2及资本配置21的当前论证依赖该错误，尚未完成原验收。项目IRR未公开本身不是失败原因。"
+    },
+    {
+      "id": "R4-FINANCING-A1",
+      "category": "evidence_gap",
+      "impact": "F2及管理层股东友好度、两总分",
+      "disposition": "open",
+      "source_ref": "repair-sol/facts.json:GZMT-R4SOL-FINANCING-001",
+      "note": "部分满足但不关闭。官方2021年报公司沿革已列截至当期历次增资至2015，同当前股本及后续桥可构成重大现金融资概况，未逐年列2016—2020不单独推翻A3=4；该分项可保留。F2原条件要求2021—2025实际分红与净利关系，现仅登记2023—2025年度方案及三年累计数，缺2021—2022，且方案/累计口径不能代替五年实际序列。2026-07-01至09-20仅称未取得原件，未有覆盖窗口的查询记录，不能称有界检索。F2=5和股东友好14仍未满足原条件，不能以短尾较短免核。"
+    }
+  ],
+  "verified_findings": [
+    {
+      "id": "R4-B0",
+      "acceptance_id": "R4-B0-A1",
+      "status": "closed"
+    },
+    {
+      "id": "R4-E1",
+      "acceptance_id": "R4-E1-A1",
+      "status": "closed"
+    },
+    {
+      "id": "R4-D2",
+      "acceptance_id": "R4-D2-A1",
+      "status": "closed"
+    },
+    {
+      "id": "R4-D5",
+      "acceptance_id": "R4-D5-A1",
+      "status": "closed"
+    },
+    {
+      "id": "R4-C1",
+      "acceptance_id": "R4-C1-A1",
+      "status": "closed"
+    },
+    {
+      "id": "R4-B3",
+      "acceptance_id": "R4-B3-A1",
+      "status": "closed"
+    },
+    {
+      "id": "R4-C2C4",
+      "acceptance_id": "R4-C2C4-A1",
+      "status": "closed"
+    },
+    {
+      "id": "R4-CAPITAL",
+      "acceptance_id": "R4-CAPITAL-A1",
+      "status": "open"
+    },
+    {
+      "id": "R4-GOV",
+      "acceptance_id": "R4-GOV-A1",
+      "status": "closed"
+    },
+    {
+      "id": "R4-FINANCING",
+      "acceptance_id": "R4-FINANCING-A1",
+      "status": "open"
+    },
+    {
+      "id": "R4-CRISIS",
+      "acceptance_id": "R4-CRISIS-A1",
+      "status": "closed"
+    }
+  ],
+  "performance_note": "性能目标与质量验收分开；token目标失败、约60分钟由主任务计量，不据此放行。"
+}

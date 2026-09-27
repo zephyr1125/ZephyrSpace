@@ -1,0 +1,25 @@
+{
+  "base": {"path":"data/reviews/triplet-token-cycle-2026-09-20/round-5/writer/rebuilt-v2/workpaper.json","sha256":"0dc7ed8b7ea2654df18cd1390b718ae7c826d538a1778e533680fc94a98c93ad"},
+  "decision": {"path":"data/reviews/triplet-token-cycle-2026-09-20/round-5/adjudicator/decision-v2.json","sha256":"6efe70184d9be04d0d4de9e7b10f2d7a271c071e13ca5fc025056a061ac1d64b"},
+  "manifest": {"path":"data/reviews/triplet-token-cycle-2026-09-20/round-5/score-manifest-v2.json","sha256":"22fb548db6ea6e4757b8a315cd4d7e1f35c6870a6faa5e270e0573a09c1ad89f"},
+  "rules": {"path":"data/reviews/triplet-token-cycle-2026-09-20/round-5/score-rules.md","sha256":"66a3034d0df68edfdc6a5d43f698130aac2a9902be66e7742c1bc0a05dc81e68"},
+  "new_evidence": {"path":"data/reviews/triplet-token-cycle-2026-09-20/round-5/repair-sol/facts.json","sha256":"48faf9fc87778bf49012a21665ae2af08e241917019ea2233015cc7f3729bb2a"},
+  "delta": {"path":"data/reviews/triplet-token-cycle-2026-09-20/round-5/repair-sol/delta.json","sha256":"f4f41934d499e427600ead55b863374d6cc54f5072997bf072c1a7477053910c"},
+  "evidence_registry": {"path":"data/reviews/triplet-token-cycle-2026-09-20/round-5/repair-sol/evidence-files.json","sha256":"4e5566e237cb96eab301eb1729bf63ae00b13e543f279efc9ddac74667e905ad"},
+  "rebuilt_workpaper": {"path":"data/reviews/triplet-token-cycle-2026-09-20/round-5/rebuilt-sol/workpaper.json","sha256":"7006717b85dd80dd524ac9fe874eaa363046e8859495361003d7337b0205f11e"},
+  "receipt": {"path":"data/reviews/triplet-token-cycle-2026-09-20/round-5/rebuilt-sol/receipt.json","sha256":"cd0ab6caf05160da200407b09aad7105a539bd5346e65923f4eaa9be1cc0434c"},
+  "source_views": [
+    "source-views/贵州茅台2021年度报告.md",
+    "source-views/贵州茅台2022年度报告.md",
+    "source-views/贵州茅台2023年度报告.md",
+    "source-views/贵州茅台2024年度报告.md",
+    "source-views/贵州茅台2025年度报告.md",
+    "source-views/贵州茅台2026半年度报告.md",
+    "source-views/贵州茅台2024半年度报告.md"
+  ],
+  "reused_evidence": [
+    "numeric/facts.json","numeric/sources.json","numeric/v2/facts.json",
+    "external/facts.json","external/v3/facts.json","external/v4/facts.json","external/v5/facts.json",
+    "writer/repair-v2/facts.json"
+  ]
+}

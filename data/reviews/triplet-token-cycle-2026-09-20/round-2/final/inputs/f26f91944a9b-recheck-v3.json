@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "review_type": "final_targeted_recheck_after_bounded_exception",
+  "verdict": "not_approved",
+  "research_status": "execution_incomplete_exception_exhausted",
+  "score_state": "not_approved",
+  "results": [
+    {"id":"C001","status":"closed_no_regression","evidence":"E4仍登记2025/2024现金Capex 31.276/46.787亿元、同比-33.15%、split_complete=false，并从2分扣至1.5；未与F2.5重复扣分。","remaining":"无。"},
+    {"id":"C002","status":"closed_no_regression","evidence":"新底稿分项机械加总公司90.5、管理层82、合计172.5，score-rationale一致。","remaining":"无。"},
+    {"id":"C003","status":"open","evidence":"R009-R012补了六年收入/利润趋势、2025单年杜邦、三年扣非和审计政策摘要；但裁决要求2020-2025同口径杜邦，现仅计算2025年，E3的完整周期量价结构仅有2025销量/收入拆解，E5.5也未核会计政策变更与计提充分性，只陈述现行政策和KAM性质。","remaining":"现有材料可继续支持E2=5；E1=5、E3=3、E5.5=3尚未满足各自完整验收桥。"},
+    {"id":"C004","status":"open","evidence":"R013补招股书，足以改善A1/B0；但A2所谓自IPO连续控制链只登记IPO及2020-2025年报，2002-2019未覆盖。A3事实仅概括2020-2025资本动作，不能证明上市以来融资用途与无卖资产保利润。R015没有商誉、账龄和近三年减值的具体数值或逐年定位。","remaining":"A1/B0子条件可视为完成；A2、A3、E5仍有公开原件执行缺口。"},
+    {"id":"C005","status":"open","evidence":"R022对蒋焰留置、免职和接任关系的处理方向正确；但repair-writer/sources.json未登记临2026-004/005原公告，仅登记招股书与2024年报。R023以一句‘定向公开检索未发现’概括近十年逐名廉洁、近三年减持、监管问询和行业处罚，未列核心姓名、查询范围、监管机构、URL或结果定位，不能验证检索实际覆盖。","remaining":"案件终局未公开可以bounded；已公开公告和指定治理检索尚未形成可复核证据，F1/F2/F3及管理层联动不能据此关闭。"},
+    {"id":"C006","status":"open","evidence":"R016/R017补三年员工、人效、研发及六年战略主线，D1与D2桥明显改善；但D5原规则最高档要求人均创收上升且研发健康，数据呈2025人效由491.8降至482.5万元，属于混合信号，却仍给3分而未解释为何不取相邻2分。管理层表达4分仍以缺即兴问答样本限制，继续把研究缺口用于选档。","remaining":"D1/D2可保留；D5及表达清晰度须按已核事实选择相邻档，不得以未取得材料扣分或维持最高档。"},
+    {"id":"C007","status":"open","evidence":"未把解任当作案件结案，也未外推系统性腐败，判断边界正确；但原公告未在sources注册，近十年逐名廉洁及治理检索不可复核，与C005同一验收条件尚未完成。","remaining":"公开终局不可得可列有界未知；公开公告链和治理检索仍是执行缺口。"},
+    {"id":"C008","status":"open","evidence":"E2现金流经济归因没有回退；但本ID共享C003的完整验收条件，E1跨期杜邦、E3完整量价周期和E5.5计提充分性仍未闭合。","remaining":"保留已核E2=5，完成C003剩余桥。"},
+    {"id":"C009","status":"open","evidence":"国资背景不再被用作排除先发优势，招股书也补强A1/B0；但A2/A3/E5仍存在C004所述时间断层和缺乏具体附注数据。","remaining":"不能以部分历史原件概括完整上市史并关闭。"},
+    {"id":"C010","status":"open","evidence":"D1/D2与三年组织数据已补；D5最高档与2025人效回落的相邻档归因未闭合，表达清晰度仍由缺问答样本限制。","remaining":"同C006，仅D5及管理层表达选档仍未通过。"},
+    {"id":"C011","status":"open","evidence":"E3已加入五年CAGR、三年扣非比例和2025量价/结构反证，不再以2026H1销量独证；但‘完整周期量价结构’并未覆盖此前年度，且E1/E5.5共享条件仍不完整。","remaining":"E3当前3分可能合理，但尚缺裁决指定的完整周期量价证据；共享财务条件同C003。"},
+    {"id":"C012","status":"open","evidence":"R018补毛利率及2023提价，R019补客户/供应商集中，R020补壁垒和替代反证；但未核裁决明确要求的合理可比毛利率，也没有可追溯的外部Top3/绝对龙头排名与近三年地位趋势。R019称需求‘可在年度内传导’没有事实定位，C2四维中的周期与净议价仍主要是作者判断。","remaining":"B3/C2/C3+C4证据改善但最高档尚不能整体关闭；至少补可比毛利率、外部排名趋势及四维归因定位。"},
+    {"id":"C013","status":"closed_no_regression","evidence":"同C002，新底稿与论证总分一致。","remaining":"无。"},
+    {"id":"C014","status":"open","evidence":"诚信14分已纳入留置负面，战略13分有连续证据；但资本配置21分依赖尚未闭合的C015，组织7分没有裁决要求的近五年任免/继任/激励时间线，危机处理8分仍在没有可归因且闭环案例的情况下维持原值，未说明8分相对相邻档的依据；对股东友好15分依赖不可复核的R023减持检索。","remaining":"七项中诚信、战略部分可保留；资本、组织、危机、股东友好仍未形成充分的事实—限制—相邻档桥。"},
+    {"id":"C015","status":"open","evidence":"基金认缴/实缴/未缴金额、positive_precedent=false和不虚构回报均正确；但R021只概括主业技改、2025 Capex收缩、高ROE和低杠杆，没有近五年计划Capex对实际Capex桥、回购价格所处历史区间、明确ROIC与WACC比较，也未给重大融资/并购逐项范围。F2/F3又依赖不可复核的R023治理检索。高ROE与低杠杆不能替代资本项目ROIC/WACC。","remaining":"F2.5基础2分及管理层资本配置21分仍缺裁决要求的资本纪律证据；基金回报未知本身可以bounded，不是阻断点。"}
+  ],
+  "closed_ids": ["C001","C002","C013"],
+  "remaining_p1": ["C003","C004","C005","C006","C007","C008","C009","C010","C011","C012","C014","C015"],
+  "final_assessment": "最后一次例外修复补入了有价值的招股书、财务趋势、战略组织、定价和治理事实，但作者把部分覆盖、概括性‘未发现’及无定位的分析判断统一标为closed。多个最高档仍缺裁决明确要求的时间范围、相邻档解释或可复核检索记录。由于研究修复额度已耗尽，本轮不能批准公司90.5、管理层82或合计172.5；应按execution_incomplete保留已核子结论和上述未闭合项，不得发布评分批准包。",
+  "bounded_unknowns_accepted": [
+    "蒋焰留置案件终局截至2026-09-20若确无公开披露，可作为有界未知，不要求推定结案。",
+    "两只产业基金完整退出与回报未披露，可限制正面先例而不按失败扣分。"
+  ],
+  "hashes": {
+    "adjudicator/decision-v3.json":"28cd683f2f2c1dcc84e77c15f6ac0f7247aea8d734c2228d3cb67cefb9f479b9",
+    "writer/rebuilt-v3/workpaper.json":"ea9df3e1ea6606c8e81575c7249d21cad8ab5d1fbe55190b26bb1e88da4adfb3",
+    "writer/rebuilt-v3/receipt.json":"8c5d810146aedc9bde81d9e4b48ed6147fd6f01afcfc2ac587cea64879cbf084",
+    "writer/repair-writer/facts.json":"b8732c0aae8d403111191223416e15e1e13f84af74ec70c4bdc8da7078d18690",
+    "writer/repair-writer/sources.json":"04cb2470f27716d2ba7a39355787a221e84490b8c69fce1f02b430e45a17f1ff",
+    "writer/repair-writer/evidence-files.json":"97171dfaa333079cb296aa58352aef5ded31d7b4bf6d1c23430f97e929ffdefd",
+    "writer/repair-writer/delta.json":"0b7a7caac2767ed3b5e9a3707d44485388fb0d719d1cc4c8fb5d05dbc8e3ca49",
+    "writer/repair-writer/acceptance-response.json":"fa052dc664ae293d22aee693256c501d0dd438d919cbd11b60f7b4431f6006aa",
+    "writer/repair-writer/score-rationale.md":"73e7164b6f9d63872c79a0dc266167df0f3adc3bba08c6cb784767eff0b8b169"
+  }
+}

@@ -1,0 +1,11 @@
+{"schema_version":1,"evidence_version":"external-v4-2026-09-21","sources":[
+{"source_id":"MT5V4-SRC-YRG","title":"贵州茅台原董事长袁仁国一审被判无期徒刑","publisher":"中华人民共和国最高人民检察院（来源：贵阳市中级人民法院微信公众号）","url":"https://www.spp.gov.cn/zdgz/202109/t20210923_530571.shtml","published_date":"2021-09-23","accessed_date":"2026-09-21"},
+{"source_id":"MT5V4-SRC-ENV-CREDIT","title":"贵州省生态环境厅2024年度重点排污单位环境信用评价结果公告","publisher":"贵州省生态环境厅","url":"https://sthj.guizhou.gov.cn/ztzl/pwxk/202509/t20250902_88553320.html","published_date":"2025-09-01","accessed_date":"2026-09-21"},
+{"source_id":"MT5V4-SRC-ENV-MON2023","title":"贵州省4月重点企业污染源监测数据","publisher":"贵州省生态环境厅","url":"https://sthj.guizhou.gov.cn/zwgk/hjsj/zdqyjdxjcjg/202305/P020230519539927884367.pdf","accessed_date":"2026-09-21"},
+{"source_id":"MT5V4-SRC-ENV-MON2024","title":"贵州省9月重点企业污染源监测数据","publisher":"贵州省生态环境厅","url":"https://sthj.guizhou.gov.cn/zwgk/hjsj/zdqyjdxjcjg/202410/P020241029543840622208.pdf","accessed_date":"2026-09-21"},
+{"source_id":"MT5V4-SRC-MT-ANN","title":"贵州茅台公司公告索引","publisher":"贵州茅台","url":"https://www.moutaichina.com/mtgf/tzzgx/gsgg/index.html","accessed_date":"2026-09-21"},
+{"source_id":"MT5V4-SRC-2023AR","title":"贵州茅台2023年度报告本地阅读视图","local_view":"data/reviews/triplet-token-cycle-2026-09-20/round-5/source-views/贵州茅台2023年度报告.md","locator":"L1431"},
+{"source_id":"MT5V4-SRC-2024AR","title":"贵州茅台2024年度报告本地阅读视图","local_view":"data/reviews/triplet-token-cycle-2026-09-20/round-5/source-views/贵州茅台2024年度报告.md","locator":"L1424"},
+{"source_id":"MT5V4-SRC-2025AR","title":"贵州茅台2025年度报告本地阅读视图","local_view":"data/reviews/triplet-token-cycle-2026-09-20/round-5/source-views/贵州茅台2025年度报告.md","locator":"L1394"},
+{"source_id":"MT5V4-SRC-2026H1","title":"贵州茅台2026半年度报告本地阅读视图","local_view":"data/reviews/triplet-token-cycle-2026-09-20/round-5/source-views/贵州茅台2026半年度报告.md","locator":"L622、L2662"}
+]}

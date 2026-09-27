@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "review_role": "triplet_review_facts",
+  "stage": "targeted_recheck_v2",
+  "frozen_workpaper": "data/reviews/triplet-token-cycle-2026-09-20/round-5/writer/rebuilt-v2/workpaper.json",
+  "frozen_workpaper_sha256": "0dc7ed8b7ea2654df18cd1390b718ae7c826d538a1778e533680fc94a98c93ad",
+  "results": [
+    {"id":"R5-HISTORY-A01","status":"passed","evidence":"external/v5/facts.json:MT5V5-HIST-CTRL-001及query-record:MT5V5-Q01覆盖1999设立、2001上市、2025/2026H1控制链关键节点；底稿A2明确国资监管表述变化不等于实控变更。","remaining":""},
+    {"id":"R5-HISTORY-A02","status":"passed","evidence":"MT5V5-HIST-FIN-001/002及MT5V5-HIST-MA-001/002列IPO用途及2002执行、并购/出售原件和后续融资/重大重组有界检索边界；底稿A3未把未命中外推为全历史不存在。","remaining":""},
+    {"id":"R5-HISTORY-A03","status":"passed","evidence":"底稿A2/A3均已按新增事实重述并说明清洁档依据，未知仅作为检索边界未被直接扣分。","remaining":""},
+    {"id":"R5-CHAIN-A01","status":"passed","evidence":"repair-v2/facts.json:MT5R2-CHAIN及底稿C2纳入上游合作社/农户、销量及价格、成本变化、2026H1成本快于收入和预收政策变化，覆盖四维中的可得事实与未知边界。","remaining":""},
+    {"id":"R5-CHAIN-A02","status":"passed","evidence":"底稿C2将价格/销量作为部分成本传导证据，并把高毛利和成本快于收入明确区分，说明维持5分的相邻档判断。","remaining":""},
+    {"id":"R5-LATEST-A01","status":"passed","evidence":"2026H1原件L88、L164-L167、L210分别支持收入+1.47%、归母净利-1.95%、成本+21.81%、合同负债-60.31%及销量、生产成本、预收政策解释。","remaining":""},
+    {"id":"R5-LATEST-A02","status":"passed","evidence":"底稿B4/D3/E3/C2均已纳入2026H1信号；未年化半年数据，E3未以扣非接近净利替代价格证据。","remaining":""},
+    {"id":"R5-ACCOUNTING-A01","status":"passed","evidence":"底稿E5.5及F3改为收入确认、关联交易KAM及其控制/实质程序含义；未再把KAM说成已发生错报或“无KAM”。","remaining":""},
+    {"id":"R5-ACCOUNTING-A02","status":"partial","evidence":"2025原件可核坏账准备约8.30%、存货跌价准备约0.00209%，并有KAM和计提分析；但2023年报L98及L2226-L2242明确存在准则解释16号导致的会计政策变更和追溯调整，repair-v2/facts.json仅笼统称2023—2025“未见重大变更”，未逐年登记变更次数、实质和约2660.70万元合并权益影响。","remaining":"须按2023、2024、2025逐年列政策/估计变更为0或具体事项，并记录2023准则解释16号追溯调整及其非重大性判断。"},
+    {"id":"R5-ACCOUNTING-A03","status":"failed","evidence":"E5.5虽已纠正KAM误报并说明F3/诚信不因KAM自动联动，但其3分仍依赖不完整的三年政策记录；裁决条件要求该记录和关键计提均已核后才可批准3分。","remaining":"完成R5-ACCOUNTING-A02的逐年原件登记后，重述E5.5=3的档位理由，并明确F3、诚信与透明度维持的联动理由。"},
+    {"id":"R5-DIVIDEND-A01","status":"passed","evidence":"MT5R2-DIV已撤回实施年/同年利润序列，改按归属年度列已实施常规、特别/中期分红并回购单列。","remaining":""},
+    {"id":"R5-DIVIDEND-A02","status":"passed","evidence":"2025中期300.01亿元/归母823.20亿元=36.44%为已实施下限；底稿F2明确不将未实施预案计入。","remaining":""},
+    {"id":"R5-DIVIDEND-A03","status":"passed","evidence":"底稿F2、资本配置能力、对股东友好度均改为同口径已实施分红、回购和集团增持等已核事实，未把检索边界作为扣分理由。","remaining":""},
+    {"id":"R5-ATTRIBUTION-A01","status":"passed","evidence":"底稿对股东友好度、表达清晰度与认知质量已删除未取得材料/查询边界作为扣分归因，评分理由仅留已核资本回报及披露事实。","remaining":""},
+    {"id":"R5-ATTRIBUTION-A02","status":"passed","evidence":"管理层战略稳定性删除缺电话会原话扣分；公司D2仍依原规则的缺原话4分上限，未混同两条规则。","remaining":""},
+    {"id":"R5-STATUS-A01","status":"passed","evidence":"2026H1原件L330列蒋焰解任、余思明聘任；底稿F1和管理层理由区分事发职务、截止日已解聘及调查未结案。","remaining":""},
+    {"id":"R5-STATUS-A02","status":"passed","evidence":"底稿F1保留两名前董事长判决对应的历史周期性腐败-2分，不再把蒋焰作为现任追加降级；管理层维度理由同步，且未称调查结案。","remaining":""},
+    {"id":"R5-TALENT-A01","status":"passed","evidence":"MT5R2-TALENT列近五年董事长三次继任及2026财务负责人变动，写明窗口和人才留存率未公开；底稿组织与人才能力已纳入。","remaining":""},
+    {"id":"R5-TALENT-A02","status":"passed","evidence":"底稿组织与人才能力把继任、激励承诺和人才留存未知分开，并未机械相加子分；危机处理能力同步纳入继任与腐败链限制。","remaining":""}
+  ],
+  "new_findings": [
+    {"severity":"P1","location":"R5-ACCOUNTING-A02/A03；writer/rebuilt-v2/workpaper.json:scores.company.items[id=E5.5]","claim":"E5.5维持3分所称2023—2025未见重大会计政策/估计变更，但三年政策记录未完整登记。","evidence":"2023年度报告L98披露准则解释16号自2023-01-01施行并追溯调整；L2226-L2242为政策/估计变更章节，权益变动表L1711列合并所有者权益追溯调整约-2660.70万元。修复事实包未逐年记录该事项、次数、实质及利润影响。","impact":"裁决规定三年政策记录或关键计提未核时不得批准E5.5=3，当前公司评分83.5仍不可批准。","recommendation":"补2023—2025逐年政策/估计变更台账，说明2023准则解释16号影响及为何不构成重大盈利质量问题，然后据此重验E5.5及F3/诚信联动。"}
+  ]
+}

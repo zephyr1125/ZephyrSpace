@@ -1,0 +1,95 @@
+{
+  "status": "failed_trial_inputs_not_approved_research",
+  "inputs": [
+    {
+      "original": "data/reviews/triplet-token-cycle-2026-09-20/round-1/writer/workpaper-v1.json",
+      "snapshot": "data/reviews/triplet-token-cycle-2026-09-20/round-1/final/inputs/001-workpaper-v1.json",
+      "sha256": "9a7be35b3266ffc78db9f03285649dc864aec6ad8f69a20395468608dc2adac2"
+    },
+    {
+      "original": "data/reviews/triplet-token-cycle-2026-09-20/round-1/writer/score-rationale.md",
+      "snapshot": "data/reviews/triplet-token-cycle-2026-09-20/round-1/final/inputs/002-score-rationale.md",
+      "sha256": "77d23f6e543224e899200de8e7db12dada7c2ff60dc846fb4171180ecfb3f5da"
+    },
+    {
+      "original": "data/reviews/triplet-token-cycle-2026-09-20/round-1/writer/coverage-score-v2.json",
+      "snapshot": "data/reviews/triplet-token-cycle-2026-09-20/round-1/final/inputs/003-coverage-score-v2.json",
+      "sha256": "4c2987377cb00455d41bcff41d8664abe42ee57f6ee19bd6974ecd6fb89ddcd6"
+    },
+    {
+      "original": "data/reviews/triplet-token-cycle-2026-09-20/round-1/writer/evidence-files-score.json",
+      "snapshot": "data/reviews/triplet-token-cycle-2026-09-20/round-1/final/inputs/004-evidence-files-score.json",
+      "sha256": "fdffdb2533086d42c88331fb6107c5d6285fe8b286a184f37bf6ddd2083d0d11"
+    },
+    {
+      "original": "data/reviews/triplet-token-cycle-2026-09-20/round-1/evidence/sources.json",
+      "snapshot": "data/reviews/triplet-token-cycle-2026-09-20/round-1/final/inputs/005-sources.json",
+      "sha256": "d7cecf9800b1ca7507674100d08359a4fd2a4cc9b37fdd07e54cd504e9c68ca9"
+    },
+    {
+      "original": "data/reviews/triplet-token-cycle-2026-09-20/round-1/evidence/facts.json",
+      "snapshot": "data/reviews/triplet-token-cycle-2026-09-20/round-1/final/inputs/006-facts.json",
+      "sha256": "4a4494e069adf8b1cf1300c4390b50cf8434a709a76dccf662fb93cc17c4ff82"
+    },
+    {
+      "original": "data/reviews/triplet-token-cycle-2026-09-20/round-1/evidence/sources-v2.json",
+      "snapshot": "data/reviews/triplet-token-cycle-2026-09-20/round-1/final/inputs/007-sources-v2.json",
+      "sha256": "bb7a6be2d3009c498e1e3c14a9e9199a1bad96cfa432e8f10f39810af5fa3800"
+    },
+    {
+      "original": "data/reviews/triplet-token-cycle-2026-09-20/round-1/evidence/facts-v2.json",
+      "snapshot": "data/reviews/triplet-token-cycle-2026-09-20/round-1/final/inputs/008-facts-v2.json",
+      "sha256": "5f550d62a858d64a96889e4fb437e79755f67497695ad7624249446ced918bb3"
+    },
+    {
+      "original": "data/reviews/triplet-token-cycle-2026-09-20/round-1/evidence/sources-v3.json",
+      "snapshot": "data/reviews/triplet-token-cycle-2026-09-20/round-1/final/inputs/009-sources-v3.json",
+      "sha256": "57c254c82e71fc11b557df6c4e0496fad7e0e2ee7f781d8ad8524a70d538d918"
+    },
+    {
+      "original": "data/reviews/triplet-token-cycle-2026-09-20/round-1/evidence/facts-v3.json",
+      "snapshot": "data/reviews/triplet-token-cycle-2026-09-20/round-1/final/inputs/010-facts-v3.json",
+      "sha256": "76c3a2c2654f3f95a6666b098a08927430a7b02a7cb468e94b821490c45ee537"
+    },
+    {
+      "original": "data/reviews/triplet-token-cycle-2026-09-20/round-1/evidence/facts-local-completion.json",
+      "snapshot": "data/reviews/triplet-token-cycle-2026-09-20/round-1/final/inputs/011-facts-local-completion.json",
+      "sha256": "186a72356b6acc86d2b59f16522166843e6489f886393f7f065d4587e6f5580f"
+    },
+    {
+      "original": "data/reviews/triplet-token-cycle-2026-09-20/round-1/writer/supplement-sources.json",
+      "snapshot": "data/reviews/triplet-token-cycle-2026-09-20/round-1/final/inputs/012-supplement-sources.json",
+      "sha256": "06a0921e2126947053e96f941089f8eff1b4e6d5ab0fec0063467028a765e998"
+    },
+    {
+      "original": "data/reviews/triplet-token-cycle-2026-09-20/round-1/writer/supplement-facts.json",
+      "snapshot": "data/reviews/triplet-token-cycle-2026-09-20/round-1/final/inputs/013-supplement-facts.json",
+      "sha256": "f60febda1b1b5edd2d3d8f112f637a82324b31284ee00f598922d4435f0bfc76"
+    },
+    {
+      "original": "data/reviews/triplet-token-cycle-2026-09-20/round-1/writer/scoring-sources.json",
+      "snapshot": "data/reviews/triplet-token-cycle-2026-09-20/round-1/final/inputs/014-scoring-sources.json",
+      "sha256": "ae040ba72e44cf2a4eced01d4ff2d7bbac90ffe8cc4a25f14afd3b9056d517e5"
+    },
+    {
+      "original": "data/reviews/triplet-token-cycle-2026-09-20/round-1/writer/scoring-facts.json",
+      "snapshot": "data/reviews/triplet-token-cycle-2026-09-20/round-1/final/inputs/015-scoring-facts.json",
+      "sha256": "eaf11accbdc257fb9260c1c62c9cc234681581fc15c84cc29e69f881620c21ea"
+    },
+    {
+      "original": "data/reviews/triplet-token-cycle-2026-09-20/round-1/score-plan.json",
+      "snapshot": "data/reviews/triplet-token-cycle-2026-09-20/round-1/final/inputs/016-score-plan.json",
+      "sha256": "e50a7d5cf739da384bb3aadf3813438089d1861d792d09924bd87e3adc14259d"
+    },
+    {
+      "original": "data/reviews/triplet-token-cycle-2026-09-20/round-1/evidence/coverage.json",
+      "snapshot": "data/reviews/triplet-token-cycle-2026-09-20/round-1/final/inputs/017-coverage.json",
+      "sha256": "242714f063a8c5cf5db6a3ef9c340af834e6953c01e32f2b9ecc0bb928c054da"
+    },
+    {
+      "original": "data/reviews/triplet-token-cycle-2026-09-20/round-1/evidence/coverage-v2.json",
+      "snapshot": "data/reviews/triplet-token-cycle-2026-09-20/round-1/final/inputs/018-coverage-v2.json",
+      "sha256": "75084dcf49f5bac0701cc20cedb66136aa0719d65e56846b65526ac38272dabc"
+    }
+  ]
+}

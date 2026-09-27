@@ -1,0 +1,9 @@
+{"schema_version":1,"evidence_version":"round-1-plan-e50a7d5c","sources":[
+{"source_id":"GZMT-SRC-FIN-2020-AR","path":"财报/贵州茅台/贵州茅台2020年度报告.md","reporting_period":"2020年度","source":"本地归档Markdown；文件自述上交所指定披露网站","sha256":"9f41a0a29c9cfe45f6253b43bb780c18badfb588340d215f79d1138f45ace4b1"},
+{"source_id":"GZMT-SRC-FIN-2021-AR","path":"财报/贵州茅台/贵州茅台2021年度报告.md","reporting_period":"2021年度","source":"本地归档Markdown；文件自述上交所披露网站","sha256":"b965a0413e5bc2c9c2e84b1a682ec4b4370d7b8aa672a1bb3d12f21871fcb6ef"},
+{"source_id":"GZMT-SRC-FIN-2022-AR","path":"财报/贵州茅台/贵州茅台2022年度报告.md","reporting_period":"2022年度","source":"本地归档Markdown；文件自述上交所披露网站","sha256":"8a51b448ba048bae3d3a7ea0935bfbcc82fe6e1067b1f039c06cc9406db32b73"},
+{"source_id":"GZMT-SRC-FIN-2023-AR","path":"财报/贵州茅台/贵州茅台2023年度报告.md","reporting_period":"2023年度","source":"本地归档Markdown；文件自述上交所披露网站","sha256":"cfd96c63c17ffd1625467e72ed1a799d484649e0edff9f1feab35f06b3fbf9a0"},
+{"source_id":"GZMT-SRC-FIN-2024-AR","path":"财报/贵州茅台/贵州茅台2024年度报告.md","reporting_period":"2024年度","source":"本地归档Markdown；文件自述上交所披露网站","sha256":"06d68e979a71cf5b168a3a101b181ef7039a606b15b9632c4d1f68bb5cc016ba"},
+{"source_id":"GZMT-SRC-FIN-2025-AR","path":"财报/贵州茅台/贵州茅台2025年度报告.md","reporting_period":"2025年度","source":"本地归档Markdown；文件自述上交所披露网站","sha256":"671846da0415046e5ba83adde16a4600f4a758ce1cb895c232fac17a35023b4b"},
+{"source_id":"GZMT-SRC-FIN-2026-Q1","path":"财报/贵州茅台/贵州茅台2026第一季度报告.md","reporting_period":"2026-01-01至2026-03-31","source":"本地归档Markdown；输入未附官方原件链接","sha256":"c9aa462a0a7b17f963aee6d0d3ab92ef8b37e5e2efe3e71d83e1e523f599b0f8"},
+{"source_id":"GZMT-SRC-FIN-2026-H1","path":"财报/贵州茅台/贵州茅台2026半年度报告.md","reporting_period":"2026-01-01至2026-06-30","source":"本地归档Markdown；文件自述上交所披露网站","sha256":"1d82e9fa3bc862041bfffa2a2fc8dd7c3726deca4b1f8ae9a4e210528e44156f"}]}

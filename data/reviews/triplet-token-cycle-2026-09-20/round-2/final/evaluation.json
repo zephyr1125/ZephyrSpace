@@ -1,0 +1,61 @@
+{
+  "round": 2,
+  "directory": "data/reviews/triplet-token-cycle-2026-09-20/round-2",
+  "started_at": "2026-09-20T15:54:16.411080+00:00",
+  "status": "failed",
+  "baseline_metric": 1325995,
+  "target_metric": 928196.5,
+  "baseline_roles_metric": 1056940,
+  "target_roles_metric": 739858,
+  "changes": [
+    "已有完整原始财报时作者直接完成32项底稿，证据角色仅明确缺口派发",
+    "取消默认全32计划/coverage重复副本，独立双复核仍全部覆盖",
+    "新稿explicit_tiers_v2检查封闭档位及E4 Capex原规则"
+  ],
+  "evidence_role_status": "not_dispatched_existing_originals",
+  "independence": "新作者及新审核，不读旧run/旧报告/旧分数",
+  "score_state": "not_approved",
+  "valuation_scope": "未纳入本轮评分基线，不能外推完整三件套节省率",
+  "concurrent_user_discussion": {
+    "since": "2026-09-20T15:55:15.212Z",
+    "until": "2026-09-20T15:56:57.050Z",
+    "scope": "本地MD与token问答，含一次研究状态只读核查",
+    "accounting": "墙钟和主任务原始用量保留，不主观扣除；另列研究子角色口径"
+  },
+  "candidate_raw_scores": {
+    "company": 90.5,
+    "management": 82
+  },
+  "score_manifest": "data/reviews/triplet-token-cycle-2026-09-20/round-2/score-manifest-v1.json",
+  "author_finished_at": "2026-09-20T16:02:07.271437+00:00",
+  "review_candidates": 15,
+  "decision": "data\\reviews\\triplet-token-cycle-2026-09-20\\round-2\\adjudicator\\decision-v3.json",
+  "repair_rounds": 2,
+  "token_target_met": false,
+  "token_failure_observed_at": "2026-09-20T16:14:23+00:00",
+  "observed_metric_before_repair": 978136,
+  "observed_roles_metric_before_repair": 527638,
+  "score_manifest_v2": "data\\reviews\\triplet-token-cycle-2026-09-20\\round-2\\score-manifest-v2.json",
+  "first_repair_author_open_ids": [
+    "C004",
+    "C005",
+    "C007",
+    "C009",
+    "C010",
+    "C012",
+    "C014"
+  ],
+  "checkpoint_45_min": "首轮修复未闭合，裁决锁定最后一次Sol例外；原计时不重置，token目标已失败。",
+  "score_manifest_v3": "data\\reviews\\triplet-token-cycle-2026-09-20\\round-2\\score-manifest-v3.json",
+  "ended_at": "2026-09-20T16:50:52.627720+00:00",
+  "elapsed_seconds": 3396.21664,
+  "noncached_plus_output": 2019987,
+  "roles_noncached_plus_output": 1489434,
+  "research_status": "execution_incomplete_exception_exhausted",
+  "approved_scores": null,
+  "reason": [
+    "总token超过目标",
+    "两次修复后决定性原条件仍未闭合，独立裁决不批准"
+  ],
+  "publish_allowed": false
+}

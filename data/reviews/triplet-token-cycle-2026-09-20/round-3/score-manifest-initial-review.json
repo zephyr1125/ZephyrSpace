@@ -1,0 +1,10 @@
+{
+  "stage": "initial_review_and_decision",
+  "frozen_at": "2026-09-20T17:36:20.305258+00:00",
+  "files": {
+    "data\\reviews\\triplet-token-cycle-2026-09-20\\round-3\\review-facts\\review.json": "93474c47235205bb587893997ebff059fddff515297606f3c1f1290d823c7707",
+    "data\\reviews\\triplet-token-cycle-2026-09-20\\round-3\\review-reasoning\\review.json": "ab51dbb34bc589dad1b6d83e9434c4c89e9ecb0989e77c99be5041fec48df481",
+    "data\\reviews\\triplet-token-cycle-2026-09-20\\round-3\\anonymous\\candidates.json": "3fc00fa0e02c7f45f7c8a84a5d9044a4ef69c9fe5d966496dc81c13065829453",
+    "data\\reviews\\triplet-token-cycle-2026-09-20\\round-3\\adjudicator\\decision-v1.json": "7e5f1e656854199b7a908d8bf0da49f9ce0f91dbbc0ce4c1cf389c373f9784a5"
+  }
+}

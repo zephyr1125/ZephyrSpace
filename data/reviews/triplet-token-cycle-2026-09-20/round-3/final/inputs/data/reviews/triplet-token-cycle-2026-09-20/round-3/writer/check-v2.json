@@ -1,0 +1,15 @@
+{
+  "status": "mechanically_checked_pending_review",
+  "errors": [],
+  "warnings": [
+    "管理层诚信与透明度触发原规则红旗；须人工处理"
+  ],
+  "scores": {
+    "cScore": 86.5,
+    "mScore": 62
+  },
+  "inputs": {
+    "data/reviews/triplet-token-cycle-2026-09-20/round-3/writer/facts-v2.json": "0de2f4fb0c5d66a61a5ff932ac996c1484ff174ab8a3584698fc32263e02fe40",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-3/writer/sources-v2.json": "8c6d7045bab3f01349d0f03b1efa7180fb714bbda6c05f50c798aa63f5e733ce"
+  }
+}

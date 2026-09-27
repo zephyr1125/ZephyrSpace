@@ -1,0 +1,42 @@
+{
+  "root_thread_id": "01a0b99c-1c9b-7732-8dfe-cf7f4a687e21",
+  "gate_status": "not_applicable",
+  "roles": [
+    {
+      "role": "triplet_writer",
+      "agent_path": "/root/token_r1_writer",
+      "agent_id": "01a0bf52-7f84-7aa1-8eae-6b0f89dbd4c3",
+      "actual_model": "gpt-5.6-terra",
+      "actual_effort": "low",
+      "actual_model_source": "C:\\Users\\zephy\\.codex\\sessions\\2026\\09\\20\\rollout-2026-09-20T22-57-30-01a0bf52-7f84-7aa1-8eae-6b0f89dbd4c3.jsonl",
+      "created_at": "2026-09-20T14:57:30.122Z"
+    },
+    {
+      "role": "triplet_evidence",
+      "agent_path": "/root/token_r1_evidence",
+      "agent_id": "01a0bf52-b0ca-7620-b848-ff78e45d9c28",
+      "actual_model": "gpt-5.6-terra",
+      "actual_effort": "low",
+      "actual_model_source": "C:\\Users\\zephy\\.codex\\sessions\\2026\\09\\20\\rollout-2026-09-20T22-57-42-01a0bf52-b0ca-7620-b848-ff78e45d9c28.jsonl",
+      "created_at": "2026-09-20T14:57:42.843Z"
+    },
+    {
+      "role": "triplet_review_facts",
+      "agent_path": "/root/token_r1_facts",
+      "agent_id": "01a0bf79-8334-7d62-9b36-c2b357c2e261",
+      "actual_model": "gpt-5.6-terra",
+      "actual_effort": "low",
+      "actual_model_source": "C:\\Users\\zephy\\.codex\\sessions\\2026\\09\\20\\rollout-2026-09-20T23-40-06-01a0bf79-8334-7d62-9b36-c2b357c2e261.jsonl",
+      "created_at": "2026-09-20T15:40:06.954Z"
+    },
+    {
+      "role": "triplet_review_reasoning",
+      "agent_path": "/root/token_r1_reasoning",
+      "agent_id": "01a0bf79-beb9-7d02-bf2e-73f6aa5c0f6b",
+      "actual_model": "gpt-5.6-sol",
+      "actual_effort": "low",
+      "actual_model_source": "C:\\Users\\zephy\\.codex\\sessions\\2026\\09\\20\\rollout-2026-09-20T23-40-22-01a0bf79-beb9-7d02-bf2e-73f6aa5c0f6b.jsonl",
+      "created_at": "2026-09-20T15:40:22.197Z"
+    }
+  ]
+}

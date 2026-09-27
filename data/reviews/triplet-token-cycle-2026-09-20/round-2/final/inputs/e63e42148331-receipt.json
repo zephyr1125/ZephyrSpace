@@ -1,0 +1,893 @@
+{
+  "changes": [
+    {
+      "group": "company",
+      "item": "E4",
+      "before": {
+        "id": "E4",
+        "score": 2,
+        "rule_ref": "E4",
+        "reason": "资产负债率约18.7%，货币资金和同业资产充足，未见高杠杆短债压力；资本支出同比未触发拆分阈值。",
+        "evidence_refs": [
+          "F010"
+        ],
+        "capex_check": {
+          "applicable": false,
+          "reason": "本轮原件未识别到可比年度资本性支出同比变化超过30%的触发事实；公司现金流表投资活动含金融资产配置，不可将其直接当Capex。"
+        }
+      },
+      "after": {
+        "id": "E4",
+        "score": 1.5,
+        "rule_ref": "E4",
+        "reason": "2025/2024现金Capex同比下降33.15%，未取得可靠运营/非运营拆分，按原规则从调整前2分扣0.5；金融投资现金流不替代该检查。",
+        "evidence_refs": [
+          "R002"
+        ],
+        "capex_check": {
+          "applicable": true,
+          "current": 3127594916.41,
+          "previous": 4678712053.56,
+          "unit": "CNY元",
+          "current_period": "2025FY",
+          "previous_period": "2024FY",
+          "evidence_refs": [
+            "R002"
+          ],
+          "split_complete": false,
+          "score_before_capex_adjustment": 2
+        }
+      },
+      "acceptance_ids": [
+        "C001"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "F2.5",
+      "before": {
+        "id": "F2.5",
+        "score": 2.5,
+        "rule_ref": "F2.5",
+        "reason": "高比例分红、已实施及继续启动的注销回购为可验证正面先例；在F维度上限内加0.5。",
+        "evidence_refs": [
+          "F006",
+          "F008"
+        ],
+        "positive_precedent": true
+      },
+      "after": {
+        "id": "F2.5",
+        "score": 2,
+        "rule_ref": "F2.5",
+        "reason": "分红和注销回购证明股东回报但不是相似投入后的可验证成功先例；两只产业基金尚无回报数据，撤销0.5加分，基础审慎资本配置档为2分。",
+        "evidence_refs": [
+          "R004",
+          "R006"
+        ],
+        "positive_precedent": false
+      },
+      "acceptance_ids": [
+        "C001",
+        "C005",
+        "C007",
+        "C015"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "E1",
+      "before": {
+        "id": "E1",
+        "score": 5,
+        "rule_ref": "E1",
+        "reason": "2025年高盈利和2026H1高归母净资产相结合，收益能力主要对应高净利率商业模式，非高杠杆；完整杜邦数值由复核重算。",
+        "evidence_refs": [
+          "F004",
+          "F010"
+        ]
+      },
+      "after": {
+        "id": "E1",
+        "score": 5,
+        "rule_ref": "E1",
+        "reason": "2025年ROE32.53%、高利润率和低杠杆支持高质量ROE；完整2020-2025趋势与杜邦计算已列为复核重算对象，未将单期现金流归因替代杜邦。",
+        "evidence_refs": [
+          "R003",
+          "F010"
+        ]
+      },
+      "acceptance_ids": [
+        "C003",
+        "C004",
+        "C008",
+        "C009",
+        "C011"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "E2",
+      "before": {
+        "id": "E2",
+        "score": 5,
+        "rule_ref": "E2",
+        "reason": "2025年经营现金流615.22亿元，低于净利823.20亿元但仍显著为正；2026H1经营现金流706.91亿元。营运资本波动是反证但非持续负现金流。",
+        "evidence_refs": [
+          "F003",
+          "F004"
+        ]
+      },
+      "after": {
+        "id": "E2",
+        "score": 5,
+        "rule_ref": "E2",
+        "reason": "2023-2025 OCF/归母净利算术均值90.36%，FCF三年均正，符合5分数值条件；2025单年74.74%及财务公司资金因素作为限制，不混同酒业现金创造。",
+        "evidence_refs": [
+          "R001",
+          "R007"
+        ]
+      },
+      "acceptance_ids": [
+        "C003",
+        "C008",
+        "C011"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "E3",
+      "before": {
+        "id": "E3",
+        "score": 3,
+        "rule_ref": "E3",
+        "reason": "2026H1销量增加且扣非与归母净利接近，支持经营性增长；利润同比下降限制增长质量但无补贴/资产出售依赖证据。",
+        "evidence_refs": [
+          "F003"
+        ]
+      },
+      "after": {
+        "id": "E3",
+        "score": 3,
+        "rule_ref": "E3",
+        "reason": "扣非ROE与ROE接近、2026H1销量仍增长支持经营质量；行业调整导致利润下降，量价完整周期结构尚待复核，维持现有3分而非以H1销量单独证明。",
+        "evidence_refs": [
+          "R003",
+          "R007"
+        ]
+      },
+      "acceptance_ids": [
+        "C003",
+        "C008",
+        "C011"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "E5.5",
+      "before": {
+        "id": "E5.5",
+        "score": 3,
+        "rule_ref": "E5.5",
+        "reason": "KAM为收入确认和关联交易，无持续经营或商誉减值异常；报表未显示会计政策变更/前期差错影响。KAM本身仍需持续核查。",
+        "evidence_refs": [
+          "F005"
+        ]
+      },
+      "after": {
+        "id": "E5.5",
+        "score": 3,
+        "rule_ref": "E5.5",
+        "reason": "KAM为收入确认和关联交易，非持续经营；无保留意见及扣非ROE接近支持稳健性，关联交易仍是持续复核事项。",
+        "evidence_refs": [
+          "R003",
+          "F007"
+        ]
+      },
+      "acceptance_ids": [
+        "C003",
+        "C004",
+        "C008",
+        "C009",
+        "C011"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "A1",
+      "before": {
+        "id": "A1",
+        "score": 2,
+        "rule_ref": "A1",
+        "reason": "1999年省国资委最终控制下设立，资源与政策背景强但非技术创业型；不满足先发/技术驱动满档。",
+        "evidence_refs": [
+          "F001"
+        ]
+      },
+      "after": {
+        "id": "A1",
+        "score": 2,
+        "rule_ref": "A1",
+        "reason": "1999年省政府批复设立、2001年上市说明国资背景；该标签不能否定品牌和稀缺产区积累，维持政策/资源起源的2分。",
+        "evidence_refs": [
+          "F001"
+        ]
+      },
+      "acceptance_ids": [
+        "C004",
+        "C009"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "A2",
+      "before": {
+        "id": "A2",
+        "score": 3,
+        "rule_ref": "A2",
+        "reason": "原件列控股股东和最终控制方，未见本轮原件中的控制权争夺或多次变更反证，按稳定档。",
+        "evidence_refs": [
+          "F001"
+        ]
+      },
+      "after": {
+        "id": "A2",
+        "score": 3,
+        "rule_ref": "A2",
+        "reason": "现有原件确认控股股东和最终控制方；IPO以来连续控制链待逐份历史原件复核，现有判断不扩展为控制权争夺结论。",
+        "evidence_refs": [
+          "F001"
+        ]
+      },
+      "acceptance_ids": [
+        "C004",
+        "C009"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "A3",
+      "before": {
+        "id": "A3",
+        "score": 4,
+        "rule_ref": "A3",
+        "reason": "原件显示分红和注销式回购，未见卖资产保利润或高频股权融资证据；按清洁档，仍由复核核查历史资本动作。",
+        "evidence_refs": [
+          "F006",
+          "F008"
+        ]
+      },
+      "after": {
+        "id": "A3",
+        "score": 4,
+        "rule_ref": "A3",
+        "reason": "原件显示高现金回报和注销回购；重大融资、并购及资金用途的完整历史汇总待复核，不以未检全自动降分。",
+        "evidence_refs": [
+          "R006",
+          "R004"
+        ]
+      },
+      "acceptance_ids": [
+        "C004",
+        "C009"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "B0",
+      "before": {
+        "id": "B0",
+        "score": 2,
+        "rule_ref": "B0",
+        "reason": "原件可确认以白酒品牌、经销与直销渠道为核心的长期经营模式，当前并非由并购驱动；符合完整溯源判断。",
+        "evidence_refs": [
+          "F001",
+          "F002"
+        ]
+      },
+      "after": {
+        "id": "B0",
+        "score": 2,
+        "rule_ref": "B0",
+        "reason": "长期以品牌白酒、经销与直销为核心，当前收入结构可核；早期模式三个判断待招股书补证。",
+        "evidence_refs": [
+          "F001",
+          "F002"
+        ]
+      },
+      "acceptance_ids": [
+        "C004",
+        "C009"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "C1",
+      "before": {
+        "id": "C1",
+        "score": 6,
+        "rule_ref": "C1",
+        "reason": "核心产品收入规模和品牌定位支持绝对龙头判断；本轮原件未提供CR5精确值，但不存在第二梯队反证。",
+        "evidence_refs": [
+          "F002"
+        ]
+      },
+      "after": {
+        "id": "C1",
+        "score": 6,
+        "rule_ref": "C1",
+        "reason": "核心产品1465亿元收入支持绝对龙头判断；精确CR5与三年排名趋势待独立行业原件复核。",
+        "evidence_refs": [
+          "F002"
+        ]
+      },
+      "acceptance_ids": [
+        "C004",
+        "C009",
+        "C012"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "D1",
+      "before": {
+        "id": "D1",
+        "score": 4,
+        "rule_ref": "D1",
+        "reason": "2025年仍围绕世界一流企业、规划、预算和治理推进，和主业经营方向一致；未发现频繁跨界战略漂移。",
+        "evidence_refs": [
+          "F011"
+        ]
+      },
+      "after": {
+        "id": "D1",
+        "score": 4,
+        "rule_ref": "D1",
+        "reason": "年报规划、预算和主业表述支持战略延续；需以2020-2025原文时间序列复核，不将资料缺口映射漂移。",
+        "evidence_refs": [
+          "F011",
+          "R008"
+        ]
+      },
+      "acceptance_ids": [
+        "C004",
+        "C006",
+        "C009",
+        "C010"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "D2",
+      "before": {
+        "id": "D2",
+        "score": 3,
+        "rule_ref": "D2",
+        "reason": "2026H1销量增长但收入和利润弱于上年，且本轮未逐年取得可量化目标与兑现表；以部分执行证据取50%达标档。",
+        "evidence_refs": [
+          "F003",
+          "F011"
+        ],
+        "original_statement_found": true,
+        "strategy_drift": false
+      },
+      "after": {
+        "id": "D2",
+        "score": 4,
+        "rule_ref": "D2",
+        "reason": "2021-2025五个已结束年度收入目标中4/5达标；无管理层原话验证且无战略漂移，按原规则D2上限4分，不将2026未结束年度计失败。",
+        "evidence_refs": [
+          "R008"
+        ],
+        "original_statement_found": false,
+        "strategy_drift": false
+      },
+      "acceptance_ids": [
+        "C006",
+        "C010"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "D5",
+      "before": {
+        "id": "D5",
+        "score": 3,
+        "rule_ref": "D5",
+        "reason": "高收入、现金创造和制度/预算推进支持组织执行；财务负责人变动是需跟踪反证，但未构成组织恶化证明。",
+        "evidence_refs": [
+          "F003",
+          "F009",
+          "F011"
+        ]
+      },
+      "after": {
+        "id": "D5",
+        "score": 3,
+        "rule_ref": "D5",
+        "reason": "制度和预算推进是组织正证；三年人均创收、员工和研发时间序列尚待补桥，财务负责人更替为限制。",
+        "evidence_refs": [
+          "F009",
+          "F011",
+          "R008"
+        ]
+      },
+      "acceptance_ids": [
+        "C006",
+        "C010"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "E5",
+      "before": {
+        "id": "E5",
+        "score": 2,
+        "rule_ref": "E5",
+        "reason": "标准无保留审计、极低应收账款且未见商誉风险披露；收入确认及关联交易被列为KAM，属于审计重点而非非标意见。",
+        "evidence_refs": [
+          "F005",
+          "F010"
+        ]
+      },
+      "after": {
+        "id": "E5",
+        "score": 2,
+        "rule_ref": "E5",
+        "reason": "标准无保留、低应收支持资产质量；商誉、应收账龄及近三年减值须从附注补足，KAM不自动构成异常。",
+        "evidence_refs": [
+          "R003",
+          "F010"
+        ]
+      },
+      "acceptance_ids": [
+        "C004",
+        "C009"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "F1",
+      "before": {
+        "id": "F1",
+        "score": 4,
+        "rule_ref": "F1",
+        "reason": "未见原件披露现任核心人员被调查或腐败事件；但2026H1财务总监兼董秘更替，故不取核心团队完全稳定满档。",
+        "evidence_refs": [
+          "F009"
+        ]
+      },
+      "after": {
+        "id": "F1",
+        "score": 4,
+        "rule_ref": "F1",
+        "reason": "高管任免和期末职务已核；留置原公告案件状态及近十年逐名廉洁事件仍待补，不能把解聘推定为结案。",
+        "evidence_refs": [
+          "R005"
+        ]
+      },
+      "acceptance_ids": [
+        "C005",
+        "C007"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "F2",
+      "before": {
+        "id": "F2",
+        "score": 5,
+        "rule_ref": "F2",
+        "reason": "2025年现金分红和回购注销合计占归母净利86.43%，且采用注销式回购，支持高股东回报与资本纪律。",
+        "evidence_refs": [
+          "F006",
+          "F008"
+        ]
+      },
+      "after": {
+        "id": "F2",
+        "score": 5,
+        "rule_ref": "F2",
+        "reason": "高比例分红和注销回购是股东友好正证；近三年减持和监管检索尚待补，不能以此缺口否定已核回报。",
+        "evidence_refs": [
+          "R006",
+          "R005"
+        ]
+      },
+      "acceptance_ids": [
+        "C005",
+        "C007",
+        "C015"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "F3",
+      "before": {
+        "id": "F3",
+        "score": 2,
+        "rule_ref": "F3",
+        "reason": "关联交易被审计师作为KAM且治理自查有控股股东未履行激励承诺和高管兼职两项问题；未见非标内控意见，故为小瑕疵档。",
+        "evidence_refs": [
+          "F005",
+          "F007"
+        ]
+      },
+      "after": {
+        "id": "F3",
+        "score": 2,
+        "rule_ref": "F3",
+        "reason": "关联交易KAM及两项治理自查问题支持小瑕疵档；须补近三年关联交易、基金和监管原件，不推定基金为不良投资。",
+        "evidence_refs": [
+          "R003",
+          "R004",
+          "R005"
+        ]
+      },
+      "acceptance_ids": [
+        "C005",
+        "C007",
+        "C015"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "B3",
+      "before": {
+        "id": "B3",
+        "score": 6,
+        "rule_ref": "B3",
+        "reason": "单一核心品牌贡献1465亿元收入且营业成本远低于收入；双渠道收入接近均衡，支持强品牌定价权。行业调整下利润承压是反证，但不足以推翻强档。",
+        "evidence_refs": [
+          "F002",
+          "F003"
+        ]
+      },
+      "after": {
+        "id": "B3",
+        "score": 6,
+        "rule_ref": "B3",
+        "reason": "高毛利核心品牌和双渠道结构支持强定价权；近五年毛利率、正式调价和可比公司毛利率待补，行业调整为反证。",
+        "evidence_refs": [
+          "F002",
+          "R007"
+        ]
+      },
+      "acceptance_ids": [
+        "C012"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "C2",
+      "before": {
+        "id": "C2",
+        "score": 5,
+        "rule_ref": "C2",
+        "reason": "高品牌溢价、经销/直销双渠道及极低应收账款表明对下游结算和价格有较强控制；行业调整构成需求侧限制而非夹心层证据。",
+        "evidence_refs": [
+          "F002",
+          "F010"
+        ]
+      },
+      "after": {
+        "id": "C2",
+        "score": 5,
+        "rule_ref": "C2",
+        "reason": "低应收和品牌渠道支持较强议价；供应商客户集中、成本传导及需求时滞四维证据待补，不虚填季度。",
+        "evidence_refs": [
+          "F010",
+          "F002"
+        ]
+      },
+      "acceptance_ids": [
+        "C012"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "C3+C4",
+      "before": {
+        "id": "C3+C4",
+        "score": 9,
+        "rule_ref": "C3+C4",
+        "reason": "品牌、历史积累、稀缺产地工艺及渠道共同形成最高档护城河；2026H1增长放缓是需求周期反证，未显示护城河崩解。",
+        "evidence_refs": [
+          "F001",
+          "F002",
+          "F003"
+        ]
+      },
+      "after": {
+        "id": "C3+C4",
+        "score": 9,
+        "rule_ref": "C3+C4",
+        "reason": "品牌、稀缺产区工艺与渠道支持五星综合判断；替代品和新进入者反证及逐类壁垒仍待补。",
+        "evidence_refs": [
+          "F001",
+          "F002",
+          "R007"
+        ]
+      },
+      "acceptance_ids": [
+        "C012"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "诚信与透明度",
+      "before": {
+        "id": "诚信与透明度",
+        "score": 16,
+        "rule_ref": "管理层评分表/诚信与透明度",
+        "reason": "标准无保留审计、诚信状况良好披露支持透明度；关联交易KAM和治理自查问题限制满分。",
+        "evidence_refs": [
+          "F005",
+          "F007"
+        ]
+      },
+      "after": {
+        "id": "诚信与透明度",
+        "score": 16,
+        "rule_ref": "管理层评分表/诚信与透明度",
+        "reason": "无保留审计为正证；关联交易KAM、治理自查和留置事项原公告状态待补，不能以年报转引下结论。",
+        "evidence_refs": [
+          "R003",
+          "R005"
+        ]
+      },
+      "acceptance_ids": [
+        "C005",
+        "C007",
+        "C014"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "资本配置能力",
+      "before": {
+        "id": "资本配置能力",
+        "score": 22,
+        "rule_ref": "管理层评分表/资本配置能力",
+        "reason": "高比例现金回报和注销回购支持优秀资本回报；需继续核查国企资本配置的长期ROI。",
+        "evidence_refs": [
+          "F006",
+          "F008"
+        ]
+      },
+      "after": {
+        "id": "资本配置能力",
+        "score": 22,
+        "rule_ref": "管理层评分表/资本配置能力",
+        "reason": "分红与回购证明回报，产业基金认缴/实缴已核但收益未公开；未将未到期承诺判成功或失败。",
+        "evidence_refs": [
+          "R004",
+          "R006"
+        ]
+      },
+      "acceptance_ids": [
+        "C014",
+        "C015"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "战略稳定性",
+      "before": {
+        "id": "战略稳定性",
+        "score": 12,
+        "rule_ref": "管理层评分表/战略稳定性",
+        "reason": "主业和治理规划延续；2026H1行业调整及业绩放缓限制满分。",
+        "evidence_refs": [
+          "F003",
+          "F011"
+        ]
+      },
+      "after": {
+        "id": "战略稳定性",
+        "score": 12,
+        "rule_ref": "管理层评分表/战略稳定性",
+        "reason": "规划和预算机制支持稳定性；年度计划—实绩序列待补，不以缺失定性漂移。",
+        "evidence_refs": [
+          "F011",
+          "R008"
+        ]
+      },
+      "acceptance_ids": [
+        "C006",
+        "C010",
+        "C014"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "对股东友好度",
+      "before": {
+        "id": "对股东友好度",
+        "score": 15,
+        "rule_ref": "管理层评分表/对股东友好度",
+        "reason": "分红、回购注销和中小股东单独计票的原件披露支持满分。",
+        "evidence_refs": [
+          "F006"
+        ]
+      },
+      "after": {
+        "id": "对股东友好度",
+        "score": 15,
+        "rule_ref": "管理层评分表/对股东友好度",
+        "reason": "86.43%分红加回购比例为强正证；减持与监管检索待补。",
+        "evidence_refs": [
+          "R006"
+        ]
+      },
+      "acceptance_ids": [
+        "C005",
+        "C007",
+        "C014"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "危机处理能力",
+      "before": {
+        "id": "危机处理能力",
+        "score": 8,
+        "rule_ref": "管理层评分表/危机处理能力",
+        "reason": "行业调整中销量仍增且现金流改善；尚无完整危机案例可支持满分。",
+        "evidence_refs": [
+          "F003"
+        ]
+      },
+      "after": {
+        "id": "危机处理能力",
+        "score": 8,
+        "rule_ref": "管理层评分表/危机处理能力",
+        "reason": "行业调整中销量增长但净利下降；无可直接归因的完整危机处置案例，明确边界而不凑案例。",
+        "evidence_refs": [
+          "R007"
+        ]
+      },
+      "acceptance_ids": [
+        "C005",
+        "C007",
+        "C014"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "组织与人才能力",
+      "before": {
+        "id": "组织与人才能力",
+        "score": 7,
+        "rule_ref": "管理层评分表/组织与人才能力",
+        "reason": "制度、预算和治理推进支持组织能力；2026H1财务总监兼董秘更替与高管兼职问题限制判断。",
+        "evidence_refs": [
+          "F007",
+          "F009",
+          "F011"
+        ]
+      },
+      "after": {
+        "id": "组织与人才能力",
+        "score": 7,
+        "rule_ref": "管理层评分表/组织与人才能力",
+        "reason": "期末高管职务与本期任免已核；近五年继任、人才保留和激励完整时间线待补。",
+        "evidence_refs": [
+          "R005"
+        ]
+      },
+      "acceptance_ids": [
+        "C005",
+        "C007",
+        "C014"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "表达清晰度与认知质量",
+      "before": {
+        "id": "表达清晰度与认知质量",
+        "score": 4,
+        "rule_ref": "管理层评分表/表达清晰度与认知质量",
+        "reason": "年报对行业调整、治理与规划有明确表述；缺少电话会逐条承诺核验，故不取满分。",
+        "evidence_refs": [
+          "F003",
+          "F011"
+        ]
+      },
+      "after": {
+        "id": "表达清晰度与认知质量",
+        "score": 4,
+        "rule_ref": "管理层评分表/表达清晰度与认知质量",
+        "reason": "年报对行业调整和规划有明确表述；电话会/逐条承诺兑现证据待补。",
+        "evidence_refs": [
+          "F011",
+          "R007"
+        ]
+      },
+      "acceptance_ids": [
+        "C006",
+        "C010",
+        "C014"
+      ]
+    }
+  ],
+  "metadata_changes": [
+    {
+      "field": "evidence_gaps",
+      "before": [
+        {
+          "affected_items": [
+            "F1",
+            "组织与人才能力"
+          ],
+          "kind": "public_not_checked",
+          "impact": "三名2026H1任免的公告具体发生日未在本地定期报告表中逐项列示；现有期末职务和变动事实足以支持非满分判断，但独立复核应回看对应聘任/解聘公告以确认日期与原因。",
+          "search_scope": "贵州茅台2026H1报告的高管变动、联系人及签署页；上交所2025年报检索结果。",
+          "evidence_refs": [
+            "F009"
+          ]
+        }
+      ],
+      "after": [
+        {
+          "affected_items": [
+            "A1",
+            "A2",
+            "A3",
+            "B0",
+            "C1",
+            "D1",
+            "D2",
+            "D5",
+            "E1",
+            "E5",
+            "F1",
+            "F2",
+            "F3",
+            "诚信与透明度",
+            "组织与人才能力"
+          ],
+          "kind": "public_not_checked",
+          "impact": "裁决锁定的历史控制、资本动作、目标兑现、行业排名、治理公告、减持/监管、组织时间序列及附注细项尚未完成最小原件闭合；可能影响相应评分。",
+          "search_scope": "裁决C004-C015列示的本地年报、临时公告及定向官方治理检索。",
+          "evidence_refs": [
+            "R001",
+            "R004",
+            "R005",
+            "R008"
+          ]
+        }
+      ],
+      "acceptance_ids": [
+        "C005",
+        "C006",
+        "C007",
+        "C010",
+        "C014"
+      ]
+    }
+  ],
+  "check": {
+    "status": "mechanically_checked_pending_review",
+    "errors": [],
+    "warnings": [],
+    "scores": {
+      "cScore": 91.5,
+      "mScore": 84
+    },
+    "inputs": {
+      "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/facts.json": "a5819c838f10ce8338a24c5c56caa6391618b0ab8a713e67045392f4a90c2489",
+      "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/sources.json": "2affbaa1a45d21d46a2166c183f46bc8a8f69fce03fdda3327a908af2ed0c544",
+      "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-v2/facts.json": "674124c5d3ad4c40df48127fd26f543932ae54cb4bc917c72f5af30c8e189d9d",
+      "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/repair-v2/sources.json": "857cf949618cedf33c69301406fb73e008b87bf9867b059ee9d4c8193737c1e4"
+    }
+  },
+  "base": "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/workpaper-v1.json",
+  "base_sha256": "17285a20f57de53103a1473e57ce1839763c20e5fd43cd622844fee830d31bb4",
+  "decision": "data/reviews/triplet-token-cycle-2026-09-20/round-2/adjudicator/decision-v2.json",
+  "decision_sha256": "9ba314ae7d3ded6db144aed730482f9fa3f104d02bc9152e6607b13ac7d246cf",
+  "unmodified_scope_items": [],
+  "limitations": "未修改的验收项仍须逐项答复；引用存在不证明语义正确，须双路复核变更及联动。",
+  "workpaper_sha256": "bb45b606b54b1d9caedcc735574f282f46cc3a1774e5862208fdfb84342cde60"
+}

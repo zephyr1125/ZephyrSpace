@@ -1,0 +1,33 @@
+{
+  "base_sha256":"bb45b606b54b1d9caedcc735574f282f46cc3a1774e5862208fdfb84342cde60",
+  "decision_sha256":"28cd683f2f2c1dcc84e77c15f6ac0f7247aea8d734c2228d3cb67cefb9f479b9",
+  "changes":[
+    {"group":"company","item":"F2.5","acceptance_ids":["C005","C007","C015"],"set":{"score":2,"reason":"主业技改为主要资本投入，2025行业调整期现金Capex收缩并实施注销式回购；高ROE、低杠杆和强现金回报支持审慎基础档。两只基金缺完整回报，计划与实际Capex口径未逐年完全可比，positive_precedent=false，不恢复0.5加分。","evidence_refs":["R002","R004","R006","R021","R023"]}},
+    {"group":"company","item":"E1","acceptance_ids":["C003","C004","C008","C009","C011"],"set":{"score":5,"reason":"2020-2025收入、利润、资产和归母权益完整趋势显示长期高盈利；2025同口径杜邦约为净利率48.76%、资产周转0.56次、权益乘数1.26倍，高ROE主要由净利率而非杠杆驱动。","evidence_refs":["R003","R009","R010"]}},
+    {"group":"company","item":"E3","acceptance_ids":["C003","C008","C011"],"set":{"score":3,"reason":"五年营收和归母净利CAGR均约12%，三年扣非/归母接近100%；2025核心酒销量微增而系列酒收入下滑、整体收入利润转负，完整周期质量仍好但当前量价结构承压，维持3分。","evidence_refs":["R007","R009","R011"]}},
+    {"group":"company","item":"E5.5","acceptance_ids":["C003","C004","C008","C009","C011"],"set":{"score":3,"reason":"标准无保留审计，收入按控制权转移确认、信用减值采用预期信用损失模型；KAM为收入确认与关联交易，提示持续核验而不自动构成错报或异常。","evidence_refs":["R003","R012"]}},
+    {"group":"company","item":"A1","acceptance_ids":["C004","C009"],"set":{"score":2,"reason":"招股书显示由茅台集团主发起设立，承接历史品牌、特定产区和传统工艺，属于资源禀赋与长期先发积累型起源；国资背景不否定先发优势。按A1量表资源/政策起源维持2分。","evidence_refs":["R013"]}},
+    {"group":"company","item":"A2","acceptance_ids":["C004","C009"],"set":{"score":3,"reason":"自IPO至2025各期原件连续列茅台集团为控股股东，未见实控权争夺、壳运作或主业更换，控制链长期稳定。","evidence_refs":["R013","R014"]}},
+    {"group":"company","item":"A3","acceptance_ids":["C004","C009"],"set":{"score":4,"reason":"重大资本动作集中于主业技改、现金分红、回购注销和两只产业基金；未见高频股权融资、跨界并购或卖资产保利润，基金回报未知限制满档。","evidence_refs":["R014","R004","R006"]}},
+    {"group":"company","item":"B0","acceptance_ids":["C004","C009"],"set":{"score":2,"reason":"早期即以茅台酒及系列酒生产销售为核心，客户价值来自品牌、稀缺产区和品质，渠道承担分销、收入按酒类销售形成，关键资源为品牌工艺与基酒，重资产长周期但高毛利，规模效应随品牌与产能积累增强。","evidence_refs":["R013","R014"]}},
+    {"group":"company","item":"C1","acceptance_ids":["C004","C009","C012"],"set":{"score":6,"reason":"核心茅台酒收入1465亿元且长期处于高端白酒第一梯队；无需精确CR5即可确认绝对龙头，2025增长放缓是趋势限制但未改变第一梯队位置。","evidence_refs":["F002","R020"]}},
+    {"group":"company","item":"D1","acceptance_ids":["C004","C006","C009","C010"],"set":{"score":4,"reason":"2020-2025战略持续围绕核心茅台酒、系列酒协同、质量产能、渠道数字化与国际化，资源投入与主业一致；2025后的市场化调整是应对行业变化，未构成战略漂移。","evidence_refs":["R017","R008"]}},
+    {"group":"company","item":"E5","acceptance_ids":["C004","C009"],"set":{"score":2,"reason":"标准无保留审计、低商誉和低客户集中支持资产质量；应收执行预期信用损失政策，近三年原件未见足以改变结论的重大商誉或固定资产/在建工程减值，但存货增长和关联交易仍需跟踪。","evidence_refs":["R012","R015"]}},
+    {"group":"company","item":"F1","acceptance_ids":["C005","C007"],"set":{"score":3,"reason":"蒋焰留置及随后免职是明确治理负面，案件终局未公开；余思明已接任财务总监和董秘，未见生产经营中断。按个别已证事件处理，不把解任当结案，也不外推系统性腐败。","evidence_refs":["R005","R022","R023"]}},
+    {"group":"company","item":"F2","acceptance_ids":["C005","C007","C015"],"set":{"score":5,"reason":"高比例现金分红与注销式回购提供强股东对齐正证；近三年定向检索未发现控股股东或现任核心高管集中减持改变结论，治理事件作为限制但不抵销已实现回报。","evidence_refs":["R006","R022","R023"]}},
+    {"group":"company","item":"F3","acceptance_ids":["C005","C007","C015"],"set":{"score":2,"reason":"关联交易为KAM且存在两项治理自查问题，支持小瑕疵档；定向检索未发现反复问询、重大处罚或资金占用证据，但检索结果不等于不存在未公开事项。","evidence_refs":["R003","R012","R023"]}},
+    {"group":"management","item":"诚信与透明度","acceptance_ids":["C005","C007","C014"],"set":{"score":14,"reason":"标准无保留审计和A级信披为正证；关联交易KAM与蒋焰留置为实质负面，公告及时但案件终局未公开，因此从原16分下调至14分。","evidence_refs":["R003","R012","R022","R023"]}},
+    {"group":"management","item":"对股东友好度","acceptance_ids":["C005","C007","C014"],"set":{"score":15,"reason":"2025分红与注销回购合计占归母净利86.43%，近三年未发现集中减持改变判断；维持满分，治理事件不直接否定已实现现金回报。","evidence_refs":["R006","R023"]}},
+    {"group":"management","item":"组织与人才能力","acceptance_ids":["C005","C007","C014"],"set":{"score":7,"reason":"三年员工规模与收入增长总体匹配、研发投入持续增加；蒋焰事件后财务总监与董秘完成接替，体现连续性，但关键岗位突发变动和2025人效回落限制更高档。","evidence_refs":["R016","R022"]}},
+    {"group":"management","item":"危机处理能力","acceptance_ids":["C005","C007","C014"],"set":{"score":8,"reason":"面对行业调整，公司推进市场化转型、收缩Capex并保持销量和治理职能连续；尚无可归因且已完整闭环的重大危机案例，维持8分而不凑案例。","evidence_refs":["R007","R017","R021","R022"]}},
+    {"group":"company","item":"D2","acceptance_ids":["C006","C010"],"set":{"score":4,"reason":"2021-2025五个已结束年度收入目标4/5达标，无管理层原话验证，且D1核验未发现战略漂移，按原规则保留4分上限；2026未结束不计失败。","evidence_refs":["R008","R017"]}},
+    {"group":"company","item":"D5","acceptance_ids":["C006","C010"],"set":{"score":3,"reason":"2023-2025员工33302、34750、34992人，人均收入约443.5、491.8、482.5万元；研发投入6.22、6.95、8.03亿元。组织扩张与增长总体匹配，2025人效小幅回落，维持3分。","evidence_refs":["R016"]}},
+    {"group":"management","item":"战略稳定性","acceptance_ids":["C006","C010","C014"],"set":{"score":13,"reason":"六年战略与资源持续聚焦核心酒业、质量产能、渠道与国际化，年度目标4/5达成；2025转向市场化应对行业调整而非漂移，较原12分上调至13分。","evidence_refs":["R008","R017"]}},
+    {"group":"management","item":"表达清晰度与认知质量","acceptance_ids":["C006","C010","C014"],"set":{"score":4,"reason":"年报明确识别行业周期与结构调整，并将行动落实到价格、渠道、产品和国际化；缺少足够即兴问答样本，维持4分。","evidence_refs":["R007","R017"]}},
+    {"group":"company","item":"B3","acceptance_ids":["C012"],"set":{"score":6,"reason":"酒类毛利率长期约九成，2023正式提价约21%，2025核心茅台酒毛利率93.53%，品牌定价权强；2025整体毛利率与收入利润承压构成反证，维持6分。","evidence_refs":["R018","R011"]}},
+    {"group":"company","item":"C2","acceptance_ids":["C012"],"set":{"score":5,"reason":"前五客户仅10.10%，下游不集中；前五供应商38.12%，公司凭品牌、渠道和高毛利具备较强成本传导。可选消费需求可在年度内传导，2025负增长表明并非无弹性，维持5分。","evidence_refs":["R019"]}},
+    {"group":"company","item":"C3+C4","acceptance_ids":["C012"],"set":{"score":9,"reason":"特定产区、复杂工艺、长周期基酒、品牌心智和全国渠道构成强综合壁垒；其他高端酒与消费降级是替代反证，网络效应非核心，新进入者难复制时间和品牌积累，维持五星综合档。","evidence_refs":["R020","R018"]}},
+    {"group":"management","item":"资本配置能力","acceptance_ids":["C014","C015"],"set":{"score":21,"reason":"主业技改、高分红与注销回购显示审慎配置，行业调整期收缩Capex；两只产业基金缺完整回报、计划与实际Capex口径不能逐年完全比较，故从22分下调至21分，不把未知当失败。","evidence_refs":["R004","R006","R021"]}}
+  ],
+  "metadata_changes":[{"field":"evidence_gaps","acceptance_ids":["C005","C006","C007","C010","C014"],"set":[{"affected_items":["F1","F3","诚信与透明度"],"kind":"unpublished","impact":"蒋焰留置案件终局截至截止日未公开；已按公开状态计入治理负面，不推定终局。","search_scope":"临2026-004/005、2025年报、2026半年报及截至2026-09-20公开状态检索。","evidence_refs":["R022","R023"]},{"affected_items":["F2.5","资本配置能力"],"kind":"unpublished","impact":"两只产业基金完整退出与回报尚未披露，限制正面先例判断但不按失败扣分。","search_scope":"2023-2025年报产业基金、公允价值及重大投资附注。","evidence_refs":["R004","R021"]}]}]
+}

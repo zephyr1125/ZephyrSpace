@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "review_role": "triplet_review_reasoning",
+  "stage": "last_exception_final_directed_recheck",
+  "workpaper": "data/reviews/triplet-token-cycle-2026-09-20/round-5/rebuilt-sol/workpaper.json",
+  "workpaper_sha256": "7006717b85dd80dd524ac9fe874eaa363046e8859495361003d7337b0205f11e",
+  "decision": "data/reviews/triplet-token-cycle-2026-09-20/round-5/adjudicator/decision-v2.json",
+  "overall_status": "failed",
+  "summary": "14个未闭原ID最终定向验收：11项passed、1项partial、2项failed。产业链、最新期、会计、分红、归因和人才条件已实质闭合，原已闭5项抽核未见回归；但IPO至2020控制链中间窗口仍未覆盖，资本运作全期仍主要依赖2001/2002、2001—2013股本沿革和2021以后披露，A2/A3最高档前置历史条件没有完全满足。最后例外已用尽，83.5/65不能按本路意见批准，应按真实未知边界收尾。",
+  "results": [
+    {"id":"R5-HISTORY-A01","status":"failed","evidence":"MT5SOL-HISTORY-001补了2021—2025及2026H1逐期控制链，1999/2001为起点；但2001上市后至2020之间没有官方沿革汇总、关键节点或覆盖该时间范围的控制权变更检索响应。2021以后连续链不能证明IPO至截止日全窗口从未变更。","remaining":"缺2001—2020中间窗口的官方控制沿革或带范围的公告检索。例外额度已用尽，应把A2的该决定性历史边界保留为未闭，不因缺证直接判公司存在变更。"},
+    {"id":"R5-HISTORY-A02","status":"partial","evidence":"MT5SOL-HISTORY-002已核IPO用途、2002习酒执行、2001—2013送转股本沿革、2021—2026债券/募集资金披露、2025商誉及处置现金流，并保留检索边界；但2014—2020融资、重大并购及压力年份处置没有逐期原件或覆盖该窗口的检索记录，所谓“全期法定披露”超过列明证据范围。","remaining":"2014—2020资本动作和压力年份仍是明确窗口缺口；不得把关键词未命中或2021以后不适用外推为全历史清洁。"},
+    {"id":"R5-HISTORY-A03","status":"failed","evidence":"A2=3和A3=4仍为最高档，理由已说明边界且没有因未知扣分；但A01/A02尚未完全闭合，当前证据不足以把“从未变更”和“全历史清洁”作为已批准事实。","remaining":"A2/A3须按A01/A02真实未知边界收尾；不能批准点值，也不能为收尾任意降分。"},
+    {"id":"R5-CHAIN-A01","status":"passed","evidence":"MT5SOL-CHAIN-001已纳入前五供应商38.12%、关联方15.22%、原料采购占比、地域与长周期替代约束、前五客户10.10%、量价变化、合同负债政策扰动和成熟调整周期，完整回答四维。","remaining":""},
+    {"id":"R5-CHAIN-A02","status":"passed","evidence":"C2理由明确区分品牌提价与实际成本传导，并用2026H1成本+21.81%、收入+1.47%、利润-1.95%作为非即时完全传导反例；5分依据落在客户分散和强下游议价，限制也已纳入。","remaining":""},
+    {"id":"R5-LATEST-A02","status":"passed","evidence":"E3已把2024H1销量增加和主要产品提价与2026H1收入、成本、利润信号合并，区分量价放缓、成本压力与非经常损益；C2联动完成，B4/D3按裁决保持已闭状态。","remaining":""},
+    {"id":"R5-ACCOUNTING-A01","status":"passed","evidence":"MT5SOL-ACCOUNTING-001分别登记收入确认KAM的固有风险与合同/函证/截止等应对，以及关联交易KAM的准确完整风险与名单/授权/对账/比价等应对；均明确不是错报结论。","remaining":""},
+    {"id":"R5-ACCOUNTING-A02","status":"passed","evidence":"独立回查2023年报L98、L2234、L2238确认解释16号追溯调整2022比较期：合并权益净影响-26,606,990.22元、所得税费用+903,191.13元，并非2023当期利润增益；2024权益表会计政策变更/前期差错为空，2025对应披露无新增变更。事实包补应收一年内2,609,048.49元、五年以上236,198元、坏账约8.30%、存货跌价约0.00209%及商誉为空。","remaining":""},
+    {"id":"R5-ACCOUNTING-A03","status":"passed","evidence":"E5.5据法定准则变更期别、三年次数、应收/存货计提和商誉适用性维持3分；F3和诚信维度分别说明KAM不自动扣分，同时保留历史治理瑕疵，联动完整。","remaining":""},
+    {"id":"R5-DIVIDEND-A01","status":"passed","evidence":"2020单位已纠正为242.361/466.973亿元；独立复算2023特别分红191.06元/10股×1,256,197,800股=24,000,915,166.80元，2024中期238.82元/10股×同股本约300.01亿元。2020—2024比率51.90%/51.93%/95.79%/84.01%/75.00%算术成立，常规、特别/中期和2025保守下限已分列，回购未重复。","remaining":""},
+    {"id":"R5-DIVIDEND-A03","status":"passed","evidence":"MT5SOL-CAPITAL-001把F2窗口限定为2021至截止，登记近五年股债融资、注销回购、集团增持及控股股东/董监高减持查询范围和边界；F2、资本配置能力、对股东友好度均有相应联动及非满分限制。","remaining":""},
+    {"id":"R5-ATTRIBUTION-A01","status":"passed","evidence":"对股东友好度13/15的限制改为个人持股绑定弱、无股权激励和未履行激励承诺；表达4/5的限制改为对目标未达及渠道调整缺少深度自我复盘，均来自已披露事实，不再用缺电话会或查询未命中扣分。","remaining":""},
+    {"id":"R5-TALENT-A01","status":"passed","evidence":"MT5SOL-TALENT-001按2021-01-01至2026-09-20逐年列非独董及高管离任和接任，按人去重。独立核计：2021三人、2022一人、2023一人、2024四人、2025两人、2026一人，共12人；近三年窗口为2024四人+2025两人+2026一人，共7人。2024年5—10月四人离任满足12个月集中变动，接任来源及关键岗位空缺也已说明。","remaining":""},
+    {"id":"R5-TALENT-A02","status":"passed","evidence":"组织人才理由分别覆盖稳定性偏弱、内部继任/无长期空缺、人才留存未知和激励偏弱，未因未知直接扣分且未机械相加；危机处理同步纳入集中变动、及时接任和历史腐败链，4/10与5/10判断可辩护。","remaining":""}
+  ],
+  "closed_item_regression_check": [
+    {"id":"R5-LATEST-A01","status":"no_regression","evidence":"2026H1四项数据、同比/年末口径和预收政策解释仍保留在MT5R2-LATEST及新底稿引用。"},
+    {"id":"R5-DIVIDEND-A02","status":"no_regression","evidence":"2025中期300.01亿元/归母823.201亿元=36.44%仍明确为已实施保守下限，未计年度预案。"},
+    {"id":"R5-ATTRIBUTION-A02","status":"no_regression","evidence":"管理层战略稳定性仍以目标兑现和2025未达为依据，公司D2缺原话4分上限未被混同。"},
+    {"id":"R5-STATUS-A01","status":"no_regression","evidence":"蒋焰事发时职务、截止日已解聘、余思明接任及调查未结案边界未被改写。"},
+    {"id":"R5-STATUS-A02","status":"no_regression","evidence":"F1=-2和治理6/15重大警告仍保留，未恢复“现任核心高管”错误。"}
+  ],
+  "new_findings": [
+    {"severity":"P1","location":"repair-sol/facts.json:MT5SOL-HISTORY-001/002；rebuilt-sol/workpaper.json:A2,A3","claim":"最后修复仍把部分年份链和关键词未命中扩写成IPO以来连续控制与全历史资本清洁。","evidence":"控制证据只连续覆盖2021—2026，资本证据覆盖IPO/2002、2001—2013股本沿革和2021以后披露；2001—2020控制窗口及2014—2020资本窗口没有原件链或覆盖范围检索。事实包自身对关键词检索设有边界。","impact":"R5-HISTORY-A01/A03失败、A02部分通过；A2/A3共7分及83.5总分不能批准。","recommendation":"例外已用尽，按closed_with_uncertainty或execution_incomplete真实收尾，保留其余已核分项；不得把未知当低分，也不得把最高档当已批准。"},
+    {"severity":"P1","location":"rebuilt-sol/workpaper.json:evidence_gaps","claim":"修复把evidence_gaps清空，与仍存在的历史中间窗口缺口冲突。","evidence":"delta把evidence_gaps从A3/F3有界检索边界改为[]，但MT5SOL-HISTORY-001/002未覆盖2001—2020控制和2014—2020资本窗口，且verification_boundary明确检索未命中不能单独证明不存在。","impact":"状态元数据会错误表示研究缺口已全部关闭，妨碍按真实边界收尾。","recommendation":"恢复A2/A3历史窗口缺口、影响与检索边界；这属于研究状态同步，不能归为已关闭的纯排版问题。"}
+  ]
+}

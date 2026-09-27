@@ -1,0 +1,31 @@
+{
+  "review_type": "triplet_review_facts_recheck_v2",
+  "workpaper": "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/rebuilt-v2/workpaper.json",
+  "workpaper_sha256": "bb45b606b54b1d9caedcc735574f282f46cc3a1774e5862208fdfb84342cde60",
+  "decision": "data/reviews/triplet-token-cycle-2026-09-20/round-2/adjudicator/decision-v2.json",
+  "decision_sha256": "9ba314ae7d3ded6db144aed730482f9fa3f104d02bc9152e6607b13ac7d246cf",
+  "results": [
+    {"id":"C001","result":"closed","evidence":"R002与S2025第337-359、1680行一致：2025/2024合并现金Capex为31.2759/46.7871亿元，-33.15%；E4设applicable=true、split_complete=false、2分扣0.5至1.5，F2.5另行重评。","remaining_p1":"无。"},
+    {"id":"C002","result":"closed","evidence":"重建底稿25项独立加总为91.5，ROUND_HALF_UP为92；repair-v2/score-rationale.md已改为原始91.5，未再写93.5/94。","remaining_p1":"无。"},
+    {"id":"C003","result":"open","evidence":"R001的2023-2025 OCF/归母净利89.11%/107.23%/74.74%及均值90.36%、三年FCF为正，经裁决给定数值和S2025现金流表复算相符；E2的归因已不再误称酒业营运资本。","remaining_p1":"验收条件同时要求E1完成2020-2025同口径杜邦趋势、E3补五年增长/三年扣非比率/量价结构、E5.5核会计政策和计提；新底稿仍将这些列为“待补/复核重算对象”，R003只给2025年ROE及KAM，故不得以作者closed自述关闭。"},
+    {"id":"C004","result":"open","evidence":"新底稿已撤回“未见即稳定/清洁”的过度结论并把A1/A2/A3/B0/E5缺口列入evidence_gaps。","remaining_p1":"招股书或同等历史原件、IPO以来控制链、资本动作汇总、早期商业模式三判断及E5附注（商誉、账龄、减值）均仍未补；不能批准相关高档分。"},
+    {"id":"C005","result":"open","evidence":"R005与S2026H1第417-419行相符，已确认临2026-004/005的公告编号、蒋焰留置披露和后续职务变动；底稿也不再将解聘等同结案。","remaining_p1":"裁决要求的临2026-004/005原公告案件状态、核心职务逐名近十年廉洁、近三年减持、监管/问询及行业处罚检索均未完成；acceptance-response标bounded不构成通过。"},
+    {"id":"C006","result":"open","evidence":"R008与S2020第521、S2021第102/556、S2022第588、S2023第643、S2024经营计划及S2025第96行可配对；4/5收入目标达成，D2改4分且original_statement_found=false，符合无原话时4分上限。","remaining_p1":"同一验收还要求D1的3-5年战略资源一致性及D5三年人均创收/员工/研发桥。新稿只记录“待补”，没有原件时间序列或计算，因此不能关闭。"},
+    {"id":"C007","result":"open","evidence":"新稿已明确不把解聘推为案件结案。","remaining_p1":"留置原公告和案件状态仍未核；与C005共享的治理检索亦未完成。"},
+    {"id":"C008","result":"open","evidence":"E2已正确区分财务公司资金因素，未再把2025现金流变动主要归因于酒业营运资本。","remaining_p1":"该验收与C003共享的E1、E3、E5.5完整条件仍未闭合，故不能整体标closed。"},
+    {"id":"C009","result":"open","evidence":"A1已不再以国资背景自动否定先发优势。","remaining_p1":"与C004共享的历史起源、控制链、资本动作、早期商业模式和E5附注证据仍缺。"},
+    {"id":"C010","result":"open","evidence":"D2未将未结束的2026年度计作失败，且不再把资料缺口写成50%达标。","remaining_p1":"D1三至五年战略一致性及D5三年组织指标时间序列未补；与C006共享的最小验收未完成。"},
+    {"id":"C011","result":"open","evidence":"三年OCF转换率、FCF正值和不以H1销量独证E3的修正已完成。","remaining_p1":"与C003共享的E1杜邦、E3全周期量价与E5.5附注核验仍缺。"},
+    {"id":"C012","result":"open","evidence":"B3/C2/C3+C4已把定价、行业排名、议价四维及壁垒反证明确列为待补，未新增精确CR5等个人门槛。","remaining_p1":"尚无近五年毛利率、调价、可比行业、客户/供应商集中、传导/时滞或替代品原件，当前B3=6、C1=6、C2=5、C3+C4=9不能获批。"},
+    {"id":"C013","result":"closed","evidence":"同C002：修复后的分项与total一致，展示由91.5按ROUND_HALF_UP得92。","remaining_p1":"无。"},
+    {"id":"C014","result":"open","evidence":"管理层七项理由已补入已核的分红、回购、产业基金、行业调整和任免限制，且未因不存在完整危机案例机械降分。","remaining_p1":"诚信/组织/危机的原公告及时间线、减持监管检索、资本配置ROI与战略/表达兑现桥仍未闭合，故不能把“理由已补”视为评分证据充分。"},
+    {"id":"C015","result":"closed","evidence":"R004与S2025第3944-3952行一致：两只基金各认缴50亿元、2023年各实缴20亿元、各余30亿元；F2.5撤销0.5正面先例，未把未公开回报定性为成功或失败。","remaining_p1":"F3和管理层资本配置的其他治理/ROI缺口仍由C005/C014承接，不妨碍本ID关于基金与正面先例的最小修正。"}
+  ],
+  "findings": [
+    {"severity":"P1","location":"writer/repair-v2/acceptance-response.json:C003,C006,C008,C011；writer/rebuilt-v2/workpaper.json:E1,E3,E5.5,D1,D5","claim":"作者将共享验收条件的一部分标closed，但新底稿和evidence_gaps仍明确保留同一条件要求的杜邦、全周期量价、会计附注、战略与组织时间序列为未查。","evidence":"裁决C003/C008/C011明确要求E1、E3、E5.5全部闭合；C006/C010明确要求D1/D5时间序列。重建稿仅有R003单年ROE/KAM与R008收入目标桥，未提供其余原件或计算。","impact":"C003、C006、C008、C011不能关闭，相关公司和管理层评分仍pending_review。","recommendation":"保留原验收ID为open，定向补齐其明确列出的原件与计算后再复查；不可用部分修复覆盖完整条件。"},
+    {"severity":"P1","location":"writer/repair-v2/acceptance-response.json:C005；writer/rebuilt-v2/workpaper.json:evidence_gaps,F1,F2,F3及管理层相关分项","claim":"C005标bounded，但裁决要求的核心治理事实和检索范围尚未执行完成。","evidence":"R005是半年报转引和公告编号，不是临2026-004/005原公告；sources/evidence-files没有新增公告或监管检索记录。证据规范要求按姓名、职务、发生日和披露日核治理事件。","impact":"F1、F2、F3及诚信、股东友好、组织、危机分项不能作无事件或充分治理判断。","recommendation":"维持C005为open，补官方公告及有界逐名/逐类检索记录；bounded不作为验收通过。"},
+    {"severity":"P1","location":"writer/rebuilt-v2/workpaper.json:scores.company.items[B3,C1,C2,C3+C4]","claim":"行业地位、定价权、议价和壁垒的高档分仍只有公司自身收入、低应收或叙述性资料，所要求的行业与反证原件没有新增。","evidence":"C012的最小条件要求近五年毛利率、调价、可比行业、行业地位、客户供应商集中与壁垒反证；repair-v2/facts.json未登记这些事实，底稿文本也承认待补。","impact":"C012未关闭，相关高档公司分不能批准。","recommendation":"按C012取得最小可追溯行业/经营证据后重审分项；不以资料缺口自动降档。"}
+  ],
+  "remaining_p1": ["C003","C004","C005","C006","C007","C008","C009","C010","C011","C012","C014"],
+  "score_check": {"company_raw":91.5,"management_raw":84,"combined_raw":175.5,"company_display_half_up":92,"management_display_half_up":84,"combined_display_half_up":176,"status":"pending_repair_acceptance"}
+}

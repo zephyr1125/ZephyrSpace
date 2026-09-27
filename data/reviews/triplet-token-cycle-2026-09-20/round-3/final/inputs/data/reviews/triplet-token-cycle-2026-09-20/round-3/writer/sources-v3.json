@@ -1,0 +1,17 @@
+[
+  {"source_id":"MT-AR-2020","path":"财报/贵州茅台/贵州茅台2020年度报告.md","retrieved_at":"2026-09-21","period":"2020年度","kind":"本地法定年报"},
+  {"source_id":"MT-AR-2021","path":"财报/贵州茅台/贵州茅台2021年度报告.md","retrieved_at":"2026-09-21","period":"2021年度","kind":"本地法定年报"},
+  {"source_id":"MT-AR-2022","path":"财报/贵州茅台/贵州茅台2022年度报告.md","retrieved_at":"2026-09-21","period":"2022年度","kind":"本地法定年报"},
+  {"source_id":"MT-AR-2023","path":"财报/贵州茅台/贵州茅台2023年度报告.md","retrieved_at":"2026-09-21","period":"2023年度","kind":"本地法定年报"},
+  {"source_id":"MT-AR-2024","path":"财报/贵州茅台/贵州茅台2024年度报告.md","retrieved_at":"2026-09-21","period":"2024年度","kind":"本地法定年报"},
+  {"source_id":"MT-AR-2025","path":"财报/贵州茅台/贵州茅台2025年度报告.md","retrieved_at":"2026-09-21","period":"2025年度","kind":"本地法定年报"},
+  {"source_id":"MT-H1-2026","path":"财报/贵州茅台/贵州茅台2026半年度报告.md","retrieved_at":"2026-09-21","period":"2026年1-6月","kind":"本地法定中报"},
+  {"source_id":"MT-CSRC-2020","url":"https://www.csrc.gov.cn/guizhou/c104852/c1405688/content.shtml","retrieved_at":"2026-09-21","kind":"贵州证监局行政监管措施"},
+  {"source_id":"MT-SPP-YUAN","url":"https://www.spp.gov.cn/zdgz/202109/t20210923_530571.shtml","retrieved_at":"2026-09-21","kind":"最高检转载法院判决"},
+  {"source_id":"MT-SPP-GAO","url":"https://www.spp.gov.cn/spp/zdgz/202402/t20240202_642409.shtml","retrieved_at":"2026-09-21","kind":"最高检转载法院判决"},
+  {"source_id":"MT-SEARCH-20260921","query":"贵州茅台 600519 处罚 问询 减持 2023 2026；贵州茅台 高管 被查 反腐 逮捕 判刑；贵州茅台 2025 年度业绩说明会","retrieved_at":"2026-09-21","kind":"有界网络检索记录"}
+  ,{"source_id":"MT-SEARCH-PEOPLE-20260921","query":"袁仁国 贵州茅台 董事长 受贿；高卫东 贵州茅台 董事长 受贿；丁雄军 张德芹 陈华 王莉 蒋焰 贵州茅台 被查 调查 处罚","retrieved_at":"2026-09-21","kind":"逐姓名治理检索；原始响应见writer/检索记录-v2.md"}
+ ,{"source_id":"MT-IPO-2001","url":"https://static.cninfo.com.cn/finalpage/2001-07-26/53299216.PDF","retrieved_at":"2026-09-21","kind":"贵州茅台招股说明书附件，巨潮原件"}
+ ,{"source_id":"MT-AR-2002-SSE","url":"https://static.sse.com.cn/sseportal/cs/zhs/scfw/gg/ssgs/2003-03-26/600519_2002_n.pdf","retrieved_at":"2026-09-21","kind":"2002年年报，上交所原件"}
+ ,{"source_id":"MT-HOLDER-2025","url":"http://static.sse.com.cn/disclosure/listedinfo/announcement/c/new/2025-09-02/600519_20250902_PFR8.pdf","retrieved_at":"2026-09-21","kind":"控股股东增持进展公告，上交所原件"}
+]

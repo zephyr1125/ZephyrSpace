@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "score_display": "integer_half_up",
+  "score_rule_validation": "explicit_tiers_v2",
+  "score_state": "pending_review",
+  "research_state": "pending_review",
+  "publish_allowed": false,
+  "evidence_gaps": [{"affected_items":["F1","组织与人才能力"],"kind":"public_not_checked","impact":"三名2026H1任免的公告具体发生日未在本地定期报告表中逐项列示；现有期末职务和变动事实足以支持非满分判断，但独立复核应回看对应聘任/解聘公告以确认日期与原因。","search_scope":"贵州茅台2026H1报告的高管变动、联系人及签署页；上交所2025年报检索结果。","evidence_refs":["F009"]}],
+  "scores": {
+    "company": {"items": [
+      {"id":"A1","score":2,"rule_ref":"A1","reason":"1999年省国资委最终控制下设立，资源与政策背景强但非技术创业型；不满足先发/技术驱动满档。","evidence_refs":["F001"]},
+      {"id":"A2","score":3,"rule_ref":"A2","reason":"原件列控股股东和最终控制方，未见本轮原件中的控制权争夺或多次变更反证，按稳定档。","evidence_refs":["F001"]},
+      {"id":"A3","score":4,"rule_ref":"A3","reason":"原件显示分红和注销式回购，未见卖资产保利润或高频股权融资证据；按清洁档，仍由复核核查历史资本动作。","evidence_refs":["F006","F008"]},
+      {"id":"B0","score":2,"rule_ref":"B0","reason":"原件可确认以白酒品牌、经销与直销渠道为核心的长期经营模式，当前并非由并购驱动；符合完整溯源判断。","evidence_refs":["F001","F002"]},
+      {"id":"B1","score":3,"rule_ref":"B1","reason":"茅台酒收入占比约86.8%，集中度高；系列酒和直销/批发双渠道提供结构分层，故为集中但逻辑清晰。","evidence_refs":["F002"]},
+      {"id":"B2","score":3,"rule_ref":"B2","reason":"白酒消费存在品牌复购、渠道重复采购和高毛利特征；2026H1销量增长支持需求仍有韧性，未见一次性项目主导。","evidence_refs":["F002","F003"]},
+      {"id":"B3","score":6,"rule_ref":"B3","reason":"单一核心品牌贡献1465亿元收入且营业成本远低于收入；双渠道收入接近均衡，支持强品牌定价权。行业调整下利润承压是反证，但不足以推翻强档。","evidence_refs":["F002","F003"]},
+      {"id":"B4","score":3,"rule_ref":"B4","reason":"成熟品牌消费品的稳定性较强，但2026H1收入仅增1.47%、净利下降1.95%，不符合行业成长期满档。","evidence_refs":["F002","F003"]},
+      {"id":"C1","score":6,"rule_ref":"C1","reason":"核心产品收入规模和品牌定位支持绝对龙头判断；本轮原件未提供CR5精确值，但不存在第二梯队反证。","evidence_refs":["F002"]},
+      {"id":"C2","score":5,"rule_ref":"C2","reason":"高品牌溢价、经销/直销双渠道及极低应收账款表明对下游结算和价格有较强控制；行业调整构成需求侧限制而非夹心层证据。","evidence_refs":["F002","F010"]},
+      {"id":"C3+C4","score":9,"rule_ref":"C3+C4","reason":"品牌、历史积累、稀缺产地工艺及渠道共同形成最高档护城河；2026H1增长放缓是需求周期反证，未显示护城河崩解。","evidence_refs":["F001","F002","F003"]},
+      {"id":"D1","score":4,"rule_ref":"D1","reason":"2025年仍围绕世界一流企业、规划、预算和治理推进，和主业经营方向一致；未发现频繁跨界战略漂移。","evidence_refs":["F011"]},
+      {"id":"D2","score":3,"rule_ref":"D2","reason":"2026H1销量增长但收入和利润弱于上年，且本轮未逐年取得可量化目标与兑现表；以部分执行证据取50%达标档。","evidence_refs":["F003","F011"],"original_statement_found":true,"strategy_drift":false},
+      {"id":"D3","score":2,"rule_ref":"D3","reason":"行业处于周期性和结构性调整，非明显顺风；公司仍称发展韧性，故为中性。","evidence_refs":["F003"]},
+      {"id":"D5","score":3,"rule_ref":"D5","reason":"高收入、现金创造和制度/预算推进支持组织执行；财务负责人变动是需跟踪反证，但未构成组织恶化证明。","evidence_refs":["F003","F009","F011"]},
+      {"id":"E1","score":5,"rule_ref":"E1","reason":"2025年高盈利和2026H1高归母净资产相结合，收益能力主要对应高净利率商业模式，非高杠杆；完整杜邦数值由复核重算。","evidence_refs":["F004","F010"]},
+      {"id":"E2","score":5,"rule_ref":"E2","reason":"2025年经营现金流615.22亿元，低于净利823.20亿元但仍显著为正；2026H1经营现金流706.91亿元。营运资本波动是反证但非持续负现金流。","evidence_refs":["F003","F004"]},
+      {"id":"E3","score":3,"rule_ref":"E3","reason":"2026H1销量增加且扣非与归母净利接近，支持经营性增长；利润同比下降限制增长质量但无补贴/资产出售依赖证据。","evidence_refs":["F003"]},
+      {"id":"E4","score":2,"rule_ref":"E4","reason":"资产负债率约18.7%，货币资金和同业资产充足，未见高杠杆短债压力；资本支出同比未触发拆分阈值。","evidence_refs":["F010"],"capex_check":{"applicable":false,"reason":"本轮原件未识别到可比年度资本性支出同比变化超过30%的触发事实；公司现金流表投资活动含金融资产配置，不可将其直接当Capex。"}},
+      {"id":"E5","score":2,"rule_ref":"E5","reason":"标准无保留审计、极低应收账款且未见商誉风险披露；收入确认及关联交易被列为KAM，属于审计重点而非非标意见。","evidence_refs":["F005","F010"]},
+      {"id":"E5.5","score":3,"rule_ref":"E5.5","reason":"KAM为收入确认和关联交易，无持续经营或商誉减值异常；报表未显示会计政策变更/前期差错影响。KAM本身仍需持续核查。","evidence_refs":["F005"]},
+      {"id":"F1","score":4,"rule_ref":"F1","reason":"未见原件披露现任核心人员被调查或腐败事件；但2026H1财务总监兼董秘更替，故不取核心团队完全稳定满档。","evidence_refs":["F009"]},
+      {"id":"F2","score":5,"rule_ref":"F2","reason":"2025年现金分红和回购注销合计占归母净利86.43%，且采用注销式回购，支持高股东回报与资本纪律。","evidence_refs":["F006","F008"]},
+      {"id":"F2.5","score":2.5,"rule_ref":"F2.5","reason":"高比例分红、已实施及继续启动的注销回购为可验证正面先例；在F维度上限内加0.5。","evidence_refs":["F006","F008"],"positive_precedent":true},
+      {"id":"F3","score":2,"rule_ref":"F3","reason":"关联交易被审计师作为KAM且治理自查有控股股东未履行激励承诺和高管兼职两项问题；未见非标内控意见，故为小瑕疵档。","evidence_refs":["F005","F007"]}
+    ],"total":91.5},
+    "management": {"items": [
+      {"id":"诚信与透明度","score":16,"rule_ref":"管理层评分表/诚信与透明度","reason":"标准无保留审计、诚信状况良好披露支持透明度；关联交易KAM和治理自查问题限制满分。","evidence_refs":["F005","F007"]},
+      {"id":"资本配置能力","score":22,"rule_ref":"管理层评分表/资本配置能力","reason":"高比例现金回报和注销回购支持优秀资本回报；需继续核查国企资本配置的长期ROI。","evidence_refs":["F006","F008"]},
+      {"id":"战略稳定性","score":12,"rule_ref":"管理层评分表/战略稳定性","reason":"主业和治理规划延续；2026H1行业调整及业绩放缓限制满分。","evidence_refs":["F003","F011"]},
+      {"id":"对股东友好度","score":15,"rule_ref":"管理层评分表/对股东友好度","reason":"分红、回购注销和中小股东单独计票的原件披露支持满分。","evidence_refs":["F006"]},
+      {"id":"危机处理能力","score":8,"rule_ref":"管理层评分表/危机处理能力","reason":"行业调整中销量仍增且现金流改善；尚无完整危机案例可支持满分。","evidence_refs":["F003"]},
+      {"id":"组织与人才能力","score":7,"rule_ref":"管理层评分表/组织与人才能力","reason":"制度、预算和治理推进支持组织能力；2026H1财务总监兼董秘更替与高管兼职问题限制判断。","evidence_refs":["F007","F009","F011"]},
+      {"id":"表达清晰度与认知质量","score":4,"rule_ref":"管理层评分表/表达清晰度与认知质量","reason":"年报对行业调整、治理与规划有明确表述；缺少电话会逐条承诺核验，故不取满分。","evidence_refs":["F003","F011"]}
+    ],"total":84}
+  },
+  "valuation": {"status":"deferred","reason":"本阶段仅完成公司与管理层评分，尚未进入估值模块。","currency":"CNY","models":[],"target_price":null,"certainty":null,"certainty_reason":"本阶段仅完成公司与管理层评分，尚未进入估值模块。","buy_price":null},
+  "bridges": [],
+  "bridges_not_applicable": "估值阶段未启动，未形成估值桥。"
+}

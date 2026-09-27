@@ -1,0 +1,24 @@
+{
+  "base_sha256": "dcb8787dc9ef765df37ca89f76bee899f359e3bef477dcfe3883d7c15c24753b",
+  "decision_sha256": "2efa7623a9765ea0053069933909fe9a421b234555fcf913b11e534e6bc5f4f8",
+  "changes": [
+    {"group":"company","item":"E1","acceptance_ids":["R4-E1-A1"],"set":{"score":5,"reason":"2020—2025披露归母加权ROE为31.41%、29.90%、30.26%、34.19%、36.02%、32.53%。以合并净利/营业总收入、营业总收入/平均合并资产、平均合并资产/平均合并总权益统一拆解，2023—2025杜邦ROE为36.1747%、38.3684%、34.4014%；净利率约49.6%—51.5%，权益乘数仅1.22左右，经营利润率而非杠杆驱动，满足5分。与披露ROE的差异来自合并口径与归母加权口径。","evidence_refs":["GZMT-R4SOL-E1-001"]}},
+    {"group":"company","item":"B3","acceptance_ids":["R4-B3-A1"],"set":{"score":6,"reason":"2021—2025酒类毛利率91.62%、92.00%、92.11%、92.01%、91.23%，长期显著高于五粮液、泸州老窖代表性样本；2023年飞天/五星出厂价主动上调约20%，且不混同市场指导价。2025毛利率下降0.78个百分点及2026H1收入微增、利润下降说明定价权并非无条件，仍属有历史验证的强档6分。","evidence_refs":["GZMT-R4SOL-B3-001"]}},
+    {"group":"company","item":"C1","acceptance_ids":["R4-C1-A1"],"set":{"score":6,"reason":"按酒类收入同口径，茅台2023—2025为1472.19/1706.12/1687.75亿元，连续高于五粮液约764.47/831.27/371.04亿元及泸州老窖约300.77/310.53/256.06亿元；五粮液2025调整收入确认，故不机械比较增长。该Top3规模与三年领先支持行业龙头6分，但不是完整CR5或行业份额。","evidence_refs":["GZMT-R4SOL-C1-001"]}},
+    {"group":"company","item":"C2","acceptance_ids":["R4-C2C4-A1"],"set":{"score":5,"reason":"客户集中度约10%、供应商35%—38%，下游分散而上游相对集中；高毛利与已核提价支持长期成本传导，但不证明即时转嫁。贮存和渠道可缓冲需求，2025收入毛利回落及2026H1利润下降表明不能消除周期冲击。四维综合仍支持产业链主导5分。","evidence_refs":["GZMT-R4SOL-C2C4-001","GZMT-R4SOL-B3-001"]}},
+    {"group":"company","item":"C3+C4","acceptance_ids":["R4-C2C4-A1"],"set":{"score":9,"reason":"核心产区自然条件与长期品牌心智最难复制，贮存形成时间成本；工艺可学习但稳定批量复制难，渠道可调整也可被竞品和新渠道替代。同行高毛利、系列酒结构调整和当期下滑均是反证。按整体壁垒持续性而非五个名词计数，综合仍支持五星9分。","evidence_refs":["GZMT-R4SOL-C2C4-001"]}},
+    {"group":"company","item":"F2.5","acceptance_ids":["R4-CAPITAL-A1"],"set":{"score":2,"reason":"6400吨系列酒项目预算34.5416亿元，已投产并释放，2023系列酒实际产能相对设计产能利用率96.57%。按新增产能满产、每吨经营贡献5/7.5/10万元，预算简单经营贡献率为9.26%/13.90%/18.53%；低情景在利用率约54%以上才覆盖8%资本成本代理。该边界不是IRR，也不归因全公司利润。另有基金60亿元待缴及未实现回报，故维持2分但保留项目级IRR未知。","evidence_refs":["GZMT-R4SOL-CAPITAL-001"]}},
+    {"group":"management","item":"资本配置能力","acceptance_ids":["R4-CAPITAL-A1"],"set":{"score":21,"reason":"核心产能项目已投产且高利用，保守经营贡献情景在合理利用率下高于资金成本代理；持续分红与低杠杆体现纪律。项目级IRR未公开、基金60亿元待缴且回报尚未实现，限制满分但不否定主业配置记录，维持21分。","evidence_refs":["GZMT-R4SOL-CAPITAL-001","MOUTAI-CAPEX-004"]}},
+    {"group":"company","item":"A3","acceptance_ids":["R4-FINANCING-A1"],"set":{"score":4,"reason":"上市以来仅核得2001首发现金融资，资金承诺投向27个主业项目，2002已核一项习酒资产及技改执行；2002—2015股本增加均为送股或资本公积转增，2021—2024无股本变化且可转债、优先股不适用，2025—2026H1仅回购注销缩股。定期报告对重大资产出售列不适用，未见以出售资产保利润，支持4分；不宣称逐件核完27项目。","evidence_refs":["GZMT-R4SOL-FINANCING-001","GZMT-R4-CAP-002"]}},
+    {"group":"company","item":"F2","acceptance_ids":["R4-FINANCING-A1"],"set":{"score":5,"reason":"2021—2024潜在摊薄工具不适用且股本不变，2025—2026H1回购注销缩股；2023—2025分红规模高，2025年报披露最近三年现金分红与注销回购合计1960.09亿元。控股股东及技术开发公司2023—2026H1股份数连续桥仅见增持或不变，未把回购导致的比例变化当减持；截止日后段无新增原件保留为有界未知。股东回报和反摊薄记录支持5分。","evidence_refs":["GZMT-R4SOL-FINANCING-001","GZMT-R4V3-CAP-002"]}},
+    {"group":"management","item":"对股东友好度","acceptance_ids":["R4-FINANCING-A1"],"set":{"score":14,"reason":"连续高额分红、回购注销、控股股东增持及无摊薄工具构成明确正面记录；已核持续治理承诺与代理制衡约束限制满分。14分来自正面回报与治理约束并列，不以资料缺口机械扣分。","evidence_refs":["GZMT-R4SOL-FINANCING-001","GZMT-R4R-GOV-001"]}}
+  ],
+  "metadata_changes": [
+    {"field":"evidence_gaps","acceptance_ids":["R4-E1-A1","R4-C1-A1","R4-B3-A1","R4-C2C4-A1","R4-CAPITAL-A1","R4-FINANCING-A1"],"set":[
+      {"affected_items":["B0"],"kind":"public_not_checked","impact":"首发材料身份与募投已核，但早期业务九要素和三个判断的官方原文未取得；B0已按部分覆盖1分。","search_scope":"2001招股书业务、客户、渠道、成本及工艺章节。","evidence_refs":["GZMT-R4V2-CAP-001"]},
+      {"affected_items":["F2.5","资本配置能力"],"kind":"unpublished","impact":"项目级税后现金流、营运资本、维护资本支出及IRR未公开；本稿用已投产、利用率和单位经营贡献敏感性形成可复算边界，未将合并ROE当项目回报。若单位贡献低于4.32万元/吨或利用率显著低于54%（8%资本成本代理），须重评。","search_scope":"项目竣工决算、分项目销量售价成本与基金定期报告。","evidence_refs":["GZMT-R4SOL-CAPITAL-001"]},
+      {"affected_items":["F2","对股东友好度"],"kind":"public_not_checked","impact":"2023—2026H1控股股东和技术开发公司股份数连续桥只见增持或不变；冻结包未取得2026-07-01至2026-09-20新增股东权益变动原件。该短尾未知不改变已核五年无摊薄、高分红及回购注销判断；若出现大额不当减持则重评。","search_scope":"2026-07-01至2026-09-20控股股东权益变动公告。","evidence_refs":["GZMT-R4SOL-FINANCING-001"]},
+      {"affected_items":["诚信与透明度","危机处理能力","组织与人才能力"],"kind":"public_not_checked","impact":"留置通知、公告、免职与补位已核；最终司法结论、整改机制及动机未取得。","search_scope":"2026-03-30后留置处置、整改及人事公告。","evidence_refs":["GZMT-R4R-CRISIS-001","GZMT-R4-GOV-002"]}
+    ]}
+  ]
+}

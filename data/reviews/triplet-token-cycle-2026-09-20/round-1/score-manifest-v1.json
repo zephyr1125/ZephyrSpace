@@ -1,0 +1,21 @@
+{
+  "frozen_at": "2026-09-20T15:39:49.655022+00:00",
+  "files": {
+    "data/reviews/triplet-token-cycle-2026-09-20/round-1/writer/workpaper-v1.json": "9a7be35b3266ffc78db9f03285649dc864aec6ad8f69a20395468608dc2adac2",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-1/writer/score-rationale.md": "77d23f6e543224e899200de8e7db12dada7c2ff60dc846fb4171180ecfb3f5da",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-1/writer/coverage-score-v2.json": "4c2987377cb00455d41bcff41d8664abe42ee57f6ee19bd6974ecd6fb89ddcd6",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-1/writer/evidence-files-score.json": "fdffdb2533086d42c88331fb6107c5d6285fe8b286a184f37bf6ddd2083d0d11",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-1/evidence/sources.json": "d7cecf9800b1ca7507674100d08359a4fd2a4cc9b37fdd07e54cd504e9c68ca9",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-1/evidence/facts.json": "4a4494e069adf8b1cf1300c4390b50cf8434a709a76dccf662fb93cc17c4ff82",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-1/evidence/sources-v2.json": "bb7a6be2d3009c498e1e3c14a9e9199a1bad96cfa432e8f10f39810af5fa3800",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-1/evidence/facts-v2.json": "5f550d62a858d64a96889e4fb437e79755f67497695ad7624249446ced918bb3",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-1/evidence/sources-v3.json": "57c254c82e71fc11b557df6c4e0496fad7e0e2ee7f781d8ad8524a70d538d918",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-1/evidence/facts-v3.json": "76c3a2c2654f3f95a6666b098a08927430a7b02a7cb468e94b821490c45ee537",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-1/evidence/facts-local-completion.json": "186a72356b6acc86d2b59f16522166843e6489f886393f7f065d4587e6f5580f",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-1/writer/supplement-sources.json": "06a0921e2126947053e96f941089f8eff1b4e6d5ab0fec0063467028a765e998",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-1/writer/supplement-facts.json": "f60febda1b1b5edd2d3d8f112f637a82324b31284ee00f598922d4435f0bfc76",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-1/writer/scoring-sources.json": "ae040ba72e44cf2a4eced01d4ff2d7bbac90ffe8cc4a25f14afd3b9056d517e5",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-1/writer/scoring-facts.json": "eaf11accbdc257fb9260c1c62c9cc234681581fc15c84cc29e69f881620c21ea"
+  },
+  "stage": "score_candidate_not_approved"
+}

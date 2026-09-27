@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "score_display": "integer_half_up",
+  "score_rule_validation": "explicit_tiers_v2",
+  "cutoff": "2026-09-20",
+  "scope": "仅公司与管理层评分，估值未展开",
+  "scores": {
+    "company": {"total": 87.5, "items": [
+      {"id":"A1","score":3,"rule_ref":"公司规则A1：先发优势/技术驱动=3","reason":"1999年国企设立、2001年上市，法定产区与长期品牌资产构成先发基因；反证是资源禀赋亦依赖产区。","evidence_refs":["MT-F-ORIGIN","MT-F-BUSINESS"]},
+      {"id":"A2","score":3,"rule_ref":"公司规则A2：从未变更=3","reason":"招股与上市材料显示公司由国有法人股主导设立；2020-2025每份年报均披露同一控股股东茅台集团及最终控制方贵州省国资委，年度变更栏目未披露变更。董事长轮换不等于控制权变更。","evidence_refs":["MT-F-IPO-HISTORY","MT-F-CONTROL-2020-25"]},
+      {"id":"A3","score":4,"rule_ref":"公司规则A3：融资用途清晰且无卖资产保利润=4","reason":"首发募资项目在2002年报披露与招股书承诺一致；公开公告检索未见后续配股、增发或可转债，近年以经营现金流、分红与注销回购为主，未见卖资产保利润或跨界并购证据。","evidence_refs":["MT-F-IPO-HISTORY","MT-F-RETURN","MT-F-AUDIT"]},
+      {"id":"B0","score":2,"rule_ref":"公司规则B0：三项判断及分类完整=2","reason":"招股材料及上市资料确认1999年设立、2001年首发；原料采购—生产陈酿—销售的模式与当下双渠道一致，属于重资产构建深壁垒型，而非靠后续并购改造的模式。","evidence_refs":["MT-F-IPO-HISTORY","MT-F-ORIGIN","MT-F-BUSINESS"]},
+      {"id":"B1","score":3,"rule_ref":"公司规则B1：过度集中但逻辑清晰=3","reason":"茅台酒为绝对核心，系列酒、直销/批发及国际化提供子维度拆分；集中度高使单一品类需求下行仍为反证。","evidence_refs":["MT-F-BUSINESS","MT-F-FIN"]},
+      {"id":"B2","score":3,"rule_ref":"公司规则B2：高复购/刚性=3","reason":"白酒消费为重复购买，品牌和陈酿库存支持高毛利，直销与代理并存；宏观周期会影响礼赠和商务需求。","evidence_refs":["MT-F-BUSINESS","MT-F-FIN"]},
+      {"id":"B3","score":6,"rule_ref":"公司规则B3：强=6","reason":"长期超高盈利、产品价格调整及品牌渠道控制支持强定价权；2025收入下滑显示定价权不能消除行业调整。","evidence_refs":["MT-F-FIN","MT-F-BUSINESS"]},
+      {"id":"B4","score":3,"rule_ref":"公司规则B4：成熟期但稳定=3","reason":"成熟高端白酒市场仍有渠道、国际化和产品结构增长点，但2025及2026H1利润走弱，不满足成长期满分。","evidence_refs":["MT-F-FIN","MT-F-EXEC"]},
+      {"id":"C1","score":6,"rule_ref":"公司规则C1：绝对龙头/Top3=6","reason":"公司年报将茅台酒列为千亿级单品并披露世界级品牌地位；本轮未另取全行业CR5，结论限于高端酱香细分。","evidence_refs":["MT-F-FIN","MT-F-BUSINESS"]},
+      {"id":"C2","score":5,"rule_ref":"公司规则C2：吃肉主导=5","reason":"对上游采用政府/合作社/农户组织采购，对下游直销与代理双渠道；前五客户仅10.10%，客户集中度低。","evidence_refs":["MT-F-BUSINESS","MT-F-RELATED"]},
+      {"id":"C3+C4","score":9,"rule_ref":"公司规则C3+C4：5星=9","reason":"产区、工艺、长周期陈酿、品牌和渠道共同构成高进入门槛；反证为高端白酒竞争和需求周期。","evidence_refs":["MT-F-BUSINESS","MT-F-FIN"]},
+      {"id":"D1","score":4,"rule_ref":"公司规则D1：长期一致且逻辑清晰=4","reason":"2023-2025均围绕质量、品牌、渠道、国际化和治理，2025市场化转型为需求环境下的延伸，未见不可解释漂移。","evidence_refs":["MT-F-EXEC"]},
+      {"id":"D2","score":4,"rule_ref":"公司规则D2：第3优先级年报经营计划可作间接验证，缺第1/2优先级原话上限4","reason":"董事会年报经营计划是管理层书面计划，但原规则将其列为第3优先级间接验证，不等同业绩说明会/投资者关系Q&A原话；2021-2023三年营收目标均达成，故按无原话的4分上限。","evidence_refs":["MT-F-EXEC"],"original_statement_found":false,"strategy_drift":false},
+      {"id":"D3","score":2,"rule_ref":"公司规则D3：中性=2","reason":"品牌和产区壁垒提供韧性，但宏观消费、舆情及环境风险均被年报列示，行业进入周期性结构调整。","evidence_refs":["MT-F-EXEC","MT-F-FIN"]},
+      {"id":"D5","score":2,"rule_ref":"公司规则D5：混合信号=2","reason":"2023-2025研发人员约800人且较稳定；业务收入高但未形成可比的人均创收/人才流失完整序列，且2026H1财务高管解聘。","evidence_refs":["MT-F-PEOPLE","MT-F-FIN"]},
+      {"id":"E1","score":5,"rule_ref":"公司规则E1：净利率/周转率驱动ROE>15%=5","reason":"以合并营业收入、合并资产总计与归母净利/归母权益作同口径近似杜邦，2020-2024归母净利率约49%-51%，资产周转由0.4788升至0.5979次，权益乘数由1.3333降至1.2738；高归母ROE来自高归母净利率与周转改善，非加杠杆。","evidence_refs":["MT-F-DUPONT"]},
+      {"id":"E2","score":4,"rule_ref":"公司规则E2：基本达标=3至5的专业判断","reason":"2023-2025经营现金流/归母净利约0.89/1.07/0.75，三年均值约0.90，现金创造总体强；2025受财务公司存款及同业存款影响显著下降，不能给满分。","evidence_refs":["MT-F-FIN","MT-F-RELATED"]},
+      {"id":"E3","score":3,"rule_ref":"公司规则E3：扣非>85%且量价双驱动=3","reason":"2025扣非与归母几乎相等，增长主要靠销量、价格和产品结构；2025收入和利润下降是阶段性反证但非补贴依赖。","evidence_refs":["MT-F-FIN"]},
+      {"id":"E4","score":1.5,"rule_ref":"公司规则E4及Capex同比>30%未拆分扣0.5","reason":"经营现金流强、未见高杠杆信号；2025现金Capex同比下降33.15%，仅知基建工程款减少，未完成维持/扩张拆分，按原规则从2分扣0.5。","evidence_refs":["MT-F-CAPEX","MT-F-FIN"],"capex_check":{"applicable":true,"current":31.2759491641,"previous":46.7871205356,"unit":"亿元","current_period":"2025年度","previous_period":"2024年度","evidence_refs":["MT-F-CAPEX"],"split_complete":false,"score_before_capex_adjustment":2}},
+      {"id":"E5","score":2,"rule_ref":"公司规则E5：标准审计+低商誉+应收质量好=2","reason":"2023-2025标准无保留审计，且本轮未见重大商誉/应收减值红旗；存货较高符合陈酿经营属性但仍需跟踪渠道消化。","evidence_refs":["MT-F-AUDIT","MT-F-CAPEX"]},
+      {"id":"E5.5","score":2,"rule_ref":"公司规则E5.5：有小瑕疵=2","reason":"年报KAM为收入确认和关联交易，均有审计程序，不是持续经营意见；两项均属金额重大和判断敏感领域，故不按无异常给满分。","evidence_refs":["MT-F-AUDIT","MT-F-RELATED"]},
+      {"id":"F1","score":2,"rule_ref":"公司规则F1：周期性高管腐败近10年≥2人=-2","reason":"历任董事长袁仁国、高卫东均因受贿获无期，且2021-2025董事长连续变动；现任团队未见被调查的本轮证据，不能推为现任问题。","evidence_refs":["MT-F-INTEGRITY","MT-F-PEOPLE"]},
+      {"id":"F2","score":5,"rule_ref":"公司规则F2：高分红+无不良减持+融资审慎=5","reason":"2025拟分红350亿元、三年累计1875亿元，回购用于注销；2022-2023及2025控股股东实施增持，2025回购公告明确决议前六个月无控股股东减持、董监高/实控人无买卖且回购期无减持计划。","evidence_refs":["MT-F-RETURN","MT-F-HOLDER-RETURN"]},
+      {"id":"F2.5","score":2,"rule_ref":"公司规则F2.5：审慎配置+逆周期布局+资金回报>成本=2","reason":"同口径归母杜邦显示2020-2024归母净利率约49%-51%、资产周转提升且权益乘数下降，年报加权ROE长期约30%以上；资本开支、分红和注销回购并行，未见重大跨界并购。该整体判断不把归母权益与负债相加冒充合并资产。","evidence_refs":["MT-F-CAPITAL-RETURN","MT-F-CAPEX-2020-25","MT-F-RETURN"],"positive_precedent":false},
+      {"id":"F3","score":2,"rule_ref":"公司规则F3：有小瑕疵或ESG中等风险=2","reason":"关联交易和财务公司资金影响披露充分，年报称定价公允；但关联交易金额重大且2020高卫东有信披警示，不能评透明清洁满分。","evidence_refs":["MT-F-RELATED","MT-F-INTEGRITY","MT-F-GOV"]}
+    ]},
+    "management": {"total": 67, "items": [
+      {"id":"诚信与透明度","score":8,"rule_ref":"管理层规则：诚信≤8触发红旗","reason":"两任前董事长因受贿被判无期，且高卫东曾被证券监管警示；近年年报信披评价A及关联交易披露是正面反证，但不足以抵消历史系统性治理风险。","evidence_refs":["MT-F-INTEGRITY","MT-F-GOV"]},
+      {"id":"资本配置能力","score":20,"rule_ref":"管理层规则：资本配置能力满分25","reason":"以合并资产总计、合并营业收入和归母利润/权益的同口径序列，2020-2024高归母净利率与提升的资产周转支撑长期高ROE，权益乘数下降；资本开支与高额分红、注销回购并行，首发项目按承诺投入。项目级IRR未取得限制满分，但不是把未知任意低扣。","evidence_refs":["MT-F-CAPITAL-RETURN","MT-F-CAPEX-2020-25","MT-F-RETURN","MT-F-IPO-HISTORY"]},
+      {"id":"战略稳定性","score":11,"rule_ref":"管理层规则：战略稳定性满分15","reason":"质量、品牌、渠道、国际化和治理主线连续，2025转向消费者和市场化适应环境；收入转负增长及董事长更迭使执行可信度不取满分。","evidence_refs":["MT-F-EXEC","MT-F-PEOPLE","MT-F-FIN"]},
+      {"id":"对股东友好度","score":13,"rule_ref":"管理层规则：对股东友好度满分15","reason":"分红、回购注销和市值管理制度均有法定披露；未取得全部大股东变动与回购时点对照，故留2分不确定性。","evidence_refs":["MT-F-RETURN","MT-F-SEARCH"]},
+      {"id":"危机处理能力","score":6,"rule_ref":"管理层规则：危机处理能力满分10","reason":"对治理自查的具体问题，年报连续披露并提出加强治理、内控和机制优化；面对2025行业调整，年报披露市场化转型和渠道、价格机制行动。未将未获得电话会原话或单一年度业绩直接扣为低分。","evidence_refs":["MT-F-GOV-REMEDY","MT-F-EXEC","MT-F-FIN"]},
+      {"id":"组织与人才能力","score":6,"rule_ref":"管理层规则：组织与人才能力满分10","reason":"向平、钟正强、张旭等生产销售高管具有公司内部履历，研发人员2023-2025约800人稳定；但董事长三次更替、2026H1财务总监/董秘解聘，以及未履行激励承诺，限制满分。","evidence_refs":["MT-F-PEOPLE","MT-F-GOV-REMEDY"]},
+      {"id":"表达清晰度与认知质量","score":3,"rule_ref":"管理层规则：表达清晰度满分5","reason":"2025年报对市场化转型、渠道、价格、风险防控和资本项目给出具体行动方向，表达结构清楚；业绩说明会逐字问答未取得，故不评价即时追问下的解释质量。","evidence_refs":["MT-F-EXEC"]}
+    ]}
+  },
+  "evidence_gaps": [
+    {"affected_items":["A2","资本配置能力"],"kind":"边界性历史/项目细节未取得","impact":"不影响本底稿已核连续控制、首发承诺执行和整体资本回报判断；仅限制IPO至2019逐年控制链与单项目IRR的更细表述","search_scope":"截至2026-09-20，若后续需叙述该细节，补全2001-2019年度报告和主要项目竣工收益资料","evidence_refs":["MT-F-IPO-HISTORY","MT-F-CAPITAL-RETURN"]}
+  ],
+  "valuation":{"status":"deferred","reason":"本轮明确排除估值","currency":"CNY","models":[],"target_price":null,"certainty":null,"buy_price":null},
+  "bridges":[],
+  "bridges_not_applicable":"本轮仅评分，未建立估值权益桥。",
+  "score_state":"pending_review","research_state":"pending_review","publish_allowed":false
+}

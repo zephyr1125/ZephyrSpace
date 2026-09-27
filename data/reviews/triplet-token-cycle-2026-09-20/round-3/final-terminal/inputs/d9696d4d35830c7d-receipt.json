@@ -1,0 +1,522 @@
+{
+  "changes": [
+    {
+      "group": "company",
+      "item": "A2",
+      "before": {
+        "id": "A2",
+        "score": 3,
+        "rule_ref": "公司规则A2：从未变更=3",
+        "reason": "招股与上市材料显示公司由国有法人股主导设立；2020-2025每份年报均披露同一控股股东茅台集团及最终控制方贵州省国资委，年度变更栏目未披露变更。董事长轮换不等于控制权变更。",
+        "evidence_refs": [
+          "MT-F-IPO-HISTORY",
+          "MT-F-CONTROL-2020-25"
+        ]
+      },
+      "after": {
+        "id": "A2",
+        "score": 2,
+        "rule_ref": "公司规则A2：从未变更=3",
+        "reason": "官方IPO端点与2020-2025连续年报确认国有控制主线，但未取得闭合2001-2019真实控制转移次数的官方汇总；不能维持“从未变更”3分，也不因缺文档任意落0/1，按原规则一项合理变更档2分并保留边界。",
+        "evidence_refs": [
+          "MT-R5-CONTROL"
+        ]
+      },
+      "acceptance_ids": [
+        "C003-A1",
+        "C004-A1"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "A3",
+      "before": {
+        "id": "A3",
+        "score": 4,
+        "rule_ref": "公司规则A3：融资用途清晰且无卖资产保利润=4",
+        "reason": "首发募资项目在2002年报披露与招股书承诺一致；公开公告检索未见后续配股、增发或可转债，近年以经营现金流、分红与注销回购为主，未见卖资产保利润或跨界并购证据。",
+        "evidence_refs": [
+          "MT-F-IPO-HISTORY",
+          "MT-F-RETURN",
+          "MT-F-AUDIT"
+        ]
+      },
+      "after": {
+        "id": "A3",
+        "score": 4,
+        "rule_ref": "公司规则A3：融资用途清晰且无卖资产保利润=4",
+        "reason": "首发项目执行已有官方年报线索；本轮所查重大重组章节未见进行中重组，产业基金投资有金额和投向披露，且未发现业绩压力期卖资产保利润证据。检索未命中不等于不存在，故结论限于可复核范围，仍支持原档。",
+        "evidence_refs": [
+          "MT-R5-A3",
+          "MT-R5-CAPITAL-ACTIONS",
+          "MT-F-IPO-HISTORY"
+        ]
+      },
+      "acceptance_ids": [
+        "C001-A1",
+        "C001-A2"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "F1",
+      "before": {
+        "id": "F1",
+        "score": 2,
+        "rule_ref": "公司规则F1：周期性高管腐败近10年≥2人=-2",
+        "reason": "历任董事长袁仁国、高卫东均因受贿获无期，且2021-2025董事长连续变动；现任团队未见被调查的本轮证据，不能推为现任问题。",
+        "evidence_refs": [
+          "MT-F-INTEGRITY",
+          "MT-F-PEOPLE"
+        ]
+      },
+      "after": {
+        "id": "F1",
+        "score": -2,
+        "rule_ref": "公司规则F1：周期性高管腐败（近10年≥2人被查）=-2，属情形得分而非从5分扣减",
+        "reason": "袁仁国、高卫东均曾任上市公司董事长，近十年窗口内分别有刑事判决/调查及判决记录，适用原表-2负档；两案均为历史人物事件，未外推为现任核心高管在查。",
+        "evidence_refs": [
+          "MT-R5-F1"
+        ]
+      },
+      "acceptance_ids": [
+        "C002-A1",
+        "C010-A1",
+        "C002-A2",
+        "C006-A1"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "D2",
+      "before": {
+        "id": "D2",
+        "score": 4,
+        "rule_ref": "公司规则D2：第3优先级年报经营计划可作间接验证，缺第1/2优先级原话上限4",
+        "reason": "董事会年报经营计划是管理层书面计划，但原规则将其列为第3优先级间接验证，不等同业绩说明会/投资者关系Q&A原话；2021-2023三年营收目标均达成，故按无原话的4分上限。",
+        "evidence_refs": [
+          "MT-F-EXEC"
+        ],
+        "original_statement_found": false,
+        "strategy_drift": false
+      },
+      "after": {
+        "id": "D2",
+        "score": 4,
+        "rule_ref": "公司规则D2：第3优先级年报经营计划可作间接验证，缺第1/2优先级原话上限4",
+        "reason": "以营业总收入一致口径配对：2021-2024四年目标均达标，2025目标约+9%而实际-1.21%未达，达标率4/5≥2/3；年报计划属第3优先级间接验证，未取得第1/2优先级原话，按规则上限4分。2026未完年度未计入。",
+        "evidence_refs": [
+          "MT-R5-D2"
+        ],
+        "original_statement_found": false,
+        "strategy_drift": false
+      },
+      "acceptance_ids": [
+        "C005-A1"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "F2.5",
+      "before": {
+        "id": "F2.5",
+        "score": 2,
+        "rule_ref": "公司规则F2.5：审慎配置+逆周期布局+资金回报>成本=2",
+        "reason": "同口径归母杜邦显示2020-2024归母净利率约49%-51%、资产周转提升且权益乘数下降，年报加权ROE长期约30%以上；资本开支、分红和注销回购并行，未见重大跨界并购。该整体判断不把归母权益与负债相加冒充合并资产。",
+        "evidence_refs": [
+          "MT-F-CAPITAL-RETURN",
+          "MT-F-CAPEX-2020-25",
+          "MT-F-RETURN"
+        ],
+        "positive_precedent": false
+      },
+      "after": {
+        "id": "F2.5",
+        "score": 2,
+        "rule_ref": "公司规则F2.5：审慎配置+逆周期布局+资金回报>成本=2",
+        "reason": "资本开支计划、实际现金Capex、产能投产三者口径不同，未直接相除；2020与2025主要项目均有计划—实施—产能释放链，整体资本回报见同口径杜邦，分红与注销回购并行。该证据支持审慎配置、逆周期产能布局和整体回报判断；未验证先例，未加0.5。",
+        "evidence_refs": [
+          "MT-R5-CAPEX-PROJECT",
+          "MT-F-CAPITAL-RETURN",
+          "MT-F-RETURN"
+        ],
+        "positive_precedent": false
+      },
+      "acceptance_ids": [
+        "C005-A2",
+        "C009-A1"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "F3",
+      "before": {
+        "id": "F3",
+        "score": 2,
+        "rule_ref": "公司规则F3：有小瑕疵或ESG中等风险=2",
+        "reason": "关联交易和财务公司资金影响披露充分，年报称定价公允；但关联交易金额重大且2020高卫东有信披警示，不能评透明清洁满分。",
+        "evidence_refs": [
+          "MT-F-RELATED",
+          "MT-F-INTEGRITY",
+          "MT-F-GOV"
+        ]
+      },
+      "after": {
+        "id": "F3",
+        "score": 2,
+        "rule_ref": "公司规则F3：有小瑕疵或ESG中等风险=2",
+        "reason": "关联交易及历史信披监管瑕疵仍是本项2分的内控依据；近五年年报/环境披露显示环评、许可、应急及排放信息，但没有将未命中处罚包装为“ESG低风险”。本次有界证据未见可归属公司/主要生产主体的重大停产、职业健康或环境处罚事件，故F4不新增扣分。",
+        "evidence_refs": [
+          "MT-R5-ESG",
+          "MT-R5-ESG-SEARCH",
+          "MT-F-RELATED",
+          "MT-F-INTEGRITY"
+        ]
+      },
+      "acceptance_ids": [
+        "C008-A1",
+        "C008-A2"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "D1",
+      "before": {
+        "id": "D1",
+        "score": 4,
+        "rule_ref": "公司规则D1：长期一致且逻辑清晰=4",
+        "reason": "2023-2025均围绕质量、品牌、渠道、国际化和治理，2025市场化转型为需求环境下的延伸，未见不可解释漂移。",
+        "evidence_refs": [
+          "MT-F-EXEC"
+        ]
+      },
+      "after": {
+        "id": "D1",
+        "score": 4,
+        "rule_ref": "公司规则D1：长期一致且逻辑清晰=4",
+        "reason": "2021-2025计划与实际窗口显示质量、品牌、渠道、产能和治理主线持续；2025市场化转型为行业调整下的策略延展。2025目标未达影响D2执行，不构成D1战略漂移。",
+        "evidence_refs": [
+          "MT-R5-D2",
+          "MT-R5-CAPEX-PROJECT"
+        ]
+      },
+      "acceptance_ids": [
+        "C005-A1",
+        "C005-A3"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "F2",
+      "before": {
+        "id": "F2",
+        "score": 5,
+        "rule_ref": "公司规则F2：高分红+无不良减持+融资审慎=5",
+        "reason": "2025拟分红350亿元、三年累计1875亿元，回购用于注销；2022-2023及2025控股股东实施增持，2025回购公告明确决议前六个月无控股股东减持、董监高/实控人无买卖且回购期无减持计划。",
+        "evidence_refs": [
+          "MT-F-RETURN",
+          "MT-F-HOLDER-RETURN"
+        ]
+      },
+      "after": {
+        "id": "F2",
+        "score": 5,
+        "rule_ref": "公司规则F2：高分红+无不良减持+融资审慎=5",
+        "reason": "持续高额现金分红、注销式回购及控股股东增持已核；新增资本配置证据没有改变融资审慎、未见不良减持的既有判断，维持5分。",
+        "evidence_refs": [
+          "MT-F-RETURN",
+          "MT-F-HOLDER-RETURN",
+          "MT-R5-CAPITAL-ACTIONS"
+        ]
+      },
+      "acceptance_ids": [
+        "C005-A3"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "资本配置能力",
+      "before": {
+        "id": "资本配置能力",
+        "score": 20,
+        "rule_ref": "管理层规则：资本配置能力满分25",
+        "reason": "以合并资产总计、合并营业收入和归母利润/权益的同口径序列，2020-2024高归母净利率与提升的资产周转支撑长期高ROE，权益乘数下降；资本开支与高额分红、注销回购并行，首发项目按承诺投入。项目级IRR未取得限制满分，但不是把未知任意低扣。",
+        "evidence_refs": [
+          "MT-F-CAPITAL-RETURN",
+          "MT-F-CAPEX-2020-25",
+          "MT-F-RETURN",
+          "MT-F-IPO-HISTORY"
+        ]
+      },
+      "after": {
+        "id": "资本配置能力",
+        "score": 20,
+        "rule_ref": "管理层规则：资本配置能力满分25",
+        "reason": "首发承诺执行、2020/2025产能项目计划—实施—释放、基金投资披露及分红/回购共同构成资本动作链；整体资本效率以同口径杜邦支持但不等同单项目IRR。2025产业基金尚在投资期和项目IRR未披露限制满分，20分维持。",
+        "evidence_refs": [
+          "MT-R5-A3",
+          "MT-R5-CAPEX-PROJECT",
+          "MT-R5-CAPITAL-ACTIONS",
+          "MT-F-CAPITAL-RETURN"
+        ]
+      },
+      "acceptance_ids": [
+        "C001-A2",
+        "C005-A2",
+        "C005-A3"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "战略稳定性",
+      "before": {
+        "id": "战略稳定性",
+        "score": 11,
+        "rule_ref": "管理层规则：战略稳定性满分15",
+        "reason": "质量、品牌、渠道、国际化和治理主线连续，2025转向消费者和市场化适应环境；收入转负增长及董事长更迭使执行可信度不取满分。",
+        "evidence_refs": [
+          "MT-F-EXEC",
+          "MT-F-PEOPLE",
+          "MT-F-FIN"
+        ]
+      },
+      "after": {
+        "id": "战略稳定性",
+        "score": 11,
+        "rule_ref": "管理层规则：战略稳定性满分15",
+        "reason": "2021-2024营收目标达成、2025未达以及连续的产品/渠道/产能战略形成正反证；行业调整下的市场化转型不构成战略断裂，维持11分。",
+        "evidence_refs": [
+          "MT-R5-D2",
+          "MT-R5-CAPEX-PROJECT"
+        ]
+      },
+      "acceptance_ids": [
+        "C005-A1",
+        "C005-A3"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "对股东友好度",
+      "before": {
+        "id": "对股东友好度",
+        "score": 13,
+        "rule_ref": "管理层规则：对股东友好度满分15",
+        "reason": "分红、回购注销和市值管理制度均有法定披露；未取得全部大股东变动与回购时点对照，故留2分不确定性。",
+        "evidence_refs": [
+          "MT-F-RETURN",
+          "MT-F-SEARCH"
+        ]
+      },
+      "after": {
+        "id": "对股东友好度",
+        "score": 13,
+        "rule_ref": "管理层规则：对股东友好度满分15",
+        "reason": "高分红、注销回购、控股股东增持均已核；新增资本项目证据未改变此判断，维持13分。",
+        "evidence_refs": [
+          "MT-F-RETURN",
+          "MT-F-HOLDER-RETURN"
+        ]
+      },
+      "acceptance_ids": [
+        "C005-A3"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "组织与人才能力",
+      "before": {
+        "id": "组织与人才能力",
+        "score": 6,
+        "rule_ref": "管理层规则：组织与人才能力满分10",
+        "reason": "向平、钟正强、张旭等生产销售高管具有公司内部履历，研发人员2023-2025约800人稳定；但董事长三次更替、2026H1财务总监/董秘解聘，以及未履行激励承诺，限制满分。",
+        "evidence_refs": [
+          "MT-F-PEOPLE",
+          "MT-F-GOV-REMEDY"
+        ]
+      },
+      "after": {
+        "id": "组织与人才能力",
+        "score": 6,
+        "rule_ref": "管理层规则：组织与人才能力满分10",
+        "reason": "生产销售内部人才与研发队伍稳定仍为正面；截至2025年末控股股东激励承诺仍未及时履行，不能表述为已整改，董事长变动亦限制满分，6分维持。",
+        "evidence_refs": [
+          "MT-R5-GOV",
+          "MT-F-PEOPLE"
+        ]
+      },
+      "acceptance_ids": [
+        "C006-A1"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "诚信与透明度",
+      "before": {
+        "id": "诚信与透明度",
+        "score": 8,
+        "rule_ref": "管理层规则：诚信≤8触发红旗",
+        "reason": "两任前董事长因受贿被判无期，且高卫东曾被证券监管警示；近年年报信披评价A及关联交易披露是正面反证，但不足以抵消历史系统性治理风险。",
+        "evidence_refs": [
+          "MT-F-INTEGRITY",
+          "MT-F-GOV"
+        ]
+      },
+      "after": {
+        "id": "诚信与透明度",
+        "score": 8,
+        "rule_ref": "管理层规则：诚信≤8触发红旗",
+        "reason": "历史两任董事长腐败与信披警示构成红旗；2025仍有未及时履行的激励承诺，环境事项未发现本轮可归属重大事件但不包装为已核低风险。8分维持，且仍触发原规则红旗。",
+        "evidence_refs": [
+          "MT-R5-F1",
+          "MT-R5-GOV",
+          "MT-R5-ESG",
+          "MT-R5-ESG-SEARCH"
+        ]
+      },
+      "acceptance_ids": [
+        "C006-A1",
+        "C008-A2"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "危机处理能力",
+      "before": {
+        "id": "危机处理能力",
+        "score": 6,
+        "rule_ref": "管理层规则：危机处理能力满分10",
+        "reason": "对治理自查的具体问题，年报连续披露并提出加强治理、内控和机制优化；面对2025行业调整，年报披露市场化转型和渠道、价格机制行动。未将未获得电话会原话或单一年度业绩直接扣为低分。",
+        "evidence_refs": [
+          "MT-F-GOV-REMEDY",
+          "MT-F-EXEC",
+          "MT-F-FIN"
+        ]
+      },
+      "after": {
+        "id": "危机处理能力",
+        "score": 6,
+        "rule_ref": "管理层规则：危机处理能力满分10",
+        "reason": "治理自查问题持续存在，不能宣称整改完成；同时年报有风险管理、环保应急与行业调整行动记录。新增证据支持原有正反证并存，维持6分。",
+        "evidence_refs": [
+          "MT-R5-GOV",
+          "MT-R5-ESG",
+          "MT-R5-ESG-SEARCH",
+          "MT-R5-D2"
+        ]
+      },
+      "acceptance_ids": [
+        "C006-A1",
+        "C008-A2"
+      ]
+    }
+  ],
+  "metadata_changes": [
+    {
+      "field": "evidence_gaps",
+      "before": [
+        {
+          "affected_items": [
+            "A2",
+            "资本配置能力"
+          ],
+          "kind": "边界性历史/项目细节未取得",
+          "impact": "不影响本底稿已核连续控制、首发承诺执行和整体资本回报判断；仅限制IPO至2019逐年控制链与单项目IRR的更细表述",
+          "search_scope": "截至2026-09-20，若后续需叙述该细节，补全2001-2019年度报告和主要项目竣工收益资料",
+          "evidence_refs": [
+            "MT-F-IPO-HISTORY",
+            "MT-F-CAPITAL-RETURN"
+          ]
+        }
+      ],
+      "after": [
+        {
+          "affected_items": [
+            "A2"
+          ],
+          "kind": "control_history_partial",
+          "impact": "2001-2019控制权变更次数未由官方连续历史完全闭合；已按一项合理变更档处理，若取得汇总可重新判断2或3分。",
+          "search_scope": "IPO端点、2020-2025连续年报及控制权变更官方汇总；未把缺文档作为低档处罚。",
+          "evidence_refs": [
+            "MT-R5-CONTROL"
+          ]
+        },
+        {
+          "affected_items": [
+            "A3",
+            "资本配置能力",
+            "F2.5"
+          ],
+          "kind": "project_return_detail",
+          "impact": "未取得产业基金及单个基建项目IRR；不影响已核项目投产/产能释放和整体资本效率判断，但限制满分及项目级回报表述。",
+          "search_scope": "首发执行、2020/2025产能项目、2025产业基金、现金Capex、分红回购及整体杜邦。",
+          "evidence_refs": [
+            "MT-R5-CAPEX-PROJECT",
+            "MT-R5-CAPITAL-ACTIONS",
+            "MT-F-CAPITAL-RETURN"
+          ]
+        },
+        {
+          "affected_items": [
+            "D2"
+          ],
+          "kind": "management_verbatim",
+          "impact": "未取得第1/2优先级业绩说明会/IR逐字原话，原规则将年报计划作为第3优先级，D2已按4分上限处理。",
+          "search_scope": "年报经营计划与实际营业总收入2021-2025配对。",
+          "evidence_refs": [
+            "MT-R5-D2"
+          ]
+        },
+        {
+          "affected_items": [
+            "F3",
+            "诚信与透明度",
+            "危机处理能力"
+          ],
+          "kind": "environment_safety_search_boundary",
+          "impact": "近5年年报环境披露及有界检索未支持可归属重大事件；这不是“已核低风险”结论，F3保持既有内控瑕疵归因。",
+          "search_scope": "上市公司及主要生产主体2020-2026-09-20环境处罚、停产、职业健康和重大安全，配合年报环境信息。",
+          "evidence_refs": [
+            "MT-R5-ESG",
+            "MT-R5-ESG-SEARCH"
+          ]
+        }
+      ],
+      "acceptance_ids": [
+        "C001-A2",
+        "C003-A1",
+        "C004-A1",
+        "C005-A1",
+        "C005-A2",
+        "C009-A1",
+        "C007-A1",
+        "C008-A1",
+        "C008-A2"
+      ]
+    }
+  ],
+  "check": {
+    "status": "mechanically_checked_pending_review",
+    "errors": [],
+    "warnings": [
+      "管理层诚信与透明度触发原规则红旗；须人工处理"
+    ],
+    "scores": {
+      "cScore": 82.5,
+      "mScore": 67
+    },
+    "inputs": {
+      "data/reviews/triplet-token-cycle-2026-09-20/round-3/writer/facts-v4.json": "a5dc568b8e4f1821bc202ac26c1080bc06edf7ac96dd5a7085c99856ae7cb6ff",
+      "data/reviews/triplet-token-cycle-2026-09-20/round-3/writer/sources-v4.json": "a49e4d37b90e71820e10d0f32265e95f9567c4773ef1899046c4ef751a7f8a6d",
+      "data/reviews/triplet-token-cycle-2026-09-20/round-3/writer/repair-v5/facts-v5.json": "fdf9e2ab178b253cd68f0bbc236193fbbf73bbad691081255beb5a3e2836c791",
+      "data/reviews/triplet-token-cycle-2026-09-20/round-3/writer/repair-v5/sources-v5.json": "c0264e44e6b03242ebec2eba9afba775cd40de28788f015f480c62bffb0424d5"
+    }
+  },
+  "base": "data/reviews/triplet-token-cycle-2026-09-20/round-3/writer/workpaper-v4.json",
+  "base_sha256": "12c0e8c4b36fdde3936d289b62adcf00661ae0b3d053acf6b5a5e8fbc0f386de",
+  "decision": "data/reviews/triplet-token-cycle-2026-09-20/round-3/adjudicator/decision-v1.json",
+  "decision_sha256": "7e5f1e656854199b7a908d8bf0da49f9ce0f91dbbc0ce4c1cf389c373f9784a5",
+  "unmodified_scope_items": [],
+  "limitations": "未修改的验收项仍须逐项答复；引用存在不证明语义正确，须双路复核变更及联动。",
+  "workpaper_sha256": "191ed53323c50882600bf63d5f0fbd3f773089c674ee1d3af4ef508318b40a7d"
+}

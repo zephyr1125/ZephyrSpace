@@ -1,0 +1,70 @@
+{
+  "root_thread_id": "01a0b99c-1c9b-7732-8dfe-cf7f4a687e21",
+  "roles": [
+    {
+      "agent_id": "01a0bff8-8e10-7de1-9a50-d19337d8a40e",
+      "actual_model": "gpt-5.6-terra",
+      "actual_effort": "low",
+      "actual_model_source": "C:\\Users\\zephy\\.codex\\sessions\\2026\\09\\21\\rollout-2026-09-21T01-58-52-01a0bff8-8e10-7de1-9a50-d19337d8a40e.jsonl",
+      "role": "triplet_evidence",
+      "agent_path": "/root/token_r4_evidence",
+      "parent_thread_id": "01a0b99c-1c9b-7732-8dfe-cf7f4a687e21",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "low",
+      "dispatch_method": "custom_role",
+      "status": "completed_candidate_or_evidence"
+    },
+    {
+      "agent_id": "01a0bff8-d898-76d0-aa46-2b56f497cd54",
+      "actual_model": "gpt-5.6-terra",
+      "actual_effort": "low",
+      "actual_model_source": "C:\\Users\\zephy\\.codex\\sessions\\2026\\09\\21\\rollout-2026-09-21T01-59-11-01a0bff8-d898-76d0-aa46-2b56f497cd54.jsonl",
+      "role": "triplet_writer",
+      "agent_path": "/root/token_r4_writer",
+      "parent_thread_id": "01a0b99c-1c9b-7732-8dfe-cf7f4a687e21",
+      "requested_model": "gpt-5.6-terra",
+      "requested_effort": "low",
+      "dispatch_method": "custom_role",
+      "status": "completed_candidate_or_evidence"
+    },
+    {
+      "agent_id": "01a0c008-671c-7503-9abb-b2b2b054a68a",
+      "agent_path": "/root/token_r4_facts",
+      "role": "triplet_review_facts",
+      "actual_model": "gpt-5.6-terra",
+      "actual_effort": "low",
+      "actual_model_source": "C:\\Users\\zephy\\.codex\\sessions\\2026\\09\\21\\rollout-2026-09-21T02-16-11-01a0c008-671c-7503-9abb-b2b2b054a68a.jsonl",
+      "status": "completed_initial_review"
+    },
+    {
+      "agent_id": "01a0c008-a279-7743-b8ef-974afd66d5cc",
+      "agent_path": "/root/token_r4_reasoning",
+      "role": "triplet_review_reasoning",
+      "actual_model": "gpt-5.6-sol",
+      "actual_effort": "low",
+      "actual_model_source": "C:\\Users\\zephy\\.codex\\sessions\\2026\\09\\21\\rollout-2026-09-21T02-16-26-01a0c008-a279-7743-b8ef-974afd66d5cc.jsonl",
+      "status": "completed_initial_review"
+    },
+    {
+      "agent_id": "01a0c00f-0bcc-7052-93ff-7ea5507b38eb",
+      "agent_path": "/root/token_r4_adjudicator",
+      "role": "triplet_adjudicator",
+      "actual_model": "gpt-6-astra",
+      "actual_effort": "low",
+      "actual_model_source": "C:\\Users\\zephy\\.codex\\sessions\\2026\\09\\21\\rollout-2026-09-21T02-23-26-01a0c00f-0bcc-7052-93ff-7ea5507b38eb.jsonl",
+      "status": "running"
+    },
+    {
+      "agent_id": "01a0c025-079b-7ba2-a5a6-ea540c128f9c",
+      "agent_path": "/root/token_r4_repair",
+      "role": "triplet_repair_writer",
+      "dispatch_method": "explicit_model_from_role_config",
+      "requested_model": "gpt-5.6-sol",
+      "requested_effort": "low",
+      "actual_model": "gpt-5.6-sol",
+      "actual_effort": "low",
+      "actual_model_source": "C:\\Users\\zephy\\.codex\\sessions\\2026\\09\\21\\rollout-2026-09-21T02-47-27-01a0c025-079b-7ba2-a5a6-ea540c128f9c.jsonl",
+      "status": "running"
+    }
+  ]
+}

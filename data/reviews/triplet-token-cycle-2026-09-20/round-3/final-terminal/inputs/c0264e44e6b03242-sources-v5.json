@@ -1,0 +1,6 @@
+[
+  {"source_id":"MT-R5-LOCAL","path":"data/reviews/triplet-token-cycle-2026-09-20/round-3/source-views/贵州茅台2020年度报告.md 至 贵州茅台2025年度报告.md","retrieved_at":"2026-09-21","kind":"本轮本地法定年报阅读视图，引用仍回原件行号"},
+  {"source_id":"MT-R5-CCDI","url":"https://m.ccdi.gov.cn/content/ed/e2/98144.html","retrieved_at":"2026-09-21","kind":"中央纪委高卫东处分通报"},
+  {"source_id":"MT-R5-XINHUA","url":"https://www.xinhuanet.com/20240202/55f1abf4431e4cd4b2a5b11881007349/c.html","retrieved_at":"2026-09-21","kind":"新华社高卫东宣判报道"},
+  {"source_id":"MT-R5-ESG-SEARCH-SRC","urls":["https://static.cninfo.com.cn/finalpage/2022-03-31/1212755837.PDF","https://www.moutaichina.com/eportal/fileDir/maotaigf/resource/cms/article/408428/555263/2023033114105594682.pdf","https://www.moutaichina.com/eportal/attachDir/mtgf/2024/05/2024050716521751939.pdf","https://www.moutaichina.com/mtjt/attachDir/2025/04/2025040220474168345.pdf"],"retrieved_at":"2026-09-21","kind":"公司/巨潮披露的安全风险防控及2022-2024 ESG报告；用于近五年环境安全职业健康有界检索记录"}
+]

@@ -1,0 +1,704 @@
+{
+  "changes": [
+    {
+      "group": "company",
+      "item": "B0",
+      "before": {
+        "id": "B0",
+        "score": 2,
+        "rule_ref": "score-rules.md:B0",
+        "reason": "以酱香白酒生产、长期贮存、品牌渠道销售为核心的重资产垄断壁垒型模式，与当前采购—生产—销售模式连续；早期完整九要素未在本轮原件完整重建。",
+        "evidence_refs": [
+          "MOUTAI-AR25"
+        ]
+      },
+      "after": {
+        "id": "B0",
+        "score": 1,
+        "rule_ref": "score-rules.md:B0",
+        "reason": "既有首发材料仅足以核身份和募投，未取得早期九要素与三个判断所需业务原文；按原规则部分覆盖1分，撤回未经证实的早期重资产分类。",
+        "evidence_refs": [
+          "GZMT-R4V2-CAP-001"
+        ]
+      },
+      "acceptance_ids": [
+        "R4-B0-A1"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "E1",
+      "before": {
+        "id": "E1",
+        "score": 5,
+        "rule_ref": "score-rules.md:E1",
+        "reason": "2020-2025加权ROE均约30%以上，2025为32.53%；低负债率和无有息借款披露支持其由高净利率/经营效率而非杠杆驱动。",
+        "evidence_refs": [
+          "MOUTAI-FIN-001",
+          "MOUTAI-FIN-003"
+        ]
+      },
+      "after": {
+        "id": "E1",
+        "score": 5,
+        "rule_ref": "score-rules.md:E1",
+        "reason": "2023-25同口径杜邦显示约31.7%、34.4%、33.4%的ROE，均主要由约49-51%净利率驱动，权益乘数约1.20而非杠杆；与归母加权ROE口径差异已说明。",
+        "evidence_refs": [
+          "GZMT-R4R-E1-001"
+        ]
+      },
+      "acceptance_ids": [
+        "R4-E1-A1"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "D2",
+      "before": {
+        "id": "D2",
+        "score": 4,
+        "rule_ref": "score-rules.md:D2",
+        "reason": "2023及2024年分别宣告高质量完成年度战略目标，收入增长18.04%和15.66%，与前期15%左右收入目标相符；未取得电话会/业绩说明会原话，按原规则上限4分。",
+        "evidence_refs": [
+          "MOUTAI-AR22",
+          "MOUTAI-AR23",
+          "MOUTAI-AR24"
+        ],
+        "original_statement_found": false,
+        "strategy_drift": false
+      },
+      "after": {
+        "id": "D2",
+        "score": 4,
+        "rule_ref": "score-rules.md:D2",
+        "reason": "2023、2024营业总收入目标均达成，2025约9%目标未达，连续三年为2/3；无管理层原话，原规则上限4分。",
+        "evidence_refs": [
+          "GZMT-R4R-D2-001"
+        ],
+        "original_statement_found": false,
+        "strategy_drift": false
+      },
+      "acceptance_ids": [
+        "R4-D2-A1"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "D5",
+      "before": {
+        "id": "D5",
+        "score": 3,
+        "rule_ref": "score-rules.md:D5",
+        "reason": "2023-2024连续两位数收入与利润增长，产能按期投放；2025-2026放缓是结果压力而非已证实组织执行失灵。",
+        "evidence_refs": [
+          "MOUTAI-FIN-001",
+          "MOUTAI-CAPEX-002"
+        ]
+      },
+      "after": {
+        "id": "D5",
+        "score": 3,
+        "rule_ref": "score-rules.md:D5",
+        "reason": "2023-25人均收入总体上升但2025回落，研发投入比0.42%、0.41%、0.48%健康；未将无离职率误作零流失。",
+        "evidence_refs": [
+          "GZMT-R4R-D5-001"
+        ]
+      },
+      "acceptance_ids": [
+        "R4-D5-A1"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "C1",
+      "before": {
+        "id": "C1",
+        "score": 6,
+        "rule_ref": "score-rules.md:C1",
+        "reason": "年报称茅台酒为千亿级单品并披露持续扩产；作为高端酱香白酒绝对龙头的判断有业务原件支撑。",
+        "evidence_refs": [
+          "MOUTAI-AR23",
+          "MOUTAI-CAPEX-002"
+        ]
+      },
+      "after": {
+        "id": "C1",
+        "score": 6,
+        "rule_ref": "score-rules.md:C1",
+        "reason": "以高端白酒收入比较，茅台2024营业收入1709亿元，显著高于五粮液酒类831亿元和泸州酒类311亿元，2023-24趋势保持领先；代表性同行非完整行业CR5。",
+        "evidence_refs": [
+          "MOUTAI-FIN-001",
+          "GZMT-R4V3-PEER-001",
+          "GZMT-R4V3-PEER-002"
+        ]
+      },
+      "acceptance_ids": [
+        "R4-C1-A1"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "B3",
+      "before": {
+        "id": "B3",
+        "score": 6,
+        "rule_ref": "score-rules.md:B3",
+        "reason": "2020-2025收入及归母净利总体持续增长、2025仍有高利润率经营；品牌、稀缺产区和渠道形成强定价权。2025收入下滑1.21%是行业调整期反证，未推翻强档。",
+        "evidence_refs": [
+          "MOUTAI-FIN-001",
+          "MOUTAI-FIN-005"
+        ]
+      },
+      "after": {
+        "id": "B3",
+        "score": 6,
+        "rule_ref": "score-rules.md:B3",
+        "reason": "2023年官方上调53度飞天/五星平均出厂价20%；茅台高端白酒盈利能力显著高于代表性同行，2025毛利率下降与2026H1利润背离作为反证。同行2025口径不可比不伪称行业均值。",
+        "evidence_refs": [
+          "GZMT-R4V3-PRICE-001",
+          "GZMT-R4V3-PEER-001",
+          "GZMT-R4V3-PEER-002",
+          "MOUTAI-FIN-005"
+        ]
+      },
+      "acceptance_ids": [
+        "R4-B3-A1"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "C2",
+      "before": {
+        "id": "C2",
+        "score": 5,
+        "rule_ref": "score-rules.md:C2",
+        "reason": "公司组织原料合作采购、自产贮存勾兑，并通过直销和批发代理销售，表现为产业链主导者；未以客户集中度缺失推断低分。",
+        "evidence_refs": [
+          "MOUTAI-AR25"
+        ]
+      },
+      "after": {
+        "id": "C2",
+        "score": 5,
+        "rule_ref": "score-rules.md:C2",
+        "reason": "客户集中度约10%、供应商约35-38%，下游分散；产区原粮组织、品牌渠道和定价权支持主导判断，但不以集中度断言即时成本转嫁。",
+        "evidence_refs": [
+          "GZMT-R4R-C2C4-001"
+        ]
+      },
+      "acceptance_ids": [
+        "R4-C2C4-A1"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "C3+C4",
+      "before": {
+        "id": "C3+C4",
+        "score": 9,
+        "rule_ref": "score-rules.md:C3+C4",
+        "reason": "产区、工艺、长期贮存、品牌认知和渠道共同形成5星综合壁垒；行业需求调整及单一品类集中为需跟踪反证。",
+        "evidence_refs": [
+          "MOUTAI-AR25",
+          "MOUTAI-CAPEX-002"
+        ]
+      },
+      "after": {
+        "id": "C3+C4",
+        "score": 9,
+        "rule_ref": "score-rules.md:C3+C4",
+        "reason": "产区/工艺/贮存/品牌/渠道形成整体不可复制壁垒；需求调整和系列酒结构变化为持久性反证，五星为综合持续性而非五层壁垒计数。",
+        "evidence_refs": [
+          "GZMT-R4R-C2C4-001",
+          "GZMT-R4V3-PRICE-001"
+        ]
+      },
+      "acceptance_ids": [
+        "R4-C2C4-A1"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "F2.5",
+      "before": {
+        "id": "F2.5",
+        "score": 2,
+        "rule_ref": "score-rules.md:F2.5",
+        "reason": "多年产能项目有投产和后续释放证据，现金Capex长期低于经营现金流，且以分红和回购回报股东；计划实际固定资产投资同口径数据仅2020可得，未额外申领0.5正面先例。",
+        "evidence_refs": [
+          "MOUTAI-CAPEX-001",
+          "MOUTAI-CAPEX-002",
+          "MOUTAI-CAPEX-004"
+        ],
+        "positive_precedent": false
+      },
+      "after": {
+        "id": "F2.5",
+        "score": 2,
+        "rule_ref": "score-rules.md:F2.5",
+        "reason": "投产产能、主业高现金产出与低杠杆支持保守回报边界；基金各50亿认缴且各30亿未缴，未将合并ROE伪作项目IRR或未实现基金回报视为零。",
+        "evidence_refs": [
+          "GZMT-R4R-CAPITAL-001"
+        ],
+        "positive_precedent": false
+      },
+      "acceptance_ids": [
+        "R4-CAPITAL-A1"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "F1",
+      "before": {
+        "id": "F1",
+        "score": -2,
+        "rule_ref": "score-rules.md:F1",
+        "reason": "近十年内已核袁仁国及高卫东两名前核心负责人受贿一审无期，另有2026高管被留置披露，满足原规则“近10年≥2人被查”的周期性高管腐败负2分档。高卫东全部受贿行为不机械归因于上市公司任期。",
+        "evidence_refs": [
+          "GZMT-R4V2-GOV-001",
+          "GZMT-R4V2-GOV-002",
+          "GZMT-R4-GOV-002"
+        ]
+      },
+      "after": {
+        "id": "F1",
+        "score": -2,
+        "rule_ref": "score-rules.md:F1",
+        "reason": "两名前核心负责人近十年司法腐败事实已满足负2分档；持续治理缺口在F3和管理层项反映，不重复扣同一风险。",
+        "evidence_refs": [
+          "GZMT-R4V2-GOV-001",
+          "GZMT-R4V2-GOV-002",
+          "GZMT-R4R-GOV-001"
+        ]
+      },
+      "acceptance_ids": [
+        "R4-GOV-A1"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "F3",
+      "before": {
+        "id": "F3",
+        "score": 2,
+        "rule_ref": "score-rules.md:F3",
+        "reason": "2025关联交易被列KAM且关联方交易类别多、金额较大，降低至有小瑕疵档；已披露部分交易采用与非关联经销商相同价格。外部监管无命中仅为未知，未作为无风险证据。",
+        "evidence_refs": [
+          "MOUTAI-FIN-004",
+          "MOUTAI-AR25",
+          "GZMT-R4-REG-002"
+        ]
+      },
+      "after": {
+        "id": "F3",
+        "score": 2,
+        "rule_ref": "score-rules.md:F3",
+        "reason": "关联交易KAM与长期激励承诺、兼职规范的治理瑕疵容纳于2分；未归因恶意失信。",
+        "evidence_refs": [
+          "MOUTAI-FIN-004",
+          "GZMT-R4R-GOV-001"
+        ]
+      },
+      "acceptance_ids": [
+        "R4-GOV-A1"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "A3",
+      "before": {
+        "id": "A3",
+        "score": 4,
+        "rule_ref": "score-rules.md:A3",
+        "reason": "首发募投总额、承诺/变更一致性及2002年一项收购与技改执行已核；定期报告未见重大资产重组/出售，非募集资金技改项目投入有披露。后续全史再融资工具尚未取得汇总，不能扩展为全史无融资；现有证据未见卖资产保利润或商誉风险。",
+        "evidence_refs": [
+          "GZMT-R4V2-CAP-001",
+          "GZMT-R4-CAP-002",
+          "MOUTAI-FIN-003"
+        ]
+      },
+      "after": {
+        "id": "A3",
+        "score": 4,
+        "rule_ref": "score-rules.md:A3",
+        "reason": "首发与募投执行、近年可转债/优先股不适用及股本回购注销已核，未见卖资产保利润；全史负面不作无证断言。",
+        "evidence_refs": [
+          "GZMT-R4V2-CAP-001",
+          "GZMT-R4V3-CAP-001"
+        ]
+      },
+      "acceptance_ids": [
+        "R4-FINANCING-A1"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "F2",
+      "before": {
+        "id": "F2",
+        "score": 5,
+        "rule_ref": "score-rules.md:F2",
+        "reason": "2025年报披露650.33亿元累计现金红利（含预案）、首次60亿元回购完成并启动第二轮；未以含利息的现金流行替代分红数据。近5年融资工具全史仍由证据边界保留。",
+        "evidence_refs": [
+          "MOUTAI-CAPEX-004",
+          "GZMT-R4-CAP-001"
+        ]
+      },
+      "after": {
+        "id": "F2",
+        "score": 5,
+        "rule_ref": "score-rules.md:F2",
+        "reason": "2024-25回购、2025-26注销和控股股东增持已核；口径差异不冒充无减持，股东回报与近年稀释工具覆盖支持5分。",
+        "evidence_refs": [
+          "GZMT-R4V3-CAP-001",
+          "GZMT-R4V3-CAP-002",
+          "GZMT-R4V3-CAP-003"
+        ]
+      },
+      "acceptance_ids": [
+        "R4-FINANCING-A1"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "资本配置能力",
+      "before": {
+        "id": "资本配置能力",
+        "score": 21,
+        "rule_ref": "score-rules.md:管理层评分",
+        "reason": "产能项目有阶段投产、股东回报规模大；计划实际同口径和项目经济回报未完整披露，未给满分。",
+        "evidence_refs": [
+          "MOUTAI-CAPEX-002",
+          "MOUTAI-CAPEX-004"
+        ]
+      },
+      "after": {
+        "id": "资本配置能力",
+        "score": 21,
+        "rule_ref": "score-rules.md:管理层评分",
+        "reason": "主业项目投产、现金产出与大额分红支撑高分；基金60亿待缴和未实现回报限制满分。",
+        "evidence_refs": [
+          "GZMT-R4R-CAPITAL-001"
+        ]
+      },
+      "acceptance_ids": [
+        "R4-CAPITAL-A1"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "战略稳定性",
+      "before": {
+        "id": "战略稳定性",
+        "score": 13,
+        "rule_ref": "score-rules.md:管理层评分",
+        "reason": "品质、核心产区、渠道和品牌升级多年连续；行业调整下效果仍需观察。",
+        "evidence_refs": [
+          "MOUTAI-AR23",
+          "MOUTAI-AR24",
+          "MOUTAI-AR25"
+        ]
+      },
+      "after": {
+        "id": "战略稳定性",
+        "score": 13,
+        "rule_ref": "score-rules.md:管理层评分",
+        "reason": "两年达目标、2025未达不等于方向漂移；战略连续，执行反证已纳入。",
+        "evidence_refs": [
+          "GZMT-R4R-D2-001"
+        ]
+      },
+      "acceptance_ids": [
+        "R4-D2-A1"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "表达清晰度与认知质量",
+      "before": {
+        "id": "表达清晰度与认知质量",
+        "score": 4,
+        "rule_ref": "score-rules.md:管理层评分",
+        "reason": "年度目标和项目计划明确，后续经营结果可对照；未取得电话会/业绩说明会原话，保留1分。",
+        "evidence_refs": [
+          "MOUTAI-AR22",
+          "MOUTAI-AR23",
+          "MOUTAI-AR24"
+        ]
+      },
+      "after": {
+        "id": "表达清晰度与认知质量",
+        "score": 4,
+        "rule_ref": "score-rules.md:管理层评分",
+        "reason": "目标明确且可核，2025未达不把目标清晰等同兑现。",
+        "evidence_refs": [
+          "GZMT-R4R-D2-001"
+        ]
+      },
+      "acceptance_ids": [
+        "R4-D2-A1"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "诚信与透明度",
+      "before": {
+        "id": "诚信与透明度",
+        "score": 12,
+        "rule_ref": "score-rules.md:管理层评分",
+        "reason": "两名前核心负责人已核受贿一审无期，2026另有高管留置关联披露；定期报告披露了相关事项，但该治理事实显著限制诚信评价。",
+        "evidence_refs": [
+          "GZMT-R4V2-GOV-001",
+          "GZMT-R4V2-GOV-002",
+          "GZMT-R4-GOV-002"
+        ]
+      },
+      "after": {
+        "id": "诚信与透明度",
+        "score": 12,
+        "rule_ref": "score-rules.md:管理层评分",
+        "reason": "司法腐败与持续治理承诺缺口限制诚信，公开披露不抵消历史事实。",
+        "evidence_refs": [
+          "GZMT-R4V2-GOV-001",
+          "GZMT-R4V2-GOV-002",
+          "GZMT-R4R-GOV-001"
+        ]
+      },
+      "acceptance_ids": [
+        "R4-GOV-A1"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "对股东友好度",
+      "before": {
+        "id": "对股东友好度",
+        "score": 14,
+        "rule_ref": "score-rules.md:管理层评分",
+        "reason": "现金分红和回购事实明确；融资全史及回购注销细节未完整核验，保留1分。",
+        "evidence_refs": [
+          "MOUTAI-CAPEX-004",
+          "GZMT-R4-CAP-001"
+        ]
+      },
+      "after": {
+        "id": "对股东友好度",
+        "score": 14,
+        "rule_ref": "score-rules.md:管理层评分",
+        "reason": "分红、回购注销与增持为正面，治理承诺和口径边界限制满分。",
+        "evidence_refs": [
+          "MOUTAI-CAPEX-004",
+          "GZMT-R4V3-CAP-001",
+          "GZMT-R4R-GOV-001"
+        ]
+      },
+      "acceptance_ids": [
+        "R4-GOV-A1",
+        "R4-FINANCING-A1"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "组织与人才能力",
+      "before": {
+        "id": "组织与人才能力",
+        "score": 7,
+        "rule_ref": "score-rules.md:管理层评分",
+        "reason": "2025-2026核心岗位有交接和调整，但高管变动完整十年窗口与留置后续状态未齐，不将未知直接降为低分。",
+        "evidence_refs": [
+          "GZMT-R4-GOV-001",
+          "GZMT-R4-GOV-002",
+          "GZMT-R4-GOV-003"
+        ]
+      },
+      "after": {
+        "id": "组织与人才能力",
+        "score": 7,
+        "rule_ref": "score-rules.md:管理层评分",
+        "reason": "长期代行与治理边界限制组织分，留置后人事补位支持职责连续；不把未知动机当零流失。",
+        "evidence_refs": [
+          "GZMT-R4R-GOV-001",
+          "GZMT-R4R-CRISIS-001"
+        ]
+      },
+      "acceptance_ids": [
+        "R4-GOV-A1",
+        "R4-CRISIS-A1"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "危机处理能力",
+      "before": {
+        "id": "危机处理能力",
+        "score": 7,
+        "rule_ref": "score-rules.md:管理层评分",
+        "reason": "行业调整中维持收入韧性，但留置事件处置细节及责任归因尚未知，不能给高档。",
+        "evidence_refs": [
+          "MOUTAI-FIN-005",
+          "GZMT-R4-GOV-002"
+        ]
+      },
+      "after": {
+        "id": "危机处理能力",
+        "score": 7,
+        "rule_ref": "score-rules.md:管理层评分",
+        "reason": "留置通知、公告、免职与补位时间链支持透明沟通和连续性；整改机制及最终司法结论未核，非高档。",
+        "evidence_refs": [
+          "GZMT-R4R-CRISIS-001"
+        ]
+      },
+      "acceptance_ids": [
+        "R4-CRISIS-A1"
+      ]
+    }
+  ],
+  "metadata_changes": [
+    {
+      "field": "evidence_gaps",
+      "before": [
+        {
+          "affected_items": [
+            "A3",
+            "F2",
+            "管理层:对股东友好度"
+          ],
+          "kind": "public_not_checked",
+          "impact": "首发及2002年募投执行、2023-2026定期报告募集资金状态已经核验，足以支持A3当前“无已核资本运作异常”的选档；但尚无上市以来全部后续增发、配股、可转债及回购注销的官方汇总。若发现重大摊薄融资、用途偏离或不当减持/回购配合事件，可能下调F2和管理层对股东友好度，并可能重评A3。",
+          "search_scope": "2003-2026历年股本变动、融资工具、权益分派与回购方案/实施公告的官方汇总。",
+          "evidence_refs": [
+            "GZMT-R4V2-CAP-001",
+            "GZMT-R4-CAP-001",
+            "MOUTAI-CAPEX-004"
+          ]
+        },
+        {
+          "affected_items": [
+            "F2.5",
+            "管理层:资本配置能力"
+          ],
+          "kind": "public_not_checked",
+          "impact": "2020固定资产实际投资、项目投产和后续产能释放已核，足以支持当前审慎配置的定性判断；2021-2025计划固定资产投资与实际固定资产投资不是同一已披露口径，项目级经济回报/ROIC未完整披露。若同口径实际显示重大超支或项目回报显著低于资本成本，F2.5和管理层资本配置能力需下调；若取得可比正面先例和回报，可复核0.5分加分。",
+          "search_scope": "2021-2025项目年度投资完成额、竣工决算、项目产能利用率与经济回报披露。",
+          "evidence_refs": [
+            "MOUTAI-CAPEX-001",
+            "MOUTAI-CAPEX-002"
+          ]
+        },
+        {
+          "affected_items": [
+            "管理层:诚信与透明度",
+            "管理层:危机处理能力",
+            "管理层:组织与人才能力"
+          ],
+          "kind": "public_not_checked",
+          "impact": "临2026-004已取得，且两名历史核心负责人司法判决已取得，足以确定F1近十年周期性高管腐败负2分档；留置最终处置、责任范围及2016-2019完整任免链仍未取得。该缺口不改变F1已满足的负档，但可能改变管理层诚信、危机处理和组织能力的具体分数。",
+          "search_scope": "临2026-005及后续留置/处分公告、2016-2019董事长/总经理/CFO/董秘任免原件。",
+          "evidence_refs": [
+            "GZMT-R4V2-GOV-001",
+            "GZMT-R4V2-GOV-002",
+            "GZMT-R4-GOV-002"
+          ]
+        }
+      ],
+      "after": [
+        {
+          "affected_items": [
+            "B0"
+          ],
+          "kind": "public_not_checked",
+          "impact": "首发材料身份与募投已核，但早期业务九要素和三个判断的官方原文未取得；B0已按部分覆盖改1，不再以该缺口支持2分。",
+          "search_scope": "2001招股书业务、客户、渠道、成本及工艺章节。",
+          "evidence_refs": [
+            "GZMT-R4V2-CAP-001"
+          ]
+        },
+        {
+          "affected_items": [
+            "F2.5",
+            "资本配置能力"
+          ],
+          "kind": "unpublished",
+          "impact": "项目级IRR、2021-2025计划与实际固定投资同口径及基金未实现回报未完整公开；已用投产、现金产出和60亿待缴作保守边界，若未来披露项目回报低于资本成本则重评。",
+          "search_scope": "项目竣工决算、产能利用率及基金定期报告。",
+          "evidence_refs": [
+            "GZMT-R4R-CAPITAL-001"
+          ]
+        },
+        {
+          "affected_items": [
+            "F2",
+            "对股东友好度"
+          ],
+          "kind": "public_not_checked",
+          "impact": "2023-2026H1股本、回购注销、可转债/优先股及控股股东变动已核；控股股东减持/无偿划转的官方全量清单未取得，不能声称不存在。若发现大额不当减持可重评F2及管理层项。",
+          "search_scope": "2021-2026-09-20控股股东权益变动、无偿划转及减持官方公告。",
+          "evidence_refs": [
+            "GZMT-R4V3-CAP-001",
+            "GZMT-R4V3-CAP-002",
+            "GZMT-R4V3-CAP-003",
+            "GZMT-R4V4-CAP-001",
+            "GZMT-R4V4-CAP-002"
+          ]
+        },
+        {
+          "affected_items": [
+            "诚信与透明度",
+            "危机处理能力",
+            "组织与人才能力"
+          ],
+          "kind": "public_not_checked",
+          "impact": "留置通知、公告、免职与补位已核，足以支持当前危机7及F1固定负档；最终司法结论、整改机制及动机未取得，可能影响管理层三项具体分数。",
+          "search_scope": "2026-03-30后留置处置、整改及人事公告。",
+          "evidence_refs": [
+            "GZMT-R4R-CRISIS-001",
+            "GZMT-R4-GOV-002"
+          ]
+        }
+      ],
+      "acceptance_ids": [
+        "R4-B0-A1",
+        "R4-E1-A1",
+        "R4-D2-A1",
+        "R4-D5-A1",
+        "R4-C1-A1",
+        "R4-B3-A1",
+        "R4-C2C4-A1",
+        "R4-CAPITAL-A1",
+        "R4-GOV-A1",
+        "R4-FINANCING-A1",
+        "R4-CRISIS-A1"
+      ]
+    }
+  ],
+  "check": {
+    "status": "mechanically_checked_pending_review",
+    "errors": [],
+    "warnings": [],
+    "scores": {
+      "cScore": 83.5,
+      "mScore": 78
+    },
+    "inputs": {
+      "data/reviews/triplet-token-cycle-2026-09-20/round-4/writer/facts.json": "6f8d0611c54900e58306f86c7a527b57c7eb1ad74c0adfb0e524b3031eec3afd",
+      "data/reviews/triplet-token-cycle-2026-09-20/round-4/writer/sources.json": "becc0f531ec9839fd1f99440d155f0a4a431ee798c436f8586de2e69e185b1c7",
+      "data/reviews/triplet-token-cycle-2026-09-20/round-4/writer/repair-v4/facts.json": "c6ca24827bf15848e0b4729ff095f09cd1869c92173bbe1b63e540e6f6642482",
+      "data/reviews/triplet-token-cycle-2026-09-20/round-4/writer/repair-v4/sources.json": "ef24c90794b468ab4ba1971fc4dff43913a1ea77cb8c2d8d888674f9da7b050d",
+      "data/reviews/triplet-token-cycle-2026-09-20/round-4/evidence/facts.json": "9ae82713cbeab8779b741b794ec9102c44a7e12fb99089aad9814182e3604181",
+      "data/reviews/triplet-token-cycle-2026-09-20/round-4/evidence/sources.json": "5c7de7ad4aaa0ec40d70f8c5bda74b4d88a3ac335bd0b577994e5f413ae79b65",
+      "data/reviews/triplet-token-cycle-2026-09-20/round-4/evidence/v2/facts.json": "f98d2554abb79b96bca92f02e25ccf2d2103a485410bc2e3c0194c3eca1997f0",
+      "data/reviews/triplet-token-cycle-2026-09-20/round-4/evidence/v2/sources.json": "dd27823d0c7c810802c7d13348a230e65013ea52ce964c29d7448fe2ab0fd64a",
+      "data/reviews/triplet-token-cycle-2026-09-20/round-4/evidence/v3/facts.json": "ce98045540f7b4bde29e7f9aa8e279e75ea3ddc8cc19186a26b7602d63d6d1a9",
+      "data/reviews/triplet-token-cycle-2026-09-20/round-4/evidence/v3/sources.json": "e1d7c1c2254113cecb2cfbf35e5debe6476aa4df21dec421925945fb63dffce5",
+      "data/reviews/triplet-token-cycle-2026-09-20/round-4/evidence/v4/facts.json": "82f1cb113fac2c930794c6aa27770fbf02e63221b9571856aeff5639810308b8",
+      "data/reviews/triplet-token-cycle-2026-09-20/round-4/evidence/v4/sources.json": "421e4792da19702bd3c7733191370510c61c65e89fd496ee3577aa7ee88af288"
+    }
+  },
+  "base": "data/reviews/triplet-token-cycle-2026-09-20/round-4/writer/v3/workpaper.json",
+  "base_sha256": "fd1c54b9f84713c644a9d91bc29e430b07738b1bb42a984236894e1f192ea0e9",
+  "decision": "data/reviews/triplet-token-cycle-2026-09-20/round-4/adjudicator/decision-v1.json",
+  "decision_sha256": "5b3661d9e1cf18ad02b5f3564c6c4f7499ef5362fa6d265620de00eab9c3a493",
+  "unmodified_scope_items": [],
+  "limitations": "未修改的验收项仍须逐项答复；引用存在不证明语义正确，须双路复核变更及联动。",
+  "workpaper_sha256": "dcb8787dc9ef765df37ca89f76bee899f359e3bef477dcfe3883d7c15c24753b"
+}

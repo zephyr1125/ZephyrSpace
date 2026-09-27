@@ -1,0 +1,11 @@
+{
+  "stage": "score_candidate_not_approved",
+  "frozen_at": "2026-09-20T16:02:07.271437+00:00",
+  "files": {
+    "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/facts.json": "a5819c838f10ce8338a24c5c56caa6391618b0ab8a713e67045392f4a90c2489",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/sources.json": "2affbaa1a45d21d46a2166c183f46bc8a8f69fce03fdda3327a908af2ed0c544",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/workpaper-v1.json": "17285a20f57de53103a1473e57ce1839763c20e5fd43cd622844fee830d31bb4",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/score-rationale.md": "f04ea9211ba0a58f36747825b316a5016fa0fc72d31dbdfc928fa32cedb8124d",
+    "data/reviews/triplet-token-cycle-2026-09-20/round-2/writer/evidence-files.json": "d58d393404cd27c1197db7aa6cc642aee8ba49ea11a67519180ad3602ee0f0b2"
+  }
+}

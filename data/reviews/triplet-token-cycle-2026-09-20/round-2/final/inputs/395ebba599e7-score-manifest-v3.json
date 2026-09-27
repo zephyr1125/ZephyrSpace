@@ -1,0 +1,15 @@
+{
+  "stage": "exception_repaired_candidate_not_approved",
+  "frozen_at": "2026-09-20T16:44:46.150765+00:00",
+  "files": {
+    "data\\reviews\\triplet-token-cycle-2026-09-20\\round-2\\writer\\repair-writer\\acceptance-response.json": "fa052dc664ae293d22aee693256c501d0dd438d919cbd11b60f7b4431f6006aa",
+    "data\\reviews\\triplet-token-cycle-2026-09-20\\round-2\\writer\\repair-writer\\delta.json": "0b7a7caac2767ed3b5e9a3707d44485388fb0d719d1cc4c8fb5d05dbc8e3ca49",
+    "data\\reviews\\triplet-token-cycle-2026-09-20\\round-2\\writer\\repair-writer\\evidence-files.json": "97171dfaa333079cb296aa58352aef5ded31d7b4bf6d1c23430f97e929ffdefd",
+    "data\\reviews\\triplet-token-cycle-2026-09-20\\round-2\\writer\\repair-writer\\facts.json": "b8732c0aae8d403111191223416e15e1e13f84af74ec70c4bdc8da7078d18690",
+    "data\\reviews\\triplet-token-cycle-2026-09-20\\round-2\\writer\\repair-writer\\score-rationale.md": "73e7164b6f9d63872c79a0dc266167df0f3adc3bba08c6cb784767eff0b8b169",
+    "data\\reviews\\triplet-token-cycle-2026-09-20\\round-2\\writer\\repair-writer\\sources.json": "04cb2470f27716d2ba7a39355787a221e84490b8c69fce1f02b430e45a17f1ff",
+    "data\\reviews\\triplet-token-cycle-2026-09-20\\round-2\\writer\\rebuilt-v3\\receipt.json": "8c5d810146aedc9bde81d9e4b48ed6147fd6f01afcfc2ac587cea64879cbf084",
+    "data\\reviews\\triplet-token-cycle-2026-09-20\\round-2\\writer\\rebuilt-v3\\workpaper.json": "ea9df3e1ea6606c8e81575c7249d21cad8ab5d1fbe55190b26bb1e88da4adfb3",
+    "data\\reviews\\triplet-token-cycle-2026-09-20\\round-2\\adjudicator\\decision-v3.json": "28cd683f2f2c1dcc84e77c15f6ac0f7247aea8d734c2228d3cb67cefb9f479b9"
+  }
+}

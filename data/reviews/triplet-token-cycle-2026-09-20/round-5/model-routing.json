@@ -1,0 +1,76 @@
+{
+  "root_thread_id": "01a0b99c-1c9b-7732-8dfe-cf7f4a687e21",
+  "roles": [
+    {
+      "agent_id": "01a0c034-b4f8-7990-ae63-3d3b8eb35a17",
+      "agent_path": "/root/token_r5_numeric",
+      "role": "triplet_evidence",
+      "actual_model": "gpt-5.6-terra",
+      "actual_effort": "low",
+      "actual_model_source": "C:\\Users\\zephy\\.codex\\sessions\\2026\\09\\21\\rollout-2026-09-21T03-04-34-01a0c034-b4f8-7990-ae63-3d3b8eb35a17.jsonl",
+      "last_event_type": "token_usage_record"
+    },
+    {
+      "agent_id": "01a0c035-000c-7491-9c43-2eb466d42e34",
+      "agent_path": "/root/token_r5_external",
+      "role": "triplet_evidence",
+      "actual_model": "gpt-5.6-terra",
+      "actual_effort": "low",
+      "actual_model_source": "C:\\Users\\zephy\\.codex\\sessions\\2026\\09\\21\\rollout-2026-09-21T03-04-54-01a0c035-000c-7491-9c43-2eb466d42e34.jsonl",
+      "last_event_type": "token_usage_record"
+    },
+    {
+      "agent_id": "01a0c03a-fd26-7bb3-a251-71fdee1e6d74",
+      "agent_path": "/root/token_r5_writer",
+      "role": "triplet_writer",
+      "actual_model": "gpt-5.6-terra",
+      "actual_effort": "low",
+      "actual_model_source": "C:\\Users\\zephy\\.codex\\sessions\\2026\\09\\21\\rollout-2026-09-21T03-11-26-01a0c03a-fd26-7bb3-a251-71fdee1e6d74.jsonl",
+      "status": "completed_initial_stage"
+    },
+    {
+      "agent_id": "01a0c04f-ebae-7e72-a5a2-6da7cb4aa8d5",
+      "agent_path": "/root/token_r5_facts",
+      "role": "triplet_review_facts",
+      "actual_model": "gpt-5.6-terra",
+      "actual_effort": "low",
+      "actual_model_source": "C:\\Users\\zephy\\.codex\\sessions\\2026\\09\\21\\rollout-2026-09-21T03-34-18-01a0c04f-ebae-7e72-a5a2-6da7cb4aa8d5.jsonl",
+      "status": "completed_initial_stage"
+    },
+    {
+      "agent_id": "01a0c050-2945-7193-86b4-8cbfc0cf5cb8",
+      "agent_path": "/root/token_r5_reasoning",
+      "role": "triplet_review_reasoning",
+      "actual_model": "gpt-5.6-sol",
+      "actual_effort": "low",
+      "actual_model_source": "C:\\Users\\zephy\\.codex\\sessions\\2026\\09\\21\\rollout-2026-09-21T03-34-34-01a0c050-2945-7193-86b4-8cbfc0cf5cb8.jsonl",
+      "status": "completed_initial_stage"
+    },
+    {
+      "agent_id": "01a0c055-410b-77a0-a78a-b38f312e5e38",
+      "agent_path": "/root/token_r5_judge",
+      "role": "triplet_adjudicator",
+      "actual_model": "gpt-6-astra",
+      "actual_effort": "low",
+      "actual_model_source": "C:\\Users\\zephy\\.codex\\sessions\\2026\\09\\21\\rollout-2026-09-21T03-40-07-01a0c055-410b-77a0-a78a-b38f312e5e38.jsonl",
+      "status": "running"
+    },
+    {
+      "agent_id": "01a0c064-5db1-7471-9920-5be929f629b1",
+      "agent_path": "/root/token_r5_repair_sol",
+      "role": "triplet_repair_writer",
+      "requested_model": "gpt-5.6-sol",
+      "requested_effort": "low",
+      "actual_model": "gpt-5.6-sol",
+      "actual_effort": "low",
+      "actual_model_source": "C:\\Users\\zephy\\.codex\\sessions\\2026\\09\\21\\rollout-2026-09-21T03-56-38-01a0c064-5db1-7471-9920-5be929f629b1.jsonl",
+      "status": "running"
+    }
+  ],
+  "failed_dispatches": [
+    {
+      "role": "triplet_writer",
+      "error": "agent thread limit reached"
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "review_role": "triplet_review_reasoning",
+  "stage": "last_bounded_exception_targeted_recheck",
+  "company": "贵州茅台",
+  "ticker": "600519.SH",
+  "cutoff": "2026-09-20",
+  "decision_source": "data/reviews/triplet-token-cycle-2026-09-20/round-4/adjudicator/decision-v2.json",
+  "workpaper": "data/reviews/triplet-token-cycle-2026-09-20/round-4/rebuilt-sol/workpaper.json",
+  "workpaper_sha256": "f2094373fc5001d5818d83a475e01d9d4ec4a1934b7c8811d0b36def87f1fc58",
+  "input_hashes": {
+    "decision_v2": "2efa7623a9765ea0053069933909fe9a421b234555fcf913b11e534e6bc5f4f8",
+    "receipt": "ea328321c227cc88fd7eaddb638e17189f3a17eee6f510ccf5319268e7e28bbc",
+    "calculations_json": "b772e9ddf1eef50d69f153874fb3b00318fdf0accfc4455adb4bd56cb72cf467",
+    "calculations_py": "62a7673bcd9d91c3190ec4abde658417fd81d3165f70a79046698ba63366f5c4",
+    "facts": "5a06020555ffcb1c1cadf74b88393dd6f834d113d92082201ce01c113ea45426",
+    "sources": "3d2180af635d364dec951080cf1c3db4ce721d9f135222b9f0b98855f7f28483",
+    "effective_evidence": "b7d5f222043a4853d183c38778f8b7f2af349960caf3b4f4749fa2708681e978",
+    "id_response": "4bdd73c8015ee975d4d449006d9711234c4937f98762ad39a71ba69068587132"
+  },
+  "review_status": "changes_required",
+  "score_approval": "not_approved",
+  "scope": {
+    "acceptance_ids": [
+      "R4-E1-A1",
+      "R4-C1-A1",
+      "R4-B3-A1",
+      "R4-C2C4-A1",
+      "R4-CAPITAL-A1",
+      "R4-FINANCING-A1"
+    ],
+    "affected_company_items": ["E1", "C1", "B3", "C2", "C3+C4", "F2.5", "A3", "F2"],
+    "affected_management_items": ["资本配置能力", "对股东友好度"],
+    "retained_closed_ids_reopened": false
+  },
+  "results": [
+    {
+      "id": "R4-E1-A1",
+      "status": "passed",
+      "evidence": "GZMT-R4SOL-E1-001已登记2020—2025披露归母加权ROE，并用精确元值统一计算2023—2025合并口径杜邦。独立运行calculations.py复得36.1747373%、38.3684382%、34.4013658%；净利率49.58%—51.49%，权益乘数1.215—1.230，支持经营利润率驱动且ROE显著高于15%。底稿已说明与归母加权ROE的口径差异。",
+      "remaining": "无。E1=5满足原验收条件。"
+    },
+    {
+      "id": "R4-C1-A1",
+      "status": "passed",
+      "evidence": "GZMT-R4SOL-C1-001改用酒类收入同口径：茅台2023—2025为1472.19/1706.12/1687.75亿元，连续显著高于五粮液和泸州老窖；五粮液2025收入确认调整已单列，未机械比较增速，也未把样本称为完整CR5。代表性主要同行规模差足以支持绝对龙头判断。",
+      "remaining": "无。完整行业分母仍不可得，但原裁决明确可靠主要同行比较可关闭，不无限阻塞。"
+    },
+    {
+      "id": "R4-B3-A1",
+      "status": "passed",
+      "evidence": "GZMT-R4SOL-B3-001登记贵州茅台2021—2025酒类毛利率91.62%/92.00%/92.11%/92.01%/91.23%，结合2023年出厂价上调20%、代表性同行毛利率和2025毛利率下降、2026H1利润下降反证；出厂价与市场指导价已区分。",
+      "remaining": "无。B3=6满足原历史验证条件。"
+    },
+    {
+      "id": "R4-C2C4-A1",
+      "status": "passed",
+      "evidence": "GZMT-R4SOL-C2C4-001逐项覆盖成本传导、需求传导、产业周期及上下游议价；同时区分产区与品牌的难复制性、贮存时间成本、工艺可学习边界、渠道可替代性，并纳入供应集中、系列酒调整、同行高毛利和当期下滑反证。",
+      "remaining": "无。现证据足以支持C2=5及C3+C4=9的分析判断。"
+    },
+    {
+      "id": "R4-CAPITAL-A1",
+      "status": "failed",
+      "evidence": "GZMT-R4SOL-CAPITAL-001登记6400吨项目预算34.5416亿元、投产和系列酒整体产能利用率，并给每吨经营贡献5/7.5/10万元的简单贡献率9.26%/13.90%/18.53%；独立运行脚本确认这三组满产计算及回收期。基金60亿元待缴已正确单列。",
+      "remaining": "失效阈值存在决定性算术错误：在5万元/吨情景下，满产贡献3.2亿元，仅相当于预算9.264%；覆盖8%资金成本所需利用率为8%/9.264%=86.354%，不是底稿所写约54%。54%左右对应7.5万元/吨情景。须修正事实、底稿、receipt和缺口说明，并重新判断低情景是否仍足以支撑F2.5=2及资本配置21。"
+    },
+    {
+      "id": "R4-FINANCING-A1",
+      "status": "failed",
+      "evidence": "GZMT-R4SOL-FINANCING-001已形成1999设立、2001首发、2002—2015送转股、2021—2024股本不变及2025—2026H1回购注销的资本桥；并登记2023—2026H1控股股东和技术开发公司股份数，避免把回购导致的比例变化误作减持。",
+      "remaining": "原remaining_minimum要求2021—2025实际分红/对应归母净利，修复只列2023—2025年度方案金额及最近三年累计回报，没有2021—2022实际分红，也未逐年列对应归母净利或派息关系。2016—2020连续股本桥未明确登记；2026-07-01至截止日权益变动仍仅写‘未取得新增原件’，没有有界查询记录。A3=4的历史融资概况接近闭合，但F2=5和股东友好14仍未完全满足原验收窗口。"
+    }
+  ],
+  "linked_item_review": {
+    "company": {
+      "E1": "通过，5分可维持",
+      "C1": "通过，6分可维持",
+      "B3": "通过，6分可维持",
+      "C2": "通过，5分可维持",
+      "C3+C4": "通过，9分可维持",
+      "F2.5": "未通过，资本边界阈值计算错误",
+      "A3": "部分实质闭合，但与融资验收ID整体仍未关闭",
+      "F2": "未通过，分红/净利窗口与截止日短尾未闭合"
+    },
+    "management": {
+      "资本配置能力": "未通过，21分需在修正项目边界后重审",
+      "对股东友好度": "未通过，14分所依赖的完整回报窗口未闭合"
+    }
+  },
+  "findings": [
+    {
+      "severity": "P1",
+      "location": "repair-sol/facts.json:GZMT-R4SOL-CAPITAL-001；rebuilt-sol/workpaper.json:F2.5及evidence_gaps；rebuilt-sol/receipt.json:R4-CAPITAL-A1",
+      "claim": "6400吨项目低情景覆盖8%资金成本的利用率阈值计算错误。",
+      "evidence": "预算34.5416亿元、产能6400吨、每吨贡献5万元时，满产年贡献3.2亿元，贡献率9.2641916%。所需利用率=34.5416亿元×8%÷(6400吨×5万元)=86.354%，而不是54%。每吨贡献4.3177万元是在100%利用率下覆盖8%的单位贡献阈值，两者不能同时与54%并列。calculations.py和calculations.json只算满产贡献率，未计算或验证54%阈值。",
+      "impact": "底稿把低情景安全垫显著夸大，直接影响F2.5顶档及管理层资本配置21分的保守回报论证。虽然已披露系列酒整体利用率96.57%高于正确阈值，但该利用率并非6400吨项目单独利用率，仍需按正确阈值重述边界。",
+      "recommendation": "在计算脚本中加入利用率阈值公式并同步所有产物；分别列5/7.5/10万元情景对应86.35%/57.57%/43.18%的8%覆盖阈值，说明96.57%是系列酒整体而非项目单体利用率，再按原R4-CAPITAL-A1判断分数。"
+    }
+  ],
+  "independent_calculation": {
+    "dupont_verified": {
+      "2023": 0.3617473725540817,
+      "2024": 0.3836843819378534,
+      "2025": 0.3440136579094739
+    },
+    "capital_verified": {
+      "budget_yuan": 3454160000,
+      "capacity_tons": 6400,
+      "full_utilization_contribution_rate_at_50000": 0.09264191583481946,
+      "utilization_required_for_8pct_at_50000": 0.86354,
+      "contribution_per_ton_required_for_8pct_at_full_utilization_yuan": 43177
+    }
+  },
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "company_total_in_workpaper": 83.5,
+    "management_total_in_workpaper": 78,
+    "arithmetic": "分项加总闭合，但F2.5、F2及两项管理层联动未通过，候选总分不能批准。",
+    "conclusion": "6个剩余原验收ID中4项通过、2项未通过；未重启5个已关闭ID。资本回报阈值出现新P1算术错误，融资/股东回报窗口仍未满足原最小条件，因此83.5/78暂不批准。"
+  }
+}

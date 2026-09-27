@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "review_role": "triplet_review_reasoning",
+  "stage": "targeted_recheck_after_repair_v2",
+  "workpaper": "data/reviews/triplet-token-cycle-2026-09-20/round-5/writer/rebuilt-v2/workpaper.json",
+  "workpaper_sha256": "0dc7ed8b7ea2654df18cd1390b718ae7c826d538a1778e533680fc94a98c93ad",
+  "decision": "data/reviews/triplet-token-cycle-2026-09-20/round-5/adjudicator/decision-v1-tool.json",
+  "overall_status": "failed",
+  "summary": "19项稳定验收ID逐项复查：5项passed、9项partial、5项failed。现任身份与KAM性质已按裁决纠正，不恢复被裁决驳回的主张；但A2/A3全历史、C2四维产业链、E5.5三年会计核查、完整分红窗口及近五年全体非独董/高管时间线仍未满足原验收条件，83.5/65暂不能据此批准。",
+  "results": [
+    {"id":"R5-HISTORY-A01","status":"partial","evidence":"MT5V5-HIST-CTRL-001只给1999设立、2001上市、当前公司简介及2025/2026控制链；未给覆盖2001至2024的官方沿革汇总，也未给带时间范围的控制权变更公告检索记录。国资监管机构更名与实质控制变更的区别只在底稿理由中断言。","remaining":"补一个覆盖IPO至截止日的官方沿革/控制权变更时间范围检索及关键节点，明确中间窗口没有实质变更的依据。"},
+    {"id":"R5-HISTORY-A02","status":"failed","evidence":"MT5V5-HIST-FIN-001和MA-001只核IPO及2002习酒收购；FIN-002仅核2025/2026无可转债并做关键词检索，MA-002也明确承认未命中不证明全历史不存在。未列IPO后历次融资工具、重大并购、商誉及业绩压力年份非主营处置的完整清单。","remaining":"按裁决列出全窗口各类别及压力年份；发生事项核用途、商誉和利润影响，未发生类别须给真正覆盖全期的有界官方检索。"},
+    {"id":"R5-HISTORY-A03","status":"failed","evidence":"A2/A3仍取3/4最高档；A3理由主要依赖2002单项和有限未命中，并以“已核事实支持清洁档”结束，未解释为何残余全历史缺口不影响相邻2分档。","remaining":"先满足A01/A02，再按完整事实重选并比较相邻档；当前不能用有限未命中支撑最高档。"},
+    {"id":"R5-CHAIN-A01","status":"partial","evidence":"MT5R2-CHAIN记录采购模式、2024H1量价/成本变化和2026H1成本与合同负债变化，但未纳入已知前五供应商38.12%，未回答替代约束、需求传导、周期位置和综合上下游四维。","remaining":"用已有数据逐项回答四维，至少纳入供应集中度、地域原料约束、下游终端/渠道压力与成熟行业周期。"},
+    {"id":"R5-CHAIN-A02","status":"partial","evidence":"C2理由已区分高毛利与价格调整，方向改善；但“价格调整和销量可支持部分成本传导”没有把同期成本、价格和毛利桥起来，也未解释部分传导为何足以选择5分而非3分。","remaining":"给出实际传导证据和5分相邻档比较；若只有部分传导及明显成本快于收入限制，应说明为何仍属主导档。"},
+    {"id":"R5-LATEST-A01","status":"passed","evidence":"MT5R2-LATEST准确注册2026H1收入+1.47%、归母-1.95%、成本+21.81%、合同负债较年末-60.31%，并保留销量、生产成本和预收政策变化解释。","remaining":""},
+    {"id":"R5-LATEST-A02","status":"partial","evidence":"B4、D3及C2已联动且未机械年化；E3虽纳入利润回落，却只以扣非接近归母及无一次性主导维持3分，没有按裁决核明量价双驱动。2026H1只披露销量增加，价格证据在MT5R2-CHAIN且E3未引用或分析。","remaining":"对E3明确核近年量、价、结构驱动；若最高档仍成立，引用价格证据并解释最新期间只有销量信号为何不改变长期判断。"},
+    {"id":"R5-ACCOUNTING-A01","status":"partial","evidence":"MT5R2-ACCOUNTING正确表述KAM不是已发生错报，也概括审计应对为控制、实质及披露程序；但没有分别列收入确认与关联交易各自关注点、各自审计应对和各自分析含义。","remaining":"按两个KAM分别登记三要素，继续遵守裁决，不把固有风险或交易重大性表述成错报。"},
+    {"id":"R5-ACCOUNTING-A02","status":"failed","evidence":"MT5R2-ACCOUNTING声称2023—2025未见重大政策/估计变更，但locator只列2025年报；未提供2023、2024原件位置、变更次数和利润影响。应收只给8.30%总计提率，未给最新账龄；未明确商誉适用检查。","remaining":"回查2023、2024、2025各年政策/估计变更原件，列次数、实质和利润影响；补应收账龄、计提分母、存货比率及商誉是否存在/适用。"},
+    {"id":"R5-ACCOUNTING-A03","status":"partial","evidence":"E5.5、F3和诚信维度均已联动，且未把KAM当错报；但E5.5仍以未完成的三年政策断言维持3分，证据只定位2025年报，尚不满足批准最高档的前置条件。","remaining":"A02完成后重选E5.5，并登记三年精确位置；再确认F3及诚信分数是否保持。"},
+    {"id":"R5-DIVIDEND-A01","status":"partial","evidence":"旧46%/87%/76%/80%实施年混配序列已撤回，MT5R2-DIV改列归属年；但序列缺2024归属年度，且2022/2023把特别或中期分红并入时未清楚说明各分红对应的利润年度与避免跨年重复规则。","remaining":"补齐原窗口每一归属年度，逐项标常规、特别/中期、实施状态、分母年度；回购继续单列。"},
+    {"id":"R5-DIVIDEND-A02","status":"passed","evidence":"2025已实施中期300.01亿元/2025归母823.20亿元重算约36.44%，明确标为下限，未把2025年度未实施预案计入。","remaining":""},
+    {"id":"R5-DIVIDEND-A03","status":"failed","evidence":"F2及两个管理层维度已改写，但F2理由和证据删除了2026H2股东行动检索边界，只保留集团增持；融资审慎也只依A3未完成的历史检索。裁决明确要求保留已核减持、融资审慎依据和检索边界。","remaining":"恢复准确的股东行动检索范围及边界，补足融资审慎的有效全窗口依据，再重核F2、资本配置能力和对股东友好度。"},
+    {"id":"R5-ATTRIBUTION-A01","status":"partial","evidence":"对股东友好度和表达清晰度已删除“查询有边界/缺电话会”作为扣分理由，符合未知不扣分；但两个理由都未解释13与相邻档、4与5分的界线，点值仍缺相邻档论证。","remaining":"各补一句基于已核真实限制的相邻档比较，不能重新使用资料未取得作为扣分原因。"},
+    {"id":"R5-ATTRIBUTION-A02","status":"passed","evidence":"管理层战略稳定性已删除缺原话扣分归因，以2025未达作为真实反证；公司D2继续执行明确的缺原话4分上限，两条规则未混同。","remaining":""},
+    {"id":"R5-STATUS-A01","status":"passed","evidence":"MT5R2-STATUS及F1明确蒋焰事发时职务、截至截止日已解聘、余思明接任，并明确调查未见结案。","remaining":""},
+    {"id":"R5-STATUS-A02","status":"passed","evidence":"F1维持历史周期性腐败-2分，不追加现任降级；管理层相关理由已同步。rebuilt receipt明确提示公司F维度触发原规则重大警告，未虚构现任或结案。","remaining":""},
+    {"id":"R5-TALENT-A01","status":"failed","evidence":"MT5R2-TALENT只列董事长四个节点和蒋焰/余思明，未建立近五年非独董及高管全量时间线；未列近3/5年离任人数、12个月集中离任判定、各接任来源和关键岗位空缺，同人多职计数也未展示。","remaining":"按裁决完成全体非独董及高管时间线和规定统计，不能以董事长/CFO样本代替。"},
+    {"id":"R5-TALENT-A02","status":"partial","evidence":"组织与人才理由已覆盖董事长继任、激励未履行和人才留存未知，且未因未知直接扣分；但未给高管稳定性、人才保留、激励三方面的点值构成或相邻档解释，危机处理也依赖不完整时间线。","remaining":"A01完成后按三方面解释4/10点值和5分危机处理联动，权重总和不得超过10。"}
+  ],
+  "new_findings": [
+    {"severity":"P1","location":"writer/repair-v2/facts.json:MT5R2-DIV；rebuilt-v2/workpaper.json:F2","claim":"修复后的分红事实仍未覆盖完整原窗口，且F2丢失裁决要求保留的股东行动与融资检索边界。","evidence":"MT5R2-DIV列2020、2021、2022、2023和2025，缺2024归属年度；F2 evidence_refs仅有MT5R2-DIV、回购及集团增持，不再引用2026H2股东行动有界检索，融资审慎又依赖未闭合的A3历史窗口。","impact":"R5-DIVIDEND-A01/A03不能关闭，F2=5及管理层资本配置、股东友好度的理由仍不完整。","recommendation":"补齐2024和每类分红归属/实施口径，恢复准确的减持与融资查询范围及边界后重核三项。"},
+    {"severity":"P1","location":"writer/repair-v2/facts.json:MT5R2-ACCOUNTING；rebuilt-v2/workpaper.json:E5.5","claim":"三年会计政策核查被压缩成一个只定位2025年报的结论，作者答复不能替代2023—2024原件核验。","evidence":"事实声称2023—2025未见重大变更，但locator只有2025年报L1508-L1570、L1059-L1067、L2316、L2523；没有2023、2024年报位置、逐年变更内容或利润影响，也缺最新应收账龄和商誉适用性。","impact":"E5.5=3的决定性条件未满足，F3和诚信联动虽方向正确，仍不能随E5.5一起批准。","recommendation":"逐年登记2023—2025政策/估计变更、利润影响及计提检查，完成后再确认3分。"},
+    {"severity":"P1","location":"external/v5/facts.json:MT5V5-HIST-*；rebuilt-v2/workpaper.json:A2,A3","claim":"全历史验收仍主要由起点、终点和有界未命中拼接，未形成裁决要求的连续历史依据。","evidence":"控制链缺2001—2024覆盖记录；资本史只核IPO、2002收购及2025/2026无可转债。两条查询事实自身明确“未命中不等于全历史不存在”，却仍据此维持A2/A3最高档。","impact":"R5-HISTORY三项不能关闭，A2/A3共7分仍待复查。","recommendation":"补官方沿革和全窗口融资、并购、商誉、压力年处置清单；未知不扣分，但也不能凭未知批准最高档。"},
+    {"severity":"P1","location":"writer/repair-v2/facts.json:MT5R2-TALENT；rebuilt-v2/workpaper.json:组织与人才能力","claim":"高管时间线仍是抽样人物表，未达到裁决锁定的近五年全体非独董及高管统计要求。","evidence":"只列高卫东、丁雄军、张德芹、陈华及蒋焰/余思明；没有其他非独董和高管、近3/5年离任数、继任来源比例、岗位空缺及集中离任判断。","impact":"组织与人才4分和危机处理5分的联动依据不足。","recommendation":"按年报董监高变动表和任免公告完成全量时间线、去重计数及规定统计，再解释最终点值。"}
+  ]
+}

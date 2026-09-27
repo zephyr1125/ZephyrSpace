@@ -1,0 +1,951 @@
+{
+  "schema_version": 1,
+  "company": "贵州茅台",
+  "ticker": "600519.SH",
+  "cutoff": "2026-09-20",
+  "stage": "score_adjudication_first",
+  "decision": "defer",
+  "score_state": "pending",
+  "research_state": "pending",
+  "research_status": "execution_incomplete",
+  "delivery_state": "not_in_scope",
+  "publish_allowed": false,
+  "basis": "首轮匿名裁决：原始83.5/65合计算术成立，决定性历史、口径、最新期和归因问题尚待一次合并修复；不把未完成评分视为公司不合格。",
+  "frozen_workpaper": "data\\reviews\\triplet-token-cycle-2026-09-20\\round-5\\writer\\workpaper-v1.json",
+  "frozen_workpaper_sha256": "7605d370cc4fb2173eb587befc5b7adbd35a99c14122bb9e9cab5dfbb942d1c4",
+  "candidate_dispositions": [
+    {
+      "candidate_id": "C001",
+      "original_acceptance_ids": [
+        "C001"
+      ],
+      "disposition": "部分成立",
+      "reason": "精确定位建议成立；但计提及三年政策判断未完成，与C005合并为研究问题，不能先批准3分。",
+      "lane": "research",
+      "issue_ids": [
+        "R5-ACCOUNTING"
+      ],
+      "acceptance_ids": [
+        "R5-ACCOUNTING-A01",
+        "R5-ACCOUNTING-A02",
+        "R5-ACCOUNTING-A03"
+      ],
+      "source_refs": [
+        "财报/贵州茅台/贵州茅台2025年度报告.md:1508-1570,1059-1067,2316,2523",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-5/score-rules.md:561-629"
+      ]
+    },
+    {
+      "candidate_id": "C002",
+      "original_acceptance_ids": [
+        "C002"
+      ],
+      "disposition": "成立",
+      "reason": "最新半年报遗漏成立；预收政策改变是合同负债下降的披露原因，需保留，不强制下调全部分项。",
+      "lane": "research",
+      "issue_ids": [
+        "R5-LATEST"
+      ],
+      "acceptance_ids": [
+        "R5-LATEST-A01",
+        "R5-LATEST-A02"
+      ],
+      "source_refs": [
+        "财报/贵州茅台/贵州茅台2026半年度报告.md:88,128,138,164-167,210"
+      ]
+    },
+    {
+      "candidate_id": "C003",
+      "original_acceptance_ids": [
+        "C003"
+      ],
+      "disposition": "成立",
+      "reason": "A3历史窗口不足，与C009合并，不能因未知降档。",
+      "lane": "research",
+      "issue_ids": [
+        "R5-HISTORY"
+      ],
+      "acceptance_ids": [
+        "R5-HISTORY-A01",
+        "R5-HISTORY-A02",
+        "R5-HISTORY-A03"
+      ],
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-5/score-rules.md:130-155",
+        "external/facts.json:MT5-EXT-CTRL-001/002、MT5-EXT-CAP-001/002"
+      ]
+    },
+    {
+      "candidate_id": "C004",
+      "original_acceptance_ids": [
+        "C004"
+      ],
+      "disposition": "成立",
+      "reason": "明确四维规则缺少实质回答，限制修复在原规则内。",
+      "lane": "research",
+      "issue_ids": [
+        "R5-CHAIN"
+      ],
+      "acceptance_ids": [
+        "R5-CHAIN-A01",
+        "R5-CHAIN-A02"
+      ],
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-5/score-rules.md:298-324",
+        "财报/贵州茅台/贵州茅台2026半年度报告.md:128,164-167",
+        "external/facts.json:MT5-EXT-BIZ-001"
+      ]
+    },
+    {
+      "candidate_id": "C005",
+      "original_acceptance_ids": [
+        "C005"
+      ],
+      "disposition": "部分成立",
+      "reason": "会计分析不足成立；KAM固有风险和关联交易重大性不等于异常或已发生错报，自动降低评分/治理联动主张不成立。",
+      "lane": "research",
+      "issue_ids": [
+        "R5-ACCOUNTING"
+      ],
+      "acceptance_ids": [
+        "R5-ACCOUNTING-A01",
+        "R5-ACCOUNTING-A02",
+        "R5-ACCOUNTING-A03"
+      ],
+      "source_refs": [
+        "财报/贵州茅台/贵州茅台2025年度报告.md:1508-1570,1059-1067,2316,2523",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-5/score-rules.md:561-629"
+      ]
+    },
+    {
+      "candidate_id": "C006",
+      "original_acceptance_ids": [
+        "C006"
+      ],
+      "disposition": "成立",
+      "reason": "口径混配成立；精确末位不是必要验收，同口径保守下限足够即可。",
+      "lane": "research",
+      "issue_ids": [
+        "R5-DIVIDEND"
+      ],
+      "acceptance_ids": [
+        "R5-DIVIDEND-A01",
+        "R5-DIVIDEND-A02",
+        "R5-DIVIDEND-A03"
+      ],
+      "source_refs": [
+        "data\\reviews\\triplet-token-cycle-2026-09-20\\round-5\\numeric\\v2\\dividend-basis.json",
+        "财报/贵州茅台/贵州茅台2025年度报告.md:875-897",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-5/score-rules.md:837"
+      ]
+    },
+    {
+      "candidate_id": "C007",
+      "original_acceptance_ids": [
+        "C007"
+      ],
+      "disposition": "成立",
+      "reason": "检索缺口被当扣分原因；删除错误归因后依事实评分，不直接补满分。",
+      "lane": "research",
+      "issue_ids": [
+        "R5-ATTRIBUTION"
+      ],
+      "acceptance_ids": [
+        "R5-ATTRIBUTION-A01",
+        "R5-ATTRIBUTION-A02"
+      ],
+      "source_refs": [
+        "writer/workpaper-v1.json:scores.management",
+        "docs/three-report-closeout.md:证据、评分与预测的边界"
+      ]
+    },
+    {
+      "candidate_id": "C008",
+      "original_acceptance_ids": [
+        "C008"
+      ],
+      "disposition": "误报",
+      "reason": "2026H1 L330明确蒋焰已解聘；仍披露被查不证明现任。保留历史腐败及调查风险，同步身份表述。",
+      "lane": "research",
+      "issue_ids": [
+        "R5-STATUS"
+      ],
+      "acceptance_ids": [
+        "R5-STATUS-A01",
+        "R5-STATUS-A02"
+      ],
+      "source_refs": [
+        "财报/贵州茅台/贵州茅台2026半年度报告.md:330,415-419",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-5/score-rules.md:836,891-902"
+      ]
+    },
+    {
+      "candidate_id": "C009",
+      "original_acceptance_ids": [
+        "C009"
+      ],
+      "disposition": "成立",
+      "reason": "A2/A3近期节点不能覆盖IPO以来窗口，与C003合并。",
+      "lane": "research",
+      "issue_ids": [
+        "R5-HISTORY"
+      ],
+      "acceptance_ids": [
+        "R5-HISTORY-A01",
+        "R5-HISTORY-A02",
+        "R5-HISTORY-A03"
+      ],
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-5/score-rules.md:130-155",
+        "external/facts.json:MT5-EXT-CTRL-001/002、MT5-EXT-CAP-001/002"
+      ]
+    },
+    {
+      "candidate_id": "C010",
+      "original_acceptance_ids": [
+        "C010"
+      ],
+      "disposition": "成立",
+      "reason": "原规则近5年变动模式未完成；未公开人才数据不直接扣分。",
+      "lane": "research",
+      "issue_ids": [
+        "R5-TALENT"
+      ],
+      "acceptance_ids": [
+        "R5-TALENT-A01",
+        "R5-TALENT-A02"
+      ],
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-5/score-rules.md:1156-1195,1238",
+        "财报/贵州茅台/贵州茅台2026半年度报告.md:330"
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "id": "R5-HISTORY",
+      "candidate_ids": [
+        "C003",
+        "C009"
+      ],
+      "original_acceptance_ids": [
+        "C003",
+        "C009"
+      ],
+      "lane": "research",
+      "severity": "P1",
+      "status": "open",
+      "affected_items": [
+        "A2",
+        "A3"
+      ],
+      "reason": "近期控制链及资本项目不能证明IPO以来控制稳定和资本运作清洁。",
+      "acceptance": [
+        {
+          "id": "R5-HISTORY-A01",
+          "condition": "补IPO至截止日控制链连续性依据：可用官方历次变更/沿革汇总或带时间范围的公告检索加关键节点原件，不要求逐年重复相同记录；说明国资监管机构更名与实质控制变更的区别。"
+        },
+        {
+          "id": "R5-HISTORY-A02",
+          "condition": "按原规则列IPO、再融资工具、重大并购及业绩压力年份重大非主营资产处置；发生事项核用途承诺与实际用途、商誉及利润影响；未发生类别给有界官方检索记录，不能用近期不适用外推全历史。"
+        },
+        {
+          "id": "R5-HISTORY-A03",
+          "condition": "据事实重选A2/A3并解释相邻档，公开可得但未取证仍为缺口，不因未知降分。"
+        }
+      ],
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-5/score-rules.md:130-155",
+        "external/facts.json:MT5-EXT-CTRL-001/002、MT5-EXT-CAP-001/002"
+      ]
+    },
+    {
+      "id": "R5-CHAIN",
+      "candidate_ids": [
+        "C004"
+      ],
+      "original_acceptance_ids": [
+        "C004"
+      ],
+      "lane": "research",
+      "severity": "P1",
+      "status": "open",
+      "affected_items": [
+        "C2"
+      ],
+      "reason": "高毛利和低客户集中度支持议价优势，但现有理由跳过成本传导等明确规则。",
+      "acceptance": [
+        {
+          "id": "R5-CHAIN-A01",
+          "condition": "补上游集中度及替代约束，结合已有2024H1销量/价格与成本变化和最新半年报，回答成本传导、需求传导、周期位置、综合上下游议价四维。已知限制须纳入；精确库存或传导季度未公开可标未知并说明不影响选档依据，不新增全行业调查。"
+        },
+        {
+          "id": "R5-CHAIN-A02",
+          "condition": "区分高毛利水平与实际成本转嫁证据，给C2=5或相邻档的可辩护判断；仅补表格标题不能通过。"
+        }
+      ],
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-5/score-rules.md:298-324",
+        "财报/贵州茅台/贵州茅台2026半年度报告.md:128,164-167",
+        "external/facts.json:MT5-EXT-BIZ-001"
+      ]
+    },
+    {
+      "id": "R5-LATEST",
+      "candidate_ids": [
+        "C002"
+      ],
+      "original_acceptance_ids": [
+        "C002"
+      ],
+      "lane": "research",
+      "severity": "P1",
+      "status": "open",
+      "affected_items": [
+        "B4",
+        "D3",
+        "E3",
+        "C2",
+        "关键反证"
+      ],
+      "reason": "最新经营信号未进入评分；合同负债下降不可径直归因为需求恶化。",
+      "acceptance": [
+        {
+          "id": "R5-LATEST-A01",
+          "condition": "注册2026H1营收+1.47%、归母利润-1.95%、成本+21.81%、合同负债-60.31%及对应同比/年末比较口径，带公司销量、生产成本和预收政策改变的解释。"
+        },
+        {
+          "id": "R5-LATEST-A02",
+          "condition": "将最新信号与年度长期趋势合并重评B4/D3/E3并联动C2；E3量价判断需已有价格证据支持，不能由扣非接近净利润替代；允许有据不改分，不机械年化半年数。"
+        }
+      ],
+      "source_refs": [
+        "财报/贵州茅台/贵州茅台2026半年度报告.md:88,128,138,164-167,210"
+      ]
+    },
+    {
+      "id": "R5-ACCOUNTING",
+      "candidate_ids": [
+        "C001",
+        "C005"
+      ],
+      "original_acceptance_ids": [
+        "C001",
+        "C005"
+      ],
+      "lane": "research",
+      "severity": "P1",
+      "status": "open",
+      "affected_items": [
+        "E5.5",
+        "F3",
+        "诚信与透明度"
+      ],
+      "reason": "KAM存在不是异常；但原理由未完成三年变更和计提充分性判断，不能将断链归为纯排版。",
+      "acceptance": [
+        {
+          "id": "R5-ACCOUNTING-A01",
+          "condition": "分别记录2025收入确认及关联方交易KAM的关注点、审计应对和对分析的含义；不得把固有风险措辞当已发生错报或审计质疑，也不得说无KAM。"
+        },
+        {
+          "id": "R5-ACCOUNTING-A02",
+          "condition": "用2023—2025原件核会计政策/估计变更次数及实质、利润影响，补最新应收账龄与计提、存货计提及适用商誉检查并计算关键比率。应收计提约8.30%、存货约0.00209%；低存货计提按白酒原规则判断，不机械扣分。"
+        },
+        {
+          "id": "R5-ACCOUNTING-A03",
+          "condition": "重选E5.5并说明F3/诚信与透明度是否联动及理由；登记精确原件位置。三年政策记录或关键计提仍未核时不能仅靠无保留意见批准3分。"
+        }
+      ],
+      "source_refs": [
+        "财报/贵州茅台/贵州茅台2025年度报告.md:1508-1570,1059-1067,2316,2523",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-5/score-rules.md:561-629"
+      ]
+    },
+    {
+      "id": "R5-DIVIDEND",
+      "candidate_ids": [
+        "C006"
+      ],
+      "original_acceptance_ids": [
+        "C006"
+      ],
+      "lane": "research",
+      "severity": "P1",
+      "status": "open",
+      "affected_items": [
+        "F2",
+        "资本配置能力",
+        "对股东友好度"
+      ],
+      "reason": "算术正确但分红分子与盈利年度不对应，必须替换。",
+      "acceptance": [
+        {
+          "id": "R5-DIVIDEND-A01",
+          "condition": "撤回实施年分红/同年利润的46%/87%/76%/80%序列；按归属年度列已实施常规、特别/中期分红及同年度归母净利，回购单列，避免重复。"
+        },
+        {
+          "id": "R5-DIVIDEND-A02",
+          "condition": "按原窗口完成实际计算；严格同口径已实施分红下限若已足够选档即可，不要求无影响的末位金额。例如2025已实施中期300.01亿元/2025归母823.200671亿元约36.44%，足以跨30%参考线，须明确仅为下限而非全年总分红率；未实施预案不得冒充实施。"
+        },
+        {
+          "id": "R5-DIVIDEND-A03",
+          "condition": "重核F2及两管理层维度的理由强度；高分红不是F2满分全部条件，保留已核减持与融资审慎依据和检索边界。"
+        }
+      ],
+      "source_refs": [
+        "data\\reviews\\triplet-token-cycle-2026-09-20\\round-5\\numeric\\v2\\dividend-basis.json",
+        "财报/贵州茅台/贵州茅台2025年度报告.md:875-897",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-5/score-rules.md:837"
+      ]
+    },
+    {
+      "id": "R5-ATTRIBUTION",
+      "candidate_ids": [
+        "C007"
+      ],
+      "original_acceptance_ids": [
+        "C007"
+      ],
+      "lane": "research",
+      "severity": "P1",
+      "status": "open",
+      "affected_items": [
+        "对股东友好度",
+        "表达清晰度与认知质量",
+        "战略稳定性"
+      ],
+      "reason": "未取得资料不是公司缺点，不支持保留一两分；不因此自动改满分。",
+      "acceptance": [
+        {
+          "id": "R5-ATTRIBUTION-A01",
+          "condition": "删除股东行动查询边界和未取得电话会原话作为扣分原因，用已核正反事实选择点值并解释相邻档，置信度/未知分开。"
+        },
+        {
+          "id": "R5-ATTRIBUTION-A02",
+          "condition": "同根因检查管理层战略稳定性中“无管理层原话验证，保留扣分”并修正归因；公司D2原规则明确缺原话上限4分继续适用，不混同两条规则。"
+        }
+      ],
+      "source_refs": [
+        "writer/workpaper-v1.json:scores.management",
+        "docs/three-report-closeout.md:证据、评分与预测的边界"
+      ]
+    },
+    {
+      "id": "R5-STATUS",
+      "candidate_ids": [
+        "C008"
+      ],
+      "original_acceptance_ids": [
+        "C008"
+      ],
+      "lane": "research",
+      "severity": "P1",
+      "status": "open",
+      "affected_items": [
+        "F1",
+        "诚信与透明度",
+        "危机处理能力",
+        "组织与人才能力",
+        "风险表述"
+      ],
+      "reason": "原件明确解聘，截止日现任假设错误；仍在涉嫌违法事项中披露不代表仍任职。",
+      "acceptance": [
+        {
+          "id": "R5-STATUS-A01",
+          "condition": "注册2026H1 L330蒋焰解聘、余思明接任，区分事发时职务与截止日身份；不以离任等同调查结案。"
+        },
+        {
+          "id": "R5-STATUS-A02",
+          "condition": "维持历史周期性腐败F1=-2的原规则适用，不追加基于现任的降级；保留调查风险及治理维度6/15触及40%重大警告。与身份有关管理层理由同步，不能虚构现任或结案。"
+        }
+      ],
+      "source_refs": [
+        "财报/贵州茅台/贵州茅台2026半年度报告.md:330,415-419",
+        "data/reviews/triplet-token-cycle-2026-09-20/round-5/score-rules.md:836,891-902"
+      ]
+    },
+    {
+      "id": "R5-TALENT",
+      "candidate_ids": [
+        "C010"
+      ],
+      "original_acceptance_ids": [
+        "C010"
+      ],
+      "lane": "research",
+      "severity": "P1",
+      "status": "open",
+      "affected_items": [
+        "组织与人才能力",
+        "危机处理能力"
+      ],
+      "reason": "单一继任事实不足以支撑近5年组织人才判断。",
+      "acceptance": [
+        {
+          "id": "R5-TALENT-A01",
+          "condition": "按近5年窗口从年报与任免公告建立非独董及高管变动时间线，列近3/5年离任数、12个月集中离任、继任来源和关键岗位空缺；同人多职勿重复计人数，窗口与截止日写清。"
+        },
+        {
+          "id": "R5-TALENT-A02",
+          "condition": "据高管稳定性、人才保留、激励三方面解释最终点值，子判断权重服从10分总上限，不能机械将3—4/3—4/2—3分相加突破上限；人才保留未披露标未知，已核继任/组织/激励证据足以选档时不要求穷尽私人信息。"
+        }
+      ],
+      "source_refs": [
+        "data/reviews/triplet-token-cycle-2026-09-20/round-5/score-rules.md:1156-1195,1238",
+        "财报/贵州茅台/贵州茅台2026半年度报告.md:330"
+      ]
+    }
+  ],
+  "score_bridge": {
+    "company": {
+      "before_total": 83.5,
+      "verified_arithmetic_total": 83.5,
+      "after_total": null,
+      "formula": "before_total + sum(逐项修复后分数 - before)；未决delta不得视为0",
+      "items": [
+        {
+          "id": "A1",
+          "before": 2,
+          "approved_after": 2,
+          "status": "retain",
+          "delta": 0
+        },
+        {
+          "id": "A2",
+          "before": 3,
+          "approved_after": null,
+          "status": "reassess",
+          "delta": null
+        },
+        {
+          "id": "A3",
+          "before": 4,
+          "approved_after": null,
+          "status": "reassess",
+          "delta": null
+        },
+        {
+          "id": "B0",
+          "before": 2,
+          "approved_after": 2,
+          "status": "retain",
+          "delta": 0
+        },
+        {
+          "id": "B1",
+          "before": 3,
+          "approved_after": 3,
+          "status": "retain",
+          "delta": 0
+        },
+        {
+          "id": "B2",
+          "before": 3,
+          "approved_after": 3,
+          "status": "retain",
+          "delta": 0
+        },
+        {
+          "id": "B3",
+          "before": 6,
+          "approved_after": 6,
+          "status": "retain",
+          "delta": 0
+        },
+        {
+          "id": "B4",
+          "before": 3,
+          "approved_after": null,
+          "status": "reassess",
+          "delta": null
+        },
+        {
+          "id": "C1",
+          "before": 6,
+          "approved_after": 6,
+          "status": "retain",
+          "delta": 0
+        },
+        {
+          "id": "C2",
+          "before": 5,
+          "approved_after": null,
+          "status": "reassess",
+          "delta": null
+        },
+        {
+          "id": "C3+C4",
+          "before": 9,
+          "approved_after": 9,
+          "status": "retain",
+          "delta": 0
+        },
+        {
+          "id": "D1",
+          "before": 4,
+          "approved_after": 4,
+          "status": "retain",
+          "delta": 0
+        },
+        {
+          "id": "D2",
+          "before": 4,
+          "approved_after": 4,
+          "status": "retain",
+          "delta": 0
+        },
+        {
+          "id": "D3",
+          "before": 2,
+          "approved_after": null,
+          "status": "reassess",
+          "delta": null
+        },
+        {
+          "id": "D5",
+          "before": 2,
+          "approved_after": 2,
+          "status": "retain",
+          "delta": 0
+        },
+        {
+          "id": "E1",
+          "before": 5,
+          "approved_after": 5,
+          "status": "retain",
+          "delta": 0
+        },
+        {
+          "id": "E2",
+          "before": 5,
+          "approved_after": 5,
+          "status": "retain",
+          "delta": 0
+        },
+        {
+          "id": "E3",
+          "before": 3,
+          "approved_after": null,
+          "status": "reassess",
+          "delta": null
+        },
+        {
+          "id": "E4",
+          "before": 1.5,
+          "approved_after": 1.5,
+          "status": "retain",
+          "delta": 0
+        },
+        {
+          "id": "E5",
+          "before": 2,
+          "approved_after": 2,
+          "status": "retain",
+          "delta": 0
+        },
+        {
+          "id": "E5.5",
+          "before": 3,
+          "approved_after": null,
+          "status": "reassess",
+          "delta": null
+        },
+        {
+          "id": "F1",
+          "before": -2,
+          "approved_after": -2,
+          "status": "retain",
+          "delta": 0
+        },
+        {
+          "id": "F2",
+          "before": 5,
+          "approved_after": null,
+          "status": "reassess",
+          "delta": null
+        },
+        {
+          "id": "F2.5",
+          "before": 1,
+          "approved_after": 1,
+          "status": "retain",
+          "delta": 0
+        },
+        {
+          "id": "F3",
+          "before": 2,
+          "approved_after": null,
+          "status": "reassess",
+          "delta": null
+        }
+      ]
+    },
+    "management": {
+      "before_total": 65,
+      "verified_arithmetic_total": 65,
+      "after_total": null,
+      "formula": "before_total + sum(逐项修复后分数 - before)；未决delta不得视为0",
+      "items": [
+        {
+          "id": "诚信与透明度",
+          "before": 10,
+          "approved_after": null,
+          "status": "reassess",
+          "delta": null
+        },
+        {
+          "id": "资本配置能力",
+          "before": 18,
+          "approved_after": null,
+          "status": "reassess",
+          "delta": null
+        },
+        {
+          "id": "战略稳定性",
+          "before": 11,
+          "approved_after": null,
+          "status": "reassess",
+          "delta": null
+        },
+        {
+          "id": "对股东友好度",
+          "before": 13,
+          "approved_after": null,
+          "status": "reassess",
+          "delta": null
+        },
+        {
+          "id": "危机处理能力",
+          "before": 5,
+          "approved_after": null,
+          "status": "reassess",
+          "delta": null
+        },
+        {
+          "id": "组织与人才能力",
+          "before": 4,
+          "approved_after": null,
+          "status": "reassess",
+          "delta": null
+        },
+        {
+          "id": "表达清晰度与认知质量",
+          "before": 4,
+          "approved_after": null,
+          "status": "reassess",
+          "delta": null
+        }
+      ]
+    }
+  },
+  "approved_parameters": {
+    "company_score": null,
+    "management_score": null,
+    "combined_score": null,
+    "F1": -2,
+    "target_price": null,
+    "buy_price": null,
+    "certainty": null
+  },
+  "valuation_approval": {
+    "status": "not_in_scope",
+    "approved_models": [],
+    "approved_range": null,
+    "reason": "仅评分授权，未开展或批准正式估值"
+  },
+  "score_bounds": null,
+  "quality_stop_approved": false,
+  "review_refs": [
+    "data\\reviews\\triplet-token-cycle-2026-09-20\\round-5\\anonymous\\candidates.json"
+  ],
+  "review_identity_boundary": "仅收匿名候选；原双路记录由主任务保留绑定，不读取来源映射。原验收回溯键为C001—C010，合并验收ID为R5-*-Axx。",
+  "repair_policy": {
+    "rounds_authorized": 1,
+    "scope": "仅本裁决问题及必要联动，保留无关分项；修复后双路定向验收全部稳定ID并核评分桥，不重复全32项初审。",
+    "new_research_not_authorized": true
+  },
+  "answer": "当前公司及管理层总分均未批准。C008现任调查降级主张误报；C005不可因KAM存在自动判异常。其余已成立缺口须定向修复。",
+  "next_trigger": "作者提交新版本局部delta、有效证据注册及逐验收ID位置后，由原双路定向复查。",
+  "score_repair_scope": [
+    {
+      "group": "company",
+      "item": "A2",
+      "acceptance_ids": [
+        "R5-HISTORY-A01",
+        "R5-HISTORY-A02",
+        "R5-HISTORY-A03"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "A3",
+      "acceptance_ids": [
+        "R5-HISTORY-A01",
+        "R5-HISTORY-A02",
+        "R5-HISTORY-A03"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "B4",
+      "acceptance_ids": [
+        "R5-LATEST-A01",
+        "R5-LATEST-A02"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "C2",
+      "acceptance_ids": [
+        "R5-CHAIN-A01",
+        "R5-CHAIN-A02",
+        "R5-LATEST-A01",
+        "R5-LATEST-A02"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "D3",
+      "acceptance_ids": [
+        "R5-LATEST-A01",
+        "R5-LATEST-A02"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "E3",
+      "acceptance_ids": [
+        "R5-LATEST-A01",
+        "R5-LATEST-A02"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "E5.5",
+      "acceptance_ids": [
+        "R5-ACCOUNTING-A01",
+        "R5-ACCOUNTING-A02",
+        "R5-ACCOUNTING-A03"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "F1",
+      "acceptance_ids": [
+        "R5-STATUS-A01",
+        "R5-STATUS-A02"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "F2",
+      "acceptance_ids": [
+        "R5-DIVIDEND-A01",
+        "R5-DIVIDEND-A02",
+        "R5-DIVIDEND-A03"
+      ]
+    },
+    {
+      "group": "company",
+      "item": "F3",
+      "acceptance_ids": [
+        "R5-ACCOUNTING-A01",
+        "R5-ACCOUNTING-A02",
+        "R5-ACCOUNTING-A03"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "诚信与透明度",
+      "acceptance_ids": [
+        "R5-ACCOUNTING-A01",
+        "R5-ACCOUNTING-A02",
+        "R5-ACCOUNTING-A03",
+        "R5-STATUS-A01",
+        "R5-STATUS-A02"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "资本配置能力",
+      "acceptance_ids": [
+        "R5-DIVIDEND-A01",
+        "R5-DIVIDEND-A02",
+        "R5-DIVIDEND-A03"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "战略稳定性",
+      "acceptance_ids": [
+        "R5-ATTRIBUTION-A01",
+        "R5-ATTRIBUTION-A02"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "对股东友好度",
+      "acceptance_ids": [
+        "R5-DIVIDEND-A01",
+        "R5-DIVIDEND-A02",
+        "R5-DIVIDEND-A03",
+        "R5-ATTRIBUTION-A01",
+        "R5-ATTRIBUTION-A02"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "危机处理能力",
+      "acceptance_ids": [
+        "R5-STATUS-A01",
+        "R5-STATUS-A02",
+        "R5-TALENT-A01",
+        "R5-TALENT-A02"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "组织与人才能力",
+      "acceptance_ids": [
+        "R5-STATUS-A01",
+        "R5-STATUS-A02",
+        "R5-TALENT-A01",
+        "R5-TALENT-A02"
+      ]
+    },
+    {
+      "group": "management",
+      "item": "表达清晰度与认知质量",
+      "acceptance_ids": [
+        "R5-ATTRIBUTION-A01",
+        "R5-ATTRIBUTION-A02"
+      ]
+    }
+  ],
+  "metadata_repair_scope": [
+    {
+      "field": "evidence_gaps",
+      "acceptance_ids": [
+        "R5-HISTORY-A01",
+        "R5-HISTORY-A02",
+        "R5-HISTORY-A03",
+        "R5-CHAIN-A01",
+        "R5-CHAIN-A02",
+        "R5-LATEST-A01",
+        "R5-LATEST-A02",
+        "R5-ACCOUNTING-A01",
+        "R5-ACCOUNTING-A02",
+        "R5-ACCOUNTING-A03",
+        "R5-DIVIDEND-A01",
+        "R5-DIVIDEND-A02",
+        "R5-DIVIDEND-A03",
+        "R5-ATTRIBUTION-A01",
+        "R5-ATTRIBUTION-A02",
+        "R5-STATUS-A01",
+        "R5-STATUS-A02",
+        "R5-TALENT-A01",
+        "R5-TALENT-A02"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "round": 5,
+  "status": "failed_performance_partial_score_approval",
+  "started_at": "2026-09-20T19:04:11.063284+00:00",
+  "ended_at": "2026-09-20T20:10:35.592697+00:00",
+  "elapsed_seconds": 3984.529413,
+  "noncached_plus_output": 1629020,
+  "roles_noncached_plus_output": 1346183,
+  "cached_input_tokens": 56063104,
+  "baseline_metric": 1325995,
+  "target_metric": 928196.5,
+  "token_target_met": false,
+  "wall_clock_target_met": false,
+  "full_score_quality_target_met": false,
+  "score_state": "partially_approved",
+  "score_states": {
+    "company": "not_approved",
+    "management": "approved"
+  },
+  "approved_scores": {
+    "company": null,
+    "management": 65,
+    "combined": null
+  },
+  "candidate_only": {
+    "company": 83.5
+  },
+  "research_status": "execution_incomplete",
+  "closed_acceptance_ids_count": 16,
+  "unclosed_acceptance_ids_count": 3,
+  "open_acceptance_ids": [
+    "R5-HISTORY-A01",
+    "R5-HISTORY-A02",
+    "R5-HISTORY-A03"
+  ],
+  "repair_rounds": 2,
+  "exception_used": true,
+  "publish_allowed": false,
+  "scope": "仅评分；未开展正式估值或三份长报告，不外推完整三件套效果",
+  "session_count": 8,
+  "decision": "data/reviews/triplet-token-cycle-2026-09-20/round-5/adjudicator/decision-v3-terminal.json",
+  "decision_sha256": "575bc8b93995bf8c7a9fce899caef936dee32c2bacb5a8c52176938288d228e1",
+  "snapshot_count": 61
+}

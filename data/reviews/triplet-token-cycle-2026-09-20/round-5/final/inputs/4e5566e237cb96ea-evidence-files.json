@@ -1,0 +1,11 @@
+[
+  "data/reviews/triplet-token-cycle-2026-09-20/round-5/numeric/facts.json",
+  "data/reviews/triplet-token-cycle-2026-09-20/round-5/numeric/sources.json",
+  "data/reviews/triplet-token-cycle-2026-09-20/round-5/numeric/v2/facts.json",
+  "data/reviews/triplet-token-cycle-2026-09-20/round-5/external/facts.json",
+  "data/reviews/triplet-token-cycle-2026-09-20/round-5/external/v3/facts.json",
+  "data/reviews/triplet-token-cycle-2026-09-20/round-5/external/v4/facts.json",
+  "data/reviews/triplet-token-cycle-2026-09-20/round-5/external/v5/facts.json",
+  "data/reviews/triplet-token-cycle-2026-09-20/round-5/writer/repair-v2/facts.json",
+  "data/reviews/triplet-token-cycle-2026-09-20/round-5/repair-sol/facts.json"
+]

@@ -1,0 +1,82 @@
+{
+  "review_role": "triplet_review_facts",
+  "review_stage": "score_initial_review",
+  "company": "贵州茅台",
+  "ticker": "600519.SH",
+  "cutoff": "2026-09-20",
+  "reviewed_workpaper_sha256": "12c0e8c4b36fdde3936d289b62adcf00661ae0b3d053acf6b5a5e8fbc0f386de",
+  "input_hashes": {
+    "score_package": "data/reviews/triplet-token-cycle-2026-09-20/round-3/final/score-package.json",
+    "score_rules_sha256": "66a3034d0df68edfdc6a5d43f698130aac2a9902be66e7742c1bc0a05dc81e68",
+    "workpaper_v4_sha256": "12c0e8c4b36fdde3936d289b62adcf00661ae0b3d053acf6b5a5e8fbc0f386de",
+    "ar_2025_sha256": "671846da0415046e5ba83adde16a4600f4a758ce1cb895c232fac17a35023b4b",
+    "h1_2026_sha256": "1d82e9fa3bc862041bfffa2a2fc8dd7c3726deca4b1f8ae9a4e210528e44156f"
+  },
+  "findings": [
+    {
+      "severity": "P1",
+      "location": "scores.company.items[F1]",
+      "claim": "F1 将“周期性高管腐败（近10年≥2人被查）=-2”的明确档位记为 2 分，并纳入公司总分87.5。",
+      "evidence": "冻结评分规则 F1 表明确规定该情形为 -2；底稿自身依据为袁仁国和高卫东两名前董事长因受贿获无期。两项判决来源 MT-SPP-YUAN、MT-SPP-GAO 与该事实相符。2025年报亦披露尚存治理专项自查问题（原件 L975-L977），不改变上述档位含义。独立加总底稿当前项目为87.5，但这是把2而非-2相加的结果。",
+      "impact": "公司F维度及公司总分被高计4分；在其余项目不变时，公司候选总分应由87.5变为83.5。",
+      "recommendation": "按原规则将F1设为-2，重算F维度和公司总分，并复核公司治理结论及所有受影响的门槛判断。"
+    },
+    {
+      "severity": "P1",
+      "location": "scores.company.items[A2]",
+      "claim": "A2以“从未变更=3”给满分，并称控制权从未变更。",
+      "evidence": "有效事实 MT-F-CONTROL-2020-25 仅覆盖2020-2025；MT-F-IPO-HISTORY仅证明1999设立及2001上市。底稿的 evidence_gaps 也明确未取得2001-2019逐年控制链。现有原件不足以证明“从未变更”这一全历史断言。",
+      "impact": "满分档的决定性前提未被有效证据覆盖；真实状态是2001-2019控制链未知，不能把该断链当作仅文字或排版问题。",
+      "recommendation": "补取2001-2019控制权变更披露或官方股权沿革；若仍不能证明“从未变更”，按原规则重定A2，且不要因资料未取得任意扣分。"
+    },
+    {
+      "severity": "P1",
+      "location": "scores.company.items[A3]",
+      "claim": "A3以“融资用途清晰且无卖资产保利润=4”给满分，并断言未见后续配股、增发、可转债、卖资产保利润及跨界并购。",
+      "evidence": "2002年报与招股书可支持首发募集资金项目一致；但 MT-F-IPO-HISTORY 的“本轮未发现后续”只对应有限检索，sources-v4未登记覆盖融资工具、资产处置和并购的完整官方公告清单或可复核响应。评分规则要求融资清洁度的正面结论，不能以网络未命中替代完整历史核验。",
+      "impact": "A3满分所需的后续资本运作事实链未闭合，可能影响公司总分和管理层资本配置判断。",
+      "recommendation": "定向核对历年年报及上交所/巨潮的配股、增发、可转债、重大资产买卖和并购公告；保留检索范围与原件定位后再确认档位。"
+    },
+    {
+      "severity": "P1",
+      "location": "scores.company.items[D2]、scores.company.items[F2.5]、scores.management.items[资本配置能力]",
+      "claim": "D2和F2.5的高档判断使用了不完整的必查历史窗口：D2只验证2021-2023三年目标，F2.5及管理层资本配置判断未建立计划Capex—实际Capex—产出/回报桥。",
+      "evidence": "评分规则要求D2在本地MD覆盖更长历史时扩展到全部可用年份；raw-inputs包含2020-2025六份年报，但底稿仅列三年。F2.5规则要求近5年计划Capex、实际Capex、偏差、营收增速、并购和回购时机核验。2025年报可核在建项目的计划投资与累计投资（原件约L400-L430）及投资现金流明细（约L3245-L3276），但冻结底稿只列现金Capex序列，未完成该规则要求的桥。",
+      "impact": "不是因缺资料应自动降分；但目前不足以验证D2=4、F2.5=2及管理层资本配置能力=20是否与原规则和事实相称。",
+      "recommendation": "补全可得年度的D2目标—实际表；以原件建立Capex计划、执行、项目进度/产出及并购、回购时点核验，再对三个受影响评分项作联动重审。"
+    },
+    {
+      "severity": "P1",
+      "location": "scores.company.items[F3]",
+      "claim": "F3以“有小瑕疵或ESG中等风险=2”定档，且将生产运营ESG风险视为已覆盖。",
+      "evidence": "白酒制造属于F4规定须核环保及安全记录的制造业。有效sources只记录有界检索的查询词，未提供监管原件或实际检索响应；2025年报只列宏观、安全、舆情和环境风险（L693-L697），并不能证明外部处罚/停产/事故状态。年报关联交易披露及审计程序可支持关联交易存在和披露充分（L1518-L1612），但不能替代F4的外部合规核验。",
+      "impact": "F3当前分数可能仍可合理，但“ESG中等风险”没有可复核事实基础，无法判断是否存在应触发扣分的高风险事件。",
+      "recommendation": "按F4执行制造业环保和安全的有界检索，回看监管/公司原件并记录范围；将真实未知与已核无重大事件区分后，重审F3及其对管理层诚信、危机处理的联动。"
+    }
+  ],
+  "coverage": {
+    "all_32_items_reviewed": true,
+    "company_score_arithmetic": "已独立加总，当前底稿分项和=87.5，与声明值一致；但F1档位录入错误。",
+    "management_score_arithmetic": "已独立加总，分项和=67，与声明值一致。",
+    "decisive_primary_source_checks": [
+      "2025年度报告：审计意见、关键审计事项、关联交易审计应对、现金流、在建项目、治理专项自查及风险章节。",
+      "2026年半年度报告：收入、归母净利、经营现金流的财务公司影响及蒋焰解任/余思明聘任。",
+      "2020-2024年报输入的归母杜邦重算：净利率、平均资产周转和权益乘数与冻结结果相符。",
+      "两名前董事长受贿判决所对应的F1规则档位。"
+    ],
+    "index_external_risk_check": "已从2025年报风险及治理章节独立检查：公司列示安全、环境保护风险且尚存控股股东股权激励承诺未履行及高管在控股股东兼职两项治理自查问题；这些风险未构成F4外部监管核验的替代证据。"
+  },
+  "uncovered": [
+    "2001-2019控制权连续链，影响A2“从未变更”满分前提。",
+    "后续融资、重大资产处置及并购的完整官方公告覆盖，影响A3。",
+    "2020-2025可得年度的完整目标—实际执行表，影响D2。",
+    "近5年Capex计划—实际—回报、并购及回购时点事实链，影响F2.5和管理层资本配置能力。",
+    "制造业环保与安全外部合规/处罚原件，影响F3及相关治理判断。"
+  ],
+  "score_recommendation": {
+    "company_current": 87.5,
+    "company_after_definite_f1_rule_correction_only": 83.5,
+    "management_current": 67,
+    "approval": "not_approved_pending_p1_closure"
+  }
+}

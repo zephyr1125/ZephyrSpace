@@ -1,0 +1,39 @@
+{
+  "schema_version":1,"score_display":"integer_half_up","score_rule_validation":"explicit_tiers_v1",
+  "scores":{"company":{"items":[
+{"id":"A1","score":2,"rule_ref":"深度规则A1","reason":"国资主发起与产区工艺传承均有原件，但起源包含政策/资源禀赋，未把资源直接等同创始质量。","evidence_refs":["SUP-F01"]},
+{"id":"A2","score":2,"rule_ref":"深度规则A2","reason":"当前控股关系明确，但未取得上市以来逐年控制链完整连续证据，按合理稳定而非从未变更处理。","evidence_refs":["SUP-F03","GZMT-FACT-CONTROL-2026Q1"]},
+{"id":"A3","score":2,"rule_ref":"深度规则A3","reason":"IPO股份事实可核且未见商誉异常材料；融资用途及全期资本运作未完整回看，保留一档。","evidence_refs":["SUP-F02","GZMT-FACT-DIVIDEND-2025"]},
+{"id":"B0","score":2,"rule_ref":"深度规则B0","reason":"早期至当前的采购、生产、渠道和核心资源可对照，长周期生产模式明确。","evidence_refs":["SUP-F01","GZMT-FACT-MODEL-2025"]},
+{"id":"B1","score":3,"rule_ref":"深度规则B1","reason":"产品与直销/批发结构透明但收入高度集中于酒类和茅台酒，属于集中但逻辑清晰。","evidence_refs":["GZMT-FACT-PRODUCT-2025"]},
+{"id":"B2","score":3,"rule_ref":"深度规则B2","reason":"采购—生产—销售、长周期基酒和直销/经销复购体系支持高质量盈利模式。","evidence_refs":["GZMT-FACT-MODEL-2025","SUP-F04"]},
+{"id":"B3","score":6,"rule_ref":"深度规则B3","reason":"2025年茅台酒毛利率93.53%，且2026年存在价格体系主动调整的公开事实，支持强品牌定价能力；不忽略行业调整。","evidence_refs":["GZMT-FACT-PRODUCT-2025","SUP-F05"]},
+{"id":"B4","score":3,"rule_ref":"深度规则B4","reason":"成熟行业中拥有产品梯队与产能储备，但行业深度调整、消费疲软和系列酒承压限制可持续性判断。","evidence_refs":["SUP-F04","SUP-F05"]},
+{"id":"C1","score":6,"rule_ref":"深度规则C1","reason":"公司主导产品和高端酱香代表性有官方定位，收入规模与品牌资料支持绝对龙头判断。","evidence_refs":["SUP-F01","GZMT-FACT-PRODUCT-2025"]},
+{"id":"C2","score":4,"rule_ref":"深度规则C2","reason":"原料组织、直销与经销多渠道及极低应收支持议价能力，但未取得完整经销商集中度和上游替代数据。","evidence_refs":["GZMT-FACT-MODEL-2025","SUP-F04"]},
+{"id":"C3+C4","score":7,"rule_ref":"深度规则C3+C4","reason":"产区、工艺、基酒陈酿、品牌和渠道共同构成强壁垒；行业调整及竞争格局缺独立份额资料，按四星而非五星。","evidence_refs":["SUP-F01","GZMT-FACT-MODEL-2025","SUP-F04"]},
+{"id":"D1","score":4,"rule_ref":"深度规则D1","reason":"2023—2026公开材料持续围绕质量、主业、渠道与消费者转型，未见无解释的战略漂移。","evidence_refs":["GZMTLOCAL-FACT-PLAN-2021","GZMTLOCAL-FACT-STRATEGY-2025-2026","SUP-F05"]},
+{"id":"D2","score":5,"rule_ref":"深度规则D2","reason":"2023计划15%左右而实际收入增19.01%，2024计划15%左右而实际营业总收入增15.66%，2025计划9%左右而实际降1.20%，三年两项达标；存在管理层业绩说明会原话。","evidence_refs":["GZMTWR-FACT-PLAN-ACTUAL-2023","GZMTLOCAL-FACT-PLAN-ACTUAL-2023-2025","SUP-F05"],"original_statement_found":true,"strategy_drift":false},
+{"id":"D3","score":2,"rule_ref":"深度规则D3","reason":"行业处于周期与结构调整、需求疲软，尚非强烈逆风但不属顺风。","evidence_refs":["SUP-F04","SUP-F05"]},
+{"id":"D5","score":2,"rule_ref":"深度规则D5","reason":"产能与质量管理、人才制度有披露，但缺连续人均产出及核心人才留存全量数据。","evidence_refs":["GZMTLOCAL-FACT-PERSONNEL-2021-2026H1","SUP-F04"]},
+{"id":"E1","score":5,"rule_ref":"深度规则E1","reason":"2020—2025加权ROE均显著高于15%，结合高毛利和低有息负债事实，不是杠杆主导证据。","evidence_refs":["GZMTV3-FACT-FINANCIAL-2020-2025","GZMTV2-FACT-2025-BALANCE"]},
+{"id":"E2","score":3,"rule_ref":"深度规则E2","reason":"多数年度合并经营现金流强，但财务公司存贷款/同业资金显著影响合并流量，尚未分离出白酒主营现金回款，不能按满档。","evidence_refs":["GZMTV3-FACT-FINANCIAL-2020-2025","GZMTV3-FACT-FINANCECOMPANY-CASH","GZMT-FACT-FINANCECOMPANY-2025"]},
+{"id":"E3","score":3,"rule_ref":"深度规则E3","reason":"2020—2025收入和利润整体扩张，2025扣非归母与归母接近；2025回落和系列酒下滑已纳入判断。","evidence_refs":["GZMTV3-FACT-FINANCIAL-2020-2025","GZMT-FACT-FIN-2025","GZMT-FACT-PRODUCT-2025"]},
+{"id":"E4","score":2,"rule_ref":"深度规则E4","reason":"租赁负债低且未见高杠杆信号；2024—2025购建长期资产现金支出下降，未触发已知同比异常拆分阻断。","evidence_refs":["GZMTV2-FACT-2025-BALANCE","GZMTV3-FACT-CAPEX-2020-2025"]},
+{"id":"E5","score":2,"rule_ref":"深度规则E5","reason":"2020—2025均为标准无保留意见，且现有材料未显示商誉或应收质量重大疑点。","evidence_refs":["GZMT-FACT-AUDIT-2020-2025","GZMTV2-FACT-2025-BALANCE"]},
+{"id":"E5.5","score":2,"rule_ref":"深度规则E5.5","reason":"2024—2025无重要政策/估计变更，2023准则解释追溯调整有披露；但收入确认及关联交易连续为KAM，故非满档。","evidence_refs":["GZMTLOCAL-FACT-KAM-2023-2025","GZMTWR-FACT-ACCOUNTING-2024-2025"]},
+{"id":"F1","score":3,"rule_ref":"深度规则F1","reason":"近年关键岗位多次工作调动与更替，且历史存在原高管治理事件；未见现任被查原件，不能按系统性现任风险处理。","evidence_refs":["GZMTLOCAL-FACT-PERSONNEL-2021-2026H1","SUP-F07","SUP-F08"]},
+{"id":"F2","score":5,"rule_ref":"深度规则F2","reason":"2025高额分红预案及已完成回购注销支持股东回报，未见本轮证据中不良减持或再融资摊薄事实。","evidence_refs":["GZMT-FACT-DIVIDEND-2025","GZMT-FACT-BUYBACK-2025"]},
+{"id":"F2.5","score":1.5,"rule_ref":"深度规则F2.5","reason":"产能项目和产业基金有可定位的投入与部分交付，但缺完整项目回报和超支对照，不主张正面先例加分。","evidence_refs":["GZMTLOCAL-FACT-CAPEX-PROJECTS","GZMTV3-FACT-CAPEX-2020-2025"],"positive_precedent":false},
+{"id":"F3","score":2,"rule_ref":"深度规则F3","reason":"关联交易有审计委员会及程序披露，但连续关联交易KAM和历史治理风险要求保留瑕疵；重大食品环保安全处罚未获合格原件。","evidence_refs":["GZMTLOCAL-FACT-AUDIT-RELATED-2025","GZMTLOCAL-FACT-KAM-2023-2025","SUP-F10"]}
+],"total":81.5},"management":{"items":[
+{"id":"诚信与透明度","score":12,"rule_ref":"管理层规则诚信与透明度","reason":"审计与关联事项有披露及IR沟通，但历史原董事长/原高管治理事件和连续关联交易KAM压低信任水平。","evidence_refs":["GZMT-FACT-AUDIT-2020-2025","SUP-F07","SUP-F08","GZMTLOCAL-FACT-KAM-2023-2025"]},
+{"id":"资本配置能力","score":20,"rule_ref":"管理层规则资本配置能力","reason":"分红回购和产能投资具有可核事实，项目管理有部分交付；产业基金及项目全周期回报尚不完整。","evidence_refs":["GZMT-FACT-DIVIDEND-2025","GZMT-FACT-BUYBACK-2025","GZMTLOCAL-FACT-CAPEX-PROJECTS"]},
+{"id":"战略稳定性","score":12,"rule_ref":"管理层规则战略稳定性","reason":"主业、质量与渠道转型持续，2026向C改革为应对行业变化的可解释调整；三年目标有两年达到收入目标。","evidence_refs":["GZMTLOCAL-FACT-PLAN-ACTUAL-2023-2025","SUP-F05","SUP-F04"]},
+{"id":"对股东友好度","score":14,"rule_ref":"管理层规则对股东友好度","reason":"高额分红预案和回购注销是直接回报证据，未取得全期融资/减持完整核验故留一分。","evidence_refs":["GZMT-FACT-DIVIDEND-2025","GZMT-FACT-BUYBACK-2025"]},
+{"id":"危机处理能力","score":6,"rule_ref":"管理层规则危机处理能力","reason":"管理层对行业调整、渠道和价格改革有公开回应与措施，但缺真实危机的完整应对—结果时间线。","evidence_refs":["SUP-F05","SUP-F10"]},
+{"id":"组织与人才能力","score":7,"rule_ref":"管理层规则组织与人才能力","reason":"岗位交接均有披露且无关键长期空缺证据，但2021—2026多次核心岗位调整，继任与人才留存的完整资料不足。","evidence_refs":["GZMTLOCAL-FACT-PERSONNEL-2021-2026H1"]},
+{"id":"表达清晰度与认知质量","score":4,"rule_ref":"管理层规则表达清晰度与认知质量","reason":"2025—2026业绩说明会对行业、价格、渠道和短期取舍作出具体回应，但改革结果仍需后验。","evidence_refs":["SUP-F05","SUP-F04"]}
+],"total":75}},
+  "valuation":{"status":"deferred","reason":"本轮范围仅至评分；正式估值、市场快照与长报告未纳入。","currency":"CNY","models":[],"target_price":null,"certainty":null,"buy_price":null},"bridges":[],"bridges_not_applicable":"正式估值递延，未建立权益价值桥。"
+}

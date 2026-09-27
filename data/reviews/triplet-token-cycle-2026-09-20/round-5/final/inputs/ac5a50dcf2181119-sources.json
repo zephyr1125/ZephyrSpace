@@ -1,0 +1,7 @@
+{"schema_version":1,"evidence_version":"external-v5-2026-09-21","sources":[
+{"source_id":"MT5V5-SRC-IPO","title":"贵州茅台酒股份有限公司招股说明书","publisher":"上海证券交易所","url":"https://www.sse.com.cn/disclosure/listedinfo/announcement/c/600519_20010726_2.pdf","published_date":"2001-07-26","accessed_date":"2026-09-21"},
+{"source_id":"MT5V5-SRC-2002AR","title":"贵州茅台2002年年度报告","publisher":"上海证券交易所","url":"https://static.sse.com.cn/sseportal/cs/zhs/scfw/gg/ssgs/2003-03-26/600519_2002_n.pdf","published_date":"2003-03-26","accessed_date":"2026-09-21"},
+{"source_id":"MT5V5-SRC-CORP","title":"贵州茅台公司简介","publisher":"贵州茅台","url":"https://www.moutai.com.cn/mtgf/qygk/gsjj/index.html","accessed_date":"2026-09-21"},
+{"source_id":"MT5V5-SRC-2026H1","title":"贵州茅台2026年半年度报告本地阅读视图","local_view":"data/reviews/triplet-token-cycle-2026-09-20/round-5/source-views/贵州茅台2026半年度报告.md","locator":"L649、L663、L773、L2662"},
+{"source_id":"MT5V5-SRC-2025AR","title":"贵州茅台2025年年度报告本地阅读视图","local_view":"data/reviews/triplet-token-cycle-2026-09-20/round-5/source-views/贵州茅台2025年度报告.md","locator":"L1348、L1354、L1496、L1720、L3713"}
+]}

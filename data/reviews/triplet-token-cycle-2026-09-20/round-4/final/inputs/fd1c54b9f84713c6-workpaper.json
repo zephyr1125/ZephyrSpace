@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "score_display": "integer_half_up",
+  "score_rule_validation": "explicit_tiers_v2",
+  "company": "贵州茅台",
+  "ticker": "600519.SH",
+  "cutoff": "2026-09-20",
+  "score_state": "pending_review",
+  "research_state": "pending",
+  "publish_allowed": false,
+  "scores": {
+    "company": {"items": [
+      {"id":"A1","score":2,"rule_ref":"score-rules.md:A1","reason":"国有控股白酒核心资产具历史品牌与产区禀赋，但原规则的起源分类不是技术或先发创业型，取政策红利档。","evidence_refs":["GZMT-R4-CTRL-001"]},
+      {"id":"A2","score":3,"rule_ref":"score-rules.md:A2","reason":"1952至2026可得材料的控制链均指向国有体系，1999设立后2020和2026两端均为贵州省国资委—茅台集团控制；2020后持股口径差异不自行推定控制转移。","evidence_refs":["GZMT-R4V2-CTRL-001","GZMT-R4-CTRL-002"]},
+      {"id":"A3","score":4,"rule_ref":"score-rules.md:A3","reason":"首发募投总额、承诺/变更一致性及2002年一项收购与技改执行已核；定期报告未见重大资产重组/出售，非募集资金技改项目投入有披露。后续全史再融资工具尚未取得汇总，不能扩展为全史无融资；现有证据未见卖资产保利润或商誉风险。","evidence_refs":["GZMT-R4V2-CAP-001","GZMT-R4-CAP-002","MOUTAI-FIN-003"]},
+      {"id":"B0","score":2,"rule_ref":"score-rules.md:B0","reason":"以酱香白酒生产、长期贮存、品牌渠道销售为核心的重资产垄断壁垒型模式，与当前采购—生产—销售模式连续；早期完整九要素未在本轮原件完整重建。","evidence_refs":["MOUTAI-AR25"]},
+      {"id":"B1","score":3,"rule_ref":"score-rules.md:B1","reason":"收入高度集中于茅台酒及系列酒，但产品层级和直销/批发代理双渠道清晰，非瘦狗，按“过度集中但逻辑清晰”档。","evidence_refs":["MOUTAI-AR25"]},
+      {"id":"B2","score":3,"rule_ref":"score-rules.md:B2","reason":"白酒消费品具有复购、预收和品牌渠道特征；2025主营收入占营业收入99.96%，利润由主营而非一次性项目驱动。","evidence_refs":["MOUTAI-AR25","MOUTAI-FIN-002"]},
+      {"id":"B3","score":6,"rule_ref":"score-rules.md:B3","reason":"2020-2025收入及归母净利总体持续增长、2025仍有高利润率经营；品牌、稀缺产区和渠道形成强定价权。2025收入下滑1.21%是行业调整期反证，未推翻强档。","evidence_refs":["MOUTAI-FIN-001","MOUTAI-FIN-005"]},
+      {"id":"B4","score":3,"rule_ref":"score-rules.md:B4","reason":"成熟行业、品牌稳定且增长主要内生，2025和2026H1收入与利润出现放缓，不能按行业成长期5分。","evidence_refs":["MOUTAI-FIN-001","MOUTAI-FIN-005"]},
+      {"id":"C1","score":6,"rule_ref":"score-rules.md:C1","reason":"年报称茅台酒为千亿级单品并披露持续扩产；作为高端酱香白酒绝对龙头的判断有业务原件支撑。","evidence_refs":["MOUTAI-AR23","MOUTAI-CAPEX-002"]},
+      {"id":"C2","score":5,"rule_ref":"score-rules.md:C2","reason":"公司组织原料合作采购、自产贮存勾兑，并通过直销和批发代理销售，表现为产业链主导者；未以客户集中度缺失推断低分。","evidence_refs":["MOUTAI-AR25"]},
+      {"id":"C3+C4","score":9,"rule_ref":"score-rules.md:C3+C4","reason":"产区、工艺、长期贮存、品牌认知和渠道共同形成5星综合壁垒；行业需求调整及单一品类集中为需跟踪反证。","evidence_refs":["MOUTAI-AR25","MOUTAI-CAPEX-002"]},
+      {"id":"D1","score":4,"rule_ref":"score-rules.md:D1","reason":"2023-2025年报均围绕品质、核心产区产能、渠道和品牌升级，计划项目连续，未见战略漂移。","evidence_refs":["MOUTAI-AR23","MOUTAI-AR24","MOUTAI-AR25"]},
+      {"id":"D2","score":4,"rule_ref":"score-rules.md:D2","reason":"2023及2024年分别宣告高质量完成年度战略目标，收入增长18.04%和15.66%，与前期15%左右收入目标相符；未取得电话会/业绩说明会原话，按原规则上限4分。","evidence_refs":["MOUTAI-AR22","MOUTAI-AR23","MOUTAI-AR24"],"original_statement_found":false,"strategy_drift":false},
+      {"id":"D3","score":1,"rule_ref":"score-rules.md:D3","reason":"白酒行业处于周期性和结构性调整，2026H1收入仅增1.47%、归母净利降1.95%，外部环境为逆风。","evidence_refs":["MOUTAI-FIN-005"]},
+      {"id":"D5","score":3,"rule_ref":"score-rules.md:D5","reason":"2023-2024连续两位数收入与利润增长，产能按期投放；2025-2026放缓是结果压力而非已证实组织执行失灵。","evidence_refs":["MOUTAI-FIN-001","MOUTAI-CAPEX-002"]},
+      {"id":"E1","score":5,"rule_ref":"score-rules.md:E1","reason":"2020-2025加权ROE均约30%以上，2025为32.53%；低负债率和无有息借款披露支持其由高净利率/经营效率而非杠杆驱动。","evidence_refs":["MOUTAI-FIN-001","MOUTAI-FIN-003"]},
+      {"id":"E2","score":5,"rule_ref":"score-rules.md:E2","reason":"2023-2025 OCF/归母净利约89%、107%、75%，三年均值约90%；各年现金Capex后仍为正自由现金流。2022现金流波动已记录，不将其忽略。","evidence_refs":["MOUTAI-FIN-001","MOUTAI-FIN-002","MOUTAI-CAPEX-001"]},
+      {"id":"E3","score":3,"rule_ref":"score-rules.md:E3","reason":"2020-2025营收和归母净利CAGR各约12%，扣非与归母利润接近，未见依赖政府补贴或资产出售；2025转负及2026H1利润下滑为增长放缓反证。","evidence_refs":["MOUTAI-FIN-001","MOUTAI-FIN-002","MOUTAI-FIN-005"]},
+      {"id":"E4","score":1.5,"rule_ref":"score-rules.md:E4","reason":"2025合并资产负债率16.42%、披露短长借款为零，偿债宽裕。现金Capex在2024同比+78.59%且未按运营/非运营拆分，原规则扣0.5后为1.5。","evidence_refs":["MOUTAI-FIN-003","MOUTAI-CAPEX-001"],"capex_check":{"applicable":true,"current":46.7871205356,"previous":26.1975588879,"unit":"亿元人民币","current_period":"2024年度","previous_period":"2023年度","evidence_refs":["MOUTAI-CAPEX-001"],"split_complete":false,"score_before_capex_adjustment":2}},
+      {"id":"E5","score":2,"rule_ref":"score-rules.md:E5","reason":"2025标准无保留审计、无商誉、应收账款极低；资产质量未见重大疑点。","evidence_refs":["MOUTAI-FIN-003","MOUTAI-FIN-004"]},
+      {"id":"E5.5","score":3,"rule_ref":"score-rules.md:E5.5","reason":"KAM为收入确认及关联交易，审计师已列对应程序；未见重大政策估计变更或持续经营KAM，取稳健档。关联交易金额较大仍在F3反映。","evidence_refs":["MOUTAI-FIN-004","MOUTAI-AR25"]},
+      {"id":"F1","score":-2,"rule_ref":"score-rules.md:F1","reason":"近十年内已核袁仁国及高卫东两名前核心负责人受贿一审无期，另有2026高管被留置披露，满足原规则“近10年≥2人被查”的周期性高管腐败负2分档。高卫东全部受贿行为不机械归因于上市公司任期。","evidence_refs":["GZMT-R4V2-GOV-001","GZMT-R4V2-GOV-002","GZMT-R4-GOV-002"]},
+      {"id":"F2","score":5,"rule_ref":"score-rules.md:F2","reason":"2025年报披露650.33亿元累计现金红利（含预案）、首次60亿元回购完成并启动第二轮；未以含利息的现金流行替代分红数据。近5年融资工具全史仍由证据边界保留。","evidence_refs":["MOUTAI-CAPEX-004","GZMT-R4-CAP-001"]},
+      {"id":"F2.5","score":2,"rule_ref":"score-rules.md:F2.5","reason":"多年产能项目有投产和后续释放证据，现金Capex长期低于经营现金流，且以分红和回购回报股东；计划实际固定资产投资同口径数据仅2020可得，未额外申领0.5正面先例。","evidence_refs":["MOUTAI-CAPEX-001","MOUTAI-CAPEX-002","MOUTAI-CAPEX-004"],"positive_precedent":false},
+      {"id":"F3","score":2,"rule_ref":"score-rules.md:F3","reason":"2025关联交易被列KAM且关联方交易类别多、金额较大，降低至有小瑕疵档；已披露部分交易采用与非关联经销商相同价格。外部监管无命中仅为未知，未作为无风险证据。","evidence_refs":["MOUTAI-FIN-004","MOUTAI-AR25","GZMT-R4-REG-002"]}
+    ],"total":84.5},
+    "management": {"items": [
+      {"id":"诚信与透明度","score":12,"rule_ref":"score-rules.md:管理层评分","reason":"两名前核心负责人已核受贿一审无期，2026另有高管留置关联披露；定期报告披露了相关事项，但该治理事实显著限制诚信评价。","evidence_refs":["GZMT-R4V2-GOV-001","GZMT-R4V2-GOV-002","GZMT-R4-GOV-002"]},
+      {"id":"资本配置能力","score":21,"rule_ref":"score-rules.md:管理层评分","reason":"产能项目有阶段投产、股东回报规模大；计划实际同口径和项目经济回报未完整披露，未给满分。","evidence_refs":["MOUTAI-CAPEX-002","MOUTAI-CAPEX-004"]},
+      {"id":"战略稳定性","score":13,"rule_ref":"score-rules.md:管理层评分","reason":"品质、核心产区、渠道和品牌升级多年连续；行业调整下效果仍需观察。","evidence_refs":["MOUTAI-AR23","MOUTAI-AR24","MOUTAI-AR25"]},
+      {"id":"对股东友好度","score":14,"rule_ref":"score-rules.md:管理层评分","reason":"现金分红和回购事实明确；融资全史及回购注销细节未完整核验，保留1分。","evidence_refs":["MOUTAI-CAPEX-004","GZMT-R4-CAP-001"]},
+      {"id":"危机处理能力","score":7,"rule_ref":"score-rules.md:管理层评分","reason":"行业调整中维持收入韧性，但留置事件处置细节及责任归因尚未知，不能给高档。","evidence_refs":["MOUTAI-FIN-005","GZMT-R4-GOV-002"]},
+      {"id":"组织与人才能力","score":7,"rule_ref":"score-rules.md:管理层评分","reason":"2025-2026核心岗位有交接和调整，但高管变动完整十年窗口与留置后续状态未齐，不将未知直接降为低分。","evidence_refs":["GZMT-R4-GOV-001","GZMT-R4-GOV-002","GZMT-R4-GOV-003"]},
+      {"id":"表达清晰度与认知质量","score":4,"rule_ref":"score-rules.md:管理层评分","reason":"年度目标和项目计划明确，后续经营结果可对照；未取得电话会/业绩说明会原话，保留1分。","evidence_refs":["MOUTAI-AR22","MOUTAI-AR23","MOUTAI-AR24"]}
+    ],"total":78}
+  },
+  "valuation":{"status":"deferred","currency":"CNY","reason":"本轮授权仅至公司及管理层评分；正式估值和长报告不在范围。","models":[],"target_price":null,"certainty":null,"buy_price":null},
+  "bridges":[],"bridges_not_applicable":"本轮未开展正式估值，未建立权益价值桥。",
+  "evidence_gaps":[
+    {"affected_items":["A3","F2","管理层:对股东友好度"],"kind":"public_not_checked","impact":"首发及2002年募投执行、2023-2026定期报告募集资金状态已经核验，足以支持A3当前“无已核资本运作异常”的选档；但尚无上市以来全部后续增发、配股、可转债及回购注销的官方汇总。若发现重大摊薄融资、用途偏离或不当减持/回购配合事件，可能下调F2和管理层对股东友好度，并可能重评A3。","search_scope":"2003-2026历年股本变动、融资工具、权益分派与回购方案/实施公告的官方汇总。","evidence_refs":["GZMT-R4V2-CAP-001","GZMT-R4-CAP-001","MOUTAI-CAPEX-004"]},
+    {"affected_items":["F2.5","管理层:资本配置能力"],"kind":"public_not_checked","impact":"2020固定资产实际投资、项目投产和后续产能释放已核，足以支持当前审慎配置的定性判断；2021-2025计划固定资产投资与实际固定资产投资不是同一已披露口径，项目级经济回报/ROIC未完整披露。若同口径实际显示重大超支或项目回报显著低于资本成本，F2.5和管理层资本配置能力需下调；若取得可比正面先例和回报，可复核0.5分加分。","search_scope":"2021-2025项目年度投资完成额、竣工决算、项目产能利用率与经济回报披露。","evidence_refs":["MOUTAI-CAPEX-001","MOUTAI-CAPEX-002"]},
+    {"affected_items":["管理层:诚信与透明度","管理层:危机处理能力","管理层:组织与人才能力"],"kind":"public_not_checked","impact":"临2026-004已取得，且两名历史核心负责人司法判决已取得，足以确定F1近十年周期性高管腐败负2分档；留置最终处置、责任范围及2016-2019完整任免链仍未取得。该缺口不改变F1已满足的负档，但可能改变管理层诚信、危机处理和组织能力的具体分数。","search_scope":"临2026-005及后续留置/处分公告、2016-2019董事长/总经理/CFO/董秘任免原件。","evidence_refs":["GZMT-R4V2-GOV-001","GZMT-R4V2-GOV-002","GZMT-R4-GOV-002"]}
+  ]
+}
