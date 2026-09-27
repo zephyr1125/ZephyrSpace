@@ -103,8 +103,9 @@ evals/reports/**/.live/
 /data/reviews/**/writer/audit-*.py
 /data/reviews/**/sol/
 /data/reviews/**/astra/
-/data/reviews/**/anonymous/
-/data/reviews/**/anonymous-recheck/
+/data/reviews/**/anonymous*/
+/data/reviews/**/recheck-normalized*/
+/data/reviews/**/review-sources.json
 /data/reviews/**/review-facts/
 /data/reviews/**/review-reasoning/
 /data/reviews/**/frozen*/
@@ -161,3 +162,28 @@ evals/reports/**/.live/
 # 名称含final的构建副本也不等于发布依据；正式验收包只放final/release-*/。
 /data/reviews/**/build-final/
 /data/reviews/**/schema-replay/
+# 工具前向测试的可再生输入/输出；验收摘要写入docs，不作为研究证据归档。
+/data/reviews/*forward-test*/
+/data/reviews/**/score-rules.md
+/data/reviews/**/valuation-rules.md
+# 降耗实测工作副本；每轮final保留失败/成功评价、冻结输入和两路审核快照。
+/data/reviews/triplet-token-cycle-*/round-*/writer/
+/data/reviews/triplet-token-cycle-*/round-*/evidence/
+/data/reviews/triplet-token-cycle-*/round-*/numeric/
+/data/reviews/triplet-token-cycle-*/round-*/external/
+/data/reviews/triplet-token-cycle-*/round-*/repair-sol/
+/data/reviews/triplet-token-cycle-*/round-*/rebuilt-sol/
+/data/reviews/**/source-views/
+
+# 终局验收快照是复核依据，嵌套原路径也不能被工作副本规则误排除。
+!/data/reviews/**/final/inputs/**
+!/data/reviews/**/final-terminal/inputs/**
+
+# 外部评审上传包为源码与验收记录副本，复盘正文仍保存在docs。
+/exports/three-report-review-*/
+
+# 研究目录中的打包副本及阶段计量检查点；终局审计仍保留。
+/data/reviews/*.zip
+/data/reviews/**/runtime-checkpoint-*.json
+/data/reviews/**/runtime-first-over-target.json
+/data/reviews/**/runtime-score-freeze.json
