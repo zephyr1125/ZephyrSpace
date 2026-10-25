@@ -6,10 +6,52 @@ aliases: [BlackBerry, 黑莓, BB]
 可投资性: 高 (NYSE + TSX 双重上市)
 阶段: 转型完成→聚焦增长期
 关注级别: 高
-最后更新日期: 2026-06-25
+最后更新日期: 2026-10-08
+watchlistLevel: "NONE"
+cScore: 73
+mScore: 75
+target_price: null
+valuation_certainty: null
 ---
 
 # BlackBerry
+
+## 最新三件套结论（2026-10-08）
+
+本次研究已获唯一独立审核者验收，批准参数与边界见稳定验收记录。
+
+BlackBerry 提供 QNX 安全关键嵌入式软件与 Secure Communications 安全通信，另有专利授权收入。
+经济本质：高毛利软件/IP 与认证集成成本形成局部护城河，客户投产时滞、SC 留存和研发维护决定现金兑现。
+截至 2026-08-31 Q2 FY2027 收入 163.3、GAAP 净利33.9；H1收入316.2、OCF33.9，金额USD百万。
+QNX 本季收入80.3，SC60.9，Licensing22.1；SC DBNRR91%是现有客户收缩反证。
+FY2027收入指引616-636、OCF约115为管理层预测，不是实际结果。
+作者经营情景收入585/626/655亦为假设，不是股票价格。
+行情：NYSE BB，2026-10-07 完整常规交易日收盘8.77 USD；不是10月8日实时价。
+参数桥：历史72/79、目标7.50、certainty0.35；旧正文另有9.44加权估值，存在冲突。
+本期raw公司72.5/管理层75，合计147.5，decision reject，watchlistLevel NONE。
+两项均≥70但合计<150，不属于单项低分压缩出口；完成研究后停止正式定价。
+当前target_price=null、valuation_certainty=null、buy_price=null、price_zones=null。
+旧7.50/0.35及旧正文9.44仅作历史记录，均不继承；四价格分区撤回，不给仓位建议。
+next_earnings_date=null、next_earnings_type=null；12月17日规划信息未达到正式确认门槛。
+风险：SC收缩、授权大单不可线性年化、汽车量产滞后、股权薪酬和可转债稀释、商誉占权益60.38%。
+法律反证：加拿大诉讼持续；Sandhu案9/14按双方共同撤诉WITH PREJUDICE结案，非实体责任裁决。
+真实未知：加拿大诉讼额外损失、Sandhu和解条款/金额、私人投资可实现价值、可转债未来结算、精确TTM期初总资产。
+重评条件：留存与经常性现金改善、版税积压兑现、净稀释下降，或新的重大法律/治理事实。
+最低入档要求证据支持总分≥150且两项≥70，禁止凑分。
+主题：[[02-主题/汽车零部件]]。
+关联公司：[[01-公司/高通]]（汽车芯片生态）、[[01-公司/NVIDIA(NVDA)]]（汽车计算平台）、[[01-公司/特斯拉]]（车载软件与整车自研对照）。
+[[深度分析/BlackBerry 深度分析 73 2026-10-08]]
+[[管理层档案/BlackBerry 管理层档案 75 2026-10-08]]
+[[估值分析/BlackBerry 估值分析 2026-10-08]]
+[[data/reviews/blackberry-simple-2026-10-08/review-initial|独审初审]]
+[[data/reviews/blackberry-simple-2026-10-08/review-acceptance|最终验收]]
+[[data/reviews/blackberry-simple-2026-10-08/correction-response|集中修正回复]]
+[[data/reviews/blackberry-simple-2026-10-08/evidence-index|来源索引]]
+
+## 历史页面原文（2026-06-25）
+
+下文保留当时信息集，最新结论以以上验收记录为准；旧价格与仓位描述不代表本次批准。
+
 
 公司代码：`BB` (NYSE) / `BB` (TSX)
 

@@ -187,3 +187,84 @@ evals/reports/**/.live/
 /data/reviews/**/runtime-checkpoint-*.json
 /data/reviews/**/runtime-first-over-target.json
 /data/reviews/**/runtime-score-freeze.json
+
+# 离线审核对照的原件文本视图可由已归档原件重建；只保留终局审核结果。
+/data/reviews/joint-review-ab-*/inputs/original-*.txt
+/data/reviews/joint-review-ab-*/outputs/
+/data/reviews/**/budget-state.json
+/data/reviews/**/budget-state.json.lock
+/data/reviews/**/budget-state.json.tmp
+
+# 已归档最小失败输入的茅台接口试验工作稿，规范化快照和final原始输入继续保留。
+/data/reviews/maotai-triplet-validation-2026-09-27/author/
+# 闭卷估值基准是唯一复现输入，不是模型请求缓存。
+!/data/reviews/valuation-dependency-validation-*/input.json
+
+# 2026-10-25 公开同步边界；优先于上方历史研究归档规则。
+# 原件、转换稿、过程证据、私人资料仅在本机保留，不因忽略而删除。
+/财报/
+/Clippings/
+/bili/
+/99-个人观察/
+/02-主题/周度监控/
+**/*portfolio*
+**/*持仓周报*
+**/*调仓方案*
+# data 使用明确的公开配置白名单，避免将证据、账户衍生数据或缓存误公开。
+/data/*
+!/data/WATCHLIST_RULES.md
+!/data/WATCHLIST_SCHEMA.md
+!/data/watchlist_meta.json
+!/data/watchlist_core.json
+!/data/watchlist_growth.json
+!/data/watchlist_strategic.json
+!/data/watchlist_index.json
+!/data/watchlist_out_of_scope.json
+!/data/classification/
+/data/classification/*
+!/data/classification/news_rules.json
+!/data/sources/
+/data/sources/*
+!/data/sources/company_sources.json
+!/data/sources/industry_sources.json
+# 工具状态及可再生输出；保留源码、测试、角色配置与规则。
+/.obsidian/
+/.claude/settings*.json
+/.codex/auth.json
+/.codex/config.toml
+/.codex/sessions/
+/.codex/history.jsonl
+/evals/reports/
+/popmart-ip-monitor/data/
+/temp_*
+/yumc_10k_*.htm
+# 原始文档与打包副本不进入公开同步；网站 public/*.html 不受影响。
+*.pdf
+*.zip
+*.7z
+*.rar
+*.pem
+*.key
+*.p12
+*.pfx
+*.sqlite
+*.sqlite3
+*.db
+**/credentials.json
+**/credentials-*.json
+**/service-account*.json
+**/id_rsa
+**/id_ed25519
+
+# 审计确认含个人资产/持仓信息或私人数据源定位的历史文件，仅停止跟踪。
+/02-主题/周度复盘/
+/估值分析/三花智控 估值分析 2026-07-19.md
+/估值分析/三花智控 估值分析 2026-08-26.md
+/data/watchlist_index.json
+/scripts/weekly_watchlist_scan.py
+/skills/watchlist-rebalance/
+/skills/weekly-satellite-review/
+/skills/portfolio-weekly-monitor/
+# 可从源码重建的二进制技能包，保留源目录。
+/howard-marks-skill.skill
+/stock-prebuy-review.skill
