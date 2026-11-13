@@ -5,72 +5,56 @@ aliases: ["The Ensign Group", "ENSG", "恩赛恩集团"]
 细分赛道: 专业护理与后急性护理设施
 可投资性: 高
 阶段: 成长期
-关注级别: Growth
-最后更新日期: 2026-08-29
+关注级别: NONE
+最后更新日期: 2026-10-30
 market: US
 board: 纳
+watchlistLevel: NONE
+cScore: 71
+mScore: 78
+totalScore: 149
+targetPrice: null
+valuationCertainty: null
+buyPrice: null
+深度分析: "[[深度分析/恩赛恩集团 深度分析 71 2026-10-30]]"
+管理层档案: "[[管理层档案/恩赛恩集团 管理层档案 78 2026-10-30]]"
+更新日期: 2026-10-30
+下一财报日: null
+下一财报类型: null
 ---
 
 # 恩赛恩集团（ENSG）
 
-> 一家通过地方自治、临床改善和地产协同，把分散且低效的专业护理设施持续转化为高回报运营资产的平台。
+恩赛恩集团（ENSG.US），NASDAQ普通股，价格单位USD/普通股。本轮纳入2026Q3，期末2026-09-30，正式披露2026-10-27。
 
-**分析日期**：2026-07-17（Q2 2026 财报已纳入，2026-08-29 更新）　**参考股价**：$172.98
+## 当前结论
 
-## 1. 公司简介
+公司原始71（显示71）、管理层原始78（显示78），合计原始149（显示149）。单项虽达70，但原始合计低于全部档位的最低150，依既有规则NONE / reject / closed_with_uncertainty，评分退出，未开展正式估值。显示舍入不改变原始分门槛。
 
-1999年成立，NASDAQ上市。2026Q2末运营398项护理和老年生活设施（含183项自有地产），覆盖17州。Deloitte对FY2025财报出具标准无保留意见。
+本轮仅完成评分与低分退出的独立验收，不称完成三件套或正式定价。目标价、估值确定性、机械买价、价格分区均为null，null不表示价值为零。旧报告及旧价格保留为历史观点，已撤回当前有效性。
 
-## 2. 业务构成与利润引擎
+## 参数变化
 
-FY2025收入 $50.58亿，约95.6%来自专业护理。利润引擎是同店入住率与 skilled mix 提升、低效收购标的改善，以及Standard Bearer持有地产带来的租赁与资产协同。
+- 公司：80→71。E3=2,F3=0 accepted prior; D2 evidence performance5 capped4 by original channel rule
+- 管理层：82→78。Prior7-dimension assessment retained; guidance evidence does not erase incentive/ownership-return/litigation constraints
+- 合理价值：180 USD→null。Quality total fails all collection gates; stop formal pricing under closeout rule
+- 确定性：0.58→null。No active formal target; certainty withdrawn together
 
-## 3. 关键财务数据
+## 行情与资格
 
-| 指标 | FY2023 | FY2024 | FY2025 | 2026Q1 | 2026Q2 |
-|---|---:|---:|---:|---:|---:|
-| 收入（亿美元） | 37.29 | 42.60 | 50.58 | 13.90 | 14.40 |
-| GAAP净利（亿美元） | 2.09 | 2.98 | 3.44 | 1.00 | 1.00 |
-| 稀释EPS | $3.65 | $5.12 | $5.84 | $1.67 | $1.68 |
-| OCF（亿美元） | 3.77 | 3.47 | 5.64 | — | — |
+同一证券报价186.32 USD/普通股，供应商更新时间2026-10-29T16:00:01-04:00（America/New_York，UTC-0400），抓取2026-10-30T10:18:02.988804+00:00。常规交易已结束或尚未开市，采用最近正常交易日收盘字段；公开延迟行情，未获实时保证。供应商更新时间不是逐笔成交时间，延迟分类未明确，不保证实时。[行情来源](https://query1.finance.yahoo.com/v8/finance/chart/ENSG?range=1d&interval=1m)。
 
-## 4. 护城河与风险
+现行B档要求两项原始分均至少70且合计至少150；A档两项至少76且合计至少160。机械公式target_price×(0.68+0.14×valuation_certainty)须有有效估值及质量资格，本轮无有效输入，不计算买入价，不据股价判为可建仓。
 
-护城河是去中心化人才系统、收购整合经验、成熟市场集群和地产协同。主要风险是Medicare/Medicaid支付、护理人员工资、责任险与诉讼、快速并购整合，以及居家护理替代部分低复杂度需求。
+重评条件：出现足以改变原评分档位的经营、资本回报或治理新证据，再依原流程核验；股价下降不自动恢复资格。
 
-## 5. 估值与价格区间
+## 已验收研究与证据
 
-目标价 **$180**（终审：正常化GAAP EPS口径），估值确定性 **0.58**，机械买入价 **$137**，最大仓位 **4%**。
+- [[深度分析/恩赛恩集团 深度分析 71 2026-10-30|公司评分与退出研究]]
+- [[管理层档案/恩赛恩集团 管理层档案 78 2026-10-30|管理层评分与快速卡]]
+- [官方财报](https://www.sec.gov/Archives/edgar/data/1125376/000112537626000046/ensg-20260930.htm)；[独立验收](../data/reviews/ensg-simple-2026-10-28/final/review-acceptance.json)
+- 历史报告：[[深度分析/恩赛恩集团 深度分析 82 2026-07-17|历史版本]]；[[管理层档案/恩赛恩集团 管理层档案 82 2026-07-17|历史版本]]；[[估值分析/恩赛恩集团 估值分析 2026-07-17|历史版本]]
 
-| 价格 | 判断 |
-|---:|---|
-| >$189 | 偏贵 |
-| $166–189 | 合理（当前 $172.98 在此区，接近 fair，不能买） |
-| $150–166 | 略低估，可关注 |
-| <$137 | 机械买入区 |
+一作者、一独立审核者，集中修正1次。停止估值说明及计算/原件随验收包保留，不另发布新的定价报告。
 
-## 6. PreBuy结论
-
-**逻辑清晰，公司质量优秀，但当前价格只是"好公司卖合理价格"，并非明显折价。** 终审 target $180（基于正常化 GAAP EPS、扣减收购资本与 SBC 影响），当前价 $172.98 仅较目标价低约 3.9%——接近 fair，**不能买**。真正符合买入纪律的机械买入价为 $137 附近，届时需确认同店入住率、责任险与新增设施改善周期未破坏。
-
-## 7. 完整研究
-
-- [[深度分析/恩赛恩集团 深度分析 82 2026-07-17]]
-- [[管理层档案/恩赛恩集团 管理层档案 82 2026-07-17]]
-- [[估值分析/恩赛恩集团 估值分析 2026-07-17]]
-
-## 8. 相关公司
-
-- [[布鲁克代尔高级护理(BKDT)]]
-- [[联合健康(UNH)]]
-
-## 9. 相关主题
-
-- [[02-主题/美国医疗服务]]
-
-## 10. 参考来源
-
-- [FY2025 Form 10-K](https://www.sec.gov/Archives/edgar/data/1125376/000112537626000007/ensg-20251231.htm)
-- [2026 Proxy Statement](https://www.sec.gov/Archives/edgar/data/1125376/000112537626000014/ensg-20260401.htm)
-- [2026Q2 Results（2026-07-27）](https://www.nasdaq.com/press-release/ensign-group-reports-second-quarter-2026-results-2026-07-27)
-- [2026Q1 Results](https://investor.ensigngroup.net/news/news-details/2026/The-Ensign-Group-Reports-First-Quarter-2026-Results-Raises-2026-Annual-Earnings-and-Revenue-Guidance/default.aspx)
+[[00-首页/低分公司登记]] · [[00-首页/公司索引]]
