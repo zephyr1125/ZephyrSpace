@@ -268,3 +268,22 @@ evals/reports/**/.live/
 # 可从源码重建的二进制技能包，保留源目录。
 /howard-marks-skill.skill
 /stock-prebuy-review.skill
+
+# 本地工具运行状态与可再生开发缓存；保留角色配置及源码。
+/.codex/*.lock
+/.codex/log/
+/.codex/tmp/
+/.codex/shell_snapshots/
+/.claude/projects/
+/.claude/session-env/
+node_modules/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+*.sqlite-wal
+*.sqlite-shm
+*.sqlite3-wal
+*.sqlite3-shm
+*.db-wal
+*.db-shm
