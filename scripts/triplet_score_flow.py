@@ -93,7 +93,26 @@ def apply_delta(base, decision, delta, root, evidence):
     original = wp.read(base_path)
     ruling = wp.read(decision_path)
     # 裁决在唯一台账中列作用范围，作者不能自行扩大修复范围。
-    scopes = ruling["score_repair_scope"]
+    scopes = ruling.get("score_repair_scope", [])
+    joint = original.get("research_profile") == "joint_research_v1"
+    if joint:
+        try:
+            from scripts import triplet_research as research
+        except ImportError:
+            import triplet_research as research
+        cycle = research.validate_cycle(ruling, root)
+        previous_cycle = original.get("research_cycle")
+        if previous_cycle:
+            wp.require(all(cycle[key] == previous_cycle[key] for key in
+                           ("mode", "first_review_refs", "first_workpaper_sha256", "repairs_used")),
+                       "裁决修复额度或初审谱系与底稿不一致，不得重置")
+        else:
+            wp.require(cycle["repairs_used"] == 0 and cycle["first_workpaper_sha256"] == delta["base_sha256"],
+                       "首次修复须绑定初审底稿且额度从零开始")
+        if ruling.get("workpaper_sha256"):
+            wp.require(ruling["workpaper_sha256"] == delta["base_sha256"], "裁决未绑定本次修复底稿")
+    else:
+        wp.require(not delta.get("valuation_changes"), "旧评分接口不接受估值修复")
     acceptance_ids = set()
     for issue in ruling.get("issues", []):
         acceptance = issue.get("acceptance")
@@ -113,18 +132,19 @@ def apply_delta(base, decision, delta, root, evidence):
     metadata_allowed = {}
     for scope in ruling.get("metadata_repair_scope", []):
         name = scope["field"]
-        wp.require(name == "evidence_gaps" and name not in metadata_allowed, "元数据裁决范围越界或重复")
+        metadata_fields = {"evidence_gaps", "bridges", "numeric_fact_ids", "numeric_calculations"} if joint else {"evidence_gaps"}
+        wp.require(name in metadata_fields and name not in metadata_allowed, "元数据裁决范围越界或重复")
         ids = set(scope.get("acceptance_ids", []))
         wp.require(bool(ids) and ids <= acceptance_ids, "元数据范围引用不存在的原验收ID")
         metadata_allowed[name] = ids
     metadata_changes = []
     for change in delta.get("metadata_changes", []):
         name = change["field"]
-        wp.require(name in metadata_allowed and not metadata_changes, "元数据修复越界或重复")
+        wp.require(name in metadata_allowed and name not in {r["field"] for r in metadata_changes}, "元数据修复越界或重复")
         wp.require(set(change["acceptance_ids"]) == metadata_allowed[name], "元数据修复须对应原验收ID")
         value = change["set"]
-        wp.require(isinstance(value, list), "evidence_gaps须为数组")
-        for gap in value:
+        wp.require(isinstance(value, list), "元数据修复须为数组")
+        for gap in value if name == "evidence_gaps" else []:
             wp.require(isinstance(gap, dict) and all(k in gap for k in
                        ("affected_items", "kind", "impact", "search_scope", "evidence_refs")), "缺口记录字段不全")
         before = copy.deepcopy(updated.get(name))
@@ -132,8 +152,38 @@ def apply_delta(base, decision, delta, root, evidence):
         updated[name] = copy.deepcopy(value)
         metadata_changes.append({"field": name, "before": before, "after": copy.deepcopy(value),
                                  "acceptance_ids": change["acceptance_ids"]})
-    wp.require(bool(delta["changes"] or metadata_changes), "修复变更为空")
-    for change in delta["changes"]:
+    valuation_changes = []
+    if joint:
+        valuation_allowed = {}
+        model_ids = set()
+        for scope in ruling.get("valuation_repair_scope", []):
+            field = scope["field"]
+            wp.require(field in research.VALUATION_FIELDS and field not in valuation_allowed, "估值修复字段越界或重复")
+            ids = set(scope["acceptance_ids"])
+            wp.require(ids and ids <= acceptance_ids, "估值范围引用不存在的原验收ID")
+            valuation_allowed[field] = ids
+            if field == "models":
+                model_ids = set(scope.get("model_ids", []))
+                wp.require(model_ids and model_ids <= {m["id"] for m in original["valuation"]["models"]},
+                           "模型修复缺明确的已有模型ID")
+        used = set()
+        for change in delta.get("valuation_changes", []):
+            field = change["field"]
+            wp.require(field in valuation_allowed and field not in used, "估值修复越界或重复")
+            wp.require(set(change["acceptance_ids"]) == valuation_allowed[field], "估值修复须对应原验收ID")
+            before = copy.deepcopy(updated["valuation"].get(field))
+            wp.require(before != change["set"], "估值修复未产生变更")
+            if field == "models":
+                old = {m["id"]: m for m in before}
+                new = {m["id"]: m for m in change["set"]}
+                wp.require(len(new) == len(change["set"]) and set(new) == set(old), "局部模型修复不能增删模型")
+                wp.require(all(new[k] == old[k] for k in set(old) - model_ids), "未授权模型发生回退或改动")
+            updated["valuation"][field] = copy.deepcopy(change["set"])
+            used.add(field)
+            valuation_changes.append({"field": field, "before": before, "after": change["set"],
+                                      "acceptance_ids": change["acceptance_ids"]})
+    wp.require(bool(delta.get("changes") or metadata_changes or valuation_changes), "修复变更为空")
+    for change in delta.get("changes", []):
         key = (change["group"], change["item"])
         wp.require(key in allowed and key not in seen, "修复越界或重复分项")
         seen.add(key)
@@ -155,9 +205,19 @@ def apply_delta(base, decision, delta, root, evidence):
     updated.update(score_state="pending_review", research_state="pending_review", publish_allowed=False)
     updated["qualification"] = {"highest_score_gate": score_gate(updated, root),
                                 "status": "pending_review", "reason": "仅重算评分门槛，须复核红线和全部入池条件"}
-    report = check(updated, root, evidence)
+    if joint:
+        updated["valuation_state"] = "pending_review"
+        # 只保留与当前事实、规则及评分完全匹配的裁决批准，不信作者自述。
+        approved = ruling.get("approval_projections", {}).get("score")
+        if ruling.get("score_state") == "approved" and approved and approved == research.projection(updated, root, evidence, "score"):
+            updated["score_state"] = "approved"
+            updated["score_approval"] = {"projection_sha256": approved, "decision": decision,
+                                         "decision_sha256": delta["decision_sha256"]}
+        updated["research_cycle"] = {**cycle, "repairs_used": cycle["repairs_used"] + 1}
+    report = research.check(updated, root, evidence) if joint else check(updated, root, evidence)
     wp.require(not report["errors"], "；".join(report["errors"]))
-    return {"workpaper": updated, "changes": changes, "metadata_changes": metadata_changes, "check": report,
+    return {"workpaper": updated, "changes": changes, "metadata_changes": metadata_changes,
+            "valuation_changes": valuation_changes, "check": report,
             "base": base, "base_sha256": delta["base_sha256"], "decision": decision,
             "decision_sha256": delta["decision_sha256"],
             "unmodified_scope_items": [list(k) for k in sorted(set(allowed) - seen)],

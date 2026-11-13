@@ -4,7 +4,11 @@ model = "gpt-5.6-terra"
 model_reasoning_effort = "low"
 developer_instructions = """
 使用简体中文。当前角色为triplet_writer；只执行主任务分派阶段，不递归启动Agent。
-读取docs/three-report-economy-routing.md的角色职责和当前阶段；其他规则按其读取表定位，不重复加载未变内容。
-按SOP分阶段读取原文核心及适用附件；评分先读公司/管理层，估值阶段再读估值模块。已有完整原件时按docs/three-report-score-flow.md直接核全32项并交底稿，不另写整套计划/覆盖副本；需委托补证时只列明确缺口。评分修复只交裁决范围delta，由程序重建完整底稿。只维护评分估值底稿、共用事实和三份独立叙述源稿，按docs/three-report-delivery.md装配，不手工同步生成表或输出稿。先完成受影响项事实→规则→判断，再写源稿；未知保留边界，不填任意分。按裁决的research/delivery范围修改，保留无关已核内容；自检不是独立验收。不使用旧preparation/handoff流程叠加新装配。
+按docs/three-report-economy-routing.md读取表加载当前阶段，已读且未变内容复用。
+首次联合底稿：完整读取公司、管理层（含review-checks）、估值规则及适用行业附件。用底稿规范的init-workpaper生成空骨架，依据原件完成全32项及估值；填输入与公式后可用联合接口recompute生成计算结果，再运行联合check。交底稿、事实/来源与明确缺口。首次只加载作者字段、关键数值和首次送审协议，成文装配及修复协议到相应阶段再读。
+研究修复：读取原裁决及联合接口的局部修复章节，提交授权范围delta，由程序重建完整底稿；先改事实与判断，再处理联动，保留无关已核内容。
+获批成文或交付修复：读取docs/three-report-delivery.md，维护三份独立叙述源稿，通过装配生成表格和状态；修改源稿而非输出稿，按裁决区分research/delivery。
+未知不填任意分，自检不是独立验收；决定性补证实际执行，不把待办清单当完成。旧preparation/handoff不参与新流程。
+本地HTML长表先用scripts/triplet_source_view.py 原件路径 --find 精确关键词读取带表头的有界摘录；优先复用主任务给出的source-views，不用rg一次输出多份原始长表。规则已完整读过则复用，不能为查单个字段重读全文。
 只写指定产物；不改历史/冻结稿、公司页、索引、Watchlist，不提交或推送。角色隔离及例外由主任务按SOP调度。
 """

@@ -1,5 +1,7 @@
 # 评分阶段的精简交接
 
+完整请求现采用[联合研究接口](three-report-research-contract.md)，本页保留评分子接口与历史兼容。完整首次送审必须连同估值，不再串行等待评分批准后才开始估值。
+
 本页只定义工具接口；评分原规则、双复核、异常收尾和轮次仍按调度SOP。目标减少重复输入输出，不以字数或缓存量宣称节省30%。程序均不批准评分或入库。路径相对Vault，输出用本次run的新路径，禁止覆盖冻结文件。
 
 ## 默认直接形成评分依据；按需委托取证
@@ -27,7 +29,7 @@ python -X utf8 scripts/triplet_score_flow.py check <workpaper.json> <evidence-fi
 
 ## 局部修复，完整底稿
 
-唯一`decision.json`增加`score_repair_scope`数组，每项为`{group, item, acceptance_ids}`，group为company或management，item为原评分ID；验收ID须对应同一裁决台账原条件。裁决记录关联分项，不让作者自行扩范围。纯证据修订保留新ID及有效版本清单，不重写未变事实。
+本次不可变版本的`decision.json`增加`score_repair_scope`数组，每项为`{group, item, acceptance_ids}`，group为company或management，item为原评分ID；验收ID须对应同一裁决台账原条件。裁决记录关联分项，不让作者自行扩范围。纯证据修订保留新ID及有效版本清单，不重写未变事实。
 
 作者仅提交`delta.json`：
 
@@ -50,7 +52,7 @@ python -X utf8 scripts/triplet_score_flow.py apply-delta <base.json> <decision.j
 
 缺口记录需随事实修正时，裁决可加`metadata_repair_scope:[{field:"evidence_gaps",acceptance_ids:[原ID]}]`，delta对应`metadata_changes:[{field:"evidence_gaps",acceptance_ids:[原ID],set:[完整新缺口记录]}]`；仅允许该字段，差异写入receipt，仍需双路核真实边界。
 
-此接口修评分项及上述缺口记录；估值、桥、跨模块判断变化按既有源稿流程修复，不强塞进delta。所有原验收条件仍逐一答复；未变分项若受新事实影响，应请原裁决扩定范围。双路复查差异、必要原件及联动，不能以机械通过、修改数量或receipt代替关闭问题。归档时将完整新底稿、receipt、delta、裁决、计划及实际证据版本纳入现有评分归档，不再抄一份同义检查报告。
+旧profile只修评分项及上述缺口记录；joint_research_v1的估值、桥与数值修复白名单见联合研究接口。所有原验收条件仍逐一答复；未变分项若受新事实影响，应请原裁决扩定范围。双路复查差异、必要原件及联动，不能以机械通过、修改数量或receipt代替关闭问题。归档时将完整新底稿、receipt、delta、裁决、计划及实际证据版本纳入现有评分归档，不再抄一份同义检查报告。
 
 ## 效果验收
 

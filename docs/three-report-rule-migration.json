@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "date": "2026-09-19",
   "normalization": "UTF-8、LF",
   "modules": [
@@ -204,7 +204,11 @@
           "original_end_line": 116,
           "path": "skills/valuation/SKILL.md",
           "sha256": "2c176210278c1386474e4cb204f9aa9f4dbe32f790b2dacc2f6cb211389cf142",
-          "mode": "core"
+          "mode": "core",
+          "original_archive_path": "docs/archive/valuation-rule-segments-2026-09-27.md",
+          "current_sha256": "b50af234bcc17c6f42e7eddb96978be6bbb67774f21440d998ec33d0b666e830",
+          "revision_date": "2026-09-27",
+          "revision_reason": "澄清数据缺口仅阻断依赖计算、自主预测边界及PE估值时点和现金口径；评分与两模型质量要求不变"
         },
         {
           "id": "part-03",
@@ -268,7 +272,11 @@
           "original_end_line": 289,
           "path": "skills/valuation/SKILL.md",
           "sha256": "475d3add054e1a273ed9adac00ff0624ccd25ba96ee1ab368d97b049cf84c2d7",
-          "mode": "core"
+          "mode": "core",
+          "original_archive_path": "docs/archive/valuation-rule-segments-2026-09-27.md",
+          "current_sha256": "28a01cde3a5108ef8bb17e033581ac64b5e92c1015b72bc3e2910b7f07b4305e",
+          "revision_date": "2026-09-27",
+          "revision_reason": "澄清数据缺口仅阻断依赖计算、自主预测边界及PE估值时点和现金口径；评分与两模型质量要求不变"
         },
         {
           "id": "part-11",

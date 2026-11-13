@@ -2,13 +2,15 @@
 
 本规范是新任务唯一交付入口；旧workpaper的评分/公式计算继续复用，旧repair-ready/handoff只用于历史复现。模型、研究轮次和发布授权仍见[调度SOP](three-report-economy-routing.md)。不增加常驻Agent，不自动改历史报告或Watchlist。
 
+新完整请求使用[联合研究接口](three-report-research-contract.md)冻结研究，bundle直接引用明确版本。发布批准在构建及读稿后单独生成，不覆盖研究裁决。下列旧路径示例仍供历史复现，新任务替换为versions/vN内路径。
+
 ## 单一来源与职责
 
 | 材料 | 维护者与内容 |
 |---|---|
 | 证据JSON | 证据角色维护有唯一ID的事实、计算及来源记录；按原件核期别、单位、定位。只列本次有效版本，冲突不得靠覆盖ID解决 |
 | workpaper.json | 作者维护唯一分项score/reason/evidence_refs、估值假设及计算；不用文稿反向生成分数 |
-| decision.json | 作者初稿标pending；裁决维护获批判断、分流、验收和批准依据，不能由作者自行关闭重大问题 |
+| versions/vN/decision.json | 作者候选标pending；裁决维护获批判断、分流及验收，按联合接口生成不可变版本；current.json只作指针 |
 | bundle.json | 主任务列证据文件、底稿、裁决、三份源稿路径及少量跨报告共用事实 |
 | 三份叙述源稿 | 作者保留公司、治理、估值各自完整分析；引用共用块，不复制维护其数值或状态 |
 | 生成三稿+manifest.json | 程序装配、建立引用索引及哈希；只生成全新版本，禁止手改输出 |
@@ -47,6 +49,7 @@
 - `{{table:model-模型ID}}`、`{{table:weighted}}`：估值情景和敏感性等沿用底稿生成器；正式定价必需，批准停止定价时不伪造表格。
 - `{{fact:executive_timeline}}`：所有报告共享同一事实状态与未知边界。
 - `{{ref:NKE-ORG-001}}`：验证并输出完整ID，程序附记录文件和字段位置。
+- `{{number:计算或数值事实ID}}`：从证据value或底稿numeric_calculations生成数字（最多六位小数，去尾零），保留追溯标记及全部计算依赖。原始值须有unit；派生值须有formula/input_fact_ids/result/unit并复算一致。现金流桥等关键派生数字在正文中用此标记，避免再抄一份。单位与经济解释仍写在正文，不能把生成数值视为来源或判断已通过。
 
 共用块不允许嵌套标记。自由文字也按id_prefixes扫描完整ID；禁止`ID-001/002/003`缩写。retired仅用于已经确认失效的具体文字，不用数字或模糊词全局禁用；其余语义矛盾仍由审核检查。证据ID不能凭相似拼写自动纠正，先确认实际来源。
 

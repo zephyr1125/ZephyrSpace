@@ -86,7 +86,8 @@ VALID_BOARDS = {
     '北',
     '港',
     '纽',
-    '纳'
+    '纳',
+    'BZX'
 }
 
 
@@ -184,6 +185,8 @@ def validate_entry(entry, entry_idx=0, tier='unknown'):
         board = entry['board']
         if board is None:
             errors.append(f"  [格式错误] board = null （必须指定上市板块）")
+        elif board == 'BZX' and not entry.get('code', '').endswith('.US'):
+            errors.append("  [板块市场错误] BZX 仅适用于 .US 普通股代码")
         elif board not in VALID_BOARDS:
             errors.append(f"  [格式错误] board = '{board}' （无效值，应为 {VALID_BOARDS}）")
     

@@ -39,6 +39,41 @@ def sample(root):
 
 
 class DeliveryTests(unittest.TestCase):
+    def test_numeric_text_is_generated_from_one_recomputed_record(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            bundle = sample(root)
+            evidence = delivery.wp.read(root / "evidence.json")
+            values = {"OCF": 147.540, "NI": 180.942, "DA": 62.462, "SBC": 10.978,
+                      "INVENTORY": -148.071, "PAYABLES": 0.210}
+            evidence["facts"] += [{"fact_id": "TEST-N-" + key, "value": value, "unit": "USD million"}
+                                  for key, value in values.items()]
+            write(root, "evidence.json", evidence)
+            data = delivery.wp.read(root / "workpaper.json")
+            data["numeric_calculations"] = [{"id": "TEST-OTHER", "formula": "OCF-NI-DA-SBC-INVENTORY-PAYABLES",
+                "input_fact_ids": {key: "TEST-N-" + key for key in values}, "result": 41.019, "unit": "USD million"}]
+            write(root, "workpaper.json", data)
+            for path in bundle["templates"].values():
+                with (root / path).open("a", encoding="utf-8") as stream:
+                    stream.write("\n其余调整：{{number:TEST-OTHER}} 百万美元。\n")
+            texts, manifest = delivery.assemble(bundle, root)
+            for text in texts.values():
+                self.assertIn("-->41.019<!--", text)
+                self.assertIn("TEST-N-OCF", text)
+                self.assertNotIn("{{number:", text)
+            data["numeric_calculations"][0]["result"] = 41.263
+            write(root, "workpaper.json", data)
+            with self.assertRaisesRegex(ValueError, "正文派生数值"):
+                delivery.assemble(bundle, root)
+
+    def test_numeric_text_rejects_cyclic_or_untyped_records(self):
+        index = {"A": {"record": {"unit": "USD", "formula": "x", "input_fact_ids": {"x": "A"}, "result": 1}}}
+        with self.assertRaisesRegex(ValueError, "循环"):
+            delivery.resolve_number("A", index)
+        index["A"]["record"] = {"value": 1}
+        with self.assertRaisesRegex(ValueError, "缺单位"):
+            delivery.resolve_number("A", index)
+
     def test_explicit_tiers_reject_plausible_but_unlisted_intermediate_scores(self):
         for key, value in (("A3", 3), ("D1", 3), ("F2", 4)):
             with self.subTest(key=key), self.assertRaisesRegex(ValueError, key + "违反"):

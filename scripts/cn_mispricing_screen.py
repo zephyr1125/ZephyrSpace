@@ -8,7 +8,7 @@
 Usage:
     python scripts/cn_mispricing_screen.py                    # 今天
     python scripts/cn_mispricing_screen.py --date 2026-08-23
-    python scripts/cn_mispricing_screen.py --skip-watchlist   # 排除已在 watchlist 的 A 股
+    python scripts/cn_mispricing_screen.py --skip-watchlist   # 兼容旧参数，默认已排除 Watchlist
     python scripts/cn_mispricing_screen.py --limit 100        # 仅评分前 100 只（测试用）
 
 Output:
@@ -28,6 +28,7 @@ import csv
 import json
 import math
 import os
+import re
 import sys
 import time
 from argparse import ArgumentParser
@@ -425,21 +426,34 @@ def score_row(row, extra):
 
 # ── Watchlist 加载 ───────────────────────────────────────
 
-def _load_watchlist_cn():
-    """从 watchlist JSON 读取已在关注列表中的 A 股代码（去 .SH/.SZ 后缀）。"""
+def _load_watchlist_cn(universe=None):
+    """按代码及跨市场公司名称排除；传入全A清单可匹配港股同一主体。"""
     symbols = set()
+    names = set()
+    def normalize_name(name):
+        # 去除名称尾部的市场/代码标签，不做模糊匹配，避免混淆母子公司。
+        return re.sub(r"[（(][^()（）]*[）)]$", "", name.strip()).strip()
     for filename in ("watchlist_core.json", "watchlist_growth.json"):
         path = ROOT / "data" / filename
-        if not path.exists():
-            continue
         try:
             data = json.loads(path.read_text(encoding="utf-8"))
-            for entry in data.get("entries", []):
-                code = entry.get("code", "")
-                if code.endswith((".SH", ".SZ")):
+            entries = data["entries"]
+            if not isinstance(entries, list):
+                raise ValueError("entries 必须为数组")
+            for entry in entries:
+                name = normalize_name(entry.get("name", ""))
+                if name:
+                    names.add(name)
+                code = entry.get("code", "").strip().upper()
+                if code.endswith((".SH", ".SZ", ".BJ")):
                     symbols.add(code[:-3])
+                elif len(code) == 6 and code.isdigit():
+                    symbols.add(code)
         except Exception as exc:
-            print(f"  ⚠ 读取 {filename} 失败: {exc}")
+            raise RuntimeError(f"读取 {filename} 失败，停止新候选筛选") from exc
+    for company in universe or []:
+        if normalize_name(company["name"]) in names:
+            symbols.add(company["code"])
     return symbols
 
 
@@ -448,10 +462,12 @@ def _load_watchlist_cn():
 def main():
     parser = ArgumentParser(description="A股质量错杀筛选")
     parser.add_argument("--date", default=date.today().isoformat(), help="筛选日期 (YYYY-MM-DD)")
-    parser.add_argument("--skip-watchlist", action="store_true", help="排除已在 watchlist 中的 A 股标的")
+    parser.add_argument("--skip-watchlist", action="store_true", default=True,
+                        help="兼容旧参数；默认排除已在 Watchlist 中的 A 股标的")
     parser.add_argument("--limit", type=int, default=0, help="仅对前 N 只候选做财务评分（0=全部，测试用）")
     parser.add_argument("--skip-tushare", action="store_true", help="跳过 52 周高点（测试用，跌幅过滤会失效）")
     args = parser.parse_args()
+    watched = _load_watchlist_cn()
 
     screen_date = args.date
     out_dir = ROOT / "data" / "screens"
@@ -468,6 +484,7 @@ def main():
 
     # ── Step 1a: CNINFO 全A清单 ──
     universe = cninfo_universe()
+    watched.update(_load_watchlist_cn(universe))
     print(f"[CNINFO] 全A股清单 → {len(universe)} 只")
     if not universe:
         print("❌ CNINFO 无结果，终止。")
@@ -535,7 +552,6 @@ def main():
         print(f"[跌幅过滤] ≥{MIN_DRAWDOWN_PCT}%: {before} → {len(candidates)} 只")
 
     # watchlist 标记/排除
-    watched = _load_watchlist_cn() if args.skip_watchlist else set()
     if watched:
         print(f"[Watchlist] 已加载 {len(watched)} 只 A 股关注标的")
     for c in candidates:

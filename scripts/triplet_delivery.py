@@ -13,7 +13,7 @@ except ImportError:
     import triplet_workpaper as wp
 
 KINDS = ("deep", "management", "valuation")
-TOKEN = re.compile(r"\{\{(ref|fact|table|score):([^{}]+)\}\}|\{\{decision\}\}")
+TOKEN = re.compile(r"\{\{(ref|fact|table|score|number):([^{}]+)\}\}|\{\{decision\}\}")
 
 
 def publication_errors(texts):
@@ -204,6 +204,26 @@ def referenced_ids(text, prefixes):
     return result
 
 
+def resolve_number(identifier, index, visiting=()):
+    """仅从数值记录或已复算派生记录取值；不从说明文字猜数字。"""
+    wp.require(identifier in index and identifier not in visiting, "数值引用缺失或循环：" + identifier)
+    row = index[identifier]["record"]
+    wp.require(row.get("unit"), "数值记录缺单位：" + identifier)
+    used = {identifier}
+    if row.get("formula"):
+        mapping = row.get("input_fact_ids")
+        wp.require(isinstance(mapping, dict) and mapping, "派生数值缺输入映射：" + identifier)
+        inputs = {}
+        for name, ref in mapping.items():
+            inputs[name], refs = resolve_number(ref, index, (*visiting, identifier))
+            used.update(refs)
+        value = wp.expression(row["formula"], inputs)
+        wp.close(row["result"], value, "正文派生数值" + identifier)
+    else:
+        value = wp.number(row["value"])
+    return value, used
+
+
 def scan_references(texts, index, prefixes):
     errors, uses = [], {}
     for name, text in texts.items():
@@ -300,6 +320,17 @@ def assemble(bundle, root):
     data = wp.read(wp.local(root, bundle["workpaper"]))
     ledger = wp.read(wp.local(root, bundle["decision"]))
     validate_decision(ledger)
+    if data.get("research_profile") == "joint_research_v1":
+        try:
+            from scripts import triplet_research as research
+        except ImportError:
+            import triplet_research as research
+        research.verify_binding(data, ledger, root, bundle["evidence"])
+        wp.require(digest(wp.local(root, bundle["workpaper"]).read_bytes()) == ledger["workpaper_sha256"],
+                   "构建底稿不是裁决冻结版本")
+        wp.require(all(Path(p).name != "current.json" for p in
+                       [bundle["decision"], bundle["workpaper"], *bundle["evidence"], *ledger["review_refs"]]),
+                   "构建须引用明确版本，不得引用current指针")
     for path in ledger["review_refs"]:
         wp.require(wp.local(root, path).is_file(), "复核记录不存在：" + path)
     bounds = score_ranges(data)
@@ -354,6 +385,11 @@ def assemble(bundle, root):
     else:
         v = data["valuation"]
         decision_text += f"\n目标价：{v['target_price']}；确定性：{v['certainty']}；机械买入价：{v['buy_price']}；币种：{v['currency']}。"
+    # 直接索引底稿已有派生计算，不复制维护第二套数值。
+    for i, calculation in enumerate(wp.calculation_records(data)):
+        key = calculation["id"]
+        wp.require(key not in index, "派生计算ID与证据重复：" + key)
+        index[key] = {"path": bundle["workpaper"], "pointer": f"/numeric_calculations/{i}", "record": calculation}
     facts = bundle.get("facts", {})
     for key, fact in facts.items():
         wp.require(fact.get("text") and fact.get("refs"), f"共用事实{key}缺正文或依据")
@@ -380,6 +416,13 @@ def assemble(bundle, root):
                 token_refs[kind].update(fact["refs"])
                 fact_uses.setdefault(key, []).append(kind)
                 return fact["text"] + " [" + "；".join(fact["refs"]) + "]"
+            if token == "number":
+                value, refs = resolve_number(key, index)
+                token_refs[kind].update(refs)
+                number = format(value, ".6f").rstrip("0").rstrip(".")
+                if number == "-0":
+                    number = "0"
+                return f"<!-- triplet:number:{key} -->{number}<!-- /triplet:number:{key} -->"
             if token == "score":
                 return display(bounds[key])
             return "<!-- triplet:table:" + key + " -->\n" + blocks[key] + "\n<!-- /triplet:table:" + key + " -->"
@@ -424,6 +467,8 @@ def assemble(bundle, root):
             texts[kind] = text
     dependencies = {path: digest(wp.local(root, path).read_bytes()) for path in
                     [bundle["workpaper"], bundle["decision"], *bundle["evidence"], *bundle["templates"].values(), *ledger["review_refs"]]}
+    if data.get("research_profile") == "joint_research_v1":
+        dependencies.update(ledger["frozen_inputs"])
     return texts, {"schema_version": 1, "status": "assembled_for_review", "decision": ledger["decision"],
                    "research_state": ledger["research_state"], "delivery_state": "mechanically_checked",
                    "publish_allowed": False, "score_bounds": bounds,

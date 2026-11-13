@@ -12,6 +12,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SCENARIOS = ("bear", "base", "bull")
+BUY_PRICE_FORMULA = "target_price * (0.68 + 0.14 * certainty)"
 UNPRICED = ("stopped_quality_gate_after_full_research", "deferred")
 OPS = {ast.Add: operator.add, ast.Sub: operator.sub, ast.Mult: operator.mul,
        ast.Div: operator.truediv, ast.Pow: operator.pow}
@@ -53,6 +54,17 @@ def snapshot_text(data, key, value):
     if data.get("score_display") == "integer_half_up" and key in ("cScore", "mScore", "combinedScore"):
         return score_display(value)
     return value if isinstance(value, str) else f"{value:.6f}"
+
+
+def calculation_records(data):
+    """外部脚本说明不是可验证的依赖记录；旧稿仍保留，不静默当作空数组。"""
+    rows = data.get("numeric_calculations", [])
+    require(isinstance(rows, list),
+            "numeric_calculations 必须是计算记录数组；外部脚本路径说明不能替代可验证的计算依赖")
+    for i, row in enumerate(rows):
+        require(isinstance(row, dict) and isinstance(row.get("id"), str) and row["id"].strip(),
+                f"numeric_calculations[{i}] 必须是含非空 id 的计算记录")
+    return rows
 
 
 def require(condition, message):
@@ -376,7 +388,7 @@ def check(data, root=ROOT, reports=True, repair=False, previous=None):
         close(valuation["target_price"], weighted["base"], "合理价")
         certainty = number(valuation["certainty"])
         require(0 <= certainty <= 1 and valuation.get("certainty_reason"), "确定性越界或无依据")
-        close(valuation["buy_price"], weighted["base"] * (0.68 + 0.14 * certainty), "机械买入价")
+        close(valuation["buy_price"], expression(BUY_PRICE_FORMULA, {"target_price": weighted["base"], "certainty": certainty}), "机械买入价")
         reverse = valuation["reverse"]
         close(reverse["weight"], 0, "反向验证权重")
         require(reverse.get("variable") and reverse.get("assumptions") and reverse.get("evidence_refs"), "反向验证缺口径或依据")
@@ -541,6 +553,13 @@ def verify_migration(path, root=ROOT):
             key = segment["id"]
             matches = re.findall(r"<!-- migrated:" + key + r":start -->\n(.*?)<!-- migrated:" + key + r":end -->", text, re.S)
             require(len(matches) == 1, "迁移段缺失或重复：" + key)
+            if segment.get("original_archive_path"):
+                require(segment.get("revision_reason") and segment.get("revision_date"), "规则修订缺原因或日期")
+                require(hashlib.sha256(matches[0].encode()).hexdigest() == segment.get("current_sha256"),
+                        "当前修订段落发生变化：" + segment["path"] + "/" + key)
+                text = local(root, segment["original_archive_path"]).read_text(encoding="utf-8-sig")
+                matches = re.findall(r"<!-- migrated:" + key + r":start -->\n(.*?)<!-- migrated:" + key + r":end -->", text, re.S)
+                require(len(matches) == 1, "原始归档段缺失或重复：" + key)
             require(hashlib.sha256(matches[0].encode()).hexdigest() == segment["sha256"], "原段落发生变化：" + segment["path"] + "/" + key)
             chunks.append(matches[0])
         require(hashlib.sha256("".join(chunks).encode()).hexdigest() == module["original_sha256"], "原模块无法完整还原")

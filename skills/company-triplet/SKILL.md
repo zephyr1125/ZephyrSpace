@@ -1,13 +1,17 @@
 ---
 name: company-triplet
-description: 建立、更新或修复A股、港股、美股公司的完整三件套（公司质量、管理层、估值）；承接个股全面分析与买入前尽调。不用于指数/ETF整体估值、行情查询或单纯笔记编辑。
+description: 建立、更新或修复A股、港股、美股公司的完整三件套（公司质量、管理层、估值）；支持“三件套简化分析XXX”指定简化流程，承接个股全面分析与买入前尽调。不用于指数/ETF整体估值、行情查询或单纯笔记编辑。
 ---
 
 # 公司三件套
 
+所有模式先评分后估值；任一原始评分<70，按`docs/three-report-closeout.md`的“单项低分强制退出”核验、停止后续估值并低分登记，退出优先于完整三报告要求。
+
 仓库 `skills/company-triplet/` 是唯一可编辑入口；安装目录仅为联接。启动前运行 `scripts/manage_research_skill_entry.ps1 -Mode Check`；失败先修入口，部署说明见 `docs/research-skill-single-source.md`。
 
-完整研究按 `docs/three-report-economy-routing.md` 执行。该SOP定义固定经济组合、角色读取范围、阶段交接和交付要求；新任务用 `docs/three-report-delivery.md` 的源稿装配流程，历史修复闸门仅供复现；不在本入口重复维护流程。已分派角色只执行当前职责，不递归启动整套。
+先识别明确口令：用户说“三件套简化分析XXX”（公司名或代码前可有空格、冒号）时，按 `docs/three-report-simple-routing.md` 执行；这是简化流程的完整研究，不是摘要版，不加载普通流程的双审调度。
+
+其余完整研究按 `docs/three-report-economy-routing.md` 执行。该SOP定义固定经济组合、角色读取范围、阶段交接和交付要求；新任务用 `docs/three-report-delivery.md` 的源稿装配流程，历史修复闸门仅供复现；不在本入口重复维护流程。已分派角色只执行当前职责，不递归启动整套。
 
 内容模块由SOP路由至 `deep-prebuy-skill/SKILL.md`、`management-archive/SKILL.md` 和 `skills/valuation/SKILL.md`，不单独安装。旧PreBuy名称统一映射到本入口，不恢复旧流程。
 

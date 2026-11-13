@@ -376,6 +376,29 @@ class WorkpaperTests(unittest.TestCase):
         result = workpaper.verify_migration(workpaper.ROOT / "docs/three-report-rule-migration.json")
         self.assertEqual(result["modules"], 3)
 
+    def test_rule_revision_checks_both_original_and_current_content(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            old, new = "原文\n", "修订\n"
+            def marked(text):
+                return "<!-- migrated:part-01:start -->\n" + text + "<!-- migrated:part-01:end -->\n"
+            digest = lambda text: workpaper.hashlib.sha256(text.encode()).hexdigest()
+            (root / "old.md").write_text(marked(old), encoding="utf-8")
+            (root / "new.md").write_text(marked(new), encoding="utf-8")
+            record = {"modules": [{"original_sha256": digest(old), "segments": [{
+                "id": "part-01", "path": "new.md", "sha256": digest(old), "current_sha256": digest(new),
+                "original_archive_path": "old.md", "revision_date": "2026-09-27", "revision_reason": "测试有据修订"}]}]}
+            path = root / "migration.json"
+            path.write_text(json.dumps(record), encoding="utf-8")
+            workpaper.verify_migration(path, root)
+            (root / "new.md").write_text(marked("偷偷变更\n"), encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "当前修订"):
+                workpaper.verify_migration(path, root)
+            (root / "new.md").write_text(marked(new), encoding="utf-8")
+            (root / "old.md").write_text(marked("改写历史\n"), encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "原段落"):
+                workpaper.verify_migration(path, root)
+
     def test_nike_repeated_placeholder_regression_is_blocked(self):
         data = fixture()
         for row in data["scores"]["company"]["items"]:
