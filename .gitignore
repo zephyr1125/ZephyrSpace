@@ -287,3 +287,6 @@ htmlcov/
 *.sqlite3-shm
 *.db-wal
 *.db-shm
+
+# 本机单次额度授权适配器，含私人任务定位，不参与公开同步。
+/scripts/oneoff_quota.py
